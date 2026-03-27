@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/simulateur", "destination": "/simulateur-rentabilite-airbnb" }
+    { "source": "/simulateur", "destination": "/simulateur/index.html" }
   ]
 }

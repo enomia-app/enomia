@@ -339,7 +339,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
   </span>
   <div class="nav-right">
     <button class="btn-sm" onclick="window.location.href='/blog'">Blog</button>
-    <button class="btn-sm" onclick="showDashboard()">Mes simulations</button>
+    <button class="btn-sm accent" onclick="newSimulation()">+ Nouvelle simulation</button>
     <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulationToDB()" style="display:none">↓ Sauvegarder</button>
     <button class="btn-sm" id="btn-share-nav" onclick="showSharePopup()" style="display:none">Partager</button>
   </div>
@@ -517,7 +517,6 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         <h1 class="dash-title">Mes <em>simulations</em></h1>
         <p class="dash-sub" id="dash-sub">0 simulation</p>
       </div>
-      <button class="btn-new" onclick="newSimulation()">+ Nouvelle simulation</button>
     </div>
     <div id="sims-container"></div>
   </div>

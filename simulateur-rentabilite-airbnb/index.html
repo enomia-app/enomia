@@ -872,7 +872,7 @@ function showScreen(id){
   document.getElementById('btn-share-nav').style.display = isCalc ? '' : 'none';
   window.scrollTo(0,0);
 }
-function showDashboard(){showScreen('screen-dashboard');renderDash();}
+function showDashboard(){showScreen('screen-dashboard');renderDash();document.getElementById('btn-dash-nav').textContent='+ Nouvelle simulation';document.getElementById('btn-dash-nav').onclick=function(){newSimulation();};document.getElementById('btn-dash-nav').className='btn-sm accent';}
 function renderDash(){
   const sims=JSON.parse(localStorage.getItem('enomia_sims')||'[]');
   document.getElementById('dash-sub').textContent=sims.length+' simulation'+(sims.length!==1?'s':'')+' sauvegardée'+(sims.length!==1?'s':'');

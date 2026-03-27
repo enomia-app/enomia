@@ -1263,3 +1263,155 @@ saveSimulation = function(){
     <p style="font-size:11px;color:var(--muted2);text-align:center;margin-top:12px">Données privées · Gratuit · Désinscription en un clic</p>
   </div>
 </div>
+<!-- AUTH SCRIPT -->
+<script>
+let currentUser = null;
+
+function getAllSliderValues() {
+  return {
+    prix: parseFloat(document.getElementById('s-prix').value || 0),
+    surface: parseFloat(document.getElementById('s-surface').value || 0),
+    travaux: parseFloat(document.getElementById('s-travaux').value || 0),
+    ameu: parseFloat(document.getElementById('s-ameu').value || 0),
+    apport: parseFloat(document.getElementById('s-apport').value || 0),
+    duree: parseFloat(document.getElementById('s-duree').value || 0),
+    taux: parseFloat(document.getElementById('s-taux').value || 0),
+    nuit: parseFloat(document.getElementById('s-nuit').value || 0),
+    occu: parseFloat(document.getElementById('s-occu').value || 0),
+    commission: parseFloat(document.getElementById('s-commission').value || 0),
+    menage: parseFloat(document.getElementById('s-menage').value || 0),
+    blanc: parseFloat(document.getElementById('s-blanc').value || 0),
+    eau: parseFloat(document.getElementById('s-eau').value || 0),
+    elec: parseFloat(document.getElementById('s-elec').value || 0),
+    internet: parseFloat(document.getElementById('s-internet').value || 0),
+    consommables: parseFloat(document.getElementById('s-consommables').value || 0),
+    logiciel: parseFloat(document.getElementById('s-logiciel').value || 0),
+    comptable: parseFloat(document.getElementById('s-comptable').value || 0),
+    fonciere: parseFloat(document.getElementById('s-fonciere').value || 0),
+    copro: parseFloat(document.getElementById('s-copro').value || 0)
+  };
+}
+
+function restoreSliderValues(data) {
+  Object.keys(data).forEach(key => {
+    const input = document.getElementById('s-' + key);
+    if (input) {
+      input.value = data[key];
+      if (typeof sv === 'function') sv(key, data[key]);
+    }
+  });
+  if (typeof recalculate === 'function') recalculate();
+}
+
+async function doSaveAccount() {
+  const prenom = document.getElementById('save-prenom').value.trim();
+  const email = document.getElementById('save-email').value.trim();
+  const pwd = document.getElementById('save-pwd').value;
+  const biens = document.getElementById('save-biens').value;
+  const nl = document.getElementById('save-nl-optin').checked;
+
+  if (!prenom || !email || !email.includes('@') || pwd.length < 6 || !biens) {
+    alert('Remplissez tous les champs');
+    return;
+  }
+
+  const response = await fetch('/api/auth', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      action: 'signup',
+      email,
+      password: pwd,
+      firstName: prenom,
+      nombreBiens: biens
+    })
+  });
+
+  if (response.ok) {
+    const { userId } = await response.json();
+    currentUser = { userId, email, firstName: prenom };
+    localStorage.setItem('enomia_user', JSON.stringify(currentUser));
+    closeSavePopup();
+    saveSimulationToDB();
+  } else {
+    const err = await response.json();
+    alert('Erreur : ' + (err.error || 'Impossible de créer le compte'));
+  }
+}
+
+async function saveSimulationToDB() {
+  if (!currentUser) {
+    showSavePopup();
+    return;
+  }
+
+  const simName = prompt('Nom de ta simulation :');
+  if (!simName) return;
+
+  const response = await fetch('/api/simulations', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      action: 'save',
+      userId: currentUser.userId,
+      simulationName: simName,
+      simulationData: getAllSliderValues()
+    })
+  });
+
+  if (response.ok) {
+    const { simulationId } = await response.json();
+    alert('Simulation sauvegardée !');
+    document.getElementById('share-link').value = window.location.origin + '/simulateur-rentabilite-airbnb?sim=' + simulationId;
+    showSharePopup();
+  } else {
+    const err = await response.json();
+    alert('Erreur : ' + (err.error || 'Impossible de sauvegarder'));
+  }
+}
+
+async function doShare() {
+  const email = document.getElementById('share-email').value.trim();
+  if (!email || !email.includes('@')) {
+    alert('Email invalide');
+    return;
+  }
+
+  const shareLink = document.getElementById('share-link').value;
+  const mailtoLink = 'mailto:' + email + '?subject=Regarde ma simulation LCD&body=' + encodeURIComponent(shareLink);
+  window.location.href = mailtoLink;
+  document.getElementById('share-success').style.display = 'block';
+}
+
+function copyShareLink() {
+  const link = document.getElementById('share-link').value;
+  navigator.clipboard.writeText(link);
+  const btn = document.getElementById('copy-link-btn');
+  btn.textContent = '✓ Copié';
+  setTimeout(() => { btn.textContent = 'Copier'; }, 2000);
+}
+
+function showSavePopup() { document.getElementById('save-popup').style.display = 'flex'; document.getElementById('save-step-1').style.display = 'flex'; document.getElementById('save-step-2').style.display = 'none'; }
+function closeSavePopup() { document.getElementById('save-popup').style.display = 'none'; }
+function showSharePopup() { document.getElementById('share-popup').style.display = 'flex'; }
+function closeSharePopup() { document.getElementById('share-popup').style.display = 'none'; document.getElementById('share-success').style.display = 'none'; }
+
+window.addEventListener('load', () => {
+  const saved = localStorage.getItem('enomia_user');
+  if (saved) {
+    currentUser = JSON.parse(saved);
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('sim')) {
+    fetch('/api/simulations', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'get', simulationId: params.get('sim') })
+    })
+    .then(r => r.json())
+    .then(d => { if (d.simulation) restoreSliderValues(d.simulation.data); })
+    .catch(e => console.error('Erreur chargement simulation:', e));
+  }
+});
+</script>

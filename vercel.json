@@ -1,5 +1,8 @@
 {
   "rewrites": [
     { "source": "/simulateur", "destination": "/simulateur/index.html" }
+  ],
+  "redirects": [
+    { "source": "/simulateur-rentabilite-airbnb", "destination": "/simulateur", "permanent": true }
   ]
 }

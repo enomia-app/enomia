@@ -1232,7 +1232,7 @@ saveSimulation = function(){
 
 <!-- SAVE POPUP -->
 <div id="save-popup" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px" onclick="if(event.target === this) closeSavePopup()">
-  <div style="background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:36px;max-width:420px;width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.1)" onclick="event.stopPropagation()">
+  <div style="background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:clamp(16px,5vw,36px);max-width:90vw;max-width:clamp(280px,90vw,420px);width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.1)" onclick="event.stopPropagation()">
     <button onclick="closeSavePopup()" style="position:absolute;top:14px;right:14px;background:none;border:none;font-size:18px;color:var(--muted);cursor:pointer">×</button>
     
     <!-- ÉTAPE 1 : AUTH -->

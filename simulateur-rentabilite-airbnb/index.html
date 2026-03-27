@@ -1222,11 +1222,11 @@ saveSimulation = function(){
       <input type="text" id="save-prenom" placeholder="Prénom" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
       <input type="email" id="save-email" placeholder="Email" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
       <input type="password" id="save-pwd" placeholder="Mot de passe (6 car. min)" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
-      <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);cursor:pointer;margin-top:4px">
+      <select id="save-biens" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none"><option value="">Nombre de biens en LCD</option><option value="0">Je n'ai pas encore de bien</option><option value="1">1 bien</option><option value="2-3">2 à 3 biens</option><option value="4-5">4 à 5 biens</option><option value="6+">6 biens ou plus</option></select>      <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);cursor:pointer;margin-top:4px">
         <input type="checkbox" id="save-nl-optin" style="width:16px;height:16px;accent-color:var(--green)">
         Recevoir la newsletter LCD chaque jeudi
       </label>
-      <button onclick="doSaveAccount()" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;margin-top:4px">Créer mon compte et sauvegarder</button>
+      <button onclick="doSaveAccount()" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;margin-top:4px">Sauvegarder</button>
     </div>
     <p style="font-size:11px;color:var(--muted2);text-align:center;margin-top:12px">Données privées · Gratuit · Désinscription en un clic</p>
   </div>

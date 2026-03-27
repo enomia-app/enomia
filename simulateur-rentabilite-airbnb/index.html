@@ -23,7 +23,7 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
 
 nav { display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(247,246,243,0.92); z-index: 50; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 @media (max-width: 768px) {
-  .nav-right { gap: 4px !important; }
+  .btn-compact { padding: 5px 6px !important; }  .nav-right { gap: 4px !important; }
   nav { padding: 0 16px; }
   .nav-right { gap: 6px; }
   .btn-sm { padding: 5px 8px; font-size: 11px; }
@@ -348,9 +348,9 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
   </span>
   <div class="nav-right">
     <button class="btn-sm nav-blog-btn" onclick="window.location.href='/blog'">Blog</button>
-    <button class="btn-sm" onclick="showDashboard()">Mes simulations</button>
-    <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">↓ Sauvegarder</button>
+    <button class="btn-sm btn-compact" onclick="showDashboard()">Mes simulations</button>
     <button class="btn-sm" id="btn-share-nav" onclick="showSharePopup()" style="display:none">Partager</button>
+    <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">↓ Sauvegarder</button>
   </div>
 </nav>
 

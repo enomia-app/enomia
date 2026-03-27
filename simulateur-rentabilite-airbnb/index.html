@@ -26,7 +26,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   .btn-compact { padding: 5px 6px !important; }  .nav-right { gap: 4px !important; }
   nav { padding: 0 16px; }
   .nav-right { gap: 6px; }
-  .btn-sm { padding: 5px 8px; font-size: 11px; }
+  .btn-sm { padding: 4px 6px; font-size: 11px; }
   .btn-sm.accent { padding: 6px 12px; }
   .nav-blog-btn { display: none !important; }
 }
@@ -350,7 +350,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     <button class="btn-sm nav-blog-btn" onclick="window.location.href='/blog'">Blog</button>
     <button class="btn-sm btn-compact" onclick="showDashboard()">Mes simulations</button>
     <button class="btn-sm" id="btn-share-nav" onclick="showSharePopup()" style="display:none">Partager</button>
-    <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">↓ Sauvegarder</button>
+    <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
   </div>
 </nav>
 
@@ -1125,7 +1125,7 @@ function newSimulation(){
   currentSimIdx=null;
   document.getElementById('sim-name-input').value='';
   document.getElementById('save-status').textContent='';
-  var saveBtn=document.getElementById('btn-save-nav');if(saveBtn)saveBtn.textContent='↓ Sauvegarder';
+  var saveBtn=document.getElementById('btn-save-nav');if(saveBtn)saveBtn.textContent='Sauvegarder';
   calcMode='single';
   document.getElementById('mode-single').classList.add('on');
   document.getElementById('mode-multi').classList.remove('on');
@@ -1162,9 +1162,9 @@ function saveSimulation(){
   const sim={name,sliders,mode:calcMode,type:bienType,...currentResult,lots:calcMode==='multi'?[...lots]:undefined,savedAt:new Date().toISOString()};
   if(currentSimIdx!==null)sims[currentSimIdx]=sim;else{sims.unshift(sim);currentSimIdx=0;}
   localStorage.setItem('enomia_sims',JSON.stringify(sims));
-  var btn=document.getElementById('btn-save-nav');if(btn){btn.textContent='✓ Sauvegardé';setTimeout(function(){btn.textContent='↓ Sauvegarder'},2000);}
+  var btn=document.getElementById('btn-save-nav');if(btn){btn.textContent='✓ Sauvegardé';setTimeout(function(){btn.textContent='Sauvegarder'},2000);}
   document.getElementById('save-status').textContent='';
-  setTimeout(()=>{btn.textContent='↓ Sauvegarder';btn.classList.remove('saved');},2000);
+  setTimeout(()=>{btn.textContent='Sauvegarder';btn.classList.remove('saved');},2000);
 }
 function initSliders(){
   Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sv(id,s.value);});

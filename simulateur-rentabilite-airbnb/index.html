@@ -19,8 +19,8 @@
   --font-body: 'Inter', sans-serif;
 }
 html { scroll-behavior: smooth; }
-body { background: var(--black); color: var(--white); font-family: var(--font-body); font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; overflow-x: hidden; }
-html { overflow-x: hidden; width: 100%; }
+body { background: var(--black); color: var(--white); font-family: var(--font-body); font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+
 nav { display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(247,246,243,0.92); z-index: 50; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 .nav-logo { font-family: var(--font-mono); font-size: 14px; font-weight: 500; letter-spacing: 0.06em; color: var(--white); cursor: pointer; }
 .nav-logo span { color: var(--accent); }
@@ -339,8 +339,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
   </span>
   <div class="nav-right">
     <button class="btn-sm" onclick="window.location.href='/blog'">Blog</button>
-    <button class="btn-sm accent" onclick="newSimulation()">+ Nouvelle simulation</button>
-    <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulationToDB()" style="display:none">↓ Sauvegarder</button>
+    <button class="btn-sm" onclick="showDashboard()">Mes simulations</button>
+    <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">↓ Sauvegarder</button>
     <button class="btn-sm" id="btn-share-nav" onclick="showSharePopup()" style="display:none">Partager</button>
   </div>
 </nav>
@@ -384,24 +384,33 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
         <div style="text-align:center;padding:24px 16px;background:var(--dark);border:1px solid var(--border);border-radius:10px">
           <div style="font-size:28px;margin-bottom:10px;font-weight:800;color:var(--accent)">1</div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:40px 0">
-            <div style="padding:20px;background:var(--mid);border-radius:10px;border:1px solid var(--border)">
-              <div style="font-size:14px;font-weight:600;margin-bottom:6px">1. Décrivez votre bien</div>
-              <p style="font-size:12px;color:var(--muted)">Prix, travaux, ameublement, localisation</p>
-            </div>
-            <div style="padding:20px;background:var(--mid);border-radius:10px;border:1px solid var(--border)">
-              <div style="font-size:14px;font-weight:600;margin-bottom:6px">2. Ajustez chaque paramètre</div>
-              <p style="font-size:12px;color:var(--muted)">Taux, durée, charges réelles, prix/nuit</p>
-            </div>
-            <div style="padding:20px;background:var(--mid);border-radius:10px;border:1px solid var(--border)">
-              <div style="font-size:14px;font-weight:600;margin-bottom:6px">3. Obtenez vos résultats</div>
-              <p style="font-size:12px;color:var(--muted)">Rendement net, cash flow, remboursement</p>
-            </div>
-            <div style="padding:20px;background:var(--mid);border-radius:10px;border:1px solid var(--border)">
-              <div style="font-size:14px;font-weight:600;margin-bottom:6px">4. Partagez & comparez</div>
-              <p style="font-size:12px;color:var(--muted)">Envoyez à vos contacts, sauvegardez</p>
-            </div>
-          </div>    <!-- Différence vs concurrents -->
+          <div style="font-size:14px;font-weight:600;margin-bottom:6px">Décrivez votre bien</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.55">Type de bien, prix d'achat, superficie, niveau de travaux, ameublement. Studio, T2, T3, T4 ou division en lots.</div>
+        </div>
+        <div style="text-align:center;padding:24px 16px;background:var(--dark);border:1px solid var(--border);border-radius:10px">
+          <div style="font-size:28px;margin-bottom:10px;font-weight:800;color:var(--accent)">2</div>
+          <div style="font-size:14px;font-weight:600;margin-bottom:6px">Ajustez chaque paramètre</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.55">Financement, tarif par nuit, taux d'occupation, ménage, commission OTA, charges fixes et assurance.</div>
+        </div>
+        <div style="text-align:center;padding:24px 16px;background:var(--dark);border:1px solid var(--border);border-radius:10px">
+          <div style="font-size:28px;margin-bottom:10px;font-weight:800;color:var(--accent)">3</div>
+          <div style="font-size:14px;font-weight:600;margin-bottom:6px">Obtenez vos résultats</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.55">Rendement net réel, cash flow mensuel, comparatif placements, seuil de rentabilité et délai de remboursement.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ce que calcule le simulateur -->
+    <div style="margin-bottom:48px">
+      <h2 style="font-family:var(--font-display);font-size:26px;font-weight:600;margin-bottom:16px">Ce que calcule notre simulateur de rentabilité Airbnb</h2>
+      <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px">La plupart des simulateurs de revenus Airbnb se limitent à multiplier un tarif par nuit par un taux d'occupation. Le résultat est un revenu brut qui ne reflète pas la réalité de l'investissement en location courte durée.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px">Notre simulateur calcule votre <strong style="color:var(--white)">rendement net réel</strong> en intégrant l'ensemble des paramètres financiers d'un investissement locatif Airbnb : le prix d'achat, les frais de notaire (calculés automatiquement à 7,5%), le budget travaux, l'ameublement, les frais bancaires, l'apport personnel, la durée et le taux du crédit immobilier.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px">Côté revenus, vous ajustez le tarif moyen par nuit et le taux d'occupation annuel. La commission Airbnb et Booking (environ 17%) est intégrée dans le calcul pour refléter ce que vous encaissez réellement après les frais de plateforme.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px">Côté charges, chaque poste est modifiable individuellement : ménage et blanchisserie par rotation de voyageurs, eau, électricité, internet, consommables, logiciel de gestion (channel manager), comptable, taxe foncière, charges de copropriété et assurance PNO. Ce niveau de détail permet d'obtenir un <strong style="color:var(--white)">cash flow mensuel</strong> fiable — ce qui reste vraiment dans votre poche après le remboursement du crédit.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.75">Le simulateur calcule également le seuil de rentabilité (le taux d'occupation minimum pour couvrir vos charges), le délai de remboursement de votre apport personnel, et affiche une jauge de qualité de l'investissement.</p>
+    </div>
+
+    <!-- Différence vs concurrents -->
     <div style="margin-bottom:48px">
       <h2 style="font-family:var(--font-display);font-size:26px;font-weight:600;margin-bottom:16px">Pourquoi ce simulateur est différent</h2>
       <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px">Les outils comme AirDNA ou Airbtics estiment vos revenus potentiels à partir de données de marché. Notre simulateur fait l'inverse : il part de votre projet concret (prix d'achat, financement, charges réelles) pour calculer ce que vous allez réellement gagner.</p>
@@ -517,6 +526,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         <h1 class="dash-title">Mes <em>simulations</em></h1>
         <p class="dash-sub" id="dash-sub">0 simulation</p>
       </div>
+      <button class="btn-new" onclick="newSimulation()">+ Nouvelle simulation</button>
     </div>
     <div id="sims-container"></div>
   </div>
@@ -1164,25 +1174,6 @@ initSliders();
 // Save popup
 function showSavePopup(){document.getElementById('save-popup').style.display='flex';}
 function closeSavePopup(){document.getElementById('save-popup').style.display='none';}
-function goToSaveStep2() {
-  const prenom = document.getElementById("save-prenom").value.trim();
-  const email = document.getElementById("save-email").value.trim();
-  const pwd = document.getElementById("save-pwd").value;
-  const biens = document.getElementById("save-biens").value;
-
-  if (!prenom || !email || !email.includes("@") || pwd.length < 6 || !biens) {
-    alert("Remplissez tous les champs");
-    return;
-  }
-
-  document.getElementById("save-step-1").style.display = "none";
-  document.getElementById("save-step-2").style.display = "flex";
-}
-
-function goToSaveStep1() {
-  document.getElementById("save-step-2").style.display = "none";
-  document.getElementById("save-step-1").style.display = "flex";
-}
 function doSaveAccount(){
   var p=document.getElementById('save-prenom').value.trim();
   var e=document.getElementById('save-email').value.trim();
@@ -1221,187 +1212,48 @@ saveSimulation = function(){
 </script>
 
 <!-- SAVE POPUP -->
-<div id="save-popup" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px" onclick="if(event.target === this) closeSavePopup()">
-  <div style="background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:clamp(16px,5vw,36px);max-width:90vw;max-width:clamp(280px,90vw,420px);width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.1)" onclick="event.stopPropagation()">
+<div id="save-popup" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px">
+  <div style="background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:36px;max-width:420px;width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.1)">
     <button onclick="closeSavePopup()" style="position:absolute;top:14px;right:14px;background:none;border:none;font-size:18px;color:var(--muted);cursor:pointer">×</button>
-    
-    <!-- ÉTAPE 1 : AUTH -->
-    <div id="save-step-1" style="display:flex;flex-direction:column;gap:8px">
-      <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:12px">Sauvegarder</div>
-      <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px">Créez un compte</div>
-      <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">Retrouvez vos simulations sur tous vos appareils et partagez-les.</p>
+    <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:12px">Sauvegarder</div>
+    <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px">Créez un compte pour sauvegarder</div>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">Retrouvez vos simulations sur tous vos appareils et partagez-les.</p>
+    <div style="display:flex;flex-direction:column;gap:8px">
       <input type="text" id="save-prenom" placeholder="Prénom" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
       <input type="email" id="save-email" placeholder="Email" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
       <input type="password" id="save-pwd" placeholder="Mot de passe (6 car. min)" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
-      <select id="save-biens" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none"><option value="">Nombre de biens en LCD</option><option value="0">Je n'ai pas encore de bien</option><option value="1">1 bien</option><option value="2-3">2 à 3 biens</option><option value="4-5">4 à 5 biens</option><option value="6+">6 biens ou plus</option></select>
-      <button onclick="goToSaveStep2()" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;margin-top:4px">Sauvegarder</button>
-    </div>
-    
-    <!-- ÉTAPE 2 : NEWSLETTER -->
-    <div id="save-step-2" style="display:none;flex-direction:column;gap:8px">
-      <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:12px">Newsletter</div>
-      <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px">Les coulisses de 9 biens LCD</div>
-      <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">À 12-18% net et 4h de gestion par mois. Méthode duplicable presque partout en France, chiffres, stratégie, charges réelles, erreurs à éviter — chaque jeudi à 7h30. Pas de théorie, que du terrain.</p>
-      <label style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--muted);cursor:pointer;margin-bottom:20px">
-        <input type="checkbox" id="save-nl-optin" style="width:16px;height:16px;accent-color:var(--green);margin-top:4px">
-        <span>Oui, je veux recevoir la newsletter chaque jeudi à 7h30</span>
+      <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);cursor:pointer;margin-top:4px">
+        <input type="checkbox" id="save-nl-optin" style="width:16px;height:16px;accent-color:var(--green)">
+        Recevoir la newsletter LCD chaque jeudi
       </label>
-      <button onclick="doSaveAccount()" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer">Valider et sauvegarder</button>
-      <button onclick="goToSaveStep1()" style="padding:14px;background:transparent;color:var(--muted);border:1px solid var(--border);border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer">Retour</button>
+      <button onclick="doSaveAccount()" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;margin-top:4px">Créer mon compte et sauvegarder</button>
     </div>
-    
     <p style="font-size:11px;color:var(--muted2);text-align:center;margin-top:12px">Données privées · Gratuit · Désinscription en un clic</p>
   </div>
 </div>
-<!-- AUTH SCRIPT -->
-<script>
-let currentUser = null;
 
-function getAllSliderValues() {
-  return {
-    prix: parseFloat(document.getElementById('s-prix').value || 0),
-    surface: parseFloat(document.getElementById('s-surface').value || 0),
-    travaux: parseFloat(document.getElementById('s-travaux').value || 0),
-    ameu: parseFloat(document.getElementById('s-ameu').value || 0),
-    apport: parseFloat(document.getElementById('s-apport').value || 0),
-    duree: parseFloat(document.getElementById('s-duree').value || 0),
-    taux: parseFloat(document.getElementById('s-taux').value || 0),
-    nuit: parseFloat(document.getElementById('s-nuit').value || 0),
-    occu: parseFloat(document.getElementById('s-occu').value || 0),
-    commission: parseFloat(document.getElementById('s-commission').value || 0),
-    menage: parseFloat(document.getElementById('s-menage').value || 0),
-    blanc: parseFloat(document.getElementById('s-blanc').value || 0),
-    eau: parseFloat(document.getElementById('s-eau').value || 0),
-    elec: parseFloat(document.getElementById('s-elec').value || 0),
-    internet: parseFloat(document.getElementById('s-internet').value || 0),
-    consommables: parseFloat(document.getElementById('s-consommables').value || 0),
-    logiciel: parseFloat(document.getElementById('s-logiciel').value || 0),
-    comptable: parseFloat(document.getElementById('s-comptable').value || 0),
-    fonciere: parseFloat(document.getElementById('s-fonciere').value || 0),
-    copro: parseFloat(document.getElementById('s-copro').value || 0)
-  };
-}
+<!-- SHARE POPUP -->
+<div id="share-popup" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px">
+  <div style="background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:36px;max-width:420px;width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.1)">
+    <button onclick="closeSharePopup()" style="position:absolute;top:14px;right:14px;background:none;border:none;font-size:18px;color:var(--muted);cursor:pointer">×</button>
+    <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:12px">Partager</div>
+    <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px">Partagez cette simulation</div>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">Le destinataire verra la simulation avec toutes les valeurs. Il pourra la modifier et la sauvegarder dans son propre espace (compte gratuit).</p>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <input type="email" id="share-email" placeholder="Email du destinataire" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
+      <input type="text" id="share-message" placeholder="Message (optionnel)" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
+      <button onclick="doShare()" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;margin-top:4px">Envoyer l'invitation →</button>
+    </div>
+    <div id="share-success" style="display:none;margin-top:12px;padding:12px;background:rgba(63,189,113,0.08);border:1px solid rgba(63,189,113,0.25);border-radius:8px;color:var(--green);font-size:14px;font-weight:500;text-align:center">✓ Invitation envoyée ! Le destinataire recevra un lien par email.</div>
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)">
+      <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Ou copier le lien (accès sans compte) :</div>
+      <div style="display:flex;gap:6px">
+        <input type="text" id="share-link" value="https://enomia.app/simulateur/s/abc123" readonly style="flex:1;padding:10px 12px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--muted);font-family:var(--font-body);font-size:12px;outline:none">
+        <button onclick="copyShareLink()" id="copy-link-btn" style="padding:10px 16px;background:var(--mid);border:1px solid var(--border);border-radius:8px;font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--white);cursor:pointer">Copier</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-function restoreSliderValues(data) {
-  Object.keys(data).forEach(key => {
-    const input = document.getElementById('s-' + key);
-    if (input) {
-      input.value = data[key];
-      if (typeof sv === 'function') sv(key, data[key]);
-    }
-  });
-  if (typeof recalculate === 'function') recalculate();
-}
-
-async function doSaveAccount() {
-  const prenom = document.getElementById('save-prenom').value.trim();
-  const email = document.getElementById('save-email').value.trim();
-  const pwd = document.getElementById('save-pwd').value;
-  const biens = document.getElementById('save-biens').value;
-  const nl = document.getElementById('save-nl-optin').checked;
-
-  if (!prenom || !email || !email.includes('@') || pwd.length < 6 || !biens) {
-    alert('Remplissez tous les champs');
-    return;
-  }
-
-  const response = await fetch('/api/auth', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      action: 'signup',
-      email,
-      password: pwd,
-      firstName: prenom,
-      nombreBiens: biens
-    })
-  });
-
-  if (response.ok) {
-    const { userId } = await response.json();
-    currentUser = { userId, email, firstName: prenom };
-    localStorage.setItem('enomia_user', JSON.stringify(currentUser));
-    closeSavePopup();
-    saveSimulationToDB();
-  } else {
-    const err = await response.json();
-    alert('Erreur : ' + (err.error || 'Impossible de créer le compte'));
-  }
-}
-
-async function saveSimulationToDB() {
-  if (!currentUser) {
-    showSavePopup();
-    return;
-  }
-
-  const simName = prompt('Nom de ta simulation :');
-  if (!simName) return;
-
-  const response = await fetch('/api/simulations', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      action: 'save',
-      userId: currentUser.userId,
-      simulationName: simName,
-      simulationData: getAllSliderValues()
-    })
-  });
-
-  if (response.ok) {
-    const { simulationId } = await response.json();
-    alert('Simulation sauvegardée !');
-    document.getElementById('share-link').value = window.location.origin + '/simulateur-rentabilite-airbnb?sim=' + simulationId;
-    showSharePopup();
-  } else {
-    const err = await response.json();
-    alert('Erreur : ' + (err.error || 'Impossible de sauvegarder'));
-  }
-}
-
-async function doShare() {
-  const email = document.getElementById('share-email').value.trim();
-  if (!email || !email.includes('@')) {
-    alert('Email invalide');
-    return;
-  }
-
-  const shareLink = document.getElementById('share-link').value;
-  const mailtoLink = 'mailto:' + email + '?subject=Regarde ma simulation LCD&body=' + encodeURIComponent(shareLink);
-  window.location.href = mailtoLink;
-  document.getElementById('share-success').style.display = 'block';
-}
-
-function copyShareLink() {
-  const link = document.getElementById('share-link').value;
-  navigator.clipboard.writeText(link);
-  const btn = document.getElementById('copy-link-btn');
-  btn.textContent = '✓ Copié';
-  setTimeout(() => { btn.textContent = 'Copier'; }, 2000);
-}
-
-function showSavePopup() { document.getElementById('save-popup').style.display = 'flex'; document.getElementById('save-step-1').style.display = 'flex'; document.getElementById('save-step-2').style.display = 'none'; }
-function closeSavePopup() { document.getElementById('save-popup').style.display = 'none'; }
-function showSharePopup() { document.getElementById('share-popup').style.display = 'flex'; }
-function closeSharePopup() { document.getElementById('share-popup').style.display = 'none'; document.getElementById('share-success').style.display = 'none'; }
-
-window.addEventListener('load', () => {
-  const saved = localStorage.getItem('enomia_user');
-  if (saved) {
-    currentUser = JSON.parse(saved);
-  }
-
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('sim')) {
-    fetch('/api/simulations', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'get', simulationId: params.get('sim') })
-    })
-    .then(r => r.json())
-    .then(d => { if (d.simulation) restoreSliderValues(d.simulation.data); })
-    .catch(e => console.error('Erreur chargement simulation:', e));
-  }
-});
-</script>
+</body>
+</html>

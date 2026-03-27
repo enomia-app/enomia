@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enomia — La gestion locative courte durée, repensée par l'IA.</title>
+<meta name="description" content="Enomia est le logiciel de gestion locative courte durée pensé pour les propriétaires solo. IA conversationnelle, zéro double booking, +24% de revenus en moyenne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #2b2d2b;
+  --bg-header: #333533;
+  --bg-input: #262826;
+  --border: #3e403e;
+  --border-light: #4a4c4a;
+  --text: #e8e4dc;
+  --text-muted: #9a9690;
+  --text-dim: #6e6b65;
+  --green: #4ade80;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ═══ HEADER ═══ */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 72px;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px;
+}
+
+.logo-icon .bar {
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  border-radius: 1px;
+}
+
+.logo-icon .bar:nth-child(2) {
+  width: 70%;
+  align-self: flex-start;
+}
+
+.logo-identity {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.logo-tagline {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.nav-center {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-center a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.nav-center a:hover { opacity: 0.7; }
+
+.btn-cta {
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border: 1.5px solid var(--border-light);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 100px;
+  transition: all 0.2s;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-cta:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: var(--text-muted);
+}
+
+/* ═══ HERO ═══ */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px 60px;
+  min-height: calc(100vh - 72px - 64px);
+}
+
+.hero {
+  max-width: 740px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.hero-subtitle {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 44px;
+  letter-spacing: -0.01em;
+}
+
+/* ─── Email capture ─── */
+.waitlist {
+  width: 100%;
+  max-width: 520px;
+  margin-bottom: 16px;
+}
+
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.waitlist-row {
+  display: flex;
+  gap: 10px;
+}
+
+.waitlist-input {
+  flex: 1;
+  padding: 14px 18px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.waitlist-input::placeholder {
+  color: var(--text-dim);
+}
+
+.waitlist-input:focus {
+  border-color: var(--border-light);
+}
+
+.waitlist-select {
+  flex: 1;
+  padding: 14px 18px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.2s;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236e6b65' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.waitlist-select:focus {
+  border-color: var(--border-light);
+}
+
+.waitlist-btn {
+  padding: 14px 24px;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+  width: 100%;
+}
+
+.waitlist-btn:hover {
+  opacity: 0.88;
+}
+
+/* Success state */
+.waitlist-success {
+  display: none;
+  padding: 14px 18px;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  border-radius: 10px;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.waitlist-success.show {
+  display: block;
+}
+
+.waitlist-form.hide {
+  display: none;
+}
+
+/* ─── Status ─── */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 64px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.status-text {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ─── Metrics ─── */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 860px;
+}
+
+.metric {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.metric-value {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.metric-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ═══ FOOTER ═══ */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-top: 1px solid var(--border);
+  min-height: 64px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px;
+}
+
+.footer-logo-icon .bar {
+  width: 100%;
+  height: 1.5px;
+  background: var(--text);
+  border-radius: 1px;
+}
+
+.footer-logo-icon .bar:nth-child(2) {
+  width: 70%;
+  align-self: flex-start;
+}
+
+.footer-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.footer-right a {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footer-right a:hover { color: var(--text); }
+
+.footer-copy {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+  header { padding: 0 20px; height: 64px; }
+  .logo-tagline { display: none; }
+  .nav-center { gap: 20px; }
+  .nav-center a { font-size: 14px; }
+  .btn-cta { font-size: 13px; padding: 8px 18px; }
+  main { padding: 60px 20px 40px; }
+  .hero-title { margin-bottom: 12px; }
+  .hero-subtitle { margin-bottom: 36px; }
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+  footer { padding: 16px 20px; flex-direction: column; gap: 12px; }
+  .waitlist-row { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .btn-cta { display: none; }
+  .nav-center { gap: 16px; }
+  .nav-center a { font-size: 13px; }
+  .metric-value { font-size: 28px; }
+  .metric-desc { font-size: 13px; }
+}
+
+/* ─── Animations ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-title { animation: fadeUp 0.5s ease 0.1s both; }
+.hero-subtitle { animation: fadeUp 0.5s ease 0.2s both; }
+.waitlist { animation: fadeUp 0.5s ease 0.3s both; }
+.status { animation: fadeUp 0.5s ease 0.4s both; }
+.metrics { animation: fadeUp 0.5s ease 0.5s both; }
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <a class="logo" href="/">
+    <div class="logo-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="logo-identity">
+      <span class="logo-name">Enomia</span>
+      <span class="logo-tagline">Un flux parfait. Pour tous.</span>
+    </div>
+  </a>
+
+  <nav class="nav-center">
+    <a href="/blog">Blog</a>
+    <a href="/simulateur">Simulateur LCD</a>
+  </nav>
+
+  <a class="btn-cta" href="#waitlist">Accéder à la beta →</a>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<main>
+  <div class="hero">
+
+    <h1 class="hero-title">
+      La gestion locative courte durée,<br>repensée par l'IA.
+    </h1>
+
+    <p class="hero-subtitle">
+      Moins de gestion. Plus de revenus.
+    </p>
+
+    <!-- Email capture — waitlist -->
+    <div class="waitlist" id="waitlist">
+      <div class="waitlist-form" id="waitlistForm">
+        <div class="waitlist-row">
+          <input
+            type="text"
+            class="waitlist-input"
+            id="waitlistName"
+            placeholder="Prénom"
+            required
+          >
+          <input
+            type="email"
+            class="waitlist-input"
+            id="waitlistEmail"
+            placeholder="Email"
+            required
+          >
+        </div>
+        <select class="waitlist-select" id="waitlistBiens">
+          <option value="" disabled selected>Nombre de biens en LCD</option>
+          <option value="0">Je n'ai pas encore de bien</option>
+          <option value="1">1 bien</option>
+          <option value="2-3">2 à 3 biens</option>
+          <option value="4-5">4 à 5 biens</option>
+          <option value="6+">6 biens ou plus</option>
+        </select>
+        <button class="waitlist-btn" id="waitlistBtn" onclick="submitWaitlist()">
+          Rejoindre la liste d'attente
+        </button>
+      </div>
+      <div class="waitlist-success" id="waitlistSuccess">
+        ✓ Vous êtes sur la liste. On vous contacte très vite.
+      </div>
+    </div>
+
+    <div class="status">
+      <div class="status-dot"></div>
+      <span class="status-text">Beta en cours de construction</span>
+    </div>
+
+    <!-- 4 metrics -->
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-value">+24%</div>
+        <div class="metric-desc">de revenus en<br>moyenne par<br>logement</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">8h</div>
+        <div class="metric-desc">de gestion en moins<br>par logement<br>chaque mois</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">0</div>
+        <div class="metric-desc">double booking<br>avec API en<br>temps réel</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">100%</div>
+        <div class="metric-desc">configuré et piloté<br>par l'IA<br>conversationnelle</div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-left">
+    <div class="footer-logo-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <span class="footer-name">Enomia</span>
+  </div>
+  <div class="footer-right">
+    <a href="/blog">Blog</a>
+    <a href="/simulateur">Simulateur rentabilité Airbnb</a>
+    <span class="footer-copy">© Enomia 2026</span>
+  </div>
+</footer>
+
+<!-- ═══ WAITLIST SCRIPT ═══ -->
+<script>
+function submitWaitlist() {
+  const name = document.getElementById('waitlistName').value.trim();
+  const email = document.getElementById('waitlistEmail').value.trim();
+  const biens = document.getElementById('waitlistBiens').value;
+  if (!name || !email || !email.includes('@') || !biens) return;
+
+  // TODO: Replace with Beehiiv API call
+  // POST to Beehiiv with tag based on nb biens
+  // Tags: "0_bien", "1_bien", "2-3_biens", "4-5_biens", "6+_biens"
+  // + tag "sequence_waitlist_beta"
+  // Example:
+  // fetch('https://api.beehiiv.com/v2/publications/YOUR_PUB_ID/subscriptions', {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer YOUR_API_KEY' },
+  //   body: JSON.stringify({
+  //     email,
+  //     custom_fields: [{ name: 'first_name', value: name }, { name: 'nb_biens', value: biens }],
+  //     tags: ['sequence_waitlist_beta', biens + '_biens']
+  //   })
+  // })
+
+  document.getElementById('waitlistForm').classList.add('hide');
+  document.getElementById('waitlistSuccess').classList.add('show');
+}
+
+// Allow Enter key on last field
+document.getElementById('waitlistBiens').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    submitWaitlist();
+  }
+});
+</script>
+
+</body>
+</html>

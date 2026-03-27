@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Enomia — Maquette Design Unique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f7f6f3;
+  --bg-card: #ffffff;
+  --bg-elevated: #ffffff;
+  --bg-dark: #2b2d2b;
+  --bg-dark-soft: #343634;
+  --border: #e5e3de;
+  --border-dark: #3e403e;
+  --text: #1a1a1a;
+  --text-secondary: #52524e;
+  --text-tertiary: #8a8985;
+  --text-light: #e8e4dc;
+  --text-dim: #6e6b65;
+  --green: #3fbd71;
+  --green-soft: rgba(63,189,113,0.08);
+  --font: 'Inter', -apple-system, sans-serif;
+  --serif: 'Newsreader', Georgia, serif;
+  --max-w: 1120px;
+  --radius: 10px;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--font); font-weight: 400; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+
+.page { display: none; }
+.page.active { display: block; }
+
+/* ═══ PAGE SWITCHER ═══ */
+.page-switch { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 999; display: flex; gap: 4px; background: var(--bg-dark); padding: 4px; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+.page-switch button { font-family: var(--font); font-size: 12px; font-weight: 600; padding: 8px 16px; border: none; background: transparent; color: var(--text-dim); cursor: pointer; border-radius: 7px; transition: all 0.15s; white-space: nowrap; }
+.page-switch button.active { background: rgba(255,255,255,0.12); color: var(--text-light); }
+
+/* ═══ HEADER ═══ */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(247,246,243,0.88);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: var(--max-w); margin: 0 auto;
+  padding: 0 32px; height: 64px;
+}
+
+.logo { display: flex; align-items: center; gap: 11px; }
+.logo-icon { width: 32px; height: 32px; background: var(--bg-dark); border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 7px; }
+.logo-icon .bar { width: 100%; height: 1.5px; background: var(--text-light); border-radius: 1px; }
+.logo-icon .bar:nth-child(2) { width: 65%; align-self: flex-start; }
+.logo-name { font-size: 16px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+
+.nav { display: flex; align-items: center; gap: 6px; }
+.nav a { font-size: 13px; font-weight: 500; color: var(--text-secondary); padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+.nav a:hover { color: var(--text); background: rgba(0,0,0,0.03); }
+.nav a.active { color: var(--text); background: rgba(0,0,0,0.04); font-weight: 600; }
+.nav-cta { font-size: 13px; font-weight: 600; padding: 7px 16px; background: var(--bg-dark); color: #ffffff !important; border-radius: 8px; margin-left: 8px; transition: opacity 0.15s; }
+.nav-cta:hover { opacity: 0.88; color: #ffffff !important; }
+
+/* Category pills */
+.cat-bar { max-width: var(--max-w); margin: 0 auto; padding: 12px 32px; display: flex; gap: 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.cat-pill { font-size: 12px; font-weight: 500; color: var(--text-tertiary); padding: 6px 14px; border: 1px solid var(--border); border-radius: 100px; white-space: nowrap; transition: all 0.15s; cursor: pointer; background: transparent; font-family: var(--font); }
+.cat-pill:hover { border-color: var(--text-tertiary); color: var(--text-secondary); }
+.cat-pill.active { background: var(--bg-dark); color: #fff; border-color: var(--bg-dark); }
+
+/* Featured author row */
+.featured-author { display: flex; align-items: center; gap: 10px; }
+.featured-author-photo { width: 32px; height: 32px; border-radius: 50%; background: #c4c2bc; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.featured-author-photo span { font-size: 11px; color: var(--text-tertiary); }
+.featured-author-info { font-size: 13px; }
+.featured-author-name { font-weight: 600; color: var(--text); }
+.featured-author-bio { font-size: 12px; color: var(--text-tertiary); }
+
+/* Category hero author */
+.cat-author { display: flex; align-items: center; gap: 14px; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+.cat-author-photo { width: 48px; height: 48px; border-radius: 50%; background: #c4c2bc; border: 2px solid var(--border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.cat-author-photo span { font-size: 11px; color: var(--text-tertiary); }
+.cat-author-info { }
+.cat-author-name { font-size: 15px; font-weight: 600; color: var(--text); }
+.cat-author-bio { font-size: 13px; color: var(--text-secondary); line-height: 1.45; }
+
+/* Article date updated */
+.author-date-updated { color: var(--green); font-size: 12px; font-weight: 500; }
+
+/* Mobile sidebar before related */
+
+/* Rating widget */
+.rating-widget {
+  margin-top: 40px;
+  padding: 28px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.rating-label { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 14px; }
+.rating-stars { display: flex; justify-content: center; gap: 6px; margin-bottom: 12px; }
+.rating-star {
+  width: 36px; height: 36px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.rating-star:hover { transform: scale(1.15); }
+.rating-star svg { width: 36px; height: 36px; }
+.rating-star .star-empty { fill: var(--border); }
+.rating-star .star-filled { fill: #f0b429; }
+.rating-star.active .star-empty { fill: #f0b429; }
+.rating-result {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.rating-score { font-weight: 700; color: var(--text); font-size: 14px; }
+.rating-stars-mini { color: #f0b429; font-size: 13px; letter-spacing: 1px; }
+.rating-thanks {
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--green);
+  margin-top: 8px;
+}
+
+/* ═══ LAYOUT ═══ */
+.wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; }
+
+/* ═══════════════════════
+   ACCUEIL BLOG
+═══════════════════════ */
+
+/* Hero featured */
+.blog-hero {
+  padding: 48px 0 0;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.featured:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+
+.featured-img {
+  aspect-ratio: 4/3;
+  background: linear-gradient(145deg, #e0ded8 0%, #cccac4 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.featured-img span { font-size: 12px; color: var(--text-tertiary); }
+
+.featured-body {
+  padding: 36px 32px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.tag { display: inline-flex; align-items: center; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--green); background: var(--green-soft); padding: 4px 10px; border-radius: 4px; width: fit-content; margin-bottom: 14px; }
+
+.featured-title {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.featured:hover .featured-title { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+.featured-excerpt { font-size: 15px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 16px; }
+
+.meta { font-size: 12px; color: var(--text-tertiary); display: flex; align-items: center; gap: 10px; }
+.meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--text-tertiary); }
+
+/* NL Inline */
+.nl-block {
+  background: var(--bg-dark);
+  border-radius: 14px;
+  padding: 36px 32px;
+  margin: 40px 0;
+}
+
+.nl-row {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nl-content { flex: 1; }
+
+.nl-tag { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-bottom: 10px; }
+.nl-title { font-size: 20px; font-weight: 700; color: var(--text-light); line-height: 1.3; margin-bottom: 6px; }
+.nl-desc { font-size: 13px; color: var(--text-dim); line-height: 1.55; }
+
+.nl-form-wrap { flex: 1; max-width: 360px; }
+.nl-form { display: flex; flex-direction: column; gap: 8px; }
+.nl-input { padding: 11px 14px; background: rgba(255,255,255,0.06); border: 1px solid var(--border-dark); border-radius: 8px; color: var(--text-light); font-family: var(--font); font-size: 13px; outline: none; transition: border-color 0.2s; }
+.nl-input::placeholder { color: var(--text-dim); }
+.nl-input:focus { border-color: var(--text-dim); }
+.nl-btn { padding: 11px 18px; background: var(--text-light); color: var(--bg-dark); border: none; border-radius: 8px; font-family: var(--font); font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity 0.15s; }
+.nl-btn:hover { opacity: 0.88; }
+.nl-note { font-size: 11px; color: var(--text-dim); margin-top: 8px; }
+
+/* Section header */
+.sec-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px; }
+.sec-title { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-tertiary); }
+.sec-link { font-size: 13px; font-weight: 500; color: var(--text-tertiary); }
+.sec-link:hover { color: var(--text); }
+
+/* Card grid */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 56px; }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+.card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); transform: translateY(-2px); }
+
+.card-img {
+  aspect-ratio: 16/10;
+  background: linear-gradient(145deg, #e4e2dc 0%, #d5d3cd 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.card-img span { font-size: 11px; color: var(--text-tertiary); }
+
+.card-body { padding: 18px 20px 20px; }
+
+.card-cat { font-size: 11px; font-weight: 600; color: var(--green); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+
+.card-title {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.card:hover .card-title { text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+
+.card-excerpt { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 12px; }
+.card-meta { font-size: 12px; color: var(--text-tertiary); }
+
+/* ═══════════════════════
+   PAGE CATÉGORIE
+═══════════════════════ */
+.cat-hero { padding: 48px 0 32px; }
+.cat-title { font-family: var(--serif); font-size: 36px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 8px; }
+.cat-desc { font-size: 16px; color: var(--text-secondary); max-width: 500px; line-height: 1.6; }
+
+/* ═══════════════════════
+   PAGE ARTICLE
+═══════════════════════ */
+.article-wrap {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  grid-template-rows: auto auto;
+  gap: 48px 48px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 40px 32px 0;
+}
+
+.article-main { max-width: 720px; grid-column: 1; grid-row: 1; }
+.sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 20px; grid-column: 2; grid-row: 1 / 3; }
+.related { grid-column: 1; grid-row: 2; padding-top: 32px; border-top: 1px solid var(--border); }
+
+.article-breadcrumb { font-size: 12px; color: var(--text-tertiary); margin-bottom: 20px; }
+.article-breadcrumb a { color: var(--text-tertiary); }
+.article-breadcrumb a:hover { color: var(--text); }
+
+.article-h1 {
+  font-family: var(--serif);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+/* Author block */
+.author-block {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 8px;
+}
+.author-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-dark); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: var(--text-light); }
+.author-info { font-size: 14px; }
+.author-name { font-weight: 600; color: var(--text); }
+.author-date { color: var(--text-tertiary); font-size: 13px; }
+
+.author-bio-line { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; font-style: italic; }
+
+/* Credibility bar */
+.cred-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.cred-item {
+  text-align: center;
+  padding: 14px 8px;
+  border-right: 1px solid var(--border);
+  background: var(--bg-card);
+}
+.cred-item:last-child { border-right: none; }
+.cred-value { font-size: 17px; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+.cred-label { font-size: 10px; color: var(--text-tertiary); margin-top: 2px; line-height: 1.3; }
+
+/* Article cover */
+.article-cover {
+  aspect-ratio: 16/9;
+  background: linear-gradient(145deg, #e0ded8 0%, #cccac4 100%);
+  border-radius: 12px;
+  margin-bottom: 36px;
+  display: flex; align-items: center; justify-content: center;
+}
+.article-cover span { font-size: 12px; color: var(--text-tertiary); }
+
+/* Article body */
+.article-body h2 { font-family: var(--serif); font-size: 24px; font-weight: 600; margin: 36px 0 14px; letter-spacing: -0.01em; }
+.article-body h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; }
+.article-body p { font-size: 16px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 18px; }
+.article-body blockquote { border-left: 3px solid var(--green); padding: 16px 24px; margin: 28px 0; background: var(--green-soft); border-radius: 0 var(--radius) var(--radius) 0; font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--text); line-height: 1.6; }
+
+/* Related is styled in article-wrap grid */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+/* ─── Sidebar ─── */
+.sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 20px; }
+
+/* Sidebar simulateur */
+.sb-sim { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 20px; }
+.sb-sim-icon { width: 34px; height: 34px; background: var(--bg-dark); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+.sb-sim-icon svg { width: 16px; height: 16px; color: var(--text-light); }
+.sb-sim-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+.sb-sim-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 14px; }
+.sb-sim-stats { display: flex; gap: 0; margin-bottom: 14px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.sb-sim-stat { flex: 1; text-align: center; padding: 10px 6px; border-right: 1px solid var(--border); }
+.sb-sim-stat:last-child { border-right: none; }
+.sb-sim-stat-val { font-size: 15px; font-weight: 800; }
+.sb-sim-stat-lbl { font-size: 9px; color: var(--text-tertiary); margin-top: 1px; line-height: 1.2; }
+.sb-sim-btn { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 10px; background: var(--bg-dark); color: #fff; border: none; border-radius: 8px; font-family: var(--font); font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity 0.15s; }
+.sb-sim-btn:hover { opacity: 0.88; }
+.sb-sim-btn svg { width: 14px; height: 14px; }
+
+/* Sidebar NL */
+.sb-nl { background: var(--bg-dark); border-radius: var(--radius); padding: 22px 20px; }
+.sb-nl-tag { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+.sb-nl-title { font-size: 14px; font-weight: 600; color: var(--text-light); line-height: 1.35; margin-bottom: 6px; }
+.sb-nl-desc { font-size: 11px; color: var(--text-dim); line-height: 1.5; margin-bottom: 12px; }
+.sb-nl input { width: 100%; padding: 9px 12px; background: rgba(255,255,255,0.06); border: 1px solid var(--border-dark); border-radius: 6px; color: var(--text-light); font-family: var(--font); font-size: 12px; margin-bottom: 6px; outline: none; }
+.sb-nl input::placeholder { color: var(--text-dim); }
+.sb-nl button { width: 100%; padding: 9px; background: var(--text-light); color: var(--bg-dark); border: none; border-radius: 6px; font-family: var(--font); font-size: 12px; font-weight: 600; cursor: pointer; }
+.sb-nl-note { font-size: 10px; color: var(--text-dim); margin-top: 8px; text-align: center; }
+
+/* ═══ HOMEPAGE APP (scoped with .hp) ═══ */
+.hp { background: #2b2d2b; color: #e8e4dc; }
+.hp-header { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 72px; background: #333533; border-bottom: 1px solid #3e403e; }
+.hp-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.hp-logo-icon { width: 42px; height: 42px; background: #262826; border: 1px solid #3e403e; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 10px; }
+.hp-logo-icon .bar { width: 100%; height: 2px; background: #e8e4dc; border-radius: 1px; }
+.hp-logo-icon .bar:nth-child(2) { width: 70%; align-self: flex-start; }
+.hp-logo-name { font-size: 18px; font-weight: 700; color: #e8e4dc; line-height: 1.2; }
+.hp-logo-tag { font-size: 12px; color: #6e6b65; }
+.hp-nav { display: flex; gap: 32px; align-items: center; }
+.hp-nav a { font-size: 15px; font-weight: 500; color: #e8e4dc; text-decoration: none; }
+.hp-btn { font-size: 15px; font-weight: 600; padding: 10px 24px; border: 1.5px solid #4a4c4a; background: transparent; color: #e8e4dc; border-radius: 100px; text-decoration: none; transition: all 0.2s; }
+.hp-btn:hover { background: rgba(255,255,255,0.06); }
+.hp-hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 24px 60px; min-height: calc(100vh - 72px - 64px); }
+.hp-title { font-size: clamp(32px, 5vw, 48px); font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 16px; color: #e8e4dc; }
+.hp-sub { font-size: clamp(18px, 2.5vw, 24px); font-weight: 500; color: #9a9690; margin-bottom: 44px; }
+.hp-waitlist { width: 100%; max-width: 520px; margin-bottom: 16px; }
+.hp-form { display: flex; flex-direction: column; gap: 10px; }
+.hp-row { display: flex; gap: 10px; }
+.hp-input { flex: 1; padding: 14px 18px; background: #262826; border: 1px solid #3e403e; border-radius: 10px; color: #e8e4dc; font-family: var(--font); font-size: 15px; outline: none; }
+.hp-input::placeholder { color: #6e6b65; }
+.hp-select { flex: 1; padding: 14px 18px; background: #262826; border: 1px solid #3e403e; border-radius: 10px; color: #e8e4dc; font-family: var(--font); font-size: 15px; outline: none; -webkit-appearance: none; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236e6b65' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+.hp-submit { padding: 14px; background: #e8e4dc; color: #2b2d2b; border: none; border-radius: 10px; font-family: var(--font); font-size: 14px; font-weight: 600; cursor: pointer; width: 100%; }
+.hp-submit:hover { opacity: 0.88; }
+.hp-success { display: none; padding: 14px; background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.25); border-radius: 10px; color: #4ade80; font-size: 14px; font-weight: 500; text-align: center; }
+.hp-success.show { display: block; }
+.hp-form.hide { display: none; }
+.hp-status { display: flex; align-items: center; gap: 8px; margin-bottom: 64px; }
+.hp-dot { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; animation: pulse 2s ease infinite; }
+.hp-status-text { font-size: 14px; color: #9a9690; }
+.hp-metrics { display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; max-width: 860px; }
+.hp-metric { text-align: center; padding: 24px 16px; }
+.hp-metric-val { font-size: clamp(32px, 4vw, 44px); font-weight: 800; letter-spacing: -0.02em; color: #e8e4dc; margin-bottom: 12px; }
+.hp-metric-desc { font-size: 14px; color: #9a9690; line-height: 1.5; }
+.hp-footer { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; border-top: 1px solid #3e403e; }
+.hp-footer-left { display: flex; align-items: center; gap: 12px; }
+.hp-footer-logo { width: 32px; height: 32px; background: #262826; border: 1px solid #3e403e; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 7px; }
+.hp-footer-logo .bar { width: 100%; height: 1.5px; background: #e8e4dc; border-radius: 1px; }
+.hp-footer-logo .bar:nth-child(2) { width: 70%; align-self: flex-start; }
+.hp-footer-name { font-size: 15px; font-weight: 600; color: #e8e4dc; }
+.hp-footer-right { display: flex; align-items: center; gap: 28px; font-size: 14px; }
+.hp-footer-right a { color: #9a9690; text-decoration: none; }
+.hp-footer-right a:hover { color: #e8e4dc; }
+.hp-footer-copy { color: #6e6b65; }
+
+@media (max-width: 768px) {
+  .hp-header { padding: 0 20px; }
+  .hp-hero { padding: 60px 20px 40px; }
+  .hp-metrics { grid-template-columns: repeat(2, 1fr); }
+  .hp-row { flex-direction: column; }
+  .hp-footer { padding: 16px 20px; flex-direction: column; gap: 12px; }
+  .hp-logo-tag { display: none; }
+}
+@media (max-width: 480px) {
+  .hp-btn { display: none; }
+  .hp-nav { gap: 16px; }
+  .hp-nav a { font-size: 13px; }
+}
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 64px;
+}
+.footer-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: var(--max-w); margin: 0 auto;
+  padding: 20px 32px;
+}
+.footer-left { display: flex; align-items: center; gap: 10px; }
+.footer-logo { width: 26px; height: 26px; background: var(--bg-dark); border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 6px; }
+.footer-logo .bar { width: 100%; height: 1.5px; background: var(--text-light); border-radius: 1px; }
+.footer-logo .bar:nth-child(2) { width: 65%; align-self: flex-start; }
+.footer-n { font-size: 14px; font-weight: 600; }
+.footer-right { display: flex; align-items: center; gap: 24px; font-size: 13px; }
+.footer-right a { color: var(--text-tertiary); }
+.footer-right a:hover { color: var(--text); }
+.footer-copy { color: var(--text-tertiary); }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 900px) {
+  .featured { grid-template-columns: 1fr; }
+  .featured-img { aspect-ratio: 16/9; }
+  .featured-body { padding: 28px 24px; }
+}
+@media (max-width: 768px) {
+  .header-inner, .wrap, .cat-bar, .footer-inner { padding-left: 20px; padding-right: 20px; }
+  .featured-body { padding: 24px 20px; }
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .nl-row { flex-direction: column; gap: 20px; }
+  .nl-form-wrap { max-width: 100%; width: 100%; }
+  .article-wrap { grid-template-columns: 1fr; padding-left: 20px; padding-right: 20px; gap: 32px; }
+  .article-main { grid-column: 1; grid-row: auto; }
+  .sidebar { position: static; grid-column: 1; grid-row: auto; order: 2; }
+  .related { grid-column: 1; grid-row: auto; order: 3; }
+  .article-main { order: 1; }
+  .cred-bar { grid-template-columns: repeat(2, 1fr); }
+  .cred-item:nth-child(2) { border-right: none; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
+  .footer-right { font-size: 11px; gap: 14px; flex-wrap: wrap; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .grid-3 { grid-template-columns: 1fr; }
+  .nav-cta { font-size: 12px; padding: 6px 12px; }
+  .featured-title { font-size: 22px; }
+  .article-h1 { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Page switcher -->
+<div class="page-switch">
+  <button onclick="showPage('app')">Homepage App</button>
+  <button class="active" onclick="showPage('home')">Accueil blog</button>
+  <button onclick="showPage('category')">Catégorie</button>
+  <button onclick="showPage('article')">Article</button>
+</div>
+
+<!-- ═══════════════════════════════
+     PAGE 0 — HOMEPAGE APP
+═══════════════════════════════ -->
+<div class="page hp" id="page-app">
+  <div class="hp-header">
+    <a class="hp-logo" href="/">
+      <div class="hp-logo-icon"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      <div>
+        <div class="hp-logo-name">Enomia</div>
+        <div class="hp-logo-tag">Un flux parfait. Pour tous.</div>
+      </div>
+    </a>
+    <nav class="hp-nav">
+      <a href="/blog">Blog</a>
+      <a href="/simulateur" class="hp-btn">Simulateur de rentabilité LCD →</a>
+    </nav>
+  </div>
+  <div class="hp-hero">
+    <h1 class="hp-title">La gestion locative courte durée,<br>repensée par l'IA.</h1>
+    <p class="hp-sub">Moins de gestion. Plus de revenus.</p>
+    <div class="hp-waitlist" id="hpWaitlist">
+      <div class="hp-form" id="hpForm">
+        <div class="hp-row">
+          <input type="text" class="hp-input" id="hpName" placeholder="Prénom">
+          <input type="email" class="hp-input" id="hpEmail" placeholder="Email">
+        </div>
+        <select class="hp-select" id="hpBiens">
+          <option value="" disabled selected>Nombre de biens en LCD</option>
+          <option value="0">Je n'ai pas encore de bien</option>
+          <option value="1">1 bien</option>
+          <option value="2-3">2 à 3 biens</option>
+          <option value="4-5">4 à 5 biens</option>
+          <option value="6+">6 biens ou plus</option>
+        </select>
+        <button class="hp-submit" onclick="submitHP()">Rejoindre la liste d'attente</button>
+      </div>
+      <div class="hp-success" id="hpSuccess">✓ Vous êtes sur la liste. On vous contacte très vite.</div>
+    </div>
+    <div class="hp-status">
+      <div class="hp-dot"></div>
+      <span class="hp-status-text">Beta en cours de construction</span>
+    </div>
+    <div class="hp-metrics">
+      <div class="hp-metric"><div class="hp-metric-val">+24%</div><div class="hp-metric-desc">de revenus en<br>moyenne par<br>logement</div></div>
+      <div class="hp-metric"><div class="hp-metric-val">8h</div><div class="hp-metric-desc">de gestion en moins<br>par logement<br>chaque mois</div></div>
+      <div class="hp-metric"><div class="hp-metric-val">0</div><div class="hp-metric-desc">double booking<br>avec API en<br>temps réel</div></div>
+      <div class="hp-metric"><div class="hp-metric-val">100%</div><div class="hp-metric-desc">configuré et piloté<br>par l'IA<br>conversationnelle</div></div>
+    </div>
+  </div>
+  <div class="hp-footer">
+    <div class="hp-footer-left">
+      <div class="hp-footer-logo"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      <span class="hp-footer-name">Enomia</span>
+    </div>
+    <div class="hp-footer-right">
+      <a href="/blog">Blog</a>
+      <a href="/simulateur">Simulateur rentabilité Airbnb</a>
+      <a href="/confidentialite">Confidentialité</a>
+      <span class="hp-footer-copy">© Enomia 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ BLOG HEADER ═══ -->
+<header id="blogHeader">
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <div class="logo-icon"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      <span class="logo-name">Enomia</span>
+    </a>
+    <nav class="nav">
+      <a href="/simulateur" class="nav-cta">Simulateur de rentabilité LCD →</a>
+    </nav>
+  </div>
+  <div class="cat-bar">
+    <button class="cat-pill active" onclick="showPage('home')">Tous</button>
+    <button class="cat-pill" onclick="showPage('category')">Chiffres & Stratégie</button>
+    <button class="cat-pill">Automatiser & Gérer</button>
+    <button class="cat-pill">Lancer & Optimiser</button>
+    <button class="cat-pill">Trouver & Acheter</button>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════
+     PAGE 1 — ACCUEIL BLOG
+═══════════════════════════════ -->
+<div class="page active" id="page-home">
+  <div class="wrap">
+    <div class="blog-hero">
+      <a class="featured" href="#" onclick="showPage('article');return false">
+        <div class="featured-img"><span>Image 4:3</span></div>
+        <div class="featured-body">
+          <div class="tag">Chiffres & Stratégie</div>
+          <div class="featured-title">LCD vs location meublée classique : comparatif réel sur 6 ans de rendements</div>
+          <div class="featured-excerpt">J'ai les chiffres des deux. Rendement net, cash flow, temps de gestion, fiscalité — voici ce que 6 ans d'exploitation m'ont appris sur le vrai écart.</div>
+          <div class="featured-author">
+            <div class="featured-author-photo"><span>Photo</span></div>
+            <div class="featured-author-info">
+              <div class="featured-author-name">Marc · 8 min · 25 mars 2026</div>
+              <div class="featured-author-bio">9 biens LCD · 12-18% net · ~1h de gestion par bien/mois</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- NL Inline after featured -->
+    <div class="nl-block">
+      <div class="nl-row">
+        <div class="nl-content">
+          <div class="nl-tag">Newsletter</div>
+          <div class="nl-title">Les coulisses de 9 biens LCD à 12-18% net et 4h de gestion par mois.</div>
+          <div class="nl-desc">Méthode duplicable presque partout en France, chiffres, stratégie, charges réelles, erreurs à éviter — chaque jeudi à 7h30. Pas de théorie, que du terrain.</div>
+        </div>
+        <div class="nl-form-wrap">
+          <div class="nl-form">
+            <input type="text" class="nl-input" placeholder="Prénom">
+            <input type="email" class="nl-input" placeholder="Email">
+            <button class="nl-btn">S'instruire</button>
+          </div>
+          <div class="nl-note">Un email par semaine. Désinscription en un clic.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Articles grid -->
+    <div class="sec-head">
+      <div class="sec-title">Derniers articles</div>
+      <a href="#" class="sec-link">Voir tous →</a>
+    </div>
+
+    <div class="grid-3">
+      <a class="card" href="#" onclick="showPage('article');return false">
+        <div class="card-img"><span>Image</span></div>
+        <div class="card-body">
+          <div class="card-cat">Automatiser & Gérer</div>
+          <div class="card-title">Channel manager : pourquoi l'API bat l'iCal à chaque fois</div>
+          <div class="card-excerpt">L'iCal synchronise toutes les 15 min. L'API, en temps réel. Sur 4 biens, ça fait 0 vs 3 double bookings par an.</div>
+          <div class="card-meta">6 min de lecture</div>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span>Image</span></div>
+        <div class="card-body">
+          <div class="card-cat">Trouver & Acheter</div>
+          <div class="card-title">Comment je choisis mes biens LCD : la méthode hôtel 2 étoiles</div>
+          <div class="card-excerpt">Se placer à côté des hôtels 2-3 étoiles et proposer mieux. Prix +20%, occupation 95%.</div>
+          <div class="card-meta">5 min de lecture</div>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span>Image</span></div>
+        <div class="card-body">
+          <div class="card-cat">Chiffres & Stratégie</div>
+          <div class="card-title">Simuler son rendement LCD : les 4 erreurs qui faussent tout</div>
+          <div class="card-excerpt">La plupart des simulateurs oublient le cautionnement, le pricing saisonnier et les charges réelles.</div>
+          <div class="card-meta">7 min de lecture</div>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span>Image</span></div>
+        <div class="card-body">
+          <div class="card-cat">Lancer & Optimiser</div>
+          <div class="card-title">Mes 93-97% d'occupation : ce n'est pas le prix, c'est le produit</div>
+          <div class="card-excerpt">Le pricing dynamique ne compense pas un mauvais produit. Ce qui fait la différence.</div>
+          <div class="card-meta">4 min de lecture</div>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span>Image</span></div>
+        <div class="card-body">
+          <div class="card-cat">Automatiser & Gérer</div>
+          <div class="card-title">5h de gestion par mois pour 4 biens : mes outils et mon système</div>
+          <div class="card-excerpt">Smoobu, Wheelhouse, messages automatiques, équipe ménage. Le stack complet.</div>
+          <div class="card-meta">5 min de lecture</div>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span>Image</span></div>
+        <div class="card-body">
+          <div class="card-cat">Trouver & Acheter</div>
+          <div class="card-title">Charges réelles LCD : tout ce que personne ne vous dit avant d'acheter</div>
+          <div class="card-excerpt">Internet, consommables, comptable, assurance, taxe de séjour. La liste complète mois par mois.</div>
+          <div class="card-meta">6 min de lecture</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- NL bottom -->
+  <div class="wrap" style="padding-bottom: 64px;">
+    <div class="nl-block">
+      <div class="nl-row">
+        <div class="nl-content">
+          <div class="nl-tag">Newsletter</div>
+          <div class="nl-title">Les coulisses de 9 biens LCD à 12-18% net et 4h de gestion par mois.</div>
+          <div class="nl-desc">Méthode duplicable presque partout en France, chiffres, stratégie, charges réelles, erreurs à éviter — chaque jeudi à 7h30. Pas de théorie, que du terrain.</div>
+        </div>
+        <div class="nl-form-wrap">
+          <div class="nl-form">
+            <input type="text" class="nl-input" placeholder="Prénom">
+            <input type="email" class="nl-input" placeholder="Email">
+            <button class="nl-btn">S'instruire</button>
+          </div>
+          <div class="nl-note">Un email par semaine. Désinscription en un clic.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     PAGE 2 — CATÉGORIE
+═══════════════════════════════ -->
+<div class="page" id="page-category">
+  <div class="wrap">
+    <div class="cat-hero">
+      <h1 class="cat-title">Chiffres & Stratégie</h1>
+      <p class="cat-desc">Rendements, fiscalité, comparatifs placements, business models LCD. Des données réelles, pas de la théorie.</p>
+      <div class="cat-author">
+        <div class="cat-author-photo"><span>Photo</span></div>
+        <div class="cat-author-info">
+          <div class="cat-author-name">Marc</div>
+          <div class="cat-author-bio">Propriétaire de 9 biens LCD en exploitation. 12-18% net, ~1h de gestion par bien/mois.<br>Je partage tout — méthode, chiffres et erreurs.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <a class="card" href="#" onclick="showPage('article');return false">
+        <div class="card-img"><span>Image</span></div>
+        <div class="card-body">
+          <div class="card-cat">Chiffres & Stratégie</div>
+          <div class="card-title">LCD vs location meublée classique : comparatif réel sur 6 ans</div>
+          <div class="card-excerpt">J'ai les chiffres des deux. Rendement net, cash flow, fiscalité.</div>
+          <div class="card-meta">8 min de lecture</div>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span>Image</span></div>
+        <div class="card-body">
+          <div class="card-cat">Chiffres & Stratégie</div>
+          <div class="card-title">Simuler son rendement LCD : les 4 erreurs qui faussent tout</div>
+          <div class="card-excerpt">Cautionnement, pricing saisonnier et charges réelles oubliés.</div>
+          <div class="card-meta">7 min de lecture</div>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span>Image</span></div>
+        <div class="card-body">
+          <div class="card-cat">Chiffres & Stratégie</div>
+          <div class="card-title">LMNP vs LMP en LCD : quel régime fiscal choisir en 2026 ?</div>
+          <div class="card-excerpt">Les seuils ont changé. Voici comment choisir selon votre situation.</div>
+          <div class="card-meta">5 min de lecture</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom: 64px;">
+    <div class="nl-block">
+      <div class="nl-row">
+        <div class="nl-content">
+          <div class="nl-tag">Newsletter</div>
+          <div class="nl-title">Les coulisses de 9 biens LCD à 12-18% net et 4h de gestion par mois.</div>
+          <div class="nl-desc">Méthode duplicable presque partout en France, chiffres, stratégie, charges réelles, erreurs à éviter — chaque jeudi à 7h30. Pas de théorie, que du terrain.</div>
+        </div>
+        <div class="nl-form-wrap">
+          <div class="nl-form">
+            <input type="text" class="nl-input" placeholder="Prénom">
+            <input type="email" class="nl-input" placeholder="Email">
+            <button class="nl-btn">S'instruire</button>
+          </div>
+          <div class="nl-note">Un email par semaine. Désinscription en un clic.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     PAGE 3 — ARTICLE
+═══════════════════════════════ -->
+<div class="page" id="page-article">
+  <div class="article-wrap">
+    <div class="article-main">
+      <div class="article-breadcrumb"><a href="/blog">Blog</a> / <a href="/blog/categorie/chiffres-strategie">Chiffres & Stratégie</a></div>
+
+      <h1 class="article-h1">LCD vs location meublée classique : comparatif réel sur 6 ans de rendements</h1>
+
+      <div class="author-block">
+        <div class="author-avatar">M</div>
+        <div class="author-info">
+          <div class="author-name">Marc</div>
+          <div class="author-date">25 mars 2026 · 8 min de lecture · <span class="author-date-updated">Mis à jour le 25 mars 2026</span></div>
+        </div>
+      </div>
+      <div class="author-bio-line">Propriétaire de 9 biens LCD en exploitation. Je partage ma méthode, mes chiffres réels et mes erreurs — sans filtre.</div>
+
+      <div class="cred-bar">
+        <div class="cred-item"><div class="cred-value">9</div><div class="cred-label">biens en exploitation</div></div>
+        <div class="cred-item"><div class="cred-value">12-18%</div><div class="cred-label">rendement net réel</div></div>
+        <div class="cred-item"><div class="cred-value">~1h</div><div class="cred-label">gestion/bien/mois</div></div>
+        <div class="cred-item"><div class="cred-value">93-97%</div><div class="cred-label">taux d'occupation</div></div>
+      </div>
+
+      <div class="article-cover"><span>Image de couverture 16:9</span></div>
+
+      <div class="article-body">
+        <p>Quand j'ai acheté mon premier bien en 2019, tout le monde me disait que la location meublée classique était plus sûre. Moins de rotation, moins de gestion, des revenus stables. Sur le papier, c'est vrai. En pratique, mes chiffres racontent une autre histoire.</p>
+
+        <h2>Les rendements bruts ne veulent rien dire</h2>
+        <p>La première erreur que font la plupart des investisseurs, c'est de comparer des rendements bruts. Un rendement brut de 8% en meublé classique et de 12% en LCD ne vous dit rien sur ce que vous allez réellement gagner. Il faut regarder le rendement net : après charges, après fiscalité, après gestion.</p>
+        <p>Sur mes biens à Lyon, le rendement net moyen est de 15-18% en LCD. Le même type de bien en meublé classique dans le même quartier tourne autour de 5-7% net. L'écart est réel, et il est massif.</p>
+
+        <h2>Le temps de gestion : le vrai coût caché</h2>
+        <p>L'argument principal contre la LCD, c'est le temps de gestion. Et c'est légitime. Sans système, un bien LCD peut facilement demander 10-15h de gestion par mois. Avec le bon stack d'outils — channel manager API, pricing dynamique, messages automatiques, équipe ménage — je suis à environ 1h par bien et par mois.</p>
+
+        <blockquote>Le temps de gestion n'est pas inhérent à la LCD. C'est inhérent au manque de système.</blockquote>
+
+        <h2>Le taux d'occupation fait tout basculer</h2>
+        <p>En meublé classique, un logement vide pendant 2 mois entre deux locataires vous coûte 16% de vos revenus annuels. En LCD, avec un taux d'occupation de 93-97% comme les miens, ce risque disparaît. La diversification des voyageurs est votre meilleure protection.</p>
+
+        <h2>Mon verdict après 6 ans</h2>
+        <p>La LCD demande un investissement initial plus important en système et en automatisation. Mais une fois le système en place, le rapport rendement/temps est incomparable. Si vous êtes prêt à investir 2-3 mois pour mettre en place les bons outils, la LCD surpasse la location classique sur tous les critères financiers.</p>
+      </div>
+
+      <!-- Rating widget -->
+      <div class="rating-widget" id="ratingWidget">
+        <div class="rating-label">Cet article vous a été utile ?</div>
+        <div class="rating-stars" id="ratingStars">
+          <div class="rating-star" data-value="1" onclick="rate(1)">
+            <svg viewBox="0 0 24 24"><polygon class="star-empty" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="rating-star" data-value="2" onclick="rate(2)">
+            <svg viewBox="0 0 24 24"><polygon class="star-empty" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="rating-star" data-value="3" onclick="rate(3)">
+            <svg viewBox="0 0 24 24"><polygon class="star-empty" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="rating-star" data-value="4" onclick="rate(4)">
+            <svg viewBox="0 0 24 24"><polygon class="star-empty" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="rating-star" data-value="5" onclick="rate(5)">
+            <svg viewBox="0 0 24 24"><polygon class="star-empty" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+        </div>
+        <div class="rating-result">
+          <span class="rating-score">4,7</span>
+          <span class="rating-stars-mini">★★★★★</span>
+          <span>(23 votes)</span>
+        </div>
+        <div class="rating-thanks" id="ratingThanks">Merci pour votre note !</div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sb-sim">
+        <div class="sb-sim-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="sb-sim-title">Simulateur de rentabilité Airbnb</div>
+        <div class="sb-sim-desc">Calculez votre rendement net réel en 2 minutes. Simulations sauvegardées et partageables.</div>
+        <div class="sb-sim-stats">
+          <div class="sb-sim-stat"><div class="sb-sim-stat-val">2 min</div><div class="sb-sim-stat-lbl">à compléter</div></div>
+          <div class="sb-sim-stat"><div class="sb-sim-stat-val">100%</div><div class="sb-sim-stat-lbl">gratuit</div></div>
+          <div class="sb-sim-stat"><div class="sb-sim-stat-val">∞</div><div class="sb-sim-stat-lbl">simulations</div></div>
+        </div>
+        <a class="sb-sim-btn" href="/simulateur">Lancer une simulation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+      </div>
+
+      <div class="sb-nl">
+        <div class="sb-nl-tag">Newsletter</div>
+        <div class="sb-nl-title">Les coulisses de 9 biens LCD à 12-18% net et 4h de gestion par mois.</div>
+        <div class="sb-nl-desc">Méthode duplicable presque partout en France, chiffres, stratégie, charges réelles, erreurs à éviter — chaque jeudi.</div>
+        <input type="text" placeholder="Prénom">
+        <input type="email" placeholder="Email">
+        <button>S'instruire</button>
+        <div class="sb-nl-note">Un email par semaine. Désinscription en un clic.</div>
+      </div>
+    </aside>
+
+    <!-- Related (separate grid child for mobile reorder) -->
+    <div class="related">
+      <div class="sec-head"><div class="sec-title">Articles liés</div></div>
+      <div class="grid-2">
+        <a class="card" href="#">
+          <div class="card-img"><span>Image</span></div>
+          <div class="card-body">
+            <div class="card-cat">Chiffres & Stratégie</div>
+            <div class="card-title">Simuler son rendement LCD : les 4 erreurs qui faussent tout</div>
+            <div class="card-meta">7 min de lecture</div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card-img"><span>Image</span></div>
+          <div class="card-body">
+            <div class="card-cat">Automatiser & Gérer</div>
+            <div class="card-title">5h de gestion par mois pour 4 biens : mes outils et mon système</div>
+            <div class="card-meta">5 min de lecture</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NL bottom article -->
+  <div class="wrap" style="padding-top: 48px; padding-bottom: 64px;">
+    <div class="nl-block">
+      <div class="nl-row">
+        <div class="nl-content">
+          <div class="nl-tag">Newsletter</div>
+          <div class="nl-title">Les coulisses de 9 biens LCD à 12-18% net et 4h de gestion par mois.</div>
+          <div class="nl-desc">Méthode duplicable presque partout en France, chiffres, stratégie, charges réelles, erreurs à éviter — chaque jeudi à 7h30. Pas de théorie, que du terrain.</div>
+        </div>
+        <div class="nl-form-wrap">
+          <div class="nl-form">
+            <input type="text" class="nl-input" placeholder="Prénom">
+            <input type="email" class="nl-input" placeholder="Email">
+            <button class="nl-btn">S'instruire</button>
+          </div>
+          <div class="nl-note">Un email par semaine. Désinscription en un clic.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer id="blogFooter">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-logo"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      <span class="footer-n">Enomia</span>
+    </div>
+    <div class="footer-right">
+      <a href="/simulateur">Simulateur rentabilité Airbnb</a>
+      <a href="/confidentialite">Confidentialité</a>
+      <span class="footer-copy">© Enomia 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  document.querySelectorAll('.page-switch button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  // Hide blog header/footer on homepage, show on blog pages
+  var blogHeader = document.getElementById('blogHeader');
+  var blogFooter = document.getElementById('blogFooter');
+  if (name === 'app') {
+    blogHeader.style.display = 'none';
+    blogFooter.style.display = 'none';
+    document.body.style.background = '#2b2d2b';
+  } else {
+    blogHeader.style.display = '';
+    blogFooter.style.display = '';
+    document.body.style.background = '#f7f6f3';
+  }
+  window.scrollTo(0, 0);
+}
+
+// HP waitlist
+function submitHP() {
+  var n = document.getElementById('hpName').value.trim();
+  var e = document.getElementById('hpEmail').value.trim();
+  var b = document.getElementById('hpBiens').value;
+  if (!n || !e || !e.includes('@') || !b) return;
+  document.getElementById('hpForm').classList.add('hide');
+  document.getElementById('hpSuccess').classList.add('show');
+}
+
+// Rating widget
+function rate(value) {
+  const stars = document.querySelectorAll('#ratingStars .rating-star');
+  stars.forEach((star, i) => {
+    if (i < value) {
+      star.querySelector('.star-empty').style.fill = '#f0b429';
+    } else {
+      star.querySelector('.star-empty').style.fill = '';
+    }
+    star.style.pointerEvents = 'none';
+  });
+  document.getElementById('ratingThanks').style.display = 'block';
+  // TODO: POST to Supabase API — { article_id, rating: value }
+}
+
+// Hover effect
+document.querySelectorAll('#ratingStars .rating-star').forEach((star, idx) => {
+  star.addEventListener('mouseenter', () => {
+    document.querySelectorAll('#ratingStars .rating-star').forEach((s, i) => {
+      s.querySelector('.star-empty').style.fill = i <= idx ? '#f0b429' : '';
+    });
+  });
+});
+document.getElementById('ratingStars').addEventListener('mouseleave', () => {
+  document.querySelectorAll('#ratingStars .rating-star').forEach(s => {
+    if (!s.style.pointerEvents) s.querySelector('.star-empty').style.fill = '';
+  });
+});
+</script>
+</body>
+</html>

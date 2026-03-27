@@ -22,7 +22,13 @@ html { scroll-behavior: smooth; }
 body { background: var(--black); color: var(--white); font-family: var(--font-body); font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; }
 
 nav { display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(247,246,243,0.92); z-index: 50; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-.nav-logo { font-family: var(--font-mono); font-size: 14px; font-weight: 500; letter-spacing: 0.06em; color: var(--white); cursor: pointer; }
+@media (max-width: 768px) {
+  nav { padding: 0 16px; }
+  .nav-right { gap: 6px; }
+  .btn-sm { padding: 6px 10px; font-size: 11px; }
+  .btn-sm.accent { padding: 6px 12px; }
+  .nav-blog-btn { display: none; }
+}.nav-logo { font-family: var(--font-mono); font-size: 14px; font-weight: 500; letter-spacing: 0.06em; color: var(--white); cursor: pointer; }
 .nav-logo span { color: var(--accent); }
 .nav-right { display: flex; align-items: center; gap: 16px; }
 .nav-user { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
@@ -338,7 +344,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     <span style="font-family:var(--font-body);font-size:16px;font-weight:700;color:var(--white);letter-spacing:-0.01em">Enomia</span>
   </span>
   <div class="nav-right">
-    <button class="btn-sm" onclick="window.location.href='/blog'">Blog</button>
+    <button class="btn-sm nav-blog-btn" onclick="window.location.href='/blog'">Blog</button>
     <button class="btn-sm" onclick="showDashboard()">Mes simulations</button>
     <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">↓ Sauvegarder</button>
     <button class="btn-sm" id="btn-share-nav" onclick="showSharePopup()" style="display:none">Partager</button>

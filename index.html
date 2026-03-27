@@ -264,6 +264,11 @@ main {
   opacity: 0.88;
 }
 
+.waitlist-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* Success state */
 .waitlist-success {
   display: none;
@@ -283,6 +288,22 @@ main {
 
 .waitlist-form.hide {
   display: none;
+}
+
+.waitlist-error {
+  display: none;
+  padding: 14px 18px;
+  background: rgba(224, 82, 82, 0.08);
+  border: 1px solid rgba(224, 82, 82, 0.25);
+  border-radius: 10px;
+  color: #e05252;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.waitlist-error.show {
+  display: block;
 }
 
 /* ─── Status ─── */
@@ -461,7 +482,7 @@ footer {
 
   <nav class="nav-center">
     <a href="/blog">Blog</a>
-    <a href="/simulateur">Simulateur LCD</a>
+    <a href="/simulateur-rentabilite-airbnb">Simulateur LCD</a>
   </nav>
 
   <a class="btn-cta" href="#waitlist">Accéder à la beta →</a>
@@ -513,6 +534,7 @@ footer {
       <div class="waitlist-success" id="waitlistSuccess">
         ✓ Vous êtes sur la liste. On vous contacte très vite.
       </div>
+      <div class="waitlist-error" id="waitlistError"></div>
     </div>
 
     <div class="status">
@@ -555,39 +577,62 @@ footer {
   </div>
   <div class="footer-right">
     <a href="/blog">Blog</a>
-    <a href="/simulateur">Simulateur rentabilité Airbnb</a>
+    <a href="/simulateur-rentabilite-airbnb">Simulateur rentabilité Airbnb</a>
     <span class="footer-copy">© Enomia 2026</span>
   </div>
 </footer>
 
 <!-- ═══ WAITLIST SCRIPT ═══ -->
 <script>
-function submitWaitlist() {
+async function submitWaitlist() {
   const name = document.getElementById('waitlistName').value.trim();
   const email = document.getElementById('waitlistEmail').value.trim();
   const biens = document.getElementById('waitlistBiens').value;
-  if (!name || !email || !email.includes('@') || !biens) return;
+  const btn = document.getElementById('waitlistBtn');
+  
+  if (!name || !email || !email.includes('@') || !biens) {
+    showError('Tous les champs sont obligatoires');
+    return;
+  }
 
-  // TODO: Replace with Beehiiv API call
-  // POST to Beehiiv with tag based on nb biens
-  // Tags: "0_bien", "1_bien", "2-3_biens", "4-5_biens", "6+_biens"
-  // + tag "sequence_waitlist_beta"
-  // Example:
-  // fetch('https://api.beehiiv.com/v2/publications/YOUR_PUB_ID/subscriptions', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer YOUR_API_KEY' },
-  //   body: JSON.stringify({
-  //     email,
-  //     custom_fields: [{ name: 'first_name', value: name }, { name: 'nb_biens', value: biens }],
-  //     tags: ['sequence_waitlist_beta', biens + '_biens']
-  //   })
-  // })
+  btn.disabled = true;
+  btn.textContent = 'Envoi en cours...';
 
-  document.getElementById('waitlistForm').classList.add('hide');
-  document.getElementById('waitlistSuccess').classList.add('show');
+  try {
+    const response = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email,
+        firstName: name,
+        nombreBiens: biens,
+      }),
+    });
+
+    if (!response.ok) {
+      const error = await response.json();
+      showError(error.error || 'Une erreur est survenue');
+      btn.disabled = false;
+      btn.textContent = 'Rejoindre la liste d\'attente';
+      return;
+    }
+
+    document.getElementById('waitlistForm').classList.add('hide');
+    document.getElementById('waitlistSuccess').classList.add('show');
+  } catch (error) {
+    showError(error.message);
+    btn.disabled = false;
+    btn.textContent = 'Rejoindre la liste d\'attente';
+  }
 }
 
-// Allow Enter key on last field
+function showError(message) {
+  const errorEl = document.getElementById('waitlistError');
+  errorEl.textContent = message;
+  errorEl.classList.add('show');
+  setTimeout(() => errorEl.classList.remove('show'), 5000);
+}
+
 document.getElementById('waitlistBiens').addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
     e.preventDefault();

@@ -347,8 +347,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     <span style="font-family:var(--font-body);font-size:16px;font-weight:700;color:var(--white);letter-spacing:-0.01em">Enomia</span>
   </span>
   <div class="nav-right">
-    <button class="btn-sm" onclick="window.location.href='/blog'">Blog</button>
-    <button class="btn-sm accent" onclick="newSimulation()">+ Nouvelle simulation</button>
+    <button class="btn-sm" id="btn-blog-nav" onclick="window.location.href='/blog'" style="display:none">Blog</button>
+    <button class="btn-sm accent" id="btn-new-nav" onclick="newSimulation()" style="display:none">+ Nouvelle simulation</button>
     <button class="btn-sm" id="btn-share-nav" onclick="showSharePopup()" style="display:none">Partager</button>
     <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
   </div>
@@ -880,7 +880,7 @@ function showScreen(id){
   document.getElementById('btn-share-nav').style.display = isCalc ? '' : 'none';
   window.scrollTo(0,0);
 }
-function showDashboard(){showScreen('screen-dashboard');renderDash();document.getElementById('btn-dash-nav').textContent='+ Nouvelle simulation';document.getElementById('btn-dash-nav').onclick=function(){newSimulation();};document.getElementById('btn-dash-nav').className='btn-sm accent';}
+function showDashboard(){document.getElementById("btn-new-nav").style.display="inline-flex";document.getElementById("btn-blog-nav").style.display="inline-flex";showScreen('screen-dashboard');renderDash();document.getElementById('btn-dash-nav').textContent='+ Nouvelle simulation';document.getElementById('btn-dash-nav').onclick=function(){newSimulation();};document.getElementById('btn-dash-nav').className='btn-sm accent';}
 function renderDash(){
   const sims=JSON.parse(localStorage.getItem('enomia_sims')||'[]');
   document.getElementById('dash-sub').textContent=sims.length+' simulation'+(sims.length!==1?'s':'')+' sauvegardée'+(sims.length!==1?'s':'');
@@ -1120,7 +1120,7 @@ function updateResults(rend,cfM,caM,otaM,menM,fixM,mens,netA,chA,seuil,total,emp
   document.getElementById('save-status').textContent='Non sauvegardé';
 }
 
-function newSimulation(){
+function newSimulation(){document.getElementById("btn-new-nav").style.display="none";document.getElementById("btn-blog-nav").style.display="none";
   currentSimIdx=null;
   document.getElementById('sim-name-input').value='';
   document.getElementById('save-status').textContent='';
@@ -1135,7 +1135,7 @@ function newSimulation(){
   document.getElementById('revenus-multi').style.display='none';
   showScreen('screen-calc');initSliders();compute();
 }
-function openSim(i){
+function openSim(i){document.getElementById("btn-new-nav").style.display="none";document.getElementById("btn-blog-nav").style.display="none";
   const sims=JSON.parse(localStorage.getItem('enomia_sims')||'[]');const s=sims[i];if(!s)return;
   currentSimIdx=i;
   document.getElementById('sim-name-input').value=s.name||'';

@@ -347,7 +347,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     <span style="font-family:var(--font-body);font-size:16px;font-weight:700;color:var(--white);letter-spacing:-0.01em">Enomia</span>
   </span>
   <div class="nav-right">
-    <button class="btn-sm nav-blog-btn" onclick="window.location.href='/blog'">Blog</button>
+    <button class="btn-sm" onclick="window.location.href='/blog'">Blog</button>
     <button class="btn-sm accent" onclick="newSimulation()">+ Nouvelle simulation</button>
     <button class="btn-sm" id="btn-share-nav" onclick="showSharePopup()" style="display:none">Partager</button>
     <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
@@ -545,7 +545,6 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 <div class="screen" id="screen-calc">
   <div class="calc-topbar">
     <div style="display:flex;align-items:center;gap:16px">
-      <span class="calc-back" onclick="showDashboard()">← Mes simulations</span>
       <input type="text" class="calc-name-input" id="sim-name-input" placeholder="Nom de la simulation...">
     </div>
     <div style="display:flex;align-items:center;gap:12px">

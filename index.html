@@ -47,7 +47,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  height: 72px;
+  height: 64px;
   background: var(--bg-header);
   border-bottom: 1px solid var(--border);
 }
@@ -55,27 +55,27 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   text-decoration: none;
 }
 
 .logo-icon {
-  width: 42px;
-  height: 42px;
+  width: 30px;
+  height: 30px;
   background: var(--bg-input);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 7px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  padding: 10px;
+  gap: 2.5px;
+  padding: 7px;
 }
 
 .logo-icon .bar {
   width: 100%;
-  height: 2px;
+  height: 1.5px;
   background: var(--text);
   border-radius: 1px;
 }
@@ -91,7 +91,7 @@ header {
 }
 
 .logo-name {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.01em;
@@ -118,6 +118,7 @@ header {
   transition: opacity 0.15s;
 }
 
+.nav-center a:visited { color: var(--text); }
 .nav-center a:hover { opacity: 0.7; }
 
 .btn-cta {
@@ -363,11 +364,12 @@ main {
 /* ═══ FOOTER ═══ */
 footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
+  justify-content: center;
+  gap: 6px;
+  padding: 24px 40px;
   border-top: 1px solid var(--border);
-  min-height: 64px;
 }
 
 .footer-left {
@@ -414,14 +416,15 @@ footer {
   gap: 28px;
 }
 
-.footer-right a {
+.footer-right a, a.footer-right {
   font-size: 14px;
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.15s;
 }
 
-.footer-right a:hover { color: var(--text); }
+.footer-right a:hover, a.footer-right:hover { color: var(--text); }
+.footer-right a:visited, a.footer-right:visited { color: var(--text-muted); }
 
 .footer-copy {
   font-size: 14px;
@@ -444,7 +447,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .btn-cta { display: none; }
+  .btn-cta { font-size: 11px; padding: 6px 12px; }
   .nav-center { gap: 16px; }
   .nav-center a { font-size: 13px; }
   .metric-value { font-size: 28px; }
@@ -482,10 +485,9 @@ footer {
 
   <nav class="nav-center">
     <a href="/blog">Blog</a>
-    <a href="/simulateur-rentabilite-airbnb">Simulateur LCD</a>
   </nav>
 
-  <a class="btn-cta" href="#waitlist">Accéder à la beta →</a>
+  <a class="btn-cta" href="/simulateur-rentabilite-airbnb">Simulateur rentabilité LCD →</a>
 </header>
 
 <!-- ═══ HERO ═══ -->
@@ -567,19 +569,9 @@ footer {
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <div class="footer-left">
-    <div class="footer-logo-icon">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <span class="footer-name">Enomia</span>
-  </div>
-  <div class="footer-right">
-    <a href="/blog">Blog</a>
-    <a href="/simulateur-rentabilite-airbnb">Simulateur rentabilité Airbnb</a>
-    <span class="footer-copy">© Enomia 2026</span>
-  </div>
+  <a href="/blog" class="footer-right" style="text-decoration:none">Blog</a>
+  <a href="/simulateur-rentabilite-airbnb" class="footer-right" style="text-decoration:none">Simulateur rentabilité Airbnb</a>
+  <span class="footer-copy">© Enomia 2026</span>
 </footer>
 
 <!-- ═══ WAITLIST SCRIPT ═══ -->

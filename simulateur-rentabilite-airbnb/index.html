@@ -21,7 +21,7 @@
 html { scroll-behavior: smooth; }
 body { background: var(--black); color: var(--white); font-family: var(--font-body); font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; }
 
-nav { display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(247,246,243,0.92); z-index: 50; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+nav { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 64px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(247,246,243,0.92); z-index: 50; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 @media (max-width: 768px) {
   .btn-compact { padding: 5px 6px !important; }  .nav-right { gap: 2px !important; }
   .nav-right { margin-left: auto !important; }  .nav-logo { gap: 6px !important; }  nav { padding: 0 16px; }
@@ -29,17 +29,23 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   .btn-sm { padding: 1px 2px; font-size: 10px; }
   .btn-sm.accent { padding: 6px 12px; }
   .nav-blog-btn { display: none !important; }
+  .nav-tagline { display: none; }
+  .sim-card-menu { opacity: 1 !important; }
+  .nav-label-desktop { display: none !important; }
+  .nav-label-mobile { display: inline !important; }
 }
 
 .nav-logo { font-family: var(--font-mono); font-size: 14px; font-weight: 500; letter-spacing: 0.06em; color: var(--white); cursor: pointer; }
 .nav-logo span { color: var(--accent); }
-.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-right { display: flex; align-items: center; gap: 8px; margin-left: 32px; }
+.nav-label-desktop { display: inline; }
+.nav-label-mobile { display: none; }
 .nav-user { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 .nav-user span { color: var(--accent); }
-.btn-sm { font-family: var(--font-mono); font-size: 12px; font-weight: 500; padding: 8px 14px; border: 1px solid var(--border); color: var(--muted); background: transparent; cursor: pointer; transition: all 0.2s; border-radius: 6px; height: 32px; display: flex; align-items: center; }
+.btn-sm { font-family: var(--font-mono); font-size: 12px; font-weight: 500; padding: 5px 3px; border: 1px solid var(--border); color: var(--muted); background: transparent; cursor: pointer; transition: all 0.2s; border-radius: 6px; height: 32px; display: flex; align-items: center; }
 .btn-sm:hover { border-color: var(--muted); color: var(--white); }
 .btn-sm.accent { border-color: var(--accent); color: #fff; background: var(--accent); }
-.btn-sm.accent:hover { opacity: 0.88; }
+.btn-sm.accent:hover { opacity: 1; color: var(--accent); background: var(--mid); border-color: var(--accent); }
 
 .screen { display: none; }
 .screen.active { display: block; }
@@ -107,7 +113,8 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .sims-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2px; }
 .sim-card { background: var(--dark); border: 1px solid var(--border); padding: 24px; cursor: pointer; transition: background 0.2s; position: relative; }
 .sim-card:hover { background: var(--mid); }
-.sim-card-menu { position: absolute; top: 16px; right: 16px; display: flex; gap: 6px; opacity: 0; transition: opacity 0.2s; }
+.sim-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.sim-card-menu { display: flex; gap: 6px; opacity: 0; transition: opacity 0.2s; }
 .sim-card:hover .sim-card-menu { opacity: 1; }
 .sim-card-btn { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; border: 1px solid var(--border); color: var(--muted); background: var(--mid2); cursor: pointer; transition: all 0.2s; }
 .sim-card-btn:hover { border-color: var(--accent); color: var(--accent); }
@@ -128,7 +135,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .sim-stat-v { font-family: var(--font-mono); font-size: 12px; color: var(--white); font-weight: 500; }
 .sim-stat-v.pos { color: var(--green); }
 .sim-stat-v.neg { color: var(--red); }
-.sim-badge { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); padding: 3px 8px; display: inline-block; margin-bottom: 14px; }
+.sim-badge { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); padding: 3px 8px; display: inline-block; }
 .sim-badge.multi { border-color: var(--blue); color: var(--blue); }
 
 /* COMPARE BAR */
@@ -338,18 +345,23 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
   .tip-box { left: auto; right: 0; min-width: 180px; }
 }
 </style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
 <nav>
-  <span class="nav-logo" onclick="window.location.href='/'" style="display:flex;align-items:center;gap:10px">
+  <span class="nav-logo" onclick="checkUnsavedAndNavigate(function(){window.location.href='/'})" style="display:flex;align-items:center;gap:10px">
     <span style="width:30px;height:30px;background:#2b2d2b;border-radius:7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5px;padding:7px"><span style="width:100%;height:1.5px;background:#e8e4dc;border-radius:1px"></span><span style="width:65%;height:1.5px;background:#e8e4dc;border-radius:1px;align-self:flex-start"></span><span style="width:100%;height:1.5px;background:#e8e4dc;border-radius:1px"></span></span>
-    <span style="font-family:var(--font-body);font-size:16px;font-weight:700;color:var(--white);letter-spacing:-0.01em">Enomia</span>
+    <span style="display:flex;flex-direction:column">
+      <span style="font-family:var(--font-body);font-size:16px;font-weight:700;color:var(--white);letter-spacing:-0.01em;line-height:1.2">Enomia</span>
+      <span class="nav-tagline" style="font-size:12px;color:var(--muted2)">Un flux parfait. Pour tous.</span>
+    </span>
   </span>
   <div class="nav-right">
-    <button class="btn-sm" id="btn-blog-nav" onclick="window.location.href='/blog'" style="display:none">Blog</button>
+    <button class="btn-sm" id="btn-blog-nav" onclick="checkUnsavedAndNavigate(function(){window.location.href='/blog'})">Blog</button>
     <button class="btn-sm accent" id="btn-new-nav" onclick="newSimulation()" style="display:none">+ Nouvelle simulation</button>
-    <button class="btn-sm" id="btn-mes-sim-nav" onclick="showDashboard()">Mes simulations</button>    <button class="btn-sm" id="btn-share-nav" onclick="showSharePopup()" style="display:none">Partager</button>
+    <button class="btn-sm" id="btn-mes-sim-nav" onclick="showDashboard()"><span class="nav-label-desktop">Mes simulations</span><span class="nav-label-mobile">Simulations</span></button>
+    <button class="btn-sm" id="btn-share-nav" onclick="showSharePopup()" style="display:none">Partager</button>
     <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
   </div>
 </nav>
@@ -390,7 +402,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     <!-- Comment ça marche -->
     <div style="padding-top:48px;margin-bottom:48px">
       <h2 style="font-family:var(--font-display);font-size:26px;font-weight:600;margin-bottom:24px;text-align:center">Comment fonctionne le simulateur de rentabilité Airbnb ?</h2>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px">
         <div style="text-align:center;padding:24px 16px;background:var(--dark);border:1px solid var(--border);border-radius:10px">
           <div style="font-size:28px;margin-bottom:10px;font-weight:800;color:var(--accent)">1</div>
           <div style="font-size:14px;font-weight:600;margin-bottom:6px">Décrivez votre bien</div>
@@ -405,6 +417,11 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
           <div style="font-size:28px;margin-bottom:10px;font-weight:800;color:var(--accent)">3</div>
           <div style="font-size:14px;font-weight:600;margin-bottom:6px">Obtenez vos résultats</div>
           <div style="font-size:13px;color:var(--muted);line-height:1.55">Rendement net réel, cash flow mensuel, comparatif placements, seuil de rentabilité et délai de remboursement.</div>
+        </div>
+        <div style="text-align:center;padding:24px 16px;background:var(--dark);border:1px solid var(--border);border-radius:10px">
+          <div style="font-size:28px;margin-bottom:10px;font-weight:800;color:var(--accent)">4</div>
+          <div style="font-size:14px;font-weight:600;margin-bottom:6px">Partagez & comparez</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.55">Sauvegardez vos simulations et partagez-les avec un associé, un courtier ou un banquier. Comparez plusieurs scénarios côte à côte.</div>
         </div>
       </div>
     </div>
@@ -535,7 +552,6 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         <h1 class="dash-title">Mes <em>simulations</em></h1>
         <p class="dash-sub" id="dash-sub">0 simulation</p>
       </div>
-      <button class="btn-new" onclick="newSimulation()">+ Nouvelle simulation</button>
     </div>
     <div id="sims-container"></div>
   </div>
@@ -880,7 +896,8 @@ function showScreen(id){
   document.getElementById('btn-share-nav').style.display = isCalc ? '' : 'none';
   window.scrollTo(0,0);
 }
-function showDashboard(){document.getElementById("btn-mes-sim-nav").style.display="none";document.getElementById("btn-new-nav").style.display="inline-flex";document.getElementById("btn-blog-nav").style.display="inline-flex";showScreen('screen-dashboard');renderDash();document.getElementById('btn-dash-nav').textContent='+ Nouvelle simulation';document.getElementById('btn-dash-nav').onclick=function(){newSimulation();};document.getElementById('btn-dash-nav').className='btn-sm accent';}
+function _doShowDashboard(){document.getElementById("btn-mes-sim-nav").style.display="none";document.getElementById("btn-new-nav").style.display="inline-flex";document.getElementById("btn-blog-nav").style.display="inline-flex";showScreen('screen-dashboard');renderDash();}
+function showDashboard(){checkUnsavedAndNavigate(_doShowDashboard);}
 function renderDash(){
   const sims=JSON.parse(localStorage.getItem('enomia_sims')||'[]');
   document.getElementById('dash-sub').textContent=sims.length+' simulation'+(sims.length!==1?'s':'')+' sauvegardée'+(sims.length!==1?'s':'');
@@ -892,7 +909,7 @@ function renderCard(s,i){
   const cls=s.rendement>=12?'good':s.rendement>=5?'ok':'bad';
   const verd=s.rendement>=12?'Excellent':s.rendement>=8?'Bon':s.rendement>=5?'Correct':'Faible';
   const dt=new Date(s.savedAt).toLocaleDateString('fr-FR',{day:'numeric',month:'short',year:'numeric'});
-  return '<div class="sim-card" onclick="openSim('+i+')"><div class="sim-card-menu"><button class="sim-card-btn del" onclick="event.stopPropagation();deleteSim('+i+')">Suppr.</button><button class="sim-card-btn" onclick="event.stopPropagation();showSharePopup()">Partager</button></div><div class="sim-badge '+(s.mode==='multi'?'multi':'')+'">'+( s.mode==='multi'?'Division lots':'Bien unique')+'</div><div class="sim-name">'+(s.name||'Sans nom')+'</div><div class="sim-date">'+dt+'</div><div class="sim-rend '+cls+'">'+(s.rendement?.toFixed(1)||'—')+'%</div><div class="sim-verdict '+cls+'">'+verd+' rendement</div><div class="sim-stats"><div class="sim-stat"><div class="sim-stat-l">Cash flow</div><div class="sim-stat-v '+(s.cfMois>=0?'pos':'neg')+'">'+fmtM(s.cfMois)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">Coût projet</div><div class="sim-stat-v">'+fmtK(s.totalProjet)+'</div></div><div class="sim-stat"><div class="sim-stat-l">Mensualité</div><div class="sim-stat-v">'+fmtM(s.mensalit)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">'+(s.mode==='multi'?'Nb lots':'Prix achat')+'</div><div class="sim-stat-v">'+(s.mode==='multi'?(s.nbLots||'—')+' lots':fmtK(s.prix||0))+'</div></div></div></div>';
+  return '<div class="sim-card" onclick="openSim('+i+')"><div class="sim-card-top"><div class="sim-badge '+(s.mode==='multi'?'multi':'')+'">'+( s.mode==='multi'?'Division lots':'Bien unique')+'</div><div class="sim-card-menu"><button class="sim-card-btn del" onclick="event.stopPropagation();deleteSim('+i+')">Suppr.</button><button class="sim-card-btn" onclick="event.stopPropagation();showSharePopup()">Partager</button></div></div><div class="sim-name">'+(s.name||'Sans nom')+'</div><div class="sim-date">'+dt+'</div><div class="sim-rend '+cls+'">'+(s.rendement?.toFixed(1)||'—')+'%</div><div class="sim-verdict '+cls+'">'+verd+' rendement</div><div class="sim-stats"><div class="sim-stat"><div class="sim-stat-l">Cash flow</div><div class="sim-stat-v '+(s.cfMois>=0?'pos':'neg')+'">'+fmtM(s.cfMois)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">Coût projet</div><div class="sim-stat-v">'+fmtK(s.totalProjet)+'</div></div><div class="sim-stat"><div class="sim-stat-l">Mensualité</div><div class="sim-stat-v">'+fmtM(s.mensalit)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">'+(s.mode==='multi'?'Nb lots':'Prix achat')+'</div><div class="sim-stat-v">'+(s.mode==='multi'?(s.nbLots||'—')+' lots':fmtK(s.prix||0))+'</div></div></div></div>';
 }
 function deleteSim(i){
   if(!confirm('Supprimer cette simulation ?'))return;
@@ -1120,7 +1137,7 @@ function updateResults(rend,cfM,caM,otaM,menM,fixM,mens,netA,chA,seuil,total,emp
   document.getElementById('save-status').textContent='Non sauvegardé';
 }
 
-function newSimulation(){document.getElementById("btn-mes-sim-nav").style.display="inline-flex";document.getElementById("btn-new-nav").style.display="none";document.getElementById("btn-blog-nav").style.display="none";
+function _doNewSimulation(){document.getElementById("btn-mes-sim-nav").style.display="inline-flex";document.getElementById("btn-new-nav").style.display="none";
   currentSimIdx=null;
   document.getElementById('sim-name-input').value='';
   document.getElementById('save-status').textContent='';
@@ -1135,7 +1152,11 @@ function newSimulation(){document.getElementById("btn-mes-sim-nav").style.displa
   document.getElementById('revenus-multi').style.display='none';
   showScreen('screen-calc');initSliders();compute();
 }
-function openSim(i){document.getElementById("btn-mes-sim-nav").style.display="inline-flex";document.getElementById("btn-new-nav").style.display="none";document.getElementById("btn-blog-nav").style.display="none";
+function newSimulation(){
+  var isCalc=document.getElementById('screen-calc').classList.contains('active');
+  if(isCalc){checkUnsavedAndNavigate(_doNewSimulation);}else{_doNewSimulation();}
+}
+function openSim(i){document.getElementById("btn-mes-sim-nav").style.display="inline-flex";document.getElementById("btn-new-nav").style.display="none";
   const sims=JSON.parse(localStorage.getItem('enomia_sims')||'[]');const s=sims[i];if(!s)return;
   currentSimIdx=i;
   document.getElementById('sim-name-input').value=s.name||'';
@@ -1210,6 +1231,53 @@ function copyShareLink(){
   setTimeout(function(){btn.textContent='Copier'},2000);
 }
 
+// ─── UNSAVED NAVIGATION GUARD ───
+window.addEventListener('beforeunload', function(e){
+  var isCalc=document.getElementById('screen-calc').classList.contains('active');
+  var isUnsaved=document.getElementById('save-status').textContent==='Non sauvegardé';
+  if(isCalc&&isUnsaved&&currentResult){
+    e.preventDefault();
+    e.returnValue='';
+  }
+});
+var _leaveCallback = null;
+function isSubscribed(){return !!localStorage.getItem('enomia_email');}
+function checkUnsavedAndNavigate(cb){
+  var isCalc=document.getElementById('screen-calc').classList.contains('active');
+  var isUnsaved=document.getElementById('save-status').textContent==='Non sauvegardé';
+  if(isCalc&&isUnsaved&&currentResult){
+    _leaveCallback=cb;
+    if(isSubscribed()){
+      saveSimulation();
+      cb();
+    } else {
+      document.getElementById('leave-popup').style.display='flex';
+    }
+  } else { cb(); }
+}
+function saveAndLeave(){
+  var prenom=document.getElementById('leave-prenom').value.trim();
+  var email=document.getElementById('leave-email').value.trim();
+  var biens=document.getElementById('leave-biens').value;
+  if(!prenom){alert('Entrez votre prénom');return;}
+  if(!email||!email.includes('@')){alert('Email invalide');return;}
+  if(!biens){alert('Sélectionnez votre nombre de biens');return;}
+  localStorage.setItem('enomia_email', email);
+  localStorage.setItem('enomia_prenom', prenom);
+  // TODO: envoyer email avec lien simulation
+  saveSimulation();
+  document.getElementById('leave-success').style.display='block';
+  setTimeout(function(){
+    document.getElementById('leave-popup').style.display='none';
+    document.getElementById('leave-success').style.display='none';
+    if(_leaveCallback){_leaveCallback();_leaveCallback=null;}
+  },1500);
+}
+function leaveWithoutSaving(){
+  document.getElementById('leave-popup').style.display='none';
+  if(_leaveCallback){_leaveCallback();_leaveCallback=null;}
+}
+
 // Override save to check if account exists
 var _origSave = saveSimulation;
 saveSimulation = function(){
@@ -1260,6 +1328,30 @@ saveSimulation = function(){
         <button onclick="copyShareLink()" id="copy-link-btn" style="padding:10px 16px;background:var(--mid);border:1px solid var(--border);border-radius:8px;font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--white);cursor:pointer">Copier</button>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- LEAVE POPUP -->
+<div id="leave-popup" style="display:none;position:fixed;inset:0;z-index:600;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px">
+  <div style="background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:36px;max-width:420px;width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.1)">
+    <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Avant de partir</div>
+    <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px">Sauvegarder votre simulation ?</div>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">Entrez votre email et nous vous enverrons le lien de votre simulation. Vous pourrez y revenir à tout moment, sans compte.</p>
+    <div id="leave-success" style="display:none;padding:12px;background:rgba(63,189,113,0.08);border:1px solid rgba(63,189,113,0.25);border-radius:8px;color:var(--green);font-size:14px;font-weight:500;text-align:center;margin-bottom:12px">✓ Simulation sauvegardée ! Lien envoyé par email.</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <input type="text" id="leave-prenom" placeholder="Prénom" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
+      <input type="email" id="leave-email" placeholder="votre@email.fr" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
+      <select id="leave-biens" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none;cursor:pointer">
+        <option value="" disabled selected>Nombre de biens en LCD</option>
+        <option value="0">Je n'ai pas encore de bien</option>
+        <option value="1">1 bien</option>
+        <option value="2-3">2 à 3 biens</option>
+        <option value="4-5">4 à 5 biens</option>
+        <option value="6+">6 biens ou plus</option>
+      </select>
+      <button onclick="saveAndLeave()" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer">Sauvegarder et recevoir le lien →</button>
+    </div>
+    <button onclick="leaveWithoutSaving()" style="width:100%;margin-top:12px;padding:10px;background:none;border:none;font-family:var(--font-body);font-size:13px;color:var(--muted2);cursor:pointer;text-decoration:underline;text-underline-offset:2px">Continuer sans sauvegarder</button>
   </div>
 </div>
 

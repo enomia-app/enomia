@@ -376,8 +376,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
   <div class="nav-right">
     <button class="btn-sm" id="btn-blog-nav" onclick="checkUnsavedAndNavigate(function(){window.location.href='/blog'})">Blog</button>
     <button class="btn-sm accent" id="btn-new-nav" onclick="newSimulation()" style="display:none">+ Nouvelle simulation</button>
-    <button class="btn-sm" id="btn-mes-sim-nav" onclick="showDashboard()" style="display:none"><span class="nav-label-desktop">Mes simulations</span><span class="nav-label-mobile">Simulations</span></button>
-    <button class="btn-sm" id="btn-login-nav" onclick="showLoginModal()">Se connecter</button>
+    <button class="btn-sm" id="btn-mes-sim-nav" onclick="showDashboard()"><span class="nav-label-desktop">Mes simulations</span><span class="nav-label-mobile">Simulations</span></button>
+    <button class="btn-sm" id="btn-login-nav" onclick="showLoginModal()" style="display:none">Se connecter</button>
     <button class="btn-sm" id="btn-share-nav" onclick="initSharePopup()" style="display:none">Partager</button>
     <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
   </div>
@@ -908,6 +908,7 @@ _sb.auth.onAuthStateChange(async (event, session) => {
       sessionStorage.removeItem('enomia_pending_save');
       await _doSaveToDb();
     }
+    _doShowDashboard();
   }
 });
 
@@ -925,13 +926,8 @@ async function _initAuth() {
 function _updateNavAuth() {
   const loginBtn = document.getElementById('btn-login-nav');
   const mesSimBtn = document.getElementById('btn-mes-sim-nav');
-  if (_user) {
-    if (loginBtn) loginBtn.style.display = 'none';
-    if (mesSimBtn) mesSimBtn.style.display = 'inline-flex';
-  } else {
-    if (loginBtn) loginBtn.style.display = 'inline-flex';
-    if (mesSimBtn) mesSimBtn.style.display = 'none';
-  }
+  if (loginBtn) loginBtn.style.display = 'none';
+  if (mesSimBtn) mesSimBtn.style.display = 'inline-flex';
 }
 
 async function _apiPost(path, body, withAuth) {
@@ -1006,7 +1002,7 @@ function showScreen(id){
   window.scrollTo(0,0);
 }
 function _doShowDashboard(){document.getElementById("btn-mes-sim-nav").style.display="none";document.getElementById("btn-new-nav").style.display="inline-flex";document.getElementById("btn-blog-nav").style.display="inline-flex";showScreen('screen-dashboard');renderDash();}
-function showDashboard(){checkUnsavedAndNavigate(_doShowDashboard);}
+function showDashboard(){if(!_user){_openMagicModal('Se connecter');return;}checkUnsavedAndNavigate(_doShowDashboard);}
 async function renderDash(){
   const c=document.getElementById('sims-container');
   c.innerHTML='<div style="padding:40px;text-align:center;color:var(--muted);font-size:14px">Chargement...</div>';

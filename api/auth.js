@@ -30,7 +30,7 @@ async function sendMagicLinkEmail({ to, prenom, magicLink }) {
             <p style="margin:0 0 8px;font-size:16px;color:#1a1a1a;font-weight:500">${greeting}</p>
             <p style="margin:0 0 28px;font-size:15px;color:#52524e;line-height:1.7">
               Cliquez sur le bouton ci-dessous pour accéder à vos simulations de rendement.<br>
-              Ce lien est valable <strong>1 heure</strong>.
+              Ce lien est valable <strong>24 heures</strong>.
             </p>
             <table cellpadding="0" cellspacing="0" style="margin-bottom:28px">
               <tr>

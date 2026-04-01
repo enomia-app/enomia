@@ -966,7 +966,7 @@ function _openMagicModal(label) {
   document.getElementById('magic-error').style.display = 'none';
   document.getElementById('magic-email-input').value = '';
   document.getElementById('magic-modal').style.display = 'flex';
-  setTimeout(() => document.getElementById('magic-email-input').focus(), 100);
+  setTimeout(() => document.getElementById('magic-prenom-input').focus(), 100);
 }
 function closeMagicModal() { document.getElementById('magic-modal').style.display = 'none'; }
 function resetMagicModal() {
@@ -1624,14 +1624,6 @@ _initAuth();
     <div style="display:flex;flex-direction:column;gap:8px">
       <input type="text" id="leave-prenom" placeholder="Prénom" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
       <input type="email" id="leave-email" placeholder="votre@email.fr" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
-      <select id="leave-biens" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none;cursor:pointer">
-        <option value="" disabled selected>Nombre de biens en LCD</option>
-        <option value="0">Je n'ai pas encore de bien</option>
-        <option value="1">1 bien</option>
-        <option value="2-3">2 à 3 biens</option>
-        <option value="4-5">4 à 5 biens</option>
-        <option value="6+">6 biens ou plus</option>
-      </select>
       <button onclick="saveAndLeave()" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer">Sauvegarder et recevoir le lien →</button>
     </div>
     <button onclick="leaveWithoutSaving()" style="width:100%;margin-top:12px;padding:10px;background:none;border:none;font-family:var(--font-body);font-size:13px;color:var(--muted2);cursor:pointer;text-decoration:underline;text-underline-offset:2px">Continuer sans sauvegarder</button>

@@ -895,7 +895,20 @@ const _sb = supabase.createClient(
   'https://pesoidoedtjpihjvrnnc.supabase.co',
   'sb_publishable_TTmUwZsTYt7OWBTwTruaLQ_BYzRT9Jp'
 );
-let _user = null, _token = null, _dbSims = [];
+let _user = null, _token = null, _dbSims = [], _pendingSimData = null;
+
+// Lire les données de simulation depuis l'URL (cross-browser)
+(function(){
+  try {
+    const ps = new URLSearchParams(window.location.search).get('ps');
+    if (ps) {
+      _pendingSimData = JSON.parse(decodeURIComponent(ps));
+      // Nettoyer l'URL
+      const u = new URL(window.location); u.searchParams.delete('ps');
+      history.replaceState({}, '', u);
+    }
+  } catch(e) {}
+})();
 
 _sb.auth.onAuthStateChange(async (event, session) => {
   _user = session?.user || null;
@@ -904,7 +917,14 @@ _sb.auth.onAuthStateChange(async (event, session) => {
   if (event === 'SIGNED_IN') {
     closeMagicModal();
     await _migrateLocalStorage();
-    if (localStorage.getItem('enomia_pending_save') === '1') {
+    // Priorité : données dans l'URL (cross-browser), sinon localStorage (même navigateur)
+    if (_pendingSimData) {
+      const simToSave = _pendingSimData;
+      _pendingSimData = null;
+      localStorage.removeItem('enomia_pending_save');
+      localStorage.removeItem('enomia_pending_sim');
+      await _doSaveToDb(simToSave);
+    } else if (localStorage.getItem('enomia_pending_save') === '1') {
       localStorage.removeItem('enomia_pending_save');
       await _doSaveToDb();
     }
@@ -962,7 +982,8 @@ async function sendMagicLink() {
   if (!email || !email.includes('@')) { errEl.textContent = 'Email invalide'; errEl.style.display = ''; return; }
   const btn = document.getElementById('magic-send-btn');
   btn.textContent = 'Envoi...'; btn.disabled = true;
-  const res = await _apiPost('/api/auth', { action: 'magic-link', email, prenom }, false);
+  const simPayload = _pendingSimData ? encodeURIComponent(JSON.stringify(_pendingSimData)) : null;
+  const res = await _apiPost('/api/auth', { action: 'magic-link', email, prenom, simPayload }, false);
   btn.textContent = 'Recevoir mon lien →'; btn.disabled = false;
   if (res.error) { errEl.textContent = res.error; errEl.style.display = ''; return; }
   document.getElementById('magic-email-sent').textContent = email;
@@ -1282,12 +1303,13 @@ function openSim(i){document.getElementById("btn-mes-sim-nav").style.display="in
   showScreen('screen-calc');
 }
 let currentSimDbId = null;
-async function _doSaveToDb(){
-  // Utiliser les données en sessionStorage si présentes (après magic link)
-  let simData;
+async function _doSaveToDb(overrideData){
+  let simData = overrideData || null;
+  if(!simData){
   const pending = localStorage.getItem('enomia_pending_sim');
   if(pending){ simData = JSON.parse(pending); localStorage.removeItem('enomia_pending_sim'); }
-  else {
+  }
+  if(!simData){
     const name=document.getElementById('sim-name-input').value.trim()||'Simulation sans nom';
     const sliders={};
     Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
@@ -1308,6 +1330,7 @@ async function saveSimulation(){
     Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
     ['prix-m','travaux-m','ameu-m'].forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
     const simData={name,sliders,mode:calcMode,type:bienType,...currentResult,lots:calcMode==='multi'?[...lots]:undefined,savedAt:new Date().toISOString()};
+    _pendingSimData = simData; // accessible dans sendMagicLink pour l'URL
     localStorage.setItem('enomia_pending_save', '1');
     localStorage.setItem('enomia_pending_sim', JSON.stringify(simData));
     _openMagicModal('Sauvegarder');

@@ -82,7 +82,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const { action, email, prenom } = req.body
+  const { action, email, prenom, simPayload } = req.body
 
   if (action === 'magic-link') {
     if (!email || !email.includes('@')) {
@@ -94,7 +94,7 @@ export default async function handler(req, res) {
       type: 'magiclink',
       email,
       options: {
-        redirectTo: `${APP_URL}/simulateur-rentabilite-airbnb`,
+        redirectTo: `${APP_URL}/simulateur-rentabilite-airbnb${simPayload ? '?ps=' + simPayload : ''}`,
         data: { prenom: prenom || '' },
       },
     })

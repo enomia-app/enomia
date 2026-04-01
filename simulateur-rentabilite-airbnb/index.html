@@ -1385,10 +1385,10 @@ function doSaveAccount(){
 
 // Share popup
 async function initSharePopup(){
-  // Si on est sur une sim partagée (?sim=...), l'URL courante est déjà le lien
+  // Si on est sur une sim partagée (?sim=...), utiliser le lien /api/share pour les OG
   const simParam = new URLSearchParams(window.location.search).get('sim');
   if(simParam){
-    document.getElementById('share-link').value = window.location.href;
+    document.getElementById('share-link').value = 'https://enomia.app/api/share?id=' + simParam;
     showSharePopup();
     return;
   }

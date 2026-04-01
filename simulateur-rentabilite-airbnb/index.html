@@ -1017,13 +1017,19 @@ function goHome(){showScreen('screen-auth');}
 function showScreen(id){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  // Show save/share only on calc screen
   var isCalc = id === 'screen-calc';
+  var isAuth = id === 'screen-auth';
   document.getElementById('btn-save-nav').style.display = isCalc ? '' : 'none';
   document.getElementById('btn-share-nav').style.display = isCalc ? '' : 'none';
+  // Bouton "+ Nouvelle simulation" : visible + noir sur la homepage
+  if(isAuth){
+    var nb=document.getElementById('btn-new-nav');
+    nb.style.display='inline-flex';
+    nb.className='btn-sm'; // noir (pas accent vert)
+  }
   window.scrollTo(0,0);
 }
-function _doShowDashboard(){document.getElementById("btn-mes-sim-nav").style.display="none";document.getElementById("btn-new-nav").style.display="inline-flex";document.getElementById("btn-blog-nav").style.display="inline-flex";showScreen('screen-dashboard');renderDash();}
+function _doShowDashboard(){document.getElementById("btn-mes-sim-nav").style.display="none";var nb=document.getElementById("btn-new-nav");nb.style.display="inline-flex";nb.className="btn-sm accent";document.getElementById("btn-blog-nav").style.display="inline-flex";showScreen('screen-dashboard');renderDash();}
 function showDashboard(){if(!_user){_openMagicModal('Se connecter');return;}checkUnsavedAndNavigate(_doShowDashboard);}
 async function renderDash(){
   const c=document.getElementById('sims-container');

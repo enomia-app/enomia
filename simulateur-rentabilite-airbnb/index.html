@@ -1268,7 +1268,7 @@ function updateResults(rend,cfM,caM,otaM,menM,fixM,mens,netA,chA,seuil,total,emp
 }
 
 function _doNewSimulation(){document.getElementById("btn-mes-sim-nav").style.display="inline-flex";document.getElementById("btn-new-nav").style.display="none";
-  currentSimIdx=null;
+  currentSimIdx=null;currentSimDbId=null;
   document.getElementById('sim-name-input').value='';
   document.getElementById('save-status').textContent='';
   var saveBtn=document.getElementById('btn-save-nav');if(saveBtn)saveBtn.textContent='Sauvegarder';

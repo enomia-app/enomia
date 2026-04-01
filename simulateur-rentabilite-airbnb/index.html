@@ -1370,10 +1370,16 @@ function doSaveAccount(){
 
 // Share popup
 async function initSharePopup(){
+  // Si on est sur une sim partagée (?sim=...), l'URL courante est déjà le lien
+  const simParam = new URLSearchParams(window.location.search).get('sim');
+  if(simParam){
+    document.getElementById('share-link').value = window.location.href;
+    showSharePopup();
+    return;
+  }
   if(!_user){
-    // Pas connecté : sauvegarder d'abord
-    _pendingSimData = null; // le partage ne nécessite pas de pending sim
-    saveSimulation(); // ouvre la modal magic link
+    // Pas connecté : sauvegarder d'abord (magic link)
+    saveSimulation();
     return;
   }
   // Connecté : sauvegarder si pas encore en DB, puis générer le lien

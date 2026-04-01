@@ -28,11 +28,13 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   .nav-right { gap: 6px; }
   .btn-sm { padding: 1px 2px; font-size: 10px; }
   .btn-sm.accent { padding: 6px 12px; }
-  .nav-blog-btn { display: none !important; }
+  #btn-blog-nav { display: none !important; }
   .nav-tagline { display: none; }
   .sim-card-menu { opacity: 1 !important; }
   .nav-label-desktop { display: none !important; }
   .nav-label-mobile { display: inline !important; }
+  .lot-break { display: block; width: 100%; height: 0; }
+  .lot-num { padding-top: 4px; }
 }
 
 .nav-logo { font-family: var(--font-mono); font-size: 14px; font-weight: 500; letter-spacing: 0.06em; color: var(--white); cursor: pointer; }
@@ -55,27 +57,27 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .tip-icon {
   width: 14px; height: 14px; border-radius: 50%;
   border: 1px solid var(--muted2); color: var(--muted);
-  font-family: var(--font-mono); font-size: 8px; font-style: italic; font-weight: 500;
+  font-family: var(--font-mono); font-size: 9px; font-style: normal; font-weight: 600;
   display: inline-flex; align-items: center; justify-content: center;
   cursor: pointer; margin-left: 6px; flex-shrink: 0;
   transition: border-color 0.2s, color 0.2s;
   user-select: none;
 }
 .tip-icon:hover { border-color: var(--accent); color: var(--accent); }
-.tip-box {
-  position: absolute; bottom: calc(100% + 8px); left: 0;
+.tip-box { display: none; }
+.tip-box a { color: var(--accent); text-decoration: underline; }
+#g-tip {
+  position: fixed; display: none;
   background: var(--mid2); border: 1px solid var(--border);
-  padding: 10px 14px; min-width: 220px; max-width: 280px;
-  z-index: 300; display: none;
+  padding: 10px 14px; width: 240px; max-width: calc(100vw - 20px);
+  z-index: 1000; pointer-events: none;
   font-family: var(--font-mono); font-size: 11px; color: var(--off-white);
   line-height: 1.6; font-style: normal;
 }
-.tip-box a { color: var(--accent); text-decoration: underline; }
-.tip-wrap:hover .tip-box { display: block; }
+#g-tip a { color: var(--accent); text-decoration: underline; pointer-events: all; }
 /* tooltip rendement — à droite du % */
 .tip-rend { position: relative; display: inline-flex; align-items: center; gap: 8px; }
 .tip-rend .tip-icon { margin-left: 0; }
-.tip-rend .tip-box { left: auto; right: 0; }
 
 /* AUTH */
 .auth-wrap { min-height: auto; display: flex; align-items: center; justify-content: center; padding: 60px 24px 40px; }
@@ -214,16 +216,24 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; background: var
 .sg-ticks span { font-family: var(--font-mono); font-size: 9px; color: var(--muted2); }
 
 /* LOTS */
-.lot-row { display: flex; align-items: center; gap: 10px; background: var(--dark); border: 1px solid var(--border); padding: 14px 16px; margin-bottom: 2px; }
+.lot-row { display: flex; align-items: flex-start; gap: 8px; background: var(--dark); border: 1px solid var(--border); padding: 14px 16px; margin-bottom: 2px; position: relative; }
+.lot-inputs { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; flex: 1; }
+.lot-break { display: none; }
+.lot-tip { position: relative; display: inline-flex; align-items: center; margin-left: 3px; }
+.lot-tip-icon { font-family: var(--font-mono); font-size: 9px; color: var(--muted); border: 1px solid var(--muted); border-radius: 50%; width: 13px; height: 13px; display: inline-flex; align-items: center; justify-content: center; cursor: help; flex-shrink: 0; line-height: 1; }
+.lot-tip-text { display: none; }
 .lot-num { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); width: 40px; flex-shrink: 0; }
-.lot-input { background: var(--mid); border: 1px solid var(--border); color: var(--white); font-family: var(--font-mono); font-size: 12px; padding: 6px 10px; outline: none; width: 80px; transition: border-color 0.2s; }
-.lot-input:focus { border-color: var(--accent); }
+.lot-field { display: inline-flex; align-items: center; background: var(--mid); border: 1px solid var(--border); transition: border-color 0.2s; }
+.lot-field:focus-within { border-color: var(--accent); }
+.lot-input { background: transparent; border: none; color: var(--white); font-family: var(--font-mono); font-size: 12px; padding: 6px 4px 6px 8px; width: 44px; outline: none; }
+.lot-input::-webkit-inner-spin-button, .lot-input::-webkit-outer-spin-button { opacity: 0.4; }
+.lot-unit { font-family: var(--font-mono); font-size: 10px; color: var(--muted); padding-right: 7px; white-space: nowrap; flex-shrink: 0; }
 .lot-label { font-family: var(--font-mono); font-size: 10px; color: var(--muted); width: 40px; text-align: right; }
 .lot-name { font-family: var(--font-mono); font-size: 12px; color: var(--white); flex: 1; }
-.lot-remove { font-family: var(--font-mono); font-size: 12px; color: var(--muted); background: none; border: none; cursor: pointer; padding: 0 4px; transition: color 0.2s; }
+.lot-remove { font-family: var(--font-mono); font-size: 14px; color: var(--muted); background: none; border: none; cursor: pointer; padding: 0; position: absolute; top: 8px; right: 10px; line-height: 1; transition: color 0.2s; }
 .lot-remove:hover { color: var(--red); }
-.btn-add-lot { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 16px; border: 1px dashed var(--border); color: var(--muted); background: transparent; cursor: pointer; transition: all 0.2s; width: 100%; margin-bottom: 12px; }
-.btn-add-lot:hover { border-color: var(--blue); color: var(--blue); }
+.btn-add-lot { font-family: var(--font-mono); font-size: 12px; font-weight: 700; padding: 14px 16px; border: 1px solid var(--border); color: var(--muted); background: var(--dark); cursor: pointer; transition: all 0.2s; width: 100%; margin-bottom: 2px; text-align: left; letter-spacing: 0.03em; }
+.btn-add-lot:hover { border-color: var(--accent); color: var(--accent); }
 .lots-total { background: var(--dark); border: 1px solid var(--accent); padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 .lots-total-l { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 .lots-total-v { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--accent); }
@@ -245,13 +255,16 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; background: var
 .tr-row:last-child { border-bottom: none; }
 .tr-l { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 .tr-v { font-family: var(--font-mono); font-size: 12px; color: var(--white); }
-.tr-row.total-line { padding-top: 12px; margin-top: 4px; border-top: 1px solid var(--accent); }
+.tr-row:has(+ .total-line) { border-bottom: none; }
+.tr-row.total-line { padding-top: 12px; margin-top: 4px; border-top: 2px solid var(--accent); }
 .tr-row.total-line .tr-l { color: var(--white); font-weight: 500; }
 .tr-row.total-line .tr-v { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--accent); }
 
 .fin-card { background: var(--dark); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: 22px; }
 .fc-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid var(--border); }
 .fc-row:last-child { border-bottom: none; }
+.fc-row:has(+ .fc-total-line) { border-bottom: none; }
+.fc-row.fc-total-line { padding-top: 10px; margin-top: 4px; border-top: 2px solid var(--accent); border-bottom: none; }
 .fc-l { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 .fc-v { font-family: var(--font-mono); font-size: 12px; color: var(--white); }
 .fc-v.acc { color: var(--accent); }
@@ -278,6 +291,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 .rb2-t { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
 .rr { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid var(--border); }
 .rr:last-child { border-bottom: none; }
+.rr:has(+ .rr-total-line) { border-bottom: none; }
+.rr.rr-total-line { padding-top: 10px; margin-top: 4px; border-top: 2px solid var(--accent); border-bottom: none; }
 .rrl { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 .rrv { font-family: var(--font-mono); font-size: 12px; color: var(--white); font-weight: 500; }
 .rrv.pos { color: var(--green); }
@@ -348,6 +363,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 <body>
+<div id="g-tip"></div>
 
 <nav>
   <span class="nav-logo" onclick="checkUnsavedAndNavigate(function(){window.location.href='/'})" style="display:flex;align-items:center;gap:10px">
@@ -706,7 +722,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         <div class="fc-row"><span class="fc-l">Coût total du projet</span><span class="fc-v acc" id="fc-total">—</span></div>
         <div class="fc-row"><span class="fc-l">Apport</span><span class="fc-v" id="fc-apport">—</span></div>
         <div class="fc-row"><span class="fc-l">Montant emprunté</span><span class="fc-v acc" id="fc-emprunt">—</span></div>
-        <div class="fc-row" style="margin-top:6px;padding-top:8px;border-top:1px solid var(--border)">
+        <div class="fc-row fc-total-line">
           <span class="fc-l" style="color:var(--white)">Mensualité calculée</span>
           <span class="fc-v big" id="fc-mens">—</span>
         </div>
@@ -714,7 +730,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 
       <hr class="sep">
       <!-- REVENUS (integrated into section above) -->
-      <div class="sec-t"><span class="sec-num" id="rev-num">03</span> Les revenus</div>
+      <div class="sec-t" id="sec-revenus"><span class="sec-num" id="rev-num">03</span> Les revenus</div>
       <div id="revenus-single">
         <div class="sg">
           <div class="sg-header"><div class="sg-label">Prix par nuit moyen</div><div class="sg-val" id="v-nuit">70 <em>€/nuit</em></div></div>
@@ -722,18 +738,17 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
           <div class="sg-ticks"><span>20€</span><span>400€</span></div>
         </div>
         <div class="sg">
-          <div class="sg-header"><div class="sg-label">Taux d'occupation</div><div class="sg-val" id="v-occu">72 <em>%</em></div></div>
-          <input type="range" id="s-occu" min="20" max="95" step="1" value="72" oninput="sv('occu',this.value);compute()">
-          <div class="sg-ticks"><span>20%</span><span>95%</span></div>
+          <div class="sg-header"><div class="sg-label">Nuits occupées / mois</div><div class="sg-val" id="v-occu">20 <em></em></div></div>
+          <input type="range" id="s-occu" min="5" max="30" step="1" value="20" oninput="sv('occu',this.value);compute()">
+          <div class="sg-ticks"><span>5 nuits</span><span>30 nuits</span></div>
         </div>
-      </div>
-      <div id="revenus-multi" style="display:none">
         <div class="sg">
-          <div class="sg-header"><div class="sg-label">Taux d'occupation global</div><div class="sg-val" id="v-occu-m">72 <em>%</em></div></div>
-          <input type="range" id="s-occu-m" min="20" max="95" step="1" value="72" oninput="sv2('occu-m',this.value);computeMulti()">
-          <div class="sg-ticks"><span>20%</span><span>95%</span></div>
+          <div class="sg-header"><div class="sg-label">Durée moyenne de séjour</div><div class="sg-val" id="v-sejour">2.5 <em>nuits</em></div></div>
+          <input type="range" id="s-sejour" min="1" max="14" step="0.1" value="2.5" oninput="sv('sejour',this.value);compute()">
+          <div class="sg-ticks"><span>1 nuit</span><span>14 nuits</span></div>
         </div>
       </div>
+      <div id="revenus-multi" style="display:none"></div>
 <!-- Commission hardcoded at 17% --><input type="hidden" id="s-commission" value="17">
 
       <hr class="sep">
@@ -757,13 +772,6 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
           <div class="ci">
             <div class="ci-label">
               Logiciel
-              <div class="tip-wrap">
-                <span class="tip-icon">i</span>
-                <div class="tip-box">
-                  Comprendre pourquoi un channel manager augmente les revenus de 24% en moyenne.<br><br>
-                  <a href="https://youtube.com/@encaisse" target="_blank">Voir la vidéo →</a>
-                </div>
-              </div>
             </div>
             <div class="ci-val" id="v-logiciel">40 <em>€/mois</em></div>
             <input type="range" id="s-logiciel" min="0" max="300" step="5" value="40" oninput="sv('logiciel',this.value);computeActive()">
@@ -791,13 +799,6 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         <div class="res-lbl">Rendement net annuel</div>
         <div class="res-big-wrap">
           <div class="res-big" id="r-rend">—</div>
-          <div class="tip-rend">
-            <span class="tip-icon">i</span>
-            <div class="tip-box">
-              Découvrir comment faire 15 à 22% net de revenu en LCD.<br><br>
-              <a href="https://youtube.com/@encaisse" target="_blank">Voir sur YouTube →</a>
-            </div>
-          </div>
         </div>
         <div class="res-verdict" id="r-verdict">—</div>
       </div>
@@ -808,7 +809,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         <div class="rr"><span class="rrl">Ménage + blanchisserie</span><span class="rrv neg" id="r-men">—</span></div>
         <div class="rr"><span class="rrl">Charges fixes</span><span class="rrv neg" id="r-ch">—</span></div>
         <div class="rr"><span class="rrl">Mensualité crédit</span><span class="rrv neg" id="r-cred">—</span></div>
-        <div class="rr" style="padding-top:8px;margin-top:4px;border-top:1px solid var(--border)">
+        <div class="rr rr-total-line">
           <span class="rrl" style="color:var(--white);font-weight:500">Cash flow net / mois</span>
           <span class="rrv big" id="r-cf">—</span>
         </div>
@@ -872,9 +873,12 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
       <div class="nl-capture">
         <div class="nl-capture-t">Les coulisses de 9 biens LCD à 12-18% net</div>
         <p class="nl-capture-d">Méthode duplicable presque partout en France, chiffres, stratégie, charges réelles, erreurs à éviter — chaque jeudi à 7h30.</p>
-        <div class="nl-capture-form">
-          <input type="email" id="nl-email" placeholder="ton@email.fr">
-          <button onclick="subscribeNL()">S'instruire →</button>
+        <div class="nl-capture-form" style="flex-direction:column;gap:8px">
+          <input type="text" id="nl-prenom" placeholder="Prénom" style="border-right:1px solid var(--border);border-radius:6px;box-sizing:border-box">
+          <div style="display:flex">
+            <input type="email" id="nl-email" placeholder="ton@email.fr">
+            <button onclick="subscribeNL()">S'instruire →</button>
+          </div>
         </div>
         <p class="nl-capture-note">Un email par semaine. Désinscription en un clic.</p>
       </div>
@@ -920,14 +924,14 @@ function deleteSim(i){
 
 // ─── CALC ───
 let currentSimIdx=null,calcMode='single',bienType='studio',travauxMode='rafraichissement';
-let lots=[{nuit:90,surface:35,occu:72,nuitMoy:2.5},{nuit:90,surface:35,occu:72,nuitMoy:2.5}];
+let lots=[{nuit:90,surface:35,occu:20,nuitMoy:2},{nuit:90,surface:35,occu:20,nuitMoy:2}];
 let currentResult={};
 const PRESETS={
-  studio:{prix:120000,surface:25,nuit:70,occu:75,eau:20,elec:50,fonciere:42,copro:65,ameu:6000},
-  t2:{prix:160000,surface:40,nuit:90,occu:72,eau:25,elec:80,fonciere:58,copro:90,ameu:8000},
-  t3:{prix:220000,surface:65,nuit:120,occu:68,eau:30,elec:120,fonciere:75,copro:130,ameu:10000},
-  t4:{prix:280000,surface:85,nuit:150,occu:65,eau:40,elec:160,fonciere:95,copro:160,ameu:15000},
-  t5:{prix:360000,surface:110,nuit:200,occu:62,eau:50,elec:200,fonciere:120,copro:200,ameu:20000},
+  studio:{prix:120000,surface:25,nuit:70,occu:23,eau:20,elec:50,fonciere:42,copro:65,ameu:6000},
+  t2:{prix:160000,surface:40,nuit:90,occu:22,eau:25,elec:80,fonciere:58,copro:90,ameu:8000},
+  t3:{prix:220000,surface:65,nuit:120,occu:21,eau:30,elec:120,fonciere:75,copro:130,ameu:10000},
+  t4:{prix:280000,surface:85,nuit:150,occu:20,eau:40,elec:160,fonciere:95,copro:160,ameu:15000},
+  t5:{prix:360000,surface:110,nuit:200,occu:19,eau:50,elec:200,fonciere:120,copro:200,ameu:20000},
 };
 const fmt=n=>new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n||0);
 const fmtM=fmt;
@@ -941,35 +945,33 @@ function setMode(mode,btn){
   document.getElementById('section-single').style.display=mode==='single'?'block':'none';
   document.getElementById('section-multi').style.display=mode==='multi'?'block':'none';
   document.getElementById('revenus-single').style.display=mode==='single'?'block':'none';
-  document.getElementById('revenus-multi').style.display=mode==='multi'?'block':'none';
   document.getElementById('fin-num').textContent=mode==='single'?'02':'03';
-  document.getElementById('rev-num').textContent=mode==='single'?'03':'04';
-  document.getElementById('ch-num').textContent=mode==='single'?'04':'05';
+  document.getElementById('sec-revenus').style.display=mode==='single'?'':'none';
+  document.getElementById('ch-num').textContent=mode==='single'?'04':'04';
   mode==='multi'?renderLots()&&computeMulti():compute();
   if(mode==='multi'){renderLots();computeMulti();}else{compute();}
 }
 function renderLots(){
   document.getElementById('lots-container').innerHTML=lots.map((l,i)=>`
-    <div class="lot-row" style="flex-wrap:wrap;gap:8px">
+    <div class="lot-row">
+      ${lots.length>1?`<button class="lot-remove" onclick="removeLot(${i})">×</button>`:''}
       <span class="lot-num">Lot ${i+1}</span>
-      <input class="lot-input" type="number" value="${l.nuit}" min="20" max="1000" step="5" placeholder="€/nuit" onchange="lots[${i}].nuit=parseFloat(this.value)||0;computeMulti()">
-      <span class="lot-label">€/nuit</span>
-      <input class="lot-input" type="number" value="${l.surface}" min="10" max="500" step="5" placeholder="m²" onchange="lots[${i}].surface=parseFloat(this.value)||0;computeMulti()">
-      <span class="lot-label">m²</span>
-      <input class="lot-input" type="number" value="${l.occu||72}" min="20" max="100" step="3" placeholder="%" onchange="lots[${i}].occu=parseFloat(this.value)||0;computeMulti()">
-      <span class="lot-label">% occ.</span>
-      <input class="lot-input" type="number" value="${l.nuitMoy||2.5}" min="1" max="30" step="0.5" placeholder="nuits" onchange="lots[${i}].nuitMoy=parseFloat(this.value)||0;computeMulti()">
-      <span class="lot-label">nuits moy.</span>
-      ${lots.length>1?`<button class="lot-remove" onclick="removeLot(${i})">×</button>`:'<span style="width:20px"></span>'}
+      <div class="lot-inputs">
+        <div class="lot-field"><input class="lot-input" type="number" value="${l.nuit}" min="20" max="1000" step="5" onchange="lots[${i}].nuit=parseFloat(this.value)||0;computeMulti()"><span class="lot-unit">€/nuit</span></div>
+        <div class="lot-field"><input class="lot-input" type="number" value="${l.surface}" min="10" max="500" step="5" onchange="lots[${i}].surface=parseFloat(this.value)||0;computeMulti()"><span class="lot-unit">m²</span></div>
+        <div class="lot-break"></div>
+        <div class="lot-field"><input class="lot-input" type="number" value="${l.occu||20}" min="1" max="30" step="1" onchange="lots[${i}].occu=parseFloat(this.value)||0;computeMulti()"><span class="lot-unit">nuits/mois</span></div>
+        <div class="lot-field"><input class="lot-input" style="width:52px" type="number" value="${l.nuitMoy||2}" min="1" max="30" step="0.1" onchange="lots[${i}].nuitMoy=parseFloat(this.value)||0;computeMulti()"><span class="lot-unit">dur. séjour</span><span class="lot-tip"><span class="lot-tip-icon">i</span><span class="lot-tip-text">La durée moyenne d'un séjour, permettant de calculer les charges exactes en fonction du nombre de ménages à faire</span></span></div>
+      </div>
     </div>`).join('');
 }
-function addLot(){lots.push({nuit:90,surface:35,occu:72,nuitMoy:2.5});renderLots();computeMulti();}
+function addLot(){lots.push({nuit:90,surface:35,occu:20,nuitMoy:2});renderLots();computeMulti();}
 function removeLot(i){lots.splice(i,1);renderLots();computeMulti();}
 
-const SLIDER_LABELS={prix:v=>v>=1000?Math.round(v/1000)+'k':v,apport:v=>v>=1000?Math.round(v/1000)+'k':v,duree:v=>v,taux:v=>parseFloat(v).toFixed(1),nuit:v=>v,occu:v=>v,commission:v=>v,surface:v=>v,travaux:v=>v>=1000?Math.round(v/1000)+'k':v,ameu:v=>v>=1000?Math.round(v/1000)+'k':v,menage:v=>v,blanc:v=>v,eau:v=>v,elec:v=>v,internet:v=>v,consommables:v=>v,logiciel:v=>v,comptable:v=>v,fonciere:v=>v,copro:v=>v,assurance:v=>v};
-const SLIDER_UNITS={prix:'€',apport:'€',duree:'ans',taux:'%',nuit:'€/nuit',occu:'%',commission:'%',surface:'m²',travaux:'€',ameu:'€',menage:'€/rot.',blanc:'€/rot.',eau:'€/mois',elec:'€/mois',internet:'€/mois',consommables:'€/mois',logiciel:'€/mois',comptable:'€/mois',fonciere:'€/mois',copro:'€/mois',assurance:'€/mois'};
-const SV2_LABELS={'prix-m':v=>v>=1000?Math.round(v/1000)+'k':v,'travaux-m':v=>v>=1000?Math.round(v/1000)+'k':v,'ameu-m':v=>v>=1000?Math.round(v/1000)+'k':v,'occu-m':v=>v};
-const SV2_UNITS={'prix-m':'€','travaux-m':'€','ameu-m':'€','occu-m':'%'};
+const SLIDER_LABELS={prix:v=>v>=1000?Math.round(v/1000)+'k':v,apport:v=>v>=1000?Math.round(v/1000)+'k':v,duree:v=>v,taux:v=>parseFloat(v).toFixed(1),nuit:v=>v,occu:v=>v+' nuits ('+Math.round(v/30.4*100)+'%)',sejour:v=>parseFloat(v).toFixed(1),commission:v=>v,surface:v=>v,travaux:v=>v>=1000?Math.round(v/1000)+'k':v,ameu:v=>v>=1000?Math.round(v/1000)+'k':v,menage:v=>v,blanc:v=>v,eau:v=>v,elec:v=>v,internet:v=>v,consommables:v=>v,logiciel:v=>v,comptable:v=>v,fonciere:v=>v,copro:v=>v,assurance:v=>v};
+const SLIDER_UNITS={prix:'€',apport:'€',duree:'ans',taux:'%',nuit:'€/nuit',occu:'',sejour:'nuits',commission:'%',surface:'m²',travaux:'€',ameu:'€',menage:'€/rot.',blanc:'€/rot.',eau:'€/mois',elec:'€/mois',internet:'€/mois',consommables:'€/mois',logiciel:'€/mois',comptable:'€/mois',fonciere:'€/mois',copro:'€/mois',assurance:'€/mois'};
+const SV2_LABELS={'prix-m':v=>v>=1000?Math.round(v/1000)+'k':v,'travaux-m':v=>v>=1000?Math.round(v/1000)+'k':v,'ameu-m':v=>v>=1000?Math.round(v/1000)+'k':v};
+const SV2_UNITS={'prix-m':'€','travaux-m':'€','ameu-m':'€'};
 
 function sv(id,val){
   const v=parseFloat(val);
@@ -1025,7 +1027,7 @@ function getInputs(){
 function compute(){
   const prix=numS('prix'),surface=numS('surface'),travaux=numS('travaux'),ameu=numS('ameu');
   const {apport,duree,taux,commission,menage,blanc,eau,elec,internet,consommables,logiciel,comptable,fonciere,copro,assurance}=getInputs();
-  const nuit=numS('nuit'),occu=numS('occu');
+  const nuit=numS('nuit'),nuits=numS('occu'),sejour=Math.max(0.5,numS('sejour'));
   const notaire=Math.round(prix*0.075);
   const emprAC=Math.max(0,prix+notaire+travaux+ameu-apport);
   const caution=Math.round(emprAC*0.01);
@@ -1033,9 +1035,8 @@ function compute(){
   const empr=Math.max(0,total-apport);
   const mens=empr>0?calcMens(empr,taux,duree):0;
   const inter=Math.max(0,mens*duree*12-empr);
-  const nL=365*(occu/100);
-  const caM=(nuit*nL)/12;
-  const rotM=nL/12/(bienType==='t4'||bienType==='t5'?4:bienType==='t3'?3.5:3);
+  const caM=nuit*nuits;
+  const rotM=nuits/sejour;
   const otaM=caM*(commission/100);
   const menM=rotM*(menage+blanc);
   const fixM=eau+elec+internet+consommables+logiciel+comptable+fonciere+copro+assurance;
@@ -1059,7 +1060,6 @@ function compute(){
 
 function computeMulti(){
   const {apport,duree,taux,commission,menage,blanc,eau,elec,internet,consommables,logiciel,comptable,fonciere,copro,assurance}=getInputs();
-  const occu=numS('occu-m');
   const prix=parseFloat(document.getElementById('s-prix-m')?.value)||0;
   const travaux=parseFloat(document.getElementById('s-travaux-m')?.value)||0;
   const ameu=parseFloat(document.getElementById('s-ameu-m')?.value)||0;
@@ -1071,9 +1071,9 @@ function computeMulti(){
   const empr=Math.max(0,total-apport);
   const mens=empr>0?calcMens(empr,taux,duree):0;
   const inter=Math.max(0,mens*duree*12-empr);
-  const lotsCaRaw=lots.reduce((s,l)=>s+(l.nuit*365*(occu/100))/12,0);
+  const lotsCaRaw=lots.reduce((s,l)=>s+l.nuit*(l.occu||20),0);
   document.getElementById('lots-ca-total').textContent=fmt(lotsCaRaw)+'/mois';
-  const rotMTot=lots.length*(365*(occu/100)/12/3);
+  const rotMTot=lots.reduce((s,l)=>s+(l.occu||20)/Math.max(0.5,l.nuitMoy||2.5),0);
   const otaMTot=lotsCaRaw*(commission/100);
   const menMTot=rotMTot*(menage+blanc);
   const fixM=eau+elec+internet+consommables+logiciel+comptable+fonciere+copro+assurance;
@@ -1149,7 +1149,6 @@ function _doNewSimulation(){document.getElementById("btn-mes-sim-nav").style.dis
   document.getElementById('section-single').style.display='block';
   document.getElementById('section-multi').style.display='none';
   document.getElementById('revenus-single').style.display='block';
-  document.getElementById('revenus-multi').style.display='none';
   showScreen('screen-calc');initSliders();compute();
 }
 function newSimulation(){
@@ -1178,7 +1177,7 @@ function saveSimulation(){
   const sims=JSON.parse(localStorage.getItem('enomia_sims')||'[]');
   const sliders={};
   Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
-  ['prix-m','travaux-m','ameu-m','occu-m'].forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
+  ['prix-m','travaux-m','ameu-m'].forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
   const sim={name,sliders,mode:calcMode,type:bienType,...currentResult,lots:calcMode==='multi'?[...lots]:undefined,savedAt:new Date().toISOString()};
   if(currentSimIdx!==null)sims[currentSimIdx]=sim;else{sims.unshift(sim);currentSimIdx=0;}
   localStorage.setItem('enomia_sims',JSON.stringify(sims));
@@ -1192,10 +1191,12 @@ function initSliders(){
 }
 function subscribeNL(){
   const email=document.getElementById('nl-email').value.trim();
+  const prenom=document.getElementById('nl-prenom')?.value.trim()||'';
   if(!email||!email.includes('@'))return;
   const btn=document.querySelector('.nl-capture-form button');
   btn.textContent='✓ Inscrit !';btn.style.background='var(--green)';
   document.getElementById('nl-email').value='';
+  if(document.getElementById('nl-prenom'))document.getElementById('nl-prenom').value='';
   // En production : appel API Beehiiv ici
 }
 initSliders();
@@ -1285,6 +1286,91 @@ saveSimulation = function(){
   // For maquette: just save to localStorage
   _origSave();
 };
+
+// Prevent accidental slider changes while scrolling on mobile
+(function(){
+  document.querySelectorAll('input[type="range"]').forEach(function(slider){
+    var startX, startY, startVal, decided, isScrolling;
+    slider.addEventListener('touchstart', function(e){
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      startVal = slider.value;
+      decided = false;
+      isScrolling = false;
+    }, {passive:true});
+    slider.addEventListener('touchmove', function(e){
+      if(!decided){
+        var dx=Math.abs(e.touches[0].clientX-startX);
+        var dy=Math.abs(e.touches[0].clientY-startY);
+        if(dx>6||dy>6){ decided=true; isScrolling=dy>dx; }
+      }
+      if(isScrolling && slider.value!==startVal){
+        slider.value=startVal;
+        slider.dispatchEvent(new Event('input',{bubbles:true}));
+      }
+    }, {passive:true});
+  });
+})();
+
+// Global tooltip system — fixed positioning, works inside overflow:auto containers
+(function(){
+  var gTip = document.getElementById('g-tip');
+  var activeIcon = null;
+
+  function showTip(icon, html) {
+    gTip.innerHTML = html;
+    gTip.style.display = 'block';
+    var rect = icon.getBoundingClientRect();
+    var tipH = gTip.offsetHeight;
+    var tipW = gTip.offsetWidth;
+    var vw = window.innerWidth;
+    // Center horizontally on icon, clamped to viewport
+    var left = rect.left + rect.width / 2 - tipW / 2;
+    left = Math.max(10, Math.min(left, vw - tipW - 10));
+    // Above the icon by default, below if not enough space
+    var top = rect.top - tipH - 8;
+    if (top < 10) top = rect.bottom + 8;
+    gTip.style.left = left + 'px';
+    gTip.style.top = top + 'px';
+  }
+
+  function hideTip() {
+    gTip.style.display = 'none';
+    activeIcon = null;
+  }
+
+  // Desktop: hover on .tip-icon and .lot-tip-icon
+  document.addEventListener('mouseover', function(e) {
+    var icon = e.target.closest('.tip-icon, .lot-tip-icon');
+    if (!icon) return;
+    var src = icon.closest('.tip-wrap, .lot-tip');
+    var box = src && src.querySelector('.tip-box, .lot-tip-text');
+    if (!box) return;
+    showTip(icon, box.innerHTML);
+  });
+  document.addEventListener('mouseout', function(e) {
+    var icon = e.target.closest('.tip-icon, .lot-tip-icon');
+    if (!icon) return;
+    if (!e.relatedTarget || !e.relatedTarget.closest('#g-tip')) hideTip();
+  });
+  gTip.addEventListener('mouseleave', hideTip);
+
+  // Mobile: tap to toggle
+  document.addEventListener('click', function(e) {
+    var icon = e.target.closest('.tip-icon, .lot-tip-icon');
+    if (icon) {
+      if (activeIcon === icon) { hideTip(); return; }
+      var src = icon.closest('.tip-wrap, .lot-tip');
+      var box = src && src.querySelector('.tip-box, .lot-tip-text');
+      if (!box) return;
+      activeIcon = icon;
+      showTip(icon, box.innerHTML);
+      e.stopPropagation();
+      return;
+    }
+    hideTip();
+  });
+})();
 </script>
 
 <!-- SAVE POPUP -->

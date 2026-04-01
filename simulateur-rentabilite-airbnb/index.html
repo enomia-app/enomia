@@ -378,7 +378,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     <button class="btn-sm accent" id="btn-new-nav" onclick="newSimulation()" style="display:none">+ Nouvelle simulation</button>
     <button class="btn-sm" id="btn-mes-sim-nav" onclick="showDashboard()" style="display:none"><span class="nav-label-desktop">Mes simulations</span><span class="nav-label-mobile">Simulations</span></button>
     <button class="btn-sm" id="btn-login-nav" onclick="showLoginModal()">Se connecter</button>
-    <button class="btn-sm" id="btn-share-nav" onclick="showSharePopup()" style="display:none">Partager</button>
+    <button class="btn-sm" id="btn-share-nav" onclick="initSharePopup()" style="display:none">Partager</button>
     <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
   </div>
 </nav>
@@ -1287,12 +1287,18 @@ function openSim(i){document.getElementById("btn-mes-sim-nav").style.display="in
 }
 let currentSimDbId = null;
 async function _doSaveToDb(){
-  const name=document.getElementById('sim-name-input').value.trim()||'Simulation sans nom';
-  const sliders={};
-  Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
-  ['prix-m','travaux-m','ameu-m'].forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
-  const simData={name,sliders,mode:calcMode,type:bienType,...currentResult,lots:calcMode==='multi'?[...lots]:undefined,savedAt:new Date().toISOString()};
-  const res=await _apiPost('/api/simulations',{action:'save',simulationName:name,simulationData:simData,simulationId:currentSimDbId},true);
+  // Utiliser les données en sessionStorage si présentes (après magic link)
+  let simData;
+  const pending = sessionStorage.getItem('enomia_pending_sim');
+  if(pending){ simData = JSON.parse(pending); sessionStorage.removeItem('enomia_pending_sim'); }
+  else {
+    const name=document.getElementById('sim-name-input').value.trim()||'Simulation sans nom';
+    const sliders={};
+    Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
+    ['prix-m','travaux-m','ameu-m'].forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
+    simData={name,sliders,mode:calcMode,type:bienType,...currentResult,lots:calcMode==='multi'?[...lots]:undefined,savedAt:new Date().toISOString()};
+  }
+  const res=await _apiPost('/api/simulations',{action:'save',simulationName:simData.name,simulationData:simData,simulationId:currentSimDbId},true);
   if(res.simulationId)currentSimDbId=res.simulationId;
   const btn=document.getElementById('btn-save-nav');
   if(btn){btn.textContent='✓ Sauvegardé';setTimeout(()=>{btn.textContent='Sauvegarder';},2000);}
@@ -1300,7 +1306,14 @@ async function _doSaveToDb(){
 }
 async function saveSimulation(){
   if(!_user){
+    // Sauvegarder l'état du simulateur avant la redirection magic link
+    const name=document.getElementById('sim-name-input').value.trim()||'Simulation sans nom';
+    const sliders={};
+    Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
+    ['prix-m','travaux-m','ameu-m'].forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
+    const simData={name,sliders,mode:calcMode,type:bienType,...currentResult,lots:calcMode==='multi'?[...lots]:undefined,savedAt:new Date().toISOString()};
     sessionStorage.setItem('enomia_pending_save', '1');
+    sessionStorage.setItem('enomia_pending_sim', JSON.stringify(simData));
     _openMagicModal('Sauvegarder');
     return;
   }
@@ -1337,12 +1350,25 @@ function doSaveAccount(){
 }
 
 // Share popup
+async function initSharePopup(){
+  // Générer le lien de partage si on a une sim sauvegardée
+  if(currentSimDbId){
+    const data = await _apiPost('/api/simulations', { action: 'share', simulationId: currentSimDbId }, true);
+    if(data.shareUrl) document.getElementById('share-link').value = data.shareUrl;
+  } else {
+    document.getElementById('share-link').value = window.location.href;
+  }
+  showSharePopup();
+}
 function showSharePopup(){document.getElementById('share-popup').style.display='flex';}
 function closeSharePopup(){document.getElementById('share-popup').style.display='none';document.getElementById('share-success').style.display='none';}
-function doShare(){
+async function doShare(){
   var e=document.getElementById('share-email').value.trim();
+  var msg=document.getElementById('share-message').value.trim();
+  var link=document.getElementById('share-link').value;
   if(!e||!e.includes('@')){alert('Email invalide');return;}
-  // TODO: API call to share
+  const res = await _apiPost('/api/auth', { action: 'share-email', email: e, message: msg, shareUrl: link }, false);
+  if(res.error){alert('Erreur envoi : '+res.error);return;}
   document.getElementById('share-success').style.display='block';
   document.getElementById('share-email').value='';
   document.getElementById('share-message').value='';

@@ -113,6 +113,55 @@ export default async function handler(req, res) {
     return res.status(200).json({ message: 'Lien envoyé' })
   }
 
+  // Envoyer un email de partage de simulation
+  if (action === 'share-email') {
+    const { email: to, message, shareUrl } = req.body
+    if (!to || !to.includes('@')) return res.status(400).json({ error: 'Email invalide' })
+
+    const html = `<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"></head>
+<body style="margin:0;padding:0;background:#f4f4f4;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:40px 0">
+    <tr><td align="center">
+      <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
+        <tr><td style="background:#1a1c1a;padding:28px 40px">
+          <span style="font-size:20px;font-weight:700;color:#ffffff">Enomia</span>
+        </td></tr>
+        <tr><td style="padding:40px 40px 32px">
+          <p style="margin:0 0 8px;font-size:16px;color:#1a1a1a;font-weight:500">Bonjour,</p>
+          <p style="margin:0 0 20px;font-size:15px;color:#52524e;line-height:1.7">
+            Quelqu'un a partagé avec vous une simulation de rendement Airbnb.
+          </p>
+          ${message ? `<p style="margin:0 0 24px;font-size:14px;color:#52524e;background:#f7f6f3;padding:16px;border-radius:8px;border-left:3px solid #3fbd71">${message}</p>` : ''}
+          <table cellpadding="0" cellspacing="0" style="margin-bottom:28px">
+            <tr><td style="background:#3fbd71;border-radius:8px">
+              <a href="${shareUrl}" style="display:inline-block;padding:14px 32px;color:#ffffff;text-decoration:none;font-size:15px;font-weight:600">
+                Voir la simulation →
+              </a>
+            </td></tr>
+          </table>
+          <p style="margin:0;font-size:13px;color:#9a9690">Vous pouvez consulter et dupliquer cette simulation gratuitement.</p>
+        </td></tr>
+        <tr><td style="padding:24px 40px 32px;border-top:1px solid #f0ede8">
+          <p style="margin:0 0 4px;font-size:14px;color:#1a1a1a">Bonne journée,</p>
+          <p style="margin:0;font-size:14px;color:#1a1a1a;font-weight:600">Marc — Enomia</p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body></html>`
+
+    const r = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ from: 'Marc <marc@enomia.app>', to: [to], subject: 'Une simulation de rendement Airbnb partagée avec vous', html }),
+    })
+
+    if (!r.ok) return res.status(500).json({ error: "Erreur d'envoi" })
+    return res.status(200).json({ message: 'Email envoyé' })
+  }
+
   if (action === 'me') {
     const token = req.headers.authorization?.replace('Bearer ', '')
     if (!token) return res.status(401).json({ error: 'Non authentifié' })

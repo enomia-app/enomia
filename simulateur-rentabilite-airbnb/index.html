@@ -376,7 +376,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
   <div class="nav-right">
     <button class="btn-sm" id="btn-blog-nav" onclick="checkUnsavedAndNavigate(function(){window.location.href='/blog'})">Blog</button>
     <button class="btn-sm accent" id="btn-new-nav" onclick="newSimulation()" style="display:none">+ Nouvelle simulation</button>
-    <button class="btn-sm" id="btn-mes-sim-nav" onclick="showDashboard()"><span class="nav-label-desktop">Mes simulations</span><span class="nav-label-mobile">Simulations</span></button>
+    <button class="btn-sm" id="btn-mes-sim-nav" onclick="showDashboard()">Mes simulations</button>
     <button class="btn-sm" id="btn-login-nav" onclick="showLoginModal()" style="display:none">Se connecter</button>
     <button class="btn-sm" id="btn-share-nav" onclick="initSharePopup()" style="display:none">Partager</button>
     <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
@@ -895,7 +895,7 @@ const _sb = supabase.createClient(
   'https://pesoidoedtjpihjvrnnc.supabase.co',
   'sb_publishable_TTmUwZsTYt7OWBTwTruaLQ_BYzRT9Jp'
 );
-let _user = null, _token = null, _dbSims = [], _pendingSimData = null;
+let _user = null, _token = null, _dbSims = [], _pendingSimData = null, _isViewingSharedSim = false;
 
 // Lire les données de simulation depuis l'URL (cross-browser)
 (function(){
@@ -1006,6 +1006,7 @@ async function _loadSharedSim(id) {
   if (data.simulation) {
     const s = data.simulation.data;
     _restoreSimData(s);
+    _isViewingSharedSim = true;
     showScreen('screen-calc');
   }
 }
@@ -1268,7 +1269,7 @@ function updateResults(rend,cfM,caM,otaM,menM,fixM,mens,netA,chA,seuil,total,emp
 }
 
 function _doNewSimulation(){document.getElementById("btn-mes-sim-nav").style.display="inline-flex";document.getElementById("btn-new-nav").style.display="none";
-  currentSimIdx=null;currentSimDbId=null;
+  currentSimIdx=null;currentSimDbId=null;_isViewingSharedSim=false;
   document.getElementById('sim-name-input').value='';
   document.getElementById('save-status').textContent='';
   var saveBtn=document.getElementById('btn-save-nav');if(saveBtn)saveBtn.textContent='Sauvegarder';
@@ -1285,7 +1286,7 @@ function newSimulation(){
   var isCalc=document.getElementById('screen-calc').classList.contains('active');
   if(isCalc){checkUnsavedAndNavigate(_doNewSimulation);}else{_doNewSimulation();}
 }
-function openSim(i){document.getElementById("btn-mes-sim-nav").style.display="inline-flex";document.getElementById("btn-new-nav").style.display="none";
+function openSim(i){_isViewingSharedSim=false;document.getElementById("btn-mes-sim-nav").style.display="inline-flex";document.getElementById("btn-new-nav").style.display="none";
   const entry=_dbSims[i];const s=entry?.data||entry;if(!s)return;
   currentSimIdx=i;
   document.getElementById('sim-name-input').value=s.name||'';
@@ -1419,6 +1420,7 @@ window.addEventListener('beforeunload', function(e){
 var _leaveCallback = null;
 function isSubscribed(){return !!_user;}
 function checkUnsavedAndNavigate(cb){
+  if(_isViewingSharedSim){cb();return;}
   var isCalc=document.getElementById('screen-calc').classList.contains('active');
   var isUnsaved=document.getElementById('save-status').textContent==='Non sauvegardé';
   if(isCalc&&isUnsaved&&currentResult){

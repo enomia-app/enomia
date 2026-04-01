@@ -953,16 +953,19 @@ function closeMagicModal() { document.getElementById('magic-modal').style.displa
 function resetMagicModal() {
   document.getElementById('magic-step-email').style.display = '';
   document.getElementById('magic-step-confirm').style.display = 'none';
+  document.getElementById('magic-prenom-input').value = '';
+  document.getElementById('magic-email-input').value = '';
 }
 async function sendMagicLink() {
+  const prenom = document.getElementById('magic-prenom-input').value.trim();
   const email = document.getElementById('magic-email-input').value.trim();
   const errEl = document.getElementById('magic-error');
   if (!email || !email.includes('@')) { errEl.textContent = 'Email invalide'; errEl.style.display = ''; return; }
   const btn = document.getElementById('magic-send-btn');
   btn.textContent = 'Envoi...'; btn.disabled = true;
-  const { error } = await _sb.auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.origin + '/simulateur-rentabilite-airbnb' } });
+  const res = await _apiPost('/api/auth', { action: 'magic-link', email, prenom }, false);
   btn.textContent = 'Recevoir mon lien →'; btn.disabled = false;
-  if (error) { errEl.textContent = error.message; errEl.style.display = ''; return; }
+  if (res.error) { errEl.textContent = res.error; errEl.style.display = ''; return; }
   document.getElementById('magic-email-sent').textContent = email;
   document.getElementById('magic-step-email').style.display = 'none';
   document.getElementById('magic-step-confirm').style.display = '';
@@ -1502,6 +1505,7 @@ _initAuth();
       <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px">Votre lien de connexion</div>
       <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">Entrez votre email — vous recevrez un lien magique. Un clic et c'est fait, sans mot de passe.</p>
       <div style="display:flex;flex-direction:column;gap:10px">
+        <input type="text" id="magic-prenom-input" placeholder="Votre prénom" style="padding:13px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
         <input type="email" id="magic-email-input" placeholder="votre@email.fr" style="padding:13px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none" onkeydown="if(event.key==='Enter')sendMagicLink()">
         <div id="magic-error" style="display:none;font-size:12px;color:#e05252;padding:8px 12px;background:rgba(224,82,82,0.08);border-radius:6px"></div>
         <button onclick="sendMagicLink()" id="magic-send-btn" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer">Recevoir mon lien →</button>

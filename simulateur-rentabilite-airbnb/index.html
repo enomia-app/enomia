@@ -376,7 +376,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
   <div class="nav-right">
     <button class="btn-sm" id="btn-blog-nav" onclick="checkUnsavedAndNavigate(function(){window.location.href='/blog'})">Blog</button>
     <button class="btn-sm accent" id="btn-new-nav" onclick="newSimulation()" style="display:none">+ Nouvelle simulation</button>
-    <button class="btn-sm" id="btn-mes-sim-nav" onclick="showDashboard()"><span class="nav-label-desktop">Mes simulations</span><span class="nav-label-mobile">Simulations</span></button>
+    <button class="btn-sm" id="btn-mes-sim-nav" onclick="showDashboard()" style="display:none"><span class="nav-label-desktop">Mes simulations</span><span class="nav-label-mobile">Simulations</span></button>
+    <button class="btn-sm" id="btn-login-nav" onclick="showLoginModal()">Se connecter</button>
     <button class="btn-sm" id="btn-share-nav" onclick="showSharePopup()" style="display:none">Partager</button>
     <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
   </div>
@@ -887,7 +888,105 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
+// ─── SUPABASE AUTH ───
+const _sb = supabase.createClient(
+  'https://pesoidoedtjpihjvrnnc.supabase.co',
+  'sb_publishable_TTmUwZsTYt7OWBTwTruaLQ_BYzRT9Jp'
+);
+let _user = null, _token = null, _dbSims = [], _pendingSaveAfterLogin = false;
+
+_sb.auth.onAuthStateChange(async (event, session) => {
+  _user = session?.user || null;
+  _token = session?.access_token || null;
+  _updateNavAuth();
+  if (event === 'SIGNED_IN') {
+    closeMagicModal();
+    await _migrateLocalStorage();
+    if (_pendingSaveAfterLogin) { _pendingSaveAfterLogin = false; await _doSaveToDb(); }
+  }
+});
+
+async function _initAuth() {
+  const { data: { session } } = await _sb.auth.getSession();
+  _user = session?.user || null;
+  _token = session?.access_token || null;
+  _updateNavAuth();
+  // Charger sim partagée depuis URL
+  const params = new URLSearchParams(window.location.search);
+  const sharedSim = params.get('sim');
+  if (sharedSim) _loadSharedSim(sharedSim);
+}
+
+function _updateNavAuth() {
+  const loginBtn = document.getElementById('btn-login-nav');
+  const mesSimBtn = document.getElementById('btn-mes-sim-nav');
+  if (_user) {
+    if (loginBtn) loginBtn.style.display = 'none';
+    if (mesSimBtn) mesSimBtn.style.display = 'inline-flex';
+  } else {
+    if (loginBtn) loginBtn.style.display = 'inline-flex';
+    if (mesSimBtn) mesSimBtn.style.display = 'none';
+  }
+}
+
+async function _apiPost(path, body, withAuth) {
+  const headers = { 'Content-Type': 'application/json' };
+  if (withAuth && _token) headers['Authorization'] = 'Bearer ' + _token;
+  const res = await fetch(path, { method: 'POST', headers, body: JSON.stringify(body) });
+  return res.json();
+}
+
+// Magic link modal
+function showLoginModal() { _openMagicModal('Se connecter'); }
+function _openMagicModal(label) {
+  document.getElementById('magic-modal-label').textContent = label || 'Se connecter';
+  document.getElementById('magic-step-email').style.display = '';
+  document.getElementById('magic-step-confirm').style.display = 'none';
+  document.getElementById('magic-error').style.display = 'none';
+  document.getElementById('magic-email-input').value = '';
+  document.getElementById('magic-modal').style.display = 'flex';
+  setTimeout(() => document.getElementById('magic-email-input').focus(), 100);
+}
+function closeMagicModal() { document.getElementById('magic-modal').style.display = 'none'; }
+function resetMagicModal() {
+  document.getElementById('magic-step-email').style.display = '';
+  document.getElementById('magic-step-confirm').style.display = 'none';
+}
+async function sendMagicLink() {
+  const email = document.getElementById('magic-email-input').value.trim();
+  const errEl = document.getElementById('magic-error');
+  if (!email || !email.includes('@')) { errEl.textContent = 'Email invalide'; errEl.style.display = ''; return; }
+  const btn = document.getElementById('magic-send-btn');
+  btn.textContent = 'Envoi...'; btn.disabled = true;
+  const { error } = await _sb.auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.origin + '/simulateur-rentabilite-airbnb' } });
+  btn.textContent = 'Recevoir mon lien →'; btn.disabled = false;
+  if (error) { errEl.textContent = error.message; errEl.style.display = ''; return; }
+  document.getElementById('magic-email-sent').textContent = email;
+  document.getElementById('magic-step-email').style.display = 'none';
+  document.getElementById('magic-step-confirm').style.display = '';
+}
+
+// Migration localStorage → DB après connexion
+async function _migrateLocalStorage() {
+  const local = JSON.parse(localStorage.getItem('enomia_sims') || '[]');
+  for (const sim of local) {
+    await _apiPost('/api/simulations', { action: 'save', simulationName: sim.name, simulationData: sim }, true);
+  }
+  if (local.length) localStorage.removeItem('enomia_sims');
+}
+
+// Charger une simulation partagée
+async function _loadSharedSim(id) {
+  const data = await _apiPost('/api/simulations', { action: 'get-public', simulationId: id }, false);
+  if (data.simulation) {
+    const s = data.simulation.data;
+    _restoreSimData(s);
+    showScreen('screen-calc');
+  }
+}
+
 // Enomia Simulateur — no auth required
 // ─── CORE FUNCTIONS ───
 function goHome(){showScreen('screen-auth');}
@@ -902,24 +1001,32 @@ function showScreen(id){
 }
 function _doShowDashboard(){document.getElementById("btn-mes-sim-nav").style.display="none";document.getElementById("btn-new-nav").style.display="inline-flex";document.getElementById("btn-blog-nav").style.display="inline-flex";showScreen('screen-dashboard');renderDash();}
 function showDashboard(){checkUnsavedAndNavigate(_doShowDashboard);}
-function renderDash(){
-  const sims=JSON.parse(localStorage.getItem('enomia_sims')||'[]');
-  document.getElementById('dash-sub').textContent=sims.length+' simulation'+(sims.length!==1?'s':'')+' sauvegardée'+(sims.length!==1?'s':'');
+async function renderDash(){
   const c=document.getElementById('sims-container');
-  if(!sims.length){c.innerHTML='<div class="sims-empty"><div class="sims-empty-icon">📊</div><div class="sims-empty-t">Aucune simulation</div><p class="sims-empty-d">Cliquez sur \"+ Nouvelle simulation\" pour analyser votre premier bien.</p></div>';return;}
-  c.innerHTML='<div class="sims-grid">'+sims.map((s,i)=>renderCard(s,i)).join('')+'</div>';
+  c.innerHTML='<div style="padding:40px;text-align:center;color:var(--muted);font-size:14px">Chargement...</div>';
+  const data = await _apiPost('/api/simulations', { action: 'fetch' }, true);
+  _dbSims = data.simulations || [];
+  document.getElementById('dash-sub').textContent=_dbSims.length+' simulation'+(_dbSims.length!==1?'s':'')+' sauvegardée'+(_dbSims.length!==1?'s':'');
+  if(!_dbSims.length){c.innerHTML='<div class="sims-empty"><div class="sims-empty-icon">📊</div><div class="sims-empty-t">Aucune simulation</div><p class="sims-empty-d">Cliquez sur \"+ Nouvelle simulation\" pour analyser votre premier bien.</p></div>';return;}
+  c.innerHTML='<div class="sims-grid">'+_dbSims.map((s,i)=>renderCard(s.data||s,i,s.id)).join('')+'</div>';
 }
-function renderCard(s,i){
+function renderCard(s,i,dbId){
   const cls=s.rendement>=12?'good':s.rendement>=5?'ok':'bad';
   const verd=s.rendement>=12?'Excellent':s.rendement>=8?'Bon':s.rendement>=5?'Correct':'Faible';
-  const dt=new Date(s.savedAt).toLocaleDateString('fr-FR',{day:'numeric',month:'short',year:'numeric'});
-  return '<div class="sim-card" onclick="openSim('+i+')"><div class="sim-card-top"><div class="sim-badge '+(s.mode==='multi'?'multi':'')+'">'+( s.mode==='multi'?'Division lots':'Bien unique')+'</div><div class="sim-card-menu"><button class="sim-card-btn del" onclick="event.stopPropagation();deleteSim('+i+')">Suppr.</button><button class="sim-card-btn" onclick="event.stopPropagation();showSharePopup()">Partager</button></div></div><div class="sim-name">'+(s.name||'Sans nom')+'</div><div class="sim-date">'+dt+'</div><div class="sim-rend '+cls+'">'+(s.rendement?.toFixed(1)||'—')+'%</div><div class="sim-verdict '+cls+'">'+verd+' rendement</div><div class="sim-stats"><div class="sim-stat"><div class="sim-stat-l">Cash flow</div><div class="sim-stat-v '+(s.cfMois>=0?'pos':'neg')+'">'+fmtM(s.cfMois)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">Coût projet</div><div class="sim-stat-v">'+fmtK(s.totalProjet)+'</div></div><div class="sim-stat"><div class="sim-stat-l">Mensualité</div><div class="sim-stat-v">'+fmtM(s.mensalit)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">'+(s.mode==='multi'?'Nb lots':'Prix achat')+'</div><div class="sim-stat-v">'+(s.mode==='multi'?(s.nbLots||'—')+' lots':fmtK(s.prix||0))+'</div></div></div></div>';
+  const dt=new Date(s.savedAt||s.created_at).toLocaleDateString('fr-FR',{day:'numeric',month:'short',year:'numeric'});
+  return '<div class="sim-card" onclick="openSim('+i+')"><div class="sim-card-top"><div class="sim-badge '+(s.mode==='multi'?'multi':'')+'">'+( s.mode==='multi'?'Division lots':'Bien unique')+'</div><div class="sim-card-menu"><button class="sim-card-btn del" onclick="event.stopPropagation();deleteSim(\''+dbId+'\')">Suppr.</button><button class="sim-card-btn" onclick="event.stopPropagation();shareSimulation(\''+dbId+'\')">Partager</button></div></div><div class="sim-name">'+(s.name||'Sans nom')+'</div><div class="sim-date">'+dt+'</div><div class="sim-rend '+cls+'">'+(s.rendement?.toFixed(1)||'—')+'%</div><div class="sim-verdict '+cls+'">'+verd+' rendement</div><div class="sim-stats"><div class="sim-stat"><div class="sim-stat-l">Cash flow</div><div class="sim-stat-v '+(s.cfMois>=0?'pos':'neg')+'">'+fmtM(s.cfMois)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">Coût projet</div><div class="sim-stat-v">'+fmtK(s.totalProjet)+'</div></div><div class="sim-stat"><div class="sim-stat-l">Mensualité</div><div class="sim-stat-v">'+fmtM(s.mensalit)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">'+(s.mode==='multi'?'Nb lots':'Prix achat')+'</div><div class="sim-stat-v">'+(s.mode==='multi'?(s.nbLots||'—')+' lots':fmtK(s.prix||0))+'</div></div></div></div>';
 }
-function deleteSim(i){
+async function deleteSim(dbId){
   if(!confirm('Supprimer cette simulation ?'))return;
-  const sims=JSON.parse(localStorage.getItem('enomia_sims')||'[]');
-  sims.splice(i,1);localStorage.setItem('enomia_sims',JSON.stringify(sims));
+  await _apiPost('/api/simulations', { action: 'delete', simulationId: dbId }, true);
   renderDash();
+}
+async function shareSimulation(dbId){
+  const data = await _apiPost('/api/simulations', { action: 'share', simulationId: dbId }, true);
+  if(data.shareUrl){
+    document.getElementById('share-link').value = data.shareUrl;
+    showSharePopup();
+  }
 }
 
 // ─── CALC ───
@@ -1156,7 +1263,7 @@ function newSimulation(){
   if(isCalc){checkUnsavedAndNavigate(_doNewSimulation);}else{_doNewSimulation();}
 }
 function openSim(i){document.getElementById("btn-mes-sim-nav").style.display="inline-flex";document.getElementById("btn-new-nav").style.display="none";
-  const sims=JSON.parse(localStorage.getItem('enomia_sims')||'[]');const s=sims[i];if(!s)return;
+  const entry=_dbSims[i];const s=entry?.data||entry;if(!s)return;
   currentSimIdx=i;
   document.getElementById('sim-name-input').value=s.name||'';
   if(s.mode==='multi'){
@@ -1172,18 +1279,26 @@ function openSim(i){document.getElementById("btn-mes-sim-nav").style.display="in
   }
   showScreen('screen-calc');
 }
-function saveSimulation(){
+let currentSimDbId = null;
+async function _doSaveToDb(){
   const name=document.getElementById('sim-name-input').value.trim()||'Simulation sans nom';
-  const sims=JSON.parse(localStorage.getItem('enomia_sims')||'[]');
   const sliders={};
   Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
   ['prix-m','travaux-m','ameu-m'].forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
-  const sim={name,sliders,mode:calcMode,type:bienType,...currentResult,lots:calcMode==='multi'?[...lots]:undefined,savedAt:new Date().toISOString()};
-  if(currentSimIdx!==null)sims[currentSimIdx]=sim;else{sims.unshift(sim);currentSimIdx=0;}
-  localStorage.setItem('enomia_sims',JSON.stringify(sims));
-  var btn=document.getElementById('btn-save-nav');if(btn){btn.textContent='✓ Sauvegardé';setTimeout(function(){btn.textContent='Sauvegarder'},2000);}
+  const simData={name,sliders,mode:calcMode,type:bienType,...currentResult,lots:calcMode==='multi'?[...lots]:undefined,savedAt:new Date().toISOString()};
+  const res=await _apiPost('/api/simulations',{action:'save',simulationName:name,simulationData:simData,simulationId:currentSimDbId},true);
+  if(res.simulationId)currentSimDbId=res.simulationId;
+  const btn=document.getElementById('btn-save-nav');
+  if(btn){btn.textContent='✓ Sauvegardé';setTimeout(()=>{btn.textContent='Sauvegarder';},2000);}
   document.getElementById('save-status').textContent='';
-  setTimeout(()=>{btn.textContent='Sauvegarder';btn.classList.remove('saved');},2000);
+}
+async function saveSimulation(){
+  if(!_user){
+    _pendingSaveAfterLogin=true;
+    _openMagicModal('Sauvegarder');
+    return;
+  }
+  await _doSaveToDb();
 }
 function initSliders(){
   Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sv(id,s.value);});
@@ -1242,15 +1357,14 @@ window.addEventListener('beforeunload', function(e){
   }
 });
 var _leaveCallback = null;
-function isSubscribed(){return !!localStorage.getItem('enomia_email');}
+function isSubscribed(){return !!_user;}
 function checkUnsavedAndNavigate(cb){
   var isCalc=document.getElementById('screen-calc').classList.contains('active');
   var isUnsaved=document.getElementById('save-status').textContent==='Non sauvegardé';
   if(isCalc&&isUnsaved&&currentResult){
     _leaveCallback=cb;
     if(isSubscribed()){
-      saveSimulation();
-      cb();
+      saveSimulation().then(cb);
     } else {
       document.getElementById('leave-popup').style.display='flex';
     }
@@ -1279,13 +1393,17 @@ function leaveWithoutSaving(){
   if(_leaveCallback){_leaveCallback();_leaveCallback=null;}
 }
 
-// Override save to check if account exists
-var _origSave = saveSimulation;
-saveSimulation = function(){
-  // In production: check if logged in, if not show save popup
-  // For maquette: just save to localStorage
-  _origSave();
-};
+// Helper pour restaurer les données d'une simulation dans les sliders
+function _restoreSimData(s){
+  if(!s)return;
+  if(s.mode)calcMode=s.mode;
+  if(s.type)bienType=s.type;
+  if(s.sliders)Object.keys(s.sliders).forEach(id=>{const el=document.getElementById('s-'+id);if(el){el.value=s.sliders[id];sv(id,s.sliders[id]);}});
+  compute();
+}
+
+// Init auth au chargement
+_initAuth();
 
 // Prevent accidental slider changes while scrolling on mobile
 (function(){
@@ -1374,25 +1492,34 @@ saveSimulation = function(){
 </script>
 
 <!-- SAVE POPUP -->
-<div id="save-popup" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px">
-  <div style="background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:36px;max-width:420px;width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.1)">
-    <button onclick="closeSavePopup()" style="position:absolute;top:14px;right:14px;background:none;border:none;font-size:18px;color:var(--muted);cursor:pointer">×</button>
-    <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:12px">Sauvegarder</div>
-    <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px">Créez un compte pour sauvegarder</div>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">Retrouvez vos simulations sur tous vos appareils et partagez-les.</p>
-    <div style="display:flex;flex-direction:column;gap:8px">
-      <input type="text" id="save-prenom" placeholder="Prénom" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
-      <input type="email" id="save-email" placeholder="Email" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
-      <input type="password" id="save-pwd" placeholder="Mot de passe (6 car. min)" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
-      <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);cursor:pointer;margin-top:4px">
-        <input type="checkbox" id="save-nl-optin" style="width:16px;height:16px;accent-color:var(--green)">
-        Recevoir la newsletter LCD chaque jeudi
-      </label>
-      <button onclick="doSaveAccount()" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;margin-top:4px">Créer mon compte et sauvegarder</button>
+<!-- MAGIC LINK MODAL (login + save) -->
+<div id="magic-modal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px">
+  <div style="background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:36px;max-width:420px;width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.2)">
+    <button onclick="closeMagicModal()" style="position:absolute;top:14px;right:14px;background:none;border:none;font-size:18px;color:var(--muted);cursor:pointer">×</button>
+    <!-- Étape 1 : saisie email -->
+    <div id="magic-step-email">
+      <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:12px" id="magic-modal-label">Se connecter</div>
+      <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px">Votre lien de connexion</div>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">Entrez votre email — vous recevrez un lien magique. Un clic et c'est fait, sans mot de passe.</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <input type="email" id="magic-email-input" placeholder="votre@email.fr" style="padding:13px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none" onkeydown="if(event.key==='Enter')sendMagicLink()">
+        <div id="magic-error" style="display:none;font-size:12px;color:#e05252;padding:8px 12px;background:rgba(224,82,82,0.08);border-radius:6px"></div>
+        <button onclick="sendMagicLink()" id="magic-send-btn" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer">Recevoir mon lien →</button>
+      </div>
+      <p style="font-size:11px;color:var(--muted2);text-align:center;margin-top:14px">Sans mot de passe · Gratuit · Données privées</p>
     </div>
-    <p style="font-size:11px;color:var(--muted2);text-align:center;margin-top:12px">Données privées · Gratuit · Désinscription en un clic</p>
+    <!-- Étape 2 : confirmation -->
+    <div id="magic-step-confirm" style="display:none;text-align:center">
+      <div style="font-size:40px;margin-bottom:16px">✉️</div>
+      <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:10px">Vérifiez vos emails</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7">Un lien de connexion a été envoyé à <strong id="magic-email-sent" style="color:var(--white)"></strong>.<br>Cliquez dessus pour vous connecter automatiquement.</p>
+      <p style="font-size:12px;color:var(--muted2);margin-top:20px">Pas reçu ? Vérifiez vos spams ou <button onclick="resetMagicModal()" style="background:none;border:none;color:var(--accent);font-size:12px;cursor:pointer;text-decoration:underline;font-family:var(--font-body)">réessayez</button>.</p>
+    </div>
   </div>
 </div>
+
+<!-- SAVE POPUP (legacy, remplacé par magic-modal) -->
+<div id="save-popup" style="display:none"></div>
 
 <!-- SHARE POPUP -->
 <div id="share-popup" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px">

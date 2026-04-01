@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js'
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
-  process.env.SUPABASE_KEY
+  process.env.SUPABASE_SERVICE_ROLE_KEY
 )
 
 export default async function handler(req, res) {
@@ -10,49 +10,36 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const { action, email, password, firstName } = req.body
+  const { action, email } = req.body
 
-  if (action === 'signup') {
-    const { data: exists } = await supabase
-      .from('users')
-      .select('id')
-      .eq('email', email)
-      .single()
-
-    if (exists) {
-      return res.status(400).json({ error: 'Email already exists' })
+  // Envoyer un magic link
+  if (action === 'magic-link') {
+    if (!email || !email.includes('@')) {
+      return res.status(400).json({ error: 'Email invalide' })
     }
 
-    const { data, error } = await supabase
-      .from('users')
-      .insert([{
-        email,
-        password_hash: password,
-        first_name: firstName
-      }])
-      .select()
+    const { error } = await supabase.auth.admin.generateLink({
+      type: 'magiclink',
+      email,
+      options: {
+        redirectTo: (process.env.APP_URL || 'https://enomia.app') + '/simulateur-rentabilite-airbnb'
+      }
+    })
 
-    if (error) {
-      return res.status(400).json({ error: error.message })
-    }
-
-    return res.status(200).json({ userId: data[0].id, email })
+    if (error) return res.status(400).json({ error: error.message })
+    return res.status(200).json({ message: 'Lien envoyé' })
   }
 
-  if (action === 'login') {
-    const { data: user, error } = await supabase
-      .from('users')
-      .select('*')
-      .eq('email', email)
-      .eq('password_hash', password)
-      .single()
+  // Vérifier un token et retourner l'utilisateur
+  if (action === 'me') {
+    const token = req.headers.authorization?.replace('Bearer ', '')
+    if (!token) return res.status(401).json({ error: 'Non authentifié' })
 
-    if (error || !user) {
-      return res.status(401).json({ error: 'Invalid credentials' })
-    }
+    const { data: { user }, error } = await supabase.auth.getUser(token)
+    if (error || !user) return res.status(401).json({ error: 'Token invalide' })
 
-    return res.status(200).json({ userId: user.id, email: user.email, firstName: user.first_name })
+    return res.status(200).json({ user: { id: user.id, email: user.email } })
   }
 
-  return res.status(400).json({ error: 'Invalid action' })
+  return res.status(400).json({ error: 'Action invalide' })
 }

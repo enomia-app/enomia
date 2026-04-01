@@ -904,8 +904,8 @@ _sb.auth.onAuthStateChange(async (event, session) => {
   if (event === 'SIGNED_IN') {
     closeMagicModal();
     await _migrateLocalStorage();
-    if (sessionStorage.getItem('enomia_pending_save') === '1') {
-      sessionStorage.removeItem('enomia_pending_save');
+    if (localStorage.getItem('enomia_pending_save') === '1') {
+      localStorage.removeItem('enomia_pending_save');
       await _doSaveToDb();
     }
     _doShowDashboard();
@@ -1285,8 +1285,8 @@ let currentSimDbId = null;
 async function _doSaveToDb(){
   // Utiliser les données en sessionStorage si présentes (après magic link)
   let simData;
-  const pending = sessionStorage.getItem('enomia_pending_sim');
-  if(pending){ simData = JSON.parse(pending); sessionStorage.removeItem('enomia_pending_sim'); }
+  const pending = localStorage.getItem('enomia_pending_sim');
+  if(pending){ simData = JSON.parse(pending); localStorage.removeItem('enomia_pending_sim'); }
   else {
     const name=document.getElementById('sim-name-input').value.trim()||'Simulation sans nom';
     const sliders={};
@@ -1308,8 +1308,8 @@ async function saveSimulation(){
     Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
     ['prix-m','travaux-m','ameu-m'].forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
     const simData={name,sliders,mode:calcMode,type:bienType,...currentResult,lots:calcMode==='multi'?[...lots]:undefined,savedAt:new Date().toISOString()};
-    sessionStorage.setItem('enomia_pending_save', '1');
-    sessionStorage.setItem('enomia_pending_sim', JSON.stringify(simData));
+    localStorage.setItem('enomia_pending_save', '1');
+    localStorage.setItem('enomia_pending_sim', JSON.stringify(simData));
     _openMagicModal('Sauvegarder');
     return;
   }

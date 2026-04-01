@@ -1450,6 +1450,7 @@ function leaveWithoutSaving(){
 // Helper pour restaurer les données d'une simulation dans les sliders
 function _restoreSimData(s){
   if(!s)return;
+  if(s.name){const el=document.getElementById('sim-name-input');if(el)el.value=s.name;}
   if(s.mode)calcMode=s.mode;
   if(s.type)bienType=s.type;
   if(s.sliders)Object.keys(s.sliders).forEach(id=>{const el=document.getElementById('s-'+id);if(el){el.value=s.sliders[id];sv(id,s.sliders[id]);}});

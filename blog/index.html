@@ -37,10 +37,6 @@ a { color: inherit; text-decoration: none; }
 .page { display: none; }
 .page.active { display: block; }
 
-/* ═══ PAGE SWITCHER ═══ */
-.page-switch { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 999; display: flex; gap: 4px; background: var(--bg-dark); padding: 4px; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
-.page-switch button { font-family: var(--font); font-size: 12px; font-weight: 600; padding: 8px 16px; border: none; background: transparent; color: var(--text-dim); cursor: pointer; border-radius: 7px; transition: all 0.15s; white-space: nowrap; }
-.page-switch button.active { background: rgba(255,255,255,0.12); color: var(--text-light); }
 
 /* ═══ HEADER ═══ */
 header {
@@ -489,13 +485,6 @@ footer {
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"></head>
 <body>
 
-<!-- Page switcher -->
-<div class="page-switch">
-  <button onclick="showPage('app')">Homepage App</button>
-  <button class="active" onclick="showPage('home')">Accueil blog</button>
-  <button onclick="showPage('category')">Catégorie</button>
-  <button onclick="showPage('article')">Article</button>
-</div>
 
 <!-- ═══════════════════════════════
      PAGE 0 — HOMEPAGE APP

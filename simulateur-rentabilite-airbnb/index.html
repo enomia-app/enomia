@@ -915,9 +915,12 @@ _sb.auth.onAuthStateChange(async (event, session) => {
   _token = session?.access_token || null;
   _updateNavAuth();
   if (event === 'SIGNED_IN') {
+    // Vérifier qu'on attend bien un sign-in (magic link envoyé explicitement)
+    const expectingSignIn = localStorage.getItem('enomia_expecting_signin') === '1';
+    localStorage.removeItem('enomia_expecting_signin');
     closeMagicModal();
     await _migrateLocalStorage();
-    // Priorité : données dans l'URL (cross-browser), sinon localStorage (même navigateur)
+    const hasPending = _pendingSimData || localStorage.getItem('enomia_pending_save') === '1';
     if (_pendingSimData) {
       const simToSave = _pendingSimData;
       _pendingSimData = null;
@@ -928,7 +931,10 @@ _sb.auth.onAuthStateChange(async (event, session) => {
       localStorage.removeItem('enomia_pending_save');
       await _doSaveToDb();
     }
-    _doShowDashboard();
+    // Rediriger vers dashboard uniquement si c'est un vrai login (pas session existante)
+    if (expectingSignIn || hasPending) {
+      _doShowDashboard();
+    }
   }
 });
 
@@ -982,6 +988,7 @@ async function sendMagicLink() {
   if (!email || !email.includes('@')) { errEl.textContent = 'Email invalide'; errEl.style.display = ''; return; }
   const btn = document.getElementById('magic-send-btn');
   btn.textContent = 'Envoi...'; btn.disabled = true;
+  localStorage.setItem('enomia_expecting_signin', '1');
   const simPayload = _pendingSimData ? encodeURIComponent(JSON.stringify(_pendingSimData)) : null;
   const res = await _apiPost('/api/auth', { action: 'magic-link', email, prenom, simPayload }, false);
   btn.textContent = 'Recevoir mon lien →'; btn.disabled = false;
@@ -1021,11 +1028,12 @@ function showScreen(id){
   var isAuth = id === 'screen-auth';
   document.getElementById('btn-save-nav').style.display = isCalc ? '' : 'none';
   document.getElementById('btn-share-nav').style.display = isCalc ? '' : 'none';
-  // Bouton "+ Nouvelle simulation" : visible + noir sur la homepage
+  var nb=document.getElementById('btn-new-nav');
   if(isAuth){
-    var nb=document.getElementById('btn-new-nav');
     nb.style.display='inline-flex';
-    nb.className='btn-sm'; // noir (pas accent vert)
+    nb.className='btn-sm'; // noir sur homepage
+  } else if(isCalc){
+    nb.style.display='none'; // caché sur le calculateur
   }
   window.scrollTo(0,0);
 }

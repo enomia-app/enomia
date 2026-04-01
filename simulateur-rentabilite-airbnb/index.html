@@ -895,7 +895,7 @@ const _sb = supabase.createClient(
   'https://pesoidoedtjpihjvrnnc.supabase.co',
   'sb_publishable_TTmUwZsTYt7OWBTwTruaLQ_BYzRT9Jp'
 );
-let _user = null, _token = null, _dbSims = [], _pendingSaveAfterLogin = false;
+let _user = null, _token = null, _dbSims = [];
 
 _sb.auth.onAuthStateChange(async (event, session) => {
   _user = session?.user || null;
@@ -904,7 +904,10 @@ _sb.auth.onAuthStateChange(async (event, session) => {
   if (event === 'SIGNED_IN') {
     closeMagicModal();
     await _migrateLocalStorage();
-    if (_pendingSaveAfterLogin) { _pendingSaveAfterLogin = false; await _doSaveToDb(); }
+    if (sessionStorage.getItem('enomia_pending_save') === '1') {
+      sessionStorage.removeItem('enomia_pending_save');
+      await _doSaveToDb();
+    }
   }
 });
 
@@ -1297,7 +1300,7 @@ async function _doSaveToDb(){
 }
 async function saveSimulation(){
   if(!_user){
-    _pendingSaveAfterLogin=true;
+    sessionStorage.setItem('enomia_pending_save', '1');
     _openMagicModal('Sauvegarder');
     return;
   }

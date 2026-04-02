@@ -1,0 +1,168 @@
+---
+export const prerender = true;
+
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+const CAT_LABELS: Record<string, string> = {
+  'chiffres-strategie': 'Chiffres & Stratégie',
+  'automatiser-gerer': 'Automatiser & Gérer',
+  'lancer-optimiser': 'Lancer & Optimiser',
+  'trouver-acheter': 'Trouver & Acheter',
+};
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function readingTime(body: string) {
+  const words = body.split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
+const allPosts = await getCollection('blog');
+
+// Sort: by order asc (nulls last), then by publishedAt desc
+const sorted = allPosts.sort((a, b) => {
+  const orderA = a.data.order ?? 9999;
+  const orderB = b.data.order ?? 9999;
+  if (orderA !== orderB) return orderA - orderB;
+  return new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime();
+});
+
+// Find featured article (or fallback to first)
+const featuredPost = sorted.find(p => p.data.featured) ?? sorted[0];
+const otherPosts = sorted.filter(p => p !== featuredPost);
+---
+
+<BlogLayout
+  title="Blog Enomia — Location courte durée"
+  description="Conseils, stratégies et guides pour optimiser votre location courte durée sur Airbnb."
+>
+  <div class="wrap">
+    <!-- Hero featured -->
+    {featuredPost && (
+      <section class="blog-hero">
+        <a href={`/blog/${featuredPost.slug}`} class="featured">
+          <div class="featured-img">
+            {featuredPost.data.featuredImage
+              ? <img src={featuredPost.data.featuredImage.src} alt={featuredPost.data.featuredImage.alt} />
+              : <span>Image à venir</span>
+            }
+          </div>
+          <div class="featured-body">
+            <span class="tag">{CAT_LABELS[featuredPost.data.category]}</span>
+            <h1 class="featured-title">{featuredPost.data.title}</h1>
+            <p class="featured-excerpt">{featuredPost.data.excerpt}</p>
+            <div class="meta">
+              <div class="featured-author">
+                <div class="featured-author-photo">
+                  <span>{featuredPost.data.authorName.charAt(0).toUpperCase()}</span>
+                </div>
+                <div class="featured-author-info">
+                  <div class="featured-author-name">{featuredPost.data.authorName}</div>
+                </div>
+              </div>
+              <div class="meta-dot"></div>
+              <span>{formatDate(featuredPost.data.publishedAt)}</span>
+              <div class="meta-dot"></div>
+              <span>{readingTime(featuredPost.body)} min de lecture</span>
+            </div>
+          </div>
+        </a>
+      </section>
+    )}
+
+    <!-- Newsletter inline -->
+    <div class="nl-block">
+      <div class="nl-row">
+        <div class="nl-content">
+          <div class="nl-tag">Newsletter</div>
+          <div class="nl-title">Recevez nos meilleurs conseils LCD chaque semaine</div>
+          <p class="nl-desc">Stratégies, chiffres et outils pour booster vos revenus en location courte durée. Gratuit, sans spam.</p>
+        </div>
+        <div class="nl-form-wrap">
+          <form class="nl-form" onsubmit="return false;">
+            <input type="email" class="nl-input" placeholder="votre@email.com" />
+            <button type="submit" class="nl-btn">S'abonner gratuitement</button>
+            <p class="nl-note">Désabonnement en 1 clic · Aucun spam</p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Articles grid -->
+    {otherPosts.length > 0 && (
+      <section>
+        <div class="sec-head">
+          <span class="sec-title">Tous les articles</span>
+        </div>
+        <div class="grid-3" id="articles-grid">
+          {otherPosts.map(post => (
+            <a href={`/blog/${post.slug}`} class="card" data-cat={post.data.category}>
+              <div class="card-img">
+                {post.data.featuredImage
+                  ? <img src={post.data.featuredImage.src} alt={post.data.featuredImage.alt} />
+                  : <div class="card-img-placeholder" style="width:100%;height:100%;"></div>
+                }
+              </div>
+              <div class="card-body">
+                <div class="card-cat">{CAT_LABELS[post.data.category]}</div>
+                <div class="card-title">{post.data.title}</div>
+                <p class="card-excerpt">{post.data.excerpt}</p>
+                <div class="card-meta">{formatDate(post.data.publishedAt)} · {readingTime(post.body)} min</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {allPosts.length === 0 && (
+      <div style="text-align:center; padding: 80px 0; color: var(--text-tertiary);">
+        <p style="font-size:16px;">Aucun article pour le moment. Revenez bientôt !</p>
+      </div>
+    )}
+  </div>
+
+  <!-- Client-side category filtering -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('cat');
+    if (cat) {
+      const pills = document.querySelectorAll('.cat-pill');
+      pills.forEach(pill => {
+        const href = (pill as HTMLAnchorElement).href;
+        if (href.includes(`cat=${cat}`)) {
+          pill.classList.add('active');
+        } else if (!href.includes('cat=') && cat) {
+          // "Tous" pill - don't mark active
+        }
+      });
+
+      const cards = document.querySelectorAll<HTMLElement>('#articles-grid .card');
+      cards.forEach(card => {
+        if (card.dataset.cat !== cat) {
+          card.style.display = 'none';
+        }
+      });
+
+      // Also check featured
+      const featured = document.querySelector<HTMLElement>('.featured');
+      if (featured) {
+        // featured doesn't have data-cat, we hide it when filtering
+        featured.style.display = 'none';
+        const hero = document.querySelector<HTMLElement>('.blog-hero');
+        if (hero) hero.style.display = 'none';
+      }
+    } else {
+      const pills = document.querySelectorAll('.cat-pill');
+      pills.forEach(pill => {
+        const href = (pill as HTMLAnchorElement).href;
+        if (!href.includes('cat=')) {
+          pill.classList.add('active');
+        }
+      });
+    }
+  </script>
+</BlogLayout>

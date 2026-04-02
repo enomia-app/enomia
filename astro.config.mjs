@@ -6,5 +6,7 @@ import vercel from '@astrojs/vercel/serverless';
 export default defineConfig({
   integrations: [react(), keystatic()],
   output: 'hybrid',
-  adapter: vercel(),
+  adapter: vercel({
+    nodeVersion: '20.x'
+  }),
 });

@@ -1,10 +1,5 @@
 {
   "rewrites": [
     { "source": "/simulateur-rentabilite-airbnb", "destination": "/simulateur-rentabilite-airbnb/index.html" }
-  ],
-  "functions": {
-    "api/**": {
-      "runtime": "nodejs20.x"
-    }
-  }
+  ]
 }

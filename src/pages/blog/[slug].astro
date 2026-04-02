@@ -1,0 +1,235 @@
+---
+export const prerender = true;
+
+import { getCollection, getEntry } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const CAT_LABELS: Record<string, string> = {
+  'chiffres-strategie': 'Chiffres & Stratégie',
+  'automatiser-gerer': 'Automatiser & Gérer',
+  'lancer-optimiser': 'Lancer & Optimiser',
+  'trouver-acheter': 'Trouver & Acheter',
+};
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function readingTime(body: string) {
+  const words = body.split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
+function getInitials(name: string) {
+  return name.split(' ').map(n => n.charAt(0).toUpperCase()).join('').slice(0, 2);
+}
+
+// Related articles: same category, exclude current
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+  .filter(p => p.slug !== post.slug && p.data.category === post.data.category)
+  .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())
+  .slice(0, 2);
+
+const catLabel = CAT_LABELS[post.data.category];
+const readTime = readingTime(post.body);
+
+// JSON-LD
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.metaTitle,
+  description: post.data.metaDescription,
+  datePublished: post.data.publishedAt,
+  dateModified: post.data.updatedAt ?? post.data.publishedAt,
+  author: {
+    '@type': 'Person',
+    name: post.data.authorName,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Enomia',
+    url: 'https://enomia.fr',
+  },
+  ...(post.data.featuredImage ? { image: post.data.featuredImage.src } : {}),
+  ...(post.data.ratingValue && post.data.ratingCount ? {
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: post.data.ratingValue,
+      reviewCount: post.data.ratingCount,
+      bestRating: 5,
+      worstRating: 1,
+    }
+  } : {}),
+};
+---
+
+<BlogLayout
+  title={post.data.metaTitle}
+  description={post.data.metaDescription}
+  ogImage={post.data.featuredImage?.src}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <div class="article-wrap">
+
+    <!-- Main content -->
+    <article class="article-main">
+      <!-- Breadcrumb -->
+      <nav class="article-breadcrumb">
+        <a href="/blog">Blog</a>
+        <span class="bc-sep">›</span>
+        <a href={`/blog?cat=${post.data.category}`}>{catLabel}</a>
+        <span class="bc-sep">›</span>
+        <span>{post.data.title}</span>
+      </nav>
+
+      <!-- Category tag -->
+      <span class="tag">{catLabel}</span>
+
+      <!-- Title -->
+      <h1 class="article-h1">{post.data.title}</h1>
+
+      <!-- Author block -->
+      <div class="author-block">
+        <div class="author-avatar">{getInitials(post.data.authorName)}</div>
+        <div class="author-info">
+          <div class="author-name">{post.data.authorName}</div>
+          <div class="author-date">
+            {formatDate(post.data.publishedAt)}
+            {post.data.updatedAt && (
+              <span> · Mis à jour le {formatDate(post.data.updatedAt)}</span>
+            )}
+            <span> · {readTime} min de lecture</span>
+          </div>
+        </div>
+      </div>
+
+      {post.data.authorBio && (
+        <p class="author-bio-line">{post.data.authorBio}</p>
+      )}
+
+      <!-- Credibility bar -->
+      <div class="cred-bar">
+        <div class="cred-item">
+          <div class="cred-value">9</div>
+          <div class="cred-label">biens en portefeuille</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-value">12–18%</div>
+          <div class="cred-label">rendement net moyen</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-value">~1h</div>
+          <div class="cred-label">par bien par mois</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-value">6 ans</div>
+          <div class="cred-label">d'expérience LCD</div>
+        </div>
+      </div>
+
+      <!-- Cover image -->
+      <div class="article-cover">
+        {post.data.featuredImage
+          ? <img src={post.data.featuredImage.src} alt={post.data.featuredImage.alt} />
+          : <span>Image de couverture</span>
+        }
+      </div>
+
+      <!-- Content -->
+      <div class="article-body">
+        <Content />
+      </div>
+    </article>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Simulateur widget -->
+      <div class="sb-sim">
+        <div class="sb-sim-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <div class="sb-sim-title">Simulateur de rentabilité</div>
+        <p class="sb-sim-desc">Calculez en 2 minutes le rendement réel de votre bien en location courte durée.</p>
+        <div class="sb-sim-stats">
+          <div class="sb-sim-stat">
+            <div class="sb-sim-stat-val">+24%</div>
+            <div class="sb-sim-stat-lbl">revenus moyens</div>
+          </div>
+          <div class="sb-sim-stat">
+            <div class="sb-sim-stat-val">2min</div>
+            <div class="sb-sim-stat-lbl">pour calculer</div>
+          </div>
+          <div class="sb-sim-stat">
+            <div class="sb-sim-stat-val">100%</div>
+            <div class="sb-sim-stat-lbl">gratuit</div>
+          </div>
+        </div>
+        <a href="/simulateur-rentabilite-airbnb" class="sb-sim-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13 17 18 12 13 7"></polyline>
+            <polyline points="6 17 11 12 6 7"></polyline>
+          </svg>
+          Lancer le simulateur
+        </a>
+      </div>
+
+      <!-- Newsletter widget -->
+      <div class="sb-nl">
+        <div class="sb-nl-tag">Newsletter</div>
+        <div class="sb-nl-title">Les meilleures stratégies LCD chaque semaine</div>
+        <p class="sb-nl-desc">Rejoignez +1 200 propriétaires qui optimisent leurs revenus LCD avec nos conseils.</p>
+        <form onsubmit="return false;">
+          <input type="email" placeholder="votre@email.com" />
+          <button type="submit">S'abonner gratuitement</button>
+        </form>
+        <p class="sb-nl-note">Désabonnement en 1 clic</p>
+      </div>
+    </aside>
+
+    <!-- Related articles -->
+    {relatedPosts.length > 0 && (
+      <section class="related">
+        <div class="sec-head">
+          <span class="sec-title">Articles liés</span>
+          <a href={`/blog?cat=${post.data.category}`} class="sec-link">Voir tout →</a>
+        </div>
+        <div class="grid-2">
+          {relatedPosts.map(related => (
+            <a href={`/blog/${related.slug}`} class="card">
+              <div class="card-img">
+                {related.data.featuredImage
+                  ? <img src={related.data.featuredImage.src} alt={related.data.featuredImage.alt} />
+                  : <div class="card-img-placeholder" style="width:100%;height:100%;"></div>
+                }
+              </div>
+              <div class="card-body">
+                <div class="card-cat">{CAT_LABELS[related.data.category]}</div>
+                <div class="card-title">{related.data.title}</div>
+                <p class="card-excerpt">{related.data.excerpt}</p>
+                <div class="card-meta">{formatDate(related.data.publishedAt)} · {readingTime(related.body)} min</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+  </div>
+</BlogLayout>

@@ -1,100 +1,108 @@
-import { config } from '@keystatic/core';
+import { config, collection, fields } from '@keystatic/core';
 
 export default config({
   storage: {
-    kind: 'github',
-    repo: 'enomia-app/enomia',
+    kind: 'local',
   },
   collections: {
-    blog: {
+    blog: collection({
       label: 'Articles du Blog',
-      slugField: 'slug',
-      path: 'keystatic/blog/*/',
-      format: { data: 'json' },
-      columns: ['title', 'slug', 'publishedAt', 'category'],
+      slugField: 'title',
+      path: 'src/content/blog/*',
+      format: { contentField: 'content' },
+      columns: ['title', 'publishedAt', 'category'],
       schema: {
-        title: {
-          label: 'Titre de l\'article',
-          type: 'string',
-          validation: { isRequired: true },
-        },
-        slug: {
-          label: 'Slug (URL de l\'article)',
-          type: 'string',
-          validation: { isRequired: true },
-        },
-        metaTitle: {
-          label: 'Titre SEO (meta title)',
-          type: 'string',
-          validation: { isRequired: true, length: { max: 60 } },
-        },
-        metaDescription: {
-          label: 'Description SEO (meta description)',
-          type: 'string',
-          validation: { isRequired: true, length: { max: 160 } },
-        },
-        excerpt: {
-          label: 'Résumé court (160 caractères)',
-          type: 'string',
-          validation: { isRequired: true, length: { max: 160 } },
-        },
-        featuredImage: {
-          label: 'Image de couverture',
-          type: 'object',
-          fields: {
-            src: {
-              label: 'URL de l\'image',
-              type: 'string',
-              validation: { isRequired: true },
-            },
-            alt: {
-              label: 'Texte alternatif (alt text)',
-              type: 'string',
-              validation: { isRequired: true },
-            },
+        title: fields.slug({
+          name: {
+            label: 'Titre de l\'article',
+            validation: { isRequired: true },
           },
-          validation: { isRequired: true },
-        },
-        publishedAt: {
+          slug: {
+            label: 'Slug (URL)',
+          },
+        }),
+        metaTitle: fields.text({
+          label: 'Titre SEO (max 60 car.)',
+          validation: { isRequired: true, length: { max: 60 } },
+        }),
+        metaDescription: fields.text({
+          label: 'Description SEO (max 160 car.)',
+          multiline: true,
+          validation: { isRequired: true, length: { max: 160 } },
+        }),
+        excerpt: fields.text({
+          label: 'Résumé court (max 160 car.)',
+          multiline: true,
+          validation: { isRequired: true, length: { max: 160 } },
+        }),
+        featuredImage: fields.object({
+          label: 'Image de couverture',
+          fields: {
+            src: fields.text({
+              label: 'URL de l\'image',
+              validation: { isRequired: true },
+            }),
+            alt: fields.text({
+              label: 'Texte alternatif',
+              validation: { isRequired: true },
+            }),
+          },
+        }),
+        publishedAt: fields.datetime({
           label: 'Date de publication',
-          type: 'datetime',
           validation: { isRequired: true },
-        },
-        updatedAt: {
+        }),
+        updatedAt: fields.datetime({
           label: 'Date de mise à jour',
-          type: 'datetime',
-        },
-        category: {
-          label: 'Catégorie (Pilier éditorial)',
-          type: 'select',
+        }),
+        category: fields.select({
+          label: 'Catégorie',
           options: [
             { label: 'Chiffres & Stratégie', value: 'chiffres-strategie' },
             { label: 'Automatiser & Gérer', value: 'automatiser-gerer' },
             { label: 'Lancer & Optimiser', value: 'lancer-optimiser' },
             { label: 'Trouver & Acheter', value: 'trouver-acheter' },
           ],
-          validation: { isRequired: true },
-        },
-        youtubeVideoId: {
-          label: 'Vidéo YouTube (URL complète)',
-          type: 'string',
-          description: 'Ex: https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-        },
-        content: {
-          label: 'Contenu (avec H1, H2, H3)',
-          type: 'rich-text',
-          validation: { isRequired: true },
-        },
-        authorName: {
+          defaultValue: 'chiffres-strategie',
+        }),
+        order: fields.integer({
+          label: 'Ordre d\'affichage (1 = premier)',
+          validation: { isRequired: false },
+        }),
+        featured: fields.checkbox({
+          label: 'Article mis en avant (Top 5)',
+          defaultValue: false,
+        }),
+        formationStep: fields.integer({
+          label: 'Étape de la formation (1-10, laisser vide si non applicable)',
+          validation: { isRequired: false },
+        }),
+        youtubeVideoId: fields.text({
+          label: 'ID Vidéo YouTube (ex: dQw4w9WgXcQ)',
+          description: 'Uniquement l\'ID, pas l\'URL complète',
+        }),
+        ratingValue: fields.number({
+          label: 'Note de l\'article (ex: 4.8)',
+          description: 'Entre 1 et 5 — apparaît dans les étoiles Google',
+          validation: { isRequired: false },
+        }),
+        ratingCount: fields.integer({
+          label: 'Nombre d\'avis',
+          description: 'Utilisé pour le schema.org AggregateRating',
+          validation: { isRequired: false },
+        }),
+        authorName: fields.text({
           label: 'Nom de l\'auteur',
-          type: 'string',
           validation: { isRequired: true },
-        },
-        authorBio: {
+        }),
+        authorBio: fields.text({
           label: 'Bio courte de l\'auteur',
-          type: 'string',
-        },
+          multiline: true,
+        }),
+        content: fields.markdoc({
+          label: 'Contenu de l\'article',
+        }),
       },
-    },
+    }),
   },
 });

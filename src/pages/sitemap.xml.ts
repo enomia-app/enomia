@@ -1,0 +1,46 @@
+export const prerender = true;
+
+import { getCollection } from 'astro:content';
+
+const SITE = 'https://www.enomia.app';
+
+const staticPages = [
+  { url: '/', changefreq: 'weekly', priority: '1.0' },
+  { url: '/blog/', changefreq: 'weekly', priority: '0.8' },
+  { url: '/simulateur-rentabilite-airbnb', changefreq: 'monthly', priority: '0.9' },
+];
+
+export async function GET() {
+  const posts = await getCollection('blog');
+
+  const postEntries = posts.map((post) => ({
+    url: `/blog/${post.slug}/`,
+    changefreq: 'monthly',
+    priority: '0.7',
+    lastmod: post.data.updatedAt ?? post.data.publishedAt,
+  }));
+
+  const allEntries = [
+    ...staticPages.map((p) => ({ ...p, lastmod: undefined })),
+    ...postEntries,
+  ];
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${allEntries
+  .map(
+    (entry) => `  <url>
+    <loc>${SITE}${entry.url}</loc>${entry.lastmod ? `\n    <lastmod>${entry.lastmod.split('T')[0]}</lastmod>` : ''}
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>`
+  )
+  .join('\n')}
+</urlset>`;
+
+  return new Response(xml, {
+    headers: {
+      'Content-Type': 'application/xml; charset=utf-8',
+    },
+  });
+}

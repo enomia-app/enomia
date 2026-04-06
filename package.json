@@ -10,6 +10,7 @@
     "postinstall": "node scripts/fix-keystatic.mjs"
   },
   "dependencies": {
+    "@astrojs/markdoc": "^0.15.11",
     "@astrojs/react": "^5.0.2",
     "@astrojs/vercel": "^9.0.5",
     "@keystatic/astro": "5.0.6",

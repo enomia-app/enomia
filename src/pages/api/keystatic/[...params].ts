@@ -10,6 +10,9 @@ const _handler = makeHandler({ config });
 export const ALL = async (context: any) => {
   const url = new URL(context.request.url);
 
+  console.log('[KS] >>> method:', context.request.method, 'path:', url.pathname, 'hostname:', url.hostname);
+  console.log('[KS] >>> cookie:', context.request.headers.get('cookie')?.slice(0, 200) ?? '(none)');
+
   if (process.env.VERCEL && (url.hostname === 'localhost' || url.hostname === '127.0.0.1')) {
     const appUrl = (process.env.APP_URL || 'https://www.enomia.app').replace(/\/$/, '');
     const correctedUrl = context.request.url.replace(
@@ -24,8 +27,12 @@ export const ALL = async (context: any) => {
       // @ts-expect-error - duplex not in TS types but needed at runtime
       duplex: 'half',
     });
-    return _handler({ ...context, request: correctedRequest });
+    const res1 = await _handler({ ...context, request: correctedRequest });
+    console.log('[KS] <<< status (corrected url):', res1.status);
+    return res1;
   }
 
-  return _handler(context);
+  const res2 = await _handler(context);
+  console.log('[KS] <<< status:', res2.status);
+  return res2;
 };

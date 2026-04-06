@@ -7,7 +7,7 @@ const _handler = makeHandler({ config });
 
 // Vercel internal rewrites (to /_render) cause the host to appear as "localhost".
 // This wrapper fixes the request URL before Keystatic builds the OAuth redirect_uri.
-export const all = async (context: any) => {
+export const ALL = async (context: any) => {
   const url = new URL(context.request.url);
 
   if (process.env.VERCEL && (url.hostname === 'localhost' || url.hostname === '127.0.0.1')) {

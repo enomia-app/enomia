@@ -20,6 +20,9 @@ export const ALL = async (context: any) => {
       method: context.request.method,
       headers: context.request.headers,
       body: ['GET', 'HEAD'].includes(context.request.method) ? undefined : context.request.body,
+      // Required for streaming bodies in Node.js (fixes POST body being lost)
+      // @ts-expect-error - duplex not in TS types but needed at runtime
+      duplex: 'half',
     });
     return _handler({ ...context, request: correctedRequest });
   }

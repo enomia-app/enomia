@@ -42,18 +42,15 @@ export default config({
           validation: { isRequired: true, length: { max: 160 } },
         }),
         featuredImage: fields.object({
-          label: 'Image de couverture',
-          fields: {
-            src: fields.text({
-              label: 'URL de l\'image',
-              validation: { isRequired: true },
-            }),
-            alt: fields.text({
-              label: 'Texte alternatif',
-              validation: { isRequired: true },
-            }),
-          },
-        }),
+          src: fields.text({
+            label: 'URL de l\'image',
+            validation: { isRequired: true },
+          }),
+          alt: fields.text({
+            label: 'Texte alternatif',
+            validation: { isRequired: true },
+          }),
+        }, { label: 'Image de couverture' }),
         publishedAt: fields.datetime({
           label: 'Date de publication',
           validation: { isRequired: true },

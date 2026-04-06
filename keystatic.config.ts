@@ -17,6 +17,7 @@ export default config({
       path: 'src/content/blog/*',
       format: { contentField: 'content' },
       columns: ['title', 'publishedAt', 'category'],
+      previewUrl: '/blog/{slug}',
       schema: {
         title: fields.slug({
           name: {

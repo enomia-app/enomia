@@ -69,7 +69,9 @@ const readTime = readingTime(post.body);
       <h1 class="article-h1">{post.data.title}</h1>
 
       <div class="author-block">
-        <div class="author-avatar">{getInitials(post.data.authorName)}</div>
+        <div class="author-avatar">
+          <img src="https://res.cloudinary.com/dv2btcpc2/image/upload/q_auto,f_auto,w_80/v1775507331/Marc_1_a6ndja.png" alt={post.data.authorName} />
+        </div>
         <div class="author-info">
           <div class="author-name">{post.data.authorName}</div>
           <div class="author-date">
@@ -107,8 +109,9 @@ const readTime = readingTime(post.body);
             <line x1="12" y1="17" x2="12" y2="21"></line>
           </svg>
         </div>
-        <div class="sb-sim-title">Simulateur de rentabilité</div>
-        <p class="sb-sim-desc">Calculez en 2 minutes le rendement réel de votre bien en location courte durée.</p>
+        <div class="sb-sim-title">Simulateur de rendement Airbnb</div>
+        <div class="sb-sim-badge">100% gratuit</div>
+        <p class="sb-sim-desc">Calculez en 2 minutes le rendement réel de votre bien Airbnb — cash flow, rentabilité nette, seuil de rentabilité.</p>
         <a href="/simulateur-rentabilite-airbnb" class="sb-sim-btn">Lancer le simulateur</a>
       </div>
     </aside>

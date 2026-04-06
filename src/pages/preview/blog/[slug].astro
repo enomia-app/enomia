@@ -2,8 +2,8 @@
 // SSR — fetches directly from GitHub so preview is always up-to-date
 // No prerender: every page load reads the latest committed content
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-import Markdoc from '@markdoc/markdoc';
-import jsYaml from 'js-yaml';
+import * as Markdoc from '@markdoc/markdoc';
+import { load as yamlLoad } from 'js-yaml';
 
 const { slug } = Astro.params;
 if (!slug) return Astro.redirect('/blog');
@@ -39,7 +39,7 @@ try {
     const raw = await res.text();
     const fmMatch = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
     if (fmMatch) {
-      data = (jsYaml.load(fmMatch[1]) as Record<string, any>) || {};
+      data = (yamlLoad(fmMatch[1]) as Record<string, any>) || {};
       const body = fmMatch[2] ?? '';
       try {
         const ast = Markdoc.parse(body);

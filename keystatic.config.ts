@@ -16,7 +16,7 @@ export default config({
       path: 'src/content/blog/*',
       format: { contentField: 'content' },
       columns: ['title', 'publishedAt', 'category'],
-      previewUrl: `/preview/blog/{slug}?secret=${process.env.PREVIEW_SECRET ?? 'dev'}`,
+      previewUrl: `/preview/blog/{slug}?secret=${import.meta.env.PUBLIC_PREVIEW_SECRET ?? 'dev'}`,
       schema: {
         title: fields.slug({
           name: {

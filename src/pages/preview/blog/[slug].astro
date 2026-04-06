@@ -6,7 +6,7 @@ import BlogLayout from '../../../layouts/BlogLayout.astro';
 
 const { slug } = Astro.params;
 const secret = Astro.url.searchParams.get('secret');
-const expectedSecret = import.meta.env.PREVIEW_SECRET || process.env.PREVIEW_SECRET || 'dev';
+const expectedSecret = import.meta.env.PUBLIC_PREVIEW_SECRET || process.env.PUBLIC_PREVIEW_SECRET || 'dev';
 
 if (secret !== expectedSecret) {
   return new Response('Accès non autorisé', { status: 401 });

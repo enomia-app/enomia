@@ -1,7 +1,5 @@
 {
   "rewrites": [
-    { "source": "/api/keystatic/:path*", "destination": "/_render" },
-    { "source": "/keystatic/:path*", "destination": "/_render" },
     { "source": "/simulateur-rentabilite-airbnb", "destination": "/simulateur-rentabilite-airbnb/index.html" }
   ]
 }

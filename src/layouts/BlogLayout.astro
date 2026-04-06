@@ -300,17 +300,19 @@ const { title, description, ogImage } = Astro.props;
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 
     /* Sidebar simulateur */
-    .sb-sim { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 20px; }
-    .sb-sim-icon { width: 34px; height: 34px; background: var(--bg-dark); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
-    .sb-sim-icon svg { width: 16px; height: 16px; color: var(--text-light); }
-    .sb-sim-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
-    .sb-sim-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 14px; }
-    .sb-sim-stats { display: flex; gap: 0; margin-bottom: 14px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-    .sb-sim-stat { flex: 1; text-align: center; padding: 10px 6px; border-right: 1px solid var(--border); }
+    .sb-sim { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 16px; }
+    .sb-sim-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+    .sb-sim-icon { width: 30px; height: 30px; min-width: 30px; background: var(--bg-dark); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+    .sb-sim-icon svg { width: 14px; height: 14px; color: var(--text-light); }
+    .sb-sim-title { font-size: 14px; font-weight: 700; line-height: 1.2; }
+    .sb-sim-desc { font-size: 11px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 12px; }
+    .sb-sim-stats { display: flex; gap: 0; margin-bottom: 12px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .sb-sim-stat { flex: 1; text-align: center; padding: 8px 4px; border-right: 1px solid var(--border); }
     .sb-sim-stat:last-child { border-right: none; }
-    .sb-sim-stat-val { font-size: 15px; font-weight: 800; }
+    .sb-sim-stat-val { font-size: 13px; font-weight: 800; }
     .sb-sim-stat-lbl { font-size: 9px; color: var(--text-tertiary); margin-top: 1px; line-height: 1.2; }
-    .sb-sim-btn { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 10px; background: var(--bg-dark); color: #fff; border: none; border-radius: 8px; font-family: var(--font); font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity 0.15s; text-decoration: none; }
+    .sb-sim-btn { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 9px 12px; background: var(--bg-dark); color: #fff; border: none; border-radius: 8px; font-family: var(--font); font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity 0.15s; text-decoration: none; }
+    .sb-sim-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
     .sb-sim-btn:hover { opacity: 0.88; }
 
     /* Simulator badge */
@@ -336,7 +338,7 @@ const { title, description, ogImage } = Astro.props;
     .article-nl-input:focus { border-color: var(--green); }
     .article-nl-row { display: flex; gap: 0; }
     .article-nl-email { border-radius: 6px 0 0 6px !important; border-right: none !important; flex: 1; }
-    .article-nl-btn { background: var(--green); color: #fff; border: none; font-family: var(--font); font-size: 13px; font-weight: 600; padding: 11px 18px; border-radius: 0 6px 6px 0; cursor: pointer; white-space: nowrap; transition: opacity 0.15s; }
+    .article-nl-btn { background: var(--text-light); color: var(--bg-dark); border: none; font-family: var(--font); font-size: 13px; font-weight: 600; padding: 11px 18px; border-radius: 0 6px 6px 0; cursor: pointer; white-space: nowrap; transition: opacity 0.15s; }
     .article-nl-btn:hover { opacity: 0.88; }
     .article-nl-note { font-size: 10px; color: var(--text-dim); margin-top: 10px; text-align: center; }
 

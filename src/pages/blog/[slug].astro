@@ -191,14 +191,16 @@ const jsonLd = {
     <aside class="sidebar">
       <!-- Simulateur widget -->
       <div class="sb-sim">
-        <div class="sb-sim-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
-          </svg>
+        <div class="sb-sim-header">
+          <div class="sb-sim-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <div class="sb-sim-title">Simulateur de rendement Airbnb</div>
         </div>
-        <div class="sb-sim-title">Simulateur de rendement Airbnb</div>
         <div class="sb-sim-badge">100% gratuit</div>
         <p class="sb-sim-desc">Calculez en 2 minutes le rendement réel de votre bien Airbnb — cash flow, rentabilité nette, seuil de rentabilité.</p>
         <div class="sb-sim-stats">
@@ -228,8 +230,9 @@ const jsonLd = {
       <div class="sb-nl">
         <div class="sb-nl-tag">Newsletter</div>
         <div class="sb-nl-title">Les meilleures stratégies LCD chaque semaine</div>
-        <p class="sb-nl-desc">Rejoignez +1 200 propriétaires qui optimisent leurs revenus LCD avec nos conseils.</p>
+        <p class="sb-nl-desc">Rejoignez +1 200 propriétaires qui optimisent leurs revenus LCD.</p>
         <form onsubmit="return false;">
+          <input type="text" placeholder="Prénom" />
           <input type="email" placeholder="votre@email.com" />
           <button type="submit">S'abonner gratuitement</button>
         </form>

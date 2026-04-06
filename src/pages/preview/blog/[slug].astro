@@ -1,12 +1,22 @@
 ---
-// SSR — fetches directly from GitHub so preview is always up-to-date
-// No prerender: every page load reads the latest committed content
+// SSR — no prerender, reads content from last Vercel deploy
+// After each Keystatic save → Vercel rebuild (~1-2 min) → preview is fresh
+import { getCollection } from 'astro:content';
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-import * as Markdoc from '@markdoc/markdoc';
-import { load as yamlLoad } from 'js-yaml';
 
-const { slug } = Astro.params;
-if (!slug) return Astro.redirect('/blog');
+export async function getStaticPaths() {
+  // Include ALL posts (drafts included) for preview
+  const allPosts = await getCollection('blog');
+  return allPosts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+export const prerender = true;
+
+const { post } = Astro.props;
+const { Content } = await post.render();
 
 const CAT_LABELS: Record<string, string> = {
   'chiffres-strategie': 'Chiffres & Stratégie',
@@ -15,147 +25,112 @@ const CAT_LABELS: Record<string, string> = {
   'trouver-acheter': 'Trouver & Acheter',
 };
 
-function formatDate(d: string | Date) {
-  if (!d) return '';
-  return new Date(d as string).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
 function readingTime(body: string) {
   return Math.max(1, Math.round(body.split(/\s+/).length / 200));
 }
 
-// Fetch latest content straight from GitHub (bypasses Vercel deploy)
-const rawUrl = `https://raw.githubusercontent.com/enomia-app/enomia/main/src/content/blog/${slug}.mdoc`;
-let html = '';
-let data: Record<string, any> = {};
-let fetchError = '';
-let fetchedAt = new Date().toLocaleTimeString('fr-FR');
-
-try {
-  const res = await fetch(rawUrl, { cache: 'no-store' });
-  if (!res.ok) {
-    fetchError = `GitHub a répondu ${res.status} pour ${slug}.mdoc`;
-  } else {
-    const raw = await res.text();
-    const fmMatch = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
-    if (fmMatch) {
-      data = (yamlLoad(fmMatch[1]) as Record<string, any>) || {};
-      const body = fmMatch[2] ?? '';
-      try {
-        const ast = Markdoc.parse(body);
-        const transformed = Markdoc.transform(ast);
-        html = Markdoc.renderers.html(transformed);
-      } catch (e: any) {
-        html = `<pre style="white-space:pre-wrap">${body}</pre>`;
-      }
-    } else {
-      fetchError = 'Impossible de parser le frontmatter du fichier .mdoc';
-    }
-  }
-} catch (e: any) {
-  fetchError = `Erreur réseau : ${e.message}`;
-}
-
-const catLabel = CAT_LABELS[data.category as string] ?? data.category ?? '';
-const readTime = readingTime(html);
+const catLabel = CAT_LABELS[post.data.category];
+const readTime = readingTime(post.body);
 ---
 
 <BlogLayout
-  title={`[PREVIEW] ${data.metaTitle ?? slug}`}
-  description={data.metaDescription ?? ''}
+  title={`[PREVIEW] ${post.data.metaTitle}`}
+  description={post.data.metaDescription}
+  ogImage={post.data.featuredImage?.src}
 >
   <meta name="robots" content="noindex,nofollow" slot="head" />
 
   <!-- Preview banner -->
   <div style="background:#f59e0b;color:#000;text-align:center;padding:10px 16px;font-weight:600;font-size:13px;position:sticky;top:0;z-index:999;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
-    <span>APERÇU — {data.draft ? '🔒 Brouillon' : '✅ Publié'} · Contenu GitHub du {fetchedAt}</span>
+    <span>APERÇU — {post.data.draft ? '🔒 Brouillon' : '✅ Publié'}</span>
     <a href="/keystatic" style="color:#000;text-decoration:underline;">Modifier dans Keystatic →</a>
   </div>
 
-  {fetchError && (
-    <div style="max-width:720px;margin:40px auto;padding:24px;background:#fee2e2;border-radius:12px;color:#991b1b;font-size:14px;">
-      <strong>Erreur :</strong> {fetchError}
-    </div>
-  )}
+  <div class="article-wrap">
 
-  {!fetchError && (
-    <div class="article-wrap">
+    <article class="article-main">
+      <nav class="article-breadcrumb">
+        <a href="/blog">Blog</a>
+        <span class="bc-sep">›</span>
+        <a href={`/blog?cat=${post.data.category}`}>{catLabel}</a>
+        <span class="bc-sep">›</span>
+        <span>{post.data.title}</span>
+      </nav>
 
-      <article class="article-main">
-        <nav class="article-breadcrumb">
-          <a href="/blog">Blog</a>
-          <span class="bc-sep">›</span>
-          {catLabel && <a href={`/blog?cat=${data.category}`}>{catLabel}</a>}
-          {catLabel && <span class="bc-sep">›</span>}
-          <span>{data.title ?? slug}</span>
-        </nav>
+      <span class="tag">{catLabel}</span>
+      <h1 class="article-h1">{post.data.title}</h1>
 
-        {catLabel && <span class="tag">{catLabel}</span>}
-        <h1 class="article-h1">{data.title ?? slug}</h1>
-
-        <div class="author-block">
-          <div class="author-avatar">
-            <img src="https://res.cloudinary.com/dv2btcpc2/image/upload/q_auto,f_auto,w_80/v1775507331/Marc_1_a6ndja.png" alt={data.authorName ?? 'Auteur'} />
-          </div>
-          <div class="author-info">
-            <div class="author-name">{data.authorName ?? 'Marc Chenut'}</div>
-            <div class="author-date">
-              {data.publishedAt && formatDate(data.publishedAt)}
-              {data.updatedAt && <span> · Mis à jour le {formatDate(data.updatedAt)}</span>}
-              <span> · {readTime} min de lecture</span>
-            </div>
+      <div class="author-block">
+        <div class="author-avatar">
+          <img src="https://res.cloudinary.com/dv2btcpc2/image/upload/q_auto,f_auto,w_80/v1775507331/Marc_1_a6ndja.png" alt={post.data.authorName} />
+        </div>
+        <div class="author-info">
+          <div class="author-name">{post.data.authorName}</div>
+          <div class="author-date">
+            {formatDate(post.data.publishedAt)}
+            {post.data.updatedAt && <span> · Mis à jour le {formatDate(post.data.updatedAt)}</span>}
+            <span> · {readTime} min de lecture</span>
           </div>
         </div>
+      </div>
 
-        {data.authorBio && <p class="author-bio-line">{data.authorBio}</p>}
+      {post.data.authorBio && <p class="author-bio-line">{post.data.authorBio}</p>}
 
-        <div class="cred-bar">
-          <div class="cred-item"><div class="cred-value">9</div><div class="cred-label">biens en portefeuille</div></div>
-          <div class="cred-item"><div class="cred-value">12–18%</div><div class="cred-label">rendement net moyen</div></div>
-          <div class="cred-item"><div class="cred-value">~1h</div><div class="cred-label">par bien par mois</div></div>
-          <div class="cred-item"><div class="cred-value">6 ans</div><div class="cred-label">d'expérience LCD</div></div>
+      <div class="cred-bar">
+        <div class="cred-item"><div class="cred-value">9</div><div class="cred-label">biens en portefeuille</div></div>
+        <div class="cred-item"><div class="cred-value">12–18%</div><div class="cred-label">rendement net moyen</div></div>
+        <div class="cred-item"><div class="cred-value">~1h</div><div class="cred-label">par bien par mois</div></div>
+        <div class="cred-item"><div class="cred-value">6 ans</div><div class="cred-label">d'expérience LCD</div></div>
+      </div>
+
+      <div class="article-cover">
+        {post.data.featuredImage
+          ? <img src={post.data.featuredImage.src} alt={post.data.featuredImage.alt} />
+          : <span>Image de couverture</span>
+        }
+      </div>
+
+      <div class="article-body">
+        <Content />
+      </div>
+
+      <!-- Star rating -->
+      <div class="rating-block">
+        <div class="rating-label">Cet article vous a été utile ?</div>
+        <div class="rating-stars" id="rating-stars">
+          <span class="star" data-v="1">★</span>
+          <span class="star" data-v="2">★</span>
+          <span class="star" data-v="3">★</span>
+          <span class="star" data-v="4">★</span>
+          <span class="star" data-v="5">★</span>
         </div>
+        <div class="rating-thanks" id="rating-thanks" style="display:none">Merci pour votre avis !</div>
+      </div>
 
-        {data.featuredImage?.src && (
-          <div class="article-cover">
-            <img src={data.featuredImage.src} alt={data.featuredImage.alt ?? ''} />
+      <!-- Newsletter end of article -->
+      <div class="article-nl">
+        <div class="article-nl-tag">Newsletter</div>
+        <div class="article-nl-title">Les coulisses de 9 biens LCD à 12–18% net</div>
+        <p class="article-nl-desc">Méthode duplicable, chiffres réels, stratégie et erreurs à éviter — chaque jeudi à 7h30.</p>
+        <form class="article-nl-form" onsubmit="return false;">
+          <input type="text" placeholder="Prénom" class="article-nl-input" />
+          <div class="article-nl-row">
+            <input type="email" placeholder="ton@email.fr" class="article-nl-input article-nl-email" />
+            <button type="submit" class="article-nl-btn">S'abonner — c'est gratuit</button>
           </div>
-        )}
+        </form>
+        <p class="article-nl-note">Un email par semaine · Désabonnement en 1 clic</p>
+      </div>
+    </article>
 
-        <div class="article-body" set:html={html} />
-
-        <!-- Star rating -->
-        <div class="rating-block">
-          <div class="rating-label">Cet article vous a été utile ?</div>
-          <div class="rating-stars" id="rating-stars">
-            <span class="star" data-v="1">★</span>
-            <span class="star" data-v="2">★</span>
-            <span class="star" data-v="3">★</span>
-            <span class="star" data-v="4">★</span>
-            <span class="star" data-v="5">★</span>
-          </div>
-          <div class="rating-thanks" id="rating-thanks" style="display:none">Merci pour votre avis !</div>
-        </div>
-
-        <!-- Newsletter end of article -->
-        <div class="article-nl">
-          <div class="article-nl-tag">Newsletter</div>
-          <div class="article-nl-title">Les coulisses de 9 biens LCD à 12–18% net</div>
-          <p class="article-nl-desc">Méthode duplicable, chiffres réels, stratégie et erreurs à éviter — chaque jeudi à 7h30.</p>
-          <form class="article-nl-form" onsubmit="return false;">
-            <input type="text" placeholder="Prénom" class="article-nl-input" />
-            <div class="article-nl-row">
-              <input type="email" placeholder="ton@email.fr" class="article-nl-input article-nl-email" />
-              <button type="submit" class="article-nl-btn">S'abonner — c'est gratuit</button>
-            </div>
-          </form>
-          <p class="article-nl-note">Un email par semaine · Désabonnement en 1 clic</p>
-        </div>
-      </article>
-
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <div class="sb-sim">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sb-sim">
+        <div class="sb-sim-header">
           <div class="sb-sim-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -164,36 +139,37 @@ const readTime = readingTime(html);
             </svg>
           </div>
           <div class="sb-sim-title">Simulateur de rendement Airbnb</div>
-          <div class="sb-sim-badge">100% gratuit</div>
-          <p class="sb-sim-desc">Calculez en 2 minutes le rendement réel de votre bien Airbnb — cash flow, rentabilité nette, seuil de rentabilité.</p>
-          <div class="sb-sim-stats">
-            <div class="sb-sim-stat"><div class="sb-sim-stat-val">+24%</div><div class="sb-sim-stat-lbl">revenus moyens</div></div>
-            <div class="sb-sim-stat"><div class="sb-sim-stat-val">2min</div><div class="sb-sim-stat-lbl">pour calculer</div></div>
-            <div class="sb-sim-stat"><div class="sb-sim-stat-val">100%</div><div class="sb-sim-stat-lbl">gratuit</div></div>
-          </div>
-          <a href="/simulateur-rentabilite-airbnb" class="sb-sim-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="13 17 18 12 13 7"></polyline>
-              <polyline points="6 17 11 12 6 7"></polyline>
-            </svg>
-            Lancer le simulateur
-          </a>
         </div>
-
-        <div class="sb-nl">
-          <div class="sb-nl-tag">Newsletter</div>
-          <div class="sb-nl-title">Les meilleures stratégies LCD chaque semaine</div>
-          <p class="sb-nl-desc">Rejoignez +1 200 propriétaires qui optimisent leurs revenus LCD avec nos conseils.</p>
-          <form onsubmit="return false;">
-            <input type="email" placeholder="votre@email.com" />
-            <button type="submit">S'abonner gratuitement</button>
-          </form>
-          <p class="sb-nl-note">Désabonnement en 1 clic</p>
+        <div class="sb-sim-badge">100% gratuit</div>
+        <p class="sb-sim-desc">Calculez en 2 minutes le rendement réel de votre bien Airbnb.</p>
+        <div class="sb-sim-stats">
+          <div class="sb-sim-stat"><div class="sb-sim-stat-val">+24%</div><div class="sb-sim-stat-lbl">revenus moyens</div></div>
+          <div class="sb-sim-stat"><div class="sb-sim-stat-val">2min</div><div class="sb-sim-stat-lbl">pour calculer</div></div>
+          <div class="sb-sim-stat"><div class="sb-sim-stat-val">100%</div><div class="sb-sim-stat-lbl">gratuit</div></div>
         </div>
-      </aside>
+        <a href="/simulateur-rentabilite-airbnb" class="sb-sim-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13 17 18 12 13 7"></polyline>
+            <polyline points="6 17 11 12 6 7"></polyline>
+          </svg>
+          Lancer le simulateur
+        </a>
+      </div>
 
-    </div>
-  )}
+      <div class="sb-nl">
+        <div class="sb-nl-tag">Newsletter</div>
+        <div class="sb-nl-title">Les meilleures stratégies LCD chaque semaine</div>
+        <p class="sb-nl-desc">Rejoignez +1 200 propriétaires qui optimisent leurs revenus LCD.</p>
+        <form onsubmit="return false;">
+          <input type="text" placeholder="Prénom" />
+          <input type="email" placeholder="votre@email.com" />
+          <button type="submit">S'abonner gratuitement</button>
+        </form>
+        <p class="sb-nl-note">Désabonnement en 1 clic</p>
+      </div>
+    </aside>
+
+  </div>
 
   <script>
     const stars = document.querySelectorAll('.star');
@@ -205,10 +181,7 @@ const readTime = readingTime(html);
         const v = Number(star.getAttribute('data-v'));
         stars.forEach(s => s.classList.toggle('active', Number(s.getAttribute('data-v')) <= v));
       });
-      star.addEventListener('mouseleave', () => {
-        if (rated) return;
-        stars.forEach(s => s.classList.remove('active'));
-      });
+      star.addEventListener('mouseleave', () => { if (!rated) stars.forEach(s => s.classList.remove('active')); });
       star.addEventListener('click', () => {
         if (rated) return;
         rated = true;

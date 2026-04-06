@@ -108,6 +108,12 @@ export default config({
         }),
         content: fields.markdoc({
           label: 'Contenu de l\'article',
+          options: {
+            image: {
+              directory: 'public/blog-images',
+              publicPath: '/blog-images/',
+            },
+          },
         }),
       },
     }),

@@ -19,6 +19,7 @@ const blog = defineCollection({
     ratingCount: z.number().optional(),
     authorName: z.string(),
     authorBio: z.string().optional(),
+    draft: z.boolean().default(false),
   }),
 });
 

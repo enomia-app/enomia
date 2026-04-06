@@ -17,7 +17,7 @@ export default config({
       path: 'src/content/blog/*',
       format: { contentField: 'content' },
       columns: ['title', 'publishedAt', 'category'],
-      previewUrl: '/blog/{slug}',
+      previewUrl: `/preview/blog/{slug}?secret=${process.env.PREVIEW_SECRET ?? 'dev'}`,
       schema: {
         title: fields.slug({
           name: {
@@ -102,6 +102,10 @@ export default config({
         authorBio: fields.text({
           label: 'Bio courte de l\'auteur',
           multiline: true,
+        }),
+        draft: fields.checkbox({
+          label: 'Brouillon (non visible sur le site)',
+          defaultValue: true,
         }),
         content: fields.markdoc({
           label: 'Contenu de l\'article',

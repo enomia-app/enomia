@@ -1,0 +1,120 @@
+---
+export const prerender = false;
+
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+
+const { slug } = Astro.params;
+const secret = Astro.url.searchParams.get('secret');
+const expectedSecret = import.meta.env.PREVIEW_SECRET || process.env.PREVIEW_SECRET || 'dev';
+
+if (secret !== expectedSecret) {
+  return new Response('Accès non autorisé', { status: 401 });
+}
+
+// Include drafts (no filter)
+const allPosts = await getCollection('blog');
+const post = allPosts.find(p => p.slug === slug);
+
+if (!post) {
+  return new Response('Article introuvable', { status: 404 });
+}
+
+const { Content } = await post.render();
+
+const CAT_LABELS: Record<string, string> = {
+  'chiffres-strategie': 'Chiffres & Stratégie',
+  'automatiser-gerer': 'Automatiser & Gérer',
+  'lancer-optimiser': 'Lancer & Optimiser',
+  'trouver-acheter': 'Trouver & Acheter',
+};
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function readingTime(body: string) {
+  const words = body.split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
+function getInitials(name: string) {
+  return name.split(' ').map(n => n.charAt(0).toUpperCase()).join('').slice(0, 2);
+}
+
+const catLabel = CAT_LABELS[post.data.category];
+const readTime = readingTime(post.body);
+---
+
+<BlogLayout
+  title={`[PREVIEW] ${post.data.metaTitle}`}
+  description={post.data.metaDescription}
+  ogImage={post.data.featuredImage?.src}
+>
+  <!-- Preview banner -->
+  <div style="background:#f59e0b;color:#000;text-align:center;padding:10px 16px;font-weight:600;font-size:14px;position:sticky;top:0;z-index:999;">
+    APERÇU — Cet article est en brouillon et n'est pas visible sur le site.
+    {post.data.draft && <span> · <a href="/keystatic" style="color:#000;text-decoration:underline;">Modifier dans Keystatic</a></span>}
+  </div>
+
+  <div class="article-wrap">
+
+    <article class="article-main">
+      <nav class="article-breadcrumb">
+        <a href="/blog">Blog</a>
+        <span class="bc-sep">›</span>
+        <a href={`/blog?cat=${post.data.category}`}>{catLabel}</a>
+        <span class="bc-sep">›</span>
+        <span>{post.data.title}</span>
+      </nav>
+
+      <span class="tag">{catLabel}</span>
+      <h1 class="article-h1">{post.data.title}</h1>
+
+      <div class="author-block">
+        <div class="author-avatar">{getInitials(post.data.authorName)}</div>
+        <div class="author-info">
+          <div class="author-name">{post.data.authorName}</div>
+          <div class="author-date">
+            {formatDate(post.data.publishedAt)}
+            {post.data.updatedAt && (
+              <span> · Mis à jour le {formatDate(post.data.updatedAt)}</span>
+            )}
+            <span> · {readTime} min de lecture</span>
+          </div>
+        </div>
+      </div>
+
+      {post.data.authorBio && (
+        <p class="author-bio-line">{post.data.authorBio}</p>
+      )}
+
+      <div class="article-cover">
+        {post.data.featuredImage
+          ? <img src={post.data.featuredImage.src} alt={post.data.featuredImage.alt} />
+          : <span>Image de couverture</span>
+        }
+      </div>
+
+      <div class="article-body">
+        <Content />
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sb-sim">
+        <div class="sb-sim-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <div class="sb-sim-title">Simulateur de rentabilité</div>
+        <p class="sb-sim-desc">Calculez en 2 minutes le rendement réel de votre bien en location courte durée.</p>
+        <a href="/simulateur-rentabilite-airbnb" class="sb-sim-btn">Lancer le simulateur</a>
+      </div>
+    </aside>
+
+  </div>
+</BlogLayout>

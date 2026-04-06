@@ -1,5 +1,5 @@
 diff --git a/node_modules/@keystatic/core/dist/keystatic-core-api-generic.js b/node_modules/@keystatic/core/dist/keystatic-core-api-generic.js
-index aabdb1a..ff31e66 100644
+index aabdb1a..fec5381 100644
 --- a/node_modules/@keystatic/core/dist/keystatic-core-api-generic.js
 +++ b/node_modules/@keystatic/core/dist/keystatic-core-api-generic.js
 @@ -186,11 +186,11 @@ function makeGenericAPIRouteHandler(_config, options) {
@@ -42,7 +42,7 @@ index aabdb1a..ff31e66 100644
 -    maxAge: tokenData.refresh_token_expires_in,
 -    expires: new Date(Date.now() + tokenData.refresh_token_expires_in * 100),
 +    maxAge: refreshExpiresIn,
-+    expires: new Date(Date.now() + refreshExpiresIn * 100),
++    expires: new Date(Date.now() + refreshExpiresIn * 1000),
      path: '/'
    })]];
    return headers;
@@ -93,8 +93,16 @@ index aabdb1a..ff31e66 100644
    }
    return getTokenCookies(tokenData, config);
  }
+@@ -336,6 +345,7 @@ async function githubLogin(req, config) {
+   const url = new URL('https://github.com/login/oauth/authorize');
+   url.searchParams.set('client_id', config.clientId);
+   url.searchParams.set('redirect_uri', `${reqUrl.origin}/api/keystatic/github/oauth/callback`);
++  url.searchParams.set('scope', 'repo');
+   if (from === '/') {
+     return redirect(url.toString());
+   }
 diff --git a/node_modules/@keystatic/core/dist/keystatic-core-api-generic.node.js b/node_modules/@keystatic/core/dist/keystatic-core-api-generic.node.js
-index b4c82e2..974b9a2 100644
+index b4c82e2..84aefe2 100644
 --- a/node_modules/@keystatic/core/dist/keystatic-core-api-generic.node.js
 +++ b/node_modules/@keystatic/core/dist/keystatic-core-api-generic.node.js
 @@ -389,11 +389,11 @@ function makeGenericAPIRouteHandler(_config, options) {
@@ -137,7 +145,7 @@ index b4c82e2..974b9a2 100644
 -    maxAge: tokenData.refresh_token_expires_in,
 -    expires: new Date(Date.now() + tokenData.refresh_token_expires_in * 100),
 +    maxAge: refreshExpiresIn,
-+    expires: new Date(Date.now() + refreshExpiresIn * 100),
++    expires: new Date(Date.now() + refreshExpiresIn * 1000),
      path: '/'
    })]];
    return headers;
@@ -197,7 +205,7 @@ index b4c82e2..974b9a2 100644
      return redirect(url.toString());
    }
 diff --git a/node_modules/@keystatic/core/dist/keystatic-core-api-generic.node.react-server.js b/node_modules/@keystatic/core/dist/keystatic-core-api-generic.node.react-server.js
-index fb21fd0..8f5dcbd 100644
+index fb21fd0..43226bc 100644
 --- a/node_modules/@keystatic/core/dist/keystatic-core-api-generic.node.react-server.js
 +++ b/node_modules/@keystatic/core/dist/keystatic-core-api-generic.node.react-server.js
 @@ -389,11 +389,11 @@ function makeGenericAPIRouteHandler(_config, options) {
@@ -240,7 +248,7 @@ index fb21fd0..8f5dcbd 100644
 -    maxAge: tokenData.refresh_token_expires_in,
 -    expires: new Date(Date.now() + tokenData.refresh_token_expires_in * 100),
 +    maxAge: refreshExpiresIn,
-+    expires: new Date(Date.now() + refreshExpiresIn * 100),
++    expires: new Date(Date.now() + refreshExpiresIn * 1000),
      path: '/'
    })]];
    return headers;
@@ -300,7 +308,7 @@ index fb21fd0..8f5dcbd 100644
      return redirect(url.toString());
    }
 diff --git a/node_modules/@keystatic/core/dist/keystatic-core-api-generic.react-server.js b/node_modules/@keystatic/core/dist/keystatic-core-api-generic.react-server.js
-index 2246207..72e0d70 100644
+index 2246207..89aa8e2 100644
 --- a/node_modules/@keystatic/core/dist/keystatic-core-api-generic.react-server.js
 +++ b/node_modules/@keystatic/core/dist/keystatic-core-api-generic.react-server.js
 @@ -205,11 +205,11 @@ function makeGenericAPIRouteHandler(_config, options) {
@@ -343,7 +351,7 @@ index 2246207..72e0d70 100644
 -    maxAge: tokenData.refresh_token_expires_in,
 -    expires: new Date(Date.now() + tokenData.refresh_token_expires_in * 100),
 +    maxAge: refreshExpiresIn,
-+    expires: new Date(Date.now() + refreshExpiresIn * 100),
++    expires: new Date(Date.now() + refreshExpiresIn * 1000),
      path: '/'
    })]];
    return headers;
@@ -403,7 +411,7 @@ index 2246207..72e0d70 100644
      return redirect(url.toString());
    }
 diff --git a/node_modules/@keystatic/core/dist/keystatic-core-api-generic.worker.js b/node_modules/@keystatic/core/dist/keystatic-core-api-generic.worker.js
-index 2246207..72e0d70 100644
+index 2246207..89aa8e2 100644
 --- a/node_modules/@keystatic/core/dist/keystatic-core-api-generic.worker.js
 +++ b/node_modules/@keystatic/core/dist/keystatic-core-api-generic.worker.js
 @@ -205,11 +205,11 @@ function makeGenericAPIRouteHandler(_config, options) {
@@ -446,7 +454,7 @@ index 2246207..72e0d70 100644
 -    maxAge: tokenData.refresh_token_expires_in,
 -    expires: new Date(Date.now() + tokenData.refresh_token_expires_in * 100),
 +    maxAge: refreshExpiresIn,
-+    expires: new Date(Date.now() + refreshExpiresIn * 100),
++    expires: new Date(Date.now() + refreshExpiresIn * 1000),
      path: '/'
    })]];
    return headers;

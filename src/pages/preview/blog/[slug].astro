@@ -14,7 +14,11 @@ if (secret !== expectedSecret) {
 
 // Include drafts (no filter)
 const allPosts = await getCollection('blog');
-const post = allPosts.find(p => p.slug === slug);
+const post = allPosts.find(p =>
+  p.slug === slug ||
+  p.id === slug ||
+  p.id.replace(/\.(mdoc|md)$/, '') === slug
+);
 
 if (!post) {
   return new Response('Article introuvable', { status: 404 });

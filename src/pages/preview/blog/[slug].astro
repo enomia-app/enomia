@@ -1,7 +1,7 @@
 ---
 export const prerender = false;
 
-import { getCollection } from 'astro:content';
+import { getEntry } from 'astro:content';
 import BlogLayout from '../../../layouts/BlogLayout.astro';
 
 const { slug } = Astro.params;
@@ -12,17 +12,12 @@ if (secret !== expectedSecret) {
   return new Response('Accès non autorisé', { status: 401 });
 }
 
-// Include drafts (no filter)
-const allPosts = await getCollection('blog');
-const post = allPosts.find(p =>
-  p.slug === slug ||
-  p.id === slug ||
-  p.id.replace(/\.(mdoc|md)$/, '') === slug
-);
+// Try to get entry by slug (with and without extension)
+const post = await getEntry('blog', slug as string)
+  ?? await getEntry('blog', `${slug}.mdoc` as any);
 
 if (!post) {
-  const available = allPosts.map(p => `id=${p.id} slug=${p.slug}`).join(', ');
-  return new Response(`Article introuvable. slug=${slug} | dispo: ${available || 'aucun'}`, { status: 404 });
+  return new Response(`Article introuvable (slug: ${slug})`, { status: 404 });
 }
 
 const { Content } = await post.render();
@@ -59,7 +54,7 @@ const readTime = readingTime(post.body);
   <!-- Preview banner -->
   <div style="background:#f59e0b;color:#000;text-align:center;padding:10px 16px;font-weight:600;font-size:14px;position:sticky;top:0;z-index:999;">
     APERÇU — Cet article est en brouillon et n'est pas visible sur le site.
-    {post.data.draft && <span> · <a href="/keystatic" style="color:#000;text-decoration:underline;">Modifier dans Keystatic</a></span>}
+    <a href="/keystatic" style="color:#000;text-decoration:underline;margin-left:8px;">Modifier dans Keystatic →</a>
   </div>
 
   <div class="article-wrap">

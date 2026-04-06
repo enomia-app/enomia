@@ -1,5 +1,36 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, rmSync, existsSync } from 'fs';
+import { spawnSync } from 'child_process';
 
+const KEY_FILE = 'node_modules/@keystatic/core/dist/keystatic-core-api-generic.node.js';
+
+// ── Guard: if core files are missing or syntactically broken, do a clean reinstall ──
+if (!existsSync(KEY_FILE)) {
+  console.log('⚠  @keystatic/core dist not found — reinstalling...');
+  reinstallCore();
+} else {
+  const content = readFileSync(KEY_FILE, 'utf8');
+  const doubleDecl = (content.match(/const expiresIn = /g) || []).length > 1;
+  const syntaxOk = spawnSync(process.execPath, ['--check', KEY_FILE]).status === 0;
+  if (doubleDecl || !syntaxOk) {
+    console.log('⚠  Corrupted @keystatic/core detected (double-patch or syntax error). Reinstalling...');
+    reinstallCore();
+  }
+}
+
+function reinstallCore() {
+  rmSync('node_modules/@keystatic/core', { recursive: true, force: true });
+  const result = spawnSync(
+    'npm', ['install', '--ignore-scripts'],
+    { stdio: 'inherit', env: { ...process.env } }
+  );
+  if (result.status !== 0) {
+    console.error('Failed to reinstall @keystatic/core');
+    process.exit(1);
+  }
+  console.log('✓ Fresh @keystatic/core installed.');
+}
+
+// ── Now patch the (clean or already-correct) files ──
 const files = [
   'node_modules/@keystatic/core/dist/keystatic-core-api-generic.js',
   'node_modules/@keystatic/core/dist/keystatic-core-api-generic.node.js',
@@ -14,15 +45,13 @@ for (const file of files) {
   let changed = false;
 
   // ── Patch A: make OAuth token fields optional + fix cookie durations ──
-  // (Classic GitHub OAuth Apps don't return expires_in / refresh_token fields)
-  const hasA = c.includes('expiresIn = tokenData.expires_in ?? 86400');
+  const hasA = c.includes('const expiresIn = ');
   if (!hasA) {
     c = c.replace(/expires_in: s\.number\(\)/g, 'expires_in: s.optional(s.number())');
     c = c.replace(/refresh_token: s\.string\(\)/g, 'refresh_token: s.optional(s.string())');
     c = c.replace(/refresh_token_expires_in: s\.number\(\)/g, 'refresh_token_expires_in: s.optional(s.number())');
     c = c.replace(/scope: s\.string\(\)/g, 'scope: s.optional(s.string())');
     c = c.replace(/token_type: s\.literal\('bearer'\)/g, "token_type: s.optional(s.literal('bearer'))");
-
     c = c.replace(
       /const headers = \[\['Set-Cookie', cookie\.serialize\('keystatic-gh-access-token', tokenData\.access_token, \{/,
       `const expiresIn = tokenData.expires_in ?? 86400;\n  const refreshExpiresIn = tokenData.refresh_token_expires_in ?? 7776000;\n  const refreshToken = tokenData.refresh_token ?? tokenData.access_token;\n  const headers = [['Set-Cookie', cookie.serialize('keystatic-gh-access-token', tokenData.access_token, {`
@@ -42,7 +71,6 @@ for (const file of files) {
   }
 
   // ── Patch B: fix OAuth redirect_uri on Vercel (use x-forwarded-host) ──
-  // Vercel internal rewrites make req.url show localhost — real host is in x-forwarded-host.
   const hasB = c.includes('_fwdHost');
   if (!hasB) {
     c = c.replace(
@@ -58,10 +86,16 @@ for (const file of files) {
 
   if (changed) {
     writeFileSync(file, c);
+    // Verify syntax immediately after writing
+    const check = spawnSync(process.execPath, ['--check', file]);
+    if (check.status !== 0) {
+      console.error(`✗ Syntax error in ${file} after patching! Aborting.`);
+      process.exit(1);
+    }
     patched++;
-    console.log(`Patched: ${file}`);
+    console.log(`✓ Patched: ${file}`);
   } else {
-    console.log(`Already patched: ${file}`);
+    console.log(`  Already patched: ${file}`);
   }
 }
 console.log(`Done. ${patched} file(s) patched.`);

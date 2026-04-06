@@ -5,7 +5,6 @@ export default config({
     ? {
         kind: 'github',
         repo: 'enomia-app/enomia',
-        branchPrefix: 'keystatic/',
       }
     : {
         kind: 'local',

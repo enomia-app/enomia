@@ -21,7 +21,8 @@ const post = allPosts.find(p =>
 );
 
 if (!post) {
-  return new Response('Article introuvable', { status: 404 });
+  const available = allPosts.map(p => `id=${p.id} slug=${p.slug}`).join(', ');
+  return new Response(`Article introuvable. slug=${slug} | dispo: ${available || 'aucun'}`, { status: 404 });
 }
 
 const { Content } = await post.render();

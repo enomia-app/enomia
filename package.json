@@ -5,9 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "patch-package && astro build",
+    "build": "node scripts/fix-keystatic.mjs && astro build",
     "preview": "astro preview",
-    "postinstall": "patch-package"
+    "postinstall": "node scripts/fix-keystatic.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.2",

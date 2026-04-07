@@ -29,7 +29,8 @@ function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
-function readingTime(body: string) {
+function readingTime(body: string | undefined) {
+  if (!body) return 1;
   return Math.max(1, Math.round(body.split(/\s+/).length / 200));
 }
 

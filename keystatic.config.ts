@@ -5,7 +5,6 @@ export default config({
     ? {
         kind: 'github',
         repo: 'enomia-app/enomia',
-        branchPrefix: 'keystatic/',
       }
     : {
         kind: 'local',
@@ -17,6 +16,7 @@ export default config({
       path: 'src/content/blog/*',
       format: { contentField: 'content' },
       columns: ['title', 'publishedAt', 'category'],
+      previewUrl: '/preview/blog/{slug}',
       schema: {
         title: fields.slug({
           name: {
@@ -102,8 +102,18 @@ export default config({
           label: 'Bio courte de l\'auteur',
           multiline: true,
         }),
+        draft: fields.checkbox({
+          label: 'Brouillon (non visible sur le site)',
+          defaultValue: true,
+        }),
         content: fields.markdoc({
           label: 'Contenu de l\'article',
+          options: {
+            image: {
+              directory: 'public/blog-images',
+              publicPath: '/blog-images/',
+            },
+          },
         }),
       },
     }),

@@ -8,8 +8,8 @@ const blog = defineCollection({
     metaDescription: z.string(),
     excerpt: z.string(),
     featuredImage: z.object({ src: z.string(), alt: z.string() }).optional(),
-    publishedAt: z.string(),
-    updatedAt: z.string().optional(),
+    publishedAt: z.union([z.string(), z.date()]).transform(v => v instanceof Date ? v.toISOString() : v),
+    updatedAt: z.union([z.string(), z.date()]).transform(v => v instanceof Date ? v.toISOString() : v).optional(),
     category: z.enum(['chiffres-strategie','automatiser-gerer','lancer-optimiser','trouver-acheter']),
     order: z.number().optional(),
     featured: z.boolean().default(false),
@@ -19,6 +19,7 @@ const blog = defineCollection({
     ratingCount: z.number().optional(),
     authorName: z.string(),
     authorBio: z.string().optional(),
+    draft: z.boolean().default(false),
   }),
 });
 

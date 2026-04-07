@@ -1,16 +1,19 @@
 ---
-export const prerender = true;
-
-import { getCollection, getEntry } from 'astro:content';
-import BlogLayout from '../../layouts/BlogLayout.astro';
+// SSR — no prerender, reads content from last Vercel deploy
+// After each Keystatic save → Vercel rebuild (~1-2 min) → preview is fresh
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.map(post => ({
+  // Include ALL posts (drafts included) for preview
+  const allPosts = await getCollection('blog');
+  return allPosts.map(post => ({
     params: { slug: post.slug },
     props: { post },
   }));
 }
+
+export const prerender = true;
 
 const { post } = Astro.props;
 const { Content } = await post.render();
@@ -27,66 +30,29 @@ function formatDate(dateStr: string) {
 }
 
 function readingTime(body: string) {
-  const words = body.split(/\s+/).length;
-  return Math.max(1, Math.round(words / 200));
+  return Math.max(1, Math.round(body.split(/\s+/).length / 200));
 }
-
-function getInitials(name: string) {
-  return name.split(' ').map(n => n.charAt(0).toUpperCase()).join('').slice(0, 2);
-}
-
-// Related articles: same category, exclude current
-const allPosts = await getCollection('blog');
-const relatedPosts = allPosts
-  .filter(p => p.slug !== post.slug && p.data.category === post.data.category)
-  .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())
-  .slice(0, 2);
 
 const catLabel = CAT_LABELS[post.data.category];
 const readTime = readingTime(post.body);
-
-// JSON-LD
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: post.data.metaTitle,
-  description: post.data.metaDescription,
-  datePublished: post.data.publishedAt,
-  dateModified: post.data.updatedAt ?? post.data.publishedAt,
-  author: {
-    '@type': 'Person',
-    name: post.data.authorName,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Enomia',
-    url: 'https://enomia.fr',
-  },
-  ...(post.data.featuredImage ? { image: post.data.featuredImage.src } : {}),
-  ...(post.data.ratingValue && post.data.ratingCount ? {
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: post.data.ratingValue,
-      reviewCount: post.data.ratingCount,
-      bestRating: 5,
-      worstRating: 1,
-    }
-  } : {}),
-};
 ---
 
 <BlogLayout
-  title={post.data.metaTitle}
+  title={`[PREVIEW] ${post.data.metaTitle}`}
   description={post.data.metaDescription}
   ogImage={post.data.featuredImage?.src}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <meta name="robots" content="noindex,nofollow" slot="head" />
+
+  <!-- Preview banner -->
+  <div style="background:#f59e0b;color:#000;text-align:center;padding:10px 16px;font-weight:600;font-size:13px;position:sticky;top:0;z-index:999;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
+    <span>APERÇU — {post.data.draft ? '🔒 Brouillon' : '✅ Publié'}</span>
+    <a href="/keystatic" style="color:#000;text-decoration:underline;">Modifier dans Keystatic →</a>
+  </div>
 
   <div class="article-wrap">
 
-    <!-- Main content -->
     <article class="article-main">
-      <!-- Breadcrumb -->
       <nav class="article-breadcrumb">
         <a href="/blog">Blog</a>
         <span class="bc-sep">›</span>
@@ -95,13 +61,9 @@ const jsonLd = {
         <span>{post.data.title}</span>
       </nav>
 
-      <!-- Category tag -->
       <span class="tag">{catLabel}</span>
-
-      <!-- Title -->
       <h1 class="article-h1">{post.data.title}</h1>
 
-      <!-- Author block -->
       <div class="author-block">
         <div class="author-avatar">
           <img src="https://res.cloudinary.com/dv2btcpc2/image/upload/q_auto,f_auto,w_80/v1775507331/Marc_1_a6ndja.png" alt={post.data.authorName} />
@@ -110,39 +72,21 @@ const jsonLd = {
           <div class="author-name">{post.data.authorName}</div>
           <div class="author-date">
             {formatDate(post.data.publishedAt)}
-            {post.data.updatedAt && (
-              <span> · Mis à jour le {formatDate(post.data.updatedAt)}</span>
-            )}
+            {post.data.updatedAt && <span> · Mis à jour le {formatDate(post.data.updatedAt)}</span>}
             <span> · {readTime} min de lecture</span>
           </div>
         </div>
       </div>
 
-      {post.data.authorBio && (
-        <p class="author-bio-line">{post.data.authorBio}</p>
-      )}
+      {post.data.authorBio && <p class="author-bio-line">{post.data.authorBio}</p>}
 
-      <!-- Credibility bar -->
       <div class="cred-bar">
-        <div class="cred-item">
-          <div class="cred-value">9</div>
-          <div class="cred-label">biens en portefeuille</div>
-        </div>
-        <div class="cred-item">
-          <div class="cred-value">12–18%</div>
-          <div class="cred-label">rendement net moyen</div>
-        </div>
-        <div class="cred-item">
-          <div class="cred-value">~1h</div>
-          <div class="cred-label">par bien par mois</div>
-        </div>
-        <div class="cred-item">
-          <div class="cred-value">6 ans</div>
-          <div class="cred-label">d'expérience LCD</div>
-        </div>
+        <div class="cred-item"><div class="cred-value">9</div><div class="cred-label">biens en portefeuille</div></div>
+        <div class="cred-item"><div class="cred-value">12–18%</div><div class="cred-label">rendement net moyen</div></div>
+        <div class="cred-item"><div class="cred-value">~1h</div><div class="cred-label">par bien par mois</div></div>
+        <div class="cred-item"><div class="cred-value">6 ans</div><div class="cred-label">d'expérience LCD</div></div>
       </div>
 
-      <!-- Cover image -->
       <div class="article-cover">
         {post.data.featuredImage
           ? <img src={post.data.featuredImage.src} alt={post.data.featuredImage.alt} />
@@ -150,7 +94,6 @@ const jsonLd = {
         }
       </div>
 
-      <!-- Content -->
       <div class="article-body">
         <Content />
       </div>
@@ -165,9 +108,6 @@ const jsonLd = {
           <span class="star" data-v="4">★</span>
           <span class="star" data-v="5">★</span>
         </div>
-        {post.data.ratingValue && post.data.ratingCount && (
-          <div class="rating-count">{post.data.ratingValue}/5 · {post.data.ratingCount} avis</div>
-        )}
         <div class="rating-thanks" id="rating-thanks" style="display:none">Merci pour votre avis !</div>
       </div>
 
@@ -189,7 +129,6 @@ const jsonLd = {
 
     <!-- Sidebar -->
     <aside class="sidebar">
-      <!-- Simulateur widget -->
       <div class="sb-sim">
         <div class="sb-sim-header">
           <div class="sb-sim-icon">
@@ -202,20 +141,11 @@ const jsonLd = {
           <div class="sb-sim-title">Simulateur de rendement Airbnb</div>
         </div>
         <div class="sb-sim-badge">100% gratuit</div>
-        <p class="sb-sim-desc">Calculez en 2 minutes le rendement réel de votre bien Airbnb — cash flow, rentabilité nette, seuil de rentabilité.</p>
+        <p class="sb-sim-desc">Calculez en 2 minutes le rendement réel de votre bien Airbnb.</p>
         <div class="sb-sim-stats">
-          <div class="sb-sim-stat">
-            <div class="sb-sim-stat-val">+24%</div>
-            <div class="sb-sim-stat-lbl">revenus moyens</div>
-          </div>
-          <div class="sb-sim-stat">
-            <div class="sb-sim-stat-val">2min</div>
-            <div class="sb-sim-stat-lbl">pour calculer</div>
-          </div>
-          <div class="sb-sim-stat">
-            <div class="sb-sim-stat-val">100%</div>
-            <div class="sb-sim-stat-lbl">gratuit</div>
-          </div>
+          <div class="sb-sim-stat"><div class="sb-sim-stat-val">+24%</div><div class="sb-sim-stat-lbl">revenus moyens</div></div>
+          <div class="sb-sim-stat"><div class="sb-sim-stat-val">2min</div><div class="sb-sim-stat-lbl">pour calculer</div></div>
+          <div class="sb-sim-stat"><div class="sb-sim-stat-val">100%</div><div class="sb-sim-stat-lbl">gratuit</div></div>
         </div>
         <a href="/simulateur-rentabilite-airbnb" class="sb-sim-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -226,7 +156,6 @@ const jsonLd = {
         </a>
       </div>
 
-      <!-- Newsletter widget -->
       <div class="sb-nl">
         <div class="sb-nl-tag">Newsletter</div>
         <div class="sb-nl-title">Les meilleures stratégies LCD chaque semaine</div>
@@ -240,51 +169,19 @@ const jsonLd = {
       </div>
     </aside>
 
-    <!-- Related articles -->
-    {relatedPosts.length > 0 && (
-      <section class="related">
-        <div class="sec-head">
-          <span class="sec-title">Articles liés</span>
-          <a href={`/blog?cat=${post.data.category}`} class="sec-link">Voir tout →</a>
-        </div>
-        <div class="grid-2">
-          {relatedPosts.map(related => (
-            <a href={`/blog/${related.slug}`} class="card">
-              <div class="card-img">
-                {related.data.featuredImage
-                  ? <img src={related.data.featuredImage.src} alt={related.data.featuredImage.alt} />
-                  : <div class="card-img-placeholder" style="width:100%;height:100%;"></div>
-                }
-              </div>
-              <div class="card-body">
-                <div class="card-cat">{CAT_LABELS[related.data.category]}</div>
-                <div class="card-title">{related.data.title}</div>
-                <p class="card-excerpt">{related.data.excerpt}</p>
-                <div class="card-meta">{formatDate(related.data.publishedAt)} · {readingTime(related.body)} min</div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
-    )}
-
   </div>
+
   <script>
-    // Star rating interaction
     const stars = document.querySelectorAll('.star');
     const thanks = document.getElementById('rating-thanks');
     let rated = false;
-
     stars.forEach(star => {
       star.addEventListener('mouseover', () => {
         if (rated) return;
         const v = Number(star.getAttribute('data-v'));
         stars.forEach(s => s.classList.toggle('active', Number(s.getAttribute('data-v')) <= v));
       });
-      star.addEventListener('mouseleave', () => {
-        if (rated) return;
-        stars.forEach(s => s.classList.remove('active'));
-      });
+      star.addEventListener('mouseleave', () => { if (!rated) stars.forEach(s => s.classList.remove('active')); });
       star.addEventListener('click', () => {
         if (rated) return;
         rated = true;

@@ -20,7 +20,7 @@ function readingTime(body: string) {
   return Math.max(1, Math.round(words / 200));
 }
 
-const allPosts = await getCollection('blog');
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 
 // Sort: by order asc (nulls last), then by publishedAt desc
 const sorted = allPosts.sort((a, b) => {
@@ -57,7 +57,7 @@ const otherPosts = sorted.filter(p => p !== featuredPost);
             <div class="meta">
               <div class="featured-author">
                 <div class="featured-author-photo">
-                  <span>{featuredPost.data.authorName.charAt(0).toUpperCase()}</span>
+                  <img src="https://res.cloudinary.com/dv2btcpc2/image/upload/q_auto,f_auto,w_80/v1775507331/Marc_1_a6ndja.png" alt={featuredPost.data.authorName} style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
                 </div>
                 <div class="featured-author-info">
                   <div class="featured-author-name">{featuredPost.data.authorName}</div>

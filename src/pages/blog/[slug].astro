@@ -64,15 +64,6 @@ const jsonLd = {
     url: 'https://enomia.fr',
   },
   ...(post.data.featuredImage ? { image: post.data.featuredImage.src } : {}),
-  ...(post.data.ratingValue && post.data.ratingCount ? {
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: post.data.ratingValue,
-      reviewCount: post.data.ratingCount,
-      bestRating: 5,
-      worstRating: 1,
-    }
-  } : {}),
 };
 ---
 
@@ -157,7 +148,7 @@ const jsonLd = {
       </div>
 
       <!-- Star rating -->
-      <div class="rating-block">
+      <div class="rating-block" data-slug={post.slug}>
         <div class="rating-label">Cet article vous a été utile ?</div>
         <div class="rating-stars" id="rating-stars">
           <span class="star" data-v="1">★</span>
@@ -166,9 +157,7 @@ const jsonLd = {
           <span class="star" data-v="4">★</span>
           <span class="star" data-v="5">★</span>
         </div>
-        {post.data.ratingValue && post.data.ratingCount && (
-          <div class="rating-count">{post.data.ratingValue}/5 · {post.data.ratingCount} avis</div>
-        )}
+        <div class="rating-count" id="rating-count"></div>
         <div class="rating-thanks" id="rating-thanks" style="display:none">Merci pour votre avis !</div>
       </div>
 
@@ -271,28 +260,72 @@ const jsonLd = {
 
   </div>
   <script>
-    // Star rating interaction
-    const stars = document.querySelectorAll('.star');
-    const thanks = document.getElementById('rating-thanks');
-    let rated = false;
+    // Star rating interaction + API
+    (async () => {
+      const block  = document.querySelector('.rating-block');
+      const slug   = block?.getAttribute('data-slug');
+      const stars  = document.querySelectorAll('.star');
+      const thanks = document.getElementById('rating-thanks');
+      const count  = document.getElementById('rating-count');
+      if (!slug) return;
 
-    stars.forEach(star => {
-      star.addEventListener('mouseover', () => {
-        if (rated) return;
-        const v = Number(star.getAttribute('data-v'));
-        stars.forEach(s => s.classList.toggle('active', Number(s.getAttribute('data-v')) <= v));
+      // Check if user already voted (localStorage)
+      const VOTED_KEY = `enomia_rated_${slug}`;
+      let rated = !!localStorage.getItem(VOTED_KEY);
+      if (rated) stars.forEach(s => s.style.cursor = 'default');
+
+      // Load current aggregate
+      async function loadAggregate() {
+        try {
+          const res = await fetch('/api/ratings', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ action: 'get', slug }),
+          });
+          const d = await res.json();
+          if (d.count > 0 && count) {
+            count.textContent = `${d.average}/5 · ${d.count} avis`;
+            count.style.display = 'block';
+          }
+        } catch (_) {}
+      }
+      loadAggregate();
+
+      stars.forEach(star => {
+        star.addEventListener('mouseover', () => {
+          if (rated) return;
+          const v = Number(star.getAttribute('data-v'));
+          stars.forEach(s => s.classList.toggle('active', Number(s.getAttribute('data-v')) <= v));
+        });
+        star.addEventListener('mouseleave', () => {
+          if (rated) return;
+          stars.forEach(s => s.classList.remove('active'));
+        });
+        star.addEventListener('click', async () => {
+          if (rated) return;
+          rated = true;
+          localStorage.setItem(VOTED_KEY, '1');
+          const v = Number(star.getAttribute('data-v'));
+          stars.forEach(s => {
+            s.classList.toggle('active', Number(s.getAttribute('data-v')) <= v);
+            s.style.cursor = 'default';
+          });
+          if (thanks) thanks.style.display = 'block';
+          // Submit vote + refresh count
+          try {
+            const res = await fetch('/api/ratings', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ action: 'rate', slug, rating: v }),
+            });
+            const d = await res.json();
+            if (d.count > 0 && count) {
+              count.textContent = `${d.average}/5 · ${d.count} avis`;
+              count.style.display = 'block';
+            }
+          } catch (_) {}
+        });
       });
-      star.addEventListener('mouseleave', () => {
-        if (rated) return;
-        stars.forEach(s => s.classList.remove('active'));
-      });
-      star.addEventListener('click', () => {
-        if (rated) return;
-        rated = true;
-        const v = Number(star.getAttribute('data-v'));
-        stars.forEach(s => s.classList.toggle('active', Number(s.getAttribute('data-v')) <= v));
-        if (thanks) thanks.style.display = 'block';
-      });
-    });
+    })();
   </script>
 </BlogLayout>

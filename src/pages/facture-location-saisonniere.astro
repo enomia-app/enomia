@@ -1,0 +1,197 @@
+---
+export const prerender = false;
+import ToolLayout from '../layouts/ToolLayout.astro';
+import FacturationTool from '../components/FacturationTool.astro';
+
+const title = "Facture location saisonnière — Modèle & générateur gratuit LCD";
+const description = "Générez gratuitement vos factures de location saisonnière : calcul automatique de la taxe de séjour, TVA LMNP (art. 293 B), mentions obligatoires. Export PDF, sans inscription.";
+const canonical = "https://www.enomia.app/facture-location-saisonniere";
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="facture">
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 0; }
+    .seo-hero { margin-bottom: 8px; }
+    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(30px, 4vw, 44px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; color: #2b2d2b; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; }
+    .seo-badge::before { content: '✓'; }
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body ul, .seo-body ol { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 18px; padding-left: 24px; }
+    .seo-body li { margin-bottom: 6px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+    .seo-body a { color: #3fbd71; text-decoration: underline; text-underline-offset: 2px; }
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 16px 20px; margin: 22px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: #1a1a1a; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .mentions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 20px 0; }
+    .mention-card { border: 1px solid #e5e3de; background: #ffffff; border-radius: 8px; padding: 14px 16px; font-size: 13px; color: #52524e; }
+    .mention-card .num { font-size: 10px; font-weight: 700; color: #3fbd71; letter-spacing: 0.06em; }
+    .mention-card .ti { font-weight: 600; color: #1a1a1a; margin: 3px 0; }
+    .faq { border: 1px solid #e5e3de; border-radius: 10px; overflow: hidden; margin: 12px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; }
+    .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; font-weight: 400; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+    .faq-ans p { margin-bottom: 10px; }
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 60px; }
+    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; transition: border-color 0.15s, transform 0.15s; color: inherit; text-decoration: none; }
+    .related a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; color: #1a1a1a; }
+    .related .rd { font-size: 12px; color: #8a8985; }
+    @media (max-width: 700px) {
+      .seo-wrap { padding: 24px 20px 0; }
+      .mentions-grid, .related { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="seo-wrap">
+    <div class="seo-hero">
+      <h1 class="seo-h1">Facture de <em>location saisonnière</em> — modèle & générateur gratuit</h1>
+      <p class="seo-lede">
+        Générez en 2 minutes une facture conforme pour votre location courte durée : calcul automatique de la <strong>taxe de séjour</strong> pour 45+ villes, mention LMNP (<strong>art. 293 B du CGI</strong>), distinction meublé classé / non classé, et export PDF prêt à envoyer. <strong>Sans inscription, gratuit</strong>.
+      </p>
+      <div class="seo-badges">
+        <span class="seo-badge">Gratuit sans inscription</span>
+        <span class="seo-badge">Taxe de séjour auto</span>
+        <span class="seo-badge">Conforme LMNP</span>
+        <span class="seo-badge">Export PDF</span>
+      </div>
+    </div>
+
+    <FacturationTool />
+
+    <div class="seo-body">
+      <h2>Qui doit émettre une facture en location saisonnière ?</h2>
+      <p>
+        Si vous louez un logement meublé en courte durée (Airbnb, Booking, Abritel, location directe), vous êtes en général <strong>loueur en meublé non professionnel (LMNP)</strong>. Vous n'avez pas l'obligation systématique d'émettre une facture auprès d'un particulier, mais vous devez <strong>obligatoirement la fournir</strong> dans ces trois cas :
+      </p>
+      <ul>
+        <li>Le voyageur est une <strong>entreprise</strong> ou réserve pour un déplacement professionnel</li>
+        <li>Le voyageur la <strong>demande explicitement</strong> (remboursement note de frais, fiscalité personnelle)</li>
+        <li>Le montant facturé dépasse <strong>25 €</strong> pour une prestation de services fournie à un particulier (obligation conservée en droit français)</li>
+      </ul>
+      <p>
+        Même en l'absence d'obligation, émettre une facture est <strong>fortement recommandé</strong> : c'est votre seule pièce justificative en cas de contrôle fiscal, et elle permet de suivre vos recettes pour votre déclaration LMNP (micro-BIC ou régime réel).
+      </p>
+
+      <div class="callout">
+        <strong>Cas particulier Airbnb & Booking</strong>
+        Attention : les reçus/récapitulatifs fournis par Airbnb ou Booking <strong>ne sont pas des factures</strong> au sens légal. Ils listent une transaction mais ne contiennent pas toutes les mentions obligatoires. C'est à vous, en tant qu'hôte, d'émettre la facture officielle si votre voyageur en fait la demande.
+      </div>
+
+      <h2>Les 10 mentions obligatoires sur une facture LCD</h2>
+      <p>Une facture de location saisonnière doit contenir les informations légales suivantes (articles L441-9 du Code de commerce et 289 du CGI) :</p>
+      <div class="mentions-grid">
+        <div class="mention-card"><div class="num">01</div><div class="ti">Numéro de facture</div>Chronologique, sans trou dans la séquence</div>
+        <div class="mention-card"><div class="num">02</div><div class="ti">Date d'émission</div>Date à laquelle la facture est créée</div>
+        <div class="mention-card"><div class="num">03</div><div class="ti">Identité du loueur</div>Nom, prénom ou raison sociale, adresse complète</div>
+        <div class="mention-card"><div class="num">04</div><div class="ti">SIRET du loueur</div>Obligatoire si vous exercez en LMNP déclaré</div>
+        <div class="mention-card"><div class="num">05</div><div class="ti">Identité du client</div>Nom et adresse (optionnelle pour particulier)</div>
+        <div class="mention-card"><div class="num">06</div><div class="ti">Désignation du service</div>Hébergement + bien loué + dates de séjour</div>
+        <div class="mention-card"><div class="num">07</div><div class="ti">Quantité & prix unitaire</div>Nombre de nuits × prix/nuit, ménage, extras</div>
+        <div class="mention-card"><div class="num">08</div><div class="ti">Montant total TTC</div>Somme à payer incluant taxe de séjour</div>
+        <div class="mention-card"><div class="num">09</div><div class="ti">TVA non applicable</div>Mention "art. 293 B du CGI" en LMNP</div>
+        <div class="mention-card"><div class="num">10</div><div class="ti">Mode de paiement</div>Virement, Airbnb, Booking, espèces, CB…</div>
+      </div>
+
+      <h2>TVA : quand s'applique-t-elle à une location saisonnière ?</h2>
+      <p>
+        La règle est simple en LMNP : <strong>la TVA ne s'applique PAS</strong> sur une location nue de meublé de tourisme. Vous devez faire figurer la mention <em>"TVA non applicable, art. 293 B du CGI"</em> sur la facture et indiquer votre total en TTC uniquement.
+      </p>
+      <p>
+        <strong>Exception para-hôtelière</strong> : si vous fournissez au moins 3 des 4 services suivants — petit-déjeuner, nettoyage régulier pendant le séjour, fourniture du linge, réception de la clientèle — votre activité devient para-hôtelière et la TVA à <strong>10 %</strong> s'applique (avec assujettissement au-delà de 36 800 € de CA). L'outil Enomia gère le cas LMNP standard ; pour la para-hôtellerie, consultez un expert-comptable.
+      </p>
+
+      <h2>Taxe de séjour : calcul automatique sur la facture</h2>
+      <p>
+        Depuis 2019, la taxe de séjour doit être <strong>explicitement affichée</strong> sur la facture du voyageur, même si elle est collectée automatiquement par la plateforme. Le montant dépend de trois facteurs :
+      </p>
+      <ol>
+        <li><strong>La commune</strong> (taux communal voté chaque année)</li>
+        <li><strong>Le classement</strong> du meublé (non classé, 1★ à 5★, ou chambre d'hôtes)</li>
+        <li><strong>Le nombre de personnes × nuits</strong></li>
+      </ol>
+      <p>
+        L'outil Enomia intègre la base des taux pour 45+ communes françaises (Paris, Lyon, Marseille, Nice, Bordeaux, Chamonix, Biarritz, Île de Ré…) et applique automatiquement le bon barème. Pour une commune non répertoriée, vous pouvez saisir le taux manuellement après vérification sur <a href="https://www.collectivites-locales.gouv.fr/taxe-de-sejour" target="_blank" rel="noopener">collectivites-locales.gouv.fr</a>.
+      </p>
+
+      <div class="callout">
+        <strong>Meublé de tourisme classé : l'avantage fiscal à ne pas manquer</strong>
+        Un meublé de tourisme classé vous ouvre droit à un <strong>abattement de 71 %</strong> sur vos recettes en micro-BIC (contre 50 % en non classé depuis 2024). Le classement est valable 5 ans et coûte entre 120 et 250 € selon l'organisme.
+      </div>
+
+      <h2>Caution, frais de ménage, extras : comment les afficher ?</h2>
+      <h3>La caution : jamais dans le total</h3>
+      <p>
+        La caution (dépôt de garantie) ne doit <strong>pas apparaître dans le total TTC</strong> de la facture. Elle n'est pas une prestation de service facturée : c'est un montant restitué au départ sous réserve d'état des lieux. Affichez-la comme <em>information annexe</em> en bas de facture.
+      </p>
+      <h3>Les frais de ménage : ligne distincte</h3>
+      <p>
+        Les frais de ménage font partie du service et doivent être facturés sur une ligne dédiée, intégrés au total TTC. Ils sont soumis à la même règle TVA que la nuitée (non applicable en LMNP).
+      </p>
+      <h3>Frais supplémentaires (linge, parking, petit-déjeuner)</h3>
+      <p>
+        Chaque prestation annexe doit apparaître sur une ligne distincte avec son libellé et son montant. L'outil permet d'ajouter un champ "Frais supplémentaires" personnalisable pour rester flexible.
+      </p>
+
+      <h2>Comment générer votre facture en 3 étapes</h2>
+      <ol>
+        <li><strong>Renseignez vos informations loueur</strong> (nom, adresse, SIRET) une seule fois dans Paramètres</li>
+        <li><strong>Créez votre bien</strong> avec son adresse et son classement (l'outil calcule automatiquement la taxe de séjour)</li>
+        <li><strong>Remplissez la nouvelle facture</strong> : dates, prix/nuit, ménage, mode de paiement → exportez en PDF</li>
+      </ol>
+      <p>
+        Vous pouvez travailler <strong>sans créer de compte</strong> (stockage local dans votre navigateur) ou vous connecter avec Google pour synchroniser vos factures entre appareils et les conserver en sécurité.
+      </p>
+
+      <h2>Questions fréquentes</h2>
+      <div class="faq">
+        <details>
+          <summary>Dois-je garder mes factures de location saisonnière ?</summary>
+          <div class="faq-ans"><p>Oui, <strong>10 ans minimum</strong>. Les factures sont des pièces comptables obligatoires en cas de contrôle fiscal ou URSSAF. Exportez-les en PDF et archivez-les dans un dossier daté par année.</p></div>
+        </details>
+        <details>
+          <summary>Puis-je émettre une facture sans SIRET ?</summary>
+          <div class="faq-ans"><p>Si vous louez ponctuellement en tant que particulier (sans statut LMNP déclaré), vous pouvez émettre une facture sans SIRET. Mais dès que vous exercez de manière régulière, l'inscription au Registre du Commerce est obligatoire (déclaration INPI gratuite pour les LMNP).</p></div>
+        </details>
+        <details>
+          <summary>La facture Airbnb suffit-elle pour mon voyageur ?</summary>
+          <div class="faq-ans"><p>Non. Airbnb n'émet qu'un <strong>reçu</strong> qui ne contient pas toutes les mentions légales françaises. Si votre voyageur a besoin d'une facture officielle (note de frais, comptabilité), vous devez l'émettre vous-même avec votre propre numérotation.</p></div>
+        </details>
+        <details>
+          <summary>Comment numéroter mes factures ?</summary>
+          <div class="faq-ans"><p>La numérotation doit être <strong>chronologique et sans trou</strong>. Format recommandé : <code>2026-001</code>, <code>2026-002</code>, etc. L'outil Enomia gère cette numérotation automatiquement et incrémente le compteur à chaque nouvelle facture.</p></div>
+        </details>
+        <details>
+          <summary>Puis-je modifier ou supprimer une facture après coup ?</summary>
+          <div class="faq-ans"><p>Légalement, une facture émise ne peut pas être supprimée. Si vous avez fait une erreur, vous devez émettre un <strong>avoir</strong> (facture négative) avec un nouveau numéro, puis une nouvelle facture corrigée. L'outil permet la modification tant que la facture n'a pas été imprimée/envoyée.</p></div>
+        </details>
+        <details>
+          <summary>Mes données sont-elles sécurisées ?</summary>
+          <div class="faq-ans"><p>En mode invité, vos données restent <strong>dans votre navigateur</strong> (localStorage) et ne sont jamais envoyées sur nos serveurs. Si vous vous connectez avec Google, elles sont stockées chez Supabase en Europe (Irlande) avec chiffrement au repos et isolation stricte par utilisateur (Row-Level Security).</p></div>
+        </details>
+      </div>
+
+      <h2>Outils complémentaires</h2>
+      <div class="related">
+        <a href="/simulateur-rentabilite-airbnb">
+          <div class="rk">Outil gratuit</div>
+          <div class="rt">Simulateur de rentabilité LCD</div>
+          <div class="rd">Calculez la rentabilité d'un bien en location courte durée : cash-flow, rendement net, fiscalité LMNP</div>
+        </a>
+        <a href="/blog">
+          <div class="rk">Blog</div>
+          <div class="rt">Guides Enomia</div>
+          <div class="rd">Fiscalité LMNP, gestion, acquisition, automatisation — tous nos guides pour les hôtes LCD</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</ToolLayout>

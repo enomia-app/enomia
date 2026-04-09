@@ -1,0 +1,233 @@
+---
+export const prerender = false;
+import ToolLayout from '../layouts/ToolLayout.astro';
+import FacturationTool from '../components/FacturationTool.astro';
+
+const title = "Facture Booking.com — Comment l'obtenir & générateur gratuit";
+const description = "Facture Booking : comment l'obtenir côté voyageur, comment l'émettre côté hôte, comment récupérer la facture de commission. Générateur gratuit + modèle email de demande. Sans inscription.";
+const canonical = "https://www.enomia.app/facture-booking";
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="facture">
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 0; }
+    .seo-hero { margin-bottom: 8px; }
+    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(30px, 4vw, 44px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; color: #2b2d2b; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; }
+    .seo-badge::before { content: '✓'; }
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body ul, .seo-body ol { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 18px; padding-left: 24px; }
+    .seo-body li { margin-bottom: 6px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+    .seo-body a { color: #3fbd71; text-decoration: underline; text-underline-offset: 2px; }
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 16px 20px; margin: 22px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: #1a1a1a; }
+    .callout.warn { border-left-color: #e05252; background: rgba(224,82,82,0.06); }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .intent-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+    .intent-card { border: 1px solid #e5e3de; background: #fff; border-radius: 10px; padding: 18px; }
+    .intent-card .ik { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3fbd71; margin-bottom: 5px; }
+    .intent-card h3 { font-size: 15px; margin: 0 0 8px; }
+    .intent-card p { font-size: 13px; margin: 0; color: #52524e; line-height: 1.6; }
+    .steps { counter-reset: s; padding-left: 0; list-style: none; margin: 20px 0; }
+    .steps li { position: relative; padding: 14px 14px 14px 54px; border: 1px solid #e5e3de; background: #fff; border-radius: 8px; margin-bottom: 10px; counter-increment: s; font-size: 14px; color: #52524e; }
+    .steps li::before { content: counter(s); position: absolute; left: 14px; top: 14px; width: 26px; height: 26px; border-radius: 50%; background: #2b2d2b; color: #fff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+    .steps li strong { color: #1a1a1a; }
+    .email-box { background: #1a1a1a; color: #e8e4dc; border-radius: 10px; padding: 22px 26px; margin: 22px 0; font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.7; position: relative; }
+    .email-box .subj { color: #8a8985; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; display: block; }
+    .email-box p { margin-bottom: 10px; color: #e8e4dc; font-size: 13px; line-height: 1.7; }
+    .faq { border: 1px solid #e5e3de; border-radius: 10px; overflow: hidden; margin: 12px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; }
+    .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; font-weight: 400; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 60px; }
+    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; transition: all 0.15s; color: inherit; text-decoration: none; }
+    .related a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; }
+    .related .rd { font-size: 12px; color: #8a8985; }
+    @media (max-width: 700px) {
+      .seo-wrap { padding: 24px 20px 0; }
+      .intent-cards, .related { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="seo-wrap">
+    <div class="seo-hero">
+      <h1 class="seo-h1">Facture <em>Booking.com</em> — l'obtenir, la créer, la déduire</h1>
+      <p class="seo-lede">
+        Booking.com <strong>ne produit pas</strong> votre facture : c'est l'hôtel ou l'hôte qui l'émet. Que vous soyez voyageur d'affaires cherchant son justificatif, hôte devant facturer son client, ou propriétaire LCD voulant récupérer sa facture de commission, cette page couvre les 3 cas + un générateur gratuit pour créer la facture en 2 minutes. <strong>Sans inscription</strong>.
+      </p>
+      <div class="seo-badges">
+        <span class="seo-badge">Gratuit sans inscription</span>
+        <span class="seo-badge">Taxe de séjour auto</span>
+        <span class="seo-badge">Modèle email inclus</span>
+        <span class="seo-badge">Export PDF</span>
+      </div>
+    </div>
+
+    <FacturationTool />
+
+    <div class="seo-body">
+      <h2>Facture Booking : 3 intentions, 3 chemins</h2>
+      <p>
+        Avant de chercher comment obtenir votre facture, identifiez précisément ce que vous cherchez. Les 3 cas se résolvent différemment :
+      </p>
+      <div class="intent-cards">
+        <div class="intent-card">
+          <div class="ik">Cas 1</div>
+          <h3>Voyageur → facture du séjour</h3>
+          <p>Vous avez séjourné quelque part via Booking et devez justifier la dépense. → L'hôtel/hôte doit vous l'émettre (voir modèle email ci-dessous).</p>
+        </div>
+        <div class="intent-card">
+          <div class="ik">Cas 2</div>
+          <h3>Hôte → facture au client</h3>
+          <p>Vous louez via Booking et votre voyageur demande une facture. → Générez-la avec l'outil ci-dessus.</p>
+        </div>
+        <div class="intent-card">
+          <div class="ik">Cas 3</div>
+          <h3>Hôte → facture de commission</h3>
+          <p>Vous voulez récupérer les factures de commission Booking pour votre compta. → Disponibles dans l'extranet Booking partner.</p>
+        </div>
+      </div>
+
+      <h2>Pourquoi Booking n'émet pas la facture de votre séjour ?</h2>
+      <p>
+        Booking.com est une plateforme d'intermédiation, pas un hébergeur. Elle met en relation des voyageurs avec des hôteliers et loueurs indépendants. Le <strong>contrat commercial</strong> se noue directement entre vous et l'établissement, pas entre vous et Booking. Par conséquent :
+      </p>
+      <ul>
+        <li>Booking n'émet <strong>pas de facture pour la nuitée</strong> — seulement un email de confirmation de réservation</li>
+        <li>Booking émet uniquement sa <strong>facture de commission</strong> à l'hôte (pour les services d'intermédiation), pas au voyageur</li>
+        <li>Le "reçu" ou "confirmation" téléchargeable depuis votre compte Booking n'est pas une facture au sens fiscal français</li>
+      </ul>
+
+      <div class="callout warn">
+        <strong>⚠ "Reçu Booking" ≠ facture officielle</strong>
+        Les entreprises et administrations françaises refusent le reçu/confirmation Booking comme justificatif de note de frais. Il leur faut une facture émise par l'hôtel avec SIRET, numérotation chronologique et mentions TVA.
+      </div>
+
+      <h2>Voyageur d'affaires : comment obtenir votre facture Booking</h2>
+      <ol class="steps">
+        <li><strong>Consultez d'abord votre compte Booking</strong> : connectez-vous sur booking.com → Mes réservations → téléchargez le PDF de confirmation. Cela vous servira de preuve de paiement.</li>
+        <li><strong>Contactez directement l'hébergeur</strong> : la facture doit venir de l'hôtel ou du loueur, pas de Booking. Utilisez la messagerie Booking ou l'email/téléphone fourni dans la confirmation.</li>
+        <li><strong>Envoyez le modèle email ci-dessous</strong> à l'hébergeur. Précisez que vous avez besoin d'une facture officielle avec SIRET et mentions TVA pour votre employeur.</li>
+        <li><strong>Si l'hébergeur refuse ou ne répond pas</strong> : contactez le service client Booking (onglet "Aide" de votre réservation) — ils peuvent relancer l'établissement. En dernier recours, le reçu Booking + la preuve de paiement bancaire peuvent parfois suffire selon votre entreprise.</li>
+      </ol>
+
+      <h3>Modèle email à envoyer à l'hébergeur</h3>
+      <div class="email-box">
+        <span class="subj">Objet : Demande de facture — Réservation n° [XXXXXXXX]</span>
+        <p>Bonjour,</p>
+        <p>J'ai séjourné dans votre établissement du [date d'arrivée] au [date de départ] suite à la réservation <strong>n° [numéro de confirmation Booking]</strong> effectuée via Booking.com.</p>
+        <p>Ma société me demande une <strong>facture officielle</strong> pour justifier cette dépense et procéder au remboursement. Pourriez-vous m'envoyer une facture comportant :</p>
+        <p>— Votre nom/raison sociale et adresse<br>— Votre numéro de SIRET<br>— Les dates du séjour et le nombre de nuits<br>— Le montant total TTC payé<br>— Votre numéro de TVA intracommunautaire le cas échéant<br>— Mon nom : [votre nom]<br>— L'adresse de facturation de ma société : [adresse société]</p>
+        <p>Vous pouvez m'adresser la facture à cet email. Je vous remercie par avance.</p>
+        <p>Cordialement,<br>[votre nom]</p>
+      </div>
+
+      <h2>Hôte Booking : générer une facture pour votre voyageur</h2>
+      <p>
+        Si vous êtes loueur ou hôtelier et que votre voyageur vous demande une facture, vous devez l'émettre vous-même. <strong>Booking ne le fait jamais à votre place.</strong>
+      </p>
+      <h3>Prérequis légaux</h3>
+      <ul>
+        <li><strong>Être déclaré</strong> : LMNP, LMP, auto-entrepreneur, SCI ou société commerciale — chaque statut a sa règle de facturation</li>
+        <li><strong>SIRET obligatoire</strong> sur toute facture émise dans un cadre professionnel</li>
+        <li><strong>Numérotation chronologique sans trou</strong> (obligation CGI art. 289)</li>
+        <li><strong>Conservation 10 ans</strong> minimum</li>
+      </ul>
+
+      <h3>Utiliser l'outil ci-dessus</h3>
+      <ol>
+        <li>Renseignez vos infos loueur dans <strong>Paramètres</strong> (nom, adresse, SIRET, mention légale)</li>
+        <li>Créez vos biens dans <strong>Mes biens</strong> (l'outil calcule la taxe de séjour automatiquement)</li>
+        <li>Cliquez <strong>+ Nouvelle facture</strong> et renseignez : client, dates, prix, mode de paiement "Booking.com"</li>
+        <li>Prévisualisez et exportez en PDF → envoyez au voyageur</li>
+      </ol>
+
+      <h2>Hôte : récupérer vos factures de commission Booking</h2>
+      <p>
+        Booking prélève une commission (15-20 % généralement) sur chaque réservation. Cette commission est une <strong>charge déductible</strong> en régime réel (LMNP, LMP, SCI à l'IS). Pour récupérer les factures :
+      </p>
+      <ol class="steps">
+        <li>Connectez-vous sur l'<strong>Extranet Booking Partner</strong> (admin.booking.com)</li>
+        <li>Allez dans <strong>Finance → Factures</strong></li>
+        <li>Téléchargez les factures mensuelles en PDF (elles incluent commission + TVA si applicable)</li>
+        <li>Enregistrez-les en compta sous le <strong>compte 622</strong> (rémunérations d'intermédiaires)</li>
+      </ol>
+      <p>
+        <strong>Important</strong> : si vous êtes en <strong>micro-BIC</strong>, vous ne pouvez pas déduire ces commissions séparément (elles sont déjà couvertes par l'abattement forfaitaire de 50 % ou 71 %). En <strong>régime réel</strong>, elles viennent réduire vos recettes imposables.
+      </p>
+
+      <h2>Taxe de séjour Booking : qui la collecte ?</h2>
+      <p>
+        Contrairement à Airbnb, Booking <strong>ne collecte pas systématiquement</strong> la taxe de séjour pour tous les établissements. Le comportement dépend :
+      </p>
+      <ul>
+        <li><strong>Hôtels classiques</strong> : c'est l'hôtel qui collecte et reverse la taxe (indépendamment de Booking)</li>
+        <li><strong>Meublés de tourisme</strong> : dans certaines grandes villes (Paris, Lyon, Nice…), Booking peut collecter automatiquement — vérifiez dans vos paramètres extranet</li>
+        <li><strong>Gîtes / chambres d'hôtes</strong> : généralement collecte manuelle par l'hébergeur, à ajouter à la facture</li>
+      </ul>
+      <p>
+        L'outil Enomia calcule automatiquement la taxe à ajouter en fonction de la ville, du classement du bien et du nombre de voyageurs × nuits. Base de données de 45+ communes françaises intégrée.
+      </p>
+
+      <h2>Frais Booking et ce qui figure sur la facture</h2>
+      <p>
+        Le prix affiché au voyageur sur Booking inclut la <strong>chambre + taxes locales</strong>. Les frais bancaires et frais de service Booking sont prélevés sur la commission (pas payés en plus par le voyageur dans la plupart des cas).
+      </p>
+      <p>
+        Sur votre facture, vous devez indiquer le <strong>montant total payé par le voyageur</strong> (prix affiché sur Booking), pas votre net vendeur. La commission que vous versez à Booking est votre charge, pas celle du voyageur.
+      </p>
+
+      <h2>Questions fréquentes sur la facture Booking</h2>
+      <div class="faq">
+        <details>
+          <summary>L'hôtel refuse de m'émettre une facture — que faire ?</summary>
+          <div class="faq-ans"><p>Un établissement professionnel a <strong>l'obligation légale</strong> d'émettre une facture si vous la demandez (art. L441-9 Code de commerce). En cas de refus : 1) relancez par écrit (SMS/email), 2) contactez le service client Booking qui peut relayer votre demande, 3) en dernier recours, signalez le cas à la DGCCRF (direction générale de la concurrence, consommation et répression des fraudes).</p></div>
+        </details>
+        <details>
+          <summary>Mon entreprise accepte-t-elle le reçu Booking sans facture ?</summary>
+          <div class="faq-ans"><p>Cela dépend de votre entreprise et de son régime fiscal. Les grandes structures exigent presque toujours une vraie facture avec SIRET. Les petites sociétés peuvent parfois accepter la confirmation Booking + le relevé bancaire comme justificatif, mais ce n'est pas conforme aux règles comptables strictes en cas de contrôle fiscal.</p></div>
+        </details>
+        <details>
+          <summary>Je suis hôte : ai-je l'obligation de facturer tous mes voyageurs ?</summary>
+          <div class="faq-ans"><p>Non. Pour un voyageur particulier, la facture est obligatoire uniquement si <strong>il la demande</strong> ou si le montant dépasse 25 €. Pour un voyageur d'affaires (ou société payant la note), elle est <strong>toujours obligatoire</strong>. Dans tous les cas, il est recommandé de la produire pour votre propre comptabilité LMNP.</p></div>
+        </details>
+        <details>
+          <summary>Je paie Booking en devise étrangère, quel taux utiliser sur la facture ?</summary>
+          <div class="faq-ans"><p>La facture doit être en <strong>euros</strong> pour un établissement français. Utilisez le taux de change de la <strong>date du séjour</strong> (ou de la date d'émission de la facture si prestation sur plusieurs jours). Vous pouvez indiquer à titre informatif le montant en devise d'origine, mais le montant fiscal de référence reste en euros.</p></div>
+        </details>
+        <details>
+          <summary>Comment différencier la facture Booking pour une entreprise ?</summary>
+          <div class="faq-ans"><p>Sur la facture émise par l'hôtel ou le loueur, ajoutez une ligne "Adresse de facturation" distincte de l'adresse du voyageur. C'est cette adresse qui doit correspondre à la société, avec son numéro de TVA intracommunautaire si elle en a un. Le nom du voyageur reste mentionné pour la traçabilité.</p></div>
+        </details>
+        <details>
+          <summary>Puis-je facturer un no-show ou une annulation ?</summary>
+          <div class="faq-ans"><p>Oui, si votre politique d'annulation prévoit une retenue (non-remboursable, frais d'annulation), vous devez émettre une facture pour le montant retenu. La mention "frais d'annulation" remplace "hébergement" et le nombre de nuits est à 0. La TVA (si applicable) reste non applicable en LMNP.</p></div>
+        </details>
+      </div>
+
+      <h2>Outils complémentaires</h2>
+      <div class="related">
+        <a href="/simulateur-rentabilite-airbnb">
+          <div class="rk">Outil gratuit</div>
+          <div class="rt">Simulateur de rentabilité LCD</div>
+          <div class="rd">Projetez la rentabilité d'un bien en location courte durée : cash-flow, rendement, fiscalité LMNP</div>
+        </a>
+        <a href="/facture-airbnb">
+          <div class="rk">Outil gratuit</div>
+          <div class="rt">Facture Airbnb</div>
+          <div class="rd">Même outil adapté aux spécificités Airbnb : commissions host-only vs split, taxe auto-collectée</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</ToolLayout>

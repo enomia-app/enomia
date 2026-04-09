@@ -1,0 +1,1511 @@
+---
+// Composant outil de facturation LCD — partagé par les 3 pages SEO.
+// Gère : dashboard, nouvelle facture, biens, aperçu PDF, settings.
+// Auth : Google OAuth via Supabase. Mode invité = localStorage, migration au login.
+---
+
+<style>
+  .fact-wrap { --fa-bg: #f7f6f3; --fa-card: #ffffff; --fa-mid: #f0efec; --fa-mid2: #e8e6e1;
+    --fa-border: #e5e3de; --fa-muted: #5c5c5c; --fa-muted2: #8a8985;
+    --fa-text: #1a1a1a; --fa-text2: #52524e;
+    --fa-accent: #2b2d2b; --fa-accent-dim: rgba(43,45,43,0.06);
+    --fa-green: #3fbd71; --fa-red: #e05252; --fa-blue: #5b9bd5;
+    --fa-display: 'Newsreader', Georgia, serif;
+    --fa-mono: 'Inter', sans-serif;
+    background: var(--fa-bg); color: var(--fa-text);
+    font-family: var(--fa-mono); font-weight: 300; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    border: 1px solid var(--fa-border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 24px 0 40px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+  }
+  .fact-wrap *, .fact-wrap *::before, .fact-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .fact-wrap .screen { display: none; }
+  .fact-wrap .screen.active { display: block; }
+
+  /* ─── TOP MINI-NAV (inside tool wrap) ─── */
+  .fact-wrap .fnav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 24px; border-bottom: 1px solid var(--fa-border);
+    background: var(--fa-card); gap: 12px; flex-wrap: wrap;
+  }
+  .fact-wrap .fnav-title { font-family: var(--fa-display); font-size: 16px; font-weight: 700; color: var(--fa-text); }
+  .fact-wrap .fnav-title em { font-style: italic; color: var(--fa-accent); }
+  .fact-wrap .fnav-right { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+
+  .fact-wrap .btn-sm {
+    font-family: var(--fa-mono); font-size: 12px; font-weight: 500;
+    padding: 6px 13px; border: 1px solid var(--fa-border);
+    color: var(--fa-text2); background: transparent;
+    cursor: pointer; transition: all 0.2s; border-radius: 6px;
+    height: 32px; display: inline-flex; align-items: center; gap: 6px;
+    white-space: nowrap;
+  }
+  .fact-wrap .btn-sm:hover { border-color: var(--fa-muted); color: var(--fa-text); }
+  .fact-wrap .btn-sm.accent { border-color: var(--fa-accent); color: #fff; background: var(--fa-accent); }
+  .fact-wrap .btn-sm.accent:hover { color: var(--fa-accent); background: var(--fa-mid); }
+  .fact-wrap .btn-sm.ghost { color: var(--fa-muted2); border-color: transparent; }
+  .fact-wrap .btn-sm.ghost:hover { color: var(--fa-text); border-color: var(--fa-border); }
+  .fact-wrap .btn-sm.del:hover { border-color: var(--fa-red); color: var(--fa-red); }
+
+  .fact-wrap .mode-tabs { display: flex; gap: 2px; }
+  .fact-wrap .mode-tab {
+    font-family: var(--fa-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 7px 16px; border: 1px solid var(--fa-border);
+    color: var(--fa-muted); background: transparent;
+    cursor: pointer; transition: all 0.2s; border-radius: 4px;
+  }
+  .fact-wrap .mode-tab.on { border-color: var(--fa-accent); color: var(--fa-accent); background: var(--fa-accent-dim); }
+
+  /* ─── DASHBOARD ─── */
+  .fact-wrap .dashboard { padding: 28px 24px; }
+  .fact-wrap .dash-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; }
+  .fact-wrap .dash-title { font-family: var(--fa-display); font-size: clamp(22px,4vw,30px); font-weight: 900; line-height: 1.1; color: var(--fa-text); }
+  .fact-wrap .dash-title em { font-style: italic; color: var(--fa-accent); }
+  .fact-wrap .dash-sub { font-family: var(--fa-mono); font-size: 11px; color: var(--fa-muted); margin-top: 6px; }
+
+  .fact-wrap .filter-row { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+  .fact-wrap .filter-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fa-muted); }
+
+  .fact-wrap .stats-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 20px; }
+  .fact-wrap .stat-card { background: var(--fa-mid2); padding: 14px 18px; }
+  .fact-wrap .stat-card-l { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fa-muted); margin-bottom: 5px; }
+  .fact-wrap .stat-card-v { font-size: 19px; font-weight: 600; color: var(--fa-text); letter-spacing: -0.02em; }
+  .fact-wrap .stat-card-sub { font-size: 10px; color: var(--fa-muted2); margin-top: 3px; }
+
+  .fact-wrap .table-wrap { overflow-x: auto; }
+  .fact-wrap table { width: 100%; border-collapse: collapse; min-width: 700px; }
+  .fact-wrap thead th {
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--fa-muted); padding: 11px 16px;
+    border-bottom: 1px solid var(--fa-border); text-align: left; font-weight: 500;
+  }
+  .fact-wrap tbody tr { border-bottom: 1px solid var(--fa-border); transition: background 0.15s; }
+  .fact-wrap tbody tr:hover { background: var(--fa-mid); }
+  .fact-wrap tbody td { padding: 12px 16px; font-size: 12px; color: var(--fa-text2); vertical-align: middle; }
+  .fact-wrap td.td-num { font-size: 11px; color: var(--fa-muted2); font-weight: 500; }
+  .fact-wrap td.td-amount { color: var(--fa-text); font-weight: 600; font-size: 13px; }
+  .fact-wrap td.td-actions { display: flex; gap: 6px; align-items: center; }
+  .fact-wrap .td-client-name { font-weight: 500; color: var(--fa-text); font-size: 13px; line-height: 1.3; }
+  .fact-wrap .td-client-email { font-size: 10px; color: var(--fa-muted2); }
+  .fact-wrap .td-stay { font-size: 11px; color: var(--fa-muted); line-height: 1.6; }
+  .fact-wrap .td-stay strong { display: block; color: var(--fa-text2); font-weight: 400; font-size: 12px; }
+
+  .fact-wrap .badge-status {
+    font-size: 10px; letter-spacing: 0.08em;
+    padding: 4px 9px; display: inline-block; border-radius: 3px;
+  }
+  .fact-wrap .badge-status.paid { background: rgba(63,189,113,0.12); color: var(--fa-green); }
+  .fact-wrap .badge-status.pending { background: var(--fa-accent-dim); color: var(--fa-accent); }
+
+  .fact-wrap .sim-card-btn {
+    font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 8px; border: 1px solid var(--fa-border);
+    color: var(--fa-muted); background: var(--fa-mid2);
+    cursor: pointer; transition: all 0.2s; border-radius: 3px;
+  }
+  .fact-wrap .sim-card-btn:hover { border-color: var(--fa-accent); color: var(--fa-accent); }
+  .fact-wrap .sim-card-btn.del:hover { border-color: var(--fa-red); color: var(--fa-red); }
+
+  /* ─── NEW INVOICE ─── */
+  .fact-wrap .calc-topbar {
+    padding: 14px 24px; border-bottom: 1px solid var(--fa-border);
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--fa-card); gap: 12px; flex-wrap: wrap;
+  }
+  .fact-wrap .calc-back {
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--fa-muted); cursor: pointer; transition: color 0.2s;
+    display: flex; align-items: center; gap: 6px;
+    background: none; border: none;
+  }
+  .fact-wrap .calc-back:hover { color: var(--fa-text); }
+  .fact-wrap .calc-title { font-family: var(--fa-display); font-size: 15px; font-weight: 700; color: var(--fa-text); }
+
+  .fact-wrap .calc-main { display: grid; grid-template-columns: 1fr 340px; min-height: 500px; }
+  .fact-wrap .calc-left { padding: 28px 32px; border-right: 1px solid var(--fa-border); }
+  .fact-wrap .calc-right {
+    background: var(--fa-card); padding: 28px 22px;
+    display: flex; flex-direction: column; gap: 2px;
+  }
+
+  .fact-wrap .sec-t {
+    font-family: var(--fa-display); font-size: 15px; font-weight: 700; color: var(--fa-text);
+    margin-bottom: 18px; display: flex; align-items: center; gap: 12px;
+  }
+  .fact-wrap .sec-t::after { content: ''; flex: 1; height: 1px; background: var(--fa-border); }
+  .fact-wrap .sec-num { font-size: 11px; color: var(--fa-accent); }
+
+  .fact-wrap .sg { margin-bottom: 16px; }
+  .fact-wrap .sg:last-child { margin-bottom: 0; }
+  .fact-wrap .sg-label {
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--fa-muted); display: block; margin-bottom: 6px;
+  }
+  .fact-wrap .sg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .fact-wrap .sg-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+
+  .fact-wrap input[type="text"], .fact-wrap input[type="email"], .fact-wrap input[type="number"], .fact-wrap input[type="date"],
+  .fact-wrap select, .fact-wrap textarea {
+    background: var(--fa-mid);
+    border: 1px solid var(--fa-border);
+    color: var(--fa-text);
+    font-family: var(--fa-mono);
+    font-size: 13px;
+    padding: 12px 15px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    appearance: none; -webkit-appearance: none;
+    font-weight: 400; border-radius: 4px;
+  }
+  .fact-wrap input::placeholder, .fact-wrap textarea::placeholder { color: var(--fa-muted2); }
+  .fact-wrap input:focus, .fact-wrap select:focus, .fact-wrap textarea:focus { border-color: var(--fa-accent); }
+  .fact-wrap select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238a8985'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer;
+  }
+  .fact-wrap textarea { resize: vertical; min-height: 80px; }
+
+  .fact-wrap .nights-display {
+    background: var(--fa-mid2); border: 1px solid var(--fa-border); border-radius: 4px;
+    padding: 10px 15px; font-size: 12px; color: var(--fa-muted);
+    display: flex; align-items: center; gap: 8px; margin-top: 4px;
+  }
+  .fact-wrap .nights-num { font-family: var(--fa-display); font-size: 20px; font-weight: 700; color: var(--fa-text); line-height: 1; }
+
+  .fact-wrap .caution-note {
+    font-size: 10px; color: var(--fa-muted2); margin-top: 5px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .fact-wrap .caution-note::before { content: 'ℹ'; color: var(--fa-accent); }
+
+  .fact-wrap .extra-row { display: grid; grid-template-columns: 1fr 130px; gap: 10px; }
+
+  .fact-wrap .recap-panel-title {
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--fa-muted); padding-bottom: 10px; border-bottom: 1px solid var(--fa-border); margin-bottom: 2px;
+  }
+  .fact-wrap .rb2 { background: var(--fa-mid); padding: 15px; margin-bottom: 2px; border-radius: 4px; }
+  .fact-wrap .rb2-t {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--fa-muted); margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--fa-border);
+  }
+  .fact-wrap .rr { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--fa-border); }
+  .fact-wrap .rr:last-child { border-bottom: none; }
+  .fact-wrap .rr.rr-total { padding-top: 11px; margin-top: 4px; border-top: 2px solid var(--fa-accent); border-bottom: none; }
+  .fact-wrap .rrl { font-size: 11px; color: var(--fa-muted); }
+  .fact-wrap .rrv { font-size: 12px; color: var(--fa-text); font-weight: 500; }
+  .fact-wrap .rrv.big { font-family: var(--fa-display); font-size: 20px; font-weight: 700; color: var(--fa-accent); }
+
+  .fact-wrap .recap-tva-note {
+    font-size: 10px; color: var(--fa-muted2);
+    line-height: 1.6; padding: 12px; background: var(--fa-mid); border: 1px solid var(--fa-border);
+    margin-bottom: 2px; border-radius: 4px;
+  }
+
+  .fact-wrap .taxe-note { font-size: 10px; color: var(--fa-muted2); margin-top: 4px; line-height: 1.5; }
+  .fact-wrap .recap-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+
+  .fact-wrap .bien-select-row { display: flex; align-items: center; gap: 8px; }
+  .fact-wrap .bien-select-row select { flex: 1; }
+  .fact-wrap .add-bien-link {
+    font-size: 18px; color: var(--fa-accent);
+    cursor: pointer; background: none; border: none; padding: 0 4px;
+    line-height: 1; font-weight: 600; flex-shrink: 0;
+    transition: opacity 0.2s;
+  }
+  .fact-wrap .add-bien-link:hover { opacity: 0.6; }
+
+  .fact-wrap .autocomplete-wrap { position: relative; }
+  .fact-wrap .autocomplete-list {
+    position: absolute; top: 100%; left: 0; right: 0; z-index: 200;
+    background: var(--fa-card); border: 1px solid var(--fa-border);
+    max-height: 200px; overflow-y: auto; display: none; border-radius: 4px;
+  }
+  .fact-wrap .autocomplete-list.open { display: block; }
+  .fact-wrap .autocomplete-item {
+    padding: 10px 14px; font-size: 12px;
+    color: var(--fa-text2); cursor: pointer; border-bottom: 1px solid var(--fa-border);
+  }
+  .fact-wrap .autocomplete-item:last-child { border-bottom: none; }
+  .fact-wrap .autocomplete-item:hover { background: var(--fa-mid2); color: var(--fa-text); }
+
+  .fact-wrap .biens-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px; margin-top: 20px;
+  }
+  .fact-wrap .bien-card {
+    background: var(--fa-mid); border: 1px solid var(--fa-border); border-radius: 6px;
+    padding: 18px; transition: border-color 0.18s;
+  }
+  .fact-wrap .bien-card:hover { border-color: var(--fa-accent); }
+  .fact-wrap .bien-card-name { font-family: var(--fa-display); font-size: 16px; font-weight: 700; color: var(--fa-text); margin-bottom: 5px; }
+  .fact-wrap .bien-card-adresse { font-size: 11px; color: var(--fa-muted2); margin-bottom: 9px; }
+  .fact-wrap .bien-card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 11px; }
+  .fact-wrap .bien-tag {
+    font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 3px 7px; background: var(--fa-mid2); color: var(--fa-muted); border: 1px solid var(--fa-border); border-radius: 2px;
+  }
+  .fact-wrap .bien-card-taxe {
+    font-size: 11px; color: var(--fa-text2);
+    padding-top: 9px; border-top: 1px solid var(--fa-border);
+  }
+  .fact-wrap .bien-card-taxe strong { color: var(--fa-text); }
+  .fact-wrap .bien-card-actions { display: flex; gap: 6px; margin-top: 11px; }
+
+  .fact-wrap .legal-disclaimer {
+    font-size: 10px; color: var(--fa-muted2);
+    line-height: 1.6; padding: 10px 14px;
+    border-left: 3px solid var(--fa-border);
+    background: var(--fa-mid); margin-bottom: 20px; border-radius: 0 4px 4px 0;
+  }
+
+  /* ─── MODALS ─── */
+  .fact-wrap .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 500;
+    display: none; align-items: center; justify-content: center;
+    padding: 24px;
+    backdrop-filter: blur(4px);
+  }
+  .fact-wrap .modal-overlay.open { display: flex; }
+  .fact-wrap .modal-inner {
+    background: var(--fa-card);
+    border: 1px solid var(--fa-border); border-radius: 8px;
+    width: 100%; max-width: 820px;
+    max-height: 92vh;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  }
+  .fact-wrap .modal-header {
+    padding: 16px 26px; border-bottom: 1px solid var(--fa-border);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-shrink: 0; background: var(--fa-card); flex-wrap: wrap; gap: 10px;
+  }
+  .fact-wrap .modal-title { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fa-muted); }
+  .fact-wrap .modal-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .fact-wrap .modal-close {
+    font-size: 20px; color: var(--fa-muted); background: none; border: none;
+    cursor: pointer; transition: color 0.18s; padding: 0 4px; line-height: 1;
+  }
+  .fact-wrap .modal-close:hover { color: var(--fa-text); }
+  .fact-wrap .modal-body { overflow-y: auto; flex: 1; padding: 36px; }
+
+  .fact-wrap #fmodal-settings .modal-inner { max-width: 560px; }
+  .fact-wrap #fmodal-bien .modal-inner { max-width: 560px; }
+
+  /* ─── INVOICE DOC ─── */
+  .fact-wrap .invoice-doc {
+    background: #fff; color: #1a1a1a;
+    padding: 56px; font-family: 'Inter', sans-serif;
+    max-width: 700px; margin: 0 auto;
+    font-size: 12px; line-height: 1.6;
+    border: 1px solid #e5e3de; border-radius: 4px;
+  }
+  .fact-wrap .inv-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 44px; }
+  .fact-wrap .inv-logo-placeholder {
+    width: 64px; height: 64px; border: 2px dashed #ddd; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    color: #bbb; font-size: 9px; text-align: center; line-height: 1.4;
+  }
+  .fact-wrap .inv-issuer { text-align: right; }
+  .fact-wrap .inv-issuer .name { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 3px; }
+  .fact-wrap .inv-issuer .detail { font-size: 11px; color: #555; line-height: 1.7; }
+  .fact-wrap .inv-title-block { margin-bottom: 28px; padding-bottom: 18px; border-bottom: 2px solid #2b2d2b; }
+  .fact-wrap .inv-title-block h1 { font-size: 21px; font-weight: 700; color: #111; letter-spacing: 0.02em; margin-bottom: 12px; }
+  .fact-wrap .inv-meta { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+  .fact-wrap .im-label { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 3px; }
+  .fact-wrap .im-val { font-size: 12px; color: #333; font-weight: 500; }
+  .fact-wrap .inv-client-box { background: #f8f7f4; border-left: 3px solid #2b2d2b; padding: 14px 18px; margin-bottom: 28px; border-radius: 0 4px 4px 0; }
+  .fact-wrap .cb-label { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 7px; }
+  .fact-wrap .cb-name { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 3px; }
+  .fact-wrap .cb-detail { font-size: 11px; color: #555; }
+  .fact-wrap .inv-table { width: 100%; border-collapse: collapse; margin-bottom: 22px; }
+  .fact-wrap .inv-table th { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; padding: 10px 12px; background: #f5f4f1; border-bottom: 1px solid #e5e3de; text-align: left; }
+  .fact-wrap .inv-table td { padding: 11px 12px; border-bottom: 1px solid #eee; font-size: 12px; color: #333; }
+  .fact-wrap .inv-table tr:last-child td { border-bottom: none; }
+  .fact-wrap .inv-table td.amount, .fact-wrap .inv-table th.amount { text-align: right; font-weight: 600; color: #111; }
+  .fact-wrap .inv-total-box { border: 1px solid #e5e3de; margin-bottom: 28px; border-radius: 4px; }
+  .fact-wrap .inv-total-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; border-bottom: 1px solid #eee; font-size: 12px; }
+  .fact-wrap .inv-total-row:last-child { border-bottom: none; background: #f8f7f4; }
+  .fact-wrap .inv-total-row .tr-val { font-weight: 600; color: #333; }
+  .fact-wrap .inv-total-row.grand { padding: 15px 16px; border-left: 4px solid #2b2d2b; }
+  .fact-wrap .inv-total-row.grand .tr-label { font-size: 13px; font-weight: 700; color: #111; text-transform: uppercase; letter-spacing: 0.04em; }
+  .fact-wrap .inv-total-row.grand .tr-val { font-size: 20px; font-weight: 700; color: #1a1a1a; }
+  .fact-wrap .inv-caution-note { font-size: 11px; color: #888; margin-bottom: 24px; padding: 10px 14px; border: 1px solid #e8e6e0; background: #fafaf8; border-radius: 4px; }
+  .fact-wrap .inv-footer { padding-top: 20px; border-top: 1px solid #e0ddd5; }
+  .fact-wrap .inv-legal { font-size: 10px; color: #999; line-height: 1.7; margin-bottom: 8px; }
+  .fact-wrap .inv-payment { font-size: 11px; color: #555; margin-bottom: 12px; padding: 10px 14px; background: #f5f4f0; border-radius: 4px; }
+  .fact-wrap .inv-stamp-area { text-align: right; margin: 22px 0; }
+  .fact-wrap .inv-stamp { display: inline-block; border: 2px solid #3fbd71; color: #3fbd71; padding: 7px 18px; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; transform: rotate(-3deg); border-radius: 3px; }
+
+  /* Toast */
+  .fact-wrap .ftoast {
+    position: fixed; bottom: 28px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--fa-accent); color: #fff;
+    padding: 12px 22px; font-size: 12px;
+    opacity: 0; transition: all 0.25s; z-index: 9999;
+    pointer-events: none; white-space: nowrap; border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .fact-wrap .ftoast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .fact-wrap .ftoast.toast-green { background: var(--fa-green); }
+  .fact-wrap .ftoast.toast-red { background: var(--fa-red); }
+
+  /* Empty state / auth prompt */
+  .fact-wrap .auth-hint {
+    padding: 13px 18px; background: var(--fa-mid); border: 1px solid var(--fa-border); border-radius: 6px;
+    font-size: 12px; color: var(--fa-text2); display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .fact-wrap .auth-hint strong { color: var(--fa-text); font-weight: 600; }
+  .fact-wrap .auth-hint .btn-sm { margin-left: auto; }
+
+  /* Responsive */
+  @media (max-width: 860px) {
+    .fact-wrap .calc-main { grid-template-columns: 1fr; }
+    .fact-wrap .calc-right { border-top: 1px solid var(--fa-border); }
+    .fact-wrap .dashboard { padding: 22px 18px; }
+    .fact-wrap .calc-left { padding: 22px 18px; }
+    .fact-wrap .calc-topbar, .fact-wrap .fnav { padding: 12px 18px; }
+    .fact-wrap .stats-bar { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .fact-wrap .sg-row, .fact-wrap .sg-row-3, .fact-wrap .extra-row { grid-template-columns: 1fr; }
+    .fact-wrap .inv-meta { grid-template-columns: 1fr 1fr; }
+    .fact-wrap .inv-header { flex-direction: column; gap: 14px; }
+    .fact-wrap .inv-issuer { text-align: left; }
+    .fact-wrap .invoice-doc { padding: 28px 18px; }
+    .fact-wrap .modal-body { padding: 24px; }
+  }
+
+  @media print {
+    .fact-wrap .fnav, .fact-wrap .calc-topbar, .fact-wrap .modal-header { display: none !important; }
+    .fact-wrap .modal-overlay { position: static; background: none; padding: 0; display: block; }
+    .fact-wrap .modal-inner { border: none; max-height: none; overflow: visible; box-shadow: none; }
+    .fact-wrap .modal-body { padding: 0; overflow: visible; }
+    .fact-wrap .invoice-doc { border: none; padding: 20px; margin: 0; max-width: 100%; }
+    .fact-wrap #fscreen-dashboard, .fact-wrap #fscreen-new, .fact-wrap #fscreen-biens, .fact-wrap #fmodal-settings, .fact-wrap #fmodal-bien { display: none !important; }
+  }
+</style>
+
+<div class="fact-wrap" id="fact-wrap">
+
+  <!-- Mini-nav interne -->
+  <div class="fnav">
+    <div class="fnav-title">Facturation <em>LCD</em> — outil gratuit</div>
+    <div class="fnav-right">
+      <button class="btn-sm" onclick="fShowScreen('fscreen-dashboard')">Tableau de bord</button>
+      <button class="btn-sm" onclick="fShowSettingsModal()">Paramètres</button>
+      <button class="btn-sm" onclick="fShowScreen('fscreen-biens')">Mes biens</button>
+      <button class="btn-sm accent" onclick="fShowScreen('fscreen-new'); fResetForm()">+ Nouvelle facture</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 1 — DASHBOARD -->
+  <div id="fscreen-dashboard" class="screen active">
+    <div class="dashboard">
+      <div class="dash-header">
+        <div>
+          <h2 class="dash-title">Mes <em>factures</em></h2>
+          <div class="dash-sub">Générez vos factures de location courte durée</div>
+        </div>
+      </div>
+
+      <div class="auth-hint" id="fauth-hint">
+        <span>🔒 <strong>Mode invité</strong> — vos données sont stockées localement dans ce navigateur.</span>
+        <button class="btn-sm accent" id="fbtn-login-hint" onclick="fLogin()">Se connecter avec Google →</button>
+      </div>
+
+      <div class="legal-disclaimer">
+        ⚠ Cet outil est un générateur de documents d'aide à la facturation. Il ne constitue pas un logiciel de facturation certifié (NF 525). Pour une comptabilité officielle soumise à audit, utilisez un logiciel homologué.
+      </div>
+
+      <div class="filter-row">
+        <span class="filter-label">Exercice</span>
+        <div class="mode-tabs">
+          <button class="mode-tab" onclick="fFilterYear(2024, this)">2024</button>
+          <button class="mode-tab on" onclick="fFilterYear(2025, this)">2025</button>
+          <button class="mode-tab" onclick="fFilterYear(2026, this)">2026</button>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-card">
+          <div class="stat-card-l">Total encaissé <span id="fstats-year">2025</span></div>
+          <div class="stat-card-v" id="fstat-total">— €</div>
+          <div class="stat-card-sub">factures payées uniquement</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-l">Nb factures</div>
+          <div class="stat-card-v" id="fstat-count">—</div>
+          <div class="stat-card-sub" id="fstat-sub-count">sur l'exercice sélectionné</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-l">Moyenne / facture</div>
+          <div class="stat-card-v" id="fstat-avg">— €</div>
+          <div class="stat-card-sub">toutes factures</div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>N°</th><th>Client</th><th>Bien</th><th>Séjour</th><th>Montant</th><th>Statut</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="finvoice-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 2 — NEW INVOICE -->
+  <div id="fscreen-new" class="screen">
+    <div class="calc-topbar">
+      <button class="calc-back" onclick="fShowScreen('fscreen-dashboard')">← Retour</button>
+      <div class="calc-title" id="fnew-title">Nouvelle facture</div>
+      <div class="calc-actions" style="display:flex;gap:8px">
+        <button class="btn-sm" onclick="fOpenPdfModal()">Aperçu PDF</button>
+        <button class="btn-sm accent" onclick="fSaveInvoice()">✓ Enregistrer</button>
+      </div>
+    </div>
+
+    <div class="calc-main">
+      <div class="calc-left">
+        <div class="legal-disclaimer" style="margin-bottom:24px">
+          ⚠ Générateur d'aide — non NF 525. Pour comptabilité soumise à audit, utilisez un logiciel homologué.
+        </div>
+
+        <div style="margin-bottom:34px">
+          <div class="sec-t"><span class="sec-num">01</span> Loueur</div>
+          <div class="sg">
+            <label class="sg-label">Nom / Prénom ou Société</label>
+            <input type="text" id="fl-nom" placeholder="Jean Dupont">
+          </div>
+          <div class="sg">
+            <label class="sg-label">Adresse complète</label>
+            <input type="text" id="fl-adresse" placeholder="12 rue de la Paix, 75001 Paris">
+          </div>
+          <div class="sg">
+            <label class="sg-label">SIRET (optionnel)</label>
+            <input type="text" id="fl-siret" placeholder="849 327 145 00018">
+          </div>
+        </div>
+
+        <div style="margin-bottom:34px">
+          <div class="sec-t"><span class="sec-num">02</span> Client</div>
+          <div class="sg-row">
+            <div class="sg">
+              <label class="sg-label">Prénom</label>
+              <input type="text" id="fc-prenom" placeholder="Marie">
+            </div>
+            <div class="sg">
+              <label class="sg-label">Nom</label>
+              <input type="text" id="fc-nom" placeholder="Martin">
+            </div>
+          </div>
+          <div class="sg">
+            <label class="sg-label">Email</label>
+            <input type="email" id="fc-email" placeholder="marie.martin@email.com">
+          </div>
+          <div class="sg">
+            <label class="sg-label">Adresse (optionnel)</label>
+            <input type="text" id="fc-adresse" placeholder="45 avenue des Fleurs, 69001 Lyon">
+          </div>
+        </div>
+
+        <div>
+          <div class="sec-t"><span class="sec-num">03</span> Séjour</div>
+          <div class="sg">
+            <label class="sg-label">Bien loué</label>
+            <div class="bien-select-row">
+              <select id="fs-bien" onchange="fCalcTotal()">
+                <option value="">— Sélectionner un bien —</option>
+              </select>
+              <button class="add-bien-link" onclick="fOpenBienModal(null)" title="Ajouter un bien">+</button>
+            </div>
+          </div>
+          <div class="sg">
+            <label class="sg-label">Nombre de personnes</label>
+            <input type="number" id="fs-personnes" placeholder="2" min="1" max="20" oninput="fCalcTotal()">
+          </div>
+          <div class="sg-row">
+            <div class="sg">
+              <label class="sg-label">Date d'arrivée</label>
+              <input type="date" id="fs-arrivee" onchange="fCalcNights()">
+            </div>
+            <div class="sg">
+              <label class="sg-label">Date de départ</label>
+              <input type="date" id="fs-depart" onchange="fCalcNights()">
+            </div>
+          </div>
+          <div class="nights-display">
+            <span class="nights-num" id="fnights-num">—</span>
+            <span id="fnights-label" style="font-size:13px;color:var(--fa-muted)">nuit(s)</span>
+          </div>
+          <div style="height:16px"></div>
+          <div class="sg-row">
+            <div class="sg">
+              <label class="sg-label">Prix par nuit (€)</label>
+              <input type="number" id="fs-prixnuit" placeholder="85" min="0" step="0.01" oninput="fCalcTotal()">
+            </div>
+            <div class="sg">
+              <label class="sg-label">Frais de ménage (€)</label>
+              <input type="number" id="fs-menage" placeholder="50" min="0" step="0.01" oninput="fCalcTotal()">
+            </div>
+          </div>
+          <div class="sg">
+            <label class="sg-label">Caution (€) — non incluse dans le total</label>
+            <input type="number" id="fs-caution" placeholder="300" min="0" step="0.01">
+            <div class="caution-note">La caution apparaît sur la facture à titre informatif</div>
+          </div>
+          <div class="sg">
+            <label class="sg-label">Frais supplémentaires (optionnel)</label>
+            <div class="extra-row">
+              <input type="text" id="fs-extra-label" placeholder="Ex : Frais de service">
+              <input type="number" id="fs-extra-montant" placeholder="0" min="0" step="0.01" oninput="fCalcTotal()">
+            </div>
+          </div>
+          <div class="sg-row">
+            <div class="sg">
+              <label class="sg-label">Mode de paiement</label>
+              <select id="fs-paiement">
+                <option value="Virement bancaire">Virement bancaire</option>
+                <option value="Espèces">Espèces</option>
+                <option value="Carte bancaire">Carte bancaire</option>
+                <option value="Airbnb">Airbnb</option>
+                <option value="Booking.com">Booking.com</option>
+              </select>
+            </div>
+            <div class="sg">
+              <label class="sg-label">Statut</label>
+              <select id="fs-statut">
+                <option value="Payée">Payée</option>
+                <option value="En attente">En attente</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-right">
+        <div class="recap-panel-title">Récapitulatif</div>
+        <div style="height:6px"></div>
+        <div class="rb2">
+          <div class="rb2-t">Détail du séjour</div>
+          <div class="rr"><span class="rrl">Nombre de nuits</span><span class="rrv" id="frecap-nuits">—</span></div>
+          <div class="rr"><span class="rrl">Sous-total hébergement</span><span class="rrv" id="frecap-hebergement">— €</span></div>
+          <div class="rr"><span class="rrl">Frais de ménage</span><span class="rrv" id="frecap-menage">— €</span></div>
+          <div class="rr" id="frecap-taxe-row" style="display:none">
+            <span class="rrl" style="display:flex;flex-direction:column;gap:2px">
+              <span>Taxe de séjour</span>
+              <span class="taxe-note" id="frecap-taxe-note"></span>
+            </span>
+            <span class="rrv" id="frecap-taxe-val">— €</span>
+          </div>
+          <div class="rr" id="frecap-taxe-manual-row" style="display:none">
+            <span class="rrl" style="display:flex;flex-direction:column;gap:4px">
+              <span>Taxe de séjour (manuelle)</span>
+              <span class="taxe-note" style="color:var(--fa-red)">Ville non trouvée — saisir manuellement</span>
+              <input type="number" id="fs-taxe-manuelle" placeholder="0" min="0" step="0.01" oninput="fCalcTotal()" style="margin-top:4px;font-size:12px;padding:6px 10px">
+            </span>
+            <span class="rrv" id="frecap-taxe-manual-val">— €</span>
+          </div>
+          <div class="rr" id="frecap-extra-row" style="display:none">
+            <span class="rrl" id="frecap-extra-label">Frais supplémentaires</span>
+            <span class="rrv" id="frecap-extra-val">— €</span>
+          </div>
+          <div class="rr rr-total">
+            <span class="rrl" style="color:var(--fa-text);font-weight:500">Total TTC</span>
+            <span class="rrv big" id="frecap-total">0,00 €</span>
+          </div>
+        </div>
+        <div class="recap-tva-note">
+          TVA non applicable, art. 293 B du CGI.<br>
+          En qualité de loueur meublé non professionnel (LMNP), aucune TVA n'est collectée ni déductible.
+        </div>
+        <div class="recap-actions">
+          <button class="btn-sm accent" style="width:100%;justify-content:center;height:40px;font-size:13px" onclick="fOpenPdfModal()">Aperçu PDF</button>
+          <button class="btn-sm" style="width:100%;justify-content:center;height:40px;font-size:13px" onclick="fSaveInvoice()">Enregistrer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 3 — BIENS -->
+  <div id="fscreen-biens" class="screen">
+    <div class="dashboard">
+      <div class="dash-header">
+        <div>
+          <h2 class="dash-title">Mes <em>biens</em></h2>
+          <div class="dash-sub">Gérez vos propriétés LCD (calcul taxe de séjour automatique)</div>
+        </div>
+        <button class="btn-sm accent" onclick="fOpenBienModal(null)">+ Ajouter un bien</button>
+      </div>
+      <div id="fbiens-list" class="biens-grid"></div>
+    </div>
+  </div>
+
+  <!-- MODAL PDF -->
+  <div id="fmodal-pdf" class="modal-overlay" onclick="fCloseModalOnBg(event, 'fmodal-pdf')">
+    <div class="modal-inner">
+      <div class="modal-header">
+        <div class="modal-title">Aperçu de la facture</div>
+        <div class="modal-actions">
+          <button class="btn-sm accent" onclick="fPrintInvoice()">↓ Télécharger PDF</button>
+          <button class="modal-close" onclick="fCloseModal('fmodal-pdf')">×</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="invoice-doc" id="finvoice-preview"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL SETTINGS -->
+  <div id="fmodal-settings" class="modal-overlay" onclick="fCloseModalOnBg(event, 'fmodal-settings')">
+    <div class="modal-inner">
+      <div class="modal-header">
+        <div class="modal-title">Paramètres loueur</div>
+        <div class="modal-actions">
+          <button class="btn-sm accent" onclick="fSaveSettings()">✓ Sauvegarder</button>
+          <button class="modal-close" onclick="fCloseModal('fmodal-settings')">×</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div style="margin-bottom:26px">
+          <div class="sec-t" style="font-size:14px;margin-bottom:16px"><span class="sec-num">01</span> Informations loueur</div>
+          <div class="sg">
+            <label class="sg-label">Nom / Prénom ou Société</label>
+            <input type="text" id="fset-nom" placeholder="Jean Dupont">
+          </div>
+          <div class="sg">
+            <label class="sg-label">Adresse complète</label>
+            <input type="text" id="fset-adresse" placeholder="12 rue de la Paix, 75001 Paris">
+          </div>
+          <div class="sg">
+            <label class="sg-label">SIRET (optionnel)</label>
+            <input type="text" id="fset-siret" placeholder="123 456 789 00010">
+          </div>
+        </div>
+        <div>
+          <div class="sec-t" style="font-size:14px;margin-bottom:16px"><span class="sec-num">02</span> Mention légale personnalisée</div>
+          <div class="sg">
+            <label class="sg-label">Texte affiché en bas de facture</label>
+            <textarea id="fset-mention" placeholder="TVA non applicable, art. 293 B du CGI. En qualité de loueur en meublé non professionnel (LMNP), je ne suis pas assujetti à la TVA."></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL BIEN -->
+  <div id="fmodal-bien" class="modal-overlay" onclick="fCloseModalOnBg(event, 'fmodal-bien')">
+    <div class="modal-inner">
+      <div class="modal-header">
+        <div class="modal-title" id="fmodal-bien-title">Ajouter un bien</div>
+        <div class="modal-actions">
+          <button class="btn-sm accent" onclick="fSaveBien()">✓ Enregistrer</button>
+          <button class="modal-close" onclick="fCloseModal('fmodal-bien')">×</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="fbien-edit-id">
+        <div class="sg">
+          <label class="sg-label">Nom du bien</label>
+          <input type="text" id="fbien-nom" placeholder="Studio Marais">
+        </div>
+        <div class="sg">
+          <label class="sg-label">Adresse complète</label>
+          <input type="text" id="fbien-adresse" placeholder="12 rue des Rosiers, 75004 Paris">
+        </div>
+        <div class="sg">
+          <label class="sg-label">Ville</label>
+          <div class="autocomplete-wrap">
+            <input type="text" id="fbien-ville" placeholder="Paris" autocomplete="off" oninput="fVilleAutocomplete(this)" onblur="setTimeout(fCloseVilleList,200)">
+            <div class="autocomplete-list" id="fville-autocomplete-list"></div>
+          </div>
+        </div>
+        <div class="sg">
+          <label class="sg-label">Catégorie</label>
+          <select id="fbien-categorie" onchange="fUpdateBienTaxePreview()">
+            <option value="Meublé de tourisme non classé">Meublé de tourisme non classé</option>
+            <option value="Meublé de tourisme 1★">Meublé de tourisme 1★</option>
+            <option value="Meublé de tourisme 2★">Meublé de tourisme 2★</option>
+            <option value="Meublé de tourisme 3★">Meublé de tourisme 3★</option>
+            <option value="Meublé de tourisme 4★">Meublé de tourisme 4★</option>
+            <option value="Meublé de tourisme 5★">Meublé de tourisme 5★</option>
+            <option value="Chambre d'hôtes">Chambre d'hôtes</option>
+          </select>
+        </div>
+        <div class="sg">
+          <label class="sg-label">Capacité d'accueil</label>
+          <input type="number" id="fbien-capacite" placeholder="4" min="1" max="50">
+        </div>
+        <div id="fbien-taxe-preview" style="margin-top:12px;padding:12px 14px;background:var(--fa-mid);border:1px solid var(--fa-border);font-size:11px;color:var(--fa-muted);display:none;border-radius:4px">
+          Taxe de séjour estimée : <strong id="fbien-taxe-preview-val"></strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ftoast" class="ftoast"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" is:inline></script>
+<script is:inline>
+// ════════════════════════════════════════════════════════════════
+// FACTURATION LCD — shared logic (Supabase + localStorage fallback)
+// ════════════════════════════════════════════════════════════════
+
+// Éviter double-init si plusieurs outils sur la même page
+if (!window.__factInit) {
+  window.__factInit = true;
+
+  // ─── SUPABASE ───
+  const _fsb = supabase.createClient(
+    'https://pesoidoedtjpihjvrnnc.supabase.co',
+    'sb_publishable_TTmUwZsTYt7OWBTwTruaLQ_BYzRT9Jp'
+  );
+  let _fuser = null, _ftoken = null;
+
+  // ─── TAXE DE SÉJOUR DB ───
+  const TAXE_SEJOUR_DB = {
+    "Paris": { nonClasse: 5.30, cat1: 0.90, cat2: 1.50, cat3: 2.60, cat4: 3.90, cat5: 5.30, chambreHotes: 1.50 },
+    "Lyon": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 2.80, cat5: 3.00, chambreHotes: 1.50 },
+    "Marseille": { nonClasse: 2.30, cat1: 0.90, cat2: 1.20, cat3: 1.80, cat4: 2.30, cat5: 2.30, chambreHotes: 1.20 },
+    "Nice": { nonClasse: 5.00, cat1: 1.10, cat2: 1.80, cat3: 2.90, cat4: 4.20, cat5: 5.00, chambreHotes: 1.80 },
+    "Bordeaux": { nonClasse: 2.50, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 2.50, cat5: 2.50, chambreHotes: 1.50 },
+    "Strasbourg": { nonClasse: 2.20, cat1: 0.90, cat2: 1.30, cat3: 1.80, cat4: 2.20, cat5: 2.20, chambreHotes: 1.30 },
+    "Toulouse": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
+    "Montpellier": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
+    "Nantes": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
+    "Rennes": { nonClasse: 1.50, cat1: 0.70, cat2: 1.00, cat3: 1.30, cat4: 1.50, cat5: 1.50, chambreHotes: 1.00 },
+    "Lille": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
+    "Cannes": { nonClasse: 5.00, cat1: 1.10, cat2: 1.90, cat3: 3.00, cat4: 4.20, cat5: 5.00, chambreHotes: 1.90 },
+    "Saint-Tropez": { nonClasse: 5.00, cat1: 1.50, cat2: 2.50, cat3: 3.80, cat4: 5.00, cat5: 5.00, chambreHotes: 2.50 },
+    "Antibes": { nonClasse: 3.50, cat1: 1.00, cat2: 1.70, cat3: 2.50, cat4: 3.50, cat5: 3.50, chambreHotes: 1.70 },
+    "Biarritz": { nonClasse: 4.40, cat1: 1.10, cat2: 1.80, cat3: 2.80, cat4: 3.90, cat5: 4.40, chambreHotes: 1.80 },
+    "Arcachon": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 3.00, cat5: 3.00, chambreHotes: 1.50 },
+    "La Rochelle": { nonClasse: 2.50, cat1: 0.90, cat2: 1.40, cat3: 2.00, cat4: 2.50, cat5: 2.50, chambreHotes: 1.40 },
+    "Annecy": { nonClasse: 3.50, cat1: 1.00, cat2: 1.70, cat3: 2.50, cat4: 3.50, cat5: 3.50, chambreHotes: 1.70 },
+    "Chamonix": { nonClasse: 4.40, cat1: 1.10, cat2: 1.90, cat3: 3.00, cat4: 4.40, cat5: 4.40, chambreHotes: 1.90 },
+    "Megève": { nonClasse: 4.40, cat1: 1.10, cat2: 1.90, cat3: 3.00, cat4: 4.40, cat5: 4.40, chambreHotes: 1.90 },
+    "Courchevel": { nonClasse: 4.40, cat1: 1.50, cat2: 2.50, cat3: 3.80, cat4: 4.40, cat5: 4.40, chambreHotes: 2.50 },
+    "Val d'Isère": { nonClasse: 4.40, cat1: 1.50, cat2: 2.50, cat3: 3.80, cat4: 4.40, cat5: 4.40, chambreHotes: 2.50 },
+    "Morzine": { nonClasse: 3.50, cat1: 1.00, cat2: 1.70, cat3: 2.50, cat4: 3.50, cat5: 3.50, chambreHotes: 1.70 },
+    "Les Gets": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 3.00, cat5: 3.00, chambreHotes: 1.50 },
+    "Avignon": { nonClasse: 2.30, cat1: 0.90, cat2: 1.30, cat3: 1.80, cat4: 2.30, cat5: 2.30, chambreHotes: 1.30 },
+    "Aix-en-Provence": { nonClasse: 2.50, cat1: 0.90, cat2: 1.40, cat3: 2.00, cat4: 2.50, cat5: 2.50, chambreHotes: 1.40 },
+    "Toulon": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
+    "Perpignan": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
+    "Colmar": { nonClasse: 2.50, cat1: 0.90, cat2: 1.40, cat3: 2.00, cat4: 2.50, cat5: 2.50, chambreHotes: 1.40 },
+    "Dijon": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
+    "Reims": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
+    "Tours": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
+    "Grenoble": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
+    "Rouen": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
+    "Caen": { nonClasse: 1.50, cat1: 0.70, cat2: 1.00, cat3: 1.30, cat4: 1.50, cat5: 1.50, chambreHotes: 1.00 },
+    "Bayonne": { nonClasse: 2.50, cat1: 0.90, cat2: 1.40, cat3: 2.00, cat4: 2.50, cat5: 2.50, chambreHotes: 1.40 },
+    "Deauville": { nonClasse: 4.40, cat1: 1.10, cat2: 1.90, cat3: 3.00, cat4: 4.40, cat5: 4.40, chambreHotes: 1.90 },
+    "Honfleur": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 3.00, cat5: 3.00, chambreHotes: 1.50 },
+    "Saint-Malo": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 3.00, cat5: 3.00, chambreHotes: 1.50 },
+    "Île de Ré": { nonClasse: 4.40, cat1: 1.10, cat2: 1.90, cat3: 3.00, cat4: 4.40, cat5: 4.40, chambreHotes: 1.90 },
+    "Île d'Oléron": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 3.00, cat5: 3.00, chambreHotes: 1.50 },
+    "Metz": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
+    "Nancy": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
+  };
+  const CAT_KEY_MAP = {
+    "Meublé de tourisme non classé": "nonClasse",
+    "Meublé de tourisme 1★": "cat1",
+    "Meublé de tourisme 2★": "cat2",
+    "Meublé de tourisme 3★": "cat3",
+    "Meublé de tourisme 4★": "cat4",
+    "Meublé de tourisme 5★": "cat5",
+    "Chambre d'hôtes": "chambreHotes",
+  };
+  function getTaxeRate(ville, cat) {
+    const c = Object.keys(TAXE_SEJOUR_DB).find(k => k.toLowerCase() === (ville||'').toLowerCase());
+    if (!c) return null;
+    const k = CAT_KEY_MAP[cat] || 'nonClasse';
+    return { taux: TAXE_SEJOUR_DB[c][k], ville: c };
+  }
+
+  // ─── STATE ───
+  let finvoices = JSON.parse(localStorage.getItem('lcd_invoices') || '[]');
+  let fbiens = JSON.parse(localStorage.getItem('lcd_biens') || '[]');
+  let fsettings = JSON.parse(localStorage.getItem('lcd_settings') || '{}');
+  let fcurrentYear = 2025;
+  let feditingId = null;
+  let feditingBienId = null;
+
+  // ─── AUTH / API ───
+  async function _fApiPost(action, body) {
+    const headers = { 'Content-Type': 'application/json' };
+    if (_ftoken) headers['Authorization'] = 'Bearer ' + _ftoken;
+    const res = await fetch('/api/invoices', {
+      method: 'POST', headers, body: JSON.stringify({ action, ...body })
+    });
+    return res.json();
+  }
+
+  async function _fLoadFromDb() {
+    if (!_fuser) return;
+    const [sRes, bRes, iRes] = await Promise.all([
+      _fApiPost('settings-fetch', {}),
+      _fApiPost('biens-fetch', {}),
+      _fApiPost('invoices-fetch', {}),
+    ]);
+    if (sRes.settings) fsettings = sRes.settings;
+    if (bRes.biens) fbiens = bRes.biens.map(b => ({ ...b }));
+    if (iRes.invoices) finvoices = iRes.invoices.map(i => ({
+      ...(i.data || {}),
+      id: i.invoice_number,
+      _dbId: i.id,
+      statut: i.statut,
+    }));
+    fRenderAll();
+  }
+
+  async function _fMigrateLocalToDb() {
+    // Push local data to DB after first login
+    const localBiens = JSON.parse(localStorage.getItem('lcd_biens') || '[]');
+    const localInvoices = JSON.parse(localStorage.getItem('lcd_invoices') || '[]');
+    const localSettings = JSON.parse(localStorage.getItem('lcd_settings') || '{}');
+
+    if (Object.keys(localSettings).length) {
+      await _fApiPost('settings-save', { settings: localSettings });
+    }
+    for (const b of localBiens) {
+      await _fApiPost('biens-save', { bien: { ...b, id: null } });
+    }
+    for (const inv of localInvoices) {
+      await _fApiPost('invoices-save', { invoice: {
+        invoice_number: inv.id,
+        data: inv,
+        statut: inv.statut,
+        total_ttc: fCalcInvoiceTotal(inv),
+        bien_id: null
+      }});
+    }
+    // Clear local
+    localStorage.removeItem('lcd_biens');
+    localStorage.removeItem('lcd_invoices');
+    localStorage.removeItem('lcd_settings');
+  }
+
+  _fsb.auth.onAuthStateChange(async (event, session) => {
+    _fuser = session?.user || null;
+    _ftoken = session?.access_token || null;
+    _fUpdateAuthUI();
+    if (event === 'SIGNED_IN') {
+      const expecting = localStorage.getItem('fact_expecting_signin') === '1';
+      localStorage.removeItem('fact_expecting_signin');
+      if (expecting) {
+        await _fMigrateLocalToDb();
+      }
+      await _fLoadFromDb();
+    }
+  });
+
+  (async () => {
+    const { data: { session } } = await _fsb.auth.getSession();
+    _fuser = session?.user || null;
+    _ftoken = session?.access_token || null;
+    _fUpdateAuthUI();
+    if (_fuser) await _fLoadFromDb();
+  })();
+
+  function _fUpdateAuthUI() {
+    const hint = document.getElementById('fauth-hint');
+    if (!hint) return;
+    if (_fuser) {
+      hint.innerHTML = `<span>✓ <strong>Connecté</strong> — ${_fuser.email}. Vos données sont sauvegardées.</span>
+        <button class="btn-sm" onclick="fLogout()">Se déconnecter</button>`;
+    } else {
+      hint.innerHTML = `<span>🔒 <strong>Mode invité</strong> — vos données sont stockées localement dans ce navigateur.</span>
+        <button class="btn-sm accent" onclick="fLogin()">Se connecter avec Google →</button>`;
+    }
+    // Bind tool-header button if present
+    const headerLogin = document.getElementById('tool-header-login');
+    if (headerLogin) {
+      headerLogin.textContent = _fuser ? 'Mon compte' : 'Se connecter';
+    }
+  }
+
+  window.toolLogin = function() { fLogin(); };
+
+  window.fLogin = async function() {
+    localStorage.setItem('fact_expecting_signin', '1');
+    await _fsb.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: window.location.href, queryParams: { prompt: 'select_account' } }
+    });
+  };
+  window.fLogout = async function() {
+    await _fsb.auth.signOut();
+    _fuser = null; _ftoken = null;
+    // Reload local data
+    finvoices = JSON.parse(localStorage.getItem('lcd_invoices') || '[]');
+    fbiens = JSON.parse(localStorage.getItem('lcd_biens') || '[]');
+    fsettings = JSON.parse(localStorage.getItem('lcd_settings') || '{}');
+    _fUpdateAuthUI();
+    fRenderAll();
+  };
+
+  // ─── HELPERS ───
+  function fNights(a, b) { return !a||!b ? 0 : Math.max(0, Math.round((new Date(b) - new Date(a)) / 86400000)); }
+  function fFormatDate(s) { if (!s) return '—'; const [y,m,d] = s.split('-'); return `${d}/${m}/${y}`; }
+  function fFormatMoney(n) { return Number(n||0).toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; }
+  window.fCalcInvoiceTotal = function(inv) {
+    const n = fNights(inv.arrivee, inv.depart);
+    return (n * (inv.prixNuit||0)) + Number(inv.menage||0) + Number(inv.extraMontant||0) + Number(inv.taxeSejour||0);
+  };
+
+  // ─── SCREEN NAV ───
+  window.fShowScreen = function(id) {
+    document.querySelectorAll('#fact-wrap .screen').forEach(s => s.classList.remove('active'));
+    const el = document.getElementById(id);
+    if (el) el.classList.add('active');
+    if (id === 'fscreen-dashboard') fRenderTable(fcurrentYear);
+    if (id === 'fscreen-biens') fRenderBiens();
+    if (id === 'fscreen-new') fPopulateBienSelect();
+  };
+
+  // ─── SETTINGS ───
+  window.fShowSettingsModal = function() {
+    document.getElementById('fset-nom').value = fsettings.nom || '';
+    document.getElementById('fset-adresse').value = fsettings.adresse || '';
+    document.getElementById('fset-siret').value = fsettings.siret || '';
+    document.getElementById('fset-mention').value = fsettings.mention || '';
+    fOpenModal('fmodal-settings');
+  };
+  window.fSaveSettings = async function() {
+    fsettings = {
+      ...fsettings,
+      nom: document.getElementById('fset-nom').value,
+      adresse: document.getElementById('fset-adresse').value,
+      siret: document.getElementById('fset-siret').value,
+      mention: document.getElementById('fset-mention').value,
+      prefix: fsettings.prefix || (new Date().getFullYear() + '-'),
+      next_num: fsettings.next_num || 1
+    };
+    if (_fuser) {
+      await _fApiPost('settings-save', { settings: fsettings });
+    } else {
+      localStorage.setItem('lcd_settings', JSON.stringify(fsettings));
+    }
+    if (document.getElementById('fl-nom')) document.getElementById('fl-nom').value = fsettings.nom || '';
+    if (document.getElementById('fl-adresse')) document.getElementById('fl-adresse').value = fsettings.adresse || '';
+    if (document.getElementById('fl-siret')) document.getElementById('fl-siret').value = fsettings.siret || '';
+    fCloseModal('fmodal-settings');
+    fToast('Paramètres sauvegardés', 'green');
+  };
+
+  // ─── BIENS ───
+  function _fSaveBiensLocal() { localStorage.setItem('lcd_biens', JSON.stringify(fbiens)); }
+
+  function fRenderBiens() {
+    const c = document.getElementById('fbiens-list');
+    if (!c) return;
+    if (!fbiens.length) {
+      c.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:52px 0;color:var(--fa-muted);font-size:12px">
+        Aucun bien — <span style="color:var(--fa-accent);cursor:pointer;text-decoration:underline" onclick="fOpenBienModal(null)">Ajouter un bien</span>
+      </div>`;
+      return;
+    }
+    c.innerHTML = fbiens.map(b => {
+      const t = getTaxeRate(b.ville, b.categorie);
+      const str = t ? `${t.taux.toFixed(2)} €/pers/nuit` : 'Ville non répertoriée';
+      return `<div class="bien-card">
+        <div class="bien-card-name">${b.nom}</div>
+        <div class="bien-card-adresse">${b.adresse || '—'}</div>
+        <div class="bien-card-tags">
+          <span class="bien-tag">${b.ville || '—'}</span>
+          <span class="bien-tag">${b.categorie || ''}</span>
+          <span class="bien-tag">${b.capacite || '?'} pers.</span>
+        </div>
+        <div class="bien-card-taxe">Taxe de séjour : <strong>${str}</strong></div>
+        <div class="bien-card-actions">
+          <button class="sim-card-btn" onclick="fOpenBienModal('${b.id}')">Modifier</button>
+          <button class="sim-card-btn del" onclick="fDeleteBien('${b.id}')">×</button>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  window.fOpenBienModal = function(id) {
+    feditingBienId = id;
+    document.getElementById('fmodal-bien-title').textContent = id ? 'Modifier le bien' : 'Ajouter un bien';
+    document.getElementById('fbien-edit-id').value = id || '';
+    ['fbien-nom','fbien-adresse','fbien-ville','fbien-capacite'].forEach(k => document.getElementById(k).value = '');
+    document.getElementById('fbien-categorie').value = 'Meublé de tourisme non classé';
+    document.getElementById('fbien-taxe-preview').style.display = 'none';
+    if (id) {
+      const b = fbiens.find(x => x.id === id);
+      if (b) {
+        document.getElementById('fbien-nom').value = b.nom || '';
+        document.getElementById('fbien-adresse').value = b.adresse || '';
+        document.getElementById('fbien-ville').value = b.ville || '';
+        document.getElementById('fbien-categorie').value = b.categorie || 'Meublé de tourisme non classé';
+        document.getElementById('fbien-capacite').value = b.capacite || '';
+        fUpdateBienTaxePreview();
+      }
+    }
+    fOpenModal('fmodal-bien');
+  };
+
+  window.fSaveBien = async function() {
+    const nom = document.getElementById('fbien-nom').value.trim();
+    if (!nom) return fToast('Nom du bien requis', 'red');
+    const b = {
+      id: feditingBienId || ('bien-local-' + Date.now()),
+      nom,
+      adresse: document.getElementById('fbien-adresse').value.trim(),
+      ville: document.getElementById('fbien-ville').value.trim(),
+      categorie: document.getElementById('fbien-categorie').value,
+      capacite: parseInt(document.getElementById('fbien-capacite').value) || null,
+    };
+
+    if (_fuser) {
+      const payload = { ...b };
+      if (!feditingBienId || String(feditingBienId).startsWith('bien-local-')) payload.id = null;
+      const res = await _fApiPost('biens-save', { bien: payload });
+      if (res.bien) {
+        if (feditingBienId) {
+          const idx = fbiens.findIndex(x => x.id === feditingBienId);
+          if (idx >= 0) fbiens[idx] = res.bien; else fbiens.push(res.bien);
+        } else {
+          fbiens.push(res.bien);
+        }
+      }
+    } else {
+      if (feditingBienId) {
+        const idx = fbiens.findIndex(x => x.id === feditingBienId);
+        if (idx >= 0) fbiens[idx] = b;
+      } else {
+        fbiens.push(b);
+      }
+      _fSaveBiensLocal();
+    }
+
+    fCloseModal('fmodal-bien');
+    fRenderBiens();
+    fPopulateBienSelect();
+    fToast('Bien enregistré', 'green');
+  };
+
+  window.fDeleteBien = async function(id) {
+    if (!confirm('Supprimer ce bien ?')) return;
+    if (_fuser && !String(id).startsWith('bien-local-')) {
+      await _fApiPost('biens-delete', { bienId: id });
+    }
+    fbiens = fbiens.filter(b => b.id !== id);
+    if (!_fuser) _fSaveBiensLocal();
+    fRenderBiens();
+    fPopulateBienSelect();
+    fToast('Bien supprimé', 'red');
+  };
+
+  window.fPopulateBienSelect = function() {
+    const sel = document.getElementById('fs-bien');
+    if (!sel) return;
+    const cur = sel.value;
+    sel.innerHTML = '<option value="">— Sélectionner un bien —</option>';
+    fbiens.forEach(b => {
+      const o = document.createElement('option');
+      o.value = b.id;
+      o.textContent = `${b.nom}${b.ville ? ' — ' + b.ville : ''}`;
+      sel.appendChild(o);
+    });
+    if (cur) sel.value = cur;
+  };
+
+  // ─── VILLE AUTOCOMPLETE ───
+  window.fVilleAutocomplete = function(input) {
+    const val = input.value.toLowerCase();
+    const list = document.getElementById('fville-autocomplete-list');
+    if (!val) { list.classList.remove('open'); list.innerHTML = ''; return; }
+    const m = Object.keys(TAXE_SEJOUR_DB).filter(k => k.toLowerCase().startsWith(val)).slice(0, 8);
+    if (!m.length) { list.classList.remove('open'); list.innerHTML = ''; return; }
+    list.innerHTML = m.map(v => `<div class="autocomplete-item" onmousedown="fSelectVille('${v.replace(/'/g, "\\'")}')">${v}</div>`).join('');
+    list.classList.add('open');
+    fUpdateBienTaxePreview();
+  };
+  window.fSelectVille = function(v) {
+    document.getElementById('fbien-ville').value = v;
+    document.getElementById('fville-autocomplete-list').classList.remove('open');
+    fUpdateBienTaxePreview();
+  };
+  window.fCloseVilleList = function() {
+    document.getElementById('fville-autocomplete-list').classList.remove('open');
+    fUpdateBienTaxePreview();
+  };
+  window.fUpdateBienTaxePreview = function() {
+    const ville = document.getElementById('fbien-ville').value.trim();
+    const cat = document.getElementById('fbien-categorie').value;
+    const p = document.getElementById('fbien-taxe-preview');
+    const v = document.getElementById('fbien-taxe-preview-val');
+    const info = getTaxeRate(ville, cat);
+    if (ville && info) { v.textContent = `${info.taux.toFixed(2)} €/pers/nuit — ${cat}`; p.style.display = 'block'; }
+    else if (ville) { v.textContent = 'Ville non répertoriée'; p.style.display = 'block'; }
+    else { p.style.display = 'none'; }
+  };
+
+  // ─── TABLE ───
+  window.fRenderTable = function(year) {
+    const tbody = document.getElementById('finvoice-tbody');
+    if (!tbody) return;
+    const filtered = finvoices.filter(inv => inv.id && String(inv.id).startsWith(String(year)));
+    if (!filtered.length) {
+      tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:52px 0;color:var(--fa-muted);font-size:12px">
+        Aucune facture pour ${year} — <span style="color:var(--fa-accent);cursor:pointer;text-decoration:underline" onclick="fShowScreen('fscreen-new');fResetForm()">Créer une facture</span>
+      </td></tr>`;
+    } else {
+      tbody.innerHTML = filtered.map(inv => {
+        const n = fNights(inv.arrivee, inv.depart);
+        const total = fCalcInvoiceTotal(inv);
+        const paid = inv.statut === 'Payée';
+        return `<tr>
+          <td class="td-num">${inv.id}</td>
+          <td><div class="td-client-name">${inv.client || '—'}</div><div class="td-client-email">${inv.email || ''}</div></td>
+          <td style="font-size:12px">${inv.bien || '—'}</td>
+          <td class="td-stay"><strong>${fFormatDate(inv.arrivee)} → ${fFormatDate(inv.depart)}</strong>${n} nuit${n>1?'s':''}</td>
+          <td class="td-amount">${fFormatMoney(total)}</td>
+          <td><span class="badge-status ${paid?'paid':'pending'}">${inv.statut || '—'}</span></td>
+          <td class="td-actions">
+            <button class="sim-card-btn" onclick="fViewInvoice('${inv.id}')">PDF</button>
+            <button class="sim-card-btn del" onclick="fDeleteInvoice('${inv.id}')">×</button>
+          </td>
+        </tr>`;
+      }).join('');
+    }
+    document.getElementById('fstats-year').textContent = year;
+    const paid = filtered.filter(i => i.statut === 'Payée');
+    const totalPaid = paid.reduce((s, i) => s + fCalcInvoiceTotal(i), 0);
+    const avgAll = filtered.length ? filtered.reduce((s,i)=>s+fCalcInvoiceTotal(i), 0) / filtered.length : 0;
+    document.getElementById('fstat-total').textContent = fFormatMoney(totalPaid);
+    document.getElementById('fstat-count').textContent = filtered.length;
+    document.getElementById('fstat-avg').textContent = filtered.length ? fFormatMoney(avgAll) : '— €';
+    document.getElementById('fstat-sub-count').textContent = `dont ${paid.length} payée${paid.length>1?'s':''}`;
+  };
+
+  window.fFilterYear = function(year, btn) {
+    fcurrentYear = year;
+    document.querySelectorAll('#fact-wrap .mode-tab').forEach(t => t.classList.remove('on'));
+    btn.classList.add('on');
+    fRenderTable(year);
+  };
+
+  // ─── FORM CALC ───
+  window.fCalcNights = function() {
+    const a = document.getElementById('fs-arrivee').value;
+    const d = document.getElementById('fs-depart').value;
+    const n = fNights(a, d);
+    document.getElementById('fnights-num').textContent = n > 0 ? n : '—';
+    document.getElementById('fnights-label').textContent = n > 1 ? 'nuits' : 'nuit';
+    fCalcTotal();
+  };
+
+  function fGetSelectedBien() {
+    const sel = document.getElementById('fs-bien');
+    if (!sel || !sel.value) return null;
+    return fbiens.find(b => b.id === sel.value) || null;
+  }
+
+  window.fCalcTotal = function() {
+    const nText = document.getElementById('fnights-num').textContent;
+    const nights = nText === '—' ? 0 : parseInt(nText) || 0;
+    const prix = parseFloat(document.getElementById('fs-prixnuit').value) || 0;
+    const menage = parseFloat(document.getElementById('fs-menage').value) || 0;
+    const extraL = document.getElementById('fs-extra-label').value;
+    const extra = parseFloat(document.getElementById('fs-extra-montant').value) || 0;
+    const persons = parseInt(document.getElementById('fs-personnes').value) || 0;
+    const hebergement = nights * prix;
+
+    const b = fGetSelectedBien();
+    let taxe = 0;
+    const autoRow = document.getElementById('frecap-taxe-row');
+    const manRow = document.getElementById('frecap-taxe-manual-row');
+    if (b && b.ville && nights > 0 && persons > 0) {
+      const info = getTaxeRate(b.ville, b.categorie);
+      if (info) {
+        taxe = info.taux * persons * nights;
+        autoRow.style.display = 'flex';
+        manRow.style.display = 'none';
+        document.getElementById('frecap-taxe-note').textContent = `${info.ville} — ${b.categorie}: ${info.taux.toFixed(2)}€/pers/nuit`;
+        document.getElementById('frecap-taxe-val').textContent = `${info.taux.toFixed(2)} × ${persons} × ${nights} = ${fFormatMoney(taxe)}`;
+      } else {
+        autoRow.style.display = 'none';
+        manRow.style.display = 'flex';
+        const mv = parseFloat(document.getElementById('fs-taxe-manuelle').value) || 0;
+        taxe = mv;
+        document.getElementById('frecap-taxe-manual-val').textContent = mv > 0 ? fFormatMoney(mv) : '— €';
+      }
+    } else {
+      autoRow.style.display = 'none';
+      manRow.style.display = 'none';
+    }
+
+    const total = hebergement + menage + extra + taxe;
+    document.getElementById('frecap-nuits').textContent = nights > 0 ? nights : '—';
+    document.getElementById('frecap-hebergement').textContent = nights > 0 ? fFormatMoney(hebergement) : '— €';
+    document.getElementById('frecap-menage').textContent = menage > 0 ? fFormatMoney(menage) : '— €';
+    document.getElementById('frecap-total').textContent = fFormatMoney(total);
+
+    const exRow = document.getElementById('frecap-extra-row');
+    if (extra > 0) {
+      exRow.style.display = 'flex';
+      document.getElementById('frecap-extra-label').textContent = extraL || 'Frais supplémentaires';
+      document.getElementById('frecap-extra-val').textContent = fFormatMoney(extra);
+    } else { exRow.style.display = 'none'; }
+  };
+
+  window.fResetForm = function() {
+    feditingId = null;
+    document.getElementById('fnew-title').textContent = 'Nouvelle facture';
+    document.querySelectorAll('#fscreen-new input').forEach(i => i.value = '');
+    document.getElementById('fs-paiement').value = 'Virement bancaire';
+    document.getElementById('fs-statut').value = 'Payée';
+    document.getElementById('fnights-num').textContent = '—';
+    document.getElementById('fnights-label').textContent = 'nuit(s)';
+    document.getElementById('frecap-nuits').textContent = '—';
+    document.getElementById('frecap-hebergement').textContent = '— €';
+    document.getElementById('frecap-menage').textContent = '— €';
+    document.getElementById('frecap-total').textContent = '0,00 €';
+    document.getElementById('frecap-extra-row').style.display = 'none';
+    document.getElementById('frecap-taxe-row').style.display = 'none';
+    document.getElementById('frecap-taxe-manual-row').style.display = 'none';
+    fPopulateBienSelect();
+    if (fsettings.nom) document.getElementById('fl-nom').value = fsettings.nom;
+    if (fsettings.adresse) document.getElementById('fl-adresse').value = fsettings.adresse;
+    if (fsettings.siret) document.getElementById('fl-siret').value = fsettings.siret;
+  };
+
+  function _fNextId() {
+    const prefix = fsettings.prefix || (new Date().getFullYear() + '-');
+    const n = fsettings.next_num || 1;
+    return prefix + String(n).padStart(3, '0');
+  }
+
+  function _fCollect() {
+    const nText = document.getElementById('fnights-num').textContent;
+    const nights = nText === '—' ? 0 : parseInt(nText) || 0;
+    const persons = parseInt(document.getElementById('fs-personnes').value) || 0;
+    const sel = fGetSelectedBien();
+    let taxe = 0, ville = '', cat = '', taux = 0;
+    if (sel && nights > 0 && persons > 0) {
+      const info = getTaxeRate(sel.ville, sel.categorie);
+      if (info) { taxe = info.taux * persons * nights; ville = info.ville; cat = sel.categorie; taux = info.taux; }
+      else { taxe = parseFloat(document.getElementById('fs-taxe-manuelle').value) || 0; ville = sel.ville; cat = sel.categorie; }
+    }
+    const bienLabel = sel ? `${sel.nom}${sel.ville ? ' — ' + sel.ville : ''}` : '';
+    return {
+      id: feditingId || '(BROUILLON)',
+      client: (document.getElementById('fc-prenom').value + ' ' + document.getElementById('fc-nom').value).trim(),
+      email: document.getElementById('fc-email').value,
+      clientAddr: document.getElementById('fc-adresse').value,
+      bien: bienLabel, bienId: sel ? sel.id : '',
+      arrivee: document.getElementById('fs-arrivee').value,
+      depart: document.getElementById('fs-depart').value,
+      prixNuit: parseFloat(document.getElementById('fs-prixnuit').value) || 0,
+      menage: parseFloat(document.getElementById('fs-menage').value) || 0,
+      caution: parseFloat(document.getElementById('fs-caution').value) || 0,
+      extra: document.getElementById('fs-extra-label').value,
+      extraMontant: parseFloat(document.getElementById('fs-extra-montant').value) || 0,
+      personnes: persons, taxeSejour: taxe, taxeVille: ville, taxeCategorie: cat, taxeTaux: taux,
+      paiement: document.getElementById('fs-paiement').value,
+      statut: document.getElementById('fs-statut').value,
+      loueur: document.getElementById('fl-nom').value,
+      loueurAddr: document.getElementById('fl-adresse').value,
+      siret: document.getElementById('fl-siret').value,
+    };
+  }
+
+  window.fSaveInvoice = async function() {
+    const loueur = document.getElementById('fl-nom').value;
+    const client = (document.getElementById('fc-prenom').value + ' ' + document.getElementById('fc-nom').value).trim();
+    if (!loueur) return fToast('Renseignez vos infos loueur', 'red');
+    if (!client) return fToast('Renseignez le nom du client', 'red');
+
+    const inv = _fCollect();
+
+    if (_fuser) {
+      const existing = finvoices.find(i => i.id === feditingId);
+      const dbId = existing ? existing._dbId : null;
+      const res = await _fApiPost('invoices-save', {
+        invoice: {
+          id: dbId,
+          invoice_number: feditingId || null,
+          data: inv,
+          statut: inv.statut,
+          total_ttc: fCalcInvoiceTotal(inv),
+          bien_id: (inv.bienId && !String(inv.bienId).startsWith('bien-local-')) ? inv.bienId : null
+        }
+      });
+      if (res.error) return fToast('Erreur: ' + res.error, 'red');
+      const saved = res.invoice;
+      inv.id = saved.invoice_number;
+      inv._dbId = saved.id;
+      const idx = finvoices.findIndex(i => i._dbId === saved.id);
+      if (idx >= 0) finvoices[idx] = inv; else finvoices.push(inv);
+    } else {
+      if (!feditingId) {
+        inv.id = _fNextId();
+        fsettings.prefix = fsettings.prefix || (new Date().getFullYear() + '-');
+        fsettings.next_num = (fsettings.next_num || 1) + 1;
+        localStorage.setItem('lcd_settings', JSON.stringify(fsettings));
+      } else { inv.id = feditingId; }
+      const idx = finvoices.findIndex(i => i.id === inv.id);
+      if (idx >= 0) finvoices[idx] = inv; else finvoices.push(inv);
+      localStorage.setItem('lcd_invoices', JSON.stringify(finvoices));
+    }
+    fToast('Facture ' + inv.id + ' enregistrée', 'green');
+    setTimeout(() => fShowScreen('fscreen-dashboard'), 700);
+  };
+
+  window.fViewInvoice = function(id) {
+    const inv = finvoices.find(i => i.id === id);
+    if (!inv) return;
+    fBuildPreview(inv);
+    fOpenModal('fmodal-pdf');
+  };
+
+  window.fDeleteInvoice = async function(id) {
+    if (!confirm('Supprimer la facture ' + id + ' ?')) return;
+    const target = finvoices.find(i => i.id === id);
+    if (_fuser && target && target._dbId) {
+      await _fApiPost('invoices-delete', { invoiceId: target._dbId });
+    }
+    finvoices = finvoices.filter(i => i.id !== id);
+    if (!_fuser) localStorage.setItem('lcd_invoices', JSON.stringify(finvoices));
+    fRenderTable(fcurrentYear);
+    fToast('Facture supprimée', 'red');
+  };
+
+  window.fOpenPdfModal = function() {
+    const inv = _fCollect();
+    if (!inv.loueur && !inv.client) return fToast('Remplissez le formulaire avant', 'red');
+    fBuildPreview(inv);
+    fOpenModal('fmodal-pdf');
+  };
+
+  function fBuildPreview(inv) {
+    const nights = fNights(inv.arrivee, inv.depart);
+    const hebergement = nights * (inv.prixNuit || 0);
+    const extra = Number(inv.extraMontant) || 0;
+    const menage = Number(inv.menage) || 0;
+    const taxeSejour = Number(inv.taxeSejour) || 0;
+    const total = hebergement + menage + extra + taxeSejour;
+    const caution = Number(inv.caution) || 0;
+    const today = new Date();
+    const todayFmt = today.toLocaleDateString('fr-FR');
+    const dueDate = new Date(today.getTime() + 30 * 86400000).toLocaleDateString('fr-FR');
+    const mention = fsettings.mention || 'TVA non applicable, art. 293 B du CGI. En qualité de loueur en meublé non professionnel (LMNP), je ne suis pas assujetti à la TVA.';
+    const stampHtml = inv.statut === 'Payée' ? `<div class="inv-stamp-area"><div class="inv-stamp">PAYÉE</div></div>` : '';
+    const extraRow = extra > 0 ? `<tr><td>${inv.extra || 'Frais supplémentaires'}</td><td>1</td><td>${fFormatMoney(extra)}</td><td class="amount">${fFormatMoney(extra)}</td></tr>` : '';
+    const taxeRow = taxeSejour > 0 && inv.taxeTaux
+      ? `<tr><td>Taxe de séjour<br><small style="color:#777">${inv.taxeVille || ''} — ${inv.taxeCategorie || ''} : ${Number(inv.taxeTaux).toFixed(2)}€/pers/nuit × ${inv.personnes||1} × ${nights}</small></td><td>${nights}</td><td>—</td><td class="amount">${fFormatMoney(taxeSejour)}</td></tr>`
+      : (taxeSejour > 0 ? `<tr><td>Taxe de séjour</td><td>1</td><td>—</td><td class="amount">${fFormatMoney(taxeSejour)}</td></tr>` : '');
+    const cautionNote = caution > 0 ? `<div class="inv-caution-note"><strong>Caution :</strong> ${fFormatMoney(caution)} — non incluse. Remboursable sous 7 jours après départ.</div>` : '';
+
+    document.getElementById('finvoice-preview').innerHTML = `
+      <div class="inv-header">
+        <div class="inv-logo-placeholder">LOGO<br>optionnel</div>
+        <div class="inv-issuer">
+          <div class="name">${inv.loueur || 'Nom du loueur'}</div>
+          <div class="detail">${(inv.loueurAddr || '').replace(/,\s*/g, '<br>')}</div>
+          ${inv.siret ? `<div class="detail" style="margin-top:5px"><strong>SIRET :</strong> ${inv.siret}</div>` : ''}
+        </div>
+      </div>
+      <div class="inv-title-block">
+        <h1>FACTURE N° ${inv.id}</h1>
+        <div class="inv-meta">
+          <div><div class="im-label">Date d'émission</div><div class="im-val">${todayFmt}</div></div>
+          <div><div class="im-label">Échéance</div><div class="im-val">${dueDate}</div></div>
+          <div><div class="im-label">Mode de paiement</div><div class="im-val">${inv.paiement || '—'}</div></div>
+        </div>
+      </div>
+      <div class="inv-client-box">
+        <div class="cb-label">Facturé à</div>
+        <div class="cb-name">${inv.client || 'Client'}</div>
+        ${inv.email ? `<div class="cb-detail">${inv.email}</div>` : ''}
+        ${inv.clientAddr ? `<div class="cb-detail">${inv.clientAddr}</div>` : ''}
+      </div>
+      <table class="inv-table">
+        <thead><tr><th>Description</th><th>Qté</th><th>Prix unitaire</th><th class="amount">Montant</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Hébergement — ${inv.bien || 'Bien loué'}</strong><br><small style="color:#777">Séjour du ${fFormatDate(inv.arrivee)} au ${fFormatDate(inv.depart)} (${nights} nuit${nights>1?'s':''}${inv.personnes ? ', ' + inv.personnes + ' pers.' : ''})</small></td>
+            <td>${nights}</td>
+            <td>${fFormatMoney(inv.prixNuit)} / nuit</td>
+            <td class="amount">${fFormatMoney(hebergement)}</td>
+          </tr>
+          ${menage > 0 ? `<tr><td>Frais de ménage</td><td>1</td><td>${fFormatMoney(menage)}</td><td class="amount">${fFormatMoney(menage)}</td></tr>` : ''}
+          ${taxeRow}
+          ${extraRow}
+        </tbody>
+      </table>
+      ${cautionNote}
+      <div class="inv-total-box">
+        <div class="inv-total-row"><span class="tr-label">Sous-total hébergement</span><span class="tr-val">${fFormatMoney(hebergement)}</span></div>
+        ${menage > 0 ? `<div class="inv-total-row"><span class="tr-label">Frais de ménage</span><span class="tr-val">${fFormatMoney(menage)}</span></div>` : ''}
+        ${taxeSejour > 0 ? `<div class="inv-total-row"><span class="tr-label">Taxe de séjour</span><span class="tr-val">${fFormatMoney(taxeSejour)}</span></div>` : ''}
+        ${extra > 0 ? `<div class="inv-total-row"><span class="tr-label">${inv.extra || 'Frais supplémentaires'}</span><span class="tr-val">${fFormatMoney(extra)}</span></div>` : ''}
+        <div class="inv-total-row"><span class="tr-label">TVA</span><span class="tr-val" style="color:#999;font-weight:400">Non applicable (art. 293 B CGI)</span></div>
+        <div class="inv-total-row grand"><span class="tr-label">Total TTC</span><span class="tr-val">${fFormatMoney(total)}</span></div>
+      </div>
+      ${stampHtml}
+      <div class="inv-footer">
+        <div class="inv-payment"><strong>Coordonnées de paiement :</strong><br>Mode : ${inv.paiement || '—'}${inv.paiement === 'Virement bancaire' ? '<br>IBAN : FR76 XXXX XXXX XXXX XXXX XXXX XXX' : ''}</div>
+        <div class="inv-legal" style="margin-top:14px"><strong>Mentions légales :</strong><br>${mention}</div>
+        <div class="inv-legal">Document émis par ${inv.loueur || 'le loueur'}${inv.siret ? ` — SIRET : ${inv.siret}` : ''}.</div>
+      </div>
+    `;
+  }
+
+  window.fPrintInvoice = function() { window.print(); };
+
+  // ─── MODALS ───
+  window.fOpenModal = function(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow = 'hidden'; };
+  window.fCloseModal = function(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow = ''; };
+  window.fCloseModalOnBg = function(e, id) { if (e.target === document.getElementById(id)) fCloseModal(id); };
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('#fact-wrap .modal-overlay.open').forEach(m => { m.classList.remove('open'); document.body.style.overflow = ''; });
+    }
+  });
+
+  // ─── TOAST ───
+  let _ftoastTimer = null;
+  function fToast(msg, type) {
+    const t = document.getElementById('ftoast');
+    if (!t) return;
+    t.textContent = msg;
+    t.className = 'ftoast show' + (type ? ' toast-' + type : '');
+    clearTimeout(_ftoastTimer);
+    _ftoastTimer = setTimeout(() => { t.className = 'ftoast'; }, 2800);
+  }
+  window.fToast = fToast;
+
+  function fRenderAll() {
+    fRenderTable(fcurrentYear);
+    fRenderBiens();
+    fPopulateBienSelect();
+    if (fsettings.nom && document.getElementById('fl-nom')) document.getElementById('fl-nom').value = fsettings.nom;
+    if (fsettings.adresse && document.getElementById('fl-adresse')) document.getElementById('fl-adresse').value = fsettings.adresse;
+    if (fsettings.siret && document.getElementById('fl-siret')) document.getElementById('fl-siret').value = fsettings.siret;
+  }
+
+  // ─── INIT ───
+  document.addEventListener('DOMContentLoaded', () => { fRenderAll(); });
+  if (document.readyState === 'complete' || document.readyState === 'interactive') { fRenderAll(); }
+}
+</script>

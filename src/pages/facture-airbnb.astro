@@ -1,0 +1,219 @@
+---
+export const prerender = false;
+import ToolLayout from '../layouts/ToolLayout.astro';
+import FacturationTool from '../components/FacturationTool.astro';
+
+const title = "Facture Airbnb — Modèle & générateur gratuit pour hôtes et voyageurs";
+const description = "Générez une facture Airbnb conforme : reconstituez la facture que Airbnb n'émet pas, calcul taxe de séjour automatique, commissions Airbnb, mentions LMNP. Gratuit, sans inscription.";
+const canonical = "https://www.enomia.app/facture-airbnb";
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="facture">
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 0; }
+    .seo-hero { margin-bottom: 8px; }
+    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(30px, 4vw, 44px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; color: #2b2d2b; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; }
+    .seo-badge::before { content: '✓'; }
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body ul, .seo-body ol { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 18px; padding-left: 24px; }
+    .seo-body li { margin-bottom: 6px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+    .seo-body a { color: #3fbd71; text-decoration: underline; text-underline-offset: 2px; }
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 16px 20px; margin: 22px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: #1a1a1a; }
+    .callout.warn { border-left-color: #e05252; background: rgba(224,82,82,0.06); }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .intent-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+    .intent-card { border: 1px solid #e5e3de; background: #fff; border-radius: 10px; padding: 18px; }
+    .intent-card .ik { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3fbd71; margin-bottom: 5px; }
+    .intent-card h3 { font-size: 15px; margin: 0 0 8px; }
+    .intent-card p { font-size: 13px; margin: 0; color: #52524e; line-height: 1.6; }
+    .faq { border: 1px solid #e5e3de; border-radius: 10px; overflow: hidden; margin: 12px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; }
+    .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; font-weight: 400; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 60px; }
+    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; transition: all 0.15s; color: inherit; text-decoration: none; }
+    .related a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; }
+    .related .rd { font-size: 12px; color: #8a8985; }
+    @media (max-width: 700px) {
+      .seo-wrap { padding: 24px 20px 0; }
+      .intent-cards, .related { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="seo-wrap">
+    <div class="seo-hero">
+      <h1 class="seo-h1">Facture <em>Airbnb</em> — générer le document que Airbnb ne vous donne pas</h1>
+      <p class="seo-lede">
+        Airbnb ne fournit qu'un <strong>reçu</strong>, pas une facture légale. En tant qu'hôte, c'est à vous de l'émettre — en tant que voyageur d'affaires, vous devez la demander à votre hôte. Notre outil génère une facture conforme en 2 minutes avec mentions LMNP, calcul automatique de la taxe de séjour et export PDF. <strong>Gratuit, sans inscription</strong>.
+      </p>
+      <div class="seo-badges">
+        <span class="seo-badge">Gratuit sans inscription</span>
+        <span class="seo-badge">Taxe de séjour auto</span>
+        <span class="seo-badge">Conforme LMNP</span>
+        <span class="seo-badge">Export PDF</span>
+      </div>
+    </div>
+
+    <FacturationTool />
+
+    <div class="seo-body">
+      <h2>3 situations, 3 besoins différents</h2>
+      <p>
+        "Facture Airbnb" recouvre trois cas d'usage très différents. Identifiez le vôtre pour savoir ce que vous devez faire :
+      </p>
+      <div class="intent-cards">
+        <div class="intent-card">
+          <div class="ik">Cas 1</div>
+          <h3>Vous êtes hôte Airbnb</h3>
+          <p>Vous louez un logement sur Airbnb et votre voyageur vous demande une facture. → Vous devez l'émettre vous-même avec cet outil.</p>
+        </div>
+        <div class="intent-card">
+          <div class="ik">Cas 2</div>
+          <h3>Vous êtes voyageur d'affaires</h3>
+          <p>Vous avez réservé un Airbnb pour un déplacement pro et devez vous faire rembourser. → Demandez à votre hôte une facture officielle (modèle ci-dessous).</p>
+        </div>
+        <div class="intent-card">
+          <div class="ik">Cas 3</div>
+          <h3>Vous êtes hôte pour la compta</h3>
+          <p>Vous cherchez vos <strong>factures de commission Airbnb</strong> à déduire en charges. → Elles sont dans votre compte hôte Airbnb (Transactions → Facturation).</p>
+        </div>
+      </div>
+
+      <h2>Pourquoi Airbnb ne fournit pas de vraie facture ?</h2>
+      <p>
+        Airbnb n'est <strong>pas l'hôtelier</strong>. C'est une plateforme d'intermédiation : le contrat de location se noue directement entre l'hôte et le voyageur. Par conséquent :
+      </p>
+      <ul>
+        <li>Airbnb n'émet <strong>que la facture de ses propres frais de service</strong> (commission voyageur + taxe applicable)</li>
+        <li>Le document appelé "reçu" dans l'app Airbnb n'est pas une facture au sens légal français : pas de numérotation chronologique du loueur, pas toujours de SIRET, pas de mention TVA valide</li>
+        <li>Les entreprises et administrations refusent ce reçu comme justificatif de dépense</li>
+      </ul>
+
+      <div class="callout warn">
+        <strong>⚠ Le reçu Airbnb n'est PAS une facture</strong>
+        Pour qu'un voyageur professionnel puisse se faire rembourser par son employeur, il lui faut une facture nominative émise par vous (l'hôte), contenant toutes les mentions obligatoires : numéro, date, SIRET, identification précise, TVA, total TTC.
+      </div>
+
+      <h2>Hôte Airbnb : comment émettre la facture en 2 minutes</h2>
+      <ol>
+        <li><strong>Reprenez les infos du reçu Airbnb</strong> : nom du voyageur, dates, nombre de personnes, montant perçu</li>
+        <li><strong>Dans l'outil ci-dessus</strong> : remplissez la section Loueur une fois (nom, adresse, SIRET), puis créez votre bien</li>
+        <li><strong>Nouvelle facture</strong> : entrez les dates du séjour, le prix/nuit, le ménage. L'outil calcule automatiquement la taxe de séjour pour votre ville</li>
+        <li><strong>Exportez en PDF</strong> et envoyez-la à votre voyageur par email</li>
+      </ol>
+      <p>
+        <strong>Astuce numérotation</strong> : l'outil démarre automatiquement à <code>2026-001</code> et incrémente à chaque nouvelle facture. Vous pouvez aussi personnaliser le préfixe (ex : <code>AIRBNB-2026-001</code>).
+      </p>
+
+      <h2>Comment reconstituer le montant réel à facturer ?</h2>
+      <p>
+        Le montant indiqué sur votre relevé Airbnb est le <strong>net vendeur</strong> (après commission plateforme). Sur votre facture au voyageur, vous devez indiquer le <strong>prix brut payé par le voyageur</strong>, qui est celui affiché lors de la réservation.
+      </p>
+      <h3>Commission Airbnb : deux modèles</h3>
+      <ul>
+        <li><strong>Split fee (par défaut)</strong> : Airbnb prend ~3 % à l'hôte + ~14 % au voyageur. Vous facturez le prix affiché hors frais voyageur, mais vous ne recevez que 97 % de ce montant</li>
+        <li><strong>Host-only fee</strong> : Airbnb prend 14-16 % uniquement à l'hôte. Vous facturez le prix plein vu par le voyageur</li>
+      </ul>
+      <p>
+        <strong>Ce que vous facturez = le total payé par le voyageur</strong>, sans déduire la commission Airbnb. La commission est une <em>charge</em> que vous déduisez séparément dans votre comptabilité LMNP (compte 622 : rémunérations d'intermédiaires).
+      </p>
+
+      <h2>Taxe de séjour Airbnb : qui la collecte ?</h2>
+      <p>
+        Dans la plupart des grandes villes françaises (Paris, Lyon, Marseille, Nice, Bordeaux…), Airbnb <strong>collecte et reverse automatiquement</strong> la taxe de séjour à la commune. Dans ce cas, vous ne devez pas la facturer en plus au voyageur.
+      </p>
+      <p>
+        Mais <strong>la taxe doit tout de même apparaître sur votre facture</strong> avec la mention "taxe collectée par la plateforme Airbnb" pour que le voyageur comprenne ce qu'il a payé. L'outil permet d'ajuster l'affichage selon votre cas.
+      </p>
+      <p>
+        Dans les communes où Airbnb ne collecte pas (moins fréquent), c'est à vous d'ajouter la taxe au total facturé et de la reverser à la commune.
+      </p>
+
+      <h2>Récupérer vos factures de commission Airbnb (côté hôte)</h2>
+      <p>
+        Les commissions prélevées par Airbnb sont des <strong>charges déductibles</strong> en régime réel LMNP. Pour les récupérer :
+      </p>
+      <ol>
+        <li>Connectez-vous sur airbnb.fr/hosting</li>
+        <li>Cliquez sur <strong>Transactions → Onglet "Taxes"</strong></li>
+        <li>Téléchargez la facture TVA mensuelle ou annuelle (au format PDF)</li>
+        <li>Enregistrez-les en comptabilité dans le compte 622 (rémunérations d'intermédiaires)</li>
+      </ol>
+
+      <h2>Modèle d'email pour demander une facture à un hôte</h2>
+      <p>Voyageur d'affaires ? Voici un modèle à envoyer à votre hôte via la messagerie Airbnb :</p>
+      <div class="callout">
+        <em>"Bonjour, je vous remercie pour mon séjour du [dates]. Mon entreprise exige une facture officielle pour me rembourser ma réservation. Pourriez-vous m'envoyer une facture à mon nom avec votre SIRET, les dates de séjour, et le montant total payé ? Merci beaucoup, [nom]"</em>
+      </div>
+      <p>Si votre hôte n'a pas d'outil, partagez-lui cette page : il pourra générer la facture en 2 minutes et vous l'envoyer en PDF.</p>
+
+      <h2>Mentions obligatoires sur une facture Airbnb</h2>
+      <p>Comme toute facture de prestation de service en France, une facture pour une location Airbnb doit contenir :</p>
+      <ul>
+        <li>Numéro de facture chronologique et date d'émission</li>
+        <li>Nom/raison sociale + adresse + <strong>SIRET</strong> de l'hôte</li>
+        <li>Nom du voyageur (adresse optionnelle pour un particulier)</li>
+        <li>Désignation précise : "Hébergement — [nom du bien] — séjour du X au Y — Z nuits — N personnes"</li>
+        <li>Prix HT (= TTC en LMNP non assujetti)</li>
+        <li>Mention <strong>"TVA non applicable, art. 293 B du CGI"</strong></li>
+        <li>Taxe de séjour détaillée (montant + taux applicable)</li>
+        <li>Total TTC à payer</li>
+        <li>Mode de paiement (ici : "Airbnb")</li>
+      </ul>
+
+      <h2>Questions fréquentes</h2>
+      <div class="faq">
+        <details>
+          <summary>Le reçu Airbnb ne suffit-il pas pour ma comptabilité ?</summary>
+          <div class="faq-ans"><p>Pour <strong>vous (hôte)</strong>, le reçu Airbnb est suffisant comme pièce de recette. Mais votre <strong>voyageur professionnel</strong> a besoin d'une facture officielle à son nom pour se faire rembourser. Vous devez donc lui émettre une facture, même si vous avez déjà reçu le paiement via Airbnb.</p></div>
+        </details>
+        <details>
+          <summary>Dois-je facturer le montant brut ou le net vendeur ?</summary>
+          <div class="faq-ans"><p><strong>Le montant brut payé par le voyageur</strong>. C'est le prix affiché au moment de la réservation (avant commission Airbnb). La commission prélevée par Airbnb est une charge que vous déduisez séparément.</p></div>
+        </details>
+        <details>
+          <summary>Comment déduire les commissions Airbnb en LMNP ?</summary>
+          <div class="faq-ans"><p>En <strong>régime réel LMNP</strong>, les commissions Airbnb sont déductibles comme charges d'intermédiation (compte comptable 622). Téléchargez les factures TVA Airbnb depuis votre compte hôte et conservez-les 10 ans. En <strong>micro-BIC</strong>, elles sont déjà incluses dans l'abattement forfaitaire (50 % ou 71 % selon classement) et ne sont pas à déduire séparément.</p></div>
+        </details>
+        <details>
+          <summary>Airbnb m'a déjà prélevé la taxe de séjour, dois-je la refacturer ?</summary>
+          <div class="faq-ans"><p>Non. Si Airbnb a collecté et reversé la taxe à la commune (cas le plus fréquent dans les grandes villes), vous ne devez <strong>pas la facturer à nouveau</strong>. Mais vous devez la <em>mentionner</em> sur votre facture avec le label "taxe de séjour — collectée par Airbnb" pour la transparence auprès du voyageur.</p></div>
+        </details>
+        <details>
+          <summary>Je loue ponctuellement, puis-je facturer sans SIRET ?</summary>
+          <div class="faq-ans"><p>Si vous exercez de manière occasionnelle (quelques nuits par an), vous pouvez émettre une facture sans SIRET. Dès que l'activité devient régulière, l'inscription au Registre du Commerce (statut LMNP) devient obligatoire — c'est une démarche <strong>gratuite</strong> sur le site de l'INPI.</p></div>
+        </details>
+        <details>
+          <summary>Comment gérer plusieurs biens sur Airbnb ?</summary>
+          <div class="faq-ans"><p>L'outil Enomia permet de créer plusieurs "biens" (adresse, classement, capacité) et de les sélectionner au moment d'émettre une facture. Chaque bien conserve son taux de taxe de séjour. Utile si vous avez un portefeuille de plusieurs logements à louer.</p></div>
+        </details>
+      </div>
+
+      <h2>Outils complémentaires</h2>
+      <div class="related">
+        <a href="/simulateur-rentabilite-airbnb">
+          <div class="rk">Outil gratuit</div>
+          <div class="rt">Simulateur de rentabilité LCD</div>
+          <div class="rd">Calculez le cash-flow et le rendement net d'un Airbnb : fiscalité LMNP, mensualité, taux d'occupation</div>
+        </a>
+        <a href="/facture-booking">
+          <div class="rk">Outil gratuit</div>
+          <div class="rt">Facture Booking</div>
+          <div class="rd">Même outil adapté aux réservations via Booking.com (commissions, voyageurs d'affaires, hôtes)</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</ToolLayout>

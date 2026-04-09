@@ -912,6 +912,19 @@ let _user = null, _token = null, _dbSims = [], _pendingSimData = null, _isViewin
   } catch(e) {}
 })();
 
+// Pré-fetch silencieux des simulations : peuple le cache en arrière-plan
+// pour que le prochain clic sur "Mes simulations" soit instantané.
+async function _prefetchSims() {
+  if (!_user || !_token) return;
+  try {
+    const data = await _apiPost('/api/simulations', { action: 'fetch' }, true);
+    if (data.simulations) {
+      _dbSims = data.simulations;
+      _saveSimsCache(_dbSims);
+    }
+  } catch (_) {}
+}
+
 _sb.auth.onAuthStateChange(async (event, session) => {
   _user = session?.user || null;
   _token = session?.access_token || null;
@@ -933,10 +946,15 @@ _sb.auth.onAuthStateChange(async (event, session) => {
       localStorage.removeItem('enomia_pending_save');
       await _doSaveToDb();
     }
+    // Pré-charger les sims en arrière-plan (non bloquant)
+    _prefetchSims();
     // Rediriger vers dashboard uniquement si c'est un vrai login (pas session existante)
     if (expectingSignIn || hasPending) {
       _doShowDashboard();
     }
+  } else if (event === 'SIGNED_OUT') {
+    // Nettoyer le cache pour éviter la fuite entre comptes
+    try { Object.keys(localStorage).filter(k => k.startsWith('enomia_sims_cache_')).forEach(k => localStorage.removeItem(k)); } catch(_) {}
   }
 });
 
@@ -949,6 +967,10 @@ async function _initAuth() {
   const params = new URLSearchParams(window.location.search);
   const sharedSim = params.get('sim');
   if (sharedSim) _loadSharedSim(sharedSim);
+  // Pré-fetch silencieux si l'utilisateur est déjà connecté (session restaurée)
+  if (_user && _token && !sharedSim) {
+    _prefetchSims();
+  }
 }
 
 function _updateNavAuth() {
@@ -1057,14 +1079,85 @@ function showScreen(id){
 }
 function _doShowDashboard(){document.getElementById("btn-mes-sim-nav").style.display="none";var nb=document.getElementById("btn-new-nav");nb.style.display="inline-flex";nb.className="btn-sm accent";document.getElementById("btn-blog-nav").style.display="inline-flex";showScreen('screen-dashboard');renderDash();}
 function showDashboard(){if(!_user){_openMagicModal('Se connecter');return;}checkUnsavedAndNavigate(_doShowDashboard);}
-async function renderDash(){
-  const c=document.getElementById('sims-container');
-  c.innerHTML='<div style="padding:40px;text-align:center;color:var(--muted);font-size:14px">Chargement...</div>';
-  const data = await _apiPost('/api/simulations', { action: 'fetch' }, true);
-  _dbSims = data.simulations || [];
-  document.getElementById('dash-sub').textContent=_dbSims.length+' simulation'+(_dbSims.length!==1?'s':'')+' sauvegardée'+(_dbSims.length!==1?'s':'');
-  if(!_dbSims.length){c.innerHTML='<div class="sims-empty"><div class="sims-empty-icon">📊</div><div class="sims-empty-t">Aucune simulation</div><p class="sims-empty-d">Cliquez sur \"+ Nouvelle simulation\" pour analyser votre premier bien.</p></div>';return;}
-  c.innerHTML='<div class="sims-grid">'+_dbSims.map((s,i)=>renderCard(s.data||s,i,s.id)).join('')+'</div>';
+
+// ─── CACHE LOCAL DES SIMULATIONS (SWR pattern) ───
+// Objectif : afficher le dashboard INSTANTANÉMENT depuis le cache,
+// puis revalider en arrière-plan et mettre à jour le DOM si différent.
+// Cache clé = user_id (pour éviter fuite entre comptes sur même navigateur).
+function _simsCacheKey() {
+  return _user ? 'enomia_sims_cache_' + _user.id : null;
+}
+function _loadSimsCache() {
+  try {
+    const k = _simsCacheKey();
+    if (!k) return null;
+    const raw = localStorage.getItem(k);
+    if (!raw) return null;
+    const obj = JSON.parse(raw);
+    // Cache valide 24h (re-fetch automatique après)
+    if (Date.now() - (obj.at || 0) > 24 * 3600 * 1000) return null;
+    return obj.sims || null;
+  } catch(_) { return null; }
+}
+function _saveSimsCache(sims) {
+  try {
+    const k = _simsCacheKey();
+    if (!k) return;
+    localStorage.setItem(k, JSON.stringify({ at: Date.now(), sims: sims }));
+  } catch(_) {}
+}
+function _clearSimsCache() {
+  try {
+    const k = _simsCacheKey();
+    if (k) localStorage.removeItem(k);
+  } catch(_) {}
+}
+
+// Rendu du dashboard (utilise directement _dbSims)
+function _renderSimsInto(container) {
+  document.getElementById('dash-sub').textContent = _dbSims.length + ' simulation' + (_dbSims.length !== 1 ? 's' : '') + ' sauvegardée' + (_dbSims.length !== 1 ? 's' : '');
+  if (!_dbSims.length) {
+    container.innerHTML = '<div class="sims-empty"><div class="sims-empty-icon">📊</div><div class="sims-empty-t">Aucune simulation</div><p class="sims-empty-d">Cliquez sur "+ Nouvelle simulation" pour analyser votre premier bien.</p></div>';
+    return;
+  }
+  container.innerHTML = '<div class="sims-grid">' + _dbSims.map((s, i) => renderCard(s.data || s, i, s.id)).join('') + '</div>';
+}
+
+async function renderDash() {
+  const c = document.getElementById('sims-container');
+  const cached = _loadSimsCache();
+
+  // 1. Affichage INSTANTANÉ depuis le cache si dispo
+  if (cached && cached.length) {
+    _dbSims = cached;
+    _renderSimsInto(c);
+  } else {
+    c.innerHTML = '<div style="padding:40px;text-align:center;color:var(--muted);font-size:14px">Chargement...</div>';
+  }
+
+  // 2. Revalidation en arrière-plan (SWR)
+  try {
+    const data = await _apiPost('/api/simulations', { action: 'fetch' }, true);
+    const fresh = data.simulations || [];
+    // Compare avec le cache : si différent, re-render
+    const cachedJson = JSON.stringify(cached || []);
+    const freshJson = JSON.stringify(fresh);
+    if (cachedJson !== freshJson) {
+      _dbSims = fresh;
+      _saveSimsCache(fresh);
+      _renderSimsInto(c);
+    } else if (!cached) {
+      // Premier load : pas de cache, on affiche maintenant
+      _dbSims = fresh;
+      _saveSimsCache(fresh);
+      _renderSimsInto(c);
+    }
+  } catch (e) {
+    // Si fetch échoue et qu'on n'avait pas de cache, message d'erreur
+    if (!cached) {
+      c.innerHTML = '<div style="padding:40px;text-align:center;color:var(--red);font-size:14px">Erreur de chargement. <a onclick="renderDash()" style="color:var(--accent);cursor:pointer;text-decoration:underline">Réessayer</a></div>';
+    }
+  }
 }
 function renderCard(s,i,dbId){
   const cls=s.rendement>=12?'good':s.rendement>=5?'ok':'bad';
@@ -1074,7 +1167,12 @@ function renderCard(s,i,dbId){
 }
 async function deleteSim(dbId){
   if(!confirm('Supprimer cette simulation ?'))return;
+  // Optimistic : retirer du cache immédiatement
+  _dbSims = _dbSims.filter(s => s.id !== dbId);
+  _saveSimsCache(_dbSims);
+  _renderSimsInto(document.getElementById('sims-container'));
   await _apiPost('/api/simulations', { action: 'delete', simulationId: dbId }, true);
+  // Revalidation en arrière-plan
   renderDash();
 }
 async function shareSimulation(dbId){
@@ -1351,6 +1449,8 @@ async function _doSaveToDb(overrideData){
   }
   const res=await _apiPost('/api/simulations',{action:'save',simulationName:simData.name,simulationData:simData,simulationId:currentSimDbId},true);
   if(res.simulationId)currentSimDbId=res.simulationId;
+  // Invalider le cache pour qu'au prochain dashboard, on refetch
+  _clearSimsCache();
   const btn=document.getElementById('btn-save-nav');
   if(btn){btn.textContent='✓ Sauvegardé';setTimeout(()=>{btn.textContent='Sauvegarder';},2000);}
   document.getElementById('save-status').textContent='';

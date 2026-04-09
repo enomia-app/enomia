@@ -1,15 +1,16 @@
 import { createClient } from '@supabase/supabase-js'
+import { getUserFromReq } from './_lib/auth.js'
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE_KEY
 )
 
+// Vérification locale du JWT (pas de round-trip Auth)
+// Remplace l'ancien `supabase.auth.getUser()` qui coûtait 100-300 ms par appel.
+// ⚠️ Async : reste en await car fallback SDK si SUPABASE_JWT_SECRET absent.
 async function getUser(req) {
-  const token = req.headers.authorization?.replace('Bearer ', '')
-  if (!token) return null
-  const { data: { user }, error } = await supabase.auth.getUser(token)
-  return error ? null : user
+  return await getUserFromReq(req)
 }
 
 export default async function handler(req, res) {

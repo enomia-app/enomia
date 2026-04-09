@@ -1025,9 +1025,12 @@ async function _loadSharedSim(id) {
   const data = await _apiPost('/api/simulations', { action: 'get-public', simulationId: id }, false);
   if (data.simulation) {
     const s = data.simulation.data;
-    _restoreSimData(s);
-    _isViewingSharedSim = true;
-    showScreen('screen-calc');
+    // Use setTimeout to ensure DOM is fully settled before restoring
+    setTimeout(function() {
+      _restoreSimData(s);
+      _isViewingSharedSim = true;
+      showScreen('screen-calc');
+    }, 50);
   }
 }
 
@@ -1318,8 +1321,8 @@ function openSim(i){_isViewingSharedSim=false;document.getElementById("btn-mes-s
   currentSimIdx=i;
   document.getElementById('sim-name-input').value=s.name||'';
   if(s.mode==='multi'){
+    if(s.lots && s.lots.length) lots=[...s.lots];
     setMode('multi',document.getElementById('mode-multi'));
-    if(s.lots)lots=s.lots;
     renderLots();
     ['prix-m','travaux-m','ameu-m'].forEach(id=>{const el=document.getElementById('s-'+id);if(el&&s.sliders?.[id]!==undefined){el.value=s.sliders[id];sv2(id,s.sliders[id]);}});
     computeMulti();

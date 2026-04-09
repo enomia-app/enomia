@@ -1023,8 +1023,10 @@ async function _migrateLocalStorage() {
 // Charger une simulation partagée
 async function _loadSharedSim(id) {
   const data = await _apiPost('/api/simulations', { action: 'get-public', simulationId: id }, false);
+  console.log('[DEBUG] _loadSharedSim response:', JSON.stringify(data));
   if (data.simulation) {
     const s = data.simulation.data;
+    console.log('[DEBUG] s.mode:', s && s.mode, '| s.lots:', JSON.stringify(s && s.lots));
     // Use setTimeout to ensure DOM is fully settled before restoring
     setTimeout(function() {
       _restoreSimData(s);

@@ -1,6 +1,7 @@
 export const prerender = true;
 
 import { getCollection } from 'astro:content';
+import { cities } from '../data/cities';
 
 const SITE = 'https://www.enomia.app';
 
@@ -25,8 +26,24 @@ export async function GET() {
       lastmod: post.data.updatedAt ?? post.data.publishedAt,
     }));
 
+  const cityEntries = cities.map((c) => ({
+    url: `/conciergerie-${c.slug}`,
+    changefreq: 'monthly',
+    priority: '0.85',
+    lastmod: c.updatedAt,
+  }));
+
+  const pillarEntry = {
+    url: '/conciergerie-airbnb',
+    changefreq: 'monthly',
+    priority: '0.9',
+    lastmod: '2026-04-09',
+  };
+
   const allEntries = [
     ...staticPages.map((p) => ({ ...p, lastmod: undefined })),
+    pillarEntry,
+    ...cityEntries,
     ...postEntries,
   ];
 

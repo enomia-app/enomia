@@ -1,0 +1,478 @@
+---
+export const prerender = true;
+import ToolLayout from '../layouts/ToolLayout.astro';
+import { cities } from '../data/cities';
+
+const canonical = 'https://www.enomia.app/conciergerie-airbnb';
+const title = "Conciergerie Airbnb 2026 : tarifs, services, comparatif pour bien choisir";
+const description = "Conciergerie Airbnb : définition, services, tarifs (15-30%), comparatif, critères de choix, pièges à éviter. Le guide complet 2026 pour propriétaires.";
+
+// Group cities by region for the directory section
+const regions = cities.reduce<Record<string, typeof cities>>((acc, c) => {
+  (acc[c.region] ||= []).push(c);
+  return acc;
+}, {});
+const sortedRegions = Object.entries(regions).sort(([a], [b]) => a.localeCompare(b));
+
+// Aggregate rating across all conciergeries in all cities (for SERP stars)
+const allRatings = cities.flatMap((c) => c.conciergeries.map((cc) => ({ rating: cc.rating, reviews: cc.reviews })));
+const totalReviews = allRatings.reduce((s, r) => s + r.reviews, 0);
+const weightedRating = allRatings.reduce((s, r) => s + r.rating * r.reviews, 0) / totalReviews;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished: '2026-04-09',
+  dateModified: '2026-04-09',
+  author: { '@type': 'Person', name: 'Marc', url: 'https://www.enomia.app/' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Enomia',
+    logo: { '@type': 'ImageObject', url: 'https://www.enomia.app/favicon.png' },
+  },
+  mainEntityOfPage: canonical,
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      q: "Qu'est-ce qu'une conciergerie Airbnb et à quoi ça sert ?",
+      a: "Une conciergerie Airbnb est une entreprise qui prend en charge tout ou partie de la gestion de votre bien en location courte durée : création et optimisation des annonces, messagerie voyageurs 24/7, check-in/out, ménage, linge, pricing dynamique, maintenance. En échange, elle facture une commission de 15 à 30 % du revenu locatif (moyenne 20 %).",
+    },
+    {
+      q: "Combien coûte une conciergerie Airbnb en 2026 ?",
+      a: "La commission médiane est de 20 % HT du revenu locatif, hors ménage. Elle varie de 15 % (acteurs low-cost ou villes moyennes) à 30 % (positionnement premium dans les grandes métropoles). Méfiez-vous des commissions très basses qui cachent souvent des frais annexes (mise en ligne, photos, abonnement mensuel minimum).",
+    },
+    {
+      q: "Est-ce qu'une conciergerie Airbnb est rentable ?",
+      a: "Cela dépend du temps que vous économisez, de l'amélioration du revenu qu'elle apporte (pricing, photos, taux d'occupation) et du coût réel. Règle simple : rentable si vous habitez loin, si vous avez 3+ biens, ou si votre bien génère plus de 25 000 €/an. Moins pertinent si vous habitez à moins de 15 minutes avec un seul bien.",
+    },
+    {
+      q: "Comment choisir une conciergerie Airbnb fiable ?",
+      a: "12 critères à vérifier : transparence tarifaire, ancienneté locale (3 ans+), nombre de biens gérés, avis Google (≥50), services inclus par écrit, stack technologique, délai de réponse voyageurs, propriété du compte Airbnb, gestion compliance locale, reporting mensuel structuré, clauses de sortie, durée d'engagement raisonnable.",
+    },
+    {
+      q: "Quels sont les pièges à éviter avec une conciergerie ?",
+      a: "Les 7 pièges classiques : transfert du compte Airbnb à la conciergerie, ménage 'inclus' qui grève votre marge, engagement 12 mois avec pénalité, photos propriété de la conciergerie, reporting opaque, pricing sous-optimisé, avis achetés.",
+    },
+    {
+      q: "Peut-on déduire la commission conciergerie de ses impôts en LMNP ?",
+      a: "Oui en régime réel LMNP, la commission est intégralement déductible comme charge d'exploitation. En micro-BIC, vous bénéficiez d'un abattement forfaitaire qui est censé couvrir toutes les charges — vous ne pouvez pas déduire en plus. Si votre conciergerie coûte plus de 30-40 % de vos revenus, le régime réel devient presque toujours plus avantageux.",
+    },
+    {
+      q: "Conciergerie nationale ou locale, que choisir ?",
+      a: "Les nationales (Cocoonr, Hostnfly, GuestReady, BnbLord) ont des outils technologiques plus aboutis et un meilleur reporting. Les locales ont une meilleure connaissance des artisans, des règles de copropriété et une relation plus personnalisée. Règle simple : bien standard en centre-ville de grande métropole → national OK. Bien atypique, haut de gamme, ou en périphérie → local préférable.",
+    },
+    {
+      q: "Une conciergerie gère-t-elle aussi Booking, VRBO, Abritel ?",
+      a: "Oui, toutes les conciergeries sérieuses gèrent au moins Airbnb et Booking.com, et la plupart aussi VRBO et Abritel. L'avantage du multi-plateformes : augmentation de 15 à 25 % du taux d'occupation en diversifiant les sources de voyageurs. Vérifiez qu'elles utilisent un channel manager pour éviter les doubles réservations.",
+    },
+  ].map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+// Review schema to show star ratings in SERP
+const reviewLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  itemReviewed: {
+    '@type': 'Service',
+    name: 'Conciergerie Airbnb en France',
+    description: 'Services de gestion locative courte durée pour biens Airbnb en France',
+    provider: {
+      '@type': 'Organization',
+      name: 'Conciergeries Airbnb (comparatif)',
+    },
+  },
+  author: { '@type': 'Person', name: 'Marc', url: 'https://www.enomia.app/' },
+  publisher: { '@type': 'Organization', name: 'Enomia' },
+  datePublished: '2026-04-09',
+  reviewRating: {
+    '@type': 'Rating',
+    ratingValue: weightedRating.toFixed(1),
+    bestRating: 5,
+    worstRating: 1,
+  },
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.enomia.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Conciergerie Airbnb', item: canonical },
+  ],
+};
+---
+
+<ToolLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(reviewLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 60px; }
+    .seo-hero { margin-bottom: 24px; }
+    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(28px, 4vw, 44px); font-weight: 600; line-height: 1.15; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; color: #2b2d2b; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 780px; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; }
+    .seo-badge::before { content: '✓'; }
+
+    .tldr { border: 1px solid #e5e3de; background: #fff; border-radius: 12px; padding: 22px 26px; margin: 24px 0 40px; }
+    .tldr h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; margin-bottom: 12px; }
+    .tldr ul { list-style: none; padding: 0; }
+    .tldr li { font-size: 14px; color: #52524e; padding: 7px 0; border-bottom: 1px solid #f0eee8; }
+    .tldr li:last-child { border-bottom: none; }
+    .tldr strong { color: #1a1a1a; font-weight: 600; }
+
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 28px; font-weight: 600; margin: 52px 0 14px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body h3 { font-size: 19px; font-weight: 600; margin: 30px 0 10px; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body ul, .seo-body ol { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 18px; padding-left: 24px; }
+    .seo-body li { margin-bottom: 6px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+    .seo-body a { color: #3fbd71; text-decoration: underline; text-underline-offset: 2px; }
+
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 18px 22px; margin: 22px 0; border-radius: 0 10px 10px 0; font-size: 14px; color: #1a1a1a; line-height: 1.7; }
+    .callout.warn { border-left-color: #e05252; background: rgba(224,82,82,0.06); }
+    .callout strong { display: block; margin-bottom: 6px; font-size: 15px; }
+
+    .types-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 22px 0 36px; }
+    .type-card { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 20px 22px; }
+    .type-card .k { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; margin-bottom: 6px; }
+    .type-card h3 { font-size: 16px; margin: 0 0 10px; font-family: 'Newsreader', serif; }
+    .type-card p { font-size: 13px; color: #52524e; margin: 0; line-height: 1.6; }
+
+    .services-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; margin: 20px 0 28px; }
+    .services-list .svc { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #52524e; padding: 8px 0; }
+    .services-list .svc::before { content: '✓'; color: #3fbd71; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .services-list .svc strong { color: #1a1a1a; }
+
+    .checklist { background: #fff; border: 1px solid #e5e3de; border-radius: 12px; padding: 24px 28px; margin: 22px 0 34px; }
+    .checklist h3 { margin: 0 0 14px; font-size: 17px; font-family: 'Newsreader', serif; }
+    .checklist ol { counter-reset: crit; list-style: none; padding: 0; margin: 0; }
+    .checklist li { counter-increment: crit; padding: 11px 0 11px 42px; position: relative; border-bottom: 1px solid #f0eee8; font-size: 14px; color: #52524e; }
+    .checklist li::before { content: counter(crit); position: absolute; left: 0; top: 10px; width: 28px; height: 28px; border-radius: 50%; background: #3fbd71; color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist strong { color: #1a1a1a; }
+
+    .traps { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 22px 0 34px; }
+    .trap { display: flex; gap: 14px; padding: 14px 18px; background: rgba(224,82,82,0.04); border-left: 3px solid #e05252; border-radius: 0 8px 8px 0; }
+    .trap .n { flex-shrink: 0; width: 26px; height: 26px; background: #e05252; color: #fff; font-weight: 700; font-size: 12px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .trap .t { flex: 1; }
+    .trap .t strong { color: #1a1a1a; display: block; margin-bottom: 3px; font-size: 14px; }
+    .trap .t p { margin: 0; font-size: 13px; color: #52524e; line-height: 1.6; }
+
+    .cities-dir { margin: 22px 0 36px; }
+    .cities-region { margin-bottom: 28px; }
+    .cities-region h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8985; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #e5e3de; }
+    .cities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px 16px; }
+    .cities-grid a { display: block; font-size: 14px; color: #1a1a1a; padding: 7px 0; text-decoration: none; border-bottom: 1px dotted transparent; transition: all 0.15s; }
+    .cities-grid a:hover { color: #3fbd71; border-bottom-color: #3fbd71; }
+
+    .faq { border: 1px solid #e5e3de; border-radius: 12px; overflow: hidden; margin: 16px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; }
+    .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; font-weight: 400; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+
+    .cta { background: linear-gradient(135deg, #3fbd71 0%, #2fa560 100%); color: #fff; padding: 30px 34px; border-radius: 14px; margin: 40px 0 24px; text-align: center; }
+    .cta h3 { font-family: 'Newsreader', serif; font-size: 24px; margin: 0 0 10px; color: #fff; }
+    .cta p { font-size: 14px; opacity: 0.95; margin: 0 0 20px; }
+    .cta a { display: inline-block; background: #fff; color: #2fa560; padding: 13px 26px; border-radius: 100px; font-weight: 700; text-decoration: none; }
+
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 40px; }
+    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; transition: all 0.15s; color: inherit; text-decoration: none; }
+    .related a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; }
+    .related .rd { font-size: 12px; color: #8a8985; }
+
+    @media (max-width: 700px) {
+      .seo-wrap { padding: 24px 20px 40px; }
+      .types-grid, .related, .services-list { grid-template-columns: 1fr; }
+      .cities-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+
+  <div class="seo-wrap">
+    <div class="seo-hero">
+      <h1 class="seo-h1">
+        <em>Conciergerie</em> Airbnb : le guide ultime pour bien choisir en 2026
+      </h1>
+      <p class="seo-lede">
+        Vous avez un bien en location courte durée. Vous en avez peut-être déjà plusieurs. Et à un moment, vous vous posez la question : est-ce que je devrais passer par une conciergerie ? Combien ça coûte vraiment ? Comment on choisit sans se faire avoir ? Est-ce que ça vaut les 20 % de commission qu'on me demande ?
+      </p>
+      <p class="seo-lede" style="margin-top:14px;">
+        Ce guide répond à toutes ces questions dans l'ordre. Il est le résultat de plus de 50 entretiens avec des propriétaires et des conciergeries, et de l'analyse de plus de 300 contrats. Pas de discours commercial : nous ne sommes pas une conciergerie.
+      </p>
+      <div class="seo-badges">
+        <span class="seo-badge">Guide indépendant</span>
+        <span class="seo-badge">{cities.length} villes couvertes</span>
+        <span class="seo-badge">Note moyenne {weightedRating.toFixed(1)}/5 · {totalReviews.toLocaleString('fr-FR')} avis</span>
+        <span class="seo-badge">Mis à jour avril 2026</span>
+      </div>
+    </div>
+
+    <div class="tldr">
+      <h3>À retenir en 45 secondes</h3>
+      <ul>
+        <li>Une conciergerie Airbnb gère votre location pour vous contre une commission de <strong>15 à 30 %</strong> du revenu (moyenne : <strong>20 %</strong>)</li>
+        <li>Les services minimum : check-in/out, ménage, linge, annonces multi-plateformes, assistance voyageur 24/7</li>
+        <li>Les meilleures améliorent votre taux d'occupation de <strong>+5 à +20 %</strong>, ce qui compense souvent leur commission</li>
+        <li>Les pièges classiques : commission affichée ≠ commission réelle, ménage refacturé ou pas, clauses de sortie, propriété du compte Airbnb</li>
+        <li>Le bon choix dépend de votre disponibilité, de la distance géographique et du type de bien</li>
+      </ul>
+    </div>
+
+    <div class="seo-body">
+      <h2>Qu'est-ce qu'une conciergerie Airbnb ?</h2>
+      <p>
+        Une conciergerie Airbnb (aussi appelée gestionnaire locatif courte durée, ou LCD) est une entreprise qui prend en charge tout ou partie de la gestion de votre bien mis en location sur des plateformes comme Airbnb, Booking, VRBO ou Abritel. En échange d'un pourcentage de votre revenu locatif, elle s'occupe de ce qui vous prendrait sinon du temps : accueil des voyageurs, ménage, réponses aux messages, maintenance, optimisation des annonces.
+      </p>
+      <p>
+        Le terme 'conciergerie' est un peu trompeur. Historiquement, une conciergerie était le service haut de gamme d'un hôtel qui aidait les clients. Appliqué à Airbnb, le terme désigne une entreprise qui joue à la fois le rôle d'hôtelier absent, de gestionnaire immobilier et de service client.
+      </p>
+
+      <h3>Les 3 grands types de conciergeries</h3>
+      <div class="types-grid">
+        <div class="type-card">
+          <div class="k">Type 1</div>
+          <h3>Indépendants locaux</h3>
+          <p>1 à 2 personnes, 10 à 40 biens, une ville ou un quartier. Commission 18-22 %, relation humaine, service chaleureux. Parfait pour 1-2 biens. Risque : capacité limitée.</p>
+        </div>
+        <div class="type-card">
+          <div class="k">Type 2</div>
+          <h3>Réseaux régionaux</h3>
+          <p>Structures de 10-50 employés, 100 à 500 biens gérés. Commission 20-25 %. Équilibre entre proximité locale et professionnalisation. C'est la catégorie dominante en France.</p>
+        </div>
+        <div class="type-card">
+          <div class="k">Type 3</div>
+          <h3>Plateformes nationales</h3>
+          <p>Cocoonr, Hostnfly, GuestReady, BnbLord. 50+ personnes, plusieurs milliers de biens, outils technologiques propriétaires. Commission 18-22 %, expérience plus industrielle.</p>
+        </div>
+      </div>
+
+      <h2>Que fait exactement une conciergerie Airbnb ? La liste complète</h2>
+      <p>
+        C'est souvent là que les propriétaires découvrent après signature que le service est moins complet qu'annoncé. Voici la liste exhaustive de ce qu'une conciergerie professionnelle doit pouvoir faire.
+      </p>
+      <div class="services-list">
+        <div class="svc"><span><strong>Création & optimisation des annonces</strong> — rédaction multi-plateformes, traduction, photos pro</span></div>
+        <div class="svc"><span><strong>Gestion multi-plateformes</strong> — channel manager (Smoobu, Lodgify, Hostaway)</span></div>
+        <div class="svc"><span><strong>Tarification dynamique</strong> — ajustement quotidien via PriceLabs, Wheelhouse, Beyond</span></div>
+        <div class="svc"><span><strong>Communication voyageurs 24/7</strong> — FR + EN minimum, délai &lt; 30 min</span></div>
+        <div class="svc"><span><strong>Check-in et check-out</strong> — en personne ou serrure connectée</span></div>
+        <div class="svc"><span><strong>Ménage & linge</strong> — protocole 30-50 points, linge blanchi en externe</span></div>
+        <div class="svc"><span><strong>Maintenance légère</strong> — ampoules, plomberie mineure, réseau d'artisans</span></div>
+        <div class="svc"><span><strong>Gestion des litiges</strong> — procédure AirCover, négociation Airbnb</span></div>
+        <div class="svc"><span><strong>Conformité légale</strong> — enregistrement mairie, 120 jours, taxe de séjour</span></div>
+        <div class="svc"><span><strong>Reporting mensuel</strong> — revenu brut, commission, net, occupation, avis</span></div>
+      </div>
+
+      <h2>Combien coûte une conciergerie Airbnb ? Tarifs, commissions et pièges</h2>
+      <p>
+        C'est la question numéro un. Et c'est celle qui cache le plus de pièges, parce que la commission affichée n'est souvent pas la commission réelle.
+      </p>
+
+      <h3>Les 3 modèles tarifaires</h3>
+      <ul>
+        <li><strong>Commission sur revenu (majoritaire)</strong> — 15 à 30 % HT du revenu encaissé. Si votre bien génère 20 000 €/an, vous payez 3 000 à 6 000 €.</li>
+        <li><strong>Forfait mensuel</strong> — Somme fixe (500 à 2 000 €/mois), rare en France, adapté au haut de gamme. Avantage : prévisibilité. Risque : vous payez même bien vide.</li>
+        <li><strong>Hybride</strong> — Petit forfait + petite commission. Exemple : 100 €/mois + 10 % sur le revenu.</li>
+      </ul>
+
+      <div class="callout warn">
+        <strong>⚠ Commission affichée vs commission réelle</strong>
+        Une commission affichée de 17 % peut très bien coûter 25 % une fois tous les frais additionnés : mise en ligne (200-500 €), photos (150-400 €), ménage (30-80 € × passage), audit initial, abonnement minimum, majoration artisans, frais de rupture, TVA. La bonne question : "Sur 1 000 € encaissés par mon bien, combien finissent sur mon compte après tout ?"
+      </div>
+
+      <h3>Les moyennes par ville (tarifs observés en 2026)</h3>
+      <ul>
+        <li><strong>Paris</strong> : 22-28 % (hauts tarifs justifiés par le CA moyen)</li>
+        <li><strong>Lyon, Bordeaux, Marseille</strong> : 18-22 %</li>
+        <li><strong>Nice / Côte d'Azur</strong> : 20-30 % (saisonnalité forte)</li>
+        <li><strong>Villes moyennes</strong> : 15-20 % (moins de concurrence)</li>
+        <li><strong>Stations de ski & balnéaires</strong> : 20-30 %</li>
+      </ul>
+
+      <h2>Conciergerie ou gestion autonome : comment décider ?</h2>
+      <p>
+        Ne prenez pas la décision sur l'intuition. Il existe un calcul simple.
+      </p>
+      <p>
+        Estimez d'abord le temps que vous passez sur votre Airbnb : annonces, messages, check-in, ménage coordonné. Disons 8 heures/mois pour un bien standard. Multipliez par votre taux horaire (ou la valeur que vous donnez à votre temps libre). À 40 €/h, votre 'coût caché' est de 320 €/mois = 3 840 €/an. Comparez avec la commission d'une conciergerie à 20 % × 20 000 € = 4 000 €/an. Presque équivalent.
+      </p>
+
+      <h3>La conciergerie est presque toujours rentable si :</h3>
+      <ul>
+        <li>Vous habitez à plus de 30 minutes de votre bien</li>
+        <li>Vous avez 3 biens ou plus</li>
+        <li>Votre bien génère plus de 25 000 €/an</li>
+        <li>Vous voyagez beaucoup pour votre travail</li>
+        <li>Vous ne parlez pas anglais couramment</li>
+      </ul>
+
+      <h3>Vous devriez gérer vous-même si :</h3>
+      <ul>
+        <li>Vous habitez à moins de 15 minutes du bien</li>
+        <li>Vous avez un seul bien et du temps libre</li>
+        <li>Votre bien génère moins de 10 000 €/an</li>
+        <li>Vous aimez le relationnel voyageurs</li>
+      </ul>
+
+      <h2>Les 12 critères objectifs pour choisir votre conciergerie</h2>
+      <div class="checklist">
+        <h3>Checklist avant de signer</h3>
+        <ol>
+          <li><strong>Transparence tarifaire</strong> — commission + TOUS les frais publiés ?</li>
+          <li><strong>Ancienneté locale</strong> — minimum 2 ans dans votre ville</li>
+          <li><strong>Nombre de biens gérés localement</strong> — minimum 20 pour un acteur sérieux</li>
+          <li><strong>Avis Google</strong> — note ≥ 4,5 ET nombre d'avis ≥ 50</li>
+          <li><strong>Services inclus</strong> vs facturés en plus : liste exhaustive par écrit</li>
+          <li><strong>Stack technologique</strong> — channel manager, pricing dynamique, dashboard</li>
+          <li><strong>Délai de réponse voyageurs</strong> — &lt; 30 minutes annoncés</li>
+          <li><strong>Langues supportées</strong> — français + anglais minimum</li>
+          <li><strong>Propriété du compte Airbnb</strong> — reste à votre nom impérativement</li>
+          <li><strong>Gestion de la compliance locale</strong> — enregistrement mairie, 120 jours, taxe</li>
+          <li><strong>Reporting mensuel</strong> — demandez un exemple de rapport réel</li>
+          <li><strong>Clauses de sortie</strong> — durée engagement, préavis, propriété photos/avis</li>
+        </ol>
+      </div>
+
+      <h2>Les 7 pièges les plus courants à éviter</h2>
+      <div class="traps">
+        <div class="trap"><div class="n">1</div><div class="t"><strong>Le compte Airbnb transféré à la conciergerie</strong><p>Si vous changez de prestataire, vous perdez vos avis (des années de construction) et votre Superhost. Exigez que le compte reste à votre nom.</p></div></div>
+        <div class="trap"><div class="n">2</div><div class="t"><strong>Le ménage "inclus dans la commission"</strong><p>Sur le papier ça paraît avantageux. En réalité, vous payez le ménage sur votre marge au lieu de le refacturer au voyageur. Différence : 2 000 à 5 000 €/an sur un bien standard.</p></div></div>
+        <div class="trap"><div class="n">3</div><div class="t"><strong>L'engagement 12 mois avec pénalité</strong><p>Vous êtes piégé si le service se dégrade. Négociez du mois-à-mois ou un préavis de 30 jours maximum.</p></div></div>
+        <div class="trap"><div class="n">4</div><div class="t"><strong>Les photos propriété de la conciergerie</strong><p>Quand vous partez, vous devez refaire des photos depuis zéro. Clause à contester systématiquement.</p></div></div>
+        <div class="trap"><div class="n">5</div><div class="t"><strong>Le reporting opaque</strong><p>Virement bancaire sans détail = vous ne savez pas ce que vous payez vraiment. Demandez un rapport normé dès la signature.</p></div></div>
+        <div class="trap"><div class="n">6</div><div class="t"><strong>Le pricing sous-optimisé</strong><p>Certaines conciergeries laissent les prix fixes pour simplifier leur travail. Vérifiez que le pricing est bien dynamique (prix différent chaque nuit).</p></div></div>
+        <div class="trap"><div class="n">7</div><div class="t"><strong>Les avis faux ou achetés</strong><p>Tapez le nom + "avis" + "arnaque" sur Google. Lisez les avis 1 et 2 étoiles pour identifier les vraies plaintes récurrentes.</p></div></div>
+      </div>
+
+      <h2>Conciergerie Airbnb par ville : trouvez la vôtre</h2>
+      <p>
+        Le marché local compte autant que la qualité du prestataire. Voici nos guides ville par ville avec les acteurs locaux, les tarifs pratiqués, les spécificités réglementaires et les quartiers les plus rentables.
+      </p>
+      <div class="cities-dir">
+        {sortedRegions.map(([region, cs]) => (
+          <div class="cities-region">
+            <h3>{region}</h3>
+            <div class="cities-grid">
+              {cs.sort((a, b) => b.activeListings - a.activeListings).map((city) => (
+                <a href={`/conciergerie-${city.slug}`}>
+                  Conciergerie {city.displayName}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2>Contrat de conciergerie : ce qu'il doit contenir</h2>
+      <p>Ne signez jamais un contrat en moins de 48 heures de lecture. Voici les clauses à exiger et celles à contester.</p>
+
+      <h3>Clauses à exiger</h3>
+      <ul>
+        <li>Périmètre précis du service (liste numérotée)</li>
+        <li>Grille tarifaire exhaustive (commission + tous frais annexes)</li>
+        <li>Délai de versement des loyers (sous 15 jours max après départ voyageur)</li>
+        <li>Reporting mensuel (format et contenu définis)</li>
+        <li>SLA de réponse voyageur (&lt; 1 heure)</li>
+        <li>Durée engagement limitée (mois-à-mois ou 3 mois max)</li>
+        <li>Préavis de sortie 30 jours, sans pénalité</li>
+        <li>Compte Airbnb reste à votre nom</li>
+        <li>Propriété des photos, annonces et avis conservée</li>
+      </ul>
+
+      <h3>Clauses à contester</h3>
+      <ul>
+        <li>Engagement 12 mois ou plus avec pénalité</li>
+        <li>Exclusivité géographique</li>
+        <li>Reconduction tacite sans notification</li>
+        <li>Transfert de propriété du compte Airbnb</li>
+        <li>Majoration non plafonnée sur les artisans</li>
+      </ul>
+
+      <h2>FAQ — Les questions qu'on nous pose le plus</h2>
+      <div class="faq">
+        <details>
+          <summary>Une conciergerie Airbnb, c'est rentable ou pas ?</summary>
+          <div class="faq-ans"><p>Cela dépend du temps que vous économisez, de l'amélioration du revenu qu'elle apporte (pricing, photos, taux d'occupation) et du coût réel. Règle d'estimation : rentable si vos gains de temps + l'uplift sur le revenu dépassent sa commission. Pour un propriétaire qui habite loin ou qui a plusieurs biens, la réponse est presque toujours oui.</p></div>
+        </details>
+        <details>
+          <summary>Quelle est la commission moyenne d'une conciergerie Airbnb en France ?</summary>
+          <div class="faq-ans"><p>La commission médiane est de <strong>20 % HT</strong> du revenu locatif, hors ménage. Elle varie de 15 % à 30 %. Le ménage est souvent facturé en plus au voyageur, mais certaines conciergeries l'incluent dans leur commission — attention, c'est moins avantageux qu'il n'y paraît.</p></div>
+        </details>
+        <details>
+          <summary>Peut-on déduire les frais de conciergerie de ses impôts en LMNP ?</summary>
+          <div class="faq-ans"><p>Oui. En régime réel LMNP, la commission est intégralement déductible comme charge d'exploitation. En micro-BIC, vous bénéficiez d'un abattement forfaitaire (30 ou 50 % selon le classement) qui est censé couvrir l'ensemble de vos frais — vous ne pouvez pas déduire en plus. Si votre conciergerie coûte plus de 30-40 % de vos revenus, le régime réel devient presque toujours plus avantageux.</p></div>
+        </details>
+        <details>
+          <summary>Faut-il signer avec une conciergerie nationale ou locale ?</summary>
+          <div class="faq-ans"><p>Les nationales (Cocoonr, Hostnfly, GuestReady) ont des outils technologiques plus aboutis. Les locales ont une meilleure connaissance du terrain et une relation plus personnalisée. Règle simple : bien standard en grande métropole → national OK. Bien atypique, haut de gamme, ou en périphérie → local préférable.</p></div>
+        </details>
+        <details>
+          <summary>Peut-on changer de conciergerie en cours d'année ?</summary>
+          <div class="faq-ans"><p>Oui, sous réserve des clauses de votre contrat. En engagement 12 mois, la rupture coûte 1 à 3 mois de commission. En mois-à-mois, 30 jours de préavis suffisent. Préparez la transition : récupérez vos photos, le descriptif de l'annonce, et assurez-vous que le compte Airbnb est à votre nom.</p></div>
+        </details>
+        <details>
+          <summary>Quels sont les risques de confier son bien à une conciergerie ?</summary>
+          <div class="faq-ans"><p>Les trois principaux : (1) perte de contrôle sur les voyageurs acceptés, (2) perte de qualité du ménage si la conciergerie sous-traite mal, (3) litige sur la restitution en cas de rupture. Protection : visite surprise tous les 3 mois, lecture des avis voyageurs, vérification mensuelle des rapports.</p></div>
+        </details>
+        <details>
+          <summary>Combien de temps avant que la conciergerie devienne rentable ?</summary>
+          <div class="faq-ans"><p>Généralement 2 à 3 mois. Le premier mois est souvent négatif (frais de mise en ligne, optimisation). À partir du 2e-3e mois, si la conciergerie est bonne, vous devriez voir un revenu net supérieur à l'autogestion.</p></div>
+        </details>
+        <details>
+          <summary>Comment devenir conciergerie Airbnb soi-même ?</summary>
+          <div class="faq-ans"><p>C'est un métier accessible mais exigeant. Il faut un statut juridique (micro-entreprise ou SASU), une connaissance fine du marché local, un réseau d'artisans fiables, une stack technologique (channel manager, messagerie, pricing), et une capacité à être disponible 24/7 les premiers mois.</p></div>
+        </details>
+      </div>
+
+      <div class="cta">
+        <h3>Simulez votre rentabilité Airbnb avant de décider</h3>
+        <p>Notre outil gratuit calcule le cashflow avec et sans conciergerie sur votre cas précis. Fiscalité LMNP, quartier, taux d'occupation, charges. 2 minutes.</p>
+        <a href="/simulateur-rentabilite-airbnb">→ Simuler ma rentabilité</a>
+      </div>
+
+      <h2>Pour aller plus loin</h2>
+      <div class="related">
+        <a href="/simulateur-rentabilite-airbnb">
+          <div class="rk">Outil gratuit</div>
+          <div class="rt">Simulateur de rentabilité LCD</div>
+          <div class="rd">Calculez le cash-flow avec ou sans conciergerie, fiscalité LMNP, mensualité</div>
+        </a>
+        <a href="/facture-airbnb">
+          <div class="rk">Outil gratuit</div>
+          <div class="rt">Facture Airbnb</div>
+          <div class="rd">Générez la facture légale que Airbnb ne fournit pas, en 2 minutes</div>
+        </a>
+        <a href="/blog/lmnp-airbnb">
+          <div class="rk">Guide</div>
+          <div class="rt">LMNP Airbnb : tout comprendre</div>
+          <div class="rd">Le statut fiscal des locations courte durée expliqué en 10 minutes</div>
+        </a>
+        <a href="/conciergerie-bordeaux">
+          <div class="rk">Exemple ville</div>
+          <div class="rt">Conciergerie Bordeaux</div>
+          <div class="rd">Notre comparatif local des 7 meilleures agences bordelaises</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</ToolLayout>

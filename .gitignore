@@ -1,4 +1,29 @@
+# OS
 .DS_Store
+
+# Env
 .env
 .env.local
+.env.*.local
+
+# Dépendances
 node_modules/
+
+# Build Astro
+dist/
+.astro/
+
+# Vercel
+.vercel/
+
+# Claude / worktrees / fichiers temporaires
+.claude/
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# Fichiers temporaires locaux (maquettes hors-repo, backups, etc.)
+maquette-facturation.html
+patch-vercel-config.mjs

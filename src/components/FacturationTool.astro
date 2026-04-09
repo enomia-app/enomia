@@ -777,65 +777,91 @@ if (!window.__factInit) {
   let _fuser = null, _ftoken = null;
 
   // ─── TAXE DE SÉJOUR DB ───
-  const TAXE_SEJOUR_DB = {
-    "Paris": { nonClasse: 5.30, cat1: 0.90, cat2: 1.50, cat3: 2.60, cat4: 3.90, cat5: 5.30, chambreHotes: 1.50 },
-    "Lyon": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 2.80, cat5: 3.00, chambreHotes: 1.50 },
-    "Marseille": { nonClasse: 2.30, cat1: 0.90, cat2: 1.20, cat3: 1.80, cat4: 2.30, cat5: 2.30, chambreHotes: 1.20 },
-    "Nice": { nonClasse: 5.00, cat1: 1.10, cat2: 1.80, cat3: 2.90, cat4: 4.20, cat5: 5.00, chambreHotes: 1.80 },
-    "Bordeaux": { nonClasse: 2.50, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 2.50, cat5: 2.50, chambreHotes: 1.50 },
-    "Strasbourg": { nonClasse: 2.20, cat1: 0.90, cat2: 1.30, cat3: 1.80, cat4: 2.20, cat5: 2.20, chambreHotes: 1.30 },
-    "Toulouse": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
-    "Montpellier": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
-    "Nantes": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
-    "Rennes": { nonClasse: 1.50, cat1: 0.70, cat2: 1.00, cat3: 1.30, cat4: 1.50, cat5: 1.50, chambreHotes: 1.00 },
-    "Lille": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
-    "Cannes": { nonClasse: 5.00, cat1: 1.10, cat2: 1.90, cat3: 3.00, cat4: 4.20, cat5: 5.00, chambreHotes: 1.90 },
-    "Saint-Tropez": { nonClasse: 5.00, cat1: 1.50, cat2: 2.50, cat3: 3.80, cat4: 5.00, cat5: 5.00, chambreHotes: 2.50 },
-    "Antibes": { nonClasse: 3.50, cat1: 1.00, cat2: 1.70, cat3: 2.50, cat4: 3.50, cat5: 3.50, chambreHotes: 1.70 },
-    "Biarritz": { nonClasse: 4.40, cat1: 1.10, cat2: 1.80, cat3: 2.80, cat4: 3.90, cat5: 4.40, chambreHotes: 1.80 },
-    "Arcachon": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 3.00, cat5: 3.00, chambreHotes: 1.50 },
-    "La Rochelle": { nonClasse: 2.50, cat1: 0.90, cat2: 1.40, cat3: 2.00, cat4: 2.50, cat5: 2.50, chambreHotes: 1.40 },
-    "Annecy": { nonClasse: 3.50, cat1: 1.00, cat2: 1.70, cat3: 2.50, cat4: 3.50, cat5: 3.50, chambreHotes: 1.70 },
-    "Chamonix": { nonClasse: 4.40, cat1: 1.10, cat2: 1.90, cat3: 3.00, cat4: 4.40, cat5: 4.40, chambreHotes: 1.90 },
-    "Megève": { nonClasse: 4.40, cat1: 1.10, cat2: 1.90, cat3: 3.00, cat4: 4.40, cat5: 4.40, chambreHotes: 1.90 },
-    "Courchevel": { nonClasse: 4.40, cat1: 1.50, cat2: 2.50, cat3: 3.80, cat4: 4.40, cat5: 4.40, chambreHotes: 2.50 },
-    "Val d'Isère": { nonClasse: 4.40, cat1: 1.50, cat2: 2.50, cat3: 3.80, cat4: 4.40, cat5: 4.40, chambreHotes: 2.50 },
-    "Morzine": { nonClasse: 3.50, cat1: 1.00, cat2: 1.70, cat3: 2.50, cat4: 3.50, cat5: 3.50, chambreHotes: 1.70 },
-    "Les Gets": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 3.00, cat5: 3.00, chambreHotes: 1.50 },
-    "Avignon": { nonClasse: 2.30, cat1: 0.90, cat2: 1.30, cat3: 1.80, cat4: 2.30, cat5: 2.30, chambreHotes: 1.30 },
-    "Aix-en-Provence": { nonClasse: 2.50, cat1: 0.90, cat2: 1.40, cat3: 2.00, cat4: 2.50, cat5: 2.50, chambreHotes: 1.40 },
-    "Toulon": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
-    "Perpignan": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
-    "Colmar": { nonClasse: 2.50, cat1: 0.90, cat2: 1.40, cat3: 2.00, cat4: 2.50, cat5: 2.50, chambreHotes: 1.40 },
-    "Dijon": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
-    "Reims": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
-    "Tours": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
-    "Grenoble": { nonClasse: 2.00, cat1: 0.80, cat2: 1.20, cat3: 1.60, cat4: 2.00, cat5: 2.00, chambreHotes: 1.20 },
-    "Rouen": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
-    "Caen": { nonClasse: 1.50, cat1: 0.70, cat2: 1.00, cat3: 1.30, cat4: 1.50, cat5: 1.50, chambreHotes: 1.00 },
-    "Bayonne": { nonClasse: 2.50, cat1: 0.90, cat2: 1.40, cat3: 2.00, cat4: 2.50, cat5: 2.50, chambreHotes: 1.40 },
-    "Deauville": { nonClasse: 4.40, cat1: 1.10, cat2: 1.90, cat3: 3.00, cat4: 4.40, cat5: 4.40, chambreHotes: 1.90 },
-    "Honfleur": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 3.00, cat5: 3.00, chambreHotes: 1.50 },
-    "Saint-Malo": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 3.00, cat5: 3.00, chambreHotes: 1.50 },
-    "Île de Ré": { nonClasse: 4.40, cat1: 1.10, cat2: 1.90, cat3: 3.00, cat4: 4.40, cat5: 4.40, chambreHotes: 1.90 },
-    "Île d'Oléron": { nonClasse: 3.00, cat1: 0.90, cat2: 1.50, cat3: 2.10, cat4: 3.00, cat5: 3.00, chambreHotes: 1.50 },
-    "Metz": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
-    "Nancy": { nonClasse: 1.80, cat1: 0.70, cat2: 1.10, cat3: 1.50, cat4: 1.80, cat5: 1.80, chambreHotes: 1.10 },
-  };
+  // Base officielle DGCL/OFGL (data.gouv.fr) — ~30 000 communes françaises avec taxe de séjour.
+  // Hébergée sur Supabase Storage (CDN Cloudflare global) pour ne pas alourdir le repo Git.
+  //
+  // Format compact : { "Nom": { "nc": [taux, "%"] ou taux€, "1": taux€, ..., "5": ..., "ch": ... } }
+  //   nc = non classé (généralement % du loyer, plafonné à 4,30 €/nuit)
+  //   1/2/3/4/5 = meublés de tourisme étoiles (en €/pers/nuit)
+  //   ch = chambre d'hôtes (en €/pers/nuit)
+  //
+  // Mise à jour : upload un nouveau fichier dans le bucket `static` avec nom versionné
+  // (ex: taxe-sejour-communes-v2.json) puis mettre à jour TAXE_DB_URL ci-dessous.
+  const TAXE_DB_URL = 'https://pesoidoedtjpihjvrnnc.supabase.co/storage/v1/object/public/static/taxe-sejour-communes-v1.json';
+  let TAXE_SEJOUR_DB = null;
+  let TAXE_SEJOUR_DB_LOADING = null;
+
+  function _loadTaxeSejourDb() {
+    if (TAXE_SEJOUR_DB) return Promise.resolve(TAXE_SEJOUR_DB);
+    if (TAXE_SEJOUR_DB_LOADING) return TAXE_SEJOUR_DB_LOADING;
+
+    // Cache localStorage (valable 7 jours) pour éviter un refetch à chaque visite
+    try {
+      const cached = localStorage.getItem('lcd_taxe_db_v1');
+      const cachedAt = parseInt(localStorage.getItem('lcd_taxe_db_at') || '0', 10);
+      if (cached && (Date.now() - cachedAt) < 7 * 24 * 3600 * 1000) {
+        TAXE_SEJOUR_DB = JSON.parse(cached);
+        return Promise.resolve(TAXE_SEJOUR_DB);
+      }
+    } catch(_) {}
+
+    TAXE_SEJOUR_DB_LOADING = fetch(TAXE_DB_URL)
+      .then(r => r.ok ? r.json() : Promise.reject('load-failed'))
+      .then(db => {
+        TAXE_SEJOUR_DB = db;
+        try {
+          localStorage.setItem('lcd_taxe_db_v1', JSON.stringify(db));
+          localStorage.setItem('lcd_taxe_db_at', String(Date.now()));
+        } catch(_) {}
+        return db;
+      })
+      .catch(() => { TAXE_SEJOUR_DB = {}; return {}; });
+    return TAXE_SEJOUR_DB_LOADING;
+  }
+
+  // Précharge en arrière-plan dès l'init
+  _loadTaxeSejourDb();
+
+  // Mapping label UI → clé compacte de la DB
   const CAT_KEY_MAP = {
-    "Meublé de tourisme non classé": "nonClasse",
-    "Meublé de tourisme 1★": "cat1",
-    "Meublé de tourisme 2★": "cat2",
-    "Meublé de tourisme 3★": "cat3",
-    "Meublé de tourisme 4★": "cat4",
-    "Meublé de tourisme 5★": "cat5",
-    "Chambre d'hôtes": "chambreHotes",
+    "Meublé de tourisme non classé": "nc",
+    "Meublé de tourisme 1★": "1",
+    "Meublé de tourisme 2★": "2",
+    "Meublé de tourisme 3★": "3",
+    "Meublé de tourisme 4★": "4",
+    "Meublé de tourisme 5★": "5",
+    "Chambre d'hôtes": "ch",
   };
+
+  // Normalisation d'un nom de ville (accents, casse, ponctuation) pour recherche
+  function _normVille(s) {
+    return (s || '')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // retire accents
+      .toLowerCase()
+      .replace(/[’']/g, "'")
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  // Retourne la catégorie matchée par recherche insensible accents/casse
   function getTaxeRate(ville, cat) {
-    const c = Object.keys(TAXE_SEJOUR_DB).find(k => k.toLowerCase() === (ville||'').toLowerCase());
-    if (!c) return null;
-    const k = CAT_KEY_MAP[cat] || 'nonClasse';
-    return { taux: TAXE_SEJOUR_DB[c][k], ville: c };
+    if (!TAXE_SEJOUR_DB) return null;
+    const target = _normVille(ville);
+    if (!target) return null;
+    let matched = null;
+    // Recherche exacte (normalisée)
+    for (const k of Object.keys(TAXE_SEJOUR_DB)) {
+      if (_normVille(k) === target) { matched = k; break; }
+    }
+    if (!matched) return null;
+    const catKey = CAT_KEY_MAP[cat] || 'nc';
+    const entry = TAXE_SEJOUR_DB[matched][catKey];
+    if (entry === undefined) return null;
+    // Array = pourcentage [taux, "%"], sinon euros
+    if (Array.isArray(entry)) {
+      return { taux: entry[0], unite: '%', ville: matched };
+    }
+    return { taux: entry, unite: '€', ville: matched };
   }
 
   // ─── STATE ───
@@ -1023,7 +1049,9 @@ if (!window.__factInit) {
     }
     c.innerHTML = fbiens.map(b => {
       const t = getTaxeRate(b.ville, b.categorie);
-      const str = t ? `${t.taux.toFixed(2)} €/pers/nuit` : 'Ville non répertoriée';
+      const str = t
+        ? (t.unite === '%' ? `${t.taux.toFixed(2)} % du loyer` : `${t.taux.toFixed(2)} €/pers/nuit`)
+        : 'Ville non répertoriée';
       return `<div class="bien-card">
         <div class="bien-card-name">${b.nom}</div>
         <div class="bien-card-adresse">${b.adresse || '—'}</div>
@@ -1129,12 +1157,25 @@ if (!window.__factInit) {
   };
 
   // ─── VILLE AUTOCOMPLETE ───
-  window.fVilleAutocomplete = function(input) {
-    const val = input.value.toLowerCase();
+  window.fVilleAutocomplete = async function(input) {
+    const val = _normVille(input.value);
     const list = document.getElementById('fville-autocomplete-list');
     if (!val) { list.classList.remove('open'); list.innerHTML = ''; return; }
-    const m = Object.keys(TAXE_SEJOUR_DB).filter(k => k.toLowerCase().startsWith(val)).slice(0, 8);
-    if (!m.length) { list.classList.remove('open'); list.innerHTML = ''; return; }
+    // Assure le chargement de la base (petit délai au premier appel seulement)
+    if (!TAXE_SEJOUR_DB) await _loadTaxeSejourDb();
+    if (!TAXE_SEJOUR_DB) return;
+    // Prefixe puis contient si peu de résultats
+    const keys = Object.keys(TAXE_SEJOUR_DB);
+    let m = keys.filter(k => _normVille(k).startsWith(val)).slice(0, 10);
+    if (m.length < 6) {
+      const extra = keys.filter(k => !m.includes(k) && _normVille(k).includes(val)).slice(0, 10 - m.length);
+      m = m.concat(extra);
+    }
+    if (!m.length) {
+      list.innerHTML = '<div class="autocomplete-item" style="color:var(--fa-muted);cursor:default">Aucune commune trouvée</div>';
+      list.classList.add('open');
+      return;
+    }
     list.innerHTML = m.map(v => `<div class="autocomplete-item" onmousedown="fSelectVille('${v.replace(/'/g, "\\'")}')">${v}</div>`).join('');
     list.classList.add('open');
     fUpdateBienTaxePreview();
@@ -1148,14 +1189,21 @@ if (!window.__factInit) {
     document.getElementById('fville-autocomplete-list').classList.remove('open');
     fUpdateBienTaxePreview();
   };
-  window.fUpdateBienTaxePreview = function() {
+  window.fUpdateBienTaxePreview = async function() {
     const ville = document.getElementById('fbien-ville').value.trim();
     const cat = document.getElementById('fbien-categorie').value;
     const p = document.getElementById('fbien-taxe-preview');
     const v = document.getElementById('fbien-taxe-preview-val');
+    if (!TAXE_SEJOUR_DB) await _loadTaxeSejourDb();
     const info = getTaxeRate(ville, cat);
-    if (ville && info) { v.textContent = `${info.taux.toFixed(2)} €/pers/nuit — ${cat}`; p.style.display = 'block'; }
-    else if (ville) { v.textContent = 'Ville non répertoriée'; p.style.display = 'block'; }
+    if (ville && info) {
+      const label = info.unite === '%'
+        ? `${info.taux.toFixed(2)} % du loyer HT — ${cat}`
+        : `${info.taux.toFixed(2)} €/pers/nuit — ${cat}`;
+      v.textContent = label;
+      p.style.display = 'block';
+    }
+    else if (ville) { v.textContent = 'Ville non répertoriée — vous pouvez saisir manuellement le tarif'; p.style.display = 'block'; }
     else { p.style.display = 'none'; }
   };
 
@@ -1237,11 +1285,22 @@ if (!window.__factInit) {
     if (b && b.ville && nights > 0 && persons > 0) {
       const info = getTaxeRate(b.ville, b.categorie);
       if (info) {
-        taxe = info.taux * persons * nights;
-        autoRow.style.display = 'flex';
-        manRow.style.display = 'none';
-        document.getElementById('frecap-taxe-note').textContent = `${info.ville} — ${b.categorie}: ${info.taux.toFixed(2)}€/pers/nuit`;
-        document.getElementById('frecap-taxe-val').textContent = `${info.taux.toFixed(2)} × ${persons} × ${nights} = ${fFormatMoney(taxe)}`;
+        if (info.unite === '%') {
+          // Tarif en % du loyer HT par nuit, plafonné à 4.30€/nuit (plafond 2026)
+          const CAP = 4.30;
+          const taxePerNight = Math.min(hebergement / nights * (info.taux / 100), CAP);
+          taxe = taxePerNight * persons * nights;
+          autoRow.style.display = 'flex';
+          manRow.style.display = 'none';
+          document.getElementById('frecap-taxe-note').textContent = `${info.ville} — ${b.categorie}: ${info.taux.toFixed(2)}% du loyer (plafond ${CAP}€/nuit)`;
+          document.getElementById('frecap-taxe-val').textContent = fFormatMoney(taxe);
+        } else {
+          taxe = info.taux * persons * nights;
+          autoRow.style.display = 'flex';
+          manRow.style.display = 'none';
+          document.getElementById('frecap-taxe-note').textContent = `${info.ville} — ${b.categorie}: ${info.taux.toFixed(2)}€/pers/nuit`;
+          document.getElementById('frecap-taxe-val').textContent = `${info.taux.toFixed(2)} × ${persons} × ${nights} = ${fFormatMoney(taxe)}`;
+        }
       } else {
         autoRow.style.display = 'none';
         manRow.style.display = 'flex';
@@ -1303,7 +1362,17 @@ if (!window.__factInit) {
     let taxe = 0, ville = '', cat = '', taux = 0;
     if (sel && nights > 0 && persons > 0) {
       const info = getTaxeRate(sel.ville, sel.categorie);
-      if (info) { taxe = info.taux * persons * nights; ville = info.ville; cat = sel.categorie; taux = info.taux; }
+      if (info) {
+        if (info.unite === '%') {
+          const CAP = 4.30;
+          const prix = parseFloat(document.getElementById('fs-prixnuit').value) || 0;
+          const taxePerNight = Math.min(prix * (info.taux / 100), CAP);
+          taxe = taxePerNight * persons * nights;
+        } else {
+          taxe = info.taux * persons * nights;
+        }
+        ville = info.ville; cat = sel.categorie; taux = info.taux;
+      }
       else { taxe = parseFloat(document.getElementById('fs-taxe-manuelle').value) || 0; ville = sel.ville; cat = sel.categorie; }
     }
     const bienLabel = sel ? `${sel.nom}${sel.ville ? ' — ' + sel.ville : ''}` : '';

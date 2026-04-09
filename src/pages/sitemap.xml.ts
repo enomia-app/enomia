@@ -13,12 +13,14 @@ const staticPages = [
 export async function GET() {
   const posts = await getCollection('blog');
 
-  const postEntries = posts.map((post) => ({
-    url: `/blog/${post.slug}/`,
-    changefreq: 'monthly',
-    priority: '0.7',
-    lastmod: post.data.updatedAt ?? post.data.publishedAt,
-  }));
+  const postEntries = posts
+    .filter((post) => !post.data.draft)
+    .map((post) => ({
+      url: `/blog/${post.slug}/`,
+      changefreq: 'monthly',
+      priority: '0.7',
+      lastmod: post.data.updatedAt ?? post.data.publishedAt,
+    }));
 
   const allEntries = [
     ...staticPages.map((p) => ({ ...p, lastmod: undefined })),

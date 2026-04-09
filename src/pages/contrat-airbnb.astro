@@ -1,0 +1,232 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+
+const title = "Contrat location Airbnb 2026 : modèle conforme Loi Le Meur (PDF gratuit)";
+const description = "Modèle de contrat de location Airbnb gratuit, à jour de la Loi Le Meur 2024. Numéro d'enregistrement, articulation AirCover, clauses spécifiques. PDF + Word, FR/EN.";
+const canonical = "https://www.enomia.app/contrat-airbnb";
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="contrat">
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 0; }
+    .seo-hero { margin-bottom: 8px; }
+    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(30px, 4vw, 44px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; color: #2b2d2b; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; }
+    .seo-badge::before { content: '✓'; }
+    .hero-cta-block { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #fff; padding: 36px 32px; border-radius: 14px; margin: 32px 0; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+    @media (max-width: 700px) { .hero-cta-block { grid-template-columns: 1fr; text-align: center; } }
+    .hero-cta-block h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .hero-cta-block p { font-size: 14px; opacity: 0.85; line-height: 1.55; }
+    .hero-cta-btn { background: #fff; color: #2b2d2b; border: none; padding: 16px 28px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; border-radius: 10px; cursor: pointer; text-decoration: none; display: inline-block; white-space: nowrap; }
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body ul, .seo-body ol { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 18px; padding-left: 24px; }
+    .seo-body li { margin-bottom: 6px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+    .seo-body a { color: #3fbd71; text-decoration: underline; text-underline-offset: 2px; }
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 16px 20px; margin: 22px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: #1a1a1a; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .callout.warn { border-left-color: #e6b740; background: rgba(230,183,64,0.08); }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    @media (max-width: 640px) { .comparison { grid-template-columns: 1fr; } }
+    .comp-col { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 22px 24px; }
+    .comp-col.red { border-color: rgba(224,82,82,0.4); background: #fff8f8; }
+    .comp-col.green { border-color: rgba(63,189,113,0.4); background: #f6faf7; }
+    .comp-col h4 { font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700; margin-bottom: 2px; color: #1a1a1a; }
+    .comp-col.red h4 { color: #a03030; }
+    .comp-col.green h4 { color: #1f7a3e; }
+    .comp-col ul { list-style: none; padding: 0; margin: 14px 0 0; }
+    .comp-col ul li { padding: 8px 0 8px 22px; font-size: 13px; line-height: 1.55; border-bottom: 1px dashed #e5e3de; position: relative; color: #52524e; }
+    .comp-col ul li:last-child { border-bottom: none; }
+    .comp-col.red ul li::before { content: '✗'; position: absolute; left: 0; color: #e05252; font-weight: 700; }
+    .comp-col.green ul li::before { content: '✓'; position: absolute; left: 0; color: #3fbd71; font-weight: 700; }
+    .clauses-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    @media (max-width: 640px) { .clauses-grid { grid-template-columns: 1fr; } }
+    .clause-item { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 14px 16px; display: flex; gap: 12px; align-items: flex-start; font-size: 13px; color: #52524e; }
+    .clause-item .check { width: 22px; height: 22px; border-radius: 50%; background: #2b2d2b; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; }
+    .clause-item strong { color: #1a1a1a; }
+    .faq { border: 1px solid #e5e3de; border-radius: 10px; overflow: hidden; margin: 12px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; }
+    .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+    .faq-ans strong { color: #1a1a1a; }
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 60px; }
+    @media (max-width: 700px) { .related { grid-template-columns: 1fr; } }
+    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; color: inherit; text-decoration: none; transition: all 0.15s; }
+    .related a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; color: #1a1a1a; }
+    .related .rd { font-size: 12px; color: #8a8985; }
+    @media (max-width: 700px) { .seo-wrap { padding: 24px 20px 0; } }
+  </style>
+
+  <div class="seo-wrap">
+    <div class="seo-hero">
+      <h1 class="seo-h1">Contrat de location <em>Airbnb</em> conforme Loi Le Meur</h1>
+      <p class="seo-lede">
+        Modèle gratuit à jour de la <strong>loi Le Meur du 19 novembre 2024</strong>. Intègre le numéro d'enregistrement à 13 chiffres, l'articulation avec les CGU Airbnb et l'AirCover, et les 12 mentions obligatoires du Code du tourisme. Téléchargeable en <strong>PDF et Word</strong>, bilingue FR/EN.
+      </p>
+      <div class="seo-badges">
+        <span class="seo-badge">Loi Le Meur 2024</span>
+        <span class="seo-badge">Articulation AirCover</span>
+        <span class="seo-badge">N° enregistrement</span>
+        <span class="seo-badge">FR & EN</span>
+      </div>
+    </div>
+
+    <div class="hero-cta-block">
+      <div>
+        <h3>Protégez vos séjours Airbnb en 2 minutes</h3>
+        <p>Modèle conforme 2026, téléchargeable gratuitement en PDF et Word. Intégration complète des obligations loi Le Meur 2024.</p>
+      </div>
+      <a href="/contrat-lcd-dashboard" class="hero-cta-btn">+ Créer mon contrat Airbnb →</a>
+    </div>
+
+    <div class="seo-body">
+      <div class="callout warn">
+        <strong>⚠ La simple réservation Airbnb ne vaut PAS contrat de location</strong>
+        Airbnb le précise lui-même dans ses CGU : « Airbnb n'est pas partie au contrat de location ». Vous restez juridiquement responsable en cas de litige. Un contrat écrit propre, signé par l'hôte et le voyageur, est la seule protection réelle — et il est obligatoire en vertu de l'<strong>article L324-2 du Code du tourisme</strong>.
+      </div>
+
+      <h2>Pourquoi Airbnb seul ne vous protège pas juridiquement</h2>
+      <p>
+        Beaucoup d'hôtes pensent qu'Airbnb couvre tout. En réalité, son rôle est limité à celui d'intermédiaire technique entre vous et le voyageur. En cas de litige (dégradation, annulation, dépassement de capacité, fêtes non autorisées), c'est <strong>votre contrat propre qui fait foi devant un juge</strong>, pas les CGU Airbnb.
+      </p>
+
+      <div class="comparison">
+        <div class="comp-col red">
+          <h4>Sans contrat propre</h4>
+          <div style="font-size:10px;color:#8a8985;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Uniquement Airbnb CGU + AirCover</div>
+          <ul>
+            <li>Aucun accord écrit signé des deux parties</li>
+            <li>Impossible de faire respecter un règlement intérieur</li>
+            <li>Caution personnelle impossible à encaisser</li>
+            <li>Litiges : médiation Airbnb, décisions opaques</li>
+            <li>AirCover plafonné et exclut de nombreux cas</li>
+            <li>Risque d'amende (art. L324-2 CT)</li>
+          </ul>
+        </div>
+        <div class="comp-col green">
+          <h4>Avec contrat Enomia</h4>
+          <div style="font-size:10px;color:#8a8985;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Signé par les 2 parties + AirCover en complément</div>
+          <ul>
+            <li>Contrat écrit opposable devant un tribunal</li>
+            <li>Règlement intérieur légalement contraignant</li>
+            <li>Caution propre encaissée par vos soins</li>
+            <li>En cas de litige, votre contrat fait foi</li>
+            <li>AirCover en filet de sécurité complémentaire</li>
+            <li>Conforme art. L324-2 + loi Le Meur</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Ce qui change avec la loi Le Meur du 19 novembre 2024</h2>
+      <p>
+        La loi n° 2024-1039 du 19 novembre 2024, dite « loi Le Meur », a profondément refondu le cadre réglementaire des meublés de tourisme loués via Airbnb, Booking ou Abritel. Notre générateur intègre automatiquement ces nouvelles obligations.
+      </p>
+      <ul>
+        <li><strong>Numéro d'enregistrement à 13 chiffres</strong> obligatoire dans votre annonce Airbnb et sur votre contrat de location.</li>
+        <li><strong>Téléservice national unifié</strong> remplace le Cerfa 14004 à partir du <strong>20 mai 2026</strong>.</li>
+        <li><strong>Réduction possible à 90 jours/an</strong> pour la résidence principale (au lieu de 120), décidée par chaque mairie.</li>
+        <li><strong>Nouveau DPE obligatoire</strong> pour les meublés de tourisme loués plus de 4 mois/an (interdiction progressive des passoires thermiques).</li>
+        <li><strong>Sanctions renforcées</strong> : amendes de 10 000 à 20 000 € en cas de manquement.</li>
+      </ul>
+
+      <h2>Les clauses spécifiques à un contrat Airbnb</h2>
+      <p>
+        En plus des 12 mentions obligatoires du Code du tourisme, notre modèle ajoute les clauses spécifiques à l'écosystème Airbnb — absentes des modèles génériques que l'on trouve ailleurs.
+      </p>
+      <div class="clauses-grid">
+        <div class="clause-item"><div class="check">✓</div><div><strong>Numéro d'enregistrement 13 chiffres</strong> à faire figurer dans l'annonce (loi Le Meur)</div></div>
+        <div class="clause-item"><div class="check">✓</div><div><strong>Articulation avec les CGU Airbnb</strong> et la Politique de Remboursement voyageur</div></div>
+        <div class="clause-item"><div class="check">✓</div><div><strong>Clause AirCover</strong> en complément du dépôt de garantie</div></div>
+        <div class="clause-item"><div class="check">✓</div><div><strong>Responsabilité en cas de fête</strong> non déclarée, opposable</div></div>
+        <div class="clause-item"><div class="check">✓</div><div><strong>Capacité d'accueil stricte</strong>, non négociable en cours de séjour</div></div>
+        <div class="clause-item"><div class="check">✓</div><div><strong>Règlement intérieur</strong> (bruit, fumeurs, animaux, piscine)</div></div>
+        <div class="clause-item"><div class="check">✓</div><div><strong>État des lieux</strong> à réaliser dans les 48 h suivant l'arrivée</div></div>
+        <div class="clause-item"><div class="check">✓</div><div><strong>Inventaire chiffré du mobilier</strong> annexé au contrat</div></div>
+        <div class="clause-item"><div class="check">✓</div><div><strong>Taxe de séjour</strong> « collectée par Airbnb » si applicable</div></div>
+        <div class="clause-item"><div class="check">✓</div><div><strong>Conditions d'annulation</strong> alignées sur votre politique Airbnb</div></div>
+      </div>
+
+      <div class="hero-cta-block" style="margin-top: 40px;">
+        <div>
+          <h3>Générez votre contrat Airbnb en 2 minutes</h3>
+          <p>Gratuit, sans carte bancaire. Conforme loi Le Meur 2024. FR et EN.</p>
+        </div>
+        <a href="/contrat-lcd-dashboard" class="hero-cta-btn">Lancer le générateur →</a>
+      </div>
+
+      <h2>Foire aux questions</h2>
+      <div class="faq">
+        <details open>
+          <summary>Dois-je vraiment faire signer un contrat si je passe par Airbnb ?</summary>
+          <div class="faq-ans">
+            <p><strong>Oui.</strong> L'article L324-2 du Code du tourisme impose un contrat écrit à tout loueur de meublé de tourisme, quel que soit le canal. Airbnb est une plateforme de mise en relation, pas un bailleur. Airbnb le reconnaît dans ses CGU : « Airbnb n'est pas partie au contrat de location qui intervient directement entre les hôtes et les voyageurs. »</p>
+          </div>
+        </details>
+        <details>
+          <summary>Qui est responsable en cas de dégradation, Airbnb ou moi ?</summary>
+          <div class="faq-ans">
+            <p><strong>Vous, en tant qu'hôte.</strong> Airbnb ne se substitue pas à votre responsabilité civile. AirCover propose une couverture complémentaire plafonnée avec de nombreuses exclusions (usure, biens de valeur non déclarés, dégâts liés aux fêtes non autorisées). Votre contrat propre + votre caution + votre assurance PNO sont votre vraie protection.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Comment afficher mon numéro d'enregistrement sur mon annonce Airbnb ?</summary>
+          <div class="faq-ans">
+            <p>Dans les paramètres de votre annonce Airbnb, section « Vos obligations légales », vous pouvez saisir votre numéro à 13 chiffres. Airbnb bloque désormais automatiquement les annonces sans numéro dans les villes où l'enregistrement est exigé. À partir du <strong>20 mai 2026</strong>, le téléservice national unifié remplacera le Cerfa 14004.</p>
+          </div>
+        </details>
+        <details>
+          <summary>AirCover remplace-t-il le dépôt de garantie ?</summary>
+          <div class="faq-ans">
+            <p><strong>Non.</strong> AirCover est une assurance, pas un dépôt de garantie. Il y a des plafonds, des franchises et de nombreux cas exclus. Pour une vraie protection : demandez une caution au voyageur via votre contrat propre, conservez votre assurance PNO, et traitez AirCover comme un filet complémentaire.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Puis-je refuser un voyageur qui ne veut pas signer mon contrat ?</summary>
+          <div class="faq-ans">
+            <p><strong>Oui, à condition de l'avoir mentionné dans votre annonce.</strong> Airbnb exige que les règles supplémentaires (contrat à signer, caution) soient explicitement indiquées dans la description. Mentionnez donc : « Un contrat de location est à signer avant la remise des clés, conformément au Code du tourisme. »</p>
+          </div>
+        </details>
+        <details>
+          <summary>Combien de jours par an puis-je louer ma résidence principale sur Airbnb ?</summary>
+          <div class="faq-ans">
+            <p>Selon l'art. L324-1-1 II du Code du tourisme, la limite est de <strong>120 jours par année civile</strong> pour une résidence principale. Airbnb plafonne automatiquement votre calendrier à 120 jours. Depuis la loi Le Meur 2024, <strong>les mairies peuvent abaisser cette limite à 90 jours</strong>.</p>
+          </div>
+        </details>
+      </div>
+
+      <h2>Découvrez aussi</h2>
+      <div class="related">
+        <a href="/contrat-location-saisonniere">
+          <div class="rk">Guide général</div>
+          <div class="rt">Contrat de location saisonnière</div>
+          <div class="rd">Le guide complet : 12 mentions obligatoires, arrhes vs acompte, Loi Le Meur, annulation.</div>
+        </a>
+        <a href="/contrat-location-gite">
+          <div class="rk">Contrat de gîte</div>
+          <div class="rt">Rural, de groupe, à la ferme</div>
+          <div class="rd">Clauses piscine NF, cheminée, animaux de la ferme, labels Gîtes de France.</div>
+        </a>
+        <a href="/contrat-location-mobil-home">
+          <div class="rk">Contrat mobil-home</div>
+          <div class="rt">HLL & règlement camping</div>
+          <div class="rd">Les 22 clauses spécifiques : accord du gestionnaire, mobilité, vétusté.</div>
+        </a>
+        <a href="/facture-airbnb">
+          <div class="rk">Facturation Airbnb</div>
+          <div class="rt">Générer une facture</div>
+          <div class="rd">Une fois le séjour réservé, générez la facture associée : TVA, taxe de séjour, LMNP.</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</ToolLayout>

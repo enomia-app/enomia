@@ -1,0 +1,310 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+
+const title = "Contrat de location saisonnière gratuit — modèle 2026 (PDF + Word)";
+const description = "Générez votre contrat de location saisonnière gratuit en 2 min. Conforme Loi Le Meur 2024, art. L324-1-1 et L324-2 Code du tourisme. PDF + Word, FR/EN, sans inscription.";
+const canonical = "https://www.enomia.app/contrat-location-saisonniere";
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="contrat">
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 0; }
+    .seo-hero { margin-bottom: 8px; }
+    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(30px, 4vw, 44px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; color: #2b2d2b; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; }
+    .seo-badge::before { content: '✓'; }
+
+    .hero-cta-block {
+      background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%);
+      color: #fff; padding: 36px 32px; border-radius: 14px;
+      margin: 32px 0; display: grid; grid-template-columns: 1fr auto;
+      gap: 24px; align-items: center;
+    }
+    @media (max-width: 700px) { .hero-cta-block { grid-template-columns: 1fr; text-align: center; } }
+    .hero-cta-block h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .hero-cta-block p { font-size: 14px; opacity: 0.85; line-height: 1.55; }
+    .hero-cta-btn {
+      background: #fff; color: #2b2d2b; border: none; padding: 16px 28px;
+      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700;
+      border-radius: 10px; cursor: pointer; text-decoration: none; display: inline-block;
+      white-space: nowrap;
+    }
+    .hero-cta-btn:hover { opacity: 0.92; }
+
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body ul, .seo-body ol { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 18px; padding-left: 24px; }
+    .seo-body li { margin-bottom: 6px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+    .seo-body a { color: #3fbd71; text-decoration: underline; text-underline-offset: 2px; }
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 16px 20px; margin: 22px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: #1a1a1a; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .callout.warn { border-left-color: #e6b740; background: rgba(230,183,64,0.08); }
+
+    .mentions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 20px 0; }
+    @media (max-width: 700px) { .mentions-grid { grid-template-columns: 1fr; } }
+    .mention-card { border: 1px solid #e5e3de; background: #fff; border-radius: 8px; padding: 14px 16px; font-size: 13px; color: #52524e; }
+    .mention-card .num { display: inline-block; background: #2b2d2b; color: #fff; width: 22px; height: 22px; border-radius: 50%; text-align: center; line-height: 22px; font-size: 11px; font-weight: 600; margin-bottom: 6px; }
+    .mention-card .ti { font-weight: 600; color: #1a1a1a; margin: 3px 0 2px; }
+    .mention-card .law { font-family: 'Inter', sans-serif; font-size: 10px; color: #8a8985; margin-top: 4px; }
+
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    @media (max-width: 640px) { .comparison { grid-template-columns: 1fr; } }
+    .comp-col { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 22px 24px; }
+    .comp-col h4 { font-family: 'Newsreader', serif; font-size: 20px; font-weight: 700; margin-bottom: 2px; color: #1a1a1a; }
+    .comp-col .ref { font-size: 10px; color: #2b2d2b; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; font-weight: 600; }
+    .comp-col ul { list-style: none; padding: 0; margin: 0; }
+    .comp-col ul li { padding: 10px 0 10px 20px; font-size: 13.5px; line-height: 1.6; border-bottom: 1px solid #f0efec; position: relative; color: #52524e; }
+    .comp-col ul li::before { content: '→'; position: absolute; left: 0; top: 10px; color: #2b2d2b; font-weight: 600; }
+    .comp-col ul li:last-child { border-bottom: none; }
+    .comp-col ul li strong { color: #1a1a1a; }
+
+    .biens-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0; }
+    @media (max-width: 700px) { .biens-grid { grid-template-columns: 1fr; } }
+    .biens-grid a { display: block; padding: 22px 22px; border: 1px solid #e5e3de; background: #fff; border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.2s; }
+    .biens-grid a:hover { border-color: #2b2d2b; transform: translateY(-2px); }
+    .biens-grid .emj { font-size: 32px; margin-bottom: 8px; }
+    .biens-grid .ti { font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+    .biens-grid .de { font-size: 12px; color: #8a8985; line-height: 1.5; margin-bottom: 10px; }
+    .biens-grid .ar { font-size: 11px; color: #3fbd71; font-weight: 600; }
+
+    .faq { border: 1px solid #e5e3de; border-radius: 10px; overflow: hidden; margin: 12px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; }
+    .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; font-weight: 400; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+    .faq-ans p { margin-bottom: 10px; }
+    .faq-ans strong { color: #1a1a1a; }
+
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 60px; }
+    @media (max-width: 700px) { .related { grid-template-columns: 1fr; } }
+    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; color: inherit; text-decoration: none; transition: all 0.15s; }
+    .related a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; color: #1a1a1a; }
+    .related .rd { font-size: 12px; color: #8a8985; }
+
+    @media (max-width: 700px) { .seo-wrap { padding: 24px 20px 0; } }
+  </style>
+
+  <div class="seo-wrap">
+    <div class="seo-hero">
+      <h1 class="seo-h1">Contrat de <em>location saisonnière</em> gratuit — modèle 2026</h1>
+      <p class="seo-lede">
+        Générez votre contrat de location saisonnière gratuit en 2 minutes. Modèle conforme à la <strong>Loi Le Meur de 2024</strong>, téléchargeable en <strong>PDF et Word</strong>, bilingue <strong>français-anglais</strong>. Un seul outil pour créer, gérer et suivre vos contrats de mobil-home, gîte, villa, meublé T2 ou maison. Sans inscription pour essayer.
+      </p>
+      <div class="seo-badges">
+        <span class="seo-badge">Conforme Loi Le Meur</span>
+        <span class="seo-badge">PDF + Word</span>
+        <span class="seo-badge">FR & EN</span>
+        <span class="seo-badge">Suivi des paiements</span>
+      </div>
+    </div>
+
+    <div class="hero-cta-block">
+      <div>
+        <h3>Créez votre premier contrat en 2 minutes</h3>
+        <p>Saisissez vos biens une fois. Générez ensuite un contrat conforme en moins d'une minute à chaque réservation. Suivi des acomptes, soldes et cautions inclus.</p>
+      </div>
+      <a href="/contrat-lcd-dashboard" class="hero-cta-btn">+ Créer mon contrat gratuit →</a>
+    </div>
+
+    <div class="seo-body">
+      <h2>Un contrat écrit est-il obligatoire en location saisonnière ?</h2>
+      <p>
+        <strong>Oui.</strong> L'article <strong>L324-2 du Code du tourisme</strong> impose un contrat écrit entre le loueur et le locataire pour toute location de meublé de tourisme, comportant <em>a minima</em> le prix et un état descriptif des lieux. Un simple échange d'emails ou une réservation sur Airbnb ne vaut pas contrat.
+      </p>
+      <p>
+        En cas de litige (dégradation, annulation, impayé), sans contrat écrit vous êtes <strong>juridiquement démuni</strong>. Un contrat bien rédigé est votre meilleure protection : il définit clairement les obligations de chaque partie, le nombre d'occupants autorisés, les conditions d'annulation, et le montant de la caution.
+      </p>
+
+      <div class="callout warn">
+        <strong>⚡ Loi Le Meur du 19 novembre 2024 — ce qui change en 2026</strong>
+        Depuis la <strong>loi n° 2024-1039</strong>, tout loueur de meublé de tourisme doit obtenir un <strong>numéro d'enregistrement à 13 chiffres</strong> auprès de sa mairie, à faire figurer sur son annonce et sur son contrat. À partir du <strong>20 mai 2026</strong>, un téléservice national unifié remplace le Cerfa 14004. Les sanctions peuvent atteindre <strong>20 000 €</strong> en cas de défaut de déclaration. Notre générateur intègre ces nouvelles obligations par défaut.
+      </div>
+
+      <h2>Les 12 mentions obligatoires d'un contrat de location saisonnière</h2>
+      <p>
+        Notre générateur intègre automatiquement les 12 mentions juridiques obligatoires, conformes aux articles L324-1-1, L324-2 et D324-1 du Code du tourisme, ainsi qu'à l'arrêté du 28 décembre 1976.
+      </p>
+      <div class="mentions-grid">
+        <div class="mention-card"><div class="num">1</div><div class="ti">Identité des parties</div>Nom, adresse, SIRET du bailleur. Nom, adresse, coordonnées du locataire.<div class="law">art. L324-2 CT</div></div>
+        <div class="mention-card"><div class="num">2</div><div class="ti">Adresse et description</div>Localisation précise, surface habitable en m², nombre de pièces principales.<div class="law">art. D324-1 CT</div></div>
+        <div class="mention-card"><div class="num">3</div><div class="ti">Inventaire du mobilier</div>Liste chiffrée, opposable en cas de litige.<div class="law">art. XI contrat</div></div>
+        <div class="mention-card"><div class="num">4</div><div class="ti">Dates d'arrivée/départ</div>Avec heures précises de remise et restitution des clés.<div class="law">Arrêté 16 mai 1967</div></div>
+        <div class="mention-card"><div class="num">5</div><div class="ti">Prix total du séjour</div>Montant en chiffres et en lettres, charges incluses ou en sus.<div class="law">art. L324-2 CT</div></div>
+        <div class="mention-card"><div class="num">6</div><div class="ti">Modalités de paiement</div>Virement, chèque, CB ou espèces. Coordonnées bancaires (IBAN) du bailleur.<div class="law">art. 1583 Code civil</div></div>
+        <div class="mention-card"><div class="num">7</div><div class="ti">Acompte ou arrhes</div>Montant, date de versement, conséquences d'une annulation.<div class="law">art. 1590 Code civil</div></div>
+        <div class="mention-card"><div class="num">8</div><div class="ti">Dépôt de garantie</div>Caution, modalités de restitution (1 mois max).<div class="law">Décret 1972, art. 68</div></div>
+        <div class="mention-card"><div class="num">9</div><div class="ti">Taxe de séjour</div>Montant prévisionnel ou mention "collectée par plateforme".<div class="law">art. L2333-26 CGCT</div></div>
+        <div class="mention-card"><div class="num">10</div><div class="ti">N° déclaration mairie</div>Numéro à 13 chiffres (loi Le Meur 2024).<div class="law">art. L324-1-1 CT</div></div>
+        <div class="mention-card"><div class="num">11</div><div class="ti">Occupants max</div>Capacité d'accueil stricte, non négociable en cours de séjour.<div class="law">art. D324-1 CT</div></div>
+        <div class="mention-card"><div class="num">12</div><div class="ti">Clauses particulières</div>Animaux, fumeurs, règlement intérieur, assurance villégiature.<div class="law">Code civil 1713+</div></div>
+      </div>
+
+      <h2>Arrhes ou acompte : bien choisir (art. 1590 du Code civil)</h2>
+      <p>
+        C'est l'un des points les plus mal compris. La distinction change tout en cas d'annulation. Par défaut, les sommes versées sont considérées comme des <strong>arrhes</strong>, sauf mention contraire explicite dans le contrat.
+      </p>
+      <div class="comparison">
+        <div class="comp-col">
+          <h4>📌 Arrhes</h4>
+          <div class="ref">art. 1590 Code civil</div>
+          <ul>
+            <li>Le locataire peut <strong>se rétracter librement</strong>, il perd les arrhes versées.</li>
+            <li>Si le bailleur annule, il doit <strong>rembourser le double</strong>.</li>
+            <li>Aucun engagement ferme des deux parties.</li>
+            <li>Solution <strong>souple</strong>, idéale pour attirer des réservations précoces.</li>
+          </ul>
+        </div>
+        <div class="comp-col">
+          <h4>📌 Acompte</h4>
+          <div class="ref">Pratique contractuelle</div>
+          <ul>
+            <li>Les deux parties sont <strong>engagées fermement</strong>.</li>
+            <li>Si le locataire annule, il doit payer <strong>l'intégralité du loyer</strong>.</li>
+            <li>Si le bailleur annule, <strong>dommages-intérêts</strong> possibles.</li>
+            <li>Solution <strong>sécurisée</strong>, recommandée pour la haute saison.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Un modèle adapté à chaque type de bien</h2>
+      <p>
+        Chaque type de logement a ses spécificités juridiques. Notre outil les gère automatiquement et nous avons écrit un guide dédié pour les cas particuliers les plus courants.
+      </p>
+      <div class="biens-grid">
+        <a href="/contrat-airbnb">
+          <div class="emj">🏙</div>
+          <div class="ti">Contrat Airbnb</div>
+          <div class="de">Articulation avec les CGU Airbnb, lexique hôte/voyageur, AirCover, numéro d'enregistrement à afficher, clauses loi Le Meur 2024.</div>
+          <div class="ar">Lire le guide →</div>
+        </a>
+        <a href="/contrat-location-gite">
+          <div class="emj">🏡</div>
+          <div class="ti">Contrat de gîte</div>
+          <div class="de">Typologie (rural, groupe, à la ferme), labels Gîtes de France / Clévacances, clauses piscine (NF P90-306), équipements ruraux.</div>
+          <div class="ar">Lire le guide →</div>
+        </a>
+        <a href="/contrat-location-mobil-home">
+          <div class="emj">🚐</div>
+          <div class="ti">Contrat mobil-home</div>
+          <div class="de">Habitation Légère de Loisirs (HLL), règlement intérieur du camping, autorisation du gestionnaire, 22 clauses spécifiques.</div>
+          <div class="ar">Lire le guide →</div>
+        </a>
+      </div>
+
+      <h2>Pourquoi notre outil plutôt qu'un simple PDF à remplir ?</h2>
+      <p>
+        Les autres sites proposent un PDF figé à imprimer et à remplir au stylo. Notre outil va beaucoup plus loin :
+      </p>
+      <ul>
+        <li><strong>Bibliothèque de biens</strong> : saisissez une fois vos biens, réutilisez-les à chaque contrat.</li>
+        <li><strong>Inventaire chiffré par pièce</strong> : opposable en cas de casse, avec suggestion automatique du montant de caution.</li>
+        <li><strong>Dashboard de suivi</strong> : visualisez d'un coup d'œil les acomptes reçus, les soldes en attente, les cautions à rendre.</li>
+        <li><strong>Bilingue FR + EN</strong> : traduction instantanée du contrat en anglais pour vos voyageurs étrangers, juridiquement alignée.</li>
+        <li><strong>Upload du contrat signé</strong> : centralisez toutes vos pièces au même endroit.</li>
+        <li><strong>Facture liée en 1 clic</strong> : une fois le séjour payé, générez la facture associée sans ressaisir les données.</li>
+        <li><strong>100 % gratuit</strong>, sans carte bancaire, données hébergées en Europe (Supabase).</li>
+      </ul>
+
+      <div class="hero-cta-block" style="margin-top: 40px;">
+        <div>
+          <h3>Prêt à générer votre premier contrat ?</h3>
+          <p>Gratuit, sans engagement. Export immédiat en PDF et Word.</p>
+        </div>
+        <a href="/contrat-lcd-dashboard" class="hero-cta-btn">Lancer le générateur →</a>
+      </div>
+
+      <h2>Foire aux questions</h2>
+      <div class="faq">
+        <details open>
+          <summary>Un contrat écrit est-il vraiment obligatoire pour une location saisonnière ?</summary>
+          <div class="faq-ans">
+            <p><strong>Oui.</strong> L'article L324-2 du Code du tourisme impose un contrat écrit entre loueur et locataire pour toute location meublée touristique. Sans contrat, en cas de litige (dégradation, annulation, impayé), vous êtes juridiquement démuni.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Quelle est la durée maximale d'une location saisonnière ?</summary>
+          <div class="faq-ans">
+            <p><strong>90 jours consécutifs maximum</strong> par locataire, selon la loi Hoguet du 2 janvier 1970. Au-delà, il faut basculer sur un bail meublé classique (loi du 6 juillet 1989) ou un bail mobilité (1 à 10 mois).</p>
+            <p>Si vous louez votre <strong>résidence principale</strong>, vous êtes également limité à <strong>120 jours par an</strong> (art. L324-1-1 II du CT). La loi Le Meur permet aux mairies de réduire ce plafond à 90 jours.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Puis-je demander un dépôt de garantie ? De quel montant ?</summary>
+          <div class="faq-ans">
+            <p><strong>Oui.</strong> Le dépôt de garantie est libre en location saisonnière, contrairement au bail classique. Les montants varient généralement de <strong>200 € à 2 000 €</strong> selon la valeur du bien et du mobilier.</p>
+            <p>Notre outil vous suggère automatiquement un montant en fonction de la valeur totale de l'inventaire renseigné (environ 30 %). Le dépôt doit être restitué dans un délai maximum d'<strong>un mois</strong> après le départ, déduction faite des éventuels dommages.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Dois-je déclarer mon logement en mairie ?</summary>
+          <div class="faq-ans">
+            <p><strong>Oui, quasiment toujours</strong>, depuis la loi Le Meur du 19 novembre 2024. La déclaration se fait via le Cerfa 14004*04 (remplacé par un téléservice national au 20 mai 2026). Vous obtenez un numéro d'enregistrement à 13 chiffres à faire figurer sur votre contrat et vos annonces.</p>
+            <p>En zone tendue (Paris, Lyon, Nice, Bordeaux…), une <strong>autorisation de changement d'usage</strong> (art. L631-7 CCH) peut être nécessaire pour les résidences secondaires.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Que se passe-t-il en cas d'annulation pour force majeure ?</summary>
+          <div class="faq-ans">
+            <p>La force majeure (catastrophe naturelle, confinement sanitaire, décès d'un proche) libère les parties de leurs obligations. Le locataire peut obtenir le remboursement des sommes versées, y compris l'acompte. Il est recommandé d'inscrire une clause explicite dans le contrat ; notre modèle en intègre une par défaut.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Mon logement est classé meublé de tourisme — dois-je le mentionner ?</summary>
+          <div class="faq-ans">
+            <p><strong>Oui, obligatoirement.</strong> Le classement (1 à 5 étoiles) est délivré par un organisme agréé par Atout France et doit figurer au contrat. Il ouvre droit à un <strong>abattement Micro-BIC de 71 %</strong> (au lieu de 30 % depuis la loi Le Meur pour les non classés).</p>
+          </div>
+        </details>
+        <details>
+          <summary>Enomia est-il vraiment gratuit ?</summary>
+          <div class="faq-ans">
+            <p><strong>Oui.</strong> Créer votre compte, ajouter vos biens, générer vos contrats et suivre vos paiements est entièrement gratuit. Aucune carte bancaire demandée, aucune limite sur le nombre de contrats.</p>
+          </div>
+        </details>
+      </div>
+
+      <h2>Découvrez aussi</h2>
+      <div class="related">
+        <a href="/contrat-airbnb">
+          <div class="rk">Contrat Airbnb</div>
+          <div class="rt">Loi Le Meur 2024 & CGU Airbnb</div>
+          <div class="rd">Le guide spécifique pour les hôtes Airbnb : numéro d'enregistrement, AirCover, articulation CGU.</div>
+        </a>
+        <a href="/contrat-location-gite">
+          <div class="rk">Contrat de gîte</div>
+          <div class="rt">Rural, de groupe, à la ferme</div>
+          <div class="rd">Clauses piscine NF, cheminée, animaux de la ferme, labels Gîtes de France et Clévacances.</div>
+        </a>
+        <a href="/contrat-location-mobil-home">
+          <div class="rk">Contrat mobil-home</div>
+          <div class="rt">HLL & règlement camping</div>
+          <div class="rd">Les 22 clauses spécifiques qu'un modèle classique n'inclut pas : accord du gestionnaire, mobilité, etc.</div>
+        </a>
+        <a href="/facture-location-saisonniere">
+          <div class="rk">Facturation</div>
+          <div class="rt">Facture LCD gratuite</div>
+          <div class="rd">Une fois votre contrat signé et payé, générez la facture en 1 clic : 30 000+ communes pour la taxe de séjour.</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Un contrat écrit est-il obligatoire pour une location saisonnière ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. L'article L324-2 du Code du tourisme impose un contrat écrit entre loueur et locataire pour toute location meublée touristique." } },
+      { "@type": "Question", "name": "Quelle est la durée maximale d'une location saisonnière ?", "acceptedAnswer": { "@type": "Answer", "text": "90 jours consécutifs maximum par locataire (loi Hoguet 1970). Pour une résidence principale, 120 jours par an, réductibles à 90 jours par la mairie depuis la loi Le Meur 2024." } },
+      { "@type": "Question", "name": "Puis-je demander un dépôt de garantie ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le dépôt est libre en location saisonnière (200 € à 2 000 € typiquement). À restituer sous 1 mois maximum après le départ." } },
+      { "@type": "Question", "name": "Dois-je déclarer mon logement en mairie ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui depuis la loi Le Meur du 19 novembre 2024. Vous obtenez un numéro d'enregistrement à 13 chiffres. Téléservice national au 20 mai 2026." } }
+    ]
+  })}></script>
+</ToolLayout>

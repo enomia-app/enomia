@@ -1,0 +1,20 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+import ContratTool from '../components/ContratTool.astro';
+---
+
+<ToolLayout
+  title="Mes contrats — Dashboard · Enomia"
+  description="Gérez tous vos contrats de location saisonnière depuis un dashboard unique. Suivi des acomptes, soldes, cautions. Génération PDF et Word gratuite."
+  canonical="https://enomia.app/contrat-lcd-dashboard"
+  currentTool="contrat"
+>
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px 48px;">
+    <ContratTool />
+  </div>
+</ToolLayout>
+
+<style>
+  /* Padding extra pour ne pas coller au header */
+  main { padding-top: 0; }
+</style>

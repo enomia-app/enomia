@@ -1,0 +1,180 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+
+const title = "Contrat de location de gîte 2026 — modèle gratuit (rural, groupe, saisonnier)";
+const description = "Modèle de contrat de location de gîte gratuit : rural, de groupe, saisonnier. Clauses piscine NF P90-306, animaux, équipements ruraux, déclaration mairie. PDF + Word.";
+const canonical = "https://www.enomia.app/contrat-location-gite";
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="contrat">
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 0; }
+    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(30px, 4vw, 44px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; color: #2b2d2b; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; }
+    .seo-badge::before { content: '✓'; margin-right: 6px; }
+    .hero-cta-block { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #fff; padding: 36px 32px; border-radius: 14px; margin: 32px 0; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+    @media (max-width: 700px) { .hero-cta-block { grid-template-columns: 1fr; text-align: center; } }
+    .hero-cta-block h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .hero-cta-block p { font-size: 14px; opacity: 0.85; }
+    .hero-cta-btn { background: #fff; color: #2b2d2b; border: none; padding: 16px 28px; font-size: 14px; font-weight: 700; border-radius: 10px; text-decoration: none; white-space: nowrap; }
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 48px 0 14px; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body ul { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 18px; padding-left: 24px; }
+    .seo-body li { margin-bottom: 6px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+    .seo-body a { color: #3fbd71; text-decoration: underline; }
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 16px 20px; margin: 22px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: #1a1a1a; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .typologie { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0; }
+    @media (max-width: 700px) { .typologie { grid-template-columns: 1fr; } }
+    .typo-card { background: #fff; border: 1px solid #e5e3de; border-radius: 12px; padding: 22px; }
+    .typo-card .emj { font-size: 36px; margin-bottom: 8px; }
+    .typo-card h4 { font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700; margin-bottom: 4px; color: #1a1a1a; }
+    .typo-card .de { font-size: 12px; color: #8a8985; margin-bottom: 10px; line-height: 1.5; }
+    .typo-card ul { list-style: none; padding: 0; font-size: 11px; margin: 0; }
+    .typo-card ul li { padding: 4px 0 4px 14px; position: relative; color: #52524e; }
+    .typo-card ul li::before { content: '▸'; position: absolute; left: 0; color: #2b2d2b; }
+    .labels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+    @media (max-width: 700px) { .labels { grid-template-columns: 1fr; } }
+    .label-cell { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 20px 22px; }
+    .label-cell h4 { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+    .label-cell .auth { font-size: 10px; color: #8a8985; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+    .label-cell p { font-size: 12px; color: #52524e; line-height: 1.55; }
+    .rural-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 20px 0; }
+    @media (max-width: 640px) { .rural-grid { grid-template-columns: 1fr; } }
+    .rural { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 16px 18px; display: flex; gap: 12px; }
+    .rural .icon { font-size: 22px; flex-shrink: 0; }
+    .rural h5 { font-size: 13px; font-weight: 600; color: #1a1a1a; margin-bottom: 3px; }
+    .rural p { font-size: 11.5px; color: #52524e; line-height: 1.5; margin: 0; }
+    .rural .norm { font-size: 10px; color: #2b2d2b; margin-top: 4px; font-weight: 600; }
+    .faq { border: 1px solid #e5e3de; border-radius: 10px; overflow: hidden; margin: 12px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; }
+    .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+    .faq-ans strong { color: #1a1a1a; }
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 60px; }
+    @media (max-width: 700px) { .related { grid-template-columns: 1fr; } }
+    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; color: inherit; text-decoration: none; }
+    .related a:hover { border-color: #8a8985; }
+    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; color: #1a1a1a; }
+    .related .rd { font-size: 12px; color: #8a8985; }
+    @media (max-width: 700px) { .seo-wrap { padding: 24px 20px 0; } }
+  </style>
+
+  <div class="seo-wrap">
+    <div>
+      <h1 class="seo-h1">Le contrat de location pour votre <em>gîte</em></h1>
+      <p class="seo-lede">
+        Le <strong>seul modèle</strong> qui traite le gîte comme un objet contractuel spécifique — rural, de groupe, à la ferme — avec les clauses que les autres oublient : <strong>piscine non surveillée (norme NF P90-306)</strong>, cheminée, animaux de la ferme, labels Gîtes de France. Gratuit, PDF + Word, conforme 2026.
+      </p>
+      <div class="seo-badges">
+        <span class="seo-badge">Rural, groupe, étape</span>
+        <span class="seo-badge">Norme piscine NF</span>
+        <span class="seo-badge">Labels inclus</span>
+        <span class="seo-badge">Loi Le Meur 2024</span>
+      </div>
+    </div>
+
+    <div class="hero-cta-block">
+      <div>
+        <h3>Générez votre contrat de gîte en 2 minutes</h3>
+        <p>Un vrai modèle gîte, pas un contrat saisonnier générique renommé. Avec les clauses rurales qui protègent vraiment.</p>
+      </div>
+      <a href="/contrat-lcd-dashboard" class="hero-cta-btn">+ Créer mon contrat →</a>
+    </div>
+
+    <div class="seo-body">
+      <h2>Un contrat par type de gîte</h2>
+      <p>
+        Contrairement aux autres sites, notre outil distingue les spécificités contractuelles de chaque typologie. Les clauses changent selon la capacité, la responsabilité, les équipements et le public cible.
+      </p>
+      <div class="typologie">
+        <div class="typo-card"><div class="emj">🏡</div><h4>Gîte rural</h4><div class="de">Maison indépendante à la campagne. 2-10 personnes. Équipements ruraux, jardin, nature.</div><ul><li>Cheminée / poêle à bois</li><li>Jardin, potager</li><li>Assainissement (fosse)</li><li>Sentiers privés</li></ul></div>
+        <div class="typo-card"><div class="emj">👨‍👩‍👧‍👦</div><h4>Gîte de groupe</h4><div class="de">Plus de 15 personnes. Responsabilité collective, caution majorée, clause événementielle.</div><ul><li>Capacité max stricte</li><li>Responsabilité signataire</li><li>Caution ≥ 1 000 €</li><li>Assurance événement</li></ul></div>
+        <div class="typo-card"><div class="emj">⛰</div><h4>Gîte d'étape / séjour</h4><div class="de">Randonneurs, cavaliers, pèlerins. Courts séjours avec règles spécifiques.</div><ul><li>Durée 1-3 nuits</li><li>Règle silence strict</li><li>Locaux communs</li><li>Équipements sport</li></ul></div>
+      </div>
+
+      <h2>Gîtes de France, Clévacances ou classement Préfecture ?</h2>
+      <p>
+        Les labels ne sont pas obligatoires mais ouvrent des avantages fiscaux et commerciaux. Le contrat change selon que vous êtes labellisé ou non, et surtout selon que vous commercialisez via la plateforme du label ou en direct.
+      </p>
+      <div class="labels">
+        <div class="label-cell"><h4>🏷 Gîtes de France</h4><div class="auth">Association nationale</div><p>Le label historique du gîte rural. Classement en épis (1 à 5). Commercialisation centralisée possible. Adhésion annuelle + commission.</p></div>
+        <div class="label-cell"><h4>🏷 Clévacances</h4><div class="auth">Fédération nationale</div><p>Label multi-produits (gîte, meublé, chambre d'hôtes). Classement en clés (1 à 5). Adhésion, audit qualité, charte.</p></div>
+        <div class="label-cell"><h4>⭐ Meublé de tourisme</h4><div class="auth">Atout France (Préfecture)</div><p>Classement officiel 1 à 5 étoiles délivré par organisme agréé. Ouvre droit à un <strong>abattement Micro-BIC de 71 %</strong>.</p></div>
+      </div>
+
+      <h2>Les clauses que les autres modèles oublient</h2>
+      <p>
+        La majorité des modèles de contrat de gîte sont en fait des contrats de location saisonnière génériques auxquels on a collé le mot « gîte » dans le titre. Notre outil intègre les clauses propres au milieu rural — celles qui évitent les litiges dans la vraie vie.
+      </p>
+      <div class="rural-grid">
+        <div class="rural"><div class="icon">🏊</div><div><h5>Piscine privée non surveillée</h5><p>Décharge de responsabilité du bailleur, surveillance des enfants, horaires d'utilisation.</p><div class="norm">Norme NF P90-306</div></div></div>
+        <div class="rural"><div class="icon">🔥</div><div><h5>Cheminée / poêle à bois</h5><p>Fourniture du bois, obligation de ramonage, responsabilité incendie, consignes de sécurité.</p></div></div>
+        <div class="rural"><div class="icon">🐔</div><div><h5>Animaux de la ferme</h5><p>Sécurité des enfants, interdiction de nourrir, gestion des allergies, coexistence avec animaux de compagnie.</p></div></div>
+        <div class="rural"><div class="icon">🚰</div><div><h5>Fosse septique</h5><p>Produits interdits (lingettes, solvants), obligation de signaler tout problème.</p></div></div>
+        <div class="rural"><div class="icon">🚶</div><div><h5>Sentiers et accès privés</h5><p>Droit d'usage, respect des cultures et pâturages, interdiction de cueillette sauvage.</p></div></div>
+        <div class="rural"><div class="icon">🔥</div><div><h5>Barbecue et feu extérieur</h5><p>Zones autorisées, interdiction en période de sécheresse (arrêté préfectoral), responsabilité incendie.</p></div></div>
+        <div class="rural"><div class="icon">🗑</div><div><h5>Tri sélectif rural</h5><p>Collecte parfois moins fréquente qu'en ville. Points d'apport volontaire. Composteur si disponible.</p></div></div>
+        <div class="rural"><div class="icon">📻</div><div><h5>Nuisances sonores rurales</h5><p>Horaires de tonte, tracteurs, cloches d'église : prévenir que « calme rural » ≠ silence absolu.</p></div></div>
+      </div>
+
+      <div class="hero-cta-block" style="margin-top: 40px;">
+        <div>
+          <h3>Un vrai contrat pour votre gîte</h3>
+          <p>Le seul modèle gratuit avec clauses rurales (piscine NF, cheminée, animaux de la ferme). PDF ou Word.</p>
+        </div>
+        <a href="/contrat-lcd-dashboard" class="hero-cta-btn">Générer →</a>
+      </div>
+
+      <h2>Foire aux questions</h2>
+      <div class="faq">
+        <details open>
+          <summary>Faut-il un contrat différent si mon gîte a une piscine ?</summary>
+          <div class="faq-ans">
+            <p><strong>Fortement recommandé.</strong> Si la piscine n'est pas surveillée par un maître-nageur (cas général des gîtes), vous devez ajouter une clause de décharge de responsabilité qui rappelle les équipements de sécurité présents (norme <strong>NF P90-306</strong> obligatoire), la surveillance des enfants, l'interdiction de baignade seule et les horaires. Notre modèle ajoute cette clause dès que vous cochez « piscine ».</p>
+          </div>
+        </details>
+        <details>
+          <summary>Je loue à un groupe de 12 personnes, quel contrat utiliser ?</summary>
+          <div class="faq-ans">
+            <p>Pour un gîte de groupe (en général dès 8-10 personnes), nous recommandons : <strong>responsabilité collective du signataire</strong>, <strong>caution majorée</strong> (1 000 € ou plus), clause événementielle si le but est EVJF/EVG/mariage, et état des lieux photographique à l'entrée.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Mon gîte est labellisé Gîtes de France, dois-je utiliser leur contrat ?</summary>
+          <div class="faq-ans">
+            <p>Si vous commercialisez via la plateforme Gîtes de France, ils imposent généralement leur contrat adhérent. Si vous louez <strong>en direct</strong> (site perso, Airbnb, Booking), vous êtes libre d'utiliser votre propre contrat, à condition qu'il respecte le Code du tourisme. Notre modèle est conforme à toutes les obligations légales.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Dois-je déclarer mon gîte en mairie ?</summary>
+          <div class="faq-ans">
+            <p><strong>Oui, pour la plupart des gîtes.</strong> Via le Cerfa 14004*04 (remplacé par un téléservice national le 20 mai 2026). Vous obtenez un numéro à 13 chiffres à faire figurer sur votre contrat et vos annonces. Seuls les gîtes avec table d'hôtes ou chambre d'hôtes ont une procédure distincte.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Quelle est la différence entre un gîte et un meublé de tourisme ?</summary>
+          <div class="faq-ans">
+            <p><strong>Juridiquement, c'est la même chose.</strong> Le Code du tourisme parle uniquement de « meublé de tourisme ». Le mot « gîte » est une appellation d'usage souvent associée au monde rural ou à certains labels. En pratique, un gîte est un meublé de tourisme, avec quelques spécificités contractuelles propres au milieu rural — c'est ce que notre modèle ajoute.</p>
+          </div>
+        </details>
+      </div>
+
+      <h2>Découvrez aussi</h2>
+      <div class="related">
+        <a href="/contrat-location-saisonniere"><div class="rk">Guide général</div><div class="rt">Contrat de location saisonnière</div><div class="rd">12 mentions obligatoires, arrhes vs acompte, loi Le Meur, conditions d'annulation.</div></a>
+        <a href="/contrat-airbnb"><div class="rk">Contrat Airbnb</div><div class="rt">Loi Le Meur 2024</div><div class="rd">Pour les hôtes Airbnb : numéro d'enregistrement, AirCover, articulation CGU.</div></a>
+        <a href="/contrat-location-mobil-home"><div class="rk">Contrat mobil-home</div><div class="rt">HLL & règlement camping</div><div class="rd">22 clauses spécifiques : accord du gestionnaire, mobilité, vétusté.</div></a>
+        <a href="/facture-location-saisonniere"><div class="rk">Facturation</div><div class="rt">Facture gîte</div><div class="rd">Générez la facture une fois le séjour payé. 30 000+ communes pour la taxe de séjour.</div></a>
+      </div>
+    </div>
+  </div>
+</ToolLayout>

@@ -4,7 +4,7 @@ interface Props {
   description: string;
   canonical?: string;
   ogImage?: string;
-  currentTool?: 'simulateur' | 'facture' | 'none';
+  currentTool?: 'simulateur' | 'facture' | 'contrat' | 'none';
 }
 
 const { title, description, canonical, ogImage, currentTool = 'none' } = Astro.props;
@@ -171,7 +171,9 @@ const { title, description, canonical, ogImage, currentTool = 'none' } = Astro.p
         <a href="/facture-location-saisonniere" class={"tool-pill" + (currentTool === 'facture' ? ' active' : '')}>
           <span class="dot"></span> Facture LCD
         </a>
-        <span class="tool-pill soon">Contrat LCD</span>
+        <a href="/contrat-location-saisonniere" class={"tool-pill" + (currentTool === 'contrat' ? ' active' : '')}>
+          <span class="dot"></span> Contrat LCD
+        </a>
       </div>
     </div>
   </header>
@@ -190,6 +192,7 @@ const { title, description, canonical, ogImage, currentTool = 'none' } = Astro.p
         <a href="/blog">Blog</a>
         <a href="/simulateur-rentabilite-airbnb">Simulateur</a>
         <a href="/facture-location-saisonniere">Facture LCD</a>
+        <a href="/contrat-location-saisonniere">Contrat LCD</a>
         <span class="tf-copy">© Enomia 2026</span>
       </div>
     </div>

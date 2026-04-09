@@ -11,6 +11,11 @@ const staticPages = [
   { url: '/facture-location-saisonniere', changefreq: 'monthly', priority: '0.9' },
   { url: '/facture-airbnb', changefreq: 'monthly', priority: '0.9' },
   { url: '/facture-booking', changefreq: 'monthly', priority: '0.9' },
+  { url: '/contrat-location-saisonniere', changefreq: 'monthly', priority: '0.9' },
+  { url: '/contrat-airbnb', changefreq: 'monthly', priority: '0.9' },
+  { url: '/contrat-location-gite', changefreq: 'monthly', priority: '0.9' },
+  { url: '/contrat-location-mobil-home', changefreq: 'monthly', priority: '0.9' },
+  { url: '/contrat-lcd-dashboard', changefreq: 'weekly', priority: '0.6' },
 ];
 
 export async function GET() {

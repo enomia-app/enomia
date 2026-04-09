@@ -1,0 +1,213 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+
+const title = "Contrat de location mobil-home : modèle vierge gratuit (PDF + Word)";
+const description = "Modèle de contrat de location mobil-home gratuit avec 22 clauses camping, règlement intérieur, autorisation gestionnaire, HLL. Conforme arrêtés 2014 DGCCRF. PDF + Word.";
+const canonical = "https://www.enomia.app/contrat-location-mobil-home";
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="contrat">
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 0; }
+    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(30px, 4vw, 44px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; color: #2b2d2b; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; }
+    .seo-badge::before { content: '✓'; margin-right: 6px; }
+    .hero-cta-block { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #fff; padding: 36px 32px; border-radius: 14px; margin: 32px 0; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+    @media (max-width: 700px) { .hero-cta-block { grid-template-columns: 1fr; text-align: center; } }
+    .hero-cta-block h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .hero-cta-block p { font-size: 14px; opacity: 0.85; }
+    .hero-cta-btn { background: #fff; color: #2b2d2b; border: none; padding: 16px 28px; font-size: 14px; font-weight: 700; border-radius: 10px; text-decoration: none; white-space: nowrap; }
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 48px 0 14px; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body ul { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 18px; padding-left: 24px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+    .seo-body a { color: #3fbd71; text-decoration: underline; }
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 16px 20px; margin: 22px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: #1a1a1a; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .callout.warn { border-left-color: #e6b740; background: rgba(230,183,64,0.08); }
+    .contracts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    @media (max-width: 700px) { .contracts-grid { grid-template-columns: 1fr; } }
+    .contract-card { background: #fff; border: 2px solid #e5e3de; border-radius: 14px; padding: 26px 24px; position: relative; }
+    .contract-card.highlighted { border-color: #2b2d2b; background: rgba(43,45,43,0.04); }
+    .contract-card.highlighted::before { content: 'Notre outil'; position: absolute; top: -10px; left: 20px; background: #2b2d2b; color: #fff; font-size: 9px; padding: 3px 10px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+    .contract-card h4 { font-family: 'Newsreader', serif; font-size: 20px; font-weight: 700; margin-bottom: 2px; color: #1a1a1a; }
+    .contract-card .who { font-size: 10px; color: #8a8985; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+    .contract-card p { font-size: 13px; color: #52524e; line-height: 1.55; margin-bottom: 10px; }
+    .contract-card ul { list-style: none; padding: 0; font-size: 12px; margin: 0; }
+    .contract-card ul li { padding: 4px 0 4px 14px; position: relative; color: #52524e; }
+    .contract-card ul li::before { content: '→'; position: absolute; left: 0; color: #2b2d2b; }
+    .clauses-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 20px 0; }
+    @media (max-width: 700px) { .clauses-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 500px) { .clauses-grid { grid-template-columns: 1fr; } }
+    .clause-box { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 14px 16px; }
+    .clause-box .num { font-size: 10px; color: #2b2d2b; font-weight: 600; margin-bottom: 4px; }
+    .clause-box h5 { font-size: 12px; font-weight: 600; margin-bottom: 4px; color: #1a1a1a; }
+    .clause-box p { font-size: 11px; color: #8a8985; line-height: 1.5; margin: 0; }
+    .faq { border: 1px solid #e5e3de; border-radius: 10px; overflow: hidden; margin: 12px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; }
+    .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+    .faq-ans strong { color: #1a1a1a; }
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 60px; }
+    @media (max-width: 700px) { .related { grid-template-columns: 1fr; } }
+    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; color: inherit; text-decoration: none; }
+    .related a:hover { border-color: #8a8985; }
+    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; color: #1a1a1a; }
+    .related .rd { font-size: 12px; color: #8a8985; }
+    @media (max-width: 700px) { .seo-wrap { padding: 24px 20px 0; } }
+  </style>
+
+  <div class="seo-wrap">
+    <div>
+      <h1 class="seo-h1">Contrat de location <em>mobil-home</em> gratuit</h1>
+      <p class="seo-lede">
+        Modèle vierge à télécharger pour louer votre mobil-home à des vacanciers. Intègre les <strong>22 clauses spécifiques</strong> absentes des modèles génériques : règlement intérieur du camping, autorisation du gestionnaire, mobilité, interdiction de résidence principale. PDF + Word, conforme aux arrêtés 2014 DGCCRF.
+      </p>
+      <div class="seo-badges">
+        <span class="seo-badge">22 clauses camping</span>
+        <span class="seo-badge">Arrêtés 2014 DGCCRF</span>
+        <span class="seo-badge">HLL & RML</span>
+        <span class="seo-badge">PDF + Word</span>
+      </div>
+    </div>
+
+    <div class="hero-cta-block">
+      <div>
+        <h3>Un vrai contrat pour votre mobil-home</h3>
+        <p>Le seul modèle gratuit qui intègre les spécificités camping : règlement intérieur, accord du gestionnaire, mobilité.</p>
+      </div>
+      <a href="/contrat-lcd-dashboard" class="hero-cta-btn">+ Créer mon contrat →</a>
+    </div>
+
+    <div class="seo-body">
+      <h2>Il existe 2 contrats pour un mobil-home</h2>
+      <p>
+        C'est LA confusion que font tous les autres sites. Un contrat de location de mobil-home à un vacancier n'est <strong>pas le même</strong> qu'un contrat d'emplacement annuel avec un camping.
+      </p>
+
+      <div class="contracts-grid">
+        <div class="contract-card highlighted">
+          <h4>① Contrat saisonnier</h4>
+          <div class="who">Propriétaire du mobil-home → Vacancier</div>
+          <p>Vous êtes propriétaire d'un mobil-home installé sur un camping et vous souhaitez le louer à la semaine à des vacanciers. C'est une <strong>sous-location</strong> qui requiert l'accord préalable du gestionnaire du camping.</p>
+          <ul>
+            <li>Durée : 1 nuit à 90 jours</li>
+            <li>Conclu avec un particulier</li>
+            <li>Régi par le Code du tourisme (L324-2)</li>
+            <li>Acompte, caution, état des lieux</li>
+          </ul>
+        </div>
+        <div class="contract-card">
+          <h4>② Contrat d'emplacement annuel</h4>
+          <div class="who">Camping → Propriétaire du mobil-home</div>
+          <p>Vous louez une parcelle à l'année au gestionnaire d'un camping pour y installer votre propre mobil-home. C'est un <strong>contrat commercial</strong> différent, régi par les arrêtés de 2014 et encadré par la DGCCRF.</p>
+          <ul>
+            <li>Durée : 1 an (renouvelable)</li>
+            <li>Conclu avec l'exploitant du camping</li>
+            <li>Arrêté du 17 février 2014 (notice)</li>
+            <li>Arrêté du 24 décembre 2014 (type)</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="font-size:13px;color:#8a8985">💡 Notre outil gère <strong>le contrat saisonnier</strong> (cas ①). Pour le contrat d'emplacement annuel, nous recommandons de demander le modèle directement au camping et de le faire vérifier par la <a href="https://ffcc.fr" target="_blank" rel="noopener">FFCC</a> ou l'<a href="https://www.inc-conso.fr" target="_blank" rel="noopener">INC</a>.</p>
+
+      <div class="callout warn">
+        <strong>⚠ Vérifiez l'accord de votre camping avant de louer</strong>
+        Louer votre mobil-home à un vacancier nécessite l'accord préalable du gestionnaire du camping. Certains l'interdisent purement et simplement, d'autres le permettent contre commission. Notre contrat inclut automatiquement une clause attestant que vous avez obtenu cet accord — conservez l'accord écrit.
+      </div>
+
+      <h2>Les 22 clauses spécifiques au mobil-home</h2>
+      <p>
+        Un contrat de location saisonnière classique ne contient <strong>aucune</strong> de ces clauses. Elles sont indispensables pour être opposable en cas de litige mobil-home.
+      </p>
+      <div class="clauses-grid">
+        <div class="clause-box"><div class="num">01</div><h5>Identification du mobil-home</h5><p>Marque, modèle, année, n° châssis, dimensions hors tout.</p></div>
+        <div class="clause-box"><div class="num">02</div><h5>N° d'emplacement</h5><p>Parcelle précise dans le camping, et non une adresse.</p></div>
+        <div class="clause-box"><div class="num">03</div><h5>Accord gestionnaire</h5><p>Attestation que l'exploitant autorise la sous-location.</p></div>
+        <div class="clause-box"><div class="num">04</div><h5>Usage loisir exclusif</h5><p>Interdiction de résidence principale (art. R.111-33 Urba).</p></div>
+        <div class="clause-box"><div class="num">05</div><h5>Maintien de mobilité</h5><p>Roues et timon conservés, aucune construction en dur.</p></div>
+        <div class="clause-box"><div class="num">06</div><h5>Règlement intérieur camping</h5><p>Annexé au contrat, le locataire l'accepte.</p></div>
+        <div class="clause-box"><div class="num">07</div><h5>Périodes d'ouverture</h5><p>Séjour conditionné aux dates d'ouverture.</p></div>
+        <div class="clause-box"><div class="num">08</div><h5>Capacité max stricte</h5><p>Limite au nb de couchages, résiliation immédiate sinon.</p></div>
+        <div class="clause-box"><div class="num">09</div><h5>Visiteurs / invités</h5><p>Règles du camping (badges, tarifs).</p></div>
+        <div class="clause-box"><div class="num">10</div><h5>Règles véhicules</h5><p>Généralement 1 véhicule par emplacement.</p></div>
+        <div class="clause-box"><div class="num">11</div><h5>Animaux</h5><p>Chiens catégories 1 et 2 interdits, vaccins à jour.</p></div>
+        <div class="clause-box"><div class="num">12</div><h5>Barbecue</h5><p>Gaz uniquement (charbon souvent interdit).</p></div>
+        <div class="clause-box"><div class="num">13</div><h5>Double caution</h5><p>Caution dégradations + caution propreté.</p></div>
+        <div class="clause-box"><div class="num">14</div><h5>Inventaire entrée/sortie</h5><p>Liste détaillée opposable avec valorisation.</p></div>
+        <div class="clause-box"><div class="num">15</div><h5>Responsabilité étendue</h5><p>Locataire responsable des équipements communs.</p></div>
+        <div class="clause-box"><div class="num">16</div><h5>Assurance RC villégiature</h5><p>Justifier d'une RC couvrant le séjour.</p></div>
+        <div class="clause-box"><div class="num">17</div><h5>Sous-location interdite</h5><p>Sauf accord écrit du bailleur ET du gestionnaire.</p></div>
+        <div class="clause-box"><div class="num">18</div><h5>Annulation graduée</h5><p>28 j → 70 %, 21 j → 50 %, 14 j → 0 %.</p></div>
+        <div class="clause-box"><div class="num">19</div><h5>Taxe de séjour</h5><p>Montant collecté par le bailleur, reversé à la commune.</p></div>
+        <div class="clause-box"><div class="num">20</div><h5>Tribunal compétent</h5><p>Tribunal du lieu de situation du camping.</p></div>
+        <div class="clause-box"><div class="num">21</div><h5>Nullité partielle</h5><p>Invalidité d'une clause sans remettre en cause les autres.</p></div>
+        <div class="clause-box"><div class="num">22</div><h5>Double exemplaire</h5><p>Contrat signé en 2 exemplaires originaux paraphés.</p></div>
+      </div>
+
+      <div class="hero-cta-block" style="margin-top: 40px;">
+        <div>
+          <h3>Générez votre contrat mobil-home en 2 minutes</h3>
+          <p>Modèle gratuit avec les 22 clauses camping intégrées. PDF ou Word.</p>
+        </div>
+        <a href="/contrat-lcd-dashboard" class="hero-cta-btn">Lancer →</a>
+      </div>
+
+      <h2>Foire aux questions</h2>
+      <div class="faq">
+        <details open>
+          <summary>Puis-je louer mon mobil-home sans passer par le camping ?</summary>
+          <div class="faq-ans">
+            <p><strong>Oui, mais seulement avec l'accord écrit du gestionnaire.</strong> Le contrat d'emplacement que vous avez signé avec le camping interdit en général la sous-location sans autorisation. Certains exploitants refusent, d'autres l'acceptent contre commission. Conservez l'accord écrit du camping.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Puis-je utiliser mon mobil-home comme résidence principale ?</summary>
+          <div class="faq-ans">
+            <p><strong>Non.</strong> Le mobil-home est une Résidence Mobile de Loisirs (RML) selon l'article R.111-33 du Code de l'urbanisme. Il ne peut en aucun cas être utilisé comme résidence principale ou domicile fiscal, même si vous y passez plusieurs mois par an. Cette interdiction doit figurer explicitement au contrat.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Combien puis-je demander de caution ?</summary>
+          <div class="faq-ans">
+            <p>En pratique, nous recommandons une <strong>caution dégradations</strong> de 300 à 500 € + une <strong>caution propreté</strong> séparée de 50 à 100 €. Notre outil suggère automatiquement un montant selon la valeur de l'inventaire.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Quelle assurance dois-je exiger du locataire ?</summary>
+          <div class="faq-ans">
+            <p>Une attestation d'<strong>assurance responsabilité civile villégiature</strong> couvrant la période du séjour. Cette garantie fait généralement partie de la multirisque habitation (extension « villégiature »). De votre côté, souscrivez une assurance multirisque mobil-home (Campez Couvert ou équivalent).</p>
+          </div>
+        </details>
+        <details>
+          <summary>Quel barème d'annulation recommander ?</summary>
+          <div class="faq-ans">
+            <p>Le barème le plus courant : plus de 28 jours → 70 % remboursé, 21-28 jours → 50 %, moins de 14 jours → aucun remboursement. La force majeure (catastrophe, maladie grave) peut faire exception.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Dois-je déclarer les revenus tirés de la location ?</summary>
+          <div class="faq-ans">
+            <p><strong>Oui.</strong> Les loyers sont imposables en BIC, comme pour tout meublé de tourisme. En dessous de 77 700 € de recettes/an : Micro-BIC (abattement 50 % non classé, 71 % classé). Au-dessus : régime réel. Depuis la loi Le Meur 2024, les abattements Micro-BIC ont été réduits pour les non classés (30 %).</p>
+          </div>
+        </details>
+      </div>
+
+      <h2>Découvrez aussi</h2>
+      <div class="related">
+        <a href="/contrat-location-saisonniere"><div class="rk">Guide général</div><div class="rt">Contrat de location saisonnière</div><div class="rd">12 mentions obligatoires, arrhes vs acompte, loi Le Meur, annulation.</div></a>
+        <a href="/contrat-airbnb"><div class="rk">Contrat Airbnb</div><div class="rt">Loi Le Meur 2024</div><div class="rd">Pour les hôtes Airbnb : numéro d'enregistrement, AirCover, CGU.</div></a>
+        <a href="/contrat-location-gite"><div class="rk">Contrat de gîte</div><div class="rt">Rural, groupe, à la ferme</div><div class="rd">Clauses piscine NF, cheminée, animaux de la ferme, labels.</div></a>
+        <a href="/facture-location-saisonniere"><div class="rk">Facturation</div><div class="rt">Facture LCD</div><div class="rd">Générez la facture une fois le séjour payé. 30 000+ communes.</div></a>
+      </div>
+    </div>
+  </div>
+</ToolLayout>

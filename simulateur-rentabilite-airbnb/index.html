@@ -1486,10 +1486,29 @@ function leaveWithoutSaving(){
 function _restoreSimData(s){
   if(!s)return;
   if(s.name){const el=document.getElementById('sim-name-input');if(el)el.value=s.name;}
-  if(s.mode)calcMode=s.mode;
-  if(s.type)bienType=s.type;
+  // Restore lots before switching mode
+  if(s.lots && s.lots.length) lots=[...s.lots];
+  // Restore mode + update UI sections
+  if(s.mode){
+    calcMode=s.mode;
+    document.querySelectorAll('.mode-tab').forEach(t=>{t.classList.remove('on');t.classList.remove('multi-on');});
+    const modeBtn=document.getElementById('mode-'+(s.mode==='multi'?'multi':'single'));
+    if(modeBtn) s.mode==='single'?modeBtn.classList.add('on'):modeBtn.classList.add('multi-on');
+    document.getElementById('section-single').style.display=s.mode==='single'?'block':'none';
+    document.getElementById('section-multi').style.display=s.mode==='multi'?'block':'none';
+    document.getElementById('revenus-single').style.display=s.mode==='single'?'block':'none';
+    document.getElementById('fin-num').textContent=s.mode==='single'?'02':'03';
+    document.getElementById('sec-revenus').style.display=s.mode==='single'?'':'none';
+  }
+  // Restore type + highlight tab
+  if(s.type){
+    bienType=s.type;
+    document.querySelectorAll('.tabs .tab').forEach(t=>t.classList.remove('on'));
+    const typeBtn=document.querySelector(`.tab[onclick*="'${s.type}'"]`);
+    if(typeBtn)typeBtn.classList.add('on');
+  }
   if(s.sliders)Object.keys(s.sliders).forEach(id=>{const el=document.getElementById('s-'+id);if(el){el.value=s.sliders[id];sv(id,s.sliders[id]);}});
-  compute();
+  if(s.mode==='multi'){renderLots();computeMulti();}else{compute();}
 }
 
 // Init auth au chargement

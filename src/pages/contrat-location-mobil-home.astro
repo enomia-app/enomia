@@ -1,68 +1,13 @@
 ---
 import ToolLayout from '../layouts/ToolLayout.astro';
+import ContratLandingStyles from '../components/ContratLandingStyles.astro';
 
 const title = "Contrat de location mobil-home : modèle vierge gratuit (PDF + Word)";
 const description = "Modèle de contrat de location mobil-home gratuit avec 22 clauses camping, règlement intérieur, autorisation gestionnaire, HLL. Conforme arrêtés 2014 DGCCRF. PDF + Word.";
 const canonical = "https://www.enomia.app/contrat-location-mobil-home";
 ---
 <ToolLayout title={title} description={description} canonical={canonical} currentTool="contrat">
-  <style>
-    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 0; }
-    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(30px, 4vw, 44px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
-    .seo-h1 em { font-style: italic; color: #2b2d2b; }
-    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
-    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
-    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; }
-    .seo-badge::before { content: '✓'; margin-right: 6px; }
-    .hero-cta-block { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #fff; padding: 36px 32px; border-radius: 14px; margin: 32px 0; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
-    @media (max-width: 700px) { .hero-cta-block { grid-template-columns: 1fr; text-align: center; } }
-    .hero-cta-block h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; }
-    .hero-cta-block p { font-size: 14px; opacity: 0.85; }
-    .hero-cta-btn, .seo-body .hero-cta-btn, a.hero-cta-btn { background: #fff; color: #2b2d2b; border: none; padding: 16px 28px; font-size: 14px; font-weight: 700; border-radius: 10px; text-decoration: none; white-space: nowrap; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; display: inline-block; }
-    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 48px 0 14px; color: #1a1a1a; }
-    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
-    .seo-body ul { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 18px; padding-left: 24px; }
-    .seo-body strong { color: #1a1a1a; font-weight: 600; }
-    .seo-body a { color: #3fbd71; text-decoration: underline; }
-    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 16px 20px; margin: 22px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: #1a1a1a; }
-    .callout strong { display: block; margin-bottom: 4px; }
-    .callout.warn { border-left-color: #e6b740; background: rgba(230,183,64,0.08); }
-    .contracts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
-    @media (max-width: 700px) { .contracts-grid { grid-template-columns: 1fr; } }
-    .contract-card { background: #fff; border: 2px solid #e5e3de; border-radius: 14px; padding: 26px 24px; position: relative; }
-    .contract-card.highlighted { border-color: #2b2d2b; background: rgba(43,45,43,0.04); }
-    .contract-card.highlighted::before { content: 'Notre outil'; position: absolute; top: -10px; left: 20px; background: #2b2d2b; color: #fff; font-size: 9px; padding: 3px 10px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
-    .contract-card h4 { font-family: 'Newsreader', serif; font-size: 20px; font-weight: 700; margin-bottom: 2px; color: #1a1a1a; }
-    .contract-card .who { font-size: 10px; color: #8a8985; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
-    .contract-card p { font-size: 13px; color: #52524e; line-height: 1.55; margin-bottom: 10px; }
-    .contract-card ul { list-style: none; padding: 0; font-size: 12px; margin: 0; }
-    .contract-card ul li { padding: 4px 0 4px 14px; position: relative; color: #52524e; }
-    .contract-card ul li::before { content: '→'; position: absolute; left: 0; color: #2b2d2b; }
-    .clauses-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 20px 0; }
-    @media (max-width: 700px) { .clauses-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 500px) { .clauses-grid { grid-template-columns: 1fr; } }
-    .clause-box { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 14px 16px; }
-    .clause-box .num { font-size: 10px; color: #2b2d2b; font-weight: 600; margin-bottom: 4px; }
-    .clause-box h5 { font-size: 12px; font-weight: 600; margin-bottom: 4px; color: #1a1a1a; }
-    .clause-box p { font-size: 11px; color: #8a8985; line-height: 1.5; margin: 0; }
-    .faq { border: 1px solid #e5e3de; border-radius: 10px; overflow: hidden; margin: 12px 0; background: #fff; }
-    .faq details { border-bottom: 1px solid #e5e3de; }
-    .faq details:last-child { border-bottom: none; }
-    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; }
-    .faq details[open] summary::after { content: '−'; }
-    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
-    .faq-ans strong { color: #1a1a1a; }
-    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 60px; }
-    @media (max-width: 700px) { .related { grid-template-columns: 1fr; } }
-    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; color: inherit; text-decoration: none; }
-    .related a:hover { border-color: #8a8985; }
-    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
-    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; color: #1a1a1a; }
-    .related .rd { font-size: 12px; color: #8a8985; }
-    @media (max-width: 700px) { .seo-wrap { padding: 24px 20px 0; } }
-  </style>
+  <ContratLandingStyles />
 
   <div class="seo-wrap">
     <div>

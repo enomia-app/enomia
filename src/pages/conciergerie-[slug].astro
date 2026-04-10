@@ -1,0 +1,523 @@
+---
+export const prerender = true;
+import ToolLayout from '../layouts/ToolLayout.astro';
+import { cities, getCityBySlug, type City } from '../data/cities';
+
+export async function getStaticPaths() {
+  return cities.map((c) => ({ params: { slug: c.slug } }));
+}
+
+const { slug } = Astro.params;
+const city = getCityBySlug(slug!);
+if (!city) throw new Error(`City not found: ${slug}`);
+
+const c: City = city;
+const canonical = `https://www.enomia.app/conciergerie-${c.slug}`;
+
+// Computed values for the "concrete example" section
+const ex = c.concreteExample;
+const commissionEur = Math.round(ex.revenuBrut * ex.commissionRate);
+const menageTotal = ex.menageCount * ex.menageUnitCost;
+const netOption1 = ex.revenuBrut - commissionEur; // Ménage refacturé voyageur
+const netOption2 = ex.revenuBrut - commissionEur - menageTotal; // Ménage inclus
+const coutRealOption2 = Math.round(((commissionEur + menageTotal) / ex.revenuBrut) * 100);
+
+// Sort conciergeries by rating × review count (weighted)
+const sortedConc = [...c.conciergeries].sort(
+  (a, b) => b.rating * Math.log(b.reviews + 1) - a.rating * Math.log(a.reviews + 1)
+);
+
+// Compute weighted aggregate rating across all conciergeries in this city
+const totalReviews = sortedConc.reduce((s, cc) => s + cc.reviews, 0);
+const weightedRating = sortedConc.reduce((s, cc) => s + cc.rating * cc.reviews, 0) / totalReviews;
+
+// Average commission used in FAQ and aggregateRating
+const avgCommission = Math.round(
+  sortedConc.reduce((sum, conc) => {
+    const match = conc.commission.match(/(\d+)/);
+    return sum + (match ? parseInt(match[1]) : 20);
+  }, 0) / sortedConc.length
+);
+
+// JSON-LD: Article schema
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: c.title,
+  description: c.metaDescription,
+  datePublished: '2026-04-09',
+  dateModified: c.updatedAt,
+  author: { '@type': 'Person', name: 'Marc', url: 'https://www.enomia.app/' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Enomia',
+    logo: { '@type': 'ImageObject', url: 'https://www.enomia.app/favicon.png' },
+  },
+  mainEntityOfPage: canonical,
+};
+
+// JSON-LD: Review schema with aggregateRating → enables star ratings in Google SERP
+const reviewLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  itemReviewed: {
+    '@type': 'Service',
+    name: `Conciergerie Airbnb ${c.displayName}`,
+    description: `Services de conciergerie Airbnb et gestion locative courte durée à ${c.displayName}`,
+    areaServed: {
+      '@type': 'City',
+      name: c.displayName,
+      address: { '@type': 'PostalAddress', addressCountry: 'FR', addressRegion: c.region },
+    },
+  },
+  author: { '@type': 'Person', name: 'Marc', url: 'https://www.enomia.app/' },
+  publisher: { '@type': 'Organization', name: 'Enomia' },
+  datePublished: '2026-04-09',
+  reviewRating: {
+    '@type': 'Rating',
+    ratingValue: weightedRating.toFixed(1),
+    bestRating: 5,
+    worstRating: 1,
+  },
+};
+
+// JSON-LD: ItemList of the reviewed conciergeries
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `Les ${sortedConc.length} meilleures conciergeries Airbnb à ${c.displayName}`,
+  numberOfItems: sortedConc.length,
+  itemListElement: sortedConc.map((conc, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'LocalBusiness',
+      name: conc.name,
+      description: conc.specialty,
+      url: conc.url ?? canonical,
+      areaServed: c.displayName,
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: conc.rating.toFixed(1),
+        reviewCount: conc.reviews,
+        bestRating: 5,
+        worstRating: 1,
+      },
+    },
+  })),
+};
+
+// JSON-LD: BreadcrumbList
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.enomia.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Guide conciergerie Airbnb', item: 'https://www.enomia.app/conciergerie-airbnb' },
+    { '@type': 'ListItem', position: 3, name: `Conciergerie ${c.displayName}`, item: canonical },
+  ],
+};
+
+// JSON-LD: FAQPage
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    ...c.extraFaq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+    {
+      '@type': 'Question',
+      name: `Quelle est la commission moyenne d'une conciergerie Airbnb à ${c.displayName} ?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `En 2026, la commission moyenne d'une conciergerie Airbnb à ${c.displayName} est de ${avgCommission} % HT du revenu locatif, hors frais de ménage. Les extrêmes observés vont de 15 % à 30 %.`,
+      },
+    },
+  ],
+};
+---
+
+<ToolLayout title={c.metaTitle} description={c.metaDescription} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(reviewLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 60px; }
+    .seo-hero { margin-bottom: 24px; }
+    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(28px, 4vw, 42px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; color: #2b2d2b; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; }
+    .seo-badge::before { content: '✓'; }
+
+    .tldr { border: 1px solid #e5e3de; background: #fff; border-radius: 12px; padding: 22px 26px; margin: 24px 0 40px; }
+    .tldr h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; margin-bottom: 12px; }
+    .tldr ul { list-style: none; padding: 0; }
+    .tldr li { font-size: 14px; color: #52524e; padding: 6px 0; border-bottom: 1px solid #f0eee8; }
+    .tldr li:last-child { border-bottom: none; }
+    .tldr strong { color: #1a1a1a; font-weight: 600; }
+
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body ul, .seo-body ol { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 18px; padding-left: 24px; }
+    .seo-body li { margin-bottom: 6px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+    .seo-body a { color: #3fbd71; text-decoration: underline; text-underline-offset: 2px; }
+
+    /* Market stats grid */
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0 32px; }
+    .stat { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 18px 20px; }
+    .stat .k { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #8a8985; margin-bottom: 6px; }
+    .stat .v { font-size: 22px; font-weight: 700; color: #1a1a1a; font-family: 'Newsreader', serif; }
+    .stat .d { font-size: 12px; color: #52524e; margin-top: 4px; }
+
+    /* Comparison table */
+    .comp { border: 1px solid #e5e3de; border-radius: 12px; margin: 24px 0 36px; background: #fff; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .comp table { width: 100%; border-collapse: collapse; min-width: 600px; }
+    .comp th { background: #2b2d2b; color: #fff; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; padding: 14px 12px; text-align: left; white-space: nowrap; }
+    .comp td { padding: 14px 12px; font-size: 13px; color: #52524e; border-top: 1px solid #f0eee8; vertical-align: top; }
+    .comp tbody tr:hover { background: #fafaf7; }
+    .comp td strong { color: #1a1a1a; }
+    .comp .rating { color: #f0a83a; font-weight: 700; white-space: nowrap; }
+    .comp .mobile-note { display: none; font-size: 11px; color: #8a8985; margin-top: 8px; }
+    @media (max-width: 700px) {
+      .comp { font-size: 12px; }
+      .comp .col-biens, .comp .col-reviews { display: none; }
+      .comp .mobile-note { display: block; }
+    }
+
+    /* Conciergerie card */
+    .conc-card { border: 1px solid #e5e3de; border-radius: 12px; padding: 22px 24px; margin: 16px 0; background: #fff; }
+    .conc-card h3 { font-family: 'Newsreader', serif; font-size: 20px; font-weight: 600; margin: 0 0 6px; color: #1a1a1a; display: flex; align-items: center; gap: 10px; }
+    .conc-card .meta { font-size: 12px; color: #8a8985; margin-bottom: 14px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .conc-card .meta strong { color: #1a1a1a; }
+    .conc-card p { font-size: 14px; color: #52524e; line-height: 1.7; margin: 0; }
+
+    /* Neighborhood grid */
+    .nb-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 24px 0 32px; }
+    .nb { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 18px 20px; }
+    .nb h3 { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 0 0 8px; color: #1a1a1a; }
+    .nb .price { display: inline-block; background: rgba(63,189,113,0.08); color: #3fbd71; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 100px; margin-right: 6px; }
+    .nb .occ { display: inline-block; background: #f0eee8; color: #52524e; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 100px; }
+    .nb p { font-size: 13px; color: #52524e; line-height: 1.6; margin: 10px 0 4px; }
+    .nb .roi { font-size: 12px; color: #8a8985; }
+    .nb .roi strong { color: #1a1a1a; }
+    @media (max-width: 700px) { .nb-grid, .stats-grid { grid-template-columns: 1fr; } }
+
+    /* Callout */
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 18px 22px; margin: 22px 0; border-radius: 0 10px 10px 0; font-size: 14px; color: #1a1a1a; line-height: 1.7; }
+    .callout.warn { border-left-color: #e05252; background: rgba(224,82,82,0.06); }
+    .callout strong { display: block; margin-bottom: 6px; font-size: 15px; }
+
+    /* Calculation box */
+    .calc { background: #2b2d2b; color: #e8e4dc; border-radius: 12px; padding: 24px 28px; margin: 24px 0 36px; }
+    .calc h3 { color: #fff; font-family: 'Newsreader', serif; font-size: 19px; margin: 0 0 14px; }
+    .calc .calc-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid #3e403e; font-size: 14px; }
+    .calc .calc-row:last-child { border-bottom: none; }
+    .calc .calc-row.total { border-top: 2px solid #3fbd71; margin-top: 6px; padding-top: 10px; font-weight: 700; }
+    .calc .calc-row .val { color: #fff; font-variant-numeric: tabular-nums; }
+    .calc .calc-row.positive .val { color: #3fbd71; }
+    .calc .calc-row.negative .val { color: #e05252; }
+    .calc small { display: block; margin-top: 12px; font-size: 12px; color: #a8a4a0; font-style: italic; }
+
+    /* FAQ */
+    .faq { border: 1px solid #e5e3de; border-radius: 12px; overflow: hidden; margin: 16px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; }
+    .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; font-weight: 400; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+
+    /* CTA */
+    .cta { background: linear-gradient(135deg, #3fbd71 0%, #2fa560 100%); color: #fff; padding: 28px 32px; border-radius: 14px; margin: 40px 0 24px; text-align: center; }
+    .cta h3 { font-family: 'Newsreader', serif; font-size: 22px; margin: 0 0 10px; color: #fff; }
+    .cta p { font-size: 14px; opacity: 0.95; margin: 0 0 18px; }
+    .cta a { display: inline-block; background: #fff; color: #2fa560; padding: 12px 24px; border-radius: 100px; font-weight: 700; text-decoration: none; }
+
+    /* Related */
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 40px; }
+    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; transition: all 0.15s; color: inherit; text-decoration: none; }
+    .related a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; }
+    .related .rd { font-size: 12px; color: #8a8985; }
+    @media (max-width: 700px) { .seo-wrap { padding: 24px 20px 40px; } .related { grid-template-columns: 1fr; } }
+  </style>
+
+  <div class="seo-wrap">
+    <div class="seo-hero">
+      <h1 class="seo-h1">
+        Conciergerie <em>{c.displayName}</em> Airbnb : comparatif 2026 des {sortedConc.length} meilleures agences
+      </h1>
+      <p class="seo-lede">{c.introCustom}</p>
+      <div class="seo-badges">
+        <span class="seo-badge">Comparatif neutre</span>
+        <span class="seo-badge">Tarifs transparents</span>
+        <span class="seo-badge">Mis à jour {new Date(c.updatedAt).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</span>
+      </div>
+    </div>
+
+    <div class="tldr">
+      <h3>À retenir en 30 secondes</h3>
+      <ul>
+        <li>
+          Commission moyenne à <strong>{c.displayName}</strong> : <strong>{avgCommission} %</strong> HT hors ménage
+        </li>
+        <li>
+          Note moyenne des conciergeries : <strong>{weightedRating.toFixed(1)} ★ / 5</strong> sur {totalReviews.toLocaleString('fr-FR')} avis Google
+        </li>
+        <li>
+          Taux d'occupation moyen : <strong>{c.occupancyRate} %</strong> · Prix moyen /nuit :
+          <strong>
+            {c.priceLow}-{c.priceHigh} €
+          </strong>
+        </li>
+        <li>
+          {c.activeListings.toLocaleString('fr-FR')} annonces Airbnb actives · RevPAR : <strong>{c.revpar} €/nuit</strong>
+        </li>
+        <li>Position nationale : <strong>#{c.rankNational}</strong> des marchés LCD français</li>
+      </ul>
+    </div>
+
+    <div class="seo-body">
+      <h2>{c.displayName}, un marché locatif courte durée en {c.rankNational <= 5 ? 'pleine mutation' : 'forte croissance'}</h2>
+      <p>{c.marketIntro}</p>
+
+      <h3>Les chiffres clés du marché Airbnb à {c.displayName}</h3>
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="k">Population</div>
+          <div class="v">{c.population.toLocaleString('fr-FR')}</div>
+          <div class="d">habitants ({c.region})</div>
+        </div>
+        <div class="stat">
+          <div class="k">Touristes /an</div>
+          <div class="v">{(c.tourists / 1_000_000).toFixed(1)} M</div>
+          <div class="d">visiteurs annuels</div>
+        </div>
+        <div class="stat">
+          <div class="k">Annonces actives</div>
+          <div class="v">{c.activeListings.toLocaleString('fr-FR')}</div>
+          <div class="d">biens Airbnb permanents</div>
+        </div>
+        <div class="stat">
+          <div class="k">Prix /nuit</div>
+          <div class="v">{c.priceLow}-{c.priceHigh} €</div>
+          <div class="d">basse à haute saison</div>
+        </div>
+        <div class="stat">
+          <div class="k">Taux d'occupation</div>
+          <div class="v">{c.occupancyRate} %</div>
+          <div class="d">moyenne sur 12 mois</div>
+        </div>
+        <div class="stat">
+          <div class="k">RevPAR</div>
+          <div class="v">{c.revpar} €</div>
+          <div class="d">revenu /nuit tous biens</div>
+        </div>
+      </div>
+      <p><strong>Saisonnalité :</strong> {c.seasonality}.</p>
+
+      <h2>Comment choisir une conciergerie Airbnb à {c.displayName} : 7 critères objectifs</h2>
+      <p>
+        Toutes les conciergeries se ressemblent sur leur page d'accueil. La différence se fait sur des points précis que peu d'entre elles mettent en avant. Voici la grille que nous utilisons pour évaluer chaque prestataire.
+      </p>
+
+      <h3>1. La commission réelle (et tout ce qui est facturé en plus)</h3>
+      <p>
+        La commission affichée est souvent le taux <strong>hors ménage</strong>. Demandez systématiquement : combien facturez-vous le ménage ? Est-ce refacturé au voyageur ou pris sur ma marge ? Facturez-vous la taxe de séjour à part ? Y a-t-il des frais de mise en ligne, d'audit initial, de photos, d'abonnement mensuel minimum ? Une commission affichée à 17 % peut devenir effectivement 24 % après tous les frais annexes.
+      </p>
+
+      <h3>2. La structure des services inclus</h3>
+      <p>
+        Exigez par écrit la liste de ce qui est compris. Les postes à vérifier : création et optimisation des annonces, photos professionnelles, gestion des calendriers multi-plateformes (Airbnb + Booking + Abritel), réponse voyageurs 24/7 en français et anglais, check-in en personne, état des lieux, ménage, linge, consommables, maintenance légère, gestion des litiges, rapport mensuel détaillé.
+      </p>
+
+      <h3>3. La transparence du reporting</h3>
+      <p>
+        Une conciergerie sérieuse vous envoie chaque mois : le revenu brut, la commission, le ménage facturé, le versement net, le taux d'occupation, le prix moyen /nuit, et les avis laissés. Si le rapport est flou ou se résume à un virement bancaire, fuyez.
+      </p>
+
+      <h3>4. L'ancrage local réel à {c.displayName}</h3>
+      <p>
+        Vérifiez l'adresse physique et l'ancienneté. Une conciergerie basée à {c.displayName} depuis plus de trois ans connaît les artisans, les policiers municipaux, les règles de copropriété. Une conciergerie franchisée qui débarque peut proposer un super site web mais galérer à trouver un plombier le dimanche. Demandez depuis quand ils opèrent à {c.displayName} et combien de biens ils y gèrent.
+      </p>
+
+      <h3>5. La technologie utilisée</h3>
+      <p>
+        Les conciergeries qui investissent dans un channel manager (Smoobu, Lodgify, Hostaway), une serrure connectée (Nuki, Igloohome) et une plateforme propriétaire pour vos reportings ont une marge d'erreur beaucoup plus faible.
+      </p>
+
+      <h3>6. Les avis Google vérifiables</h3>
+      <p>
+        Tapez le nom + "{c.displayName}" sur Google. Regardez la note et la distribution : 200 avis avec 4,8 est beaucoup plus fiable que 12 avis avec 5,0. Lisez les avis négatifs en priorité — ils vous diront ce qui coince vraiment.
+      </p>
+
+      <h3>7. Le contrat : durée, préavis, clauses de sortie</h3>
+      <p>
+        Certaines conciergeries imposent un engagement de 12 mois, d'autres fonctionnent au mois. Vérifiez la clause de sortie et assurez-vous que votre compte Airbnb reste à votre nom.
+      </p>
+
+      <h2>Les {sortedConc.length} meilleures conciergeries Airbnb à {c.displayName} : notre comparatif 2026</h2>
+      <p>
+        Notre sélection est basée sur l'ancienneté locale, le nombre d'avis Google, la transparence tarifaire, les services inclus et la couverture géographique sur {c.displayName} métropole.
+      </p>
+
+      <div class="comp">
+        <table>
+          <thead>
+            <tr>
+              <th>Conciergerie</th>
+              <th>Commission</th>
+              <th>Ménage</th>
+              <th>Note</th>
+              <th class="col-reviews">Avis</th>
+              <th class="col-biens">Biens</th>
+              <th>Spécialité</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sortedConc.map((conc) => (
+              <tr>
+                <td><strong>{conc.name}</strong></td>
+                <td>{conc.commission}</td>
+                <td>{conc.menage}</td>
+                <td><span class="rating">{conc.rating.toFixed(1)} ★</span></td>
+                <td class="col-reviews">{conc.reviews}</td>
+                <td class="col-biens">~{conc.biensGeres}</td>
+                <td>{conc.specialty}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div class="mobile-note">Avis et nombre de biens visibles sur écran large.</div>
+      </div>
+
+      {sortedConc.map((conc, i) => (
+        <div class="conc-card">
+          <h3>{i + 1}. {conc.name} <span style="font-size:13px;color:#3fbd71;font-weight:600;">— {conc.specialty}</span></h3>
+          <div class="meta">
+            <span>Commission : <strong>{conc.commission}</strong></span>
+            <span>Ménage : <strong>{conc.menage}</strong></span>
+            <span>Note : <strong>{conc.rating.toFixed(1)} ★ ({conc.reviews} avis)</strong></span>
+            <span>~{conc.biensGeres} biens gérés</span>
+          </div>
+          <p>{conc.description}</p>
+        </div>
+      ))}
+
+      <h2>Combien coûte vraiment une conciergerie à {c.displayName} ? Cas concret</h2>
+      <p>
+        Passons des pourcentages aux euros. Prenons un cas typique : {ex.bienType} de {ex.surface} m² à {ex.neighborhood},
+        <strong> {ex.pricePerNight} €/nuit en moyenne</strong>, taux d'occupation {c.occupancyRate} %.
+      </p>
+
+      <div class="calc">
+        <h3>💰 Calcul de revenu annuel net (options 1 vs 2)</h3>
+        <div class="calc-row"><span>Nuitées louées (365 × {c.occupancyRate} %)</span><span class="val">{Math.round((365 * c.occupancyRate) / 100)} nuits</span></div>
+        <div class="calc-row"><span>Revenu brut annuel</span><span class="val">{ex.revenuBrut.toLocaleString('fr-FR')} €</span></div>
+        <div class="calc-row negative"><span>Commission ({Math.round(ex.commissionRate * 100)} %)</span><span class="val">−{commissionEur.toLocaleString('fr-FR')} €</span></div>
+        <div class="calc-row"><span>Ménages ({ex.menageCount} × {ex.menageUnitCost} €)</span><span class="val">{menageTotal.toLocaleString('fr-FR')} €</span></div>
+        <div class="calc-row total positive"><span>Net option 1 (ménage refacturé voyageur)</span><span class="val">{netOption1.toLocaleString('fr-FR')} €</span></div>
+        <div class="calc-row total negative"><span>Net option 2 (ménage inclus dans commission)</span><span class="val">{netOption2.toLocaleString('fr-FR')} €</span></div>
+        <small>
+          Différence : {(netOption1 - netOption2).toLocaleString('fr-FR')} €/an selon comment le ménage est traité. C'est pour cela que la question du ménage est cruciale avant de signer. Avec ménage inclus, le coût réel de la conciergerie atteint {coutRealOption2} % de votre revenu brut.
+        </small>
+      </div>
+
+      <h2>Réglementation Airbnb à {c.displayName} en 2026 : ce que la conciergerie doit gérer</h2>
+      <p>{c.regulation}</p>
+
+      <h2>Les quartiers les plus rentables pour un Airbnb à {c.displayName}</h2>
+      <p>Le prix d'achat et le rendement locatif varient fortement selon le quartier. Voici les zones où un bien Airbnb est le plus performant en 2026.</p>
+
+      <div class="nb-grid">
+        {c.neighborhoods.map((n) => (
+          <div class="nb">
+            <h3>{n.name}</h3>
+            <div>
+              <span class="price">{n.pricePerNight}</span>
+              <span class="occ">Occupation {n.occupancy} %</span>
+            </div>
+            <p>{n.description}</p>
+            <div class="roi">ROI brut estimé : <strong>{n.roiBrut}</strong></div>
+          </div>
+        ))}
+      </div>
+
+      <h2>Et si vous vouliez gérer vous-même votre Airbnb à {c.displayName} ?</h2>
+      <p>
+        La question mérite d'être posée honnêtement. Gérer son Airbnb soi-même permet d'économiser la commission de 20 %, soit sur notre cas précédent environ <strong>{commissionEur.toLocaleString('fr-FR')} €/an</strong>. C'est une somme. Mais cela suppose d'être disponible pour les check-in (ou d'installer une serrure connectée), de gérer les messages voyageurs à toute heure, de faire ou coordonner le ménage, et d'être réactif en cas d'incident.
+      </p>
+      <p>
+        Règle simple : si vous habitez à moins de 30 minutes de votre bien et que vous avez de la flexibilité dans votre emploi du temps, la gestion autonome peut être rentable. Si vous habitez loin ou à l'étranger, la conciergerie devient presque indispensable. Notre calculateur intégré vous aide à trancher.
+      </p>
+
+      <h2>FAQ — Les questions qu'on nous pose le plus sur les conciergeries à {c.displayName}</h2>
+      <div class="faq">
+        {c.extraFaq.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <div class="faq-ans"><p>{f.a}</p></div>
+          </details>
+        ))}
+        <details>
+          <summary>Quelle est la commission moyenne d'une conciergerie Airbnb à {c.displayName} ?</summary>
+          <div class="faq-ans"><p>En 2026, la commission moyenne est de <strong>20 à 22 % HT du revenu locatif</strong>, hors frais de ménage. Les extrêmes observés vont de 15 % (acteurs low-cost) à 30 % (positionnements premium). Méfiez-vous des commissions très basses qui cachent souvent des frais annexes.</p></div>
+        </details>
+        <details>
+          <summary>Est-ce que la conciergerie s'occupe de l'enregistrement en mairie ?</summary>
+          <div class="faq-ans"><p>Les conciergeries sérieuses prennent en charge cette formalité dans leur forfait. Vérifiez-le par écrit dans le contrat. Le numéro à 13 chiffres doit figurer sur votre annonce Airbnb dès la première nuitée louée.</p></div>
+        </details>
+        <details>
+          <summary>Puis-je changer de conciergerie si je ne suis pas satisfait ?</summary>
+          <div class="faq-ans"><p>Oui, mais les conditions varient. Certains contrats imposent un engagement de 12 mois avec pénalité en cas de rupture anticipée. Vérifiez toujours avant de signer : durée d'engagement, préavis, clause de sortie, et surtout que votre compte Airbnb reste à votre nom.</p></div>
+        </details>
+        <details>
+          <summary>Une conciergerie peut-elle vraiment améliorer mon taux d'occupation ?</summary>
+          <div class="faq-ans"><p>Oui, dans deux cas : si vous gériez mal votre pricing (trop statique) ou si vos photos étaient médiocres. Les gains observés vont de +5 % à +20 %. En revanche, si vous étiez déjà à 80 % d'occupation en autogestion, le gain marginal ne compensera pas toujours la commission.</p></div>
+        </details>
+      </div>
+
+      <div class="cta">
+        <h3>Simulez votre rentabilité à {c.displayName} avant de choisir</h3>
+        <p>Notre outil gratuit intègre les prix moyens par quartier, les taux d'occupation locaux, et compare autogestion vs conciergerie sur votre cas précis.</p>
+        <a href="/simulateur-rentabilite-airbnb">→ Simuler ma rentabilité Airbnb</a>
+      </div>
+
+      <h2>Pour aller plus loin</h2>
+      <div class="related">
+        <a href="/conciergerie-airbnb">
+          <div class="rk">Guide pillar</div>
+          <div class="rt">Conciergerie Airbnb : le guide ultime</div>
+          <div class="rd">Définition, services, tarifs, comparatif complet pour bien choisir</div>
+        </a>
+        <a href="/simulateur-rentabilite-airbnb">
+          <div class="rk">Outil gratuit</div>
+          <div class="rt">Simulateur de rentabilité LCD</div>
+          <div class="rd">Calculez le cash-flow avec ou sans conciergerie, fiscalité LMNP</div>
+        </a>
+        {cities
+          .filter((other) => other.slug !== c.slug && other.region === c.region)
+          .slice(0, 2)
+          .map((other) => (
+            <a href={`/conciergerie-${other.slug}`}>
+              <div class="rk">Même région</div>
+              <div class="rt">Conciergerie {other.displayName}</div>
+              <div class="rd">{other.region} · {other.activeListings.toLocaleString('fr-FR')} annonces actives</div>
+            </a>
+          ))}
+      </div>
+    </div>
+  </div>
+</ToolLayout>

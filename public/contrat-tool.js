@@ -52,7 +52,8 @@
     } else if (event === 'SIGNED_OUT') {
       _ctUser = null;
       _ctToken = null;
-      ctShowAuthLanding();
+      // Return to guest mode instead of auth landing
+      ctBootstrap();
     }
   });
 
@@ -60,11 +61,8 @@
     const { data: { session } } = await _ctSb.auth.getSession();
     _ctUser = session && session.user;
     _ctToken = session && session.access_token;
-    if (_ctUser) {
-      ctBootstrap();
-    } else {
-      ctShowAuthLanding();
-    }
+    // Always go to dashboard — guest mode uses localStorage
+    ctBootstrap();
   }
 
   window.ctOpenLoginModal = function () {
@@ -132,27 +130,59 @@
   async function ctBootstrap() {
     document.getElementById('ctnav').style.display = 'flex';
     // Avatar + label
-    const email = (_ctUser && _ctUser.email) || '';
-    const initials = (email.match(/^(.)(?:.*?[.\-_](.))?/) || []).slice(1).join('').toUpperCase() || '?';
-    document.getElementById('ctnav-avatar').textContent = initials;
-    document.getElementById('ctnav-user-label').textContent = email;
+    if (_ctUser) {
+      const email = _ctUser.email || '';
+      const initials = (email.match(/^(.)(?:.*?[.\-_](.))?/) || []).slice(1).join('').toUpperCase() || '?';
+      document.getElementById('ctnav-avatar').textContent = initials;
+      document.getElementById('ctnav-user-label').textContent = email;
+    } else {
+      document.getElementById('ctnav-avatar').textContent = '👤';
+      document.getElementById('ctnav-user-label').textContent = 'Se connecter';
+      // In guest mode, clicking user badge opens login instead of logout
+      document.getElementById('ctnav-user-badge').onclick = function () { ctOpenLoginModal(); };
+    }
     // Charger en parallèle
     await Promise.all([ctLoadBailleur(), ctLoadBiens(), ctLoadContrats()]);
     ctShowScreen('ctscreen-dashboard');
   }
 
+  // ─── LOCAL STORAGE HELPERS (guest mode) ─────────────────────────
+  const CT_LS_BAILLEUR = 'ct_guest_bailleur';
+  const CT_LS_BIENS = 'ct_guest_biens';
+  const CT_LS_CONTRATS = 'ct_guest_contrats';
+
+  function ctLsGet(key, fallback) {
+    try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }
+    catch (_) { return fallback; }
+  }
+  function ctLsSet(key, val) {
+    try { localStorage.setItem(key, JSON.stringify(val)); } catch (_) {}
+  }
+
   // ─── DATA LOADERS ───────────────────────────────────────────────
   async function ctLoadBailleur() {
-    const r = await ctApi('bailleur-fetch');
-    ctBailleur = (r && r.bailleur) || {};
+    if (_ctUser) {
+      const r = await ctApi('bailleur-fetch');
+      ctBailleur = (r && r.bailleur) || {};
+    } else {
+      ctBailleur = ctLsGet(CT_LS_BAILLEUR, {});
+    }
   }
   async function ctLoadBiens() {
-    const r = await ctApi('biens-fetch');
-    ctBiens = (r && r.biens) || [];
+    if (_ctUser) {
+      const r = await ctApi('biens-fetch');
+      ctBiens = (r && r.biens) || [];
+    } else {
+      ctBiens = ctLsGet(CT_LS_BIENS, []);
+    }
   }
   async function ctLoadContrats() {
-    const r = await ctApi('contrats-fetch');
-    ctContrats = (r && r.contrats) || [];
+    if (_ctUser) {
+      const r = await ctApi('contrats-fetch');
+      ctContrats = (r && r.contrats) || [];
+    } else {
+      ctContrats = ctLsGet(CT_LS_CONTRATS, []);
+    }
   }
 
   // ─── UTILS ──────────────────────────────────────────────────────
@@ -276,11 +306,16 @@
   }
 
   window.ctTogglePay = async function (id, field, newVal) {
-    const r = await ctApi('contrat-pay', { contratId: id, field, value: newVal });
-    if (r && r.contrat) {
+    if (_ctUser) {
+      const r = await ctApi('contrat-pay', { contratId: id, field, value: newVal });
+      if (r && r.contrat) {
+        const idx = ctContrats.findIndex(c => c.id === id);
+        if (idx >= 0) ctContrats[idx] = r.contrat;
+        ctRenderDashboard();
+      }
+    } else {
       const idx = ctContrats.findIndex(c => c.id === id);
-      if (idx >= 0) ctContrats[idx] = r.contrat;
-      ctRenderDashboard();
+      if (idx >= 0) { ctContrats[idx][field] = newVal; ctLsSet(CT_LS_CONTRATS, ctContrats); ctRenderDashboard(); }
     }
   };
 
@@ -291,19 +326,31 @@
     if (!c.caution_encaissee) { field = 'caution_encaissee'; value = true; }
     else if (!c.caution_rendue) { field = 'caution_rendue'; value = true; }
     else { field = 'caution_encaissee'; value = false; }  // reset
-    const r = await ctApi('contrat-pay', { contratId: id, field, value });
-    if (r && r.contrat) {
-      // Re-fetch pour être safe (champs multiples peuvent changer)
-      await ctLoadContrats();
+    if (_ctUser) {
+      const r = await ctApi('contrat-pay', { contratId: id, field, value });
+      if (r && r.contrat) {
+        await ctLoadContrats();
+        ctRenderDashboard();
+      }
+    } else {
+      c[field] = value;
+      if (field === 'caution_encaissee' && !value) { c.caution_rendue = false; }
+      ctLsSet(CT_LS_CONTRATS, ctContrats);
       ctRenderDashboard();
     }
   };
 
   window.ctDeleteContract = async function (id) {
     if (!confirm('Supprimer ce contrat ? Cette action est irréversible.')) return;
-    const r = await ctApi('contrat-delete', { contratId: id });
-    if (r && r.ok) {
+    if (_ctUser) {
+      const r = await ctApi('contrat-delete', { contratId: id });
+      if (r && r.ok) {
+        ctContrats = ctContrats.filter(c => c.id !== id);
+        ctRenderDashboard();
+      }
+    } else {
       ctContrats = ctContrats.filter(c => c.id !== id);
+      ctLsSet(CT_LS_CONTRATS, ctContrats);
       ctRenderDashboard();
     }
   };
@@ -627,24 +674,44 @@
     if (!b.nom_interne) { alert('Le nom interne est obligatoire'); return; }
     if (!b.capacite_max) { alert('La capacité max est obligatoire'); return; }
 
-    const r = await ctApi('bien-upsert', { bien: b });
-    if (r && r.bien) {
-      ctTempBien = null;
-      await ctLoadBiens();
-      ctSelectedBienId = r.bien.id;
-      ctRenderBiens();
+    if (_ctUser) {
+      const r = await ctApi('bien-upsert', { bien: b });
+      if (r && r.bien) {
+        ctTempBien = null;
+        await ctLoadBiens();
+        ctSelectedBienId = r.bien.id;
+        ctRenderBiens();
+      } else {
+        alert('Erreur : ' + (r && r.error));
+      }
     } else {
-      alert('Erreur : ' + (r && r.error));
+      // Guest mode — save to localStorage
+      if (!b.id) b.id = 'local_' + Date.now();
+      const idx = ctBiens.findIndex(x => x.id === b.id);
+      if (idx >= 0) ctBiens[idx] = b; else ctBiens.push(b);
+      ctLsSet(CT_LS_BIENS, ctBiens);
+      ctTempBien = null;
+      ctSelectedBienId = b.id;
+      ctRenderBiens();
+      ctShowSavePopup();
     }
   };
 
   window.ctDeleteBien = async function () {
     if (!confirm('Supprimer ce bien ? Les contrats existants liés à ce bien resteront dans votre dashboard.')) return;
-    const r = await ctApi('bien-delete', { bienId: ctSelectedBienId });
-    if (r && r.ok) {
+    if (_ctUser) {
+      const r = await ctApi('bien-delete', { bienId: ctSelectedBienId });
+      if (r && r.ok) {
+        ctTempBien = null;
+        ctSelectedBienId = null;
+        await ctLoadBiens();
+        ctRenderBiens();
+      }
+    } else {
+      ctBiens = ctBiens.filter(b => b.id !== ctSelectedBienId);
+      ctLsSet(CT_LS_BIENS, ctBiens);
       ctTempBien = null;
       ctSelectedBienId = null;
-      await ctLoadBiens();
       ctRenderBiens();
     }
   };
@@ -715,14 +782,23 @@
     };
     if (!payload.prenom || !payload.nom) { alert('Prénom et nom obligatoires'); return; }
     if (!payload.email) { alert('Email obligatoire'); return; }
-    const r = await ctApi('bailleur-upsert', { bailleur: payload });
-    if (r && r.bailleur) {
-      ctBailleur = r.bailleur;
+    if (_ctUser) {
+      const r = await ctApi('bailleur-upsert', { bailleur: payload });
+      if (r && r.bailleur) {
+        ctBailleur = r.bailleur;
+        ctRenderSettings();
+        const btn = document.querySelector('#ctsettings-body .btn.accent');
+        if (btn) { const o = btn.textContent; btn.textContent = '✓ Enregistré'; btn.style.background = 'var(--ct-green)'; btn.style.borderColor = 'var(--ct-green)'; setTimeout(() => { btn.textContent = o; btn.style.background = ''; btn.style.borderColor = ''; }, 1500); }
+      } else alert('Erreur : ' + (r && r.error));
+    } else {
+      // Guest mode
+      ctBailleur = payload;
+      ctLsSet(CT_LS_BAILLEUR, ctBailleur);
       ctRenderSettings();
-      // Petite notif
       const btn = document.querySelector('#ctsettings-body .btn.accent');
       if (btn) { const o = btn.textContent; btn.textContent = '✓ Enregistré'; btn.style.background = 'var(--ct-green)'; btn.style.borderColor = 'var(--ct-green)'; setTimeout(() => { btn.textContent = o; btn.style.background = ''; btn.style.borderColor = ''; }, 1500); }
-    } else alert('Erreur : ' + (r && r.error));
+      ctShowSavePopup();
+    }
   };
 
   // ─── WIZARD NOUVEAU CONTRAT ─────────────────────────────────────
@@ -1203,12 +1279,23 @@ ${html}
       numero_declaration_mairie: bien.numero_declaration_mairie
     } : null;
     if (ctEditingContratId) d.id = ctEditingContratId;
-    const r = await ctApi('contrat-upsert', { contrat: d });
-    if (r && r.contrat) {
-      await ctLoadContrats();
-      ctShowScreen('ctscreen-dashboard');
+    if (_ctUser) {
+      const r = await ctApi('contrat-upsert', { contrat: d });
+      if (r && r.contrat) {
+        await ctLoadContrats();
+        ctShowScreen('ctscreen-dashboard');
+      } else {
+        alert('Erreur : ' + (r && r.error));
+      }
     } else {
-      alert('Erreur : ' + (r && r.error));
+      // Guest mode
+      if (!d.id) d.id = 'local_' + Date.now();
+      d.created_at = d.created_at || new Date().toISOString();
+      const idx = ctContrats.findIndex(c => c.id === d.id);
+      if (idx >= 0) ctContrats[idx] = d; else ctContrats.push(d);
+      ctLsSet(CT_LS_CONTRATS, ctContrats);
+      ctShowScreen('ctscreen-dashboard');
+      ctShowSavePopup();
     }
   };
 
@@ -1216,6 +1303,7 @@ ${html}
   window.ctUploadSigned = async function (contratId, input) {
     const file = input.files && input.files[0];
     if (!file) return;
+    if (!_ctUser) { ctOpenLoginModal(); return; }
     const path = `${_ctUser.id}/${contratId}/contrat-signe-${Date.now()}.${file.name.split('.').pop()}`;
     const { error } = await _ctSb.storage
       .from('contrats-signes')
@@ -1233,6 +1321,43 @@ ${html}
     const r = await ctApi('contrat-sign-signed-url', { path });
     if (r && r.url) window.open(r.url, '_blank');
   };
+
+  // ─── SAVE POPUP (guest mode — prompt to create account) ─────────
+  let _ctSavePopupShown = false;
+  function ctShowSavePopup() {
+    if (_ctUser || _ctSavePopupShown) return;
+    _ctSavePopupShown = true;
+    const el = document.getElementById('ct-save-popup');
+    if (el) el.style.display = 'flex';
+    // Auto-hide after 8s
+    setTimeout(() => { if (el) el.style.display = 'none'; _ctSavePopupShown = false; }, 8000);
+  }
+  window.ctDismissSavePopup = function () {
+    const el = document.getElementById('ct-save-popup');
+    if (el) el.style.display = 'none';
+    _ctSavePopupShown = false;
+  };
+  window.ctSavePopupLogin = function () {
+    ctDismissSavePopup();
+    ctOpenLoginModal();
+  };
+
+  // Show save popup on tab switch / page leave if guest has local data
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden && !_ctUser) {
+      const hasData = ctBiens.length > 0 || ctContrats.length > 0 || (ctBailleur && ctBailleur.nom);
+      if (hasData) ctShowSavePopup();
+    }
+  });
+  window.addEventListener('beforeunload', function (e) {
+    if (!_ctUser) {
+      const hasData = ctBiens.length > 0 || ctContrats.length > 0 || (ctBailleur && ctBailleur.nom);
+      if (hasData && !localStorage.getItem('ct_guest_dismiss_warn')) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    }
+  });
 
   // ─── INIT ───────────────────────────────────────────────────────
   function ctReady() {

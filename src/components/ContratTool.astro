@@ -689,8 +689,8 @@
     </div>
   </nav>
 
-  <!-- ─── AUTH LANDING (invité) ─── -->
-  <div class="screen active" id="ctscreen-auth">
+  <!-- ─── AUTH LANDING (invité) — hidden by default, tool loads directly ─── -->
+  <div class="screen" id="ctscreen-auth">
     <div class="auth-wrap">
       <div class="tag" style="justify-content:center">Générateur de contrat de location saisonnière</div>
       <h1 class="auth-title">Créez votre <em>contrat</em> en 2 minutes</h1>
@@ -874,6 +874,17 @@
     </div>
   </div>
 
+  <!-- ─── SAVE POPUP (guest mode — nudge to create account) ─── -->
+  <div id="ct-save-popup" style="display:none;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:10000;background:var(--ct-accent);color:#fff;padding:16px 24px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.2);font-family:var(--ct-mono);font-size:13px;align-items:center;gap:16px;max-width:560px;width:calc(100% - 48px)">
+    <div style="flex:1">
+      <strong style="display:block;margin-bottom:4px">Vos donnees sont stockees localement</strong>
+      <span style="font-size:11px;opacity:0.8">Connectez-vous pour synchroniser entre vos appareils et ne rien perdre.</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-shrink:0;margin-top:10px">
+      <button onclick="ctSavePopupLogin()" style="background:#fff;color:var(--ct-accent);border:none;padding:8px 16px;border-radius:8px;font-family:var(--ct-mono);font-size:12px;font-weight:600;cursor:pointer">Se connecter</button>
+      <button onclick="ctDismissSavePopup()" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:8px 12px;border-radius:8px;font-family:var(--ct-mono);font-size:12px;cursor:pointer">Plus tard</button>
+    </div>
+  </div>
 
 </div>
 

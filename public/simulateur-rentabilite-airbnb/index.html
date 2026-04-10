@@ -384,6 +384,13 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
   </div>
 </nav>
+<div style="border-top:1px solid var(--border);background:rgba(247,246,243,0.92)">
+  <div style="max-width:1120px;margin:0 auto;padding:10px 40px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none">
+    <a href="/simulateur-rentabilite-airbnb" style="font-size:12px;font-weight:500;color:#fff;padding:7px 14px;border:1px solid #2b2d2b;border-radius:100px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;background:#2b2d2b;text-decoration:none"><span style="width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0"></span> Simulateur rentabilité LCD</a>
+    <a href="/facture-location-saisonniere" style="font-size:12px;font-weight:500;color:#8a8985;padding:7px 14px;border:1px solid #e5e3de;border-radius:100px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;background:transparent;text-decoration:none;transition:all 0.15s"><span style="width:6px;height:6px;border-radius:50%;background:#3fbd71;flex-shrink:0"></span> Facture LCD</a>
+    <a href="/contrat-location-saisonniere" style="font-size:12px;font-weight:500;color:#8a8985;padding:7px 14px;border:1px solid #e5e3de;border-radius:100px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;background:transparent;text-decoration:none;transition:all 0.15s"><span style="width:6px;height:6px;border-radius:50%;background:#3fbd71;flex-shrink:0"></span> Contrat LCD</a>
+  </div>
+</div>
 
 <!-- LANDING PAGE SIMULATEUR -->
 <div class="screen active" id="screen-auth">
@@ -560,6 +567,21 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     <div style="text-align:center">
       <button class="auth-btn" onclick="newSimulation()" style="border-radius:10px;font-family:var(--font-body);font-size:15px;font-weight:600;letter-spacing:0;text-transform:none;padding:14px 32px;display:inline-block;width:auto">Lancer une simulation gratuite →</button>
     </div>
+
+    <!-- Newsletter -->
+    <div style="background:#2b2d2b;border-radius:14px;padding:36px 40px;margin:48px 0 0;color:#e8e4dc">
+      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(63,189,113,0.15);color:#3fbd71;font-size:9.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 11px;border-radius:20px;border:1px solid rgba(63,189,113,0.3);margin-bottom:14px">Guide PDF offert + Newsletter</div>
+      <div style="font-family:var(--font-display);font-size:23px;font-weight:700;color:#fff;line-height:1.22;margin-bottom:8px">Recevez ma méthode LCD complète, gratuitement</div>
+      <p style="font-size:13px;color:#6e6b65;line-height:1.6;margin-bottom:18px">Le guide PDF en 10 étapes pour atteindre <strong style="color:#e8e4dc">93–97% d'occupation</strong> — la méthode que j'applique sur mes 9 biens.</p>
+      <form id="sim-nl-form" style="display:flex;flex-direction:column;gap:8px">
+        <input type="text" placeholder="Prénom" required style="padding:12px 14px;background:rgba(255,255,255,0.07);border:1px solid #3e403e;border-radius:8px;color:#e8e4dc;font-family:var(--font-body);font-size:13px;outline:none;width:100%;box-sizing:border-box">
+        <div style="display:flex;gap:0">
+          <input type="email" placeholder="votre@email.com" required style="padding:12px 14px;background:rgba(255,255,255,0.07);border:1px solid #3e403e;border-radius:8px 0 0 8px;border-right:none;color:#e8e4dc;font-family:var(--font-body);font-size:13px;outline:none;flex:1;box-sizing:border-box">
+          <button type="submit" style="background:#3fbd71;color:#fff;border:none;font-family:var(--font-body);font-size:13px;font-weight:700;padding:12px 20px;border-radius:0 8px 8px 0;cursor:pointer;white-space:nowrap">Recevoir le guide</button>
+        </div>
+      </form>
+      <p style="font-size:10.5px;color:#6e6b65;margin-top:10px;text-align:center">Désinscription en 1 clic · Email jamais partagé</p>
+    </div>
   </div>
 </div>
 
@@ -614,8 +636,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         </div>
         <div class="sg">
           <div class="sg-header"><div class="sg-lw"><div class="sg-label">Prix d'achat net vendeur</div></div><div class="sg-val" id="v-prix">120k <em>€</em></div></div>
-          <input type="range" id="s-prix" min="40000" max="3000000" step="10000" value="120000" oninput="sv('prix',this.value);compute()">
-          <div class="sg-ticks"><span>40k€</span><span>3M€</span></div>
+          <input type="range" id="s-prix" min="40000" max="1500000" step="10000" value="120000" oninput="sv('prix',this.value);compute()">
+          <div class="sg-ticks"><span>40k€</span><span>1.5M€</span></div>
         </div>
 <!-- Notaire affiché dans total card --><span id="v-notaire" style="display:none">9 000 €</span><span id="notaire-hint" style="display:none"></span>
         <div class="sg">
@@ -633,8 +655,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         </div>
         <div class="sg" style="margin-bottom:18px">
           <div class="sg-header"><div><div class="sg-label">Budget travaux</div><div class="sg-hint" id="travaux-hint">Pré-rempli : 400€/m² × 35m²</div></div><div class="sg-val" id="v-travaux">14k <em>€</em></div></div>
-          <input type="range" id="s-travaux" min="0" max="1500000" step="5000" value="14000" oninput="sv('travaux',this.value);compute()">
-          <div class="sg-ticks"><span>0€</span><span>1.5M€</span></div>
+          <input type="range" id="s-travaux" min="0" max="1200000" step="5000" value="14000" oninput="sv('travaux',this.value);compute()">
+          <div class="sg-ticks"><span>0€</span><span>1.2M€</span></div>
         </div>
         <div style="margin-bottom:18px">
           <div class="sg-label" style="margin-bottom:8px">Ameublement</div>
@@ -677,13 +699,13 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         <div class="sec-t"><span class="sec-num">02</span> Le bien (global)</div>
         <div class="sg">
           <div class="sg-header"><div class="sg-label">Prix d'achat total</div><div class="sg-val" id="v-prix-m">200k <em>€</em></div></div>
-          <input type="range" id="s-prix-m" min="40000" max="3000000" step="10000" value="200000" oninput="sv2('prix-m',this.value);computeMulti()">
+          <input type="range" id="s-prix-m" min="40000" max="1500000" step="10000" value="200000" oninput="sv2('prix-m',this.value);computeMulti()">
           <div class="sg-ticks"><span>40k€</span><span>3M€</span></div>
         </div>
 <span id="v-notaire-m" style="display:none">15 000 €</span>
         <div class="sg">
           <div class="sg-header"><div><div class="sg-label">Budget travaux global</div></div><div class="sg-val" id="v-travaux-m">30k <em>€</em></div></div>
-          <input type="range" id="s-travaux-m" min="0" max="1500000" step="5000" value="30000" oninput="sv2('travaux-m',this.value);computeMulti()">
+          <input type="range" id="s-travaux-m" min="0" max="1200000" step="5000" value="30000" oninput="sv2('travaux-m',this.value);computeMulti()">
           <div class="sg-ticks"><span>0€</span><span>1.5M€</span></div>
         </div>
         <div class="sg">
@@ -708,7 +730,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
       <div class="sec-t"><span class="sec-num" id="fin-num">02</span> Le financement</div>
       <div class="sg">
         <div class="sg-header"><div class="sg-label">Apport personnel</div><div class="sg-val" id="v-apport">15k <em>€</em></div></div>
-        <input type="range" id="s-apport" min="0" max="1500000" step="5000" value="15000" oninput="sv('apport',this.value);computeActive()">
+        <input type="range" id="s-apport" min="0" max="800000" step="5000" value="15000" oninput="sv('apport',this.value);computeActive()">
         <div class="sg-ticks"><span>0€</span><span>1.5M€</span></div>
       </div>
       <div class="sg">
@@ -768,29 +790,29 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
       <div>
         <div class="sg-label" style="margin-bottom:12px">Charges fixes mensuelles</div>
         <div class="cg">
-          <div class="ci"><div class="ci-label">Eau</div><div class="ci-val" id="v-eau">20 <em>€/mois</em></div><input type="range" id="s-eau" min="0" max="300" step="5" value="20" oninput="sv('eau',this.value);computeActive()"></div>
-          <div class="ci"><div class="ci-label">Électricité</div><div class="ci-val" id="v-elec">50 <em>€/mois</em></div><input type="range" id="s-elec" min="0" max="800" step="10" value="50" oninput="sv('elec',this.value);computeActive()"></div>
-          <div class="ci"><div class="ci-label">Internet</div><div class="ci-val" id="v-internet">30 <em>€/mois</em></div><input type="range" id="s-internet" min="0" max="200" step="5" value="30" oninput="sv('internet',this.value);computeActive()"></div>
-          <div class="ci"><div class="ci-label">Consommables</div><div class="ci-val" id="v-consommables">30 <em>€/mois</em></div><input type="range" id="s-consommables" min="0" max="300" step="5" value="30" oninput="sv('consommables',this.value);computeActive()"></div>
+          <div class="ci"><div class="ci-label">Eau</div><div class="ci-val" id="v-eau">15 <em>€/mois</em></div><input type="range" id="s-eau" min="0" max="300" step="5" value="15" oninput="sv('eau',this.value);computeActive()"></div>
+          <div class="ci"><div class="ci-label">Électricité</div><div class="ci-val" id="v-elec">35 <em>€/mois</em></div><input type="range" id="s-elec" min="0" max="800" step="10" value="35" oninput="sv('elec',this.value);computeActive()"></div>
+          <div class="ci"><div class="ci-label">Internet</div><div class="ci-val" id="v-internet">20 <em>€/mois</em></div><input type="range" id="s-internet" min="0" max="200" step="5" value="20" oninput="sv('internet',this.value);computeActive()"></div>
+          <div class="ci"><div class="ci-label">Consommables</div><div class="ci-val" id="v-consommables">20 <em>€/mois</em></div><input type="range" id="s-consommables" min="0" max="300" step="5" value="20" oninput="sv('consommables',this.value);computeActive()"></div>
           <div class="ci">
             <div class="ci-label">
               Logiciel
             </div>
-            <div class="ci-val" id="v-logiciel">40 <em>€/mois</em></div>
-            <input type="range" id="s-logiciel" min="0" max="300" step="5" value="40" oninput="sv('logiciel',this.value);computeActive()">
+            <div class="ci-val" id="v-logiciel">30 <em>€/mois</em></div>
+            <input type="range" id="s-logiciel" min="0" max="300" step="5" value="30" oninput="sv('logiciel',this.value);computeActive()">
           </div>
           <div class="ci">
             <div class="ci-label">Comptable</div>
-            <div class="ci-val" id="v-comptable">60 <em>€/mois</em></div>
-            <input type="range" id="s-comptable" min="0" max="500" step="10" value="60" oninput="sv('comptable',this.value);computeActive()">
+            <div class="ci-val" id="v-comptable">40 <em>€/mois</em></div>
+            <input type="range" id="s-comptable" min="0" max="500" step="10" value="40" oninput="sv('comptable',this.value);computeActive()">
           </div>
-          <div class="ci"><div class="ci-label">Taxe foncière</div><div class="ci-val" id="v-fonciere">42 <em>€/mois</em></div><input type="range" id="s-fonciere" min="0" max="800" step="5" value="42" oninput="sv('fonciere',this.value);computeActive()"></div>
-          <div class="ci"><div class="ci-label">Charges copro</div><div class="ci-val" id="v-copro">65 <em>€/mois</em></div><input type="range" id="s-copro" min="0" max="800" step="5" value="65" oninput="sv('copro',this.value);computeActive()"></div>
+          <div class="ci"><div class="ci-label">Taxe foncière</div><div class="ci-val" id="v-fonciere">30 <em>€/mois</em></div><input type="range" id="s-fonciere" min="0" max="800" step="5" value="30" oninput="sv('fonciere',this.value);computeActive()"></div>
+          <div class="ci"><div class="ci-label">Charges copro</div><div class="ci-val" id="v-copro">45 <em>€/mois</em></div><input type="range" id="s-copro" min="0" max="800" step="5" value="45" oninput="sv('copro',this.value);computeActive()"></div>
         </div>
       </div>
       <div class="sg" style="margin-top:16px">
-        <div class="sg-header"><div class="sg-label">Assurance PNO</div><div class="sg-val" id="v-assurance">18 <em>€/mois</em></div></div>
-        <input type="range" id="s-assurance" min="5" max="200" step="1" value="18" oninput="sv('assurance',this.value);computeActive()">
+        <div class="sg-header"><div class="sg-label">Assurance PNO</div><div class="sg-val" id="v-assurance">13 <em>€/mois</em></div></div>
+        <input type="range" id="s-assurance" min="5" max="200" step="1" value="13" oninput="sv('assurance',this.value);computeActive()">
         <div class="sg-ticks"><span>5€</span><span>200€</span></div>
       </div>
 
@@ -1596,6 +1618,26 @@ _initAuth();
       return;
     }
     hideTip();
+  });
+})();
+
+// Newsletter form
+(function(){
+  var f=document.getElementById('sim-nl-form');
+  if(!f)return;
+  f.addEventListener('submit',async function(e){
+    e.preventDefault();
+    var ins=f.querySelectorAll('input');
+    var fn=ins[0].value.trim(),em=ins[1].value.trim();
+    if(!fn||!em)return;
+    var btn=f.querySelector('button');
+    var orig=btn.textContent;
+    btn.disabled=true;btn.textContent='Envoi…';
+    try{
+      var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,firstName:fn})});
+      if(r.ok){btn.textContent='✓ Envoyé !';btn.style.background='#2b2d2b';ins.forEach(function(i){i.disabled=true;i.style.opacity='0.5'});}
+      else{btn.textContent='Erreur, réessayez';btn.disabled=false;setTimeout(function(){btn.textContent=orig},2000);}
+    }catch(_){btn.textContent='Erreur, réessayez';btn.disabled=false;setTimeout(function(){btn.textContent=orig},2000);}
   });
 })();
 </script>

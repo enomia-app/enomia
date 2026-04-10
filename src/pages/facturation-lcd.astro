@@ -1,0 +1,19 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+import FacturationTool from '../components/FacturationTool.astro';
+---
+
+<ToolLayout
+  title="Facturation LCD — Dashboard · Enomia"
+  description="Gérez toutes vos factures de location courte durée depuis un dashboard unique. Taxe de séjour automatique 30 000+ communes, mentions LMNP, export PDF gratuit."
+  canonical="https://enomia.app/facturation-lcd"
+  currentTool="facture"
+>
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px 48px;">
+    <FacturationTool />
+  </div>
+</ToolLayout>
+
+<style>
+  main { padding-top: 0; }
+</style>

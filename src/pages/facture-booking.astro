@@ -1,7 +1,6 @@
 ---
 export const prerender = false;
 import ToolLayout from '../layouts/ToolLayout.astro';
-import FacturationTool from '../components/FacturationTool.astro';
 
 const title = "Facture Booking.com — Comment l'obtenir & générateur gratuit";
 const description = "Facture Booking : comment l'obtenir côté voyageur, comment l'émettre côté hôte, comment récupérer la facture de commission. Générateur gratuit + modèle email de demande. Sans inscription.";
@@ -53,9 +52,24 @@ const canonical = "https://www.enomia.app/facture-booking";
     .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
     .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; }
     .related .rd { font-size: 12px; color: #8a8985; }
+    .hero-cta-block {
+      background: #2b2d2b; border-radius: 14px; padding: 36px 40px;
+      display: flex; align-items: center; justify-content: space-between; gap: 28px;
+      margin: 28px 0 8px; flex-wrap: wrap; color: #e8e4dc;
+    }
+    .hero-cta-block h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; color: #fff; }
+    .hero-cta-block p { font-size: 14px; opacity: 0.85; line-height: 1.55; margin: 0; }
+    .hero-cta-btn, .seo-body .hero-cta-btn, a.hero-cta-btn {
+      background: #fff; color: #2b2d2b; border: none; padding: 16px 28px;
+      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700;
+      border-radius: 10px; cursor: pointer; text-decoration: none; display: inline-block;
+      white-space: nowrap; box-shadow: 0 2px 8px rgba(0,0,0,0.1); flex-shrink: 0;
+    }
+    .hero-cta-btn:hover { opacity: 0.92; }
     @media (max-width: 700px) {
       .seo-wrap { padding: 24px 20px 0; }
       .intent-cards, .related { grid-template-columns: 1fr; }
+      .hero-cta-block { padding: 28px 24px; }
     }
   </style>
 
@@ -73,7 +87,13 @@ const canonical = "https://www.enomia.app/facture-booking";
       </div>
     </div>
 
-    <FacturationTool />
+    <div class="hero-cta-block">
+      <div>
+        <h3>Booking ne fournit pas la facture — créez la vôtre</h3>
+        <p>Générez une facture conforme en 2 minutes : taxe de séjour 30 000+ communes, mentions LMNP, export PDF. Mode de paiement "Booking.com" pré-intégré.</p>
+      </div>
+      <a href="/facturation-lcd" class="hero-cta-btn">+ Créer ma facture Booking →</a>
+    </div>
 
     <div class="seo-body">
       <h2>Facture Booking : 3 intentions, 3 chemins</h2>
@@ -186,6 +206,14 @@ const canonical = "https://www.enomia.app/facture-booking";
       <p>
         Sur votre facture, vous devez indiquer le <strong>montant total payé par le voyageur</strong> (prix affiché sur Booking), pas votre net vendeur. La commission que vous versez à Booking est votre charge, pas celle du voyageur.
       </p>
+
+      <div class="hero-cta-block" style="margin-top: 40px;">
+        <div>
+          <h3>Prêt à facturer vos réservations Booking ?</h3>
+          <p>Dashboard complet avec historique, stats et multi-biens. Mode de paiement "Booking.com" pré-intégré.</p>
+        </div>
+        <a href="/facturation-lcd" class="hero-cta-btn">Lancer le générateur →</a>
+      </div>
 
       <h2>Questions fréquentes sur la facture Booking</h2>
       <div class="faq">

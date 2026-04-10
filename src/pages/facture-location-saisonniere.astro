@@ -1,7 +1,6 @@
 ---
 export const prerender = false;
 import ToolLayout from '../layouts/ToolLayout.astro';
-import FacturationTool from '../components/FacturationTool.astro';
 
 const title = "Facture location saisonnière — Modèle & générateur gratuit LCD";
 const description = "Générez gratuitement vos factures de location saisonnière : calcul automatique de la taxe de séjour, TVA LMNP (art. 293 B), mentions obligatoires. Export PDF, sans inscription.";
@@ -45,9 +44,25 @@ const canonical = "https://www.enomia.app/facture-location-saisonniere";
     .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
     .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; color: #1a1a1a; }
     .related .rd { font-size: 12px; color: #8a8985; }
+    .hero-cta-block {
+      background: #2b2d2b; border-radius: 14px; padding: 36px 40px;
+      display: flex; align-items: center; justify-content: space-between; gap: 28px;
+      margin: 28px 0 8px; flex-wrap: wrap;
+      color: #e8e4dc;
+    }
+    .hero-cta-block h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; color: #fff; }
+    .hero-cta-block p { font-size: 14px; opacity: 0.85; line-height: 1.55; margin: 0; }
+    .hero-cta-btn, .seo-body .hero-cta-btn, a.hero-cta-btn {
+      background: #fff; color: #2b2d2b; border: none; padding: 16px 28px;
+      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700;
+      border-radius: 10px; cursor: pointer; text-decoration: none; display: inline-block;
+      white-space: nowrap; box-shadow: 0 2px 8px rgba(0,0,0,0.1); flex-shrink: 0;
+    }
+    .hero-cta-btn:hover { opacity: 0.92; }
     @media (max-width: 700px) {
       .seo-wrap { padding: 24px 20px 0; }
       .mentions-grid, .related { grid-template-columns: 1fr; }
+      .hero-cta-block { padding: 28px 24px; }
     }
   </style>
 
@@ -65,7 +80,13 @@ const canonical = "https://www.enomia.app/facture-location-saisonniere";
       </div>
     </div>
 
-    <FacturationTool />
+    <div class="hero-cta-block">
+      <div>
+        <h3>Générez votre première facture en 2 minutes</h3>
+        <p>Saisissez vos biens une fois. Taxe de séjour automatique pour 30 000+ communes. Numérotation chronologique, mentions LMNP, export PDF.</p>
+      </div>
+      <a href="/facturation-lcd" class="hero-cta-btn">+ Créer ma facture gratuite →</a>
+    </div>
 
     <div class="seo-body">
       <h2>Qui doit émettre une facture en location saisonnière ?</h2>
@@ -150,6 +171,14 @@ const canonical = "https://www.enomia.app/facture-location-saisonniere";
       <p>
         Vous pouvez travailler <strong>sans créer de compte</strong> (stockage local dans votre navigateur) ou vous connecter avec Google pour synchroniser vos factures entre appareils et les conserver en sécurité.
       </p>
+
+      <div class="hero-cta-block" style="margin-top: 40px;">
+        <div>
+          <h3>Prêt à facturer vos locations ?</h3>
+          <p>Dashboard complet : historique, stats, multi-biens. Connectez-vous avec Google pour synchroniser entre vos appareils.</p>
+        </div>
+        <a href="/facturation-lcd" class="hero-cta-btn">Lancer le générateur →</a>
+      </div>
 
       <h2>Questions fréquentes</h2>
       <div class="faq">

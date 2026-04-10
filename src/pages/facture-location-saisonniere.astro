@@ -51,7 +51,7 @@ const canonical = "https://www.enomia.app/facture-location-saisonniere";
       color: #e8e4dc;
     }
     .hero-cta-block h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; color: #fff; }
-    .hero-cta-block p { font-size: 14px; opacity: 0.85; line-height: 1.55; margin: 0; }
+    .hero-cta-block p { font-size: 14px; opacity: 0.85; line-height: 1.55; margin: 0; color: #e8e4dc; }
     .hero-cta-btn, .seo-body .hero-cta-btn, a.hero-cta-btn {
       background: #fff; color: #2b2d2b; border: none; padding: 16px 28px;
       font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700;
@@ -104,7 +104,7 @@ const canonical = "https://www.enomia.app/facture-location-saisonniere";
 
       <div class="callout">
         <strong>Cas particulier Airbnb & Booking</strong>
-        Attention : les reçus/récapitulatifs fournis par Airbnb ou Booking <strong>ne sont pas des factures</strong> au sens légal. Ils listent une transaction mais ne contiennent pas toutes les mentions obligatoires. C'est à vous, en tant qu'hôte, d'émettre la facture officielle si votre voyageur en fait la demande.
+        <p>Attention : les reçus/récapitulatifs fournis par Airbnb ou Booking <strong>ne sont pas des factures</strong> au sens légal. Ils listent une transaction mais ne contiennent pas toutes les mentions obligatoires. C'est à vous, en tant qu'hôte, d'émettre la facture officielle si votre voyageur en fait la demande.</p>
       </div>
 
       <h2>Les 10 mentions obligatoires sur une facture LCD</h2>
@@ -145,7 +145,7 @@ const canonical = "https://www.enomia.app/facture-location-saisonniere";
 
       <div class="callout">
         <strong>Meublé de tourisme classé : l'avantage fiscal à ne pas manquer</strong>
-        Un meublé de tourisme classé vous ouvre droit à un <strong>abattement de 71 %</strong> sur vos recettes en micro-BIC (contre 50 % en non classé depuis 2024). Le classement est valable 5 ans et coûte entre 120 et 250 € selon l'organisme.
+        <p>Un meublé de tourisme classé vous ouvre droit à un <strong>abattement de 71 %</strong> sur vos recettes en micro-BIC (contre 50 % en non classé depuis 2024). Le classement est valable 5 ans et coûte entre 120 et 250 € selon l'organisme.</p>
       </div>
 
       <h2>Caution, frais de ménage, extras : comment les afficher ?</h2>
@@ -215,44 +215,49 @@ const canonical = "https://www.enomia.app/facture-location-saisonniere";
           <div class="rt">Simulateur de rentabilité LCD</div>
           <div class="rd">Calculez la rentabilité d'un bien en location courte durée : cash-flow, rendement net, fiscalité LMNP</div>
         </a>
-        <a href="/blog">
-          <div class="rk">Blog</div>
-          <div class="rt">Guides Enomia</div>
-          <div class="rd">Fiscalité LMNP, gestion, acquisition, automatisation — tous nos guides pour les hôtes LCD</div>
+        <a href="/contrat-location-saisonniere">
+          <div class="rk">Outil gratuit</div>
+          <div class="rt">Contrat LCD</div>
+          <div class="rd">Générez un contrat de location saisonnière conforme — PDF + Word, bilingue FR/EN</div>
         </a>
       </div>
     </div>
 
     <!-- Newsletter -->
-    <div class="hero-cta-block" style="margin-top:48px;margin-bottom:40px">
-      <div style="flex:1">
-        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(63,189,113,0.15);color:#3fbd71;font-size:9.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 11px;border-radius:20px;border:1px solid rgba(63,189,113,0.3);margin-bottom:14px">Guide PDF offert</div>
-        <h3>Ma méthode LCD complète, gratuitement</h3>
-        <p>Le guide PDF en 10 étapes pour atteindre 93–97% d'occupation — la méthode que j'applique sur mes 9 biens.</p>
-        <form id="page-nl-form" style="display:flex;gap:0;margin-top:16px;max-width:440px">
-          <input type="text" placeholder="Prénom" required style="padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid #3e403e;border-radius:8px 0 0 8px;border-right:none;color:#e8e4dc;font-family:'Inter',sans-serif;font-size:13px;outline:none;width:120px">
-          <input type="email" placeholder="votre@email.com" required style="padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid #3e403e;border-top-right-radius:0;border-bottom-right-radius:0;color:#e8e4dc;font-family:'Inter',sans-serif;font-size:13px;outline:none;flex:1;border-right:none">
-          <button type="submit" style="background:#3fbd71;color:#fff;border:none;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;padding:11px 18px;border-radius:0 8px 8px 0;cursor:pointer;white-space:nowrap">Recevoir le guide</button>
-        </form>
-        <p style="font-size:10px;color:#6e6b65;margin-top:8px">Désinscription en 1 clic · Email jamais partagé</p>
+    <div style="background:linear-gradient(135deg,#2b2d2b 0%,#3a3c3a 100%);border-radius:14px;padding:36px 40px;color:#e8e4dc;margin-top:48px;margin-bottom:40px">
+      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(63,189,113,0.15);color:#3fbd71;font-size:9.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 11px;border-radius:20px;border:1px solid rgba(63,189,113,0.3);margin-bottom:14px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Guide PDF offert + Newsletter
       </div>
+      <div style="font-family:'Newsreader',Georgia,serif;font-size:23px;font-weight:700;color:#fff;line-height:1.22;margin-bottom:8px">Recevez ma Méthode 97%© LCD complète, gratuitement</div>
+      <p style="font-size:13px;color:#6e6b65;line-height:1.6;margin-bottom:18px">Le guide PDF en 10 étapes que j'ai utilisé pour atteindre <strong style="color:#e8e4dc">12–18% de rendement net</strong> sur 9 biens — expliqué de A à Z, sans jargon.</p>
+      <form id="page-nl-form" style="display:flex;flex-direction:column;gap:8px;max-width:440px">
+        <input type="text" placeholder="Prénom" required style="padding:12px 14px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#e8e4dc;font-family:'Inter',sans-serif;font-size:13px;outline:none;width:100%;box-sizing:border-box">
+        <div style="display:flex;gap:0">
+          <input type="email" placeholder="votre@email.com" required style="padding:12px 14px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:8px 0 0 8px;border-right:none;color:#e8e4dc;font-family:'Inter',sans-serif;font-size:13px;outline:none;flex:1;box-sizing:border-box">
+          <button type="submit" style="background:#3fbd71;color:#fff;border:none;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;padding:12px 20px;border-radius:0 8px 8px 0;cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;gap:5px">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Recevoir le guide
+          </button>
+        </div>
+      </form>
+      <p style="font-size:10.5px;color:rgba(255,255,255,0.4);margin-top:10px;text-align:center">Désinscription en 1 clic · Email jamais partagé</p>
     </div>
   </div>
   <script>
     (function(){
-      var f=document.getElementById('page-nl-form');
-      if(!f)return;
+      var f=document.getElementById('page-nl-form');if(!f)return;
       f.addEventListener('submit',async function(e){
         e.preventDefault();
         var ins=f.querySelectorAll('input'),fn=ins[0].value.trim(),em=ins[1].value.trim();
         if(!fn||!em)return;
-        var btn=f.querySelector('button'),orig=btn.textContent;
+        var btn=f.querySelector('button'),orig=btn.innerHTML;
         btn.disabled=true;btn.textContent='Envoi…';
         try{
           var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,firstName:fn})});
           if(r.ok){btn.textContent='✓ Envoyé !';btn.style.background='#2b2d2b';ins.forEach(function(i){i.disabled=true;i.style.opacity='0.5'});}
-          else{btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.textContent=orig},2000);}
-        }catch(_){btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.textContent=orig},2000);}
+          else{btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.innerHTML=orig},2000);}
+        }catch(_){btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.innerHTML=orig},2000);}
       });
     })();
   </script>

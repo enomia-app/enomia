@@ -91,6 +91,7 @@
   .fact-wrap td.td-actions { display: flex; gap: 6px; align-items: center; }
   .fact-wrap .td-client-name { font-weight: 500; color: var(--fa-text); font-size: 13px; line-height: 1.3; }
   .fact-wrap .td-client-email { font-size: 10px; color: var(--fa-muted2); }
+  .fact-wrap .td-bien { font-size: 12px; color: var(--fa-text2); max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .fact-wrap .td-stay { font-size: 11px; color: var(--fa-muted); line-height: 1.6; }
   .fact-wrap .td-stay strong { display: block; color: var(--fa-text2); font-weight: 400; font-size: 12px; }
 
@@ -239,23 +240,27 @@
     gap: 14px; margin-top: 20px;
   }
   .fact-wrap .bien-card {
-    background: var(--fa-mid); border: 1px solid var(--fa-border); border-radius: 6px;
-    padding: 18px; transition: border-color 0.18s;
+    background: var(--fa-card); border: 1px solid var(--fa-border); border-radius: 8px;
+    padding: 20px; transition: border-color 0.18s, box-shadow 0.18s;
+    display: flex; flex-direction: column; gap: 0;
   }
-  .fact-wrap .bien-card:hover { border-color: var(--fa-accent); }
-  .fact-wrap .bien-card-name { font-family: var(--fa-display); font-size: 16px; font-weight: 700; color: var(--fa-text); margin-bottom: 5px; }
-  .fact-wrap .bien-card-adresse { font-size: 11px; color: var(--fa-muted2); margin-bottom: 9px; }
-  .fact-wrap .bien-card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 11px; }
-  .fact-wrap .bien-tag {
-    font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 3px 7px; background: var(--fa-mid2); color: var(--fa-muted); border: 1px solid var(--fa-border); border-radius: 2px;
+  .fact-wrap .bien-card:hover { border-color: var(--fa-accent); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+  .fact-wrap .bien-card-name { font-family: var(--fa-mono); font-size: 14px; font-weight: 600; color: var(--fa-text); margin-bottom: 4px; letter-spacing: -0.01em; }
+  .fact-wrap .bien-card-adresse { font-size: 12px; color: var(--fa-muted2); margin-bottom: 10px; line-height: 1.4; }
+  .fact-wrap .bien-card-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; font-size: 11px; color: var(--fa-muted); }
+  .fact-wrap .bien-meta-item { white-space: nowrap; }
+  .fact-wrap .bien-meta-sep { color: var(--fa-border); }
+  .fact-wrap .bien-card-footer {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    padding-top: 12px; border-top: 1px solid var(--fa-border); margin-top: auto;
   }
-  .fact-wrap .bien-card-taxe {
-    font-size: 11px; color: var(--fa-text2);
-    padding-top: 9px; border-top: 1px solid var(--fa-border);
+  .fact-wrap .bien-taxe-badge {
+    font-size: 11px; font-weight: 500; color: var(--fa-green);
+    background: rgba(63,189,113,0.1); padding: 4px 10px; border-radius: 20px;
+    white-space: nowrap;
   }
-  .fact-wrap .bien-card-taxe strong { color: var(--fa-text); }
-  .fact-wrap .bien-card-actions { display: flex; gap: 6px; margin-top: 11px; }
+  .fact-wrap .bien-taxe-badge--unknown { color: var(--fa-muted2); background: var(--fa-mid2); }
+  .fact-wrap .bien-card-actions { display: flex; gap: 6px; }
 
   .fact-wrap .legal-disclaimer {
     font-size: 10px; color: var(--fa-muted2);
@@ -308,17 +313,11 @@
     font-size: 12px; line-height: 1.6;
     border: 1px solid #e5e3de; border-radius: 4px;
   }
-  .fact-wrap .inv-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 44px; }
-  .fact-wrap .inv-logo-placeholder {
-    width: 64px; height: 64px; border: 2px dashed #ddd; border-radius: 4px;
-    display: flex; align-items: center; justify-content: center;
-    color: #bbb; font-size: 9px; text-align: center; line-height: 1.4;
-  }
-  .fact-wrap .inv-issuer { text-align: right; }
-  .fact-wrap .inv-issuer .name { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 3px; }
-  .fact-wrap .inv-issuer .detail { font-size: 11px; color: #555; line-height: 1.7; }
+  .fact-wrap .inv-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 36px; padding-bottom: 24px; border-bottom: 1px solid #e8e6e1; }
+  .fact-wrap .inv-issuer-left .name { font-size: 15px; font-weight: 700; color: #111; margin-bottom: 4px; letter-spacing: -0.01em; }
+  .fact-wrap .inv-issuer-left .detail { font-size: 11px; color: #555; line-height: 1.7; }
+  .fact-wrap .inv-doc-ref { text-align: right; }
   .fact-wrap .inv-title-block { margin-bottom: 28px; padding-bottom: 18px; border-bottom: 2px solid #2b2d2b; }
-  .fact-wrap .inv-title-block h1 { font-size: 21px; font-weight: 700; color: #111; letter-spacing: 0.02em; margin-bottom: 12px; }
   .fact-wrap .inv-meta { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
   .fact-wrap .im-label { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 3px; }
   .fact-wrap .im-val { font-size: 12px; color: #333; font-weight: 500; }
@@ -381,7 +380,7 @@
     .fact-wrap .sg-row, .fact-wrap .sg-row-3, .fact-wrap .extra-row { grid-template-columns: 1fr; }
     .fact-wrap .inv-meta { grid-template-columns: 1fr 1fr; }
     .fact-wrap .inv-header { flex-direction: column; gap: 14px; }
-    .fact-wrap .inv-issuer { text-align: left; }
+    .fact-wrap .inv-doc-ref { text-align: left; }
     .fact-wrap .invoice-doc { padding: 28px 18px; }
     .fact-wrap .modal-body { padding: 24px; }
   }
@@ -431,15 +430,15 @@
       <div class="filter-row">
         <span class="filter-label">Exercice</span>
         <div class="mode-tabs">
-          <button class="mode-tab" onclick="fFilterYear(2024, this)">2024</button>
-          <button class="mode-tab on" onclick="fFilterYear(2025, this)">2025</button>
-          <button class="mode-tab" onclick="fFilterYear(2026, this)">2026</button>
+          <button class="mode-tab on" onclick="fFilterYear(2026, this)">2026</button>
+          <button class="mode-tab" onclick="fFilterYear(2027, this)">2027</button>
+          <button class="mode-tab" onclick="fFilterYear(2028, this)">2028</button>
         </div>
       </div>
 
       <div class="stats-bar">
         <div class="stat-card">
-          <div class="stat-card-l">Total encaissé <span id="fstats-year">2025</span></div>
+          <div class="stat-card-l">Total encaissé <span id="fstats-year">2026</span></div>
           <div class="stat-card-v" id="fstat-total">— €</div>
           <div class="stat-card-sub">factures payées uniquement</div>
         </div>
@@ -868,7 +867,7 @@ if (!window.__factInit) {
   let finvoices = JSON.parse(localStorage.getItem('lcd_invoices') || '[]');
   let fbiens = JSON.parse(localStorage.getItem('lcd_biens') || '[]');
   let fsettings = JSON.parse(localStorage.getItem('lcd_settings') || '{}');
-  let fcurrentYear = 2025;
+  let fcurrentYear = 2026;
   let feditingId = null;
   let feditingBienId = null;
 
@@ -970,9 +969,10 @@ if (!window.__factInit) {
 
   window.fLogin = async function() {
     localStorage.setItem('fact_expecting_signin', '1');
+    const redirectTo = window.location.origin + '/facturation-lcd';
     await _fsb.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: window.location.href, queryParams: { prompt: 'select_account' } }
+      options: { redirectTo, queryParams: { prompt: 'select_account' } }
     });
   };
   window.fLogout = async function() {
@@ -1049,21 +1049,26 @@ if (!window.__factInit) {
     }
     c.innerHTML = fbiens.map(b => {
       const t = getTaxeRate(b.ville, b.categorie);
-      const str = t
+      const taxeBadge = t
         ? (t.unite === '%' ? `${t.taux.toFixed(2)} % du loyer` : `${t.taux.toFixed(2)} €/pers/nuit`)
-        : 'Ville non répertoriée';
+        : 'Non répertoriée';
+      const taxeBadgeClass = t ? 'bien-taxe-badge' : 'bien-taxe-badge bien-taxe-badge--unknown';
       return `<div class="bien-card">
         <div class="bien-card-name">${b.nom}</div>
         <div class="bien-card-adresse">${b.adresse || '—'}</div>
-        <div class="bien-card-tags">
-          <span class="bien-tag">${b.ville || '—'}</span>
-          <span class="bien-tag">${b.categorie || ''}</span>
-          <span class="bien-tag">${b.capacite || '?'} pers.</span>
+        <div class="bien-card-meta">
+          <span class="bien-meta-item">${b.ville || '—'}</span>
+          <span class="bien-meta-sep">/</span>
+          <span class="bien-meta-item">${b.categorie || 'Non classé'}</span>
+          <span class="bien-meta-sep">/</span>
+          <span class="bien-meta-item">${b.capacite || '?'} pers.</span>
         </div>
-        <div class="bien-card-taxe">Taxe de séjour : <strong>${str}</strong></div>
-        <div class="bien-card-actions">
-          <button class="sim-card-btn" onclick="fOpenBienModal('${b.id}')">Modifier</button>
-          <button class="sim-card-btn del" onclick="fDeleteBien('${b.id}')">×</button>
+        <div class="bien-card-footer">
+          <span class="${taxeBadgeClass}">Taxe : ${taxeBadge}</span>
+          <div class="bien-card-actions">
+            <button class="btn-sm" onclick="fOpenBienModal('${b.id}')">Modifier</button>
+            <button class="btn-sm del" onclick="fDeleteBien('${b.id}')">Supprimer</button>
+          </div>
         </div>
       </div>`;
     }).join('');
@@ -1224,13 +1229,13 @@ if (!window.__factInit) {
         return `<tr>
           <td class="td-num">${inv.id}</td>
           <td><div class="td-client-name">${inv.client || '—'}</div><div class="td-client-email">${inv.email || ''}</div></td>
-          <td style="font-size:12px">${inv.bien || '—'}</td>
+          <td class="td-bien">${inv.bien || '—'}</td>
           <td class="td-stay"><strong>${fFormatDate(inv.arrivee)} → ${fFormatDate(inv.depart)}</strong>${n} nuit${n>1?'s':''}</td>
           <td class="td-amount">${fFormatMoney(total)}</td>
-          <td><span class="badge-status ${paid?'paid':'pending'}">${inv.statut || '—'}</span></td>
+          <td><span class="badge-status ${paid?'paid':'pending'}">${paid ? 'Payee' : 'En attente'}</span></td>
           <td class="td-actions">
-            <button class="sim-card-btn" onclick="fViewInvoice('${inv.id}')">PDF</button>
-            <button class="sim-card-btn del" onclick="fDeleteInvoice('${inv.id}')">×</button>
+            <button class="btn-sm" onclick="fViewInvoice('${inv.id}')">PDF</button>
+            <button class="btn-sm del" onclick="fDeleteInvoice('${inv.id}')">Supprimer</button>
           </td>
         </tr>`;
       }).join('');
@@ -1487,55 +1492,57 @@ if (!window.__factInit) {
 
     document.getElementById('finvoice-preview').innerHTML = `
       <div class="inv-header">
-        <div class="inv-logo-placeholder">LOGO<br>optionnel</div>
-        <div class="inv-issuer">
+        <div class="inv-issuer-left">
           <div class="name">${inv.loueur || 'Nom du loueur'}</div>
           <div class="detail">${(inv.loueurAddr || '').replace(/,\s*/g, '<br>')}</div>
-          ${inv.siret ? `<div class="detail" style="margin-top:5px"><strong>SIRET :</strong> ${inv.siret}</div>` : ''}
+          ${inv.siret ? `<div class="detail" style="margin-top:4px">SIRET : ${inv.siret}</div>` : ''}
+        </div>
+        <div class="inv-doc-ref">
+          <div style="font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#888;margin-bottom:4px">Facture</div>
+          <div style="font-size:16px;font-weight:700;color:#111;letter-spacing:-0.01em">${inv.id}</div>
         </div>
       </div>
       <div class="inv-title-block">
-        <h1>FACTURE N° ${inv.id}</h1>
         <div class="inv-meta">
-          <div><div class="im-label">Date d'émission</div><div class="im-val">${todayFmt}</div></div>
-          <div><div class="im-label">Échéance</div><div class="im-val">${dueDate}</div></div>
+          <div><div class="im-label">Date d'emission</div><div class="im-val">${todayFmt}</div></div>
+          <div><div class="im-label">Echeance</div><div class="im-val">${dueDate}</div></div>
           <div><div class="im-label">Mode de paiement</div><div class="im-val">${inv.paiement || '—'}</div></div>
         </div>
       </div>
       <div class="inv-client-box">
-        <div class="cb-label">Facturé à</div>
+        <div class="cb-label">Facture a</div>
         <div class="cb-name">${inv.client || 'Client'}</div>
         ${inv.email ? `<div class="cb-detail">${inv.email}</div>` : ''}
         ${inv.clientAddr ? `<div class="cb-detail">${inv.clientAddr}</div>` : ''}
       </div>
       <table class="inv-table">
-        <thead><tr><th>Description</th><th>Qté</th><th>Prix unitaire</th><th class="amount">Montant</th></tr></thead>
+        <thead><tr><th>Description</th><th>Qte</th><th>Prix unitaire</th><th class="amount">Montant</th></tr></thead>
         <tbody>
           <tr>
-            <td><strong>Hébergement — ${inv.bien || 'Bien loué'}</strong><br><small style="color:#777">Séjour du ${fFormatDate(inv.arrivee)} au ${fFormatDate(inv.depart)} (${nights} nuit${nights>1?'s':''}${inv.personnes ? ', ' + inv.personnes + ' pers.' : ''})</small></td>
+            <td><strong>Hebergement — ${inv.bien || 'Bien loue'}</strong><br><span style="color:#777;font-size:11px">Sejour du ${fFormatDate(inv.arrivee)} au ${fFormatDate(inv.depart)} (${nights} nuit${nights>1?'s':''}${inv.personnes ? ', ' + inv.personnes + ' pers.' : ''})</span></td>
             <td>${nights}</td>
             <td>${fFormatMoney(inv.prixNuit)} / nuit</td>
             <td class="amount">${fFormatMoney(hebergement)}</td>
           </tr>
-          ${menage > 0 ? `<tr><td>Frais de ménage</td><td>1</td><td>${fFormatMoney(menage)}</td><td class="amount">${fFormatMoney(menage)}</td></tr>` : ''}
+          ${menage > 0 ? `<tr><td>Frais de menage</td><td>1</td><td>${fFormatMoney(menage)}</td><td class="amount">${fFormatMoney(menage)}</td></tr>` : ''}
           ${taxeRow}
           ${extraRow}
         </tbody>
       </table>
       ${cautionNote}
       <div class="inv-total-box">
-        <div class="inv-total-row"><span class="tr-label">Sous-total hébergement</span><span class="tr-val">${fFormatMoney(hebergement)}</span></div>
-        ${menage > 0 ? `<div class="inv-total-row"><span class="tr-label">Frais de ménage</span><span class="tr-val">${fFormatMoney(menage)}</span></div>` : ''}
-        ${taxeSejour > 0 ? `<div class="inv-total-row"><span class="tr-label">Taxe de séjour</span><span class="tr-val">${fFormatMoney(taxeSejour)}</span></div>` : ''}
-        ${extra > 0 ? `<div class="inv-total-row"><span class="tr-label">${inv.extra || 'Frais supplémentaires'}</span><span class="tr-val">${fFormatMoney(extra)}</span></div>` : ''}
+        <div class="inv-total-row"><span class="tr-label">Sous-total hebergement</span><span class="tr-val">${fFormatMoney(hebergement)}</span></div>
+        ${menage > 0 ? `<div class="inv-total-row"><span class="tr-label">Frais de menage</span><span class="tr-val">${fFormatMoney(menage)}</span></div>` : ''}
+        ${taxeSejour > 0 ? `<div class="inv-total-row"><span class="tr-label">Taxe de sejour</span><span class="tr-val">${fFormatMoney(taxeSejour)}</span></div>` : ''}
+        ${extra > 0 ? `<div class="inv-total-row"><span class="tr-label">${inv.extra || 'Frais supplementaires'}</span><span class="tr-val">${fFormatMoney(extra)}</span></div>` : ''}
         <div class="inv-total-row"><span class="tr-label">TVA</span><span class="tr-val" style="color:#999;font-weight:400">Non applicable (art. 293 B CGI)</span></div>
         <div class="inv-total-row grand"><span class="tr-label">Total TTC</span><span class="tr-val">${fFormatMoney(total)}</span></div>
       </div>
       ${stampHtml}
       <div class="inv-footer">
-        <div class="inv-payment"><strong>Coordonnées de paiement :</strong><br>Mode : ${inv.paiement || '—'}${inv.paiement === 'Virement bancaire' ? '<br>IBAN : FR76 XXXX XXXX XXXX XXXX XXXX XXX' : ''}</div>
-        <div class="inv-legal" style="margin-top:14px"><strong>Mentions légales :</strong><br>${mention}</div>
-        <div class="inv-legal">Document émis par ${inv.loueur || 'le loueur'}${inv.siret ? ` — SIRET : ${inv.siret}` : ''}.</div>
+        <div class="inv-payment"><strong>Coordonnees de paiement :</strong><br>Mode : ${inv.paiement || '—'}${inv.paiement === 'Virement bancaire' ? '<br>IBAN : FR76 XXXX XXXX XXXX XXXX XXXX XXX' : ''}</div>
+        <div class="inv-legal" style="margin-top:14px"><strong>Mentions legales :</strong><br>${mention}</div>
+        <div class="inv-legal">Document emis par ${inv.loueur || 'le loueur'}${inv.siret ? ` — SIRET : ${inv.siret}` : ''}.</div>
       </div>
     `;
   }

@@ -61,12 +61,12 @@ export default config({
         category: fields.select({
           label: 'Catégorie',
           options: [
-            { label: 'Chiffres & Stratégie', value: 'chiffres-strategie' },
-            { label: 'Automatiser & Gérer', value: 'automatiser-gerer' },
-            { label: 'Lancer & Optimiser', value: 'lancer-optimiser' },
-            { label: 'Trouver & Acheter', value: 'trouver-acheter' },
+            { label: '💰 Chiffres & Rentabilité', value: 'chiffres-rentabilite' },
+            { label: '🔧 Outils & Automatisation', value: 'outils-automatisation' },
+            { label: '🏛️ Fiscal & Juridique', value: 'fiscal-juridique' },
+            { label: '🏠 Gestion', value: 'gestion' },
           ],
-          defaultValue: 'chiffres-strategie',
+          defaultValue: 'chiffres-rentabilite',
         }),
         order: fields.integer({
           label: 'Ordre d\'affichage (1 = premier)',

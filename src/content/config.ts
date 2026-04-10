@@ -10,7 +10,7 @@ const blog = defineCollection({
     featuredImage: z.object({ src: z.string(), alt: z.string() }).optional(),
     publishedAt: z.union([z.string(), z.date()]).transform(v => v instanceof Date ? v.toISOString() : v),
     updatedAt: z.union([z.string(), z.date()]).transform(v => v instanceof Date ? v.toISOString() : v).optional(),
-    category: z.enum(['chiffres-strategie','automatiser-gerer','lancer-optimiser','trouver-acheter']),
+    category: z.enum(['chiffres-rentabilite','outils-automatisation','fiscal-juridique','gestion']),
     order: z.number().optional(),
     featured: z.boolean().default(false),
     formationStep: z.number().optional(),

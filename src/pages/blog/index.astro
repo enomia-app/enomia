@@ -5,11 +5,13 @@ import { getCollection } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 
 const CAT_LABELS: Record<string, string> = {
-  'chiffres-strategie': 'Chiffres & Stratégie',
-  'automatiser-gerer': 'Automatiser & Gérer',
-  'lancer-optimiser': 'Lancer & Optimiser',
-  'trouver-acheter': 'Trouver & Acheter',
+  'chiffres-rentabilite': '💰 Chiffres & Rentabilité',
+  'outils-automatisation': '🔧 Outils & Automatisation',
+  'fiscal-juridique': '🏛️ Fiscal & Juridique',
+  'gestion': '🏠 Gestion',
 };
+
+const CAT_ORDER = ['chiffres-rentabilite', 'outils-automatisation', 'fiscal-juridique', 'gestion'];
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -30,9 +32,19 @@ const sorted = allPosts.sort((a, b) => {
   return new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime();
 });
 
-// Find featured article (or fallback to first)
+// Formation articles (with formationStep), sorted by step
+const formationPosts = sorted
+  .filter(p => p.data.formationStep != null)
+  .sort((a, b) => (a.data.formationStep ?? 999) - (b.data.formationStep ?? 999));
+
+// Find featured article (or fallback to first non-formation)
 const featuredPost = sorted.find(p => p.data.featured) ?? sorted[0];
-const otherPosts = sorted.filter(p => p !== featuredPost);
+const nonFormationPosts = sorted.filter(p => p.data.formationStep == null);
+const otherPosts = nonFormationPosts.filter(p => p !== featuredPost);
+
+// Count articles per category (for the filter chips)
+const catCounts: Record<string, number> = {};
+CAT_ORDER.forEach(c => { catCounts[c] = otherPosts.filter(p => p.data.category === c).length; });
 ---
 
 <BlogLayout
@@ -127,29 +139,94 @@ const otherPosts = sorted.filter(p => p !== featuredPost);
       @media (max-width: 600px) { .ts-grid { grid-template-columns: 1fr; } .ts-soon { grid-column: auto; } }
     </style>
 
+    <!-- Formation 10 étapes -->
+    {formationPosts.length > 0 && (
+      <section class="formation">
+        <div class="formation-head">
+          <span class="formation-tag">🎓 Formation gratuite</span>
+          <h2 class="formation-title">La méthode LCD en 10 étapes</h2>
+          <p class="formation-sub">Le parcours complet pour lancer, optimiser et automatiser vos biens en location courte durée. 100% gratuit, basé sur 9 biens en exploitation.</p>
+        </div>
+        <div class="formation-grid">
+          {formationPosts.map(post => (
+            <a href={`/blog/${post.slug}`} class="step-card">
+              <div class="step-num">Étape {post.data.formationStep}</div>
+              <div class="step-title">{post.data.title}</div>
+              <div class="step-meta">{readingTime(post.body)} min de lecture →</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <style>
+      .formation { margin: 48px 0 40px; }
+      .formation-head { text-align: center; margin-bottom: 28px; max-width: 680px; margin-left: auto; margin-right: auto; }
+      .formation-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); background: var(--green-soft); padding: 6px 14px; border-radius: 20px; margin-bottom: 14px; }
+      .formation-title { font-family: var(--serif); font-size: 34px; font-weight: 700; color: var(--text); margin: 0 0 10px; letter-spacing: -0.02em; line-height: 1.15; }
+      .formation-sub { font-size: 14.5px; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+      .formation-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+      .step-card { display: block; padding: 18px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; text-decoration: none; color: inherit; transition: all 0.15s; position: relative; overflow: hidden; }
+      .step-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--green); opacity: 0.4; transition: opacity 0.15s; }
+      .step-card:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(63,189,113,0.1); }
+      .step-card:hover::before { opacity: 1; }
+      .step-num { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+      .step-title { font-family: var(--serif); font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.3; margin-bottom: 10px; min-height: 36px; }
+      .step-meta { font-size: 11px; color: var(--text-tertiary); font-weight: 500; }
+      @media (max-width: 1024px) { .formation-grid { grid-template-columns: repeat(3, 1fr); } }
+      @media (max-width: 640px) { .formation-grid { grid-template-columns: repeat(2, 1fr); } .formation-title { font-size: 26px; } }
+    </style>
+
     <!-- Newsletter inline -->
     <div class="nl-block">
       <div class="nl-row">
         <div class="nl-content">
-          <div class="nl-tag">Newsletter</div>
-          <div class="nl-title">Recevez nos meilleurs conseils LCD chaque semaine</div>
-          <p class="nl-desc">Stratégies, chiffres et outils pour booster vos revenus en location courte durée. Gratuit, sans spam.</p>
+          <div class="nl-pdf-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Guide PDF offert + Newsletter
+          </div>
+          <div class="nl-title">Recevez ma méthode LCD complète, gratuitement</div>
+          <p class="nl-desc">Le guide PDF en 10 étapes que j'ai utilisé pour atteindre <strong style="color:var(--text-light);">93–97% d'occupation sur 9 biens</strong> — expliqué de A à Z, sans jargon.</p>
+          <div class="nl-bullets">
+            <div class="nl-bullet">
+              <span class="nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>Guide PDF Méthode 97%</strong> — 40+ pages, de A à Z</span>
+            </div>
+            <div class="nl-bullet">
+              <span class="nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Accès au <strong>simulateur de rentabilité</strong> Enomia</span>
+            </div>
+            <div class="nl-bullet">
+              <span class="nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>1 email/semaine</strong> — chiffres réels, pas de spam</span>
+            </div>
+          </div>
         </div>
         <div class="nl-form-wrap">
           <form class="nl-form" onsubmit="return false;">
+            <input type="text" class="nl-input" placeholder="Prénom" />
             <input type="email" class="nl-input" placeholder="votre@email.com" />
-            <button type="submit" class="nl-btn">S'abonner gratuitement</button>
-            <p class="nl-note">Désabonnement en 1 clic · Aucun spam</p>
+            <button type="submit" class="nl-btn">📘 Recevoir le guide gratuit</button>
+            <p class="nl-note">Désinscription en 1 clic · Email jamais partagé</p>
           </form>
         </div>
       </div>
     </div>
 
-    <!-- Articles grid -->
+    <!-- Articles grid with cluster filters -->
     {otherPosts.length > 0 && (
-      <section>
+      <section class="guides-section">
         <div class="sec-head">
-          <span class="sec-title">Tous les articles</span>
+          <span class="sec-title">Tous les guides</span>
+          <span class="sec-count" id="guides-count">{otherPosts.length} articles</span>
+        </div>
+        <div class="cluster-chips" id="cluster-chips">
+          <button class="chip active" data-filter="all">Tous <span class="chip-count">{otherPosts.length}</span></button>
+          {CAT_ORDER.filter(c => catCounts[c] > 0).map(c => (
+            <button class="chip" data-filter={c}>
+              {CAT_LABELS[c]} <span class="chip-count">{catCounts[c]}</span>
+            </button>
+          ))}
         </div>
         <div class="grid-3" id="articles-grid">
           {otherPosts.map(post => (
@@ -172,6 +249,18 @@ const otherPosts = sorted.filter(p => p !== featuredPost);
       </section>
     )}
 
+    <style>
+      .guides-section { margin-top: 48px; }
+      .guides-section .sec-head { align-items: baseline; margin-bottom: 18px; }
+      .sec-count { font-size: 12px; color: var(--text-tertiary); font-weight: 500; }
+      .cluster-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+      .chip { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 22px; font-family: var(--font); font-size: 13px; font-weight: 500; color: var(--text-secondary); cursor: pointer; transition: all 0.15s; }
+      .chip:hover { border-color: var(--text-tertiary); color: var(--text); }
+      .chip.active { background: var(--bg-dark); border-color: var(--bg-dark); color: var(--text-light); }
+      .chip.active .chip-count { background: rgba(255,255,255,0.14); color: var(--text-light); }
+      .chip-count { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 18px; padding: 0 6px; background: var(--border); color: var(--text-tertiary); border-radius: 10px; font-size: 10.5px; font-weight: 700; }
+    </style>
+
     {allPosts.length === 0 && (
       <div style="text-align:center; padding: 80px 0; color: var(--text-tertiary);">
         <p style="font-size:16px;">Aucun article pour le moment. Revenez bientôt !</p>
@@ -179,44 +268,39 @@ const otherPosts = sorted.filter(p => p !== featuredPost);
     )}
   </div>
 
-  <!-- Client-side category filtering -->
+  <!-- Client-side cluster filtering -->
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const cat = params.get('cat');
-    if (cat) {
-      const pills = document.querySelectorAll('.cat-pill');
-      pills.forEach(pill => {
-        const href = (pill as HTMLAnchorElement).href;
-        if (href.includes(`cat=${cat}`)) {
-          pill.classList.add('active');
-        } else if (!href.includes('cat=') && cat) {
-          // "Tous" pill - don't mark active
-        }
-      });
+    const chips = document.querySelectorAll<HTMLButtonElement>('#cluster-chips .chip');
+    const cards = document.querySelectorAll<HTMLElement>('#articles-grid .card');
+    const countEl = document.getElementById('guides-count');
+    const totalCount = cards.length;
 
-      const cards = document.querySelectorAll<HTMLElement>('#articles-grid .card');
+    function applyFilter(filter: string) {
+      let visible = 0;
       cards.forEach(card => {
-        if (card.dataset.cat !== cat) {
-          card.style.display = 'none';
-        }
+        const match = filter === 'all' || card.dataset.cat === filter;
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
       });
-
-      // Also check featured
-      const featured = document.querySelector<HTMLElement>('.featured');
-      if (featured) {
-        // featured doesn't have data-cat, we hide it when filtering
-        featured.style.display = 'none';
-        const hero = document.querySelector<HTMLElement>('.blog-hero');
-        if (hero) hero.style.display = 'none';
-      }
-    } else {
-      const pills = document.querySelectorAll('.cat-pill');
-      pills.forEach(pill => {
-        const href = (pill as HTMLAnchorElement).href;
-        if (!href.includes('cat=')) {
-          pill.classList.add('active');
-        }
-      });
+      chips.forEach(chip => chip.classList.toggle('active', chip.dataset.filter === filter));
+      if (countEl) countEl.textContent = `${visible} article${visible > 1 ? 's' : ''}`;
     }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const filter = chip.dataset.filter || 'all';
+        applyFilter(filter);
+        // Update URL without reload
+        const url = new URL(window.location.href);
+        if (filter === 'all') url.searchParams.delete('cat');
+        else url.searchParams.set('cat', filter);
+        window.history.replaceState({}, '', url.toString());
+      });
+    });
+
+    // Initial filter from URL
+    const params = new URLSearchParams(window.location.search);
+    const initCat = params.get('cat');
+    if (initCat) applyFilter(initCat);
   </script>
 </BlogLayout>

@@ -56,26 +56,23 @@ const articleLd = {
   mainEntityOfPage: canonical,
 };
 
-// JSON-LD: Review schema with aggregateRating → enables star ratings in Google SERP
+// JSON-LD: LocalBusiness with aggregateRating → enables star ratings in Google SERP
+// (Google requires a valid parent type: LocalBusiness, Product, etc. — not standalone Review)
 const reviewLd = {
   '@context': 'https://schema.org',
-  '@type': 'Review',
-  itemReviewed: {
-    '@type': 'Service',
-    name: `Conciergerie Airbnb ${c.displayName}`,
-    description: `Services de conciergerie Airbnb et gestion locative courte durée à ${c.displayName}`,
-    areaServed: {
-      '@type': 'City',
-      name: c.displayName,
-      address: { '@type': 'PostalAddress', addressCountry: 'FR', addressRegion: c.region },
-    },
+  '@type': 'LocalBusiness',
+  name: `Conciergerie Airbnb ${c.displayName}`,
+  description: `Services de conciergerie Airbnb et gestion locative courte durée à ${c.displayName}`,
+  url: canonical,
+  areaServed: {
+    '@type': 'City',
+    name: c.displayName,
+    address: { '@type': 'PostalAddress', addressCountry: 'FR', addressRegion: c.region },
   },
-  author: { '@type': 'Person', name: 'Marc', url: 'https://www.enomia.app/' },
-  publisher: { '@type': 'Organization', name: 'Enomia' },
-  datePublished: '2026-04-09',
-  reviewRating: {
-    '@type': 'Rating',
+  aggregateRating: {
+    '@type': 'AggregateRating',
     ratingValue: weightedRating.toFixed(1),
+    reviewCount: totalReviews,
     bestRating: 5,
     worstRating: 1,
   },

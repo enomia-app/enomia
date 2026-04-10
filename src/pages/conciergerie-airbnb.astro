@@ -78,25 +78,18 @@ const faqLd = {
   })),
 };
 
-// Review schema to show star ratings in SERP
+// LocalBusiness schema with aggregateRating → enables star ratings in SERP
+// (Google requires a valid parent type: LocalBusiness, Product, etc. — not standalone Review)
 const reviewLd = {
   '@context': 'https://schema.org',
-  '@type': 'Review',
-  itemReviewed: {
-    '@type': 'Service',
-    name: 'Conciergerie Airbnb en France',
-    description: 'Services de gestion locative courte durée pour biens Airbnb en France',
-    provider: {
-      '@type': 'Organization',
-      name: 'Conciergeries Airbnb (comparatif)',
-    },
-  },
-  author: { '@type': 'Person', name: 'Marc', url: 'https://www.enomia.app/' },
-  publisher: { '@type': 'Organization', name: 'Enomia' },
-  datePublished: '2026-04-09',
-  reviewRating: {
-    '@type': 'Rating',
+  '@type': 'LocalBusiness',
+  name: 'Conciergerie Airbnb en France',
+  description: 'Services de gestion locative courte durée pour biens Airbnb en France',
+  url: canonical,
+  aggregateRating: {
+    '@type': 'AggregateRating',
     ratingValue: weightedRating.toFixed(1),
+    reviewCount: totalReviews,
     bestRating: 5,
     worstRating: 1,
   },

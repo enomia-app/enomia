@@ -1,0 +1,33 @@
+name: Daily Article Freshness
+
+on:
+  schedule:
+    # Runs every day at 7:37 AM Paris time (5:37 UTC in winter, 5:37 UTC in summer)
+    # Off-round minute to avoid GitHub Actions congestion
+    - cron: '37 5 * * *'
+  workflow_dispatch: # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Refresh one article
+        run: node scripts/daily-freshness.mjs
+
+      - name: Commit and push
+        run: |
+          git config user.name "Enomia Bot"
+          git config user.email "bot@encaisse.fr"
+          git add -A
+          # Only commit if there are changes
+          git diff --staged --quiet || git commit -m "chore: daily article refresh ($(date +%Y-%m-%d))"
+          git push

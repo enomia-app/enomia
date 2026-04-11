@@ -7,6 +7,13 @@
   if (window.__ctInit) return;
   window.__ctInit = true;
 
+  // ─── JSPDF (chargement anticipé) ─────────────────────────────────
+  if (!window.jspdf) {
+    var _jspdfScript = document.createElement('script');
+    _jspdfScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js';
+    document.head.appendChild(_jspdfScript);
+  }
+
   // ─── SUPABASE ────────────────────────────────────────────────────
   const _ctSb = supabase.createClient(
     'https://pesoidoedtjpihjvrnnc.supabase.co',

@@ -236,8 +236,8 @@
   .fact-wrap .autocomplete-item:hover { background: var(--fa-mid2); color: var(--fa-text); }
 
   .fact-wrap .biens-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 14px; margin-top: 20px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px; margin-top: 20px;
   }
   .fact-wrap .bien-card {
     background: var(--fa-card); border: 1px solid var(--fa-border); border-radius: 8px;
@@ -658,7 +658,7 @@
       <div class="modal-header">
         <div class="modal-title">Aperçu de la facture</div>
         <div class="modal-actions">
-          <button class="btn-sm accent" onclick="fPrintInvoice()">↓ Télécharger PDF</button>
+          <button class="btn-sm accent" onclick="fExportPdf()">↓ Télécharger PDF</button>
           <button class="modal-close" onclick="fCloseModal('fmodal-pdf')">×</button>
         </div>
       </div>
@@ -759,6 +759,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" is:inline></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js" is:inline></script>
 <script is:inline>
 // ════════════════════════════════════════════════════════════════
 // FACTURATION LCD — shared logic (Supabase + localStorage fallback)
@@ -987,6 +988,7 @@ if (!window.__factInit) {
   };
 
   // ─── HELPERS ───
+  function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
   function fNights(a, b) { return !a||!b ? 0 : Math.max(0, Math.round((new Date(b) - new Date(a)) / 86400000)); }
   function fFormatDate(s) { if (!s) return '—'; const [y,m,d] = s.split('-'); return `${d}/${m}/${y}`; }
   function fFormatMoney(n) { return Number(n||0).toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; }
@@ -1052,25 +1054,19 @@ if (!window.__factInit) {
       const taxeBadge = t
         ? (t.unite === '%' ? `${t.taux.toFixed(2)} % du loyer` : `${t.taux.toFixed(2)} €/pers/nuit`)
         : 'Non répertoriée';
-      const taxeBadgeClass = t ? 'bien-taxe-badge' : 'bien-taxe-badge bien-taxe-badge--unknown';
-      return `<div class="bien-card">
-        <div class="bien-card-name">${b.nom}</div>
-        <div class="bien-card-adresse">${b.adresse || '—'}</div>
-        <div class="bien-card-meta">
-          <span class="bien-meta-item">${b.ville || '—'}</span>
-          <span class="bien-meta-sep">/</span>
-          <span class="bien-meta-item">${b.categorie || 'Non classé'}</span>
-          <span class="bien-meta-sep">/</span>
-          <span class="bien-meta-item">${b.capacite || '?'} pers.</span>
-        </div>
-        <div class="bien-card-footer">
-          <span class="${taxeBadgeClass}">Taxe : ${taxeBadge}</span>
-          <div class="bien-card-actions">
-            <button class="btn-sm" onclick="fOpenBienModal('${b.id}')">Modifier</button>
-            <button class="btn-sm del" onclick="fDeleteBien('${b.id}')">Supprimer</button>
-          </div>
-        </div>
-      </div>`;
+      return `<div style="background:#fff;border:1px solid #e5e3de;border-radius:12px;padding:20px 24px;position:relative">
+  <div style="position:absolute;top:16px;right:16px;display:flex;gap:6px">
+    <button onclick="fOpenBienModal('${b.id}')" style="width:32px;height:32px;border-radius:8px;border:1px solid #e5e3de;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px" title="Modifier">✏️</button>
+    <button onclick="fDeleteBien('${b.id}')" style="width:32px;height:32px;border-radius:8px;border:1px solid #e5e3de;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px" title="Supprimer">🗑️</button>
+  </div>
+  <div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:6px;padding-right:80px">${esc(b.nom)}</div>
+  <div style="font-size:13px;color:#8a8985;margin-bottom:12px">${esc(b.adresse || '—')}, ${esc(b.ville || '—')}</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+    <span style="font-size:11px;font-weight:600;color:#52524e;background:#f0efec;padding:4px 10px;border-radius:20px">${esc(b.categorie || 'Non classé')}</span>
+    <span style="font-size:11px;font-weight:600;color:#52524e;background:#f0efec;padding:4px 10px;border-radius:20px">${b.capacite || '?'} pers.</span>
+  </div>
+  <div style="font-size:13px;font-weight:600;color:#1a1a1a">Taxe de séjour : <span style="color:#3fbd71">${taxeBadge}</span></div>
+</div>`;
     }).join('');
   }
 
@@ -1230,12 +1226,12 @@ if (!window.__factInit) {
           <td class="td-num">${inv.id}</td>
           <td><div class="td-client-name">${inv.client || '—'}</div><div class="td-client-email">${inv.email || ''}</div></td>
           <td class="td-bien">${inv.bien || '—'}</td>
-          <td class="td-stay"><strong>${fFormatDate(inv.arrivee)} → ${fFormatDate(inv.depart)}</strong>${n} nuit${n>1?'s':''}</td>
+          <td class="td-stay"><div style="font-weight:600">${fFormatDate(inv.arrivee)} → ${fFormatDate(inv.depart)}</div><div style="font-size:12px;color:#8a8985;margin-top:2px">${n} nuit${n>1?'s':''}</div></td>
           <td class="td-amount">${fFormatMoney(total)}</td>
           <td><span class="badge-status ${paid?'paid':'pending'}">${paid ? 'Payee' : 'En attente'}</span></td>
           <td class="td-actions">
-            <button class="btn-sm" onclick="fViewInvoice('${inv.id}')">PDF</button>
-            <button class="btn-sm del" onclick="fDeleteInvoice('${inv.id}')">Supprimer</button>
+            <button style="padding:6px 12px;border-radius:6px;border:1px solid #e5e3de;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1a1a1a;cursor:pointer" onclick="fExportPdfById('${inv.id}')">PDF</button>
+            <button style="padding:6px 12px;border-radius:6px;border:1px solid #e5e3de;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#e05252;cursor:pointer" onclick="fDeleteInvoice('${inv.id}')">×</button>
           </td>
         </tr>`;
       }).join('');
@@ -1472,6 +1468,7 @@ if (!window.__factInit) {
   };
 
   function fBuildPreview(inv) {
+    _fLastPreviewInv = inv;
     const nights = fNights(inv.arrivee, inv.depart);
     const hebergement = nights * (inv.prixNuit || 0);
     const extra = Number(inv.extraMontant) || 0;
@@ -1547,7 +1544,215 @@ if (!window.__factInit) {
     `;
   }
 
-  window.fPrintInvoice = function() { window.print(); };
+  // ─── PDF EXPORT (jsPDF) ───
+  // Called from the modal "Télécharger PDF" button (uses current preview data)
+  window.fExportPdf = function() {
+    // Build inv from current preview context — try collected form data first,
+    // then fall back to the last viewed invoice stored in _fLastPreviewInv.
+    const inv = _fLastPreviewInv || _fCollect();
+    if (!inv) return;
+    _generatePdf(inv);
+  };
+
+  // Called from the table row PDF button (by invoice id, no modal needed)
+  window.fExportPdfById = function(id) {
+    const inv = finvoices.find(i => i.id === id);
+    if (!inv) return;
+    _generatePdf(inv);
+  };
+
+  // Keep track of the last invoice shown in preview so fExportPdf can use it
+  let _fLastPreviewInv = null;
+
+  function _generatePdf(inv) {
+    if (!window.jspdf) return fToast('Chargement PDF en cours, réessayez', 'red');
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF('p', 'mm', 'a4');
+    const W = 210, M = 20, CW = W - 2 * M;
+    let y = 25;
+
+    const addLine = (x1, y1, x2, y2) => { doc.setDrawColor(200); doc.line(x1, y1, x2, y2); };
+
+    // --- Header: Issuer left, Invoice # right ---
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(11);
+    doc.text(inv.loueur || fsettings.nom || 'Loueur', M, y);
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(9);
+    y += 5;
+    const addr = inv.loueurAddr || fsettings.adresse || '';
+    if (addr) { doc.text(addr, M, y); y += 4; }
+    const siret = inv.siret || fsettings.siret || '';
+    if (siret) { doc.text('SIRET : ' + siret, M, y); y += 4; }
+
+    // Invoice number right-aligned
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(18);
+    doc.text('FACTURE', W - M, 25, { align: 'right' });
+    doc.setFontSize(11);
+    doc.text('N\u00b0 ' + (inv.id || '—'), W - M, 32, { align: 'right' });
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(9);
+    const emissionDate = inv.date_emission || inv.created_at || new Date().toISOString().slice(0, 10);
+    doc.text('Date : ' + fFormatDate(emissionDate), W - M, 38, { align: 'right' });
+
+    y = Math.max(y, 44) + 4;
+    addLine(M, y, W - M, y);
+    y += 10;
+
+    // --- Client ---
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(10);
+    doc.text('CLIENT', M, y);
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(9);
+    y += 5;
+    doc.text(inv.client || '\u2014', M, y); y += 4;
+    if (inv.email) { doc.text(inv.email, M, y); y += 4; }
+    const clientAddr = inv.clientAddr || inv.adresse_client || '';
+    if (clientAddr) { doc.text(clientAddr, M, y); y += 4; }
+    y += 6;
+
+    // --- Séjour / Prestations ---
+    const nights = fNights(inv.arrivee, inv.depart);
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(10);
+    doc.text('PRESTATIONS', M, y);
+    y += 6;
+
+    // Table header
+    doc.setFillColor(245, 244, 241);
+    doc.rect(M, y, CW, 7, 'F');
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(8);
+    doc.text('DESIGNATION', M + 2, y + 5);
+    doc.text('QTE', M + 100, y + 5);
+    doc.text('P.U.', M + 120, y + 5);
+    doc.text('TOTAL', W - M - 2, y + 5, { align: 'right' });
+    y += 10;
+
+    // Line items
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(9);
+
+    const prixNuit = parseFloat(inv.prixNuit) || 0;
+    const menage = parseFloat(inv.menage) || 0;
+    const extraMontant = parseFloat(inv.extraMontant) || 0;
+    const taxeSejour = parseFloat(inv.taxeSejour) || 0;
+    const bienLabel = inv.bien || 'Bien';
+
+    // Nuitées
+    doc.text('Hebergement \u2014 ' + bienLabel, M + 2, y + 4);
+    doc.text('' + nights, M + 100, y + 4);
+    doc.text(fFormatMoney(prixNuit), M + 120, y + 4);
+    doc.text(fFormatMoney(prixNuit * nights), W - M - 2, y + 4, { align: 'right' });
+    y += 7;
+    addLine(M, y, W - M, y); y += 3;
+
+    // Ménage
+    if (menage > 0) {
+      doc.text('Frais de menage', M + 2, y + 4);
+      doc.text('1', M + 100, y + 4);
+      doc.text(fFormatMoney(menage), M + 120, y + 4);
+      doc.text(fFormatMoney(menage), W - M - 2, y + 4, { align: 'right' });
+      y += 7;
+      addLine(M, y, W - M, y); y += 3;
+    }
+
+    // Extras
+    if (extraMontant > 0) {
+      const extraLabel = inv.extra || 'Frais supplementaires';
+      doc.text(extraLabel, M + 2, y + 4);
+      doc.text('1', M + 100, y + 4);
+      doc.text(fFormatMoney(extraMontant), M + 120, y + 4);
+      doc.text(fFormatMoney(extraMontant), W - M - 2, y + 4, { align: 'right' });
+      y += 7;
+      addLine(M, y, W - M, y); y += 3;
+    }
+
+    // Taxe de séjour
+    if (taxeSejour > 0) {
+      let taxeDesc = 'Taxe de sejour';
+      if (inv.taxeVille && inv.taxeTaux) {
+        taxeDesc += ' (' + inv.taxeVille + ' — ' + Number(inv.taxeTaux).toFixed(2) + '\u20ac/pers/nuit)';
+      }
+      doc.text(taxeDesc, M + 2, y + 4);
+      doc.text('\u2014', M + 100, y + 4);
+      doc.text('\u2014', M + 120, y + 4);
+      doc.text(fFormatMoney(taxeSejour), W - M - 2, y + 4, { align: 'right' });
+      y += 7;
+      addLine(M, y, W - M, y); y += 3;
+    }
+
+    y += 4;
+
+    // --- Total ---
+    const total = fCalcInvoiceTotal(inv);
+    doc.setFillColor(43, 45, 43);
+    doc.rect(M + 80, y, CW - 80, 10, 'F');
+    doc.setTextColor(255);
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(11);
+    doc.text('TOTAL TTC : ' + fFormatMoney(total), W - M - 4, y + 7, { align: 'right' });
+    doc.setTextColor(0);
+    y += 16;
+
+    // TVA mention
+    doc.setFont('helvetica', 'italic');
+    doc.setFontSize(8);
+    const mention = fsettings.mention || 'TVA non applicable, art. 293 B du CGI. En qualite de loueur meuble non professionnel (LMNP), aucune TVA n\'est collectee ni deductible.';
+    doc.text(mention, M, y, { maxWidth: CW });
+    y += 10;
+
+    // Payment
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(9);
+    if (inv.paiement) {
+      doc.text('Mode de paiement : ' + inv.paiement, M, y);
+      y += 5;
+    }
+
+    // Caution
+    const caution = parseFloat(inv.caution) || 0;
+    if (caution > 0) {
+      y += 4;
+      doc.setFont('helvetica', 'italic');
+      doc.setFontSize(8);
+      doc.text('Depot de garantie (caution) : ' + fFormatMoney(caution) + ' \u2014 non incluse. Remboursable sous 7 jours apres depart.', M, y, { maxWidth: CW });
+    }
+
+    // Paid stamp
+    if (inv.statut === 'Payée' || inv.statut === 'Payee') {
+      y += 14;
+      doc.setDrawColor(63, 189, 113);
+      doc.setTextColor(63, 189, 113);
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(14);
+      // Rotate slightly for stamp effect
+      const stampX = W - M - 40;
+      const stampY = y;
+      doc.setLineWidth(0.6);
+      doc.rect(stampX - 2, stampY - 6, 44, 12);
+      doc.text('PAYEE', stampX + 20, stampY + 2, { align: 'center' });
+      doc.setTextColor(0);
+      doc.setDrawColor(200);
+      doc.setLineWidth(0.2);
+    }
+
+    // --- Footer ---
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(7);
+    doc.setTextColor(150);
+    doc.text('Document emis par ' + (inv.loueur || fsettings.nom || 'le loueur') + (siret ? ' \u2014 SIRET : ' + siret : '') + '.', M, 282);
+    doc.setTextColor(0);
+
+    // --- Save ---
+    const clientName = (inv.client || 'client').replace(/[^a-zA-Z0-9àâäéèêëïîôùûüÿçÀÂÄÉÈÊËÏÎÔÙÛÜŸÇ -]/g, '').replace(/\s+/g, '-');
+    const bienName = (bienLabel || 'bien').replace(/[^a-zA-Z0-9àâäéèêëïîôùûüÿçÀÂÄÉÈÊËÏÎÔÙÛÜŸÇ -]/g, '').replace(/\s+/g, '-');
+    const filename = clientName + ' facture sejour ' + bienName + ' - ' + (inv.arrivee || '') + ' ' + (inv.depart || '') + '.pdf';
+    doc.save(filename);
+    fToast('PDF telecharge', 'green');
+  }
 
   // ─── MODALS ───
   window.fOpenModal = function(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow = 'hidden'; };

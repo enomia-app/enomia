@@ -14,6 +14,70 @@
   );
   let _ctUser = null, _ctToken = null;
 
+  // ─── TAXE DE SÉJOUR DB ─────────────────────────────────────────
+  let _ctTaxeDb = null;
+  async function ctLoadTaxeDb() {
+    if (_ctTaxeDb) return _ctTaxeDb;
+    try {
+      const res = await fetch('https://pesoidoedtjpihjvrnnc.supabase.co/storage/v1/object/public/static/taxe-sejour-communes-v1.json');
+      _ctTaxeDb = await res.json();
+      return _ctTaxeDb;
+    } catch(e) { return null; }
+  }
+  function _ctNormVille(s) {
+    return (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/['']/g, "'").replace(/\s+/g, ' ').trim();
+  }
+  // Map classement bien → DB category key
+  var CT_CAT_MAP = { 'Non classé': 'nc', '1 étoile': '1', '2 étoiles': '2', '3 étoiles': '3', '4 étoiles': '4', '5 étoiles': '5' };
+  function ctGetTaxeRate(ville, classement) {
+    if (!_ctTaxeDb || !ville) return null;
+    var target = _ctNormVille(ville);
+    if (!target) return null;
+    var matched = null;
+    for (var k of Object.keys(_ctTaxeDb)) {
+      if (_ctNormVille(k) === target) { matched = k; break; }
+    }
+    if (!matched) return null;
+    var catKey = CT_CAT_MAP[classement] || 'nc';
+    var entry = _ctTaxeDb[matched][catKey];
+    if (entry === undefined) entry = _ctTaxeDb[matched]['nc'];
+    if (entry === undefined) return null;
+    // Array = pourcentage [taux, "%"], sinon euros per person per night
+    if (Array.isArray(entry)) {
+      return { taux: entry[0], unite: '%' };
+    }
+    return { taux: entry, unite: '\u20ac' };
+  }
+  // Extract city from a French address string (last word-group after postal code)
+  function _ctExtractVille(adresse) {
+    if (!adresse) return '';
+    // Try pattern: "... 75001 Paris" or "... 13100 Aix-en-Provence"
+    var m = adresse.match(/\d{5}\s+(.+?)$/);
+    if (m) return m[1].trim();
+    // Fallback: last comma-segment
+    var parts = adresse.split(',');
+    return parts[parts.length - 1].trim();
+  }
+  // Auto-calculate taxe de séjour for a bien + wizard data
+  function ctAutoCalcTaxe(bien, d) {
+    var ville = _ctExtractVille(bien.adresse);
+    var rate = ctGetTaxeRate(ville, bien.classement);
+    if (!rate) return null;
+    var n = nights(d.date_arrivee, d.date_depart);
+    var nbPers = (+d.nb_adultes || 0) + (+d.nb_enfants || 0);
+    if (n <= 0 || nbPers <= 0) return null;
+    var total;
+    if (rate.unite === '%') {
+      // Percentage of nightly price
+      var prixNuit = (+d.prix_total || 0) / n;
+      total = Math.round(prixNuit * (rate.taux / 100) * n * 100) / 100;
+    } else {
+      // Flat rate per person per night
+      total = Math.round(rate.taux * nbPers * n * 100) / 100;
+    }
+    return { total: total, taux: rate.taux, unite: rate.unite, ville: ville, nuits: n, personnes: nbPers };
+  }
+
   // ─── STATE ──────────────────────────────────────────────────────
   let ctBailleur = null;
   let ctBiens = [];
@@ -28,7 +92,7 @@
   // Ces fonctions permettent aux handlers HTML inline de modifier l'état
   // interne sans y avoir accès directement (l'IIFE crée une closure).
   window.ctGoStep = function (n) { ctWizardStep = n; ctRenderWizard(); };
-  window.ctSetLang = function (l) { ctWizardData.langue = l; ctRenderWizard(); };
+  window.ctSetLang = function (l) { ctCollectWizardStep2(); ctWizardData.langue = l; ctRenderWizard(); };
   window.ctGetWizardData = function () { return ctWizardData; };
 
   // ─── API HELPERS ────────────────────────────────────────────────
@@ -142,7 +206,7 @@
       document.getElementById('ctnav-user-badge').onclick = function () { ctOpenLoginModal(); };
     }
     // Charger en parallèle
-    await Promise.all([ctLoadBailleur(), ctLoadBiens(), ctLoadContrats()]);
+    await Promise.all([ctLoadBailleur(), ctLoadBiens(), ctLoadContrats(), ctLoadTaxeDb()]);
     ctShowScreen('ctscreen-dashboard');
   }
 
@@ -591,12 +655,20 @@
   }
 
   window.ctAddInventairePiece = function () {
+    const modal = document.getElementById('ct-inv-modal');
+    const input = document.getElementById('ct-inv-room-input');
+    if (input) input.value = '';
+    if (modal) modal.style.display = 'flex';
+  };
+  window.ctConfirmAddRoom = function () {
+    const input = document.getElementById('ct-inv-room-input');
+    const name = input ? input.value.trim() : '';
+    if (!name) return;
     const b = getTempBien();
     if (!b.inventaire) b.inventaire = { pieces: [] };
-    const name = prompt('Nom de la pièce (ex: Salon, Cuisine, Chambre 1) :');
-    if (!name) return;
     b.inventaire.pieces.push({ nom: name, items: [] });
     refreshInventaireUI(b);
+    document.getElementById('ct-inv-modal').style.display = 'none';
   };
 
   window.ctAddInvItem = function (pi) {
@@ -870,7 +942,7 @@
         '<div class="field"><label class="field-label">Date limite acompte</label><input type="date" class="input" id="ctw-acd" value="' + (ctWizardData.acompte_date_limite || '') + '"></div>' +
         '<div class="field"><label class="field-label">Date limite solde</label><input type="date" class="input" id="ctw-sod" value="' + (ctWizardData.solde_date_limite || '') + '"></div></div>' +
         '<div class="field-row"><div class="field"><label class="field-label">Caution</label><input type="number" class="input" id="ctw-cau" value="' + (ctWizardData.caution || bien.caution_defaut || 500) + '"><div class="field-hint">Restituée 7 j après le départ</div></div>' +
-        '<div class="field"><label class="field-label">Taxe de séjour</label><input type="number" class="input" id="ctw-tax" value="' + (ctWizardData.taxe_sejour_montant || 0) + '"></div></div>' +
+        '<div class="field"><label class="field-label">Taxe de séjour</label><input type="number" class="input" id="ctw-tax" value="' + (ctWizardData.taxe_sejour_montant || 0) + '" step="0.01"><div class="field-hint" id="ctw-tax-hint"></div></div></div>' +
 
         '<div class="section-title" style="margin-top:28px"><span class="section-num">05</span> Langue du contrat</div>' +
         '<div class="lang-switch"><span style="font-family:var(--ct-mono);font-size:11px;color:var(--ct-muted);padding-right:8px;border-right:1px solid var(--ct-border);margin-right:4px">Langue de génération</span>' +
@@ -884,6 +956,29 @@
 
       // Recalculer les nuits
       setTimeout(ctRecalcNights, 0);
+      // Auto-calculate taxe de séjour if DB loaded and dates set
+      setTimeout(function () {
+        var taxInput = document.getElementById('ctw-tax');
+        var taxHint = document.getElementById('ctw-tax-hint');
+        if (!taxInput || !bien) return;
+        var calc = ctAutoCalcTaxe(bien, ctWizardData);
+        if (calc && taxHint) {
+          taxHint.textContent = calc.unite === '%' ?
+            calc.taux + ' % du prix/nuit \u00d7 ' + calc.nuits + ' nuits = ' + fmtEurP(calc.total) + ' (' + calc.ville + ')' :
+            calc.taux + ' \u20ac/pers/nuit \u00d7 ' + calc.personnes + ' pers \u00d7 ' + calc.nuits + ' nuits = ' + fmtEurP(calc.total) + ' (' + calc.ville + ')';
+          taxHint.style.color = 'var(--ct-green)';
+          // Pre-fill only if current value is 0 (don't override user edits)
+          if (!ctWizardData.taxe_sejour_montant || ctWizardData.taxe_sejour_montant === 0) {
+            taxInput.value = calc.total;
+          }
+        } else if (taxHint) {
+          var ville = bien.adresse ? _ctExtractVille(bien.adresse) : '';
+          if (ville && _ctTaxeDb) {
+            taxHint.textContent = 'Commune « ' + ville + ' » non trouvée dans la base de taxe de séjour';
+            taxHint.style.color = 'var(--ct-muted2)';
+          }
+        }
+      }, 50);
     } else {
       // Étape 3 = aperçu + téléchargement
       const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
@@ -1205,50 +1300,218 @@
     }
   };
 
-  // ─── EXPORT PDF (via fenêtre dédiée + window.print) ─────────────
-  // On ouvre une nouvelle fenêtre avec uniquement le contrat, puis on
-  // déclenche print. L'utilisateur peut ensuite "Save as PDF" depuis le
-  // dialogue d'impression du navigateur. C'est plus fiable que de hacker
-  // @media print sur le document actuel (qui a header, footer, tool…).
+  // ─── EXPORT PDF (jsPDF) ──────────────────────────────────────────
   window.ctExportPdf = function () {
     const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
     if (!bien) { alert('Aucun bien sélectionné'); return; }
-    const html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'pdf');
-    const title = 'Contrat — ' + (ctWizardData.locataire_nom || 'locataire') + ' — ' + (ctWizardData.date_arrivee || '');
-    const fullHtml = `<!DOCTYPE html>
-<html lang="${ctWizardData.langue || 'fr'}">
-<head>
-<meta charset="utf-8">
-<title>${esc(title)}</title>
-<style>
-  @page { size: A4; margin: 18mm 15mm; }
-  body { font-family: 'Inter', -apple-system, sans-serif; font-size: 10.5pt; line-height: 1.5; color: #000; max-width: 180mm; margin: 0 auto; padding: 4mm; }
-  h1 { font-size: 18pt; text-align: center; margin: 0 0 18pt; padding-bottom: 10pt; border-bottom: 1.5px solid #000; }
-  h2 { font-size: 11pt; font-weight: 700; text-transform: uppercase; margin: 14pt 0 5pt; letter-spacing: 0.02em; }
-  h3 { font-size: 10pt; font-weight: 600; margin: 8pt 0 4pt; }
-  p { margin: 0 0 7pt; text-align: justify; }
-  p strong { font-weight: 600; }
-  table { width: 100%; border-collapse: collapse; font-size: 9pt; margin: 6pt 0 10pt; }
-  th, td { border: 0.5pt solid #666; padding: 4pt 6pt; text-align: left; vertical-align: top; }
-  th { background: #eee; font-weight: 600; }
-  .sig { display: table; width: 100%; margin-top: 28pt; table-layout: fixed; page-break-inside: avoid; }
-  .sig > div { display: table-cell; width: 50%; padding: 18pt 10pt 8pt; text-align: center; border-top: 0.5pt solid #000; font-size: 9pt; vertical-align: top; }
-  .sig strong { display: block; margin-bottom: 14pt; }
-</style>
-</head>
-<body>
-${html}
-<script>
-  window.onload = function() { window.print(); };
-  window.onafterprint = function() { setTimeout(function(){ window.close(); }, 300); };
-<\/script>
-</body>
-</html>`;
-    const w = window.open('', '_blank', 'width=900,height=1000');
-    if (!w) { alert('Veuillez autoriser les pop-ups pour télécharger le PDF'); return; }
-    w.document.open();
-    w.document.write(fullHtml);
-    w.document.close();
+    const d = ctWizardData;
+    const bailleur = ctBailleur || {};
+    const lang = d.langue || 'fr';
+    const L = T[lang];
+    const n = nights(d.date_arrivee, d.date_depart);
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+    const pw = 170; // printable width (A4 = 210 - 20*2)
+    let y = 20;
+
+    function checkPage(need) {
+      if (y + need > 270) { doc.addPage(); y = 20; }
+    }
+
+    function addTitle(text) {
+      checkPage(16);
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(18);
+      var lines = doc.splitTextToSize(text, pw);
+      doc.text(lines, 105, y, { align: 'center' });
+      y += lines.length * 8;
+      doc.setLineWidth(0.4);
+      doc.line(20, y, 190, y);
+      y += 10;
+    }
+
+    function addH2(text) {
+      checkPage(12);
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(11);
+      doc.text(text.toUpperCase(), 20, y);
+      y += 6;
+    }
+
+    function addPara(text) {
+      if (!text) return;
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(10);
+      var lines = doc.splitTextToSize(text, pw);
+      for (var i = 0; i < lines.length; i++) {
+        checkPage(5);
+        doc.text(lines[i], 20, y);
+        y += 4.5;
+      }
+      y += 3;
+    }
+
+    function addBoldPara(label, text) {
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(10);
+      var full = label + ' ' + text;
+      var lines = doc.splitTextToSize(full, pw);
+      for (var i = 0; i < lines.length; i++) {
+        checkPage(5);
+        doc.text(lines[i], 20, y);
+        y += 4.5;
+      }
+      y += 3;
+      doc.setFont('helvetica', 'normal');
+    }
+
+    // Build data
+    var bailleurLine = bailleur.type === 'societe'
+      ? (bailleur.raison_sociale || '') + ' — SIRET ' + (bailleur.siret || '')
+      : (bailleur.prenom || '') + ' ' + (bailleur.nom || '');
+    var bailleurAddr = (bailleur.adresse || '') + (bailleur.email ? ', ' + bailleur.email : '') + (bailleur.telephone ? ', ' + bailleur.telephone : '');
+    var locataireLine = (d.locataire_prenom || '') + ' ' + (d.locataire_nom || '');
+    var locataireAddr = (d.locataire_adresse || '') + (d.locataire_email ? ', ' + d.locataire_email : '') + (d.locataire_telephone ? ', ' + d.locataire_telephone : '');
+    var equips = (Array.isArray(bien.equipements) ? bien.equipements : []).join(', ') || '—';
+    var invTotal = computeInventaireTotal(bien.inventaire);
+    var totalPers = (+d.nb_adultes || 0) + (+d.nb_enfants || 0);
+
+    // Title
+    addTitle(L.title);
+
+    // I. Parties
+    addH2(L.h_parties);
+    addBoldPara(L.bailleur + ':', bailleurLine + '. ' + bailleurAddr);
+    addBoldPara(L.preneur + ':', locataireLine + '. ' + locataireAddr);
+
+    // II. Objet
+    addH2(L.h_objet);
+    addPara(L.objet_text);
+
+    // III. Logement
+    addH2(L.h_logement);
+    addPara((bien.nom_interne || '') + ' — ' + (bien.adresse || '') + '. ' + L.surface + ': ' + (bien.surface || '—') + ' m\u00B2. ' + L.pieces + ': ' + (bien.nb_pieces || '—') + '. ' + L.classement + ': ' + (bien.classement || '—') + '. ' + L.capacite + ': ' + (bien.capacite_max || '—') + ' ' + L.pers + '.' + (bien.numero_declaration_mairie ? ' ' + L.num_mairie + ': ' + bien.numero_declaration_mairie + '.' : ''));
+    addBoldPara(L.equipements + ':', equips + '.');
+
+    // IV. Durée
+    addH2(L.h_duree);
+    addPara(L.du + ' ' + fmtDate(d.date_arrivee) + ' ' + L.a + ' ' + d.heure_arrivee + ' ' + L.au + ' ' + fmtDate(d.date_depart) + ' ' + L.a + ' ' + d.heure_depart + ', ' + L.soit + ' ' + n + ' ' + (n > 1 ? L.nuits : L.nuit) + '. ' + L.duree_text);
+
+    // V. Prix
+    addH2(L.h_prix);
+    addPara(L.loyer + ': ' + fmtEurP(d.prix_total) + ' ' + L.pour_total + '.');
+    addPara(L.acompte_text(d.acompte_pourcentage, fmtEurP(d.acompte_montant), d.acompte_date_limite ? fmtDate(d.acompte_date_limite) : '—'));
+    addPara(L.solde_text(fmtEurP((d.prix_total || 0) - (d.acompte_montant || 0)), d.solde_date_limite ? fmtDate(d.solde_date_limite) : '—'));
+    if (d.taxe_sejour_montant > 0) {
+      addPara(L.taxe_sejour + ': ' + fmtEurP(d.taxe_sejour_montant) + ' ' + L.en_sus + '.');
+    }
+
+    // VI. Caution
+    addH2(L.h_caution);
+    addPara(L.caution_text(fmtEurP(d.caution)));
+
+    // VII. EDL
+    addH2(L.h_edl);
+    addPara(L.edl_text(fmtEurP(invTotal)));
+
+    // VIII. Obligations
+    addH2(L.h_obligations);
+    addPara(L.obligations_text(totalPers));
+    if (bien.animaux === 'non') addPara(L.animaux_non);
+    else if (bien.animaux === 'oui') addPara(L.animaux_oui);
+    else addPara(L.animaux_demande);
+    if (bien.fumeurs === 'non') addPara(L.fumeurs_non);
+    if (bien.fetes === 'non') addPara(L.fetes_non);
+
+    // IX. Annulation
+    addH2(L.h_annulation);
+    addPara(L.annulation_text[bien.conditions_annulation || 'standard']);
+
+    // X. Assurance
+    addH2(L.h_assurance);
+    addPara(L.assurance_text[bien.assurance_villegiature || 'obligatoire']);
+
+    // XI. Clauses
+    if (bien.clauses_particulieres) {
+      addH2(L.h_clauses);
+      addPara(bien.clauses_particulieres);
+    }
+
+    // XII. Domicile
+    addH2(L.h_domicile);
+    addPara(L.domicile_text);
+
+    // Signatures
+    checkPage(30);
+    y += 6;
+    addPara(L.lu_approuve);
+    y += 4;
+    doc.setLineWidth(0.3);
+    doc.line(20, y, 95, y);
+    doc.line(115, y, 190, y);
+    y += 6;
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(9);
+    doc.text(L.bailleur, 57, y, { align: 'center' });
+    doc.text(L.preneur, 152, y, { align: 'center' });
+    y += 5;
+    doc.setFont('helvetica', 'normal');
+    doc.text(L.date_lieu, 57, y, { align: 'center' });
+    doc.text(L.date_lieu, 152, y, { align: 'center' });
+
+    // Annexe inventaire
+    if (bien.inventaire && bien.inventaire.pieces && bien.inventaire.pieces.length) {
+      doc.addPage();
+      y = 20;
+      addH2(L.h_annexe_inventaire);
+      bien.inventaire.pieces.forEach(function (p) {
+        checkPage(14);
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(10);
+        doc.text(p.nom, 20, y);
+        y += 6;
+        if (p.items && p.items.length) {
+          // Table header
+          checkPage(8);
+          doc.setFontSize(8);
+          doc.setFont('helvetica', 'bold');
+          doc.setFillColor(240, 240, 240);
+          doc.rect(20, y - 3.5, pw, 5, 'F');
+          doc.text(L.objet, 22, y);
+          doc.text(L.qte, 110, y);
+          doc.text(L.etat, 130, y);
+          doc.text(L.valeur, 160, y);
+          y += 5;
+          doc.setFont('helvetica', 'normal');
+          p.items.forEach(function (it) {
+            checkPage(6);
+            doc.text(String(it.objet || ''), 22, y);
+            doc.text(String(it.qte || 1), 110, y);
+            doc.text(String(it.etat || ''), 130, y);
+            doc.text(fmtEur((+it.valeur || 0) * (+it.qte || 1)), 160, y);
+            y += 4.5;
+          });
+          y += 3;
+        }
+      });
+      checkPage(8);
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(10);
+      doc.text(L.inventaire_total + ': ' + fmtEur(invTotal), 20, y);
+      y += 8;
+    }
+
+    // Annexe règlement
+    if (bien.reglement_interieur) {
+      checkPage(20);
+      if (y > 40) { doc.addPage(); y = 20; }
+      addH2(L.h_annexe_reglement);
+      addPara(bien.reglement_interieur);
+    }
+
+    // Save
+    var fname = 'contrat-' + (d.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-') + '-' + (d.date_arrivee || '') + '.pdf';
+    doc.save(fname);
   };
 
   // ─── EXPORT WORD (.doc via Blob HTML) ───────────────────────────
@@ -1256,15 +1519,32 @@ ${html}
     const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
     if (!bien) return;
     const html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'word');
-    const fullHtml = `<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
-<head><meta charset="utf-8"><title>Contrat</title>
-<style>body{font-family:Calibri,Arial,sans-serif;font-size:11pt;line-height:1.5;max-width:170mm;margin:auto} h1{font-size:16pt;text-align:center;border-bottom:1px solid #000;padding-bottom:6pt} h2{font-size:11pt;font-weight:700;text-transform:uppercase;margin-top:12pt} p{margin:4pt 0;text-align:justify} .sig{display:table;width:100%;margin-top:24pt} .sig > div{display:table-cell;width:50%;padding:12pt;text-align:center;border-top:1px solid #000} table{border-collapse:collapse;width:100%;font-size:9pt;margin:6pt 0} th,td{border:1px solid #666;padding:3pt 5pt;text-align:left} th{background:#eee}</style>
-</head><body>${html}</body></html>`;
-    const blob = new Blob([fullHtml], { type: 'application/msword' });
+    const fullHtml = `<!DOCTYPE html>
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset="utf-8">
+<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View></w:WordDocument></xml><![endif]-->
+<style>
+@page { size: A4; margin: 2cm; }
+body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #000; }
+h1 { font-size: 16pt; text-align: center; border-bottom: 2px solid #000; padding-bottom: 8pt; margin-bottom: 16pt; }
+h2 { font-size: 12pt; font-weight: 700; text-transform: uppercase; margin-top: 14pt; margin-bottom: 6pt; border-bottom: 1px solid #ccc; padding-bottom: 3pt; }
+p { margin: 4pt 0; text-align: justify; }
+table { border-collapse: collapse; width: 100%; font-size: 10pt; margin: 8pt 0; }
+th, td { border: 1px solid #999; padding: 4pt 6pt; text-align: left; }
+th { background-color: #f0f0f0; font-weight: bold; }
+.sig { display: table; width: 100%; margin-top: 30pt; }
+.sig > div { display: table-cell; width: 50%; padding: 16pt; text-align: center; border-top: 1px solid #000; }
+</style>
+</head>
+<body>${html}</body>
+</html>`;
+    const blob = new Blob(['\ufeff' + fullHtml], { type: 'application/msword;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `contrat-${(ctWizardData.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-')}-${ctWizardData.date_arrivee || ''}.doc`;
+    const name = (ctWizardData.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-');
+    a.download = 'contrat-' + name + '-' + (ctWizardData.date_arrivee || '') + '.doc';
     a.click();
     URL.revokeObjectURL(url);
   };

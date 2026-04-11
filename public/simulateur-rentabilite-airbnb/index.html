@@ -990,7 +990,9 @@ async function _initAuth() {
   // Charger sim partagée depuis URL
   const params = new URLSearchParams(window.location.search);
   const sharedSim = params.get('sim');
-  if (sharedSim) _loadSharedSim(sharedSim);
+  if (sharedSim) { _loadSharedSim(sharedSim); return; }
+  // Si connecté, aller directement au dashboard
+  if (_user) { _doShowDashboard(); }
 }
 
 function _updateNavAuth() {

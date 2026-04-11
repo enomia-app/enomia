@@ -86,21 +86,26 @@
   .fact-wrap tbody tr { border-bottom: 1px solid var(--fa-border); transition: background 0.15s; }
   .fact-wrap tbody tr:hover { background: var(--fa-mid); }
   .fact-wrap tbody td { padding: 12px 16px; font-size: 12px; color: var(--fa-text2); vertical-align: middle; }
-  .fact-wrap td.td-num { font-size: 11px; color: var(--fa-muted2); font-weight: 500; }
-  .fact-wrap td.td-amount { color: var(--fa-text); font-weight: 600; font-size: 13px; }
-  .fact-wrap td.td-actions { display: flex; gap: 6px; align-items: center; }
-  .fact-wrap .td-client-name { font-weight: 500; color: var(--fa-text); font-size: 13px; line-height: 1.3; }
-  .fact-wrap .td-client-email { font-size: 10px; color: var(--fa-muted2); }
-  .fact-wrap .td-bien { font-size: 12px; color: var(--fa-text2); max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .fact-wrap .td-stay { font-size: 11px; color: var(--fa-muted); line-height: 1.6; }
-  .fact-wrap .td-stay strong { display: block; color: var(--fa-text2); font-weight: 400; font-size: 12px; }
+  .fact-wrap .f-primary { color: var(--fa-text); font-weight: 500; display: block; font-size: 13px; }
+  .fact-wrap .f-secondary { font-size: 10px; color: var(--fa-muted2); display: block; margin-top: 1px; }
+  .fact-wrap .td-bien { font-size: 12px; color: var(--fa-text2); max-width: 180px; }
 
-  .fact-wrap .badge-status {
-    font-size: 10px; letter-spacing: 0.08em;
-    padding: 4px 9px; display: inline-block; border-radius: 3px;
+  .fact-wrap .f-pay-chip {
+    font-size: 11px; font-weight: 500; padding: 4px 12px;
+    border-radius: 20px; display: inline-block; white-space: nowrap;
   }
-  .fact-wrap .badge-status.paid { background: rgba(63,189,113,0.12); color: var(--fa-green); }
-  .fact-wrap .badge-status.pending { background: var(--fa-accent-dim); color: var(--fa-accent); }
+  .fact-wrap .f-pay-chip.f-ok { background: rgba(63,189,113,0.12); color: #1f7a3e; }
+  .fact-wrap .f-pay-chip.f-wait { background: var(--fa-accent-dim); color: var(--fa-muted); }
+
+  .fact-wrap .f-row-actions { display: flex; gap: 4px; opacity: 0.4; transition: opacity 0.2s; }
+  .fact-wrap tbody tr:hover .f-row-actions { opacity: 1; }
+  .fact-wrap .f-icon-btn {
+    width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--fa-border);
+    background: transparent; cursor: pointer; font-size: 12px; color: var(--fa-muted);
+    display: flex; align-items: center; justify-content: center; transition: all 0.15s;
+  }
+  .fact-wrap .f-icon-btn:hover { border-color: var(--fa-accent); color: var(--fa-accent); }
+  .fact-wrap .f-icon-btn.f-danger:hover { border-color: #e05252; color: #e05252; }
 
   .fact-wrap .sim-card-btn {
     font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
@@ -457,7 +462,7 @@
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>N°</th><th>Client</th><th>Bien</th><th>Séjour</th><th>Montant</th><th>Statut</th><th>Actions</th></tr>
+            <tr><th>Client</th><th>Bien</th><th>Séjour</th><th>Montant</th><th>Statut</th><th></th></tr>
           </thead>
           <tbody id="finvoice-tbody"></tbody>
         </table>
@@ -1222,17 +1227,15 @@ if (!window.__factInit) {
         const n = fNights(inv.arrivee, inv.depart);
         const total = fCalcInvoiceTotal(inv);
         const paid = inv.statut === 'Payée';
+        const statusClass = paid ? 'f-pay-chip f-ok' : 'f-pay-chip f-wait';
+        const statusLabel = paid ? '● Payée' : '● En attente';
         return `<tr>
-          <td class="td-num">${inv.id}</td>
-          <td><div class="td-client-name">${inv.client || '—'}</div><div class="td-client-email">${inv.email || ''}</div></td>
+          <td><span class="f-primary">${inv.client || '—'}</span><span class="f-secondary">${inv.email || ''}</span></td>
           <td class="td-bien">${inv.bien || '—'}</td>
-          <td class="td-stay"><div style="font-weight:600">${fFormatDate(inv.arrivee)} → ${fFormatDate(inv.depart)}</div><div style="font-size:12px;color:#8a8985;margin-top:2px">${n} nuit${n>1?'s':''}</div></td>
-          <td class="td-amount">${fFormatMoney(total)}</td>
-          <td><span class="badge-status ${paid?'paid':'pending'}">${paid ? 'Payee' : 'En attente'}</span></td>
-          <td class="td-actions">
-            <button style="padding:6px 12px;border-radius:6px;border:1px solid #e5e3de;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1a1a1a;cursor:pointer" onclick="fExportPdfById('${inv.id}')">PDF</button>
-            <button style="padding:6px 12px;border-radius:6px;border:1px solid #e5e3de;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#e05252;cursor:pointer" onclick="fDeleteInvoice('${inv.id}')">×</button>
-          </td>
+          <td><span class="f-primary">${fFormatDate(inv.arrivee)} → ${fFormatDate(inv.depart)}</span><span class="f-secondary">${n} nuit${n>1?'s':''}</span></td>
+          <td><span class="f-primary">${fFormatMoney(total)}</span></td>
+          <td><span class="${statusClass}">${statusLabel}</span></td>
+          <td><div class="f-row-actions"><button class="f-icon-btn" title="Télécharger PDF" onclick="fExportPdfById('${inv.id}')">↓</button><button class="f-icon-btn f-danger" title="Supprimer" onclick="fDeleteInvoice('${inv.id}')">✕</button></div></td>
         </tr>`;
       }).join('');
     }

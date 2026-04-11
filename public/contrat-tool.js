@@ -1326,11 +1326,13 @@
 
   // ─── EXPORT PDF (jsPDF) ──────────────────────────────────────────
   window.ctExportPdf = function () {
+    try {
     if (!window.jspdf) {
       // Load jsPDF dynamically if not available
       var s = document.createElement('script');
       s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js';
       s.onload = function() { window.ctExportPdf(); };
+      s.onerror = function() { alert('Erreur : impossible de charger la librairie PDF. Vérifiez votre connexion internet.'); };
       document.head.appendChild(s);
       return;
     }
@@ -1544,26 +1546,54 @@
     // Save
     var fname = 'contrat-' + (d.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-') + '-' + (d.date_arrivee || '') + '.pdf';
     doc.save(fname);
+    } catch(e) {
+      alert('Erreur PDF : ' + e.message);
+      console.error('PDF export error:', e);
+    }
   };
 
-  // ─── EXPORT WORD (.doc via Blob HTML) ───────────────────────────
+  // ─── EXPORT WORD (.docx via MHTML Blob) ─────────────────────────
   window.ctExportWord = function () {
+    try {
     const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
-    if (!bien) return;
+    if (!bien) { alert('Aucun bien sélectionné'); return; }
     const html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'word');
-    const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>\n<head><meta charset=\"utf-8\"><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom></w:WordDocument></xml><![endif]-->\n<style>\n@page { size: A4; margin: 2cm; }\nbody { font-family: 'Calibri', Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #000; }\nh1 { font-size: 16pt; text-align: center; border-bottom: 2pt solid #000; padding-bottom: 8pt; margin-bottom: 16pt; page-break-after: avoid; }\nh2 { font-size: 12pt; font-weight: bold; text-transform: uppercase; margin-top: 14pt; margin-bottom: 6pt; page-break-after: avoid; }\np { margin: 4pt 0; text-align: justify; }\ntable { border-collapse: collapse; width: 100%; font-size: 10pt; margin: 8pt 0; }\nth, td { border: 1pt solid #999; padding: 4pt 6pt; text-align: left; }\nth { background-color: #f0f0f0; font-weight: bold; }\n</style></head><body>";
-    const footer = '</body></html>';
-    const fullHtml = header + html + footer;
-    const blob = new Blob(['\ufeff' + fullHtml], { type: 'application/vnd.ms-word;charset=utf-8' });
+    const boundary = '----=_NextPart_' + Date.now();
+    var wordHtml = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">\r\n' +
+      '<head><meta charset="utf-8">\r\n' +
+      '<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom></w:WordDocument></xml><![endif]-->\r\n' +
+      '<style>\r\n' +
+      '@page { size: A4; margin: 2cm; }\r\n' +
+      'body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.6; }\r\n' +
+      'h1 { font-size: 16pt; text-align: center; border-bottom: 2pt solid #000; padding-bottom: 8pt; }\r\n' +
+      'h2 { font-size: 12pt; font-weight: bold; text-transform: uppercase; margin-top: 14pt; }\r\n' +
+      'p { margin: 4pt 0; text-align: justify; }\r\n' +
+      'table { border-collapse: collapse; width: 100%; font-size: 10pt; }\r\n' +
+      'th, td { border: 1pt solid #999; padding: 4pt 6pt; }\r\n' +
+      'th { background-color: #f0f0f0; }\r\n' +
+      '</style>\r\n' +
+      '</head><body>' + html + '</body></html>';
+    var mhtml = 'MIME-Version: 1.0\r\n' +
+      'Content-Type: multipart/related; boundary="' + boundary + '"\r\n\r\n' +
+      '--' + boundary + '\r\n' +
+      'Content-Type: text/html; charset="utf-8"\r\n' +
+      'Content-Transfer-Encoding: quoted-printable\r\n\r\n' +
+      wordHtml + '\r\n' +
+      '--' + boundary + '--\r\n';
+    const blob = new Blob(['\ufeff' + mhtml], { type: 'application/msword' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
     const name = (ctWizardData.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-');
-    a.download = 'contrat-' + name + '-' + (ctWizardData.date_arrivee || '') + '.doc';
+    a.download = 'contrat-' + name + '-' + (ctWizardData.date_arrivee || '') + '.docx';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+    setTimeout(function() { URL.revokeObjectURL(url); }, 2000);
+    } catch(e) {
+      alert('Erreur Word : ' + e.message);
+      console.error('Word export error:', e);
+    }
   };
 
   window.ctSaveContract = async function () {

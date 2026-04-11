@@ -671,10 +671,34 @@
     document.getElementById('ct-inv-modal').style.display = 'none';
   };
 
+  var _ctInvItemPieceIdx = -1;
   window.ctAddInvItem = function (pi) {
-    const b = getTempBien();
-    b.inventaire.pieces[pi].items.push({ objet: '', qte: 1, etat: 'Bon', valeur: 0 });
-    refreshInventaireUI(b);
+    _ctInvItemPieceIdx = pi;
+    var modal = document.getElementById('ct-inv-item-modal');
+    var nameInput = document.getElementById('ct-inv-item-name');
+    var qtyInput = document.getElementById('ct-inv-item-qty');
+    var stateSelect = document.getElementById('ct-inv-item-state');
+    var valInput = document.getElementById('ct-inv-item-val');
+    if (nameInput) nameInput.value = '';
+    if (qtyInput) qtyInput.value = '1';
+    if (stateSelect) stateSelect.value = 'Bon';
+    if (valInput) valInput.value = '0';
+    if (modal) modal.style.display = 'flex';
+    if (nameInput) setTimeout(function() { nameInput.focus(); }, 100);
+  };
+
+  window.ctConfirmAddItem = function () {
+    var name = (document.getElementById('ct-inv-item-name').value || '').trim();
+    if (!name) return;
+    var qty = parseInt(document.getElementById('ct-inv-item-qty').value) || 1;
+    var state = document.getElementById('ct-inv-item-state').value || 'Bon';
+    var val = parseFloat(document.getElementById('ct-inv-item-val').value) || 0;
+    var b = getTempBien();
+    if (_ctInvItemPieceIdx >= 0 && b.inventaire && b.inventaire.pieces[_ctInvItemPieceIdx]) {
+      b.inventaire.pieces[_ctInvItemPieceIdx].items.push({ objet: name, qte: qty, etat: state, valeur: val });
+      refreshInventaireUI(b);
+    }
+    document.getElementById('ct-inv-item-modal').style.display = 'none';
   };
 
   window.ctInvUpdate = function (pi, ii, field, val) {
@@ -1302,6 +1326,14 @@
 
   // ─── EXPORT PDF (jsPDF) ──────────────────────────────────────────
   window.ctExportPdf = function () {
+    if (!window.jspdf) {
+      // Load jsPDF dynamically if not available
+      var s = document.createElement('script');
+      s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js';
+      s.onload = function() { window.ctExportPdf(); };
+      document.head.appendChild(s);
+      return;
+    }
     const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
     if (!bien) { alert('Aucun bien sélectionné'); return; }
     const d = ctWizardData;
@@ -1519,34 +1551,19 @@
     const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
     if (!bien) return;
     const html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'word');
-    const fullHtml = `<!DOCTYPE html>
-<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
-<head>
-<meta charset="utf-8">
-<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View></w:WordDocument></xml><![endif]-->
-<style>
-@page { size: A4; margin: 2cm; }
-body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #000; }
-h1 { font-size: 16pt; text-align: center; border-bottom: 2px solid #000; padding-bottom: 8pt; margin-bottom: 16pt; }
-h2 { font-size: 12pt; font-weight: 700; text-transform: uppercase; margin-top: 14pt; margin-bottom: 6pt; border-bottom: 1px solid #ccc; padding-bottom: 3pt; }
-p { margin: 4pt 0; text-align: justify; }
-table { border-collapse: collapse; width: 100%; font-size: 10pt; margin: 8pt 0; }
-th, td { border: 1px solid #999; padding: 4pt 6pt; text-align: left; }
-th { background-color: #f0f0f0; font-weight: bold; }
-.sig { display: table; width: 100%; margin-top: 30pt; }
-.sig > div { display: table-cell; width: 50%; padding: 16pt; text-align: center; border-top: 1px solid #000; }
-</style>
-</head>
-<body>${html}</body>
-</html>`;
-    const blob = new Blob(['\ufeff' + fullHtml], { type: 'application/msword;charset=utf-8' });
+    const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>\n<head><meta charset=\"utf-8\"><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom></w:WordDocument></xml><![endif]-->\n<style>\n@page { size: A4; margin: 2cm; }\nbody { font-family: 'Calibri', Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #000; }\nh1 { font-size: 16pt; text-align: center; border-bottom: 2pt solid #000; padding-bottom: 8pt; margin-bottom: 16pt; page-break-after: avoid; }\nh2 { font-size: 12pt; font-weight: bold; text-transform: uppercase; margin-top: 14pt; margin-bottom: 6pt; page-break-after: avoid; }\np { margin: 4pt 0; text-align: justify; }\ntable { border-collapse: collapse; width: 100%; font-size: 10pt; margin: 8pt 0; }\nth, td { border: 1pt solid #999; padding: 4pt 6pt; text-align: left; }\nth { background-color: #f0f0f0; font-weight: bold; }\n</style></head><body>";
+    const footer = '</body></html>';
+    const fullHtml = header + html + footer;
+    const blob = new Blob(['\ufeff' + fullHtml], { type: 'application/vnd.ms-word;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
     const name = (ctWizardData.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-');
     a.download = 'contrat-' + name + '-' + (ctWizardData.date_arrivee || '') + '.doc';
+    document.body.appendChild(a);
     a.click();
-    URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+    setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
   };
 
   window.ctSaveContract = async function () {

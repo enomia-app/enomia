@@ -905,6 +905,49 @@
   </div>
 </div>
 
+<!-- Inventory item modal -->
+<div id="ct-inv-item-modal" style="display:none;position:fixed;inset:0;z-index:600;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px">
+  <div style="background:#fff;border:1px solid #e5e3de;border-radius:14px;padding:32px;max-width:440px;width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.1)">
+    <button onclick="document.getElementById('ct-inv-item-modal').style.display='none'" style="position:absolute;top:14px;right:14px;background:none;border:none;font-size:18px;color:#8a8985;cursor:pointer">&times;</button>
+    <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#3fbd71;margin-bottom:12px">Ajouter un objet</div>
+    <div style="font-family:'Newsreader',serif;font-size:20px;font-weight:600;margin-bottom:16px">Nouvel objet</div>
+
+    <label style="font-size:12px;font-weight:600;color:#52524e;display:block;margin-bottom:4px">Nom de l'objet *</label>
+    <input type="text" id="ct-inv-item-name" placeholder="Ex: Canape, Table basse, TV..." style="width:100%;padding:12px 14px;border:1px solid #e5e3de;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;outline:none;box-sizing:border-box;margin-bottom:12px">
+
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
+      <button onclick="document.getElementById('ct-inv-item-name').value='Canape'" style="padding:5px 10px;border-radius:20px;border:1px solid #e5e3de;background:#f7f6f3;font-size:11px;cursor:pointer;font-family:'Inter',sans-serif">Canape</button>
+      <button onclick="document.getElementById('ct-inv-item-name').value='Table'" style="padding:5px 10px;border-radius:20px;border:1px solid #e5e3de;background:#f7f6f3;font-size:11px;cursor:pointer;font-family:'Inter',sans-serif">Table</button>
+      <button onclick="document.getElementById('ct-inv-item-name').value='Chaise'" style="padding:5px 10px;border-radius:20px;border:1px solid #e5e3de;background:#f7f6f3;font-size:11px;cursor:pointer;font-family:'Inter',sans-serif">Chaise</button>
+      <button onclick="document.getElementById('ct-inv-item-name').value='Lit'" style="padding:5px 10px;border-radius:20px;border:1px solid #e5e3de;background:#f7f6f3;font-size:11px;cursor:pointer;font-family:'Inter',sans-serif">Lit</button>
+      <button onclick="document.getElementById('ct-inv-item-name').value='TV'" style="padding:5px 10px;border-radius:20px;border:1px solid #e5e3de;background:#f7f6f3;font-size:11px;cursor:pointer;font-family:'Inter',sans-serif">TV</button>
+      <button onclick="document.getElementById('ct-inv-item-name').value='Micro-ondes'" style="padding:5px 10px;border-radius:20px;border:1px solid #e5e3de;background:#f7f6f3;font-size:11px;cursor:pointer;font-family:'Inter',sans-serif">Micro-ondes</button>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px">
+      <div>
+        <label style="font-size:12px;font-weight:600;color:#52524e;display:block;margin-bottom:4px">Quantite</label>
+        <input type="number" id="ct-inv-item-qty" value="1" min="1" style="width:100%;padding:10px 12px;border:1px solid #e5e3de;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;outline:none;box-sizing:border-box">
+      </div>
+      <div>
+        <label style="font-size:12px;font-weight:600;color:#52524e;display:block;margin-bottom:4px">Etat</label>
+        <select id="ct-inv-item-state" style="width:100%;padding:10px 12px;border:1px solid #e5e3de;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;outline:none;box-sizing:border-box;background:#fff">
+          <option>Neuf</option>
+          <option selected>Bon</option>
+          <option>Correct</option>
+          <option>Use</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:12px;font-weight:600;color:#52524e;display:block;margin-bottom:4px">Valeur (EUR)</label>
+        <input type="number" id="ct-inv-item-val" value="0" min="0" style="width:100%;padding:10px 12px;border:1px solid #e5e3de;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;outline:none;box-sizing:border-box">
+      </div>
+    </div>
+
+    <button onclick="ctConfirmAddItem()" style="width:100%;padding:14px;background:#2b2d2b;color:#fff;border:none;border-radius:10px;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;cursor:pointer">Ajouter l'objet</button>
+  </div>
+</div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" is:inline></script>

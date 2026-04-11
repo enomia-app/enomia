@@ -3,6 +3,7 @@ export const prerender = true;
 
 import { getCollection, getEntry } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import NewsletterBlock from '../../components/NewsletterBlock.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -161,42 +162,7 @@ const jsonLd = {
         <div class="rating-thanks" id="rating-thanks" style="display:none">Merci pour votre avis !</div>
       </div>
 
-      <!-- Newsletter end of article -->
-      <div class="article-nl">
-        <div class="article-nl-content">
-          <div class="article-nl-pdf-pill">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Guide PDF offert + Newsletter
-          </div>
-          <div class="article-nl-title">Recevez ma Méthode 97%© LCD complète, gratuitement</div>
-          <p class="article-nl-desc">Le guide PDF en 10 étapes que j'ai utilisé pour atteindre <strong style="color:var(--text-light);">12–18% de rendement net</strong> sur 9 biens — expliqué de A à Z, sans jargon.</p>
-          <div class="article-nl-bullets">
-            <div class="article-nl-bullet">
-              <span class="article-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span><strong>Guide PDF Méthode 97%©</strong> — 40+ pages</span>
-            </div>
-            <div class="article-nl-bullet">
-              <span class="article-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>Accès au <strong>simulateur de rentabilité</strong> Enomia</span>
-            </div>
-            <div class="article-nl-bullet">
-              <span class="article-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span><strong>1 email/semaine</strong> — chiffres réels, rien à vendre</span>
-            </div>
-          </div>
-          <form class="article-nl-form" id="article-nl-form">
-            <input type="text" placeholder="Prénom" class="article-nl-input" required />
-            <div class="article-nl-row">
-              <input type="email" placeholder="votre@email.com" class="article-nl-input article-nl-email" required />
-              <button type="submit" class="article-nl-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-1px;margin-right:4px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                Recevoir le guide
-              </button>
-            </div>
-          </form>
-          <p class="article-nl-note">Désinscription en 1 clic · Email jamais partagé</p>
-        </div>
-      </div>
+      <NewsletterBlock id="article-nl-form" />
     </article>
 
     <!-- Sidebar -->
@@ -276,40 +242,7 @@ const jsonLd = {
         </a>
       </div>
 
-      <!-- Newsletter widget -->
-      <div class="sb-nl">
-        <div class="sb-nl-content">
-          <div class="sb-nl-pdf-pill">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Guide PDF offert + Newsletter
-          </div>
-          <div class="sb-nl-title">Méthode 97%© LCD gratuite</div>
-          <p class="sb-nl-desc">Le guide en 10 étapes pour atteindre 12–18% de rendement net sur vos biens.</p>
-          <div class="sb-nl-bullets">
-            <div class="sb-nl-bullet">
-              <span class="sb-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>Guide PDF 40+ pages</span>
-            </div>
-            <div class="sb-nl-bullet">
-              <span class="sb-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>Accès simulateur Enomia</span>
-            </div>
-            <div class="sb-nl-bullet">
-              <span class="sb-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>1 email/semaine, rien à vendre</span>
-            </div>
-          </div>
-          <form id="sb-nl-form">
-            <input type="text" placeholder="Prénom" required />
-            <input type="email" placeholder="votre@email.com" required />
-            <button type="submit">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;vertical-align:-1px;margin-right:3px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Recevoir le guide
-            </button>
-          </form>
-          <p class="sb-nl-note">Désinscription en 1 clic</p>
-        </div>
-      </div>
+      <NewsletterBlock id="sb-nl-form" />
     </aside>
 
     <!-- Related articles -->
@@ -410,42 +343,5 @@ const jsonLd = {
       });
     })();
 
-    // Newsletter subscription
-    function handleNlForm(form) {
-      if (!form) return;
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const inputs = form.querySelectorAll('input');
-        const firstName = inputs[0].value.trim();
-        const email = inputs[1].value.trim();
-        if (!firstName || !email) return;
-        const btn = form.querySelector('button');
-        const origText = btn.textContent;
-        btn.disabled = true;
-        btn.textContent = 'Envoi…';
-        try {
-          const res = await fetch('/api/subscribe', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, firstName }),
-          });
-          if (res.ok) {
-            btn.textContent = '✓ Envoyé !';
-            btn.style.background = '#2b2d2b';
-            inputs.forEach(i => { i.disabled = true; i.style.opacity = '0.5'; });
-          } else {
-            btn.textContent = 'Erreur, réessayez';
-            btn.disabled = false;
-            setTimeout(() => { btn.textContent = origText; }, 2000);
-          }
-        } catch (_) {
-          btn.textContent = 'Erreur, réessayez';
-          btn.disabled = false;
-          setTimeout(() => { btn.textContent = origText; }, 2000);
-        }
-      });
-    }
-    handleNlForm(document.getElementById('article-nl-form'));
-    handleNlForm(document.getElementById('sb-nl-form'));
   </script>
 </BlogLayout>

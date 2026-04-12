@@ -1262,13 +1262,13 @@ function showScreen(id){
   var nb=document.getElementById('btn-new-nav');
   if(isAuth){
     nb.style.display='inline-flex';
-    nb.className='btn-sm'; // noir sur homepage
+    nb.className='eh-btn eh-btn-green';
   } else if(isCalc){
-    nb.style.display='none'; // caché sur le calculateur
+    nb.style.display='none';
   }
   window.scrollTo(0,0);
 }
-function _doShowDashboard(){document.getElementById("btn-mes-sim-nav").style.display="none";var nb=document.getElementById("btn-new-nav");nb.style.display="inline-flex";nb.className="btn-sm accent";document.getElementById("btn-blog-nav").style.display="inline-flex";showScreen('screen-dashboard');renderDash();}
+function _doShowDashboard(){document.getElementById("btn-mes-sim-nav").style.display="none";var nb=document.getElementById("btn-new-nav");nb.style.display="inline-flex";nb.className="eh-btn eh-btn-green";showScreen('screen-dashboard');renderDash();}
 function showDashboard(){if(!_user){_openMagicModal('Se connecter');return;}checkUnsavedAndNavigate(_doShowDashboard);}
 
 // ─── CACHE LOCAL DES SIMULATIONS (SWR pattern) ───

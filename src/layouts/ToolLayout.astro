@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+
 interface Props {
   title: string;
   description: string;
@@ -8,6 +10,7 @@ interface Props {
 }
 
 const { title, description, canonical, ogImage, currentTool = 'none' } = Astro.props;
+const headerTool = currentTool === 'none' ? undefined : currentTool;
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -53,74 +56,7 @@ const { title, description, canonical, ogImage, currentTool = 'none' } = Astro.p
     body { background: var(--bg); color: var(--text); font-family: var(--font); font-weight: 400; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
 
-    /* ═══ HEADER ═══ */
-    header.tool-header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(247,246,243,0.92);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .th-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 40px; height: 60px;
-      max-width: var(--max-w); margin: 0 auto;
-    }
-    .th-logo { display: flex; align-items: center; gap: 10px; }
-    .th-logo-icon { width: 30px; height: 30px; background: var(--bg-dark); border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5px; padding: 7px; }
-    .th-logo-icon .bar { width: 100%; height: 1.5px; background: var(--text-light); border-radius: 1px; }
-    .th-logo-icon .bar:nth-child(2) { width: 65%; align-self: flex-start; }
-    .th-logo-name { font-size: 16px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
-
-    .th-actions { display: flex; align-items: center; gap: 8px; }
-    .th-btn {
-      font-size: 13px; font-weight: 600;
-      padding: 7px 14px; border-radius: 8px;
-      color: var(--text-secondary); background: transparent;
-      border: 1px solid var(--border); cursor: pointer;
-      transition: all 0.15s; font-family: var(--font);
-    }
-    .th-btn:hover { border-color: var(--text-tertiary); color: var(--text); }
-    .th-btn.primary { background: var(--bg-dark); color: #fff; border-color: var(--bg-dark); }
-    .th-btn.primary:hover { opacity: 0.88; color: #fff; }
-
-    /* ═══ TOOL BAR (horizontal scroll on mobile) ═══ */
-    .tool-bar { border-top: 1px solid var(--border); background: rgba(247,246,243,0.92); }
-    .tool-bar-inner {
-      max-width: var(--max-w); margin: 0 auto;
-      padding: 10px 40px;
-      display: flex; gap: 6px;
-      overflow-x: auto; overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-    .tool-bar-inner::-webkit-scrollbar { display: none; }
-    .tool-pill {
-      font-size: 12px; font-weight: 500;
-      color: var(--text-tertiary);
-      padding: 7px 14px;
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      white-space: nowrap;
-      transition: all 0.15s;
-      background: transparent;
-      display: inline-flex; align-items: center; gap: 6px;
-      font-family: var(--font);
-      flex-shrink: 0;
-    }
-    .tool-pill:hover { border-color: var(--text-tertiary); color: var(--text-secondary); }
-    .tool-pill.active {
-      background: var(--bg-dark); color: #fff; border-color: var(--bg-dark);
-    }
-    .tool-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
-    .tool-pill.active .dot { background: #fff; }
-    .tool-pill.soon { opacity: 0.55; }
-    .tool-pill.soon::after {
-      content: 'bientôt';
-      font-size: 9px; font-weight: 600; letter-spacing: 0.04em;
-      text-transform: uppercase; color: var(--text-tertiary);
-      border: 1px solid var(--border); border-radius: 3px;
-      padding: 1px 5px; margin-left: 2px;
-    }
+    /* Header styles are in Header.astro component */
 
     /* ═══ FOOTER ═══ */
     footer.tool-footer {
@@ -141,42 +77,14 @@ const { title, description, canonical, ogImage, currentTool = 'none' } = Astro.p
     .tf-copy { color: var(--text-dim); }
 
     @media (max-width: 768px) {
-      .th-inner, .tool-bar-inner, .tf-inner { padding-left: 20px; padding-right: 20px; }
-      .th-btn { font-size: 12px; padding: 6px 11px; }
-      .th-logo-name { font-size: 15px; }
+      .tf-inner { padding-left: 20px; padding-right: 20px; }
       .tf-inner { flex-direction: column; gap: 8px; text-align: center; }
       .tf-right { font-size: 11px; gap: 14px; flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
 <body>
-  <header class="tool-header">
-    <div class="th-inner">
-      <a href="/" class="th-logo">
-        <div class="th-logo-icon">
-          <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-        </div>
-        <span class="th-logo-name">Enomia</span>
-      </a>
-      <div class="th-actions">
-        <a href="/blog" class="th-btn">Blog</a>
-        <button class="th-btn primary" id="tool-header-login" onclick="window.toolLogin && window.toolLogin()">Se connecter</button>
-      </div>
-    </div>
-    <div class="tool-bar" aria-label="Outils Enomia">
-      <div class="tool-bar-inner">
-        <a href="/simulateur-rentabilite-airbnb" class={"tool-pill" + (currentTool === 'simulateur' ? ' active' : '')}>
-          <span class="dot"></span> Simulateur rentabilité LCD
-        </a>
-        <a href="/facture-location-saisonniere" class={"tool-pill" + (currentTool === 'facture' ? ' active' : '')}>
-          <span class="dot"></span> Facture LCD
-        </a>
-        <a href="/contrat-location-saisonniere" class={"tool-pill" + (currentTool === 'contrat' ? ' active' : '')}>
-          <span class="dot"></span> Contrat LCD
-        </a>
-      </div>
-    </div>
-  </header>
+  <Header variant="tool" currentTool={headerTool} />
 
   <main>
     <slot />

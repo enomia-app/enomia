@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+
 interface Props {
   title: string;
   description: string;
@@ -50,51 +52,7 @@ const { title, description, ogImage } = Astro.props;
     body { background: var(--bg); color: var(--text); font-family: var(--font); font-weight: 400; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
 
-    /* ═══ HEADER ═══ */
-    header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(247,246,243,0.88);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 40px; height: 64px;
-      max-width: var(--max-w); margin: 0 auto;
-    }
-
-    .logo { display: flex; align-items: center; gap: 10px; }
-    .logo-icon { width: 30px; height: 30px; background: var(--bg-dark); border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5px; padding: 7px; }
-    .logo-icon .bar { width: 100%; height: 1.5px; background: var(--text-light); border-radius: 1px; }
-    .logo-icon .bar:nth-child(2) { width: 65%; align-self: flex-start; }
-    .logo-name { font-size: 16px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; line-height: 1.2; }
-
-    .nav { display: flex; align-items: center; gap: 6px; }
-    .nav-cta { font-size: 13px; font-weight: 600; padding: 7px 16px; background: var(--bg-dark); color: #ffffff !important; border-radius: 8px; transition: opacity 0.15s; }
-    .nav-cta:hover { opacity: 0.88; }
-
-    /* Tool bar (Option B — horizontal scroll) */
-    .tool-bar { border-top: 1px solid var(--border); background: rgba(247,246,243,0.88); }
-    .tool-bar-inner {
-      max-width: var(--max-w); margin: 0 auto; padding: 9px 40px;
-      display: flex; gap: 6px; overflow-x: auto; overflow-y: hidden;
-      -webkit-overflow-scrolling: touch; scrollbar-width: none;
-    }
-    .tool-bar-inner::-webkit-scrollbar { display: none; }
-    .tool-pill {
-      font-size: 12px; font-weight: 500; color: var(--text-tertiary);
-      padding: 6px 13px; border: 1px solid var(--border); border-radius: 100px;
-      white-space: nowrap; transition: all 0.15s; background: transparent;
-      display: inline-flex; align-items: center; gap: 6px; font-family: var(--font);
-      flex-shrink: 0; text-decoration: none;
-    }
-    .tool-pill:hover { border-color: var(--text-tertiary); color: var(--text-secondary); }
-    .tool-pill.active { background: var(--bg-dark); color: #fff; border-color: var(--bg-dark); }
-    .tool-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
-    .tool-pill.active .dot { background: #fff; }
-    .tool-pill.soon { opacity: 0.55; }
-    .tool-pill.soon::after { content: 'bientôt'; font-size: 9px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-tertiary); border: 1px solid var(--border); border-radius: 3px; padding: 1px 5px; margin-left: 2px; }
+    /* Header styles are in Header.astro component */
 
     /* Category pills */
     .cat-bar { border-top: 1px solid var(--border); }
@@ -472,7 +430,7 @@ const { title, description, ogImage } = Astro.props;
       .featured-body { padding: 28px 24px; }
     }
     @media (max-width: 768px) {
-      .header-inner, .wrap, .cat-bar-inner, .footer-inner { padding-left: 20px; padding-right: 20px; }
+      .wrap, .cat-bar-inner, .footer-inner { padding-left: 20px; padding-right: 20px; }
       .featured-body { padding: 24px 20px; }
       .grid-3 { grid-template-columns: 1fr 1fr; }
       .nl-row { flex-direction: column; gap: 20px; }
@@ -489,7 +447,6 @@ const { title, description, ogImage } = Astro.props;
     }
     @media (max-width: 480px) {
       .grid-3 { grid-template-columns: 1fr; }
-      .nav-cta { font-size: 12px; padding: 6px 12px; }
       .featured-title { font-size: 22px; }
       .article-h1 { font-size: 28px; }
     }
@@ -497,28 +454,7 @@ const { title, description, ogImage } = Astro.props;
 </head>
 <body>
 
-  <header>
-    <div class="header-inner">
-      <a href="/" class="logo">
-        <div class="logo-icon">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <span class="logo-name">Enomia</span>
-      </a>
-      <nav class="nav">
-        <a href="/simulateur-rentabilite-airbnb" class="nav-cta">Simulateur LCD →</a>
-      </nav>
-    </div>
-    <div class="tool-bar" aria-label="Outils Enomia">
-      <div class="tool-bar-inner">
-        <a href="/simulateur-rentabilite-airbnb" class="tool-pill"><span class="dot"></span> Simulateur rentabilité LCD</a>
-        <a href="/facture-location-saisonniere" class="tool-pill"><span class="dot"></span> Facture LCD</a>
-        <span class="tool-pill soon">Contrat LCD</span>
-      </div>
-    </div>
-  </header>
+  <Header variant="marketing" />
 
   <main>
     <slot />

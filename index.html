@@ -12,15 +12,18 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #2b2d2b;
-  --bg-header: #333533;
-  --bg-input: #262826;
-  --border: #3e403e;
-  --border-light: #4a4c4a;
-  --text: #e8e4dc;
-  --text-muted: #9a9690;
-  --text-dim: #6e6b65;
-  --green: #4ade80;
+  --bg: #f7f6f3;
+  --bg-header: rgba(247,246,243,0.92);
+  --bg-dark: #2b2d2b;
+  --border: #e5e3de;
+  --border-light: #e5e3de;
+  --text: #1a1a1a;
+  --text-secondary: #52524e;
+  --text-muted: #52524e;
+  --text-dim: #8a8985;
+  --text-light: #e8e4dc;
+  --green: #3fbd71;
+  --bg-input: #ffffff;
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -39,110 +42,102 @@ body {
   flex-direction: column;
 }
 
+a { color: inherit; text-decoration: none; }
+
 /* ═══ HEADER ═══ */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  height: 64px;
+.eh {
+  position: sticky; top: 0; z-index: 100;
   background: var(--bg-header);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
 }
+.eh-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; height: 64px; max-width: 1120px; margin: 0 auto;
+  position: relative;
+}
+.eh-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+.eh-logo-icon {
+  width: 30px; height: 30px; background: var(--bg-dark);
+  border-radius: 7px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2.5px; padding: 7px;
+}
+.eh-logo-icon .bar { width: 100%; height: 1.5px; background: var(--text-light); border-radius: 1px; }
+.eh-logo-icon .bar:nth-child(2) { width: 65%; align-self: flex-start; }
+.eh-logo-text { display: flex; flex-direction: column; }
+.eh-logo-name { font-size: 16px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; line-height: 1.2; }
+.eh-logo-tagline { font-size: 11px; color: var(--text-secondary); letter-spacing: 0.01em; line-height: 1.2; }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
+.eh-nav {
+  display: flex; align-items: center; gap: 32px;
+  position: absolute; left: 50%; transform: translateX(-50%);
+}
+.eh-nav-link { font-size: 13px; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.eh-nav-link:hover { color: var(--text); }
+
+.eh-dropdown { position: relative; }
+.eh-dropdown-trigger {
+  font-size: 13px; font-weight: 500; color: var(--text-muted);
+  background: none; border: none; cursor: pointer; font-family: var(--font);
+  display: flex; align-items: center; gap: 4px; padding: 4px 0; transition: color 0.2s;
+}
+.eh-dropdown-trigger:hover { color: var(--text); }
+.eh-dropdown-trigger svg { transition: transform 0.2s; }
+.eh-dropdown:hover .eh-dropdown-trigger svg { transform: rotate(180deg); }
+
+.eh-dropdown-menu {
+  position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%);
+  min-width: 260px; background: #ffffff; border: 1px solid var(--border);
+  border-radius: 10px; padding: 6px;
+  opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+.eh-dropdown:hover .eh-dropdown-menu { opacity: 1; visibility: visible; }
+
+.eh-dropdown-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px; text-decoration: none; color: var(--text);
+  font-size: 13px; font-weight: 500; border-radius: 7px; transition: background 0.15s;
+}
+.eh-dropdown-item:hover { background: var(--bg); }
+.eh-tool-info { display: flex; flex-direction: column; gap: 1px; }
+.eh-tool-name { font-size: 13px; font-weight: 500; color: var(--text); }
+.eh-tool-desc { font-size: 11px; color: var(--text-dim); }
+.eh-badge-free {
+  font-size: 10px; font-weight: 600; color: var(--green);
+  background: rgba(63,189,113,0.1); padding: 2px 8px;
+  border-radius: 20px; letter-spacing: 0.03em; flex-shrink: 0;
 }
 
-.logo-icon {
-  width: 30px;
-  height: 30px;
-  background: var(--bg-input);
-  border: 1px solid var(--border);
-  border-radius: 7px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5px;
-  padding: 7px;
+.eh-right { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.eh-btn {
+  font-family: var(--font); font-size: 12px; font-weight: 600;
+  padding: 8px 18px; border-radius: 8px; text-decoration: none;
+  cursor: pointer; transition: all 0.2s; border: none; white-space: nowrap;
+  display: inline-flex; align-items: center;
 }
+.eh-btn-green { background: var(--green); color: #ffffff; }
+.eh-btn-green:hover { background: #36a863; }
 
-.logo-icon .bar {
-  width: 100%;
-  height: 1.5px;
-  background: var(--text);
-  border-radius: 1px;
+.eh-mobile-btn {
+  display: none; background: none; border: none; cursor: pointer;
+  padding: 8px; color: var(--text);
 }
+.eh-mobile-btn svg { width: 20px; height: 20px; }
 
-.logo-icon .bar:nth-child(2) {
-  width: 70%;
-  align-self: flex-start;
+.eh-mobile-menu {
+  display: none; flex-direction: column;
+  border-top: 1px solid var(--border);
+  background: rgba(247,246,243,0.98); padding: 8px 20px 12px;
 }
-
-.logo-identity {
-  display: flex;
-  flex-direction: column;
+.eh-mobile-menu.open { display: flex; }
+.eh-mobile-link {
+  font-size: 14px; font-weight: 500; color: var(--text-muted);
+  text-decoration: none; padding: 10px 0;
+  border-bottom: 1px solid var(--border); transition: color 0.15s;
 }
-
-.logo-name {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: -0.01em;
-  line-height: 1.2;
-}
-
-.logo-tagline {
-  font-size: 12px;
-  color: var(--text-dim);
-  font-weight: 400;
-}
-
-.nav-center {
-  display: flex;
-  gap: 32px;
-  list-style: none;
-}
-
-.nav-center a {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text);
-  text-decoration: none;
-  transition: opacity 0.15s;
-}
-
-.nav-center a:visited { color: var(--text); }
-.nav-center a:hover { opacity: 0.7; }
-
-.btn-cta {
-  font-family: var(--font);
-  font-size: 15px;
-  font-weight: 600;
-  padding: 10px 24px;
-  border: 1.5px solid var(--border-light);
-  background: transparent;
-  color: var(--text);
-  cursor: pointer;
-  border-radius: 100px;
-  transition: all 0.2s;
-  white-space: nowrap;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-
-.btn-cta:hover {
-  background: rgba(255,255,255,0.06);
-  border-color: var(--text-muted);
-}
+.eh-mobile-link:last-child { border-bottom: none; }
+.eh-mobile-link:hover { color: var(--text); }
 
 /* ═══ HERO ═══ */
 main {
@@ -434,11 +429,12 @@ footer {
 
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 768px) {
-  header { padding: 0 20px; height: 64px; }
-  .logo-tagline { display: none; }
-  .nav-center { gap: 20px; }
-  .nav-center a { font-size: 14px; }
-  .btn-cta { font-size: 13px; padding: 8px 18px; }
+  .eh-inner { padding: 0 20px; }
+  .eh-nav { display: none; }
+  .eh-right { margin-left: auto; margin-right: 8px; }
+  .eh-btn { font-size: 11px; padding: 6px 12px; }
+  .eh-logo-tagline { display: none; }
+  .eh-mobile-btn { display: flex; }
   main { padding: 60px 20px 40px; }
   .hero-title { margin-bottom: 12px; }
   .hero-subtitle { margin-bottom: 36px; }
@@ -448,7 +444,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .btn-cta { font-size: 11px; padding: 6px 12px; }
   .nav-center { gap: 16px; }
   .nav-center a { font-size: 13px; }
   .metric-value { font-size: 28px; }
@@ -473,24 +468,62 @@ footer {
 <body>
 
 <!-- ═══ HEADER ═══ -->
-<header>
-  <a class="logo" href="/">
-    <div class="logo-icon">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+<header class="eh">
+  <div class="eh-inner">
+    <a href="/" class="eh-logo">
+      <div class="eh-logo-icon">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      </div>
+      <div class="eh-logo-text">
+        <span class="eh-logo-name">Enomia</span>
+        <span class="eh-logo-tagline">Un flux parfait. Pour tous.</span>
+      </div>
+    </a>
+    <nav class="eh-nav">
+      <a href="/blog" class="eh-nav-link">Blog</a>
+      <div class="eh-dropdown">
+        <button class="eh-dropdown-trigger">
+          Outils
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="eh-dropdown-menu">
+          <a href="/simulateur-rentabilite-airbnb" class="eh-dropdown-item">
+            <div class="eh-tool-info">
+              <span class="eh-tool-name">Simulateur rentabilité LCD</span>
+              <span class="eh-tool-desc">Estimez vos revenus locatifs</span>
+            </div>
+            <span class="eh-badge-free">Gratuit</span>
+          </a>
+          <a href="/contrat-location-saisonniere" class="eh-dropdown-item">
+            <div class="eh-tool-info">
+              <span class="eh-tool-name">Contrat de location</span>
+              <span class="eh-tool-desc">Générez vos contrats LCD</span>
+            </div>
+            <span class="eh-badge-free">Gratuit</span>
+          </a>
+          <a href="/facture-location-saisonniere" class="eh-dropdown-item">
+            <div class="eh-tool-info">
+              <span class="eh-tool-name">Factures LCD</span>
+              <span class="eh-tool-desc">Facturez vos locations</span>
+            </div>
+            <span class="eh-badge-free">Gratuit</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="eh-right">
+      <a href="/simulateur-rentabilite-airbnb" class="eh-btn eh-btn-green">Simulateur de rentabilité LCD →</a>
     </div>
-    <div class="logo-identity">
-      <span class="logo-name">Enomia</span>
-      <span class="logo-tagline">Un flux parfait. Pour tous.</span>
-    </div>
-  </a>
-
-  <nav class="nav-center">
-    <a href="/blog">Blog</a>
-  </nav>
-
-  <a class="btn-cta" href="/simulateur-rentabilite-airbnb">Simulateur rentabilité LCD →</a>
+    <button class="eh-mobile-btn" aria-label="Menu" id="eh-mobile-toggle">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="eh-mobile-menu" id="eh-mobile-menu">
+    <a href="/blog" class="eh-mobile-link">Blog</a>
+    <a href="/simulateur-rentabilite-airbnb" class="eh-mobile-link">Simulateur rentabilité LCD</a>
+    <a href="/contrat-location-saisonniere" class="eh-mobile-link">Contrat de location</a>
+    <a href="/facture-location-saisonniere" class="eh-mobile-link">Factures LCD</a>
+  </div>
 </header>
 
 <!-- ═══ HERO ═══ -->
@@ -634,6 +667,17 @@ document.getElementById('waitlistBiens').addEventListener('keydown', function(e)
     submitWaitlist();
   }
 });
+</script>
+
+<script>
+const toggle = document.getElementById('eh-mobile-toggle');
+const menu = document.getElementById('eh-mobile-menu');
+if (toggle && menu) {
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+}
 </script>
 
 </body>

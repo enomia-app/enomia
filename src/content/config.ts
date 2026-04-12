@@ -19,7 +19,6 @@ const blog = defineCollection({
     ratingCount: z.number().optional(),
     authorName: z.string(),
     authorBio: z.string().optional(),
-    draft: z.boolean().default(false),
     status: z.enum(['brouillon', 'en-ligne']).default('brouillon'),
     articleType: z.enum(['pilier', 'satellite']).default('satellite'),
     pillarKeyword: z.string().optional(),

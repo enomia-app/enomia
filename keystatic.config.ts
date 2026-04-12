@@ -15,7 +15,7 @@ export default config({
       slugField: 'title',
       path: 'src/content/blog/*',
       format: { contentField: 'content' },
-      columns: ['title', 'publishedAt', 'updatedAt', 'category', 'status', 'articleType', 'pillarKeyword'],
+      columns: ['title', 'publishedAt', 'updatedAt', 'category', 'status'],
       previewUrl: '/preview/blog/{slug}',
       schema: {
         title: fields.slug({
@@ -29,17 +29,17 @@ export default config({
         }),
         metaTitle: fields.text({
           label: 'Titre SEO (max 60 car.)',
-          validation: { isRequired: true, length: { max: 60 } },
+          validation: { isRequired: true },
         }),
         metaDescription: fields.text({
           label: 'Description SEO (max 160 car.)',
           multiline: true,
-          validation: { isRequired: true, length: { max: 160 } },
+          validation: { isRequired: true },
         }),
         excerpt: fields.text({
           label: 'Résumé court (max 160 car.)',
           multiline: true,
-          validation: { isRequired: true, length: { max: 160 } },
+          validation: { isRequired: true },
         }),
         featuredImage: fields.object({
           src: fields.text({

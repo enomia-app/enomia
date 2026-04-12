@@ -1482,7 +1482,34 @@
 
     // ── DUREE ──
     addH2(L.h_duree);
-    addPara(L.du + ' ' + fmtDate(d.date_arrivee) + ' a ' + (d.heure_arrivee||'15h00') + ' ' + L.au + ' ' + fmtDate(d.date_depart) + ' a ' + (d.heure_depart||'11h00') + ', ' + L.soit + ' ' + nuits + ' ' + (nuits > 1 ? L.nuits : L.nuit) + '. ' + L.duree_text);
+    checkPage(22);
+    doc.setFillColor(light[0], light[1], light[2]);
+    doc.roundedRect(M, y - 2, pw, 20, 2, 2, 'F');
+    // Arrivée
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('ARRIVEE', M + 6, y + 3);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(fmtDate(d.date_arrivee), M + 6, y + 9);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('a ' + (d.heure_arrivee || '15h00'), M + 6, y + 14);
+    // Flèche
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(14); doc.setTextColor(200, 200, 200);
+    doc.text('>', M + 72, y + 9);
+    // Départ
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('DEPART', M + 86, y + 3);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(fmtDate(d.date_depart), M + 86, y + 9);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('a ' + (d.heure_depart || '11h00'), M + 86, y + 14);
+    // Nuits badge
+    doc.setFillColor(dark[0], dark[1], dark[2]);
+    doc.roundedRect(M + 140, y + 2, 26, 13, 2, 2, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(255, 255, 255);
+    doc.text(nuits + ' nuit' + (nuits > 1 ? 's' : ''), M + 153, y + 11, { align: 'center' });
+    doc.setTextColor(dark[0], dark[1], dark[2]);
+    y += 24;
+    addPara(L.duree_text);
 
     // ── PRIX ──
     addH2(L.h_prix);

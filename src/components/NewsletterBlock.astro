@@ -10,13 +10,14 @@ const { id = 'page-nl-form', source = 'NL', compact = false } = Astro.props;
     Guide PDF offert
   </div>
   <div class="nlc-title">La M&eacute;thode 97%&nbsp;&copy;</div>
-  <p class="nlc-desc">Le guide en 10 &eacute;tapes pour atteindre <strong>93&ndash;97% d'occupation</strong> &mdash; gratuit, sans jargon.</p>
+  <p class="nlc-desc">Le guide en 10 &eacute;tapes pour atteindre <strong>12&ndash;18% de rendement net</strong> sur 9 biens &mdash; gratuit, sans jargon.</p>
   <form id={id} class="nl-form">
     <input type="text" placeholder="Pr&eacute;nom" required class="nl-input" />
     <input type="email" placeholder="votre@email.com" required class="nl-input" />
     <button type="submit" class="nl-btn">Recevoir le guide &rarr;</button>
   </form>
-  <p class="nl-note">D&eacute;sinscription en 1 clic &middot; Pas de spam</p>
+  <p class="nlc-weekly">1 email/semaine &mdash; Anecdotes &amp; chiffres r&eacute;els, pas de spam</p>
+  <p class="nl-note">D&eacute;sinscription en 1 clic</p>
 </div>
 ) : (
 <div class="nl-block">
@@ -27,7 +28,7 @@ const { id = 'page-nl-form', source = 'NL', compact = false } = Astro.props;
         Guide PDF offert + Newsletter
       </div>
       <div class="nl-title">Recevez La M&eacute;thode 97%&nbsp;&copy; compl&egrave;te, gratuitement</div>
-      <p class="nl-desc">Le guide PDF en 10 &eacute;tapes que j'ai utilis&eacute; pour atteindre <strong class="nl-highlight">93&ndash;97% d'occupation</strong> sur 9 biens &mdash; expliqu&eacute; de A &agrave; Z, sans jargon.</p>
+      <p class="nl-desc">Le guide PDF en 10 &eacute;tapes que j'ai utilis&eacute; pour atteindre <strong class="nl-highlight">12&ndash;18% de rendement net</strong> sur 9 biens &mdash; expliqu&eacute; de A &agrave; Z, sans jargon.</p>
       <ul class="nl-checks">
         <li>
           <svg viewBox="0 0 20 20" fill="none" class="nl-check-icon"><circle cx="10" cy="10" r="10" fill="#3fbd71" opacity="0.15"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#3fbd71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -244,9 +245,17 @@ const { id = 'page-nl-form', source = 'NL', compact = false } = Astro.props;
     padding: 10px 16px;
     font-size: 12px;
   }
+  .nlc-weekly {
+    font-size: 11px;
+    color: #8a8985;
+    margin: 10px 0 0;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    line-height: 1.4;
+  }
   .nl-compact .nl-note {
     font-size: 9.5px;
-    margin-top: 8px;
+    margin-top: 4px;
   }
 
   @media (max-width: 700px) {

@@ -28,6 +28,7 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           email,
           reactivation_intent: 'DOUBLE_OPT_IN',
+          utm_source: source || 'direct',
           custom_fields: [
             { name: 'first_name', value: firstName },
             { name: 'nombre_biens', value: nombreBiens || '0' },

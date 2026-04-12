@@ -1,21 +1,18 @@
 ---
-// SSR — no prerender, reads content from last Vercel deploy
-// After each Keystatic save → Vercel rebuild (~1-2 min) → preview is fresh
+// SSR — no prerender so previews work immediately after Keystatic save
+export const prerender = false;
+
 import { getCollection } from 'astro:content';
 import BlogLayout from '../../../layouts/BlogLayout.astro';
 
-export async function getStaticPaths() {
-  // Include ALL posts (drafts included) for preview
-  const allPosts = await getCollection('blog');
-  return allPosts.map(post => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
+const { slug } = Astro.params;
+const allPosts = await getCollection('blog');
+const post = allPosts.find(p => p.slug === slug);
+
+if (!post) {
+  return Astro.redirect('/blog');
 }
 
-export const prerender = true;
-
-const { post } = Astro.props;
 const { Content } = await post.render();
 
 const CAT_LABELS: Record<string, string> = {

@@ -27,16 +27,12 @@ export default async function handler(req, res) {
         },
         body: JSON.stringify({
           email,
-          reactivation_intent: 'DOUBLE_OPT_IN',
+          reactivate_existing: false,
+          send_welcome_email: false,
           utm_source: source || 'direct',
           custom_fields: [
             { name: 'first_name', value: firstName },
             { name: 'nombre_biens', value: nombreBiens || '0' },
-          ],
-          tags: [
-            'sequence_waitlist_beta',
-            `${nombreBiens}_biens`,
-            ...(source ? [source] : []),
           ],
         }),
       }
@@ -48,6 +44,27 @@ export default async function handler(req, res) {
     }
 
     const data = await response.json();
+    const subscriptionId = data?.data?.id;
+
+    // Add tags via dedicated endpoint
+    if (subscriptionId) {
+      const tags = ['sequence_waitlist_beta'];
+      if (nombreBiens) tags.push(`${nombreBiens}_biens`);
+      if (source) tags.push(source);
+
+      await fetch(
+        `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions/${subscriptionId}/tags`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`,
+          },
+          body: JSON.stringify({ tags }),
+        }
+      ).catch(() => {}); // best-effort, don't block response
+    }
+
     return res.status(200).json({ success: true, data });
   } catch (error) {
     console.error('Beehiiv API error:', error);

@@ -1600,6 +1600,10 @@ if (!window.__factInit) {
     doc.setFillColor(247, 246, 243);
     doc.rect(0, 0, W, 42, 'F');
 
+    // Enomia branding
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('Facture realisee sur Enomia', W - M, 8, { align: 'right' });
+
     // Loueur (left)
     var loueur = inv.loueur || ((fsettings.prenom || '') + ' ' + (fsettings.nom || '')).trim() || 'Loueur';
     var addr = inv.loueurAddr || fsettings.adresse || '';

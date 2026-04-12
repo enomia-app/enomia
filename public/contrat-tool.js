@@ -1407,10 +1407,12 @@
     // ── HEADER ──
     doc.setFillColor(light[0], light[1], light[2]);
     doc.rect(0, 0, W, 38, 'F');
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('Contrat realise sur Enomia', W - M, 8, { align: 'right' });
     doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(dark[0], dark[1], dark[2]);
-    doc.text('CONTRAT DE LOCATION SAISONNIERE', 105, 16, { align: 'center' });
+    doc.text('CONTRAT DE LOCATION SAISONNIERE', 105, 18, { align: 'center' });
     doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(gray[0], gray[1], gray[2]);
-    doc.text(fmtDate(d.date_arrivee) + ' au ' + fmtDate(d.date_depart) + ' - ' + nuits + ' nuit' + (nuits > 1 ? 's' : ''), 105, 24, { align: 'center' });
+    doc.text(fmtDate(d.date_arrivee) + ' au ' + fmtDate(d.date_depart) + ' - ' + nuits + ' nuit' + (nuits > 1 ? 's' : ''), 105, 26, { align: 'center' });
     doc.setDrawColor(dark[0], dark[1], dark[2]); doc.setLineWidth(0.5);
     doc.line(M, 36, W - M, 36);
 

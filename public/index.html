@@ -12,15 +12,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #2b2d2b;
-  --bg-header: #333533;
-  --bg-input: #262826;
-  --border: #3e403e;
-  --border-light: #4a4c4a;
-  --text: #e8e4dc;
-  --text-muted: #9a9690;
-  --text-dim: #6e6b65;
-  --green: #4ade80;
+  --bg: #f7f6f3;
+  --bg-header: rgba(247,246,243,0.92);
+  --bg-input: #f0efec;
+  --border: #e5e3de;
+  --border-light: #d5d3ce;
+  --text: #1a1a1a;
+  --text-muted: #52524e;
+  --text-dim: #8a8985;
+  --green: #3fbd71;
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -50,6 +50,7 @@ header {
   padding: 0 40px;
   height: 64px;
   background: var(--bg-header);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -122,6 +123,27 @@ header {
 .nav-center a:visited { color: var(--text); }
 .nav-center a:hover { opacity: 0.7; }
 
+/* ─── Nav dropdown ─── */
+.nav-dropdown { position: relative; }
+.nav-dropdown-trigger {
+  font-family: var(--font); font-size: 15px; font-weight: 500;
+  color: var(--text); background: none; border: none; cursor: pointer;
+  display: flex; align-items: center; gap: 4px; transition: opacity 0.15s;
+}
+.nav-dropdown-trigger:hover { opacity: 0.7; }
+.nav-dropdown-menu {
+  display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%);
+  background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+  padding: 6px; min-width: 220px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); z-index: 200;
+}
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown-item {
+  display: block; padding: 10px 14px; font-size: 14px; font-weight: 500;
+  color: var(--text); text-decoration: none; border-radius: 6px; transition: background 0.15s;
+}
+.nav-dropdown-item:visited { color: var(--text); }
+.nav-dropdown-item:hover { background: var(--bg-input); }
+
 .btn-cta {
   font-family: var(--font);
   font-size: 15px;
@@ -140,7 +162,7 @@ header {
 }
 
 .btn-cta:hover {
-  background: rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.04);
   border-color: var(--text-muted);
 }
 
@@ -237,7 +259,7 @@ main {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236e6b65' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238a8985' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
   padding-right: 40px;
@@ -411,21 +433,21 @@ footer {
   color: var(--text);
 }
 
-.footer-right {
+.footer-links {
   display: flex;
   align-items: center;
   gap: 28px;
 }
 
-.footer-right a, a.footer-right {
+.footer-links a {
   font-size: 14px;
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.15s;
 }
 
-.footer-right a:hover, a.footer-right:hover { color: var(--text); }
-.footer-right a:visited, a.footer-right:visited { color: var(--text-muted); }
+.footer-links a:hover { color: var(--text); }
+.footer-links a:visited { color: var(--text-muted); }
 
 .footer-copy {
   font-size: 14px;
@@ -488,9 +510,17 @@ footer {
 
   <nav class="nav-center">
     <a href="/blog">Blog</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger">Outils <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-dropdown-menu">
+        <a href="/simulateur-rentabilite-airbnb" class="nav-dropdown-item">Simulateur rentabilite LCD</a>
+        <a href="/contrat-location-saisonniere" class="nav-dropdown-item">Contrat de location</a>
+        <a href="/facture-location-saisonniere" class="nav-dropdown-item">Factures LCD</a>
+      </div>
+    </div>
   </nav>
 
-  <a class="btn-cta" href="/simulateur-rentabilite-airbnb">Simulateur rentabilité LCD →</a>
+  <a class="btn-cta" href="/simulateur-rentabilite-airbnb">Simulateur rentabilite LCD →</a>
 </header>
 
 <!-- ═══ HERO ═══ -->
@@ -572,8 +602,16 @@ footer {
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <a href="/blog" class="footer-right" style="text-decoration:none">Blog</a>
-  <a href="/simulateur-rentabilite-airbnb" class="footer-right" style="text-decoration:none">Simulateur rentabilité Airbnb</a>
+  <div class="footer-left">
+    <div class="footer-logo-icon"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+    Enomia
+  </div>
+  <div class="footer-links">
+    <a href="/blog">Blog</a>
+    <a href="/simulateur-rentabilite-airbnb">Simulateur</a>
+    <a href="/facture-location-saisonniere">Facture LCD</a>
+    <a href="/contrat-location-saisonniere">Contrat LCD</a>
+  </div>
   <span class="footer-copy">© Enomia 2026</span>
 </footer>
 

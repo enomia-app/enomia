@@ -4,37 +4,43 @@ const { id = 'page-nl-form' } = Astro.props;
 ---
 
 <div class="nl-block">
-  <div class="nl-badge">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="nl-badge-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-    Guide PDF offert + Newsletter
-  </div>
-  <div class="nl-title">Recevez La M&eacute;thode 97%&nbsp;&copy; compl&egrave;te, gratuitement</div>
-  <p class="nl-desc">Le guide PDF en 10 &eacute;tapes que j'ai utilis&eacute; pour atteindre <strong class="nl-highlight">93&ndash;97% d'occupation</strong> sur 9 biens &mdash; expliqu&eacute; de A &agrave; Z, sans jargon.</p>
-  <ul class="nl-checks">
-    <li>
-      <svg viewBox="0 0 20 20" fill="none" class="nl-check-icon"><circle cx="10" cy="10" r="10" fill="#3fbd71" opacity="0.15"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#3fbd71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Guide PDF La M&eacute;thode 97%&nbsp;&copy; &mdash; 40+ pages, de A &agrave; Z
-    </li>
-    <li>
-      <svg viewBox="0 0 20 20" fill="none" class="nl-check-icon"><circle cx="10" cy="10" r="10" fill="#3fbd71" opacity="0.15"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#3fbd71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Acc&egrave;s au simulateur de rentabilit&eacute; Enomia
-    </li>
-    <li>
-      <svg viewBox="0 0 20 20" fill="none" class="nl-check-icon"><circle cx="10" cy="10" r="10" fill="#3fbd71" opacity="0.15"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#3fbd71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      1 email/semaine &mdash; Anecdotes &amp; chiffres r&eacute;els, pas de spam
-    </li>
-  </ul>
-  <form id={id} class="nl-form">
-    <input type="text" placeholder="Pr&eacute;nom" required class="nl-input nl-input-name" />
-    <div class="nl-row">
-      <input type="email" placeholder="votre@email.com" required class="nl-input nl-input-email" />
-      <button type="submit" class="nl-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="nl-btn-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        Recevoir La M&eacute;thode 97%&nbsp;&copy;
-      </button>
+  <div class="nl-cols">
+    <div class="nl-left">
+      <div class="nl-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="nl-badge-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Guide PDF offert + Newsletter
+      </div>
+      <div class="nl-title">Recevez La M&eacute;thode 97%&nbsp;&copy; compl&egrave;te, gratuitement</div>
+      <p class="nl-desc">Le guide PDF en 10 &eacute;tapes que j'ai utilis&eacute; pour atteindre <strong class="nl-highlight">93&ndash;97% d'occupation</strong> sur 9 biens &mdash; expliqu&eacute; de A &agrave; Z, sans jargon.</p>
+      <ul class="nl-checks">
+        <li>
+          <svg viewBox="0 0 20 20" fill="none" class="nl-check-icon"><circle cx="10" cy="10" r="10" fill="#3fbd71" opacity="0.15"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#3fbd71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Guide PDF La M&eacute;thode 97%&nbsp;&copy; &mdash; 40+ pages, de A &agrave; Z
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" fill="none" class="nl-check-icon"><circle cx="10" cy="10" r="10" fill="#3fbd71" opacity="0.15"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#3fbd71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Acc&egrave;s au simulateur de rentabilit&eacute; Enomia
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" fill="none" class="nl-check-icon"><circle cx="10" cy="10" r="10" fill="#3fbd71" opacity="0.15"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#3fbd71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          1 email/semaine &mdash; Anecdotes &amp; chiffres r&eacute;els, pas de spam
+        </li>
+      </ul>
     </div>
-  </form>
-  <p class="nl-note">D&eacute;sinscription en 1 clic &middot; Email jamais partag&eacute;</p>
+    <div class="nl-right">
+      <form id={id} class="nl-form">
+        <input type="text" placeholder="Pr&eacute;nom" required class="nl-input nl-input-name" />
+        <div class="nl-row">
+          <input type="email" placeholder="votre@email.com" required class="nl-input nl-input-email" />
+          <button type="submit" class="nl-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="nl-btn-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Recevoir La M&eacute;thode 97%&nbsp;&copy;
+          </button>
+        </div>
+      </form>
+      <p class="nl-note">D&eacute;sinscription en 1 clic &middot; Email jamais partag&eacute;</p>
+    </div>
+  </div>
 </div>
 
 <script define:vars={{ id }}>
@@ -63,6 +69,18 @@ const { id = 'page-nl-form' } = Astro.props;
     color: #e8e4dc;
     max-width: 920px;
     margin: 48px auto 40px;
+  }
+  .nl-cols {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+  }
+  .nl-left {
+    flex: 1;
+    min-width: 0;
+  }
+  .nl-right {
+    flex: 0 0 320px;
   }
   .nl-badge {
     display: inline-flex;
@@ -127,7 +145,7 @@ const { id = 'page-nl-form' } = Astro.props;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    max-width: 440px;
+    width: 100%;
   }
   .nl-input {
     padding: 12px 14px;
@@ -179,6 +197,14 @@ const { id = 'page-nl-form' } = Astro.props;
   @media (max-width: 700px) {
     .nl-block {
       padding: 28px 24px;
+    }
+    .nl-cols {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .nl-right {
+      flex: none;
+      width: 100%;
     }
   }
 </style>

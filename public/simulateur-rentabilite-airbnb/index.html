@@ -368,6 +368,26 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 
 @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 @media print { nav, .calc-topbar, .cmp-bar { display: none !important; } .calc-main { grid-template-columns: 1fr 1fr; } .calc-right { position: static; height: auto; } }
+/* Outils strip (same as blog) */
+.ts-strip { margin-bottom: 48px; }
+.ts-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+.ts-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+.ts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.ts-grid-single { grid-template-columns: 1fr; }
+.ts-card { display: block; padding: 22px; background: #fff; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.18s; }
+.ts-card:hover { border-color: #8a8985; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.05); }
+.ts-icon { width: 38px; height: 38px; border-radius: 9px; background: #2b2d2b; color: #fff; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+.ts-t { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ts-badge { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3fbd71; background: rgba(63,189,113,0.1); padding: 2px 7px; border-radius: 3px; font-family: var(--font-body); }
+.ts-d { font-size: 13px; color: #5c5c5c; line-height: 1.55; margin-bottom: 14px; min-height: 42px; }
+.ts-link { font-size: 12px; font-weight: 600; color: #3fbd71; }
+
+/* Newsletter block simulateur */
+.nl-block-sim { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); border-radius: 14px; padding: 36px 40px; color: #e8e4dc; margin: 0 0 40px; }
+.nl-cols-sim { display: flex; gap: 36px; align-items: center; }
+.nl-left-sim { flex: 1; min-width: 0; }
+.nl-right-sim { flex: 0 0 320px; }
+
 @media (max-width: 900px) {
   nav { padding: 0 20px; }
   .dashboard, .cmp-screen { padding: 28px 20px; }
@@ -380,6 +400,12 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
   .cg { grid-template-columns: 1fr; }
   .travaux-hints { grid-template-columns: 1fr; }
   .tip-box { left: auto; right: 0; min-width: 180px; }
+}
+@media (max-width: 700px) {
+  .ts-grid { grid-template-columns: 1fr; }
+  .nl-block-sim { padding: 28px 24px; }
+  .nl-cols-sim { flex-direction: column; gap: 20px; }
+  .nl-right-sim { flex: none; width: 100%; }
 }
 </style>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -481,7 +507,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
   </div>
 
   <!-- SEO CONTENT -->
-  <div style="max-width:720px;margin:0 auto;padding:0 24px 64px;text-align:left">
+  <div style="max-width:920px;margin:0 auto;padding:0 32px 64px;text-align:left">
 
     <!-- Comment ça marche -->
     <div style="padding-top:48px;margin-bottom:48px">
@@ -622,9 +648,109 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     </script>
 
     <!-- CTA final -->
-    <div style="text-align:center">
+    <div style="text-align:center;margin-bottom:48px">
       <button class="auth-btn" onclick="newSimulation()" style="border-radius:10px;font-family:var(--font-body);font-size:15px;font-weight:600;letter-spacing:0;text-transform:none;padding:14px 32px;display:inline-block;width:auto">Lancer une simulation gratuite →</button>
     </div>
+
+    <!-- Outils gratuits Enomia -->
+    <section class="ts-strip">
+      <div class="ts-head">
+        <span class="ts-tag">Outils gratuits Enomia</span>
+      </div>
+      <div class="ts-grid">
+        <a href="/facture-location-saisonniere" class="ts-card">
+          <div class="ts-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+          </div>
+          <div class="ts-t">Facture LCD <span class="ts-badge">Gratuit</span></div>
+          <div class="ts-d">Générez vos factures Airbnb, Booking ou location saisonnière. Taxe de séjour auto, mentions LMNP.</div>
+          <div class="ts-link">Ouvrir l'outil →</div>
+        </a>
+        <a href="/contrat-location-saisonniere" class="ts-card">
+          <div class="ts-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <div class="ts-t">Contrat LCD <span class="ts-badge">Gratuit</span></div>
+          <div class="ts-d">Modèle de contrat de location courte durée conforme, pré-rempli depuis vos biens.</div>
+          <div class="ts-link">Ouvrir l'outil →</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- La Méthode 97% — à afficher quand /formation existera
+    <section class="ts-strip">
+      <div class="ts-head">
+        <span class="ts-tag">Formation</span>
+      </div>
+      <div class="ts-grid ts-grid-single">
+        <a href="/formation" class="ts-card">
+          <div class="ts-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="ts-t">La Méthode 97%&nbsp;© <span class="ts-badge">Gratuit</span></div>
+          <div class="ts-d">La méthode complète pour atteindre 93–97% d'occupation sans conciergerie — expliquée de A à Z, en 10 étapes.</div>
+          <div class="ts-link">Découvrir →</div>
+        </a>
+      </div>
+    </section>
+    -->
+
+    <!-- Newsletter -->
+    <div class="nl-block-sim">
+      <div class="nl-cols-sim">
+        <div class="nl-left-sim">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(63,189,113,0.15);color:#3fbd71;font-size:9.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 11px;border-radius:20px;border:1px solid rgba(63,189,113,0.3);margin-bottom:14px;font-family:'Inter',sans-serif">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Guide PDF offert + Newsletter
+          </div>
+          <div style="font-family:'Newsreader',Georgia,serif;font-size:23px;font-weight:700;color:#fff;line-height:1.22;margin-bottom:8px">Recevez La M&eacute;thode 97%&nbsp;&copy; compl&egrave;te, gratuitement</div>
+          <p style="font-size:13px;color:#6e6b65;line-height:1.6;margin-bottom:14px;font-family:'Inter',sans-serif">Le guide PDF en 10 &eacute;tapes que j'ai utilis&eacute; pour atteindre <strong style="color:#e8e4dc">93&ndash;97% d'occupation</strong> sur 9 biens &mdash; expliqu&eacute; de A &agrave; Z, sans jargon.</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px">
+            <li style="display:flex;align-items:center;gap:8px;font-size:13px;color:#e8e4dc;font-family:'Inter',sans-serif">
+              <svg viewBox="0 0 20 20" fill="none" style="width:17px;height:17px;flex-shrink:0"><circle cx="10" cy="10" r="10" fill="#3fbd71" opacity="0.15"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#3fbd71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Guide PDF La M&eacute;thode 97%&nbsp;&copy; &mdash; 40+ pages, de A &agrave; Z
+            </li>
+            <li style="display:flex;align-items:center;gap:8px;font-size:13px;color:#e8e4dc;font-family:'Inter',sans-serif">
+              <svg viewBox="0 0 20 20" fill="none" style="width:17px;height:17px;flex-shrink:0"><circle cx="10" cy="10" r="10" fill="#3fbd71" opacity="0.15"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#3fbd71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Acc&egrave;s au simulateur de rentabilit&eacute; Enomia
+            </li>
+            <li style="display:flex;align-items:center;gap:8px;font-size:13px;color:#e8e4dc;font-family:'Inter',sans-serif">
+              <svg viewBox="0 0 20 20" fill="none" style="width:17px;height:17px;flex-shrink:0"><circle cx="10" cy="10" r="10" fill="#3fbd71" opacity="0.15"/><path d="M6 10.5l2.5 2.5L14 8" stroke="#3fbd71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              1 email/semaine &mdash; Anecdotes &amp; chiffres r&eacute;els, pas de spam
+            </li>
+          </ul>
+        </div>
+        <div class="nl-right-sim">
+          <form id="sim-nl-form" style="display:flex;flex-direction:column;gap:8px;width:100%">
+            <input type="text" placeholder="Pr&eacute;nom" required style="padding:12px 14px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#e8e4dc;font-family:'Inter',sans-serif;font-size:13px;outline:none;width:100%;box-sizing:border-box" />
+            <input type="email" placeholder="votre@email.com" required style="padding:12px 14px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#e8e4dc;font-family:'Inter',sans-serif;font-size:13px;outline:none;width:100%;box-sizing:border-box" />
+            <button type="submit" style="background:#3fbd71;color:#fff;border:none;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;padding:12px 20px;border-radius:8px;cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:5px;width:100%">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Recevoir La M&eacute;thode 97%&nbsp;&copy;
+            </button>
+          </form>
+          <p style="font-size:10.5px;color:rgba(255,255,255,0.4);margin-top:10px;text-align:center;font-family:'Inter',sans-serif">D&eacute;sinscription en 1 clic &middot; Email jamais partag&eacute;</p>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function(){
+      var f=document.getElementById('sim-nl-form');if(!f)return;
+      f.addEventListener('submit',async function(e){
+        e.preventDefault();
+        var ins=f.querySelectorAll('input'),fn=ins[0].value.trim(),em=ins[1].value.trim();
+        if(!fn||!em)return;
+        var btn=f.querySelector('button'),orig=btn.innerHTML;
+        btn.disabled=true;btn.textContent='Envoi\u2026';
+        try{
+          var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,firstName:fn})});
+          if(r.ok){btn.textContent='\u2713 Envoy\u00e9 !';btn.style.background='#2b2d2b';ins.forEach(function(i){i.disabled=true;i.style.opacity='0.5'});}
+          else{btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.innerHTML=orig},2000);}
+        }catch(_){btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.innerHTML=orig},2000);}
+      });
+    })();
+    </script>
+
   </div>
 </div>
 

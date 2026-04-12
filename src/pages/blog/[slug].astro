@@ -47,7 +47,7 @@ const relatedPosts = allPosts
 const catLabel = CAT_LABELS[post.data.category];
 const readTime = readingTime(post.body);
 
-// JSON-LD
+// JSON-LD Article
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -66,6 +66,48 @@ const jsonLd = {
   },
   ...(post.data.featuredImage ? { image: post.data.featuredImage.src } : {}),
 };
+
+// JSON-LD FAQPage — auto-parsed from Markdoc ### headings inside ## FAQ section
+function parseFaqFromBody(body: string | undefined) {
+  if (!body) return [];
+  // Find the FAQ section (## **FAQ ...)
+  const faqMatch = body.match(/^## \*\*FAQ[^*]*\*\*/m);
+  if (!faqMatch || faqMatch.index === undefined) return [];
+  const faqSection = body.slice(faqMatch.index);
+  // Stop at the next ## that isn't a ### (i.e., next top-level section)
+  const nextH2 = faqSection.slice(faqMatch[0].length).match(/^## (?!\*\*FAQ)/m);
+  const faqText = nextH2 && nextH2.index !== undefined
+    ? faqSection.slice(0, faqMatch[0].length + nextH2.index)
+    : faqSection;
+  // Extract ### **Question** + following paragraph(s)
+  const items: { q: string; a: string }[] = [];
+  const qRegex = /### \*\*(.+?)\*\*\s*\n\n([\s\S]*?)(?=\n### |\n## |$)/g;
+  let m;
+  while ((m = qRegex.exec(faqText)) !== null) {
+    const question = m[1].trim();
+    // Clean answer: remove markdown bold/italic/links, keep plain text
+    const answer = m[2].trim()
+      .replace(/\*\*(.+?)\*\*/g, '$1')
+      .replace(/\*(.+?)\*/g, '$1')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/`([^`]+)`/g, '$1')
+      .split('\n\n')[0] // first paragraph only
+      .slice(0, 300); // cap at 300 chars
+    if (question && answer) items.push({ q: question, a: answer });
+  }
+  return items;
+}
+
+const faqItems = parseFaqFromBody(post.body);
+const faqLd = faqItems.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+} : null;
 ---
 
 <BlogLayout
@@ -74,6 +116,7 @@ const jsonLd = {
   ogImage={post.data.featuredImage?.src}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}
 
   <div class="article-wrap">
 

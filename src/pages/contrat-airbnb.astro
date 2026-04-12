@@ -165,4 +165,16 @@ const canonical = "https://www.enomia.app/contrat-airbnb";
 
     <NewsletterBlock source="Contrat" />
   </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Dois-je vraiment faire signer un contrat si je passe par Airbnb ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. L'article L324-2 du Code du tourisme impose un contrat écrit à tout loueur de meublé de tourisme, quel que soit le canal. Airbnb est une plateforme de mise en relation, pas un bailleur." } },
+      { "@type": "Question", "name": "Qui est responsable en cas de dégradation, Airbnb ou moi ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous, en tant qu'hôte. AirCover propose une couverture complémentaire plafonnée avec de nombreuses exclusions. Votre contrat propre, votre caution et votre assurance PNO sont votre vraie protection." } },
+      { "@type": "Question", "name": "AirCover remplace-t-il le dépôt de garantie ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. AirCover est une assurance, pas un dépôt de garantie. Il y a des plafonds, des franchises et de nombreux cas exclus." } },
+      { "@type": "Question", "name": "Puis-je refuser un voyageur qui ne veut pas signer mon contrat ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, à condition de l'avoir mentionné dans votre annonce. Airbnb exige que les règles supplémentaires soient explicitement indiquées dans la description." } },
+      { "@type": "Question", "name": "Combien de jours par an puis-je louer ma résidence principale sur Airbnb ?", "acceptedAnswer": { "@type": "Answer", "text": "La limite est de 120 jours par année civile pour une résidence principale. Depuis la loi Le Meur 2024, les mairies peuvent abaisser cette limite à 90 jours." } }
+    ]
+  })}></script>
 </ToolLayout>

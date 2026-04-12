@@ -149,4 +149,17 @@ const canonical = "https://www.enomia.app/contrat-location-mobil-home";
 
     <NewsletterBlock source="Contrat" />
   </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Puis-je louer mon mobil-home sans passer par le camping ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, mais seulement avec l'accord écrit du gestionnaire. Le contrat d'emplacement interdit en général la sous-location sans autorisation." } },
+      { "@type": "Question", "name": "Puis-je utiliser mon mobil-home comme résidence principale ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Le mobil-home est une Résidence Mobile de Loisirs (RML) selon l'article R.111-33 du Code de l'urbanisme. Il ne peut être utilisé comme résidence principale ou domicile fiscal." } },
+      { "@type": "Question", "name": "Combien puis-je demander de caution ?", "acceptedAnswer": { "@type": "Answer", "text": "Nous recommandons une caution dégradations de 300 à 500 € plus une caution propreté séparée de 50 à 100 €." } },
+      { "@type": "Question", "name": "Quelle assurance dois-je exiger du locataire ?", "acceptedAnswer": { "@type": "Answer", "text": "Une attestation d'assurance responsabilité civile villégiature couvrant la période du séjour, qui fait généralement partie de la multirisque habitation." } },
+      { "@type": "Question", "name": "Quel barème d'annulation recommander ?", "acceptedAnswer": { "@type": "Answer", "text": "Le plus courant : plus de 28 jours → 70 % remboursé, 21-28 jours → 50 %, moins de 14 jours → aucun remboursement." } },
+      { "@type": "Question", "name": "Dois-je déclarer les revenus tirés de la location ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les loyers sont imposables en BIC. En dessous de 77 700 € : Micro-BIC (abattement 50 % non classé, 71 % classé). Au-dessus : régime réel." } }
+    ]
+  })}></script>
 </ToolLayout>

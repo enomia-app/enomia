@@ -112,4 +112,16 @@ const canonical = "https://www.enomia.app/contrat-location-gite";
 
     <NewsletterBlock source="Contrat" />
   </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Faut-il un contrat différent si mon gîte a une piscine ?", "acceptedAnswer": { "@type": "Answer", "text": "Fortement recommandé. Vous devez ajouter une clause de décharge de responsabilité rappelant les équipements de sécurité (norme NF P90-306), la surveillance des enfants et les horaires." } },
+      { "@type": "Question", "name": "Je loue à un groupe de 12 personnes, quel contrat utiliser ?", "acceptedAnswer": { "@type": "Answer", "text": "Pour un gîte de groupe (dès 8-10 personnes), prévoyez une responsabilité collective du signataire, une caution majorée, une clause événementielle si EVJF/mariage, et un état des lieux photographique." } },
+      { "@type": "Question", "name": "Mon gîte est labellisé Gîtes de France, dois-je utiliser leur contrat ?", "acceptedAnswer": { "@type": "Answer", "text": "Si vous commercialisez via Gîtes de France, ils imposent leur contrat. Si vous louez en direct (site perso, Airbnb, Booking), vous êtes libre d'utiliser votre propre contrat conforme au Code du tourisme." } },
+      { "@type": "Question", "name": "Dois-je déclarer mon gîte en mairie ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, pour la plupart des gîtes. Via le Cerfa 14004 (remplacé par un téléservice national le 20 mai 2026). Vous obtenez un numéro à 13 chiffres à faire figurer sur votre contrat et vos annonces." } },
+      { "@type": "Question", "name": "Quelle est la différence entre un gîte et un meublé de tourisme ?", "acceptedAnswer": { "@type": "Answer", "text": "Juridiquement, c'est la même chose. Le Code du tourisme parle de meublé de tourisme. Le mot gîte est une appellation d'usage associée au monde rural ou à certains labels." } }
+    ]
+  })}></script>
 </ToolLayout>

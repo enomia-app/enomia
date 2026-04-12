@@ -10,7 +10,7 @@
   // ─── JSPDF (chargement anticipé) ─────────────────────────────────
   if (!window.jspdf) {
     var _jspdfScript = document.createElement('script');
-    _jspdfScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js';
+    _jspdfScript.src = '/jspdf.min.js';
     document.head.appendChild(_jspdfScript);
   }
 
@@ -1337,7 +1337,7 @@
     if (!window.jspdf) {
       // Load jsPDF dynamically if not available
       var s = document.createElement('script');
-      s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js';
+      s.src = '/jspdf.min.js';
       s.onload = function() { window.ctExportPdf(); };
       s.onerror = function() { alert('Erreur : impossible de charger la librairie PDF. Vérifiez votre connexion internet.'); };
       document.head.appendChild(s);

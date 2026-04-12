@@ -764,7 +764,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" is:inline></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js" is:inline></script>
+<script src="/jspdf.min.js" is:inline></script>
 <script is:inline>
 // ════════════════════════════════════════════════════════════════
 // FACTURATION LCD — shared logic (Supabase + localStorage fallback)
@@ -777,7 +777,7 @@ if (!window.__factInit) {
   // ─── JSPDF (chargement anticipé) ───
   if (!window.jspdf) {
     var _jspdfScript = document.createElement('script');
-    _jspdfScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js';
+    _jspdfScript.src = '/jspdf.min.js';
     document.head.appendChild(_jspdfScript);
   }
 

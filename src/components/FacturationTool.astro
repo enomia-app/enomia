@@ -1574,194 +1574,166 @@ if (!window.__factInit) {
   // Keep track of the last invoice shown in preview so fExportPdf can use it
   let _fLastPreviewInv = null;
 
+  // PDF money formatter — safe for jsPDF (no unicode thin space)
+  function _pdfMoney(n) {
+    var v = Number(n || 0).toFixed(2);
+    var parts = v.split('.');
+    var int = parts[0];
+    var dec = parts[1];
+    // Add space as thousands separator (normal space, not thin/narrow)
+    var formatted = int.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    return formatted + ',' + dec + ' EUR';
+  }
+
   function _generatePdf(inv) {
-    if (!window.jspdf) return fToast('Chargement PDF en cours, réessayez', 'red');
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF('p', 'mm', 'a4');
-    const W = 210, M = 20, CW = W - 2 * M;
-    let y = 25;
+    if (!window.jspdf) return fToast('Chargement PDF en cours, reessayez', 'red');
+    try {
+    var jsPDF = window.jspdf.jsPDF;
+    var doc = new jsPDF('p', 'mm', 'a4');
+    var W = 210, M = 20, RightCol = 130, CW = W - 2 * M;
+    var y = 0;
+    var gray = [138, 137, 133];
+    var dark = [43, 45, 43];
+    var green = [63, 189, 113];
 
-    const addLine = (x1, y1, x2, y2) => { doc.setDrawColor(200); doc.line(x1, y1, x2, y2); };
+    // ── HEADER BAR ──
+    doc.setFillColor(247, 246, 243);
+    doc.rect(0, 0, W, 42, 'F');
 
-    // --- Header: Issuer left, Invoice # right ---
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(11);
-    doc.text(inv.loueur || fsettings.nom || 'Loueur', M, y);
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(9);
-    y += 5;
-    const addr = inv.loueurAddr || fsettings.adresse || '';
-    if (addr) { doc.text(addr, M, y); y += 4; }
-    const siret = inv.siret || fsettings.siret || '';
-    if (siret) { doc.text('SIRET : ' + siret, M, y); y += 4; }
+    // Loueur (left)
+    var loueur = inv.loueur || ((fsettings.prenom || '') + ' ' + (fsettings.nom || '')).trim() || 'Loueur';
+    var addr = inv.loueurAddr || fsettings.adresse || '';
+    var siret = inv.siret || fsettings.siret || '';
+    var email = inv.loueurEmail || fsettings.email || '';
 
-    // Invoice number right-aligned
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(18);
-    doc.text('FACTURE', W - M, 25, { align: 'right' });
-    doc.setFontSize(11);
-    doc.text('N\u00b0 ' + (inv.id || '—'), W - M, 32, { align: 'right' });
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(9);
-    const emissionDate = inv.date_emission || inv.created_at || new Date().toISOString().slice(0, 10);
-    doc.text('Date : ' + fFormatDate(emissionDate), W - M, 38, { align: 'right' });
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(12); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(loueur, M, 14);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(gray[0], gray[1], gray[2]);
+    y = 19;
+    if (addr) { doc.text(addr, M, y); y += 3.5; }
+    if (siret) { doc.text('SIRET : ' + siret, M, y); y += 3.5; }
+    if (email) { doc.text(email, M, y); }
 
-    y = Math.max(y, 44) + 4;
-    addLine(M, y, W - M, y);
-    y += 10;
+    // FACTURE (right)
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(22); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text('FACTURE', W - M, 16, { align: 'right' });
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('N. ' + (inv.id || '---'), W - M, 23, { align: 'right' });
+    var emissionDate = inv.date_emission || inv.created_at || new Date().toISOString().slice(0, 10);
+    doc.text('Date : ' + fFormatDate(emissionDate), W - M, 28, { align: 'right' });
+    if (inv.arrivee && inv.depart) {
+      doc.text('Sejour : ' + fFormatDate(inv.arrivee) + ' au ' + fFormatDate(inv.depart), W - M, 33, { align: 'right' });
+    }
 
-    // --- Client ---
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(10);
-    doc.text('CLIENT', M, y);
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(9);
-    y += 5;
-    doc.text(inv.client || '\u2014', M, y); y += 4;
-    if (inv.email) { doc.text(inv.email, M, y); y += 4; }
-    const clientAddr = inv.clientAddr || inv.adresse_client || '';
-    if (clientAddr) { doc.text(clientAddr, M, y); y += 4; }
-    y += 6;
+    y = 52;
 
-    // --- Séjour / Prestations ---
-    const nights = fNights(inv.arrivee, inv.depart);
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(10);
-    doc.text('PRESTATIONS', M, y);
-    y += 6;
+    // ── CLIENT BOX ──
+    doc.setFillColor(247, 246, 243);
+    doc.roundedRect(M, y, CW, 22, 2, 2, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('FACTURE A', M + 6, y + 6);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(inv.client || '---', M + 6, y + 12);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(gray[0], gray[1], gray[2]);
+    var clientLine2 = [inv.email, inv.clientAddr || inv.adresse_client].filter(Boolean).join(' - ');
+    if (clientLine2) doc.text(clientLine2, M + 6, y + 17);
+
+    y += 30;
+
+    // ── TABLE ──
+    var nights = fNights(inv.arrivee, inv.depart);
+    var prixNuit = parseFloat(inv.prixNuit) || 0;
+    var menage = parseFloat(inv.menage) || 0;
+    var extraMontant = parseFloat(inv.extraMontant) || 0;
+    var taxeSejour = parseFloat(inv.taxeSejour) || 0;
+    var bienLabel = inv.bien || 'Bien';
+    var colD = M, colQ = M + 95, colP = M + 115, colT = W - M;
 
     // Table header
-    doc.setFillColor(245, 244, 241);
-    doc.rect(M, y, CW, 7, 'F');
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(8);
-    doc.text('DESIGNATION', M + 2, y + 5);
-    doc.text('QTE', M + 100, y + 5);
-    doc.text('P.U.', M + 120, y + 5);
-    doc.text('TOTAL', W - M - 2, y + 5, { align: 'right' });
-    y += 10;
+    doc.setFillColor(dark[0], dark[1], dark[2]);
+    doc.roundedRect(M, y, CW, 8, 1.5, 1.5, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(255, 255, 255);
+    doc.text('DESIGNATION', colD + 4, y + 5.5);
+    doc.text('QTE', colQ, y + 5.5);
+    doc.text('P.U.', colP, y + 5.5);
+    doc.text('TOTAL', colT - 2, y + 5.5, { align: 'right' });
+    y += 12;
 
-    // Line items
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(9);
-
-    const prixNuit = parseFloat(inv.prixNuit) || 0;
-    const menage = parseFloat(inv.menage) || 0;
-    const extraMontant = parseFloat(inv.extraMontant) || 0;
-    const taxeSejour = parseFloat(inv.taxeSejour) || 0;
-    const bienLabel = inv.bien || 'Bien';
-
-    // Nuitées
-    doc.text('Hebergement \u2014 ' + bienLabel, M + 2, y + 4);
-    doc.text('' + nights, M + 100, y + 4);
-    doc.text(fFormatMoney(prixNuit), M + 120, y + 4);
-    doc.text(fFormatMoney(prixNuit * nights), W - M - 2, y + 4, { align: 'right' });
-    y += 7;
-    addLine(M, y, W - M, y); y += 3;
-
-    // Ménage
-    if (menage > 0) {
-      doc.text('Frais de menage', M + 2, y + 4);
-      doc.text('1', M + 100, y + 4);
-      doc.text(fFormatMoney(menage), M + 120, y + 4);
-      doc.text(fFormatMoney(menage), W - M - 2, y + 4, { align: 'right' });
-      y += 7;
-      addLine(M, y, W - M, y); y += 3;
+    // Row helper
+    function addRow(label, qty, pu, total, isLight) {
+      if (isLight) { doc.setFillColor(250, 250, 248); doc.rect(M, y - 1, CW, 8, 'F'); }
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(dark[0], dark[1], dark[2]);
+      doc.text(label, colD + 4, y + 4);
+      doc.setTextColor(gray[0], gray[1], gray[2]);
+      doc.text(String(qty), colQ, y + 4);
+      doc.text(pu, colP, y + 4);
+      doc.setFont('helvetica', 'bold'); doc.setTextColor(dark[0], dark[1], dark[2]);
+      doc.text(total, colT - 2, y + 4, { align: 'right' });
+      y += 9;
     }
 
-    // Extras
-    if (extraMontant > 0) {
-      const extraLabel = inv.extra || 'Frais supplementaires';
-      doc.text(extraLabel, M + 2, y + 4);
-      doc.text('1', M + 100, y + 4);
-      doc.text(fFormatMoney(extraMontant), M + 120, y + 4);
-      doc.text(fFormatMoney(extraMontant), W - M - 2, y + 4, { align: 'right' });
-      y += 7;
-      addLine(M, y, W - M, y); y += 3;
-    }
-
-    // Taxe de séjour
+    addRow('Hebergement - ' + bienLabel, nights, _pdfMoney(prixNuit), _pdfMoney(prixNuit * nights), true);
+    if (menage > 0) addRow('Frais de menage', 1, _pdfMoney(menage), _pdfMoney(menage), false);
+    if (extraMontant > 0) addRow(inv.extra || 'Frais supplementaires', 1, _pdfMoney(extraMontant), _pdfMoney(extraMontant), true);
     if (taxeSejour > 0) {
-      let taxeDesc = 'Taxe de sejour';
-      if (inv.taxeVille && inv.taxeTaux) {
-        taxeDesc += ' (' + inv.taxeVille + ' — ' + Number(inv.taxeTaux).toFixed(2) + '\u20ac/pers/nuit)';
-      }
-      doc.text(taxeDesc, M + 2, y + 4);
-      doc.text('\u2014', M + 100, y + 4);
-      doc.text('\u2014', M + 120, y + 4);
-      doc.text(fFormatMoney(taxeSejour), W - M - 2, y + 4, { align: 'right' });
-      y += 7;
-      addLine(M, y, W - M, y); y += 3;
+      var taxeDesc = 'Taxe de sejour';
+      if (inv.taxeVille) taxeDesc += ' (' + inv.taxeVille + ')';
+      addRow(taxeDesc, '---', '---', _pdfMoney(taxeSejour), menage > 0 && extraMontant > 0);
     }
 
-    y += 4;
+    // Separator
+    doc.setDrawColor(230, 230, 225); doc.setLineWidth(0.3);
+    doc.line(M, y, W - M, y);
+    y += 6;
 
-    // --- Total ---
-    const total = fCalcInvoiceTotal(inv);
-    doc.setFillColor(43, 45, 43);
-    doc.rect(M + 80, y, CW - 80, 10, 'F');
-    doc.setTextColor(255);
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(11);
-    doc.text('TOTAL TTC : ' + fFormatMoney(total), W - M - 4, y + 7, { align: 'right' });
-    doc.setTextColor(0);
-    y += 16;
+    // ── TOTAL ──
+    var total = fCalcInvoiceTotal(inv);
+    doc.setFillColor(dark[0], dark[1], dark[2]);
+    doc.roundedRect(RightCol, y, W - M - RightCol, 12, 2, 2, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(255, 255, 255);
+    doc.text('TOTAL TTC :  ' + _pdfMoney(total), W - M - 5, y + 8, { align: 'right' });
+    doc.setTextColor(dark[0], dark[1], dark[2]);
+    y += 20;
 
-    // TVA mention
-    doc.setFont('helvetica', 'italic');
-    doc.setFontSize(8);
-    const mention = fsettings.mention || 'TVA non applicable, art. 293 B du CGI. En qualite de loueur meuble non professionnel (LMNP), aucune TVA n\'est collectee ni deductible.';
-    doc.text(mention, M, y, { maxWidth: CW });
-    y += 10;
+    // ── TVA + PAIEMENT ──
+    doc.setFont('helvetica', 'italic'); doc.setFontSize(7.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('TVA non applicable, art. 293 B du CGI', M, y);
+    y += 5;
 
-    // Payment
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(9);
-    if (inv.paiement) {
-      doc.text('Mode de paiement : ' + inv.paiement, M, y);
-      y += 5;
-    }
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(dark[0], dark[1], dark[2]);
+    if (inv.paiement) { doc.text('Mode de paiement : ' + inv.paiement, M, y); y += 5; }
 
-    // Caution
-    const caution = parseFloat(inv.caution) || 0;
+    var caution = parseFloat(inv.caution) || 0;
     if (caution > 0) {
-      y += 4;
-      doc.setFont('helvetica', 'italic');
-      doc.setFontSize(8);
-      doc.text('Depot de garantie (caution) : ' + fFormatMoney(caution) + ' \u2014 non incluse. Remboursable sous 7 jours apres depart.', M, y, { maxWidth: CW });
+      y += 2;
+      doc.setFillColor(250, 250, 248);
+      doc.roundedRect(M, y - 3, CW, 10, 1.5, 1.5, 'F');
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(gray[0], gray[1], gray[2]);
+      doc.text('Depot de garantie (caution) : ' + _pdfMoney(caution) + ' - non incluse dans le total. Remboursable sous 7 jours.', M + 4, y + 3);
+      y += 12;
     }
 
-    // Paid stamp
-    if (inv.statut === 'Payée' || inv.statut === 'Payee') {
-      y += 14;
-      doc.setDrawColor(63, 189, 113);
-      doc.setTextColor(63, 189, 113);
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(14);
-      // Rotate slightly for stamp effect
-      const stampX = W - M - 40;
-      const stampY = y;
-      doc.setLineWidth(0.6);
-      doc.rect(stampX - 2, stampY - 6, 44, 12);
-      doc.text('PAYEE', stampX + 20, stampY + 2, { align: 'center' });
-      doc.setTextColor(0);
-      doc.setDrawColor(200);
-      doc.setLineWidth(0.2);
+    // ── PAID STAMP ──
+    if (inv.statut === 'Payee' || inv.statut === 'Payee') {
+      doc.setDrawColor(green[0], green[1], green[2]); doc.setTextColor(green[0], green[1], green[2]);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setLineWidth(0.8);
+      doc.roundedRect(W - M - 44, y, 44, 14, 2, 2);
+      doc.text('PAYEE', W - M - 22, y + 10, { align: 'center' });
+      doc.setTextColor(0); doc.setDrawColor(200); doc.setLineWidth(0.2);
     }
 
-    // --- Footer ---
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(7);
-    doc.setTextColor(150);
-    doc.text('Document emis par ' + (inv.loueur || fsettings.nom || 'le loueur') + (siret ? ' \u2014 SIRET : ' + siret : '') + '.', M, 282);
+    // ── FOOTER ──
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(6.5); doc.setTextColor(180, 180, 180);
+    doc.text(loueur + (siret ? ' - SIRET : ' + siret : '') + ' - Document genere par Enomia', M, 285);
     doc.setTextColor(0);
 
-    // --- Save ---
-    const clientName = (inv.client || 'client').replace(/[^a-zA-Z0-9àâäéèêëïîôùûüÿçÀÂÄÉÈÊËÏÎÔÙÛÜŸÇ -]/g, '').replace(/\s+/g, '-');
-    const bienName = (bienLabel || 'bien').replace(/[^a-zA-Z0-9àâäéèêëïîôùûüÿçÀÂÄÉÈÊËÏÎÔÙÛÜŸÇ -]/g, '').replace(/\s+/g, '-');
-    const filename = clientName + ' facture sejour ' + bienName + ' - ' + (inv.arrivee || '') + ' ' + (inv.depart || '') + '.pdf';
+    // ── SAVE ──
+    var clientName = (inv.client || 'client').replace(/[^a-zA-Z0-9 -]/g, '').replace(/\s+/g, '-');
+    var bienName = (bienLabel || 'bien').replace(/[^a-zA-Z0-9 -]/g, '').replace(/\s+/g, '-');
+    var filename = clientName + ' facture sejour ' + bienName + ' - ' + (inv.arrivee || '') + ' ' + (inv.depart || '') + '.pdf';
     doc.save(filename);
     fToast('PDF telecharge', 'green');
+    } catch(e) { alert('Erreur PDF: ' + e.message); console.error(e); }
   }
 
   // ─── MODALS ───

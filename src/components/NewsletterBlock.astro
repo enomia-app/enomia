@@ -1,6 +1,6 @@
 ---
-interface Props { id?: string; }
-const { id = 'page-nl-form' } = Astro.props;
+interface Props { id?: string; source?: string; }
+const { id = 'page-nl-form', source = 'NL' } = Astro.props;
 ---
 
 <div class="nl-block">
@@ -41,7 +41,7 @@ const { id = 'page-nl-form' } = Astro.props;
   </div>
 </div>
 
-<script define:vars={{ id }}>
+<script define:vars={{ id, source }}>
 (function(){
   var f=document.getElementById(id);if(!f)return;
   f.addEventListener('submit',async function(e){
@@ -51,7 +51,7 @@ const { id = 'page-nl-form' } = Astro.props;
     var btn=f.querySelector('button'),orig=btn.innerHTML;
     btn.disabled=true;btn.textContent='Envoi\u2026';
     try{
-      var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,firstName:fn})});
+      var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,firstName:fn,source:source})});
       if(r.ok){btn.textContent='\u2713 Envoy\u00e9 !';btn.style.background='#2b2d2b';ins.forEach(function(i){i.disabled=true;i.style.opacity='0.5'});}
       else{btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.innerHTML=orig},2000);}
     }catch(_){btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.innerHTML=orig},2000);}

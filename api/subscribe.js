@@ -3,7 +3,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email, firstName, nombreBiens } = req.body;
+  const { email, firstName, nombreBiens, source } = req.body;
 
   if (!email || !firstName) {
     return res.status(400).json({ error: 'Missing required fields' });
@@ -32,7 +32,11 @@ export default async function handler(req, res) {
             { name: 'first_name', value: firstName },
             { name: 'nombre_biens', value: nombreBiens || '0' },
           ],
-          tags: ['sequence_waitlist_beta', `${nombreBiens}_biens`],
+          tags: [
+            'sequence_waitlist_beta',
+            `${nombreBiens}_biens`,
+            ...(source ? [source] : []),
+          ],
         }),
       }
     );

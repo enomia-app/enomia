@@ -359,7 +359,7 @@
       const caSym = c.caution_rendue ? '✓' : (c.caution_encaissee ? '✓' : '⏳');
       const signed = c.contrat_signe_url;
       return '<tr>' +
-        '<td><span class="primary">' + esc(c.locataire_prenom || '') + ' ' + esc(c.locataire_nom) + '</span><span class="secondary">' + esc(c.locataire_email || '') + '</span><span class="secondary">' + ((+c.nb_adultes || 0) + (+c.nb_enfants || 0)) + ' pers.</span></td>' +
+        '<td><span class="primary">' + esc(c.locataire_prenom || '') + ' ' + esc(c.locataire_nom) + '</span><span class="secondary">' + esc(c.locataire_email || '') + '</span><br><span class="secondary">' + ((+c.nb_adultes || 0) + (+c.nb_enfants || 0)) + ' pers.</span></td>' +
         '<td class="col-bien"><div style="display:flex;align-items:center;gap:10px"><div class="bien-item-icon">' + bienIcon(b.type_bien) + '</div><div><span class="primary">' + esc(b.nom_interne || '—') + '</span><span class="secondary">' + esc((b.adresse || '').split(',').pop() || '') + '</span></div></div></td>' +
         '<td style="white-space:nowrap"><span class="primary">' + fmtDateShort(c.date_arrivee) + ' → ' + fmtDateShort(c.date_depart) + '</span><span class="secondary">' + n + ' nuit' + (n > 1 ? 's' : '') + (c.langue === 'en' ? ' · 🇬🇧' : '') + '</span></td>' +
         '<td><span class="primary">' + fmtEur(c.prix_total) + '</span></td>' +
@@ -1162,6 +1162,8 @@
   function buildContratHtml(d, bien, bailleur, mode) {
     const lang = d.langue || 'fr';
     const L = T[lang];
+    function _trRoom(n) { return lang === 'en' && window.CT_ROOM_NAMES && window.CT_ROOM_NAMES[n] ? window.CT_ROOM_NAMES[n] : n; }
+    function _trItem(n) { return lang === 'en' && window.CT_ITEM_NAMES && window.CT_ITEM_NAMES[n] ? window.CT_ITEM_NAMES[n] : n; }
     const n = nights(d.date_arrivee, d.date_depart);
 
     const bailleurLine = bailleur.type === 'societe'
@@ -1225,10 +1227,15 @@
       `<div class="sig"><div><strong>${L.bailleur}</strong><br>${L.date_lieu}</div><div><strong>${L.preneur}</strong><br>${L.date_lieu}</div></div>`,
 
       // Annexes : inventaire
-      bien.inventaire && bien.inventaire.pieces && bien.inventaire.pieces.length ? `<h2 style="margin-top:24pt">${L.h_annexe_inventaire}</h2>${bien.inventaire.pieces.map(p => `<h3 style="font-size:10pt;font-weight:600;margin-top:8pt">${esc(p.nom)}</h3><table><tr><th>${L.objet}</th><th>${L.qte}</th><th>${L.etat}</th><th>${L.valeur}</th></tr>${(p.items || []).map(it => `<tr><td>${esc(it.objet)}</td><td>${it.qte || 1}</td><td>${esc(it.etat || '')}</td><td>${fmtEur((+it.valeur || 0) * (+it.qte || 1))}</td></tr>`).join('')}</table>`).join('')}<p style="margin-top:8pt"><strong>${L.inventaire_total}: ${fmtEur(invTotal)}</strong></p>` : '',
+      bien.inventaire && bien.inventaire.pieces && bien.inventaire.pieces.length ? `<h2 style="margin-top:24pt">${L.h_annexe_inventaire}</h2>${bien.inventaire.pieces.map(p => `<h3 style="font-size:10pt;font-weight:600;margin-top:8pt">${esc(_trRoom(p.nom))}</h3><table><tr><th>${L.objet}</th><th>${L.qte}</th><th>${L.etat}</th><th>${L.valeur}</th></tr>${(p.items || []).map(it => `<tr><td>${esc(_trItem(it.objet))}</td><td>${it.qte || 1}</td><td>${esc(it.etat || '')}</td><td>${fmtEur((+it.valeur || 0) * (+it.qte || 1))}</td></tr>`).join('')}</table>`).join('')}<p style="margin-top:8pt"><strong>${L.inventaire_total}: ${fmtEur(invTotal)}</strong></p>` : '',
 
       // Annexe règlement
-      bien.reglement_interieur ? `<h2 style="margin-top:20pt">${L.h_annexe_reglement}</h2><p style="white-space:pre-wrap">${esc(bien.reglement_interieur)}</p>` : ''
+      (function() {
+        if (!bien.reglement_interieur) return '';
+        var rTxt = bien.reglement_interieur;
+        if (lang === 'en' && window.CT_DEFAULT_REGLEMENT_EN && window.DEFAULT_REGLEMENT_RUNTIME && rTxt.trim() === window.DEFAULT_REGLEMENT_RUNTIME.trim()) rTxt = window.CT_DEFAULT_REGLEMENT_EN;
+        return `<h2 style="margin-top:20pt">${L.h_annexe_reglement}</h2><p style="white-space:pre-wrap">${esc(rTxt)}</p>`;
+      })()
     ];
 
     return parts.join('');
@@ -1303,15 +1310,27 @@
     var invTotal = computeInventaireTotal(bien.inventaire);
     var totalPers = (+d.nb_adultes || 0) + (+d.nb_enfants || 0);
 
+    // ── Translation helpers for room / item names ──
+    function trRoom(name) { return lang === 'en' && window.CT_ROOM_NAMES && window.CT_ROOM_NAMES[name] ? window.CT_ROOM_NAMES[name] : name; }
+    function trItem(name) { return lang === 'en' && window.CT_ITEM_NAMES && window.CT_ITEM_NAMES[name] ? window.CT_ITEM_NAMES[name] : name; }
+
     // ── HEADER ──
     doc.setFillColor(light[0], light[1], light[2]);
     doc.rect(0, 0, W, 38, 'F');
+    // Logo (mini Eunomia icon)
+    var lx = W - M - 42;
+    doc.setFillColor(dark[0], dark[1], dark[2]);
+    doc.roundedRect(lx, 3.5, 7, 7, 1.2, 1.2, 'F');
+    doc.setDrawColor(232, 228, 220); doc.setLineWidth(0.5);
+    doc.line(lx + 1.5, 5.5, lx + 5.5, 5.5);
+    doc.line(lx + 1.5, 7, lx + 4.2, 7);
+    doc.line(lx + 1.5, 8.5, lx + 5.5, 8.5);
     doc.setFont('helvetica', 'normal'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
-    doc.text('Contrat realise sur Enomia', W - M, 8, { align: 'right' });
+    doc.text(L.branding, lx + 9, 8.5);
     doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(dark[0], dark[1], dark[2]);
-    doc.text('CONTRAT DE LOCATION SAISONNIERE', 105, 18, { align: 'center' });
+    doc.text(L.title, 105, 18, { align: 'center' });
     doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(gray[0], gray[1], gray[2]);
-    doc.text(fmtDate(d.date_arrivee) + ' au ' + fmtDate(d.date_depart) + ' - ' + nuits + ' nuit' + (nuits > 1 ? 's' : ''), 105, 26, { align: 'center' });
+    doc.text(fmtDate(d.date_arrivee) + ' ' + L.au + ' ' + fmtDate(d.date_depart) + ' - ' + nuits + ' ' + (nuits > 1 ? L.nuits : L.nuit), 105, 26, { align: 'center' });
     doc.setDrawColor(dark[0], dark[1], dark[2]); doc.setLineWidth(0.5);
     doc.line(M, 36, W - M, 36);
 
@@ -1324,7 +1343,7 @@
 
     // Bailleur
     doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(green[0], green[1], green[2]);
-    doc.text('BAILLEUR', M + 4, y + 2);
+    doc.text(L.bailleur_label, M + 4, y + 2);
     doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
     doc.text(bailleurName, M + 4, y + 8);
     doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(gray[0], gray[1], gray[2]);
@@ -1335,7 +1354,7 @@
 
     // Preneur
     doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(green[0], green[1], green[2]);
-    doc.text('LOCATAIRE', M + 92, y + 2);
+    doc.text(L.preneur_label, M + 92, y + 2);
     doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
     doc.text(locataireName, M + 92, y + 8);
     doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(gray[0], gray[1], gray[2]);
@@ -1358,12 +1377,12 @@
 
     // Info grid
     var infos = [
-      ['Surface', (bien.surface || '---') + ' m2'],
-      ['Pieces', String(bien.nb_pieces || '---')],
-      ['Classement', bien.classement || '---'],
-      ['Capacite', (bien.capacite_max || '---') + ' pers.']
+      [L.surface, (bien.surface || '---') + ' ' + L.m2],
+      [L.pieces, String(bien.nb_pieces || '---')],
+      [L.classement, bien.classement || '---'],
+      [L.capacite, (bien.capacite_max || '---') + ' ' + L.pers]
     ];
-    if (bien.numero_declaration_mairie) infos.push(['N. mairie', bien.numero_declaration_mairie]);
+    if (bien.numero_declaration_mairie) infos.push([L.num_mairie, bien.numero_declaration_mairie]);
     var gx = M + 2;
     doc.setFontSize(7);
     infos.forEach(function(info) {
@@ -1379,7 +1398,7 @@
     y += 10;
 
     var equips = (Array.isArray(bien.equipements) ? bien.equipements : []).join(', ') || '---';
-    addPara('Equipements et charges inclus : ' + equips);
+    addPara(L.equipements + ' : ' + equips);
 
     // ── DUREE ──
     addH2(L.h_duree);
@@ -1388,26 +1407,26 @@
     doc.roundedRect(M, y - 2, pw, 20, 2, 2, 'F');
     // Arrivée
     doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
-    doc.text('ARRIVEE', M + 6, y + 3);
+    doc.text(L.arrivee_label, M + 6, y + 3);
     doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(dark[0], dark[1], dark[2]);
     doc.text(fmtDate(d.date_arrivee), M + 6, y + 9);
     doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
-    doc.text('a ' + (d.heure_arrivee || '15h00'), M + 6, y + 14);
+    doc.text(L.a + ' ' + (d.heure_arrivee || '15h00'), M + 6, y + 14);
     // Flèche
     doc.setFont('helvetica', 'normal'); doc.setFontSize(14); doc.setTextColor(200, 200, 200);
     doc.text('>', M + 72, y + 9);
     // Départ
     doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
-    doc.text('DEPART', M + 86, y + 3);
+    doc.text(L.depart_label, M + 86, y + 3);
     doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(dark[0], dark[1], dark[2]);
     doc.text(fmtDate(d.date_depart), M + 86, y + 9);
     doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
-    doc.text('a ' + (d.heure_depart || '11h00'), M + 86, y + 14);
+    doc.text(L.a + ' ' + (d.heure_depart || '11h00'), M + 86, y + 14);
     // Nuits badge
     doc.setFillColor(dark[0], dark[1], dark[2]);
     doc.roundedRect(M + 140, y + 2, 26, 13, 2, 2, 'F');
     doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(255, 255, 255);
-    doc.text(nuits + ' nuit' + (nuits > 1 ? 's' : ''), M + 153, y + 11, { align: 'center' });
+    doc.text(nuits + ' ' + (nuits > 1 ? L.nuits : L.nuit), M + 153, y + 11, { align: 'center' });
     doc.setTextColor(dark[0], dark[1], dark[2]);
     y += 24;
     addPara(L.duree_text);
@@ -1419,12 +1438,12 @@
     doc.setFillColor(light[0], light[1], light[2]);
     doc.roundedRect(M, y - 2, pw, 18, 2, 2, 'F');
     doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
-    doc.text('LOYER TOTAL', M + 4, y + 3);
+    doc.text(L.loyer_label, M + 4, y + 3);
     doc.setFont('helvetica', 'bold'); doc.setFontSize(14); doc.setTextColor(dark[0], dark[1], dark[2]);
     doc.text(_pdfEur(d.prix_total), M + 4, y + 11);
     doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(gray[0], gray[1], gray[2]);
-    doc.text(nuits + ' nuit' + (nuits > 1 ? 's' : '') + ' - ' + totalPers + ' personne' + (totalPers > 1 ? 's' : ''), M + 60, y + 6);
-    if (d.taxe_sejour_montant > 0) doc.text('+ Taxe de sejour : ' + _pdfEur(d.taxe_sejour_montant), M + 60, y + 11);
+    doc.text(nuits + ' ' + (nuits > 1 ? L.nuits : L.nuit) + ' - ' + totalPers + ' ' + (totalPers > 1 ? L.personnes : L.personne), M + 60, y + 6);
+    if (d.taxe_sejour_montant > 0) doc.text(L.taxe_plus + ' ' + _pdfEur(d.taxe_sejour_montant), M + 60, y + 11);
     y += 22;
 
     addPara(L.acompte_text(d.acompte_pourcentage, _pdfEur(d.acompte_montant), d.acompte_date_limite ? fmtDate(d.acompte_date_limite) : '---'));
@@ -1489,7 +1508,7 @@
       bien.inventaire.pieces.forEach(function (p) {
         checkPage(16);
         doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
-        doc.text(p.nom, M + 2, y); y += 6;
+        doc.text(trRoom(p.nom), M + 2, y); y += 6;
         if (p.items && p.items.length) {
           checkPage(8);
           doc.setFillColor(dark[0], dark[1], dark[2]);
@@ -1502,7 +1521,7 @@
           p.items.forEach(function (it, idx) {
             checkPage(6);
             if (idx % 2 === 0) { doc.setFillColor(250, 250, 248); doc.rect(M, y - 3, pw, 5.5, 'F'); }
-            doc.text(String(it.objet || ''), M + 3, y);
+            doc.text(trItem(String(it.objet || '')), M + 3, y);
             doc.text(String(it.qte || 1), M + 95, y);
             doc.text(String(it.etat || ''), M + 115, y);
             doc.text(_pdfEur((+it.valeur || 0) * (+it.qte || 1), 0), M + 145, y);
@@ -1522,12 +1541,17 @@
     if (bien.reglement_interieur) {
       if (y > 40) { doc.addPage(); y = 20; }
       addH2(L.h_annexe_reglement);
-      addPara(bien.reglement_interieur);
+      // Use English default if rules match French default and lang is EN
+      var reglTxt = bien.reglement_interieur;
+      if (lang === 'en' && window.CT_DEFAULT_REGLEMENT_EN && window.DEFAULT_REGLEMENT_RUNTIME && reglTxt.trim() === window.DEFAULT_REGLEMENT_RUNTIME.trim()) {
+        reglTxt = window.CT_DEFAULT_REGLEMENT_EN;
+      }
+      addPara(reglTxt);
     }
 
     // ── FOOTER ──
     doc.setFont('helvetica', 'normal'); doc.setFontSize(6.5); doc.setTextColor(180, 180, 180);
-    doc.text(bailleurName + (bailleur.siret ? ' - SIRET : ' + bailleur.siret : '') + ' - Document genere par Enomia', M, 288);
+    doc.text(bailleurName + (bailleur.siret ? ' - SIRET : ' + bailleur.siret : '') + ' - ' + L.branding_footer, M, 288);
 
     // Save
     var fname = 'contrat-' + (d.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-') + '-' + (d.date_arrivee || '') + '.pdf';
@@ -1538,31 +1562,36 @@
     }
   };
 
-  // ─── EXPORT WORD (.docx via MHTML Blob) ─────────────────────────
+  // ─── EXPORT WORD (.docx via Word-XML Blob) ──────────────────────
   window.ctExportWord = function () {
     try {
     var bien = ctBiens.find(function(b){return b.id===ctWizardData.bien_id});
     if (!bien) { alert('Aucun bien selectionne'); return; }
     var html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'word');
-    var fullHtml = '<!DOCTYPE html><html><head><meta charset="utf-8">' +
+    var fullHtml = '<html xmlns:o="urn:schemas-microsoft-com:office:office" ' +
+      'xmlns:w="urn:schemas-microsoft-com:office:word" ' +
+      'xmlns="http://www.w3.org/TR/REC-html40">' +
+      '<head><meta charset="utf-8">' +
+      '<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View>' +
+      '<w:Zoom>100</w:Zoom><w:DoNotOptimizeForBrowser/></w:WordDocument></xml><![endif]-->' +
       '<style>' +
-      '@page { size: A4; margin: 2cm; }' +
-      'body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #1a1a1a; max-width: 170mm; margin: 0 auto; }' +
+      '@page { size: 21cm 29.7cm; margin: 2cm; }' +
+      'body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #1a1a1a; }' +
       'h1 { font-size: 16pt; text-align: center; border-bottom: 2px solid #2b2d2b; padding-bottom: 10px; margin-bottom: 20px; }' +
       'h2 { font-size: 11pt; font-weight: bold; text-transform: uppercase; margin-top: 18px; margin-bottom: 8px; padding: 4px 10px; background: #f0efec; border-left: 3px solid #2b2d2b; }' +
       'p { margin: 6pt 0; text-align: justify; }' +
       'table { border-collapse: collapse; width: 100%; font-size: 10pt; margin: 10px 0; }' +
       'th, td { border: 1px solid #ccc; padding: 5px 8px; text-align: left; }' +
       'th { background: #f0efec; font-weight: bold; font-size: 9pt; }' +
-      '.sig-row { display: flex; justify-content: space-between; margin-top: 30px; }' +
-      '.sig-box { width: 45%; text-align: center; padding-top: 12px; border-top: 1px solid #000; }' +
+      '.sig { margin-top: 30px; }' +
+      '.sig div { display: inline-block; width: 45%; text-align: center; padding-top: 40px; border-top: 1px solid #000; }' +
       '</style></head><body>' + html + '</body></html>';
-    var blob = new Blob(['\ufeff' + fullHtml], { type: 'text/html' });
+    var blob = new Blob(['\ufeff' + fullHtml], { type: 'application/msword' });
     var url = URL.createObjectURL(blob);
     var a = document.createElement('a');
     a.href = url;
     var name = (ctWizardData.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-');
-    a.download = 'contrat-' + name + '-' + (ctWizardData.date_arrivee || '') + '.doc';
+    a.download = 'contrat-' + name + '-' + (ctWizardData.date_arrivee || '') + '.docx';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

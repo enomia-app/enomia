@@ -743,7 +743,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         var btn=f.querySelector('button'),orig=btn.innerHTML;
         btn.disabled=true;btn.textContent='Envoi\u2026';
         try{
-          var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,firstName:fn})});
+          var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,firstName:fn,source:'Simulateur'})});
           if(r.ok){btn.textContent='\u2713 Envoy\u00e9 !';btn.style.background='#2b2d2b';ins.forEach(function(i){i.disabled=true;i.style.opacity='0.5'});}
           else{btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.innerHTML=orig},2000);}
         }catch(_){btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.innerHTML=orig},2000);}

@@ -3,6 +3,7 @@ export const prerender = true;
 
 import { getCollection } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import NewsletterBlock from '../../components/NewsletterBlock.astro';
 
 const CAT_LABELS: Record<string, string> = {
   'chiffres-rentabilite': '💰 Chiffres & Rentabilité',
@@ -177,41 +178,7 @@ CAT_ORDER.forEach(c => { catCounts[c] = otherPosts.filter(p => p.data.category =
       @media (max-width: 640px) { .formation-grid { grid-template-columns: repeat(2, 1fr); } .formation-title { font-size: 26px; } }
     </style>
 
-    <!-- Newsletter inline -->
-    <div class="nl-block">
-      <div class="nl-row">
-        <div class="nl-content">
-          <div class="nl-pdf-pill">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Guide PDF offert + Newsletter
-          </div>
-          <div class="nl-title">Recevez ma méthode LCD complète, gratuitement</div>
-          <p class="nl-desc">Le guide PDF en 10 étapes que j'ai utilisé pour atteindre <strong style="color:var(--text-light);">93–97% d'occupation sur 9 biens</strong> — expliqué de A à Z, sans jargon.</p>
-          <div class="nl-bullets">
-            <div class="nl-bullet">
-              <span class="nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span><strong>Guide PDF Méthode 97%</strong> — 40+ pages, de A à Z</span>
-            </div>
-            <div class="nl-bullet">
-              <span class="nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>Accès au <strong>simulateur de rentabilité</strong> Enomia</span>
-            </div>
-            <div class="nl-bullet">
-              <span class="nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span><strong>1 email/semaine</strong> — chiffres réels, pas de spam</span>
-            </div>
-          </div>
-        </div>
-        <div class="nl-form-wrap">
-          <form class="nl-form" onsubmit="return false;">
-            <input type="text" class="nl-input" placeholder="Prénom" />
-            <input type="email" class="nl-input" placeholder="votre@email.com" />
-            <button type="submit" class="nl-btn">📘 Recevoir le guide gratuit</button>
-            <p class="nl-note">Désinscription en 1 clic · Email jamais partagé</p>
-          </form>
-        </div>
-      </div>
-    </div>
+    <NewsletterBlock id="blog-index-nl-form" />
 
     <!-- Articles grid with cluster filters -->
     {otherPosts.length > 0 && (

@@ -263,6 +263,15 @@
   function fmtEurP(n) {
     return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 2 }).format(Number(n) || 0);
   }
+  // PDF-safe money formatter (no unicode thin space that jsPDF can't render)
+  function _pdfEur(n, decimals) {
+    var v = Number(n || 0).toFixed(decimals === undefined ? 2 : decimals);
+    var parts = v.split('.');
+    var int = parts[0];
+    var dec = parts[1];
+    var formatted = int.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    return formatted + (dec ? ',' + dec : '') + ' EUR';
+  }
   function fmtDate(s) {
     if (!s) return '—';
     return new Date(s).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
@@ -1335,127 +1344,173 @@
   window.ctExportPdf = function () {
     try {
     if (!window.jspdf) {
-      // Load jsPDF dynamically if not available
       var s = document.createElement('script');
       s.src = '/jspdf.min.js';
       s.onload = function() { window.ctExportPdf(); };
-      s.onerror = function() { alert('Erreur : impossible de charger la librairie PDF. Vérifiez votre connexion internet.'); };
+      s.onerror = function() { alert('Erreur : impossible de charger la librairie PDF.'); };
       document.head.appendChild(s);
       return;
     }
-    const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
-    if (!bien) { alert('Aucun bien sélectionné'); return; }
-    const d = ctWizardData;
-    const bailleur = ctBailleur || {};
-    const lang = d.langue || 'fr';
-    const L = T[lang];
-    const n = nights(d.date_arrivee, d.date_depart);
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF({ unit: 'mm', format: 'a4' });
-    const pw = 170; // printable width (A4 = 210 - 20*2)
-    let y = 20;
+    var bien = ctBiens.find(function(b){return b.id===ctWizardData.bien_id});
+    if (!bien) { alert('Aucun bien selectionne'); return; }
+    var d = ctWizardData;
+    var bailleur = ctBailleur || {};
+    var lang = d.langue || 'fr';
+    var L = T[lang];
+    var nuits = nights(d.date_arrivee, d.date_depart);
+    var jsPDF = window.jspdf.jsPDF;
+    var doc = new jsPDF({ unit: 'mm', format: 'a4' });
+    var W = 210, M = 20, pw = W - 2 * M;
+    var y = 0;
+    var dark = [43, 45, 43];
+    var gray = [138, 137, 133];
+    var green = [63, 189, 113];
+    var light = [247, 246, 243];
 
-    function checkPage(need) {
-      if (y + need > 270) { doc.addPage(); y = 20; }
-    }
-
-    function addTitle(text) {
-      checkPage(16);
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(18);
-      var lines = doc.splitTextToSize(text, pw);
-      doc.text(lines, 105, y, { align: 'center' });
-      y += lines.length * 8;
-      doc.setLineWidth(0.4);
-      doc.line(20, y, 190, y);
-      y += 10;
-    }
+    function checkPage(need) { if (y + need > 275) { doc.addPage(); y = 20; } }
 
     function addH2(text) {
-      checkPage(12);
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(11);
-      doc.text(text.toUpperCase(), 20, y);
-      y += 6;
+      checkPage(14);
+      y += 4;
+      doc.setFillColor(dark[0], dark[1], dark[2]);
+      doc.roundedRect(M, y - 4, pw, 8, 1.5, 1.5, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(255, 255, 255);
+      doc.text(text.toUpperCase(), M + 4, y + 1.5);
+      doc.setTextColor(dark[0], dark[1], dark[2]);
+      y += 10;
     }
 
     function addPara(text) {
       if (!text) return;
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(10);
-      var lines = doc.splitTextToSize(text, pw);
-      for (var i = 0; i < lines.length; i++) {
-        checkPage(5);
-        doc.text(lines[i], 20, y);
-        y += 4.5;
-      }
-      y += 3;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(60, 60, 60);
+      var lines = doc.splitTextToSize(text, pw - 4);
+      for (var i = 0; i < lines.length; i++) { checkPage(5); doc.text(lines[i], M + 2, y); y += 4.2; }
+      y += 2;
     }
 
-    function addBoldPara(label, text) {
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(10);
-      var full = label + ' ' + text;
-      var lines = doc.splitTextToSize(full, pw);
-      for (var i = 0; i < lines.length; i++) {
-        checkPage(5);
-        doc.text(lines[i], 20, y);
-        y += 4.5;
-      }
-      y += 3;
-      doc.setFont('helvetica', 'normal');
+    function addField(label, value) {
+      checkPage(6);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(8); doc.setTextColor(gray[0], gray[1], gray[2]);
+      doc.text(label, M + 2, y);
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(dark[0], dark[1], dark[2]);
+      doc.text(String(value || '---'), M + 2, y + 4.5);
+      y += 10;
     }
 
     // Build data
-    var bailleurLine = bailleur.type === 'societe'
-      ? (bailleur.raison_sociale || '') + ' — SIRET ' + (bailleur.siret || '')
-      : (bailleur.prenom || '') + ' ' + (bailleur.nom || '');
-    var bailleurAddr = (bailleur.adresse || '') + (bailleur.email ? ', ' + bailleur.email : '') + (bailleur.telephone ? ', ' + bailleur.telephone : '');
-    var locataireLine = (d.locataire_prenom || '') + ' ' + (d.locataire_nom || '');
-    var locataireAddr = (d.locataire_adresse || '') + (d.locataire_email ? ', ' + d.locataire_email : '') + (d.locataire_telephone ? ', ' + d.locataire_telephone : '');
-    var equips = (Array.isArray(bien.equipements) ? bien.equipements : []).join(', ') || '—';
+    var bailleurName = bailleur.type === 'societe'
+      ? (bailleur.raison_sociale || '') : (bailleur.prenom || '') + ' ' + (bailleur.nom || '');
+    var locataireName = (d.locataire_prenom || '') + ' ' + (d.locataire_nom || '');
     var invTotal = computeInventaireTotal(bien.inventaire);
     var totalPers = (+d.nb_adultes || 0) + (+d.nb_enfants || 0);
 
-    // Title
-    addTitle(L.title);
+    // ── HEADER ──
+    doc.setFillColor(light[0], light[1], light[2]);
+    doc.rect(0, 0, W, 38, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text('CONTRAT DE LOCATION SAISONNIERE', 105, 16, { align: 'center' });
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text(fmtDate(d.date_arrivee) + ' au ' + fmtDate(d.date_depart) + ' - ' + nuits + ' nuit' + (nuits > 1 ? 's' : ''), 105, 24, { align: 'center' });
+    doc.setDrawColor(dark[0], dark[1], dark[2]); doc.setLineWidth(0.5);
+    doc.line(M, 36, W - M, 36);
 
-    // I. Parties
-    addH2(L.h_parties);
-    addBoldPara(L.bailleur + ':', bailleurLine + '. ' + bailleurAddr);
-    addBoldPara(L.preneur + ':', locataireLine + '. ' + locataireAddr);
+    y = 46;
 
-    // II. Objet
+    // ── PARTIES (2 colonnes) ──
+    doc.setFillColor(light[0], light[1], light[2]);
+    doc.roundedRect(M, y - 3, 82, 28, 2, 2, 'F');
+    doc.roundedRect(M + 88, y - 3, 82, 28, 2, 2, 'F');
+
+    // Bailleur
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(green[0], green[1], green[2]);
+    doc.text('BAILLEUR', M + 4, y + 2);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(bailleurName, M + 4, y + 8);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    if (bailleur.adresse) doc.text(bailleur.adresse, M + 4, y + 13, { maxWidth: 74 });
+    var bInfo = [bailleur.email, bailleur.telephone].filter(Boolean).join(' - ');
+    if (bInfo) doc.text(bInfo, M + 4, y + 18, { maxWidth: 74 });
+    if (bailleur.siret) doc.text('SIRET : ' + bailleur.siret, M + 4, y + 22);
+
+    // Preneur
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(green[0], green[1], green[2]);
+    doc.text('LOCATAIRE', M + 92, y + 2);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(locataireName, M + 92, y + 8);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    if (d.locataire_adresse) doc.text(d.locataire_adresse, M + 92, y + 13, { maxWidth: 74 });
+    var lInfo = [d.locataire_email, d.locataire_telephone].filter(Boolean).join(' - ');
+    if (lInfo) doc.text(lInfo, M + 92, y + 18, { maxWidth: 74 });
+
+    y += 32;
+
+    // ── OBJET ──
     addH2(L.h_objet);
     addPara(L.objet_text);
 
-    // III. Logement
+    // ── LOGEMENT ──
     addH2(L.h_logement);
-    addPara((bien.nom_interne || '') + ' — ' + (bien.adresse || '') + '. ' + L.surface + ': ' + (bien.surface || '—') + ' m\u00B2. ' + L.pieces + ': ' + (bien.nb_pieces || '—') + '. ' + L.classement + ': ' + (bien.classement || '—') + '. ' + L.capacite + ': ' + (bien.capacite_max || '—') + ' ' + L.pers + '.' + (bien.numero_declaration_mairie ? ' ' + L.num_mairie + ': ' + bien.numero_declaration_mairie + '.' : ''));
-    addBoldPara(L.equipements + ':', equips + '.');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text((bien.nom_interne || 'Logement'), M + 2, y); y += 5;
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text(bien.adresse || '', M + 2, y); y += 6;
 
-    // IV. Durée
+    // Info grid
+    var infos = [
+      ['Surface', (bien.surface || '---') + ' m2'],
+      ['Pieces', String(bien.nb_pieces || '---')],
+      ['Classement', bien.classement || '---'],
+      ['Capacite', (bien.capacite_max || '---') + ' pers.']
+    ];
+    if (bien.numero_declaration_mairie) infos.push(['N. mairie', bien.numero_declaration_mairie]);
+    var gx = M + 2;
+    doc.setFontSize(7);
+    infos.forEach(function(info) {
+      if (gx > 160) { gx = M + 2; y += 10; }
+      checkPage(10);
+      doc.setFont('helvetica', 'bold'); doc.setTextColor(gray[0], gray[1], gray[2]);
+      doc.text(info[0].toUpperCase(), gx, y);
+      doc.setFont('helvetica', 'normal'); doc.setTextColor(dark[0], dark[1], dark[2]); doc.setFontSize(9);
+      doc.text(info[1], gx, y + 4);
+      doc.setFontSize(7);
+      gx += 34;
+    });
+    y += 10;
+
+    var equips = (Array.isArray(bien.equipements) ? bien.equipements : []).join(', ') || '---';
+    addPara('Equipements et charges inclus : ' + equips);
+
+    // ── DUREE ──
     addH2(L.h_duree);
-    addPara(L.du + ' ' + fmtDate(d.date_arrivee) + ' ' + L.a + ' ' + d.heure_arrivee + ' ' + L.au + ' ' + fmtDate(d.date_depart) + ' ' + L.a + ' ' + d.heure_depart + ', ' + L.soit + ' ' + n + ' ' + (n > 1 ? L.nuits : L.nuit) + '. ' + L.duree_text);
+    addPara(L.du + ' ' + fmtDate(d.date_arrivee) + ' a ' + (d.heure_arrivee||'15h00') + ' ' + L.au + ' ' + fmtDate(d.date_depart) + ' a ' + (d.heure_depart||'11h00') + ', ' + L.soit + ' ' + nuits + ' ' + (nuits > 1 ? L.nuits : L.nuit) + '. ' + L.duree_text);
 
-    // V. Prix
+    // ── PRIX ──
     addH2(L.h_prix);
-    addPara(L.loyer + ': ' + fmtEurP(d.prix_total) + ' ' + L.pour_total + '.');
-    addPara(L.acompte_text(d.acompte_pourcentage, fmtEurP(d.acompte_montant), d.acompte_date_limite ? fmtDate(d.acompte_date_limite) : '—'));
-    addPara(L.solde_text(fmtEurP((d.prix_total || 0) - (d.acompte_montant || 0)), d.solde_date_limite ? fmtDate(d.solde_date_limite) : '—'));
-    if (d.taxe_sejour_montant > 0) {
-      addPara(L.taxe_sejour + ': ' + fmtEurP(d.taxe_sejour_montant) + ' ' + L.en_sus + '.');
-    }
+    // Price summary box
+    checkPage(20);
+    doc.setFillColor(light[0], light[1], light[2]);
+    doc.roundedRect(M, y - 2, pw, 18, 2, 2, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('LOYER TOTAL', M + 4, y + 3);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(14); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(_pdfEur(d.prix_total), M + 4, y + 11);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text(nuits + ' nuit' + (nuits > 1 ? 's' : '') + ' - ' + totalPers + ' personne' + (totalPers > 1 ? 's' : ''), M + 60, y + 6);
+    if (d.taxe_sejour_montant > 0) doc.text('+ Taxe de sejour : ' + _pdfEur(d.taxe_sejour_montant), M + 60, y + 11);
+    y += 22;
 
-    // VI. Caution
+    addPara(L.acompte_text(d.acompte_pourcentage, _pdfEur(d.acompte_montant), d.acompte_date_limite ? fmtDate(d.acompte_date_limite) : '---'));
+    addPara(L.solde_text(_pdfEur((d.prix_total || 0) - (d.acompte_montant || 0)), d.solde_date_limite ? fmtDate(d.solde_date_limite) : '---'));
+
+    // ── CAUTION ──
     addH2(L.h_caution);
-    addPara(L.caution_text(fmtEurP(d.caution)));
+    addPara(L.caution_text(_pdfEur(d.caution)));
 
-    // VII. EDL
+    // ── EDL ──
     addH2(L.h_edl);
-    addPara(L.edl_text(fmtEurP(invTotal)));
+    addPara(L.edl_text(_pdfEur(invTotal)));
 
-    // VIII. Obligations
+    // ── OBLIGATIONS ──
     addH2(L.h_obligations);
     addPara(L.obligations_text(totalPers));
     if (bien.animaux === 'non') addPara(L.animaux_non);
@@ -1464,91 +1519,87 @@
     if (bien.fumeurs === 'non') addPara(L.fumeurs_non);
     if (bien.fetes === 'non') addPara(L.fetes_non);
 
-    // IX. Annulation
+    // ── ANNULATION ──
     addH2(L.h_annulation);
     addPara(L.annulation_text[bien.conditions_annulation || 'standard']);
 
-    // X. Assurance
+    // ── ASSURANCE ──
     addH2(L.h_assurance);
     addPara(L.assurance_text[bien.assurance_villegiature || 'obligatoire']);
 
-    // XI. Clauses
+    // ── CLAUSES ──
     if (bien.clauses_particulieres) {
       addH2(L.h_clauses);
       addPara(bien.clauses_particulieres);
     }
 
-    // XII. Domicile
+    // ── DOMICILE ──
     addH2(L.h_domicile);
     addPara(L.domicile_text);
 
-    // Signatures
-    checkPage(30);
+    // ── SIGNATURES ──
+    checkPage(40);
     y += 6;
-    addPara(L.lu_approuve);
-    y += 4;
-    doc.setLineWidth(0.3);
-    doc.line(20, y, 95, y);
-    doc.line(115, y, 190, y);
-    y += 6;
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(9);
-    doc.text(L.bailleur, 57, y, { align: 'center' });
-    doc.text(L.preneur, 152, y, { align: 'center' });
-    y += 5;
-    doc.setFont('helvetica', 'normal');
-    doc.text(L.date_lieu, 57, y, { align: 'center' });
-    doc.text(L.date_lieu, 152, y, { align: 'center' });
+    doc.setFont('helvetica', 'italic'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text(L.lu_approuve, M + 2, y); y += 8;
 
-    // Annexe inventaire
+    // 2 signature boxes
+    doc.setFillColor(light[0], light[1], light[2]);
+    doc.roundedRect(M, y, 78, 30, 2, 2, 'F');
+    doc.roundedRect(M + 92, y, 78, 30, 2, 2, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(8); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(L.bailleur, M + 39, y + 5, { align: 'center' });
+    doc.text(L.preneur, M + 131, y + 5, { align: 'center' });
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text(L.date_lieu, M + 39, y + 10, { align: 'center' });
+    doc.text(L.date_lieu, M + 131, y + 10, { align: 'center' });
+
+    // ── ANNEXE INVENTAIRE ──
     if (bien.inventaire && bien.inventaire.pieces && bien.inventaire.pieces.length) {
-      doc.addPage();
-      y = 20;
+      doc.addPage(); y = 20;
       addH2(L.h_annexe_inventaire);
       bien.inventaire.pieces.forEach(function (p) {
-        checkPage(14);
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(10);
-        doc.text(p.nom, 20, y);
-        y += 6;
+        checkPage(16);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
+        doc.text(p.nom, M + 2, y); y += 6;
         if (p.items && p.items.length) {
-          // Table header
           checkPage(8);
-          doc.setFontSize(8);
-          doc.setFont('helvetica', 'bold');
-          doc.setFillColor(240, 240, 240);
-          doc.rect(20, y - 3.5, pw, 5, 'F');
-          doc.text(L.objet, 22, y);
-          doc.text(L.qte, 110, y);
-          doc.text(L.etat, 130, y);
-          doc.text(L.valeur, 160, y);
+          doc.setFillColor(dark[0], dark[1], dark[2]);
+          doc.roundedRect(M, y - 3.5, pw, 6, 1, 1, 'F');
+          doc.setFontSize(7); doc.setFont('helvetica', 'bold'); doc.setTextColor(255, 255, 255);
+          doc.text(L.objet, M + 3, y); doc.text(L.qte, M + 95, y); doc.text(L.etat, M + 115, y); doc.text(L.valeur, M + 145, y);
+          doc.setTextColor(dark[0], dark[1], dark[2]);
           y += 5;
-          doc.setFont('helvetica', 'normal');
-          p.items.forEach(function (it) {
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5);
+          p.items.forEach(function (it, idx) {
             checkPage(6);
-            doc.text(String(it.objet || ''), 22, y);
-            doc.text(String(it.qte || 1), 110, y);
-            doc.text(String(it.etat || ''), 130, y);
-            doc.text(fmtEur((+it.valeur || 0) * (+it.qte || 1)), 160, y);
-            y += 4.5;
+            if (idx % 2 === 0) { doc.setFillColor(250, 250, 248); doc.rect(M, y - 3, pw, 5.5, 'F'); }
+            doc.text(String(it.objet || ''), M + 3, y);
+            doc.text(String(it.qte || 1), M + 95, y);
+            doc.text(String(it.etat || ''), M + 115, y);
+            doc.text(_pdfEur((+it.valeur || 0) * (+it.qte || 1), 0), M + 145, y);
+            y += 5.5;
           });
-          y += 3;
+          y += 4;
         }
       });
-      checkPage(8);
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(10);
-      doc.text(L.inventaire_total + ': ' + fmtEur(invTotal), 20, y);
-      y += 8;
+      checkPage(10);
+      doc.setFillColor(light[0], light[1], light[2]);
+      doc.roundedRect(M, y - 2, pw, 10, 2, 2, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
+      doc.text(L.inventaire_total + ' : ' + _pdfEur(invTotal, 0), M + 4, y + 5);
     }
 
-    // Annexe règlement
+    // ── ANNEXE REGLEMENT ──
     if (bien.reglement_interieur) {
-      checkPage(20);
       if (y > 40) { doc.addPage(); y = 20; }
       addH2(L.h_annexe_reglement);
       addPara(bien.reglement_interieur);
     }
+
+    // ── FOOTER ──
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(6.5); doc.setTextColor(180, 180, 180);
+    doc.text(bailleurName + (bailleur.siret ? ' - SIRET : ' + bailleur.siret : '') + ' - Document genere par Enomia', M, 288);
 
     // Save
     var fname = 'contrat-' + (d.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-') + '-' + (d.date_arrivee || '') + '.pdf';
@@ -1562,37 +1613,28 @@
   // ─── EXPORT WORD (.docx via MHTML Blob) ─────────────────────────
   window.ctExportWord = function () {
     try {
-    const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
-    if (!bien) { alert('Aucun bien sélectionné'); return; }
-    const html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'word');
-    const boundary = '----=_NextPart_' + Date.now();
-    var wordHtml = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">\r\n' +
-      '<head><meta charset="utf-8">\r\n' +
-      '<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom></w:WordDocument></xml><![endif]-->\r\n' +
-      '<style>\r\n' +
-      '@page { size: A4; margin: 2cm; }\r\n' +
-      'body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.6; }\r\n' +
-      'h1 { font-size: 16pt; text-align: center; border-bottom: 2pt solid #000; padding-bottom: 8pt; }\r\n' +
-      'h2 { font-size: 12pt; font-weight: bold; text-transform: uppercase; margin-top: 14pt; }\r\n' +
-      'p { margin: 4pt 0; text-align: justify; }\r\n' +
-      'table { border-collapse: collapse; width: 100%; font-size: 10pt; }\r\n' +
-      'th, td { border: 1pt solid #999; padding: 4pt 6pt; }\r\n' +
-      'th { background-color: #f0f0f0; }\r\n' +
-      '</style>\r\n' +
-      '</head><body>' + html + '</body></html>';
-    var mhtml = 'MIME-Version: 1.0\r\n' +
-      'Content-Type: multipart/related; boundary="' + boundary + '"\r\n\r\n' +
-      '--' + boundary + '\r\n' +
-      'Content-Type: text/html; charset="utf-8"\r\n' +
-      'Content-Transfer-Encoding: quoted-printable\r\n\r\n' +
-      wordHtml + '\r\n' +
-      '--' + boundary + '--\r\n';
-    const blob = new Blob(['\ufeff' + mhtml], { type: 'application/msword' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    var bien = ctBiens.find(function(b){return b.id===ctWizardData.bien_id});
+    if (!bien) { alert('Aucun bien selectionne'); return; }
+    var html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'word');
+    var fullHtml = '<!DOCTYPE html><html><head><meta charset="utf-8">' +
+      '<style>' +
+      '@page { size: A4; margin: 2cm; }' +
+      'body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #1a1a1a; max-width: 170mm; margin: 0 auto; }' +
+      'h1 { font-size: 16pt; text-align: center; border-bottom: 2px solid #2b2d2b; padding-bottom: 10px; margin-bottom: 20px; }' +
+      'h2 { font-size: 11pt; font-weight: bold; text-transform: uppercase; margin-top: 18px; margin-bottom: 8px; padding: 4px 10px; background: #f0efec; border-left: 3px solid #2b2d2b; }' +
+      'p { margin: 6pt 0; text-align: justify; }' +
+      'table { border-collapse: collapse; width: 100%; font-size: 10pt; margin: 10px 0; }' +
+      'th, td { border: 1px solid #ccc; padding: 5px 8px; text-align: left; }' +
+      'th { background: #f0efec; font-weight: bold; font-size: 9pt; }' +
+      '.sig-row { display: flex; justify-content: space-between; margin-top: 30px; }' +
+      '.sig-box { width: 45%; text-align: center; padding-top: 12px; border-top: 1px solid #000; }' +
+      '</style></head><body>' + html + '</body></html>';
+    var blob = new Blob(['\ufeff' + fullHtml], { type: 'text/html' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
     a.href = url;
-    const name = (ctWizardData.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-');
-    a.download = 'contrat-' + name + '-' + (ctWizardData.date_arrivee || '') + '.docx';
+    var name = (ctWizardData.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-');
+    a.download = 'contrat-' + name + '-' + (ctWizardData.date_arrivee || '') + '.doc';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

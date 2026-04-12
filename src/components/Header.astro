@@ -2,9 +2,11 @@
 interface Props {
   variant?: 'marketing' | 'tool';
   currentTool?: 'simulateur' | 'facture' | 'contrat';
+  ctaLabel?: string;
+  ctaHref?: string;
 }
 
-const { variant = 'marketing', currentTool } = Astro.props;
+const { variant = 'marketing', currentTool, ctaLabel, ctaHref } = Astro.props;
 const isTool = variant === 'tool';
 ---
 
@@ -58,7 +60,9 @@ const isTool = variant === 'tool';
 
     <!-- CTA right -->
     <div class="eh-right">
-      {isTool ? (
+      {ctaHref && ctaLabel ? (
+        <a href={ctaHref} class="eh-btn eh-btn-green">{ctaLabel}</a>
+      ) : isTool ? (
         <button class="eh-btn eh-btn-green" id="header-save-btn">Sauvegarder</button>
       ) : (
         <a href="/simulateur-rentabilite-airbnb" class="eh-btn eh-btn-green">Simulateur de rentabilité LCD →</a>

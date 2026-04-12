@@ -30,13 +30,11 @@ const { id = 'page-nl-form' } = Astro.props;
     <div class="nl-right">
       <form id={id} class="nl-form">
         <input type="text" placeholder="Pr&eacute;nom" required class="nl-input nl-input-name" />
-        <div class="nl-row">
-          <input type="email" placeholder="votre@email.com" required class="nl-input nl-input-email" />
-          <button type="submit" class="nl-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="nl-btn-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Recevoir La M&eacute;thode 97%&nbsp;&copy;
-          </button>
-        </div>
+        <input type="email" placeholder="votre@email.com" required class="nl-input nl-input-email" />
+        <button type="submit" class="nl-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="nl-btn-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Recevoir La M&eacute;thode 97%&nbsp;&copy;
+        </button>
       </form>
       <p class="nl-note">D&eacute;sinscription en 1 clic &middot; Email jamais partag&eacute;</p>
     </div>
@@ -67,8 +65,7 @@ const { id = 'page-nl-form' } = Astro.props;
     border-radius: 14px;
     padding: 36px 40px;
     color: #e8e4dc;
-    max-width: 920px;
-    margin: 48px auto 40px;
+    margin: 48px 0 40px;
   }
   .nl-cols {
     display: flex;
@@ -159,14 +156,8 @@ const { id = 'page-nl-form' } = Astro.props;
     width: 100%;
     box-sizing: border-box;
   }
-  .nl-row {
-    display: flex;
-    gap: 0;
-  }
   .nl-input-email {
-    border-radius: 8px 0 0 8px;
-    border-right: none;
-    flex: 1;
+    border-radius: 8px;
   }
   .nl-btn {
     background: #3fbd71;
@@ -176,12 +167,14 @@ const { id = 'page-nl-form' } = Astro.props;
     font-size: 13px;
     font-weight: 700;
     padding: 12px 20px;
-    border-radius: 0 8px 8px 0;
+    border-radius: 8px;
     cursor: pointer;
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
+    width: 100%;
   }
   .nl-btn-icon {
     width: 13px;

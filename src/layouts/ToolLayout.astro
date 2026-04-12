@@ -7,9 +7,11 @@ interface Props {
   canonical?: string;
   ogImage?: string;
   currentTool?: 'simulateur' | 'facture' | 'contrat' | 'none';
+  ctaLabel?: string;
+  ctaHref?: string;
 }
 
-const { title, description, canonical, ogImage, currentTool = 'none' } = Astro.props;
+const { title, description, canonical, ogImage, currentTool = 'none', ctaLabel, ctaHref } = Astro.props;
 const headerTool = currentTool === 'none' ? undefined : currentTool;
 ---
 <!DOCTYPE html>
@@ -84,7 +86,7 @@ const headerTool = currentTool === 'none' ? undefined : currentTool;
   </style>
 </head>
 <body>
-  <Header variant="tool" currentTool={headerTool} />
+  <Header variant="tool" currentTool={headerTool} ctaLabel={ctaLabel} ctaHref={ctaHref} />
 
   <main>
     <slot />

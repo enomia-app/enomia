@@ -1,8 +1,24 @@
 ---
-interface Props { id?: string; source?: string; }
-const { id = 'page-nl-form', source = 'NL' } = Astro.props;
+interface Props { id?: string; source?: string; compact?: boolean; }
+const { id = 'page-nl-form', source = 'NL', compact = false } = Astro.props;
 ---
 
+{compact ? (
+<div class="nl-compact">
+  <div class="nl-badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="nl-badge-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+    Guide PDF offert
+  </div>
+  <div class="nlc-title">La M&eacute;thode 97%&nbsp;&copy;</div>
+  <p class="nlc-desc">Le guide en 10 &eacute;tapes pour atteindre <strong>93&ndash;97% d'occupation</strong> &mdash; gratuit, sans jargon.</p>
+  <form id={id} class="nl-form">
+    <input type="text" placeholder="Pr&eacute;nom" required class="nl-input" />
+    <input type="email" placeholder="votre@email.com" required class="nl-input" />
+    <button type="submit" class="nl-btn">Recevoir le guide &rarr;</button>
+  </form>
+  <p class="nl-note">D&eacute;sinscription en 1 clic &middot; Pas de spam</p>
+</div>
+) : (
 <div class="nl-block">
   <div class="nl-cols">
     <div class="nl-left">
@@ -40,6 +56,7 @@ const { id = 'page-nl-form', source = 'NL' } = Astro.props;
     </div>
   </div>
 </div>
+)}
 
 <script define:vars={{ id, source }}>
 (function(){
@@ -187,6 +204,51 @@ const { id = 'page-nl-form', source = 'NL' } = Astro.props;
     text-align: center;
     font-family: 'Inter', sans-serif;
   }
+  /* ─── Compact variant (sidebar) ─── */
+  .nl-compact {
+    background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%);
+    border-radius: 12px;
+    padding: 22px 20px;
+    color: #e8e4dc;
+  }
+  .nl-compact .nl-badge {
+    margin-bottom: 12px;
+  }
+  .nlc-title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .nlc-desc {
+    font-size: 12px;
+    color: #8a8985;
+    line-height: 1.55;
+    margin-bottom: 14px;
+    font-family: 'Inter', sans-serif;
+  }
+  .nlc-desc strong {
+    color: #e8e4dc;
+    font-weight: 600;
+  }
+  .nl-compact .nl-form {
+    gap: 7px;
+  }
+  .nl-compact .nl-input {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  .nl-compact .nl-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+  .nl-compact .nl-note {
+    font-size: 9.5px;
+    margin-top: 8px;
+  }
+
   @media (max-width: 700px) {
     .nl-block {
       padding: 28px 24px;

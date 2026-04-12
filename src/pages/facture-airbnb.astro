@@ -263,4 +263,16 @@ const canonical = "https://www.enomia.app/facture-airbnb";
 
     <NewsletterBlock source="Facture" />
   </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Le reçu Airbnb ne suffit-il pas pour ma comptabilité ?", "acceptedAnswer": { "@type": "Answer", "text": "Pour vous (hôte), le reçu Airbnb est suffisant comme pièce de recette. Mais votre voyageur professionnel a besoin d'une facture officielle à son nom pour se faire rembourser." } },
+      { "@type": "Question", "name": "Dois-je facturer le montant brut ou le net vendeur ?", "acceptedAnswer": { "@type": "Answer", "text": "Le montant brut payé par le voyageur, c'est-à-dire le prix affiché au moment de la réservation avant commission Airbnb." } },
+      { "@type": "Question", "name": "Comment déduire les commissions Airbnb en LMNP ?", "acceptedAnswer": { "@type": "Answer", "text": "En régime réel LMNP, les commissions Airbnb sont déductibles comme charges d'intermédiation. En micro-BIC, elles sont déjà incluses dans l'abattement forfaitaire." } },
+      { "@type": "Question", "name": "Airbnb m'a déjà prélevé la taxe de séjour, dois-je la refacturer ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Si Airbnb a collecté et reversé la taxe, vous ne devez pas la facturer à nouveau mais la mentionner sur votre facture pour la transparence." } },
+      { "@type": "Question", "name": "Je loue ponctuellement, puis-je facturer sans SIRET ?", "acceptedAnswer": { "@type": "Answer", "text": "Si vous exercez de manière occasionnelle, vous pouvez facturer sans SIRET. Dès que l'activité devient régulière, l'inscription LMNP est obligatoire (gratuit sur INPI)." } }
+    ]
+  })}></script>
 </ToolLayout>

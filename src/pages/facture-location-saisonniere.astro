@@ -242,4 +242,17 @@ const canonical = "https://www.enomia.app/facture-location-saisonniere";
 
     <NewsletterBlock source="Facture" />
   </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Dois-je garder mes factures de location saisonnière ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, 10 ans minimum. Les factures sont des pièces comptables obligatoires en cas de contrôle fiscal ou URSSAF." } },
+      { "@type": "Question", "name": "Puis-je émettre une facture sans SIRET ?", "acceptedAnswer": { "@type": "Answer", "text": "Si vous louez ponctuellement en tant que particulier, vous pouvez émettre une facture sans SIRET. Dès que vous exercez de manière régulière, l'inscription au Registre du Commerce est obligatoire." } },
+      { "@type": "Question", "name": "La facture Airbnb suffit-elle pour mon voyageur ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Airbnb n'émet qu'un reçu qui ne contient pas toutes les mentions légales françaises. Vous devez émettre la facture vous-même." } },
+      { "@type": "Question", "name": "Comment numéroter mes factures ?", "acceptedAnswer": { "@type": "Answer", "text": "La numérotation doit être chronologique et sans trou. Format recommandé : 2026-001, 2026-002, etc." } },
+      { "@type": "Question", "name": "Puis-je modifier ou supprimer une facture après coup ?", "acceptedAnswer": { "@type": "Answer", "text": "Légalement, une facture émise ne peut pas être supprimée. Si vous avez fait une erreur, vous devez émettre un avoir (facture négative) puis une nouvelle facture corrigée." } },
+      { "@type": "Question", "name": "Mes données sont-elles sécurisées ?", "acceptedAnswer": { "@type": "Answer", "text": "En mode invité, vos données restent dans votre navigateur. Si vous vous connectez avec Google, elles sont stockées chez Supabase en Europe avec chiffrement au repos et Row-Level Security." } }
+    ]
+  })}></script>
 </ToolLayout>

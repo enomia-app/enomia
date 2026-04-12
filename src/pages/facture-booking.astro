@@ -278,4 +278,16 @@ const canonical = "https://www.enomia.app/facture-booking";
 
     <NewsletterBlock source="Facture" />
   </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "L'hôtel refuse de m'émettre une facture — que faire ?", "acceptedAnswer": { "@type": "Answer", "text": "Un établissement professionnel a l'obligation légale d'émettre une facture si vous la demandez (art. L441-9 Code de commerce). En cas de refus, relancez par écrit, contactez Booking, puis signalez à la DGCCRF." } },
+      { "@type": "Question", "name": "Mon entreprise accepte-t-elle le reçu Booking sans facture ?", "acceptedAnswer": { "@type": "Answer", "text": "Les grandes structures exigent presque toujours une vraie facture avec SIRET. La confirmation Booking seule n'est pas conforme aux règles comptables strictes en cas de contrôle fiscal." } },
+      { "@type": "Question", "name": "Je suis hôte : ai-je l'obligation de facturer tous mes voyageurs ?", "acceptedAnswer": { "@type": "Answer", "text": "Pour un voyageur particulier, la facture est obligatoire s'il la demande ou si le montant dépasse 25 €. Pour un voyageur d'affaires, elle est toujours obligatoire." } },
+      { "@type": "Question", "name": "Je paie Booking en devise étrangère, quel taux utiliser sur la facture ?", "acceptedAnswer": { "@type": "Answer", "text": "La facture doit être en euros pour un établissement français. Utilisez le taux de change de la date du séjour." } },
+      { "@type": "Question", "name": "Puis-je facturer un no-show ou une annulation ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, si votre politique d'annulation prévoit une retenue, vous devez émettre une facture pour le montant retenu avec la mention frais d'annulation." } }
+    ]
+  })}></script>
 </ToolLayout>

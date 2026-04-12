@@ -1090,6 +1090,21 @@ const _sb = supabase.createClient(
 );
 let _user = null, _token = null, _dbSims = [], _pendingSimData = null, _isViewingSharedSim = false;
 
+// ─── Lightweight client-side error logging ───
+// Logs go to Supabase table `client_logs` (fire-and-forget, never blocks UI)
+function _elog(event, meta) {
+  try {
+    console.log('[Enomia]', event, meta);
+    _sb.from('client_logs').insert([{
+      event: event,
+      meta: meta || {},
+      page: window.location.pathname,
+      ua: navigator.userAgent.slice(0, 200),
+      ts: new Date().toISOString()
+    }]).then(function(){}).catch(function(){});
+  } catch(_) {}
+}
+
 // Lire les données de simulation depuis l'URL (cross-browser)
 (function(){
   try {
@@ -1150,14 +1165,21 @@ _sb.auth.onAuthStateChange(async (event, session) => {
 });
 
 async function _initAuth() {
-  const { data: { session } } = await _sb.auth.getSession();
-  _user = session?.user || null;
-  _token = session?.access_token || null;
-  _updateNavAuth();
-  // Charger sim partagée depuis URL
+  // Shared sim loading FIRST — independent of auth (works in private browsing)
   const params = new URLSearchParams(window.location.search);
   const sharedSim = params.get('sim');
   if (sharedSim) _loadSharedSim(sharedSim);
+
+  // Auth session — wrapped in try/catch for private browsing resilience
+  try {
+    const { data: { session } } = await _sb.auth.getSession();
+    _user = session?.user || null;
+    _token = session?.access_token || null;
+  } catch (e) {
+    console.warn('[Enomia] Session recovery failed (private browsing?):', e.message);
+    _user = null; _token = null;
+  }
+  _updateNavAuth();
   // Pré-fetch silencieux si l'utilisateur est déjà connecté (session restaurée)
   if (_user && _token && !sharedSim) {
     _prefetchSims();
@@ -1235,17 +1257,23 @@ async function _migrateLocalStorage() {
 
 // Charger une simulation partagée
 async function _loadSharedSim(id) {
-  const data = await _apiPost('/api/simulations', { action: 'get-public', simulationId: id }, false);
-  console.log('[DEBUG] _loadSharedSim response:', JSON.stringify(data));
-  if (data.simulation) {
-    const s = data.simulation.data;
-    console.log('[DEBUG] s.mode:', s && s.mode, '| s.lots:', JSON.stringify(s && s.lots));
-    // Use setTimeout to ensure DOM is fully settled before restoring
-    setTimeout(function() {
-      _restoreSimData(s);
-      _isViewingSharedSim = true;
-      showScreen('screen-calc');
-    }, 50);
+  try {
+    const data = await _apiPost('/api/simulations', { action: 'get-public', simulationId: id }, false);
+    _elog('share_load', { id, hasData: !!data?.simulation, mode: data?.simulation?.data?.mode, lotsCount: data?.simulation?.data?.lots?.length });
+    if (data.simulation) {
+      const s = data.simulation.data;
+      // Use setTimeout to ensure DOM is fully settled before restoring
+      setTimeout(function() {
+        _restoreSimData(s);
+        _isViewingSharedSim = true;
+        showScreen('screen-calc');
+      }, 50);
+    } else {
+      console.warn('[Enomia] Shared simulation not found:', id);
+    }
+  } catch (e) {
+    console.error('[Enomia] Failed to load shared sim:', e);
+    _elog('share_load_error', { id, error: e.message });
   }
 }
 
@@ -1803,7 +1831,14 @@ function _restoreSimData(s){
     const typeBtn=document.querySelector(`.tab[onclick*="'${s.type}'"]`);
     if(typeBtn)typeBtn.classList.add('on');
   }
-  if(s.sliders)Object.keys(s.sliders).forEach(id=>{const el=document.getElementById('s-'+id);if(el){el.value=s.sliders[id];sv(id,s.sliders[id]);}});
+  if(s.sliders)Object.keys(s.sliders).forEach(id=>{
+    const el=document.getElementById('s-'+id);
+    if(el){
+      el.value=s.sliders[id];
+      // Multi-lot sliders use sv2(), single-mode sliders use sv()
+      if(SV2_LABELS[id]){sv2(id,s.sliders[id]);}else{sv(id,s.sliders[id]);}
+    }
+  });
   if(s.mode==='multi'){renderLots();computeMulti();}else{compute();}
 }
 

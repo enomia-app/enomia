@@ -1197,7 +1197,7 @@ if (!window.__factInit) {
       list.classList.add('open');
       return;
     }
-    list.innerHTML = m.map(v => `<div class="autocomplete-item" onmousedown="fSelectVille('${v.replace(/'/g, "\\'")}')">${v}</div>`).join('');
+    list.innerHTML = m.map(v => `<div class="autocomplete-item" onmousedown="fSelectVille('${v.replace(/'/g, "\\'")}')">${esc(v)}</div>`).join('');
     list.classList.add('open');
     fUpdateBienTaxePreview();
   };
@@ -1246,8 +1246,8 @@ if (!window.__factInit) {
         const badgeLabel = paid ? 'Payee' : 'En attente';
         const badgeDot = paid ? '●' : '●';
         return `<tr>
-          <td><span class="f-primary">${inv.client || '---'}</span><span class="f-secondary">${inv.email || ''}</span></td>
-          <td class="td-bien"><span class="f-primary">${inv.bien || '---'}</span></td>
+          <td><span class="f-primary">${esc(inv.client || '---')}</span><span class="f-secondary">${esc(inv.email || '')}</span></td>
+          <td class="td-bien"><span class="f-primary">${esc(inv.bien || '---')}</span></td>
           <td><span class="f-primary">${fFormatDate(inv.arrivee)} → ${fFormatDate(inv.depart)}</span><span class="f-secondary">${n} nuit${n>1?'s':''}</span></td>
           <td><span class="f-primary">${fFormatMoney(total)}</span></td>
           <td><span class="${badgeClass}">${badgeDot} ${badgeLabel}</span></td>

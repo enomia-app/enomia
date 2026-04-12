@@ -85,7 +85,8 @@ export default async function handler(req, res) {
   const { action, email, prenom, simPayload } = req.body
 
   if (action === 'magic-link') {
-    if (!email || !email.includes('@')) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+    if (!email || !emailRegex.test(email) || email.length > 254) {
       return res.status(400).json({ error: 'Email invalide' })
     }
 

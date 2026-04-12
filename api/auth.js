@@ -7,6 +7,23 @@ const supabase = createClient(
 
 const APP_URL = process.env.APP_URL || 'https://www.enomia.app'
 
+// ─── Rate limiting simple (en memoire, par IP) ───
+const rateMap = new Map()
+const RATE_WINDOW = 15 * 60 * 1000  // 15 minutes
+const RATE_LIMIT  = 5               // max 5 requetes par fenetre
+
+function isRateLimited(ip) {
+  const now = Date.now()
+  const entry = rateMap.get(ip)
+  if (!entry || now - entry.start > RATE_WINDOW) {
+    rateMap.set(ip, { start: now, count: 1 })
+    return false
+  }
+  entry.count++
+  if (entry.count > RATE_LIMIT) return true
+  return false
+}
+
 async function sendMagicLinkEmail({ to, prenom, magicLink }) {
   const firstName = prenom ? prenom.trim() : null
   const greeting = firstName ? `Bonjour ${firstName},` : 'Bonjour,'
@@ -85,6 +102,12 @@ export default async function handler(req, res) {
   const { action, email, prenom, simPayload } = req.body
 
   if (action === 'magic-link') {
+    // Rate limiting : max 5 magic links par IP toutes les 15 min
+    const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || 'unknown'
+    if (isRateLimited(ip)) {
+      return res.status(429).json({ error: 'Trop de tentatives. Reessayez dans quelques minutes.' })
+    }
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
     if (!email || !emailRegex.test(email) || email.length > 254) {
       return res.status(400).json({ error: 'Email invalide' })

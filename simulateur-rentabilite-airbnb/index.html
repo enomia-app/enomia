@@ -21,33 +21,55 @@
 html { scroll-behavior: smooth; }
 body { background: var(--black); color: var(--white); font-family: var(--font-body); font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; }
 
-nav { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 64px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(247,246,243,0.92); z-index: 50; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+/* ═══ HEADER ═══ */
+.eh { position: sticky; top: 0; z-index: 100; background: rgba(247,246,243,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+.eh-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 64px; max-width: 1120px; margin: 0 auto; position: relative; }
+.eh-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; cursor: pointer; }
+.eh-logo-icon { width: 30px; height: 30px; background: #2b2d2b; border-radius: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5px; padding: 7px; }
+.eh-logo-icon .bar { width: 100%; height: 1.5px; background: #e8e4dc; border-radius: 1px; }
+.eh-logo-icon .bar:nth-child(2) { width: 65%; align-self: flex-start; }
+.eh-logo-text { display: flex; flex-direction: column; }
+.eh-logo-name { font-size: 16px; font-weight: 700; color: var(--white); letter-spacing: -0.01em; line-height: 1.2; }
+.eh-logo-tagline { font-size: 11px; color: var(--muted2); letter-spacing: 0.01em; line-height: 1.2; }
+.eh-nav { display: flex; align-items: center; gap: 32px; position: absolute; left: 50%; transform: translateX(-50%); }
+.eh-nav-link { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.eh-nav-link:hover { color: var(--white); }
+.eh-dropdown { position: relative; }
+.eh-dropdown-trigger { font-size: 13px; font-weight: 500; color: var(--muted); background: none; border: none; cursor: pointer; font-family: var(--font-body); display: flex; align-items: center; gap: 4px; padding: 4px 0; transition: color 0.2s; }
+.eh-dropdown-trigger:hover { color: var(--white); }
+.eh-dropdown-trigger svg { transition: transform 0.2s; }
+.eh-dropdown:hover .eh-dropdown-trigger svg { transform: rotate(180deg); }
+.eh-dropdown-menu { position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); min-width: 260px; background: #ffffff; border: 1px solid var(--border); border-radius: 10px; padding: 6px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+.eh-dropdown:hover .eh-dropdown-menu { opacity: 1; visibility: visible; }
+.eh-dropdown-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; text-decoration: none; color: #1a1a1a; font-size: 13px; font-weight: 500; border-radius: 7px; transition: background 0.15s; }
+.eh-dropdown-item:hover { background: #f7f6f3; }
+.eh-dropdown-item.active { background: #f0efec; }
+.eh-tool-info { display: flex; flex-direction: column; gap: 1px; }
+.eh-tool-name { font-size: 13px; font-weight: 500; color: #1a1a1a; }
+.eh-tool-desc { font-size: 11px; color: #8a8985; }
+.eh-badge-free { font-size: 10px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.1); padding: 2px 8px; border-radius: 20px; letter-spacing: 0.03em; flex-shrink: 0; }
+.eh-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.eh-btn { font-family: var(--font-body); font-size: 12px; font-weight: 600; padding: 8px 18px; border-radius: 8px; text-decoration: none; cursor: pointer; transition: all 0.2s; border: none; white-space: nowrap; display: inline-flex; align-items: center; }
+.eh-btn-green { background: #3fbd71; color: #ffffff; }
+.eh-btn-green:hover { background: #36a863; }
+.eh-mobile-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--white); }
+.eh-mobile-btn svg { width: 20px; height: 20px; }
+.eh-mobile-menu { display: none; flex-direction: column; border-top: 1px solid var(--border); background: rgba(247,246,243,0.98); padding: 8px 20px 12px; }
+.eh-mobile-menu.open { display: flex; }
+.eh-mobile-link { font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--border); transition: color 0.15s; }
+.eh-mobile-link:last-child { border-bottom: none; }
+.eh-mobile-link:hover { color: var(--white); }
 @media (max-width: 768px) {
-  .btn-compact { padding: 5px 6px !important; }  .nav-right { gap: 2px !important; }
-  .nav-right { margin-left: auto !important; }  .nav-logo { gap: 6px !important; }  nav { padding: 0 16px; }
-  .nav-right { gap: 6px; }
-  .btn-sm { padding: 1px 2px; font-size: 10px; }
-  .btn-sm.accent { padding: 6px 12px; }
-  #btn-blog-nav { display: none !important; }
-  .nav-tagline { display: none; }
+  .eh-inner { padding: 0 20px; }
+  .eh-nav { display: none; }
+  .eh-right { margin-left: auto; margin-right: 8px; }
+  .eh-btn { font-size: 11px; padding: 6px 12px; }
+  .eh-logo-tagline { display: none; }
+  .eh-mobile-btn { display: flex; }
   .sim-card-menu { opacity: 1 !important; }
-  .nav-label-desktop { display: none !important; }
-  .nav-label-mobile { display: inline !important; }
   .lot-break { display: block; width: 100%; height: 0; }
   .lot-num { padding-top: 4px; }
 }
-
-.nav-logo { font-family: var(--font-mono); font-size: 14px; font-weight: 500; letter-spacing: 0.06em; color: var(--white); cursor: pointer; }
-.nav-logo span { color: var(--accent); }
-.nav-right { display: flex; align-items: center; gap: 8px; margin-left: 32px; }
-.nav-label-desktop { display: inline; }
-.nav-label-mobile { display: none; }
-.nav-user { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
-.nav-user span { color: var(--accent); }
-.btn-sm { font-family: var(--font-mono); font-size: 12px; font-weight: 500; padding: 5px 3px; border: 1px solid var(--border); color: var(--muted); background: transparent; cursor: pointer; transition: all 0.2s; border-radius: 6px; height: 32px; display: flex; align-items: center; }
-.btn-sm:hover { border-color: var(--muted); color: var(--white); }
-.btn-sm.accent { border-color: var(--accent); color: #fff; background: var(--accent); }
-.btn-sm.accent:hover { opacity: 1; color: var(--accent); background: var(--mid); border-color: var(--accent); }
 
 .screen { display: none; }
 .screen.active { display: block; }
@@ -367,23 +389,64 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 <body>
 <div id="g-tip"></div>
 
-<nav>
-  <span class="nav-logo" onclick="checkUnsavedAndNavigate(function(){window.location.href='/'})" style="display:flex;align-items:center;gap:10px">
-    <span style="width:30px;height:30px;background:#2b2d2b;border-radius:7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5px;padding:7px"><span style="width:100%;height:1.5px;background:#e8e4dc;border-radius:1px"></span><span style="width:65%;height:1.5px;background:#e8e4dc;border-radius:1px;align-self:flex-start"></span><span style="width:100%;height:1.5px;background:#e8e4dc;border-radius:1px"></span></span>
-    <span style="display:flex;flex-direction:column">
-      <span style="font-family:var(--font-body);font-size:16px;font-weight:700;color:var(--white);letter-spacing:-0.01em;line-height:1.2">Enomia</span>
-      <span class="nav-tagline" style="font-size:12px;color:var(--muted2)">Un flux parfait. Pour tous.</span>
+<header class="eh">
+  <div class="eh-inner">
+    <span class="eh-logo" onclick="checkUnsavedAndNavigate(function(){window.location.href='/'})">
+      <div class="eh-logo-icon">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      </div>
+      <div class="eh-logo-text">
+        <span class="eh-logo-name">Enomia</span>
+        <span class="eh-logo-tagline">Un flux parfait. Pour tous.</span>
+      </div>
     </span>
-  </span>
-  <div class="nav-right">
-    <button class="btn-sm" id="btn-blog-nav" onclick="checkUnsavedAndNavigate(function(){window.location.href='/blog'})">Blog</button>
-    <button class="btn-sm accent" id="btn-new-nav" onclick="newSimulation()" style="display:none">+ Nouvelle simulation</button>
-    <button class="btn-sm" id="btn-mes-sim-nav" onclick="showDashboard()">Mes simulations</button>
-    <button class="btn-sm" id="btn-login-nav" onclick="showLoginModal()" style="display:none">Se connecter</button>
-    <button class="btn-sm" id="btn-share-nav" onclick="initSharePopup()" style="display:none">Partager</button>
-    <button class="btn-sm accent" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
+    <nav class="eh-nav">
+      <a href="/blog" class="eh-nav-link">Blog</a>
+      <div class="eh-dropdown">
+        <button class="eh-dropdown-trigger">
+          Outils
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="eh-dropdown-menu">
+          <a href="/simulateur-rentabilite-airbnb" class="eh-dropdown-item active">
+            <div class="eh-tool-info">
+              <span class="eh-tool-name">Simulateur rentabilité LCD</span>
+              <span class="eh-tool-desc">Estimez vos revenus locatifs</span>
+            </div>
+            <span class="eh-badge-free">Gratuit</span>
+          </a>
+          <a href="/contrat-location-saisonniere" class="eh-dropdown-item">
+            <div class="eh-tool-info">
+              <span class="eh-tool-name">Contrat de location</span>
+              <span class="eh-tool-desc">Générez vos contrats LCD</span>
+            </div>
+            <span class="eh-badge-free">Gratuit</span>
+          </a>
+          <a href="/facture-location-saisonniere" class="eh-dropdown-item">
+            <div class="eh-tool-info">
+              <span class="eh-tool-name">Factures LCD</span>
+              <span class="eh-tool-desc">Facturez vos locations</span>
+            </div>
+            <span class="eh-badge-free">Gratuit</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="eh-right">
+      <button class="eh-btn eh-btn-green" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
+      <button class="eh-btn eh-btn-green" id="btn-mes-sim-nav" onclick="showDashboard()">Mes simulations</button>
+    </div>
+    <button class="eh-mobile-btn" aria-label="Menu" id="eh-mobile-toggle">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
   </div>
-</nav>
+  <div class="eh-mobile-menu" id="eh-mobile-menu">
+    <a href="/blog" class="eh-mobile-link">Blog</a>
+    <a href="/simulateur-rentabilite-airbnb" class="eh-mobile-link">Simulateur rentabilité LCD</a>
+    <a href="/contrat-location-saisonniere" class="eh-mobile-link">Contrat de location</a>
+    <a href="/facture-location-saisonniere" class="eh-mobile-link">Factures LCD</a>
+  </div>
+</header>
 
 <!-- LANDING PAGE SIMULATEUR -->
 <div class="screen active" id="screen-auth">
@@ -1787,6 +1850,19 @@ _initAuth();
     <button onclick="leaveWithoutSaving()" style="width:100%;margin-top:12px;padding:10px;background:none;border:none;font-family:var(--font-body);font-size:13px;color:var(--muted2);cursor:pointer;text-decoration:underline;text-underline-offset:2px">Continuer sans sauvegarder</button>
   </div>
 </div>
+
+<script>
+(function(){
+  var toggle = document.getElementById('eh-mobile-toggle');
+  var menu = document.getElementById('eh-mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function() {
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+})();
+</script>
 
 </body>
 </html>

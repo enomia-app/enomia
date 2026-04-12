@@ -3,6 +3,7 @@ export const prerender = true;
 
 import { getCollection, getEntry } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import NewsletterBlock from '../../components/NewsletterBlock.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -161,39 +162,7 @@ const jsonLd = {
         <div class="rating-thanks" id="rating-thanks" style="display:none">Merci pour votre avis !</div>
       </div>
 
-      <!-- Newsletter end of article -->
-      <div class="article-nl">
-        <div class="article-nl-content">
-          <div class="article-nl-pdf-pill">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Guide PDF offert + Newsletter
-          </div>
-          <div class="article-nl-title">Recevez ma méthode LCD complète, gratuitement</div>
-          <p class="article-nl-desc">Le guide PDF en 10 étapes pour atteindre <strong style="color:var(--text-light);">93–97% d'occupation</strong> — la méthode que j'applique sur mes 9 biens, expliquée de A à Z.</p>
-          <div class="article-nl-bullets">
-            <div class="article-nl-bullet">
-              <span class="article-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span><strong>Guide PDF Méthode 97%</strong> — 40+ pages</span>
-            </div>
-            <div class="article-nl-bullet">
-              <span class="article-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>Accès au <strong>simulateur de rentabilité</strong> Enomia</span>
-            </div>
-            <div class="article-nl-bullet">
-              <span class="article-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span><strong>1 email/semaine</strong> — chiffres réels, rien à vendre</span>
-            </div>
-          </div>
-          <form class="article-nl-form" onsubmit="return false;">
-            <input type="text" placeholder="Prénom" class="article-nl-input" />
-            <div class="article-nl-row">
-              <input type="email" placeholder="votre@email.com" class="article-nl-input article-nl-email" />
-              <button type="submit" class="article-nl-btn">📘 Recevoir le guide</button>
-            </div>
-          </form>
-          <p class="article-nl-note">Désinscription en 1 clic · Email jamais partagé</p>
-        </div>
-      </div>
+      <NewsletterBlock id="article-nl-form" />
     </article>
 
     <!-- Sidebar -->
@@ -248,7 +217,7 @@ const jsonLd = {
           </div>
           <div class="sb-sim-title">Facture LCD gratuite</div>
         </div>
-        <div class="sb-sim-badge">Nouveau</div>
+        <div class="sb-sim-badge">Gratuit</div>
         <p class="sb-sim-desc">Générez vos factures Airbnb, Booking ou location saisonnière : taxe de séjour automatique, mentions LMNP, export PDF.</p>
         <div class="sb-sim-stats">
           <div class="sb-sim-stat">
@@ -273,37 +242,7 @@ const jsonLd = {
         </a>
       </div>
 
-      <!-- Newsletter widget -->
-      <div class="sb-nl">
-        <div class="sb-nl-content">
-          <div class="sb-nl-pdf-pill">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            PDF + Newsletter
-          </div>
-          <div class="sb-nl-title">Ma méthode LCD complète, gratuite</div>
-          <p class="sb-nl-desc">Le guide PDF en 10 étapes pour atteindre 93–97% d'occupation sur vos biens.</p>
-          <div class="sb-nl-bullets">
-            <div class="sb-nl-bullet">
-              <span class="sb-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>Guide PDF 40+ pages</span>
-            </div>
-            <div class="sb-nl-bullet">
-              <span class="sb-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>Accès simulateur Enomia</span>
-            </div>
-            <div class="sb-nl-bullet">
-              <span class="sb-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>1 email/semaine, rien à vendre</span>
-            </div>
-          </div>
-          <form onsubmit="return false;">
-            <input type="text" placeholder="Prénom" />
-            <input type="email" placeholder="votre@email.com" />
-            <button type="submit">📘 Recevoir le guide</button>
-          </form>
-          <p class="sb-nl-note">Désinscription en 1 clic</p>
-        </div>
-      </div>
+      <NewsletterBlock id="sb-nl-form" />
     </aside>
 
     <!-- Related articles -->
@@ -403,5 +342,6 @@ const jsonLd = {
         });
       });
     })();
+
   </script>
 </BlogLayout>

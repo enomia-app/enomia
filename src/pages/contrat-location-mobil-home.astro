@@ -1,6 +1,7 @@
 ---
 import ToolLayout from '../layouts/ToolLayout.astro';
 import ContratLandingStyles from '../components/ContratLandingStyles.astro';
+import NewsletterBlock from '../components/NewsletterBlock.astro';
 
 const title = "Contrat de location mobil-home : modèle vierge gratuit (PDF + Word)";
 const description = "Modèle de contrat de location mobil-home gratuit avec 22 clauses camping, règlement intérieur, autorisation gestionnaire, HLL. Conforme arrêtés 2014 DGCCRF. PDF + Word.";
@@ -9,29 +10,20 @@ const canonical = "https://www.enomia.app/contrat-location-mobil-home";
 <ToolLayout title={title} description={description} canonical={canonical} currentTool="contrat">
   <ContratLandingStyles />
 
-  <div class="seo-wrap">
-    <div>
-      <h1 class="seo-h1">Contrat de location <em>mobil-home</em> gratuit</h1>
-      <p class="seo-lede">
-        Modèle vierge à télécharger pour louer votre mobil-home à des vacanciers. Intègre les <strong>22 clauses spécifiques</strong> absentes des modèles génériques : règlement intérieur du camping, autorisation du gestionnaire, mobilité, interdiction de résidence principale. PDF + Word, conforme aux arrêtés 2014 DGCCRF.
-      </p>
-      <div class="seo-badges">
-        <span class="seo-badge">22 clauses camping</span>
-        <span class="seo-badge">Arrêtés 2014 DGCCRF</span>
-        <span class="seo-badge">HLL & RML</span>
-        <span class="seo-badge">PDF + Word</span>
-      </div>
+  <div class="landing-hero">
+    <div class="landing-tag">Contrat de location mobil-home</div>
+    <h1 class="landing-h1">Contrat de location <em>mobil-home</em> gratuit — modèle 2026</h1>
+    <p class="landing-sub">Accord gestionnaire camping. Clauses HLL spécifiques. PDF + Word. Gratuit.</p>
+    <div class="landing-stats">
+      <div class="landing-stat"><div class="landing-stat-val">< 1 min</div><div class="landing-stat-lbl">par contrat</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">PDF + Word</div><div class="landing-stat-lbl">export bilingue</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">100%</div><div class="landing-stat-lbl">conforme 2026</div></div>
     </div>
+    <a href="/contrat-lcd-dashboard" class="landing-cta">+ Créer mon contrat mobil-home →</a>
+    <p class="landing-note">Sans inscription · Stockage local dans votre navigateur</p>
+  </div>
 
-    <div class="hero-cta-block">
-      <div>
-        <h3>Un vrai contrat pour votre mobil-home</h3>
-        <p>Le seul modèle gratuit qui intègre les spécificités camping : règlement intérieur, accord du gestionnaire, mobilité.</p>
-      </div>
-      <a href="/contrat-lcd-dashboard" class="hero-cta-btn">+ Créer mon contrat →</a>
-    </div>
-
-    <div class="seo-body">
+  <div class="seo-wrap"><div class="seo-body">
       <h2>Il existe 2 contrats pour un mobil-home</h2>
       <p>
         C'est LA confusion que font tous les autres sites. Un contrat de location de mobil-home à un vacancier n'est <strong>pas le même</strong> qu'un contrat d'emplacement annuel avec un camping.
@@ -66,7 +58,7 @@ const canonical = "https://www.enomia.app/contrat-location-mobil-home";
 
       <div class="callout warn">
         <strong>⚠ Vérifiez l'accord de votre camping avant de louer</strong>
-        Louer votre mobil-home à un vacancier nécessite l'accord préalable du gestionnaire du camping. Certains l'interdisent purement et simplement, d'autres le permettent contre commission. Notre contrat inclut automatiquement une clause attestant que vous avez obtenu cet accord — conservez l'accord écrit.
+        <p>Louer votre mobil-home à un vacancier nécessite l'accord préalable du gestionnaire du camping. Certains l'interdisent purement et simplement, d'autres le permettent contre commission. Notre contrat inclut automatiquement une clause attestant que vous avez obtenu cet accord — conservez l'accord écrit.</p>
       </div>
 
       <h2>Les 22 clauses spécifiques au mobil-home</h2>
@@ -154,5 +146,7 @@ const canonical = "https://www.enomia.app/contrat-location-mobil-home";
         <a href="/facture-location-saisonniere"><div class="rk">Facturation</div><div class="rt">Facture LCD</div><div class="rd">Générez la facture une fois le séjour payé. 30 000+ communes.</div></a>
       </div>
     </div>
+
+    <NewsletterBlock />
   </div>
 </ToolLayout>

@@ -1,6 +1,7 @@
 ---
 export const prerender = false;
 import ToolLayout from '../layouts/ToolLayout.astro';
+import NewsletterBlock from '../components/NewsletterBlock.astro';
 
 const title = "Facture Airbnb — Modèle & générateur gratuit pour hôtes et voyageurs";
 const description = "Générez une facture Airbnb conforme : reconstituez la facture que Airbnb n'émet pas, calcul taxe de séjour automatique, commissions Airbnb, mentions LMNP. Gratuit, sans inscription.";
@@ -26,6 +27,7 @@ const canonical = "https://www.enomia.app/facture-airbnb";
     .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 16px 20px; margin: 22px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: #1a1a1a; }
     .callout.warn { border-left-color: #e05252; background: rgba(224,82,82,0.06); }
     .callout strong { display: block; margin-bottom: 4px; }
+    .callout p strong { display: inline; }
     .intent-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
     .intent-card { border: 1px solid #e5e3de; background: #fff; border-radius: 10px; padding: 18px; }
     .intent-card .ik { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3fbd71; margin-bottom: 5px; }
@@ -51,7 +53,9 @@ const canonical = "https://www.enomia.app/facture-airbnb";
       margin: 28px 0 8px; flex-wrap: wrap; color: #e8e4dc;
     }
     .hero-cta-block h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; color: #fff; }
-    .hero-cta-block p { font-size: 14px; opacity: 0.85; line-height: 1.55; margin: 0; }
+    .hero-cta-block p { font-size: 14px; opacity: 0.85; line-height: 1.55; margin: 0; color: #e8e4dc; }
+    .seo-body .hero-cta-block p { color: #e8e4dc !important; }
+    .seo-body .hero-cta-block h3 { color: #fff !important; }
     .hero-cta-btn, .seo-body .hero-cta-btn, a.hero-cta-btn {
       background: #fff; color: #2b2d2b; border: none; padding: 16px 28px;
       font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700;
@@ -59,6 +63,20 @@ const canonical = "https://www.enomia.app/facture-airbnb";
       white-space: nowrap; box-shadow: 0 2px 8px rgba(0,0,0,0.1); flex-shrink: 0;
     }
     .hero-cta-btn:hover { opacity: 0.92; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .landing-hero { max-width: 560px; margin: 0 auto; padding: 60px 24px 40px; text-align: center; animation: fadeUp 0.4s ease both; }
+    .landing-tag { font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2b2d2b; display: flex; align-items: center; gap: 12px; justify-content: center; margin-bottom: 28px; }
+    .landing-tag::before { content: ''; width: 24px; height: 1px; background: #2b2d2b; }
+    .landing-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(28px, 5vw, 42px); font-weight: 900; line-height: 1.05; margin-bottom: 12px; color: #1a1a1a; }
+    .landing-h1 em { font-style: italic; color: #2b2d2b; }
+    .landing-sub { font-size: 14px; color: #8a8985; line-height: 1.7; margin-bottom: 36px; }
+    .landing-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 36px; }
+    .landing-stat { background: #ffffff; border: 1px solid #e5e3de; border-radius: 10px; padding: 18px 12px; text-align: center; }
+    .landing-stat-val { font-family: 'Newsreader', serif; font-size: 24px; font-weight: 600; margin-bottom: 4px; color: #1a1a1a; }
+    .landing-stat-lbl { font-size: 12px; color: #8a8985; }
+    .landing-cta { display: block; width: 100%; background: #2b2d2b; color: #fff; border: none; padding: 16px; border-radius: 10px; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; text-align: center; }
+    .landing-cta:hover { opacity: 0.88; color: #fff; }
+    .landing-note { font-size: 10px; color: #8a8985; text-align: center; margin-top: 16px; }
     @media (max-width: 700px) {
       .seo-wrap { padding: 24px 20px 0; }
       .intent-cards, .related { grid-template-columns: 1fr; }
@@ -67,25 +85,24 @@ const canonical = "https://www.enomia.app/facture-airbnb";
   </style>
 
   <div class="seo-wrap">
-    <div class="seo-hero">
-      <h1 class="seo-h1">Facture <em>Airbnb</em> — générer le document que Airbnb ne vous donne pas</h1>
-      <p class="seo-lede">
-        Airbnb ne fournit qu'un <strong>reçu</strong>, pas une facture légale. En tant qu'hôte, c'est à vous de l'émettre — en tant que voyageur d'affaires, vous devez la demander à votre hôte. Notre outil génère une facture conforme en 2 minutes avec mentions LMNP, calcul automatique de la taxe de séjour et export PDF. <strong>Gratuit, sans inscription</strong>.
-      </p>
-      <div class="seo-badges">
-        <span class="seo-badge">Gratuit sans inscription</span>
-        <span class="seo-badge">Taxe de séjour auto</span>
-        <span class="seo-badge">Conforme LMNP</span>
-        <span class="seo-badge">Export PDF</span>
+    <div class="landing-hero">
+      <div class="landing-tag">Facturation Airbnb</div>
+      <h1 class="landing-h1">Facture <em>Airbnb</em> — le document que Airbnb ne vous donne pas</h1>
+      <p class="landing-sub">Airbnb ne fournit qu'un reçu. Générez la vraie facture conforme LMNP en 2 minutes.</p>
+      <div class="landing-stats">
+        <div class="landing-stat"><div class="landing-stat-val">2 min</div><div class="landing-stat-lbl">par facture</div></div>
+        <div class="landing-stat"><div class="landing-stat-val">30k+</div><div class="landing-stat-lbl">communes taxe séjour</div></div>
+        <div class="landing-stat"><div class="landing-stat-val">PDF</div><div class="landing-stat-lbl">export gratuit</div></div>
       </div>
+      <a href="/facturation-lcd" class="landing-cta">+ Créer ma facture Airbnb →</a>
+      <p class="landing-note">Sans inscription · Stockage local dans votre navigateur</p>
     </div>
 
-    <div class="hero-cta-block">
-      <div>
-        <h3>Reconstituez la facture que Airbnb ne vous donne pas</h3>
-        <p>Renseignez le séjour, l'outil calcule tout : nuitées, ménage, taxe de séjour, TVA LMNP. Export PDF en 2 minutes.</p>
-      </div>
-      <a href="/facturation-lcd" class="hero-cta-btn">+ Créer ma facture Airbnb →</a>
+    <div class="seo-badges">
+      <span class="seo-badge">Gratuit sans inscription</span>
+      <span class="seo-badge">Taxe de séjour auto</span>
+      <span class="seo-badge">Conforme LMNP</span>
+      <span class="seo-badge">Export PDF</span>
     </div>
 
     <div class="seo-body">
@@ -123,7 +140,7 @@ const canonical = "https://www.enomia.app/facture-airbnb";
 
       <div class="callout warn">
         <strong>⚠ Le reçu Airbnb n'est PAS une facture</strong>
-        Pour qu'un voyageur professionnel puisse se faire rembourser par son employeur, il lui faut une facture nominative émise par vous (l'hôte), contenant toutes les mentions obligatoires : numéro, date, SIRET, identification précise, TVA, total TTC.
+        <p>Pour qu'un voyageur professionnel puisse se faire rembourser par son employeur, il lui faut une facture nominative émise par vous (l'hôte), contenant toutes les mentions obligatoires : numéro, date, SIRET, identification précise, TVA, total TTC.</p>
       </div>
 
       <h2>Hôte Airbnb : comment émettre la facture en 2 minutes</h2>
@@ -243,5 +260,7 @@ const canonical = "https://www.enomia.app/facture-airbnb";
         </a>
       </div>
     </div>
+
+    <NewsletterBlock />
   </div>
 </ToolLayout>

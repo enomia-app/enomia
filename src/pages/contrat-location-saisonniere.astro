@@ -1,6 +1,7 @@
 ---
 import ToolLayout from '../layouts/ToolLayout.astro';
 import ContratLandingStyles from '../components/ContratLandingStyles.astro';
+import NewsletterBlock from '../components/NewsletterBlock.astro';
 
 const title = "Contrat de location saisonnière gratuit — modèle 2026 (PDF + Word)";
 const description = "Générez votre contrat de location saisonnière gratuit en 2 min. Conforme Loi Le Meur 2024, art. L324-1-1 et L324-2 Code du tourisme. PDF + Word, FR/EN, sans inscription.";
@@ -10,25 +11,24 @@ const canonical = "https://www.enomia.app/contrat-location-saisonniere";
   <ContratLandingStyles />
 
   <div class="seo-wrap">
-    <div class="seo-hero">
-      <h1 class="seo-h1">Contrat de <em>location saisonnière</em> gratuit — modèle 2026</h1>
-      <p class="seo-lede">
-        Générez votre contrat de location saisonnière gratuit en 2 minutes. Modèle conforme à la <strong>Loi Le Meur de 2024</strong>, téléchargeable en <strong>PDF et Word</strong>, bilingue <strong>français-anglais</strong>. Un seul outil pour créer, gérer et suivre vos contrats de mobil-home, gîte, villa, meublé T2 ou maison. Sans inscription pour essayer.
-      </p>
-      <div class="seo-badges">
-        <span class="seo-badge">Conforme Loi Le Meur</span>
-        <span class="seo-badge">PDF + Word</span>
-        <span class="seo-badge">FR & EN</span>
-        <span class="seo-badge">Suivi des paiements</span>
+    <div class="landing-hero">
+      <div class="landing-tag">Contrat de location saisonnière</div>
+      <h1 class="landing-h1">Contrat de <em>location saisonnière</em> gratuit — modèle 2026</h1>
+      <p class="landing-sub">Conforme Loi Le Meur 2024. PDF + Word. Bilingue FR/EN. Gratuit.</p>
+      <div class="landing-stats">
+        <div class="landing-stat"><div class="landing-stat-val">< 1 min</div><div class="landing-stat-lbl">par contrat</div></div>
+        <div class="landing-stat"><div class="landing-stat-val">PDF + Word</div><div class="landing-stat-lbl">export bilingue</div></div>
+        <div class="landing-stat"><div class="landing-stat-val">100%</div><div class="landing-stat-lbl">conforme 2026</div></div>
       </div>
+      <a href="/contrat-lcd-dashboard" class="landing-cta">+ Créer mon contrat gratuit →</a>
+      <p class="landing-note">Sans inscription · Stockage local dans votre navigateur</p>
     </div>
 
-    <div class="hero-cta-block">
-      <div>
-        <h3>Créez votre premier contrat en 2 minutes</h3>
-        <p>Saisissez vos biens une fois. Générez ensuite un contrat conforme en moins d'une minute à chaque réservation. Suivi des acomptes, soldes et cautions inclus.</p>
-      </div>
-      <a href="/contrat-lcd-dashboard" class="hero-cta-btn">+ Créer mon contrat gratuit →</a>
+    <div class="seo-badges">
+      <span class="seo-badge">Conforme Loi Le Meur</span>
+      <span class="seo-badge">PDF + Word</span>
+      <span class="seo-badge">FR & EN</span>
+      <span class="seo-badge">Suivi des paiements</span>
     </div>
 
     <div class="seo-body">
@@ -42,7 +42,7 @@ const canonical = "https://www.enomia.app/contrat-location-saisonniere";
 
       <div class="callout warn">
         <strong>⚡ Loi Le Meur du 19 novembre 2024 — ce qui change en 2026</strong>
-        Depuis la <strong>loi n° 2024-1039</strong>, tout loueur de meublé de tourisme doit obtenir un <strong>numéro d'enregistrement à 13 chiffres</strong> auprès de sa mairie, à faire figurer sur son annonce et sur son contrat. À partir du <strong>20 mai 2026</strong>, un téléservice national unifié remplace le Cerfa 14004. Les sanctions peuvent atteindre <strong>20 000 €</strong> en cas de défaut de déclaration. Notre générateur intègre ces nouvelles obligations par défaut.
+        <p>Depuis la <strong>loi n° 2024-1039</strong>, tout loueur de meublé de tourisme doit obtenir un <strong>numéro d'enregistrement à 13 chiffres</strong> auprès de sa mairie, à faire figurer sur son annonce et sur son contrat. À partir du <strong>20 mai 2026</strong>, un téléservice national unifié remplace le Cerfa 14004. Les sanctions peuvent atteindre <strong>20 000 €</strong> en cas de défaut de déclaration. Notre générateur intègre ces nouvelles obligations par défaut.</p>
       </div>
 
       <h2>Les 12 mentions obligatoires d'un contrat de location saisonnière</h2>
@@ -223,4 +223,8 @@ const canonical = "https://www.enomia.app/contrat-location-saisonniere";
       { "@type": "Question", "name": "Dois-je déclarer mon logement en mairie ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui depuis la loi Le Meur du 19 novembre 2024. Vous obtenez un numéro d'enregistrement à 13 chiffres. Téléservice national au 20 mai 2026." } }
     ]
   })}></script>
+
+  <div style="max-width:920px;margin:0 auto;padding:0 32px 48px">
+    <NewsletterBlock />
+  </div>
 </ToolLayout>

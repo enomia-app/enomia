@@ -7,12 +7,83 @@
   if (window.__ctInit) return;
   window.__ctInit = true;
 
+  // ─── JSPDF (chargement anticipé) ─────────────────────────────────
+  if (!window.jspdf) {
+    var _jspdfScript = document.createElement('script');
+    _jspdfScript.src = '/jspdf.min.js';
+    document.head.appendChild(_jspdfScript);
+  }
+
   // ─── SUPABASE ────────────────────────────────────────────────────
   const _ctSb = supabase.createClient(
     'https://pesoidoedtjpihjvrnnc.supabase.co',
     'sb_publishable_TTmUwZsTYt7OWBTwTruaLQ_BYzRT9Jp'
   );
   let _ctUser = null, _ctToken = null;
+
+  // ─── TAXE DE SÉJOUR DB ─────────────────────────────────────────
+  let _ctTaxeDb = null;
+  async function ctLoadTaxeDb() {
+    if (_ctTaxeDb) return _ctTaxeDb;
+    try {
+      const res = await fetch('https://pesoidoedtjpihjvrnnc.supabase.co/storage/v1/object/public/static/taxe-sejour-communes-v1.json');
+      _ctTaxeDb = await res.json();
+      return _ctTaxeDb;
+    } catch(e) { return null; }
+  }
+  function _ctNormVille(s) {
+    return (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/['']/g, "'").replace(/\s+/g, ' ').trim();
+  }
+  // Map classement bien → DB category key
+  var CT_CAT_MAP = { 'Non classé': 'nc', '1 étoile': '1', '2 étoiles': '2', '3 étoiles': '3', '4 étoiles': '4', '5 étoiles': '5' };
+  function ctGetTaxeRate(ville, classement) {
+    if (!_ctTaxeDb || !ville) return null;
+    var target = _ctNormVille(ville);
+    if (!target) return null;
+    var matched = null;
+    for (var k of Object.keys(_ctTaxeDb)) {
+      if (_ctNormVille(k) === target) { matched = k; break; }
+    }
+    if (!matched) return null;
+    var catKey = CT_CAT_MAP[classement] || 'nc';
+    var entry = _ctTaxeDb[matched][catKey];
+    if (entry === undefined) entry = _ctTaxeDb[matched]['nc'];
+    if (entry === undefined) return null;
+    // Array = pourcentage [taux, "%"], sinon euros per person per night
+    if (Array.isArray(entry)) {
+      return { taux: entry[0], unite: '%' };
+    }
+    return { taux: entry, unite: '\u20ac' };
+  }
+  // Extract city from a French address string (last word-group after postal code)
+  function _ctExtractVille(adresse) {
+    if (!adresse) return '';
+    // Try pattern: "... 75001 Paris" or "... 13100 Aix-en-Provence"
+    var m = adresse.match(/\d{5}\s+(.+?)$/);
+    if (m) return m[1].trim();
+    // Fallback: last comma-segment
+    var parts = adresse.split(',');
+    return parts[parts.length - 1].trim();
+  }
+  // Auto-calculate taxe de séjour for a bien + wizard data
+  function ctAutoCalcTaxe(bien, d) {
+    var ville = _ctExtractVille(bien.adresse);
+    var rate = ctGetTaxeRate(ville, bien.classement);
+    if (!rate) return null;
+    var n = nights(d.date_arrivee, d.date_depart);
+    var nbPers = (+d.nb_adultes || 0) + (+d.nb_enfants || 0);
+    if (n <= 0 || nbPers <= 0) return null;
+    var total;
+    if (rate.unite === '%') {
+      // Percentage of nightly price
+      var prixNuit = (+d.prix_total || 0) / n;
+      total = Math.round(prixNuit * (rate.taux / 100) * n * 100) / 100;
+    } else {
+      // Flat rate per person per night
+      total = Math.round(rate.taux * nbPers * n * 100) / 100;
+    }
+    return { total: total, taux: rate.taux, unite: rate.unite, ville: ville, nuits: n, personnes: nbPers };
+  }
 
   // ─── STATE ──────────────────────────────────────────────────────
   let ctBailleur = null;
@@ -28,7 +99,7 @@
   // Ces fonctions permettent aux handlers HTML inline de modifier l'état
   // interne sans y avoir accès directement (l'IIFE crée une closure).
   window.ctGoStep = function (n) { ctWizardStep = n; ctRenderWizard(); };
-  window.ctSetLang = function (l) { ctWizardData.langue = l; ctRenderWizard(); };
+  window.ctSetLang = function (l) { ctCollectWizardStep2(); ctWizardData.langue = l; ctRenderWizard(); };
   window.ctGetWizardData = function () { return ctWizardData; };
 
   // ─── API HELPERS ────────────────────────────────────────────────
@@ -52,7 +123,8 @@
     } else if (event === 'SIGNED_OUT') {
       _ctUser = null;
       _ctToken = null;
-      ctShowAuthLanding();
+      // Return to guest mode instead of auth landing
+      ctBootstrap();
     }
   });
 
@@ -60,11 +132,8 @@
     const { data: { session } } = await _ctSb.auth.getSession();
     _ctUser = session && session.user;
     _ctToken = session && session.access_token;
-    if (_ctUser) {
-      ctBootstrap();
-    } else {
-      ctShowAuthLanding();
-    }
+    // Always go to dashboard — guest mode uses localStorage
+    ctBootstrap();
   }
 
   window.ctOpenLoginModal = function () {
@@ -132,27 +201,59 @@
   async function ctBootstrap() {
     document.getElementById('ctnav').style.display = 'flex';
     // Avatar + label
-    const email = (_ctUser && _ctUser.email) || '';
-    const initials = (email.match(/^(.)(?:.*?[.\-_](.))?/) || []).slice(1).join('').toUpperCase() || '?';
-    document.getElementById('ctnav-avatar').textContent = initials;
-    document.getElementById('ctnav-user-label').textContent = email;
+    if (_ctUser) {
+      const email = _ctUser.email || '';
+      const initials = (email.match(/^(.)(?:.*?[.\-_](.))?/) || []).slice(1).join('').toUpperCase() || '?';
+      document.getElementById('ctnav-avatar').textContent = initials;
+      document.getElementById('ctnav-user-label').textContent = email;
+    } else {
+      document.getElementById('ctnav-avatar').textContent = '👤';
+      document.getElementById('ctnav-user-label').textContent = 'Se connecter';
+      // In guest mode, clicking user badge opens login instead of logout
+      document.getElementById('ctnav-user-badge').onclick = function () { ctOpenLoginModal(); };
+    }
     // Charger en parallèle
-    await Promise.all([ctLoadBailleur(), ctLoadBiens(), ctLoadContrats()]);
+    await Promise.all([ctLoadBailleur(), ctLoadBiens(), ctLoadContrats(), ctLoadTaxeDb()]);
     ctShowScreen('ctscreen-dashboard');
+  }
+
+  // ─── LOCAL STORAGE HELPERS (guest mode) ─────────────────────────
+  const CT_LS_BAILLEUR = 'ct_guest_bailleur';
+  const CT_LS_BIENS = 'ct_guest_biens';
+  const CT_LS_CONTRATS = 'ct_guest_contrats';
+
+  function ctLsGet(key, fallback) {
+    try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }
+    catch (_) { return fallback; }
+  }
+  function ctLsSet(key, val) {
+    try { localStorage.setItem(key, JSON.stringify(val)); } catch (_) {}
   }
 
   // ─── DATA LOADERS ───────────────────────────────────────────────
   async function ctLoadBailleur() {
-    const r = await ctApi('bailleur-fetch');
-    ctBailleur = (r && r.bailleur) || {};
+    if (_ctUser) {
+      const r = await ctApi('bailleur-fetch');
+      ctBailleur = (r && r.bailleur) || {};
+    } else {
+      ctBailleur = ctLsGet(CT_LS_BAILLEUR, {});
+    }
   }
   async function ctLoadBiens() {
-    const r = await ctApi('biens-fetch');
-    ctBiens = (r && r.biens) || [];
+    if (_ctUser) {
+      const r = await ctApi('biens-fetch');
+      ctBiens = (r && r.biens) || [];
+    } else {
+      ctBiens = ctLsGet(CT_LS_BIENS, []);
+    }
   }
   async function ctLoadContrats() {
-    const r = await ctApi('contrats-fetch');
-    ctContrats = (r && r.contrats) || [];
+    if (_ctUser) {
+      const r = await ctApi('contrats-fetch');
+      ctContrats = (r && r.contrats) || [];
+    } else {
+      ctContrats = ctLsGet(CT_LS_CONTRATS, []);
+    }
   }
 
   // ─── UTILS ──────────────────────────────────────────────────────
@@ -161,6 +262,15 @@
   }
   function fmtEurP(n) {
     return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 2 }).format(Number(n) || 0);
+  }
+  // PDF-safe money formatter (no unicode thin space that jsPDF can't render)
+  function _pdfEur(n, decimals) {
+    var v = Number(n || 0).toFixed(decimals === undefined ? 2 : decimals);
+    var parts = v.split('.');
+    var int = parts[0];
+    var dec = parts[1];
+    var formatted = int.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    return formatted + (dec ? ',' + dec : '') + ' EUR';
   }
   function fmtDate(s) {
     if (!s) return '—';
@@ -249,9 +359,9 @@
       const caSym = c.caution_rendue ? '✓' : (c.caution_encaissee ? '✓' : '⏳');
       const signed = c.contrat_signe_url;
       return '<tr>' +
-        '<td><span class="primary">' + esc(c.locataire_prenom || '') + ' ' + esc(c.locataire_nom) + '</span><span class="secondary">' + esc(c.locataire_email || '') + ' · ' + ((+c.nb_adultes || 0) + (+c.nb_enfants || 0)) + ' pers.</span></td>' +
+        '<td><span class="primary">' + esc(c.locataire_prenom || '') + ' ' + esc(c.locataire_nom) + '</span><span class="secondary">' + esc(c.locataire_email || '') + '</span><span class="secondary">' + ((+c.nb_adultes || 0) + (+c.nb_enfants || 0)) + ' pers.</span></td>' +
         '<td class="col-bien"><div style="display:flex;align-items:center;gap:10px"><div class="bien-item-icon">' + bienIcon(b.type_bien) + '</div><div><span class="primary">' + esc(b.nom_interne || '—') + '</span><span class="secondary">' + esc((b.adresse || '').split(',').pop() || '') + '</span></div></div></td>' +
-        '<td><span class="primary">' + fmtDateShort(c.date_arrivee) + ' → ' + fmtDateShort(c.date_depart) + '</span><span class="secondary">' + n + ' nuit' + (n > 1 ? 's' : '') + (c.langue === 'en' ? ' · 🇬🇧' : '') + '</span></td>' +
+        '<td style="white-space:nowrap"><span class="primary">' + fmtDateShort(c.date_arrivee) + ' → ' + fmtDateShort(c.date_depart) + '</span><span class="secondary">' + n + ' nuit' + (n > 1 ? 's' : '') + (c.langue === 'en' ? ' · 🇬🇧' : '') + '</span></td>' +
         '<td><span class="primary">' + fmtEur(c.prix_total) + '</span></td>' +
         '<td class="col-money"><span class="pay-chip ' + ac + '" onclick="ctTogglePay(\'' + c.id + '\',\'acompte_paye\',' + !c.acompte_paye + ')">' + acSym + ' ' + fmtEur(c.acompte_montant) + '</span></td>' +
         '<td class="col-money"><span class="pay-chip ' + so + '" onclick="ctTogglePay(\'' + c.id + '\',\'solde_paye\',' + !c.solde_paye + ')">' + soSym + ' ' + fmtEur(c.solde_montant) + '</span></td>' +
@@ -276,11 +386,16 @@
   }
 
   window.ctTogglePay = async function (id, field, newVal) {
-    const r = await ctApi('contrat-pay', { contratId: id, field, value: newVal });
-    if (r && r.contrat) {
+    if (_ctUser) {
+      const r = await ctApi('contrat-pay', { contratId: id, field, value: newVal });
+      if (r && r.contrat) {
+        const idx = ctContrats.findIndex(c => c.id === id);
+        if (idx >= 0) ctContrats[idx] = r.contrat;
+        ctRenderDashboard();
+      }
+    } else {
       const idx = ctContrats.findIndex(c => c.id === id);
-      if (idx >= 0) ctContrats[idx] = r.contrat;
-      ctRenderDashboard();
+      if (idx >= 0) { ctContrats[idx][field] = newVal; ctLsSet(CT_LS_CONTRATS, ctContrats); ctRenderDashboard(); }
     }
   };
 
@@ -291,19 +406,31 @@
     if (!c.caution_encaissee) { field = 'caution_encaissee'; value = true; }
     else if (!c.caution_rendue) { field = 'caution_rendue'; value = true; }
     else { field = 'caution_encaissee'; value = false; }  // reset
-    const r = await ctApi('contrat-pay', { contratId: id, field, value });
-    if (r && r.contrat) {
-      // Re-fetch pour être safe (champs multiples peuvent changer)
-      await ctLoadContrats();
+    if (_ctUser) {
+      const r = await ctApi('contrat-pay', { contratId: id, field, value });
+      if (r && r.contrat) {
+        await ctLoadContrats();
+        ctRenderDashboard();
+      }
+    } else {
+      c[field] = value;
+      if (field === 'caution_encaissee' && !value) { c.caution_rendue = false; }
+      ctLsSet(CT_LS_CONTRATS, ctContrats);
       ctRenderDashboard();
     }
   };
 
   window.ctDeleteContract = async function (id) {
     if (!confirm('Supprimer ce contrat ? Cette action est irréversible.')) return;
-    const r = await ctApi('contrat-delete', { contratId: id });
-    if (r && r.ok) {
+    if (_ctUser) {
+      const r = await ctApi('contrat-delete', { contratId: id });
+      if (r && r.ok) {
+        ctContrats = ctContrats.filter(c => c.id !== id);
+        ctRenderDashboard();
+      }
+    } else {
       ctContrats = ctContrats.filter(c => c.id !== id);
+      ctLsSet(CT_LS_CONTRATS, ctContrats);
       ctRenderDashboard();
     }
   };
@@ -544,18 +671,50 @@
   }
 
   window.ctAddInventairePiece = function () {
+    const modal = document.getElementById('ct-inv-modal');
+    const input = document.getElementById('ct-inv-room-input');
+    if (input) input.value = '';
+    if (modal) modal.style.display = 'flex';
+  };
+  window.ctConfirmAddRoom = function () {
+    const input = document.getElementById('ct-inv-room-input');
+    const name = input ? input.value.trim() : '';
+    if (!name) return;
     const b = getTempBien();
     if (!b.inventaire) b.inventaire = { pieces: [] };
-    const name = prompt('Nom de la pièce (ex: Salon, Cuisine, Chambre 1) :');
-    if (!name) return;
     b.inventaire.pieces.push({ nom: name, items: [] });
     refreshInventaireUI(b);
+    document.getElementById('ct-inv-modal').style.display = 'none';
   };
 
+  var _ctInvItemPieceIdx = -1;
   window.ctAddInvItem = function (pi) {
-    const b = getTempBien();
-    b.inventaire.pieces[pi].items.push({ objet: '', qte: 1, etat: 'Bon', valeur: 0 });
-    refreshInventaireUI(b);
+    _ctInvItemPieceIdx = pi;
+    var modal = document.getElementById('ct-inv-item-modal');
+    var nameInput = document.getElementById('ct-inv-item-name');
+    var qtyInput = document.getElementById('ct-inv-item-qty');
+    var stateSelect = document.getElementById('ct-inv-item-state');
+    var valInput = document.getElementById('ct-inv-item-val');
+    if (nameInput) nameInput.value = '';
+    if (qtyInput) qtyInput.value = '1';
+    if (stateSelect) stateSelect.value = 'Bon';
+    if (valInput) valInput.value = '0';
+    if (modal) modal.style.display = 'flex';
+    if (nameInput) setTimeout(function() { nameInput.focus(); }, 100);
+  };
+
+  window.ctConfirmAddItem = function () {
+    var name = (document.getElementById('ct-inv-item-name').value || '').trim();
+    if (!name) return;
+    var qty = parseInt(document.getElementById('ct-inv-item-qty').value) || 1;
+    var state = document.getElementById('ct-inv-item-state').value || 'Bon';
+    var val = parseFloat(document.getElementById('ct-inv-item-val').value) || 0;
+    var b = getTempBien();
+    if (_ctInvItemPieceIdx >= 0 && b.inventaire && b.inventaire.pieces[_ctInvItemPieceIdx]) {
+      b.inventaire.pieces[_ctInvItemPieceIdx].items.push({ objet: name, qte: qty, etat: state, valeur: val });
+      refreshInventaireUI(b);
+    }
+    document.getElementById('ct-inv-item-modal').style.display = 'none';
   };
 
   window.ctInvUpdate = function (pi, ii, field, val) {
@@ -627,24 +786,44 @@
     if (!b.nom_interne) { alert('Le nom interne est obligatoire'); return; }
     if (!b.capacite_max) { alert('La capacité max est obligatoire'); return; }
 
-    const r = await ctApi('bien-upsert', { bien: b });
-    if (r && r.bien) {
-      ctTempBien = null;
-      await ctLoadBiens();
-      ctSelectedBienId = r.bien.id;
-      ctRenderBiens();
+    if (_ctUser) {
+      const r = await ctApi('bien-upsert', { bien: b });
+      if (r && r.bien) {
+        ctTempBien = null;
+        await ctLoadBiens();
+        ctSelectedBienId = r.bien.id;
+        ctRenderBiens();
+      } else {
+        alert('Erreur : ' + (r && r.error));
+      }
     } else {
-      alert('Erreur : ' + (r && r.error));
+      // Guest mode — save to localStorage
+      if (!b.id) b.id = 'local_' + Date.now();
+      const idx = ctBiens.findIndex(x => x.id === b.id);
+      if (idx >= 0) ctBiens[idx] = b; else ctBiens.push(b);
+      ctLsSet(CT_LS_BIENS, ctBiens);
+      ctTempBien = null;
+      ctSelectedBienId = b.id;
+      ctRenderBiens();
+      ctShowSavePopup();
     }
   };
 
   window.ctDeleteBien = async function () {
     if (!confirm('Supprimer ce bien ? Les contrats existants liés à ce bien resteront dans votre dashboard.')) return;
-    const r = await ctApi('bien-delete', { bienId: ctSelectedBienId });
-    if (r && r.ok) {
+    if (_ctUser) {
+      const r = await ctApi('bien-delete', { bienId: ctSelectedBienId });
+      if (r && r.ok) {
+        ctTempBien = null;
+        ctSelectedBienId = null;
+        await ctLoadBiens();
+        ctRenderBiens();
+      }
+    } else {
+      ctBiens = ctBiens.filter(b => b.id !== ctSelectedBienId);
+      ctLsSet(CT_LS_BIENS, ctBiens);
       ctTempBien = null;
       ctSelectedBienId = null;
-      await ctLoadBiens();
       ctRenderBiens();
     }
   };
@@ -715,14 +894,23 @@
     };
     if (!payload.prenom || !payload.nom) { alert('Prénom et nom obligatoires'); return; }
     if (!payload.email) { alert('Email obligatoire'); return; }
-    const r = await ctApi('bailleur-upsert', { bailleur: payload });
-    if (r && r.bailleur) {
-      ctBailleur = r.bailleur;
+    if (_ctUser) {
+      const r = await ctApi('bailleur-upsert', { bailleur: payload });
+      if (r && r.bailleur) {
+        ctBailleur = r.bailleur;
+        ctRenderSettings();
+        const btn = document.querySelector('#ctsettings-body .btn.accent');
+        if (btn) { const o = btn.textContent; btn.textContent = '✓ Enregistré'; btn.style.background = 'var(--ct-green)'; btn.style.borderColor = 'var(--ct-green)'; setTimeout(() => { btn.textContent = o; btn.style.background = ''; btn.style.borderColor = ''; }, 1500); }
+      } else alert('Erreur : ' + (r && r.error));
+    } else {
+      // Guest mode
+      ctBailleur = payload;
+      ctLsSet(CT_LS_BAILLEUR, ctBailleur);
       ctRenderSettings();
-      // Petite notif
       const btn = document.querySelector('#ctsettings-body .btn.accent');
       if (btn) { const o = btn.textContent; btn.textContent = '✓ Enregistré'; btn.style.background = 'var(--ct-green)'; btn.style.borderColor = 'var(--ct-green)'; setTimeout(() => { btn.textContent = o; btn.style.background = ''; btn.style.borderColor = ''; }, 1500); }
-    } else alert('Erreur : ' + (r && r.error));
+      ctShowSavePopup();
+    }
   };
 
   // ─── WIZARD NOUVEAU CONTRAT ─────────────────────────────────────
@@ -794,7 +982,7 @@
         '<div class="field"><label class="field-label">Date limite acompte</label><input type="date" class="input" id="ctw-acd" value="' + (ctWizardData.acompte_date_limite || '') + '"></div>' +
         '<div class="field"><label class="field-label">Date limite solde</label><input type="date" class="input" id="ctw-sod" value="' + (ctWizardData.solde_date_limite || '') + '"></div></div>' +
         '<div class="field-row"><div class="field"><label class="field-label">Caution</label><input type="number" class="input" id="ctw-cau" value="' + (ctWizardData.caution || bien.caution_defaut || 500) + '"><div class="field-hint">Restituée 7 j après le départ</div></div>' +
-        '<div class="field"><label class="field-label">Taxe de séjour</label><input type="number" class="input" id="ctw-tax" value="' + (ctWizardData.taxe_sejour_montant || 0) + '"></div></div>' +
+        '<div class="field"><label class="field-label">Taxe de séjour</label><input type="number" class="input" id="ctw-tax" value="' + (ctWizardData.taxe_sejour_montant || 0) + '" step="0.01"><div class="field-hint" id="ctw-tax-hint"></div></div></div>' +
 
         '<div class="section-title" style="margin-top:28px"><span class="section-num">05</span> Langue du contrat</div>' +
         '<div class="lang-switch"><span style="font-family:var(--ct-mono);font-size:11px;color:var(--ct-muted);padding-right:8px;border-right:1px solid var(--ct-border);margin-right:4px">Langue de génération</span>' +
@@ -808,6 +996,29 @@
 
       // Recalculer les nuits
       setTimeout(ctRecalcNights, 0);
+      // Auto-calculate taxe de séjour if DB loaded and dates set
+      setTimeout(function () {
+        var taxInput = document.getElementById('ctw-tax');
+        var taxHint = document.getElementById('ctw-tax-hint');
+        if (!taxInput || !bien) return;
+        var calc = ctAutoCalcTaxe(bien, ctWizardData);
+        if (calc && taxHint) {
+          taxHint.textContent = calc.unite === '%' ?
+            calc.taux + ' % du prix/nuit \u00d7 ' + calc.nuits + ' nuits = ' + fmtEurP(calc.total) + ' (' + calc.ville + ')' :
+            calc.taux + ' \u20ac/pers/nuit \u00d7 ' + calc.personnes + ' pers \u00d7 ' + calc.nuits + ' nuits = ' + fmtEurP(calc.total) + ' (' + calc.ville + ')';
+          taxHint.style.color = 'var(--ct-green)';
+          // Pre-fill only if current value is 0 (don't override user edits)
+          if (!ctWizardData.taxe_sejour_montant || ctWizardData.taxe_sejour_montant === 0) {
+            taxInput.value = calc.total;
+          }
+        } else if (taxHint) {
+          var ville = bien.adresse ? _ctExtractVille(bien.adresse) : '';
+          if (ville && _ctTaxeDb) {
+            taxHint.textContent = 'Commune « ' + ville + ' » non trouvée dans la base de taxe de séjour';
+            taxHint.style.color = 'var(--ct-muted2)';
+          }
+        }
+      }, 50);
     } else {
       // Étape 3 = aperçu + téléchargement
       const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
@@ -1129,68 +1340,338 @@
     }
   };
 
-  // ─── EXPORT PDF (via fenêtre dédiée + window.print) ─────────────
-  // On ouvre une nouvelle fenêtre avec uniquement le contrat, puis on
-  // déclenche print. L'utilisateur peut ensuite "Save as PDF" depuis le
-  // dialogue d'impression du navigateur. C'est plus fiable que de hacker
-  // @media print sur le document actuel (qui a header, footer, tool…).
+  // ─── EXPORT PDF (jsPDF) ──────────────────────────────────────────
   window.ctExportPdf = function () {
-    const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
-    if (!bien) { alert('Aucun bien sélectionné'); return; }
-    const html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'pdf');
-    const title = 'Contrat — ' + (ctWizardData.locataire_nom || 'locataire') + ' — ' + (ctWizardData.date_arrivee || '');
-    const fullHtml = `<!DOCTYPE html>
-<html lang="${ctWizardData.langue || 'fr'}">
-<head>
-<meta charset="utf-8">
-<title>${esc(title)}</title>
-<style>
-  @page { size: A4; margin: 18mm 15mm; }
-  body { font-family: 'Inter', -apple-system, sans-serif; font-size: 10.5pt; line-height: 1.5; color: #000; max-width: 180mm; margin: 0 auto; padding: 4mm; }
-  h1 { font-size: 18pt; text-align: center; margin: 0 0 18pt; padding-bottom: 10pt; border-bottom: 1.5px solid #000; }
-  h2 { font-size: 11pt; font-weight: 700; text-transform: uppercase; margin: 14pt 0 5pt; letter-spacing: 0.02em; }
-  h3 { font-size: 10pt; font-weight: 600; margin: 8pt 0 4pt; }
-  p { margin: 0 0 7pt; text-align: justify; }
-  p strong { font-weight: 600; }
-  table { width: 100%; border-collapse: collapse; font-size: 9pt; margin: 6pt 0 10pt; }
-  th, td { border: 0.5pt solid #666; padding: 4pt 6pt; text-align: left; vertical-align: top; }
-  th { background: #eee; font-weight: 600; }
-  .sig { display: table; width: 100%; margin-top: 28pt; table-layout: fixed; page-break-inside: avoid; }
-  .sig > div { display: table-cell; width: 50%; padding: 18pt 10pt 8pt; text-align: center; border-top: 0.5pt solid #000; font-size: 9pt; vertical-align: top; }
-  .sig strong { display: block; margin-bottom: 14pt; }
-</style>
-</head>
-<body>
-${html}
-<script>
-  window.onload = function() { window.print(); };
-  window.onafterprint = function() { setTimeout(function(){ window.close(); }, 300); };
-<\/script>
-</body>
-</html>`;
-    const w = window.open('', '_blank', 'width=900,height=1000');
-    if (!w) { alert('Veuillez autoriser les pop-ups pour télécharger le PDF'); return; }
-    w.document.open();
-    w.document.write(fullHtml);
-    w.document.close();
+    try {
+    if (!window.jspdf) {
+      var s = document.createElement('script');
+      s.src = '/jspdf.min.js';
+      s.onload = function() { window.ctExportPdf(); };
+      s.onerror = function() { alert('Erreur : impossible de charger la librairie PDF.'); };
+      document.head.appendChild(s);
+      return;
+    }
+    var bien = ctBiens.find(function(b){return b.id===ctWizardData.bien_id});
+    if (!bien) { alert('Aucun bien selectionne'); return; }
+    var d = ctWizardData;
+    var bailleur = ctBailleur || {};
+    var lang = d.langue || 'fr';
+    var L = T[lang];
+    var nuits = nights(d.date_arrivee, d.date_depart);
+    var jsPDF = window.jspdf.jsPDF;
+    var doc = new jsPDF({ unit: 'mm', format: 'a4' });
+    var W = 210, M = 20, pw = W - 2 * M;
+    var y = 0;
+    var dark = [43, 45, 43];
+    var gray = [138, 137, 133];
+    var green = [63, 189, 113];
+    var light = [247, 246, 243];
+
+    function checkPage(need) { if (y + need > 275) { doc.addPage(); y = 20; } }
+
+    function addH2(text) {
+      checkPage(14);
+      y += 4;
+      doc.setFillColor(dark[0], dark[1], dark[2]);
+      doc.roundedRect(M, y - 4, pw, 8, 1.5, 1.5, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(255, 255, 255);
+      doc.text(text.toUpperCase(), M + 4, y + 1.5);
+      doc.setTextColor(dark[0], dark[1], dark[2]);
+      y += 10;
+    }
+
+    function addPara(text) {
+      if (!text) return;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(60, 60, 60);
+      var lines = doc.splitTextToSize(text, pw - 4);
+      for (var i = 0; i < lines.length; i++) { checkPage(5); doc.text(lines[i], M + 2, y); y += 4.2; }
+      y += 2;
+    }
+
+    function addField(label, value) {
+      checkPage(6);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(8); doc.setTextColor(gray[0], gray[1], gray[2]);
+      doc.text(label, M + 2, y);
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(dark[0], dark[1], dark[2]);
+      doc.text(String(value || '---'), M + 2, y + 4.5);
+      y += 10;
+    }
+
+    // Build data
+    var bailleurName = bailleur.type === 'societe'
+      ? (bailleur.raison_sociale || '') : (bailleur.prenom || '') + ' ' + (bailleur.nom || '');
+    var locataireName = (d.locataire_prenom || '') + ' ' + (d.locataire_nom || '');
+    var invTotal = computeInventaireTotal(bien.inventaire);
+    var totalPers = (+d.nb_adultes || 0) + (+d.nb_enfants || 0);
+
+    // ── HEADER ──
+    doc.setFillColor(light[0], light[1], light[2]);
+    doc.rect(0, 0, W, 38, 'F');
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('Contrat realise sur Enomia', W - M, 8, { align: 'right' });
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text('CONTRAT DE LOCATION SAISONNIERE', 105, 18, { align: 'center' });
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text(fmtDate(d.date_arrivee) + ' au ' + fmtDate(d.date_depart) + ' - ' + nuits + ' nuit' + (nuits > 1 ? 's' : ''), 105, 26, { align: 'center' });
+    doc.setDrawColor(dark[0], dark[1], dark[2]); doc.setLineWidth(0.5);
+    doc.line(M, 36, W - M, 36);
+
+    y = 46;
+
+    // ── PARTIES (2 colonnes) ──
+    doc.setFillColor(light[0], light[1], light[2]);
+    doc.roundedRect(M, y - 3, 82, 28, 2, 2, 'F');
+    doc.roundedRect(M + 88, y - 3, 82, 28, 2, 2, 'F');
+
+    // Bailleur
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(green[0], green[1], green[2]);
+    doc.text('BAILLEUR', M + 4, y + 2);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(bailleurName, M + 4, y + 8);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    if (bailleur.adresse) doc.text(bailleur.adresse, M + 4, y + 13, { maxWidth: 74 });
+    var bInfo = [bailleur.email, bailleur.telephone].filter(Boolean).join(' - ');
+    if (bInfo) doc.text(bInfo, M + 4, y + 18, { maxWidth: 74 });
+    if (bailleur.siret) doc.text('SIRET : ' + bailleur.siret, M + 4, y + 22);
+
+    // Preneur
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(green[0], green[1], green[2]);
+    doc.text('LOCATAIRE', M + 92, y + 2);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(locataireName, M + 92, y + 8);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    if (d.locataire_adresse) doc.text(d.locataire_adresse, M + 92, y + 13, { maxWidth: 74 });
+    var lInfo = [d.locataire_email, d.locataire_telephone].filter(Boolean).join(' - ');
+    if (lInfo) doc.text(lInfo, M + 92, y + 18, { maxWidth: 74 });
+
+    y += 32;
+
+    // ── OBJET ──
+    addH2(L.h_objet);
+    addPara(L.objet_text);
+
+    // ── LOGEMENT ──
+    addH2(L.h_logement);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text((bien.nom_interne || 'Logement'), M + 2, y); y += 5;
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text(bien.adresse || '', M + 2, y); y += 6;
+
+    // Info grid
+    var infos = [
+      ['Surface', (bien.surface || '---') + ' m2'],
+      ['Pieces', String(bien.nb_pieces || '---')],
+      ['Classement', bien.classement || '---'],
+      ['Capacite', (bien.capacite_max || '---') + ' pers.']
+    ];
+    if (bien.numero_declaration_mairie) infos.push(['N. mairie', bien.numero_declaration_mairie]);
+    var gx = M + 2;
+    doc.setFontSize(7);
+    infos.forEach(function(info) {
+      if (gx > 160) { gx = M + 2; y += 10; }
+      checkPage(10);
+      doc.setFont('helvetica', 'bold'); doc.setTextColor(gray[0], gray[1], gray[2]);
+      doc.text(info[0].toUpperCase(), gx, y);
+      doc.setFont('helvetica', 'normal'); doc.setTextColor(dark[0], dark[1], dark[2]); doc.setFontSize(9);
+      doc.text(info[1], gx, y + 4);
+      doc.setFontSize(7);
+      gx += 34;
+    });
+    y += 10;
+
+    var equips = (Array.isArray(bien.equipements) ? bien.equipements : []).join(', ') || '---';
+    addPara('Equipements et charges inclus : ' + equips);
+
+    // ── DUREE ──
+    addH2(L.h_duree);
+    checkPage(22);
+    doc.setFillColor(light[0], light[1], light[2]);
+    doc.roundedRect(M, y - 2, pw, 20, 2, 2, 'F');
+    // Arrivée
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('ARRIVEE', M + 6, y + 3);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(fmtDate(d.date_arrivee), M + 6, y + 9);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('a ' + (d.heure_arrivee || '15h00'), M + 6, y + 14);
+    // Flèche
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(14); doc.setTextColor(200, 200, 200);
+    doc.text('>', M + 72, y + 9);
+    // Départ
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('DEPART', M + 86, y + 3);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(fmtDate(d.date_depart), M + 86, y + 9);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('a ' + (d.heure_depart || '11h00'), M + 86, y + 14);
+    // Nuits badge
+    doc.setFillColor(dark[0], dark[1], dark[2]);
+    doc.roundedRect(M + 140, y + 2, 26, 13, 2, 2, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(255, 255, 255);
+    doc.text(nuits + ' nuit' + (nuits > 1 ? 's' : ''), M + 153, y + 11, { align: 'center' });
+    doc.setTextColor(dark[0], dark[1], dark[2]);
+    y += 24;
+    addPara(L.duree_text);
+
+    // ── PRIX ──
+    addH2(L.h_prix);
+    // Price summary box
+    checkPage(20);
+    doc.setFillColor(light[0], light[1], light[2]);
+    doc.roundedRect(M, y - 2, pw, 18, 2, 2, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text('LOYER TOTAL', M + 4, y + 3);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(14); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(_pdfEur(d.prix_total), M + 4, y + 11);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text(nuits + ' nuit' + (nuits > 1 ? 's' : '') + ' - ' + totalPers + ' personne' + (totalPers > 1 ? 's' : ''), M + 60, y + 6);
+    if (d.taxe_sejour_montant > 0) doc.text('+ Taxe de sejour : ' + _pdfEur(d.taxe_sejour_montant), M + 60, y + 11);
+    y += 22;
+
+    addPara(L.acompte_text(d.acompte_pourcentage, _pdfEur(d.acompte_montant), d.acompte_date_limite ? fmtDate(d.acompte_date_limite) : '---'));
+    addPara(L.solde_text(_pdfEur((d.prix_total || 0) - (d.acompte_montant || 0)), d.solde_date_limite ? fmtDate(d.solde_date_limite) : '---'));
+
+    // ── CAUTION ──
+    addH2(L.h_caution);
+    addPara(L.caution_text(_pdfEur(d.caution)));
+
+    // ── EDL ──
+    addH2(L.h_edl);
+    addPara(L.edl_text(_pdfEur(invTotal)));
+
+    // ── OBLIGATIONS ──
+    addH2(L.h_obligations);
+    addPara(L.obligations_text(totalPers));
+    if (bien.animaux === 'non') addPara(L.animaux_non);
+    else if (bien.animaux === 'oui') addPara(L.animaux_oui);
+    else addPara(L.animaux_demande);
+    if (bien.fumeurs === 'non') addPara(L.fumeurs_non);
+    if (bien.fetes === 'non') addPara(L.fetes_non);
+
+    // ── ANNULATION ──
+    addH2(L.h_annulation);
+    addPara(L.annulation_text[bien.conditions_annulation || 'standard']);
+
+    // ── ASSURANCE ──
+    addH2(L.h_assurance);
+    addPara(L.assurance_text[bien.assurance_villegiature || 'obligatoire']);
+
+    // ── CLAUSES ──
+    if (bien.clauses_particulieres) {
+      addH2(L.h_clauses);
+      addPara(bien.clauses_particulieres);
+    }
+
+    // ── DOMICILE ──
+    addH2(L.h_domicile);
+    addPara(L.domicile_text);
+
+    // ── SIGNATURES ──
+    checkPage(40);
+    y += 6;
+    doc.setFont('helvetica', 'italic'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text(L.lu_approuve, M + 2, y); y += 8;
+
+    // 2 signature boxes
+    doc.setFillColor(light[0], light[1], light[2]);
+    doc.roundedRect(M, y, 78, 30, 2, 2, 'F');
+    doc.roundedRect(M + 92, y, 78, 30, 2, 2, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(8); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text(L.bailleur, M + 39, y + 5, { align: 'center' });
+    doc.text(L.preneur, M + 131, y + 5, { align: 'center' });
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text(L.date_lieu, M + 39, y + 10, { align: 'center' });
+    doc.text(L.date_lieu, M + 131, y + 10, { align: 'center' });
+
+    // ── ANNEXE INVENTAIRE ──
+    if (bien.inventaire && bien.inventaire.pieces && bien.inventaire.pieces.length) {
+      doc.addPage(); y = 20;
+      addH2(L.h_annexe_inventaire);
+      bien.inventaire.pieces.forEach(function (p) {
+        checkPage(16);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
+        doc.text(p.nom, M + 2, y); y += 6;
+        if (p.items && p.items.length) {
+          checkPage(8);
+          doc.setFillColor(dark[0], dark[1], dark[2]);
+          doc.roundedRect(M, y - 3.5, pw, 6, 1, 1, 'F');
+          doc.setFontSize(7); doc.setFont('helvetica', 'bold'); doc.setTextColor(255, 255, 255);
+          doc.text(L.objet, M + 3, y); doc.text(L.qte, M + 95, y); doc.text(L.etat, M + 115, y); doc.text(L.valeur, M + 145, y);
+          doc.setTextColor(dark[0], dark[1], dark[2]);
+          y += 5;
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5);
+          p.items.forEach(function (it, idx) {
+            checkPage(6);
+            if (idx % 2 === 0) { doc.setFillColor(250, 250, 248); doc.rect(M, y - 3, pw, 5.5, 'F'); }
+            doc.text(String(it.objet || ''), M + 3, y);
+            doc.text(String(it.qte || 1), M + 95, y);
+            doc.text(String(it.etat || ''), M + 115, y);
+            doc.text(_pdfEur((+it.valeur || 0) * (+it.qte || 1), 0), M + 145, y);
+            y += 5.5;
+          });
+          y += 4;
+        }
+      });
+      checkPage(10);
+      doc.setFillColor(light[0], light[1], light[2]);
+      doc.roundedRect(M, y - 2, pw, 10, 2, 2, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(dark[0], dark[1], dark[2]);
+      doc.text(L.inventaire_total + ' : ' + _pdfEur(invTotal, 0), M + 4, y + 5);
+    }
+
+    // ── ANNEXE REGLEMENT ──
+    if (bien.reglement_interieur) {
+      if (y > 40) { doc.addPage(); y = 20; }
+      addH2(L.h_annexe_reglement);
+      addPara(bien.reglement_interieur);
+    }
+
+    // ── FOOTER ──
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(6.5); doc.setTextColor(180, 180, 180);
+    doc.text(bailleurName + (bailleur.siret ? ' - SIRET : ' + bailleur.siret : '') + ' - Document genere par Enomia', M, 288);
+
+    // Save
+    var fname = 'contrat-' + (d.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-') + '-' + (d.date_arrivee || '') + '.pdf';
+    doc.save(fname);
+    } catch(e) {
+      alert('Erreur PDF : ' + e.message);
+      console.error('PDF export error:', e);
+    }
   };
 
-  // ─── EXPORT WORD (.doc via Blob HTML) ───────────────────────────
+  // ─── EXPORT WORD (.docx via MHTML Blob) ─────────────────────────
   window.ctExportWord = function () {
-    const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
-    if (!bien) return;
-    const html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'word');
-    const fullHtml = `<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
-<head><meta charset="utf-8"><title>Contrat</title>
-<style>body{font-family:Calibri,Arial,sans-serif;font-size:11pt;line-height:1.5;max-width:170mm;margin:auto} h1{font-size:16pt;text-align:center;border-bottom:1px solid #000;padding-bottom:6pt} h2{font-size:11pt;font-weight:700;text-transform:uppercase;margin-top:12pt} p{margin:4pt 0;text-align:justify} .sig{display:table;width:100%;margin-top:24pt} .sig > div{display:table-cell;width:50%;padding:12pt;text-align:center;border-top:1px solid #000} table{border-collapse:collapse;width:100%;font-size:9pt;margin:6pt 0} th,td{border:1px solid #666;padding:3pt 5pt;text-align:left} th{background:#eee}</style>
-</head><body>${html}</body></html>`;
-    const blob = new Blob([fullHtml], { type: 'application/msword' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    try {
+    var bien = ctBiens.find(function(b){return b.id===ctWizardData.bien_id});
+    if (!bien) { alert('Aucun bien selectionne'); return; }
+    var html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'word');
+    var fullHtml = '<!DOCTYPE html><html><head><meta charset="utf-8">' +
+      '<style>' +
+      '@page { size: A4; margin: 2cm; }' +
+      'body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #1a1a1a; max-width: 170mm; margin: 0 auto; }' +
+      'h1 { font-size: 16pt; text-align: center; border-bottom: 2px solid #2b2d2b; padding-bottom: 10px; margin-bottom: 20px; }' +
+      'h2 { font-size: 11pt; font-weight: bold; text-transform: uppercase; margin-top: 18px; margin-bottom: 8px; padding: 4px 10px; background: #f0efec; border-left: 3px solid #2b2d2b; }' +
+      'p { margin: 6pt 0; text-align: justify; }' +
+      'table { border-collapse: collapse; width: 100%; font-size: 10pt; margin: 10px 0; }' +
+      'th, td { border: 1px solid #ccc; padding: 5px 8px; text-align: left; }' +
+      'th { background: #f0efec; font-weight: bold; font-size: 9pt; }' +
+      '.sig-row { display: flex; justify-content: space-between; margin-top: 30px; }' +
+      '.sig-box { width: 45%; text-align: center; padding-top: 12px; border-top: 1px solid #000; }' +
+      '</style></head><body>' + html + '</body></html>';
+    var blob = new Blob(['\ufeff' + fullHtml], { type: 'text/html' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
     a.href = url;
-    a.download = `contrat-${(ctWizardData.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-')}-${ctWizardData.date_arrivee || ''}.doc`;
+    var name = (ctWizardData.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-');
+    a.download = 'contrat-' + name + '-' + (ctWizardData.date_arrivee || '') + '.doc';
+    document.body.appendChild(a);
     a.click();
-    URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+    setTimeout(function() { URL.revokeObjectURL(url); }, 2000);
+    } catch(e) {
+      alert('Erreur Word : ' + e.message);
+      console.error('Word export error:', e);
+    }
   };
 
   window.ctSaveContract = async function () {
@@ -1203,12 +1684,23 @@ ${html}
       numero_declaration_mairie: bien.numero_declaration_mairie
     } : null;
     if (ctEditingContratId) d.id = ctEditingContratId;
-    const r = await ctApi('contrat-upsert', { contrat: d });
-    if (r && r.contrat) {
-      await ctLoadContrats();
-      ctShowScreen('ctscreen-dashboard');
+    if (_ctUser) {
+      const r = await ctApi('contrat-upsert', { contrat: d });
+      if (r && r.contrat) {
+        await ctLoadContrats();
+        ctShowScreen('ctscreen-dashboard');
+      } else {
+        alert('Erreur : ' + (r && r.error));
+      }
     } else {
-      alert('Erreur : ' + (r && r.error));
+      // Guest mode
+      if (!d.id) d.id = 'local_' + Date.now();
+      d.created_at = d.created_at || new Date().toISOString();
+      const idx = ctContrats.findIndex(c => c.id === d.id);
+      if (idx >= 0) ctContrats[idx] = d; else ctContrats.push(d);
+      ctLsSet(CT_LS_CONTRATS, ctContrats);
+      ctShowScreen('ctscreen-dashboard');
+      ctShowSavePopup();
     }
   };
 
@@ -1216,6 +1708,7 @@ ${html}
   window.ctUploadSigned = async function (contratId, input) {
     const file = input.files && input.files[0];
     if (!file) return;
+    if (!_ctUser) { ctOpenLoginModal(); return; }
     const path = `${_ctUser.id}/${contratId}/contrat-signe-${Date.now()}.${file.name.split('.').pop()}`;
     const { error } = await _ctSb.storage
       .from('contrats-signes')
@@ -1233,6 +1726,43 @@ ${html}
     const r = await ctApi('contrat-sign-signed-url', { path });
     if (r && r.url) window.open(r.url, '_blank');
   };
+
+  // ─── SAVE POPUP (guest mode — prompt to create account) ─────────
+  let _ctSavePopupShown = false;
+  function ctShowSavePopup() {
+    if (_ctUser || _ctSavePopupShown) return;
+    _ctSavePopupShown = true;
+    const el = document.getElementById('ct-save-popup');
+    if (el) el.style.display = 'flex';
+    // Auto-hide after 8s
+    setTimeout(() => { if (el) el.style.display = 'none'; _ctSavePopupShown = false; }, 8000);
+  }
+  window.ctDismissSavePopup = function () {
+    const el = document.getElementById('ct-save-popup');
+    if (el) el.style.display = 'none';
+    _ctSavePopupShown = false;
+  };
+  window.ctSavePopupLogin = function () {
+    ctDismissSavePopup();
+    ctOpenLoginModal();
+  };
+
+  // Show save popup on tab switch / page leave if guest has local data
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden && !_ctUser) {
+      const hasData = ctBiens.length > 0 || ctContrats.length > 0 || (ctBailleur && ctBailleur.nom);
+      if (hasData) ctShowSavePopup();
+    }
+  });
+  window.addEventListener('beforeunload', function (e) {
+    if (!_ctUser) {
+      const hasData = ctBiens.length > 0 || ctContrats.length > 0 || (ctBailleur && ctBailleur.nom);
+      if (hasData && !localStorage.getItem('ct_guest_dismiss_warn')) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    }
+  });
 
   // ─── INIT ───────────────────────────────────────────────────────
   function ctReady() {

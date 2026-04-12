@@ -1,6 +1,7 @@
 ---
 import ToolLayout from '../layouts/ToolLayout.astro';
 import ContratLandingStyles from '../components/ContratLandingStyles.astro';
+import NewsletterBlock from '../components/NewsletterBlock.astro';
 
 const title = "Contrat de location de gîte 2026 — modèle gratuit (rural, groupe, saisonnier)";
 const description = "Modèle de contrat de location de gîte gratuit : rural, de groupe, saisonnier. Clauses piscine NF P90-306, animaux, équipements ruraux, déclaration mairie. PDF + Word.";
@@ -9,29 +10,20 @@ const canonical = "https://www.enomia.app/contrat-location-gite";
 <ToolLayout title={title} description={description} canonical={canonical} currentTool="contrat">
   <ContratLandingStyles />
 
-  <div class="seo-wrap">
-    <div>
-      <h1 class="seo-h1">Le contrat de location pour votre <em>gîte</em></h1>
-      <p class="seo-lede">
-        Le <strong>seul modèle</strong> qui traite le gîte comme un objet contractuel spécifique — rural, de groupe, à la ferme — avec les clauses que les autres oublient : <strong>piscine non surveillée (norme NF P90-306)</strong>, cheminée, animaux de la ferme, labels Gîtes de France. Gratuit, PDF + Word, conforme 2026.
-      </p>
-      <div class="seo-badges">
-        <span class="seo-badge">Rural, groupe, étape</span>
-        <span class="seo-badge">Norme piscine NF</span>
-        <span class="seo-badge">Labels inclus</span>
-        <span class="seo-badge">Loi Le Meur 2024</span>
-      </div>
+  <div class="landing-hero">
+    <div class="landing-tag">Contrat de location de gîte</div>
+    <h1 class="landing-h1">Contrat de location pour votre <em>gîte</em> — modèle gratuit</h1>
+    <p class="landing-sub">Clauses piscine, cheminée, animaux. Labels Gîtes de France. PDF + Word. Gratuit.</p>
+    <div class="landing-stats">
+      <div class="landing-stat"><div class="landing-stat-val">< 1 min</div><div class="landing-stat-lbl">par contrat</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">PDF + Word</div><div class="landing-stat-lbl">export bilingue</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">100%</div><div class="landing-stat-lbl">conforme 2026</div></div>
     </div>
+    <a href="/contrat-lcd-dashboard" class="landing-cta">+ Créer mon contrat gîte →</a>
+    <p class="landing-note">Sans inscription · Stockage local dans votre navigateur</p>
+  </div>
 
-    <div class="hero-cta-block">
-      <div>
-        <h3>Générez votre contrat de gîte en 2 minutes</h3>
-        <p>Un vrai modèle gîte, pas un contrat saisonnier générique renommé. Avec les clauses rurales qui protègent vraiment.</p>
-      </div>
-      <a href="/contrat-lcd-dashboard" class="hero-cta-btn">+ Créer mon contrat →</a>
-    </div>
-
-    <div class="seo-body">
+  <div class="seo-wrap"><div class="seo-body">
       <h2>Un contrat par type de gîte</h2>
       <p>
         Contrairement aux autres sites, notre outil distingue les spécificités contractuelles de chaque typologie. Les clauses changent selon la capacité, la responsabilité, les équipements et le public cible.
@@ -117,5 +109,7 @@ const canonical = "https://www.enomia.app/contrat-location-gite";
         <a href="/facture-location-saisonniere"><div class="rk">Facturation</div><div class="rt">Facture gîte</div><div class="rd">Générez la facture une fois le séjour payé. 30 000+ communes pour la taxe de séjour.</div></a>
       </div>
     </div>
+
+    <NewsletterBlock />
   </div>
 </ToolLayout>

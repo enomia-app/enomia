@@ -1,6 +1,7 @@
 ---
 import ToolLayout from '../layouts/ToolLayout.astro';
 import ContratLandingStyles from '../components/ContratLandingStyles.astro';
+import NewsletterBlock from '../components/NewsletterBlock.astro';
 
 const title = "Contrat location Airbnb 2026 : modèle conforme Loi Le Meur (PDF gratuit)";
 const description = "Modèle de contrat de location Airbnb gratuit, à jour de la Loi Le Meur 2024. Numéro d'enregistrement, articulation AirCover, clauses spécifiques. PDF + Word, FR/EN.";
@@ -9,32 +10,23 @@ const canonical = "https://www.enomia.app/contrat-airbnb";
 <ToolLayout title={title} description={description} canonical={canonical} currentTool="contrat">
   <ContratLandingStyles />
 
-  <div class="seo-wrap">
-    <div class="seo-hero">
-      <h1 class="seo-h1">Contrat de location <em>Airbnb</em> conforme Loi Le Meur</h1>
-      <p class="seo-lede">
-        Modèle gratuit à jour de la <strong>loi Le Meur du 19 novembre 2024</strong>. Intègre le numéro d'enregistrement à 13 chiffres, l'articulation avec les CGU Airbnb et l'AirCover, et les 12 mentions obligatoires du Code du tourisme. Téléchargeable en <strong>PDF et Word</strong>, bilingue FR/EN.
-      </p>
-      <div class="seo-badges">
-        <span class="seo-badge">Loi Le Meur 2024</span>
-        <span class="seo-badge">Articulation AirCover</span>
-        <span class="seo-badge">N° enregistrement</span>
-        <span class="seo-badge">FR & EN</span>
-      </div>
+  <div class="landing-hero">
+    <div class="landing-tag">Contrat de location Airbnb</div>
+    <h1 class="landing-h1">Contrat <em>Airbnb</em> conforme — Loi Le Meur 2024</h1>
+    <p class="landing-sub">Numéro d'enregistrement 13 chiffres. Clauses AirCover. PDF + Word. Gratuit.</p>
+    <div class="landing-stats">
+      <div class="landing-stat"><div class="landing-stat-val">< 1 min</div><div class="landing-stat-lbl">par contrat</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">PDF + Word</div><div class="landing-stat-lbl">export bilingue</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">100%</div><div class="landing-stat-lbl">conforme 2026</div></div>
     </div>
+    <a href="/contrat-lcd-dashboard" class="landing-cta">+ Créer mon contrat Airbnb →</a>
+    <p class="landing-note">Sans inscription · Stockage local dans votre navigateur</p>
+  </div>
 
-    <div class="hero-cta-block">
-      <div>
-        <h3>Protégez vos séjours Airbnb en 2 minutes</h3>
-        <p>Modèle conforme 2026, téléchargeable gratuitement en PDF et Word. Intégration complète des obligations loi Le Meur 2024.</p>
-      </div>
-      <a href="/contrat-lcd-dashboard" class="hero-cta-btn">+ Créer mon contrat Airbnb →</a>
-    </div>
-
-    <div class="seo-body">
+  <div class="seo-wrap"><div class="seo-body">
       <div class="callout warn">
         <strong>⚠ La simple réservation Airbnb ne vaut PAS contrat de location</strong>
-        Airbnb le précise lui-même dans ses CGU : « Airbnb n'est pas partie au contrat de location ». Vous restez juridiquement responsable en cas de litige. Un contrat écrit propre, signé par l'hôte et le voyageur, est la seule protection réelle — et il est obligatoire en vertu de l'<strong>article L324-2 du Code du tourisme</strong>.
+        <p>Airbnb le précise lui-même dans ses CGU : « Airbnb n'est pas partie au contrat de location ». Vous restez juridiquement responsable en cas de litige. Un contrat écrit propre, signé par l'hôte et le voyageur, est la seule protection réelle — et il est obligatoire en vertu de l'<strong>article L324-2 du Code du tourisme</strong>.</p>
       </div>
 
       <h2>Pourquoi Airbnb seul ne vous protège pas juridiquement</h2>
@@ -170,5 +162,7 @@ const canonical = "https://www.enomia.app/contrat-airbnb";
         </a>
       </div>
     </div>
+
+    <NewsletterBlock />
   </div>
 </ToolLayout>

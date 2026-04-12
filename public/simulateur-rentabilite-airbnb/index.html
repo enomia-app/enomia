@@ -391,7 +391,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 
 <header class="eh">
   <div class="eh-inner">
-    <span class="eh-logo" onclick="checkUnsavedAndNavigate(function(){window.location.href='/'})">
+    <a href="/" class="eh-logo" onclick="event.preventDefault();checkUnsavedAndNavigate(function(){window.location.href='/'})" style="text-decoration:none;color:inherit">
       <div class="eh-logo-icon">
         <div class="bar"></div><div class="bar"></div><div class="bar"></div>
       </div>
@@ -399,7 +399,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         <span class="eh-logo-name">Enomia</span>
         <span class="eh-logo-tagline">Un flux parfait. Pour tous.</span>
       </div>
-    </span>
+    </a>
     <nav class="eh-nav">
       <a href="/blog" class="eh-nav-link">Blog</a>
       <div class="eh-dropdown">
@@ -434,8 +434,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     </nav>
     <div class="eh-right">
       <button class="eh-btn eh-btn-green" id="btn-save-nav" onclick="saveSimulation()" style="display:none">Sauvegarder</button>
-      <button class="eh-btn eh-btn-green" id="btn-share-nav" onclick="shareSimulation()" style="display:none">Partager</button>
-      <a href="/blog" class="eh-btn" id="btn-blog-nav" style="display:none;background:transparent;color:var(--text-secondary,#52524e)">Blog</a>
+      <button class="eh-btn eh-btn-green" id="btn-share-nav" onclick="initSharePopup()" style="display:none">Partager</button>
       <button class="eh-btn eh-btn-green" id="btn-new-nav" onclick="newSimulation()" style="display:none">+ Nouvelle</button>
       <button class="eh-btn eh-btn-green" id="btn-mes-sim-nav" onclick="showDashboard()">Mes simulations</button>
     </div>
@@ -680,14 +679,14 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         </div>
         <div class="sg">
           <div class="sg-header"><div class="sg-lw"><div class="sg-label">Prix d'achat net vendeur</div></div><div class="sg-val" id="v-prix">120k <em>€</em></div></div>
-          <input type="range" id="s-prix" min="40000" max="3000000" step="10000" value="120000" oninput="sv('prix',this.value);compute()">
-          <div class="sg-ticks"><span>40k€</span><span>3M€</span></div>
+          <input type="range" id="s-prix" min="40000" max="1500000" step="10000" value="120000" oninput="sv('prix',this.value);compute()">
+          <div class="sg-ticks"><span>40k€</span><span>1.5M€</span></div>
         </div>
 <!-- Notaire affiché dans total card --><span id="v-notaire" style="display:none">9 000 €</span><span id="notaire-hint" style="display:none"></span>
         <div class="sg">
           <div class="sg-header"><div><div class="sg-label">Superficie</div></div><div class="sg-val" id="v-surface">35 <em>m²</em></div></div>
-          <input type="range" id="s-surface" min="15" max="1000" step="5" value="35" oninput="sv('surface',this.value);compute()">
-          <div class="sg-ticks"><span>15m²</span><span>1000m²</span></div>
+          <input type="range" id="s-surface" min="15" max="800" step="5" value="35" oninput="sv('surface',this.value);compute()">
+          <div class="sg-ticks"><span>15m²</span><span>800m²</span></div>
         </div>
         <div style="margin-bottom:10px">
           <div class="sg-label" style="margin-bottom:10px">Niveau de travaux</div>
@@ -713,8 +712,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
           </div>
           <div class="sg">
             <div class="sg-header"><div class="sg-label">Budget ameublement</div><div class="sg-val" id="v-ameu">6k <em>€</em></div></div>
-            <input type="range" id="s-ameu" min="0" max="200000" step="1000" value="6000" oninput="sv('ameu',this.value);clearAmeuPre();compute()">
-            <div class="sg-ticks"><span>0€</span><span>1.5M€</span></div>
+            <input type="range" id="s-ameu" min="0" max="500000" step="1000" value="6000" oninput="sv('ameu',this.value);clearAmeuPre();compute()">
+            <div class="sg-ticks"><span>0€</span><span>500k€</span></div>
           </div>
         </div>
         <!-- Frais bancaires : affichés dans le total uniquement, pas de slider -->
@@ -743,8 +742,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         <div class="sec-t"><span class="sec-num">02</span> Le bien (global)</div>
         <div class="sg">
           <div class="sg-header"><div class="sg-label">Prix d'achat total</div><div class="sg-val" id="v-prix-m">200k <em>€</em></div></div>
-          <input type="range" id="s-prix-m" min="40000" max="3000000" step="10000" value="200000" oninput="sv2('prix-m',this.value);computeMulti()">
-          <div class="sg-ticks"><span>40k€</span><span>3M€</span></div>
+          <input type="range" id="s-prix-m" min="40000" max="1500000" step="10000" value="200000" oninput="sv2('prix-m',this.value);computeMulti()">
+          <div class="sg-ticks"><span>40k€</span><span>1.5M€</span></div>
         </div>
 <span id="v-notaire-m" style="display:none">15 000 €</span>
         <div class="sg">
@@ -754,8 +753,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
         </div>
         <div class="sg">
           <div class="sg-header"><div><div class="sg-label">Ameublement global</div></div><div class="sg-val" id="v-ameu-m">20k <em>€</em></div></div>
-          <input type="range" id="s-ameu-m" min="0" max="200000" step="1000" value="20000" oninput="sv2('ameu-m',this.value);computeMulti()">
-          <div class="sg-ticks"><span>0€</span><span>200k€</span></div>
+          <input type="range" id="s-ameu-m" min="0" max="500000" step="1000" value="20000" oninput="sv2('ameu-m',this.value);computeMulti()">
+          <div class="sg-ticks"><span>0€</span><span>500k€</span></div>
         </div>
         <div class="total-card" id="total-multi" style="display:none">
           <div class="total-card-t">Composition du projet</div>
@@ -803,8 +802,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
       <div id="revenus-single">
         <div class="sg">
           <div class="sg-header"><div class="sg-label">Prix par nuit moyen</div><div class="sg-val" id="v-nuit">70 <em>€/nuit</em></div></div>
-          <input type="range" id="s-nuit" min="20" max="400" step="5" value="70" oninput="sv('nuit',this.value);compute()">
-          <div class="sg-ticks"><span>20€</span><span>400€</span></div>
+          <input type="range" id="s-nuit" min="20" max="1000" step="5" value="70" oninput="sv('nuit',this.value);compute()">
+          <div class="sg-ticks"><span>20€</span><span>1000€</span></div>
         </div>
         <div class="sg">
           <div class="sg-header"><div class="sg-label">Nuits occupées / mois</div><div class="sg-val" id="v-occu">20 <em></em></div></div>

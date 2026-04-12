@@ -5,7 +5,7 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 )
 
-const APP_URL = process.env.APP_URL || 'https://enomia.app'
+const APP_URL = process.env.APP_URL || 'https://www.enomia.app'
 
 async function sendMagicLinkEmail({ to, prenom, magicLink }) {
   const firstName = prenom ? prenom.trim() : null

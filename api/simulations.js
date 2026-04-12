@@ -90,7 +90,7 @@ export default async function handler(req, res) {
 
     if (error) return res.status(400).json({ error: error.message })
     return res.status(200).json({
-      shareUrl: `${process.env.APP_URL || 'https://enomia.app'}/api/share?id=${simulationId}`
+      shareUrl: `${process.env.APP_URL || 'https://www.enomia.app'}/api/share?id=${simulationId}`
     })
   }
 

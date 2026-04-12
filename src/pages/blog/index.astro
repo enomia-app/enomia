@@ -23,7 +23,7 @@ function readingTime(body: string) {
   return Math.max(1, Math.round(words / 200));
 }
 
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const allPosts = await getCollection('blog', ({ data }) => data.status === 'en-ligne');
 
 // Sort: by order asc (nulls last), then by publishedAt desc
 const sorted = allPosts.sort((a, b) => {

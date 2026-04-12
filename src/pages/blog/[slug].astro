@@ -6,7 +6,7 @@ import BlogLayout from '../../layouts/BlogLayout.astro';
 import NewsletterBlock from '../../components/NewsletterBlock.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const posts = await getCollection('blog', ({ data }) => data.status === 'en-ligne');
   return posts.map(post => ({
     params: { slug: post.slug },
     props: { post },
@@ -37,8 +37,8 @@ function getInitials(name: string) {
   return name.split(' ').map(n => n.charAt(0).toUpperCase()).join('').slice(0, 2);
 }
 
-// Related articles: same category, exclude current
-const allPosts = await getCollection('blog');
+// Related articles: same category, exclude current, exclude drafts
+const allPosts = await getCollection('blog', ({ data }) => data.status === 'en-ligne');
 const relatedPosts = allPosts
   .filter(p => p.slug !== post.slug && p.data.category === post.data.category)
   .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())

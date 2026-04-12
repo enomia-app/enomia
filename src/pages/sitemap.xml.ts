@@ -23,7 +23,7 @@ export async function GET() {
   const posts = await getCollection('blog');
 
   const postEntries = posts
-    .filter((post) => !post.data.draft)
+    .filter((post) => post.data.status === 'en-ligne')
     .map((post) => ({
       url: `/blog/${post.slug}/`,
       changefreq: 'monthly',

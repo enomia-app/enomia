@@ -15,7 +15,7 @@ export default config({
       slugField: 'title',
       path: 'src/content/blog/*',
       format: { contentField: 'content' },
-      columns: ['title', 'publishedAt', 'category', 'draft'],
+      columns: ['title', 'publishedAt', 'updatedAt', 'category', 'status', 'articleType', 'pillarKeyword'],
       previewUrl: '/preview/blog/{slug}',
       schema: {
         title: fields.slug({
@@ -51,12 +51,12 @@ export default config({
             validation: { isRequired: true },
           }),
         }, { label: 'Image de couverture' }),
-        publishedAt: fields.datetime({
+        publishedAt: fields.date({
           label: 'Date de publication',
           validation: { isRequired: true },
         }),
-        updatedAt: fields.datetime({
-          label: 'Date de mise à jour',
+        updatedAt: fields.date({
+          label: 'Dernière modification',
         }),
         category: fields.select({
           label: 'Catégorie',
@@ -102,9 +102,25 @@ export default config({
           label: 'Bio courte de l\'auteur',
           multiline: true,
         }),
-        draft: fields.checkbox({
-          label: 'Brouillon (non visible sur le site)',
-          defaultValue: true,
+        status: fields.select({
+          label: 'Statut',
+          options: [
+            { label: 'Brouillon', value: 'brouillon' },
+            { label: 'En ligne', value: 'en-ligne' },
+          ],
+          defaultValue: 'brouillon',
+        }),
+        articleType: fields.select({
+          label: 'Type d\'article',
+          options: [
+            { label: 'Pilier', value: 'pilier' },
+            { label: 'Satellite', value: 'satellite' },
+          ],
+          defaultValue: 'satellite',
+        }),
+        pillarKeyword: fields.text({
+          label: 'Mot-clé pilier',
+          description: 'Le mot-clé principal du cluster SEO (ex: channel manager, fiscalité airbnb)',
         }),
         content: fields.markdoc({
           label: 'Contenu de l\'article',

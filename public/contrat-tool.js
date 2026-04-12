@@ -359,9 +359,9 @@
       const caSym = c.caution_rendue ? '✓' : (c.caution_encaissee ? '✓' : '⏳');
       const signed = c.contrat_signe_url;
       return '<tr>' +
-        '<td><span class="primary">' + esc(c.locataire_prenom || '') + ' ' + esc(c.locataire_nom) + '</span><span class="secondary">' + esc(c.locataire_email || '') + ' · ' + ((+c.nb_adultes || 0) + (+c.nb_enfants || 0)) + ' pers.</span></td>' +
+        '<td><span class="primary">' + esc(c.locataire_prenom || '') + ' ' + esc(c.locataire_nom) + '</span><span class="secondary">' + esc(c.locataire_email || '') + '</span><span class="secondary">' + ((+c.nb_adultes || 0) + (+c.nb_enfants || 0)) + ' pers.</span></td>' +
         '<td class="col-bien"><div style="display:flex;align-items:center;gap:10px"><div class="bien-item-icon">' + bienIcon(b.type_bien) + '</div><div><span class="primary">' + esc(b.nom_interne || '—') + '</span><span class="secondary">' + esc((b.adresse || '').split(',').pop() || '') + '</span></div></div></td>' +
-        '<td><span class="primary">' + fmtDateShort(c.date_arrivee) + ' → ' + fmtDateShort(c.date_depart) + '</span><span class="secondary">' + n + ' nuit' + (n > 1 ? 's' : '') + (c.langue === 'en' ? ' · 🇬🇧' : '') + '</span></td>' +
+        '<td style="white-space:nowrap"><span class="primary">' + fmtDateShort(c.date_arrivee) + ' → ' + fmtDateShort(c.date_depart) + '</span><span class="secondary">' + n + ' nuit' + (n > 1 ? 's' : '') + (c.langue === 'en' ? ' · 🇬🇧' : '') + '</span></td>' +
         '<td><span class="primary">' + fmtEur(c.prix_total) + '</span></td>' +
         '<td class="col-money"><span class="pay-chip ' + ac + '" onclick="ctTogglePay(\'' + c.id + '\',\'acompte_paye\',' + !c.acompte_paye + ')">' + acSym + ' ' + fmtEur(c.acompte_montant) + '</span></td>' +
         '<td class="col-money"><span class="pay-chip ' + so + '" onclick="ctTogglePay(\'' + c.id + '\',\'solde_paye\',' + !c.solde_paye + ')">' + soSym + ' ' + fmtEur(c.solde_montant) + '</span></td>' +

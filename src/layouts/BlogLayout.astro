@@ -5,9 +5,10 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  canonical?: string;
 }
 
-const { title, description, ogImage } = Astro.props;
+const { title, description, ogImage, canonical } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,6 +17,7 @@ const { title, description, ogImage } = Astro.props;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  {canonical && <link rel="canonical" href={canonical} />}
   {ogImage && <meta property="og:image" content={ogImage} />}
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -493,6 +495,9 @@ const { title, description, ogImage } = Astro.props;
       </div>
     </div>
   </footer>
-
+  <script>
+    import { inject } from '@vercel/analytics';
+    inject();
+  </script>
 </body>
 </html>

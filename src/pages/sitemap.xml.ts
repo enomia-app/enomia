@@ -16,7 +16,6 @@ const staticPages = [
   { url: '/contrat-airbnb', changefreq: 'monthly', priority: '0.9' },
   { url: '/contrat-location-gite', changefreq: 'monthly', priority: '0.9' },
   { url: '/contrat-location-mobil-home', changefreq: 'monthly', priority: '0.9' },
-  { url: '/contrat-lcd-dashboard', changefreq: 'weekly', priority: '0.6' },
 ];
 
 export async function GET() {
@@ -25,7 +24,7 @@ export async function GET() {
   const postEntries = posts
     .filter((post) => post.data.status === 'en-ligne')
     .map((post) => ({
-      url: `/blog/${post.slug}/`,
+      url: `/blog/${post.slug}`,
       changefreq: 'monthly',
       priority: '0.7',
       lastmod: post.data.updatedAt ?? post.data.publishedAt,

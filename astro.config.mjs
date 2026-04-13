@@ -6,6 +6,7 @@ import markdoc from '@astrojs/markdoc';
 
 export default defineConfig({
   site: 'https://www.enomia.app',
+  trailingSlash: 'never',
   integrations: [react(), markdoc(), keystatic()],
   output: 'server',
   adapter: vercel(),

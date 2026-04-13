@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /preview/
+Disallow: /api/
+Disallow: /keystatic/
 
 Sitemap: https://www.enomia.app/sitemap.xml

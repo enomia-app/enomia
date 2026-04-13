@@ -114,6 +114,7 @@ const faqLd = faqItems.length > 0 ? {
   title={post.data.metaTitle}
   description={post.data.metaDescription}
   ogImage={post.data.featuredImage?.src}
+  canonical={`https://www.enomia.app/blog/${post.slug}`}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}

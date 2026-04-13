@@ -1,7 +1,7 @@
 export const prerender = true;
 
 import { getCollection } from 'astro:content';
-import { cities } from '../data/cities';
+import { cities, regions } from '../data/cities';
 
 const SITE = 'https://www.enomia.app';
 
@@ -31,22 +31,32 @@ export async function GET() {
     }));
 
   const cityEntries = cities.map((c) => ({
-    url: `/conciergerie-${c.slug}`,
+    url: `/conciergerie-airbnb/${c.regionSlug}/${c.slug}`,
     changefreq: 'monthly',
     priority: '0.85',
     lastmod: c.updatedAt,
   }));
 
+  const regionEntries = regions
+    .filter((r) => cities.some((c) => c.regionSlug === r.slug))
+    .map((r) => ({
+      url: `/conciergerie-airbnb/${r.slug}`,
+      changefreq: 'monthly',
+      priority: '0.8',
+      lastmod: '2026-04-13',
+    }));
+
   const pillarEntry = {
     url: '/conciergerie-airbnb',
     changefreq: 'monthly',
     priority: '0.9',
-    lastmod: '2026-04-09',
+    lastmod: '2026-04-13',
   };
 
   const allEntries = [
     ...staticPages.map((p) => ({ ...p, lastmod: undefined })),
     pillarEntry,
+    ...regionEntries,
     ...cityEntries,
     ...postEntries,
   ];

@@ -1,0 +1,121 @@
+---
+export const prerender = true;
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import { regions, getCitiesByRegion, type Region } from '../../../data/cities';
+
+export function getStaticPaths() {
+  return regions.map((r) => ({
+    params: { region: r.slug },
+    props: { region: r },
+  }));
+}
+
+interface Props { region: Region }
+const { region } = Astro.props;
+const citiesInRegion = getCitiesByRegion(region.slug).sort((a, b) => b.activeListings - a.activeListings);
+
+const canonical = `https://www.enomia.app/conciergerie-airbnb/${region.slug}`;
+const title = `Conciergerie Airbnb en ${region.displayName} : comparatif 2026 par ville`;
+const description = `Trouvez la meilleure conciergerie Airbnb en ${region.displayName}. Comparatif ville par ville : tarifs, avis, quartiers rentables. Guide ind\u00e9pendant 2026.`;
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.enomia.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Conciergerie Airbnb', item: 'https://www.enomia.app/conciergerie-airbnb' },
+    { '@type': 'ListItem', position: 3, name: region.displayName, item: canonical },
+  ],
+};
+---
+
+<ToolLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+
+  <style>
+    .rg-wrap { max-width: 920px; margin: 0 auto; padding: 48px 32px 60px; }
+    .rg-breadcrumb { font-size: 12px; color: #8a8985; margin-bottom: 24px; }
+    .rg-breadcrumb a { color: #8a8985; text-decoration: none; transition: color 0.15s; }
+    .rg-breadcrumb a:hover { color: #1a1a1a; }
+    .rg-breadcrumb span { margin: 0 6px; }
+
+    .rg-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(28px, 4vw, 40px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .rg-h1 em { font-style: italic; color: #2b2d2b; }
+    .rg-intro { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 720px; margin-bottom: 36px; }
+
+    .rg-stats { display: flex; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
+    .rg-stat { font-size: 13px; color: #8a8985; }
+    .rg-stat strong { color: #1a1a1a; font-weight: 700; font-size: 22px; display: block; font-family: 'Newsreader', serif; margin-bottom: 2px; }
+
+    .rg-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 48px; }
+    .rg-card { background: #fff; border: 1px solid #e5e3de; border-radius: 12px; padding: 24px 26px; transition: all 0.15s; text-decoration: none; color: inherit; display: block; }
+    .rg-card:hover { border-color: #8a8985; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
+    .rg-card-name { font-family: 'Newsreader', serif; font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 10px; }
+    .rg-card-meta { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 10px; }
+    .rg-card-meta span { font-size: 12px; color: #52524e; background: #f7f6f3; padding: 3px 10px; border-radius: 4px; }
+    .rg-card-desc { font-size: 13px; color: #8a8985; line-height: 1.5; }
+    .rg-card-arrow { font-size: 13px; color: #52524e; margin-top: 10px; font-weight: 600; }
+
+    .rg-cta { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #e8e4dc; padding: 30px 34px; border-radius: 14px; margin-bottom: 40px; text-align: center; }
+    .rg-cta h3 { font-family: 'Newsreader', serif; font-size: 22px; margin: 0 0 10px; color: #fff; }
+    .rg-cta p { font-size: 14px; opacity: 0.85; margin: 0 0 20px; }
+    .rg-cta a { display: inline-block; background: #fff; color: #2b2d2b; padding: 12px 24px; border-radius: 100px; font-weight: 700; text-decoration: none; font-size: 14px; }
+
+    .rg-back { display: inline-block; font-size: 13px; color: #8a8985; text-decoration: none; transition: color 0.15s; }
+    .rg-back:hover { color: #1a1a1a; }
+
+    @media (max-width: 700px) {
+      .rg-wrap { padding: 24px 20px 40px; }
+      .rg-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="rg-wrap">
+    <div class="rg-breadcrumb">
+      <a href="/">Accueil</a><span>/</span>
+      <a href="/conciergerie-airbnb">Conciergerie Airbnb</a><span>/</span>
+      {region.displayName}
+    </div>
+
+    <h1 class="rg-h1">Conciergerie Airbnb en <em>{region.displayName}</em></h1>
+    <p class="rg-intro">{region.description}</p>
+
+    <div class="rg-stats">
+      <div class="rg-stat">
+        <strong>{citiesInRegion.length}</strong>
+        villes couvertes
+      </div>
+      <div class="rg-stat">
+        <strong>{citiesInRegion.reduce((s, c) => s + c.activeListings, 0).toLocaleString('fr-FR')}</strong>
+        annonces actives
+      </div>
+      <div class="rg-stat">
+        <strong>{citiesInRegion.reduce((s, c) => s + c.conciergeries.length, 0)}</strong>
+        conciergeries compar\u00e9es
+      </div>
+    </div>
+
+    <div class="rg-grid">
+      {citiesInRegion.map((city) => (
+        <a href={`/conciergerie-airbnb/${city.regionSlug}/${city.slug}`} class="rg-card">
+          <div class="rg-card-name">Conciergerie {city.displayName}</div>
+          <div class="rg-card-meta">
+            <span>{city.conciergeries.length} agences compar\u00e9es</span>
+            <span>{city.activeListings.toLocaleString('fr-FR')} annonces</span>
+            <span>{city.priceLow}-{city.priceHigh} \u20ac/nuit</span>
+          </div>
+          <div class="rg-card-desc">{city.metaDescription.split('.')[0]}.</div>
+          <div class="rg-card-arrow">Voir le comparatif \u2192</div>
+        </a>
+      ))}
+    </div>
+
+    <div class="rg-cta">
+      <h3>Simulez votre rentabilit\u00e9 en {region.displayName}</h3>
+      <p>Notre outil gratuit calcule votre cashflow avec et sans conciergerie. Fiscalit\u00e9 LMNP, charges, taux d\u2019occupation. 2 minutes.</p>
+      <a href="/simulateur-rentabilite-airbnb">\u2192 Simuler ma rentabilit\u00e9</a>
+    </div>
+
+    <a href="/conciergerie-airbnb" class="rg-back">\u2190 Retour au guide national</a>
+  </div>
+</ToolLayout>

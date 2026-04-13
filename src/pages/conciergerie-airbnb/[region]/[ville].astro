@@ -1,18 +1,21 @@
 ---
 export const prerender = true;
-import ToolLayout from '../layouts/ToolLayout.astro';
-import { cities, getCityBySlug, type City } from '../data/cities';
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import { cities, getCityBySlug, getRegionBySlug, type City } from '../../../data/cities';
 
 export async function getStaticPaths() {
-  return cities.map((c) => ({ params: { slug: c.slug } }));
+  return cities.map((c) => ({
+    params: { region: c.regionSlug, ville: c.slug },
+  }));
 }
 
-const { slug } = Astro.params;
-const city = getCityBySlug(slug!);
-if (!city) throw new Error(`City not found: ${slug}`);
+const { ville } = Astro.params;
+const city = getCityBySlug(ville!);
+if (!city) throw new Error(`City not found: ${ville}`);
 
 const c: City = city;
-const canonical = `https://www.enomia.app/conciergerie-${c.slug}`;
+const regionData = getRegionBySlug(c.regionSlug);
+const canonical = `https://www.enomia.app/conciergerie-airbnb/${c.regionSlug}/${c.slug}`;
 
 // Computed values for the "concrete example" section
 const ex = c.concreteExample;
@@ -110,8 +113,9 @@ const breadcrumbLd = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.enomia.app/' },
-    { '@type': 'ListItem', position: 2, name: 'Guide conciergerie Airbnb', item: 'https://www.enomia.app/conciergerie-airbnb' },
-    { '@type': 'ListItem', position: 3, name: `Conciergerie ${c.displayName}`, item: canonical },
+    { '@type': 'ListItem', position: 2, name: 'Conciergerie Airbnb', item: 'https://www.enomia.app/conciergerie-airbnb' },
+    { '@type': 'ListItem', position: 3, name: regionData?.displayName ?? c.region, item: `https://www.enomia.app/conciergerie-airbnb/${c.regionSlug}` },
+    { '@type': 'ListItem', position: 4, name: `Conciergerie ${c.displayName}`, item: canonical },
   ],
 };
 
@@ -237,10 +241,10 @@ const faqLd = {
     .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
 
     /* CTA */
-    .cta { background: linear-gradient(135deg, #3fbd71 0%, #2fa560 100%); color: #fff; padding: 28px 32px; border-radius: 14px; margin: 40px 0 24px; text-align: center; }
+    .cta { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #e8e4dc; padding: 28px 32px; border-radius: 14px; margin: 40px 0 24px; text-align: center; }
     .cta h3 { font-family: 'Newsreader', serif; font-size: 22px; margin: 0 0 10px; color: #fff; }
-    .cta p { font-size: 14px; opacity: 0.95; margin: 0 0 18px; }
-    .cta a { display: inline-block; background: #fff; color: #2fa560; padding: 12px 24px; border-radius: 100px; font-weight: 700; text-decoration: none; }
+    .cta p { font-size: 14px; opacity: 0.85; margin: 0 0 18px; }
+    .cta a { display: inline-block; background: #fff; color: #2b2d2b; padding: 12px 24px; border-radius: 100px; font-weight: 700; text-decoration: none; }
 
     /* Related */
     .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 40px; }
@@ -506,10 +510,10 @@ const faqLd = {
           <div class="rd">Calculez le cash-flow avec ou sans conciergerie, fiscalité LMNP</div>
         </a>
         {cities
-          .filter((other) => other.slug !== c.slug && other.region === c.region)
+          .filter((other) => other.slug !== c.slug && other.regionSlug === c.regionSlug)
           .slice(0, 2)
           .map((other) => (
-            <a href={`/conciergerie-${other.slug}`}>
+            <a href={`/conciergerie-airbnb/${other.regionSlug}/${other.slug}`}>
               <div class="rk">Même région</div>
               <div class="rt">Conciergerie {other.displayName}</div>
               <div class="rd">{other.region} · {other.activeListings.toLocaleString('fr-FR')} annonces actives</div>

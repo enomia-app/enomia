@@ -1,18 +1,17 @@
 ---
 export const prerender = true;
-import ToolLayout from '../layouts/ToolLayout.astro';
-import { cities } from '../data/cities';
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import { cities, regions as allRegions } from '../../data/cities';
 
 const canonical = 'https://www.enomia.app/conciergerie-airbnb';
 const title = "Conciergerie Airbnb 2026 : tarifs, services, comparatif pour bien choisir";
 const description = "Conciergerie Airbnb : définition, services, tarifs (15-30%), comparatif, critères de choix, pièges à éviter. Le guide complet 2026 pour propriétaires.";
 
 // Group cities by region for the directory section
-const regions = cities.reduce<Record<string, typeof cities>>((acc, c) => {
-  (acc[c.region] ||= []).push(c);
-  return acc;
-}, {});
-const sortedRegions = Object.entries(regions).sort(([a], [b]) => a.localeCompare(b));
+const cityByRegion = allRegions.map((r) => ({
+  region: r,
+  cities: cities.filter((c) => c.regionSlug === r.slug).sort((a, b) => b.activeListings - a.activeListings),
+})).filter((g) => g.cities.length > 0);
 
 // Aggregate rating across all conciergeries in all cities (for SERP stars)
 const allRatings = cities.flatMap((c) => c.conciergeries.map((cc) => ({ rating: cc.rating, reviews: cc.reviews })));
@@ -170,6 +169,8 @@ const breadcrumbLd = {
     .cities-dir { margin: 22px 0 36px; }
     .cities-region { margin-bottom: 28px; }
     .cities-region h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8985; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #e5e3de; }
+    .cities-region h3 a { color: inherit; text-decoration: none; transition: color 0.15s; }
+    .cities-region h3 a:hover { color: #1a1a1a; }
     .cities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px 16px; }
     .cities-grid a { display: block; font-size: 14px; color: #1a1a1a; padding: 7px 0; text-decoration: none; border-bottom: 1px dotted transparent; transition: all 0.15s; }
     .cities-grid a:hover { color: #3fbd71; border-bottom-color: #3fbd71; }
@@ -183,10 +184,10 @@ const breadcrumbLd = {
     .faq details[open] summary::after { content: '−'; }
     .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
 
-    .cta { background: linear-gradient(135deg, #3fbd71 0%, #2fa560 100%); color: #fff; padding: 30px 34px; border-radius: 14px; margin: 40px 0 24px; text-align: center; }
+    .cta { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #e8e4dc; padding: 30px 34px; border-radius: 14px; margin: 40px 0 24px; text-align: center; }
     .cta h3 { font-family: 'Newsreader', serif; font-size: 24px; margin: 0 0 10px; color: #fff; }
-    .cta p { font-size: 14px; opacity: 0.95; margin: 0 0 20px; }
-    .cta a { display: inline-block; background: #fff; color: #2fa560; padding: 13px 26px; border-radius: 100px; font-weight: 700; text-decoration: none; }
+    .cta p { font-size: 14px; opacity: 0.85; margin: 0 0 20px; }
+    .cta a { display: inline-block; background: #fff; color: #2b2d2b; padding: 13px 26px; border-radius: 100px; font-weight: 700; text-decoration: none; }
 
     .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 40px; }
     .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; transition: all 0.15s; color: inherit; text-decoration: none; }
@@ -363,12 +364,12 @@ const breadcrumbLd = {
         Le marché local compte autant que la qualité du prestataire. Voici nos guides ville par ville avec les acteurs locaux, les tarifs pratiqués, les spécificités réglementaires et les quartiers les plus rentables.
       </p>
       <div class="cities-dir">
-        {sortedRegions.map(([region, cs]) => (
+        {cityByRegion.map(({ region, cities: cs }) => (
           <div class="cities-region">
-            <h3>{region}</h3>
+            <h3><a href={`/conciergerie-airbnb/${region.slug}`}>{region.displayName}</a></h3>
             <div class="cities-grid">
-              {cs.sort((a, b) => b.activeListings - a.activeListings).map((city) => (
-                <a href={`/conciergerie-${city.slug}`}>
+              {cs.map((city) => (
+                <a href={`/conciergerie-airbnb/${city.regionSlug}/${city.slug}`}>
                   Conciergerie {city.displayName}
                 </a>
               ))}
@@ -461,7 +462,7 @@ const breadcrumbLd = {
           <div class="rt">LMNP Airbnb : tout comprendre</div>
           <div class="rd">Le statut fiscal des locations courte durée expliqué en 10 minutes</div>
         </a>
-        <a href="/conciergerie-bordeaux">
+        <a href="/conciergerie-airbnb/nouvelle-aquitaine/bordeaux">
           <div class="rk">Exemple ville</div>
           <div class="rt">Conciergerie Bordeaux</div>
           <div class="rd">Notre comparatif local des 7 meilleures agences bordelaises</div>

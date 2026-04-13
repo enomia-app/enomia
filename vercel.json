@@ -1,4 +1,13 @@
 {
+  "redirects": [
+    { "source": "/conciergerie-bordeaux", "destination": "/conciergerie-airbnb/nouvelle-aquitaine/bordeaux", "permanent": true },
+    { "source": "/conciergerie-lyon", "destination": "/conciergerie-airbnb/auvergne-rhone-alpes/lyon", "permanent": true },
+    { "source": "/conciergerie-marseille", "destination": "/conciergerie-airbnb/provence-alpes-cote-dazur/marseille", "permanent": true },
+    { "source": "/conciergerie-nice", "destination": "/conciergerie-airbnb/provence-alpes-cote-dazur/nice", "permanent": true },
+    { "source": "/conciergerie-strasbourg", "destination": "/conciergerie-airbnb/alsace/strasbourg", "permanent": true },
+    { "source": "/conciergerie-toulouse", "destination": "/conciergerie-airbnb/occitanie/toulouse", "permanent": true },
+    { "source": "/conciergerie-lille", "destination": "/conciergerie-airbnb/hauts-de-france/lille", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/api/keystatic/:path*", "destination": "/_render" },
     { "source": "/keystatic/:path*", "destination": "/_render" },

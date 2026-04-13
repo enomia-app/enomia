@@ -25,10 +25,26 @@ export type Neighborhood = {
 
 export type CityFaq = { q: string; a: string };
 
+export type Region = {
+  slug: string;
+  displayName: string;
+  description: string;
+};
+
+export const regions: Region[] = [
+  { slug: 'auvergne-rhone-alpes', displayName: 'Auvergne-Rhône-Alpes', description: 'Région dynamique portée par Lyon, Annecy et les stations alpines. Le marché LCD y est mature avec une forte saisonnalité hiver/été.' },
+  { slug: 'alsace', displayName: 'Grand Est', description: 'Strasbourg, Colmar et le vignoble alsacien attirent un tourisme culturel et événementiel toute l\'année. Le marché LCD reste accessible avec des rendements solides.' },
+  { slug: 'hauts-de-france', displayName: 'Hauts-de-France', description: 'Lille et sa métropole européenne, à 1h de Paris, Londres et Bruxelles. Un marché LCD en croissance porté par le tourisme d\'affaires et les événements.' },
+  { slug: 'nouvelle-aquitaine', displayName: 'Nouvelle-Aquitaine', description: 'De Bordeaux au Bassin d\'Arcachon en passant par Biarritz, la région offre un potentiel LCD exceptionnel entre œnotourisme et littoral atlantique.' },
+  { slug: 'occitanie', displayName: 'Occitanie', description: 'Toulouse, Montpellier et la côte méditerranéenne. Un marché LCD en forte croissance, porté par le dynamisme économique et le tourisme balnéaire.' },
+  { slug: 'provence-alpes-cote-dazur', displayName: 'Provence-Alpes-Côte d\'Azur', description: 'Nice, Marseille, Aix-en-Provence : la région concentre les plus fortes demandes LCD de France avec une saisonnalité marquée et des tarifs élevés.' },
+];
+
 export type City = {
   slug: string;
   displayName: string;
   region: string;
+  regionSlug: string;
 
   // SEO
   title: string;
@@ -76,6 +92,7 @@ export const cities: City[] = [
     slug: 'bordeaux',
     displayName: 'Bordeaux',
     region: 'Nouvelle-Aquitaine',
+    regionSlug: 'nouvelle-aquitaine',
     title: 'Conciergerie Bordeaux Airbnb : comparatif 2026 des 7 meilleures agences',
     metaTitle: 'Conciergerie Bordeaux Airbnb : Comparatif 2026 (tarifs & avis)',
     metaDescription:
@@ -272,6 +289,7 @@ export const cities: City[] = [
     slug: 'lyon',
     displayName: 'Lyon',
     region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
     title: 'Conciergerie Lyon Airbnb : comparatif 2026 des 7 meilleures agences',
     metaTitle: 'Conciergerie Lyon Airbnb : Comparatif 2026 (tarifs & avis)',
     metaDescription:
@@ -466,6 +484,7 @@ export const cities: City[] = [
     slug: 'nice',
     displayName: 'Nice',
     region: "Provence-Alpes-Côte d'Azur",
+    regionSlug: 'provence-alpes-cote-dazur',
     title: 'Conciergerie Nice Airbnb : comparatif 2026 des meilleures agences',
     metaTitle: 'Conciergerie Nice Airbnb : Comparatif 2026 (tarifs & avis)',
     metaDescription:
@@ -620,6 +639,7 @@ export const cities: City[] = [
     slug: 'marseille',
     displayName: 'Marseille',
     region: "Provence-Alpes-Côte d'Azur",
+    regionSlug: 'provence-alpes-cote-dazur',
     title: 'Conciergerie Marseille Airbnb : comparatif 2026 des meilleures agences',
     metaTitle: 'Conciergerie Marseille Airbnb : Comparatif 2026 (tarifs & avis)',
     metaDescription:
@@ -774,6 +794,7 @@ export const cities: City[] = [
     slug: 'toulouse',
     displayName: 'Toulouse',
     region: 'Occitanie',
+    regionSlug: 'occitanie',
     title: 'Conciergerie Toulouse Airbnb : comparatif 2026 des meilleures agences',
     metaTitle: 'Conciergerie Toulouse Airbnb : Comparatif 2026 (tarifs & avis)',
     metaDescription:
@@ -928,6 +949,7 @@ export const cities: City[] = [
     slug: 'strasbourg',
     displayName: 'Strasbourg',
     region: 'Grand Est',
+    regionSlug: 'alsace',
     title: 'Conciergerie Strasbourg Airbnb : comparatif 2026 des meilleures agences',
     metaTitle: 'Conciergerie Strasbourg Airbnb : Comparatif 2026 (tarifs & avis)',
     metaDescription:
@@ -1119,6 +1141,7 @@ export const cities: City[] = [
     slug: 'lille',
     displayName: 'Lille',
     region: 'Hauts-de-France',
+    regionSlug: 'hauts-de-france',
     title: 'Conciergerie Lille Airbnb : comparatif 2026 des meilleures agences',
     metaTitle: 'Conciergerie Lille Airbnb : Comparatif 2026 (tarifs & avis)',
     metaDescription:
@@ -1310,4 +1333,12 @@ export function getCityBySlug(slug: string): City | undefined {
 
 export function getAllCitySlugs(): string[] {
   return cities.map((c) => c.slug);
+}
+
+export function getCitiesByRegion(regionSlug: string): City[] {
+  return cities.filter((c) => c.regionSlug === regionSlug);
+}
+
+export function getRegionBySlug(slug: string): Region | undefined {
+  return regions.find((r) => r.slug === slug);
 }

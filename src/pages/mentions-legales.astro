@@ -1,0 +1,134 @@
+---
+export const prerender = true;
+import ToolLayout from '../layouts/ToolLayout.astro';
+const canonical = 'https://www.enomia.app/mentions-legales';
+---
+
+<ToolLayout
+  title="Mentions l\u00e9gales — Enomia"
+  description="Mentions l\u00e9gales du site Enomia : \u00e9diteur, h\u00e9bergeur, propri\u00e9t\u00e9 intellectuelle et conditions d\u2019utilisation."
+  canonical={canonical}
+  currentTool="none"
+>
+  <main class="legal-page">
+    <h1>Mentions l\u00e9gales</h1>
+    <p class="legal-updated">Derni\u00e8re mise \u00e0 jour : 13 avril 2026</p>
+
+    <section>
+      <h2>1. \u00c9diteur du site</h2>
+      <p>
+        Le site <strong>enomia.app</strong> est \u00e9dit\u00e9 par :<br>
+        Marc Chenut<br>
+        Contact : <a href="mailto:marchenut@gmail.com">marchenut@gmail.com</a>
+      </p>
+      <p class="legal-note">
+        Les informations relatives au statut juridique et au num\u00e9ro SIRET seront mises \u00e0 jour d\u00e8s l\u2019immatriculation de l\u2019activit\u00e9.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Directeur de la publication</h2>
+      <p>Marc Chenut</p>
+    </section>
+
+    <section>
+      <h2>3. H\u00e9bergement</h2>
+      <p>
+        Le site est h\u00e9berg\u00e9 par :<br>
+        <strong>Vercel Inc.</strong><br>
+        440 N Baxter St, Los Angeles, CA 90012, \u00c9tats-Unis<br>
+        <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel.com</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Propri\u00e9t\u00e9 intellectuelle</h2>
+      <p>
+        L\u2019ensemble du contenu du site (textes, images, graphismes, logo, structure) est la propri\u00e9t\u00e9 exclusive de Marc Chenut, sauf mention contraire.
+        Toute reproduction, repr\u00e9sentation ou diffusion, en tout ou partie, du contenu de ce site sans autorisation pr\u00e9alable est interdite.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Limitation de responsabilit\u00e9</h2>
+      <p>
+        Les outils propos\u00e9s sur Enomia (g\u00e9n\u00e9rateur de factures, mod\u00e8les de contrats, simulateur de rentabilit\u00e9) sont fournis \u00e0 titre informatif et ne constituent pas un conseil juridique, fiscal ou comptable.
+      </p>
+      <p>
+        L\u2019\u00e9diteur ne saurait \u00eatre tenu responsable des erreurs ou omissions dans les documents g\u00e9n\u00e9r\u00e9s. Il appartient \u00e0 l\u2019utilisateur de v\u00e9rifier la conformit\u00e9 des documents avec la r\u00e9glementation en vigueur et de les adapter \u00e0 sa situation.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Donn\u00e9es personnelles</h2>
+      <p>
+        Pour en savoir plus sur la collecte et le traitement de vos donn\u00e9es personnelles, consultez notre <a href="/confidentialite">politique de confidentialit\u00e9</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Conditions d\u2019utilisation</h2>
+      <p>
+        L\u2019utilisation du site enomia.app implique l\u2019acceptation des pr\u00e9sentes mentions l\u00e9gales. L\u2019\u00e9diteur se r\u00e9serve le droit de les modifier \u00e0 tout moment.
+      </p>
+      <p>
+        Les outils du site sont accessibles gratuitement. L\u2019\u00e9diteur se r\u00e9serve le droit de suspendre, modifier ou interrompre l\u2019acc\u00e8s au site sans pr\u00e9avis.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Cr\u00e9dits</h2>
+      <p>
+        Site d\u00e9velopp\u00e9 avec <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a> et h\u00e9berg\u00e9 sur <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a>.
+      </p>
+    </section>
+  </main>
+</ToolLayout>
+
+<style>
+  .legal-page {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+  .legal-page h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .legal-updated {
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+  .legal-page section {
+    margin-bottom: 32px;
+  }
+  .legal-page h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .legal-page p,
+  .legal-page li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  .legal-page ul {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+  .legal-page li {
+    margin-bottom: 4px;
+  }
+  .legal-page a {
+    color: var(--green);
+    text-decoration: underline;
+  }
+  .legal-note {
+    font-style: italic;
+    font-size: 0.88rem !important;
+    margin-top: 8px;
+  }
+</style>

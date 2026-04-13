@@ -1,0 +1,137 @@
+---
+export const prerender = true;
+import ToolLayout from '../layouts/ToolLayout.astro';
+const canonical = 'https://www.enomia.app/confidentialite';
+---
+
+<ToolLayout
+  title="Politique de confidentialit\u00e9 — Enomia"
+  description="Politique de confidentialit\u00e9 du site Enomia. D\u00e9couvrez comment vos donn\u00e9es personnelles sont collect\u00e9es, utilis\u00e9es et prot\u00e9g\u00e9es."
+  canonical={canonical}
+  currentTool="none"
+>
+  <main class="legal-page">
+    <h1>Politique de confidentialit\u00e9</h1>
+    <p class="legal-updated">Derni\u00e8re mise \u00e0 jour : 13 avril 2026</p>
+
+    <section>
+      <h2>1. Responsable du traitement</h2>
+      <p>
+        Le site <strong>enomia.app</strong> est \u00e9dit\u00e9 par Marc Chenut.<br>
+        Contact : <a href="mailto:marchenut@gmail.com">marchenut@gmail.com</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Donn\u00e9es collect\u00e9es</h2>
+      <p>Enomia collecte les donn\u00e9es suivantes :</p>
+      <ul>
+        <li><strong>Donn\u00e9es de navigation</strong> : pages visit\u00e9es, dur\u00e9e de visite, type d\u2019appareil (via Vercel Analytics, sans cookies, anonymis\u00e9)</li>
+        <li><strong>Adresse e-mail</strong> : uniquement si vous vous inscrivez volontairement \u00e0 la newsletter</li>
+        <li><strong>Donn\u00e9es saisies dans les outils</strong> : les informations que vous entrez dans les g\u00e9n\u00e9rateurs de factures et contrats sont trait\u00e9es c\u00f4t\u00e9 client (dans votre navigateur) et ne sont pas transmises \u00e0 nos serveurs, sauf si vous utilisez la fonctionnalit\u00e9 de sauvegarde</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Finalit\u00e9s du traitement</h2>
+      <ul>
+        <li>Am\u00e9liorer l\u2019exp\u00e9rience utilisateur et les performances du site</li>
+        <li>Envoyer la newsletter (si inscription volontaire)</li>
+        <li>Permettre la sauvegarde et le partage de documents g\u00e9n\u00e9r\u00e9s</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Base l\u00e9gale</h2>
+      <ul>
+        <li><strong>Consentement</strong> : pour l\u2019inscription \u00e0 la newsletter</li>
+        <li><strong>Int\u00e9r\u00eat l\u00e9gitime</strong> : pour les statistiques de navigation anonymis\u00e9es</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Cookies</h2>
+      <p>
+        Enomia utilise <strong>Vercel Analytics</strong>, un outil d\u2019analyse respectueux de la vie priv\u00e9e qui <strong>ne d\u00e9pose aucun cookie</strong> et ne collecte aucune donn\u00e9e personnelle identifiable.
+      </p>
+      <p>Aucun cookie publicitaire ou de tracking tiers n\u2019est utilis\u00e9 sur ce site.</p>
+    </section>
+
+    <section>
+      <h2>6. Dur\u00e9e de conservation</h2>
+      <ul>
+        <li><strong>Donn\u00e9es de navigation</strong> : agr\u00e9g\u00e9es et anonymis\u00e9es, conserv\u00e9es tant que le service Vercel Analytics est actif</li>
+        <li><strong>Adresse e-mail (newsletter)</strong> : conserv\u00e9e jusqu\u2019\u00e0 d\u00e9sinscription</li>
+        <li><strong>Documents sauvegard\u00e9s</strong> : conserv\u00e9s tant que l\u2019utilisateur ne les supprime pas</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Sous-traitants</h2>
+      <ul>
+        <li><strong>Vercel Inc.</strong> (USA) \u2014 h\u00e9bergement et analytics</li>
+        <li><strong>Supabase Inc.</strong> (USA) \u2014 base de donn\u00e9es pour la sauvegarde</li>
+        <li><strong>Resend</strong> (USA) \u2014 envoi d\u2019e-mails (newsletter)</li>
+      </ul>
+      <p>Ces prestataires sont conformes au RGPD ou couverts par les clauses contractuelles types de la Commission europ\u00e9enne.</p>
+    </section>
+
+    <section>
+      <h2>8. Vos droits</h2>
+      <p>Conform\u00e9ment au R\u00e8glement G\u00e9n\u00e9ral sur la Protection des Donn\u00e9es (RGPD), vous disposez des droits suivants :</p>
+      <ul>
+        <li>Droit d\u2019acc\u00e8s \u00e0 vos donn\u00e9es</li>
+        <li>Droit de rectification</li>
+        <li>Droit \u00e0 l\u2019effacement</li>
+        <li>Droit \u00e0 la portabilit\u00e9</li>
+        <li>Droit d\u2019opposition</li>
+        <li>Droit de retirer votre consentement \u00e0 tout moment</li>
+      </ul>
+      <p>Pour exercer ces droits, contactez-nous \u00e0 : <a href="mailto:marchenut@gmail.com">marchenut@gmail.com</a></p>
+      <p>Vous pouvez \u00e9galement adresser une r\u00e9clamation \u00e0 la <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">CNIL</a>.</p>
+    </section>
+  </main>
+</ToolLayout>
+
+<style>
+  .legal-page {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+  .legal-page h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .legal-updated {
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+  .legal-page section {
+    margin-bottom: 32px;
+  }
+  .legal-page h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .legal-page p,
+  .legal-page li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  .legal-page ul {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+  .legal-page li {
+    margin-bottom: 4px;
+  }
+  .legal-page a {
+    color: var(--green);
+    text-decoration: underline;
+  }
+</style>

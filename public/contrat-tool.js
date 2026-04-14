@@ -1223,7 +1223,10 @@
     const locataireLine = `${esc(d.locataire_prenom || '')} ${esc(d.locataire_nom)}`;
     const locataireAddr = `${esc(d.locataire_adresse || '')}${d.locataire_email ? ', ' + esc(d.locataire_email) : ''}${d.locataire_telephone ? ', ' + esc(d.locataire_telephone) : ''}`;
 
-    const equips = (Array.isArray(bien.equipements) ? bien.equipements : []).join(', ') || '—';
+    const rawEquips = Array.isArray(bien.equipements) ? bien.equipements : [];
+    const equipsList = rawEquips.length
+      ? '<ul>' + rawEquips.map(e => '<li>' + esc(String(e).replace(/_/g, ' ')) + '</li>').join('') + '</ul>'
+      : '—';
     const invTotal = computeInventaireTotal(bien.inventaire);
     const totalPers = (+d.nb_adultes || 0) + (+d.nb_enfants || 0);
 
@@ -1238,7 +1241,7 @@
 
       `<h2>${L.h_logement}</h2>`,
       `<p><strong>${esc(bien.nom_interne || '')}</strong> — ${esc(bien.adresse || '')}. ${L.surface}: ${bien.surface || '—'} m². ${L.pieces}: ${bien.nb_pieces || '—'}. ${L.classement}: ${esc(bien.classement || '—')}. ${L.capacite}: ${bien.capacite_max || '—'} ${L.pers}.${bien.numero_declaration_mairie ? ' ' + L.num_mairie + ': ' + esc(bien.numero_declaration_mairie) + '.' : ''}</p>`,
-      `<p><strong>${L.equipements}:</strong> ${equips}.</p>`,
+      `<p><strong>${L.equipements}:</strong></p>${equipsList}`,
 
       `<h2>${L.h_duree}</h2>`,
       `<p>${L.du} <strong>${fmtDate(d.date_arrivee)} ${L.a} ${d.heure_arrivee}</strong> ${L.au} <strong>${fmtDate(d.date_depart)} ${L.a} ${d.heure_depart}</strong>, ${L.soit} ${n} ${n > 1 ? L.nuits : L.nuit}. ${L.duree_text}</p>`,
@@ -1354,7 +1357,8 @@
 
     // Build data
     var bailleurName = bailleur.type === 'societe'
-      ? (bailleur.raison_sociale || '') : (bailleur.prenom || '') + ' ' + (bailleur.nom || '');
+      ? (bailleur.raison_sociale || (bailleur.prenom || '') + ' ' + (bailleur.nom || ''))
+      : (bailleur.prenom || '') + ' ' + (bailleur.nom || '');
     var locataireName = (d.locataire_prenom || '') + ' ' + (d.locataire_nom || '');
     var invTotal = computeInventaireTotal(bien.inventaire);
     var totalPers = (+d.nb_adultes || 0) + (+d.nb_enfants || 0);
@@ -1365,25 +1369,27 @@
 
     // ── HEADER ──
     doc.setFillColor(light[0], light[1], light[2]);
-    doc.rect(0, 0, W, 38, 'F');
-    // Logo (mini Eunomia icon)
-    var lx = W - M - 42;
+    doc.rect(0, 0, W, 44, 'F');
+    // Logo Enomia top-left
     doc.setFillColor(dark[0], dark[1], dark[2]);
-    doc.roundedRect(lx, 3.5, 7, 7, 1.2, 1.2, 'F');
+    doc.roundedRect(M, 5, 7, 7, 1.2, 1.2, 'F');
     doc.setDrawColor(232, 228, 220); doc.setLineWidth(0.5);
-    doc.line(lx + 1.5, 5.5, lx + 5.5, 5.5);
-    doc.line(lx + 1.5, 7, lx + 4.2, 7);
-    doc.line(lx + 1.5, 8.5, lx + 5.5, 8.5);
-    doc.setFont('helvetica', 'normal'); doc.setFontSize(7); doc.setTextColor(gray[0], gray[1], gray[2]);
-    doc.text(L.branding, lx + 9, 8.5);
+    doc.line(M + 1.5, 7, M + 5.5, 7);
+    doc.line(M + 1.5, 8.5, M + 4.2, 8.5);
+    doc.line(M + 1.5, 10, M + 5.5, 10);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(dark[0], dark[1], dark[2]);
+    doc.text('Enomia', M + 9, 10);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(6.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+    doc.text(L.branding, M + 9, 13.5);
+    // Title (centered, with spacing)
     doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(dark[0], dark[1], dark[2]);
-    doc.text(L.title, 105, 18, { align: 'center' });
+    doc.text(L.title, 105, 24, { align: 'center' });
     doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(gray[0], gray[1], gray[2]);
-    doc.text(fmtDate(d.date_arrivee) + ' ' + L.au + ' ' + fmtDate(d.date_depart) + ' - ' + nuits + ' ' + (nuits > 1 ? L.nuits : L.nuit), 105, 26, { align: 'center' });
+    doc.text(fmtDate(d.date_arrivee) + ' ' + L.au + ' ' + fmtDate(d.date_depart) + ' - ' + nuits + ' ' + (nuits > 1 ? L.nuits : L.nuit), 105, 32, { align: 'center' });
     doc.setDrawColor(dark[0], dark[1], dark[2]); doc.setLineWidth(0.5);
-    doc.line(M, 36, W - M, 36);
+    doc.line(M, 42, W - M, 42);
 
-    y = 46;
+    y = 52;
 
     // ── PARTIES (2 colonnes) ──
     doc.setFillColor(light[0], light[1], light[2]);
@@ -1446,8 +1452,20 @@
     });
     y += 10;
 
-    var equips = (Array.isArray(bien.equipements) ? bien.equipements : []).join(', ') || '---';
-    addPara(L.equipements + ' : ' + equips);
+    var pdfEquips = Array.isArray(bien.equipements) ? bien.equipements : [];
+    if (pdfEquips.length) {
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(60, 60, 60);
+      checkPage(6); doc.text(L.equipements + ' :', M + 2, y); y += 5;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(60, 60, 60);
+      pdfEquips.forEach(function(eq) {
+        checkPage(5);
+        doc.text('\u2022  ' + String(eq).replace(/_/g, ' '), M + 4, y);
+        y += 4.2;
+      });
+      y += 2;
+    } else {
+      addPara(L.equipements + ' : ---');
+    }
 
     // ── DUREE ──
     addH2(L.h_duree);
@@ -1471,11 +1489,11 @@
     doc.text(fmtDate(d.date_depart), M + 86, y + 9);
     doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
     doc.text(L.a + ' ' + (d.heure_depart || '11h00'), M + 86, y + 14);
-    // Nuits badge
+    // Nuits badge (centré verticalement dans le bloc de 20mm)
     doc.setFillColor(dark[0], dark[1], dark[2]);
-    doc.roundedRect(M + 140, y + 2, 26, 13, 2, 2, 'F');
+    doc.roundedRect(M + 140, y + 1.5, 26, 13, 2, 2, 'F');
     doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(255, 255, 255);
-    doc.text(nuits + ' ' + (nuits > 1 ? L.nuits : L.nuit), M + 153, y + 11, { align: 'center' });
+    doc.text(nuits + ' ' + (nuits > 1 ? L.nuits : L.nuit), M + 153, y + 10, { align: 'center' });
     doc.setTextColor(dark[0], dark[1], dark[2]);
     y += 24;
     addPara(L.duree_text);
@@ -1617,30 +1635,27 @@
     var bien = ctBiens.find(function(b){return b.id===ctWizardData.bien_id});
     if (!bien) { alert('Aucun bien selectionne'); return; }
     var html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'word');
-    var fullHtml = '<html xmlns:o="urn:schemas-microsoft-com:office:office" ' +
-      'xmlns:w="urn:schemas-microsoft-com:office:word" ' +
-      'xmlns="http://www.w3.org/TR/REC-html40">' +
-      '<head><meta charset="utf-8">' +
-      '<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View>' +
-      '<w:Zoom>100</w:Zoom><w:DoNotOptimizeForBrowser/></w:WordDocument></xml><![endif]-->' +
+    var fullHtml = '<!DOCTYPE html><html><head><meta charset="utf-8">' +
       '<style>' +
-      '@page { size: 21cm 29.7cm; margin: 2cm; }' +
-      'body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #1a1a1a; }' +
+      '@page { size: A4; margin: 2cm; }' +
+      'body { font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 11pt; line-height: 1.6; color: #1a1a1a; }' +
       'h1 { font-size: 16pt; text-align: center; border-bottom: 2px solid #2b2d2b; padding-bottom: 10px; margin-bottom: 20px; }' +
       'h2 { font-size: 11pt; font-weight: bold; text-transform: uppercase; margin-top: 18px; margin-bottom: 8px; padding: 4px 10px; background: #f0efec; border-left: 3px solid #2b2d2b; }' +
       'p { margin: 6pt 0; text-align: justify; }' +
+      'ul { margin: 4pt 0; padding-left: 20pt; }' +
+      'li { margin: 2pt 0; }' +
       'table { border-collapse: collapse; width: 100%; font-size: 10pt; margin: 10px 0; }' +
       'th, td { border: 1px solid #ccc; padding: 5px 8px; text-align: left; }' +
       'th { background: #f0efec; font-weight: bold; font-size: 9pt; }' +
       '.sig { margin-top: 30px; }' +
       '.sig div { display: inline-block; width: 45%; text-align: center; padding-top: 40px; border-top: 1px solid #000; }' +
       '</style></head><body>' + html + '</body></html>';
-    var blob = new Blob(['\ufeff' + fullHtml], { type: 'application/msword' });
+    var blob = new Blob(['\ufeff' + fullHtml], { type: 'text/html' });
     var url = URL.createObjectURL(blob);
     var a = document.createElement('a');
     a.href = url;
     var name = (ctWizardData.locataire_nom || 'locataire').toLowerCase().replace(/\W+/g, '-');
-    a.download = 'contrat-' + name + '-' + (ctWizardData.date_arrivee || '') + '.docx';
+    a.download = 'contrat-' + name + '-' + (ctWizardData.date_arrivee || '') + '.doc';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

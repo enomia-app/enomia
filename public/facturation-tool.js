@@ -196,21 +196,22 @@ if (!window.__factInit) {
   function _fUpdateAuthUI() {
     const hint = document.getElementById('fauth-hint');
     if (!hint) return;
+    var saveBtn = document.getElementById('fnav-save-btn');
     if (_fuser) {
       hint.innerHTML = `<span>✓ <strong>Connecté</strong> — ${_fuser.email}. Vos données sont sauvegardées.</span>
         <button class="btn-sm" onclick="fLogout()">Se déconnecter</button>`;
+      if (saveBtn) saveBtn.style.display = 'none';
     } else {
       hint.innerHTML = `<span>🔒 <strong>Mode invité</strong> — vos données sont stockées localement dans ce navigateur.</span>
-        <button class="btn-sm accent" onclick="fLogin()">Se connecter avec Google →</button>`;
-    }
-    // Bind tool-header button if present
-    const headerLogin = document.getElementById('tool-header-login');
-    if (headerLogin) {
-      headerLogin.textContent = _fuser ? 'Mon compte' : 'Se connecter';
+        <button class="btn-sm accent" onclick="fOpenLoginModal()">Se connecter</button>`;
+      if (saveBtn) saveBtn.style.display = '';
     }
   }
 
-  window.toolLogin = function() { fLogin(); };
+  window.toolLogin = function() { fOpenLoginModal(); };
+  window.fOpenLoginModal = function() {
+    document.getElementById('fmodal-login').classList.add('show');
+  };
 
   window.fLogin = async function() {
     localStorage.setItem('fact_expecting_signin', '1');
@@ -220,10 +221,21 @@ if (!window.__factInit) {
       options: { redirectTo, queryParams: { prompt: 'select_account' } }
     });
   };
+  window.fSendMagicLink = async function() {
+    var email = document.getElementById('flogin-email').value.trim();
+    var fb = document.getElementById('flogin-feedback');
+    if (!email || !email.includes('@')) {
+      fb.textContent = 'Email invalide'; fb.style.color = 'var(--fa-red)'; fb.style.display = 'block'; return;
+    }
+    fb.textContent = 'Envoi…'; fb.style.color = 'var(--fa-muted)'; fb.style.display = 'block';
+    localStorage.setItem('fact_expecting_signin', '1');
+    var res = await _fsb.auth.signInWithOtp({ email: email, options: { emailRedirectTo: window.location.origin + '/facturation-lcd' } });
+    if (res.error) { fb.textContent = 'Erreur : ' + res.error.message; fb.style.color = 'var(--fa-red)'; }
+    else { fb.textContent = '✓ Lien envoyé à ' + email + '. Vérifiez votre boîte.'; fb.style.color = 'var(--fa-green)'; }
+  };
   window.fLogout = async function() {
     await _fsb.auth.signOut();
     _fuser = null; _ftoken = null;
-    // Reload local data
     finvoices = JSON.parse(localStorage.getItem('lcd_invoices') || '[]');
     fbiens = JSON.parse(localStorage.getItem('lcd_biens') || '[]');
     fsettings = JSON.parse(localStorage.getItem('lcd_settings') || '{}');

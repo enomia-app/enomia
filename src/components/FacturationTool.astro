@@ -11,7 +11,10 @@
 
   <!-- Mini-nav interne -->
   <div class="fnav">
-    <div class="fnav-title">Facturation <em>LCD</em> — outil gratuit</div>
+    <div class="fnav-left">
+      <div class="fnav-title">Facturation <em>LCD</em></div>
+      <button class="btn-sm" id="fnav-save-btn" onclick="fOpenLoginModal()" style="display:none">Sauvegarder</button>
+    </div>
     <div class="fnav-right">
       <button class="btn-sm" onclick="fShowScreen('fscreen-dashboard')">Tableau de bord</button>
       <button class="btn-sm" onclick="fShowSettingsModal()">Paramètres</button>
@@ -32,11 +35,7 @@
 
       <div class="auth-hint" id="fauth-hint">
         <span>🔒 <strong>Mode invité</strong> — vos données sont stockées localement dans ce navigateur.</span>
-        <button class="btn-sm accent" id="fbtn-login-hint" onclick="fLogin()">Se connecter avec Google →</button>
-      </div>
-
-      <div class="legal-disclaimer">
-        ⚠ Cet outil est un générateur de documents d'aide à la facturation. Il ne constitue pas un logiciel de facturation certifié (NF 525). Pour une comptabilité officielle soumise à audit, utilisez un logiciel homologué.
+        <button class="btn-sm accent" id="fbtn-login-hint" onclick="fOpenLoginModal()">Se connecter</button>
       </div>
 
       <div class="filter-row">
@@ -73,6 +72,10 @@
           </thead>
           <tbody id="finvoice-tbody"></tbody>
         </table>
+      </div>
+
+      <div class="legal-disclaimer" style="margin-top:16px">
+        ⚠ Cet outil est un générateur de documents d'aide à la facturation. Il ne constitue pas un logiciel de facturation certifié (NF 525). Pour une comptabilité officielle soumise à audit, utilisez un logiciel homologué.
       </div>
     </div>
   </div>
@@ -261,6 +264,26 @@
         <button class="btn-sm accent" onclick="fOpenBienModal(null)">+ Ajouter un bien</button>
       </div>
       <div id="fbiens-list" class="biens-grid"></div>
+    </div>
+  </div>
+
+  <!-- MODAL LOGIN -->
+  <div id="fmodal-login" class="modal-overlay" onclick="fCloseModalOnBg(event, 'fmodal-login')">
+    <div class="modal-inner" style="max-width:420px">
+      <div class="modal-header">
+        <div class="modal-title">Se connecter</div>
+        <div class="modal-actions"><button class="modal-close" onclick="fCloseModal('fmodal-login')">×</button></div>
+      </div>
+      <div class="modal-body" style="padding:24px">
+        <p style="font-size:13px;color:var(--fa-muted);margin-bottom:20px">Pour sauvegarder vos factures et les retrouver depuis n'importe quel appareil.</p>
+        <button class="btn-sm accent" onclick="fLogin()" style="width:100%;padding:12px;font-size:14px;margin-bottom:16px">Se connecter avec Google</button>
+        <div style="text-align:center;font-size:12px;color:var(--fa-muted2);margin-bottom:16px">ou</div>
+        <div style="display:flex;gap:8px">
+          <input type="email" id="flogin-email" placeholder="email@exemple.com" style="flex:1;padding:10px 12px;border:1px solid var(--fa-border);border-radius:6px;font-size:13px">
+          <button class="btn-sm" onclick="fSendMagicLink()">Envoyer le lien</button>
+        </div>
+        <div id="flogin-feedback" style="display:none;font-size:12px;margin-top:10px"></div>
+      </div>
     </div>
   </div>
 

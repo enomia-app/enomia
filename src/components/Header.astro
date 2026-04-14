@@ -62,11 +62,11 @@ const isTool = variant === 'tool';
     <div class="eh-right">
       {ctaHref && ctaLabel ? (
         <a href={ctaHref} class="eh-btn eh-btn-green">{ctaLabel}</a>
-      ) : isTool ? (
+      ) : isTool && currentTool !== 'contrat' ? (
         <button class="eh-btn eh-btn-green" id="header-save-btn">Sauvegarder</button>
-      ) : (
+      ) : !isTool ? (
         <a href="/simulateur-rentabilite-airbnb" class="eh-btn eh-btn-green">Simulateur de rentabilité LCD →</a>
-      )}
+      ) : null}
     </div>
 
     <!-- Mobile hamburger -->

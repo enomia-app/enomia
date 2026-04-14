@@ -22,7 +22,10 @@
 
   <!-- ─── NAV interne ─── -->
   <nav class="ctnav" id="ctnav" style="display:none">
-    <div class="ctnav-title">Contrats <em>LCD</em></div>
+    <div class="ctnav-left">
+      <div class="ctnav-title">Contrats <em>LCD</em></div>
+      <button class="btn sm" id="ctnav-save-btn" onclick="ctSaveToCloud()" style="display:none">Sauvegarder</button>
+    </div>
     <div class="ctnav-tabs">
       <button class="ctnav-tab" data-screen="ctscreen-dashboard" onclick="ctShowScreen('ctscreen-dashboard')">📄 Contrats</button>
       <button class="ctnav-tab" data-screen="ctscreen-biens" onclick="ctShowScreen('ctscreen-biens')">🏠 Mes biens</button>
@@ -98,14 +101,10 @@
           <thead>
             <tr>
               <th>Locataire</th>
-              <th class="col-bien">Bien</th>
+              <th>Bien</th>
               <th>Séjour</th>
               <th>Montant</th>
-              <th class="col-money">Acompte</th>
-              <th class="col-money">Solde</th>
-              <th class="col-money">Caution</th>
               <th>Statut</th>
-              <th>Signé</th>
               <th></th>
             </tr>
           </thead>

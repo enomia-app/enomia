@@ -67,7 +67,7 @@
   }
   // Auto-calculate taxe de séjour for a bien + wizard data
   function ctAutoCalcTaxe(bien, d) {
-    var ville = _ctExtractVille(bien.adresse);
+    var ville = bien.ville || _ctExtractVille(bien.adresse);
     var rate = ctGetTaxeRate(ville, bien.classement);
     if (!rate) return null;
     var n = nights(d.date_arrivee, d.date_depart);
@@ -113,12 +113,47 @@
     return res.json();
   }
 
+  // ─── MIGRATION localStorage → DB (au premier login) ──────────
+  async function ctMigrateLocalToDb() {
+    var localBailleur = ctLsGet(CT_LS_BAILLEUR, null);
+    var localBiens = ctLsGet(CT_LS_BIENS, []);
+    var localContrats = ctLsGet(CT_LS_CONTRATS, []);
+    if (localBailleur && Object.keys(localBailleur).length) {
+      await ctApi('bailleur-upsert', { bailleur: localBailleur });
+    }
+    // Map old local IDs → new DB IDs for contrats
+    var bienIdMap = {};
+    for (var b of localBiens) {
+      var oldId = b.id;
+      delete b.id; delete b.user_id; delete b.created_at; delete b.updated_at;
+      var r = await ctApi('bien-upsert', { bien: b });
+      if (r && r.bien) bienIdMap[oldId] = r.bien.id;
+    }
+    for (var c of localContrats) {
+      delete c.id; delete c.user_id; delete c.created_at; delete c.updated_at;
+      if (c.bien_id && bienIdMap[c.bien_id]) c.bien_id = bienIdMap[c.bien_id];
+      await ctApi('contrat-upsert', { contrat: c });
+    }
+    // Clear local guest data
+    try {
+      localStorage.removeItem(CT_LS_BAILLEUR);
+      localStorage.removeItem(CT_LS_BIENS);
+      localStorage.removeItem(CT_LS_CONTRATS);
+    } catch (_) {}
+  }
+
   // ─── AUTH ───────────────────────────────────────────────────────
-  _ctSb.auth.onAuthStateChange((event, session) => {
+  _ctSb.auth.onAuthStateChange(async (event, session) => {
     _ctUser = session && session.user;
     _ctToken = session && session.access_token;
     if (event === 'SIGNED_IN') {
       ctCloseModal();
+      // Migrate guest data to DB on first login
+      var expecting = localStorage.getItem('ct_expecting_signin') === '1';
+      localStorage.removeItem('ct_expecting_signin');
+      if (expecting) {
+        await ctMigrateLocalToDb();
+      }
       ctBootstrap();
     } else if (event === 'SIGNED_OUT') {
       _ctUser = null;
@@ -162,6 +197,7 @@
     fb.textContent = 'Envoi…';
     fb.style.color = 'var(--ct-muted)';
     fb.style.display = 'block';
+    localStorage.setItem('ct_expecting_signin', '1');
     const { error } = await _ctSb.auth.signInWithOtp({
       email,
       options: { emailRedirectTo: window.location.origin + '/contrat-lcd-dashboard' }
@@ -177,6 +213,10 @@
   window.ctLogout = async function () {
     if (!confirm('Se déconnecter ?')) return;
     await _ctSb.auth.signOut();
+  };
+  // Bouton « Sauvegarder » en mode guest → ouvre le login modal
+  window.ctSaveToCloud = function () {
+    ctOpenLoginModal();
   };
 
   // ─── SCREEN NAV ─────────────────────────────────────────────────
@@ -201,16 +241,19 @@
   async function ctBootstrap() {
     document.getElementById('ctnav').style.display = 'flex';
     // Avatar + label
+    var saveBtn = document.getElementById('ctnav-save-btn');
     if (_ctUser) {
       const email = _ctUser.email || '';
       const initials = (email.match(/^(.)(?:.*?[.\-_](.))?/) || []).slice(1).join('').toUpperCase() || '?';
       document.getElementById('ctnav-avatar').textContent = initials;
       document.getElementById('ctnav-user-label').textContent = email;
+      document.getElementById('ctnav-user-badge').onclick = function () { ctLogout(); };
+      if (saveBtn) saveBtn.style.display = 'none';
     } else {
       document.getElementById('ctnav-avatar').textContent = '👤';
       document.getElementById('ctnav-user-label').textContent = 'Se connecter';
-      // In guest mode, clicking user badge opens login instead of logout
       document.getElementById('ctnav-user-badge').onclick = function () { ctOpenLoginModal(); };
+      if (saveBtn) saveBtn.style.display = '';
     }
     // Charger en parallèle
     await Promise.all([ctLoadBailleur(), ctLoadBiens(), ctLoadContrats(), ctLoadTaxeDb()]);
@@ -344,7 +387,7 @@
     else if (ctCurrentFilter === 'late') filtered = ctContrats.filter(c => c.acompte_date_limite && new Date(c.acompte_date_limite) < now && !c.acompte_paye);
 
     if (!filtered.length) {
-      tbody.innerHTML = '<tr><td colspan="10" style="text-align:center;padding:60px 20px"><div class="empty-state" style="border:none;padding:20px"><div class="empty-icon">📄</div><div class="empty-title">Aucun contrat ' + (ctCurrentFilter === 'all' ? '' : 'dans ce filtre') + '</div><div class="empty-desc">' + (ctCurrentFilter === 'all' ? 'Créez votre premier contrat en 2 minutes.' : 'Essayez un autre filtre.') + '</div>' + (ctCurrentFilter === 'all' ? '<button class="btn accent" onclick="ctNewContract()">+ Nouveau contrat</button>' : '') + '</div></td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:60px 20px"><div class="empty-state" style="border:none;padding:20px"><div class="empty-icon">📄</div><div class="empty-title">Aucun contrat ' + (ctCurrentFilter === 'all' ? '' : 'dans ce filtre') + '</div><div class="empty-desc">' + (ctCurrentFilter === 'all' ? 'Créez votre premier contrat en 2 minutes.' : 'Essayez un autre filtre.') + '</div>' + (ctCurrentFilter === 'all' ? '<button class="btn accent" onclick="ctNewContract()">+ Nouveau contrat</button>' : '') + '</div></td></tr>';
       return;
     }
 
@@ -359,16 +402,20 @@
       const caSym = c.caution_rendue ? '✓' : (c.caution_encaissee ? '✓' : '⏳');
       const signed = c.contrat_signe_url;
       return '<tr>' +
-        '<td><span class="primary">' + esc(c.locataire_prenom || '') + ' ' + esc(c.locataire_nom) + '</span><span class="secondary">' + esc(c.locataire_email || '') + '</span><br><span class="secondary">' + ((+c.nb_adultes || 0) + (+c.nb_enfants || 0)) + ' pers.</span></td>' +
-        '<td class="col-bien"><div style="display:flex;align-items:center;gap:10px"><div class="bien-item-icon">' + bienIcon(b.type_bien) + '</div><div><span class="primary">' + esc(b.nom_interne || '—') + '</span><span class="secondary">' + esc((b.adresse || '').split(',').pop() || '') + '</span></div></div></td>' +
-        '<td style="white-space:nowrap"><span class="primary">' + fmtDateShort(c.date_arrivee) + ' → ' + fmtDateShort(c.date_depart) + '</span><span class="secondary">' + n + ' nuit' + (n > 1 ? 's' : '') + (c.langue === 'en' ? ' · 🇬🇧' : '') + '</span></td>' +
-        '<td><span class="primary">' + fmtEur(c.prix_total) + '</span></td>' +
-        '<td class="col-money"><span class="pay-chip ' + ac + '" onclick="ctTogglePay(\'' + c.id + '\',\'acompte_paye\',' + !c.acompte_paye + ')">' + acSym + ' ' + fmtEur(c.acompte_montant) + '</span></td>' +
-        '<td class="col-money"><span class="pay-chip ' + so + '" onclick="ctTogglePay(\'' + c.id + '\',\'solde_paye\',' + !c.solde_paye + ')">' + soSym + ' ' + fmtEur(c.solde_montant) + '</span></td>' +
-        '<td class="col-money"><span class="pay-chip ' + ca + '" onclick="ctToggleCaution(\'' + c.id + '\')">' + caSym + ' ' + fmtEur(c.caution) + '</span></td>' +
-        '<td>' + statutBadge(c) + '</td>' +
-        '<td>' + (signed ? '<button class="upload-inline uploaded" onclick="ctDownloadSigned(\'' + esc(signed) + '\')"><span>Signé</span><span>✓</span></button>' : '<label class="upload-inline"><span>↑ Upload</span><input type="file" accept="application/pdf,image/*" style="display:none" onchange="ctUploadSigned(\'' + c.id + '\', this)"></label>') + '</td>' +
-        '<td><div class="row-actions"><button class="icon-btn" title="Télécharger le contrat" onclick="ctRegenerate(\'' + c.id + '\')">↓</button><button class="icon-btn danger" title="Supprimer" onclick="ctDeleteContract(\'' + c.id + '\')">✕</button></div></td>' +
+        '<td class="col-locataire"><span class="primary">' + esc(c.locataire_prenom || '') + ' ' + esc(c.locataire_nom) + '</span><span class="secondary">' + esc(c.locataire_email || '') + '</span></td>' +
+        '<td class="col-bien"><div style="display:flex;align-items:center;gap:8px"><div class="bien-item-icon">' + bienIcon(b.type_bien) + '</div><div><span class="primary">' + esc(b.nom_interne || '—') + '</span><span class="secondary">' + esc(b.ville || (b.adresse || '').split(',').pop() || '') + '</span></div></div></td>' +
+        '<td class="col-sejour" style="white-space:nowrap"><span class="primary">' + fmtDateShort(c.date_arrivee) + ' → ' + fmtDateShort(c.date_depart) + '</span><span class="secondary">' + n + ' nuit' + (n > 1 ? 's' : '') + ' · ' + ((+c.nb_adultes || 0) + (+c.nb_enfants || 0)) + ' pers.' + (c.langue === 'en' ? ' · 🇬🇧' : '') + '</span></td>' +
+        '<td class="col-montant"><span class="primary">' + fmtEur(c.prix_total) + '</span>' +
+        '<div class="pay-row">' +
+        '<span class="pay-chip ' + ac + '" onclick="ctTogglePay(\'' + c.id + '\',\'acompte_paye\',' + !c.acompte_paye + ')" title="Acompte">' + acSym + ' ' + fmtEur(c.acompte_montant) + '</span>' +
+        '<span class="pay-chip ' + so + '" onclick="ctTogglePay(\'' + c.id + '\',\'solde_paye\',' + !c.solde_paye + ')" title="Solde">' + soSym + ' ' + fmtEur(c.solde_montant) + '</span>' +
+        '<span class="pay-chip ' + ca + '" onclick="ctToggleCaution(\'' + c.id + '\')" title="Caution">' + caSym + ' ' + fmtEur(c.caution) + '</span>' +
+        '</div></td>' +
+        '<td class="col-status">' + statutBadge(c) + '</td>' +
+        '<td class="col-actions">' +
+        (signed ? '<button class="upload-inline uploaded" onclick="ctDownloadSigned(\'' + esc(signed) + '\')">✓</button>' : '<label class="upload-inline"><span>↑</span><input type="file" accept="application/pdf,image/*" style="display:none" onchange="ctUploadSigned(\'' + c.id + '\', this)"></label>') +
+        '<button class="icon-btn" title="Télécharger" onclick="ctRegenerate(\'' + c.id + '\')">↓</button>' +
+        '<button class="icon-btn danger" title="Supprimer" onclick="ctDeleteContract(\'' + c.id + '\')">✕</button></td>' +
         '</tr>';
     }).join('');
   }
@@ -537,7 +584,8 @@
       '<div class="field"><label class="field-label">Type</label><select class="select" id="ctb-type">' +
       ['villa', 'maison', 'mobil-home', 'gite', 'appartement T1', 'appartement T2', 'appartement T3', 'studio', 'chalet', 'autre'].map(t => '<option' + (b.type_bien === t ? ' selected' : '') + '>' + t + '</option>').join('') +
       '</select></div></div>' +
-      '<div class="field"><label class="field-label">Adresse complète <span class="req">*</span></label><input type="text" class="input" id="ctb-adresse" value="' + esc(b.adresse) + '"></div>' +
+      '<div class="field-row"><div class="field" style="flex:2"><label class="field-label">Adresse <span class="req">*</span></label><input type="text" class="input" id="ctb-adresse" value="' + esc(b.adresse) + '"></div>' +
+      '<div class="field" style="flex:1"><label class="field-label">Ville <span class="req">*</span></label><input type="text" class="input" id="ctb-ville" value="' + esc(b.ville) + '" placeholder="Ex : Irigny"></div></div>' +
       '<div class="field-row-4"><div class="field"><label class="field-label">Surface</label><input type="text" class="input" id="ctb-surface" value="' + (b.surface || '') + '" placeholder="m²"></div>' +
       '<div class="field"><label class="field-label">Pièces</label><input type="number" class="input" id="ctb-pieces" value="' + (b.nb_pieces || '') + '"></div>' +
       '<div class="field"><label class="field-label">Couchages</label><input type="number" class="input" id="ctb-couchages" value="' + (b.nb_couchages || '') + '"></div>' +
@@ -755,6 +803,7 @@
     b.nom_interne = document.getElementById('ctb-nom').value.trim();
     b.type_bien = document.getElementById('ctb-type').value;
     b.adresse = document.getElementById('ctb-adresse').value.trim();
+    b.ville = document.getElementById('ctb-ville').value.trim();
     b.surface = parseInt(document.getElementById('ctb-surface').value) || null;
     b.nb_pieces = parseInt(document.getElementById('ctb-pieces').value) || null;
     b.nb_couchages = parseInt(document.getElementById('ctb-couchages').value) || null;
@@ -1012,7 +1061,7 @@
             taxInput.value = calc.total;
           }
         } else if (taxHint) {
-          var ville = bien.adresse ? _ctExtractVille(bien.adresse) : '';
+          var ville = bien.ville || (bien.adresse ? _ctExtractVille(bien.adresse) : '');
           if (ville && _ctTaxeDb) {
             taxHint.textContent = 'Commune « ' + ville + ' » non trouvée dans la base de taxe de séjour';
             taxHint.style.color = 'var(--ct-muted2)';

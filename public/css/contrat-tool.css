@@ -36,6 +36,7 @@
     padding: 14px 24px; border-bottom: 1px solid var(--ct-border);
     background: var(--ct-card); gap: 12px; flex-wrap: wrap;
   }
+  .ctr-wrap .ctnav-left { display: flex; align-items: center; gap: 12px; }
   .ctr-wrap .ctnav-title {
     font-family: var(--ct-display); font-size: 16px; font-weight: 700;
   }
@@ -216,23 +217,29 @@
     background: var(--ct-card); border: 1px solid var(--ct-border);
     border-radius: 10px; overflow: hidden; overflow-x: auto;
   }
-  .ctr-wrap table.data { width: 100%; border-collapse: collapse; min-width: 900px; }
+  .ctr-wrap table.data { width: 100%; border-collapse: collapse; min-width: 640px; }
   .ctr-wrap table.data th {
     font-family: var(--ct-mono); font-size: 10px; letter-spacing: 0.08em;
     text-transform: uppercase; color: var(--ct-muted);
-    padding: 14px 16px; border-bottom: 1px solid var(--ct-border);
+    padding: 10px 12px; border-bottom: 1px solid var(--ct-border);
     text-align: left; font-weight: 500; background: var(--ct-card);
   }
   .ctr-wrap table.data td {
-    padding: 14px 16px; border-bottom: 1px solid var(--ct-border);
+    padding: 10px 12px; border-bottom: 1px solid var(--ct-border);
     font-size: 13px; color: var(--ct-text2); vertical-align: middle;
   }
   .ctr-wrap table.data tr:last-child td { border-bottom: none; }
   .ctr-wrap table.data tr:hover td { background: var(--ct-mid); }
   .ctr-wrap table.data td .primary { color: var(--ct-text); font-weight: 500; display: block; }
   .ctr-wrap table.data td .secondary { font-family: var(--ct-mono); font-size: 10px; color: var(--ct-muted2); }
-  .ctr-wrap .col-bien { min-width: 220px; }
-  .ctr-wrap .col-money { width: 90px; padding-left: 8px; padding-right: 8px; }
+  .ctr-wrap .col-locataire { max-width: 160px; }
+  .ctr-wrap .col-bien { min-width: 140px; }
+  .ctr-wrap .col-sejour { white-space: nowrap; }
+  .ctr-wrap .col-montant .pay-row { display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap; }
+  .ctr-wrap .col-status { white-space: nowrap; }
+  .ctr-wrap .col-actions { white-space: nowrap; }
+  .ctr-wrap .col-actions { display: flex; gap: 4px; align-items: center; opacity: 0.5; transition: opacity 0.2s; }
+  .ctr-wrap table.data tr:hover .col-actions { opacity: 1; }
 
   .ctr-wrap .badge {
     display: inline-flex; align-items: center; gap: 5px;
@@ -257,7 +264,6 @@
   .ctr-wrap .pay-chip:hover { filter: brightness(0.92); }
 
   .ctr-wrap .row-actions { display: flex; gap: 4px; opacity: 0.4; transition: opacity 0.2s; }
-  .ctr-wrap table.data tr:hover .row-actions { opacity: 1; }
   .ctr-wrap .icon-btn {
     width: 28px; height: 28px; border: 1px solid var(--ct-border);
     background: var(--ct-card); border-radius: 6px;

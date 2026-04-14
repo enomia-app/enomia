@@ -412,10 +412,10 @@
         '<span class="pay-chip ' + ca + '" onclick="ctToggleCaution(\'' + c.id + '\')" title="Caution">' + caSym + ' ' + fmtEur(c.caution) + '</span>' +
         '</div></td>' +
         '<td class="col-status">' + statutBadge(c) + '</td>' +
-        '<td class="col-actions">' +
+        '<td class="col-actions"><div class="row-actions">' +
         (signed ? '<button class="upload-inline uploaded" onclick="ctDownloadSigned(\'' + esc(signed) + '\')">✓</button>' : '<label class="upload-inline"><span>↑</span><input type="file" accept="application/pdf,image/*" style="display:none" onchange="ctUploadSigned(\'' + c.id + '\', this)"></label>') +
         '<button class="icon-btn" title="Télécharger" onclick="ctRegenerate(\'' + c.id + '\')">↓</button>' +
-        '<button class="icon-btn danger" title="Supprimer" onclick="ctDeleteContract(\'' + c.id + '\')">✕</button></td>' +
+        '<button class="icon-btn danger" title="Supprimer" onclick="ctDeleteContract(\'' + c.id + '\')">✕</button></div></td>' +
         '</tr>';
     }).join('');
   }

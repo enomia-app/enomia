@@ -118,7 +118,7 @@ export default async function handler(req, res) {
       type: 'magiclink',
       email,
       options: {
-        redirectTo: `${APP_URL}/simulateur-rentabilite-airbnb${simPayload ? '?ps=' + simPayload : ''}`,
+        redirectTo: `${APP_URL}/simulateur-lcd${simPayload ? '?ps=' + simPayload : ''}`,
         data: { prenom: prenom || '' },
       },
     })

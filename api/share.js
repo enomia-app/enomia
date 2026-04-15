@@ -39,7 +39,7 @@ export default async function handler(req, res) {
 
   const APP_URL    = process.env.APP_URL || 'https://www.enomia.app'
   const ogImage    = `${APP_URL}/api/og?sim=${simId}`
-  const redirectTo = `${APP_URL}/simulateur-rentabilite-airbnb?sim=${simId}`
+  const redirectTo = `${APP_URL}/simulateur-lcd?sim=${simId}`
   const canonical  = `${APP_URL}/api/share?id=${simId}`
 
   res.setHeader('Content-Type', 'text/html; charset=utf-8')

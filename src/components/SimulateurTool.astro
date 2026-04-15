@@ -1,0 +1,454 @@
+---
+// Composant simulateur de rentabilité LCD.
+// Gère : dashboard (mes simulations), calculateur, comparaison.
+// Auth : Google OAuth via Supabase. Mode invité = localStorage, migration au login.
+---
+
+<link rel="stylesheet" href="/css/simulateur-tool.css" />
+
+<div id="g-tip"></div>
+
+<div class="sim-wrap">
+
+  <!-- Mini-nav -->
+  <div class="snav">
+    <div class="snav-left">
+      <div class="snav-title">Simulateur <em>LCD</em></div>
+      <div class="snav-tabs">
+        <button class="snav-tab active" id="snav-tab-dash" onclick="showDashboard()">Mes simulations</button>
+        <button class="snav-tab" id="snav-tab-new" onclick="newSimulation()">+ Nouvelle simulation</button>
+      </div>
+    </div>
+    <div class="snav-right">
+      <button class="snav-login" id="snav-login-btn" onclick="showLoginModal()">Se connecter</button>
+      <div class="snav-user" id="snav-user-badge" style="display:none">
+        <div class="snav-avatar" id="snav-avatar">?</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="screen active" id="screen-dashboard">
+    <div class="dashboard">
+      <div class="dash-header">
+        <div>
+          <h1 class="dash-title">Mes <em>simulations</em></h1>
+          <p class="dash-sub" id="dash-sub">0 simulation</p>
+        </div>
+      </div>
+      <div class="sim-auth-hint" id="sim-auth-hint">
+        <span>🔒 <strong>Mode invité</strong> — vos données sont stockées localement dans ce navigateur.</span>
+        <button onclick="showLoginModal()">Se connecter</button>
+      </div>
+      <div id="sims-container"></div>
+    </div>
+  </div>
+
+  <!-- CALCULATEUR -->
+  <div class="screen" id="screen-calc">
+    <div class="calc-topbar">
+      <div style="display:flex;align-items:center;gap:16px">
+        <input type="text" class="calc-name-input" id="sim-name-input" placeholder="Nom de la simulation...">
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span class="calc-save-status" id="save-status"></span>
+      </div>
+    </div>
+
+    <div class="calc-main">
+      <div class="calc-left">
+
+        <!-- MODE -->
+        <div style="margin-bottom:28px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Mode d'analyse</div>
+          <div class="mode-tabs">
+            <button class="mode-tab on" onclick="setMode('single',this)" id="mode-single">Bien unique</button>
+            <button class="mode-tab" onclick="setMode('multi',this)" id="mode-multi">Division en lots</button>
+          </div>
+        </div>
+
+        <!-- BIEN UNIQUE -->
+        <div id="section-single">
+          <div class="sec-t"><span class="sec-num">01</span> Le bien</div>
+          <div style="margin-bottom:22px">
+            <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Type de bien</div>
+            <div class="tabs">
+              <button class="tab on" onclick="setType('studio',this)">Studio</button>
+              <button class="tab" onclick="setType('t2',this)">T2</button>
+              <button class="tab" onclick="setType('t3',this)">T3</button>
+              <button class="tab" onclick="setType('t4',this)">T4</button>
+              <button class="tab" onclick="setType('t5',this)">T5</button>
+            </div>
+          </div>
+          <div class="sg">
+            <div class="sg-header"><div class="sg-lw"><div class="sg-label">Prix d'achat net vendeur</div></div><div class="sg-val" id="v-prix">120k <em>€</em></div></div>
+            <input type="range" id="s-prix" min="40000" max="1500000" step="10000" value="120000" oninput="sv('prix',this.value);compute()">
+            <div class="sg-ticks"><span>40k€</span><span>1.5M€</span></div>
+          </div>
+<!-- Notaire affiché dans total card --><span id="v-notaire" style="display:none">9 000 €</span><span id="notaire-hint" style="display:none"></span>
+          <div class="sg">
+            <div class="sg-header"><div><div class="sg-label">Superficie</div></div><div class="sg-val" id="v-surface">35 <em>m²</em></div></div>
+            <input type="range" id="s-surface" min="15" max="800" step="5" value="35" oninput="sv('surface',this.value);compute()">
+            <div class="sg-ticks"><span>15m²</span><span>800m²</span></div>
+          </div>
+          <div style="margin-bottom:10px">
+            <div class="sg-label" style="margin-bottom:10px">Niveau de travaux</div>
+            <div class="travaux-hints">
+              <div class="th" onclick="setTravaux('aucun',this)"><div class="th-label">Aucun</div><div class="th-val">0 €/m²</div></div>
+              <div class="th on" onclick="setTravaux('rafraichissement',this)"><div class="th-label">Rafraîchissement</div><div class="th-val">400 €/m²</div></div>
+              <div class="th" onclick="setTravaux('renovation',this)"><div class="th-label">Rénovation</div><div class="th-val">1 000 €/m²</div></div>
+            </div>
+          </div>
+          <div class="sg" style="margin-bottom:18px">
+            <div class="sg-header"><div><div class="sg-label">Budget travaux</div><div class="sg-hint" id="travaux-hint">Pré-rempli : 400€/m² × 35m²</div></div><div class="sg-val" id="v-travaux">14k <em>€</em></div></div>
+            <input type="range" id="s-travaux" min="0" max="1500000" step="5000" value="14000" oninput="sv('travaux',this.value);compute()">
+            <div class="sg-ticks"><span>0€</span><span>1.5M€</span></div>
+          </div>
+          <div style="margin-bottom:18px">
+            <div class="sg-label" style="margin-bottom:8px">Ameublement</div>
+            <div class="ameu-pre" id="ameu-pre">
+              <button class="ap on" onclick="setAmeu(6000,this)">Studio 6k</button>
+              <button class="ap" onclick="setAmeu(8000,this)">T2 8k</button>
+              <button class="ap" onclick="setAmeu(10000,this)">T3 10k</button>
+              <button class="ap" onclick="setAmeu(15000,this)">T4 15k</button>
+              <button class="ap" onclick="setAmeu(20000,this)">T5 20k</button>
+            </div>
+            <div class="sg">
+              <div class="sg-header"><div class="sg-label">Budget ameublement</div><div class="sg-val" id="v-ameu">6k <em>€</em></div></div>
+              <input type="range" id="s-ameu" min="0" max="500000" step="1000" value="6000" oninput="sv('ameu',this.value);clearAmeuPre();compute()">
+              <div class="sg-ticks"><span>0€</span><span>500k€</span></div>
+            </div>
+          </div>
+          <!-- Frais bancaires : affichés dans le total uniquement, pas de slider -->
+          <div class="total-card">
+            <div class="total-card-t">Composition du projet</div>
+            <div class="tr-row"><span class="tr-l">Prix d'achat</span><span class="tr-v" id="tc-prix">—</span></div>
+            <div class="tr-row"><span class="tr-l">Frais de notaire (7.5%)</span><span class="tr-v" id="tc-notaire">—</span></div>
+            <div class="tr-row"><span class="tr-l">Travaux</span><span class="tr-v" id="tc-travaux">—</span></div>
+            <div class="tr-row"><span class="tr-l">Ameublement</span><span class="tr-v" id="tc-ameu">—</span></div>
+            <div class="tr-row"><span class="tr-l">Frais bancaires (~1%)</span><span class="tr-v" id="tc-bancaires">—</span></div>
+            <div class="tr-row total-line"><span class="tr-l">Coût total du projet</span><span class="tr-v" id="tc-total">—</span></div>
+          </div>
+        </div>
+
+        <!-- DIVISION EN LOTS -->
+        <div id="section-multi" style="display:none">
+          <div class="sec-t"><span class="sec-num">01</span> Division en lots</div>
+          <p style="font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-bottom:18px;line-height:1.7">Définis chaque lot — prix par nuit et surface. Le rendement est calculé sur l'ensemble du bien.</p>
+          <div id="lots-container"></div>
+          <button class="btn-add-lot" onclick="addLot()">+ Ajouter un lot</button>
+          <div class="lots-total">
+            <span class="lots-total-l">CA brut total / mois estimé</span>
+            <span class="lots-total-v" id="lots-ca-total">—</span>
+          </div>
+  
+          <div class="sec-t"><span class="sec-num">02</span> Le bien (global)</div>
+          <div class="sg">
+            <div class="sg-header"><div class="sg-label">Prix d'achat total</div><div class="sg-val" id="v-prix-m">200k <em>€</em></div></div>
+            <input type="range" id="s-prix-m" min="40000" max="1500000" step="10000" value="200000" oninput="sv2('prix-m',this.value);computeMulti()">
+            <div class="sg-ticks"><span>40k€</span><span>1.5M€</span></div>
+          </div>
+<span id="v-notaire-m" style="display:none">15 000 €</span>
+          <div class="sg">
+            <div class="sg-header"><div><div class="sg-label">Budget travaux global</div></div><div class="sg-val" id="v-travaux-m">30k <em>€</em></div></div>
+            <input type="range" id="s-travaux-m" min="0" max="1500000" step="5000" value="30000" oninput="sv2('travaux-m',this.value);computeMulti()">
+            <div class="sg-ticks"><span>0€</span><span>1.5M€</span></div>
+          </div>
+          <div class="sg">
+            <div class="sg-header"><div><div class="sg-label">Ameublement global</div></div><div class="sg-val" id="v-ameu-m">20k <em>€</em></div></div>
+            <input type="range" id="s-ameu-m" min="0" max="500000" step="1000" value="20000" oninput="sv2('ameu-m',this.value);computeMulti()">
+            <div class="sg-ticks"><span>0€</span><span>500k€</span></div>
+          </div>
+          <div class="total-card" id="total-multi" style="display:none">
+            <div class="total-card-t">Composition du projet</div>
+            <div class="tr-row"><span class="tr-l">Prix d'achat</span><span class="tr-v" id="tc-prix-m">—</span></div>
+            <div class="tr-row"><span class="tr-l">Frais de notaire (7.5%)</span><span class="tr-v" id="tc-notaire-m">—</span></div>
+            <div class="tr-row"><span class="tr-l">Travaux</span><span class="tr-v" id="tc-travaux-m">—</span></div>
+            <div class="tr-row"><span class="tr-l">Ameublement</span><span class="tr-v" id="tc-ameu-m">—</span></div>
+            <div class="tr-row"><span class="tr-l">Frais bancaires (~1%)</span><span class="tr-v" id="tc-bancaires-m">—</span></div>
+            <div class="tr-row total-line"><span class="tr-l">Coût total</span><span class="tr-v" id="tc-total-m">—</span></div>
+          </div>
+        </div>
+
+
+
+        <!-- FINANCEMENT -->
+        <div class="sec-t"><span class="sec-num" id="fin-num">02</span> Le financement</div>
+        <div class="sg">
+          <div class="sg-header"><div class="sg-label">Apport personnel</div><div class="sg-val" id="v-apport">15k <em>€</em></div></div>
+          <input type="range" id="s-apport" min="0" max="1500000" step="5000" value="15000" oninput="sv('apport',this.value);computeActive()">
+          <div class="sg-ticks"><span>0€</span><span>1.5M€</span></div>
+        </div>
+        <div class="sg">
+          <div class="sg-header"><div class="sg-label">Durée du crédit</div><div class="sg-val" id="v-duree">20 <em>ans</em></div></div>
+          <input type="range" id="s-duree" min="5" max="25" step="1" value="20" oninput="sv('duree',this.value);computeActive()">
+          <div class="sg-ticks"><span>5 ans</span><span>25 ans</span></div>
+        </div>
+        <div class="sg">
+          <div class="sg-header"><div class="sg-label">Taux du crédit</div><div class="sg-val" id="v-taux">3.5 <em>%</em></div></div>
+          <input type="range" id="s-taux" min="0.5" max="6" step="0.1" value="3.5" oninput="sv('taux',this.value);computeActive()">
+          <div class="sg-ticks"><span>0.5%</span><span>6%</span></div>
+        </div>
+        <div class="fin-card">
+          <div class="fc-row"><span class="fc-l">Coût total du projet</span><span class="fc-v acc" id="fc-total">—</span></div>
+          <div class="fc-row"><span class="fc-l">Apport</span><span class="fc-v" id="fc-apport">—</span></div>
+          <div class="fc-row"><span class="fc-l">Montant emprunté</span><span class="fc-v acc" id="fc-emprunt">—</span></div>
+          <div class="fc-row fc-total-line">
+            <span class="fc-l" style="color:var(--white)">Mensualité calculée</span>
+            <span class="fc-v big" id="fc-mens">—</span>
+          </div>
+        </div>
+
+
+        <!-- REVENUS -->
+        <div class="sec-t" id="sec-revenus"><span class="sec-num" id="rev-num">03</span> Les revenus</div>
+        <div id="revenus-single">
+          <div class="sg">
+            <div class="sg-header"><div class="sg-label">Prix par nuit moyen</div><div class="sg-val" id="v-nuit">70 <em>€/nuit</em></div></div>
+            <input type="range" id="s-nuit" min="20" max="1000" step="5" value="70" oninput="sv('nuit',this.value);compute()">
+            <div class="sg-ticks"><span>20€</span><span>1000€</span></div>
+          </div>
+          <div class="sg">
+            <div class="sg-header"><div class="sg-label">Nuits occupées / mois</div><div class="sg-val" id="v-occu">20 <em></em></div></div>
+            <input type="range" id="s-occu" min="5" max="30" step="1" value="20" oninput="sv('occu',this.value);compute()">
+            <div class="sg-ticks"><span>5 nuits</span><span>30 nuits</span></div>
+          </div>
+          <div class="sg">
+            <div class="sg-header"><div class="sg-label">Durée moyenne de séjour</div><div class="sg-val" id="v-sejour">2.5 <em>nuits</em></div></div>
+            <input type="range" id="s-sejour" min="1" max="14" step="0.1" value="2.5" oninput="sv('sejour',this.value);compute()">
+            <div class="sg-ticks"><span>1 nuit</span><span>14 nuits</span></div>
+          </div>
+        </div>
+        <div id="revenus-multi" style="display:none"></div>
+<!-- Commission hardcoded at 17% --><input type="hidden" id="s-commission" value="17">
+
+
+
+        <!-- CHARGES -->
+        <div class="sec-t"><span class="sec-num" id="ch-num">04</span> Les charges</div>
+        <div style="margin-bottom:18px">
+          <div class="sg-label" style="margin-bottom:12px">Par entrée / sortie</div>
+          <div class="cg">
+            <div class="ci"><div class="ci-label">Ménage</div><div class="ci-val" id="v-menage">17.5 <em>€/rot.</em></div><input type="range" id="s-menage" min="0" max="200" step="2.5" value="17.5" oninput="sv('menage',this.value);computeActive()"></div>
+            <div class="ci"><div class="ci-label">Blanchisserie</div><div class="ci-val" id="v-blanc">12.5 <em>€/rot.</em></div><input type="range" id="s-blanc" min="0" max="200" step="2.5" value="12.5" oninput="sv('blanc',this.value);computeActive()"></div>
+          </div>
+        </div>
+        <div>
+          <div class="sg-label" style="margin-bottom:12px">Charges fixes mensuelles</div>
+          <div class="cg">
+            <div class="ci"><div class="ci-label">Eau</div><div class="ci-val" id="v-eau">20 <em>€/mois</em></div><input type="range" id="s-eau" min="0" max="300" step="5" value="20" oninput="sv('eau',this.value);computeActive()"></div>
+            <div class="ci"><div class="ci-label">Électricité</div><div class="ci-val" id="v-elec">50 <em>€/mois</em></div><input type="range" id="s-elec" min="0" max="800" step="10" value="50" oninput="sv('elec',this.value);computeActive()"></div>
+            <div class="ci"><div class="ci-label">Internet</div><div class="ci-val" id="v-internet">30 <em>€/mois</em></div><input type="range" id="s-internet" min="0" max="200" step="5" value="30" oninput="sv('internet',this.value);computeActive()"></div>
+            <div class="ci"><div class="ci-label">Consommables</div><div class="ci-val" id="v-consommables">30 <em>€/mois</em></div><input type="range" id="s-consommables" min="0" max="300" step="5" value="30" oninput="sv('consommables',this.value);computeActive()"></div>
+            <div class="ci">
+              <div class="ci-label">
+                Logiciel
+              </div>
+              <div class="ci-val" id="v-logiciel">40 <em>€/mois</em></div>
+              <input type="range" id="s-logiciel" min="0" max="300" step="5" value="40" oninput="sv('logiciel',this.value);computeActive()">
+            </div>
+            <div class="ci">
+              <div class="ci-label">Comptable</div>
+              <div class="ci-val" id="v-comptable">60 <em>€/mois</em></div>
+              <input type="range" id="s-comptable" min="0" max="500" step="10" value="60" oninput="sv('comptable',this.value);computeActive()">
+            </div>
+            <div class="ci"><div class="ci-label">Taxe foncière</div><div class="ci-val" id="v-fonciere">42 <em>€/mois</em></div><input type="range" id="s-fonciere" min="0" max="800" step="5" value="42" oninput="sv('fonciere',this.value);computeActive()"></div>
+            <div class="ci"><div class="ci-label">Charges copro</div><div class="ci-val" id="v-copro">65 <em>€/mois</em></div><input type="range" id="s-copro" min="0" max="800" step="5" value="65" oninput="sv('copro',this.value);computeActive()"></div>
+          </div>
+        </div>
+        <div class="sg" style="margin-top:16px">
+          <div class="sg-header"><div class="sg-label">Assurance PNO</div><div class="sg-val" id="v-assurance">18 <em>€/mois</em></div></div>
+          <input type="range" id="s-assurance" min="5" max="200" step="1" value="18" oninput="sv('assurance',this.value);computeActive()">
+          <div class="sg-ticks"><span>5€</span><span>200€</span></div>
+        </div>
+
+      </div><!-- end calc-left -->
+
+      <!-- RÉSULTATS -->
+      <div class="calc-right">
+        <div class="res-main">
+          <div class="res-lbl">Rendement net annuel</div>
+          <div class="res-big-wrap">
+            <div class="res-big" id="r-rend">—</div>
+          </div>
+          <div class="res-verdict" id="r-verdict">—</div>
+        </div>
+        <div class="rb2">
+          <div class="rb2-t">Cash flow mensuel</div>
+          <div class="rr"><span class="rrl">CA brut / mois</span><span class="rrv acc" id="r-ca">—</span></div>
+          <div class="rr"><span class="rrl">Commission Airbnb/Booking</span><span class="rrv neg" id="r-ota">—</span></div>
+          <div class="rr"><span class="rrl">Ménage + blanchisserie</span><span class="rrv neg" id="r-men">—</span></div>
+          <div class="rr"><span class="rrl">Charges fixes</span><span class="rrv neg" id="r-ch">—</span></div>
+          <div class="rr"><span class="rrl">Mensualité crédit</span><span class="rrv neg" id="r-cred">—</span></div>
+          <div class="rr rr-total-line">
+            <span class="rrl" style="color:var(--white);font-weight:500">Cash flow net / mois</span>
+            <span class="rrv big" id="r-cf">—</span>
+          </div>
+        </div>
+        <div class="rb2">
+          <div class="rb2-t">Vue annuelle</div>
+          <div class="rr"><span class="rrl">CA brut annuel</span><span class="rrv acc" id="r-ca-a">—</span></div>
+          <div class="rr"><span class="rrl">Charges totales annuelles</span><span class="rrv neg" id="r-ch-a">—</span></div>
+          <div class="rr"><span class="rrl">Net avant impôt</span><span class="rrv pos" id="r-net-a">—</span></div>
+          <div class="rr"><span class="rrl">Seuil de rentabilité</span><span class="rrv" id="r-seuil">—</span></div>
+        </div>
+        <div class="rb2">
+          <div class="rb2-t">Coût total du projet</div>
+          <div class="rr"><span class="rrl">Total investissement</span><span class="rrv" id="r-projet">—</span></div>
+          <div class="rr"><span class="rrl">Montant emprunté</span><span class="rrv" id="r-empr">—</span></div>
+          <div class="rr"><span class="rrl">Coût total intérêts</span><span class="rrv neg" id="r-interets">—</span></div>
+        </div>
+        <div class="apport-b">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)">Remboursement apport</div>
+          <div class="apport-n" id="r-apport-n">—</div>
+          <div class="apport-l">mois pour récupérer ton apport</div>
+          <div class="apport-bar"><div class="apport-fill" id="apport-fill" style="width:0%"></div></div>
+          <div class="apport-sub" id="r-apport-sub">—</div>
+        </div>
+        <div class="gauge-b">
+          <div class="gauge-l">Qualité du rendement</div>
+          <div class="gauge-bar"><div class="gauge-fill" id="g-fill" style="width:0%"></div></div>
+          <div class="gauge-ticks"><span>0%</span><span>5%</span><span>10%</span><span>15%</span><span>20%+</span></div>
+        </div>
+        <div class="comp-b">
+          <div class="comp-bt">Comparatif placements (réf. 2%–30%)</div>
+          <div class="comp-row">
+            <span class="comp-name">Ton LCD</span>
+            <div class="comp-track"><div class="comp-fill lcd" id="comp-lcd" style="width:0%"></div></div>
+            <span class="comp-pct" id="comp-lcd-v">—</span>
+          </div>
+          <div class="comp-row">
+            <span class="comp-name">ETF</span>
+            <div class="comp-track"><div class="comp-fill etf" style="width:17.9%"></div></div>
+            <span class="comp-pct">7%</span>
+          </div>
+          <div class="comp-row">
+            <span class="comp-name">Loc. meublé</span>
+            <div class="comp-track"><div class="comp-fill lmeuble" style="width:10.7%"></div></div>
+            <span class="comp-pct">5%</span>
+          </div>
+          <div class="comp-row">
+            <span class="comp-name">SCPI</span>
+            <div class="comp-track"><div class="comp-fill scpi" style="width:8.9%"></div></div>
+            <span class="comp-pct">4.5%</span>
+          </div>
+          <div class="comp-row">
+            <span class="comp-name">Livret A</span>
+            <div class="comp-track"><div class="comp-fill livret" style="width:1.8%"></div></div>
+            <span class="comp-pct">2.5%</span>
+          </div>
+          <div class="comp-scale"><span>2%</span><span>8%</span><span>15%</span><span>22%</span><span>30%</span></div>
+        </div>
+
+        <!-- CAPTURE NL -->
+        <div class="nl-capture">
+          <div class="nl-capture-t">Les coulisses de 9 biens LCD à 12-18% net</div>
+          <p class="nl-capture-d">Méthode duplicable presque partout en France, chiffres, stratégie, charges réelles, erreurs à éviter — chaque jeudi à 7h30.</p>
+          <div class="nl-capture-form" style="flex-direction:column;gap:8px">
+            <input type="text" id="nl-prenom" placeholder="Prénom" style="border-right:1px solid var(--border);border-radius:6px;box-sizing:border-box">
+            <div style="display:flex">
+              <input type="email" id="nl-email" placeholder="ton@email.fr">
+              <button onclick="subscribeNL()">S'instruire →</button>
+            </div>
+          </div>
+          <p class="nl-capture-note">Un email par semaine. Désinscription en un clic.</p>
+        </div>
+
+      </div><!-- end calc-right -->
+    </div>
+  </div>
+
+</div><!-- end sim-wrap -->
+
+<!-- COMPARE BAR -->
+<div class="cmp-bar" id="cmp-bar">
+  <span class="cmp-label">Comparer :</span>
+  <div class="cmp-items" id="cmp-items"></div>
+  <button class="btn-cmp" onclick="showCompare()">Comparer</button>
+  <button class="btn-cmp-clear" onclick="clearCompare()">Annuler</button>
+</div>
+
+<!-- MAGIC LINK MODAL (login + save) -->
+<div id="magic-modal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px">
+  <div style="background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:36px;max-width:420px;width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.2)">
+    <button onclick="closeMagicModal()" style="position:absolute;top:14px;right:14px;background:none;border:none;font-size:18px;color:var(--muted);cursor:pointer">×</button>
+    <!-- Étape 1 : saisie email -->
+    <div id="magic-step-email">
+      <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:12px" id="magic-modal-label">Se connecter</div>
+      <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:20px">Accéder à vos simulations</div>
+
+      <!-- Bouton Google -->
+      <button onclick="signInWithGoogle()" style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:13px 14px;background:#fff;border:1px solid #e0e0e0;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;color:#1f1f1f;cursor:pointer;margin-bottom:16px">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Continuer avec Google
+      </button>
+
+      <!-- Séparateur -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+        <div style="flex:1;height:1px;background:var(--border)"></div>
+        <span style="font-size:12px;color:var(--muted2)">ou par email</span>
+        <div style="flex:1;height:1px;background:var(--border)"></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <input type="text" id="magic-prenom-input" placeholder="Votre prénom" style="padding:13px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
+        <input type="email" id="magic-email-input" placeholder="votre@email.fr" style="padding:13px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none" onkeydown="if(event.key==='Enter')sendMagicLink()">
+        <div id="magic-error" style="display:none;font-size:12px;color:#e05252;padding:8px 12px;background:rgba(224,82,82,0.08);border-radius:6px"></div>
+        <button onclick="sendMagicLink()" id="magic-send-btn" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer">Recevoir mon lien →</button>
+      </div>
+      <p style="font-size:11px;color:var(--muted2);text-align:center;margin-top:14px">Sans mot de passe · Gratuit · Données privées</p>
+    </div>
+    <!-- Étape 2 : confirmation -->
+    <div id="magic-step-confirm" style="display:none;text-align:center">
+      <div style="font-size:40px;margin-bottom:16px">✉️</div>
+      <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:10px">Vérifiez vos emails</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7">Un lien de connexion a été envoyé à <strong id="magic-email-sent" style="color:var(--white)"></strong>.<br>Cliquez dessus pour vous connecter automatiquement.</p>
+      <p style="font-size:12px;color:var(--muted2);margin-top:20px">Pas reçu ? Vérifiez vos spams ou <button onclick="resetMagicModal()" style="background:none;border:none;color:var(--accent);font-size:12px;cursor:pointer;text-decoration:underline;font-family:var(--font-body)">réessayez</button>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SAVE POPUP (legacy, remplacé par magic-modal) -->
+<div id="save-popup" style="display:none"></div>
+
+<!-- SHARE POPUP -->
+<div id="share-popup" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px">
+  <div style="background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:36px;max-width:420px;width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.1)">
+    <button onclick="closeSharePopup()" style="position:absolute;top:14px;right:14px;background:none;border:none;font-size:18px;color:var(--muted);cursor:pointer">×</button>
+    <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:12px">Partager</div>
+    <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px">Partagez cette simulation</div>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">Le destinataire verra la simulation avec toutes les valeurs. Il pourra la modifier et la sauvegarder dans son propre espace (compte gratuit).</p>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <input type="email" id="share-email" placeholder="Email du destinataire" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
+      <input type="text" id="share-message" placeholder="Message (optionnel)" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
+      <button onclick="doShare()" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;margin-top:4px">Envoyer l'invitation →</button>
+    </div>
+    <div id="share-success" style="display:none;margin-top:12px;padding:12px;background:rgba(63,189,113,0.08);border:1px solid rgba(63,189,113,0.25);border-radius:8px;color:var(--green);font-size:14px;font-weight:500;text-align:center">✓ Invitation envoyée ! Le destinataire recevra un lien par email.</div>
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)">
+      <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Ou copier le lien (accès sans compte) :</div>
+      <div style="display:flex;gap:6px">
+        <input type="text" id="share-link" value="https://enomia.app/simulateur/s/abc123" readonly style="flex:1;padding:10px 12px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--muted);font-family:var(--font-body);font-size:12px;outline:none">
+        <button onclick="copyShareLink()" id="copy-link-btn" style="padding:10px 16px;background:var(--mid);border:1px solid var(--border);border-radius:8px;font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--white);cursor:pointer">Copier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEAVE POPUP -->
+<div id="leave-popup" style="display:none;position:fixed;inset:0;z-index:600;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px">
+  <div style="background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:36px;max-width:420px;width:100%;position:relative;box-shadow:0 24px 48px rgba(0,0,0,0.1)">
+    <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Avant de partir</div>
+    <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px">Sauvegarder votre simulation ?</div>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">Entrez votre email et nous vous enverrons le lien de votre simulation. Vous pourrez y revenir à tout moment, sans compte.</p>
+    <div id="leave-success" style="display:none;padding:12px;background:rgba(63,189,113,0.08);border:1px solid rgba(63,189,113,0.25);border-radius:8px;color:var(--green);font-size:14px;font-weight:500;text-align:center;margin-bottom:12px">✓ Simulation sauvegardée ! Lien envoyé par email.</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <input type="text" id="leave-prenom" placeholder="Prénom" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
+      <input type="email" id="leave-email" placeholder="votre@email.fr" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
+      <button onclick="saveAndLeave()" style="padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer">Sauvegarder et recevoir le lien →</button>
+    </div>
+    <button onclick="leaveWithoutSaving()" style="width:100%;margin-top:12px;padding:10px;background:none;border:none;font-family:var(--font-body);font-size:13px;color:var(--muted2);cursor:pointer;text-decoration:underline;text-underline-offset:2px">Continuer sans sauvegarder</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" is:inline></script>
+<script is:inline src="/simulateur-tool.js"></script>

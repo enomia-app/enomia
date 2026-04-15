@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+import SimulateurTool from '../components/SimulateurTool.astro';
+import NewsletterBlock from '../components/NewsletterBlock.astro';
+---
+
+<ToolLayout
+  title="Simulateur rentabilité LCD — Mes simulations · Enomia"
+  description="Simulez la rentabilité nette réelle de votre investissement Airbnb. Toutes charges incluses, cash flow mensuel, comparatif placements. 100% gratuit."
+  canonical="https://www.enomia.app/simulateur-lcd"
+  currentTool="simulateur"
+>
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px 48px;">
+    <SimulateurTool />
+  </div>
+
+  <div style="max-width:920px;margin:0 auto;padding:0 24px 48px">
+    <NewsletterBlock source="Simulateur" />
+  </div>
+</ToolLayout>
+
+<style>
+  main { padding-top: 0; }
+</style>

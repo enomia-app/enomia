@@ -1,0 +1,195 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+import ContratLandingStyles from '../components/ContratLandingStyles.astro';
+import NewsletterBlock from '../components/NewsletterBlock.astro';
+
+const title = "Simulateur rentabilité Airbnb 2026 : calculateur gratuit (rendement net réel)";
+const description = "Simulez la rentabilité nette réelle de votre investissement Airbnb. Toutes charges incluses, cash flow mensuel, comparatif placements. 100% gratuit.";
+const canonical = "https://www.enomia.app/simulateur-rentabilite-airbnb";
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="simulateur" ctaLabel="Mes simulations" ctaHref="/simulateur-lcd">
+  <ContratLandingStyles />
+
+  <!-- Redirect existing shared links to new dashboard URL -->
+  <script is:inline>
+  (function(){
+    var p = new URLSearchParams(window.location.search);
+    if (p.has('sim') || p.has('ps')) {
+      window.location.replace('/simulateur-lcd' + window.location.search);
+    }
+  })();
+  </script>
+
+  <div class="landing-hero">
+    <div class="landing-tag">Simulateur de rentabilité Airbnb</div>
+    <h1 class="landing-h1">Calculez votre<br><em>rentabilité Airbnb nette réelle</em></h1>
+    <p class="landing-sub">Toutes charges incluses. En 2 minutes. Gratuit.</p>
+    <div class="landing-stats">
+      <div class="landing-stat"><div class="landing-stat-val">2 min</div><div class="landing-stat-lbl">à compléter</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">100%</div><div class="landing-stat-lbl">gratuit</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">&infin;</div><div class="landing-stat-lbl">simulations sauvegardées</div></div>
+    </div>
+    <a href="/simulateur-lcd" class="landing-cta">Lancer une simulation &rarr;</a>
+    <p class="landing-note">Pas de compte requis &middot; Créez un compte uniquement pour sauvegarder</p>
+  </div>
+
+  <div class="seo-wrap"><div class="seo-body">
+
+    <!-- Comment ça marche -->
+    <h2>Comment fonctionne le simulateur de rentabilité Airbnb ?</h2>
+    <div class="clauses-grid">
+      <div class="clause-item"><div class="check">1</div><div><strong>Décrivez votre bien</strong><br>Type de bien, prix d'achat, superficie, niveau de travaux, ameublement. Studio, T2, T3, T4 ou division en lots.</div></div>
+      <div class="clause-item"><div class="check">2</div><div><strong>Ajustez chaque paramètre</strong><br>Financement, tarif par nuit, taux d'occupation, ménage, commission OTA, charges fixes et assurance.</div></div>
+      <div class="clause-item"><div class="check">3</div><div><strong>Obtenez vos résultats</strong><br>Rendement net réel, cash flow mensuel, comparatif placements, seuil de rentabilité et délai de remboursement.</div></div>
+      <div class="clause-item"><div class="check">4</div><div><strong>Partagez &amp; comparez</strong><br>Sauvegardez vos simulations et partagez-les avec un associé, un courtier ou un banquier. Comparez plusieurs scénarios côte à côte.</div></div>
+    </div>
+
+    <!-- Ce que calcule le simulateur -->
+    <h2>Ce que calcule notre simulateur de rentabilité Airbnb</h2>
+    <p>La plupart des simulateurs de revenus Airbnb se limitent à multiplier un tarif par nuit par un taux d'occupation. Le résultat est un revenu brut qui ne reflète pas la réalité de l'investissement en location courte durée.</p>
+    <p>Notre simulateur calcule votre <strong>rendement net réel</strong> en intégrant l'ensemble des paramètres financiers d'un investissement locatif Airbnb : le prix d'achat, les frais de notaire (calculés automatiquement à 7,5%), le budget travaux, l'ameublement, les frais bancaires, l'apport personnel, la durée et le taux du crédit immobilier.</p>
+    <p>Côté revenus, vous ajustez le tarif moyen par nuit et le taux d'occupation annuel. La commission Airbnb et Booking (environ 17%) est intégrée dans le calcul pour refléter ce que vous encaissez réellement après les frais de plateforme.</p>
+    <p>Côté charges, chaque poste est modifiable individuellement : ménage et blanchisserie par rotation de voyageurs, eau, électricité, internet, consommables, logiciel de gestion (channel manager), comptable, taxe foncière, charges de copropriété et assurance PNO. Ce niveau de détail permet d'obtenir un <strong>cash flow mensuel</strong> fiable — ce qui reste vraiment dans votre poche après le remboursement du crédit.</p>
+    <p>Le simulateur calcule également le seuil de rentabilité (le taux d'occupation minimum pour couvrir vos charges), le délai de remboursement de votre apport personnel, et affiche une jauge de qualité de l'investissement.</p>
+
+    <!-- Pourquoi ce simulateur est différent -->
+    <h2>Pourquoi ce simulateur est différent</h2>
+    <p>Les outils comme AirDNA ou Airbtics estiment vos revenus potentiels à partir de données de marché. Notre simulateur fait l'inverse : il part de votre projet concret (prix d'achat, financement, charges réelles) pour calculer ce que vous allez réellement gagner.</p>
+    <div class="comparison">
+      <div class="comp-col">
+        <h4>Mode bien unique</h4>
+        <ul>
+          <li>Simulez un studio, T2, T3, T4 ou T5 avec toutes les charges détaillées</li>
+          <li>Idéal pour un premier investissement en location saisonnière</li>
+        </ul>
+      </div>
+      <div class="comp-col">
+        <h4>Mode division en lots</h4>
+        <ul>
+          <li>Découpez un grand bien en plusieurs lots avec des tarifs et taux d'occupation différents par lot</li>
+          <li>Calculez le rendement global du projet</li>
+        </ul>
+      </div>
+    </div>
+    <div class="comparison">
+      <div class="comp-col">
+        <h4>Comparatif placements</h4>
+        <ul>
+          <li>Comparez votre rendement LCD avec les ETF (7%), la location meublée classique (5%), les SCPI (4,5%) et le Livret A (2,5%)</li>
+        </ul>
+      </div>
+      <div class="comp-col">
+        <h4>Sauvegarde et partage</h4>
+        <ul>
+          <li>Sauvegardez vos simulations et partagez-les avec un associé, un courtier ou un banquier</li>
+          <li>Le destinataire y accède sans compte</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Rentabilité Airbnb : les chiffres clés -->
+    <h2>Rentabilité Airbnb : les chiffres à connaître avant d'investir</h2>
+    <p>La rentabilité d'un investissement Airbnb dépend de trois facteurs principaux : le prix d'achat du bien, le tarif moyen par nuit et le taux d'occupation annuel. En France, le tarif moyen d'une nuit en location courte durée est d'environ 82&euro;, et le taux d'occupation moyen se situe autour de 65-70%.</p>
+    <p>Un rendement brut supérieur à 10% est considéré comme bon en LCD. Mais le rendement brut ne raconte qu'une partie de l'histoire. Ce qui compte, c'est le <strong>rendement net après charges et financement</strong>. En dessous de 8% net, il est difficile de générer un cash flow positif. Au-dessus de 12% net, l'investissement est excellent.</p>
+
+    <!-- Credibility block Marc -->
+    <div class="callout">
+      <strong>Marc — fondateur d'Enomia</strong>
+      <p>J'exploite 9 biens en location courte durée avec un rendement net de 12 à 18% sur chacun des investissements. La clé : un taux d'occupation supérieur à 90% et une gestion de moins d'une heure par bien et par mois, sans conciergerie. Je partage ma méthode en détail — gratuitement — sur <a href="/blog">le blog</a> et sur <a href="https://youtube.com/@enomia" target="_blank">YouTube</a>.</p>
+    </div>
+
+    <p>L'erreur la plus fréquente en location saisonnière est de se concentrer uniquement sur les revenus en haute saison tout en sous-estimant les charges fixes (taxe foncière, copropriété, assurance) et les périodes de vacance locative en basse saison. Un simulateur de rentabilité Airbnb fiable doit prendre en compte la saisonnalité et l'ensemble des charges pour donner un résultat réaliste.</p>
+    <p>Notre simulateur vous permet de tester différents scénarios — optimiste, réaliste, conservateur — pour chaque paramètre. Vous visualisez immédiatement l'impact sur votre rendement net et votre cash flow mensuel.</p>
+
+    <!-- CTA intermédiaire -->
+    <div class="hero-cta-block">
+      <div>
+        <h3>Testez avec votre propre projet</h3>
+        <p>2 minutes. Gratuit. Sans inscription.</p>
+      </div>
+      <a href="/simulateur-lcd" class="hero-cta-btn">Lancer une simulation &rarr;</a>
+    </div>
+
+    <!-- FAQ -->
+    <h2>Questions fréquentes sur la rentabilité Airbnb</h2>
+    <div class="faq">
+      <details open>
+        <summary>Comment calculer la rentabilité nette d'un Airbnb ?</summary>
+        <div class="faq-ans">
+          <p>La rentabilité nette se calcule en divisant le revenu net annuel (revenus locatifs moins toutes les charges : ménage, commission plateforme, taxe foncière, copropriété, assurance, eau, électricité, internet, comptable) par le coût total du projet (prix d'achat + frais de notaire + travaux + ameublement + frais bancaires). Pour obtenir un chiffre fiable, il est essentiel de ne pas oublier les charges souvent sous-estimées comme les consommables, la blanchisserie et le logiciel de gestion.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Quel rendement net espérer pour un Airbnb en France ?</summary>
+        <div class="faq-ans">
+          <p>Le rendement net varie fortement selon la ville, le type de bien et la qualité de gestion. En moyenne en France, un bien en location courte durée bien géré génère entre 6% et 15% de rendement net. Les villes moyennes avec un tourisme régulier offrent souvent les meilleurs rendements grâce à des prix d'achat accessibles. Au-dessus de 12% net, un investissement LCD est considéré comme excellent. Notre simulateur vous permet de vérifier le rendement net de votre projet spécifique.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Quelles charges prendre en compte pour une location Airbnb ?</summary>
+        <div class="faq-ans">
+          <p>Les charges d'une location courte durée se divisent en charges variables (ménage et blanchisserie par rotation, commission Airbnb ou Booking d'environ 17%) et charges fixes mensuelles (eau, électricité, internet, consommables, logiciel de gestion/channel manager, comptable, taxe foncière, charges de copropriété, assurance propriétaire non occupant). La plupart des simulateurs oublient les frais bancaires, le cautionnement et les consommables — notre calculateur les intègre tous.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Quelle différence entre rentabilité brute et nette en LCD ?</summary>
+        <div class="faq-ans">
+          <p>La rentabilité brute ne prend en compte que les revenus locatifs divisés par le prix d'achat. Elle ne reflète pas la réalité car elle ignore toutes les charges d'exploitation et le coût du financement. La rentabilité nette déduit l'ensemble des charges (ménage, commission, charges fixes, assurance) et le coût des intérêts du crédit. L'écart entre les deux peut aller de 3 à 8 points. C'est pourquoi il est indispensable de toujours calculer le rendement net avant d'investir.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Comment estimer le taux d'occupation d'un Airbnb ?</summary>
+        <div class="faq-ans">
+          <p>Le taux d'occupation dépend de la localisation, de la qualité de l'annonce, du pricing et de la saisonnalité. En France, le taux moyen se situe autour de 65-70% pour un bien correctement géré. Dans les grandes villes touristiques, un taux de 75-85% est atteignable. Avec une stratégie de pricing dynamique et un produit de qualité supérieure aux hôtels environnants, il est possible d'atteindre 90% et plus. Notre simulateur vous permet de tester plusieurs hypothèses pour voir l'impact sur votre rentabilité.</p>
+        </div>
+      </details>
+      <details>
+        <summary>LCD vs location meublée classique : quel est le plus rentable ?</summary>
+        <div class="faq-ans">
+          <p>La location courte durée génère en moyenne 2 à 3 fois plus de revenus qu'une location meublée classique sur le même bien. En contrepartie, les charges d'exploitation sont plus élevées (ménage, commission plateforme, consommables) et la gestion demande plus de temps — sauf si vous automatisez avec les bons outils. Notre simulateur inclut un comparatif direct entre LCD, ETF, SCPI, location meublée classique et Livret A pour vous aider à choisir le placement le plus adapté à votre situation.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Découvrez aussi -->
+    <h2>Découvrez aussi</h2>
+    <div class="related">
+      <a href="/facture-location-saisonniere">
+        <div class="rk">Facturation LCD</div>
+        <div class="rt">Facture location saisonnière</div>
+        <div class="rd">Générez vos factures Airbnb, Booking ou location saisonnière. Taxe de séjour auto, mentions LMNP.</div>
+      </a>
+      <a href="/contrat-location-saisonniere">
+        <div class="rk">Contrat LCD</div>
+        <div class="rt">Contrat de location saisonnière</div>
+        <div class="rd">Modèle de contrat de location courte durée conforme, pré-rempli depuis vos biens. PDF + Word.</div>
+      </a>
+      <a href="/contrat-airbnb">
+        <div class="rk">Contrat Airbnb</div>
+        <div class="rt">Modèle conforme Loi Le Meur</div>
+        <div class="rd">Numéro d'enregistrement, articulation AirCover, clauses spécifiques. PDF + Word, FR/EN.</div>
+      </a>
+      <a href="/facture-airbnb">
+        <div class="rk">Facture Airbnb</div>
+        <div class="rt">Modèle &amp; générateur gratuit</div>
+        <div class="rd">Reconstituez la facture que Airbnb n'émet pas. Commissions, taxe de séjour, mentions LMNP.</div>
+      </a>
+    </div>
+  </div>
+
+  <NewsletterBlock source="Simulateur" />
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Comment calculer la rentabilité nette d'un Airbnb ?", "acceptedAnswer": { "@type": "Answer", "text": "La rentabilité nette se calcule en divisant le revenu net annuel (revenus locatifs moins toutes les charges) par le coût total du projet (prix d'achat + frais de notaire + travaux + ameublement + frais bancaires). Il est essentiel d'inclure toutes les charges : ménage, commission plateforme, taxe foncière, copropriété, assurance, eau, électricité, internet, comptable." } },
+      { "@type": "Question", "name": "Quel rendement net espérer pour un Airbnb en France ?", "acceptedAnswer": { "@type": "Answer", "text": "En moyenne en France, un bien en location courte durée bien géré génère entre 6% et 15% de rendement net. Au-dessus de 12% net, un investissement LCD est considéré comme excellent. Le rendement varie selon la ville, le type de bien et la qualité de gestion." } },
+      { "@type": "Question", "name": "Quelles charges prendre en compte pour une location Airbnb ?", "acceptedAnswer": { "@type": "Answer", "text": "Charges variables : ménage et blanchisserie par rotation, commission Airbnb/Booking (~17%). Charges fixes : eau, électricité, internet, consommables, logiciel de gestion, comptable, taxe foncière, copropriété, assurance PNO." } },
+      { "@type": "Question", "name": "Quelle différence entre rentabilité brute et nette en LCD ?", "acceptedAnswer": { "@type": "Answer", "text": "La rentabilité brute ignore les charges et le financement. La rentabilité nette déduit toutes les charges d'exploitation et le coût du crédit. L'écart peut aller de 3 à 8 points." } },
+      { "@type": "Question", "name": "Comment estimer le taux d'occupation d'un Airbnb ?", "acceptedAnswer": { "@type": "Answer", "text": "En France, le taux moyen est de 65-70%. Avec un pricing dynamique et un produit de qualité, 90%+ est atteignable. Le taux dépend de la localisation, de la qualité d'annonce et de la saisonnalité." } },
+      { "@type": "Question", "name": "LCD vs location meublée classique : quel est le plus rentable ?", "acceptedAnswer": { "@type": "Answer", "text": "La LCD génère 2 à 3 fois plus de revenus qu'une location meublée classique, mais les charges sont plus élevées. Avec une bonne automatisation, le rendement net LCD surpasse largement le meublé classique." } }
+    ]
+  })}></script>
+</ToolLayout>

@@ -20,11 +20,11 @@
       <button class="fnav-tab" data-screen="fscreen-settings" onclick="fShowScreen('fscreen-settings')">⚙ Paramètres</button>
     </div>
     <div class="fnav-right">
-      <div class="fnav-user" id="fnav-user-badge" style="display:none">
+      <div class="fnav-user" id="fnav-user-badge" style="display:none" onclick="fLogout()">
         <div class="fnav-avatar" id="fnav-avatar">?</div>
-        <span id="fnav-user-label">Se déconnecter</span>
+        <span id="fnav-user-label">email</span>
       </div>
-      <button class="btn-sm" id="fnav-save-btn" onclick="fOpenLoginModal()" style="display:none">Sauvegarder</button>
+      <button class="btn-sm" id="fnav-login-btn" onclick="fOpenLoginModal()">Se connecter</button>
     </div>
   </div>
 
@@ -39,10 +39,6 @@
         <button class="btn-sm accent" onclick="fShowScreen('fscreen-new'); fResetForm()">+ Nouvelle facture</button>
       </div>
 
-      <div class="auth-hint" id="fauth-hint">
-        <span>🔒 <strong>Mode invité</strong> — vos données sont stockées localement dans ce navigateur.</span>
-        <button class="btn-sm accent" id="fbtn-login-hint" onclick="fOpenLoginModal()">Se connecter</button>
-      </div>
 
       <div class="filter-row">
         <span class="filter-label">Exercice</span>

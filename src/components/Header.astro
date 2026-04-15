@@ -58,14 +58,8 @@ const isTool = variant === 'tool';
       </div>
     </nav>
 
-    <!-- CTA right -->
-    <div class="eh-right">
-      {ctaHref && ctaLabel ? (
-        <a href={ctaHref} class="eh-btn eh-btn-green">{ctaLabel}</a>
-      ) : !isTool ? (
-        <a href="/simulateur-rentabilite-airbnb" class="eh-btn eh-btn-green">Simulateur de rentabilité LCD →</a>
-      ) : null}
-    </div>
+    <!-- CTA right (empty — tools have their own nav) -->
+    <div class="eh-right"></div>
 
     <!-- Mobile hamburger -->
     <button class="eh-mobile-btn" aria-label="Menu" id="eh-mobile-toggle">

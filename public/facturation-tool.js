@@ -194,24 +194,18 @@ if (!window.__factInit) {
   })();
 
   function _fUpdateAuthUI() {
-    const hint = document.getElementById('fauth-hint');
-    if (!hint) return;
-    var saveBtn = document.getElementById('fnav-save-btn');
+    var loginBtn = document.getElementById('fnav-login-btn');
     var userBadge = document.getElementById('fnav-user-badge');
     if (_fuser) {
-      hint.innerHTML = `<span>✓ <strong>Connecté</strong> — ${_fuser.email}. Vos données sont sauvegardées.</span>`;
-      if (saveBtn) saveBtn.style.display = 'none';
+      if (loginBtn) loginBtn.style.display = 'none';
       if (userBadge) {
         userBadge.style.display = 'flex';
-        userBadge.onclick = function() { fLogout(); };
         var initials = (_fuser.email || '?').substring(0, 2).toUpperCase();
         document.getElementById('fnav-avatar').textContent = initials;
-        document.getElementById('fnav-user-label').textContent = 'Se déconnecter';
+        document.getElementById('fnav-user-label').textContent = _fuser.email;
       }
     } else {
-      hint.innerHTML = `<span>🔒 <strong>Mode invité</strong> — vos données sont stockées localement dans ce navigateur.</span>
-        <button class="btn-sm accent" onclick="fOpenLoginModal()">Se connecter</button>`;
-      if (saveBtn) saveBtn.style.display = '';
+      if (loginBtn) loginBtn.style.display = '';
       if (userBadge) userBadge.style.display = 'none';
     }
   }

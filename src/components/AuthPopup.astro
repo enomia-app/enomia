@@ -1,0 +1,135 @@
+---
+/**
+ * Auth popup — shown after 45s on tool pages for non-logged-in users.
+ * Requires `toolLogin()` to be defined globally by the tool's JS.
+ */
+---
+
+<div id="auth-popup-overlay" class="auth-popup-overlay" style="display:none">
+  <div class="auth-popup">
+    <button class="auth-popup-close" onclick="dismissAuthPopup()">&times;</button>
+    <div class="auth-popup-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="auth-popup-title">Sauvegardez vos donn&eacute;es</div>
+    <p class="auth-popup-desc">Retrouvez vos factures, contrats et simulations sur tous vos appareils &mdash; gratuitement.</p>
+    <button class="auth-popup-btn" onclick="dismissAuthPopup(); if(typeof toolLogin==='function') toolLogin();">Se connecter gratuitement &rarr;</button>
+    <p class="auth-popup-note">Aucun spam &middot; D&eacute;sinscription en 1 clic</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  if (localStorage.getItem('auth_popup_dismissed')) return;
+  setTimeout(function() {
+    // Check if user is logged in (Supabase sets sb-*-auth-token)
+    var hasAuth = Object.keys(localStorage).some(function(k) { return k.indexOf('sb-') === 0 && k.indexOf('-auth-token') > 0; });
+    if (hasAuth) return;
+    var overlay = document.getElementById('auth-popup-overlay');
+    if (overlay) overlay.style.display = 'flex';
+  }, 45000);
+
+  // Close on overlay click
+  var overlay = document.getElementById('auth-popup-overlay');
+  if (overlay) {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismissAuthPopup();
+    });
+  }
+})();
+
+window.dismissAuthPopup = function() {
+  var overlay = document.getElementById('auth-popup-overlay');
+  if (overlay) overlay.style.display = 'none';
+  localStorage.setItem('auth_popup_dismissed', '1');
+};
+</script>
+
+<style>
+  .auth-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .auth-popup {
+    background: #fff;
+    border-radius: 14px;
+    padding: 36px 32px 28px;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+  }
+
+  .auth-popup-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #8a8985;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+  }
+
+  .auth-popup-close:hover { color: #1a1a1a; }
+
+  .auth-popup-icon {
+    margin: 0 auto 14px;
+    width: 48px;
+    height: 48px;
+    background: rgba(63,189,113,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3fbd71;
+  }
+
+  .auth-popup-title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+
+  .auth-popup-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #52524e;
+    line-height: 1.6;
+    margin: 0 0 20px;
+  }
+
+  .auth-popup-btn {
+    width: 100%;
+    background: #2b2d2b;
+    color: #fff;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .auth-popup-btn:hover { background: #1a1c1a; }
+
+  .auth-popup-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    color: #8a8985;
+    margin: 10px 0 0;
+  }
+</style>

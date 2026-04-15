@@ -2,6 +2,7 @@
 import ToolLayout from '../layouts/ToolLayout.astro';
 import FacturationTool from '../components/FacturationTool.astro';
 import NewsletterBlock from '../components/NewsletterBlock.astro';
+import AuthPopup from '../components/AuthPopup.astro';
 ---
 
 <ToolLayout
@@ -17,6 +18,8 @@ import NewsletterBlock from '../components/NewsletterBlock.astro';
   <div style="max-width:920px;margin:0 auto;padding:0 24px 48px">
     <NewsletterBlock source="Facture" />
   </div>
+
+  <AuthPopup />
 </ToolLayout>
 
 <style>

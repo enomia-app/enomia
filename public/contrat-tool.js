@@ -843,6 +843,7 @@
         await ctLoadBiens();
         ctSelectedBienId = r.bien.id;
         ctRenderBiens();
+        ctToast('Bien enregistré ✓', 'green');
       } else {
         alert('Erreur : ' + (r && r.error));
       }
@@ -1455,16 +1456,17 @@
     ];
     if (bien.numero_declaration_mairie) infos.push([L.num_mairie, bien.numero_declaration_mairie]);
     var gx = M + 2;
+    var colW = Math.floor(pw / Math.min(infos.length, 4));
     doc.setFontSize(7);
     infos.forEach(function(info) {
-      if (gx > 160) { gx = M + 2; y += 10; }
+      if (gx + colW > W - M + 5) { gx = M + 2; y += 10; }
       checkPage(10);
       doc.setFont('helvetica', 'bold'); doc.setTextColor(gray[0], gray[1], gray[2]);
       doc.text(info[0].toUpperCase(), gx, y);
       doc.setFont('helvetica', 'normal'); doc.setTextColor(dark[0], dark[1], dark[2]); doc.setFontSize(9);
       doc.text(info[1], gx, y + 4);
       doc.setFontSize(7);
-      gx += 34;
+      gx += colW;
     });
     y += 10;
 
@@ -1651,7 +1653,11 @@
     var bien = ctBiens.find(function(b){return b.id===ctWizardData.bien_id});
     if (!bien) { alert('Aucun bien selectionne'); return; }
     var html = buildContratHtml(ctWizardData, bien, ctBailleur || {}, 'word');
-    var fullHtml = '<!DOCTYPE html><html><head><meta charset="utf-8">' +
+    var wordHtml = '<html xmlns:o="urn:schemas-microsoft-com:office:office" ' +
+      'xmlns:w="urn:schemas-microsoft-com:office:word" ' +
+      'xmlns="http://www.w3.org/TR/REC-html40">' +
+      '<head><meta charset="utf-8">' +
+      '<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom></w:WordDocument></xml><![endif]-->' +
       '<style>' +
       '@page { size: A4; margin: 2cm; }' +
       'body { font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 11pt; line-height: 1.6; color: #1a1a1a; }' +
@@ -1666,7 +1672,7 @@
       '.sig { margin-top: 30px; }' +
       '.sig div { display: inline-block; width: 45%; text-align: center; padding-top: 40px; border-top: 1px solid #000; }' +
       '</style></head><body>' + html + '</body></html>';
-    var blob = new Blob(['\ufeff' + fullHtml], { type: 'text/html' });
+    var blob = new Blob(['\ufeff' + wordHtml], { type: 'application/msword' });
     var url = URL.createObjectURL(blob);
     var a = document.createElement('a');
     a.href = url;
@@ -1734,6 +1740,17 @@
     const r = await ctApi('contrat-sign-signed-url', { path });
     if (r && r.url) window.open(r.url, '_blank');
   };
+
+  // ─── TOAST ───
+  let _ctToastTimer = null;
+  function ctToast(msg, type) {
+    const t = document.getElementById('ct-toast');
+    if (!t) return;
+    t.textContent = msg;
+    t.className = 'ct-toast show' + (type ? ' toast-' + type : '');
+    clearTimeout(_ctToastTimer);
+    _ctToastTimer = setTimeout(() => { t.className = 'ct-toast'; }, 2800);
+  }
 
   // ─── SAVE POPUP (guest mode — prompt to create account) ─────────
   let _ctSavePopupShown = false;

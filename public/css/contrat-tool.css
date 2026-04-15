@@ -662,5 +662,19 @@
   }
   .ctr-wrap .pdf-p { margin-bottom: 5px; }
 
+  /* Toast */
+  .ctr-wrap .ct-toast {
+    position: fixed; bottom: 28px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--ct-accent); color: #fff;
+    padding: 12px 22px; font-size: 12px; font-family: var(--ct-mono);
+    opacity: 0; transition: all 0.25s; z-index: 9999;
+    pointer-events: none; white-space: nowrap; border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .ctr-wrap .ct-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .ctr-wrap .ct-toast.toast-green { background: #3fbd71; }
+  .ctr-wrap .ct-toast.toast-red { background: #e74c3c; }
+
   /* Export PDF : se fait via une fenêtre dédiée ouverte par ctExportPdf(),
      pas via @media print sur le document actuel — c'est plus fiable. */

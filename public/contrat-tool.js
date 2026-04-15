@@ -212,7 +212,6 @@
     }
   };
   window.ctLogout = async function () {
-    if (!confirm('Se déconnecter ?')) return;
     await _ctSb.auth.signOut();
   };
   // Bouton « Sauvegarder » en mode guest → ouvre le login modal
@@ -836,6 +835,10 @@
     if (!b.nom_interne) { alert('Le nom interne est obligatoire'); return; }
     if (!b.capacite_max) { alert('La capacité max est obligatoire'); return; }
 
+    // Preserve scroll position across re-render
+    var detail = document.getElementById('ctbien-detail');
+    var scrollY = detail ? detail.scrollTop : 0;
+
     if (_ctUser) {
       const r = await ctApi('bien-upsert', { bien: b });
       if (r && r.bien) {
@@ -843,6 +846,7 @@
         await ctLoadBiens();
         ctSelectedBienId = r.bien.id;
         ctRenderBiens();
+        if (detail) detail.scrollTop = scrollY;
         ctToast('Bien enregistré ✓', 'green');
       } else {
         alert('Erreur : ' + (r && r.error));
@@ -856,6 +860,7 @@
       ctTempBien = null;
       ctSelectedBienId = b.id;
       ctRenderBiens();
+      if (detail) detail.scrollTop = scrollY;
       ctShowSavePopup();
     }
   };
@@ -1448,25 +1453,29 @@
     doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
     doc.text(bien.adresse || '', M + 2, y); y += 6;
 
-    // Info grid
-    var infos = [
+    // Info grid — 2 colonnes par ligne
+    var row1 = [
       [L.surface, (bien.surface || '---') + ' ' + L.m2],
-      [L.pieces, String(bien.nb_pieces || '---')],
+      [L.pieces, String(bien.nb_pieces || '---')]
+    ];
+    var row2 = [
       [L.capacite, (bien.capacite_max || '---') + ' ' + L.pers]
     ];
-    if (bien.numero_declaration_mairie) infos.push([L.num_mairie, bien.numero_declaration_mairie]);
-    var gx = M + 2;
-    var colW = Math.floor(pw / Math.min(infos.length, 4));
-    doc.setFontSize(7);
-    infos.forEach(function(info) {
-      if (gx + colW > W - M + 5) { gx = M + 2; y += 10; }
-      checkPage(10);
-      doc.setFont('helvetica', 'bold'); doc.setTextColor(gray[0], gray[1], gray[2]);
-      doc.text(info[0].toUpperCase(), gx, y);
-      doc.setFont('helvetica', 'normal'); doc.setTextColor(dark[0], dark[1], dark[2]); doc.setFontSize(9);
-      doc.text(info[1], gx, y + 4);
+    if (bien.numero_declaration_mairie) row2.push([L.num_mairie, bien.numero_declaration_mairie]);
+    var halfW = Math.floor(pw / 2);
+    [row1, row2].forEach(function(row) {
+      var gx = M + 2;
       doc.setFontSize(7);
-      gx += colW;
+      checkPage(10);
+      row.forEach(function(info) {
+        doc.setFont('helvetica', 'bold'); doc.setTextColor(gray[0], gray[1], gray[2]);
+        doc.text(info[0].toUpperCase(), gx, y);
+        doc.setFont('helvetica', 'normal'); doc.setTextColor(dark[0], dark[1], dark[2]); doc.setFontSize(9);
+        doc.text(info[1], gx, y + 4);
+        doc.setFontSize(7);
+        gx += halfW;
+      });
+      y += 10;
     });
     y += 10;
 
@@ -1632,6 +1641,19 @@
         reglTxt = window.CT_DEFAULT_REGLEMENT_EN;
       }
       addPara(reglTxt);
+    }
+
+    // ── RIB (si paiement par virement) ──
+    if (d.mode_paiement === 'virement' && bailleur.iban) {
+      checkPage(30);
+      y += 6;
+      var ribTitle = lang === 'en' ? 'Bank details for wire transfer' : 'Coordonnées bancaires pour virement';
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(dark[0], dark[1], dark[2]);
+      doc.text(ribTitle, M + 2, y); y += 6;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(gray[0], gray[1], gray[2]);
+      doc.text('IBAN : ' + bailleur.iban, M + 2, y); y += 5;
+      if (bailleur.bic) { doc.text('BIC : ' + bailleur.bic, M + 2, y); y += 5; }
+      doc.text((lang === 'en' ? 'Account holder: ' : 'Titulaire : ') + bailleurName, M + 2, y); y += 8;
     }
 
     // ── FOOTER ──

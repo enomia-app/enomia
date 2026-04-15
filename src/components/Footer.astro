@@ -1,0 +1,57 @@
+<footer class="site-footer">
+  <div class="sf-inner">
+    <div class="sf-left">
+      <div class="sf-logo"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      Enomia
+    </div>
+    <div class="sf-right">
+      <a href="/blog">Blog</a>
+      <a href="/simulateur-rentabilite-airbnb">Simulateur</a>
+      <a href="/facture-location-saisonniere">Facture LCD</a>
+      <a href="/contrat-location-saisonniere">Contrat LCD</a>
+      <a href="/mentions-legales">Mentions légales</a>
+      <a href="/confidentialite">Confidentialité</a>
+      <span class="sf-copy">© Enomia 2026</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--bg-dark, #2b2d2b);
+    margin-top: 64px;
+  }
+  .sf-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: var(--max-w, 1120px); margin: 0 auto;
+    padding: 24px 40px; font-size: 13px;
+  }
+  .sf-left {
+    display: flex; align-items: center; gap: 10px;
+    color: var(--text-light, #e8e4dc); font-weight: 600;
+  }
+  .sf-logo {
+    width: 26px; height: 26px;
+    background: rgba(255,255,255,0.08); border-radius: 6px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 2px; padding: 6px;
+  }
+  .sf-logo .bar {
+    width: 100%; height: 1.5px;
+    background: var(--text-light, #e8e4dc); border-radius: 1px;
+  }
+  .sf-logo .bar:nth-child(2) { width: 65%; align-self: flex-start; }
+  .sf-right { display: flex; align-items: center; gap: 24px; }
+  .sf-right a { color: var(--text-dim, #8a8985); }
+  .sf-right a:hover { color: var(--text-light, #e8e4dc); }
+  .sf-copy { color: var(--text-dim, #8a8985); }
+
+  @media (max-width: 768px) {
+    .sf-inner {
+      padding: 24px 20px;
+      flex-direction: column; gap: 8px; text-align: center;
+    }
+    .sf-right { font-size: 11px; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  }
+</style>

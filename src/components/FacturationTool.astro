@@ -13,13 +13,18 @@
   <div class="fnav">
     <div class="fnav-left">
       <div class="fnav-title">Facturation <em>LCD</em></div>
-      <button class="btn-sm" id="fnav-save-btn" onclick="fOpenLoginModal()" style="display:none">Sauvegarder</button>
+    </div>
+    <div class="fnav-tabs">
+      <button class="fnav-tab active" data-screen="fscreen-dashboard" onclick="fShowScreen('fscreen-dashboard')">📄 Factures</button>
+      <button class="fnav-tab" data-screen="fscreen-biens" onclick="fShowScreen('fscreen-biens')">🏠 Mes biens</button>
+      <button class="fnav-tab" data-screen="fscreen-settings" onclick="fShowScreen('fscreen-settings')">⚙ Paramètres</button>
     </div>
     <div class="fnav-right">
-      <button class="btn-sm" onclick="fShowScreen('fscreen-dashboard')">Tableau de bord</button>
-      <button class="btn-sm" onclick="fShowSettingsModal()">Paramètres</button>
-      <button class="btn-sm" onclick="fShowScreen('fscreen-biens')">Mes biens</button>
-      <button class="btn-sm accent" onclick="fShowScreen('fscreen-new'); fResetForm()">+ Nouvelle facture</button>
+      <div class="fnav-user" id="fnav-user-badge" style="display:none">
+        <div class="fnav-avatar" id="fnav-avatar">?</div>
+        <span id="fnav-user-label">Se déconnecter</span>
+      </div>
+      <button class="btn-sm" id="fnav-save-btn" onclick="fOpenLoginModal()" style="display:none">Sauvegarder</button>
     </div>
   </div>
 
@@ -31,6 +36,7 @@
           <h2 class="dash-title">Mes <em>factures</em></h2>
           <div class="dash-sub">Générez vos factures de location courte durée</div>
         </div>
+        <button class="btn-sm accent" onclick="fShowScreen('fscreen-new'); fResetForm()">+ Nouvelle facture</button>
       </div>
 
       <div class="auth-hint" id="fauth-hint">
@@ -303,17 +309,17 @@
     </div>
   </div>
 
-  <!-- MODAL SETTINGS -->
-  <div id="fmodal-settings" class="modal-overlay" onclick="fCloseModalOnBg(event, 'fmodal-settings')">
-    <div class="modal-inner">
-      <div class="modal-header">
-        <div class="modal-title">Paramètres loueur</div>
-        <div class="modal-actions">
-          <button class="btn-sm accent" onclick="fSaveSettings()">✓ Sauvegarder</button>
-          <button class="modal-close" onclick="fCloseModal('fmodal-settings')">×</button>
+  <!-- SCREEN 4 — SETTINGS -->
+  <div id="fscreen-settings" class="screen">
+    <div class="dashboard">
+      <div class="dash-header">
+        <div>
+          <h2 class="dash-title">Vos <em>paramètres</em></h2>
+          <div class="dash-sub">Informations utilisées automatiquement sur toutes vos factures</div>
         </div>
+        <button class="btn-sm accent" onclick="fSaveSettings()">✓ Sauvegarder</button>
       </div>
-      <div class="modal-body">
+      <div style="max-width:560px">
         <div style="margin-bottom:26px">
           <div class="sec-t" style="font-size:14px;margin-bottom:16px"><span class="sec-num">01</span> Informations loueur</div>
           <div class="sg">

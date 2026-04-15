@@ -30,10 +30,34 @@
     padding: 14px 24px; border-bottom: 1px solid var(--fa-border);
     background: var(--fa-card); gap: 12px; flex-wrap: wrap;
   }
-  .fact-wrap .fnav-left { display: flex; align-items: center; gap: 12px; }
+  .fact-wrap .fnav-left { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
   .fact-wrap .fnav-title { font-family: var(--fa-display); font-size: 16px; font-weight: 700; color: var(--fa-text); }
   .fact-wrap .fnav-title em { font-style: italic; color: var(--fa-accent); }
-  .fact-wrap .fnav-right { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .fact-wrap .fnav-right { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; justify-content: flex-end; }
+  .fact-wrap .fnav-tabs { display: flex; gap: 4px; }
+  .fact-wrap .fnav-tab {
+    font-family: var(--fa-mono); font-size: 12px; font-weight: 500;
+    padding: 8px 14px; border: 1px solid transparent;
+    color: var(--fa-muted); background: transparent;
+    cursor: pointer; transition: all 0.2s; border-radius: 8px;
+    display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  }
+  .fact-wrap .fnav-tab:hover { color: var(--fa-text); background: var(--fa-mid); }
+  .fact-wrap .fnav-tab.active {
+    background: var(--fa-accent); color: #fff; border-color: var(--fa-accent);
+  }
+  .fact-wrap .fnav-user {
+    display: flex; align-items: center; gap: 8px; padding: 6px 12px;
+    border: 1px solid var(--fa-border); border-radius: 20px;
+    font-size: 11px; color: var(--fa-muted); cursor: pointer;
+  }
+  .fact-wrap .fnav-user:hover { border-color: var(--fa-accent); }
+  .fact-wrap .fnav-avatar {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--fa-accent); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 600;
+  }
 
   .fact-wrap .btn-sm {
     font-family: var(--fa-mono); font-size: 12px; font-weight: 500;
@@ -314,7 +338,6 @@
   .fact-wrap .modal-close:hover { color: var(--fa-text); }
   .fact-wrap .modal-body { overflow-y: auto; flex: 1; padding: 36px; }
 
-  .fact-wrap #fmodal-settings .modal-inner { max-width: 560px; }
   .fact-wrap #fmodal-bien .modal-inner { max-width: 560px; }
 
   /* ─── INVOICE DOC ─── */
@@ -403,5 +426,5 @@
     .fact-wrap .modal-inner { border: none; max-height: none; overflow: visible; box-shadow: none; }
     .fact-wrap .modal-body { padding: 0; overflow: visible; }
     .fact-wrap .invoice-doc { border: none; padding: 20px; margin: 0; max-width: 100%; }
-    .fact-wrap #fscreen-dashboard, .fact-wrap #fscreen-new, .fact-wrap #fscreen-biens, .fact-wrap #fmodal-settings, .fact-wrap #fmodal-bien { display: none !important; }
+    .fact-wrap #fscreen-dashboard, .fact-wrap #fscreen-new, .fact-wrap #fscreen-biens, .fact-wrap #fscreen-settings, .fact-wrap #fmodal-bien { display: none !important; }
   }

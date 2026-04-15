@@ -29,7 +29,7 @@ export default async function handler(req, res) {
   try {
     const attributes = { SOURCE: source || 'direct' };
     if (firstName) attributes.PRENOM = firstName;
-    if (nombreBiens) attributes.NOMBRE_BIENS = nombreBiens;
+    if (nombreBiens) attributes.NB_APPARTEMENT = nombreBiens;
 
     const response = await fetch('https://api.brevo.com/v3/contacts', {
       method: 'POST',

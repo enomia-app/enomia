@@ -5,38 +5,45 @@ export default async function handler(req, res) {
 
   const { email, firstName, nombreBiens, source } = req.body;
 
-  if (!email || !firstName) {
-    return res.status(400).json({ error: 'Missing required fields' });
+  if (!email) {
+    return res.status(400).json({ error: 'Missing email' });
   }
 
-  const publicationId = process.env.BEEHIIV_PUBLICATION_ID;
-  const apiKey = process.env.BEEHIIV_API_KEY;
+  const apiKey = process.env.BREVO_API_KEY;
+  const listNL = parseInt(process.env.BREVO_LIST_ID, 10);
+  const listOutils = parseInt(process.env.BREVO_LIST_OUTILS, 10) || listNL;
+  const listChannel = parseInt(process.env.BREVO_LIST_CHANNEL, 10) || listNL;
 
-  if (!publicationId || !apiKey) {
+  if (!apiKey || !listNL) {
     return res.status(500).json({ error: 'Missing API credentials' });
   }
 
+  // Route to the right list based on source
+  let listId = listNL;
+  if (source === 'ChannelManager') {
+    listId = listChannel;
+  } else if (['Contrat', 'Facturation', 'Simulateur_Auth'].includes(source)) {
+    listId = listOutils;
+  }
+
   try {
-    const response = await fetch(
-      `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          email,
-          reactivate_existing: false,
-          send_welcome_email: false,
-          utm_source: source || 'direct',
-          custom_fields: [
-            { name: 'first_name', value: firstName },
-            { name: 'nombre_biens', value: nombreBiens || '0' },
-          ],
-        }),
-      }
-    );
+    const attributes = { SOURCE: source || 'direct' };
+    if (firstName) attributes.PRENOM = firstName;
+    if (nombreBiens) attributes.NOMBRE_BIENS = nombreBiens;
+
+    const response = await fetch('https://api.brevo.com/v3/contacts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'api-key': apiKey,
+      },
+      body: JSON.stringify({
+        email,
+        attributes,
+        listIds: [listId],
+        updateEnabled: true,
+      }),
+    });
 
     if (!response.ok) {
       const error = await response.json();
@@ -44,30 +51,9 @@ export default async function handler(req, res) {
     }
 
     const data = await response.json();
-    const subscriptionId = data?.data?.id;
-
-    // Add tags via dedicated endpoint
-    if (subscriptionId) {
-      const tags = ['sequence_waitlist_beta'];
-      if (nombreBiens) tags.push(`${nombreBiens}_biens`);
-      if (source) tags.push(source);
-
-      await fetch(
-        `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions/${subscriptionId}/tags`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`,
-          },
-          body: JSON.stringify({ tags }),
-        }
-      ).catch(() => {}); // best-effort, don't block response
-    }
-
     return res.status(200).json({ success: true, data });
   } catch (error) {
-    console.error('Beehiiv API error:', error);
+    console.error('Brevo API error:', error);
     return res.status(500).json({ error: error.message });
   }
 }

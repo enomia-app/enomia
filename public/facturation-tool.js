@@ -197,14 +197,22 @@ if (!window.__factInit) {
     const hint = document.getElementById('fauth-hint');
     if (!hint) return;
     var saveBtn = document.getElementById('fnav-save-btn');
+    var userBadge = document.getElementById('fnav-user-badge');
     if (_fuser) {
-      hint.innerHTML = `<span>✓ <strong>Connecté</strong> — ${_fuser.email}. Vos données sont sauvegardées.</span>
-        <button class="btn-sm" onclick="fLogout()">Se déconnecter</button>`;
+      hint.innerHTML = `<span>✓ <strong>Connecté</strong> — ${_fuser.email}. Vos données sont sauvegardées.</span>`;
       if (saveBtn) saveBtn.style.display = 'none';
+      if (userBadge) {
+        userBadge.style.display = 'flex';
+        userBadge.onclick = function() { fLogout(); };
+        var initials = (_fuser.email || '?').substring(0, 2).toUpperCase();
+        document.getElementById('fnav-avatar').textContent = initials;
+        document.getElementById('fnav-user-label').textContent = 'Se déconnecter';
+      }
     } else {
       hint.innerHTML = `<span>🔒 <strong>Mode invité</strong> — vos données sont stockées localement dans ce navigateur.</span>
         <button class="btn-sm accent" onclick="fOpenLoginModal()">Se connecter</button>`;
       if (saveBtn) saveBtn.style.display = '';
+      if (userBadge) userBadge.style.display = 'none';
     }
   }
 
@@ -231,7 +239,7 @@ if (!window.__factInit) {
     localStorage.setItem('fact_expecting_signin', '1');
     var res = await _fsb.auth.signInWithOtp({ email: email, options: { emailRedirectTo: window.location.origin + '/facturation-lcd' } });
     if (res.error) { fb.textContent = 'Erreur : ' + res.error.message; fb.style.color = 'var(--fa-red)'; }
-    else { fb.textContent = '✓ Lien envoyé à ' + email + '. Vérifiez votre boîte.'; fb.style.color = 'var(--fa-green)'; }
+    else { fb.textContent = '✓ Lien envoyé à ' + email + '. Vérifiez votre boîte.'; fb.style.color = 'var(--fa-green)'; fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, source: 'Facturation' }) }).catch(function () {}); }
   };
   window.fLogout = async function() {
     await _fsb.auth.signOut();
@@ -258,18 +266,24 @@ if (!window.__factInit) {
     document.querySelectorAll('#fact-wrap .screen').forEach(s => s.classList.remove('active'));
     const el = document.getElementById(id);
     if (el) el.classList.add('active');
+    document.querySelectorAll('.fnav-tab').forEach(t => {
+      t.classList.toggle('active', t.dataset.screen === id);
+    });
     if (id === 'fscreen-dashboard') fRenderTable(fcurrentYear);
     if (id === 'fscreen-biens') fRenderBiens();
     if (id === 'fscreen-new') fPopulateBienSelect();
+    if (id === 'fscreen-settings') fPopulateSettings();
   };
 
   // ─── SETTINGS ───
-  window.fShowSettingsModal = function() {
+  function fPopulateSettings() {
     document.getElementById('fset-nom').value = fsettings.nom || '';
     document.getElementById('fset-adresse').value = fsettings.adresse || '';
     document.getElementById('fset-siret').value = fsettings.siret || '';
     document.getElementById('fset-mention').value = fsettings.mention || '';
-    fOpenModal('fmodal-settings');
+  }
+  window.fShowSettingsModal = function() {
+    fShowScreen('fscreen-settings');
   };
   window.fSaveSettings = async function() {
     fsettings = {
@@ -289,7 +303,6 @@ if (!window.__factInit) {
     if (document.getElementById('fl-nom')) document.getElementById('fl-nom').value = fsettings.nom || '';
     if (document.getElementById('fl-adresse')) document.getElementById('fl-adresse').value = fsettings.adresse || '';
     if (document.getElementById('fl-siret')) document.getElementById('fl-siret').value = fsettings.siret || '';
-    fCloseModal('fmodal-settings');
     fToast('Paramètres sauvegardés', 'green');
   };
 

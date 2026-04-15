@@ -19,7 +19,7 @@
   --font-body: 'Inter', sans-serif;
 }
 html { scroll-behavior: smooth; }
-body { background: var(--black); color: var(--white); font-family: var(--font-body); font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+body { background: var(--black); color: var(--white); font-family: var(--font-body); font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; padding-bottom: 48px; }
 
 /* ═══ HEADER ═══ */
 .eh { position: sticky; top: 0; z-index: 100; background: rgba(247,246,243,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
@@ -70,6 +70,9 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
   .lot-break { display: block; width: 100%; height: 0; }
   .lot-num { padding-top: 4px; }
 }
+
+/* TOOL WRAP (cadre comme contrat/facture) */
+.sim-wrap { max-width: 1200px; margin: 24px auto 0; padding: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--dark); }
 
 .screen { display: none; }
 .screen.active { display: block; }
@@ -475,6 +478,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     <a href="/facture-location-saisonniere" class="eh-mobile-link">Factures LCD</a>
   </div>
 </header>
+
+<div class="sim-wrap">
 
 <!-- LANDING PAGE SIMULATEUR -->
 <div class="screen active" id="screen-auth">
@@ -1080,6 +1085,8 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     </div><!-- end calc-right -->
   </div>
 </div>
+
+</div><!-- end sim-wrap -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
@@ -1694,15 +1701,18 @@ function initSliders(){
   Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sv(id,s.value);});
   Object.keys(SV2_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sv2(id,s.value);});
 }
-function subscribeNL(){
+async function subscribeNL(){
   const email=document.getElementById('nl-email').value.trim();
   const prenom=document.getElementById('nl-prenom')?.value.trim()||'';
   if(!email||!email.includes('@'))return;
   const btn=document.querySelector('.nl-capture-form button');
-  btn.textContent='✓ Inscrit !';btn.style.background='var(--green)';
-  document.getElementById('nl-email').value='';
-  if(document.getElementById('nl-prenom'))document.getElementById('nl-prenom').value='';
-  // En production : appel API Beehiiv ici
+  const orig=btn.textContent;
+  btn.disabled=true;btn.textContent='Envoi…';
+  try{
+    const r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,firstName:prenom||'Visiteur',source:'Simulateur_NL'})});
+    if(r.ok){btn.textContent='✓ Inscrit !';btn.style.background='var(--green)';document.getElementById('nl-email').value='';if(document.getElementById('nl-prenom'))document.getElementById('nl-prenom').value='';}
+    else{btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.textContent=orig;},2000);}
+  }catch(_){btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.textContent=orig;},2000);}
 }
 initSliders();
 

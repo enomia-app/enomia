@@ -208,6 +208,7 @@
     } else {
       fb.textContent = '✓ Lien envoyé à ' + email + '. Vérifiez votre boîte.';
       fb.style.color = 'var(--ct-green)';
+      fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, source: 'Contrat' }) }).catch(function () {});
     }
   };
   window.ctLogout = async function () {
@@ -813,7 +814,7 @@
     // Équipements
     b.equipements = Array.from(document.querySelectorAll('#ctb-equip-grid input[type=checkbox]:checked')).map(i => i.dataset.label || i.dataset.eq);
     // Radios
-    document.querySelectorAll('[data-group]').forEach(g => {
+    document.querySelectorAll('#ctbien-detail [data-group]').forEach(g => {
       const field = g.dataset.group;
       const active = g.querySelector('.radio-pill.active');
       if (active) {
@@ -1009,8 +1010,8 @@
         '<div class="field-row"><div class="field"><label class="field-label">Email</label><input type="email" class="input" id="ctw-email" value="' + esc(ctWizardData.locataire_email) + '"></div>' +
         '<div class="field"><label class="field-label">Téléphone</label><input type="tel" class="input" id="ctw-tel" value="' + esc(ctWizardData.locataire_telephone) + '"></div></div>' +
         '<div class="field"><label class="field-label">Adresse de résidence principale</label><input type="text" class="input" id="ctw-addr" value="' + esc(ctWizardData.locataire_adresse) + '"></div>' +
-        '<div class="field-row"><div class="field"><label class="field-label">Adultes</label><input type="number" class="input" id="ctw-ad" value="' + (ctWizardData.nb_adultes || 2) + '" min="1"></div>' +
-        '<div class="field"><label class="field-label">Enfants</label><input type="number" class="input" id="ctw-en" value="' + (ctWizardData.nb_enfants || 0) + '" min="0"></div></div>' +
+        '<div class="field-row"><div class="field"><label class="field-label">Adultes</label><input type="number" class="input" id="ctw-ad" value="' + (ctWizardData.nb_adultes || 2) + '" min="1" onchange="ctRecalcTaxe()"></div>' +
+        '<div class="field"><label class="field-label">Enfants</label><input type="number" class="input" id="ctw-en" value="' + (ctWizardData.nb_enfants || 0) + '" min="0" onchange="ctRecalcTaxe()"></div></div>' +
 
         '<div class="section-title" style="margin-top:28px"><span class="section-num">03</span> Dates du séjour</div>' +
         '<div class="field-row-4"><div class="field"><label class="field-label">Arrivée</label><input type="date" class="input" id="ctw-arr" value="' + (ctWizardData.date_arrivee || '') + '" onchange="ctRecalcNights()"></div>' +
@@ -1020,7 +1021,7 @@
         '<div id="ctw-nights-info" style="font-family:var(--ct-mono);font-size:11px;color:var(--ct-muted);margin-bottom:20px">→ Durée : <strong id="ctw-nights-num">—</strong></div>' +
 
         '<div class="section-title" style="margin-top:10px"><span class="section-num">04</span> Montants & paiements</div>' +
-        '<div class="field-row"><div class="field"><label class="field-label">Loyer total <span class="req">*</span></label><input type="number" class="input" id="ctw-prix" value="' + (ctWizardData.prix_total || '') + '" onchange="ctRecalcAcompte()"></div>' +
+        '<div class="field-row"><div class="field"><label class="field-label">Loyer total <span class="req">*</span></label><input type="number" class="input" id="ctw-prix" value="' + (ctWizardData.prix_total || '') + '" onchange="ctRecalcAcompte();ctRecalcTaxe()"></div>' +
         '<div class="field"><label class="field-label">Mode de paiement</label><select class="select" id="ctw-paie">' + ['virement', 'chèque', 'CB', 'espèces'].map(m => '<option' + (ctWizardData.mode_paiement === m ? ' selected' : '') + '>' + m + '</option>').join('') + '</select></div></div>' +
 
         '<div class="field"><label class="field-label">Acompte (%)</label><div class="radio-group" id="ctw-ac-pc">' +
@@ -1046,28 +1047,7 @@
       // Recalculer les nuits
       setTimeout(ctRecalcNights, 0);
       // Auto-calculate taxe de séjour if DB loaded and dates set
-      setTimeout(function () {
-        var taxInput = document.getElementById('ctw-tax');
-        var taxHint = document.getElementById('ctw-tax-hint');
-        if (!taxInput || !bien) return;
-        var calc = ctAutoCalcTaxe(bien, ctWizardData);
-        if (calc && taxHint) {
-          taxHint.textContent = calc.unite === '%' ?
-            calc.taux + ' % du prix/nuit \u00d7 ' + calc.nuits + ' nuits = ' + fmtEurP(calc.total) + ' (' + calc.ville + ')' :
-            calc.taux + ' \u20ac/pers/nuit \u00d7 ' + calc.personnes + ' pers \u00d7 ' + calc.nuits + ' nuits = ' + fmtEurP(calc.total) + ' (' + calc.ville + ')';
-          taxHint.style.color = 'var(--ct-green)';
-          // Pre-fill only if current value is 0 (don't override user edits)
-          if (!ctWizardData.taxe_sejour_montant || ctWizardData.taxe_sejour_montant === 0) {
-            taxInput.value = calc.total;
-          }
-        } else if (taxHint) {
-          var ville = bien.ville || (bien.adresse ? _ctExtractVille(bien.adresse) : '');
-          if (ville && _ctTaxeDb) {
-            taxHint.textContent = 'Commune « ' + ville + ' » non trouvée dans la base de taxe de séjour';
-            taxHint.style.color = 'var(--ct-muted2)';
-          }
-        }
-      }, 50);
+      setTimeout(ctRecalcTaxe, 50);
     } else {
       // Étape 3 = aperçu + téléchargement
       const bien = ctBiens.find(b => b.id === ctWizardData.bien_id);
@@ -1163,7 +1143,44 @@
     const n = nights(d1, d2);
     const el = document.getElementById('ctw-nights-num');
     if (el) el.textContent = n + ' nuit' + (n > 1 ? 's' : '');
+    ctRecalcTaxe();
   };
+
+  // Recalculate taxe de séjour from current wizard inputs
+  function ctRecalcTaxe() {
+    var taxInput = document.getElementById('ctw-tax');
+    var taxHint = document.getElementById('ctw-tax-hint');
+    if (!taxInput) return;
+    var bien = ctBiens.find(function (b) { return b.id === ctWizardData.bien_id; });
+    if (!bien) return;
+    // Read live values from inputs
+    var liveData = {
+      date_arrivee: document.getElementById('ctw-arr') ? document.getElementById('ctw-arr').value : ctWizardData.date_arrivee,
+      date_depart: document.getElementById('ctw-dep') ? document.getElementById('ctw-dep').value : ctWizardData.date_depart,
+      nb_adultes: document.getElementById('ctw-ad') ? document.getElementById('ctw-ad').value : ctWizardData.nb_adultes,
+      nb_enfants: document.getElementById('ctw-en') ? document.getElementById('ctw-en').value : ctWizardData.nb_enfants,
+      prix_total: document.getElementById('ctw-prix') ? document.getElementById('ctw-prix').value : ctWizardData.prix_total
+    };
+    var calc = ctAutoCalcTaxe(bien, liveData);
+    if (calc && taxHint) {
+      taxHint.textContent = calc.unite === '%' ?
+        calc.taux + ' % du prix/nuit \u00d7 ' + calc.nuits + ' nuits = ' + fmtEurP(calc.total) + ' (' + calc.ville + ')' :
+        calc.taux + ' \u20ac/pers/nuit \u00d7 ' + calc.personnes + ' pers \u00d7 ' + calc.nuits + ' nuits = ' + fmtEurP(calc.total) + ' (' + calc.ville + ')';
+      taxHint.style.color = 'var(--ct-green)';
+      // Pre-fill only if user hasn't manually edited (still 0 or matches previous calc)
+      var current = parseFloat(taxInput.value) || 0;
+      if (current === 0) {
+        taxInput.value = calc.total;
+      }
+    } else if (taxHint) {
+      var ville = bien.ville || (bien.adresse ? _ctExtractVille(bien.adresse) : '');
+      if (ville && _ctTaxeDb) {
+        taxHint.textContent = 'Commune \u00ab ' + ville + ' \u00bb non trouv\u00e9e dans la base de taxe de s\u00e9jour';
+        taxHint.style.color = 'var(--ct-muted2)';
+      }
+    }
+  }
+  window.ctRecalcTaxe = ctRecalcTaxe;
 
   window.ctSetAcomptePct = function (pct, btn) {
     ctWizardData.acompte_pourcentage = pct;
@@ -1434,7 +1451,6 @@
     var infos = [
       [L.surface, (bien.surface || '---') + ' ' + L.m2],
       [L.pieces, String(bien.nb_pieces || '---')],
-      [L.classement, bien.classement || '---'],
       [L.capacite, (bien.capacite_max || '---') + ' ' + L.pers]
     ];
     if (bien.numero_declaration_mairie) infos.push([L.num_mairie, bien.numero_declaration_mairie]);

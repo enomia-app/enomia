@@ -134,6 +134,22 @@ export default async function handler(req, res) {
 
     if (!sent) return res.status(500).json({ error: "Erreur d'envoi email" })
 
+    // Add to Brevo (best-effort, don't block response)
+    const brevoKey = process.env.BREVO_API_KEY
+    const brevoList = parseInt(process.env.BREVO_LIST_OUTILS, 10)
+    if (brevoKey && brevoList) {
+      fetch('https://api.brevo.com/v3/contacts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'api-key': brevoKey },
+        body: JSON.stringify({
+          email,
+          attributes: { PRENOM: prenom || '', SOURCE: 'Simulateur_Auth' },
+          listIds: [brevoList],
+          updateEnabled: true,
+        }),
+      }).catch(() => {})
+    }
+
     return res.status(200).json({ message: 'Lien envoyé' })
   }
 

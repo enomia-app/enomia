@@ -256,7 +256,7 @@ export const cities: City[] = [
       },
     ],
     regulation:
-      "Bordeaux fait partie des villes en zone tendue, ce qui déclenche plusieurs obligations. Depuis 2018, toute location meublée touristique doit être déclarée à la mairie, qui attribue un numéro à 13 chiffres obligatoire sur l'annonce Airbnb (amende jusqu'à 10 000 € en cas d'absence). La résidence principale est limitée à 120 nuitées par an — au-delà, le bien bascule en résidence secondaire avec un régime différent. Pour une résidence secondaire dédiée à la location courte durée, un changement d'usage à la mairie est obligatoire, avec compensation (convertir un bureau en logement ailleurs) de plus en plus difficile à obtenir depuis la loi Le Meur de 2024. Bordeaux applique aussi une taxe de séjour de 0,65 € à 5 € par nuit et par voyageur adulte selon le classement du bien, collectée automatiquement par Airbnb.",
+      "Bordeaux fait partie des **villes en zone tendue**, ce qui déclenche plusieurs obligations.\n\n**Enregistrement obligatoire.** Depuis 2018, toute location meublée touristique doit être déclarée à la mairie, qui attribue un **numéro à 13 chiffres** obligatoire sur l'annonce Airbnb. Amende jusqu'à **10 000 €** en cas d'absence.\n\n**Limite de 120 nuitées/an.** La résidence principale est plafonnée à 120 nuitées par an. Au-delà, le bien bascule en résidence secondaire avec un régime différent.\n\n**Changement d'usage (résidence secondaire).** Pour une résidence secondaire dédiée à la location courte durée, un **changement d'usage** à la mairie est obligatoire, avec compensation (convertir un bureau en logement ailleurs) de plus en plus difficile à obtenir depuis la **loi Le Meur 2024**.\n\n**Taxe de séjour.** De **0,65 € à 5 €** par nuit et par voyageur adulte selon le classement du bien, collectée automatiquement par Airbnb.",
     concreteExample: {
       bienType: 'T2',
       surface: 40,
@@ -451,7 +451,7 @@ export const cities: City[] = [
       },
     ],
     regulation:
-      "Lyon est l'une des villes françaises avec la réglementation la plus stricte sur la location courte durée. Enregistrement en mairie obligatoire depuis 2019 avec numéro à 13 chiffres affiché sur l'annonce Airbnb. Limite de 120 nuitées par an pour les résidences principales, contrôlée activement par la mairie (courriers d'avertissement en cas de dépassement). Depuis 2024, le changement d'usage pour les résidences secondaires exige une compensation dans le centre (1er, 2e, 3e, 6e, 7e arrondissements) : il faut convertir une surface équivalente de bureau en logement dans le même arrondissement, ou verser une compensation financière. Cette règle rend quasi impossible l'achat d'un bien dédié à la LCD dans l'hypercentre pour un nouvel investisseur. La taxe de séjour lyonnaise va de 0,85 € à 5 € par nuit et par adulte.",
+      "Lyon est l'une des **villes françaises avec la réglementation la plus stricte** sur la location courte durée.\n\n**Enregistrement en mairie.** Obligatoire depuis 2019, avec **numéro à 13 chiffres** affiché sur l'annonce Airbnb.\n\n**Limite 120 nuitées/an.** Pour les résidences principales, **contrôlée activement** par la mairie (courriers d'avertissement en cas de dépassement).\n\n**Compensation obligatoire dans l'hypercentre.** Depuis 2024, le changement d'usage pour les résidences secondaires exige une compensation dans les **1er, 2e, 3e, 6e et 7e arrondissements** : convertir une surface équivalente de bureau en logement dans le même arrondissement, ou verser une compensation financière. Cette règle rend **quasi impossible** l'achat d'un bien dédié à la LCD dans l'hypercentre pour un nouvel investisseur.\n\n**Taxe de séjour.** De **0,85 € à 5 €** par nuit et par adulte.",
     concreteExample: {
       bienType: 'T2',
       surface: 38,
@@ -606,7 +606,7 @@ export const cities: City[] = [
       },
     ],
     regulation:
-      "Nice applique une réglementation parmi les plus strictes de la Côte d'Azur. Enregistrement mairie obligatoire avec numéro sur l'annonce. Limite 120 nuitées pour les résidences principales, renforcée par des contrôles réguliers. Depuis 2024, le changement d'usage pour les résidences secondaires est soumis à compensation obligatoire dans les quartiers centraux, ce qui a fait chuter le nombre de nouveaux meublés touristiques. La taxe de séjour varie de 1 € à 5 € par nuit et par voyageur adulte selon le classement, collectée automatiquement par Airbnb.",
+      "Nice applique une **réglementation parmi les plus strictes** de la Côte d'Azur.\n\n**Enregistrement mairie obligatoire** avec **numéro à 13 chiffres** sur l'annonce.\n\n**Limite 120 nuitées/an** pour les résidences principales, **renforcée par des contrôles réguliers**.\n\n**Compensation obligatoire.** Depuis 2024, le changement d'usage pour les résidences secondaires est soumis à **compensation obligatoire** dans les quartiers centraux, ce qui a **fait chuter le nombre de nouveaux meublés touristiques**.\n\n**Taxe de séjour.** De **1 € à 5 €** par nuit et par voyageur adulte selon le classement, collectée automatiquement par Airbnb.",
     concreteExample: {
       bienType: 'T2',
       surface: 42,
@@ -761,7 +761,7 @@ export const cities: City[] = [
       },
     ],
     regulation:
-      "Marseille a mis en place l'enregistrement obligatoire pour les meublés touristiques en 2023 avec le numéro à 13 chiffres. La limite 120 nuitées pour résidence principale s'applique. La ville n'a pas encore instauré de compensation obligatoire pour le changement d'usage (contrairement à Paris, Lyon, Nice), ce qui laisse plus de liberté aux investisseurs. Attention : certaines copropriétés du centre-ville ont voté l'interdiction de la location courte durée dans leur règlement — toujours vérifier avant d'acheter. Taxe de séjour de 0,50 € à 3 € par nuit.",
+      "**Enregistrement obligatoire.** Marseille a mis en place l'enregistrement pour les meublés touristiques en 2023, avec **numéro à 13 chiffres** sur l'annonce.\n\n**Limite 120 nuitées/an** pour résidence principale.\n\n**Pas de compensation obligatoire.** Contrairement à **Paris, Lyon ou Nice**, la ville n'a pas encore instauré de compensation pour le changement d'usage, ce qui **laisse plus de liberté aux investisseurs**.\n\n**⚠️ Attention copropriétés.** Certaines copropriétés du centre-ville ont voté **l'interdiction de la location courte durée** dans leur règlement — **toujours vérifier avant d'acheter**.\n\n**Taxe de séjour.** De **0,50 € à 3 €** par nuit.",
     concreteExample: {
       bienType: 'T2',
       surface: 45,
@@ -916,7 +916,7 @@ export const cities: City[] = [
       },
     ],
     regulation:
-      "Toulouse a mis en place l'enregistrement en mairie depuis 2020 avec numéro obligatoire sur l'annonce. La limite 120 nuitées résidence principale s'applique normalement. Pas de compensation obligatoire pour le changement d'usage en résidence secondaire, ce qui rend la ville beaucoup plus accessible aux investisseurs LCD que Paris, Lyon ou Nice. La taxe de séjour varie de 0,60 € à 3 € par nuit, collectée par Airbnb.",
+      "**Enregistrement en mairie.** Obligatoire depuis 2020, avec **numéro à 13 chiffres** sur l'annonce.\n\n**Limite 120 nuitées/an** pour résidence principale.\n\n**Pas de compensation obligatoire.** Pas d'obligation pour le changement d'usage en résidence secondaire, ce qui rend la ville **beaucoup plus accessible aux investisseurs LCD** que **Paris, Lyon ou Nice**.\n\n**Taxe de séjour.** De **0,60 € à 3 €** par nuit, collectée par Airbnb.",
     concreteExample: {
       bienType: 'T2',
       surface: 42,
@@ -1108,7 +1108,7 @@ export const cities: City[] = [
       },
     ],
     regulation:
-      "Strasbourg a mis en place l'enregistrement obligatoire pour les meublés touristiques avec numéro à 13 chiffres affiché sur l'annonce Airbnb. La limite 120 nuitées par an pour les résidences principales s'applique strictement. Depuis 2023, la ville demande une autorisation de changement d'usage pour les résidences secondaires dédiées à la location courte durée dans les quartiers centraux, sans compensation obligatoire à date mais des restrictions sont à l'étude. La taxe de séjour va de 0,75 € à 5 € par nuit et par voyageur adulte, collectée automatiquement par Airbnb. Attention : certaines copropriétés anciennes du centre historique ont inscrit l'interdiction de la location courte durée dans leur règlement — à vérifier avant achat.",
+      "**Enregistrement obligatoire** avec **numéro à 13 chiffres** affiché sur l'annonce Airbnb.\n\n**Limite 120 nuitées/an** strictement appliquée pour les résidences principales.\n\n**Changement d'usage au centre.** Depuis 2023, la ville demande une **autorisation de changement d'usage** pour les résidences secondaires dédiées à la LCD dans les quartiers centraux. Pas de compensation obligatoire à date, mais **des restrictions sont à l'étude**.\n\n**Taxe de séjour.** De **0,75 € à 5 €** par nuit et par voyageur adulte, collectée automatiquement par Airbnb.\n\n**⚠️ Attention copropriétés.** Certaines copropriétés anciennes du **centre historique** ont inscrit **l'interdiction de la LCD** dans leur règlement — **à vérifier avant achat**.",
     concreteExample: {
       bienType: 'T2',
       surface: 42,
@@ -1300,7 +1300,7 @@ export const cities: City[] = [
       },
     ],
     regulation:
-      "Lille a mis en place l'enregistrement obligatoire pour les meublés touristiques avec numéro à 13 chiffres affiché sur l'annonce Airbnb, amende jusqu'à 10 000 € en cas d'absence. La limite 120 nuitées par an pour les résidences principales s'applique. À ce jour Lille n'impose pas de compensation obligatoire pour le changement d'usage en résidence secondaire (contrairement à Paris, Lyon, Nice), ce qui laisse plus de marge aux investisseurs. La taxe de séjour varie de 0,60 € à 3 € par nuit, collectée automatiquement par Airbnb. Certaines copropriétés du Vieux-Lille ont voté l'interdiction de la LCD — toujours vérifier avant d'acheter.",
+      "**Enregistrement obligatoire** avec **numéro à 13 chiffres** affiché sur l'annonce Airbnb. Amende jusqu'à **10 000 €** en cas d'absence.\n\n**Limite 120 nuitées/an** pour les résidences principales.\n\n**Pas de compensation obligatoire.** À ce jour, Lille n'impose pas de compensation pour le changement d'usage en résidence secondaire, contrairement à **Paris, Lyon ou Nice** — ce qui **laisse plus de marge aux investisseurs**.\n\n**Taxe de séjour.** De **0,60 € à 3 €** par nuit, collectée automatiquement par Airbnb.\n\n**⚠️ Attention Vieux-Lille.** Certaines copropriétés du **Vieux-Lille** ont voté **l'interdiction de la LCD** — **toujours vérifier avant d'acheter**.",
     concreteExample: {
       bienType: 'T2',
       surface: 45,

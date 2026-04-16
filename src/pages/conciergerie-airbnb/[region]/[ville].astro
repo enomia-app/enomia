@@ -438,7 +438,9 @@ const faqLd = {
       </div>
 
       <h2>Réglementation Airbnb à {c.displayName} en 2026 : ce que la conciergerie doit gérer</h2>
-      <p>{c.regulation}</p>
+      {c.regulation.split('\n\n').map((para) => (
+        <p set:html={para.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')} />
+      ))}
 
       <h2>Les quartiers les plus rentables pour un Airbnb à {c.displayName}</h2>
       <p>Le prix d'achat et le rendement locatif varient fortement selon le quartier. Voici les zones où un bien Airbnb est le plus performant en 2026.</p>

@@ -91,7 +91,7 @@ const breadcrumbLd = {
       </div>
       <div class="rg-stat">
         <strong>{citiesInRegion.reduce((s, c) => s + c.conciergeries.length, 0)}</strong>
-        conciergeries compar\u00e9es
+        conciergeries comparées
       </div>
     </div>
 
@@ -100,22 +100,22 @@ const breadcrumbLd = {
         <a href={`/conciergerie-airbnb/${city.regionSlug}/${city.slug}`} class="rg-card">
           <div class="rg-card-name">Conciergerie {city.displayName}</div>
           <div class="rg-card-meta">
-            <span>{city.conciergeries.length} agences compar\u00e9es</span>
+            <span>{city.conciergeries.length} agences comparées</span>
             <span>{city.activeListings.toLocaleString('fr-FR')} annonces</span>
-            <span>{city.priceLow}-{city.priceHigh} \u20ac/nuit</span>
+            <span>{city.priceLow}-{city.priceHigh} €/nuit</span>
           </div>
           <div class="rg-card-desc">{city.metaDescription.split('.')[0]}.</div>
-          <div class="rg-card-arrow">Voir le comparatif \u2192</div>
+          <div class="rg-card-arrow">Voir le comparatif →</div>
         </a>
       ))}
     </div>
 
     <div class="rg-cta">
-      <h3>Simulez votre rentabilit\u00e9 en {region.displayName}</h3>
-      <p>Notre outil gratuit calcule votre cashflow avec et sans conciergerie. Fiscalit\u00e9 LMNP, charges, taux d\u2019occupation. 2 minutes.</p>
-      <a href="/simulateur-rentabilite-airbnb">\u2192 Simuler ma rentabilit\u00e9</a>
+      <h3>Simulez votre rentabilité en {region.displayName}</h3>
+      <p>Notre outil gratuit calcule votre cashflow avec et sans conciergerie. Fiscalité LMNP, charges, taux d'occupation. 2 minutes.</p>
+      <a href="/simulateur-rentabilite-airbnb">→ Simuler ma rentabilité</a>
     </div>
 
-    <a href="/conciergerie-airbnb" class="rg-back">\u2190 Retour au guide national</a>
+    <a href="/conciergerie-airbnb" class="rg-back">← Retour au guide national</a>
   </div>
 </ToolLayout>

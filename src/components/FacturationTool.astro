@@ -20,11 +20,10 @@
       <button class="fnav-tab" data-screen="fscreen-settings" onclick="fShowScreen('fscreen-settings')">⚙ Paramètres</button>
     </div>
     <div class="fnav-right">
-      <div class="fnav-user" id="fnav-user-badge" style="display:none" onclick="fLogout()">
-        <div class="fnav-avatar" id="fnav-avatar">?</div>
-        <span id="fnav-user-label">email</span>
+      <div class="fnav-user" id="fnav-user-badge" onclick="fOpenLoginModal()">
+        <div class="fnav-avatar" id="fnav-avatar">👤</div>
+        <span id="fnav-user-label">Se connecter</span>
       </div>
-      <button class="btn-sm" id="fnav-login-btn" onclick="fOpenLoginModal()">Se connecter</button>
     </div>
   </div>
 
@@ -67,13 +66,18 @@
         </div>
       </div>
 
-      <div class="table-wrap">
+      <div class="table-wrap" id="finvoice-table-wrap">
         <table>
           <thead>
             <tr><th>Client</th><th>Bien</th><th>Séjour</th><th>Montant</th><th>Statut</th><th></th></tr>
           </thead>
           <tbody id="finvoice-tbody"></tbody>
         </table>
+      </div>
+      <div id="finvoice-empty-cta" style="display:none;text-align:center;padding:40px 20px;border:1px dashed var(--fa-border);border-radius:10px">
+        <div style="font-family:var(--fa-display);font-size:17px;font-weight:600;color:var(--fa-text);margin-bottom:8px">📄 Aucune facture</div>
+        <div style="font-size:13px;color:var(--fa-muted);line-height:1.6;margin-bottom:18px;max-width:420px;margin-left:auto;margin-right:auto">Connectez-vous en 1 clic pour retrouver vos factures sur tous vos terminaux (téléphone · ordinateur).</div>
+        <button class="btn-sm accent" onclick="fOpenLoginModal()">👤 Se connecter</button>
       </div>
 
       <div class="legal-disclaimer" style="margin-top:16px">

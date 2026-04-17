@@ -61,9 +61,9 @@
   .ctr-wrap .ctnav-user:hover { border-color: var(--ct-accent); }
   .ctr-wrap .ctnav-avatar {
     width: 22px; height: 22px; border-radius: 50%;
-    background: var(--ct-accent); color: #fff;
+    background: var(--ct-mid); color: var(--ct-text2);
     display: flex; align-items: center; justify-content: center;
-    font-size: 10px; font-weight: 600;
+    font-size: 11px; font-weight: 600; overflow: hidden;
   }
 
   /* ─── BUTTONS ─── */
@@ -152,6 +152,13 @@
     .ctr-wrap .field-row, .ctr-wrap .field-row-3, .ctr-wrap .field-row-4 {
       grid-template-columns: 1fr;
     }
+  }
+  @media (max-width: 700px) {
+    .ctr-wrap { border: none; border-radius: 0; box-shadow: none; margin: 12px 0 0; }
+    .ctr-wrap .ctnav { border-top: 1px solid var(--ct-border); padding: 14px 12px; }
+    .ctr-wrap .ctnav-tabs { order: 3; flex-basis: 100%; }
+    .ctr-wrap .ctnav-user { display: none; }
+    .ctr-wrap .page { padding: 24px 0; }
   }
 
   .ctr-wrap .radio-group { display: flex; gap: 6px; flex-wrap: wrap; }

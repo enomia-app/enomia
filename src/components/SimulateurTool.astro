@@ -14,15 +14,15 @@
   <div class="snav">
     <div class="snav-left">
       <div class="snav-title">Simulateur <em>LCD</em></div>
-      <div class="snav-tabs">
-        <button class="snav-tab active" id="snav-tab-dash" onclick="showDashboard()">Mes simulations</button>
-        <button class="snav-tab" id="snav-tab-new" onclick="newSimulation()">+ Nouvelle simulation</button>
-      </div>
+    </div>
+    <div class="snav-tabs">
+      <button class="snav-tab active" id="snav-tab-dash" onclick="showDashboard()">📊 Mes simulations</button>
+      <button class="snav-tab" id="snav-tab-new" onclick="newSimulation()">+ Nouvelle simulation</button>
     </div>
     <div class="snav-right">
-      <button class="snav-login" id="snav-login-btn" onclick="showLoginModal()">Se connecter</button>
-      <div class="snav-user" id="snav-user-badge" style="display:none">
-        <div class="snav-avatar" id="snav-avatar">?</div>
+      <div class="snav-user" id="snav-user-badge" onclick="showLoginModal()">
+        <div class="snav-avatar" id="snav-avatar">👤</div>
+        <span id="snav-user-label">Se connecter</span>
       </div>
     </div>
   </div>
@@ -36,24 +36,14 @@
           <p class="dash-sub" id="dash-sub">0 simulation</p>
         </div>
       </div>
-      <div class="sim-auth-hint" id="sim-auth-hint">
-        <span>🔒 <strong>Mode invité</strong> — vos données sont stockées localement dans ce navigateur.</span>
-        <button onclick="showLoginModal()">Se connecter</button>
-      </div>
       <div id="sims-container"></div>
     </div>
   </div>
 
   <!-- CALCULATEUR -->
   <div class="screen" id="screen-calc">
-    <div class="calc-topbar">
-      <div style="display:flex;align-items:center;gap:16px">
-        <input type="text" class="calc-name-input" id="sim-name-input" placeholder="Nom de la simulation...">
-      </div>
-      <div style="display:flex;align-items:center;gap:12px">
-        <span class="calc-save-status" id="save-status"></span>
-      </div>
-    </div>
+    <input type="hidden" id="sim-name-input" value="">
+    <span id="save-status" style="display:none"></span>
 
     <div class="calc-main">
       <div class="calc-left">
@@ -262,6 +252,18 @@
           <div class="sg-ticks"><span>5€</span><span>200€</span></div>
         </div>
 
+        <div class="sg" style="margin-top:20px;padding:14px;border:1px solid var(--border);border-radius:10px">
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;margin-bottom:4px">
+            <input type="checkbox" id="chk-conciergerie" onchange="toggleConciergerie()" style="width:16px;height:16px;cursor:pointer;accent-color:var(--accent)">
+            <span class="sg-label" style="margin:0">Conciergerie (gestion déléguée)</span>
+          </label>
+          <div id="conciergerie-wrap" style="display:none;margin-top:12px">
+            <div class="sg-header"><div class="sg-label">Commission conciergerie</div><div class="sg-val" id="v-conciergerie">20 <em>%</em></div></div>
+            <input type="range" id="s-conciergerie" min="15" max="30" step="1" value="20" oninput="sv('conciergerie',this.value);computeActive()">
+            <div class="sg-ticks"><span>15%</span><span>30%</span></div>
+          </div>
+        </div>
+
       </div><!-- end calc-left -->
 
       <!-- RÉSULTATS -->
@@ -277,6 +279,7 @@
           <div class="rb2-t">Cash flow mensuel</div>
           <div class="rr"><span class="rrl">CA brut / mois</span><span class="rrv acc" id="r-ca">—</span></div>
           <div class="rr"><span class="rrl">Commission Airbnb/Booking</span><span class="rrv neg" id="r-ota">—</span></div>
+          <div class="rr" id="rr-conciergerie" style="display:none"><span class="rrl">Conciergerie</span><span class="rrv neg" id="r-conciergerie">—</span></div>
           <div class="rr"><span class="rrl">Ménage + blanchisserie</span><span class="rrv neg" id="r-men">—</span></div>
           <div class="rr"><span class="rrl">Charges fixes</span><span class="rrv neg" id="r-ch">—</span></div>
           <div class="rr"><span class="rrl">Mensualité crédit</span><span class="rrv neg" id="r-cred">—</span></div>
@@ -338,20 +341,6 @@
             <span class="comp-pct">2.5%</span>
           </div>
           <div class="comp-scale"><span>2%</span><span>8%</span><span>15%</span><span>22%</span><span>30%</span></div>
-        </div>
-
-        <!-- CAPTURE NL -->
-        <div class="nl-capture">
-          <div class="nl-capture-t">Les coulisses de 9 biens LCD à 12-18% net</div>
-          <p class="nl-capture-d">Méthode duplicable presque partout en France, chiffres, stratégie, charges réelles, erreurs à éviter — chaque jeudi à 7h30.</p>
-          <div class="nl-capture-form" style="flex-direction:column;gap:8px">
-            <input type="text" id="nl-prenom" placeholder="Prénom" style="border-right:1px solid var(--border);border-radius:6px;box-sizing:border-box">
-            <div style="display:flex">
-              <input type="email" id="nl-email" placeholder="ton@email.fr">
-              <button onclick="subscribeNL()">S'instruire →</button>
-            </div>
-          </div>
-          <p class="nl-capture-note">Un email par semaine. Désinscription en un clic.</p>
         </div>
 
       </div><!-- end calc-right -->
@@ -441,6 +430,20 @@
     <div style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px">Sauvegarder votre simulation ?</div>
     <p style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">Entrez votre email et nous vous enverrons le lien de votre simulation. Vous pourrez y revenir à tout moment, sans compte.</p>
     <div id="leave-success" style="display:none;padding:12px;background:rgba(63,189,113,0.08);border:1px solid rgba(63,189,113,0.25);border-radius:8px;color:var(--green);font-size:14px;font-weight:500;text-align:center;margin-bottom:12px">✓ Simulation sauvegardée ! Lien envoyé par email.</div>
+
+    <!-- Bouton Google -->
+    <button onclick="signInWithGoogle()" style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:13px 14px;background:#fff;border:1px solid #e0e0e0;border-radius:8px;font-family:var(--font-body);font-size:14px;font-weight:600;color:#1f1f1f;cursor:pointer;margin-bottom:14px">
+      <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+      Continuer avec Google
+    </button>
+
+    <!-- Séparateur -->
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+      <div style="flex:1;height:1px;background:var(--border)"></div>
+      <span style="font-size:12px;color:var(--muted2)">ou par email</span>
+      <div style="flex:1;height:1px;background:var(--border)"></div>
+    </div>
+
     <div style="display:flex;flex-direction:column;gap:8px">
       <input type="text" id="leave-prenom" placeholder="Prénom" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">
       <input type="email" id="leave-email" placeholder="votre@email.fr" style="padding:12px 14px;background:var(--mid);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none">

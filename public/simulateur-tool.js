@@ -103,22 +103,26 @@ async function _initAuth() {
   if (_user && _token && !sharedSim) {
     _prefetchSims();
   }
+  // Render dashboard (shows empty state with login CTA for guests)
+  if (!sharedSim) {
+    try { renderDash(); } catch (_) {}
+  }
 }
 
 function _updateNavAuth() {
-  var loginBtn = document.querySelector('.snav-login');
-  var userBadge = document.querySelector('.snav-user');
-  var avatar = document.querySelector('.snav-avatar');
+  var userBadge = document.getElementById('snav-user-badge');
+  var avatar = document.getElementById('snav-avatar');
+  var label = document.getElementById('snav-user-label');
+  if (!userBadge) return;
   if (_user) {
-    if (loginBtn) loginBtn.style.display = 'none';
-    if (userBadge) userBadge.style.display = 'flex';
-    if (avatar) {
-      var initials = ((_user.email || '?').match(/^(.)(?:.*?[.\-_](.))?/) || []).slice(1).join('').toUpperCase() || '?';
-      avatar.textContent = initials;
-    }
+    var initials = ((_user.email || '?').match(/^(.)(?:.*?[.\-_](.))?/) || []).slice(1).join('').toUpperCase() || '?';
+    if (avatar) avatar.textContent = initials;
+    if (label) label.textContent = _user.email;
+    userBadge.onclick = function () { logout(); };
   } else {
-    if (loginBtn) loginBtn.style.display = '';
-    if (userBadge) userBadge.style.display = 'none';
+    if (avatar) avatar.textContent = '👤';
+    if (label) label.textContent = 'Se connecter';
+    userBadge.onclick = function () { showLoginModal(); };
   }
 }
 
@@ -148,6 +152,7 @@ async function signInWithGoogle() {
 
 // Magic link modal
 function showLoginModal() { _openMagicModal('Se connecter'); }
+window.toolLogin = function() { showLoginModal(); };
 function _openMagicModal(label) {
   document.getElementById('magic-modal-label').textContent = label || 'Se connecter';
   document.getElementById('magic-step-email').style.display = '';
@@ -267,7 +272,11 @@ function _clearSimsCache() {
 function _renderSimsInto(container) {
   document.getElementById('dash-sub').textContent = _dbSims.length + ' simulation' + (_dbSims.length !== 1 ? 's' : '') + ' sauvegardée' + (_dbSims.length !== 1 ? 's' : '');
   if (!_dbSims.length) {
-    container.innerHTML = '<div class="sims-empty"><div class="sims-empty-icon">\ud83d\udcca</div><div class="sims-empty-t">Aucune simulation</div><p class="sims-empty-d">Cliquez sur "+ Nouvelle simulation" pour analyser votre premier bien.</p></div>';
+    if (_user) {
+      container.innerHTML = '<div class="sims-empty"><div class="sims-empty-t">\ud83d\udcca Aucune simulation</div><p class="sims-empty-d">Cliquez sur &laquo; + Nouvelle simulation &raquo; pour analyser votre premier bien.</p></div>';
+    } else {
+      container.innerHTML = '<div class="sims-empty"><div class="sims-empty-t">\ud83d\udcca Aucune simulation</div><p class="sims-empty-d" style="margin-bottom:20px">Connectez-vous en 1 clic pour retrouver vos simulations sur tous vos terminaux (t\u00e9l\u00e9phone &middot; ordinateur).</p><button class="btn-new" onclick="showLoginModal()">\ud83d\udc64 Se connecter</button></div>';
+    }
     return;
   }
   container.innerHTML = '<div class="sims-grid">' + _dbSims.map((s, i) => renderCard(s.data || s, i, s.id)).join('') + '</div>';
@@ -276,6 +285,13 @@ function _renderSimsInto(container) {
 async function renderDash() {
   const c = document.getElementById('sims-container');
   const cached = _loadSimsCache();
+
+  // Mode invité : pas de fetch, affichage direct de l'empty state (CTA login)
+  if (!_user) {
+    _dbSims = cached || [];
+    _renderSimsInto(c);
+    return;
+  }
 
   // 1. Affichage INSTANTANÉ depuis le cache si dispo
   if (cached && cached.length) {
@@ -379,8 +395,15 @@ function renderLots(){
 function addLot(){lots.push({nuit:90,surface:35,occu:20,nuitMoy:2});renderLots();computeMulti();}
 function removeLot(i){lots.splice(i,1);renderLots();computeMulti();}
 
-const SLIDER_LABELS={prix:v=>v>=1000?Math.round(v/1000)+'k':v,apport:v=>v>=1000?Math.round(v/1000)+'k':v,duree:v=>v,taux:v=>parseFloat(v).toFixed(1),nuit:v=>v,occu:v=>v+' nuits ('+Math.round(v/30.4*100)+'%)',sejour:v=>parseFloat(v).toFixed(1),commission:v=>v,surface:v=>v,travaux:v=>v>=1000?Math.round(v/1000)+'k':v,ameu:v=>v>=1000?Math.round(v/1000)+'k':v,menage:v=>v,blanc:v=>v,eau:v=>v,elec:v=>v,internet:v=>v,consommables:v=>v,logiciel:v=>v,comptable:v=>v,fonciere:v=>v,copro:v=>v,assurance:v=>v};
-const SLIDER_UNITS={prix:'\u20ac',apport:'\u20ac',duree:'ans',taux:'%',nuit:'\u20ac/nuit',occu:'',sejour:'nuits',commission:'%',surface:'m\u00b2',travaux:'\u20ac',ameu:'\u20ac',menage:'\u20ac/rot.',blanc:'\u20ac/rot.',eau:'\u20ac/mois',elec:'\u20ac/mois',internet:'\u20ac/mois',consommables:'\u20ac/mois',logiciel:'\u20ac/mois',comptable:'\u20ac/mois',fonciere:'\u20ac/mois',copro:'\u20ac/mois',assurance:'\u20ac/mois'};
+const SLIDER_LABELS={prix:v=>v>=1000?Math.round(v/1000)+'k':v,apport:v=>v>=1000?Math.round(v/1000)+'k':v,duree:v=>v,taux:v=>parseFloat(v).toFixed(1),nuit:v=>v,occu:v=>v+' nuits ('+Math.round(v/30.4*100)+'%)',sejour:v=>parseFloat(v).toFixed(1),commission:v=>v,surface:v=>v,travaux:v=>v>=1000?Math.round(v/1000)+'k':v,ameu:v=>v>=1000?Math.round(v/1000)+'k':v,menage:v=>v,blanc:v=>v,eau:v=>v,elec:v=>v,internet:v=>v,consommables:v=>v,logiciel:v=>v,comptable:v=>v,fonciere:v=>v,copro:v=>v,assurance:v=>v,conciergerie:v=>v};
+const SLIDER_UNITS={prix:'\u20ac',apport:'\u20ac',duree:'ans',taux:'%',nuit:'\u20ac/nuit',occu:'',sejour:'nuits',commission:'%',surface:'m\u00b2',travaux:'\u20ac',ameu:'\u20ac',menage:'\u20ac/rot.',blanc:'\u20ac/rot.',eau:'\u20ac/mois',elec:'\u20ac/mois',internet:'\u20ac/mois',consommables:'\u20ac/mois',logiciel:'\u20ac/mois',comptable:'\u20ac/mois',fonciere:'\u20ac/mois',copro:'\u20ac/mois',assurance:'\u20ac/mois',conciergerie:'%'};
+
+function toggleConciergerie(){
+  var chk=document.getElementById('chk-conciergerie');
+  var wrap=document.getElementById('conciergerie-wrap');
+  if(wrap) wrap.style.display=chk.checked?'':'none';
+  if(typeof computeActive==='function') computeActive();
+}
 const SV2_LABELS={'prix-m':v=>v>=1000?Math.round(v/1000)+'k':v,'travaux-m':v=>v>=1000?Math.round(v/1000)+'k':v,'ameu-m':v=>v>=1000?Math.round(v/1000)+'k':v};
 const SV2_UNITS={'prix-m':'\u20ac','travaux-m':'\u20ac','ameu-m':'\u20ac'};
 
@@ -427,17 +450,20 @@ function calcMens(m,r,d){if(r<=0)return m/(d*12);const mr=r/100/12,n=d*12;return
 function computeActive(){calcMode==='multi'?computeMulti():compute();}
 
 function getInputs(){
+  var concChk=document.getElementById('chk-conciergerie');
+  var concActive=!!(concChk&&concChk.checked);
   return {
     apport:numS('apport'),duree:numS('duree'),taux:numS('taux'),commission:numS('commission'),
     menage:numS('menage'),blanc:numS('blanc'),eau:numS('eau'),elec:numS('elec'),
     internet:numS('internet'),consommables:numS('consommables'),logiciel:numS('logiciel'),
     comptable:numS('comptable'),fonciere:numS('fonciere'),copro:numS('copro'),assurance:numS('assurance'),
+    concActive:concActive,concRate:concActive?numS('conciergerie'):0,
   };
 }
 
 function compute(){
   const prix=numS('prix'),surface=numS('surface'),travaux=numS('travaux'),ameu=numS('ameu');
-  const {apport,duree,taux,commission,menage,blanc,eau,elec,internet,consommables,logiciel,comptable,fonciere,copro,assurance}=getInputs();
+  const {apport,duree,taux,commission,menage,blanc,eau,elec,internet,consommables,logiciel,comptable,fonciere,copro,assurance,concActive,concRate}=getInputs();
   const nuit=numS('nuit'),nuits=numS('occu'),sejour=Math.max(0.5,numS('sejour'));
   const notaire=Math.round(prix*0.075);
   const emprAC=Math.max(0,prix+notaire+travaux+ameu-apport);
@@ -451,7 +477,8 @@ function compute(){
   const otaM=caM*(commission/100);
   const menM=rotM*(menage+blanc);
   const fixM=eau+elec+internet+consommables+logiciel+comptable+fonciere+copro+assurance;
-  const chM=otaM+menM+fixM;
+  const concM=concActive?caM*(concRate/100):0;
+  const chM=otaM+menM+fixM+concM;
   const cfM=caM-chM-mens;
   const netA=(caM-chM)*12;
   const rend=total>0?((netA-inter/duree)/total)*100:0;
@@ -466,11 +493,11 @@ function compute(){
   document.getElementById('tc-bancaires').textContent=fmt(caution);
   document.getElementById('tc-total').textContent=fmt(total);
   currentResult={rendement:rend,cfMois:cfM,netAn:netA,totalProjet:total,emprunt:empr,mensalit:mens,interets:inter,moisApport:mA,prix,mode:'single'};
-  updateResults(rend,cfM,caM,otaM,menM,fixM,mens,(caM-chM)*12,chM*12,seuil,total,empr,inter,apport,mA);
+  updateResults(rend,cfM,caM,otaM,menM,fixM,mens,(caM-chM)*12,chM*12,seuil,total,empr,inter,apport,mA,concM);
 }
 
 function computeMulti(){
-  const {apport,duree,taux,commission,menage,blanc,eau,elec,internet,consommables,logiciel,comptable,fonciere,copro,assurance}=getInputs();
+  const {apport,duree,taux,commission,menage,blanc,eau,elec,internet,consommables,logiciel,comptable,fonciere,copro,assurance,concActive,concRate}=getInputs();
   const prix=parseFloat(document.getElementById('s-prix-m')?.value)||0;
   const travaux=parseFloat(document.getElementById('s-travaux-m')?.value)||0;
   const ameu=parseFloat(document.getElementById('s-ameu-m')?.value)||0;
@@ -488,7 +515,8 @@ function computeMulti(){
   const otaMTot=lotsCaRaw*(commission/100);
   const menMTot=rotMTot*(menage+blanc);
   const fixM=eau+elec+internet+consommables+logiciel+comptable+fonciere+copro+assurance;
-  const chM=otaMTot+menMTot+fixM;
+  const concM=concActive?lotsCaRaw*(concRate/100):0;
+  const chM=otaMTot+menMTot+fixM+concM;
   const caM=lotsCaRaw;
   const cfM=caM-chM-mens;
   const netA=(caM-chM)*12;
@@ -503,10 +531,10 @@ function computeMulti(){
   document.getElementById('tc-total-m').textContent=fmt(total);
   document.getElementById('total-multi').style.display='block';
   currentResult={rendement:rend,cfMois:cfM,netAn:netA,totalProjet:total,emprunt:empr,mensalit:mens,interets:inter,moisApport:mA,mode:'multi',nbLots:lots.length,prix};
-  updateResults(rend,cfM,caM,otaMTot,menMTot,fixM,mens,(caM-chM)*12,chM*12,seuil,total,empr,inter,apport,mA);
+  updateResults(rend,cfM,caM,otaMTot,menMTot,fixM,mens,(caM-chM)*12,chM*12,seuil,total,empr,inter,apport,mA,concM);
 }
 
-function updateResults(rend,cfM,caM,otaM,menM,fixM,mens,netA,chA,seuil,total,empr,inter,apport,mA){
+function updateResults(rend,cfM,caM,otaM,menM,fixM,mens,netA,chA,seuil,total,empr,inter,apport,mA,concM){
   const rDisp=rend.toFixed(1);
   const rEl=document.getElementById('r-rend');rEl.textContent=rDisp+'%';
   let cls,txt;
@@ -523,6 +551,9 @@ function updateResults(rend,cfM,caM,otaM,menM,fixM,mens,netA,chA,seuil,total,emp
   document.getElementById('fc-mens').textContent=fmt(mens)+'/mois';
   document.getElementById('r-ca').textContent=fmt(caM)+'/mois';
   document.getElementById('r-ota').textContent='\u2212'+fmt(otaM)+'/mois';
+  var concRow=document.getElementById('rr-conciergerie');
+  if(concM&&concM>0){concRow.style.display='';document.getElementById('r-conciergerie').textContent='\u2212'+fmt(concM)+'/mois';}
+  else{concRow.style.display='none';}
   document.getElementById('r-men').textContent='\u2212'+fmt(menM)+'/mois';
   document.getElementById('r-ch').textContent='\u2212'+fmt(fixM)+'/mois';
   document.getElementById('r-cred').textContent='\u2212'+fmt(mens)+'/mois';

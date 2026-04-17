@@ -194,19 +194,19 @@ if (!window.__factInit) {
   })();
 
   function _fUpdateAuthUI() {
-    var loginBtn = document.getElementById('fnav-login-btn');
     var userBadge = document.getElementById('fnav-user-badge');
+    var avatar = document.getElementById('fnav-avatar');
+    var label = document.getElementById('fnav-user-label');
+    if (!userBadge) return;
     if (_fuser) {
-      if (loginBtn) loginBtn.style.display = 'none';
-      if (userBadge) {
-        userBadge.style.display = 'flex';
-        var initials = (_fuser.email || '?').substring(0, 2).toUpperCase();
-        document.getElementById('fnav-avatar').textContent = initials;
-        document.getElementById('fnav-user-label').textContent = _fuser.email;
-      }
+      var initials = (_fuser.email || '?').substring(0, 2).toUpperCase();
+      if (avatar) avatar.textContent = initials;
+      if (label) label.textContent = _fuser.email;
+      userBadge.onclick = function () { fLogout(); };
     } else {
-      if (loginBtn) loginBtn.style.display = '';
-      if (userBadge) userBadge.style.display = 'none';
+      if (avatar) avatar.textContent = '👤';
+      if (label) label.textContent = 'Se connecter';
+      userBadge.onclick = function () { fOpenLoginModal(); };
     }
   }
 
@@ -476,11 +476,23 @@ if (!window.__factInit) {
     const tbody = document.getElementById('finvoice-tbody');
     if (!tbody) return;
     const filtered = finvoices.filter(inv => inv.id && String(inv.id).startsWith(String(year)));
+    var wrap = document.getElementById('finvoice-table-wrap');
+    var emptyCta = document.getElementById('finvoice-empty-cta');
     if (!filtered.length) {
-      tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:52px 0;color:var(--fa-muted);font-size:12px">
-        Aucune facture pour ${year} — <span style="color:var(--fa-accent);cursor:pointer;text-decoration:underline" onclick="fShowScreen('fscreen-new');fResetForm()">Créer une facture</span>
-      </td></tr>`;
+      if (!_fuser) {
+        if (wrap) wrap.style.display = 'none';
+        if (emptyCta) emptyCta.style.display = '';
+        tbody.innerHTML = '';
+      } else {
+        if (wrap) wrap.style.display = '';
+        if (emptyCta) emptyCta.style.display = 'none';
+        tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:52px 0;color:var(--fa-muted);font-size:12px">
+          Aucune facture pour ${year} — <span style="color:var(--fa-accent);cursor:pointer;text-decoration:underline" onclick="fShowScreen('fscreen-new');fResetForm()">Créer une facture</span>
+        </td></tr>`;
+      }
     } else {
+      if (wrap) wrap.style.display = '';
+      if (emptyCta) emptyCta.style.display = 'none';
       tbody.innerHTML = filtered.map(inv => {
         const n = fNights(inv.arrivee, inv.depart);
         const total = fCalcInvoiceTotal(inv);

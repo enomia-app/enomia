@@ -174,6 +174,7 @@
   window.ctOpenLoginModal = function () {
     document.getElementById('ctmodal').classList.add('show');
   };
+  window.toolLogin = function () { ctOpenLoginModal(); };
   window.ctCloseModal = function () {
     document.getElementById('ctmodal').classList.remove('show');
   };
@@ -386,10 +387,25 @@
     else if (ctCurrentFilter === 'done') filtered = ctContrats.filter(c => c.solde_paye && c.acompte_paye);
     else if (ctCurrentFilter === 'late') filtered = ctContrats.filter(c => c.acompte_date_limite && new Date(c.acompte_date_limite) < now && !c.acompte_paye);
 
+    var wrap = document.getElementById('ctdash-table-wrap');
+    var emptyCta = document.getElementById('ctdash-empty-cta');
     if (!filtered.length) {
-      tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:60px 20px"><div class="empty-state" style="border:none;padding:20px"><div class="empty-icon">📄</div><div class="empty-title">Aucun contrat ' + (ctCurrentFilter === 'all' ? '' : 'dans ce filtre') + '</div><div class="empty-desc">' + (ctCurrentFilter === 'all' ? 'Créez votre premier contrat en 2 minutes.' : 'Essayez un autre filtre.') + '</div>' + (ctCurrentFilter === 'all' ? '<button class="btn accent" onclick="ctNewContract()">+ Nouveau contrat</button>' : '') + '</div></td></tr>';
+      if (!_ctUser && ctCurrentFilter === 'all') {
+        if (wrap) wrap.style.display = 'none';
+        if (emptyCta) emptyCta.style.display = '';
+        tbody.innerHTML = '';
+      } else {
+        if (wrap) wrap.style.display = '';
+        if (emptyCta) emptyCta.style.display = 'none';
+        var inner = ctCurrentFilter === 'all'
+          ? '<div class="empty-desc">Créez votre premier contrat en 2 minutes.</div>'
+          : '<div class="empty-desc">Essayez un autre filtre.</div>';
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:60px 20px"><div class="empty-state" style="border:none;padding:20px"><div class="empty-icon">📄</div><div class="empty-title">Aucun contrat ' + (ctCurrentFilter === 'all' ? '' : 'dans ce filtre') + '</div>' + inner + '</div></td></tr>';
+      }
       return;
     }
+    if (wrap) wrap.style.display = '';
+    if (emptyCta) emptyCta.style.display = 'none';
 
     tbody.innerHTML = filtered.map(c => {
       const b = ctBiens.find(bb => bb.id === c.bien_id) || (c.bien_snapshot || {});

@@ -73,6 +73,11 @@ const isTool = variant === 'tool';
     <a href="/simulateur-rentabilite-airbnb" class="eh-mobile-link">Simulateur rentabilité LCD</a>
     <a href="/contrat-location-saisonniere" class="eh-mobile-link">Contrat de location</a>
     <a href="/facture-location-saisonniere" class="eh-mobile-link">Factures LCD</a>
+    {isTool && (
+      <button type="button" class="eh-mobile-link eh-mobile-login" onclick="if(typeof window.toolLogin==='function'){document.getElementById('eh-mobile-menu')?.classList.remove('open');window.toolLogin();}">
+        👤 Se connecter
+      </button>
+    )}
   </div>
 </header>
 
@@ -263,6 +268,13 @@ const isTool = variant === 'tool';
 
   .eh-mobile-link:last-child { border-bottom: none; }
   .eh-mobile-link:hover { color: var(--text, #1a1a1a); }
+
+  .eh-mobile-login {
+    background: none; border: none; cursor: pointer;
+    font-family: inherit; text-align: left; width: 100%;
+    display: flex; align-items: center; gap: 8px;
+    color: var(--text, #1a1a1a); font-weight: 600;
+  }
 
   @media (max-width: 768px) {
     .eh-inner { padding: 0 20px; }

@@ -1,5 +1,41 @@
 [
   {
+    "num": 1,
+    "ville": "Paris",
+    "region": "Île-de-France",
+    "regionSlug": "ile-de-france",
+    "citySlug": "paris",
+    "newUrl": "/conciergerie-airbnb/ile-de-france/paris",
+    "oldSlug": "/conciergerie-airbnb-paris",
+    "kw": "conciergerie airbnb paris",
+    "vol": 3570,
+    "status": "Publié"
+  },
+  {
+    "num": 4,
+    "ville": "Les Sables-d'Olonne",
+    "region": "Pays de la Loire",
+    "regionSlug": "pays-de-la-loire",
+    "citySlug": "les-sables-d-olonne",
+    "newUrl": "/conciergerie-airbnb/pays-de-la-loire/les-sables-d-olonne",
+    "oldSlug": "/conciergerie-airbnb-les-sables-d-olonne",
+    "kw": "conciergerie aux sables d olonne",
+    "vol": 2200,
+    "status": "Publié"
+  },
+  {
+    "num": 9,
+    "ville": "Agde",
+    "region": "Occitanie",
+    "regionSlug": "occitanie",
+    "citySlug": "agde",
+    "newUrl": "/conciergerie-airbnb/occitanie/agde",
+    "oldSlug": "/conciergerie-airbnb-agde",
+    "kw": "conciergerie agde (H1) + conciergerie airbnb agde (H2)",
+    "vol": 830,
+    "status": "Publié"
+  },
+  {
     "num": 10,
     "ville": "Cannes",
     "region": "Provence-Alpes-Côte d'Azur",

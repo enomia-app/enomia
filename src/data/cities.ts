@@ -40,6 +40,8 @@ export const regions: Region[] = [
   { slug: 'provence-alpes-cote-dazur', displayName: 'Provence-Alpes-Côte d\'Azur', description: 'Nice, Marseille, Aix-en-Provence : la région concentre les plus fortes demandes LCD de France avec une saisonnalité marquée et des tarifs élevés.' },
   { slug: 'ile-de-france', displayName: 'Île-de-France', description: 'Paris et sa couronne, premier marché LCD de France et d\'Europe. La capitale concentre plus de 50 000 annonces actives et une demande touristique mondiale toute l\'année.' },
   { slug: 'pays-de-la-loire', displayName: 'Pays de la Loire', description: 'Des Sables-d\'Olonne à La Baule en passant par Nantes, la région combine littoral atlantique, îles et métropoles. La Vendée est le 2e département touristique de France avec un marché LCD très saisonnier.' },
+  { slug: 'bretagne', displayName: 'Bretagne', description: 'De Rennes à Saint-Malo en passant par Brest et Quiberon, la Bretagne combine tourisme balnéaire, patrimoine celte et marché étudiant. Rennes est un des marchés locatifs les plus tendus de France.' },
+  { slug: 'normandie', displayName: 'Normandie', description: 'Rouen, Honfleur, Deauville, Étretat : la Normandie mixe tourisme culturel, impressionnisme et plages du Débarquement. Proximité immédiate de Paris et événements emblématiques (L\'Armada, Festival du Film Américain).' },
 ];
 
 export type City = {
@@ -1833,6 +1835,600 @@ export const cities: City[] = [
       },
     ],
     updatedAt: '2026-04-13',
+  },
+  // ==========================================================================
+  // CANNES
+  // ==========================================================================
+  {
+    slug: 'cannes',
+    displayName: 'Cannes',
+    region: "Provence-Alpes-Côte d'Azur",
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie Cannes Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Cannes : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Cannes. Tarifs (18-25 %), stratégie Festival & MIPIM, réglementation zone tendue, quartiers rentables.',
+    kwPrincipal: 'conciergerie airbnb cannes',
+    kwSecondaires: [
+      'conciergerie cannes',
+      'gestion locative cannes',
+      'location courte durée cannes',
+      'airbnb cannes festival',
+      'meublé touristique cannes',
+    ],
+    population: 74152,
+    tourists: 3000000,
+    activeListings: 8865,
+    priceLow: 120,
+    priceHigh: 450,
+    occupancyRate: 51,
+    revpar: 110,
+    seasonality:
+      "Saisonnalité exceptionnelle dopée par les événements : Festival de Cannes mi-mai (x3 des tarifs, séjours minimum 7-11 nuits), MIPIM en mars (x2,5, hôtels complets 6 mois à l'avance), Cannes Yachting Festival début septembre, MIPCOM mi-octobre et Cannes Lions en juin. Haute saison plages juin-septembre, creux novembre-février hors événements.",
+    rankNational: 8,
+    introCustom:
+      "Vous avez un appartement à Cannes que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée. Entre les stratégies de tarification pendant le Festival (+300 %), la clientèle ultra-internationale et la réglementation zone tendue parmi les plus strictes de France, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable. Et surtout : laquelle choisir parmi les agences cannoises, dont plusieurs sont nées ici ?",
+    marketIntro:
+      "Cannes est l'un des marchés LCD les plus lucratifs de France, avec un revenu moyen par annonce autour de 39 500 € par an. Le Festival de Cannes, le MIPIM, le MIPCOM, les Cannes Lions et le Yachting Festival génèrent des pics où les tarifs sont multipliés par 2,5 à 3. Mais le marché est aussi l'un des plus régulés : classée zone tendue, la ville plafonne les résidences principales à 90 nuitées par an (contre 120 au niveau national), impose un changement d'usage avec compensation pour les résidences secondaires et applique des amendes jusqu'à 100 000 €. Le nombre d'annonces Airbnb a baissé de 8 % sur un an (mars 2026) sous l'effet combiné de la loi Le Meur et du durcissement local.",
+    conciergeries: [
+      {
+        name: 'YourHostHelper Cannes',
+        url: 'https://yourhosthelper.com/conciergerie-cannes/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 180,
+        biensGeres: 120,
+        specialty: 'Réseau fondé à Cannes en 2017',
+        description:
+          "YourHostHelper est né à Cannes en 2017 avant de devenir un réseau national présent dans 20+ villes. Commission de 20 % sans frais fixes, ménage refacturé au voyageur. Photos pro incluses, pricing dynamique, expertise prouvée sur les pics Festival et MIPIM. Bon rapport qualité/prix pour un T1-T2 standard sur la Croisette ou en centre-ville.",
+      },
+      {
+        name: 'Welkeys Cannes',
+        url: 'https://www.welkeys.com/conciergerie-airbnb/cannes',
+        commission: '22-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 210,
+        biensGeres: 150,
+        specialty: 'Premium & pricing agressif événements',
+        description:
+          "Acteur national premium, Welkeys maîtrise la stratégie de pricing pendant le Festival et le MIPIM avec des tarifs parfois multipliés par 2,5 à 3. Commission 22-25 % selon le niveau de service, ménage refacturé au voyageur. Suivi rigoureux des avis et maintenance soignée, idéal pour les biens standing sur la Croisette ou à la Pointe Croisette.",
+      },
+      {
+        name: 'Manasteos Cannes',
+        url: 'https://manasteos.com/conciergerie/cannes/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 55,
+        biensGeres: 60,
+        specialty: 'Note Google 5,0/5, outil propriétaire',
+        description:
+          "Conciergerie structurée autour d'une plateforme propriétaire (check-in, ménage, linge, optimisation revenus) avec une note Google parfaite de 5.0/5. Commission 20 % HT all-inclusive, ménage refacturé au voyageur. Plébiscitée par les investisseurs cannois qui cherchent un reporting transparent et une qualité opérationnelle sans accroc.",
+      },
+      {
+        name: 'BnB Groom Services',
+        url: 'https://bnbgroomservices.com/',
+        commission: '22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 95,
+        biensGeres: 80,
+        specialty: 'Conciergerie + agence immobilière',
+        description:
+          "Implantée sur la Côte d'Azur depuis 2014, BnB Groom combine gestion locative et expertise immobilière (conseil achat, transaction). Commission 22 %, ménage refacturé voyageur. Les propriétaires citent un pricing fin adapté à chaque période et un contact humain réactif, avec une équipe à taille humaine sur Cannes et Mougins.",
+      },
+      {
+        name: 'HostnFly Cannes',
+        url: 'https://hostnfly.com/conciergerie-airbnb/cannes',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 140,
+        biensGeres: 110,
+        specialty: 'Tech + yield management algorithmique',
+        description:
+          "Solution clé en main avec algorithme de tarification dynamique propriétaire et 150 000+ réservations gérées par an au niveau national. Commission à partir de 20 %, ménage refacturé voyageur, diffusion 10+ plateformes, assurance incluse. Idéal pour les propriétaires qui veulent un process industrialisé et zéro gestion.",
+      },
+      {
+        name: 'Croceo',
+        url: 'https://www.croceo.fr/conciergerie-airbnb-cannes',
+        commission: '18 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 70,
+        biensGeres: 55,
+        specialty: 'Conciergerie boutique Côte d\'Azur',
+        description:
+          "Croceo se positionne comme une conciergerie boutique sur la Côte d'Azur, avec une commission parmi les plus basses du marché cannois (18 %). Prend en charge l'ensemble des étapes : accueil, ménage, maintenance, optimisation revenus. Suivi personnalisé idéal pour un propriétaire qui veut rester très proche de la gestion de son bien.",
+      },
+      {
+        name: 'Nestify Cannes',
+        url: 'https://www.nestify.fr/conciergerie-airbnb-cannes/',
+        commission: '22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 85,
+        biensGeres: 75,
+        specialty: 'Gestion A à Z multi-plateformes',
+        description:
+          "Nestify couvre la création et la diffusion multi-plateformes (Airbnb, Booking, Vrbo), gestion complète des séjours et reporting financier mensuel. Commission 22 %, ménage refacturé voyageur. Structure intermédiaire entre boutique locale et plateforme nationale, bon compromis pour un bien premium en centre-ville.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'La Croisette',
+        pricePerNight: '280-900 €',
+        occupancy: 62,
+        description:
+          "Front de mer mythique face au Palais des Festivals, clientèle internationale premium. Tarifs records pendant le Festival et le MIPIM — numéro d'enregistrement et compensation obligatoires (zone tendue). T2 à partir de 500 000 €.",
+        roiBrut: '4 à 4,5 %',
+      },
+      {
+        name: 'Le Suquet (vieille ville)',
+        pricePerNight: '140-320 €',
+        occupancy: 58,
+        description:
+          "Cœur historique avec ruelles pavées, vue panoramique depuis la tour du Suquet et restaurants animés. Très prisé des couples et des voyageurs en quête d'authenticité. Désormais zone régulée par la mairie (août 2025).",
+        roiBrut: '5,5 à 6 %',
+      },
+      {
+        name: 'Palm Beach / Pointe Croisette',
+        pricePerNight: '220-600 €',
+        occupancy: 55,
+        description:
+          "Péninsule chic à l'est de la Croisette avec casino Palm Beach et plages privées. Appartements vue mer recherchés pour le Yachting Festival et les séjours haut de gamme estivaux. T3 à partir de 650 000 €.",
+        roiBrut: '4,5 %',
+      },
+      {
+        name: "Centre-ville / Rue d'Antibes",
+        pricePerNight: '130-280 €',
+        occupancy: 56,
+        description:
+          "Artère commerçante piétonne, à 5 min à pied du Palais et de la gare SNCF. Excellent rapport occupation/prix pour les voyageurs affaires (MIPIM, MIPCOM) et courts séjours. T2 à partir de 350 000 €.",
+        roiBrut: '6 à 6,5 %',
+      },
+      {
+        name: 'La Bocca',
+        pricePerNight: '90-180 €',
+        occupancy: 50,
+        description:
+          "Quartier ouest populaire en pleine requalification (port de La Bocca, plage du Midi). Ticket d'entrée accessible (T2 dès 220 000 €). Idéal pour un premier investissement LCD à Cannes, moins concurrentiel que l'hypercentre.",
+        roiBrut: '7 à 7,5 %',
+      },
+      {
+        name: 'Le Cannet (commune limitrophe)',
+        pricePerNight: '100-200 €',
+        occupancy: 48,
+        description:
+          "Commune résidentielle au calme sur les hauteurs, connexion rapide au centre de Cannes en bus. Réglementation LCD plus souple que Cannes intra-muros — réel atout pour investir sans changement d'usage compliqué.",
+        roiBrut: '6,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Cannes est classée **zone tendue** et applique l'une des réglementations LCD les plus strictes de France. La résidence principale en meublé de tourisme est plafonnée à **90 jours par an** (contre 120 au niveau national), et tout loueur doit obtenir un **numéro d'enregistrement à 13 chiffres** via le téléservice de la mairie avant toute mise en location.\n\n**Changement d'usage obligatoire.** Pour une résidence secondaire, un changement d'usage avec compensation est exigé : il faut transformer une surface équivalente de local commercial en logement. Cette contrainte est renforcée dans les périmètres de **la Croisette** et du **Suquet** depuis août 2025, sous l'impulsion du maire David Lisnard.\n\n**Loi Le Meur 2024.** L'enregistrement national est en cours de déploiement (plateforme unique avant mai 2026), le **DPE classe E minimum** est obligatoire (classe D à partir de 2034) et l'abattement micro-BIC passe à 30 % pour les meublés non classés (50 % pour les classés). Booking.com désactivera automatiquement les annonces sans numéro d'enregistrement avant le **20 mai 2026**.\n\n**Taxe de séjour & sanctions.** La taxe de séjour varie de 0,83 € à 4,40 € par nuit et par personne selon le classement, collectée automatiquement par Airbnb. Les amendes peuvent atteindre **100 000 €** pour location d'une résidence secondaire sans autorisation de changement d'usage — parmi les plus élevées de France.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 185,
+      neighborhood: "Centre-ville / Rue d'Antibes",
+      revenuBrut: 35500,
+      commissionRate: 0.22,
+      menageCount: 85,
+      menageUnitCost: 75,
+    },
+    extraFaq: [
+      {
+        q: 'Comment optimiser les tarifs pendant le Festival de Cannes et le MIPIM ?',
+        a: "Les tarifs sont multipliés par 2,5 à 3 pendant le Festival (mi-mai) et le MIPIM (mars). Une conciergerie applique un yield management précis : ouverture des dates 12 mois à l'avance, minimum 7 nuits imposé (11 nuits pour le Festival 2026), tarifs 800 à 5 000 € par nuit selon surface et vue. Sans cette expertise, les propriétaires sous-vendent facilement de 30 à 50 % leurs biens pendant ces pics, ce qui représente une perte de 5 000 à 15 000 € sur seulement deux semaines.",
+      },
+      {
+        q: 'Ma résidence secondaire à Cannes est-elle éligible à la location Airbnb ?',
+        a: "Oui, mais avec changement d'usage et compensation obligatoire depuis que Cannes est zone tendue. Vous devez compenser la surface louée par la transformation d'un local commercial équivalent en logement — procédure longue et coûteuse. Les périmètres Croisette et Suquet sont désormais ultra-régulés depuis août 2025. Une conciergerie locale connaît les démarches et peut vous orienter vers des biens déjà autorisés ou des quartiers voisins (Le Cannet) moins contraints.",
+      },
+      {
+        q: 'Quelle clientèle vise-t-on à Cannes et comment adapter son bien ?',
+        a: "Clientèle à 70 % internationale (anglo-saxonne, moyen-orientale, asiatique) aux standards luxe : literie premium, wifi fibre, climatisation, smart TV, parking sécurisé, welcome pack. Pendant le Yachting Festival (septembre) et le Festival, attendez-vous à des demandes VIP : service de blanchisserie, chef privé, navette port. Une conciergerie bilingue anglais/français est quasi indispensable — sans elle, vous perdez la moitié du marché haut de gamme.",
+      },
+    ],
+    updatedAt: '2026-04-20',
+  },
+  // ==========================================================================
+  // RENNES
+  // ==========================================================================
+  {
+    slug: 'rennes',
+    displayName: 'Rennes',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Rennes Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Rennes : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Rennes. Tarifs (18-25 %), zone tendue, quartiers rentables, spécificités marché étudiant & business.',
+    kwPrincipal: 'conciergerie airbnb rennes',
+    kwSecondaires: [
+      'conciergerie rennes',
+      'gestion locative rennes',
+      'location courte durée rennes',
+      'airbnb rennes rentabilité',
+      'meublé touristique rennes',
+    ],
+    population: 220488,
+    tourists: 1200000,
+    activeListings: 1550,
+    priceLow: 55,
+    priceHigh: 145,
+    occupancyRate: 62,
+    revpar: 51,
+    seasonality:
+      "Saisonnalité atypique pour une grande ville : pic d'activité mars-juin et septembre-octobre (tourisme d'affaires, congrès, rentrée étudiante avec 70 000 étudiants), creux en juillet-août (ville studieuse qui se vide). Temps forts : Les Transmusicales début décembre (+60 000 visiteurs, tarifs x2-3), Tombées de la Nuit en juillet, matchs du Stade Rennais. Clientèle majoritairement business + visites familiales d'étudiants.",
+    rankNational: 18,
+    introCustom:
+      "Vous avez un appartement à Rennes que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée. Entre la saisonnalité inversée (creux estival, pic mars-juin), les 70 000 étudiants dont les familles viennent les visiter, les Transmusicales qui font exploser la demande en décembre, et Rennes désormais classée zone tendue, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable. Et surtout : laquelle choisir, entre Cocoonr (leader rennais fondé localement) et les indépendants nouveaux venus ?",
+    marketIntro:
+      "Rennes est le 2e marché locatif le plus tendu de France après Paris et une destination LCD atypique. 70 000 étudiants, 1,2 million de touristes par an, 2 gares (dont la TGV à 1h25 de Paris) : la demande est portée avant tout par le tourisme d'affaires et les visites familiales d'étudiants, pas par le tourisme classique. Conséquence : le pic d'occupation est mars-juin (concours, soutenances) et septembre-octobre (rentrée), avec un creux estival quand les étudiants rentrent chez eux. La saisonnalité inversée avantage les propriétaires qui savent cibler cette clientèle mixte business + parents d'étudiants. Rennes est classée zone tendue depuis octobre 2023, ce qui rend le choix d'une conciergerie locale d'autant plus stratégique pour rester en conformité.",
+    conciergeries: [
+      {
+        name: 'Cocoonr Rennes',
+        url: 'https://cocoonr.fr/conciergerie-bnb-rennes/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.2,
+        reviews: 95,
+        biensGeres: 400,
+        specialty: 'Leader local, siège social à Rennes',
+        description:
+          "Cocoonr est la conciergerie historique rennaise, fondée localement et devenue un des plus gros acteurs français avec 2 000+ biens dans 15 villes. L'agence mère est à Rennes. Commission standard de 20 %, ménage refacturé voyageur. Large couverture géographique sur Rennes Métropole (Cesson-Sévigné, Chantepie, Pacé), équipe ménage internalisée. Le choix par défaut pour un bien standard.",
+      },
+      {
+        name: 'Rennes Host',
+        url: 'https://www.rennes-host.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 42,
+        biensGeres: 65,
+        specialty: '100 % locale, indépendante',
+        description:
+          "Rennes Host est une conciergerie purement locale, dédiée au seul bassin rennais. Commission 20 %, ménage refacturé voyageur. Approche personnalisée et proximité terrain, avec une équipe dédiée qui connaît chaque quartier, chaque syndic et chaque artisan de la métropole. Idéal pour un propriétaire qui veut un interlocuteur unique et joignable.",
+      },
+      {
+        name: 'Nooma & Co',
+        url: 'https://www.nooma.fr/',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 58,
+        biensGeres: 100,
+        specialty: 'Gestion Rennes + Grand Ouest',
+        description:
+          "Nooma propose une gestion complète (réservations, accueil, ménage pro, dashboard propriétaire) avec une approche orientée investisseurs patrimoniaux. Commission 20-25 % selon la formule. Couverture Rennes + Grand Ouest, pertinente si vous avez plusieurs biens sur la région. Bonne qualité de reporting et de relation propriétaire.",
+      },
+      {
+        name: 'JustUnToit Rennes',
+        url: 'https://www.justuntoit.fr/la-conciergerie-a-rennes/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 35,
+        biensGeres: 80,
+        specialty: 'Familiale, courte & moyenne durée',
+        description:
+          "Conciergerie familiale et professionnelle à Rennes, spécialisée courte ET moyenne durée (bail mobilité, étudiants Erasmus). Commission 20 %, ménage refacturé voyageur. Offre avec prestations quasi-hôtelières (linge, plateau de bienvenue) pour un positionnement haut de gamme sur les locations saisonnières et les séjours >30 nuits.",
+      },
+      {
+        name: 'YourHostHelper Rennes',
+        url: 'https://yourhosthelper.com/conciergerie-rennes/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 48,
+        biensGeres: 55,
+        specialty: 'Réseau national, agence locale',
+        description:
+          "Franchise nationale avec une agence physique à Rennes. Commission 20 % sans frais fixes, ménage refacturé voyageur, photos pro et pricing dynamique inclus. Combine la standardisation des process (channel manager, dashboard propriétaire) et un suivi local par un agent dédié. Bon rapport qualité/prix pour les T1-T2 standards.",
+      },
+      {
+        name: 'HostnFly Rennes',
+        url: 'https://hostnfly.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 30,
+        biensGeres: 40,
+        specialty: 'Tech + pricing algorithmique',
+        description:
+          "HostnFly propose une gestion via algorithme de pricing dynamique et automatisation des réservations. Présence nationale, couverture Rennes via agents mobiles et sous-traitance ménage locale. Commission 20 %, ménage refacturé voyageur. Pertinent pour un propriétaire qui préfère un acteur technologique à un indépendant local.",
+      },
+      {
+        name: 'CheckIn Conciergerie Rennes',
+        url: 'https://checkinconciergerie.com/conciergerie-rennes/',
+        commission: '18-22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 22,
+        biensGeres: 30,
+        specialty: "Accueil physique 7j/7",
+        description:
+          "CheckIn Conciergerie se positionne sur la qualité d'accueil avec remise de clés en personne systématique. Commission 18-22 % selon formule, ménage refacturé voyageur. Cible des biens premium dans l'hypercentre et autour du Thabor. Petite structure avec un service très personnalisé.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre historique',
+        pricePerNight: '85-160 €',
+        occupancy: 72,
+        description:
+          "Cœur médiéval de Rennes avec ses maisons à pans de bois, place Sainte-Anne et rue Saint-Michel (« rue de la Soif »). Demande forte toute l'année, pics aux Transmusicales et aux week-ends festifs étudiants. T2 à partir de 280 000 €.",
+        roiBrut: '6,5 à 7,5 %',
+      },
+      {
+        name: 'Sainte-Anne',
+        pricePerNight: '80-140 €',
+        occupancy: 68,
+        description:
+          "Épicentre de la vie nocturne rennaise, avec la place Sainte-Anne et ses bars emblématiques. Excellent taux de remplissage le week-end, clientèle jeune et festive, proche du métro ligne A. T2 dès 250 000 €.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Thabor / Saint-Martin',
+        pricePerNight: '75-130 €',
+        occupancy: 65,
+        description:
+          "Quartier bourgeois autour du parc du Thabor, prisé par la clientèle famille et business. Prix au m² parmi les plus élevés de Rennes (4 600-6 800 €/m²), ce qui pèse sur la rentabilité brute malgré des nuitées premium.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Saint-Hélier',
+        pricePerNight: '65-110 €',
+        occupancy: 66,
+        description:
+          "Quartier résidentiel bien connecté à la gare et à l'hypercentre, idéal pour le tourisme d'affaires. Bon compromis entre prix d'achat modéré (T2 dès 200 000 €) et nuitées correctes. Zone en pleine valorisation.",
+        roiBrut: '6,5 %',
+      },
+      {
+        name: 'Rennes Sud-Gare (EuroRennes)',
+        pricePerNight: '70-125 €',
+        occupancy: 70,
+        description:
+          "Quartier d'affaires en pleine mutation autour de la gare TGV (Paris en 1h25). Clientèle business dominante en semaine, excellent pour le mid-term et les voyageurs professionnels. Parc immobilier récent, standing élevé.",
+        roiBrut: '6,5 à 7 %',
+      },
+      {
+        name: 'Villejean-Beauregard',
+        pricePerNight: '50-90 €',
+        occupancy: 58,
+        description:
+          "Quartier étudiant autour du campus Villejean (Université Rennes 2) et du CHU Pontchaillou. Rentabilité brute élevée grâce à des prix d'achat accessibles (2 700-3 200 €/m²), idéal pour la moyenne durée et les familles d'étudiants.",
+        roiBrut: '7,5 à 8 %',
+      },
+    ],
+    regulation:
+      "Rennes est classée **zone tendue** depuis le décret d'octobre 2023 et fait partie des communes les plus encadrées de France en matière de location courte durée. La ville applique strictement la **loi Le Meur du 19 novembre 2024**.\n\n**Numéro d'enregistrement obligatoire.** Toute mise en location d'un meublé touristique à Rennes nécessite un numéro d'enregistrement obtenu via le téléservice de la ville, à afficher obligatoirement sur toutes les annonces (Airbnb, Booking, Abritel). Défaut = amende jusqu'à **10 000 €**.\n\n**Résidence principale : 120 nuits/an.** Plafond que le conseil municipal peut abaisser à **90 jours** par délibération en zone tendue. Airbnb bloque automatiquement le calendrier une fois le seuil atteint.\n\n**Résidence secondaire : changement d'usage.** Pour un bien dédié à la location saisonnière, un changement d'usage auprès de la mairie est obligatoire, avec généralement une **compensation** (transformation d'un local commercial en habitation). Les manquements sont sanctionnés jusqu'à **50 000 €** d'amende par logement.\n\n**Taxe de séjour.** Collectée par Rennes Métropole (0,83 € à 3 € par nuit selon classement). Airbnb la reverse automatiquement. Les copropriétés peuvent depuis la **loi Le Meur** interdire la location courte durée par modification du règlement à la **majorité simple** (auparavant unanimité) — toujours vérifier avant d'acheter.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 85,
+      neighborhood: 'Centre historique',
+      revenuBrut: 22300,
+      commissionRate: 0.2,
+      menageCount: 70,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: 'La clientèle étudiante de Rennes est-elle compatible avec la location Airbnb courte durée ?',
+        a: "Oui, mais indirectement : les 70 000 étudiants ne sont pas vos locataires Airbnb, ce sont leurs familles qui viennent les visiter, déménager, assister aux remises de diplômes. La rentrée de septembre et les week-ends d'avril-mai (concours, soutenances) sont d'excellents pics. La moyenne durée (30+ nuits) pour étudiants en stage ou en échange Erasmus est également une niche rentable, surtout à Villejean-Beauregard et Saint-Hélier. Une conciergerie qui gère moyen et courte durée (comme JustUnToit) est un vrai atout.",
+      },
+      {
+        q: "Quel est l'impact des Transmusicales sur les prix et la demande ?",
+        a: "Les Transmusicales début décembre attirent 60 000+ visiteurs sur 4 jours, dont des professionnels de la musique venus du monde entier. Les nuitées grimpent de 2 à 3x le prix habituel (150-300 €/nuit en hypercentre), avec un taux d'occupation proche de 100 %. C'est l'événement phare pour maximiser le RevPAR à Rennes, à l'image de ce que représente le Festival pour Cannes. Une bonne conciergerie verrouille les dates 8-12 mois à l'avance et applique un pricing dynamique agressif.",
+      },
+      {
+        q: 'Vaut-il mieux cibler les voyageurs business ou les touristes à Rennes ?',
+        a: "Rennes est avant tout une destination d'affaires et universitaire, pas une ville touristique classique. Plus de 60 % de la demande Airbnb est professionnelle (congrès, chantiers tech, La French Tech Rennes). Privilégiez des biens fonctionnels avec bureau, wifi pro et proximité gare TGV/métro. Les quartiers Sud-Gare et Saint-Hélier surperforment sur cette clientèle semaine, moins volatile que le tourisme pur. Le week-end et les vacances scolaires, c'est le Centre historique et Sainte-Anne qui prennent le relais.",
+      },
+    ],
+    updatedAt: '2026-04-20',
+  },
+  // ==========================================================================
+  // ROUEN
+  // ==========================================================================
+  {
+    slug: 'rouen',
+    displayName: 'Rouen',
+    region: 'Normandie',
+    regionSlug: 'normandie',
+    title: 'Conciergerie Rouen Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Rouen : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      "Comparatif des 7 meilleures conciergeries Airbnb à Rouen. Tarifs (17-22 %), réglementation zone tendue, quartiers rentables, stratégie L'Armada 2027.",
+    kwPrincipal: 'conciergerie airbnb rouen',
+    kwSecondaires: [
+      'conciergerie rouen',
+      'gestion locative rouen',
+      'location courte durée rouen',
+      'airbnb rouen rentabilité',
+      'meublé touristique rouen',
+    ],
+    population: 115639,
+    tourists: 4200000,
+    activeListings: 1400,
+    priceLow: 55,
+    priceHigh: 140,
+    occupancyRate: 58,
+    revpar: 45,
+    seasonality:
+      "Saisonnalité modérée dopée par des pics événementiels. L'Armada (prochaine édition juin 2027) génère des hausses de tarifs de +80 à +150 % pendant 10 jours. La Foire Saint-Romain (oct-nov), le festival Normandie Impressionniste et Jeanne d'Arc tirent la fréquentation. La cathédrale (Monet, gothique flamboyant) et le tourisme d'affaires (sièges sociaux, CHU, universités) lissent la demande sur l'année.",
+    rankNational: 18,
+    introCustom:
+      "Vous avez un appartement à Rouen que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée. Entre la proximité immédiate de Paris (1h10 en train qui amène chaque week-end une clientèle parisienne), le tourisme patrimonial (cathédrale, Jeanne d'Arc, Monet), l'Armada 2027 qui va faire exploser la demande et Rouen désormais classée zone tendue, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable. Et surtout : laquelle choisir parmi les acteurs locaux rouennais ?",
+    marketIntro:
+      "Rouen a connu une année 2024 record avec 4,2 millions de nuitées touristiques (+4 % vs 2023) et 1,6 million de nuitées étrangères (+8 %). La ville profite de trois leviers LCD : le tourisme patrimonial (capitale historique de la Normandie, cathédrale peinte par Monet), la proximité Paris qui génère un flux continu de week-ends, et le tourisme d'affaires (CHU, Matmut, Crédit Agricole). L'Armada 2027 (navires géants sur la Seine) va doper le marché sur 10 jours en juin — les propriétaires qui préparent cet événement dès maintenant peuvent tripler leurs revenus sur cette période. Rouen est passée en zone tendue par arrêté préfectoral en 2023, imposant numéro d'enregistrement et changement d'usage pour les résidences secondaires.",
+    conciergeries: [
+      {
+        name: 'Olympe Services',
+        url: 'https://olympe.services/',
+        commission: '17 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 32,
+        biensGeres: 50,
+        specialty: 'Commission la plus basse de Rouen',
+        description:
+          "Conciergerie indépendante dirigée par Valérie et Frédéric, deux Rouennais avec une connaissance fine du marché local. Commission de 17 %, parmi les plus basses de la métropole, ménage refacturé voyageur. Assistance voyageur réelle 7j/7 24h/24. Note Google parfaite 5,0/5. Le choix rationnel pour un propriétaire qui veut maximiser sa marge.",
+      },
+      {
+        name: 'GMS Conciergerie',
+        url: 'https://gmsconciergerie.com/rouen/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 45,
+        biensGeres: 90,
+        specialty: 'Dynamic pricing adapté marché rouennais',
+        description:
+          "Conciergerie régionale couvrant Rouen, Mont-Saint-Aignan, Sotteville-lès-Rouen et Bois-Guillaume. Commission 20 %, ménage refacturé voyageur. Spécialisée dans la tarification dynamique calée sur les événements locaux (Armada, Foire Saint-Romain, saisonnalité cathédrale). Publie un blog d'analyse du marché rouennais très complet.",
+      },
+      {
+        name: 'YourHostHelper Rouen',
+        url: 'https://yourhosthelper.com/conciergerie-rouen/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 180,
+        biensGeres: 120,
+        specialty: 'Réseau national, formule 15 services',
+        description:
+          "Franchise nationale de conciergerie Airbnb avec une agence dédiée à Rouen. Sans frais fixes, commission de 20 % uniquement sur les revenus générés. Formule clé en main incluant photos pro, optimisation tarifaire et accueil voyageurs. Un des plus gros réseaux d'avis cumulés (180+ pour Rouen), gage de fiabilité.",
+      },
+      {
+        name: 'Rouen Conciergerie',
+        url: 'https://rouenconciergerie.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur + forfait',
+        rating: 4.8,
+        reviews: 95,
+        biensGeres: 170,
+        specialty: 'Leader en volume à Rouen (170 biens)',
+        description:
+          "L'un des plus gros acteurs rouennais en nombre de biens (170+). Propose une gestion complète avec ménage forfaitaire, accueil physique et optimisation des annonces multi-plateformes (Airbnb, Booking, Abritel). Commission 20 %, ménage refacturé + forfait. Idéal si vous cherchez une structure rodée avec un volume important.",
+      },
+      {
+        name: 'Ma Conciergerie en Normandie (MCEN)',
+        url: 'https://www.maconciergerieennormandie.fr/',
+        commission: '22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 60,
+        biensGeres: 70,
+        specialty: 'Couverture Rouen + Deauville + Caen + Le Havre',
+        description:
+          "Conciergerie normande multi-villes positionnée premium avec création d'annonces, shooting photo pro et optimisation tarifaire. Commission 22 %, ménage refacturé voyageur. Particulièrement pertinente si vous avez plusieurs biens dispersés en Normandie (Rouen + résidence balnéaire à Deauville par exemple).",
+      },
+      {
+        name: 'LB Conciergerie',
+        url: 'https://lbconciergerie.com/',
+        commission: '18-22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 40,
+        biensGeres: 50,
+        specialty: 'Formules modulables (basic à premium)',
+        description:
+          "Conciergerie indépendante proposant plusieurs niveaux de service (basic, standard, premium) avec commission modulable entre 18 et 22 % selon les prestations retenues. Gestion complète ménage, accueil voyageurs et optimisation des revenus. Approche transparente et contrats flexibles, bon choix pour tester la LCD avant engagement total.",
+      },
+      {
+        name: 'M&A Conciergerie',
+        url: 'https://livretaccueil.com/fr/conciergerie-airbnb/rouen/ma-conciergerie-rouen',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 28,
+        biensGeres: 30,
+        specialty: 'Taille humaine, accompagnement personnalisé',
+        description:
+          "Structure à taille humaine pour Rouen et sa périphérie. Prend en charge la création d'annonces, le pilotage quotidien et l'accueil voyageur avec une approche relationnelle forte. Commission 20 %, ménage refacturé voyageur. Idéal pour un propriétaire avec 1-2 biens qui veut un vrai interlocuteur, pas un dashboard anonyme.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieux-Rouen (Cathédrale / Gros-Horloge)',
+        pricePerNight: '85-160 €',
+        occupancy: 72,
+        description:
+          "Cœur historique ultra-touristique autour de la cathédrale (peinte par Monet), du Gros-Horloge et du Vieux-Marché. Zone n°1 pour l'Airbnb avec la demande la plus forte et les tarifs les plus élevés de la ville. T2 à partir de 230 000 €.",
+        roiBrut: '7 à 7,5 %',
+      },
+      {
+        name: 'Saint-Marc',
+        pricePerNight: '60-95 €',
+        occupancy: 62,
+        description:
+          "Quartier bohème et gastronomique à l'est du centre, très apprécié pour ses halles, ses bistrots et ses antiquaires. Bon compromis entre attractivité touristique et prix d'achat immobilier plus raisonnables (T2 dès 160 000 €).",
+        roiBrut: '6,5 à 7 %',
+      },
+      {
+        name: 'Gare / Saint-Hilaire',
+        pricePerNight: '55-90 €',
+        occupancy: 65,
+        description:
+          "Quartier stratégique pour le tourisme d'affaires et les voyageurs Paris-Rouen grâce à la gare Rouen Rive-Droite (TER 1h10 Paris Saint-Lazare). Forte demande semaine (cadres en déplacement) et week-end (touristes parisiens). T2 dès 150 000 €.",
+        roiBrut: '7 à 7,5 %',
+      },
+      {
+        name: 'Rive Gauche (Saint-Sever)',
+        pricePerNight: '45-75 €',
+        occupancy: 55,
+        description:
+          "Quartier en pleine mutation urbaine avec le projet Seine Cité et l'écoquartier Flaubert. Prix d'achat bas (3 000-3 500 €/m²) et rentabilité brute élevée compensent un attrait touristique moindre. Potentiel fort à moyen terme.",
+        roiBrut: '8 à 8,5 %',
+      },
+      {
+        name: 'Quartier du Palais',
+        pricePerNight: '75-130 €',
+        occupancy: 68,
+        description:
+          "Quartier prestigieux autour du Palais de Justice gothique et de la rue Eau-de-Robec. Clientèle business (avocats, magistrats) en semaine et touristique le week-end, tarifs premium. T2 dès 200 000 €.",
+        roiBrut: '7 %',
+      },
+      {
+        name: 'Mont-Gargan / Les Sapins',
+        pricePerNight: '50-80 €',
+        occupancy: 52,
+        description:
+          "Quartier résidentiel sur les hauteurs avec vue sur Rouen et proximité du CHU Charles Nicolle. Demande portée par les familles en visite médicale et les touristes recherchant du calme hors centre. T2 dès 140 000 €.",
+        roiBrut: '7,5 à 8 %',
+      },
+    ],
+    regulation:
+      "Rouen est classée **zone tendue** depuis 2023 par arrêté préfectoral, ce qui déclenche un ensemble de restrictions spécifiques pour la LCD.\n\n**Enregistrement obligatoire.** La commune impose un enregistrement préalable en mairie pour tout meublé de tourisme, avec délivrance d'un **numéro à 13 chiffres** qui doit obligatoirement figurer sur chaque annonce Airbnb, Booking ou Abritel. Défaut = amende jusqu'à **10 000 €**.\n\n**Résidence principale : 120 jours/an.** Plafond au-delà duquel le propriétaire bascule dans le régime des résidences secondaires. Airbnb applique ce blocage automatiquement. Dépassement = amende jusqu'à **50 000 €**.\n\n**Résidence secondaire : changement d'usage.** Pour un investissement locatif dédié, Rouen impose une autorisation de changement d'usage délivrée par la mairie, avec souvent une règle de compensation (transformer un local commercial en habitation).\n\n**Loi Le Meur 2024.** DPE classe **A à E** obligatoire pour obtenir l'autorisation (A à D à partir de 2034), abattement micro-BIC réduit à **50 % pour les meublés classés** et **30 % pour les non classés**. Les règlements de copropriété peuvent désormais interdire la location touristique à la **double majorité** (auparavant unanimité).\n\n**Taxe de séjour.** Collectée au réel par la Métropole Rouen Normandie via la plateforme dédiée. Les tarifs varient selon le classement (1 à 5 étoiles) ou un pourcentage du prix de la nuitée pour les non classés (5 % plafonné). **L'Armada 2027** est autorisée en tarification dynamique, mais la commune surveille activement les annonces non déclarées pendant l'événement.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 78,
+      neighborhood: 'Vieux-Rouen (Cathédrale)',
+      revenuBrut: 19500,
+      commissionRate: 0.2,
+      menageCount: 85,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Combien peut-on gagner avec un Airbnb pendant L'Armada de Rouen ?",
+        a: "Pendant les 10 jours de L'Armada (prochaine édition en juin 2027), les tarifs de nuitée grimpent de +80 à +150 % par rapport à la moyenne annuelle. Un T2 qui se loue 78 €/nuit hors saison peut atteindre 180 à 220 €/nuit, avec un taux d'occupation quasi garanti à 100 %. Sur la durée complète de l'événement, un propriétaire peut générer l'équivalent de 2 à 3 mois de revenus moyens, soit 3 500 à 5 000 € bruts pour un bien bien placé près des quais de Seine. Verrouillez les dates dès maintenant si vous voulez profiter de 2027.",
+      },
+      {
+        q: "Rouen est-il intéressant pour capter la clientèle business et les voyageurs pro ?",
+        a: "Oui, Rouen a un tourisme d'affaires solide grâce à son statut de capitale régionale, au CHU Charles Nicolle, aux sièges sociaux (Matmut, Crédit Agricole Normandie Seine) et à l'Université de Rouen. La demande semaine (lundi-jeudi) est portée par les cadres en mission, avec des séjours de 2 à 4 nuits. Les quartiers Gare, Palais et Saint-Hilaire captent cette clientèle qui préfère souvent un Airbnb à l'hôtel pour les longs séjours (2-3 semaines) grâce aux cuisines équipées.",
+      },
+      {
+        q: "La proximité de Paris (1h10 en train) est-elle un atout ou un frein pour l'Airbnb à Rouen ?",
+        a: "C'est un atout majeur. Rouen bénéficie d'un flux régulier de touristes parisiens en week-end (notamment novembre-mars, hors saison des côtes normandes) et de voyageurs internationaux qui font l'aller-retour Paris-Rouen pour visiter la cathédrale, suivre Monet ou combiner Rouen avec Honfleur/Étretat. Cette proximité crée une demande récurrente toute l'année, contrairement aux destinations purement estivales. Les tarifs restent nettement inférieurs à Paris (78 € vs 135 € en moyenne), ce qui positionne Rouen comme une alternative abordable pour un city-break culturel.",
+      },
+    ],
+    updatedAt: '2026-04-20',
   },
 ];
 

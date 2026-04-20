@@ -166,9 +166,11 @@ const faqLd = {
     .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(28px, 4vw, 42px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
     .seo-h1 em { font-style: italic; color: #2b2d2b; }
     .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
-    .seo-lede p { margin: 0 0 14px; }
-    .seo-lede p:last-child { margin-bottom: 0; }
-    .seo-lede strong { color: #1a1a1a; font-weight: 600; }
+    .seo-lede :global(strong) { color: #1a1a1a; font-weight: 600; }
+    .rich :global(p) { margin: 0 0 16px; font-size: 15px; line-height: 1.75; color: #52524e; }
+    .rich :global(p:last-child) { margin-bottom: 0; }
+    .rich :global(strong) { color: #1a1a1a; font-weight: 600; }
+    .seo-lede.rich :global(p) { font-size: 16px; line-height: 1.7; color: #52524e; margin-bottom: 14px; }
     .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
     .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; }
     .seo-badge::before { content: '✓'; }
@@ -276,7 +278,7 @@ const faqLd = {
       <h1 class="seo-h1">
         Conciergerie <em>{c.displayName}</em> Airbnb : comparatif 2026 des {sortedConc.length} meilleures agences
       </h1>
-      <div class="seo-lede" set:html={renderRich(c.introCustom)} />
+      <div class="seo-lede rich" set:html={renderRich(c.introCustom)} />
       <div class="seo-badges">
         <span class="seo-badge">Comparatif neutre</span>
         <span class="seo-badge">Tarifs transparents</span>
@@ -308,7 +310,7 @@ const faqLd = {
 
     <div class="seo-body">
       <h2>{c.displayName}, un marché locatif courte durée en {c.rankNational <= 5 ? 'pleine mutation' : 'forte croissance'}</h2>
-      <Fragment set:html={renderRich(c.marketIntro)} />
+      <div class="rich" set:html={renderRich(c.marketIntro)} />
 
       <h3>Les chiffres clés du marché Airbnb à {c.displayName}</h3>
       <div class="stats-grid">

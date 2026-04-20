@@ -17,6 +17,18 @@ const c: City = city;
 const regionData = getRegionBySlug(c.regionSlug);
 const canonical = `https://www.enomia.app/conciergerie-airbnb/${c.regionSlug}/${c.slug}`;
 
+// Lightweight Markdown renderer: splits on `\n\n` into paragraphs and turns `**x**` into <strong>x</strong>.
+// Used for introCustom / marketIntro / regulation so we can aerate long blocks with a few bold keywords.
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function renderRich(text: string): string {
+  return text
+    .split('\n\n')
+    .map((p) => `<p>${escapeHtml(p).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p>`)
+    .join('');
+}
+
 // Computed values for the "concrete example" section
 const ex = c.concreteExample;
 const commissionEur = Math.round(ex.revenuBrut * ex.commissionRate);
@@ -261,7 +273,7 @@ const faqLd = {
       <h1 class="seo-h1">
         Conciergerie <em>{c.displayName}</em> Airbnb : comparatif 2026 des {sortedConc.length} meilleures agences
       </h1>
-      <p class="seo-lede">{c.introCustom}</p>
+      <div class="seo-lede" set:html={renderRich(c.introCustom)} />
       <div class="seo-badges">
         <span class="seo-badge">Comparatif neutre</span>
         <span class="seo-badge">Tarifs transparents</span>
@@ -293,7 +305,7 @@ const faqLd = {
 
     <div class="seo-body">
       <h2>{c.displayName}, un marché locatif courte durée en {c.rankNational <= 5 ? 'pleine mutation' : 'forte croissance'}</h2>
-      <p>{c.marketIntro}</p>
+      <Fragment set:html={renderRich(c.marketIntro)} />
 
       <h3>Les chiffres clés du marché Airbnb à {c.displayName}</h3>
       <div class="stats-grid">
@@ -438,9 +450,7 @@ const faqLd = {
       </div>
 
       <h2>Réglementation Airbnb à {c.displayName} en 2026 : ce que la conciergerie doit gérer</h2>
-      {c.regulation.split('\n\n').map((para) => (
-        <p set:html={para.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')} />
-      ))}
+      <div class="rich" set:html={renderRich(c.regulation)} />
 
       <h2>Les quartiers les plus rentables pour un Airbnb à {c.displayName}</h2>
       <p>Le prix d'achat et le rendement locatif varient fortement selon le quartier. Voici les zones où un bien Airbnb est le plus performant en 2026.</p>

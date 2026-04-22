@@ -8,18 +8,14 @@ const PRENOM = `E2E ${STAMP}`;
 
 let userId = '';
 
-test.beforeAll(async ({ request }) => {
-  // Nothing to do here — login happens per test in beforeEach so each test has a fresh page state.
-});
-
-test.afterAll(async ({ request }) => {
-  await deleteTestUser(request, userId);
+test.afterAll(async () => {
+  await deleteTestUser(userId);
 });
 
 test.describe('Enomia outils — parcours end-to-end', () => {
-  test('1. Simulateur — save + share', async ({ page, request }) => {
+  test('1. Simulateur — save + share', async ({ page }) => {
     await page.goto('/simulateur-lcd');
-    const login = await loginAsTestUser(page, request, EMAIL, PRENOM);
+    const login = await loginAsTestUser(page, EMAIL, PRENOM);
     userId = login.userId;
 
     await page.goto('/simulateur-lcd');
@@ -45,7 +41,7 @@ test.describe('Enomia outils — parcours end-to-end', () => {
 
   test('2. Contrat — bailleur + bien + contrat end-to-end', async ({ page, request }) => {
     await page.goto('/contrat-lcd-dashboard');
-    await loginAsTestUser(page, request, EMAIL, PRENOM);
+    await loginAsTestUser(page, EMAIL, PRENOM);
     await page.goto('/contrat-lcd-dashboard');
 
     const token = await page.evaluate(() => {
@@ -81,7 +77,7 @@ test.describe('Enomia outils — parcours end-to-end', () => {
 
   test('3. Facture — create via API, renders in dashboard', async ({ page, request }) => {
     await page.goto('/facturation-lcd');
-    await loginAsTestUser(page, request, EMAIL, PRENOM);
+    await loginAsTestUser(page, EMAIL, PRENOM);
     await page.goto('/facturation-lcd');
 
     const token = await page.evaluate(() => {
@@ -124,7 +120,7 @@ test.describe('Enomia outils — parcours end-to-end', () => {
 
   test('4. Cross-user isolation — test2 cannot see test1 data', async ({ page, request }) => {
     const altEmail = `marchenut+e2e2-${STAMP}@gmail.com`;
-    const { userId: altId } = await loginAsTestUser(page, request, altEmail, 'Alt User');
+    const { userId: altId } = await loginAsTestUser(page, altEmail, 'Alt User');
 
     const token = await page.evaluate(() => {
       const k = Object.keys(localStorage).find(x => x.startsWith('sb-') && x.endsWith('-auth-token'))!;
@@ -143,6 +139,6 @@ test.describe('Enomia outils — parcours end-to-end', () => {
       expect(s.name).not.toBe('E2E Test Sim'); // test1's sim from test #1
     }
 
-    await deleteTestUser(request, altId);
+    await deleteTestUser(altId);
   });
 });

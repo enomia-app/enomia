@@ -182,7 +182,26 @@ const faqLd = faqItems.length > 0 ? {
       <!-- Cover image -->
       <div class="article-cover">
         {post.data.featuredImage
-          ? <img src={post.data.featuredImage.src} alt={post.data.featuredImage.alt} />
+          ? (() => {
+              const raw = post.data.featuredImage.src;
+              const isCloudinary = raw.includes('res.cloudinary.com');
+              const makeSrc = (w: number) =>
+                isCloudinary
+                  ? raw.replace(/\/upload\/[^/]*\//, `/upload/q_auto,f_auto,w_${w}/`)
+                  : raw;
+              return (
+                <img
+                  src={makeSrc(800)}
+                  srcset={isCloudinary ? `${makeSrc(400)} 400w, ${makeSrc(800)} 800w, ${makeSrc(1200)} 1200w` : undefined}
+                  sizes="(max-width: 768px) 100vw, 720px"
+                  alt={post.data.featuredImage.alt}
+                  fetchpriority="high"
+                  decoding="async"
+                  width="1280"
+                  height="720"
+                />
+              );
+            })()
           : <span>Image de couverture</span>
         }
       </div>
@@ -348,7 +367,20 @@ const faqLd = faqItems.length > 0 ? {
           }
         } catch (_) {}
       }
-      loadAggregate();
+      // Defer: only fetch when rating block is near viewport (not on critical path)
+      if (block && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          if (entries.some(e => e.isIntersecting)) {
+            io.disconnect();
+            loadAggregate();
+          }
+        }, { rootMargin: '400px' });
+        io.observe(block);
+      } else {
+        // Fallback: idle callback
+        const schedule = window.requestIdleCallback || ((cb) => setTimeout(cb, 2000));
+        schedule(loadAggregate);
+      }
 
       stars.forEach(star => {
         star.addEventListener('mouseover', () => {

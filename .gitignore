@@ -20,6 +20,11 @@ dist/
 .claude/
 *.log
 
+# Playwright
+/playwright-report/
+/test-results/
+/blob-report/
+
 # IDE
 .idea/
 .vscode/

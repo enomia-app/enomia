@@ -114,8 +114,11 @@ test.describe('Enomia outils — parcours end-to-end', () => {
     expect(Number(invoice.total_ttc)).toBe(504);
 
     await page.reload();
-    // Bug 3 fix: pill label must have the accent
-    await expect(page.locator('text=Payée')).toBeVisible();
+    // Bug 3 fix: the status pill for Jean Dupont's row must contain the accented 'Payée'
+    // (regression guard — prior version rendered 'Payee' without the accent).
+    const pill = page.locator('tr', { hasText: 'Jean Dupont' }).locator('.f-badge');
+    await expect(pill).toBeVisible();
+    await expect(pill).toContainText('Payée');
   });
 
   test('4. Cross-user isolation — test2 cannot see test1 data', async ({ page, request }) => {

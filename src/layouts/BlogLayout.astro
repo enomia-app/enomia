@@ -315,7 +315,8 @@ const { title, description, ogImage, canonical } = Astro.props;
     /* Tables */
     .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0 28px; border-radius: 8px; overflow: hidden; font-size: 14px; line-height: 1.5; }
     .article-body thead th { background: #2b2d2b; color: #fff; font-size: 13px; font-weight: 600; padding: 12px 16px; text-align: left; white-space: nowrap; }
-    .article-body tbody td { padding: 12px 16px; color: var(--text-secondary); border-top: 1px solid var(--border); vertical-align: top; }
+    .article-body tbody td { padding: 12px 16px; color: var(--text-secondary); border-top: 1px solid var(--border); vertical-align: top; white-space: nowrap; }
+    .article-body tbody td:nth-child(2) { white-space: normal; } /* ville : peut wrap */
     .article-body tbody tr:hover { background: rgba(0,0,0,0.02); }
     .article-body tbody td:first-child { font-weight: 600; color: var(--text); }
     @media (max-width: 640px) {

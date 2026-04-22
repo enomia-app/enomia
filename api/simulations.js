@@ -67,13 +67,15 @@ export default async function handler(req, res) {
     const user = await getUser(req)
     if (!user) return res.status(401).json({ error: 'Non authentifié' })
 
-    const { error } = await supabase
+    const { data, error } = await supabase
       .from('simulations')
       .delete()
       .eq('id', simulationId)
       .eq('user_id', user.id)
+      .select('id')
 
     if (error) return res.status(400).json({ error: error.message })
+    if (!data || data.length === 0) return res.status(404).json({ error: 'Simulation introuvable' })
     return res.status(200).json({ message: 'Supprimée' })
   }
 

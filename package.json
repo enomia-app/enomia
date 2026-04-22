@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "node scripts/fix-keystatic.mjs && astro build",
     "preview": "astro preview",
-    "postinstall": "node scripts/fix-keystatic.mjs"
+    "postinstall": "node scripts/fix-keystatic.mjs",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@astrojs/markdoc": "^0.15.11",
@@ -23,6 +24,7 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "patch-package": "^8.0.1"
   }
 }

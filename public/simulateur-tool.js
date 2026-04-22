@@ -6,6 +6,9 @@ const _sb = supabase.createClient(
   'sb_publishable_TTmUwZsTYt7OWBTwTruaLQ_BYzRT9Jp'
 );
 let _user = null, _token = null, _dbSims = [], _pendingSimData = null, _isViewingSharedSim = false;
+// Tracks whether the sim has been modified since last save/load. Only flipped by
+// real user input on sliders/inputs, not by internal recomputes.
+let _simDirty = false;
 
 // ─── Lightweight client-side error logging ───
 // Logs go to Supabase table `client_logs` (fire-and-forget, never blocks UI)
@@ -576,11 +579,12 @@ function updateResults(rend,cfM,caM,otaM,menM,fixM,mens,netA,chA,seuil,total,emp
   lcdEl.style.width=lcdPct+'%';
   lcdEl.className='comp-fill lcd '+(rend>=10?'good':rend>=5?'':'bad');
   document.getElementById('comp-lcd-v').textContent=rDisp+'%';
-  document.getElementById('save-status').textContent='Non sauvegard\u00e9';
+  if(_simDirty){document.getElementById('save-status').textContent='Non sauvegard\u00e9';}
 }
 
 function _doNewSimulation(){
   currentSimIdx=null;currentSimDbId=null;_isViewingSharedSim=false;
+  _simDirty=false;
   document.getElementById('sim-name-input').value='';
   document.getElementById('save-status').textContent='';
   calcMode='single';
@@ -611,6 +615,9 @@ function openSim(i){_isViewingSharedSim=false;
     Object.keys(SLIDER_LABELS).forEach(id=>{const el=document.getElementById('s-'+id);if(el&&s.sliders?.[id]!==undefined){el.value=s.sliders[id];sv(id,s.sliders[id]);}});
     compute();
   }
+  currentSimDbId = entry?.id || null;
+  _simDirty = false;
+  document.getElementById('save-status').textContent = '';
   showScreen('screen-calc');
 }
 let currentSimDbId = null;
@@ -631,6 +638,7 @@ async function _doSaveToDb(overrideData){
   if(res.simulationId)currentSimDbId=res.simulationId;
   // Invalider le cache pour qu'au prochain dashboard, on refetch
   _clearSimsCache();
+  _simDirty=false;
   document.getElementById('save-status').textContent='';
 }
 async function saveSimulation(){
@@ -652,6 +660,10 @@ async function saveSimulation(){
 function initSliders(){
   Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sv(id,s.value);});
   Object.keys(SV2_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sv2(id,s.value);});
+  // Mark the simulation dirty only on real user interaction, not programmatic value changes.
+  document.querySelectorAll('input[type="range"], #sim-name-input, input.lot-input').forEach(el=>{
+    el.addEventListener('input', function(){ _simDirty = true; }, { passive: true });
+  });
 }
 async function subscribeNL(){
   const email=document.getElementById('nl-email').value.trim();
@@ -724,7 +736,7 @@ function copyShareLink(){
 // ─── UNSAVED NAVIGATION GUARD ───
 window.addEventListener('beforeunload', function(e){
   var isCalc=document.getElementById('screen-calc').classList.contains('active');
-  var isUnsaved=document.getElementById('save-status').textContent==='Non sauvegard\u00e9';
+  var isUnsaved=_simDirty;
   if(isCalc&&isUnsaved&&currentResult){
     e.preventDefault();
     e.returnValue='';
@@ -735,7 +747,7 @@ function isSubscribed(){return !!_user;}
 function checkUnsavedAndNavigate(cb){
   if(_isViewingSharedSim){cb();return;}
   var isCalc=document.getElementById('screen-calc').classList.contains('active');
-  var isUnsaved=document.getElementById('save-status').textContent==='Non sauvegard\u00e9';
+  var isUnsaved=_simDirty;
   if(isCalc&&isUnsaved&&currentResult){
     _leaveCallback=cb;
     if(isSubscribed()){

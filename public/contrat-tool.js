@@ -1257,10 +1257,10 @@
     const bailleurLine = bailleur.type === 'societe'
       ? `${esc(bailleur.raison_sociale || '')} — SIRET ${esc(bailleur.siret || '')}`
       : `${esc(bailleur.prenom || '')} ${esc(bailleur.nom || '')}`;
-    const bailleurAddr = `${esc(bailleur.adresse || '')}${bailleur.email ? ', ' + esc(bailleur.email) : ''}${bailleur.telephone ? ', ' + esc(bailleur.telephone) : ''}`;
+    const bailleurAddr = [bailleur.adresse, bailleur.email, bailleur.telephone].filter(Boolean).map(esc).join(', ');
 
-    const locataireLine = `${esc(d.locataire_prenom || '')} ${esc(d.locataire_nom)}`;
-    const locataireAddr = `${esc(d.locataire_adresse || '')}${d.locataire_email ? ', ' + esc(d.locataire_email) : ''}${d.locataire_telephone ? ', ' + esc(d.locataire_telephone) : ''}`;
+    const locataireLine = `${esc(d.locataire_prenom || '')} ${esc(d.locataire_nom)}`.trim();
+    const locataireAddr = [d.locataire_adresse, d.locataire_email, d.locataire_telephone].filter(Boolean).map(esc).join(', ');
 
     const rawEquips = Array.isArray(bien.equipements) ? bien.equipements : [];
     const equipsList = rawEquips.length
@@ -1272,8 +1272,8 @@
     const parts = [
       `<h1>${L.title}</h1>`,
       `<h2>${L.h_parties}</h2>`,
-      `<p><strong>${L.bailleur}:</strong> ${bailleurLine}. ${bailleurAddr}.</p>`,
-      `<p><strong>${L.preneur}:</strong> ${locataireLine}. ${locataireAddr}.</p>`,
+      `<p><strong>${L.bailleur}:</strong> ${bailleurLine}${bailleurAddr ? '. ' + bailleurAddr : ''}.</p>`,
+      `<p><strong>${L.preneur}:</strong> ${locataireLine}${locataireAddr ? '. ' + locataireAddr : ''}.</p>`,
 
       `<h2>${L.h_objet}</h2>`,
       `<p>${L.objet_text}</p>`,

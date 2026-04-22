@@ -199,7 +199,7 @@ if (!window.__factInit) {
     var label = document.getElementById('fnav-user-label');
     if (!userBadge) return;
     if (_fuser) {
-      var initials = (_fuser.email || '?').substring(0, 2).toUpperCase();
+      var initials = ((_fuser.email || '?').match(/^(.)(?:.*?[.\-_](.))?/) || []).slice(1).join('').toUpperCase() || '?';
       if (avatar) avatar.textContent = initials;
       if (label) label.textContent = _fuser.email;
       userBadge.onclick = function () { fLogout(); };
@@ -498,7 +498,7 @@ if (!window.__factInit) {
         const total = fCalcInvoiceTotal(inv);
         const paid = inv.statut === 'Payée';
         const badgeClass = paid ? 'f-badge f-paid' : 'f-badge f-pending';
-        const badgeLabel = paid ? 'Payee' : 'En attente';
+        const badgeLabel = paid ? 'Payée' : 'En attente';
         const badgeDot = paid ? '●' : '●';
         return `<tr>
           <td><span class="f-primary">${esc(inv.client || '---')}</span><span class="f-secondary">${esc(inv.email || '')}</span></td>
@@ -982,7 +982,7 @@ if (!window.__factInit) {
     }
 
     // ── PAID STAMP ──
-    if (inv.statut === 'Payee' || inv.statut === 'Payee') {
+    if (inv.statut === 'Payée') {
       doc.setDrawColor(green[0], green[1], green[2]); doc.setTextColor(green[0], green[1], green[2]);
       doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setLineWidth(0.8);
       doc.roundedRect(W - M - 44, y, 44, 14, 2, 2);

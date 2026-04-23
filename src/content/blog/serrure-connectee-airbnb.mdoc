@@ -109,12 +109,14 @@ Résultat sur un de mes biens : voyageur bloqué dehors, appel d'urgence, j'ai d
 
 La boîte à code mécanique : **zéro batterie, zéro risque**.
 
-### **Bug 2 — Application smartphone qui bugge**
+### **Bug 2 — Application smartphone (côté hôte) qui bugge**
 
-Les serrures connectées fonctionnent via une app mobile. Cette app peut bugger pour 1001 raisons :
+**Précision importante** : c'est **l'hôte** qui a besoin d'une app pour gérer la serrure (générer des codes, ajouter des utilisateurs). Le voyageur, lui, tape juste le code sur le clavier physique de la serrure — pas besoin d'app sur son téléphone dans la grande majorité des cas (seules les serrures sans clavier "Bluetooth only" imposent une app côté voyageur, à éviter en LCD).
+
+Mais l'app côté hôte peut bugger pour 1001 raisons :
 - Mise à jour iOS/Android incompatible
 - Serveur du fabricant down
-- Changement de smartphone du voyageur
+- Changement de smartphone de l'hôte (re-pairing à refaire)
 - VPN actif qui bloque la connexion
 
 Sur une de mes serrures Nuki, une mise à jour a cassé le pairing pendant 48h. Pendant ce temps, impossible de générer un code pour les nouveaux arrivants. J'ai dû basculer en boîte à code d'urgence.
@@ -141,9 +143,11 @@ Les fabricants poussent des mises à jour régulières. Une sur dix pose problè
 
 ### **Bug 5 — Voyageur qui ne comprend pas le système**
 
-Les voyageurs de 60+ ans, ceux qui ne parlent pas anglais ou ceux qui arrivent après 15h de voyage : ils ne veulent pas télécharger une app, ne comprennent pas le Bluetooth, pestent contre le smartphone. **Un code à 4 chiffres dans une boîte, tout le monde comprend, même mes grand-parents.**
+Ce bug concerne uniquement les serrures **sans clavier physique** (ouverture Bluetooth via app uniquement — à éviter absolument en LCD). Les voyageurs de 60+ ans, ceux qui ne parlent pas anglais ou ceux qui arrivent après 15h de voyage : ils ne veulent pas télécharger une app, ne comprennent pas le Bluetooth, pestent contre le smartphone.
 
-Sur mes biens, 100% des voyageurs maîtrisent la boîte à code. Sur mes biens ex-connectés, j'ai eu **3 à 5% de voyageurs** qui n'arrivaient pas à utiliser l'app et me téléphonaient pour être guidés.
+**Pour une serrure avec clavier physique**, ce problème disparaît — le voyageur tape juste le code, exactement comme une boîte à code mécanique. Aucune différence côté voyageur.
+
+Sur mes biens ex-connectés (j'avais du Bluetooth only à l'époque), j'ai eu **3 à 5% de voyageurs** qui n'arrivaient pas à utiliser l'app et me téléphonaient pour être guidés. Avec un clavier physique (ou la boîte à code mécanique), c'est 0%.
 
 ## **Pourquoi la boîte à code mécanique est supérieure (95% des cas)**
 

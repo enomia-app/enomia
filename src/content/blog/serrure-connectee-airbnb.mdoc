@@ -11,7 +11,7 @@ excerpt: >-
   vite fait.
 featuredImage:
   src: >-
-    https://res.cloudinary.com/dv2btcpc2/image/upload/q_auto,f_auto,w_1200/v1775495181/placeholder-serrure-connectee-airbnb.png
+    https://res.cloudinary.com/dv2btcpc2/image/upload/v1776943030/serrure-connectee-2_stjxjt.webp
   alt: Serrure connectée Airbnb vs boîte à code mécanique
 publishedAt: 2026-04-22
 updatedAt: 2026-04-22
@@ -50,13 +50,47 @@ Dans cet article :
 - La réglementation 2025 sur les boîtes à clé publiques (⚠️ important)
 - Les modèles recommandés et les prix réels
 
-## **Serrure connectée vs boîte à code mécanique : la vraie comparaison**
+## **Les 2 types de serrures connectées (très différents)**
 
-Avant tout, distinguons les deux objets — beaucoup les confondent.
+Avant de comparer avec la boîte à code mécanique, il faut distinguer les **2 grandes familles** de serrures connectées — parce qu'elles ne sont pas du tout équivalentes en usage LCD.
 
-**Serrure connectée** : serrure électronique fixée sur la porte d'entrée, qui s'ouvre via code numérique / empreinte / Bluetooth / application smartphone. Requiert une batterie et souvent une connexion Wi-Fi.
+### **Type 1 — Serrure connectée "Bluetooth / app uniquement"**
 
-**Boîte à code mécanique** : petit coffre fixé **dans l'encadrement de la porte** ou dans un sas sécurisé, qui contient le jeu de clés. Le voyageur entre un code à 4 chiffres, récupère les clés, ouvre la porte classique. Zéro électronique, zéro batterie.
+La serrure s'ouvre **seulement** via l'application smartphone du voyageur (connexion Bluetooth au moment de l'arrivée) ou via la clé physique de secours. Pas de clavier, pas de code à taper.
+
+**Avantages** :
+- Design minimaliste (rien ne dépasse, indiscernable d'une serrure classique)
+- Génération de codes d'accès numériques à durée limitée
+- Intégration écosystème smart home (Alexa, Google Home, Apple Home)
+
+**Inconvénients (majeurs en LCD)** :
+- **Le voyageur DOIT télécharger l'app** de la marque (iOS + Android), créer un compte, accepter les permissions
+- Ne fonctionne pas si le voyageur a un vieux smartphone, pas de data à l'arrivée, ou n'est pas technophile
+- 3-5% de voyageurs incapables de s'en sortir sans appel = note qui chute
+- Process d'ouverture long (lancer l'app, attendre Bluetooth, parfois relancer)
+
+**Verdict LCD** : **À ÉVITER ABSOLUMENT**. Ce type est pensé pour un usage perso de type "ma maison + ma famille + quelques invités", pas pour recevoir 180 voyageurs différents par an avec 90 ans d'écart d'âge entre eux.
+
+### **Type 2 — Serrure connectée "avec clavier numérique"**
+
+La serrure a un **pavé numérique physique** intégré (ou un module Keypad séparé). Le voyageur tape simplement un code à 4-8 chiffres comme sur une boîte à code mécanique. L'hôte, lui, gère les codes via app.
+
+**Avantages** :
+- **Le voyageur n'a rien à télécharger** — il tape juste le code
+- Expérience identique à une boîte à code mécanique côté voyageur
+- Codes à usage unique possibles (valides sur la durée du séjour uniquement)
+- Intégration possible avec channel manager pour envoi auto du code
+
+**Inconvénients** :
+- Prix élevé (200-500 €)
+- Dépendance batterie (6-18 mois) et parfois Wi-Fi
+- Installation plus technique (changement du cylindre)
+
+**Verdict LCD** : **seul type viable** si vous envisagez du connecté. **Tout le reste de cet article parle uniquement des serrures du Type 2** (clavier numérique).
+
+### **Boîte à code mécanique**
+
+Petit coffre fixé **dans l'encadrement de la porte** ou dans un sas sécurisé, qui contient le jeu de clés. Le voyageur entre un code à 4 chiffres, récupère les clés, ouvre la porte classique. Zéro électronique, zéro batterie.
 
 {% table %}
 - Critère
@@ -273,6 +307,36 @@ Si vous optez pour la **serrure connectée** (uniquement si vous êtes dans le 1
 - **August Wi-Fi Smart Lock + Smart Keypad** : intégration écosystème Apple/Google
 
 **Règle absolue** : toujours un **clavier physique** couplé à la serrure (le voyageur n'a pas besoin d'app). Et **toujours une boîte à code en backup** avec un jeu de secours. Si la techno plante, vous n'êtes pas bloqué.
+
+## **L'automatisation : channel manager + plugin de la serrure**
+
+Si vous optez pour une serrure connectée (type 2 avec clavier numérique), la vraie valeur ajoutée n'est pas dans la serrure en elle-même — c'est dans **l'automatisation de l'envoi des codes**.
+
+### **Le principe**
+
+Votre **channel manager** (Smoobu, Lodgify, Hospitable, etc.) reçoit les réservations Airbnb + Booking en temps réel. Via le **plugin de la marque de votre serrure** (Nuki, Igloohome, Yale, August), le channel manager :
+
+1. **Génère automatiquement un code unique** pour chaque nouvelle réservation
+2. **Envoie ce code** au voyageur via message automatique (Airbnb/Booking) quelques heures avant son arrivée
+3. **Active le code** dans la serrure pour la durée exacte du séjour
+4. **Invalide le code** automatiquement après le check-out
+
+Vous ne touchez à rien. Vous ne voyez même pas les codes passer.
+
+### **Plugins disponibles en 2026**
+
+- **Nuki** : intégrations natives avec Smoobu, Hospitable, Guesty, Hostaway
+- **Igloohome** : intégration directe avec Hostaway, Smoobu, Lodgify, Hospitable
+- **August** : via IFTTT ou plugin Hospitable
+- **Yale** : intégration Hostaway, Lodgify
+
+Vérifiez la compatibilité avant d'acheter : certains plugins sont payants en supplément (5-15 €/mois/bien) et toutes les combinaisons ne sont pas parfaites.
+
+### **Sans plugin, ça perd tout son intérêt**
+
+Si vous gérez les codes **manuellement** via l'app de la serrure (créer un code, copier, coller dans le message Airbnb), vous reproduisez exactement ce que vous faites avec une boîte à code mécanique — pour 10× le prix. Le gain d'automatisation via le plugin est **la seule vraie justification économique** d'une serrure connectée en LCD.
+
+Détail complet sur l'écosystème d'automatisation dans mon article [automatiser sa LCD](/automatiser-location-saisonniere) et le [comparatif channel manager 2026](/channel-manager-comparatif).
 
 ## **L'installation en pratique**
 

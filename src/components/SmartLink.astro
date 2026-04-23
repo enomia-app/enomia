@@ -1,0 +1,18 @@
+---
+import { isPageAvailable } from '../utils/isPageAvailable';
+
+interface Props {
+  href?: string;
+  title?: string;
+  class?: string;
+  [key: string]: any;
+}
+
+const { href, title, class: className, ...rest } = Astro.props;
+const available = await isPageAvailable(href);
+---
+{available ? (
+  <a href={href} title={title} class={className} {...rest}><slot /></a>
+) : (
+  <span class={className} {...rest}><slot /></span>
+)}

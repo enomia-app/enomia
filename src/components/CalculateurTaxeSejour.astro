@@ -1,0 +1,135 @@
+---
+// Calculateur de taxe de séjour — formulaire + résultat.
+// Les tarifs sont récupérés via /api/taxe-sejour (source : fichier DELTA/OCSITAN DGFiP).
+---
+
+<link rel="stylesheet" href="/css/calculateur-taxe-sejour.css" />
+
+<form class="ts-form" id="ts-form" autocomplete="off">
+
+  <!-- 01 Commune -->
+  <div class="ts-field ts-field-commune">
+    <label for="ts-commune">
+      <svg class="ts-icn" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6" />
+      </svg>
+      <span><em class="ts-num">01</em> Commune de location</span>
+    </label>
+    <div class="ts-autoc">
+      <input
+        type="text"
+        id="ts-commune"
+        placeholder="Ex. Paris, Nice, La Rochelle…"
+        autocomplete="off"
+        aria-autocomplete="list"
+        aria-controls="ts-commune-list"
+        required
+      />
+      <ul id="ts-commune-list" class="ts-autoc-list" role="listbox" hidden></ul>
+    </div>
+    <p class="ts-hint" id="ts-commune-hint">Saisissez au moins 2 lettres.</p>
+  </div>
+
+  <!-- 02 Hébergement -->
+  <div class="ts-field">
+    <label for="ts-hebergement">
+      <svg class="ts-icn" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 18h18M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M8 14h3" />
+      </svg>
+      <span><em class="ts-num">02</em> Type d'hébergement</span>
+    </label>
+    <select id="ts-hebergement" disabled required>
+      <option value="">— Choisissez d'abord une commune —</option>
+    </select>
+    <p class="ts-hint" id="ts-hebergement-hint">Le tarif dépend du classement officiel de votre bien.</p>
+  </div>
+
+  <!-- 03 Adultes -->
+  <div class="ts-grid-2">
+    <div class="ts-field">
+      <label for="ts-adultes">
+        <svg class="ts-icn" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="7" r="3" />
+          <path d="M3 21a6 6 0 0 1 12 0M16 3.2A3 3 0 1 1 16 9.8M21 21a6 6 0 0 0-3.5-5.4" />
+        </svg>
+        <span><em class="ts-num">03</em> Adultes (≥18 ans)</span>
+      </label>
+      <div class="ts-stepper">
+        <button type="button" class="ts-stp" data-target="ts-adultes" data-delta="-1" aria-label="Moins">−</button>
+        <input type="number" id="ts-adultes" min="1" max="50" step="1" value="2" required />
+        <button type="button" class="ts-stp" data-target="ts-adultes" data-delta="1" aria-label="Plus">+</button>
+      </div>
+      <p class="ts-hint">Les mineurs sont exonérés.</p>
+    </div>
+
+    <!-- 04 Nuits -->
+    <div class="ts-field">
+      <label for="ts-nuits">
+        <svg class="ts-icn" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="5" width="18" height="16" rx="2" />
+          <path d="M3 9h18M8 3v4M16 3v4" />
+        </svg>
+        <span><em class="ts-num">04</em> Nombre de nuits</span>
+      </label>
+      <div class="ts-stepper">
+        <button type="button" class="ts-stp" data-target="ts-nuits" data-delta="-1" aria-label="Moins">−</button>
+        <input type="number" id="ts-nuits" min="1" max="365" step="1" value="3" required />
+        <button type="button" class="ts-stp" data-target="ts-nuits" data-delta="1" aria-label="Plus">+</button>
+      </div>
+      <p class="ts-hint">Plafond : 120 nuits/an pour une résidence principale.</p>
+    </div>
+  </div>
+
+  <!-- 05 Prix (pour les tarifs proportionnels seulement) -->
+  <div class="ts-field ts-field-prix" id="ts-field-prix" hidden>
+    <label for="ts-prix">
+      <svg class="ts-icn" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2v20M16 6H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H7" />
+      </svg>
+      <span><em class="ts-num">05</em> Prix par nuit HT (hors taxes)</span>
+    </label>
+    <div class="ts-stepper">
+      <input type="number" id="ts-prix" min="0" step="1" value="100" />
+      <span class="ts-unit">€</span>
+    </div>
+    <p class="ts-hint">Requis pour les meublés non classés (tarif en % du prix).</p>
+  </div>
+</form>
+
+<!-- RÉSULTAT -->
+<div class="ts-result" id="ts-result" aria-live="polite">
+  <div class="ts-result-empty" id="ts-result-empty">
+    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M8 9h8M8 13h8M8 17h4" />
+    </svg>
+    <p>Choisissez une commune et un type d'hébergement pour voir le montant.</p>
+  </div>
+
+  <div class="ts-result-full" id="ts-result-full" hidden>
+    <div class="ts-result-head">
+      <div>
+        <p class="ts-result-label">Taxe de séjour totale</p>
+        <p class="ts-result-total" id="ts-result-total">0,00 €</p>
+      </div>
+      <div class="ts-result-meta" id="ts-result-meta"></div>
+    </div>
+
+    <ul class="ts-result-breakdown" id="ts-result-breakdown"></ul>
+
+    <div class="ts-result-actions">
+      <button type="button" class="ts-btn ts-btn-primary" id="ts-btn-share">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+          <path d="M8.6 13.5L15.4 17.5M15.4 6.5L8.6 10.5"/>
+        </svg>
+        Copier le lien
+      </button>
+      <button type="button" class="ts-btn" id="ts-btn-reset">Recommencer</button>
+    </div>
+
+    <p class="ts-legal" id="ts-legal"></p>
+  </div>
+</div>
+
+<script src="/calculateur-taxe-sejour.js" defer></script>

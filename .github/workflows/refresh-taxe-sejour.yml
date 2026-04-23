@@ -1,0 +1,42 @@
+name: Refresh Taxe de Séjour (DELTA OCSITAN)
+
+on:
+  schedule:
+    # Le fichier DELTA N+1 est publié chaque année à la mi-octobre par la DGFiP.
+    # On récupère chaque 1er novembre à 6h UTC (7h Paris) pour avoir les tarifs N+1.
+    - cron: '0 6 1 11 *'
+  # Déclenchement manuel via l'onglet Actions (pour forcer un refresh)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Import latest DELTA file
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/import-taxe-sejour.mjs
+
+      - name: Archive parsed CSV artifact (debug)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: delta-${{ github.run_id }}
+          path: data/taxe-sejour/delta-latest.csv
+          retention-days: 7
+          if-no-files-found: ignore

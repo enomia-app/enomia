@@ -1,7 +1,7 @@
 ---
 interface Props {
   variant?: 'marketing' | 'tool';
-  currentTool?: 'simulateur' | 'facture' | 'contrat';
+  currentTool?: 'simulateur' | 'facture' | 'contrat' | 'taxe-sejour';
   ctaLabel?: string;
   ctaHref?: string;
 }
@@ -54,6 +54,13 @@ const isTool = variant === 'tool';
             </div>
             <span class="eh-badge-free">Gratuit</span>
           </a>
+          <a href="/calcul-taxe-de-sejour" class:list={["eh-dropdown-item", { active: currentTool === 'taxe-sejour' }]}>
+            <div class="eh-tool-info">
+              <span class="eh-tool-name">Calcul taxe de séjour</span>
+              <span class="eh-tool-desc">Tarif officiel par commune</span>
+            </div>
+            <span class="eh-badge-free">Gratuit</span>
+          </a>
         </div>
       </div>
     </nav>
@@ -73,6 +80,7 @@ const isTool = variant === 'tool';
     <a href="/simulateur-rentabilite-airbnb" class="eh-mobile-link">Simulateur rentabilité LCD</a>
     <a href="/contrat-location-saisonniere" class="eh-mobile-link">Contrat de location</a>
     <a href="/facture-location-saisonniere" class="eh-mobile-link">Factures LCD</a>
+    <a href="/calcul-taxe-de-sejour" class="eh-mobile-link">Calcul taxe de séjour</a>
     {isTool && (
       <button type="button" class="eh-mobile-link eh-mobile-login" onclick="if(typeof window.toolLogin==='function'){document.getElementById('eh-mobile-menu')?.classList.remove('open');window.toolLogin();}">
         👤 Se connecter

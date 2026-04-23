@@ -1,0 +1,274 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+import ContratLandingStyles from '../components/ContratLandingStyles.astro';
+import CalculateurTaxeSejour from '../components/CalculateurTaxeSejour.astro';
+import NewsletterBlock from '../components/NewsletterBlock.astro';
+
+const title = 'Calcul taxe de séjour 2026 — Calculateur gratuit par commune · Enomia';
+const description =
+  "Calculez la taxe de séjour exacte pour votre location courte durée. 32 000 communes françaises, 21 catégories d'hébergement, barème officiel DGFiP 2026 — 100 % gratuit.";
+const canonical = 'https://www.enomia.app/calcul-taxe-de-sejour';
+
+const ldApp = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Calculateur taxe de séjour Enomia',
+  url: canonical,
+  applicationCategory: 'FinanceApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+  description,
+  inLanguage: 'fr-FR'
+};
+
+const faqItems = [
+  {
+    q: "Comment se calcule la taxe de séjour en 2026 ?",
+    a: "Tarif communal × nombre d'adultes (≥18 ans) × nombre de nuits. Pour les meublés non classés, c'est un pourcentage du prix HT par personne et par nuit (1 à 5 %), plafonné au tarif le plus élevé voté par la commune (typiquement le palace local)."
+  },
+  {
+    q: "Qui paie la taxe de séjour : le propriétaire ou le voyageur ?",
+    a: "Le voyageur majeur. Le loueur (ou la plateforme comme Airbnb/Booking) la collecte puis la reverse à la commune. Les mineurs, résidents permanents, saisonniers et personnes en hébergement d'urgence sont exonérés."
+  },
+  {
+    q: "Airbnb et Booking collectent-ils automatiquement la taxe de séjour ?",
+    a: "Airbnb collecte dans la quasi-totalité des communes françaises depuis 2025. Booking uniquement dans les grandes villes et EPCI touristiques majeurs. Pour vos réservations en direct, vous devez collecter et reverser vous-même."
+  },
+  {
+    q: "Quelle différence entre tarif réel et tarif proportionnel ?",
+    a: "Tarif réel : montant fixe en euros (ex. 1,87 €/nuit/personne pour un meublé 3★ à Paris). Tarif proportionnel : pourcentage du prix HT par personne et par nuit (ex. 5 % à Paris pour un meublé non classé), plafonné au tarif le plus élevé de la grille communale."
+  },
+  {
+    q: "D'où viennent les tarifs affichés par ce calculateur ?",
+    a: "Du fichier DELTA (ex-OCSITAN) publié par la DGFiP sur data.gouv.fr. Nous l'importons automatiquement chaque année en octobre-novembre pour disposer des barèmes N+1 dès leur publication officielle."
+  },
+  {
+    q: "Dois-je ajouter la taxe additionnelle départementale ?",
+    a: "Non, elle est déjà incluse dans le tarif total affiché. La plupart des départements ajoutent 10 % sur le tarif communal. L'Île-de-France ajoute en plus 15 % pour la Société du Grand Paris — ces éléments sont intégrés quand la donnée est publiée."
+  },
+  {
+    q: "Les mineurs paient-ils la taxe de séjour ?",
+    a: "Non. Les moins de 18 ans sont exonérés de droit. Dans une famille de 4 avec 2 enfants, vous ne collectez la taxe que pour les 2 adultes. Le calculateur ne demande volontairement que le nombre d'adultes."
+  },
+  {
+    q: "Si ma commune n'apparaît pas dans le calculateur ?",
+    a: "Si la commune n'est pas dans le fichier officiel DELTA, c'est qu'elle n'a pas voté de taxe de séjour. Vous n'avez alors rien à collecter. Le calculateur couvre 32 000 communes — la quasi-totalité des communes ayant délibéré."
+  }
+];
+const ldFaq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a }
+  }))
+};
+---
+
+<ToolLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="https://www.enomia.app/og/calcul-taxe-de-sejour.png"
+  currentTool="taxe-sejour"
+>
+  <ContratLandingStyles />
+
+  <script type="application/ld+json" set:html={JSON.stringify(ldApp)} />
+  <script type="application/ld+json" set:html={JSON.stringify(ldFaq)} />
+
+  <!-- ─── HERO (landing pattern) ─── -->
+  <div class="landing-hero">
+    <div class="landing-tag">Calculateur taxe de séjour</div>
+    <h1 class="landing-h1">Calculez la<br><em>taxe de séjour exacte</em></h1>
+    <p class="landing-sub">Barème officiel DGFiP. 32 000 communes. En 20 secondes. Gratuit.</p>
+    <div class="landing-stats">
+      <div class="landing-stat">
+        <div class="landing-stat-val">32 000</div>
+        <div class="landing-stat-lbl">communes françaises</div>
+      </div>
+      <div class="landing-stat">
+        <div class="landing-stat-val">21</div>
+        <div class="landing-stat-lbl">catégories d'hébergement</div>
+      </div>
+      <div class="landing-stat">
+        <div class="landing-stat-val">2026</div>
+        <div class="landing-stat-lbl">tarifs à jour</div>
+      </div>
+    </div>
+    <a href="#outil" class="landing-cta">Lancer le calcul →</a>
+    <p class="landing-note">Pas de compte · Barème DGFiP/DELTA mis à jour chaque année</p>
+  </div>
+
+  <!-- ─── OUTIL ─── -->
+  <div id="outil" style="max-width: 920px; margin: 0 auto; padding: 0 24px;">
+    <CalculateurTaxeSejour />
+  </div>
+
+  <!-- ─── SEO BODY ─── -->
+  <div class="seo-wrap">
+    <div class="seo-body">
+
+      <h2>Comment fonctionne l'outil de calcul de taxe de séjour</h2>
+      <div class="clauses-grid">
+        <div class="clause-item"><div class="check">1</div><div><strong>Choisissez votre commune</strong><br>Autocomplétion sur 32 000 communes françaises. La commune vote chaque année son barème dans les limites fixées par la loi.</div></div>
+        <div class="clause-item"><div class="check">2</div><div><strong>Sélectionnez le classement</strong><br>Meublé non classé, meublé 1 à 5★, hôtel, résidence, chambre d'hôtes, camping, palace. Le tarif dépend directement du classement officiel.</div></div>
+        <div class="clause-item"><div class="check">3</div><div><strong>Indiquez adultes × nuits</strong><br>La taxe est due par adulte (≥18 ans) et par nuit. Les mineurs, résidents permanents, saisonniers et hébergements d'urgence sont exonérés.</div></div>
+        <div class="clause-item"><div class="check">4</div><div><strong>Obtenez le montant exact</strong><br>Tarif officiel, taxe additionnelle incluse, avec le détail du calcul. Partagez le lien avec un voyageur ou archivez-le.</div></div>
+      </div>
+
+      <h2>Formule officielle pour calculer la taxe de séjour</h2>
+      <p>Pour la majorité des cas (tarif en euros, régime réel) :</p>
+      <div class="callout">
+        <strong>Taxe totale = tarif communal × nombre d'adultes × nombre de nuits</strong>
+        <p>Exemple : Airbnb meublé 3★ à Paris, 2 adultes, 3 nuits → 1,70 € × 1,10 (taxe dép.) × 2 × 3 = <strong>11,22 €</strong>. C'est le montant que paie le voyageur et que vous reversez à la commune (ou que la plateforme collecte pour vous).</p>
+      </div>
+
+      <h2>Les 2 régimes : réel vs forfaitaire</h2>
+      <p>Chaque commune choisit son régime lors du vote annuel. En location courte durée via Airbnb/Booking, vous êtes quasi toujours au régime réel.</p>
+      <div class="comparison">
+        <div class="comp-col">
+          <h4>Régime réel</h4>
+          <div class="ref">Cas standard · ~95 % des communes</div>
+          <ul>
+            <li>La taxe se calcule sur le nombre <strong>réel</strong> de personnes qui séjournent, chaque nuit</li>
+            <li>Le loueur collecte auprès du voyageur puis reverse à la commune</li>
+            <li>Taxe affichée séparément du loyer</li>
+          </ul>
+        </div>
+        <div class="comp-col">
+          <h4>Régime forfaitaire</h4>
+          <div class="ref">Rare · ~5 % des communes</div>
+          <ul>
+            <li>Forfait annuel basé sur la <strong>capacité d'accueil déclarée</strong></li>
+            <li>Payé en une fois, indépendamment du taux d'occupation réel</li>
+            <li>Vous ne collectez plus auprès du voyageur</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Tarif fixe (€) ou tarif proportionnel (%)</h2>
+      <p>Le barème voté par la commune dépend de la catégorie de votre hébergement. Un bien <strong>classé</strong> (procédure Atout France) bénéficie d'un tarif en euros fixe, plus avantageux qu'un non-classé.</p>
+      <p>Un bien <strong>non classé</strong> (la majorité des Airbnb par défaut) est taxé en <strong>pourcentage du prix HT par personne et par nuit</strong>, plafonné au tarif le plus élevé voté par la commune — typiquement le tarif Palace local. À Paris en 2026, le plafond légal atteint 15,93 € après les taxes régionales additionnelles.</p>
+
+      <h2>La taxe additionnelle : ne l'oubliez pas</h2>
+      <p>Le tarif voté par la commune n'est <strong>pas</strong> le tarif final. S'y ajoutent :</p>
+      <ul>
+        <li><strong>10 % de taxe additionnelle départementale</strong> — votée par quasi tous les départements</li>
+        <li><strong>15 % de taxe régionale en Île-de-France</strong> — finance la Société du Grand Paris (IdF uniquement)</li>
+        <li>Autres taxes additionnelles selon les cas (transports Grand Paris, stations classées)</li>
+      </ul>
+      <p>Ces suppléments sont inclus automatiquement dans le tarif total affiché par le calculateur — vous n'avez rien à additionner à la main.</p>
+
+      <h2>Les 4 exonérations prévues par la loi</h2>
+      <p>Article L.2333-31 du CGCT exonère expressément :</p>
+      <div class="clauses-grid">
+        <div class="clause-item"><div class="check">1</div><div><strong>Mineurs (< 18 ans)</strong><br>Aucun justificatif requis. Sur une famille de 4 avec 2 enfants : taxe pour 2 adultes seulement.</div></div>
+        <div class="clause-item"><div class="check">2</div><div><strong>Résidents permanents</strong><br>Personne domiciliée fiscalement sur le territoire de la commune. Rare en LCD.</div></div>
+        <div class="clause-item"><div class="check">3</div><div><strong>Travailleurs saisonniers</strong><br>Employés sur la commune concernée. Présenter un justificatif d'employeur.</div></div>
+        <div class="clause-item"><div class="check">4</div><div><strong>Hébergement d'urgence</strong><br>Personnes relogées temporairement via les services sociaux.</div></div>
+      </div>
+
+      <h2>Airbnb, Booking : qui collecte quoi en 2026</h2>
+      <div class="comparison">
+        <div class="comp-col green">
+          <h4>Airbnb</h4>
+          <div class="ref">Collecte auto quasi-totale</div>
+          <ul>
+            <li>Collecte et reverse <strong>automatiquement</strong> dans la quasi-totalité des communes françaises depuis 2025</li>
+            <li>Affichée séparément sur le récap de réservation du voyageur</li>
+            <li>Vous n'avez rien à déclarer, mais vous restez légalement responsable</li>
+          </ul>
+        </div>
+        <div class="comp-col">
+          <h4>Booking, Abritel, Vrbo</h4>
+          <div class="ref">Couverture partielle</div>
+          <ul>
+            <li>Collecte dans les <strong>grandes villes</strong> (Paris, Lyon, Marseille, Nice…) et EPCI touristiques majeurs</li>
+            <li>Partout ailleurs : <strong>à vous</strong> de collecter et reverser</li>
+            <li>Réservations en direct (votre site, WhatsApp…) : toujours à votre charge</li>
+          </ul>
+        </div>
+      </div>
+      <p>Conseil pratique : même quand la plateforme collecte, <strong>conservez les décomptes trimestriels</strong> que la mairie vous envoie — en cas de contrôle, c'est vous qui êtes responsable, pas Airbnb.</p>
+
+      <div class="callout">
+        <strong>Marc — fondateur d'Enomia</strong>
+        <p>J'exploite 9 biens en location courte durée avec un rendement net de 12 à 18 %. Sur 8 de mes 9 biens, c'est Airbnb qui collecte automatiquement la taxe de séjour — je n'ai aucun formulaire à remplir. Je partage ma méthode en détail, gratuitement, sur <a href="/blog">le blog</a> et sur <a href="https://youtube.com/@enomia" target="_blank">YouTube</a>.</p>
+      </div>
+
+      <h2>Comment payer la taxe de séjour pour vos réservations en direct</h2>
+      <p>Si vous louez via <strong>votre propre site, Instagram, WhatsApp, un bouche à oreille</strong>, ou via une plateforme qui ne collecte pas (Booking hors grandes villes, Abritel dans certains EPCI), c'est à vous de collecter auprès du voyageur <em>puis</em> de reverser à la commune. Voici la procédure exacte.</p>
+
+      <h3>1. Collecter auprès du voyageur au moment du séjour</h3>
+      <p>La taxe s'affiche en ligne séparée sur la facture (elle n'est <strong>pas</strong> un revenu : elle appartient à la commune, pas à vous). Utilisez le calculateur ci-dessus pour obtenir le montant exact à facturer, ou branchez-le sur votre <a href="/facture-location-saisonniere">générateur de facture LCD</a> qui le fait automatiquement.</p>
+
+      <h3>2. Tenir un registre du loueur</h3>
+      <p>Document obligatoire. Pour chaque séjour, notez :</p>
+      <ul>
+        <li>Dates d'arrivée et de départ</li>
+        <li>Nombre de personnes hébergées (adultes / mineurs)</li>
+        <li>Montant de la taxe collectée</li>
+        <li>Justificatifs d'exonération le cas échéant (âge, saisonnier, hébergement d'urgence)</li>
+      </ul>
+      <p>Un simple tableur suffit. À conserver 6 ans.</p>
+
+      <h3>3. Déclarer et verser à la commune (ou à l'EPCI)</h3>
+      <p>La fréquence dépend de la délibération communale : <strong>semestrielle</strong> dans la plupart des cas, <strong>trimestrielle</strong> dans les grandes villes touristiques, <strong>annuelle</strong> dans quelques petites communes. Deux canaux possibles :</p>
+      <ul>
+        <li><strong>Téléservice dédié</strong> (quand la commune en a un) : <code>taxesejour.impots.gouv.fr</code> pour les communes qui utilisent le service national, ou la plateforme locale type <code>taxesejour.fr</code>, 3DOuest, etc.</li>
+        <li><strong>Formulaire papier</strong> envoyé par la mairie/EPCI, à renvoyer accompagné du chèque ou d'un virement SEPA</li>
+      </ul>
+      <p>Pour trouver les coordonnées de votre commune collectrice : <a href="https://taxesejour.impots.gouv.fr/DTS_WEB/FR/" target="_blank" rel="nofollow">catalogue officiel DGFiP</a> ou directement votre mairie / office de tourisme.</p>
+
+      <div class="callout warn">
+        <strong>Attention aux sanctions</strong>
+        <p>Ne pas collecter ou ne pas reverser la taxe est une contravention de 4<sup>e</sup> classe (amende jusqu'à 750 € par infraction constatée — article R.2333-58 CGCT). En pratique, les mairies ferment rarement les yeux sur les loueurs LCD : un simple contrôle des annonces en ligne suffit à les identifier.</p>
+      </div>
+
+      <h3>Cas où vous n'avez rien à faire</h3>
+      <p>Quand la plateforme (Airbnb, Booking Paris/Lyon/Marseille…, Abritel dans les EPCI partenaires) collecte automatiquement, vous n'avez <strong>aucun formulaire à remplir</strong> — la plateforme reverse directement à la commune. Vous recevrez chaque semestre un <strong>décompte de versement</strong> à conserver dans votre registre (6 ans).</p>
+
+      <h2>Le cas particulier de Paris 2026</h2>
+      <p>Depuis le 1<sup>er</sup> janvier 2026, Paris applique un nouveau barème avec un plafond porté à <strong>15,93 €/nuit/personne</strong> pour les meublés non classés (5 % du prix HT par nuit et par personne, plafonnés). Ça n'impacte que les locations haut de gamme (au-delà d'environ 320 €/nuit pour 1 personne).</p>
+
+      <h2>Questions fréquentes</h2>
+      <div class="faq">
+        {faqItems.map((f, i) => (
+          <details open={i === 0}>
+            <summary>{f.q}</summary>
+            <div class="faq-ans"><p>{f.a}</p></div>
+          </details>
+        ))}
+      </div>
+
+      <h2>Découvrez aussi</h2>
+      <div class="related">
+        <a href="/simulateur-rentabilite-airbnb">
+          <div class="rk">Simulateur rentabilité</div>
+          <div class="rt">Rentabilité nette réelle Airbnb</div>
+          <div class="rd">Calculez le rendement net de votre investissement LCD : toutes charges, cash flow, comparatif placements.</div>
+        </a>
+        <a href="/facture-location-saisonniere">
+          <div class="rk">Facturation LCD</div>
+          <div class="rt">Facture location saisonnière</div>
+          <div class="rd">Générez vos factures Airbnb, Booking ou location directe. Taxe de séjour auto, mentions LMNP.</div>
+        </a>
+        <a href="/contrat-location-saisonniere">
+          <div class="rk">Contrat LCD</div>
+          <div class="rt">Contrat de location saisonnière</div>
+          <div class="rd">Modèle de contrat de location courte durée conforme, pré-rempli depuis vos biens. PDF + Word.</div>
+        </a>
+        <a href="/facture-airbnb">
+          <div class="rk">Facture Airbnb</div>
+          <div class="rt">Reconstituez la facture que Airbnb n'émet pas</div>
+          <div class="rd">Commissions, taxe de séjour, mentions LMNP. PDF + Word, FR/EN.</div>
+        </a>
+      </div>
+
+    </div>
+
+    <NewsletterBlock source="CalculTaxeSejour" />
+  </div>
+</ToolLayout>

@@ -1,0 +1,288 @@
+/* Calculateur taxe de séjour — styles */
+
+.ts-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.ts-field { display: flex; flex-direction: column; gap: 8px; }
+
+.ts-field label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.ts-icn { flex-shrink: 0; color: var(--green); }
+
+.ts-num {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-right: 4px;
+  letter-spacing: 0.1em;
+}
+
+.ts-field input[type="text"],
+.ts-field input[type="number"],
+.ts-field select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--text);
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.ts-field input:focus,
+.ts-field select:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px var(--green-soft);
+}
+
+.ts-field select:disabled {
+  color: var(--text-tertiary);
+  background: var(--bg);
+  cursor: not-allowed;
+}
+
+.ts-hint {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.ts-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 520px) {
+  .ts-grid-2 { grid-template-columns: 1fr; }
+  .ts-form { padding: 20px; }
+}
+
+/* Stepper (adultes / nuits) */
+.ts-stepper {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+.ts-stepper:focus-within { border-color: var(--green); box-shadow: 0 0 0 3px var(--green-soft); }
+.ts-stepper input {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  border: none !important;
+  border-radius: 0 !important;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 12px 6px !important;
+  box-shadow: none !important;
+}
+.ts-stp {
+  width: 44px;
+  border: none;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.ts-stp:hover { background: var(--border); }
+.ts-stp:first-child { border-right: 1px solid var(--border); }
+.ts-stp:last-child { border-left: 1px solid var(--border); }
+.ts-unit {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-left: 1px solid var(--border);
+  background: var(--bg);
+}
+
+/* Autocomplete commune */
+.ts-autoc { position: relative; }
+.ts-autoc-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 260px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  z-index: 40;
+  list-style: none;
+  padding: 4px;
+  margin: 0;
+}
+.ts-autoc-list li {
+  padding: 10px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.ts-autoc-list li:hover,
+.ts-autoc-list li[aria-selected="true"] {
+  background: var(--green-soft);
+  color: var(--text);
+}
+.ts-autoc-list li .ts-dept {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  background: var(--bg);
+  padding: 2px 7px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+.ts-autoc-list li.ts-autoc-empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  cursor: default;
+  text-align: center;
+}
+.ts-autoc-list li.ts-autoc-empty:hover { background: transparent; }
+
+/* Résultat */
+.ts-result {
+  margin-top: 22px;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  border-radius: 14px;
+  padding: 28px;
+  min-height: 160px;
+}
+
+.ts-result-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding: 32px 20px;
+  min-height: 140px;
+}
+.ts-result-empty svg { opacity: 0.5; }
+
+.ts-result-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.ts-result-label {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a8b5a8;
+  margin-bottom: 8px;
+}
+.ts-result-total {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.ts-result-total em { font-size: 30px; opacity: 0.6; margin-left: 6px; font-style: normal; }
+
+.ts-result-meta {
+  text-align: right;
+  font-size: 13px;
+  color: #c6cfc6;
+  line-height: 1.55;
+}
+.ts-result-meta strong { color: #fff; font-weight: 600; }
+
+.ts-result-breakdown {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+.ts-result-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #dde5dd;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.ts-result-breakdown li:last-child { border-bottom: none; }
+.ts-result-breakdown li strong { color: #fff; font-weight: 600; }
+
+.ts-result-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.ts-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.12s;
+}
+.ts-btn:hover { background: rgba(255,255,255,0.1); }
+.ts-btn-primary {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+.ts-btn-primary:hover { background: #35a764; border-color: #35a764; }
+
+.ts-legal {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 12px;
+  color: #9aa69a;
+  line-height: 1.55;
+}
+.ts-legal strong { color: #c6cfc6; }

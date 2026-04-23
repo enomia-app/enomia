@@ -88,6 +88,48 @@ La serrure a un **pavé numérique physique** intégré (ou un module Keypad sé
 
 **Verdict LCD** : **seul type viable** si vous envisagez du connecté. **Tout le reste de cet article parle uniquement des serrures du Type 2** (clavier numérique).
 
+Mais attention : au sein du Type 2, il existe **deux méthodes de génération des codes très différentes**. Comprendre laquelle vous achetez change tout.
+
+### **Type 2A — "En ligne" : codes envoyés via Wi-Fi**
+
+**Le mécanisme** : la serrure est connectée en permanence au Wi-Fi du logement. Quand vous créez un nouveau code dans l'app, l'app envoie ce code à la serrure via Internet → la serrure reçoit, enregistre, active. Quand le séjour est terminé, l'app envoie un ordre de désactivation via Wi-Fi.
+
+**Exemples** : Nuki Smart Lock + Keypad, Yale Linus + Keypad (via Wi-Fi bridge), August Smart Lock + Wi-Fi Bridge.
+
+**Avantages** :
+- Pilotage en temps réel (annuler un code à la volée, créer un code d'urgence)
+- Logs d'ouvertures accessibles à distance
+- Intégration possible avec channel manager en push en temps réel
+
+**Inconvénients** :
+- **Ne fonctionne plus si le Wi-Fi est coupé** : voyageur qui débranche la box, panne opérateur, redémarrage box = vous ne pouvez plus envoyer de nouveau code
+- Dépendance à un serveur tiers (si le fabricant a une panne de ses serveurs, vous êtes bloqué)
+- Batterie qui se vide plus vite (connexion Wi-Fi permanente consomme)
+
+### **Type 2B — "Offline" : codes calculés par algorithme (algoPIN)**
+
+**Le mécanisme** : la serrure contient un **algorithme mathématique** et une horloge interne. L'app de l'hôte contient le même algorithme et le même secret partagé. Quand vous demandez un code dans l'app pour une période précise (ex: "du 15 au 18 mai"), l'app **calcule localement** un code valide uniquement pour cette période. Vous envoyez ce code au voyageur. Le voyageur tape ce code sur la serrure. La serrure vérifie de son côté (via le même algorithme) que le code correspond bien à une période autorisée — si oui, elle ouvre.
+
+**Le point clé** : **aucune communication entre l'app et la serrure**. Tout est calculé des deux côtés indépendamment. La serrure a potentiellement **des centaines de milliers de codes valides** pré-calculables, chacun pour une période précise.
+
+C'est le même principe technique que les codes Google Authenticator : le serveur et l'app partagent un secret, chacun calcule un code basé sur l'heure, les codes correspondent sans jamais communiquer.
+
+**Exemples** : Igloohome (technologie algoPIN), Tedee avec codes offline, certaines serrures Nuki en mode offline.
+
+**Avantages** :
+- **Aucun besoin de Wi-Fi** — la serrure est déconnectée du réseau en permanence
+- **Aucun besoin de Bluetooth** au moment de l'utilisation
+- Vous pouvez **générer des codes des mois à l'avance** (utile pour de la programmation en amont)
+- Codes transmissibles par **n'importe quel canal** (SMS, email, message Airbnb) car ils ne sont pas "secrets liés à un pairing"
+- Invalidation automatique à la fin de la période
+
+**Inconvénients** :
+- L'horloge interne de la serrure peut **dériver légèrement** avec le temps ou si la batterie est coupée trop longtemps → il faut parfois la resynchroniser manuellement via Bluetooth (~1× par an)
+- Impossible d'annuler un code déjà généré à distance (il faut attendre sa fin de période)
+- Pas de logs d'ouverture temps réel
+
+**Verdict LCD** : la sous-famille **2B offline (algoPIN)** est **plus fiable en LCD** que la 2A Wi-Fi. Zéro dépendance réseau, génération illimitée de codes futurs, compatibilité channel manager aussi bonne. C'est ce que je recommanderais en priorité si vous partez sur du connecté.
+
 ### **Boîte à code mécanique**
 
 Petit coffre fixé **dans l'encadrement de la porte** ou dans un sas sécurisé, qui contient le jeu de clés. Le voyageur entre un code à 4 chiffres, récupère les clés, ouvre la porte classique. Zéro électronique, zéro batterie.

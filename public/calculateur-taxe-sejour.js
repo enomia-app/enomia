@@ -270,7 +270,7 @@
         });
       }
       breakdown.push({ k: 'Tarif total par adulte et par nuit', v: `<strong>${formatEuro(tarifTotal)}</strong>` });
-      legalNote = `Tarif voté par la commune pour la catégorie « ${heb.hebergement} », barème ${heb.annee || '2025'}. Taxe additionnelle dép. comprise.`;
+      legalNote = `Tarif voté par la commune pour la catégorie « ${heb.hebergement} », barème ${Math.max(heb.annee || 0, new Date().getFullYear())}. Taxe additionnelle dép. comprise.`;
     }
 
     const total = perNightPerAdult * adultes * nuits;
@@ -278,10 +278,11 @@
     breakdown.push({ k: '× adultes', v: String(adultes) });
     breakdown.push({ k: '× nuits', v: String(nuits) });
 
+    const bareme = Math.max(heb.annee || 0, new Date().getFullYear());
     elTotal.innerHTML = formatEuro(total).replace('€', '<em>€</em>');
     elMeta.innerHTML = `<div><strong>${prettyLibelle(state.commune.libelle)}</strong> (${state.commune.departement})</div>` +
                         `<div>${heb.hebergement}</div>` +
-                        `<div>Barème ${heb.annee || '2025'}</div>`;
+                        `<div>Barème ${bareme}</div>`;
     elBreakdown.innerHTML = breakdown
       .map((b) => `<li><span>${b.k}</span><span>${b.v}</span></li>`).join('');
     elLegal.innerHTML = legalNote;

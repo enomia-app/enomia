@@ -2430,6 +2430,588 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-04-20',
   },
+  // ==========================================================================
+  // ANGERS
+  // ==========================================================================
+  {
+    slug: 'angers',
+    displayName: 'Angers',
+    region: 'Pays de la Loire',
+    regionSlug: 'pays-de-la-loire',
+    title: 'Conciergerie Angers Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Angers : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      "Comparatif des 7 meilleures conciergeries Airbnb à Angers. Tarifs (15-22 %), réglementation zone tendue, quartiers rentables, stratégie Château d'Angers & Accroche-Cœurs.",
+    kwPrincipal: 'conciergerie airbnb angers',
+    kwSecondaires: [
+      'conciergerie angers',
+      'gestion locative angers',
+      'location courte durée angers',
+      'airbnb angers rentabilité',
+      'meublé touristique angers',
+    ],
+    population: 157175,
+    tourists: 1500000,
+    activeListings: 1600,
+    priceLow: 50,
+    priceHigh: 130,
+    occupancyRate: 62,
+    revpar: 52,
+    seasonality:
+      "Saisonnalité modérée, lissée par les 40 000 étudiants et le tourisme d'affaires (CHU, Servier, Sagem). Pic estival juillet-août autour du Château d'Angers et des vignobles d'Anjou. Événements clés : Accroche-Cœurs (festival de rue biennal, septembre, 150 000 personnes), Festival d'Anjou (théâtre, juin-juillet), Premiers Plans (cinéma européen, janvier). La Loire à Vélo génère un flux de cyclotouristes de mai à octobre. Proximité Paris (TGV 1h35) favorise les courts séjours week-end toute l'année.",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un appartement à **Angers** que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les **40 000 étudiants** qui créent une demande locative structurelle forte, le Château des Ducs et la tapisserie de l'Apocalypse (300 000 visiteurs/an), et **Angers désormais classée zone tendue**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** parmi les acteurs angevins locaux ?",
+    marketIntro:
+      "**Angers** est une ville universitaire en pleine croissance — **7e ville étudiante de France** avec 40 000 étudiants sur 157 000 habitants — ce qui génère une demande locative structurelle forte toute l'année.\n\nLe marché LCD angevin compte environ **1 600 annonces actives** en 2026, en hausse de +40 % depuis 2021. Les prix moyens oscillent entre 50 et 130 €/nuit selon le quartier, avec un taux d'occupation médian autour de **62 %**.\n\nLes deux leviers clés : le **tourisme culturel** (Château des Ducs, tapisserie de l'Apocalypse, Loire à Vélo, vignobles d'Anjou) et le tourisme d'affaires (CHU d'Angers, Servier, Sagem, Technicolor).\n\nAngers est classée **zone tendue** depuis 2022, imposant enregistrement obligatoire et encadrement strict de la LCD.",
+    conciergeries: [
+      {
+        name: '2KEYS',
+        url: 'https://2keys.fr/conciergerie-airbnb-angers/',
+        commission: 'à partir de 15 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 170,
+        biensGeres: 70,
+        specialty: 'Référence angevine, 900+ séjours/an',
+        description:
+          "Référence locale angevine pour la gestion Airbnb, 2KEYS gère plus de 900 séjours par an avec une approche sur mesure. Commission compétitive à partir de 15 %, ménage refacturé voyageur. Équipe angevine qui connaît parfaitement les spécificités du marché local (événements, quartiers étudiants, dynamique festivalière). Note Google 4.9/5 sur 170 avis.",
+      },
+      {
+        name: "Mayordom'",
+        url: 'https://www.mayordom.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 85,
+        biensGeres: 50,
+        specialty: 'Boutique angevine, accompagnement sur mesure',
+        description:
+          "Conciergerie boutique angevine positionnée sur la qualité et la relation humaine. Commission 20 % HT sans frais cachés, ménage refacturé voyageur. Mayordom' prend en charge estimation des revenus, aide réglementaire, rédaction d'annonces et accueil voyageurs. Idéal pour un propriétaire qui veut un interlocuteur unique et disponible à Angers.",
+      },
+      {
+        name: 'YourHostHelper Angers',
+        url: 'https://yourhosthelper.com/conciergerie-angers/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 180,
+        biensGeres: 90,
+        specialty: 'Réseau national, formule clé en main',
+        description:
+          "Franchise nationale de conciergerie Airbnb avec une agence dédiée à Angers. Commission 20 % sans frais fixes, ménage refacturé voyageur. Inclut photos pro, optimisation tarifaire et accueil voyageurs 7j/7. Réseau de 20+ villes, bon choix pour un propriétaire qui veut la solidité d'un grand groupe avec une présence locale.",
+      },
+      {
+        name: 'LocAndSmile Angers',
+        url: 'https://locandsmile.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 45,
+        biensGeres: 35,
+        specialty: 'Taille humaine, réactivité locale',
+        description:
+          "Conciergerie angevine à taille humaine spécialisée dans la gestion complète des locations courte durée. Commission 20 %, ménage refacturé voyageur. Approche personnalisée avec une connaissance fine des quartiers angevins (Centre, La Doutre, Gare). Idéal pour 1 à 3 biens avec un propriétaire qui veut rester proche de la gestion.",
+      },
+      {
+        name: 'HostnFly Angers',
+        url: 'https://hostnfly.com/conciergerie-airbnb/angers',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 120,
+        biensGeres: 80,
+        specialty: 'Tech + yield management algorithmique',
+        description:
+          "Solution clé en main avec algorithme de tarification dynamique et 150 000+ réservations gérées nationalement. Commission à partir de 20 %, ménage refacturé voyageur, diffusion 10+ plateformes. Idéal pour les propriétaires qui veulent un process industrialisé sans interaction humaine fréquente.",
+      },
+      {
+        name: 'Nestify Angers',
+        url: 'https://www.nestify.fr/conciergerie-airbnb-angers/',
+        commission: '22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 75,
+        biensGeres: 55,
+        specialty: 'Gestion A à Z multi-plateformes',
+        description:
+          "Nestify couvre la création d'annonces, la diffusion multi-plateformes (Airbnb, Booking, Vrbo), gestion complète des séjours et reporting financier mensuel. Commission 22 %, ménage refacturé voyageur. Bonne option pour un bien en centre-ville ou La Doutre orienté clientèle internationale.",
+      },
+      {
+        name: 'Welkeys Angers',
+        url: 'https://www.welkeys.com/conciergerie-airbnb/angers',
+        commission: '20-22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 95,
+        biensGeres: 65,
+        specialty: 'Pricing dynamique et gestion événementielle',
+        description:
+          "Acteur national présent à Angers avec une expertise en optimisation tarifaire sur les pics événementiels (Accroche-Cœurs, Festival d'Anjou). Commission 20-22 % selon les prestations, ménage refacturé voyageur. Bon rapport qualité/prix pour un propriétaire avec un ou deux biens en centre-ville.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre-ville (Historique / Cathédrale)',
+        pricePerNight: '70-130 €',
+        occupancy: 68,
+        description:
+          "Cœur piéton autour de la Cathédrale Saint-Maurice, des halles et de la place du Ralliement. Zone n°1 pour la LCD angevine, forte demande touristique et culturelle toute l'année. Appartements anciens à partir de 2 800 €/m².",
+        roiBrut: '6 à 6,5 %',
+      },
+      {
+        name: 'La Doutre',
+        pricePerNight: '65-115 €',
+        occupancy: 63,
+        description:
+          "Quartier bohème sur la rive gauche de la Maine, avec maisons à colombages, galeries d'art et terrasses animées. Très apprécié des voyageurs en quête d'authenticité, clientèle week-end Paris-Angers. Prix d'achat 2 800-4 500 €/m², fort potentiel de plus-value après rénovation.",
+        roiBrut: '6,5 à 7 %',
+      },
+      {
+        name: 'Gare / République',
+        pricePerNight: '55-95 €',
+        occupancy: 65,
+        description:
+          "Quartier stratégique pour le tourisme d'affaires (CHU d'Angers, Servier, Sagem) et les voyageurs Paris-Angers (TGV 1h35). Forte demande semaine (cadres en déplacement) et week-end. Appartements dès 2 300 €/m², bon compromis prix/occupation.",
+        roiBrut: '7 à 7,5 %',
+      },
+      {
+        name: 'Saint-Serge / Cité',
+        pricePerNight: '50-80 €',
+        occupancy: 60,
+        description:
+          "Meilleur rapport risque/rendement à Angers selon les investisseurs locaux : grande population étudiante (campus universitaire), forte demande locative structurelle et prix d'achat bas (2 000-2 500 €/m²). Studios et T1 très demandés.",
+        roiBrut: '7,5 à 8,5 %',
+      },
+      {
+        name: 'Belle-Beille',
+        pricePerNight: '45-75 €',
+        occupancy: 57,
+        description:
+          "Quartier résidentiel proche de l'Université d'Angers et d'Oniris (école vétérinaire). Forte demande étudiante et jeunes professionnels, prix d'achat accessibles (dès 1 900 €/m²). Rentabilité brute élevée mais moins d'attractivité pour le tourisme pur.",
+        roiBrut: '8 à 9 %',
+      },
+      {
+        name: 'Quais / Bords de Maine',
+        pricePerNight: '60-105 €',
+        occupancy: 61,
+        description:
+          "Bords de Maine et vue sur le Château des Ducs d'Anjou, quartier très prisé pour des courts séjours romantiques. Forte demande le week-end (Château, tapisserie de l'Apocalypse, Loire à Vélo). Appartements T2 dès 2 900 €/m².",
+        roiBrut: '6,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Angers est classée **zone tendue** depuis 2022, déclenchant un ensemble de restrictions pour la location courte durée.\n\n**Enregistrement obligatoire.** Depuis la loi Le Meur, tout meublé de tourisme doit être enregistré via le téléservice national et obtenir un **numéro à 13 chiffres** à afficher sur toutes les annonces (Airbnb, Booking, Abritel). Défaut d'enregistrement = amende jusqu'à **10 000 €**. Les plateformes suppriment les annonces non conformes à partir du **20 mai 2026**.\n\n**Résidence principale : 120 jours/an.** Plafond légal national, que le maire d'Angers peut abaisser à **90 jours** par délibération. Au-delà, le propriétaire doit obtenir une autorisation de changement d'usage. Airbnb bloque automatiquement les dates supplémentaires.\n\n**Résidence secondaire : changement d'usage.** Pour tout investissement locatif dédié, Angers impose une autorisation délivrée par la mairie, potentiellement avec compensation dans les quartiers les plus tendus.\n\n**Loi Le Meur 2024.** DPE classe **E minimum** obligatoire pour louer (D à partir de 2034). Abattement micro-BIC réduit à **30 % pour les meublés non classés** (50 % pour les classés). Les règlements de copropriété peuvent désormais interdire la LCD à la **double majorité** — vérifiez votre règlement avant d'investir.\n\n**Taxe de séjour.** Collectée automatiquement par Airbnb pour Angers Loire Métropole. Tarif entre **0,66 € et 3,00 €** par nuit et par personne selon le classement du bien.\n\n**⚠️ Attention copropriétés.** La loi Le Meur permet désormais d'interdire la location touristique à la double majorité (avant : unanimité). Vérifiez votre règlement de copropriété avant tout achat ou mise en location.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 78,
+      neighborhood: 'Centre-ville (Cathédrale)',
+      revenuBrut: 17500,
+      commissionRate: 0.2,
+      menageCount: 80,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Angers est-elle une bonne ville pour investir dans l'Airbnb en 2026 ?",
+        a: "Angers reste une ville solide pour la LCD en 2026, grâce à ses 40 000 étudiants (demande structurelle), son tourisme culturel (Château des Ducs, tapisserie de l'Apocalypse, Loire à Vélo) et sa bonne accessibilité depuis Paris (TGV 1h35). Le marché a subi une dilution de l'offre depuis 2022 (+40 % d'annonces), ce qui a mécaniquement baissé les taux d'occupation des biens standard. La solution : soit un bien premium en Centre-ville ou La Doutre avec une vraie stratégie de pricing, soit un studio en zone étudiante (Saint-Serge, Belle-Beille) pour une rentabilité brute de 8-9 %.",
+      },
+      {
+        q: "Quels événements génèrent les pics de revenus à Angers ?",
+        a: "Les trois événements clés à cibler : les Accroche-Cœurs (festival de rue biennal en septembre, 150 000 personnes, +40 à +80 % sur les tarifs), le Festival d'Anjou (théâtre, juin-juillet), et les Premiers Plans (festival de cinéma européen, janvier, 20 000 entrées). En dehors des festivals, le marché profite de flux continus : Château des Ducs (300 000 visiteurs/an), Loire à Vélo, vignobles d'Anjou (Saumur, Layon). Prévenez votre conciergerie à l'avance pour ajuster les minimums de séjour et les tarifs sur ces dates.",
+      },
+      {
+        q: "La proximité de Paris (1h35 en TGV) aide-t-elle vraiment la LCD à Angers ?",
+        a: "Oui, c'est un moteur clé de la demande week-end. Paris génère un flux régulier de touristes en short-break : week-ends Château + vignobles, sorties de festival, séjours romantiques sur les bords de Maine. Angers est également une bonne base pour rayonner dans la Loire (Saumur, Chinon, Amboise) ou vers le littoral vendéen (2h en voiture). Cette double clientèle (Parisiens le week-end + étudiants/professionnels en semaine) crée une demande bien répartie sur l'année, plus rassurante qu'un marché 100 % saisonnier.",
+      },
+    ],
+    updatedAt: '2026-04-23',
+  },
+  // ==========================================================================
+  // MONTPELLIER
+  // ==========================================================================
+  {
+    slug: 'montpellier',
+    displayName: 'Montpellier',
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title: 'Conciergerie Montpellier Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Montpellier : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      "Comparatif des 7 meilleures conciergeries Airbnb à Montpellier. Tarifs (18-22 %), quota Écusson 770 logements, 90 jours/an, quartiers rentables hors quota.",
+    kwPrincipal: 'conciergerie airbnb montpellier',
+    kwSecondaires: [
+      'conciergerie montpellier',
+      'gestion locative montpellier',
+      'location courte durée montpellier',
+      'airbnb montpellier rentabilité',
+      'meublé touristique montpellier',
+    ],
+    population: 302000,
+    tourists: 5500000,
+    activeListings: 3508,
+    priceLow: 70,
+    priceHigh: 160,
+    occupancyRate: 72,
+    revpar: 70,
+    seasonality:
+      "Saisonnalité forte portée par la Méditerranée : pic juillet-août (+40 à +60 % sur les tarifs). Demande étudiante structurelle (70 000 étudiants) et tourisme d'affaires (CHU de Montpellier, Sanofi, Cap Oméga, Languedoc Roussillon Pharma) lissent la fréquentation hors saison. Événements : Foire Internationale de Montpellier (octobre), Montpellier Danse (juin), Comédie du Livre (mai), Internationaux de Montpellier tennis (octobre). Quota strict dans l'Écusson depuis octobre 2025.",
+    rankNational: 6,
+    introCustom:
+      "Vous avez un appartement à **Montpellier** que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les **70 000 étudiants** (1 habitant sur 5), la proximité de la Méditerranée (30 min), le dynamisme de la **7e ville de France** et un durcissement réglementaire historique — **quota de 770 logements dans l'Écusson** depuis octobre 2025 et plafond réduit à **90 jours/an** — vous vous demandez si confier la gestion à une conciergerie est rentable.\n\nEt surtout : **laquelle choisir** parmi les conciergeries montpelliéraines ?",
+    marketIntro:
+      "**Montpellier** est l'un des marchés LCD les plus dynamiques de France avec **3 508 annonces actives** et un taux d'occupation médian de **72 %** — parmi les plus élevés de Métropole.\n\nLa ville combine deux forces : une **clientèle touristique estivale** (mer, garrigue, vignobles du Languedoc) et une **base étudiante parmi les plus grandes de France** (70 000 étudiants) qui crée une demande de moyen séjour structurelle toute l'année.\n\nLe revenu moyen annuel par annonce atteint **19 000 €**, avec des pics à 30 000 € pour les biens du centre. La plateforme Airbtics confirme une médiane de **263 nuits réservées par an**.\n\nDepuis le 14 octobre 2025, la **Métropole de Montpellier** a voté un durcissement sans précédent : quota de **770 logements dans l'Écusson** (déjà atteint), plafond réduit à **90 jours/an** (contre 120 nationalement), et amendes jusqu'à **100 000 €**.",
+    conciergeries: [
+      {
+        name: 'Groomi',
+        url: 'https://www.conciergerie-groomi.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 80,
+        biensGeres: 60,
+        specialty: 'Conciergerie familiale Montpellier + Alpes',
+        description:
+          "Conciergerie familiale spécialisée dans la gestion locative courte et moyenne durée à Montpellier. Commission 20 %, ménage refacturé voyageur. Groomi se distingue par une approche humaine et un suivi personnalisé de chaque bien — idéal pour un propriétaire qui veut un vrai partenaire, pas un algorithme.",
+      },
+      {
+        name: 'Welchome34',
+        url: 'https://welchome34.fr/',
+        commission: "variable (services à l'acte)",
+        menage: 'variable',
+        rating: 4.8,
+        reviews: 65,
+        biensGeres: 50,
+        specialty: "Facturation à l'acte, sans commission fixe",
+        description:
+          "Welchome34 se distingue avec un modèle unique dans le secteur : facturation strictement à l'acte (check-in, ménage, gestion annonce) sans pourcentage fixe prélevé sur les revenus. Permet aux propriétaires actifs de ne payer que les services réellement utilisés. Couvre Montpellier, Palavas, Carnon, Lattes et la proche périphérie.",
+      },
+      {
+        name: 'Cynergy',
+        url: 'https://cynergy-real-estate.com/conciergerie-airbnb-montpellier/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 103,
+        biensGeres: 80,
+        specialty: 'Expertise réglementaire Montpellier',
+        description:
+          "Cynergy est l'une des conciergeries les plus actives sur les questions réglementaires montpelliéraines (quota Écusson, loi Le Meur, 90 jours). Commission 20 %, ménage refacturé voyageur. Bon choix pour un investisseur qui veut comprendre et sécuriser sa situation légale avant de se lancer.",
+      },
+      {
+        name: 'Occitania Conciergerie',
+        url: 'https://www.occitania-conciergerie.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 55,
+        biensGeres: 45,
+        specialty: 'Local Montpellier, gestion 7j/7',
+        description:
+          "Conciergerie montpelliéraine locale avec gestion complète de la location courte durée : communication voyageurs, nettoyage, maintenance et gestion des conflits 7j/7. Commission 20 %, ménage refacturé voyageur. Connaissance fine des quartiers Écusson, Antigone et Port Marianne.",
+      },
+      {
+        name: 'Halo Butler',
+        url: 'https://halobutler.fr/conciergerie-airbnb-montpellier/',
+        commission: '20-22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 60,
+        biensGeres: 55,
+        specialty: 'Montpellier + Nîmes, pricing dynamique',
+        description:
+          "Halo Butler couvre Montpellier, Nîmes et leur périphérie avec une gestion 7j/7 incluant check-in, nettoyage, linge, pricing dynamique et assistance voyageurs. Commission 20-22 %, ménage refacturé voyageur. Idéal pour les propriétaires qui ont des biens sur plusieurs villes du Languedoc.",
+      },
+      {
+        name: 'WeCARE BnB34',
+        url: 'https://www.wecarebnb34.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 40,
+        biensGeres: 35,
+        specialty: 'Boutique, qualité et confiance',
+        description:
+          "WeCARE BnB34 est une conciergerie montpelliéraine à taille humaine positionnée sur la qualité de service et la relation de confiance avec les propriétaires. Commission 20 %, ménage refacturé voyageur. Approche soignée de la présentation des biens et du suivi voyageur.",
+      },
+      {
+        name: 'YourHostHelper Montpellier',
+        url: 'https://yourhosthelper.com/conciergerie-montpellier/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 180,
+        biensGeres: 110,
+        specialty: 'Réseau national, présence locale',
+        description:
+          "Franchise nationale avec une agence dédiée à Montpellier. Commission 20 %, ménage refacturé voyageur. Photos professionnelles incluses, optimisation des annonces multi-plateformes, accueil voyageurs 7j/7. Bon choix pour un investisseur qui veut un opérateur rodé avec un historique de performance.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: "L'Écusson (centre historique)",
+        pricePerNight: '90-160 €',
+        occupancy: 70,
+        description:
+          "Cœur médiéval de Montpellier, le plus demandé touristiquement. Attention : le **quota de 770 autorisations est atteint** depuis octobre 2025 — toute nouvelle demande dans l'Écusson est gelée jusqu'à retrait d'un bien existant. Idéal si vous détenez déjà une autorisation en cours de validité.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Antigone',
+        pricePerNight: '75-125 €',
+        occupancy: 65,
+        description:
+          "Quartier néoclassique des années 1980 conçu par Ricardo Bofill, populaire auprès des voyageurs internationaux et corporate. À 10 min à pied du centre, hors périmètre quota Écusson. T2 dès 200 000 €, rendement brut 5,2 %. Autorisations encore accessibles.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Port Marianne',
+        pricePerNight: '70-115 €',
+        occupancy: 62,
+        description:
+          "Éco-quartier moderne sur le Lez, apprécié des jeunes professionnels et familles. Hôtel de Ville, tramway, mer proche. Hors zone quota direct, autorisations accessibles. T2 dès 220 000 €, bon potentiel à moyen terme.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Beaux-Arts / Voltaire',
+        pricePerNight: '80-135 €',
+        occupancy: 65,
+        description:
+          "Quartier adjacent à l'Écusson, prisé des jeunes professionnels et des étudiants en master. Beaucoup de logements divisés dans de beaux immeubles anciens. Hors quota direct mais surveillance réglementaire vigilante. T2 dès 180 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Boutonnet / Les Arceaux',
+        pricePerNight: '55-90 €',
+        occupancy: 60,
+        description:
+          "Quartier résidentiel et étudiant proche de la fac de Médecine. Forte demande de moyen séjour (internes, chercheurs, étudiants). Hors zone tendue premium, prix d'achat raisonnables (2 500-3 200 €/m²). Bon compromis occupation + rentabilité.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: "Ovalie / Près-d'Arène",
+        pricePerNight: '50-80 €',
+        occupancy: 55,
+        description:
+          "Quartier résidentiel à l'ouest du centre, prix d'achat les plus bas de Montpellier (2 000-2 500 €/m²). Rendement brut élevé mais attractivité touristique plus faible. Clientèle professionnelle et étudiante, potentiel à moyen terme avec le développement du tramway.",
+        roiBrut: '7 à 9 %',
+      },
+    ],
+    regulation:
+      "Montpellier a adopté **le 14 octobre 2025** l'une des réglementations LCD les plus strictes de France, sous l'impulsion de la **loi Le Meur du 19 novembre 2024**.\n\n**Quota strict : 770 logements dans l'Écusson.** Le centre historique est soumis à un quota de **770 logements Airbnb maximum** — quota déjà atteint. Aucune nouvelle autorisation n'est délivrée tant qu'un bien existant n'est pas retiré. Cette mesure couvre 7,3 % du territoire communal mais concentrait 52 % des meublés touristiques déclarés.\n\n**Plafond réduit à 90 jours/an.** Depuis le **1er janvier 2026**, le plafond annuel de location en résidence principale est abaissé à **90 jours** (contre 120 au niveau national) — soit un mois de revenus en moins pour les propriétaires non conformes.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme doit être déclaré et recevoir un **numéro à 13 chiffres** à afficher sur toutes les annonces. Échéance plateforme : **20 mai 2026**. Amende jusqu'à **10 000 €** pour défaut d'enregistrement.\n\n**Changement d'usage.** Pour toute résidence secondaire ou investissement locatif dédié, un changement d'usage est requis auprès de la mairie, souvent avec compensation. Procédure longue et coûteuse dans Montpellier intra-muros.\n\n**Loi Le Meur 2024.** DPE classe **E minimum** (D à partir de 2034), abattement micro-BIC à **30 % pour les non classés** (50 % classés), copropriétés peuvent interdire la LCD à la **double majorité**.\n\n**⚠️ Amendes jusqu'à 100 000 €.** La métropole surveille activement les annonces non conformes. Les sanctions administratives sont parmi les plus élevées de France.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 95,
+      neighborhood: 'Antigone',
+      revenuBrut: 21500,
+      commissionRate: 0.2,
+      menageCount: 90,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: "Le quota de 770 logements dans l'Écusson bloque-t-il tout investissement Airbnb à Montpellier ?",
+        a: "Non — le quota ne concerne que le périmètre Écusson (centre historique médiéval). Les quartiers Antigone, Port Marianne, Beaux-Arts, Boutonnet et Ovalie sont hors quota direct. Ces zones permettent encore d'investir en Airbnb avec une autorisation standard, sous réserve des autres règles (enregistrement, limite 90 jours, DPE). Si vous cherchez un bien dans l'Écusson, il faut racheter un bien déjà autorisé ou attendre qu'un slot se libère. Les conciergeries locales (Cynergy, Occitania) connaissent ces subtilités réglementaires — consultez-les avant tout achat.",
+      },
+      {
+        q: "La limite à 90 jours/an affecte-t-elle vraiment la rentabilité à Montpellier ?",
+        a: "Oui, mais moins qu'on ne le croit pour les biens bien gérés. Avec un taux d'occupation médian de 72 % et 263 nuits réservées/an, beaucoup de propriétaires dépassent déjà les 90 jours. La limite force à se concentrer sur les périodes à haute valeur (juillet-août, événements) et à maximiser le tarif par nuit plutôt que le volume. La stratégie optimale : 90 nuits à 120-150 €/nuit (juillet-août + événements) plutôt que 180 nuits à 60-70 €/nuit. Une bonne conciergerie avec pricing dynamique fait toute la différence.",
+      },
+      {
+        q: "Montpellier est-il intéressant pour la location moyenne durée (1-3 mois) en complément de l'Airbnb ?",
+        a: "Absolument. Montpellier a une des plus fortes demandes de moyen séjour de France : 70 000 étudiants cherchant des logements pour leurs stages ou semestres d'échange, des internes en médecine (CHU de Montpellier, 3e CHU de France), des chercheurs et professionnels en mission. Une stratégie mixte (Airbnb juillet-août à tarif premium + moyen séjour octobre-juin) permet de maximiser les revenus tout en respectant la limite des 90 jours Airbnb. Welchome34 et Cynergy sont particulièrement bons sur ce schéma hybride.",
+      },
+    ],
+    updatedAt: '2026-04-23',
+  },
+  // ==========================================================================
+  // LA ROCHELLE
+  // ==========================================================================
+  {
+    slug: 'la-rochelle',
+    displayName: 'La Rochelle',
+    region: 'Nouvelle-Aquitaine',
+    regionSlug: 'nouvelle-aquitaine',
+    title: 'Conciergerie La Rochelle Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb La Rochelle : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à La Rochelle. Tarifs (18-22 %), autorisation obligatoire Agglo 2025, quartiers rentables, Francofolies & Grand Pavois.",
+    kwPrincipal: 'conciergerie airbnb la rochelle',
+    kwSecondaires: [
+      'conciergerie la rochelle',
+      'gestion locative la rochelle',
+      'location courte durée la rochelle',
+      'airbnb la rochelle rentabilité',
+      'meublé touristique la rochelle',
+    ],
+    population: 80000,
+    tourists: 3000000,
+    activeListings: 5265,
+    priceLow: 70,
+    priceHigh: 160,
+    occupancyRate: 67,
+    revpar: 60,
+    seasonality:
+      "Saisonnalité marquée avec une haute saison estivale (juillet-août, taux d'occupation jusqu'à 95 %). La saison s'étend grâce aux événements majeurs : Francofolies (festival francophone, juillet, 150 000 entrées, +50 à +100 % sur les tarifs), Grand Pavois (salon nautique, octobre, 69 000 visiteurs), Festival de La Rochelle Cinéma (juillet). Le tourisme d'affaires (port, industries maritimes) et la clientèle Île de Ré lissent la demande hors saison. Creux hivernal novembre-mars.",
+    rankNational: 11,
+    introCustom:
+      "Vous avez un appartement à **La Rochelle** que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les **Francofolies**, le Grand Pavois, la proximité de **l'Île de Ré** et un cadre réglementaire parmi les plus stricts de France — **autorisation obligatoire** délivrée par l'Agglo depuis novembre 2025, avec compensation dans le centre-ville et les Minimes — vous vous demandez si confier la gestion à une conciergerie est rentable.\n\nEt surtout : **laquelle choisir** parmi les acteurs rochelais ?",
+    marketIntro:
+      "**La Rochelle** est l'une des destinations touristiques les plus prisées du littoral atlantique avec **2,94 millions de nuitées marchandes** en 2024. Le marché LCD concentre **5 265 annonces actives** — un chiffre très élevé pour une ville de 80 000 habitants.\n\nLe taux d'occupation médian atteint **67 %**, avec des pics à 95 % en juillet-août. Le revenu moyen annuel par annonce tourne autour de **19 000 €**, avec de fortes disparités entre le Vieux-Port (prime touristique) et la périphérie.\n\nLa forte saisonnalité est à la fois un atout (tarifs élevés en été) et un risque (creux hivernal novembre-mars). Les Francofolies et le Grand Pavois génèrent des pics de **+50 à +100 %** sur les tarifs en juillet et octobre — à sécuriser en priorité.\n\nDepuis novembre 2025, **l'Agglo de La Rochelle a adopté un système d'autorisation préalable obligatoire** pour tout meublé de tourisme, avec des règles de compensation dans les quartiers les plus tendus.",
+    conciergeries: [
+      {
+        name: 'ZeRochelle',
+        url: 'https://www.ze-rochelle.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 90,
+        biensGeres: 70,
+        specialty: 'Référence locale depuis 2018',
+        description:
+          "Conciergerie rochelaise fondée en 2018, ZeRochelle est la référence locale pour l'efficacité quotidienne et la transparence. Commission 20 %, ménage refacturé voyageur. Reconnue pour sa maîtrise des pics événementiels (Francofolies, Grand Pavois) et sa connaissance du nouveau règlement Agglo 2025. Note Google 4.7/5 sur 90 avis.",
+      },
+      {
+        name: 'La Conciergerie de Lucas',
+        url: 'https://www.laconciergeriedelucas.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 55,
+        biensGeres: 40,
+        specialty: 'Boutique responsable, éco-engagée',
+        description:
+          "Conciergerie responsable et à taille humaine basée à La Rochelle. Lucas propose une gestion complète avec une approche éco-engagée (produits locaux, linge certifié). Commission à partir de 20 %, ménage refacturé voyageur. Clients décrivent un service sérieux, professionnel et très réactif — idéal pour 1 à 3 biens.",
+      },
+      {
+        name: 'BNB Conciergerie La Rochelle',
+        url: 'https://www.bnb-conciergerie.fr/conciergerie-airbnb-la-rochelle.html',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 65,
+        biensGeres: 55,
+        specialty: "Sans frais d'entrée ni engagement",
+        description:
+          "BNB Conciergerie propose une commission de 20 % des revenus nets (hors ménage), sans frais d'entrée ni d'engagement de durée. Gestion complète des annonces, accueil voyageurs et coordination des prestations. Bonne option pour tester la LCD rochelaise sans engagement long terme.",
+      },
+      {
+        name: 'HostnFly La Rochelle',
+        url: 'https://hostnfly.com/conciergerie-airbnb/la-rochelle',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 110,
+        biensGeres: 85,
+        specialty: 'Tech + algorithme tarification dynamique',
+        description:
+          "Solution nationale clé en main avec algorithme de yield management propriétaire et diffusion sur 10+ plateformes. Commission à partir de 20 %, ménage refacturé voyageur. Bon choix pour un propriétaire qui privilégie l'optimisation automatique des tarifs sur les pics saisonniers (Francofolies, juillet-août).",
+      },
+      {
+        name: 'Conciergerie BB La Rochelle',
+        url: 'https://www.conciergebb.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 70,
+        biensGeres: 60,
+        specialty: 'Gestion complète multi-plateformes',
+        description:
+          "Conciergerie présente à La Rochelle avec une gestion multi-plateformes (Airbnb, Booking, Abritel). Commission 20 %, ménage refacturé voyageur. Service check-in/check-out, coordination ménage et maintenance inclus. Bonne option pour un bien en Vieux-Port ou aux Minimes.",
+      },
+      {
+        name: 'Nestify La Rochelle',
+        url: 'https://www.nestify.fr/conciergerie-airbnb-la-rochelle/',
+        commission: '22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 80,
+        biensGeres: 65,
+        specialty: 'Réseau national, reporting mensuel',
+        description:
+          "Nestify couvre la création d'annonces, diffusion multi-plateformes, gestion complète des séjours et reporting financier mensuel. Commission 22 %, ménage refacturé voyageur. Idéal pour un investisseur qui veut une visibilité complète sur la performance de son bien et un tableau de bord financier détaillé.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieux-Port / Saint-Nicolas',
+        pricePerNight: '90-175 €',
+        occupancy: 73,
+        description:
+          "Cœur historique avec les tours médiévales et le Vieux-Port. Zone n°1 en attractivité touristique, forte demande toute l'année. Attention : soumis à la règle de compensation pour les autorisations permanentes (meublé à l'année). Appartements anciens à partir de 4 000 €/m².",
+        roiBrut: '5 à 5,5 %',
+      },
+      {
+        name: 'Les Minimes',
+        pricePerNight: '75-135 €',
+        occupancy: 68,
+        description:
+          "Quartier balnéaire avec plage, port de plaisance (le plus grand d'Europe) et Université de La Rochelle. Double clientèle : touristes en été et étudiants/chercheurs en intersaison. Zone de compensation pour les autorisations permanentes. T2 dès 295 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Gabut / Cours des Dames',
+        pricePerNight: '80-145 €',
+        occupancy: 70,
+        description:
+          "Quartier des maisons de pêcheurs colorées sur les quais, à quelques pas du Vieux-Port. Très photogénique, prisé des voyageurs étrangers. Bonne demande tout au long de la saison. T2 rénovés à partir de 3 500 €/m².",
+        roiBrut: '5,5 à 6 %',
+      },
+      {
+        name: 'La Genette / Tasdon',
+        pricePerNight: '60-100 €',
+        occupancy: 60,
+        description:
+          "Quartiers résidentiels à 10-15 min du Vieux-Port, hors zones de compensation. Ticket d'entrée accessible (2 500-3 200 €/m²), rendement brut plus élevé. Clientèle familiale cherchant calme et accès facile au centre. Autorisations moins contraignantes.",
+        roiBrut: '6,5 à 7,5 %',
+      },
+      {
+        name: 'Île de Ré (Saint-Martin)',
+        pricePerNight: '120-280 €',
+        occupancy: 60,
+        description:
+          "Île accessible en 20 min depuis La Rochelle (pont payant). Tarifs parmi les plus élevés du littoral atlantique, forte demande estivale (juillet-août). Réglementation moins contraignante que La Rochelle centre mais très saisonnière. T2 dès 350 000 €.",
+        roiBrut: '4,5 à 5 %',
+      },
+      {
+        name: 'Laleu / La Pallice',
+        pricePerNight: '50-80 €',
+        occupancy: 55,
+        description:
+          "Quartiers portuaires et industriels en mutation, prix d'achat très bas (2 000-2 500 €/m²). Clientèle professionnelle maritime et industrielle (Grand Port Maritime). Rendement brut élevé, peu de tourisme pur, profil investisseur cherchant la rentabilité.",
+        roiBrut: '7 à 8,5 %',
+      },
+    ],
+    regulation:
+      "La Rochelle a adopté le **13 novembre 2025** l'un des systèmes d'encadrement LCD les plus complets de France, basé sur un régime d'**autorisation préalable obligatoire**.\n\n**Deux types d'autorisations.** L'Agglo distingue : l'**autorisation permanente** (location à l'année, soumise à la règle de compensation dans les zones tendues) et l'**autorisation temporaire à titre personnel** (valable 1 an renouvelable, pour une location ponctuelle ou mixte). Un propriétaire ne peut détenir plus de **3 autorisations temporaires** dans les communes classées en zone tendue.\n\n**Enregistrement via declaloc.fr.** Tout meublé de tourisme doit être déclaré sur le portail **declaloc.fr** pour obtenir un numéro d'enregistrement à afficher sur toutes les annonces. Défaut = amende **10 000 €**. Les plateformes suppriment les annonces non conformes à partir du **20 mai 2026**.\n\n**Compensation obligatoire dans le centre et les Minimes.** Dans les quartiers les plus tendus (Vieux-Port, Gabut, Les Minimes), l'autorisation permanente impose de compenser la perte d'un logement pour les habitants en transformant une surface commerciale équivalente en habitation.\n\n**Déclaration mensuelle des nuitées.** Chaque mois, le propriétaire doit déclarer le nombre de nuitées sur **agglolarochelle.taxesejour.fr**, même lorsqu'Airbnb collecte automatiquement la taxe de séjour.\n\n**Loi Le Meur 2024.** DPE classe **E minimum** obligatoire (D à partir de 2034), abattement micro-BIC à **30 % pour les non classés** (50 % classés), copropriétés peuvent interdire la LCD à la **double majorité**.\n\n**Sanctions jusqu'à 100 000 €.** Défaut d'enregistrement : **10 000 €**. Fausse déclaration : **20 000 €**. Location sans autorisation de changement d'usage en zone tendue : jusqu'à **100 000 €**.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 100,
+      neighborhood: 'Les Minimes',
+      revenuBrut: 22000,
+      commissionRate: 0.2,
+      menageCount: 90,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: "Combien peut-on gagner avec un Airbnb pendant les Francofolies de La Rochelle ?",
+        a: "Les Francofolies (festival de musique francophone, fin juillet, 4 jours, 150 000 entrées) génèrent des hausses de tarifs de +50 à +100 % sur les biens bien placés. Un T2 au Vieux-Port qui se loue 100 €/nuit en dehors de la saison peut atteindre 180-220 €/nuit pendant le festival, avec un taux d'occupation garanti à 100 %. Sur 4 nuits, cela représente 700 à 900 € de revenus supplémentaires. Le Grand Pavois (salon nautique, octobre) génère un second pic (+30 %) bienvenu en basse saison. Verrouillez ces dates dès l'ouverture du calendrier pour maximiser les revenus.",
+      },
+      {
+        q: "Le nouveau système d'autorisation rochelais est-il très contraignant pour un particulier ?",
+        a: "Pour un particulier qui loue sa résidence principale ponctuellement (vacances, week-ends), l'autorisation temporaire reste accessible : déclaration sur declaloc.fr, numéro d'enregistrement, et tenue du registre mensuel des nuitées. La contrainte principale concerne les zones de compensation dans le Vieux-Port et les Minimes : si vous voulez une autorisation permanente (résidence secondaire louée à l'année), il faut compenser en transformant un local commercial en logement — procédure longue et coûteuse. Pour un investissement locatif dédié, orientez-vous vers La Genette, Tasdon ou la périphérie où les contraintes sont moindres.",
+      },
+      {
+        q: "L'Île de Ré est-elle gérable via une conciergerie basée à La Rochelle ?",
+        a: "Oui, la plupart des conciergeries rochelaises couvrent l'Île de Ré (Saint-Martin-de-Ré, La Flotte, Ars-en-Ré) grâce au pont : 20-30 min en voiture. ZeRochelle, La Conciergerie de Lucas et BNB Conciergerie opèrent sur l'île. Les tarifs sur l'Île de Ré sont nettement plus élevés (120-280 €/nuit en été) mais la saisonnalité est encore plus marquée (creux hivernal quasi total de novembre à avril). Assurez-vous que la conciergerie dispose d'une équipe ménage et maintenance sur l'île même — c'est non-négociable pour la qualité opérationnelle.",
+      },
+    ],
+    updatedAt: '2026-04-23',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

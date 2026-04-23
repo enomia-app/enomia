@@ -119,15 +119,21 @@ Les serrures connectées fonctionnent via une app mobile. Cette app peut bugger 
 
 Sur une de mes serrures Nuki, une mise à jour a cassé le pairing pendant 48h. Pendant ce temps, impossible de générer un code pour les nouveaux arrivants. J'ai dû basculer en boîte à code d'urgence.
 
-### **Bug 3 — Wi-Fi de la copro capricieux**
+### **Bug 3 — Wi-Fi de la copro capricieux (selon modèle)**
 
-Pour générer un code "à distance", la serrure doit être connectée au Wi-Fi. Dans la vraie vie :
+Beaucoup de serrures connectées (Nuki standard, August, Yale Linus) ont besoin du Wi-Fi pour envoyer un nouveau code à distance. Dans la vraie vie :
 - Wi-Fi du voisin éteint (s'il partageait)
 - Box opérateur redémarrée sans prévenir
 - Copropriété qui change de fournisseur
 - Déconnexion intempestive aléatoire
 
-Sans Wi-Fi, la serrure ne peut plus recevoir les nouveaux codes. Vous êtes obligé d'y aller physiquement.
+Sans Wi-Fi sur ces modèles, vous ne pouvez plus envoyer de nouveau code à la serrure.
+
+**Nuance importante** : certaines serrures fonctionnent **sans Wi-Fi** grâce à des systèmes de codes offline :
+- **Igloohome avec technologie algoPIN** : génère des codes mathématiques valides pour une période, sans jamais communiquer avec la serrure. L'app calcule le code, vous le transmettez au voyageur, la serrure le reconnaît en local.
+- **Serrures à codes multi-utilisateurs** : permettent de pré-programmer jusqu'à plusieurs centaines de codes directement sur la serrure à l'installation, sans Wi-Fi ni Bluetooth par la suite.
+
+Si vous partez sur du connecté, privilégiez ces modèles offline — ils éliminent la dépendance Wi-Fi. Sinon, préférez la boîte à code mécanique qui fonctionne 100% offline par définition.
 
 ### **Bug 4 — Mise à jour firmware qui plante**
 

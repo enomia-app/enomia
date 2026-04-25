@@ -171,8 +171,13 @@
 .sg-lw { display: flex; align-items: center; }
 .sg-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .sg-hint { font-family: var(--font-mono); font-size: 9px; color: var(--muted2); margin-top: 1px; }
-.sg-val { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--white); line-height: 1; }
+.sg-val { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--white); line-height: 1; display: inline-flex; align-items: baseline; gap: 2px; }
 .sg-val em { font-family: var(--font-mono); font-size: 10px; font-weight: 400; color: var(--accent); font-style: normal; margin-left: 2px; }
+.sg-input { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--white); background: transparent; border: 1px dashed transparent; outline: none; text-align: right; width: 8ch; min-width: 4ch; padding: 2px 6px; border-radius: 6px; -moz-appearance: textfield; transition: border-color 0.12s, background 0.12s; cursor: text; }
+.sg-input::-webkit-outer-spin-button, .sg-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.sg-input:hover { border-color: var(--border); }
+.sg-input:focus { background: var(--mid); border-color: var(--accent); border-style: solid; }
+.sg-input::selection { background: var(--accent); color: #fff; }
 input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 3px; background: var(--border); outline: none; cursor: pointer; display: block; margin: 4px 0; border-radius: 2px; }
 input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; background: var(--accent); border-radius: 50%; border: 3px solid var(--black); box-shadow: 0 1px 4px rgba(0,0,0,0.15); transition: transform 0.15s; cursor: pointer; }
 input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.2); }

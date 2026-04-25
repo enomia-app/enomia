@@ -180,6 +180,8 @@
   };
   window.ctSignInGoogle = async function () {
     localStorage.setItem('ct_expecting_signin', '1');
+    // Fallback redirect via index.html si la redirect URL Supabase n'est pas whitelistée
+    localStorage.setItem('enomia_oauth_target', '/contrat-lcd-dashboard');
     const redirectTo = window.location.origin + '/contrat-lcd-dashboard';
     await _ctSb.auth.signInWithOAuth({
       provider: 'google',

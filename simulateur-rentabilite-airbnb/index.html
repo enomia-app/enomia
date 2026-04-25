@@ -1053,8 +1053,10 @@ async function _apiPost(path, body, withAuth) {
 // Google OAuth
 async function signInWithGoogle() {
   localStorage.setItem('enomia_expecting_signin', '1');
+  // Fallback redirect via index.html si la redirect URL Supabase n'est pas whitelistée
+  localStorage.setItem('enomia_oauth_target', '/simulateur-lcd');
   const simPayload = _pendingSimData ? encodeURIComponent(JSON.stringify(_pendingSimData)) : null;
-  const redirectTo = 'https://enomia.app/simulateur-rentabilite-airbnb' + (simPayload ? '?ps=' + simPayload : '');
+  const redirectTo = window.location.origin + '/simulateur-lcd' + (simPayload ? '?ps=' + simPayload : '');
   await _sb.auth.signInWithOAuth({
     provider: 'google',
     options: { redirectTo, queryParams: { prompt: 'select_account' } }

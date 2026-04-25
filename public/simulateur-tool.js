@@ -145,6 +145,9 @@ async function _apiPost(path, body, withAuth) {
 // Google OAuth
 async function signInWithGoogle() {
   localStorage.setItem('enomia_expecting_signin', '1');
+  // Fallback : si Supabase redirige sur la home (whitelist KO), index.html
+  // utilise cette clé pour rediriger vers le bon outil avec le hash préservé.
+  localStorage.setItem('enomia_oauth_target', '/simulateur-lcd');
   const simPayload = _pendingSimData ? encodeURIComponent(JSON.stringify(_pendingSimData)) : null;
   const redirectTo = window.location.origin + '/simulateur-lcd' + (simPayload ? '?ps=' + simPayload : '');
   await _sb.auth.signInWithOAuth({
@@ -399,7 +402,7 @@ function addLot(){lots.push({nuit:90,surface:35,occu:20,nuitMoy:2});renderLots()
 function removeLot(i){lots.splice(i,1);renderLots();computeMulti();}
 
 const SLIDER_LABELS={prix:v=>v>=1000?Math.round(v/1000)+'k':v,apport:v=>v>=1000?Math.round(v/1000)+'k':v,duree:v=>v,taux:v=>parseFloat(v).toFixed(1),nuit:v=>v,occu:v=>v+' nuits ('+Math.round(v/30.4*100)+'%)',sejour:v=>parseFloat(v).toFixed(1),commission:v=>v,surface:v=>v,travaux:v=>v>=1000?Math.round(v/1000)+'k':v,ameu:v=>v>=1000?Math.round(v/1000)+'k':v,menage:v=>v,blanc:v=>v,eau:v=>v,elec:v=>v,internet:v=>v,consommables:v=>v,logiciel:v=>v,comptable:v=>v,fonciere:v=>v,copro:v=>v,assurance:v=>v,conciergerie:v=>v};
-const SLIDER_UNITS={prix:'\u20ac',apport:'\u20ac',duree:'ans',taux:'%',nuit:'\u20ac/nuit',occu:'',sejour:'nuits',commission:'%',surface:'m\u00b2',travaux:'\u20ac',ameu:'\u20ac',menage:'\u20ac/rot.',blanc:'\u20ac/rot.',eau:'\u20ac/mois',elec:'\u20ac/mois',internet:'\u20ac/mois',consommables:'\u20ac/mois',logiciel:'\u20ac/mois',comptable:'\u20ac/mois',fonciere:'\u20ac/mois',copro:'\u20ac/mois',assurance:'\u20ac/mois',conciergerie:'%'};
+const SLIDER_UNITS={prix:'\u20ac',apport:'\u20ac',duree:'ans',taux:'%',nuit:'\u20ac/nuit',occu:'nuits',sejour:'nuits',commission:'%',surface:'m\u00b2',travaux:'\u20ac',ameu:'\u20ac',menage:'\u20ac/rot.',blanc:'\u20ac/rot.',eau:'\u20ac/mois',elec:'\u20ac/mois',internet:'\u20ac/mois',consommables:'\u20ac/mois',logiciel:'\u20ac/mois',comptable:'\u20ac/mois',fonciere:'\u20ac/mois',copro:'\u20ac/mois',assurance:'\u20ac/mois',conciergerie:'%'};
 
 function toggleConciergerie(){
   var chk=document.getElementById('chk-conciergerie');
@@ -413,16 +416,57 @@ const SV2_UNITS={'prix-m':'\u20ac','travaux-m':'\u20ac','ameu-m':'\u20ac'};
 function sv(id,val){
   const v=parseFloat(val);
   const el=document.getElementById('v-'+id);
-  if(el)el.innerHTML=((SLIDER_LABELS[id]?.(v))??v)+' <em>'+(SLIDER_UNITS[id]||'')+'</em>';
+  if(el){
+    const inp=el.querySelector('input.sg-input');
+    if(inp){ if(document.activeElement!==inp) inp.value=isNaN(v)?'':v; }
+    else el.innerHTML=((SLIDER_LABELS[id]?.(v))??v)+' <em>'+(SLIDER_UNITS[id]||'')+'</em>';
+  }
   const s=document.getElementById('s-'+id);
   if(s){const p=(s.value-s.min)/(s.max-s.min)*100;s.style.background=`linear-gradient(to right,var(--accent) ${p}%,var(--border) ${p}%)`;}
 }
 function sv2(id,val){
   const v=parseFloat(val);
   const el=document.getElementById('v-'+id);
-  if(el)el.innerHTML=((SV2_LABELS[id]?.(v))??v)+' <em>'+(SV2_UNITS[id]||'')+'</em>';
+  if(el){
+    const inp=el.querySelector('input.sg-input');
+    if(inp){ if(document.activeElement!==inp) inp.value=isNaN(v)?'':v; }
+    else el.innerHTML=((SV2_LABELS[id]?.(v))??v)+' <em>'+(SV2_UNITS[id]||'')+'</em>';
+  }
   const s=document.getElementById('s-'+id);
   if(s){const p=(s.value-s.min)/(s.max-s.min)*100;s.style.background=`linear-gradient(to right,var(--accent) ${p}%,var(--border) ${p}%)`;}
+}
+
+// Sync slider when user types in the value input. Browser auto-clamps to min/max.
+function _inputToSlider(id,val){
+  if(val===''||val==='-'||val==='.') return;
+  const s=document.getElementById('s-'+id);
+  if(!s) return;
+  const v=parseFloat(val);
+  if(isNaN(v)) return;
+  s.value=v;
+  const isMulti=id.endsWith('-m');
+  if(isMulti){sv2(id,s.value);computeMulti();}
+  else{sv(id,s.value);if(typeof computeActive==='function')computeActive();else compute();}
+}
+
+// Inject editable inputs into all slider value displays (.sg-val with id v-*).
+function _injectSliderInputs(){
+  const ids=[...Object.keys(SLIDER_LABELS),...Object.keys(SV2_LABELS)];
+  ids.forEach(id=>{
+    const wrap=document.getElementById('v-'+id);
+    if(!wrap||wrap.querySelector('input.sg-input')) return;
+    const s=document.getElementById('s-'+id);
+    if(!s) return;
+    const isMulti=id.endsWith('-m');
+    const unit=(isMulti?SV2_UNITS:SLIDER_UNITS)[id]||'';
+    const initialValue=parseFloat(s.value);
+    wrap.innerHTML='<input type="text" inputmode="decimal" class="sg-input" value="'+initialValue+'"><em>'+unit+'</em>';
+    const inp=wrap.querySelector('input.sg-input');
+    inp.addEventListener('input',function(){_inputToSlider(id,this.value);_simDirty=true;});
+    inp.addEventListener('focus',function(){this.select();});
+    inp.addEventListener('blur',function(){this.value=s.value;});
+    inp.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();this.blur();}});
+  });
 }
 
 function setType(type,btn){
@@ -658,6 +702,7 @@ async function saveSimulation(){
   await _doSaveToDb();
 }
 function initSliders(){
+  _injectSliderInputs();
   Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sv(id,s.value);});
   Object.keys(SV2_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sv2(id,s.value);});
   // Mark the simulation dirty only on real user interaction, not programmatic value changes.

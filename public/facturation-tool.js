@@ -217,6 +217,8 @@ if (!window.__factInit) {
 
   window.fLogin = async function() {
     localStorage.setItem('fact_expecting_signin', '1');
+    // Fallback redirect via index.html si la redirect URL Supabase n'est pas whitelistée
+    localStorage.setItem('enomia_oauth_target', '/facturation-lcd');
     const redirectTo = window.location.origin + '/facturation-lcd';
     await _fsb.auth.signInWithOAuth({
       provider: 'google',

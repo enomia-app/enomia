@@ -210,14 +210,12 @@ if (!window.__factInit) {
     }
   }
 
-  window.toolLogin = function() { fOpenLoginModal(); };
-  window.fOpenLoginModal = function() {
-    document.getElementById('fmodal-login').classList.add('show');
-  };
+  // AuthModal — composant unique. fOpenLoginModal devient un alias.
+  window.fOpenLoginModal = function() { if (window.authOpen) window.authOpen('Se connecter'); };
+  window.toolLogin = function() { window.fOpenLoginModal(); };
 
   window.fLogin = async function() {
     localStorage.setItem('fact_expecting_signin', '1');
-    // Fallback redirect via index.html si la redirect URL Supabase n'est pas whitelistée
     localStorage.setItem('enomia_oauth_target', '/facturation-lcd');
     const redirectTo = window.location.origin + '/facturation-lcd';
     await _fsb.auth.signInWithOAuth({
@@ -225,18 +223,28 @@ if (!window.__factInit) {
       options: { redirectTo, queryParams: { prompt: 'select_account' } }
     });
   };
-  window.fSendMagicLink = async function() {
-    var email = document.getElementById('flogin-email').value.trim();
-    var fb = document.getElementById('flogin-feedback');
-    if (!email || !email.includes('@')) {
-      fb.textContent = 'Email invalide'; fb.style.color = 'var(--fa-red)'; fb.style.display = 'block'; return;
-    }
-    fb.textContent = 'Envoi…'; fb.style.color = 'var(--fa-muted)'; fb.style.display = 'block';
+
+  // Hooks consommés par AuthModal
+  window.toolSignInGoogle = function () { return window.fLogin(); };
+  window.toolSendMagicLink = async function ({ email, prenom }) {
     localStorage.setItem('fact_expecting_signin', '1');
-    var res = await _fsb.auth.signInWithOtp({ email: email, options: { emailRedirectTo: window.location.origin + '/facturation-lcd' } });
-    if (res.error) { fb.textContent = 'Erreur : ' + res.error.message; fb.style.color = 'var(--fa-red)'; }
-    else { fb.textContent = '✓ Lien envoyé à ' + email + '. Vérifiez votre boîte.'; fb.style.color = 'var(--fa-green)'; fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, source: 'Facturation' }) }).catch(function () {}); }
+    localStorage.setItem('enomia_oauth_target', '/facturation-lcd');
+    const res = await _fsb.auth.signInWithOtp({
+      email: email,
+      options: {
+        emailRedirectTo: window.location.origin + '/facturation-lcd',
+        data: { prenom: prenom || '' }
+      }
+    });
+    if (res && res.error) throw new Error(res.error.message || 'Erreur magic link');
+    fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email, firstName: prenom || '', source: 'Facturation' })
+    }).catch(function () {});
+    return true;
   };
+  window.fSendMagicLink = function () { /* legacy alias, ouvre simplement le modal */ window.fOpenLoginModal(); };
   window.fLogout = async function() {
     await _fsb.auth.signOut();
     _fuser = null; _ftoken = null;

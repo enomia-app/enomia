@@ -171,16 +171,13 @@
     ctBootstrap();
   }
 
-  window.ctOpenLoginModal = function () {
-    document.getElementById('ctmodal').classList.add('show');
-  };
-  window.toolLogin = function () { ctOpenLoginModal(); };
-  window.ctCloseModal = function () {
-    document.getElementById('ctmodal').classList.remove('show');
-  };
+  // AuthModal — composant unique. ctOpenLoginModal devient un alias.
+  window.ctOpenLoginModal = function () { if (window.authOpen) window.authOpen('Se connecter'); };
+  window.toolLogin = function () { window.ctOpenLoginModal(); };
+  window.ctCloseModal = function () { if (window.authClose) window.authClose(); };
+
   window.ctSignInGoogle = async function () {
     localStorage.setItem('ct_expecting_signin', '1');
-    // Fallback redirect via index.html si la redirect URL Supabase n'est pas whitelistée
     localStorage.setItem('enomia_oauth_target', '/contrat-lcd-dashboard');
     const redirectTo = window.location.origin + '/contrat-lcd-dashboard';
     await _ctSb.auth.signInWithOAuth({
@@ -188,32 +185,28 @@
       options: { redirectTo, queryParams: { prompt: 'select_account' } }
     });
   };
-  window.ctSendMagicLink = async function () {
-    const email = document.getElementById('ctmodal-email').value.trim();
-    const fb = document.getElementById('ctmodal-feedback');
-    if (!email || !email.includes('@')) {
-      fb.textContent = 'Email invalide';
-      fb.style.color = 'var(--ct-red)';
-      fb.style.display = 'block';
-      return;
-    }
-    fb.textContent = 'Envoi…';
-    fb.style.color = 'var(--ct-muted)';
-    fb.style.display = 'block';
+
+  // Hooks consommés par AuthModal
+  window.toolSignInGoogle = function () { return window.ctSignInGoogle(); };
+  window.toolSendMagicLink = async function ({ email, prenom }) {
     localStorage.setItem('ct_expecting_signin', '1');
+    localStorage.setItem('enomia_oauth_target', '/contrat-lcd-dashboard');
     const { error } = await _ctSb.auth.signInWithOtp({
-      email,
-      options: { emailRedirectTo: window.location.origin + '/contrat-lcd-dashboard' }
+      email: email,
+      options: {
+        emailRedirectTo: window.location.origin + '/contrat-lcd-dashboard',
+        data: { prenom: prenom || '' }
+      }
     });
-    if (error) {
-      fb.textContent = 'Erreur : ' + error.message;
-      fb.style.color = 'var(--ct-red)';
-    } else {
-      fb.textContent = '✓ Lien envoyé à ' + email + '. Vérifiez votre boîte.';
-      fb.style.color = 'var(--ct-green)';
-      fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, source: 'Contrat' }) }).catch(function () {});
-    }
+    if (error) throw new Error(error.message || 'Erreur magic link');
+    fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email, firstName: prenom || '', source: 'Contrat' })
+    }).catch(function () {});
+    return true;
   };
+  window.ctSendMagicLink = function () { /* legacy alias, ouvre le modal */ window.ctOpenLoginModal(); };
   window.ctLogout = async function () {
     await _ctSb.auth.signOut();
   };

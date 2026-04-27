@@ -162,41 +162,21 @@ async function signInWithGoogle() {
   });
 }
 
-// Magic link modal
-function showLoginModal() { _openMagicModal('Se connecter'); }
-window.toolLogin = function() { showLoginModal(); };
-function _openMagicModal(label) {
-  document.getElementById('magic-modal-label').textContent = label || 'Se connecter';
-  document.getElementById('magic-step-email').style.display = '';
-  document.getElementById('magic-step-confirm').style.display = 'none';
-  document.getElementById('magic-error').style.display = 'none';
-  document.getElementById('magic-email-input').value = '';
-  document.getElementById('magic-modal').style.display = 'flex';
-  setTimeout(() => document.getElementById('magic-prenom-input').focus(), 100);
-}
-function closeMagicModal() { document.getElementById('magic-modal').style.display = 'none'; }
-function resetMagicModal() {
-  document.getElementById('magic-step-email').style.display = '';
-  document.getElementById('magic-step-confirm').style.display = 'none';
-  document.getElementById('magic-prenom-input').value = '';
-  document.getElementById('magic-email-input').value = '';
-}
-async function sendMagicLink() {
-  const prenom = document.getElementById('magic-prenom-input').value.trim();
-  const email = document.getElementById('magic-email-input').value.trim();
-  const errEl = document.getElementById('magic-error');
-  if (!email || !email.includes('@')) { errEl.textContent = 'Email invalide'; errEl.style.display = ''; return; }
-  const btn = document.getElementById('magic-send-btn');
-  btn.textContent = 'Envoi...'; btn.disabled = true;
+// AuthModal — composant unique. Les fonctions ci-dessous sont des aliases pour
+// rester compatibles avec le code existant qui appelle showLoginModal/_openMagicModal/closeMagicModal.
+function showLoginModal() { window.authOpen && window.authOpen('Se connecter'); }
+function _openMagicModal(label) { window.authOpen && window.authOpen(label || 'Se connecter'); }
+function closeMagicModal() { window.authClose && window.authClose(); }
+
+// Expose les fonctions auth attendues par AuthModal
+window.toolSignInGoogle = function () { return signInWithGoogle(); };
+window.toolSendMagicLink = async function ({ email, prenom }) {
   localStorage.setItem('enomia_expecting_signin', '1');
   const simPayload = _pendingSimData ? encodeURIComponent(JSON.stringify(_pendingSimData)) : null;
-  const res = await _apiPost('/api/auth', { action: 'magic-link', email, prenom, simPayload }, false);
-  btn.textContent = 'Recevoir mon lien \u2192'; btn.disabled = false;
-  if (res.error) { errEl.textContent = res.error; errEl.style.display = ''; return; }
-  document.getElementById('magic-email-sent').textContent = email;
-  document.getElementById('magic-step-email').style.display = 'none';
-  document.getElementById('magic-step-confirm').style.display = '';
-}
+  const res = await _apiPost('/api/auth', { action: 'magic-link', email: email, prenom: prenom, simPayload: simPayload }, false);
+  if (res && res.error) throw new Error(res.error);
+  return true;
+};
 
 // Migration localStorage → DB après connexion
 async function _migrateLocalStorage() {

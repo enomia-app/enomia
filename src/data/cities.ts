@@ -42,6 +42,7 @@ export const regions: Region[] = [
   { slug: 'pays-de-la-loire', displayName: 'Pays de la Loire', description: 'Des Sables-d\'Olonne à La Baule en passant par Nantes, la région combine littoral atlantique, îles et métropoles. La Vendée est le 2e département touristique de France avec un marché LCD très saisonnier.' },
   { slug: 'bretagne', displayName: 'Bretagne', description: 'De Rennes à Saint-Malo en passant par Brest et Quiberon, la Bretagne combine tourisme balnéaire, patrimoine celte et marché étudiant. Rennes est un des marchés locatifs les plus tendus de France.' },
   { slug: 'normandie', displayName: 'Normandie', description: 'Rouen, Honfleur, Deauville, Étretat : la Normandie mixe tourisme culturel, impressionnisme et plages du Débarquement. Proximité immédiate de Paris et événements emblématiques (L\'Armada, Festival du Film Américain).' },
+  { slug: 'maroc', displayName: 'Maroc', description: 'Marrakech, Essaouira et Agadir attirent les investisseurs francophones avec des rendements locatifs de 6 à 8 %. Un marché LCD en pleine reprise, porté par le tourisme international et une fiscalité compétitive.' },
 ];
 
 export type City = {
@@ -3011,6 +3012,540 @@ export const cities: City[] = [
       },
     ],
     updatedAt: '2026-04-23',
+  },
+  // ==========================================================================
+  // CAP D'AGDE
+  // ==========================================================================
+  {
+    slug: 'cap-d-agde',
+    displayName: "Cap d'Agde",
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title: "Conciergerie Cap d'Agde Airbnb : comparatif 2026 des 6 meilleures agences",
+    metaTitle: "Conciergerie Airbnb Cap d'Agde : Comparatif 2026 (tarifs & avis)",
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb au Cap d'Agde. Tarifs (20-22 %), Roquille, Neptune, Centre-Port, réglementation 2026, quartiers rentables. Guide complet.",
+    kwPrincipal: "conciergerie cap d'agde",
+    kwSecondaires: [
+      "conciergerie airbnb cap d'agde",
+      "gestion locative cap d'agde",
+      "location courte durée cap d'agde",
+      "agence conciergerie cap agde",
+      "conciergerie location saisonnière hérault",
+    ],
+    population: 31431,
+    tourists: 3000000,
+    activeListings: 1200,
+    priceLow: 70,
+    priceHigh: 210,
+    occupancyRate: 65,
+    revpar: 70,
+    seasonality:
+      "Saisonnalité extrêmement marquée : juillet-août concentrent 45-50 % du CA annuel (taux d'occupation 90-95 %, tarifs +70 %). Saison exploitable mai-septembre = 80 % des revenus. Creux hivernal important de novembre à mars (30-40 % d'occupation). Le Cap d'Agde est la première station balnéaire de France en capacité d'accueil : 175 000 lits touristiques.",
+    rankNational: 20,
+    introCustom:
+      "Vous possédez un appartement au **Cap d'Agde** — front de mer, Roquille, Môle ou Neptune — et vous envisagez de le mettre en location saisonnière, ou vous cherchez à en savoir plus sur les agences locales.\n\nAvec 3 millions de touristes par an et une capacité d'accueil de 175 000 lits, le potentiel est indéniable. Mais la **saisonnalité extrême** (80 % des revenus concentrés entre mai et septembre) rend le choix de la conciergerie déterminant pour la rentabilité réelle.\n\nCe guide compare les **6 meilleures conciergeries du Cap d'Agde** — de HostnFly à Dell'Accio Dimora — pour vous aider à choisir **laquelle** convient à votre bien et vos objectifs.",
+    marketIntro:
+      "Le **Cap d'Agde** est la première station balnéaire de France par capacité d'hébergement avec plus de 15 millions de nuitées touristiques par an dans le département de l'Hérault.\n\nLe marché LCD y est très actif : **1 200 annonces actives** sur la commune, taux d'occupation annuel moyen de **65 %**, prix moyen en haute saison autour de **110 €/nuit**. Le RevPAR de 70 € dépasse la moyenne Occitanie de 5 %.\n\nLa particularité du Cap ? Une **saisonnalité ultra-concentrée** : juillet-août génèrent 45 à 50 % du CA annuel. Un T2 bien placé en Centre-Port peut espérer **16 000 à 22 000 €** de revenus bruts/an avec une bonne gestion.\n\nDepuis la **loi Le Meur 2024**, l'enregistrement national sur le téléservice devient obligatoire avant le **20 mai 2026** — les annonces sans numéro valide seront désactivées automatiquement par Airbnb et Booking.",
+    conciergeries: [
+      {
+        name: "HostnFly Cap d'Agde",
+        url: 'https://hostnfly.com/conciergerie-airbnb/cap-d-agde',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 4000,
+        biensGeres: 120,
+        specialty: 'Leader national, 10+ plateformes, 0 frais fixe',
+        description:
+          "HostnFly est le leader national de la conciergerie Airbnb avec 150 000+ réservations gérées par an. Au Cap d'Agde, l'équipe locale gère plus de 100 logements avec pricing dynamique quotidien, diffusion sur 10 plateformes (Airbnb, Booking, Abritel…), photos pro et assurance incluses. Commission fixe à 20 %, ménage refacturé voyageur. Idéal pour un propriétaire qui veut un process zéro gestion.",
+      },
+      {
+        name: "Dell'Accio Dimora",
+        url: 'https://dellaccio-conciergerie.fr/',
+        commission: '20-22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 60,
+        biensGeres: 70,
+        specialty: "Cap d'Agde, Valras-Plage, Vias — ancrage local fort",
+        description:
+          "Fondée par une professionnelle avec plus de 10 ans en immobilier, Dell'Accio Dimora couvre les secteurs les plus prisés du littoral héraultais : Cap d'Agde, Valras-Plage et Vias. Service personnalisé et réactif, accueil sur mesure des voyageurs, gestion complète de A à Z. Idéale pour les propriétaires qui préfèrent une structure boutique avec un vrai suivi local.",
+      },
+      {
+        name: 'CapConciergerie',
+        url: 'http://capconciergerie.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 55,
+        biensGeres: 80,
+        specialty: "20 ans d'expérience immobilière au Cap d'Agde",
+        description:
+          "Forte de plus de 20 ans d'expérience en immobilier au Cap d'Agde, CapConciergerie propose une gestion locative complète adaptée aux résidences secondaires et aux biens dédiés LCD. Services : check-in/check-out, ménage, linge, maintenance, diffusion multi-plateformes. Son ancrage historique lui permet de maîtriser les subtilités de chaque quartier.",
+      },
+      {
+        name: "BnB Cap d'Agde",
+        url: 'https://www.bnbcapdagde.com/',
+        commission: 'Forfaits dès 60 €/prestation',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 30,
+        biensGeres: 40,
+        specialty: 'Modèle forfaitaire à la carte (pas de %)',
+        description:
+          "BnB Cap d'Agde se différencie par un modèle à la carte plutôt qu'une commission en pourcentage : pack complet à partir de 60 € (accueil + état des lieux), ménage pro dès 80 €. Ce modèle est particulièrement avantageux pour les propriétaires qui génèrent beaucoup de réservations et souhaitent payer au service réellement rendu.",
+      },
+      {
+        name: 'F&G Conciergerie',
+        url: 'https://conciergeriecapdagde.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 40,
+        biensGeres: 50,
+        specialty: "Gestion locative 100 % locale Cap d'Agde",
+        description:
+          "F&G Conciergerie est une agence locale dédiée à la gestion locative saisonnière au Cap d'Agde. Elle prend en charge l'intégralité du processus : rédaction des annonces, accueil voyageurs, ménage, linge, maintenance et reporting mensuel. Bonne option pour un propriétaire cherchant un interlocuteur 100 % local.",
+      },
+      {
+        name: 'NFG Conciergerie',
+        url: 'https://nfgconciergerie-capdagde.com/',
+        commission: '22 %',
+        menage: 'inclus',
+        rating: 4.9,
+        reviews: 35,
+        biensGeres: 45,
+        specialty: 'Ménage inclus dans la commission — tout compris',
+        description:
+          "NFG Conciergerie se distingue par l'inclusion du ménage dans sa commission de 22 %, sans frais additionnels. Ce modèle tout-compris simplifie le calcul de rentabilité. Spécialisée dans les appartements de front de mer et les résidences balnéaires du Cap d'Agde, elle affiche un taux de retour voyageurs parmi les plus élevés du secteur.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: "Front de mer — Roquille & Môle",
+        pricePerNight: '100-210 €',
+        occupancy: 82,
+        description:
+          "Emplacement premium face à la mer, accès direct aux plages et au port de plaisance. Prix d'achat 3 500-4 500 €/m². Clientèle familiale et premium en saison. T2 à partir de 120 000 €. Zone la plus demandée, aussi la plus concurrentielle.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Centre-Port / Richelieu',
+        pricePerNight: '80-160 €',
+        occupancy: 70,
+        description:
+          "Cœur animé du Cap d'Agde, à 5 min à pied des plages et du port. Restaurants, commerces, animation estivale. Bon compromis accessibilité/rentabilité pour un premier investissement. T2 à partir de 100 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Neptune (village naturiste)',
+        pricePerNight: '70-150 €',
+        occupancy: 75,
+        description:
+          "Segment unique en Europe : village naturiste autonome accueillant jusqu'à 40 000 vacanciers au pic. Demande très spécialisée mais fidèle avec une clientèle de retour chaque saison. Biens moins chers à l'achat (2 500-3 500 €/m²).",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Rochelongue / Périphérie',
+        pricePerNight: '60-110 €',
+        occupancy: 58,
+        description:
+          "En retrait du front de mer, plages à 10-15 min à pied. Ticket d'entrée très accessible (T2 dès 70 000 €, 2 000-2 500 €/m²). Marché moins concurrentiel hors saison. Idéal pour un premier investissement à budget serré.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Marseillan-Plage (commune limitrophe)',
+        pricePerNight: '75-140 €',
+        occupancy: 62,
+        description:
+          "Station balnéaire calme à 5 km, sur l'étang de Thau. Biens moins chers, réglementation moins contraignante. Clientèle familiale cherchant une alternative au Cap en haute saison. Bonne rentabilité sur les grandes surfaces.",
+        roiBrut: '5 à 6 %',
+      },
+    ],
+    regulation:
+      "**Enregistrement obligatoire dès mai 2026.** La loi du 19 novembre 2024 impose l'enregistrement de tout meublé de tourisme sur un téléservice national avant le **20 mai 2026**. Airbnb et Booking désactiveront automatiquement les annonces sans numéro valide. Amendes : **10 000 €** pour non-enregistrement, **20 000 €** pour fausse déclaration.\n\n**Déclaration en mairie.** À Agde, la déclaration via le formulaire CERFA n°14004*04 reste obligatoire et attribue un numéro à afficher sur toutes les annonces (amende 450 € pour manquement). Ces deux obligations — mairie et téléservice national — sont cumulatives.\n\n**Plafond 120 nuitées/an.** La résidence principale est limitée à 120 jours de location par an. Agde/Cap d'Agde n'est pas classé en zone tendue à 90 jours, mais la loi Le Meur permet aux communes de réduire ce plafond.\n\n**Taxe de séjour.** Agde applique le régime proportionnel : 5 % du coût net de la nuitée par personne pour les meublés non classés, plafonné à 4,60 €, plus 10 % de taxe additionnelle départementale (Hérault). Airbnb la collecte automatiquement.\n\n**Fiscalité 2026.** L'abattement micro-BIC est ramené à **30 %** pour les meublés non classés (contre 50 % avant 2025). Faire classer son bien en meublé de tourisme (50 % d'abattement) est fortement recommandé pour préserver la rentabilité nette.\n\n**⚠️ Attention copropriétés.** La loi Le Meur permet à une copropriété de voter en assemblée générale pour interdire la location touristique courte durée dans l'immeuble. Vérifiez le règlement avant tout achat.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 32,
+      pricePerNight: 95,
+      neighborhood: 'Centre-Port / Richelieu',
+      revenuBrut: 18050,
+      commissionRate: 0.20,
+      menageCount: 78,
+      menageUnitCost: 40,
+    },
+    extraFaq: [
+      {
+        q: "Le Cap d'Agde est-il trop saisonnier pour rentabiliser une location toute l'année ?",
+        a: "Oui, la saisonnalité est le principal défi : juillet-août représentent à eux seuls 45-50 % du CA annuel, et la saison exploitable mai-septembre génère 80 % des revenus. Hors saison (novembre-mars), le taux d'occupation tombe à 30-40 %. Pour compenser, les bonnes conciergeries locales pratiquent un pricing agressif en basse saison et ciblent les week-ends prolongés et événements locaux. Sans stratégie active, le bien risque d'être vide 5 mois par an.",
+      },
+      {
+        q: "Faut-il déclarer sa location au Cap d'Agde même si Airbnb collecte déjà la taxe de séjour ?",
+        a: "Oui, absolument. La collecte automatique de la taxe de séjour par Airbnb ne vous dispense ni de déclarer votre meublé de tourisme en mairie (CERFA n°14004*04) ni de vous inscrire sur le téléservice national avant mai 2026. Ce sont deux obligations distinctes. Sans numéro d'enregistrement, vous risquez 450 € d'amende (mairie), et jusqu'à 10 000 € à partir de mai 2026 pour le registre national.",
+      },
+      {
+        q: "Studio ou T2 : quel type de bien est le plus rentable au Cap d'Agde ?",
+        a: "Le T2 (1 chambre, 28-35 m²) offre le meilleur compromis. Les studios peinent à justifier un tarif supérieur à 55-65 €/nuit même en haute saison, tandis que le T2 permet de facturer 80-130 €/nuit et d'accueillir 4 personnes. Pour un premier investissement sous 120 000 €, le T2 Centre-Port ou Roquille est le meilleur rapport prix/rentabilité.",
+      },
+    ],
+    updatedAt: '2026-04-27',
+  },
+  // ==========================================================================
+  // ARCACHON
+  // ==========================================================================
+  {
+    slug: 'arcachon',
+    displayName: 'Arcachon',
+    region: 'Nouvelle-Aquitaine',
+    regionSlug: 'nouvelle-aquitaine',
+    title: 'Conciergerie Arcachon Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Arcachon : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Arcachon et Bassin. Tarifs (20-22 %), Pyla, Cap Ferret, zone tendue, réglementation 2026. Guide complet.",
+    kwPrincipal: 'conciergerie arcachon',
+    kwSecondaires: [
+      'conciergerie airbnb arcachon',
+      'conciergerie bassin arcachon',
+      'gestion locative arcachon',
+      'location courte durée arcachon',
+      'conciergerie pyla arcachon',
+    ],
+    population: 11500,
+    tourists: 4000000,
+    activeListings: 700,
+    priceLow: 90,
+    priceHigh: 380,
+    occupancyRate: 60,
+    revpar: 82,
+    seasonality:
+      "Saisonnalité forte portée par le Bassin, la Dune du Pilat et l'Atlantique. Juillet-août représentent 50-60 % du CA annuel (occupation 90-95 %, tarifs multipliés par 2 à 3). Saison exploitable d'avril à octobre. Creux hivernal de novembre à mars (20-35 % d'occupation). Le Pyla-sur-Mer et Cap Ferret tirent les prix vers le haut avec des villas à 400-1 500 €/nuit.",
+    rankNational: 14,
+    introCustom:
+      "Vous possédez une maison ou un appartement à **Arcachon** — Ville d'Hiver, Ville d'Été, ou ailleurs dans le **Bassin d'Arcachon** — et vous souhaitez le rentabiliser en location saisonnière.\n\nAvec 4 millions de visiteurs par an sur le Bassin, la Dune du Pilat et l'une des plus belles baies de France, le potentiel est exceptionnel. Mais la forte saisonnalité et la **réglementation zone tendue** complexifient la gestion, surtout pour les résidences secondaires.\n\nCe guide compare les **6 meilleures conciergeries Arcachon**, de YourHostHelper à La Conciergerie du Bassin, pour vous aider à choisir **laquelle** correspond à votre bien.",
+    marketIntro:
+      "Arcachon et son Bassin constituent l'un des marchés de location saisonnière les plus dynamiques de France, porté par la Dune du Pilat, les cabanes tchanquées et un littoral unique en Europe.\n\nLe Bassin d'Arcachon compte **plus de 2 500 annonces actives** de location courte durée, avec un taux d'occupation moyen de **60 %** et un prix moyen de **137 €/nuit**. Le RevPAR atteint 82 €, soit 25 % au-dessus de la moyenne Nouvelle-Aquitaine.\n\nLes performances varient fortement selon les secteurs : le **Pyla-sur-Mer** et Cap Ferret affichent des prix de 300-600 €/nuit pour des villas, tandis que les appartements en centre-ville d'Arcachon se négocient à 100-200 €/nuit.\n\nArcachon est classée **zone tendue**, ce qui plafonne la résidence principale à **90 jours par an** et impose des contraintes renforcées pour les résidences secondaires.",
+    conciergeries: [
+      {
+        name: 'YourHostHelper Arcachon',
+        url: 'https://yourhosthelper.com/en/agence-arcachon/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 80,
+        biensGeres: 100,
+        specialty: 'Note Google 5/5, 4 agences sur le Bassin',
+        description:
+          "YourHostHelper est présent sur l'ensemble du Bassin avec 4 agences (Arcachon, La Teste-de-Buch, Gujan-Mestras, Lège-Cap-Ferret) et une note Google 5/5. Commission fixe à 20 %, ménage refacturé voyageur, photos pro incluses, pricing dynamique et dashboard propriétaire en temps réel. Excellent réseau local pour gérer des biens sur tout le Bassin.",
+      },
+      {
+        name: 'Sejourneur Arcachon',
+        url: 'https://www.sejourneur.com/conciergerie-a-arcachon/',
+        commission: '20-22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 90,
+        biensGeres: 80,
+        specialty: 'Spécialiste haut de gamme Bassin',
+        description:
+          "Sejourneur est spécialisé dans la gestion de biens haut de gamme sur le Bassin (villas, maisons de plage, propriétés premium). Commission 20-22 % avec un accompagnement personnalisé et un suivi rigoureux. Particulièrement adapté aux propriétaires de villas au Pyla ou de maisons sur pilotis à Cap Ferret.",
+      },
+      {
+        name: 'La Conciergerie du Bassin',
+        url: 'https://laconciergeriedubassin.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 65,
+        biensGeres: 55,
+        specialty: 'Conciergerie boutique — suivi ultra-personnalisé',
+        description:
+          "Gérée par Sophie, La Conciergerie du Bassin est une structure à taille humaine avec plusieurs années d'expertise dans la gestion locative haut de gamme sur le Bassin. Suivi personnalisé, accueil soigné des voyageurs, entretien impeccable. Idéale pour les propriétaires qui veulent un contact humain direct et une gestion attentive, pas un call center.",
+      },
+      {
+        name: 'Welkeys Arcachon',
+        url: 'https://www.welkeys.com/conciergerie-airbnb/arcachon',
+        commission: '22-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 120,
+        biensGeres: 90,
+        specialty: 'Premium, pricing saisonnier optimisé',
+        description:
+          "Welkeys maîtrise la stratégie tarifaire estivale sur les marchés saisonniers. À Arcachon, leur expertise en yield management maximise les revenus en juillet-août. Commission 22-25 % selon le niveau de service, ménage refacturé voyageur. Adapté aux villas et maisons premium sur le Bassin.",
+      },
+      {
+        name: 'BNB Conciergerie Arcachon',
+        url: 'https://bnb-conciergerie.fr/conciergerie-airbnb-arcachon.html',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 75,
+        biensGeres: 60,
+        specialty: '+30 % de revenus vs gestion en solo (moy. 3 mois)',
+        description:
+          "BNB Conciergerie affiche des résultats concrets : +30 % de revenus en moyenne par rapport à une gestion en solo après 3 mois. Commission à 20 %, sans frais d'entrée ni engagement. Gestion clé en main incluant diffusion multi-plateformes, accueil voyageurs, ménage et maintenance.",
+      },
+      {
+        name: 'HostnFly Arcachon',
+        url: 'https://hostnfly.com/conciergerie-airbnb/arcachon',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 150,
+        biensGeres: 80,
+        specialty: 'Algo pricing IA, 10+ plateformes',
+        description:
+          "HostnFly apporte son algorithme de pricing dynamique et sa diffusion sur 10+ plateformes au marché arcachonnais. Assurance incluse, reporting mensuel. Commission à partir de 20 %, ménage refacturé voyageur. Option solide pour un appartement en centre-ville d'Arcachon qui nécessite un process industrialisé sans intervention manuelle.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Pyla-sur-Mer (Dune du Pilat)',
+        pricePerNight: '200-600 €',
+        occupancy: 68,
+        description:
+          "Secteur ultra-premium au pied de la Dune du Pilat. Villas et maisons de prestige avec piscine ou vue Bassin. Clientèle haut de gamme parisienne et internationale. Prix d'achat 7 000-15 000 €/m². Investissement pour gros budgets, mais ROI élevé sur une villa bien gérée.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: "Ville d'Hiver (Arcachon)",
+        pricePerNight: '130-320 €',
+        occupancy: 60,
+        description:
+          "Quartier historique chic avec villas de villégiature Belle Époque sur les hauteurs. Ambiance paisible, clientèle culturelle et familles aisées. Biens rares et très peu en vente. Prix d'achat 4 000-7 000 €/m².",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: "Ville d'Été (centre-ville)",
+        pricePerNight: '100-220 €',
+        occupancy: 65,
+        description:
+          "Cœur commercial d'Arcachon en bord de Bassin, restaurants, casino et plages. Clientèle touristique large en été. Appartements accessibles (3 000-5 000 €/m²). Meilleur rapport occupation/prix pour un T2 ou T3.",
+        roiBrut: '4,5 à 5,5 %',
+      },
+      {
+        name: 'Lège-Cap-Ferret',
+        pricePerNight: '180-500 €',
+        occupancy: 58,
+        description:
+          "Presqu'île mythique face à la Dune du Pilat. Ambiance bohème chic, cabanes ostréicoles, clientèle bobo et célébrités. Saisonnalité extrême mais tarifs records. Prix d'achat 6 000-12 000 €/m².",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'La Teste-de-Buch',
+        pricePerNight: '80-160 €',
+        occupancy: 55,
+        description:
+          "Commune limitrophe d'Arcachon, plus accessible à l'achat (2 000-3 500 €/m²). Accès rapide aux plages et aux services. Bon point d'entrée pour un investissement LCD dans le Bassin avec un budget limité.",
+        roiBrut: '5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "**Arcachon, zone tendue.** La ville figure sur la liste officielle des zones tendues, ce qui entraîne un plafond de **90 jours par an** pour la location de la résidence principale (contre 120 ailleurs) et des contraintes renforcées pour les résidences secondaires.\n\n**Enregistrement obligatoire.** Avant toute mise en location, vous devez obtenir un **numéro d'enregistrement à 13 chiffres** via le téléservice de la mairie ou le portail national. Depuis la **loi Le Meur 2024**, ce registre national doit être complété avant le **20 mai 2026** — les annonces sans numéro valide seront désactivées par les plateformes.\n\n**Changement d'usage résidence secondaire.** À Arcachon, une résidence secondaire mise en LCD nécessite une autorisation de changement d'usage. Dans certaines zones protégées du Bassin, une compensation (transformer un local commercial en logement équivalent) peut être exigée par la mairie.\n\n**Loi Le Meur 2026.** DPE minimum classe **E** obligatoire (classe D à partir de 2034), abattement micro-BIC réduit à **30 %** pour les meublés non classés (50 % pour les classés). Faire classer son meublé est fortement conseillé.\n\n**Taxe de séjour.** Arcachon applique une taxe de séjour de 1,65 € à 4,40 € par nuit et par personne selon le classement, collectée automatiquement par Airbnb.\n\n**⚠️ Attention copropriétés.** La loi Le Meur permet à une copropriété de voter en assemblée générale pour interdire la location courte durée. Vérifiez le règlement de copropriété avant tout achat.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 145,
+      neighborhood: "Ville d'Été (centre-ville)",
+      revenuBrut: 24650,
+      commissionRate: 0.20,
+      menageCount: 80,
+      menageUnitCost: 65,
+    },
+    extraFaq: [
+      {
+        q: "Quelle conciergerie choisir pour une villa au Pyla vs un appartement en centre-ville d'Arcachon ?",
+        a: "Pour une villa au Pyla (300-600 €/nuit, clientèle premium), choisissez Sejourneur, La Conciergerie du Bassin ou YourHostHelper : ils sont habitués aux biens standing, à la coordination de prestataires haut de gamme et à une clientèle exigeante. Pour un appartement T2-T3 en centre-ville (100-200 €/nuit), HostnFly ou BNB Conciergerie offrent un process industrialisé et un pricing algorithmique plus adapté à un bien standard.",
+      },
+      {
+        q: "Peut-on rentabiliser un bien sur le Bassin d'Arcachon toute l'année ?",
+        a: "La saisonnalité est réelle : novembre à mars représentent seulement 15-20 % du CA annuel. Pour optimiser, les conciergeries ciblent les week-ends prolongés (Toussaint, Noël, Pâques), les séjours nature/VTT hors été et les retraites d'entreprise. Un T2 bien géré en centre-ville peut espérer 20 000-26 000 €/an avec une bonne conciergerie, contre 12 000-16 000 € en solo.",
+      },
+      {
+        q: "Comment fonctionne l'autorisation de changement d'usage pour une résidence secondaire à Arcachon ?",
+        a: "Pour une résidence secondaire en zone tendue comme Arcachon, vous devez déposer une demande d'autorisation de changement d'usage en mairie avant de la louer en LCD. Dans les secteurs protégés du Bassin, une compensation (transformer un local commercial de surface équivalente en logement) peut être exigée. La procédure prend 3 à 6 mois. Les conciergeries locales (YourHostHelper, Sejourneur) connaissent bien les démarches par secteur.",
+      },
+    ],
+    updatedAt: '2026-04-27',
+  },
+  // ==========================================================================
+  // MARRAKECH
+  // ==========================================================================
+  {
+    slug: 'marrakech',
+    displayName: 'Marrakech',
+    region: 'Maroc',
+    regionSlug: 'maroc',
+    title: 'Conciergerie Marrakech Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Marrakech : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      'Comparatif des 6 meilleures conciergeries Airbnb à Marrakech. Tarifs (15-22 %), riads Médina, Guéliz, Palmeraie, réglementation loi 80-14, fiscalité Maroc 2026.',
+    kwPrincipal: 'conciergerie marrakech',
+    kwSecondaires: [
+      'conciergerie airbnb marrakech',
+      'gestion locative marrakech',
+      'location courte durée marrakech',
+      'conciergerie riad marrakech',
+      'agence gestion airbnb marrakech',
+    ],
+    population: 980000,
+    tourists: 3500000,
+    activeListings: 9648,
+    priceLow: 50,
+    priceHigh: 350,
+    occupancyRate: 52,
+    revpar: 61,
+    seasonality:
+      "Saisonnalité distincte de la France : pic printanier mars-avril (temperatures idéales, 22-28°C) et automne septembre-novembre. L'été (juin-août) est creux en raison des fortes chaleurs (40°C+). Hiver doux (décembre-février) avec demande steady et tarifs plus modestes. Ramadan génère une période calme pour le tourisme mais animée localement.",
+    rankNational: 1,
+    introCustom:
+      "**Marrakech** — la Ville Ocre, Jemaa el-Fna, les souks, les riads — attire 3,5 millions de touristes par an et affiche près de **10 000 annonces Airbnb actives**.\n\nInvestir dans un riad en **Médina** ou un appartement à **Guéliz** pour le mettre en location courte durée est de plus en plus courant chez les investisseurs francophones. Les rendements bruts de **6 à 8 %** dépassent souvent ce qu'on trouve dans les grandes villes françaises.\n\nMais la **loi 80-14** marocaine impose désormais une autorisation obligatoire, un registre des clients et une taxe de séjour. Ce guide compare les **6 meilleures conciergeries Marrakech** pour vous aider à choisir **laquelle** convient à votre bien.",
+    marketIntro:
+      "Marrakech est le premier marché LCD du Maghreb avec **9 648 annonces actives** sur Airbnb et un taux d'occupation moyen de **52 %** (top performers : 62-67 %).\n\nLe prix moyen par nuit est de **1 265 MAD (environ 118 €)**, avec des revenus mensuels moyens de **19 900 MAD (~1 860 €)** par annonce. Les riads premium de la Médina (Mouassine, Bab Doukkala) atteignent **150-350 €/nuit**, tandis que les studios de **Guéliz** se louent entre 50 et 90 €.\n\nLa saisonnalité est inversée par rapport à la France : le **printemps (mars-avril)** et **l'automne (septembre-novembre)** sont les meilleures saisons. L'été est creux à cause des chaleurs (40°C+), ce qui différencie Marrakech de toutes les destinations balnéaires françaises.\n\nDepuis la **loi 80-14 et son décret de 2023**, l'exploitation d'un logement en location courte durée sans autorisation est illégale au Maroc, avec des amendes de **20 000 à 100 000 MAD**.",
+    conciergeries: [
+      {
+        name: 'Morokeys',
+        url: 'https://www.morokeys.com/',
+        commission: '15-18 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 90,
+        biensGeres: 100,
+        specialty: 'Commission parmi les plus basses (15 %), tech-driven',
+        description:
+          "Morokeys est l'un des acteurs les plus actifs de la conciergerie LCD à Marrakech, avec une commission à partir de 15 % — parmi les plus basses du marché. Gestion complète : annonce multi-plateformes, communication voyageurs 24h/24, check-in, ménage, maintenance. Adapté aux appartements modernes de Guéliz et aux riads standard.",
+      },
+      {
+        name: 'Dar & Keys',
+        url: 'https://darandkeys.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 75,
+        biensGeres: 80,
+        specialty: 'Expert riads Médina, pricing premium',
+        description:
+          "Dar & Keys est spécialisé dans la gestion de riads et dars en Médina de Marrakech. Leur expertise de la clientèle internationale premium (tarifs 150-350 €/nuit) et de la stratégie de pricing par saison fait leur réputation. Commission à 20 %, ménage refacturé voyageur. La référence pour un riad de charme dans les quartiers Mouassine ou Riad Zitoun.",
+      },
+      {
+        name: 'YourHostHelper Marrakech',
+        url: 'https://yourhosthelper.com/en/agences-conciergerie-maroc/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 120,
+        biensGeres: 150,
+        specialty: 'Réseau France + Maroc, dashboard propriétaire',
+        description:
+          "YourHostHelper a étendu son réseau de conciergeries en France jusqu'au Maroc, avec une présence à Marrakech. Commission fixe à 20 %, photos pro incluses, dashboard propriétaire en temps réel. Bonne option pour les investisseurs français qui veulent le même interlocuteur que pour leurs biens en France.",
+      },
+      {
+        name: 'Nippy House',
+        url: 'https://nippy-house.com/',
+        commission: '20 %',
+        menage: 'inclus',
+        rating: 4.7,
+        reviews: 60,
+        biensGeres: 70,
+        specialty: 'Pack all-inclusive ménage compris',
+        description:
+          "Nippy House propose un pack tout compris à 20 % commission avec le ménage inclus — modèle simplifié apprécié des propriétaires non-résidents. Gestion complète des annonces, des séjours et de la maintenance. Bon rapport qualité/prix pour un appartement ou un riad de taille standard.",
+      },
+      {
+        name: 'Hospitality Conciergerie Marrakech',
+        url: 'https://www.hospitalityconciergemarrakech.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 55,
+        biensGeres: 60,
+        specialty: 'Service hôtelier haut de gamme, Hivernage & Palmeraie',
+        description:
+          "Hospitality Conciergerie Marrakech est positionnée sur le segment luxe : Hivernage, Palmeraie et riads premium. Commission à 20 % TTC sur chaque réservation, sans frais fixes. Standards hôteliers appliqués à la gestion des particuliers : welcome pack, service de conciergerie voyageur, linge de maison haut de gamme.",
+      },
+      {
+        name: 'HostLux Marrakech',
+        url: 'https://host-lux.com/',
+        commission: '18-20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 50,
+        biensGeres: 55,
+        specialty: 'Gestion locative complète, villa & riad',
+        description:
+          "HostLux est une conciergerie marrakchie spécialisée dans la gestion locative complète pour les propriétaires non-résidents. Commission entre 18 et 20 % selon le type de bien, ménage refacturé voyageur. Expertise reconnue sur les villas de la Palmeraie et les riads de la Médina. Interface propriétaire claire avec reporting mensuel.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Médina — Mouassine & Bab Doukkala',
+        pricePerNight: '120-350 €',
+        occupancy: 60,
+        description:
+          "Cœur historique classé UNESCO avec riads et dars authentiques. Clientèle internationale premium cherchant l'authenticité. Prix d'achat 800 000-3 000 000 MAD pour un riad (75 000-280 000 €). ROI élevé sur les riads bien rénovés.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Guéliz (quartier moderne)',
+        pricePerNight: '55-130 €',
+        occupancy: 55,
+        description:
+          "Quartier moderne avec appartements contemporains, boutiques et restaurants branchés. Clientèle professionnelle et voyageurs indépendants. Prix d'achat accessibles (600 000-1 500 000 MAD). Idéal pour un premier investissement LCD.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Hivernage',
+        pricePerNight: '90-200 €',
+        occupancy: 58,
+        description:
+          "Quartier résidentiel chic entre Médina et Guéliz. Hôtels de luxe, palaces, clubs branchés. Appartements et villas haut de gamme avec piscine. Clientèle aisée européenne et moyen-orientale. Prix d'achat 1 200 000-3 000 000 MAD.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Palmeraie',
+        pricePerNight: '200-800 €',
+        occupancy: 48,
+        description:
+          "Secteur villa avec jardins privés, piscine et palmiers à 5 km du centre. Clientèle ultra-premium. Villas à partir de 3 000 000 MAD (280 000 €). Taux d'occupation plus faible mais tarifs records.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Agdal / Quartier du golf',
+        pricePerNight: '60-140 €',
+        occupancy: 50,
+        description:
+          "Quartier résidentiel calme au sud, adjacent aux jardins de l'Agdal. Appartements modernes à prix raisonnables, bonne connexion au centre. Clientèle familles et voyageurs qui préfèrent le calme. Prix d'achat 700 000-1 400 000 MAD.",
+        roiBrut: '5,5 à 7 %',
+      },
+    ],
+    regulation:
+      "**Autorisation obligatoire — loi 80-14 et décret 2.23.441 (2023).** Louer son logement en courte durée au Maroc sans autorisation préalable est illégal. L'autorisation s'obtient via la plateforme nationale **Télédéclaration des Établissements d'Hébergement Touristique** du Ministère du Tourisme. Sans autorisation, les amendes vont de **20 000 à 100 000 MAD** et l'établissement peut être fermé administrativement.\n\n**Registre des clients obligatoire.** Chaque propriétaire doit tenir un registre des arrivées et départs, avec conservation des bulletins d'arrivée pendant au moins un an. Les autorités marocaines ont considérablement renforcé les contrôles depuis 2024.\n\n**Taxe de séjour.** La taxe varie selon la ville et le classement du bien : généralement **10 à 30 MAD** par nuitée et par personne. S'y ajoute la **Taxe de Promotion Touristique (TPT)** de 5 à 25 MAD. Chaque séjour doit donner lieu à une facture numérotée mentionnant ces taxes.\n\n**Fiscalité des revenus.** Les revenus locatifs sont soumis à l'**Impôt sur le Revenu (IR) marocain**. Les propriétaires non-résidents peuvent bénéficier d'un abattement forfaitaire de 40 % sur les revenus bruts. Des conventions fiscales franco-marocaines permettent d'éviter la double imposition.\n\n**Copropriété et règlement.** Comme en France, certaines copropriétés peuvent interdire la location touristique. Vérifiez le règlement de copropriété avant tout achat, notamment dans les résidences de Guéliz ou Hivernage.\n\n**⚠️ Attention propriétaires non-résidents.** La gestion à distance d'un bien à Marrakech sans conciergerie locale est très difficile : contrôles des autorités, gestion des arrivées tardives, maintenance. Une conciergerie locale habituée à la réglementation marocaine est quasi-indispensable.",
+    concreteExample: {
+      bienType: 'Riad 2 chambres',
+      surface: 80,
+      pricePerNight: 130,
+      neighborhood: 'Médina — Mouassine',
+      revenuBrut: 21000,
+      commissionRate: 0.20,
+      menageCount: 95,
+      menageUnitCost: 35,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il absolument une autorisation pour louer son riad sur Airbnb à Marrakech ?',
+        a: "Oui, depuis le décret 2.23.441 de juillet 2023 qui précise la loi 80-14, toute exploitation de location courte durée sans autorisation préalable du Ministère du Tourisme est illégale. Airbnb accepte de publier une annonce sans vérifier ce statut, mais les contrôles locaux des autorités marocaines se sont renforcés depuis 2024. Les amendes vont de 20 000 à 100 000 MAD et peuvent aboutir à une fermeture administrative. Les conciergeries locales (Dar & Keys, Morokeys) peuvent vous accompagner dans cette démarche.",
+      },
+      {
+        q: "Quelle est la meilleure saison pour louer à Marrakech ?",
+        a: "Contrairement à la France, Marrakech a une saisonnalité printanière et automnale : mars-avril (20-28°C, période idéale pour visiter, tarifs au plus haut) et septembre-novembre. L'hiver (décembre-février) est doux et steady. L'été (juin-août) est le creux absolu : 38-42°C dans la journée, le tourisme s'effondre. Planifiez vos travaux ou votre maintenance personnelle pendant cette période.",
+      },
+      {
+        q: 'Un investisseur français peut-il vraiment gérer un Airbnb à Marrakech à distance ?',
+        a: "Seul : non, c'est très difficile. La distance géographique, la barrière de langue partielle (darija), les contrôles des autorités et les spécificités locales (arrivées tardives, gestion des clés en Médina aux ruelles sinueuses) rendent la gestion à distance quasi-impossible sans partenaire local. Une conciergerie locale (YourHostHelper, Nippy House, Dar & Keys) est indispensable. Bonus : leur commission (15-20 %) est inférieure à la moyenne française, ce qui préserve la rentabilité.",
+      },
+    ],
+    updatedAt: '2026-04-27',
   },
 ];
 

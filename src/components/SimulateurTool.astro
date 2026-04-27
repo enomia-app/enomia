@@ -42,8 +42,14 @@
 
   <!-- CALCULATEUR -->
   <div class="screen" id="screen-calc">
-    <input type="hidden" id="sim-name-input" value="">
-    <span id="save-status" style="display:none"></span>
+    <div class="calc-actions">
+      <input type="text" id="sim-name-input" class="calc-name-input" placeholder="Nom de la simulation (optionnel)" value="">
+      <span id="save-status" class="calc-save-status"></span>
+      <div class="calc-actions-btns">
+        <button class="calc-btn" onclick="saveSimulation()">💾 Sauvegarder</button>
+        <button class="calc-btn calc-btn-accent" onclick="initSharePopup()">↗ Partager</button>
+      </div>
+    </div>
 
     <div class="calc-main">
       <div class="calc-left">

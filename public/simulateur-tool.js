@@ -75,9 +75,15 @@ _sb.auth.onAuthStateChange(async (event, session) => {
     }
     // Pré-charger les sims en arrière-plan (non bloquant)
     _prefetchSims();
+    // Si l'utilisateur attendait un partage, ouvrir le share popup juste après save
+    const wantsShare = localStorage.getItem('enomia_pending_share') === '1';
+    localStorage.removeItem('enomia_pending_share');
     // Rediriger vers dashboard uniquement si c'est un vrai login (pas session existante)
     if (expectingSignIn || hasPending) {
       _doShowDashboard();
+    }
+    if (wantsShare) {
+      setTimeout(initSharePopup, 200);
     }
   } else if (event === 'SIGNED_OUT') {
     // Nettoyer le cache pour éviter la fuite entre comptes
@@ -335,7 +341,7 @@ function renderCard(s,i,dbId){
   const cls=s.rendement>=12?'good':s.rendement>=5?'ok':'bad';
   const verd=s.rendement>=12?'Excellent':s.rendement>=8?'Bon':s.rendement>=5?'Correct':'Faible';
   const dt=new Date(s.savedAt||s.created_at).toLocaleDateString('fr-FR',{day:'numeric',month:'short',year:'numeric'});
-  return '<div class="sim-card" onclick="openSim('+i+')"><div class="sim-card-top"><div class="sim-badge '+(s.mode==='multi'?'multi':'')+'">'+( s.mode==='multi'?'Division lots':'Bien unique')+'</div><div class="sim-card-menu"><button class="sim-card-btn del" onclick="event.stopPropagation();deleteSim(\''+dbId+'\')">Suppr.</button><button class="sim-card-btn" onclick="event.stopPropagation();shareSimulation(\''+dbId+'\')">Partager</button></div></div><div class="sim-name">'+(s.name||'Sans nom')+'</div><div class="sim-date">'+dt+'</div><div class="sim-rend '+cls+'">'+(s.rendement?.toFixed(1)||'\u2014')+'%</div><div class="sim-verdict '+cls+'">'+verd+' rendement</div><div class="sim-stats"><div class="sim-stat"><div class="sim-stat-l">Cash flow</div><div class="sim-stat-v '+(s.cfMois>=0?'pos':'neg')+'">'+fmtM(s.cfMois)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">Co\u00fbt projet</div><div class="sim-stat-v">'+fmtK(s.totalProjet)+'</div></div><div class="sim-stat"><div class="sim-stat-l">Mensualit\u00e9</div><div class="sim-stat-v">'+fmtM(s.mensalit)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">'+(s.mode==='multi'?'Nb lots':'Prix achat')+'</div><div class="sim-stat-v">'+(s.mode==='multi'?(s.nbLots||'\u2014')+' lots':fmtK(s.prix||0))+'</div></div></div></div>';
+  return '<div class="sim-card" onclick="openSim('+i+')"><div class="sim-card-top"><div class="sim-badge '+(s.mode==='multi'?'multi':'')+'">'+( s.mode==='multi'?'Division lots':'Bien unique')+'</div><div class="sim-card-menu"><button class="sim-card-btn" onclick="event.stopPropagation();renameSim(\''+dbId+'\')" title="Renommer">\u270f\ufe0f</button><button class="sim-card-btn" onclick="event.stopPropagation();shareSimulation(\''+dbId+'\')">Partager</button><button class="sim-card-btn del" onclick="event.stopPropagation();deleteSim(\''+dbId+'\')">Suppr.</button></div></div><div class="sim-name">'+(s.name||'Sans nom')+'</div><div class="sim-date">'+dt+'</div><div class="sim-rend '+cls+'">'+(s.rendement?.toFixed(1)||'\u2014')+'%</div><div class="sim-verdict '+cls+'">'+verd+' rendement</div><div class="sim-stats"><div class="sim-stat"><div class="sim-stat-l">Cash flow</div><div class="sim-stat-v '+(s.cfMois>=0?'pos':'neg')+'">'+fmtM(s.cfMois)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">Co\u00fbt projet</div><div class="sim-stat-v">'+fmtK(s.totalProjet)+'</div></div><div class="sim-stat"><div class="sim-stat-l">Mensualit\u00e9</div><div class="sim-stat-v">'+fmtM(s.mensalit)+'/mois</div></div><div class="sim-stat"><div class="sim-stat-l">'+(s.mode==='multi'?'Nb lots':'Prix achat')+'</div><div class="sim-stat-v">'+(s.mode==='multi'?(s.nbLots||'\u2014')+' lots':fmtK(s.prix||0))+'</div></div></div></div>';
 }
 async function deleteSim(dbId){
   if(!confirm('Supprimer cette simulation ?'))return;
@@ -349,9 +355,38 @@ async function deleteSim(dbId){
 }
 async function shareSimulation(dbId){
   const data = await _apiPost('/api/simulations', { action: 'share', simulationId: dbId }, true);
-  if(data.shareUrl){
-    document.getElementById('share-link').value = data.shareUrl;
-    showSharePopup();
+  if(data.error || !data.shareUrl){
+    alert('Erreur de partage : ' + (data.error || 'inconnue'));
+    return;
+  }
+  document.getElementById('share-link').value = data.shareUrl;
+  showSharePopup();
+}
+
+// Renommer une simulation depuis la liste
+async function renameSim(dbId){
+  const sim = _dbSims.find(s => s.id === dbId);
+  if(!sim) return;
+  const currentName = (sim.data?.name) || sim.name || '';
+  const newName = prompt('Nouveau nom de la simulation :', currentName);
+  if(newName === null) return;
+  const trimmed = newName.trim();
+  if(!trimmed || trimmed === currentName) return;
+  // Optimistic update
+  if(sim.data) sim.data.name = trimmed;
+  sim.name = trimmed;
+  _saveSimsCache(_dbSims);
+  _renderSimsInto(document.getElementById('sims-container'));
+  // Persist
+  const res = await _apiPost('/api/simulations', {
+    action: 'save',
+    simulationName: trimmed,
+    simulationData: sim.data || sim,
+    simulationId: dbId
+  }, true);
+  if(res.error){
+    alert('Erreur : ' + res.error);
+    renderDash();
   }
 }
 
@@ -462,7 +497,7 @@ function _injectSliderInputs(){
     const initialValue=parseFloat(s.value);
     wrap.innerHTML='<input type="text" inputmode="decimal" class="sg-input" value="'+initialValue+'"><em>'+unit+'</em>';
     const inp=wrap.querySelector('input.sg-input');
-    inp.addEventListener('input',function(){_inputToSlider(id,this.value);_simDirty=true;});
+    inp.addEventListener('input',function(){_inputToSlider(id,this.value);_simDirty=true;_scheduleAutoSave();});
     inp.addEventListener('focus',function(){this.select();});
     inp.addEventListener('blur',function(){this.value=s.value;});
     inp.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();this.blur();}});
@@ -678,11 +713,13 @@ async function _doSaveToDb(overrideData){
     ['prix-m','travaux-m','ameu-m'].forEach(id=>{const s=document.getElementById('s-'+id);if(s)sliders[id]=parseFloat(s.value);});
     simData={name,sliders,mode:calcMode,type:bienType,...currentResult,lots:calcMode==='multi'?[...lots]:undefined,savedAt:new Date().toISOString()};
   }
+  // Optimistic : on marque clean AVANT l'await pour que les frappes pendant
+  // le save remettent dirty à true et déclenchent un nouveau save différé.
+  _simDirty=false;
   const res=await _apiPost('/api/simulations',{action:'save',simulationName:simData.name,simulationData:simData,simulationId:currentSimDbId},true);
   if(res.simulationId)currentSimDbId=res.simulationId;
   // Invalider le cache pour qu'au prochain dashboard, on refetch
   _clearSimsCache();
-  _simDirty=false;
   document.getElementById('save-status').textContent='';
 }
 async function saveSimulation(){
@@ -699,16 +736,36 @@ async function saveSimulation(){
     _openMagicModal('Sauvegarder');
     return;
   }
+  const status = document.getElementById('save-status');
+  if(status) status.textContent = 'Sauvegarde\u2026';
   await _doSaveToDb();
+  if(status){ status.textContent = '\u2713 Sauvegard\u00e9'; setTimeout(()=>{ if(!_simDirty && status.textContent==='\u2713 Sauvegard\u00e9') status.textContent = ''; }, 2000); }
 }
 function initSliders(){
   _injectSliderInputs();
   Object.keys(SLIDER_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sv(id,s.value);});
   Object.keys(SV2_LABELS).forEach(id=>{const s=document.getElementById('s-'+id);if(s)sv2(id,s.value);});
   // Mark the simulation dirty only on real user interaction, not programmatic value changes.
-  document.querySelectorAll('input[type="range"], #sim-name-input, input.lot-input').forEach(el=>{
-    el.addEventListener('input', function(){ _simDirty = true; }, { passive: true });
+  // Trigger debounced auto-save for logged users.
+  document.querySelectorAll('input[type="range"], #sim-name-input, input.lot-input, input.sg-input').forEach(el=>{
+    el.addEventListener('input', function(){ _simDirty = true; _scheduleAutoSave(); }, { passive: true });
   });
+}
+
+// Debounced auto-save : 1.5s after the last user input, only if logged in and on calc screen
+let _autoSaveTimer = null;
+function _scheduleAutoSave(){
+  if(!_user||!_token) return;
+  if(_autoSaveTimer) clearTimeout(_autoSaveTimer);
+  _autoSaveTimer = setTimeout(async ()=>{
+    if(!_simDirty) return;
+    if(_isViewingSharedSim) return;
+    if(!document.getElementById('screen-calc').classList.contains('active')) return;
+    const status = document.getElementById('save-status');
+    if(status) status.textContent = 'Sauvegarde\u2026';
+    await _doSaveToDb();
+    if(status){ status.textContent = '\u2713 Sauvegard\u00e9'; setTimeout(()=>{ if(!_simDirty && status.textContent==='\u2713 Sauvegard\u00e9') status.textContent = ''; }, 2000); }
+  }, 1500);
 }
 async function subscribeNL(){
   const email=document.getElementById('nl-email').value.trim();
@@ -749,14 +806,24 @@ async function initSharePopup(){
     return;
   }
   if(!_user){
-    // Pas connecté : sauvegarder d'abord (magic link)
+    // Pas connecté : sauvegarder d'abord (magic modal). Après login, le hook
+    // SIGNED_IN ouvrira automatiquement le share popup grâce à ce flag.
+    localStorage.setItem('enomia_pending_share', '1');
     saveSimulation();
     return;
   }
   // Connecté : sauvegarder si pas encore en DB, puis générer le lien
   if(!currentSimDbId) await _doSaveToDb();
+  if(!currentSimDbId){
+    alert('Impossible de sauvegarder la simulation. Réessayez.');
+    return;
+  }
   const data = await _apiPost('/api/simulations', { action: 'share', simulationId: currentSimDbId }, true);
-  if(data.shareUrl) document.getElementById('share-link').value = data.shareUrl;
+  if(data.error || !data.shareUrl){
+    alert('Erreur de partage : ' + (data.error || 'inconnue'));
+    return;
+  }
+  document.getElementById('share-link').value = data.shareUrl;
   showSharePopup();
 }
 function showSharePopup(){document.getElementById('share-popup').style.display='flex';}
@@ -772,10 +839,36 @@ async function doShare(){
   document.getElementById('share-email').value='';
   document.getElementById('share-message').value='';
 }
-function copyShareLink(){
-  navigator.clipboard.writeText(document.getElementById('share-link').value);
-  var btn=document.getElementById('copy-link-btn');btn.textContent='\u2713 Copi\u00e9';
-  setTimeout(function(){btn.textContent='Copier'},2000);
+async function copyShareLink(){
+  const link = document.getElementById('share-link').value;
+  const btn = document.getElementById('copy-link-btn');
+  // Web Share API (mobile) — ouvre le partage natif système
+  const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+  if (isMobile && navigator.share) {
+    try { await navigator.share({ url: link, title: 'Simulation Airbnb' }); return; }
+    catch(_){}
+  }
+  // Clipboard API moderne
+  try {
+    await navigator.clipboard.writeText(link);
+    btn.textContent='\u2713 Copi\u00e9';
+    setTimeout(function(){btn.textContent='Copier'},2000);
+    return;
+  } catch(_){}
+  // Fallback : sélection + execCommand
+  const input = document.getElementById('share-link');
+  input.removeAttribute('readonly');
+  input.focus();
+  input.select();
+  input.setSelectionRange(0, 99999);
+  try {
+    document.execCommand('copy');
+    btn.textContent='\u2713 Copi\u00e9';
+    setTimeout(function(){btn.textContent='Copier'},2000);
+  } catch(_){
+    alert('Copie automatique impossible. S\u00e9lectionnez le lien manuellement.');
+  }
+  input.setAttribute('readonly', 'readonly');
 }
 
 // ─── UNSAVED NAVIGATION GUARD ───

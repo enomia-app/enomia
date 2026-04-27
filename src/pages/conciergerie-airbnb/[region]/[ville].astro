@@ -25,11 +25,20 @@ function escapeHtml(s: string): string {
 function renderRich(text: string): string {
   return text
     .split('\n\n')
-    .map((p) =>
-      `<p>${escapeHtml(p)
-        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>')}</p>`
-    )
+    .map((p) => {
+      const links: [string, string][] = [];
+      const stripped = p.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, txt, url) => {
+        links.push([txt, url]);
+        return `\x00L${links.length - 1}\x00`;
+      });
+      let result = escapeHtml(stripped)
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      result = result.replace(/\x00L(\d+)\x00/g, (_, i) => {
+        const [txt, url] = links[parseInt(i)];
+        return `<a href="${url}">${txt}</a>`;
+      });
+      return `<p>${result}</p>`;
+    })
     .join('');
 }
 

@@ -143,6 +143,20 @@
   }
 
   // ─── AUTH ───────────────────────────────────────────────────────
+  // Sync user to Brevo après sign-in (Google OAuth ou magic link).
+  // Idempotent côté serveur (updateEnabled: true).
+  function _ctSyncToBrevo(user) {
+    try {
+      var meta = user.user_metadata || {};
+      var firstName = meta.prenom || meta.given_name || ((meta.full_name || meta.name || '').split(' ')[0]) || '';
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: user.email, firstName: firstName, source: 'Contrat' })
+      }).catch(function(){});
+    } catch(_){}
+  }
+
   _ctSb.auth.onAuthStateChange(async (event, session) => {
     _ctUser = session && session.user;
     _ctToken = session && session.access_token;
@@ -151,6 +165,7 @@
       // Migrate guest data to DB on first login
       var expecting = localStorage.getItem('ct_expecting_signin') === '1';
       localStorage.removeItem('ct_expecting_signin');
+      if (expecting && _ctUser) _ctSyncToBrevo(_ctUser);
       if (expecting) {
         await ctMigrateLocalToDb();
       }

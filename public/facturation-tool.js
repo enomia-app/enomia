@@ -171,6 +171,20 @@ if (!window.__factInit) {
     localStorage.removeItem('lcd_settings');
   }
 
+  // Sync user to Brevo après sign-in (Google OAuth ou magic link).
+  // Idempotent côté serveur (updateEnabled: true).
+  function _fSyncToBrevo(user) {
+    try {
+      const meta = user.user_metadata || {};
+      const firstName = meta.prenom || meta.given_name || ((meta.full_name || meta.name || '').split(' ')[0]) || '';
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: user.email, firstName: firstName, source: 'Facturation' })
+      }).catch(function(){});
+    } catch(_){}
+  }
+
   _fsb.auth.onAuthStateChange(async (event, session) => {
     _fuser = session?.user || null;
     _ftoken = session?.access_token || null;
@@ -178,6 +192,8 @@ if (!window.__factInit) {
     if (event === 'SIGNED_IN') {
       const expecting = localStorage.getItem('fact_expecting_signin') === '1';
       localStorage.removeItem('fact_expecting_signin');
+      if (window.authClose) window.authClose();
+      if (expecting && _fuser) _fSyncToBrevo(_fuser);
       if (expecting) {
         await _fMigrateLocalToDb();
       }

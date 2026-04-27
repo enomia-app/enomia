@@ -25,6 +25,21 @@ function _elog(event, meta) {
   } catch(_) {}
 }
 
+// Sync user to Brevo après sign-in (Google OAuth ou magic link).
+// Le magic link sync déjà côté serveur via /api/auth, mais c'est idempotent
+// (updateEnabled: true) — pas grave si on l'appelle deux fois.
+function _syncToBrevo(user, source) {
+  try {
+    const meta = user.user_metadata || {};
+    const firstName = meta.prenom || meta.given_name || ((meta.full_name || meta.name || '').split(' ')[0]) || '';
+    fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: user.email, firstName: firstName, source: source })
+    }).catch(function(){});
+  } catch(_){}
+}
+
 // Lire les données de simulation depuis l'URL (cross-browser)
 (function(){
   try {
@@ -61,6 +76,8 @@ _sb.auth.onAuthStateChange(async (event, session) => {
     const expectingSignIn = localStorage.getItem('enomia_expecting_signin') === '1';
     localStorage.removeItem('enomia_expecting_signin');
     closeMagicModal();
+    // Sync Brevo (best-effort, fire-and-forget) — idempotent côté serveur
+    if (expectingSignIn && _user) _syncToBrevo(_user, 'Simulateur_Auth');
     await _migrateLocalStorage();
     const hasPending = _pendingSimData || localStorage.getItem('enomia_pending_save') === '1';
     if (_pendingSimData) {

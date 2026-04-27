@@ -1049,7 +1049,6 @@ export const cities: City[] = [
       },
       {
         name: 'La Conciergerie des Rosiers',
-        url: 'https://laconciergeriedesrosiers.fr/',
         commission: '22-28 %',
         menage: 'inclus dans commission',
         rating: 4.9,
@@ -2342,7 +2341,7 @@ export const cities: City[] = [
       },
       {
         name: 'M&A Conciergerie',
-        url: 'https://livretaccueil.com/fr/conciergerie-airbnb/rouen/ma-conciergerie-rouen',
+        url: 'https://livretaccueil.com/',
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 4.7,
@@ -2492,7 +2491,7 @@ export const cities: City[] = [
       },
       {
         name: 'YourHostHelper Angers',
-        url: 'https://yourhosthelper.com/conciergerie-angers/',
+        url: 'https://yourhosthelper.com/',
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 4.7,
@@ -2516,7 +2515,7 @@ export const cities: City[] = [
       },
       {
         name: 'HostnFly Angers',
-        url: 'https://hostnfly.com/conciergerie-airbnb/angers',
+        url: 'https://hostnfly.com/',
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 4.5,
@@ -2528,7 +2527,7 @@ export const cities: City[] = [
       },
       {
         name: 'Nestify Angers',
-        url: 'https://www.nestify.fr/conciergerie-airbnb-angers/',
+        url: 'https://www.nestify.fr/',
         commission: '22 %',
         menage: 'refacturé voyageur',
         rating: 4.4,
@@ -2540,7 +2539,7 @@ export const cities: City[] = [
       },
       {
         name: 'Welkeys Angers',
-        url: 'https://www.welkeys.com/conciergerie-airbnb/angers',
+        url: 'https://www.welkeys.com/',
         commission: '20-22 %',
         menage: 'refacturé voyageur',
         rating: 4.6,

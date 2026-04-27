@@ -19,6 +19,7 @@ const STATIC_PAGES = new Set<string>([
   '/mentions-legales',
   '/simulateur-lcd',
   '/simulateur-rentabilite-airbnb',
+  '/estimation-airbnb',
 ]);
 
 const VERCEL_REDIRECTS = new Set<string>([

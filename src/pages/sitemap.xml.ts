@@ -9,6 +9,7 @@ const staticPages = [
   { url: '/', changefreq: 'weekly', priority: '1.0' },
   { url: '/blog/', changefreq: 'weekly', priority: '0.8' },
   { url: '/simulateur-rentabilite-airbnb', changefreq: 'monthly', priority: '0.9' },
+  { url: '/estimation-airbnb', changefreq: 'monthly', priority: '0.9' },
   { url: '/facture-location-saisonniere', changefreq: 'monthly', priority: '0.9' },
   { url: '/facture-airbnb', changefreq: 'monthly', priority: '0.9' },
   { url: '/facture-booking', changefreq: 'monthly', priority: '0.9' },

@@ -4,7 +4,7 @@ import ContratLandingStyles from '../components/ContratLandingStyles.astro';
 import NewsletterBlock from '../components/NewsletterBlock.astro';
 
 const title = "Estimation Airbnb 2026 : combien votre bien peut rapporter (gratuit)";
-const description = "Estimez les revenus Airbnb de votre bien avant d'investir. Tarif moyen, taux d'occupation, CA annuel projeté par ville. Plus précis qu'AirDNA. 100% gratuit.";
+const description = "Estimez les revenus Airbnb de votre bien avant d'investir. Ordres de grandeur 2026 par ville et type de bien (Paris, Lyon, Marseille…) + calculateur. 100% gratuit.";
 const canonical = "https://www.enomia.app/estimation-airbnb";
 ---
 <ToolLayout title={title} description={description} canonical={canonical} currentTool="simulateur" ctaLabel="Mes estimations" ctaHref="/simulateur-lcd">
@@ -26,11 +26,11 @@ const canonical = "https://www.enomia.app/estimation-airbnb";
     <p class="landing-sub">Projection des revenus annuels par ville, type de bien et stratégie de pricing. Sans inscription.</p>
     <div class="landing-stats">
       <div class="landing-stat"><div class="landing-stat-val">2 min</div><div class="landing-stat-lbl">pour estimer</div></div>
-      <div class="landing-stat"><div class="landing-stat-val">95</div><div class="landing-stat-lbl">villes couvertes</div></div>
-      <div class="landing-stat"><div class="landing-stat-val">0&euro;</div><div class="landing-stat-lbl">vs 60&euro;/mois AirDNA</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">9</div><div class="landing-stat-lbl">biens en exploitation</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">100%</div><div class="landing-stat-lbl">gratuit</div></div>
     </div>
     <a href="/simulateur-lcd" class="landing-cta">Estimer mes revenus &rarr;</a>
-    <p class="landing-note">Pas de compte requis &middot; Comparez plusieurs scénarios &middot; Exportable PDF</p>
+    <p class="landing-note">Pas de compte requis &middot; Sauvegardez et partagez vos simulations avec un associé, un courtier ou un banquier</p>
   </div>
 
   <div class="seo-wrap"><div class="seo-body">
@@ -42,45 +42,46 @@ const canonical = "https://www.enomia.app/estimation-airbnb";
     <p>Notre estimateur Airbnb part du marché réel de chaque ville (tarif moyen constaté, taux d'occupation moyen sur 12 mois, saisonnalité) et applique vos paramètres spécifiques pour produire une projection annuelle exploitable par un banquier ou un comptable.</p>
 
     <!-- Comment ça marche -->
-    <h2>Comment fonctionne l'estimation Airbnb&nbsp;?</h2>
+    <h2>Comment fonctionne notre estimation Airbnb&nbsp;?</h2>
+    <p>L'estimation s'appuie sur deux sources combinées&nbsp;: les ordres de grandeur de marché documentés plus bas dans cette page (par ville et par type de bien) et un calculateur où vous saisissez les paramètres de votre projet. Voici comment vous obtenez une projection fiable en 4 étapes&nbsp;:</p>
     <div class="clauses-grid">
-      <div class="clause-item"><div class="check">1</div><div><strong>Localisez le bien</strong><br>Sélectionnez la ville parmi nos 95 villes couvertes (Paris, Lyon, Marseille, Bordeaux, Cannes, Annecy, Biarritz...). Les données de marché (tarif moyen, occupation) sont préchargées.</div></div>
-      <div class="clause-item"><div class="check">2</div><div><strong>Décrivez le produit</strong><br>Studio, T2, T3 ou division en lots. Surface, niveau de prestation (basique, soigné, design), capacité d'accueil. Plus le produit se démarque des hôtels environnants, plus l'estimation grimpe.</div></div>
-      <div class="clause-item"><div class="check">3</div><div><strong>Choisissez la stratégie</strong><br>Pricing fixe, pricing dynamique (PriceLabs/Wheelhouse), ou stratégie agressive. L'écart de chiffre d'affaires entre fixe et dynamique est en moyenne de 15 à 25%.</div></div>
-      <div class="clause-item"><div class="check">4</div><div><strong>Obtenez la projection</strong><br>Chiffre d'affaires annuel (haute, moyenne, basse saison), nombre de nuits réservées, panier moyen et revenu par nuit disponible (RevPAN). Exportable en PDF pour votre dossier bancaire.</div></div>
+      <div class="clause-item"><div class="check">1</div><div><strong>Repérez votre marché</strong><br>Lisez les ordres de grandeur de votre ville et de votre type de bien plus bas dans cette page (T2, T3, division&hellip;). Vous obtenez une fourchette de tarif moyen par nuit et de taux d'occupation à viser.</div></div>
+      <div class="clause-item"><div class="check">2</div><div><strong>Décrivez votre projet</strong><br>Dans le calculateur&nbsp;: type de bien, surface, prix d'achat, financement, niveau de travaux et d'ameublement. C'est l'input réel qui ancre la projection à votre situation.</div></div>
+      <div class="clause-item"><div class="check">3</div><div><strong>Saisissez les hypothèses tarifaires</strong><br>Tarif moyen par nuit et taux d'occupation issus de l'étape 1. Le calculateur intègre la commission Airbnb/Booking, le ménage par rotation et toutes les charges fixes (eau, électricité, copropriété, assurance, taxe foncière).</div></div>
+      <div class="clause-item"><div class="check">4</div><div><strong>Obtenez la projection</strong><br>Chiffre d'affaires annuel, cash flow mensuel, rendement net et seuil de rentabilité. Sauvegardez et partagez le lien avec un associé, un courtier ou un banquier.</div></div>
     </div>
 
     <!-- 3 méthodes -->
     <h2>Les 3 méthodes pour estimer les revenus d'un Airbnb</h2>
-    <p>Il existe trois grandes approches pour projeter les revenus d'un bien en location courte durée. Chacune a ses limites.</p>
+    <p>Il existe trois grandes approches pour projeter les revenus d'un bien en location courte durée. Chacune a ses forces et ses limites.</p>
     <div class="comparison">
       <div class="comp-col">
         <h4>1. Sites de données de marché</h4>
         <ul>
           <li>AirDNA (49&euro; à 199&euro;/mois) et Airbtics (29&euro; à 119&euro;/mois) scrappent les annonces Airbnb publiques pour reconstituer un revenu moyen par quartier.</li>
-          <li>Limite : ces données sont des moyennes sur des annonces hétérogènes (qualité, capacité, photos), pas une projection adaptée à VOTRE bien.</li>
+          <li>Limite&nbsp;: ces données sont des moyennes sur des annonces hétérogènes (qualité, capacité, photos), pas une projection adaptée à VOTRE bien. Elles surestiment souvent le tourisme et sous-estiment la demande hors-saison (voyageurs d'affaires, chantiers, déménagements).</li>
         </ul>
       </div>
       <div class="comp-col">
         <h4>2. Estimation manuelle</h4>
         <ul>
           <li>Comparer son bien à 3-5 annonces similaires sur Airbnb, regarder leur calendrier de disponibilité, en déduire un taux d'occupation et un tarif moyen.</li>
-          <li>Limite : long, subjectif, et impossible à présenter à un banquier sans méthode reproductible.</li>
+          <li>Limite&nbsp;: long, subjectif, et impossible à présenter à un banquier sans méthode reproductible.</li>
         </ul>
       </div>
     </div>
     <div class="comparison">
       <div class="comp-col">
-        <h4>3. Estimateur Enomia</h4>
+        <h4>3. Notre approche&nbsp;: guide chiffré + calculateur</h4>
         <ul>
-          <li>Combine les données de marché par ville (tarifs et occupation moyens, saisonnalité) avec les paramètres spécifiques de votre projet (surface, prestation, stratégie).</li>
-          <li>Avantage : projection annuelle complète (CA, nuits, panier moyen) en 2 minutes, gratuite, exportable.</li>
+          <li>Vous lisez les ordres de grandeur 2026 par ville et par type de bien plus bas dans cette page, puis vous les croisez avec votre projet réel dans le calculateur.</li>
+          <li>Avantage&nbsp;: la projection est ancrée dans VOS chiffres (prix d'achat, financement, charges) plutôt que dans une moyenne de marché. Gratuit, sauvegardable, partageable par lien.</li>
         </ul>
       </div>
       <div class="comp-col">
         <h4>Conseil pratique</h4>
         <ul>
-          <li>Utilisez deux méthodes en parallèle pour valider votre projection. Si l'estimation Enomia et 3 annonces voisines vous donnent un écart inférieur à 15%, vous tenez un chiffre fiable.</li>
+          <li>Utilisez deux méthodes en parallèle pour valider votre projection. Si vos estimations à partir des ordres de grandeur ci-dessous et celles tirées de 3 annonces voisines convergent à moins de 15% d'écart, vous tenez un chiffre fiable.</li>
         </ul>
       </div>
     </div>
@@ -103,7 +104,7 @@ const canonical = "https://www.enomia.app/estimation-airbnb";
     <!-- Credibility block Marc -->
     <div class="callout">
       <strong>Marc — fondateur d'Enomia, exploite 9 biens en LCD</strong>
-      <p>Mes 9 biens en première couronne lyonnaise — sans tourisme, sans haute saison estivale particulière — affichent un taux d'occupation de 92% et un CA annuel moyen de 24&nbsp;000&nbsp;&euro; par bien. La majorité des estimateurs publics auraient projeté la moitié. Pourquoi&nbsp;? Parce qu'ils raisonnent sur le tourisme alors que mes voyageurs sont des artisans, des familles entre deux logements, des cadres en mission. Une estimation fiable doit intégrer ce type de demande, pas uniquement les vacances. <a href="/blog/louer-airbnb-rentable">Mes 4 opérations détaillées</a></p>
+      <p>Mes 9 biens en première couronne lyonnaise — sans tourisme, sans haute saison estivale particulière — affichent un taux d'occupation de 97% (c'est le nom de ma méthode) et un CA annuel moyen de 24&nbsp;000&nbsp;&euro; par bien. La majorité des estimateurs publics auraient projeté la moitié. Pourquoi&nbsp;? Parce qu'ils raisonnent sur le tourisme alors que mes voyageurs sont des artisans, des familles entre deux logements, des cadres en mission. Une estimation fiable doit intégrer ce type de demande, pas uniquement les vacances. <a href="/blog/louer-airbnb-rentable">Mes 4 opérations détaillées</a></p>
     </div>
 
     <!-- Estimation par type de bien -->
@@ -156,7 +157,7 @@ const canonical = "https://www.enomia.app/estimation-airbnb";
     <div class="hero-cta-block">
       <div>
         <h3>Estimez les revenus de votre projet</h3>
-        <p>2 minutes &middot; 95 villes &middot; Export PDF inclus</p>
+        <p>2 minutes &middot; gratuit &middot; sauvegarde et partage par lien</p>
       </div>
       <a href="/simulateur-lcd" class="hero-cta-btn">Lancer une estimation &rarr;</a>
     </div>
@@ -167,13 +168,13 @@ const canonical = "https://www.enomia.app/estimation-airbnb";
       <details open>
         <summary>Comment estimer les revenus d'un Airbnb avant d'acheter&nbsp;?</summary>
         <div class="faq-ans">
-          <p>La méthode fiable consiste à croiser trois sources : un estimateur basé sur les données de marché de la ville (tarif moyen, occupation moyenne par type de bien), une analyse de 3 à 5 annonces concurrentes similaires (surface, prestation, capacité), et une projection ajustée à votre stratégie de pricing (fixe ou dynamique). Si les trois méthodes donnent un écart inférieur à 15%, votre estimation est solide. Notre estimateur intègre directement ces paramètres et produit une projection annuelle exploitable pour un dossier bancaire.</p>
+          <p>La méthode fiable consiste à croiser trois sources&nbsp;: les ordres de grandeur de marché par ville et par type de bien (tarif moyen par nuit, occupation moyenne, saisonnalité), une analyse de 3 à 5 annonces concurrentes similaires (surface, prestation, capacité), et une projection chiffrée ajustée à votre projet réel (prix d'achat, financement, charges). Si les trois méthodes donnent un écart inférieur à 15%, votre estimation est solide. Cette page documente les fourchettes par ville (Paris, Lyon, Marseille&hellip;) et notre calculateur intègre vos paramètres pour produire une projection annuelle exploitable pour un dossier bancaire.</p>
         </div>
       </details>
       <details>
-        <summary>L'estimation Airbnb Enomia est-elle aussi précise qu'AirDNA&nbsp;?</summary>
+        <summary>Comment se positionne notre estimation par rapport à AirDNA&nbsp;?</summary>
         <div class="faq-ans">
-          <p>AirDNA s'appuie sur un scrap des annonces Airbnb publiques, ce qui donne des moyennes par quartier sur des biens hétérogènes. Notre estimateur prend ces données de marché comme base et y ajoute vos paramètres spécifiques (type de bien, prestation, stratégie de tarification). Sur les 95 villes couvertes, nos projections sont calibrées avec un échantillon d'investisseurs réels qui partagent leurs résultats annuels. La précision est équivalente à AirDNA pour les villes touristiques, et nettement supérieure pour les villes hors-tourisme et la première couronne, où AirDNA manque de profondeur.</p>
+          <p>AirDNA s'appuie sur un scrap des annonces Airbnb publiques, ce qui donne des moyennes par quartier sur des biens hétérogènes. Notre approche est différente&nbsp;: nous publions sur cette page les ordres de grandeur 2026 par ville et par type de bien (issus de l'expérience d'exploitation et des données publiques disponibles), puis nous vous laissons les croiser avec votre projet réel dans le calculateur. C'est moins automatisé qu'AirDNA, mais c'est gratuit et la projection est ancrée dans VOS chiffres (prix d'achat, financement, charges) plutôt que dans une moyenne de marché. Pour les villes hors-tourisme et la première couronne, où AirDNA manque de profondeur, l'approche est particulièrement adaptée.</p>
         </div>
       </details>
       <details>
@@ -241,8 +242,8 @@ const canonical = "https://www.enomia.app/estimation-airbnb";
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "Comment estimer les revenus d'un Airbnb avant d'acheter ?", "acceptedAnswer": { "@type": "Answer", "text": "Croiser trois sources : un estimateur basé sur les données de marché (tarif moyen, occupation moyenne), une analyse de 3-5 annonces concurrentes, et une projection ajustée à votre stratégie de pricing. Si les trois méthodes donnent un écart inférieur à 15%, l'estimation est solide." } },
-      { "@type": "Question", "name": "L'estimation Airbnb Enomia est-elle aussi précise qu'AirDNA ?", "acceptedAnswer": { "@type": "Answer", "text": "AirDNA scrappe les annonces publiques pour produire des moyennes par quartier. Notre estimateur prend ces données comme base et y ajoute les paramètres spécifiques du bien (type, prestation, stratégie). Précision équivalente sur les villes touristiques, supérieure sur les villes hors-tourisme et la première couronne." } },
+      { "@type": "Question", "name": "Comment estimer les revenus d'un Airbnb avant d'acheter ?", "acceptedAnswer": { "@type": "Answer", "text": "Croiser trois sources : les ordres de grandeur de marché par ville et type de bien, une analyse de 3-5 annonces concurrentes, et une projection chiffrée ajustée à votre projet réel (prix d'achat, financement, charges). Si les trois méthodes donnent un écart inférieur à 15%, l'estimation est solide." } },
+      { "@type": "Question", "name": "Comment se positionne notre estimation par rapport à AirDNA ?", "acceptedAnswer": { "@type": "Answer", "text": "AirDNA scrappe les annonces publiques pour produire des moyennes par quartier. Notre approche publie les ordres de grandeur 2026 par ville et type de bien, et vous laisse les croiser avec votre projet réel dans le calculateur. Moins automatisé mais gratuit, et la projection est ancrée dans vos chiffres réels plutôt que dans une moyenne de marché." } },
       { "@type": "Question", "name": "Quels paramètres influencent le plus les revenus Airbnb ?", "acceptedAnswer": { "@type": "Answer", "text": "Par ordre d'impact décroissant : localisation (x3 selon le quartier), qualité du produit (+25 à 40% de tarif), pricing dynamique (+15 à 25%), capacité d'accueil maximale, qualité de l'annonce." } },
       { "@type": "Question", "name": "Combien rapporte un Airbnb à Paris en 2026 ?", "acceptedAnswer": { "@type": "Answer", "text": "Pour un T2 de 35m² bien situé (1er-11e arrondissement) avec pricing dynamique, le CA annuel est de 28 000 à 52 000 €. Panier moyen 110-180 € par nuit. La loi Le Meur impose un plafond de 90 jours/an si le bien est en résidence principale." } },
       { "@type": "Question", "name": "Combien rapporte un Airbnb à Lyon en 2026 ?", "acceptedAnswer": { "@type": "Answer", "text": "Pour un T2 de 35m² en Presqu'île ou aux Brotteaux, CA annuel de 18 000 à 32 000 €. Panier 80-130 € par nuit, occupation 70-85%. La première couronne offre des CA inférieurs mais une occupation supérieure (90%+) grâce aux séjours d'affaires." } },

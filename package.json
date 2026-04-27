@@ -10,7 +10,9 @@
     "postinstall": "node scripts/fix-keystatic.mjs",
     "test:e2e": "playwright test",
     "audit:blog-links": "node scripts/audit-blog-links.mjs",
-    "audit:blog-links:fix": "node scripts/audit-blog-links.mjs --fix"
+    "audit:blog-links:fix": "node scripts/audit-blog-links.mjs --fix",
+    "audit:external": "node scripts/audit-blog-links.mjs --external",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/markdoc": "^0.15.11",
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
+    "husky": "^9.1.7",
     "patch-package": "^8.0.1"
   }
 }

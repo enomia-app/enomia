@@ -1,0 +1,8 @@
+# Audit des liens internes du blog avant chaque commit.
+# Bloque si un article référence un lien interne cassé (404, /blog/ manquant).
+# Les warnings DRAFT (articles en brouillon) ne bloquent pas.
+#
+# Pour skip ponctuellement : git commit --no-verify (à n'utiliser qu'en cas de force majeure)
+# Pour vérifier aussi les liens externes : npm run audit:external (pas dans le hook car lent)
+
+npm run audit:blog-links --silent

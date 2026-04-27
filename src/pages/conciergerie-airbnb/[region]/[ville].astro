@@ -25,7 +25,11 @@ function escapeHtml(s: string): string {
 function renderRich(text: string): string {
   return text
     .split('\n\n')
-    .map((p) => `<p>${escapeHtml(p).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p>`)
+    .map((p) =>
+      `<p>${escapeHtml(p)
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>')}</p>`
+    )
     .join('');
 }
 

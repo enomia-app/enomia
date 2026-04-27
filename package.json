@@ -8,7 +8,9 @@
     "build": "node scripts/fix-keystatic.mjs && astro build",
     "preview": "astro preview",
     "postinstall": "node scripts/fix-keystatic.mjs",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "audit:blog-links": "node scripts/audit-blog-links.mjs",
+    "audit:blog-links:fix": "node scripts/audit-blog-links.mjs --fix"
   },
   "dependencies": {
     "@astrojs/markdoc": "^0.15.11",

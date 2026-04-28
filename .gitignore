@@ -7,14 +7,16 @@
 .env.*.local
 
 # Dépendances
-node_modules/
+node_modules
+node_modules.nosync
 
 # Build Astro
 dist/
 .astro/
 
 # Vercel
-.vercel/
+.vercel
+.vercel.nosync
 
 # Claude / worktrees / fichiers temporaires
 .claude/

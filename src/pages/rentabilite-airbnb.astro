@@ -35,7 +35,7 @@ const upcomingCount = citiesRentabilite.length - publishedCities.length;
     <h2>Rentabilité Airbnb : qu'est-ce qu'on regarde vraiment ?</h2>
     <p>La rentabilité d'un investissement Airbnb se mesure en deux temps. D'abord le <strong>chiffre d'affaires annuel brut</strong>&nbsp;: tarif moyen par nuit × (365 × taux d'occupation). Ensuite le <strong>rendement net</strong>&nbsp;: revenu net après charges (ménage, commission, taxes, copropriété, assurance) et coût du financement, divisé par le coût total du projet (achat + frais + travaux).</p>
     <p>En France, un rendement net entre <strong>8 et 12% est considéré comme bon</strong> en location courte durée. Au-delà de 12%, l'investissement est excellent. En dessous de 8%, le cash flow positif n'est pas garanti et l'opération devient fragile.</p>
-    <p>La rentabilité varie fortement selon la ville. Un même T2 peut générer 16 000&nbsp;€ de CA annuel à Toulouse et 32 000&nbsp;€ à Cannes &mdash; mais le prix d'achat à Cannes est 2,5× supérieur, ce qui peut inverser le rendement net réel. C'est pour cela que <strong>comparer ville par ville en intégrant le coût d'entrée est décisif</strong>.</p>
+    <p>La rentabilité varie fortement selon la ville. Un même T2 peut générer 16 000&nbsp;€ de CA annuel à Toulouse et 32 000&nbsp;€ à Cannes : mais le prix d'achat à Cannes est 2,5× supérieur, ce qui peut inverser le rendement net réel. C'est pour cela que <strong>comparer ville par ville en intégrant le coût d'entrée est décisif</strong>.</p>
 
     <!-- Classement -->
     <h2>Classement rentabilité Airbnb par ville 2026</h2>
@@ -56,7 +56,7 @@ const upcomingCount = citiesRentabilite.length - publishedCities.length;
       <tbody>
         {allCities.map((c) => (
           <tr>
-            <td><strong>{c.name}</strong> <span style="color:#888; font-size:12px;">— {c.region}</span></td>
+            <td><strong>{c.name}</strong> <span style="color:#888; font-size:12px;">, {c.region}</span></td>
             <td><span class={`cat cat-${c.category}`}>{c.category.replace(/-/g, ' ')}</span></td>
             <td>{c.t2.caAnnualMin.toLocaleString('fr-FR')} - {c.t2.caAnnualMax.toLocaleString('fr-FR')}&nbsp;€</td>
             <td>{c.t2.occupancyMin}-{c.t2.occupancyMax}%</td>
@@ -116,8 +116,8 @@ const upcomingCount = citiesRentabilite.length - publishedCities.length;
 
     <!-- Crédibilité Marc -->
     <div class="callout">
-      <strong>Marc — fondateur d'Enomia, exploite 9 biens en LCD</strong>
-      <p>Mes 9 biens sont en première couronne lyonnaise (Irigny, Pierre-Bénite, Montagny). Ce ne sont pas les villes en tête de ce classement&nbsp;: il y a peu de tourisme, donc des CA moyens. Mais les <strong>prix d'achat sont accessibles</strong> et le taux d'occupation atteint 97% (méthode 97%) grâce à une demande lissée toute l'année (artisans, familles entre deux logements, voyageurs d'affaires). Résultat&nbsp;: <strong>rendement net 12-18%</strong> sur tous mes biens. La rentabilité ne se trouve pas forcément dans les villes les plus médiatisées. <a href="/blog/louer-airbnb-rentable">Détail des 4 opérations</a>.</p>
+      <strong>Marc : fondateur d'Enomia, exploite 9 biens en LCD</strong>
+      <p>Mes 9 biens sont en première couronne lyonnaise (Irigny, Pierre-Bénite, Montagny). Ce ne sont pas les villes en tête de ce classement&nbsp;: il y a peu de tourisme, donc des CA moyens. Mais les <strong>prix d'achat sont accessibles</strong> et le taux d'occupation atteint 97% (La Méthode 97%©) grâce à une demande lissée toute l'année (artisans, familles entre deux logements, voyageurs d'affaires). Résultat&nbsp;: <strong>rendement net 12-18%</strong> sur tous mes biens. La rentabilité ne se trouve pas forcément dans les villes les plus médiatisées. <a href="/blog/louer-airbnb-rentable">Détail des 4 opérations</a>.</p>
     </div>
 
     <!-- Rentabilité par catégorie -->
@@ -199,7 +199,7 @@ const upcomingCount = citiesRentabilite.length - publishedCities.length;
       <details>
         <summary>Comment calculer la rentabilité de mon Airbnb&nbsp;?</summary>
         <div class="faq-ans">
-          <p>Formule simple&nbsp;: (revenu locatif annuel net &mdash; toutes charges &mdash; intérêts du crédit) ÷ coût total du projet × 100. Le coût total inclut prix d'achat, frais de notaire (7,5%), travaux, ameublement, frais bancaires. Le revenu net retire 35-40% du CA brut pour les charges. Pour obtenir un chiffre fiable adapté à VOTRE projet, utilisez notre <a href="/simulateur-rentabilite-airbnb">simulateur de rentabilité Airbnb</a> qui détaille chaque poste.</p>
+          <p>Formule simple&nbsp;: (revenu locatif annuel net : toutes charges : intérêts du crédit) ÷ coût total du projet × 100. Le coût total inclut prix d'achat, frais de notaire (7,5%), travaux, ameublement, frais bancaires. Le revenu net retire 35-40% du CA brut pour les charges. Pour obtenir un chiffre fiable adapté à VOTRE projet, utilisez notre <a href="/simulateur-rentabilite-airbnb">simulateur de rentabilité Airbnb</a> qui détaille chaque poste.</p>
         </div>
       </details>
       <details>
@@ -238,7 +238,7 @@ const upcomingCount = citiesRentabilite.length - publishedCities.length;
       <a href="/blog/louer-airbnb-rentable">
         <div class="rk">Méthode</div>
         <div class="rt">Louer en Airbnb : est-ce rentable ?</div>
-        <div class="rd">9 biens, 4 opérations détaillées, méthode 97% pour atteindre 12-18% de rendement.</div>
+        <div class="rd">9 biens, 4 opérations détaillées, La Méthode 97%© pour atteindre 12-18% de rendement.</div>
       </a>
       <a href="/tarif-conciergerie-airbnb">
         <div class="rk">Coût gestion</div>

@@ -1,0 +1,111 @@
+---
+export const prerender = true;
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import NewsletterBlock from '../../components/NewsletterBlock.astro';
+import AuthorSchema from '../../components/AuthorSchema.astro';
+
+const title = "Marc Chenut — Investisseur Location Courte Durée et fondateur d'Enomia";
+const description =
+  "Marc Chenut, investisseur Airbnb avec 9 biens en location courte durée et 12 à 18% de rendement net. Méthode 97%© et chiffres détaillés gratuitement sur le blog Enomia.";
+const canonical = 'https://www.enomia.app/auteur/marc-chenut';
+const photo =
+  'https://res.cloudinary.com/dv2btcpc2/image/upload/q_auto,f_auto,w_400/v1775507331/Marc_1_a6ndja.png';
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="none">
+  <AuthorSchema />
+
+  <main class="author-page">
+    <nav class="author-bc">
+      <a href="/">Accueil</a>
+      <span class="bc-sep">›</span>
+      <span>Auteur</span>
+      <span class="bc-sep">›</span>
+      <span>Marc Chenut</span>
+    </nav>
+
+    <header class="author-hero">
+      <img src={photo} alt="Marc Chenut" width="120" height="120" class="author-photo" />
+      <div class="author-meta">
+        <h1>Marc Chenut</h1>
+        <p class="author-role">Investisseur Location Courte Durée · Fondateur Enomia</p>
+        <p class="author-lead">
+          J'exploite 9 biens en location courte durée avec un rendement net de 12 à 18% sur chacun des investissements. La clé : un taux d'occupation supérieur à 93% et une gestion de moins d'une heure par bien et par mois, sans conciergerie.
+        </p>
+      </div>
+    </header>
+
+    <section class="author-creds">
+      <div class="cred"><div class="cred-val">9</div><div class="cred-lbl">biens en portefeuille</div></div>
+      <div class="cred"><div class="cred-val">12–18%</div><div class="cred-lbl">rendement net</div></div>
+      <div class="cred"><div class="cred-val">93%+</div><div class="cred-lbl">taux d'occupation</div></div>
+      <div class="cred"><div class="cred-val">~1h</div><div class="cred-lbl">par bien par mois</div></div>
+      <div class="cred"><div class="cred-val">6 ans</div><div class="cred-lbl">d'expérience LCD</div></div>
+    </section>
+
+    <section class="author-section">
+      <h2>La Méthode 97%©</h2>
+      <p>
+        La Méthode 97%© est le système que j'applique sur l'ensemble de mes biens pour atteindre un taux d'occupation supérieur à 93% tout en passant moins d'une heure de gestion par bien et par mois. Pas de conciergerie, pas d'intermédiaire qui prend 20 à 25% du chiffre d'affaires : tout est automatisé en direct, du pricing dynamique aux serrures connectées en passant par le ménage et la communication voyageurs.
+      </p>
+      <p>
+        Ma règle simple pour qualifier un bien avant achat : <strong>les revenus nets après charges doivent représenter 3 à 4 fois la mensualité du crédit</strong>. Sans cette marge, le moindre creux de saison fait basculer l'opération dans le rouge. C'est la règle qui m'a permis d'éviter plusieurs investissements présentés comme rentables et qui ne l'étaient pas.
+      </p>
+    </section>
+
+    <section class="author-section">
+      <h2>Articles à lire en priorité</h2>
+      <ul class="author-links">
+        <li><a href="/blog/louer-airbnb-rentable">Louer en Airbnb est-ce rentable&nbsp;? Mes vrais chiffres sur 9 biens</a></li>
+        <li><a href="/blog/commissions-airbnb">Commissions Airbnb&nbsp;: ce que la plateforme prend vraiment</a></li>
+        <li><a href="/blog/pricing-airbnb-tarif-dynamique">Pricing Airbnb et tarif dynamique&nbsp;: ce qui marche</a></li>
+        <li><a href="/blog/taux-occupation-par-ville">Taux d'occupation Airbnb par ville</a></li>
+        <li><a href="/blog/automatiser-airbnb">Automatiser un Airbnb sans conciergerie</a></li>
+        <li><a href="/blog/fiscalite-airbnb">Fiscalité Airbnb&nbsp;: LMNP, micro-BIC et réel</a></li>
+      </ul>
+    </section>
+
+    <section class="author-section">
+      <h2>Outils Enomia que je maintiens</h2>
+      <ul class="author-links">
+        <li><a href="/estimation-airbnb">Estimation Airbnb gratuite</a> — combien votre bien peut rapporter</li>
+        <li><a href="/simulateur-rentabilite-airbnb">Simulateur de rentabilité Airbnb</a> — rendement net réel toutes charges incluses</li>
+        <li><a href="/calcul-taxe-de-sejour">Calculateur taxe de séjour</a> — 32 000 communes, barème DGFiP</li>
+        <li><a href="/contrat-airbnb">Contrat Airbnb conforme Loi Le Meur</a></li>
+        <li><a href="/facture-airbnb">Générateur de facture Airbnb</a></li>
+      </ul>
+    </section>
+
+    <NewsletterBlock id="author-nl-form" />
+  </main>
+
+  <style>
+    .author-page { max-width: 920px; margin: 0 auto; padding: 32px 32px 64px; }
+    .author-bc { font-size: 13px; color: #777; margin-bottom: 20px; }
+    .author-bc a { color: #777; text-decoration: none; }
+    .author-bc a:hover { text-decoration: underline; }
+    .author-bc .bc-sep { margin: 0 6px; color: #ccc; }
+
+    .author-hero { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 32px; flex-wrap: wrap; }
+    .author-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-meta { flex: 1; min-width: 240px; }
+    .author-meta h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(28px, 4vw, 40px); font-weight: 600; color: #1a1a1a; margin: 0 0 6px; letter-spacing: -0.01em; }
+    .author-role { font-size: 14px; color: #3fbd71; font-weight: 600; margin: 0 0 14px; }
+    .author-lead { font-size: 16px; line-height: 1.7; color: #52524e; margin: 0; }
+
+    .author-creds { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin: 24px 0 36px; padding: 20px; background: #f7f7f5; border-radius: 12px; }
+    .cred { text-align: center; }
+    .cred-val { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; color: #1a1a1a; line-height: 1; }
+    .cred-lbl { font-size: 11px; color: #777; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 6px; }
+
+    .author-section { margin: 36px 0; }
+    .author-section h2 { font-family: 'Newsreader', serif; font-size: 24px; font-weight: 600; color: #1a1a1a; margin: 0 0 14px; letter-spacing: -0.01em; }
+    .author-section p { font-size: 15px; line-height: 1.75; color: #52524e; margin: 0 0 14px; }
+    .author-section strong { color: #1a1a1a; font-weight: 600; }
+
+    .author-links { list-style: none; padding: 0; margin: 0; }
+    .author-links li { font-size: 15px; line-height: 1.75; color: #52524e; padding: 8px 0; border-bottom: 1px solid #f0f0ec; }
+    .author-links li:last-child { border-bottom: none; }
+    .author-links a { color: #3fbd71; text-decoration: none; font-weight: 600; }
+    .author-links a:hover { text-decoration: underline; }
+  </style>
+</ToolLayout>

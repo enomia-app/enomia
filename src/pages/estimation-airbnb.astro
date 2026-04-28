@@ -2,12 +2,14 @@
 import ToolLayout from '../layouts/ToolLayout.astro';
 import ContratLandingStyles from '../components/ContratLandingStyles.astro';
 import NewsletterBlock from '../components/NewsletterBlock.astro';
+import AuthorSchema from '../components/AuthorSchema.astro';
 
 const title = "Estimation Airbnb 2026 : combien votre bien peut rapporter (gratuit)";
 const description = "Estimez les revenus Airbnb de votre bien avant d'investir. Ordres de grandeur 2026 par ville et type de bien (Paris, Lyon, Marseille…) + calculateur. 100% gratuit.";
 const canonical = "https://www.enomia.app/estimation-airbnb";
 ---
 <ToolLayout title={title} description={description} canonical={canonical} currentTool="simulateur" ctaLabel="Mes estimations" ctaHref="/simulateur-lcd">
+  <AuthorSchema />
   <ContratLandingStyles />
 
   <!-- Redirect existing shared links to new dashboard URL -->

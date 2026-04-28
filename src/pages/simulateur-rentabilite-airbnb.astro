@@ -2,12 +2,14 @@
 import ToolLayout from '../layouts/ToolLayout.astro';
 import ContratLandingStyles from '../components/ContratLandingStyles.astro';
 import NewsletterBlock from '../components/NewsletterBlock.astro';
+import AuthorSchema from '../components/AuthorSchema.astro';
 
 const title = "Simulateur rentabilité Airbnb 2026 : calculateur gratuit (rendement net réel)";
 const description = "Simulez la rentabilité nette réelle de votre investissement Airbnb. Toutes charges incluses, cash flow mensuel, comparatif placements. 100% gratuit.";
 const canonical = "https://www.enomia.app/simulateur-rentabilite-airbnb";
 ---
 <ToolLayout title={title} description={description} canonical={canonical} currentTool="simulateur" ctaLabel="Mes simulations" ctaHref="/simulateur-lcd">
+  <AuthorSchema />
   <ContratLandingStyles />
 
   <!-- Redirect existing shared links to new dashboard URL -->

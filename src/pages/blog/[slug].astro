@@ -4,6 +4,7 @@ export const prerender = true;
 import { getCollection, getEntry } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import NewsletterBlock from '../../components/NewsletterBlock.astro';
+import { marcChenut } from '../../data/author';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => data.status === 'en-ligne');
@@ -55,16 +56,24 @@ const jsonLd = {
   description: post.data.metaDescription,
   datePublished: post.data.publishedAt,
   dateModified: post.data.updatedAt ?? post.data.publishedAt,
-  author: {
-    '@type': 'Person',
-    name: post.data.authorName,
-  },
+  author: marcChenut,
   publisher: {
     '@type': 'Organization',
     name: 'Enomia',
     url: 'https://www.enomia.app',
   },
   ...(post.data.featuredImage ? { image: post.data.featuredImage.src } : {}),
+  ...(post.data.ratingValue && post.data.ratingCount
+    ? {
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: post.data.ratingValue,
+          ratingCount: post.data.ratingCount,
+          bestRating: 5,
+          worstRating: 1,
+        },
+      }
+    : {}),
 };
 
 // JSON-LD FAQPage — auto-parsed from Markdoc ### headings inside ## FAQ section

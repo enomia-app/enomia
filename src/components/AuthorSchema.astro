@@ -1,0 +1,9 @@
+---
+import { marcChenut } from '../data/author';
+
+const ld = {
+  '@context': 'https://schema.org',
+  ...marcChenut,
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />

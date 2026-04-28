@@ -2,6 +2,7 @@ export const prerender = true;
 
 import { getCollection } from 'astro:content';
 import { cities, regions } from '../data/cities';
+import { getPublishedCitiesRentabilite } from '../data/cities-rentabilite';
 
 const SITE = 'https://www.enomia.app';
 
@@ -10,6 +11,8 @@ const staticPages = [
   { url: '/blog/', changefreq: 'weekly', priority: '0.8' },
   { url: '/simulateur-rentabilite-airbnb', changefreq: 'monthly', priority: '0.9' },
   { url: '/estimation-airbnb', changefreq: 'monthly', priority: '0.9' },
+  { url: '/rentabilite-airbnb', changefreq: 'monthly', priority: '0.9' },
+  { url: '/tarif-conciergerie-airbnb', changefreq: 'monthly', priority: '0.9' },
   { url: '/facture-location-saisonniere', changefreq: 'monthly', priority: '0.9' },
   { url: '/facture-airbnb', changefreq: 'monthly', priority: '0.9' },
   { url: '/facture-booking', changefreq: 'monthly', priority: '0.9' },
@@ -38,6 +41,13 @@ export async function GET() {
     lastmod: c.updatedAt,
   }));
 
+  const rentabiliteCityEntries = getPublishedCitiesRentabilite().map((c) => ({
+    url: `/rentabilite-airbnb/${c.slug}`,
+    changefreq: 'monthly',
+    priority: '0.8',
+    lastmod: c.publishAt,
+  }));
+
   const regionEntries = regions
     .filter((r) => cities.some((c) => c.regionSlug === r.slug))
     .map((r) => ({
@@ -59,6 +69,7 @@ export async function GET() {
     pillarEntry,
     ...regionEntries,
     ...cityEntries,
+    ...rentabiliteCityEntries,
     ...postEntries,
   ];
 

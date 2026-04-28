@@ -1,0 +1,38 @@
+name: Publish Rentabilite City
+
+# Publication progressive des pages /rentabilite-airbnb/[ville].
+# Tourne tous les 2 jours à 05:11 UTC (07:11 Paris été, 06:11 hiver).
+# Le script lit src/data/cities-rentabilite.ts et publie toutes les villes
+# dont publishAt <= today. Commit + push automatique.
+
+on:
+  schedule:
+    # Tous les jours impairs (1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31)
+    # = environ 1 fois tous les 2 jours
+    - cron: '11 5 1-31/2 * *'
+  workflow_dispatch: # Manual trigger pour tester
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run publication script
+        run: node scripts/publish-next-rentabilite-city.mjs
+
+      - name: Commit and push
+        run: |
+          git config user.name "Enomia Bot"
+          git config user.email "bot@enomia.app"
+          git add -A
+          # Only commit if there are changes
+          git diff --staged --quiet || git commit -m "chore(rentabilite): publish next city ($(date +%Y-%m-%d))"
+          git push

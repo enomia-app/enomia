@@ -1,0 +1,41 @@
+name: SEMrush Villes Cron
+
+# Lance scripts/semrush-villes.mjs --auto le 3 du mois à 06:00 UTC.
+# Première exécution prévue : 3 mai 2026 (post-reset des 2M units API).
+# Ensuite : refresh mensuel le 3 de chaque mois.
+#
+# REQUIS : ajouter le secret GitHub SEMRUSH_API_KEY dans
+#   Settings > Secrets and variables > Actions > New repository secret
+#   Nom: SEMRUSH_API_KEY
+#   Valeur: aa60a3c7425b6b7c4e16e055392f19bf (depuis /Users/marc/Desktop/Neocamino/.env)
+#
+# Le CSV résultat est sauvegardé en artefact GitHub (téléchargeable depuis l'UI).
+
+on:
+  schedule:
+    # Tous les 3 du mois à 06:00 UTC (08:00 Paris été, 07:00 hiver)
+    # Première exécution : 3 mai 2026
+    - cron: '0 6 3 * *'
+  workflow_dispatch: # Manual trigger pour tester sans attendre
+
+jobs:
+  semrush:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run SEMrush analysis
+        env:
+          SEMRUSH_API_KEY: ${{ secrets.SEMRUSH_API_KEY }}
+        run: node scripts/semrush-villes.mjs --auto
+
+      - name: Upload CSV artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: semrush-villes-${{ github.run_id }}
+          path: /tmp/semrush-villes-*.csv
+          retention-days: 90

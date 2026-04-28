@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import { getCityBySlug, getRegionBySlug } from '../data/cities';
+import { getCityRentabiliteBySlug } from '../data/cities-rentabilite';
 
 const STATIC_PAGES = new Set<string>([
   '/',
@@ -20,6 +21,8 @@ const STATIC_PAGES = new Set<string>([
   '/simulateur-lcd',
   '/simulateur-rentabilite-airbnb',
   '/estimation-airbnb',
+  '/rentabilite-airbnb',
+  '/tarif-conciergerie-airbnb',
 ]);
 
 const VERCEL_REDIRECTS = new Set<string>([
@@ -67,6 +70,12 @@ export async function isPageAvailable(href: string | undefined | null): Promise<
     const region = getRegionBySlug(cityMatch[1]);
     const city = getCityBySlug(cityMatch[2]);
     return !!(region && city && city.regionSlug === cityMatch[1]);
+  }
+
+  const rentabiliteCityMatch = path.match(/^\/rentabilite-airbnb\/([^/]+)$/);
+  if (rentabiliteCityMatch) {
+    const city = getCityRentabiliteBySlug(rentabiliteCityMatch[1]);
+    return !!(city && city.status === 'en-ligne');
   }
 
   return false;

@@ -1,0 +1,286 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+import ContratLandingStyles from '../components/ContratLandingStyles.astro';
+import NewsletterBlock from '../components/NewsletterBlock.astro';
+import { citiesRentabilite, getPublishedCitiesRentabilite } from '../data/cities-rentabilite';
+
+const title = "Rentabilité Airbnb par ville 2026 : classement et analyse des 30 meilleures villes";
+const description = "Rentabilité Airbnb par ville en 2026 : classement chiffré sur 30 villes (Paris, Lyon, Marseille, Bordeaux, Cannes…). CA moyen, taux d'occupation, rendement net. Données 2026.";
+const canonical = "https://www.enomia.app/rentabilite-airbnb";
+
+// Sort published cities by net rendement max (best to worst) for the hero ranking
+const allCities = citiesRentabilite.slice().sort((a, b) => b.t2.rendementNetMax - a.t2.rendementNetMax);
+const publishedCities = getPublishedCitiesRentabilite();
+const upcomingCount = citiesRentabilite.length - publishedCities.length;
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="simulateur" ctaLabel="Estimer ma rentabilité" ctaHref="/simulateur-lcd">
+  <ContratLandingStyles />
+
+  <div class="landing-hero">
+    <div class="landing-tag">Rentabilité Airbnb par ville 2026</div>
+    <h1 class="landing-h1">Rentabilité Airbnb par ville&nbsp;:<br><em>où investir en location courte durée ?</em></h1>
+    <p class="landing-sub">Classement 2026 sur 30 villes françaises. CA moyen T2, taux d'occupation, rendement net. Données calibrées par catégorie de marché.</p>
+    <div class="landing-stats">
+      <div class="landing-stat"><div class="landing-stat-val">{citiesRentabilite.length}</div><div class="landing-stat-lbl">villes analysées</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">5-17%</div><div class="landing-stat-lbl">rendement net constaté</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">100%</div><div class="landing-stat-lbl">gratuit</div></div>
+    </div>
+    <a href="/simulateur-lcd" class="landing-cta">Estimer ma rentabilité &rarr;</a>
+    <p class="landing-note">Calculateur intégré pour ajuster sur votre projet réel</p>
+  </div>
+
+  <div class="seo-wrap"><div class="seo-body">
+
+    <!-- Intro -->
+    <h2>Rentabilité Airbnb : qu'est-ce qu'on regarde vraiment ?</h2>
+    <p>La rentabilité d'un investissement Airbnb se mesure en deux temps. D'abord le <strong>chiffre d'affaires annuel brut</strong>&nbsp;: tarif moyen par nuit × (365 × taux d'occupation). Ensuite le <strong>rendement net</strong>&nbsp;: revenu net après charges (ménage, commission, taxes, copropriété, assurance) et coût du financement, divisé par le coût total du projet (achat + frais + travaux).</p>
+    <p>En France, un rendement net entre <strong>8 et 12% est considéré comme bon</strong> en location courte durée. Au-delà de 12%, l'investissement est excellent. En dessous de 8%, le cash flow positif n'est pas garanti et l'opération devient fragile.</p>
+    <p>La rentabilité varie fortement selon la ville. Un même T2 peut générer 16 000&nbsp;€ de CA annuel à Toulouse et 32 000&nbsp;€ à Cannes &mdash; mais le prix d'achat à Cannes est 2,5× supérieur, ce qui peut inverser le rendement net réel. C'est pour cela que <strong>comparer ville par ville en intégrant le coût d'entrée est décisif</strong>.</p>
+
+    <!-- Classement -->
+    <h2>Classement rentabilité Airbnb par ville 2026</h2>
+    <p>Tableau chiffré pour un T2 standard de 35&nbsp;m&sup2; bien équipé, avec stratégie de pricing dynamique. Le rendement net intègre les charges d'exploitation et le coût moyen du financement. À ajuster avec votre projet réel via le calculateur.</p>
+    <p style="font-size:13px; color:#666; margin-top:-12px;"><em>Données 2026 calibrées par catégorie de marché. Pour la précision sur VOTRE projet, lancez le calculateur. Les villes en cours de publication apparaîtront ici progressivement.</em></p>
+
+    <table class="ranking-table">
+      <thead>
+        <tr>
+          <th>Ville</th>
+          <th>Catégorie</th>
+          <th>CA T2 / an</th>
+          <th>Occupation</th>
+          <th>Rendement net</th>
+          <th>Page détail</th>
+        </tr>
+      </thead>
+      <tbody>
+        {allCities.map((c) => (
+          <tr>
+            <td><strong>{c.name}</strong> <span style="color:#888; font-size:12px;">— {c.region}</span></td>
+            <td><span class={`cat cat-${c.category}`}>{c.category.replace(/-/g, ' ')}</span></td>
+            <td>{c.t2.caAnnualMin.toLocaleString('fr-FR')} - {c.t2.caAnnualMax.toLocaleString('fr-FR')}&nbsp;€</td>
+            <td>{c.t2.occupancyMin}-{c.t2.occupancyMax}%</td>
+            <td><strong>{c.t2.rendementNetMin}-{c.t2.rendementNetMax}%</strong></td>
+            <td>
+              {c.status === 'en-ligne' ? (
+                <a href={`/rentabilite-airbnb/${c.slug}`}>Voir →</a>
+              ) : (
+                <span style="color:#aaa; font-size:13px;">À venir</span>
+              )}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <p style="margin-top:14px; font-size:13px; color:#666;"><em>{publishedCities.length} villes publiées avec analyse détaillée. {upcomingCount} villes à venir (1 publication tous les 2 jours).</em></p>
+
+    <!-- Critères de rentabilité -->
+    <h2>Les 4 critères qui font (vraiment) la rentabilité d'un Airbnb</h2>
+    <p>Au-delà de la ville, 4 facteurs déterminent à 80% la rentabilité finale d'un investissement Airbnb. Les ignorer, c'est se condamner à un rendement médiocre quel que soit l'emplacement.</p>
+    <div class="comparison">
+      <div class="comp-col">
+        <h4>1. Le ratio prix d'achat / CA potentiel</h4>
+        <ul>
+          <li>Règle Marc Chenut&nbsp;: viser un revenu net mensuel ≥ 3× le crédit mensuel pour un rendement supérieur à 12%</li>
+          <li>Une grande ville à fort CA mais prix d'achat × 3 peut être moins rentable qu'une ville moyenne aux prix accessibles</li>
+        </ul>
+      </div>
+      <div class="comp-col">
+        <h4>2. Le taux d'occupation visé</h4>
+        <ul>
+          <li>L'écart entre 65% et 90% d'occupation = +50% de revenus sur le même bien</li>
+          <li>Pricing dynamique + multi-canal (Airbnb + Booking + Vrbo) + qualité produit = +20-30 points d'occupation</li>
+          <li><a href="/blog/taux-occupation-par-ville">Comparatif détaillé taux d'occupation par ville</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="comparison">
+      <div class="comp-col">
+        <h4>3. Le coût de gestion réel</h4>
+        <ul>
+          <li>Conciergerie classique&nbsp;: 25-32% du CA tous frais inclus &rarr; le rendement net est divisé par 1,5</li>
+          <li>Gestion en direct + automatisation&nbsp;: 12-16% du CA &rarr; rendement net préservé</li>
+          <li><a href="/tarif-conciergerie-airbnb">Détail des tarifs conciergerie</a> | <a href="/blog/automatiser-airbnb">Comment automatiser sans conciergerie</a></li>
+        </ul>
+      </div>
+      <div class="comp-col">
+        <h4>4. La fiscalité du régime choisi</h4>
+        <ul>
+          <li>Micro-BIC 30% (depuis 2026)&nbsp;: simple mais perd 20-40% de rendement net vs régime réel</li>
+          <li>Régime réel LMNP&nbsp;: amortissement permet de neutraliser l'impôt pendant 10-15 ans</li>
+          <li><a href="/blog/fiscalite-airbnb">Détail régimes fiscaux Airbnb</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Crédibilité Marc -->
+    <div class="callout">
+      <strong>Marc — fondateur d'Enomia, exploite 9 biens en LCD</strong>
+      <p>Mes 9 biens sont en première couronne lyonnaise (Irigny, Pierre-Bénite, Montagny). Ce ne sont pas les villes en tête de ce classement&nbsp;: il y a peu de tourisme, donc des CA moyens. Mais les <strong>prix d'achat sont accessibles</strong> et le taux d'occupation atteint 97% (méthode 97%) grâce à une demande lissée toute l'année (artisans, familles entre deux logements, voyageurs d'affaires). Résultat&nbsp;: <strong>rendement net 12-18%</strong> sur tous mes biens. La rentabilité ne se trouve pas forcément dans les villes les plus médiatisées. <a href="/blog/louer-airbnb-rentable">Détail des 4 opérations</a>.</p>
+    </div>
+
+    <!-- Rentabilité par catégorie -->
+    <h2>Rentabilité Airbnb par catégorie de ville</h2>
+    <p>Au-delà du classement, chaque catégorie de marché a son propre profil de rentabilité. Comprendre la catégorie de la ville visée aide à projeter le bon scénario.</p>
+    <div class="comparison">
+      <div class="comp-col">
+        <h4>Métropoles (Paris, Lyon, Marseille…)</h4>
+        <ul>
+          <li>CA solide mais prix d'achat élevés</li>
+          <li>Rendement net&nbsp;: 4 à 17% selon la métropole</li>
+          <li>Demande toute l'année (saisonnalité modérée)</li>
+        </ul>
+      </div>
+      <div class="comp-col">
+        <h4>Tourisme balnéaire (Cannes, Biarritz, Saint-Malo…)</h4>
+        <ul>
+          <li>CA potentiellement élevé en haute saison</li>
+          <li>Rendement net&nbsp;: 5 à 14%</li>
+          <li>Saisonnalité forte = pricing dynamique indispensable</li>
+        </ul>
+      </div>
+    </div>
+    <div class="comparison">
+      <div class="comp-col">
+        <h4>Stations de ski (Chamonix, Megève, Courchevel…)</h4>
+        <ul>
+          <li>Double saison été/hiver = bonne couverture annuelle</li>
+          <li>Rendement net&nbsp;: 5 à 11%</li>
+          <li>Prix d'achat très élevés tirent le rendement vers le bas</li>
+        </ul>
+      </div>
+      <div class="comp-col">
+        <h4>Villes patrimoniales (Sarlat, Colmar, Carcassonne…)</h4>
+        <ul>
+          <li>Prix d'achat très bas = rendement net souvent excellent</li>
+          <li>Rendement net&nbsp;: 9 à 15%</li>
+          <li>Saisonnalité avril-octobre, peu de quotas Loi Le Meur</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CTA intermédiaire -->
+    <div class="hero-cta-block">
+      <div>
+        <h3>Calculez la rentabilité de votre projet réel</h3>
+        <p>Le tableau ci-dessus donne les ordres de grandeur. Le calculateur intègre VOS chiffres (prix d'achat, financement, charges).</p>
+      </div>
+      <a href="/simulateur-lcd" class="hero-cta-btn">Lancer le calcul &rarr;</a>
+    </div>
+
+    <!-- Méthode de calcul -->
+    <h2>Méthode de calcul de la rentabilité Airbnb</h2>
+    <p>Pour chaque ville de ce classement, le rendement net est calculé selon une méthode transparente&nbsp;:</p>
+    <ol>
+      <li><strong>CA brut annuel</strong>&nbsp;: tarif moyen par nuit × (365 × taux d'occupation cible). Pour Paris&nbsp;: 145&nbsp;€ × (365 × 82,5%) ≈ 43&nbsp;700&nbsp;€/an.</li>
+      <li><strong>Charges d'exploitation</strong>&nbsp;: ménage et blanchisserie (~12% du CA), commission Airbnb/Booking (~17%), eau-élec-internet (~3%), copropriété + assurance + taxe foncière (~6%), comptable et logiciel (~2%). Total&nbsp;: 35-40% du CA.</li>
+      <li><strong>Coût du financement</strong>&nbsp;: crédit mensuel × 12. Pour un bien à 250&nbsp;000&nbsp;€ avec 110% financé sur 20 ans à 3,5%&nbsp;: 1&nbsp;460&nbsp;€/mois = 17&nbsp;500&nbsp;€/an.</li>
+      <li><strong>Coût total du projet</strong>&nbsp;: prix achat + frais notaire (7,5%) + travaux + ameublement + frais bancaires.</li>
+      <li><strong>Rendement net</strong>&nbsp;: (CA brut − charges − financement) ÷ coût total du projet × 100.</li>
+    </ol>
+    <p>Notre <a href="/simulateur-rentabilite-airbnb">simulateur de rentabilité Airbnb</a> intègre l'ensemble de ces paramètres avec une granularité fine, ajustable poste par poste sur votre projet réel.</p>
+
+    <!-- FAQ -->
+    <h2>Questions fréquentes sur la rentabilité Airbnb par ville</h2>
+    <div class="faq">
+      <details open>
+        <summary>Quelle est la rentabilité moyenne d'un Airbnb en France en 2026&nbsp;?</summary>
+        <div class="faq-ans">
+          <p>Le rendement net moyen d'un investissement Airbnb bien géré se situe entre <strong>8 et 15%</strong> en France en 2026. Les villes moyennes avec un tourisme régulier (patrimoine, périphérie sans tourisme) offrent souvent les meilleurs rendements grâce à des prix d'achat accessibles. Les grandes métropoles touristiques (Paris, Cannes, Saint-Tropez) affichent des CA élevés mais des rendements nets plus bas en raison du coût d'entrée. Au-dessus de 12% net, l'investissement est considéré comme excellent.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Quelle ville française est la plus rentable en Airbnb&nbsp;?</summary>
+        <div class="faq-ans">
+          <p>Sur le ratio rendement net / coût d'entrée, les villes les plus rentables en 2026 sont&nbsp;: <strong>Lille, Marseille, Toulouse, Montpellier</strong> dans le top des grandes métropoles, et <strong>Sarlat, Colmar, Carcassonne</strong> sur les villes patrimoniales. Mais la "meilleure ville" dépend de votre profil&nbsp;: un investisseur lyonnais qui veut gérer en direct fera mieux dans la première couronne lyonnaise (rendement 12-18%, occupation 90%+) qu'à Paris où il devra obligatoirement passer par une conciergerie.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Comment calculer la rentabilité de mon Airbnb&nbsp;?</summary>
+        <div class="faq-ans">
+          <p>Formule simple&nbsp;: (revenu locatif annuel net &mdash; toutes charges &mdash; intérêts du crédit) ÷ coût total du projet × 100. Le coût total inclut prix d'achat, frais de notaire (7,5%), travaux, ameublement, frais bancaires. Le revenu net retire 35-40% du CA brut pour les charges. Pour obtenir un chiffre fiable adapté à VOTRE projet, utilisez notre <a href="/simulateur-rentabilite-airbnb">simulateur de rentabilité Airbnb</a> qui détaille chaque poste.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Investir en Airbnb à Paris est-il encore rentable en 2026&nbsp;?</summary>
+        <div class="faq-ans">
+          <p>Oui, mais les marges se sont resserrées. Avec la <a href="/blog/loi-le-meur-airbnb">loi Le Meur</a> qui plafonne les meublés de tourisme à Paris, les nouvelles autorisations sont rares et les biens rentables sont chers. Sur un T2 dans le 11e à 350&nbsp;000&nbsp;€ avec 30&nbsp;000&nbsp;€/an de CA, le rendement net se situe autour de 5-7%. C'est correct si vous visez aussi la valorisation patrimoniale, moins attractif si vous cherchez du cash flow pur. Les arrondissements 18e, 19e, 20e offrent encore des opportunités de rendement.</p>
+        </div>
+      </details>
+      <details>
+        <summary>La loi Le Meur change-t-elle la rentabilité Airbnb par ville&nbsp;?</summary>
+        <div class="faq-ans">
+          <p>Oui significativement. La <a href="/blog/loi-le-meur-airbnb">loi Le Meur</a> (2024-2025) impose un plafond de 90 jours/an pour les résidences principales, réduit l'abattement micro-BIC (30% au lieu de 50-71%), et renforce les pouvoirs des communes pour limiter les autorisations. Les villes très impactées&nbsp;: Paris, Bordeaux, Annecy, Saint-Malo, Biarritz. Les villes peu ou pas impactées&nbsp;: première couronne hors-tourisme, villes patrimoniales (Sarlat, Carcassonne), métropoles secondaires. La rentabilité diminue d'environ 15-25% sur les villes à quota.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Faut-il investir en Airbnb dans une grande ville ou en périphérie&nbsp;?</summary>
+        <div class="faq-ans">
+          <p>Périphérie SI vous habitez à proximité (gestion en direct possible) et acceptez un CA absolu plus modeste (15-25k€/an au lieu de 30-50k€). Les rendements nets en périphérie atteignent fréquemment <strong>15-18%</strong> grâce aux prix d'achat accessibles, là où une grande ville plafonne à 8-12%. C'est le pari de Marc Chenut sur 9 biens en première couronne lyonnaise. Grande ville SI vous visez la valorisation patrimoniale en complément du rendement, ou si vous habitez loin et passez par une conciergerie.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Découvrez aussi -->
+    <h2>Pour aller plus loin</h2>
+    <div class="related">
+      <a href="/estimation-airbnb">
+        <div class="rk">Estimation revenus</div>
+        <div class="rt">Estimation Airbnb</div>
+        <div class="rd">Combien votre bien peut rapporter en location courte durée. Calculateur projection.</div>
+      </a>
+      <a href="/simulateur-rentabilite-airbnb">
+        <div class="rk">Simulateur</div>
+        <div class="rt">Rentabilité nette réelle</div>
+        <div class="rd">Calculateur complet avec financement, charges, cash flow et comparatif placements.</div>
+      </a>
+      <a href="/blog/louer-airbnb-rentable">
+        <div class="rk">Méthode</div>
+        <div class="rt">Louer en Airbnb : est-ce rentable ?</div>
+        <div class="rd">9 biens, 4 opérations détaillées, méthode 97% pour atteindre 12-18% de rendement.</div>
+      </a>
+      <a href="/tarif-conciergerie-airbnb">
+        <div class="rk">Coût gestion</div>
+        <div class="rt">Tarif conciergerie Airbnb</div>
+        <div class="rd">Commission, frais cachés, comparatif gestion en direct vs conciergerie.</div>
+      </a>
+    </div>
+  </div>
+
+  <NewsletterBlock source="RentabiliteVille" />
+  </div>
+
+  <style>
+    .ranking-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+    .ranking-table th, .ranking-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e8e4dc; }
+    .ranking-table th { background: #f7f5f0; font-weight: 600; color: #3a3c3a; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .ranking-table tr:hover { background: #faf8f3; }
+    .ranking-table td a { color: #2b6cb0; font-weight: 600; text-decoration: none; }
+    .ranking-table td a:hover { text-decoration: underline; }
+    .cat { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; text-transform: capitalize; background: #e8e4dc; color: #3a3c3a; }
+    .cat-metropole { background: #c5d9ed; color: #1e4d7a; }
+    .cat-tourisme-balneaire { background: #ffd8b8; color: #8a4d1f; }
+    .cat-station-ski { background: #d4e6f7; color: #1e4d7a; }
+    .cat-patrimoine { background: #e8d4c4; color: #6b4226; }
+    .cat-peripherie { background: #d4e8d4; color: #2d5a2d; }
+    .cat-tourisme-affaires { background: #f0e0c0; color: #6b5a26; }
+    @media (max-width: 720px) {
+      .ranking-table { font-size: 12px; }
+      .ranking-table th, .ranking-table td { padding: 8px 6px; }
+      .ranking-table th:nth-child(2), .ranking-table td:nth-child(2) { display: none; }
+    }
+  </style>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Quelle est la rentabilité moyenne d'un Airbnb en France en 2026 ?", "acceptedAnswer": { "@type": "Answer", "text": "Rendement net moyen entre 8 et 15%. Villes patrimoniales et métropoles secondaires offrent les meilleurs rendements. Au-dessus de 12% net = excellent." } },
+      { "@type": "Question", "name": "Quelle ville française est la plus rentable en Airbnb ?", "acceptedAnswer": { "@type": "Answer", "text": "Sur le ratio rendement/coût d'entrée : Lille, Marseille, Toulouse, Montpellier (grandes métropoles), Sarlat, Colmar, Carcassonne (villes patrimoniales). La première couronne hors-tourisme atteint 15-18% pour les investisseurs gérant en direct." } },
+      { "@type": "Question", "name": "Comment calculer la rentabilité de mon Airbnb ?", "acceptedAnswer": { "@type": "Answer", "text": "Formule : (revenu net annuel - charges - intérêts crédit) / coût total du projet × 100. Coût total = achat + notaire 7,5% + travaux + ameublement + frais bancaires. Revenu net = CA brut - 35-40% de charges." } },
+      { "@type": "Question", "name": "Investir en Airbnb à Paris est-il encore rentable en 2026 ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui mais marges resserrées. Loi Le Meur réduit les autorisations. Rendement net 5-7% sur T2 du 11e à 350 000 €. Arrondissements 18e/19e/20e offrent encore des opportunités." } },
+      { "@type": "Question", "name": "La loi Le Meur change-t-elle la rentabilité Airbnb par ville ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Plafond 90 jours/an résidence principale, abattement micro-BIC réduit à 30%. Villes impactées : Paris, Bordeaux, Annecy, Saint-Malo, Biarritz. Rentabilité réduite de 15-25% sur ces villes." } }
+    ]
+  })}></script>
+</ToolLayout>

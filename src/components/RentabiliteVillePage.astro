@@ -1,0 +1,468 @@
+---
+/**
+ * Composant principal pour les pages /rentabilite-airbnb/[ville] (live + preview).
+ *
+ * Contient tout le contenu éditorial selon le skill SEO :
+ *   - Hero landing avec data ville
+ *   - Calcul cashflow réaliste (priceM2 × surface, frais notaire 7,5%, ameublement par type, frais bancaires 1%, 10% apport)
+ *   - Bloc « La Méthode 97%© » (impact gestion 80% / 50% / 12-16%)
+ *   - Module fiscalité (URSSAF/LMP, micro-BIC 30%) + CTA /blog/fiscalite-airbnb
+ *   - Module conciergerie (25-32% du CA) + CTA conditionnel via helper
+ *   - Module réglementation (lit regulation BDD) + encadré peur conditionnel + CTA /blog/loi-le-meur-airbnb
+ *   - Saisonnalité contextuelle par catégorie de marché
+ *   - Estimation par type de bien
+ *   - Callout Marc (97% + La Méthode 97%©)
+ *   - Villes voisines (maillage)
+ *   - FAQ avec ldFaq inline (parser auto Schema FAQPage)
+ *
+ * Schemas injectés : AuthorSchema (Person Marc) + WebPage + FAQPage
+ *
+ * Props :
+ *   - city : objet CityRentabilite de la BDD
+ *   - neighbors : villes voisines
+ *   - previewMode : true pour le mode preview (bandeau jaune + noindex)
+ */
+import ContratLandingStyles from './ContratLandingStyles.astro';
+import NewsletterBlock from './NewsletterBlock.astro';
+import AuthorSchema from './AuthorSchema.astro';
+import type { CityRentabilite } from '../data/cities-rentabilite';
+import { getConciergerieLinkForVille } from '../utils/getConciergeriePathForVille';
+
+interface Props {
+  city: CityRentabilite;
+  neighbors: CityRentabilite[];
+  previewMode?: boolean;
+}
+
+const { city, neighbors, previewMode = false } = Astro.props;
+
+const canonical = `https://www.enomia.app/rentabilite-airbnb/${city.slug}`;
+const conciergerieLink = getConciergerieLinkForVille(city.slug, city.name);
+
+// Computed values
+const caMid = Math.round((city.t2.caAnnualMin + city.t2.caAnnualMax) / 2);
+const occupancyMid = Math.round((city.t2.occupancyMin + city.t2.occupancyMax) / 2);
+const nightlyMid = Math.round((city.t2.nightlyMin + city.t2.nightlyMax) / 2);
+const rendementMid = (city.t2.rendementNetMin + city.t2.rendementNetMax) / 2;
+
+// ─── Calcul cashflow réaliste pour T2 35m² ──────────────────────────
+// Convention 10% d'apport (terminologie Marc) sur prix achat moyen
+const SURFACE_T2 = 35;
+const FRAIS_NOTAIRE_PCT = 0.075;
+const AMEUBLEMENT_T2 = 10000; // 10K pour T2
+const FRAIS_BANCAIRES_PCT = 0.01;
+const APPORT_PCT = 0.10;
+const TRAVAUX_T2 = 5000; // estimation prudente
+const TAUX_CREDIT = 0.035;
+const DUREE_CREDIT_ANS = 20;
+
+const priceM2Mid = Math.round((city.priceM2.min + city.priceM2.max) / 2);
+const prixAchat = priceM2Mid * SURFACE_T2;
+const fraisNotaire = Math.round(prixAchat * FRAIS_NOTAIRE_PCT);
+const coutTotal = prixAchat + fraisNotaire + AMEUBLEMENT_T2 + TRAVAUX_T2;
+const apport = Math.round(coutTotal * APPORT_PCT);
+const montantEmprunte = coutTotal - apport;
+const fraisBancaires = Math.round(montantEmprunte * FRAIS_BANCAIRES_PCT);
+
+// Mensualité crédit (formule annuité constante)
+const mensuelTaux = TAUX_CREDIT / 12;
+const nbMois = DUREE_CREDIT_ANS * 12;
+const mensualiteCredit = Math.round(
+  (montantEmprunte * mensuelTaux) / (1 - Math.pow(1 + mensuelTaux, -nbMois))
+);
+
+// CA mensuel (médiane) et charges 38% du CA
+const caMensuelMid = Math.round(caMid / 12);
+const chargesMensuel = Math.round(caMensuelMid * 0.38);
+const cashFlowMensuelMid = caMensuelMid - chargesMensuel - mensualiteCredit;
+
+// ─── Labels ─────────────────────────────────────────────────────────
+const reliabilityLabel = {
+  low: { icon: '🟡', text: 'Fiabilité indicative : peu d\'annonces de référence sur cette ville. Ordres de grandeur basés sur la catégorie de marché.' },
+  medium: { icon: '🟢', text: 'Fiabilité moyenne : données calibrées sur un échantillon représentatif d\'annonces actives.' },
+  high: { icon: '⭐', text: 'Fiabilité élevée : marché mature avec données abondantes et calibration croisée.' },
+}[city.reliability];
+
+const categoryLabel = {
+  metropole: 'Métropole',
+  'tourisme-balneaire': 'Tourisme balnéaire',
+  'station-ski': 'Station de ski',
+  patrimoine: 'Ville patrimoniale',
+  peripherie: 'Périphérie',
+  'tourisme-affaires': 'Tourisme & affaires',
+}[city.category];
+
+const regulationStatusLabel = {
+  libre: { icon: '🟢', text: 'Marché libre' },
+  restreint: { icon: '🟡', text: 'Marché restreint' },
+  tendu: { icon: '🔴', text: 'Marché tendu' },
+  'interdit-residence-principale': { icon: '⛔', text: 'Résidence principale interdite' },
+}[city.regulation.status];
+
+const isRegulationTendu = city.regulation.status === 'tendu' || city.regulation.status === 'restreint' || city.regulation.status === 'interdit-residence-principale';
+
+const previewStatusLabel = previewMode
+  ? city.status === 'en-ligne'
+    ? '✅ Publiée'
+    : `⏳ Publication prévue le ${city.publishAt}`
+  : '';
+
+// ─── FAQ Schema ─────────────────────────────────────────────────────
+const ldFaq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: `Combien rapporte un Airbnb à ${city.name} en 2026 ?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Un T2 bien équipé à ${city.name} génère ${city.t2.caAnnualMin.toLocaleString('fr-FR')} à ${city.t2.caAnnualMax.toLocaleString('fr-FR')} € de chiffre d'affaires annuel en 2026, avec un tarif moyen de ${city.t2.nightlyMin} à ${city.t2.nightlyMax} €/nuit et un taux d'occupation de ${city.t2.occupancyMin} à ${city.t2.occupancyMax}%. Le revenu net mensuel après charges et avant remboursement du crédit se situe entre ${Math.round((city.t2.caAnnualMin * 0.6) / 12).toLocaleString('fr-FR')} et ${Math.round((city.t2.caAnnualMax * 0.65) / 12).toLocaleString('fr-FR')} €.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: `Quelle est la rentabilité d'un Airbnb à ${city.name} ?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `La rentabilité nette d'un investissement Airbnb à ${city.name} se situe entre ${city.t2.rendementNetMin}% et ${city.t2.rendementNetMax}% en 2026 pour un T2 standard. La fourchette dépend du prix d'achat, de la stratégie de pricing et de la qualité du produit. Pour calculer précisément la rentabilité de votre projet, intégrez votre prix d'achat, financement et charges réelles dans le simulateur.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: `Quel taux d'occupation viser pour un Airbnb à ${city.name} ?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Le taux d'occupation moyen visé à ${city.name} se situe entre ${city.t2.occupancyMin}% et ${city.t2.occupancyMax}% selon la qualité du produit et la stratégie de pricing. La Méthode 97%© de Marc Chenut atteint 97% sur ses 9 biens grâce à trois leviers : pricing dynamique, distribution multi-canal (Airbnb + Booking + Vrbo), qualité produit aux standards 2026.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: `Quel est le tarif moyen d'un Airbnb à ${city.name} ?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Le tarif moyen par nuit pour un T2 bien équipé à ${city.name} se situe entre ${city.t2.nightlyMin} € et ${city.t2.nightlyMax} € en 2026. Cette amplitude reflète la saisonnalité. Un pricing dynamique permet de capturer cette amplitude automatiquement et augmente typiquement le CA de 15 à 25% vs un tarif fixe.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: `Quelles sont les règles Loi Le Meur à ${city.name} ?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: city.regulation.detail,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: `Faut-il une conciergerie pour son Airbnb à ${city.name} ?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Une conciergerie classique facture 25 à 32% du CA tous frais inclus à ${city.name}, ce qui réduit le rendement net de 30 à 50%. La gestion en direct avec automatisation coûte 12 à 16% du CA. Sur un bien à ${caMid.toLocaleString('fr-FR')} € de CA, l'écart est d'environ ${Math.round(caMid * 0.18).toLocaleString('fr-FR')} €/an en faveur de la gestion en direct.`,
+      },
+    },
+  ],
+};
+---
+{previewMode && (
+  <>
+    <div style="background:#ffe9b3; border-bottom:2px solid #d4a040; padding:14px 20px; text-align:center; font-size:14px; position:sticky; top:0; z-index:100;">
+      <strong>📝 MODE PREVIEW</strong> · {city.name} · Status: {previewStatusLabel} ·
+      <a href={`/rentabilite-airbnb/${city.slug}`} style="color:#5a3a00; text-decoration:underline;">Voir la version live</a> ·
+      <a href="/preview/rentabilite-airbnb" style="color:#5a3a00; text-decoration:underline;">Liste preview</a>
+    </div>
+    <Fragment slot="head">
+      <meta name="robots" content="noindex,nofollow" />
+    </Fragment>
+  </>
+)}
+
+<ContratLandingStyles />
+<AuthorSchema />
+
+<div class="landing-hero">
+  <div class="landing-tag">Rentabilité Airbnb à {city.name}</div>
+  <h1 class="landing-h1">Rentabilité Airbnb à {city.name}&nbsp;:<br><em>revenus, estimation et cashflow 2026</em></h1>
+  <p class="landing-sub">{categoryLabel} · {city.region} · Données 2026 calibrées par catégorie de marché</p>
+  <div class="landing-stats">
+    <div class="landing-stat"><div class="landing-stat-val">{caMid.toLocaleString('fr-FR')}&euro;</div><div class="landing-stat-lbl">CA T2 moyen / an</div></div>
+    <div class="landing-stat"><div class="landing-stat-val">{occupancyMid}%</div><div class="landing-stat-lbl">occupation visée</div></div>
+    <div class="landing-stat"><div class="landing-stat-val">{rendementMid}%</div><div class="landing-stat-lbl">rendement net moyen</div></div>
+  </div>
+  <a href={`/simulateur-lcd?ville=${city.slug}&type=t2&surface=35&apport=10`} class="landing-cta">Estimer ma rentabilité &rarr;</a>
+  <p class="landing-note">Calculateur préremplit avec les données de {city.name}</p>
+</div>
+
+<div class="seo-wrap"><div class="seo-body">
+
+  <!-- Reliability indicator -->
+  <p style="background:#faf8f3; padding:12px 16px; border-left:3px solid #c4ad7a; font-size:14px; margin:24px 0;">
+    {reliabilityLabel.icon} <strong>{reliabilityLabel.icon === '⭐' ? 'Fiabilité élevée' : reliabilityLabel.icon === '🟢' ? 'Fiabilité moyenne' : 'Fiabilité indicative'}</strong> : {reliabilityLabel.text}
+  </p>
+
+  <!-- TL;DR / réponse directe -->
+  <h2>Rentabilité Airbnb à {city.name} : la réponse en 30 secondes</h2>
+  <p>Pour un T2 de 35&nbsp;m&sup2; bien équipé à {city.name}, géré avec un pricing dynamique en 2026&nbsp;: <strong>{city.t2.caAnnualMin.toLocaleString('fr-FR')} à {city.t2.caAnnualMax.toLocaleString('fr-FR')}&nbsp;€</strong> de chiffre d'affaires annuel, <strong>{city.t2.occupancyMin} à {city.t2.occupancyMax}%</strong> d'occupation, <strong>{city.t2.rendementNetMin} à {city.t2.rendementNetMax}%</strong> de rendement net réel après charges et financement.</p>
+  <p>{city.context}</p>
+
+  <!-- Encadré peur conditionnel pour villes tendu/restreint -->
+  {isRegulationTendu && (
+    <div style="background:#fff4f0; border-left:4px solid #c14; padding:18px 22px; margin:28px 0; border-radius:6px;">
+      <h3 style="margin-top:0; color:#c14;">🚨 Ce que les nouveaux investisseurs ignorent à {city.name}</h3>
+      <p style="margin-bottom:8px;">{city.name} est en zone <strong>{regulationStatusLabel.text.toLowerCase()}</strong>. La Loi Le Meur (novembre 2024) a déjà durci les règles, et les communes peuvent renforcer encore le cadre.</p>
+      <p style="margin:0;"><strong>Risques concrets si vous démarrez sans préparation</strong>&nbsp;: amende de 5 000 à 50 000&nbsp;€ par bien sans numéro d'enregistrement, dépassement involontaire du seuil 23&nbsp;000&nbsp;€/an qui bascule en LMP avec affiliation URSSAF (cotisations 30-40% en plus), micro-BIC réduit à 30% au lieu de 50% en 2026. <a href="/blog/loi-le-meur-airbnb" style="color:#c14;"><strong>Lire le guide Loi Le Meur complet →</strong></a></p>
+    </div>
+  )}
+
+  <!-- CA et rentabilité -->
+  <h2>Combien rapporte un Airbnb à {city.name} ?</h2>
+  <p>Voici les ordres de grandeur de chiffre d'affaires et de rentabilité pour un T2 standard à {city.name} en 2026.</p>
+  <div class="comparison">
+    <div class="comp-col">
+      <h4>Scénario conservateur</h4>
+      <ul>
+        <li>Tarif moyen&nbsp;: <strong>{city.t2.nightlyMin}&nbsp;€/nuit</strong></li>
+        <li>Occupation&nbsp;: <strong>{city.t2.occupancyMin}%</strong></li>
+        <li>CA brut annuel&nbsp;: <strong>{city.t2.caAnnualMin.toLocaleString('fr-FR')}&nbsp;€</strong></li>
+        <li>Rendement net&nbsp;: <strong>{city.t2.rendementNetMin}%</strong></li>
+      </ul>
+    </div>
+    <div class="comp-col">
+      <h4>Scénario optimisé (Méthode 97%©)</h4>
+      <ul>
+        <li>Tarif moyen&nbsp;: <strong>{city.t2.nightlyMax}&nbsp;€/nuit</strong></li>
+        <li>Occupation&nbsp;: <strong>{city.t2.occupancyMax}%</strong></li>
+        <li>CA brut annuel&nbsp;: <strong>{city.t2.caAnnualMax.toLocaleString('fr-FR')}&nbsp;€</strong></li>
+        <li>Rendement net&nbsp;: <strong>{city.t2.rendementNetMax}%</strong></li>
+      </ul>
+    </div>
+  </div>
+  <p>L'écart entre les deux scénarios représente <strong>{Math.round(((city.t2.caAnnualMax - city.t2.caAnnualMin) / city.t2.caAnnualMin) * 100)}% de chiffre d'affaires en plus</strong> sur le même bien à {city.name}. Cet écart se joue sur trois facteurs principaux&nbsp;: la qualité de l'annonce et des photos, l'activation du pricing dynamique, et la qualité du produit.</p>
+
+  <!-- Calcul cashflow réaliste -->
+  <h2>Calcul du cashflow d'un Airbnb à {city.name}&nbsp;: les vrais chiffres</h2>
+  <p>Voici un calcul détaillé pour un T2 de 35&nbsp;m&sup2; à {city.name} en 2026, avec 10% d'apport et un crédit sur 20 ans à 3,5%. Les ordres de grandeur de prix au m² sont issus du marché immobilier local.</p>
+  <div class="comparison">
+    <div class="comp-col">
+      <h4>Investissement total</h4>
+      <ul>
+        <li>Prix d'achat T2 35&nbsp;m&sup2; (≈ {priceM2Mid.toLocaleString('fr-FR')}&nbsp;€/m&sup2;) : <strong>{prixAchat.toLocaleString('fr-FR')}&nbsp;€</strong></li>
+        <li>Frais de notaire (7,5%) : {fraisNotaire.toLocaleString('fr-FR')}&nbsp;€</li>
+        <li>Travaux estimés : {TRAVAUX_T2.toLocaleString('fr-FR')}&nbsp;€</li>
+        <li>Ameublement T2 : {AMEUBLEMENT_T2.toLocaleString('fr-FR')}&nbsp;€</li>
+        <li>Frais bancaires (1%) : {fraisBancaires.toLocaleString('fr-FR')}&nbsp;€</li>
+        <li><strong>Coût total du projet : {(coutTotal + fraisBancaires).toLocaleString('fr-FR')}&nbsp;€</strong></li>
+        <li>Apport (10%) : {apport.toLocaleString('fr-FR')}&nbsp;€</li>
+        <li>Montant emprunté : {montantEmprunte.toLocaleString('fr-FR')}&nbsp;€</li>
+      </ul>
+    </div>
+    <div class="comp-col">
+      <h4>Cashflow mensuel (scénario médian)</h4>
+      <ul>
+        <li>CA brut mensuel : {caMensuelMid.toLocaleString('fr-FR')}&nbsp;€</li>
+        <li>Charges (38% du CA) : -{chargesMensuel.toLocaleString('fr-FR')}&nbsp;€</li>
+        <li>Mensualité crédit : -{mensualiteCredit.toLocaleString('fr-FR')}&nbsp;€</li>
+        <li><strong>Cash flow net : {cashFlowMensuelMid.toLocaleString('fr-FR')}&nbsp;€/mois</strong></li>
+        <li style="color:#666; font-size:13px; margin-top:8px;"><em>Charges incluent : ménage, commission Airbnb/Booking, eau-élec-internet, copropriété, assurance, taxe foncière, comptable.</em></li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:13px; color:#666;"><em>Calcul indicatif basé sur des fourchettes de prix au m² du marché. Pour un calcul précis sur votre projet réel, lancez le <a href={`/simulateur-lcd?ville=${city.slug}&type=t2&surface=35&apport=10`}>simulateur préremplit avec les données de {city.name}</a>.</em></p>
+
+  <!-- La Méthode 97%© : impact gestion sur cashflow -->
+  <h2>La Méthode 97%© : comment elle change la rentabilité à {city.name}</h2>
+  <p>La rentabilité affichée plus haut suppose une gestion optimisée. La Méthode 97%© (97% est le taux d'occupation moyen sur les 9 biens de Marc Chenut, fondateur Enomia) repose sur trois leviers cumulatifs.</p>
+  <ol>
+    <li><strong>Pricing dynamique</strong> via PriceLabs ou Wheelhouse&nbsp;: capture la haute saison sans abandonner la basse. Gain&nbsp;: +15 à +25% de CA annuel vs tarif fixe.</li>
+    <li><strong>Distribution multi-canal</strong>&nbsp;: Airbnb + Booking + Vrbo. Gain&nbsp;: +20 à +30% d'occupation par diversification des sources de voyageurs.</li>
+    <li><strong>Gestion en direct</strong> avec automatisation (serrure connectée, channel manager)&nbsp;: élimine la commission conciergerie de 25-32%, qui mange la rentabilité. Gain net direct&nbsp;: +30 à +50% de rendement.</li>
+  </ol>
+  <p>Concrètement, sur votre T2 à {city.name} générant {caMid.toLocaleString('fr-FR')}&nbsp;€ de CA annuel&nbsp;:</p>
+  <ul>
+    <li><strong>Gestion conciergerie sans optimisation</strong>&nbsp;: la conciergerie (~28% du CA) + perte de pricing dynamique = <strong>{Math.round(caMid * 0.65).toLocaleString('fr-FR')}&nbsp;€ engloutis sur l'année</strong> (jusqu'à 80% du cashflow). Vous gardez quelques centaines d'euros par mois.</li>
+    <li><strong>Gestion conciergerie avec optimisation</strong>&nbsp;: pricing dynamique + multi-canal mais conciergerie qui prend toujours sa commission&nbsp;: la conciergerie mange environ 50% du cashflow réel.</li>
+    <li><strong>Gestion en direct (Méthode 97%©)</strong>&nbsp;: 12-16% du CA en coût total (logiciel + ménage en direct + outils). Cashflow préservé, rendement multiplié par 1,5 à 2 vs conciergerie classique.</li>
+  </ul>
+  <p>Sur le panel de 9 biens de Marc en première couronne lyonnaise, ce différentiel représente environ 30&nbsp;000&nbsp;€/an récupéré par rapport à un mode conciergerie classique. <a href="/blog/automatiser-airbnb">Voir comment Marc gère 9 biens en 5-6h/mois</a>.</p>
+
+  <!-- Module fiscalité -->
+  <h2>La fiscalité qui va changer la rentabilité de votre Airbnb à {city.name}</h2>
+  <p>La fiscalité LCD a fortement évolué depuis 2024 et impacte directement la rentabilité nette de votre projet à {city.name}.</p>
+  <ul>
+    <li><strong>Loi Le Meur (novembre 2024)</strong>&nbsp;: l'abattement micro-BIC est passé de 50% (meublé classique) ou 71% (meublé de tourisme classé) à <strong>30% par défaut</strong> en 2026. Pour conserver un abattement plus élevé, classement tourisme obligatoire.</li>
+    <li><strong>Seuil URSSAF / LMP</strong>&nbsp;: si vos revenus locatifs dépassent 23&nbsp;000&nbsp;€/an et représentent plus de 50% de vos revenus du foyer, vous basculez automatiquement en Loueur Meublé Professionnel (LMP) avec affiliation URSSAF obligatoire (cotisations sociales de 30-40% en plus de l'impôt).</li>
+    <li><strong>Régime réel LMNP</strong>&nbsp;: l'amortissement du bien et du mobilier permet de neutraliser l'imposition pendant 10 à 15 ans. Souvent plus rentable que le micro-BIC dès que vos charges dépassent 30% du CA.</li>
+  </ul>
+  <p>Sur un T2 à {city.name} générant {caMid.toLocaleString('fr-FR')}&nbsp;€ de CA, le choix du régime fiscal peut représenter un écart de 2 000 à 4 000&nbsp;€/an en faveur du régime réel. <a href="/blog/fiscalite-airbnb">Voir le guide fiscalité Airbnb 2026 pour choisir votre régime</a>.</p>
+
+  <!-- Module conciergerie -->
+  <h2>Comment vous gérez votre bien à {city.name} impacte la rentabilité</h2>
+  <p>Le coût de gestion réel est le second levier majeur de rentabilité, après le tarif et l'occupation. À {city.name}, voici les options et leur impact.</p>
+  <div class="comparison">
+    <div class="comp-col">
+      <h4>Conciergerie classique (option majoritaire)</h4>
+      <ul>
+        <li>Commission affichée : 18-25% du CA</li>
+        <li>Coût total avec frais cachés : <strong>25-32% du CA</strong></li>
+        <li>Adaptée si vous habitez à plus de 30 minutes ou avez 4+ biens</li>
+      </ul>
+    </div>
+    <div class="comp-col">
+      <h4>Gestion en direct + automatisation</h4>
+      <ul>
+        <li>Logiciel + outils : 1-3% du CA</li>
+        <li>Ménage en direct : ~10-13% du CA</li>
+        <li><strong>Coût total : 12-16% du CA</strong></li>
+      </ul>
+    </div>
+  </div>
+  <p>Sur le bien type à {city.name} (CA {caMid.toLocaleString('fr-FR')}&nbsp;€), l'écart représente environ <strong>{Math.round(caMid * 0.18).toLocaleString('fr-FR')}&nbsp;€/an en faveur de la gestion en direct</strong>. Pour creuser le sujet selon votre profil&nbsp;: <a href={conciergerieLink.href}>{conciergerieLink.label}</a>.</p>
+
+  <!-- Module réglementation -->
+  <h2>Réglementation Airbnb à {city.name}</h2>
+  <p style="background:#f7f5f0; padding:14px 18px; border-left:3px solid #888; margin:18px 0;">
+    <strong>{regulationStatusLabel.icon} {regulationStatusLabel.text}</strong>
+  </p>
+  <p>{city.regulation.detail}</p>
+  {city.regulation.compensation && (
+    <p><strong>Compensation requise</strong>&nbsp;: pour transformer un logement classique en meublé de tourisme à {city.name}, il faut transformer simultanément un local commercial en logement (équivalent surface). Mécanisme strict, peu de locaux disponibles dans la plupart des cas.</p>
+  )}
+  {city.regulation.localCommercialAlternative && (
+    <p><strong>Échappatoire local commercial</strong>&nbsp;: si la copropriété autorise l'usage commercial dans son règlement, vous pouvez acheter un local commercial directement (plutôt qu'un logement) pour faire du LCD sans compensation requise. Vérifier impérativement le règlement de copropriété et l'usage des étages avant achat.</p>
+  )}
+  <p>Pour comprendre l'ensemble des règles applicables (numéro d'enregistrement, plafonds de jours, sanctions)&nbsp;: <a href="/blog/loi-le-meur-airbnb">Loi Le Meur 2024 expliquée en clair</a> et <a href="/blog/numero-enregistrement-airbnb">Numéro d'enregistrement Airbnb&nbsp;: démarches</a>.</p>
+
+  <!-- Saisonnalité spécifique -->
+  <h2>Saisonnalité Airbnb à {city.name}</h2>
+  {city.category === 'tourisme-balneaire' && (
+    <p>{city.name} est une destination à <strong>forte saisonnalité estivale</strong>. Typiquement, juillet-août concentre 45 à 55% du chiffre d'affaires annuel, les ailes (mai-juin et septembre-octobre) apportent 25-30%, et la basse saison ne pèse que 20-25%. Cette concentration impose un pricing dynamique agressif pour capturer les pics et un effort de visibilité multi-canal pour maintenir un taux d'occupation correct hors saison.</p>
+  )}
+  {city.category === 'station-ski' && (
+    <p>{city.name} bénéficie d'une <strong>double saison</strong>&nbsp;: hiver (ski, décembre-mars) et été (alpinisme, randonnée, lacs ; juillet-août). Cette double saison est un avantage majeur car elle réduit la dépendance à une seule période. La saison hiver concentre généralement 50-60% du CA, la saison été 25-30%, et les inter-saisons (avril-mai et octobre-novembre) sont les périodes creuses.</p>
+  )}
+  {city.category === 'metropole' && (
+    <p>{city.name}, métropole, présente une <strong>saisonnalité modérée</strong>. La demande mixe tourisme + voyageurs d'affaires + événements professionnels, ce qui lisse l'occupation sur l'année. Pic d'activité typique au printemps (avril-juin) et automne (septembre-octobre). Janvier et août restent les mois les moins chargés. Cette stabilité facilite le pilotage du cash flow et présente un dossier bancaire plus prévisible.</p>
+  )}
+  {city.category === 'patrimoine' && (
+    <p>{city.name} est une destination patrimoniale avec une saisonnalité <strong>concentrée sur avril-octobre</strong>. La haute saison (juillet-août) représente typiquement 35-45% du CA, les ailes (mai-juin et septembre) 30-35%, et la basse saison (novembre-mars) 20-30%. Les courts séjours patrimoniaux week-end soutiennent l'occupation hors-saison.</p>
+  )}
+  {city.category === 'peripherie' && (
+    <p>{city.name} en périphérie offre une <strong>saisonnalité quasi plate</strong> grâce à une demande lissée par les voyageurs d'affaires, artisans en mission et familles entre deux logements. Typiquement 7 à 10% du CA chaque mois, avec un creux limité en novembre-février. Profil très prévisible pour un dossier bancaire et plus reposant à exploiter.</p>
+  )}
+  {city.category === 'tourisme-affaires' && (
+    <p>{city.name} combine tourisme et voyageurs d'affaires, ce qui donne une <strong>saisonnalité étalée</strong>. La haute saison touristique (juin-septembre) coïncide avec un creux affaires, et inversement (octobre-mai chargé en B2B). Cette complémentarité maintient un taux d'occupation stable toute l'année.</p>
+  )}
+
+  <!-- Estimation par type de bien -->
+  <h2>Estimation des revenus Airbnb par type de bien à {city.name}</h2>
+  <p>Le type de bien impose son propre profil de revenus à {city.name}. Voici les estimations pour les principaux formats.</p>
+  <div class="comparison">
+    <div class="comp-col">
+      <h4>Studio (15-25&nbsp;m&sup2;)</h4>
+      <ul>
+        <li>Tarif moyen&nbsp;: {Math.round(city.t2.nightlyMin * 0.75)}-{Math.round(city.t2.nightlyMax * 0.75)}&nbsp;€/nuit</li>
+        <li>Occupation typique&nbsp;: {Math.min(city.t2.occupancyMin + 5, 95)}-{Math.min(city.t2.occupancyMax + 5, 95)}%</li>
+        <li>CA annuel&nbsp;: {Math.round(city.t2.caAnnualMin * 0.7).toLocaleString('fr-FR')}-{Math.round(city.t2.caAnnualMax * 0.7).toLocaleString('fr-FR')}&nbsp;€</li>
+      </ul>
+    </div>
+    <div class="comp-col">
+      <h4>T2 (30-45&nbsp;m&sup2;) <em style="color:#888; font-weight:normal;">(référence)</em></h4>
+      <ul>
+        <li>Tarif moyen&nbsp;: {city.t2.nightlyMin}-{city.t2.nightlyMax}&nbsp;€/nuit</li>
+        <li>Occupation typique&nbsp;: {city.t2.occupancyMin}-{city.t2.occupancyMax}%</li>
+        <li>CA annuel&nbsp;: {city.t2.caAnnualMin.toLocaleString('fr-FR')}-{city.t2.caAnnualMax.toLocaleString('fr-FR')}&nbsp;€</li>
+      </ul>
+    </div>
+  </div>
+  <div class="comparison">
+    <div class="comp-col">
+      <h4>T3 / T4 (50-80&nbsp;m&sup2;)</h4>
+      <ul>
+        <li>Tarif moyen&nbsp;: {Math.round(city.t2.nightlyMin * 1.3)}-{Math.round(city.t2.nightlyMax * 1.3)}&nbsp;€/nuit</li>
+        <li>Occupation typique&nbsp;: {Math.max(city.t2.occupancyMin - 5, 50)}-{Math.max(city.t2.occupancyMax - 5, 60)}%</li>
+        <li>CA annuel&nbsp;: {Math.round(city.t2.caAnnualMin * 1.25).toLocaleString('fr-FR')}-{Math.round(city.t2.caAnnualMax * 1.3).toLocaleString('fr-FR')}&nbsp;€</li>
+      </ul>
+    </div>
+    <div class="comp-col">
+      <h4>Division (60-90&nbsp;m&sup2; en 2 lots)</h4>
+      <ul>
+        <li>2× les chiffres T2 ci-dessus</li>
+        <li>CA annuel combiné&nbsp;: {Math.round(city.t2.caAnnualMin * 1.9).toLocaleString('fr-FR')}-{Math.round(city.t2.caAnnualMax * 1.9).toLocaleString('fr-FR')}&nbsp;€</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Crédibilité Marc -->
+  <div class="callout">
+    <strong>Marc Chenut, fondateur d'Enomia, exploite 9 biens en LCD</strong>
+    <p>Mes 9 biens sont en première couronne lyonnaise (Irigny, Pierre-Bénite, Montagny). Profil très différent de {city.name}&nbsp;: pas de tourisme, taux d'occupation 97% (La Méthode 97%©), rendement net 12-18%. La rentabilité ne dépend pas seulement de la ville, mais surtout de la qualité du produit, de la stratégie de pricing et du coût de gestion. Avec une gestion en direct + automatisation, on récupère 15-20% du CA qu'on aurait laissé à une conciergerie. <a href="/blog/automatiser-airbnb">Comment je gère 9 biens en 5-6h/mois</a>.</p>
+  </div>
+
+  <!-- CTA intermédiaire -->
+  <div class="hero-cta-block">
+    <div>
+      <h3>Calculez la rentabilité de votre projet à {city.name}</h3>
+      <p>Le simulateur préremplit avec les données de {city.name} (prix au m², tarif moyen, occupation). Ajustez sur votre bien réel.</p>
+    </div>
+    <a href={`/simulateur-lcd?ville=${city.slug}&type=t2&surface=35&apport=10`} class="hero-cta-btn">Lancer le calcul &rarr;</a>
+  </div>
+
+  <!-- Villes voisines -->
+  {neighbors.length > 0 && (
+    <>
+      <h2>Rentabilité Airbnb dans les villes voisines de {city.name}</h2>
+      <p>Comparez la rentabilité Airbnb à {city.name} avec les villes voisines pour ajuster votre choix d'investissement.</p>
+      <div class="related">
+        {neighbors.map((n) => (
+          <a href={previewMode ? `/preview/rentabilite-airbnb/${n.slug}` : (n.status === 'en-ligne' ? `/rentabilite-airbnb/${n.slug}` : `/rentabilite-airbnb`)}>
+            <div class="rk">{n.region}</div>
+            <div class="rt">Rentabilité Airbnb {n.name}</div>
+            <div class="rd">CA T2 {n.t2.caAnnualMin.toLocaleString('fr-FR')}-{n.t2.caAnnualMax.toLocaleString('fr-FR')}&nbsp;€/an · Rendement {n.t2.rendementNetMin}-{n.t2.rendementNetMax}%</div>
+          </a>
+        ))}
+      </div>
+    </>
+  )}
+
+  <!-- FAQ -->
+  <h2>Questions fréquentes sur la rentabilité Airbnb à {city.name}</h2>
+  <div class="faq">
+    {ldFaq.mainEntity.map((item, idx) => (
+      <details open={idx === 0}>
+        <summary>{item.name}</summary>
+        <div class="faq-ans">
+          <p>{item.acceptedAnswer.text}</p>
+        </div>
+      </details>
+    ))}
+  </div>
+
+  <!-- Pour aller plus loin -->
+  <h2>Pour aller plus loin</h2>
+  <div class="related">
+    <a href="/rentabilite-airbnb">
+      <div class="rk">Comparatif national</div>
+      <div class="rt">Rentabilité Airbnb par ville</div>
+      <div class="rd">Classement des 30 villes françaises avec CA, occupation et rendement net.</div>
+    </a>
+    <a href="/estimation-airbnb">
+      <div class="rk">Estimation revenus</div>
+      <div class="rt">Estimation Airbnb</div>
+      <div class="rd">Combien votre bien peut rapporter en location courte durée. Guide complet.</div>
+    </a>
+    <a href="/blog/louer-airbnb-rentable">
+      <div class="rk">Méthode</div>
+      <div class="rt">Louer en Airbnb : est-ce rentable ?</div>
+      <div class="rd">La Méthode 97%© pour atteindre 12-18% de rendement, 4 opérations détaillées.</div>
+    </a>
+    <a href={conciergerieLink.href}>
+      <div class="rk">Coût gestion</div>
+      <div class="rt">{conciergerieLink.label}</div>
+      <div class="rd">{conciergerieLink.isLocal ? `Conciergeries Airbnb à ${city.name} : services, tarifs, comparatif local.` : 'Comparatif gestion en direct vs conciergerie. ~3 000-5 000 €/an d\'écart par bien.'}</div>
+    </a>
+  </div>
+</div>
+
+<NewsletterBlock source={`Rentabilite-${previewMode ? 'preview-' : ''}${city.slug}`} />
+</div>
+
+<script type="application/ld+json" set:html={JSON.stringify(ldFaq)} />

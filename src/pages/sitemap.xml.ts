@@ -8,7 +8,7 @@ const SITE = 'https://www.enomia.app';
 
 const staticPages = [
   { url: '/', changefreq: 'weekly', priority: '1.0' },
-  { url: '/blog/', changefreq: 'weekly', priority: '0.8' },
+  { url: '/blog', changefreq: 'weekly', priority: '0.8' },
   { url: '/simulateur-rentabilite-airbnb', changefreq: 'monthly', priority: '0.9' },
   { url: '/estimation-airbnb', changefreq: 'monthly', priority: '0.9' },
   { url: '/rentabilite-airbnb', changefreq: 'monthly', priority: '0.9' },

@@ -21,12 +21,8 @@ const draft = sorted.filter((c) => c.status === 'brouillon');
 const title = "[PREVIEW] Liste des villes Rentabilité Airbnb";
 const description = "Preview interne — toutes les pages /rentabilite-airbnb/[ville] pour relecture avant et après publication.";
 ---
-<ToolLayout title={title} description={description} canonical="https://www.enomia.app/preview/rentabilite-airbnb" currentTool="simulateur" ctaLabel="Estimer ma rentabilité" ctaHref="/simulateur-lcd">
+<ToolLayout title={title} description={description} canonical="https://www.enomia.app/preview/rentabilite-airbnb" currentTool="simulateur" ctaLabel="Estimer ma rentabilité" ctaHref="/simulateur-lcd" noindex={true}>
   <ContratLandingStyles />
-
-  <Fragment slot="head">
-    <meta name="robots" content="noindex,nofollow" />
-  </Fragment>
 
   <div style="background:#ffe9b3; border-bottom:2px solid #d4a040; padding:14px 20px; text-align:center; font-size:14px;">
     <strong>📝 MODE PREVIEW</strong> · Toutes les villes accessibles · Bloqué pour Google (noindex)

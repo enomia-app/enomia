@@ -10,9 +10,11 @@ interface Props {
   currentTool?: 'simulateur' | 'facture' | 'contrat' | 'taxe-sejour' | 'none';
   ctaLabel?: string;
   ctaHref?: string;
+  /** Empêche l'indexation Google (utilisé par les pages /preview/*) */
+  noindex?: boolean;
 }
 
-const { title, description, canonical, ogImage, currentTool = 'none', ctaLabel, ctaHref } = Astro.props;
+const { title, description, canonical, ogImage, currentTool = 'none', ctaLabel, ctaHref, noindex = false } = Astro.props;
 const headerTool = currentTool === 'none' ? undefined : currentTool;
 ---
 <!DOCTYPE html>
@@ -27,6 +29,7 @@ const headerTool = currentTool === 'none' ? undefined : currentTool;
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   {ogImage && <meta property="og:image" content={ogImage} />}
+  {noindex && <meta name="robots" content="noindex,nofollow" />}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

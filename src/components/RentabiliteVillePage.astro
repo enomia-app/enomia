@@ -171,16 +171,11 @@ const ldFaq = {
 };
 ---
 {previewMode && (
-  <>
-    <div style="background:#ffe9b3; border-bottom:2px solid #d4a040; padding:14px 20px; text-align:center; font-size:14px; position:sticky; top:0; z-index:100;">
-      <strong>📝 MODE PREVIEW</strong> · {city.name} · Status: {previewStatusLabel} ·
-      <a href={`/rentabilite-airbnb/${city.slug}`} style="color:#5a3a00; text-decoration:underline;">Voir la version live</a> ·
-      <a href="/preview/rentabilite-airbnb" style="color:#5a3a00; text-decoration:underline;">Liste preview</a>
-    </div>
-    <Fragment slot="head">
-      <meta name="robots" content="noindex,nofollow" />
-    </Fragment>
-  </>
+  <div style="background:#ffe9b3; border-bottom:2px solid #d4a040; padding:14px 20px; text-align:center; font-size:14px; position:sticky; top:0; z-index:100;">
+    <strong>📝 MODE PREVIEW</strong> · {city.name} · Status: {previewStatusLabel} ·
+    <a href={`/rentabilite-airbnb/${city.slug}`} style="color:#5a3a00; text-decoration:underline;">Voir la version live</a> ·
+    <a href="/preview/rentabilite-airbnb" style="color:#5a3a00; text-decoration:underline;">Liste preview</a>
+  </div>
 )}
 
 <ContratLandingStyles />

@@ -102,7 +102,7 @@ export const citiesRentabilite: CityRentabilite[] = [
     t2: { caAnnualMin: 16000, caAnnualMax: 28000, occupancyMin: 65, occupancyMax: 80, nightlyMin: 75, nightlyMax: 120, rendementNetMin: 9, rendementNetMax: 16 },
     reliability: 'high',
     publishAt: '2026-05-02',
-    status: 'brouillon',
+    status: 'en-ligne',
     neighbors: ['aix-en-provence', 'cassis', 'toulon'],
     context: 'Forte saisonnalité (juin-septembre = 50% du CA). Quartiers premium : Vieux-Port, Le Panier, Endoume. Prix d\'achat encore accessibles donnent les meilleurs rendements net du top 10.',
   },

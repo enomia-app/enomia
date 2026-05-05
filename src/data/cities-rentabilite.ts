@@ -116,7 +116,7 @@ export const citiesRentabilite: CityRentabilite[] = [
     t2: { caAnnualMin: 15000, caAnnualMax: 26000, occupancyMin: 70, occupancyMax: 82, nightlyMin: 80, nightlyMax: 125, rendementNetMin: 7, rendementNetMax: 13 },
     reliability: 'high',
     publishAt: '2026-05-04',
-    status: 'brouillon',
+    status: 'en-ligne',
     neighbors: ['arcachon', 'la-rochelle', 'biarritz'],
     context: 'Marché tendu avec quota d\'autorisations (Loi Le Meur). Quartiers premium : Chartrons, hyper-centre, Saint-Pierre. Demande forte toute l\'année (vinexpo, événements œnotouristiques).',
   },

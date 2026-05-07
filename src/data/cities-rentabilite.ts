@@ -130,7 +130,7 @@ export const citiesRentabilite: CityRentabilite[] = [
     t2: { caAnnualMin: 13000, caAnnualMax: 22000, occupancyMin: 65, occupancyMax: 78, nightlyMin: 70, nightlyMax: 110, rendementNetMin: 9, rendementNetMax: 15 },
     reliability: 'high',
     publishAt: '2026-05-06',
-    status: 'brouillon',
+    status: 'en-ligne',
     neighbors: ['carcassonne', 'albi', 'montauban'],
     context: 'Demande dominée par voyageurs d\'affaires (aéronautique, Airbus). Quartiers premium : Capitole, Carmes, Saint-Étienne. Rendements solides grâce à l\'occupation lissée toute l\'année.',
   },

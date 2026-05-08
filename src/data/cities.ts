@@ -3546,6 +3546,600 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-04-27',
   },
+  // ==========================================================================
+  // ANNECY
+  // ==========================================================================
+  {
+    slug: 'annecy',
+    displayName: 'Annecy',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Annecy Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Annecy : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Annecy. Tarifs (17-25 %), nouveau quota mairie 2 660 meublés, quartiers rentables et stratégie lac.',
+    kwPrincipal: 'conciergerie airbnb annecy',
+    kwSecondaires: [
+      'conciergerie annecy',
+      'gestion locative annecy',
+      'location courte durée annecy',
+      'airbnb annecy rentabilité',
+      'meublé touristique annecy',
+    ],
+    population: 131272,
+    tourists: 3000000,
+    activeListings: 6200,
+    priceLow: 85,
+    priceHigh: 220,
+    occupancyRate: 64,
+    revpar: 78,
+    seasonality:
+      "Forte saisonnalité estivale : 90 % d'occupation entre juin et septembre, dopée par le Festival du Film d'Animation (juin) et la Fête du Lac (1er samedi d'août, plus grand spectacle pyrotechnique d'Europe). Creux marqué l'hiver hors vacances scolaires (30 %), avec un rebond Noël/Nouvel An. Les Noctibules (juillet-août) et le Marché de Noël soutiennent les ailes de saison.",
+    rankNational: 6,
+    introCustom:
+      "Vous avez un appartement à **Annecy** que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **demande explosive** côté lac, la **proximité Genève** (40 min, clientèle internationale) et le tout nouveau **règlement de juin 2025** qui plafonne la ville à 2 660 meublés autorisés (contre 6 400 auparavant), vous vous demandez si confier la gestion à une conciergerie est encore rentable.\n\nEt surtout : **laquelle choisir** parmi les acteurs locaux annéciens ?",
+    marketIntro:
+      "Annecy fait partie du **top 6 des marchés LCD français** : 3 millions de visiteurs par an, 6 200 meublés de tourisme déclarés, et un revenu locatif moyen de **122 €/nuit** (+90 % d'occupation l'été).\n\nLa ville profite d'un **mix unique** : lac alpin classé parmi les plus purs d'Europe, vieille ville médiévale (la « Venise des Alpes ») et accès direct aux stations de ski (La Clusaz à 30 min, Le Grand-Bornand à 40 min).\n\nLa **proximité de Genève** (40 minutes par l'A41, aéroport international à 45 min) draine une clientèle internationale haut de gamme — Suisses, Allemands, Britanniques — au pouvoir d'achat supérieur à la moyenne française.\n\nMais attention : depuis **juin 2025**, Annecy applique le règlement le plus strict de France. **Quotas par zone** (460 en Vieille Ville, 1 000 sur le lac, 1 200 dans le reste de la ville), **changement d'usage obligatoire**, **autorisation valable 4 ans** et **une seule autorisation par personne**. Un investissement LCD à Annecy aujourd'hui, c'est entrer dans un marché plafonné — donc rare et valorisé.",
+    conciergeries: [
+      {
+        name: 'La Conciergerie du Lac',
+        url: 'https://laconciergeriedulac.com/',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 3.6,
+        reviews: 175,
+        biensGeres: 100,
+        specialty: 'Pionnier annécien depuis 2016, local d\'accueil physique',
+        description:
+          "Première conciergerie Airbnb d'Annecy à disposer d'un local d'accueil physique pour propriétaires et voyageurs au cœur du centre-ville depuis 2022. Couvre tout le bassin annécien avec une approche hôtellerie-réception. Volume important (175+ avis) mais note Google moyenne (3,6) — à comparer attentivement avec les structures plus petites.",
+      },
+      {
+        name: 'Save My Bed',
+        url: 'https://www.savemybed.com/',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 63,
+        biensGeres: 40,
+        specialty: 'Annecy + Megève, linge hôtelier inclus',
+        description:
+          "Conciergerie de confiance opérant sur Annecy et Megève, spécialisée locations meublées courte durée. Propose photos pro, linge hôtelier inclus, gestion check-in/out, optimisation prix et calendrier. Idéale si vous avez un bien dans les deux destinations.",
+      },
+      {
+        name: 'Margaret Conciergerie',
+        url: 'https://www.margaretconciergerie.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 19,
+        biensGeres: 25,
+        specialty: 'Carte CPI, gestion soignée',
+        description:
+          "Conciergerie spécialisée Airbnb basée 27 rue de Narvik à Annecy, dirigée par Alix et Aude. Carte professionnelle CPI N° 7401 2020 000 045 146, attention au détail saluée par les avis Google. Bon choix pour les propriétaires qui veulent un interlocuteur direct et une structure légalement encadrée.",
+      },
+      {
+        name: 'Like your Bed',
+        url: 'https://likeyourbed.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 50,
+        biensGeres: 35,
+        specialty: 'Service clé en main 7j/7, ménage + blanchisserie',
+        description:
+          "Service complet de A à Z : optimisation annonce, check-in/out, assistance voyageurs 7j/7, gestion des avis, ménage et blanchisserie inclus. Commission claire de 20 % sur les revenus locatifs, sans frais cachés ni paliers.",
+      },
+      {
+        name: '16Bis Conciergerie',
+        url: 'https://16bisconciergerie.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 15,
+        biensGeres: 20,
+        specialty: 'Approche personnelle, linge hôtelier',
+        description:
+          "Conciergerie indépendante dirigée par Laurène, disponible avant, pendant et après les séjours. Linge et serviettes qualité hôtelière, produits éco-responsables et starter kits inclus. Idéal pour 1-2 biens avec une vraie relation humaine.",
+      },
+      {
+        name: 'Cygne Blanc',
+        url: 'https://cygne-blanc.fr/',
+        commission: '20-22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 30,
+        biensGeres: 35,
+        specialty: 'Annecy + Veyrier-du-Lac, multi-plateformes',
+        description:
+          "Couvre Annecy, Veyrier-du-Lac et alentours du lac. Diffusion multi-plateformes (Airbnb, Booking, TripAdvisor, Abritel), photos pro, assistance voyageurs 7j/7, logistique linge et ménage avec prestataires locaux. Bonne option pour les biens premium en bord de lac.",
+      },
+      {
+        name: 'Welkeys Annecy',
+        url: 'https://www.welkeys.com/conciergerie-airbnb/annecy',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 3.8,
+        reviews: 100,
+        biensGeres: 80,
+        specialty: 'Réseau national, carte G loi Hoguet',
+        description:
+          "Branche annécienne d'un acteur national de la conciergerie Airbnb, titulaire de la carte G. Promet +25 % de revenus, mais avis mitigés à surveiller (frais de ménage, transparence commission). Volume important mais structure plus distante que les acteurs locaux.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieille Ville (Palais de l\'Île / Sainte-Claire)',
+        pricePerNight: '130-220 €',
+        occupancy: 75,
+        description:
+          "Cœur historique avec ses canaux, ruelles pavées et façades colorées — la « Venise des Alpes ». Quartier n°1 pour l'Airbnb avec la demande la plus forte de la ville mais zone A du nouveau règlement (quota 460 autorisations, déjà saturé). Prix m² ~6 950 €.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Bord du Lac (Pâquier / Albigny)',
+        pricePerNight: '150-250 €',
+        occupancy: 80,
+        description:
+          "Esplanade emblématique face au lac et aux montagnes, prolongée par les plages d'Albigny. Vue lac premium qui justifie des tarifs nuit élevés (>200 €) — zone B du règlement (quota 1 000). Prix m² ~7 500 €.",
+        roiBrut: '4,5 à 5,5 %',
+      },
+      {
+        name: 'Annecy-le-Vieux',
+        pricePerNight: '110-180 €',
+        occupancy: 68,
+        description:
+          "Rive nord du lac, ambiance village + dynamisme économique. Très prisé des familles et de la clientèle étrangère, marché tendu avec biens rares. Prix m² appartement ~6 310 €, maison ~9 520 €.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Cran-Gevrier',
+        pricePerNight: '80-130 €',
+        occupancy: 60,
+        description:
+          "Quartier résidentiel à l'ouest fusionné avec Annecy depuis 2017, accès rapide centre-ville et bord du Thiou. Bon ratio prix/rentabilité pour primo-investisseurs (m² ~4 800 €), zone C du règlement avec quotas plus larges.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Seynod',
+        pricePerNight: '75-120 €',
+        occupancy: 58,
+        description:
+          "Sud d'Annecy, plus de maisons et d'espaces extérieurs, attire les familles. Cadre résidentiel équilibré, moins touristique mais demande pro et familiale stable. Prix m² ~4 845 €.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Veyrier-du-Lac',
+        pricePerNight: '180-350 €',
+        occupancy: 70,
+        description:
+          "Adresse prestige rive est du lac, vues spectaculaires sur les Alpes. Marché patrimonial avec le m² le plus cher du bassin (~11 660 €) — investissement haut de gamme avec rentabilité brute modeste mais valorisation long terme.",
+        roiBrut: '3 à 4,5 %',
+      },
+    ],
+    regulation:
+      "Annecy applique depuis **juin 2025** le règlement LCD le plus strict de France. La ville a été pionnière sur la régulation des meublés touristiques et sert désormais de modèle à Paris, Bordeaux et Saint-Malo.\n\n**Enregistrement obligatoire.** Déclaration préalable en mairie pour tout meublé de tourisme avec délivrance d'un **numéro à 13 chiffres** à mentionner sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Limite 90 nuitées/an pour les résidences principales.** Annecy applique la **loi Le Meur 2024** : le plafond passe de 120 à 90 jours en zone tendue. Airbnb bloque automatiquement le calendrier au-delà.\n\n**Changement d'usage avec quotas par zone.** Depuis juin 2025, le parc total est plafonné à **2 660 meublés autorisés** (contre 6 400 avant), réparti entre **460 en Vieille Ville (zone A)**, **1 000 sur les bords du lac (zone B)** et **1 200 dans le reste de la ville (zone C)**. Toutes les nouvelles demandes sont gelées tant qu'aucune autorisation n'est libérée.\n\n**Une autorisation par personne, valable 4 ans.** L'autorisation est personnelle, incessible, et limitée à **un seul logement par propriétaire**. Elle doit être renouvelée tous les 4 ans.\n\n**DPE classe E minimum.** Depuis le 20 novembre 2024, un DPE A à E est exigé pour obtenir l'autorisation (A à D à partir de 2034).\n\n**⚠️ Compensation possible.** Pour les personnes morales (SCI, SARL), chaque m² retiré du parc résidentiel doit être compensé par la création d'une surface équivalente dans le même secteur — règle dissuasive pour les investisseurs structurés.\n\n**Sanction maximale 50 000 € par logement.** La mairie surveille activement les annonces non déclarées, notamment pendant les pics estivaux.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 122,
+      neighborhood: 'Bord du Lac (Pâquier)',
+      revenuBrut: 28500,
+      commissionRate: 0.22,
+      menageCount: 95,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: "Avec le nouveau quota de 2 660 meublés, peut-on encore se lancer en Airbnb à Annecy ?",
+        a: "Oui, mais ça demande une stratégie précise. Les 6 400 meublés existants au moment du règlement ont une priorité d'antériorité, mais les autorisations sont valables 4 ans avec **une seule par personne** — donc des places se libèrent chaque année. Le secteur le plus accessible est la zone C (1 200 autorisations, reste de la ville), beaucoup moins saturé que la Vieille Ville (zone A, 460 places). Les conciergeries locales rodées au montage de dossiers (carte CPI, expertise loi Le Meur) peuvent vous aider à passer en file d'attente et à sécuriser une autorisation dès qu'elle se libère. À éviter : acheter sans avoir validé la disponibilité d'une autorisation dans la zone visée.",
+      },
+      {
+        q: "Combien peut-on gagner avec un Airbnb pendant la Fête du Lac à Annecy ?",
+        a: "Le 1er samedi d'août, la Fête du Lac (plus grand spectacle pyrotechnique d'Europe, 70 minutes de show) attire 200 000 spectateurs. Les hôtels sont saturés 6 mois à l'avance et les tarifs Airbnb sur le week-end (vendredi-dimanche) bondissent de **×2 à ×3** par rapport à la moyenne d'août. Un T2 qui se loue 122 €/nuit grimpe à 280-380 €/nuit. Sur le seul week-end de la Fête du Lac, un propriétaire peut générer 800 à 1 200 € bruts. Verrouillez les dates de la prochaine édition (1er août 2026) dès aujourd'hui.",
+      },
+      {
+        q: "La proximité de Genève (40 minutes) est-elle un vrai atout pour mon Airbnb à Annecy ?",
+        a: "C'est un atout majeur, surtout en intersaison. Annecy capte une clientèle internationale (Suisses, Allemands, Britanniques, Américains) qui transite par l'aéroport de Genève (45 min) et préfère Annecy à Genève pour le rapport qualité/prix. Cette clientèle a un budget **20 à 30 % supérieur** à la moyenne française et privilégie les biens premium (vue lac, terrasse, parking sécurisé). En octobre-novembre et avril-mai (creux annécien), elle représente jusqu'à 50 % des réservations dans les quartiers Albigny, Veyrier et Annecy-le-Vieux. Optimisez vos annonces en anglais et en allemand pour la capter.",
+      },
+    ],
+    updatedAt: '2026-04-30',
+  },
+  // ==========================================================================
+  // AVIGNON
+  // ==========================================================================
+  {
+    slug: 'avignon',
+    displayName: 'Avignon',
+    region: 'Provence-Alpes-Côte d\'Azur',
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie Avignon Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Avignon : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Avignon. Tarifs (14-23 %), zone tendue, stratégie Festival d\'Avignon, quartiers rentables intra-muros.',
+    kwPrincipal: 'avignon conciergerie',
+    kwSecondaires: [
+      'conciergerie airbnb avignon',
+      'gestion locative avignon',
+      'location courte durée avignon',
+      'airbnb avignon rentabilité',
+      'meublé touristique avignon',
+    ],
+    population: 91760,
+    tourists: 6500000,
+    activeListings: 3500,
+    priceLow: 60,
+    priceHigh: 200,
+    occupancyRate: 57,
+    revpar: 57,
+    seasonality:
+      "Saisonnalité estivale dopée par le Festival d'Avignon (IN + OFF) en juillet : 1,6 million de billets OFF vendus en 22 jours, 97 % de remplissage IN, **60 à 100 millions d'euros de retombées économiques**. Les tarifs Airbnb explosent (×2 à ×3) et l'occupation dépasse 90 % sur tout le mois. Saison forte : avril-octobre. Creux : décembre-février.",
+    rankNational: 11,
+    introCustom:
+      "Vous avez un appartement à **Avignon** que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre le **Festival d'Avignon** qui attire 1,6 million de spectateurs en juillet, le tourisme patrimonial UNESCO (Palais des Papes, Pont Saint-Bénezet) qui draine 5 millions de visiteurs par an, le **classement en zone tendue** depuis 2023 et la nouvelle loi Le Meur, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** parmi les acteurs avignonnais ?",
+    marketIntro:
+      "Avignon est la **11e ville touristique de France** avec **22,3 millions de nuitées** dans le Vaucluse en 2024 (+3 % vs 2023), dont 29 % concentrées sur le Grand Avignon.\n\nLa ville profite de **trois leviers LCD majeurs** : le **Festival d'Avignon** en juillet (1,6 million de billets OFF, IN à 97 % de remplissage, 100 M€ de retombées éco), le **patrimoine UNESCO** (Palais des Papes 774 000 visiteurs, Pont d'Avignon 541 000 visiteurs en 2023) et la **proximité TGV Paris** (2h33, 26 trains/jour).\n\nLa connectivité est exceptionnelle : Gare TGV Avignon (Courtine), aéroport low-cost Avignon-Provence, A7 (Lyon 2h, Marseille 1h), ce qui crée une demande continue toute l'année.\n\n**Avignon est passée en zone tendue** par décret n°2023-822 du 25 août 2023, déclenchant la taxe sur les logements vacants, l'encadrement des loyers longue durée et la possibilité d'imposer le changement d'usage en LCD.",
+    conciergeries: [
+      {
+        name: 'Merci Conciergerie Avignon',
+        url: 'https://www.merci-conciergerie.fr/conciergerie-avignon',
+        commission: '14-23 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 50,
+        biensGeres: 60,
+        specialty: 'Barème progressif (14 % jusqu\'à 600 €)',
+        description:
+          "Conciergerie multi-villes (Marseille, Aix, Toulon, Avignon) avec une grille progressive unique : **14 % TTC** jusqu'à 600 € de revenus mensuels, **18 %** entre 600 et 1 300 €, **23 %** au-delà. Connaissance fine des micro-marchés avignonnais (Intra-muros, Barthelasse, Banasterie, Villeneuve-lès-Avignon).",
+      },
+      {
+        name: 'Serena Place',
+        url: 'https://serenaplace.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 35,
+        biensGeres: 40,
+        specialty: 'Avignon + Provence + Côte Bleue',
+        description:
+          "Conciergerie fondée par Johanne et Chloé qui couvre Avignon, la Provence et la Côte Bleue jusqu'à Martigues. Propose une offre clé en main et une formule flexible à la carte pour les propriétaires qui veulent garder la main sur certaines tâches.",
+      },
+      {
+        name: 'Capsule Corp Conciergerie Avignon',
+        url: 'https://www.capsulecorp-conciergerie-avignon.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 28,
+        biensGeres: 30,
+        specialty: 'Sans engagement, sans frais cachés',
+        description:
+          "Conciergerie Airbnb sans contrat longue durée et sans frais cachés, qui gère la communication voyageurs, les check-in/out, le ménage pro et l'optimisation tarifaire dynamique. Filiale du groupe Capsule Corp Immo, également présent à Grenoble et Nîmes.",
+      },
+      {
+        name: 'Rachel Conciergerie',
+        url: 'https://www.rachelconciergerie.com/',
+        commission: '19-23 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 22,
+        biensGeres: 25,
+        specialty: 'Services premium (petits-déj, événementiel)',
+        description:
+          "Conciergerie locale (35 rue Saint-Michel, Avignon) qui couvre Avignon, Villeneuve-lès-Avignon et Les Angles. Offre clé en main + services premium voyageurs : petits-déjeuners, activités, décoration événementielle. Idéale pour les biens haut de gamme intra-muros.",
+      },
+      {
+        name: 'Week Where',
+        url: 'https://www.weekwhere.com/',
+        commission: '22 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 18,
+        biensGeres: 35,
+        specialty: 'Standing intra-muros + chef privé',
+        description:
+          "Conciergerie historique à Avignon depuis 2012, spécialisée dans la location saisonnière d'appartements de standing intra-muros et de biens de charme. Propose en plus aux voyageurs des visites guidées, chefs privés, baby-sitting et transferts.",
+      },
+      {
+        name: 'MM Conciergerie',
+        url: 'https://www.mmconciergerie-avignon.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 15,
+        biensGeres: 20,
+        specialty: 'Avignon + 30 km, gérée par 2 sœurs propriétaires',
+        description:
+          "Conciergerie créée par Magali et Marion, deux sœurs déjà propriétaires-loueuses depuis 5 ans à Avignon. Couvre un rayon de 30 km autour de la ville, positionnement humain et terrain. Bonne option pour propriétaires qui veulent un vrai interlocuteur.",
+      },
+      {
+        name: 'La Fine Équipe (LFEC)',
+        url: 'https://www.lafineequipe-conciergerie.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 20,
+        biensGeres: 25,
+        specialty: '100 % Grand Avignon, fondateur ex-loueur LCD',
+        description:
+          "Conciergerie exclusivement Grand Avignon, positionnée sur la proximité locale. Le fondateur a lui-même plusieurs années d'expérience en LCD avant de monter LFEC pour mutualiser cette expertise. Parfait pour propriétaires recherchant une gestion ultra-locale.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Intra-muros (Palais des Papes)',
+        pricePerNight: '110-200 €',
+        occupancy: 70,
+        description:
+          "Cœur médiéval classé UNESCO, à 5 min à pied du Palais des Papes et du Pont Saint-Bénezet. Les voyageurs payent une prime importante pour dormir dans les ruelles intra-muros, surtout pendant le Festival (×2 à ×3).",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Quartier Banasterie',
+        pricePerNight: '100-180 €',
+        occupancy: 68,
+        description:
+          "Quartier bourgeois et tranquille intra-muros, prix m² médian ~3 100 € (1 900-4 100 €/m²), à 2 min du Palais des Papes. Cible familles et clientèle culture haut de gamme, bonne demande hors festival aussi.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Île de la Barthelasse',
+        pricePerNight: '90-150 €',
+        occupancy: 60,
+        description:
+          "Plus grande île fluviale d'Europe, « poumon vert » d'Avignon avec 396 logements dont 326 maisons. Idéal pour familles cherchant un cadre nature à 10 min du centre, ROI tiré par le foncier moins cher.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Saint-Roch (extra-muros sud-ouest)',
+        pricePerNight: '70-110 €',
+        occupancy: 58,
+        description:
+          "Quartier résidentiel à 10 min à pied de la gare centrale, 834 logements (dont 662 appartements). Prix m² inférieur à la moyenne ville, bon couple rendement/proximité gare TGV-Centre.",
+        roiBrut: '7 à 8,5 %',
+      },
+      {
+        name: 'Champfleury (extra-muros sud)',
+        pricePerNight: '65-100 €',
+        occupancy: 55,
+        description:
+          "Quartier résidentiel calme aux portes des remparts, prix m² médian ~2 125 € (apparts) — soit 30 % moins cher que la moyenne ville. ROI le plus élevé des quartiers couverts, demande tirée par les voyageurs pragmatiques avec voiture.",
+        roiBrut: '7,5 à 9 %',
+      },
+      {
+        name: 'Villeneuve-lès-Avignon (rive Gard)',
+        pricePerNight: '80-130 €',
+        occupancy: 65,
+        description:
+          "Commune voisine côté Gard, charme village + Fort Saint-André. Ticket d'entrée immobilier plus bas qu'Avignon centre, 290+ annonces actives, demande estivale très soutenue (revenu août ~2 000 €/mois, 80 % occupation).",
+        roiBrut: '6 à 7,5 %',
+      },
+    ],
+    regulation:
+      "Avignon est classée **zone tendue** depuis le décret n°2023-822 du 25 août 2023, ce qui déclenche un ensemble de restrictions spécifiques pour la LCD.\n\n**Enregistrement obligatoire.** Déclaration préalable en mairie obligatoire pour tout meublé de tourisme avec délivrance d'un **numéro à 13 chiffres** à mentionner sur chaque annonce Airbnb, Booking ou Abritel. Contact mairie : meubletourisme@mairie-avignon.com.\n\n**Limite 120 nuitées/an pour les résidences principales** (réductible à 90 jours/an par délibération municipale en zone tendue depuis la **loi Le Meur 2024**). Airbnb bloque automatiquement le calendrier au-delà.\n\n**Changement d'usage activable.** En tant que zone tendue, Avignon peut imposer une autorisation de changement d'usage pour les résidences secondaires utilisées en LCD. À vérifier auprès de la mairie selon le quartier.\n\n**Loi Le Meur 2024.** DPE classe **A à E** obligatoire pour louer en LCD (DPE G **interdit depuis le 1er janvier 2025**), abattement micro-BIC réduit à **50 % pour les meublés classés** et **30 % pour les non classés** (plafond abaissé à **15 000 €**). Les règlements de copropriété peuvent désormais interdire la location touristique à la **double majorité**.\n\n**Numéro d'enregistrement national au plus tard le 20 mai 2026.** Téléservice national obligatoire pour TOUS les meublés de tourisme, y compris ceux déjà déclarés en mairie. Sanction : amende jusqu'à **10 000 €** (défaut d'enregistrement) et **20 000 €** (fausse déclaration).\n\n**Taxe de séjour.** Collectée au réel par la commune via la plateforme dédiée. Tarifs variables selon le classement (1 à 5 étoiles) ou un pourcentage du prix de la nuitée pour les non classés (5 % plafonné). **Festival d'Avignon (juillet)** : la commune surveille activement les annonces non déclarées pendant cette période de pic.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 100,
+      neighborhood: 'Intra-muros (Palais des Papes)',
+      revenuBrut: 22000,
+      commissionRate: 0.20,
+      menageCount: 80,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: "Combien peut-on gagner avec un Airbnb pendant le Festival d'Avignon ?",
+        a: "Pendant les 22 jours du Festival d'Avignon (IN + OFF, début juillet à fin juillet), les tarifs grimpent de **+100 à +200 %** par rapport à la moyenne annuelle. Un T2 intra-muros qui se loue 100 €/nuit hors saison peut atteindre 220 à 350 €/nuit, avec un taux d'occupation à 100 %. Sur la durée complète du festival, un propriétaire peut générer **5 000 à 8 000 € bruts** pour un bien bien placé près du Palais des Papes ou de la rue de la République. Verrouillez les dates dès le mois de janvier précédent — les festivaliers (artistes, programmateurs, journalistes) réservent 6 mois à l'avance.",
+      },
+      {
+        q: "Quels sont les meilleurs quartiers d'Avignon pour louer en Airbnb hors festival ?",
+        a: "**Intra-muros (Palais des Papes, Banasterie)** reste le meilleur choix toute l'année grâce au tourisme patrimonial UNESCO (5 millions de visiteurs annuels). Pour un meilleur ROI brut, **Champfleury** (extra-muros sud) et **Saint-Roch** (proximité gare) offrent des prix m² 30 % moins chers avec une occupation de 55-60 %. **Villeneuve-lès-Avignon** (rive Gard) cumule charme village + ticket d'entrée bas. À éviter pour la LCD : zones nord et est trop éloignées du centre où la demande tombe rapidement hors festival.",
+      },
+      {
+        q: "La gare TGV Avignon est-elle un atout pour la rentabilité ?",
+        a: "Oui, c'est un atout structurel. Avignon est à **2h33 de Paris** par le TGV le plus rapide (26 trains/jour, opérateurs SNCF, Ouigo, Lyria, TER) et 1h de Marseille. Cette connectivité génère un flux continu de week-ends parisiens (vendredi-dimanche) toute l'année et de touristes internationaux (Espagnols, Allemands, Britanniques) qui combinent Avignon avec la Provence (Lubéron, Ventoux, Châteauneuf-du-Pape). Les quartiers Saint-Roch et Champfleury (proches gare TGV-Centre) bénéficient particulièrement de cette demande business + culturelle. Une navette gare TGV-Centre en 7 minutes facilite l'accès intra-muros.",
+      },
+    ],
+    updatedAt: '2026-04-30',
+  },
+  // ==========================================================================
+  // NANTES
+  // ==========================================================================
+  {
+    slug: 'nantes',
+    displayName: 'Nantes',
+    region: 'Pays de la Loire',
+    regionSlug: 'pays-de-la-loire',
+    title: 'Conciergerie Nantes Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Nantes : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Nantes. Tarifs (13-25 %), changement d\'usage obligatoire, quartiers rentables, stratégie Voyage à Nantes.',
+    kwPrincipal: 'conciergerie nantes',
+    kwSecondaires: [
+      'conciergerie airbnb nantes',
+      'gestion locative nantes',
+      'location courte durée nantes',
+      'airbnb nantes rentabilité',
+      'meublé touristique nantes',
+    ],
+    population: 325070,
+    tourists: 10500000,
+    activeListings: 4500,
+    priceLow: 70,
+    priceHigh: 170,
+    occupancyRate: 71,
+    revpar: 67,
+    seasonality:
+      "Saisonnalité moins marquée que les villes balnéaires grâce au tourisme d'affaires et au cluster French Tech. Pic juin-septembre avec **Le Voyage à Nantes** (6 juillet au 8 septembre, 853 000 visites en 2024) qui dope l'occupation. Tourisme business régulier hors saison via TGV Paris (2h, 25 allers-retours/jour). Hellfest fin juin à Clisson (40 km) génère un débordement de festivaliers vers Nantes. Creux : décembre-février.",
+    rankNational: 8,
+    introCustom:
+      "Vous avez un appartement à **Nantes** que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre **Le Voyage à Nantes** qui attire 853 000 visiteurs en été, le tourisme business porté par la French Tech, la **proximité TGV Paris** (2h) et un règlement local devenu l'un des plus stricts de France (changement d'usage obligatoire, compensation pour les SCI), vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** parmi les acteurs nantais ?",
+    marketIntro:
+      "Nantes est la **6e ville de France** par sa population (325 000 habitants, 672 000 sur la métropole) et la **8e ville la plus visitée**, avec **10,5 millions de nuitées** sur la métropole en 2024 (33 % des nuitées de Loire-Atlantique).\n\nLa ville profite de **quatre leviers LCD** : Le **Voyage à Nantes** (parcours d'art urbain estival, 853 000 visites en 2024), les **Machines de l'Île** (Grand Éléphant, Carrousel des Mondes Marins), le **tourisme d'affaires** (cluster French Tech, Cité des Congrès, CHU sur l'Île de Nantes) et la **proximité Atlantique** (Pornic, La Baule à 45 min).\n\nLa connectivité est excellente : **TGV Paris en 2h**, gare Atlantique connectée centre-ville, A11/A83/A84. Cette accessibilité génère un flux continu de week-ends parisiens et de voyageurs business toute l'année — le taux d'occupation moyen est de **71 %**, l'un des plus élevés des grandes villes françaises (vs 63 % moyenne France).\n\n**Nantes est en zone tendue** (décret 10 mai 2013) **et** soumise au régime de l'**autorisation de changement d'usage de plein droit** (commune > 200 000 habitants), ce qui en fait l'une des villes les plus restrictives de France pour les résidences secondaires en LCD.",
+    conciergeries: [
+      {
+        name: 'Cocoonr Nantes',
+        url: 'https://cocoonr.fr/conciergerie-bnb-nantes/',
+        commission: '15-20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 42,
+        biensGeres: 66,
+        specialty: 'Plus gros gestionnaire de Loire-Atlantique',
+        description:
+          "Antenne nantaise du réseau Cocoonr structuré depuis 2015, qui gère une soixantaine de biens à Nantes et Loire-Atlantique. Grille tarifaire transparente entre 15 et 20 % TTC selon le périmètre (gestion partagée à full service), photos pro et diffusion multi-plateformes. 2 303 avis cumulés à 4,69/5.",
+      },
+      {
+        name: 'Conciergerie Lulu',
+        url: 'https://conciergerielulu.com/',
+        commission: '20 %',
+        menage: 'inclus dans commission',
+        rating: 4.7,
+        reviews: 29,
+        biensGeres: 35,
+        specialty: 'Seule conciergerie nantaise avec carte d\'agent immobilier',
+        description:
+          "Conciergerie portée par Benjamin Luzeau et Isabelle depuis août 2023, structurée en SAS. Modèle volontairement épuré avec une commission unique de **20 % HT tout inclus** (ménage forfait inclus dans la commission) et la carte professionnelle d'agent immobilier — rare sur le marché nantais.",
+      },
+      {
+        name: 'Conciergerie Océane',
+        url: 'https://www.conciergerie-oceane.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 80,
+        biensGeres: 50,
+        specialty: 'Conciergerie historique nantaise, full service A à Z',
+        description:
+          "Conciergerie créée par Mickaël Mary, qui gère plus de 50 logements à Nantes et sa métropole. Approche « comme si c'était chez nous » et présence physique systématique aux check-in et check-out. Bonne option pour propriétaires qui veulent une gestion humaine et proche.",
+      },
+      {
+        name: 'Kerbnb',
+        url: 'https://kerbnb.fr/',
+        commission: '13-15 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 25,
+        biensGeres: 30,
+        specialty: 'Commission la plus basse de Nantes, éco-responsable',
+        description:
+          "Conciergerie nantaise éco-responsable fondée en 2020 par Didier Rayssiguier, avec une **commission disruptive de 13 à 15 % HT** contre 20-25 % en moyenne sur le marché. Approche locale et durable revendiquée. Le choix rationnel pour un propriétaire qui veut maximiser sa marge.",
+      },
+      {
+        name: 'Hoomy Nantes',
+        url: 'https://www.hoomy.fr/conciergeries/votre-conciergerie-a-nantes/',
+        commission: '25-30 %',
+        menage: 'variable',
+        rating: 4.3,
+        reviews: 60,
+        biensGeres: 350,
+        specialty: 'Maisons et villas, périmètre régional Pays de la Loire',
+        description:
+          "Réseau régional basé à Nantes qui gère plus de 350 biens à travers les Pays de la Loire — majoritairement des maisons et villas. Structure plus large mais commission parmi les plus élevées du marché. Pertinent pour des biens dispersés (Nantes + côte atlantique).",
+      },
+      {
+        name: 'WeHost Nantes',
+        url: 'https://www.wehost.fr/conciergerie-airbnb-nantes/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 230,
+        biensGeres: 80,
+        specialty: 'Réseau national, technologie pricing dynamique',
+        description:
+          "Antenne nantaise du réseau national WeHost (commission 20 %), qui industrialise la gestion Airbnb avec optimisation tarifaire et calendrier. Linge et photos pro en suppléments — modèle plus modulaire que tout-inclus. 230+ avis Trustpilot.",
+      },
+      {
+        name: 'Conciergerie Nantaise',
+        url: 'https://www.conciergerie-nantaise.fr/',
+        commission: '0-8 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 35,
+        biensGeres: 40,
+        specialty: 'Modèle disruptif « 0 % commission », facturation à l\'acte',
+        description:
+          "Conciergerie nantaise active depuis 2020 avec un positionnement disruptif : **0 ou 8 % de commission** selon les services choisis, et facturation à la prestation plutôt qu'au pourcentage. Reporting mensuel détaillé. À étudier de près si vous générez de gros revenus locatifs.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre-ville (Bouffay / Decré-Cathédrale)',
+        pricePerNight: '110-160 €',
+        occupancy: 78,
+        description:
+          "Cœur médiéval avec ruelles et immeubles à colombages, à 5 min à pied du château des Ducs et de la cathédrale. Prix au m² ~4 200 €, demande locative tendue toute l'année (business + tourisme).",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Île de Nantes (Machines / Hangar à Bananes)',
+        pricePerNight: '100-150 €',
+        occupancy: 72,
+        description:
+          "Quartier en mutation spectaculaire autour des Machines de l'Île, du Hangar à Bananes et du nouveau CHU. Potentiel de valorisation le plus fort de Nantes pour les investisseurs prêts à accompagner la transformation urbaine.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Graslin / Talensac',
+        pricePerNight: '120-170 €',
+        occupancy: 75,
+        description:
+          "Quartier bourgeois haussmannien (parquets point de Hongrie, cheminées marbre) entre 5 000 et 6 500 €/m². Place Graslin, théâtre, marché Talensac — emplacement premium pour clientèle exigeante.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Hauts-Pavés / Saint-Félix',
+        pricePerNight: '85-120 €',
+        occupancy: 70,
+        description:
+          "Quartier résidentiel calme et bien desservi (~4 500 €/m²), prisé pour sa qualité de vie. Bon compromis prix d'achat / locatif, ciblage tourisme familial et long séjour business.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Erdre / Procé',
+        pricePerNight: '90-130 €',
+        occupancy: 67,
+        description:
+          "Quartiers verts au bord de l'Erdre et autour du parc de Procé. Cible voyageurs cherchant calme et nature, à 15 min du centre. Demande plus saisonnière, idéale pour familles l'été.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Doulon-Bottière',
+        pricePerNight: '70-95 €',
+        occupancy: 62,
+        description:
+          "Quartier en mutation à l'est, prix d'acquisition les plus bas de Nantes (loyers médians ~16 €/m² vs 22 € centre). ROI brut le plus élevé de la ville mais demande LCD plus fragile (clientèle business essentiellement).",
+        roiBrut: '7 à 9 %',
+      },
+    ],
+    regulation:
+      "Nantes est l'une des villes françaises où la régulation LCD est la **plus stricte**. Cumul du statut de **zone tendue** (décret 10 mai 2013) et de l'**autorisation de changement d'usage de plein droit** (commune > 200 000 habitants).\n\n**Enregistrement obligatoire.** Déclaration en mairie via cerfa n°14004, avec délivrance d'un **numéro à 13 chiffres** à mentionner sur **toutes les annonces** (Airbnb, Booking, Abritel) et contrats. Plateforme dédiée : taxedesejour.nantesmetropole.fr.\n\n**Limite 120 nuitées/an pour les résidences principales** (réductible à 90 jours/an par délibération municipale en zone tendue depuis la **loi Le Meur 2024**). Airbnb bloque automatiquement le calendrier au-delà.\n\n**Changement d'usage obligatoire pour les résidences secondaires.** Pour un investissement locatif dédié (non résidence principale), Nantes impose une autorisation de changement d'usage **délivrée par la mairie**. Le régime varie selon le statut du propriétaire :\n\n**⚠️ Personne physique vs personne morale.** **Personne physique** : changement d'usage **sans compensation**, durée 4 ans renouvelable 2 ans (8 ans max), caractère personnel et incessible. **Personne morale (SCI, SARL)** : **règle de compensation obligatoire** — création d'un logement équivalent à celui transformé en meublé de tourisme. Règle dissuasive pour les investisseurs structurés.\n\n**Loi Le Meur 2024.** DPE classe **A à E** obligatoire (DPE G **interdit depuis le 1er janvier 2025**), abattement micro-BIC réduit à **50 % pour les meublés classés** et **30 % pour les non classés** (plafond abaissé à **15 000 €**). Les règlements de copropriété peuvent désormais interdire la LCD à la **double majorité**.\n\n**Sanctions.** Amende jusqu'à **50 000 € par logement** en cas de défaut d'autorisation de changement d'usage, et **10 000 €** pour défaut d'enregistrement.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 95,
+      neighborhood: 'Centre-ville (Bouffay)',
+      revenuBrut: 24600,
+      commissionRate: 0.20,
+      menageCount: 95,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Avec le changement d'usage obligatoire, peut-on encore investir en Airbnb à Nantes ?",
+        a: "Oui, mais avec une stratégie précise. La règle clé : **investissez en personne physique, pas en SCI**. Une personne physique obtient l'autorisation **sans compensation** (durée 4 ans renouvelable une fois 2 ans), tandis qu'une SCI ou SARL doit créer un logement équivalent (compensation). Pour un investisseur particulier, la procédure mairie reste accessible, surtout en dehors de l'hyper-centre où les autorisations sont moins demandées. Les conciergeries comme **Conciergerie Lulu** (carte d'agent immobilier) ou **Cocoonr** (15 ans d'expérience locale) peuvent vous aider à monter le dossier de A à Z.",
+      },
+      {
+        q: "Combien peut-on gagner avec un Airbnb pendant Le Voyage à Nantes ?",
+        a: "Pendant les 9 semaines du Voyage à Nantes (6 juillet au 8 septembre), l'occupation grimpe à **85-90 %** et les tarifs augmentent de **+30 à +50 %** par rapport à la moyenne annuelle. Un T2 centre-ville qui se loue 95 €/nuit hors saison atteint 130-150 €/nuit avec une réservation quasi continue. Sur la durée complète (~63 nuits), un propriétaire peut générer **7 000 à 9 000 € bruts** pour un bien bien placé près du parcours (Bouffay, Île de Nantes, Graslin). À Nantes, contrairement à Avignon, l'effet « événement » est plus diffus mais plus long — c'est un atout pour la stabilité des revenus.",
+      },
+      {
+        q: "Nantes est-elle intéressante pour la clientèle business et la French Tech ?",
+        a: "Oui, c'est même un **atout structurel**. Nantes a le 3e plus gros écosystème French Tech de France après Paris et Lyon, et la Cité des Congrès attire 700+ événements/an (200 000 congressistes). La demande business (cadres en mission, conférences, séminaires) est très forte du lundi au jeudi avec des séjours de 2-4 nuits, et lisse la saisonnalité. Les quartiers Centre-ville, Île de Nantes (proximité CHU + Machines) et Graslin captent cette clientèle qui préfère un Airbnb à l'hôtel pour les longs séjours grâce aux cuisines équipées. Le **TGV Paris en 2h** permet aussi d'accueillir des cadres parisiens en télétravail Nantes-Paris sur 2-3 jours.",
+      },
+    ],
+    updatedAt: '2026-04-30',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

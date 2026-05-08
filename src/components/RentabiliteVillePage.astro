@@ -17,7 +17,6 @@
  */
 import ContratLandingStyles from './ContratLandingStyles.astro';
 import NewsletterBlock from './NewsletterBlock.astro';
-import AuthorSchema from './AuthorSchema.astro';
 import type { CityRentabilite } from '../data/cities-rentabilite';
 import { getConciergerieLinkForVille } from '../utils/getConciergeriePathForVille';
 
@@ -179,7 +178,6 @@ const ldFaq = {
 )}
 
 <ContratLandingStyles />
-<AuthorSchema />
 
 <div class="landing-hero">
   <div class="landing-tag">Rentabilité Airbnb à {city.name}</div>

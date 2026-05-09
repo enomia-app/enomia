@@ -144,7 +144,7 @@ export const citiesRentabilite: CityRentabilite[] = [
     t2: { caAnnualMin: 18000, caAnnualMax: 35000, occupancyMin: 60, occupancyMax: 78, nightlyMin: 90, nightlyMax: 180, rendementNetMin: 6, rendementNetMax: 12 },
     reliability: 'high',
     publishAt: '2026-05-08',
-    status: 'brouillon',
+    status: 'en-ligne',
     neighbors: ['antibes', 'cannes', 'menton'],
     context: 'Forte saisonnalité (juin-août = 45% du CA). Pricing dynamique indispensable. Quartiers premium : Vieux Nice, Promenade des Anglais, Carré d\'Or.',
   },

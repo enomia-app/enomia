@@ -1,12 +1,12 @@
 {
   "redirects": [
-    { "source": "/conciergerie-bordeaux", "destination": "/conciergerie-airbnb/nouvelle-aquitaine/bordeaux", "permanent": true },
-    { "source": "/conciergerie-lyon", "destination": "/conciergerie-airbnb/auvergne-rhone-alpes/lyon", "permanent": true },
-    { "source": "/conciergerie-marseille", "destination": "/conciergerie-airbnb/provence-alpes-cote-dazur/marseille", "permanent": true },
-    { "source": "/conciergerie-nice", "destination": "/conciergerie-airbnb/provence-alpes-cote-dazur/nice", "permanent": true },
-    { "source": "/conciergerie-strasbourg", "destination": "/conciergerie-airbnb/alsace/strasbourg", "permanent": true },
-    { "source": "/conciergerie-toulouse", "destination": "/conciergerie-airbnb/occitanie/toulouse", "permanent": true },
-    { "source": "/conciergerie-lille", "destination": "/conciergerie-airbnb/hauts-de-france/lille", "permanent": true }
+    { "source": "/conciergerie-bordeaux", "destination": "/conciergerie-airbnb/nouvelle-aquitaine/bordeaux", "statusCode": 301 },
+    { "source": "/conciergerie-lyon", "destination": "/conciergerie-airbnb/auvergne-rhone-alpes/lyon", "statusCode": 301 },
+    { "source": "/conciergerie-marseille", "destination": "/conciergerie-airbnb/provence-alpes-cote-dazur/marseille", "statusCode": 301 },
+    { "source": "/conciergerie-nice", "destination": "/conciergerie-airbnb/provence-alpes-cote-dazur/nice", "statusCode": 301 },
+    { "source": "/conciergerie-strasbourg", "destination": "/conciergerie-airbnb/alsace/strasbourg", "statusCode": 301 },
+    { "source": "/conciergerie-toulouse", "destination": "/conciergerie-airbnb/occitanie/toulouse", "statusCode": 301 },
+    { "source": "/conciergerie-lille", "destination": "/conciergerie-airbnb/hauts-de-france/lille", "statusCode": 301 }
   ],
   "rewrites": [
     { "source": "/api/keystatic/:path*", "destination": "/_render" },

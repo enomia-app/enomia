@@ -2,6 +2,7 @@
 export const prerender = true;
 import ToolLayout from '../../../layouts/ToolLayout.astro';
 import { cities, getCityBySlug, getRegionBySlug, type City } from '../../../data/cities';
+import { getRentabiliteLinkForVille } from '../../../utils/getRentabilitePathForVille';
 
 export async function getStaticPaths() {
   return cities.map((c) => ({
@@ -16,6 +17,9 @@ if (!city) throw new Error(`City not found: ${ville}`);
 const c: City = city;
 const regionData = getRegionBySlug(c.regionSlug);
 const canonical = `https://www.enomia.app/conciergerie-airbnb/${c.regionSlug}/${c.slug}`;
+
+// Cross-link vers la page rentabilité si elle existe et est en ligne
+const rentabiliteLink = getRentabiliteLinkForVille(c.slug, c.name);
 
 // Lightweight Markdown renderer: splits on `\n\n` into paragraphs and turns `**x**` into <strong>x</strong>.
 // Used for introCustom / marketIntro / regulation so we can aerate long blocks with a few bold keywords.
@@ -529,6 +533,13 @@ const faqLd = {
 
       <h2>Pour aller plus loin</h2>
       <div class="related">
+        {rentabiliteLink && (
+          <a href={rentabiliteLink.href}>
+            <div class="rk">Avant de déléguer</div>
+            <div class="rt">Rentabilité Airbnb à {c.displayName}</div>
+            <div class="rd">Chiffres réels par typologie, comparatif autogestion vs conciergerie classique sur votre cas</div>
+          </a>
+        )}
         <a href="/conciergerie-airbnb">
           <div class="rk">Guide pillar</div>
           <div class="rt">Conciergerie Airbnb : le guide ultime</div>
@@ -541,7 +552,7 @@ const faqLd = {
         </a>
         {cities
           .filter((other) => other.slug !== c.slug && other.regionSlug === c.regionSlug)
-          .slice(0, 2)
+          .slice(0, rentabiliteLink ? 1 : 2)
           .map((other) => (
             <a href={`/conciergerie-airbnb/${other.regionSlug}/${other.slug}`}>
               <div class="rk">Même région</div>

@@ -95,7 +95,7 @@ for (const file of readdirSync(BLOG_DIR).filter((f) => f.endsWith('.mdoc'))) {
     if (toolPages.has(slug)) continue;
     if (slug in articles) {
       issues.push({ file, link: `/${link}`, type: 'WRONG_PATH', detail: `manque /blog/`, fix: `/blog/${link}` });
-    } else if (!slug.startsWith('api/') && !slug.startsWith('preview/') && !slug.startsWith('conciergerie-airbnb/')) {
+    } else if (!slug.startsWith('api/') && !slug.startsWith('preview/') && !slug.startsWith('conciergerie-airbnb/') && !slug.startsWith('rentabilite-airbnb/')) {
       issues.push({ file, link: `/${link}`, type: '404', detail: `cible inconnue` });
     }
   }

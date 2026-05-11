@@ -158,7 +158,7 @@ export const citiesRentabilite: CityRentabilite[] = [
     t2: { caAnnualMin: 12000, caAnnualMax: 21000, occupancyMin: 65, occupancyMax: 78, nightlyMin: 65, nightlyMax: 105, rendementNetMin: 9, rendementNetMax: 15 },
     reliability: 'medium',
     publishAt: '2026-05-10',
-    status: 'brouillon',
+    status: 'en-ligne',
     neighbors: ['rennes', 'la-rochelle', 'angers'],
     context: 'Demande mixte tourisme + affaires + étudiants. Quartiers premium : Bouffay, Graslin, Île de Nantes. Saisonnalité modérée, occupation plus stable que les villes balnéaires.',
   },

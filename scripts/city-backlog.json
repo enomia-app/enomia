@@ -9,7 +9,8 @@
     "oldSlug": "/conciergerie-airbnb-paris",
     "kw": "conciergerie airbnb paris",
     "vol": 3570,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 16
   },
   {
     "num": 4,
@@ -21,7 +22,8 @@
     "oldSlug": "/conciergerie-airbnb-les-sables-d-olonne",
     "kw": "conciergerie aux sables d olonne",
     "vol": 2200,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 22
   },
   {
     "num": 9,
@@ -33,7 +35,8 @@
     "oldSlug": "/conciergerie-airbnb-agde",
     "kw": "conciergerie agde (H1) + conciergerie airbnb agde (H2)",
     "vol": 830,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 10
   },
   {
     "num": 10,
@@ -45,7 +48,8 @@
     "oldSlug": "/conciergerie-airbnb-cannes",
     "kw": "conciergerie cannes",
     "vol": 810,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 16
   },
   {
     "num": 11,
@@ -57,7 +61,8 @@
     "oldSlug": "/conciergerie-airbnb-rennes",
     "kw": "conciergerie rennes",
     "vol": 750,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 11
   },
   {
     "num": 12,
@@ -69,7 +74,8 @@
     "oldSlug": "/conciergerie-airbnb-rouen",
     "kw": "conciergerie rouen",
     "vol": 750,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 36
   },
   {
     "num": 14,
@@ -81,7 +87,8 @@
     "oldSlug": "/conciergerie-airbnb-angers",
     "kw": "conciergerie angers",
     "vol": 720,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 29
   },
   {
     "num": 15,
@@ -93,7 +100,8 @@
     "oldSlug": "/conciergerie-airbnb-marrakech",
     "kw": "conciergerie marrakech",
     "vol": 700,
-    "status": "En attente review"
+    "status": "En attente review",
+    "kd": 6
   },
   {
     "num": 16,
@@ -105,7 +113,8 @@
     "oldSlug": "/conciergerie-airbnb-montpellier",
     "kw": "conciergerie montpellier",
     "vol": 700,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 10
   },
   {
     "num": 17,
@@ -117,7 +126,8 @@
     "oldSlug": "/conciergerie-airbnb-la-rochelle",
     "kw": "conciergerie la rochelle",
     "vol": 700,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 3
   },
   {
     "num": 18,
@@ -129,7 +139,8 @@
     "oldSlug": "/conciergerie-airbnb-cap-d-agde",
     "kw": "conciergerie cap d agde (H1) + conciergerie airbnb cap d'agde (H2)",
     "vol": 680,
-    "status": "En attente review"
+    "status": "En attente review",
+    "kd": 11
   },
   {
     "num": 19,
@@ -141,7 +152,8 @@
     "oldSlug": "/conciergerie-airbnb-arcachon",
     "kw": "conciergerie arcachon",
     "vol": 660,
-    "status": "En attente review"
+    "status": "En attente review",
+    "kd": 0
   },
   {
     "num": 20,
@@ -153,7 +165,8 @@
     "oldSlug": "/conciergerie-airbnb-annecy",
     "kw": "conciergerie annecy",
     "vol": 660,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 22
   },
   {
     "num": 21,
@@ -165,7 +178,8 @@
     "oldSlug": "/conciergerie-airbnb-avignon",
     "kw": "avignon conciergerie",
     "vol": 640,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 0
   },
   {
     "num": 22,
@@ -177,7 +191,8 @@
     "oldSlug": "/conciergerie-airbnb-nantes",
     "kw": "conciergerie nantes",
     "vol": 620,
-    "status": "Publié"
+    "status": "Publié",
+    "kd": 7
   },
   {
     "num": 23,
@@ -189,7 +204,8 @@
     "oldSlug": "/conciergerie-airbnb-aix-en-provence",
     "kw": "conciergerie aix en provence",
     "vol": 570,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 7
   },
   {
     "num": 24,
@@ -201,7 +217,8 @@
     "oldSlug": "/conciergerie-airbnb-hyeres",
     "kw": "conciergerie hyeres",
     "vol": 540,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 25,
@@ -213,7 +230,8 @@
     "oldSlug": "/conciergerie-airbnb-reims",
     "kw": "conciergerie reims",
     "vol": 510,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 26,
@@ -225,7 +243,8 @@
     "oldSlug": "/conciergerie-airbnb-caen",
     "kw": "conciergerie caen",
     "vol": 460,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 19
   },
   {
     "num": 27,
@@ -237,7 +256,8 @@
     "oldSlug": "/conciergerie-airbnb-antibes",
     "kw": "conciergerie antibes",
     "vol": 390,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 12
   },
   {
     "num": 28,
@@ -249,7 +269,8 @@
     "oldSlug": "/conciergerie-airbnb-toulon",
     "kw": "conciergerie toulon",
     "vol": 390,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 29,
@@ -261,7 +282,8 @@
     "oldSlug": "/conciergerie-airbnb-metz",
     "kw": "conciergerie metz",
     "vol": 380,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 15
   },
   {
     "num": 30,
@@ -273,7 +295,8 @@
     "oldSlug": "/conciergerie-airbnb-chamonix",
     "kw": "conciergerie chamonix",
     "vol": 380,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 31,
@@ -285,7 +308,8 @@
     "oldSlug": "/conciergerie-airbnb-tours",
     "kw": "conciergerie tours",
     "vol": 350,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 9
   },
   {
     "num": 32,
@@ -297,7 +321,8 @@
     "oldSlug": "/conciergerie-airbnb-nimes",
     "kw": "conciergerie nimes",
     "vol": 350,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 33,
@@ -309,7 +334,8 @@
     "oldSlug": "/conciergerie-airbnb-sete",
     "kw": "conciergerie sete",
     "vol": 330,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 34,
@@ -321,7 +347,8 @@
     "oldSlug": "/conciergerie-airbnb-perpignan",
     "kw": "conciergerie perpignan",
     "vol": 320,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 35,
@@ -333,7 +360,8 @@
     "oldSlug": "/conciergerie-airbnb-deauville",
     "kw": "conciergerie deauville",
     "vol": 320,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 36,
@@ -345,7 +373,8 @@
     "oldSlug": "/conciergerie-airbnb-frejus",
     "kw": "conciergerie frejus",
     "vol": 310,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 37,
@@ -357,7 +386,8 @@
     "oldSlug": "/conciergerie-airbnb-porto-vecchio",
     "kw": "conciergerie porto vecchio",
     "vol": 310,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 38,
@@ -369,7 +399,8 @@
     "oldSlug": "/conciergerie-airbnb-grenoble",
     "kw": "conciergerie grenoble",
     "vol": 300,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 14
   },
   {
     "num": 39,
@@ -381,7 +412,8 @@
     "oldSlug": "/conciergerie-airbnb-biarritz",
     "kw": "conciergerie biarritz",
     "vol": 280,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 40,
@@ -393,7 +425,8 @@
     "oldSlug": "/conciergerie-airbnb-boulogne-sur-mer",
     "kw": "conciergerie boulogne sur mer",
     "vol": 260,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 41,
@@ -405,7 +438,8 @@
     "oldSlug": "/conciergerie-airbnb-vannes",
     "kw": "conciergerie vannes",
     "vol": 260,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 42,
@@ -417,7 +451,8 @@
     "oldSlug": "/conciergerie-airbnb-amiens",
     "kw": "conciergerie amiens",
     "vol": 260,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 3
   },
   {
     "num": 43,
@@ -429,7 +464,8 @@
     "oldSlug": "/conciergerie-airbnb-dijon",
     "kw": "conciergerie dijon",
     "vol": 260,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 44,
@@ -441,7 +477,8 @@
     "oldSlug": "/conciergerie-airbnb-la-baule",
     "kw": "conciergerie la baule",
     "vol": 260,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 45,
@@ -453,7 +490,8 @@
     "oldSlug": "/conciergerie-airbnb-brest",
     "kw": "conciergerie brest",
     "vol": 260,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 46,
@@ -465,7 +503,8 @@
     "oldSlug": "/conciergerie-airbnb-le-grau-du-roi",
     "kw": "conciergerie grau du roi",
     "vol": 250,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 47,
@@ -477,7 +516,8 @@
     "oldSlug": "/conciergerie-airbnb-nancy",
     "kw": "conciergerie nancy",
     "vol": 240,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 48,
@@ -489,7 +529,8 @@
     "oldSlug": "/conciergerie-airbnb-vichy",
     "kw": "conciergerie vichy",
     "vol": 240,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 49,
@@ -501,7 +542,8 @@
     "oldSlug": "/conciergerie-airbnb-calais",
     "kw": "conciergerie calais",
     "vol": 230,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 50,
@@ -513,7 +555,8 @@
     "oldSlug": "/conciergerie-airbnb-dinard",
     "kw": "conciergerie dinard",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 51,
@@ -525,7 +568,8 @@
     "oldSlug": "/conciergerie-airbnb-ajaccio",
     "kw": "conciergerie ajaccio",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 52,
@@ -537,7 +581,8 @@
     "oldSlug": "/conciergerie-airbnb-clermont-ferrand",
     "kw": "conciergerie clermont ferrand",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 53,
@@ -549,7 +594,8 @@
     "oldSlug": "/conciergerie-airbnb-lorient",
     "kw": "conciergerie lorient",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 54,
@@ -561,7 +607,8 @@
     "oldSlug": "/conciergerie-airbnb-carcassonne",
     "kw": "conciergerie carcassonne",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 55,
@@ -573,7 +620,8 @@
     "oldSlug": "/conciergerie-airbnb-le-touquet",
     "kw": "conciergerie le touquet",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 56,
@@ -585,7 +633,8 @@
     "oldSlug": "/conciergerie-airbnb-cabourg",
     "kw": "conciergerie cabourg",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 57,
@@ -597,7 +646,8 @@
     "oldSlug": "/conciergerie-airbnb-honfleur",
     "kw": "conciergerie honfleur",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 58,
@@ -609,7 +659,8 @@
     "oldSlug": "/conciergerie-airbnb-limoges",
     "kw": "conciergerie limoges",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 6
   },
   {
     "num": 59,
@@ -621,7 +672,8 @@
     "oldSlug": "/conciergerie-airbnb-menton",
     "kw": "conciergerie menton",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 60,
@@ -633,7 +685,8 @@
     "oldSlug": "/conciergerie-airbnb-beziers",
     "kw": "conciergerie beziers",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 61,
@@ -645,7 +698,8 @@
     "oldSlug": "/conciergerie-airbnb-le-havre",
     "kw": "conciergerie le havre",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 62,
@@ -657,7 +711,8 @@
     "oldSlug": "/conciergerie-airbnb-quiberon",
     "kw": "conciergerie quiberon",
     "vol": 210,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 63,
@@ -681,7 +736,8 @@
     "oldSlug": "/conciergerie-airbnb-tignes",
     "kw": "conciergerie tignes",
     "vol": 180,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 65,
@@ -693,7 +749,8 @@
     "oldSlug": "/conciergerie-airbnb-pau",
     "kw": "conciergerie pau",
     "vol": 170,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 66,
@@ -705,7 +762,8 @@
     "oldSlug": "/conciergerie-airbnb-colmar",
     "kw": "conciergerie colmar",
     "vol": 170,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 67,
@@ -717,7 +775,8 @@
     "oldSlug": "/conciergerie-airbnb-le-mans",
     "kw": "conciergerie le mans",
     "vol": 170,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 68,
@@ -729,7 +788,8 @@
     "oldSlug": "/conciergerie-airbnb-poitiers",
     "kw": "conciergerie poitiers",
     "vol": 170,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 69,
@@ -741,7 +801,8 @@
     "oldSlug": "/conciergerie-airbnb-chambery",
     "kw": "conciergerie chambery",
     "vol": 170,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 70,
@@ -753,7 +814,8 @@
     "oldSlug": "/conciergerie-airbnb-bayeux",
     "kw": "conciergerie bayeux",
     "vol": 170,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 71,
@@ -765,7 +827,8 @@
     "oldSlug": "/conciergerie-airbnb-avoriaz",
     "kw": "conciergerie avoriaz",
     "vol": 160,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 72,
@@ -777,7 +840,8 @@
     "oldSlug": "/conciergerie-airbnb-les-arcs",
     "kw": "conciergerie les arcs 1800",
     "vol": 160,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 73,
@@ -789,7 +853,8 @@
     "oldSlug": "/conciergerie-airbnb-trouville",
     "kw": "conciergerie trouville",
     "vol": 160,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 74,
@@ -801,7 +866,8 @@
     "oldSlug": "/conciergerie-airbnb-perros-guirec",
     "kw": "conciergerie perros guirec",
     "vol": 140,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 75,
@@ -813,7 +879,8 @@
     "oldSlug": "/conciergerie-airbnb-val-thorens",
     "kw": "conciergerie val thorens",
     "vol": 140,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 76,
@@ -825,7 +892,8 @@
     "oldSlug": "/conciergerie-airbnb-dunkerque",
     "kw": "conciergerie dunkerque",
     "vol": 140,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 77,
@@ -837,7 +905,8 @@
     "oldSlug": "/conciergerie-airbnb-carnac",
     "kw": "conciergerie carnac",
     "vol": 140,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 78,
@@ -849,7 +918,8 @@
     "oldSlug": "/conciergerie-airbnb-noirmoutier",
     "kw": "conciergerie noirmoutier",
     "vol": 140,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 79,
@@ -861,7 +931,8 @@
     "oldSlug": "/conciergerie-airbnb-narbonne",
     "kw": "conciergerie narbonne",
     "vol": 140,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 80,
@@ -873,7 +944,8 @@
     "oldSlug": "/conciergerie-airbnb-concarneau",
     "kw": "conciergerie concarneau",
     "vol": 140,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 81,
@@ -885,7 +957,8 @@
     "oldSlug": "/conciergerie-airbnb-courchevel",
     "kw": "conciergerie courchevel",
     "vol": 140,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 82,
@@ -897,7 +970,8 @@
     "oldSlug": "/conciergerie-airbnb-valenciennes",
     "kw": "conciergerie valenciennes",
     "vol": 120,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 7
   },
   {
     "num": 83,
@@ -909,7 +983,8 @@
     "oldSlug": "/conciergerie-airbnb-cherbourg",
     "kw": "conciergerie cherbourg",
     "vol": 110,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 84,
@@ -921,7 +996,8 @@
     "oldSlug": "/conciergerie-airbnb-bastia",
     "kw": "conciergerie bastia",
     "vol": 110,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 85,
@@ -933,7 +1009,8 @@
     "oldSlug": "/conciergerie-airbnb-versailles",
     "kw": "conciergerie versailles",
     "vol": 110,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 86,
@@ -957,7 +1034,8 @@
     "oldSlug": "/conciergerie-airbnb-bayonne",
     "kw": "conciergerie bayonne",
     "vol": 90,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 88,
@@ -981,7 +1059,8 @@
     "oldSlug": "/conciergerie-airbnb-mulhouse",
     "kw": "conciergerie mulhouse",
     "vol": 90,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 90,
@@ -1005,7 +1084,8 @@
     "oldSlug": "/conciergerie-airbnb-besancon",
     "kw": "conciergerie besancon",
     "vol": 90,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 92,
@@ -1017,7 +1097,8 @@
     "oldSlug": "/conciergerie-airbnb-la-plagne",
     "kw": "conciergerie la plagne",
     "vol": 90,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 93,
@@ -1029,7 +1110,8 @@
     "oldSlug": "/conciergerie-airbnb-fontainebleau",
     "kw": "conciergerie fontainebleau",
     "vol": 90,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 94,
@@ -1041,7 +1123,8 @@
     "oldSlug": "/conciergerie-airbnb-cassis",
     "kw": "conciergerie cassis",
     "vol": 70,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 95,
@@ -1065,7 +1148,8 @@
     "oldSlug": "/conciergerie-airbnb-morzine",
     "kw": "conciergerie morzine",
     "vol": 70,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 97,
@@ -1077,7 +1161,8 @@
     "oldSlug": "/conciergerie-airbnb-thonon-les-bains",
     "kw": "conciergerie thonon",
     "vol": 70,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   },
   {
     "num": 98,
@@ -1089,6 +1174,7 @@
     "oldSlug": "/conciergerie-airbnb-val-d-isere",
     "kw": "conciergerie val d'isère",
     "vol": 50,
-    "status": "À faire"
+    "status": "À faire",
+    "kd": 0
   }
 ]

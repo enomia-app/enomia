@@ -1,0 +1,93 @@
+[
+  {
+    "num": 99,
+    "ville": "Bordeaux",
+    "region": "Nouvelle Aquitaine",
+    "regionSlug": "nouvelle-aquitaine",
+    "citySlug": "bordeaux",
+    "newUrl": "/conciergerie-airbnb/nouvelle-aquitaine/bordeaux",
+    "kw": "conciergerie bordeaux",
+    "vol": 720,
+    "kd": 9,
+    "status": "Publié",
+    "addedFrom": "sitemap-extra"
+  },
+  {
+    "num": 100,
+    "ville": "Lyon",
+    "region": "Auvergne Rhone Alpes",
+    "regionSlug": "auvergne-rhone-alpes",
+    "citySlug": "lyon",
+    "newUrl": "/conciergerie-airbnb/auvergne-rhone-alpes/lyon",
+    "kw": "conciergerie lyon",
+    "vol": 880,
+    "kd": 25,
+    "status": "Publié",
+    "addedFrom": "sitemap-extra"
+  },
+  {
+    "num": 101,
+    "ville": "Nice",
+    "region": "Provence Alpes Cote Dazur",
+    "regionSlug": "provence-alpes-cote-dazur",
+    "citySlug": "nice",
+    "newUrl": "/conciergerie-airbnb/provence-alpes-cote-dazur/nice",
+    "kw": "conciergerie nice",
+    "vol": 1000,
+    "kd": 22,
+    "status": "Publié",
+    "addedFrom": "sitemap-extra"
+  },
+  {
+    "num": 102,
+    "ville": "Marseille",
+    "region": "Provence Alpes Cote Dazur",
+    "regionSlug": "provence-alpes-cote-dazur",
+    "citySlug": "marseille",
+    "newUrl": "/conciergerie-airbnb/provence-alpes-cote-dazur/marseille",
+    "kw": "conciergerie marseille",
+    "vol": 720,
+    "kd": 18,
+    "status": "Publié",
+    "addedFrom": "sitemap-extra"
+  },
+  {
+    "num": 103,
+    "ville": "Toulouse",
+    "region": "Occitanie",
+    "regionSlug": "occitanie",
+    "citySlug": "toulouse",
+    "newUrl": "/conciergerie-airbnb/occitanie/toulouse",
+    "kw": "conciergerie toulouse",
+    "vol": 1000,
+    "kd": 18,
+    "status": "Publié",
+    "addedFrom": "sitemap-extra"
+  },
+  {
+    "num": 104,
+    "ville": "Strasbourg",
+    "region": "Alsace",
+    "regionSlug": "alsace",
+    "citySlug": "strasbourg",
+    "newUrl": "/conciergerie-airbnb/alsace/strasbourg",
+    "kw": "conciergerie strasbourg",
+    "vol": 480,
+    "kd": 12,
+    "status": "Publié",
+    "addedFrom": "sitemap-extra"
+  },
+  {
+    "num": 105,
+    "ville": "Lille",
+    "region": "Hauts De France",
+    "regionSlug": "hauts-de-france",
+    "citySlug": "lille",
+    "newUrl": "/conciergerie-airbnb/hauts-de-france/lille",
+    "kw": "conciergerie lille",
+    "vol": 480,
+    "kd": 14,
+    "status": "Publié",
+    "addedFrom": "sitemap-extra"
+  }
+]

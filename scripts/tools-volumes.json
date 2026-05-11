@@ -1,0 +1,158 @@
+{
+  "https://www.enomia.app/": {
+    "kw": "enomia",
+    "vol": 20,
+    "kd": 0,
+    "cpc": 0
+  },
+  "https://www.enomia.app/blog": {
+    "kw": "blog",
+    "vol": 8100,
+    "kd": 69,
+    "cpc": 0
+  },
+  "https://www.enomia.app/simulateur-rentabilite-airbnb": {
+    "kw": "simulateur rentabilite airbnb",
+    "vol": 0,
+    "kd": 0,
+    "cpc": 0
+  },
+  "https://www.enomia.app/estimation-airbnb": {
+    "kw": "estimation airbnb",
+    "vol": 1000,
+    "kd": 33,
+    "cpc": 3.08
+  },
+  "https://www.enomia.app/rentabilite-airbnb": {
+    "kw": "rentabilite airbnb",
+    "vol": 40,
+    "kd": 0,
+    "cpc": 1.79
+  },
+  "https://www.enomia.app/tarif-conciergerie-airbnb": {
+    "kw": "tarif conciergerie airbnb",
+    "vol": 480,
+    "kd": 5,
+    "cpc": 1.13
+  },
+  "https://www.enomia.app/facture-location-saisonniere": {
+    "kw": "facture location saisonniere",
+    "vol": 170,
+    "kd": 19,
+    "cpc": 1.36
+  },
+  "https://www.enomia.app/facture-airbnb": {
+    "kw": "facture airbnb",
+    "vol": 1600,
+    "kd": 0,
+    "cpc": 4.68
+  },
+  "https://www.enomia.app/facture-booking": {
+    "kw": "facture booking",
+    "vol": 1900,
+    "kd": 34,
+    "cpc": 1.23
+  },
+  "https://www.enomia.app/contrat-location-saisonniere": {
+    "kw": "contrat location saisonniere",
+    "vol": 480,
+    "kd": 22,
+    "cpc": 1.17
+  },
+  "https://www.enomia.app/contrat-airbnb": {
+    "kw": "contrat airbnb",
+    "vol": 70,
+    "kd": 19,
+    "cpc": 2.2
+  },
+  "https://www.enomia.app/contrat-location-gite": {
+    "kw": "contrat location gite",
+    "vol": 50,
+    "kd": 19,
+    "cpc": 0.36
+  },
+  "https://www.enomia.app/contrat-location-mobil-home": {
+    "kw": "contrat location mobil home",
+    "vol": 40,
+    "kd": 0,
+    "cpc": 0
+  },
+  "https://www.enomia.app/conciergerie-airbnb": {
+    "kw": "conciergerie airbnb",
+    "vol": 5400,
+    "kd": 44,
+    "cpc": 1.85
+  },
+  "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes": {
+    "kw": "conciergerie airbnb auvergne rhone alpes",
+    "vol": 0,
+    "kd": 0,
+    "cpc": 0,
+    "notFound": true
+  },
+  "https://www.enomia.app/conciergerie-airbnb/alsace": {
+    "kw": "conciergerie airbnb alsace",
+    "vol": 20,
+    "kd": 0,
+    "cpc": 1.62
+  },
+  "https://www.enomia.app/conciergerie-airbnb/hauts-de-france": {
+    "kw": "conciergerie airbnb hauts de france",
+    "vol": 0,
+    "kd": 0,
+    "cpc": 0,
+    "notFound": true
+  },
+  "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine": {
+    "kw": "conciergerie airbnb nouvelle aquitaine",
+    "vol": 0,
+    "kd": 0,
+    "cpc": 0,
+    "notFound": true
+  },
+  "https://www.enomia.app/conciergerie-airbnb/occitanie": {
+    "kw": "conciergerie airbnb occitanie",
+    "vol": 0,
+    "kd": 0,
+    "cpc": 0,
+    "notFound": true
+  },
+  "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur": {
+    "kw": "conciergerie airbnb provence alpes cote dazur",
+    "vol": 0,
+    "kd": 0,
+    "cpc": 0,
+    "notFound": true
+  },
+  "https://www.enomia.app/conciergerie-airbnb/ile-de-france": {
+    "kw": "conciergerie airbnb ile de france",
+    "vol": 20,
+    "kd": 0,
+    "cpc": 2.44
+  },
+  "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire": {
+    "kw": "conciergerie airbnb pays de la loire",
+    "vol": 0,
+    "kd": 0,
+    "cpc": 0,
+    "notFound": true
+  },
+  "https://www.enomia.app/conciergerie-airbnb/bretagne": {
+    "kw": "conciergerie airbnb bretagne",
+    "vol": 20,
+    "kd": 0,
+    "cpc": 1.19
+  },
+  "https://www.enomia.app/conciergerie-airbnb/normandie": {
+    "kw": "conciergerie airbnb normandie",
+    "vol": 40,
+    "kd": 0,
+    "cpc": 1.99
+  },
+  "https://www.enomia.app/conciergerie-airbnb/maroc": {
+    "kw": "conciergerie airbnb maroc",
+    "vol": 20,
+    "kd": 0,
+    "cpc": 0.78
+  }
+}

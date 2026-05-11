@@ -12,6 +12,9 @@
     "audit:blog-links": "node scripts/audit-blog-links.mjs",
     "audit:blog-links:fix": "node scripts/audit-blog-links.mjs --fix",
     "audit:external": "node scripts/audit-blog-links.mjs --external",
+    "snapshot": "node scripts/generate-snapshots.mjs && open .claude/acquisition.html",
+    "snapshot:gen": "node scripts/generate-snapshots.mjs",
+    "gsc:refresh": "node scripts/gsc-fetch-index-status.mjs && node scripts/gsc-fetch-analytics.mjs && node scripts/generate-snapshots.mjs && open .claude/acquisition.html",
     "prepare": "husky"
   },
   "dependencies": {
@@ -24,6 +27,7 @@
     "@vercel/analytics": "^2.0.1",
     "@vercel/og": "^0.6.2",
     "astro": "^5.18.1",
+    "googleapis": "^171.4.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },

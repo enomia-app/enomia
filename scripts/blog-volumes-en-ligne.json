@@ -1,0 +1,63 @@
+{
+  "channel-manager-comparatif": {
+    "phrase": "channel manager comparatif",
+    "vol": 70,
+    "kd": 0,
+    "cpc": 220.39,
+    "title": "Channel manager : comparatif complet pour propriétaires LCD en 2026",
+    "pillarKeyword": "channel manager comparatif",
+    "fallback": true
+  },
+  "fiscalite-airbnb": {
+    "phrase": "Fiscalité",
+    "vol": 4400,
+    "kd": 42,
+    "cpc": 1.11,
+    "title": "Fiscalité Airbnb 2026 : ce que vous devez déclarer et ne pas oublier",
+    "pillarKeyword": "Fiscalité",
+    "fallback": false
+  },
+  "lmnp-airbnb": {
+    "phrase": "Fiscalité Airbnb",
+    "vol": 720,
+    "kd": 37,
+    "cpc": 0.59,
+    "title": "LMNP Airbnb : tout comprendre en 10 minutes",
+    "pillarKeyword": "Fiscalité Airbnb",
+    "fallback": false
+  },
+  "loi-le-meur-airbnb": {
+    "phrase": "loi le meur",
+    "vol": 4400,
+    "kd": 34,
+    "cpc": 0.03,
+    "title": ">-",
+    "pillarKeyword": "loi le meur",
+    "fallback": false
+  },
+  "louer-airbnb-rentable": {
+    "phrase": "Rebtabilité airbnb",
+    "error": "ERROR 50 :: NOTHING FOUND",
+    "title": "Louer en Airbnb est-ce rentable ? Mes vrais chiffres sur 9 biens (2026)",
+    "pillarKeyword": "Rebtabilité airbnb",
+    "fallback": false
+  },
+  "pricing-airbnb-tarif-dynamique": {
+    "phrase": "tarification dynamique airbnb",
+    "vol": 110,
+    "kd": 19,
+    "cpc": 6.83,
+    "title": "Tarification dynamique Airbnb : comment j''ai fait +24% de CA en un mois (2026)",
+    "pillarKeyword": "tarification dynamique airbnb",
+    "fallback": false
+  },
+  "taux-occupation-par-ville": {
+    "phrase": "taux occupation airbnb par ville",
+    "vol": 70,
+    "kd": 16,
+    "cpc": 1.39,
+    "title": ">-",
+    "pillarKeyword": "taux occupation airbnb par ville",
+    "fallback": false
+  }
+}

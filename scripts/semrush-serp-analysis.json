@@ -1,0 +1,289 @@
+[
+  {
+    "source": "blog",
+    "slug": "automatiser-airbnb",
+    "phrase": "automatiser airbnb",
+    "vol": 40,
+    "kd": 0,
+    "cpc": 0,
+    "top3": [],
+    "backlinksNeeded": null
+  },
+  {
+    "source": "blog",
+    "slug": "commissions-airbnb",
+    "phrase": "airbnb commission",
+    "vol": 880,
+    "kd": 22,
+    "cpc": 2.22,
+    "top3": [
+      {
+        "domain": "www.airbnb.fr",
+        "url": "https://www.airbnb.fr/help/article/1857",
+        "position": 1,
+        "backlinks": null
+      },
+      {
+        "domain": "www.lodgify.com",
+        "url": "https://www.lodgify.com/blog/fr/combien-vous-coute-reellement-airbnb/",
+        "position": 2,
+        "backlinks": null
+      },
+      {
+        "domain": "toploc.com",
+        "url": "https://toploc.com/blog/hotes/commissions-airbnb",
+        "position": 3,
+        "backlinks": null
+      }
+    ],
+    "backlinksNeeded": null
+  },
+  {
+    "source": "blog",
+    "slug": "difference-location-saisonniere-meuble-tourisme",
+    "phrase": "différence location saisonnière meublé de tourisme",
+    "vol": 0,
+    "kd": 0,
+    "cpc": 0,
+    "top3": [],
+    "backlinksNeeded": null
+  },
+  {
+    "source": "blog",
+    "slug": "fiscalite-airbnb",
+    "phrase": "Fiscalité",
+    "vol": 4400,
+    "kd": 42,
+    "cpc": 1.11,
+    "top3": [
+      {
+        "domain": "www.dalloz.fr",
+        "url": "https://www.dalloz.fr/documentation/DocumentStatic?StaticDoc=DZ%2FOASIS%2Fsharp_%2Fthematic%2FGENERALES%2Ffinance-et-fiscalite.html",
+        "position": 1,
+        "backlinks": null
+      },
+      {
+        "domain": "www.impots.gouv.fr",
+        "url": "https://www.impots.gouv.fr/accueil",
+        "position": 2,
+        "backlinks": null
+      },
+      {
+        "domain": "entreprendre.service-public.gouv.fr",
+        "url": "https://entreprendre.service-public.gouv.fr/vosdroits/N24265",
+        "position": 3,
+        "backlinks": null
+      }
+    ],
+    "backlinksNeeded": null
+  },
+  {
+    "source": "blog",
+    "slug": "lmnp-airbnb",
+    "phrase": "Fiscalité Airbnb",
+    "vol": 720,
+    "kd": 37,
+    "cpc": 0.59,
+    "top3": [
+      {
+        "domain": "www.airbnb.fr",
+        "url": "https://www.airbnb.fr/e/fiscalite",
+        "position": 1,
+        "backlinks": null
+      },
+      {
+        "domain": "www.legalstart.fr",
+        "url": "https://www.legalstart.fr/fiches-pratiques/immobilier-patrimoine/imposition-airbnb/",
+        "position": 2,
+        "backlinks": null
+      },
+      {
+        "domain": "www.vinci-immobilier.com",
+        "url": "https://www.vinci-immobilier.com/investissement-locatif/lmnp/airbnb",
+        "position": 3,
+        "backlinks": null
+      }
+    ],
+    "backlinksNeeded": null
+  },
+  {
+    "source": "blog",
+    "slug": "loi-le-meur-airbnb",
+    "phrase": "loi le meur",
+    "vol": 4400,
+    "kd": 34,
+    "cpc": 0.03,
+    "top3": [
+      {
+        "domain": "www.jedeclaremonmeuble.com",
+        "url": "https://www.jedeclaremonmeuble.com/loi-le-meur-location-saisonniere-fiscalite/",
+        "position": 1,
+        "backlinks": null
+      },
+      {
+        "domain": "www.legifrance.gouv.fr",
+        "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000050612711",
+        "position": 2,
+        "backlinks": null
+      },
+      {
+        "domain": "www.actu-juridique.fr",
+        "url": "https://www.actu-juridique.fr/fiscalite/fiscal-finances/locations-touristiques-ce-que-change-la-loi-le-meur/",
+        "position": 3,
+        "backlinks": null
+      }
+    ],
+    "backlinksNeeded": null
+  },
+  {
+    "source": "blog",
+    "slug": "louer-airbnb-rentable",
+    "phrase": "Rebtabilité airbnb",
+    "error": "ERROR 50 :: NOTHING FOUND"
+  },
+  {
+    "source": "blog",
+    "slug": "numero-enregistrement-airbnb",
+    "phrase": "numéro d'enregistrement airbnb",
+    "vol": 390,
+    "kd": 20,
+    "cpc": 6.8,
+    "top3": [
+      {
+        "domain": "www.jedeclaremonmeuble.com",
+        "url": "https://www.jedeclaremonmeuble.com/airbnb-enregistrement/",
+        "position": 1,
+        "backlinks": null
+      },
+      {
+        "domain": "www.airbnb.fr",
+        "url": "https://www.airbnb.fr/e/enregistrement",
+        "position": 2,
+        "backlinks": null
+      },
+      {
+        "domain": "www.paris.fr",
+        "url": "https://www.paris.fr/pages/meubles-touristiques-3637",
+        "position": 3,
+        "backlinks": null
+      }
+    ],
+    "backlinksNeeded": null
+  },
+  {
+    "source": "blog",
+    "slug": "pricing-airbnb-tarif-dynamique",
+    "phrase": "tarification dynamique airbnb",
+    "vol": 110,
+    "kd": 19,
+    "cpc": 6.83,
+    "top3": [
+      {
+        "domain": "www.airbnb.fr",
+        "url": "https://www.airbnb.fr/help/article/1168",
+        "position": 1,
+        "backlinks": null
+      },
+      {
+        "domain": "www.beyondpricing.com",
+        "url": "https://www.beyondpricing.com/france",
+        "position": 2,
+        "backlinks": null
+      },
+      {
+        "domain": "hoteltechreport.com",
+        "url": "https://hoteltechreport.com/fr/news/airbnb-pricing-tools",
+        "position": 3,
+        "backlinks": null
+      }
+    ],
+    "backlinksNeeded": null
+  },
+  {
+    "source": "blog",
+    "slug": "serrure-connectee-airbnb",
+    "phrase": "serrure connectée",
+    "vol": 12100,
+    "kd": 26,
+    "cpc": 1.11,
+    "top3": [
+      {
+        "domain": "yalehome.fr",
+        "url": "https://yalehome.fr/serrures-connectees/",
+        "position": 1,
+        "backlinks": null
+      },
+      {
+        "domain": "www.leroymerlin.fr",
+        "url": "https://www.leroymerlin.fr/produits/quincaillerie/quincaillerie-de-porte/serrure-de-porte/serrure-connectee-et-serrure-electronique/",
+        "position": 2,
+        "backlinks": null
+      },
+      {
+        "domain": "www.frandroid.com",
+        "url": "https://www.frandroid.com/guide-dachat/guide-dachat-maison-connectee/840576_quelles-sont-les-meilleures-serrures-connectees-en-2021",
+        "position": 3,
+        "backlinks": null
+      }
+    ],
+    "backlinksNeeded": null
+  },
+  {
+    "source": "blog",
+    "slug": "taux-occupation-par-ville",
+    "phrase": "taux occupation airbnb par ville",
+    "vol": 70,
+    "kd": 16,
+    "cpc": 1.39,
+    "top3": [
+      {
+        "domain": "www.lodgify.com",
+        "url": "https://www.lodgify.com/blog/fr/villes-francaises-airbnb/",
+        "position": 1,
+        "backlinks": null
+      },
+      {
+        "domain": "www.jedeclaremonmeuble.com",
+        "url": "https://www.jedeclaremonmeuble.com/taux-occupation-airbnb-par-ville/",
+        "position": 2,
+        "backlinks": null
+      },
+      {
+        "domain": "www.hostnfly.com",
+        "url": "https://www.hostnfly.com/blog/taux-d-occupation-airbnb-par-ville",
+        "position": 3,
+        "backlinks": null
+      }
+    ],
+    "backlinksNeeded": null
+  },
+  {
+    "source": "blog",
+    "slug": "taxe-habitation-airbnb",
+    "phrase": "taxe habitation airbnb",
+    "vol": 90,
+    "kd": 19,
+    "cpc": 1.22,
+    "top3": [
+      {
+        "domain": "www.tgs-france.fr",
+        "url": "https://www.tgs-france.fr/faq/taxe-d-habitation-biens-en-location-saisonniere/",
+        "position": 1,
+        "backlinks": null
+      },
+      {
+        "domain": "community.withairbnb.com",
+        "url": "https://community.withairbnb.com/t5/G%C3%A9rer-votre-activit%C3%A9/Taxation-CFE-et-Taxe-d-habitation/m-p/2023263",
+        "position": 2,
+        "backlinks": null
+      },
+      {
+        "domain": "www.tf1info.fr",
+        "url": "https://www.tf1info.fr/immobilier/louer-son-bien-sur-airbnb-permet-il-d-eviter-la-taxe-d-habitation-2362962.html",
+        "position": 3,
+        "backlinks": null
+      }
+    ],
+    "backlinksNeeded": null
+  }
+]

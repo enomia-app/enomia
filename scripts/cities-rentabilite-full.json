@@ -1,0 +1,1019 @@
+{
+  "paris": {
+    "nom": "Paris",
+    "slug": "paris",
+    "population": 2103778,
+    "code": "75056",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb paris",
+        "vol": 30,
+        "kd": 0
+      },
+      {
+        "template": 1,
+        "phrase": "tarif airbnb paris",
+        "vol": 20,
+        "kd": 0
+      },
+      {
+        "template": 2,
+        "phrase": "tarif conciergerie airbnb paris",
+        "vol": 70,
+        "kd": 13
+      },
+      {
+        "template": 3,
+        "phrase": "combien rapporte airbnb paris",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 4,
+        "phrase": "estimation airbnb paris",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 5,
+        "phrase": "investir airbnb paris",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 6,
+        "phrase": "airbnb paris rentable",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 120,
+    "volEstimated": 120,
+    "isEstimated": false
+  },
+  "marseille": {
+    "nom": "Marseille",
+    "slug": "marseille",
+    "population": 886040,
+    "code": "13055",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb marseille",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 1,
+        "phrase": "tarif airbnb marseille",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 2,
+        "phrase": "tarif conciergerie airbnb marseille",
+        "vol": 20,
+        "kd": 0
+      },
+      {
+        "template": 4,
+        "phrase": "estimation airbnb marseille",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 5,
+        "phrase": "investir airbnb marseille",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 20,
+    "volEstimated": 20,
+    "isEstimated": false
+  },
+  "lyon": {
+    "nom": "Lyon",
+    "slug": "lyon",
+    "population": 519127,
+    "code": "69123",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb lyon",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 2,
+        "phrase": "tarif conciergerie airbnb lyon",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 5,
+        "phrase": "investir airbnb lyon",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "toulouse": {
+    "nom": "Toulouse",
+    "slug": "toulouse",
+    "population": 514819,
+    "code": "31555",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb toulouse",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 2,
+        "phrase": "tarif conciergerie airbnb toulouse",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 3,
+        "phrase": "combien rapporte airbnb toulouse",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 4,
+        "phrase": "estimation airbnb toulouse",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "nice": {
+    "nom": "Nice",
+    "slug": "nice",
+    "population": 357737,
+    "code": "06088",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb nice",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 2,
+        "phrase": "tarif conciergerie airbnb nice",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "nantes": {
+    "nom": "Nantes",
+    "slug": "nantes",
+    "population": 327734,
+    "code": "44109",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb nantes",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "montpellier": {
+    "nom": "Montpellier",
+    "slug": "montpellier",
+    "population": 310240,
+    "code": "34172",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb montpellier",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 5,
+        "phrase": "investir airbnb montpellier",
+        "vol": 10,
+        "kd": 0
+      }
+    ],
+    "volTotal": 10,
+    "volEstimated": 10,
+    "isEstimated": false
+  },
+  "strasbourg": {
+    "nom": "Strasbourg",
+    "slug": "strasbourg",
+    "population": 293771,
+    "code": "67482",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb strasbourg",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 5,
+        "phrase": "investir airbnb strasbourg",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "bordeaux": {
+    "nom": "Bordeaux",
+    "slug": "bordeaux",
+    "population": 267991,
+    "code": "33063",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb bordeaux",
+        "vol": 10,
+        "kd": 0
+      }
+    ],
+    "volTotal": 10,
+    "volEstimated": 10,
+    "isEstimated": false
+  },
+  "lille": {
+    "nom": "Lille",
+    "slug": "lille",
+    "population": 238246,
+    "code": "59350",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb lille",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "rennes": {
+    "nom": "Rennes",
+    "slug": "rennes",
+    "population": 230890,
+    "code": "35238",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb rennes",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "toulon": {
+    "nom": "Toulon",
+    "slug": "toulon",
+    "population": 179116,
+    "code": "83137",
+    "excluded": true
+  },
+  "reims": {
+    "nom": "Reims",
+    "slug": "reims",
+    "population": 177674,
+    "code": "51454",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb reims",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "saint-etienne": {
+    "nom": "Saint-Étienne",
+    "slug": "saint-etienne",
+    "population": 173136,
+    "code": "42218",
+    "excluded": true
+  },
+  "le-havre": {
+    "nom": "Le Havre",
+    "slug": "le-havre",
+    "population": 166687,
+    "code": "76351",
+    "excluded": true
+  },
+  "villeurbanne": {
+    "nom": "Villeurbanne",
+    "slug": "villeurbanne",
+    "population": 163684,
+    "code": "69266",
+    "excluded": true
+  },
+  "dijon": {
+    "nom": "Dijon",
+    "slug": "dijon",
+    "population": 161830,
+    "code": "21231",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb dijon",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "angers": {
+    "nom": "Angers",
+    "slug": "angers",
+    "population": 159022,
+    "code": "49007",
+    "excluded": true
+  },
+  "grenoble": {
+    "nom": "Grenoble",
+    "slug": "grenoble",
+    "population": 156140,
+    "code": "38185",
+    "excluded": true
+  },
+  "saint-denis": {
+    "nom": "Saint-Denis",
+    "slug": "saint-denis",
+    "population": 149077,
+    "code": "93066",
+    "excluded": true
+  },
+  "nimes": {
+    "nom": "Nîmes",
+    "slug": "nimes",
+    "population": 151839,
+    "code": "30189",
+    "excluded": true
+  },
+  "aix-en-provence": {
+    "nom": "Aix-en-Provence",
+    "slug": "aix-en-provence",
+    "population": 149695,
+    "code": "13001",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb aix-en-provence",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "clermont-ferrand": {
+    "nom": "Clermont-Ferrand",
+    "slug": "clermont-ferrand",
+    "population": 146351,
+    "code": "63113",
+    "excluded": true
+  },
+  "le-mans": {
+    "nom": "Le Mans",
+    "slug": "le-mans",
+    "population": 146249,
+    "code": "72181",
+    "excluded": true
+  },
+  "brest": {
+    "nom": "Brest",
+    "slug": "brest",
+    "population": 142346,
+    "code": "29019",
+    "excluded": true
+  },
+  "tours": {
+    "nom": "Tours",
+    "slug": "tours",
+    "population": 139259,
+    "code": "37261",
+    "excluded": true
+  },
+  "amiens": {
+    "nom": "Amiens",
+    "slug": "amiens",
+    "population": 136449,
+    "code": "80021",
+    "excluded": true
+  },
+  "annecy": {
+    "nom": "Annecy",
+    "slug": "annecy",
+    "population": 132117,
+    "code": "74010",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb annecy",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "limoges": {
+    "nom": "Limoges",
+    "slug": "limoges",
+    "population": 129937,
+    "code": "87085",
+    "excluded": true
+  },
+  "metz": {
+    "nom": "Metz",
+    "slug": "metz",
+    "population": 122572,
+    "code": "57463",
+    "excluded": true
+  },
+  "perpignan": {
+    "nom": "Perpignan",
+    "slug": "perpignan",
+    "population": 121616,
+    "code": "66136",
+    "excluded": true
+  },
+  "boulogne-billancourt": {
+    "nom": "Boulogne-Billancourt",
+    "slug": "boulogne-billancourt",
+    "population": 119019,
+    "code": "92012",
+    "excluded": true
+  },
+  "besancon": {
+    "nom": "Besançon",
+    "slug": "besancon",
+    "population": 118489,
+    "code": "25056",
+    "excluded": true
+  },
+  "rouen": {
+    "nom": "Rouen",
+    "slug": "rouen",
+    "population": 117662,
+    "code": "76540",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb rouen",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "orleans": {
+    "nom": "Orléans",
+    "slug": "orleans",
+    "population": 116357,
+    "code": "45234",
+    "excluded": true
+  },
+  "montreuil": {
+    "nom": "Montreuil",
+    "slug": "montreuil",
+    "population": 111934,
+    "code": "93048",
+    "excluded": true
+  },
+  "caen": {
+    "nom": "Caen",
+    "slug": "caen",
+    "population": 109400,
+    "code": "14118",
+    "templates": [
+      {
+        "template": 2,
+        "phrase": "tarif conciergerie airbnb caen",
+        "vol": 30,
+        "kd": 0
+      }
+    ],
+    "volTotal": 30,
+    "volEstimated": 30,
+    "isEstimated": false
+  },
+  "saint-paul": {
+    "nom": "Saint-Paul",
+    "slug": "saint-paul",
+    "population": 108088,
+    "code": "97415",
+    "excluded": true
+  },
+  "argenteuil": {
+    "nom": "Argenteuil",
+    "slug": "argenteuil",
+    "population": 106130,
+    "code": "95018",
+    "excluded": true
+  },
+  "mulhouse": {
+    "nom": "Mulhouse",
+    "slug": "mulhouse",
+    "population": 104978,
+    "code": "68224",
+    "excluded": true
+  },
+  "nancy": {
+    "nom": "Nancy",
+    "slug": "nancy",
+    "population": 103671,
+    "code": "54395",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb nancy",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "tourcoing": {
+    "nom": "Tourcoing",
+    "slug": "tourcoing",
+    "population": 98772,
+    "code": "59599",
+    "excluded": true
+  },
+  "roubaix": {
+    "nom": "Roubaix",
+    "slug": "roubaix",
+    "population": 98286,
+    "code": "59512",
+    "excluded": true
+  },
+  "nanterre": {
+    "nom": "Nanterre",
+    "slug": "nanterre",
+    "population": 97783,
+    "code": "92050",
+    "excluded": true
+  },
+  "vitry-sur-seine": {
+    "nom": "Vitry-sur-Seine",
+    "slug": "vitry-sur-seine",
+    "population": 93963,
+    "code": "94081",
+    "excluded": true
+  },
+  "asnieres-sur-seine": {
+    "nom": "Asnières-sur-Seine",
+    "slug": "asnieres-sur-seine",
+    "population": 93941,
+    "code": "92004",
+    "excluded": true
+  },
+  "creteil": {
+    "nom": "Créteil",
+    "slug": "creteil",
+    "population": 93397,
+    "code": "94028",
+    "excluded": true
+  },
+  "avignon": {
+    "nom": "Avignon",
+    "slug": "avignon",
+    "population": 92188,
+    "code": "84007",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb avignon",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "colombes": {
+    "nom": "Colombes",
+    "slug": "colombes",
+    "population": 91053,
+    "code": "92025",
+    "excluded": true
+  },
+  "poitiers": {
+    "nom": "Poitiers",
+    "slug": "poitiers",
+    "population": 89916,
+    "code": "86194",
+    "excluded": true
+  },
+  "aubervilliers": {
+    "nom": "Aubervilliers",
+    "slug": "aubervilliers",
+    "population": 88365,
+    "code": "93001",
+    "excluded": true
+  },
+  "aulnay-sous-bois": {
+    "nom": "Aulnay-sous-Bois",
+    "slug": "aulnay-sous-bois",
+    "population": 87599,
+    "code": "93005",
+    "excluded": true
+  },
+  "dunkerque": {
+    "nom": "Dunkerque",
+    "slug": "dunkerque",
+    "population": 86263,
+    "code": "59183",
+    "excluded": true
+  },
+  "noumea": {
+    "nom": "Nouméa",
+    "slug": "noumea",
+    "population": 85976,
+    "code": "98818",
+    "excluded": true
+  },
+  "saint-pierre": {
+    "nom": "Saint-Pierre",
+    "slug": "saint-pierre",
+    "population": 85038,
+    "code": "97416",
+    "excluded": true
+  },
+  "versailles": {
+    "nom": "Versailles",
+    "slug": "versailles",
+    "population": 84095,
+    "code": "78646",
+    "excluded": true
+  },
+  "courbevoie": {
+    "nom": "Courbevoie",
+    "slug": "courbevoie",
+    "population": 82902,
+    "code": "92026",
+    "excluded": true
+  },
+  "rueil-malmaison": {
+    "nom": "Rueil-Malmaison",
+    "slug": "rueil-malmaison",
+    "population": 82874,
+    "code": "92063",
+    "excluded": true
+  },
+  "le-tampon": {
+    "nom": "Le Tampon",
+    "slug": "le-tampon",
+    "population": 82579,
+    "code": "97422",
+    "excluded": true
+  },
+  "beziers": {
+    "nom": "Béziers",
+    "slug": "beziers",
+    "population": 81545,
+    "code": "34032",
+    "excluded": true
+  },
+  "pau": {
+    "nom": "Pau",
+    "slug": "pau",
+    "population": 80441,
+    "code": "64445",
+    "excluded": true
+  },
+  "la-rochelle": {
+    "nom": "La Rochelle",
+    "slug": "la-rochelle",
+    "population": 79851,
+    "code": "17300",
+    "excluded": true
+  },
+  "cherbourg-en-cotentin": {
+    "nom": "Cherbourg-en-Cotentin",
+    "slug": "cherbourg-en-cotentin",
+    "population": 78258,
+    "code": "50129",
+    "excluded": true
+  },
+  "merignac": {
+    "nom": "Mérignac",
+    "slug": "merignac",
+    "population": 78090,
+    "code": "33281",
+    "excluded": true
+  },
+  "champigny-sur-marne": {
+    "nom": "Champigny-sur-Marne",
+    "slug": "champigny-sur-marne",
+    "population": 78072,
+    "code": "94017",
+    "excluded": true
+  },
+  "antibes": {
+    "nom": "Antibes",
+    "slug": "antibes",
+    "population": 77637,
+    "code": "06004",
+    "excluded": true
+  },
+  "saint-maur-des-fosses": {
+    "nom": "Saint-Maur-des-Fossés",
+    "slug": "saint-maur-des-fosses",
+    "population": 76572,
+    "code": "94068",
+    "excluded": true
+  },
+  "ajaccio": {
+    "nom": "Ajaccio",
+    "slug": "ajaccio",
+    "population": 76320,
+    "code": "2A004",
+    "excluded": true
+  },
+  "fort-de-france": {
+    "nom": "Fort-de-France",
+    "slug": "fort-de-france",
+    "population": 75506,
+    "code": "97209",
+    "excluded": true
+  },
+  "saint-nazaire": {
+    "nom": "Saint-Nazaire",
+    "slug": "saint-nazaire",
+    "population": 74568,
+    "code": "44184",
+    "excluded": true
+  },
+  "cannes": {
+    "nom": "Cannes",
+    "slug": "cannes",
+    "population": 74350,
+    "code": "06029",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb cannes",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "noisy-le-grand": {
+    "nom": "Noisy-le-Grand",
+    "slug": "noisy-le-grand",
+    "population": 72978,
+    "code": "93051",
+    "excluded": true
+  },
+  "drancy": {
+    "nom": "Drancy",
+    "slug": "drancy",
+    "population": 72390,
+    "code": "93029",
+    "excluded": true
+  },
+  "mamoudzou": {
+    "nom": "Mamoudzou",
+    "slug": "mamoudzou",
+    "population": 71437,
+    "code": "97611",
+    "excluded": true
+  },
+  "cergy": {
+    "nom": "Cergy",
+    "slug": "cergy",
+    "population": 70906,
+    "code": "95127",
+    "excluded": true
+  },
+  "levallois-perret": {
+    "nom": "Levallois-Perret",
+    "slug": "levallois-perret",
+    "population": 68092,
+    "code": "92044",
+    "excluded": true
+  },
+  "issy-les-moulineaux": {
+    "nom": "Issy-les-Moulineaux",
+    "slug": "issy-les-moulineaux",
+    "population": 67669,
+    "code": "92040",
+    "excluded": true
+  },
+  "calais": {
+    "nom": "Calais",
+    "slug": "calais",
+    "population": 67571,
+    "code": "62193",
+    "excluded": true
+  },
+  "pessac": {
+    "nom": "Pessac",
+    "slug": "pessac",
+    "population": 67339,
+    "code": "33318",
+    "excluded": true
+  },
+  "colmar": {
+    "nom": "Colmar",
+    "slug": "colmar",
+    "population": 66970,
+    "code": "68066",
+    "templates": [
+      {
+        "template": 0,
+        "phrase": "rentabilité airbnb colmar",
+        "vol": 0,
+        "kd": 0
+      },
+      {
+        "template": 6,
+        "phrase": "airbnb colmar rentable",
+        "vol": 0,
+        "kd": 0
+      }
+    ],
+    "volTotal": 0,
+    "volEstimated": 10,
+    "isEstimated": true
+  },
+  "evry-courcouronnes": {
+    "nom": "Évry-Courcouronnes",
+    "slug": "evry-courcouronnes",
+    "population": 66919,
+    "code": "91228",
+    "excluded": true
+  },
+  "venissieux": {
+    "nom": "Vénissieux",
+    "slug": "venissieux",
+    "population": 65502,
+    "code": "69259",
+    "excluded": true
+  },
+  "ivry-sur-seine": {
+    "nom": "Ivry-sur-Seine",
+    "slug": "ivry-sur-seine",
+    "population": 65064,
+    "code": "94041",
+    "excluded": true
+  },
+  "valence": {
+    "nom": "Valence",
+    "slug": "valence",
+    "population": 64458,
+    "code": "26362",
+    "excluded": true
+  },
+  "clichy": {
+    "nom": "Clichy",
+    "slug": "clichy",
+    "population": 64410,
+    "code": "92024",
+    "excluded": true
+  },
+  "quimper": {
+    "nom": "Quimper",
+    "slug": "quimper",
+    "population": 64385,
+    "code": "29232",
+    "excluded": true
+  },
+  "antony": {
+    "nom": "Antony",
+    "slug": "antony",
+    "population": 64263,
+    "code": "92002",
+    "excluded": true
+  },
+  "bourges": {
+    "nom": "Bourges",
+    "slug": "bourges",
+    "population": 64186,
+    "code": "18033",
+    "excluded": true
+  },
+  "la-seyne-sur-mer": {
+    "nom": "La Seyne-sur-Mer",
+    "slug": "la-seyne-sur-mer",
+    "population": 63732,
+    "code": "83126",
+    "excluded": true
+  },
+  "montauban": {
+    "nom": "Montauban",
+    "slug": "montauban",
+    "population": 62945,
+    "code": "82121",
+    "excluded": true
+  },
+  "villeneuve-d-ascq": {
+    "nom": "Villeneuve-d'Ascq",
+    "slug": "villeneuve-d-ascq",
+    "population": 62868,
+    "code": "59009",
+    "excluded": true
+  },
+  "cayenne": {
+    "nom": "Cayenne",
+    "slug": "cayenne",
+    "population": 62675,
+    "code": "97302",
+    "excluded": true
+  },
+  "le-blanc-mesnil": {
+    "nom": "Le Blanc-Mesnil",
+    "slug": "le-blanc-mesnil",
+    "population": 62376,
+    "code": "93007",
+    "excluded": true
+  },
+  "troyes": {
+    "nom": "Troyes",
+    "slug": "troyes",
+    "population": 62088,
+    "code": "10387",
+    "excluded": true
+  },
+  "pantin": {
+    "nom": "Pantin",
+    "slug": "pantin",
+    "population": 61929,
+    "code": "93055",
+    "excluded": true
+  },
+  "villejuif": {
+    "nom": "Villejuif",
+    "slug": "villejuif",
+    "population": 60183,
+    "code": "94076",
+    "excluded": true
+  },
+  "chambery": {
+    "nom": "Chambéry",
+    "slug": "chambery",
+    "population": 59964,
+    "code": "73065",
+    "excluded": true
+  },
+  "niort": {
+    "nom": "Niort",
+    "slug": "niort",
+    "population": 59854,
+    "code": "79191",
+    "excluded": true
+  },
+  "frejus": {
+    "nom": "Fréjus",
+    "slug": "frejus",
+    "population": 59719,
+    "code": "83061",
+    "excluded": true
+  }
+}

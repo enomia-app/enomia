@@ -172,7 +172,7 @@ export const citiesRentabilite: CityRentabilite[] = [
     t2: { caAnnualMin: 13000, caAnnualMax: 23000, occupancyMin: 65, occupancyMax: 80, nightlyMin: 70, nightlyMax: 115, rendementNetMin: 9, rendementNetMax: 15 },
     reliability: 'medium',
     publishAt: '2026-05-12',
-    status: 'brouillon',
+    status: 'en-ligne',
     neighbors: ['colmar', 'metz', 'nancy'],
     context: 'Marché européen (Parlement européen, Conseil de l\'Europe). Pic décembre (marché de Noël). Quartiers premium : Petite France, Krutenau, hyper-centre.',
   },

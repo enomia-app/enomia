@@ -63,17 +63,6 @@ const jsonLd = {
     url: 'https://www.enomia.app',
   },
   ...(post.data.featuredImage ? { image: post.data.featuredImage.src } : {}),
-  ...(post.data.ratingValue && post.data.ratingCount
-    ? {
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: post.data.ratingValue,
-          ratingCount: post.data.ratingCount,
-          bestRating: 5,
-          worstRating: 1,
-        },
-      }
-    : {}),
 };
 
 // JSON-LD FAQPage — auto-parsed from Markdoc ### headings inside ## FAQ section

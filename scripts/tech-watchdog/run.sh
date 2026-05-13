@@ -39,9 +39,11 @@ fi
 echo "Claude bin: $CLAUDE_BIN" | tee -a "$RUN_LOG"
 
 # Lancer Claude avec le prompt
-# --dangerously-skip-permissions n'est PAS utilisé : on garde les approvals routés via push notif.
+# --dangerously-skip-permissions: nécessaire en headless 8h sans humain pour approuver
+# (approvals via push notif peu fiables tôt le matin). Garde-fous via watchdog-prompt.md.
 "$CLAUDE_BIN" -p "$(cat "$PROMPT_FILE")" \
   --output-format text \
+  --dangerously-skip-permissions \
   >> "$RUN_LOG" 2>&1 || {
     echo "ERREUR: claude -p a échoué (exit $?)" | tee -a "$RUN_LOG"
     osascript -e 'display notification "Échec exécution Claude" with title "tech-watchdog" subtitle "⚠️ Voir log" sound name "Sosumi"' || true

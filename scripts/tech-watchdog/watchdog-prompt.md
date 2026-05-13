@@ -192,9 +192,11 @@ Re-run `list_deployments` pour confirmer un nouveau `READY`.
 - Action requise : <ce que Marc doit faire>
 ```
 
-## Étape 8 — Notification macOS
+## Étape 8 — Notifications
 
-Lancer via bash :
+Deux canaux : notif macOS (toujours, locale Mac mini) + email (uniquement quand action requise, pour notif iPhone via Mail.app).
+
+### 8.1 — Notif macOS (toujours)
 
 ```bash
 osascript -e 'display notification "<résumé court 1 ligne>" with title "tech-watchdog" subtitle "<status>" sound name "<sound>"'
@@ -205,6 +207,58 @@ Logique :
 - **Tout auto-résolu** : titre `tech-watchdog`, subtitle `✅ X fixes appliqués`, son = `Glass`
 - **Au moins 1 intervention requise** : titre `tech-watchdog`, subtitle `⚠️ Y interventions requises`, son = `Sosumi`
 - **Site prod cassé (Vercel ERROR > 1h)** : titre `tech-watchdog`, subtitle `🚨 PROD CASSÉE`, son = `Sosumi`
+
+### 8.2 — Email à marc@enomia.app (UNIQUEMENT si intervention requise OU prod cassée)
+
+**Ne PAS envoyer d'email** si :
+- Aucune alerte (`status=ok` sans fix)
+- Tout auto-résolu (Marc consulte le log s'il veut, pas urgent)
+
+**Envoyer un email** si :
+- Au moins 1 intervention requise → sujet `[tech-watchdog] ⚠️ N intervention(s) requise(s)`
+- Prod cassée → sujet `[tech-watchdog] 🚨 PROD CASSÉE`
+
+Mail.app est configuré sur le Mac mini avec `marc@enomia.app`, toujours ouvert. Envoi via AppleScript :
+
+```bash
+SUBJECT="[tech-watchdog] ⚠️ 2 intervention(s) requise(s)"
+BODY="$(cat <<'EOF'
+Run du YYYY-MM-DD HH:MM
+
+Synthèse :
+- Sources scannées : GSC ✓ Vercel ✓ Supabase ✓
+- Auto-résolues : X
+- Action requise : Y
+
+À traiter :
+1. <SOURCE>: <titre court>
+   → <action attendue de Marc en 1 phrase>
+2. <SOURCE>: <titre court>
+   → <action attendue>
+
+Rapport complet :
+  scripts/tech-watchdog/logs/YYYY-MM-DD.md
+EOF
+)"
+
+osascript <<APPLESCRIPT
+tell application "Mail"
+  set newMessage to make new outgoing message with properties {subject:"$SUBJECT", content:"$BODY", visible:false}
+  tell newMessage
+    make new to recipient at end of to recipients with properties {address:"marc@enomia.app"}
+  end tell
+  send newMessage
+end tell
+APPLESCRIPT
+```
+
+⚠ Échapper les `"` et `\` dans `$BODY` si présents (utiliser `printf %q` au besoin).
+
+Body règles :
+- Court, scannable au tel (pas de dump du rapport complet)
+- Top 5 actions max, chacune en 1-2 lignes
+- Toujours référencer le chemin du rapport markdown local pour les détails
+- Pas de jargon (Marc lit ça depuis son lit, faut comprendre vite)
 
 ## Garde-fous absolus
 

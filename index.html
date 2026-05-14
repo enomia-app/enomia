@@ -3,6 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+// Fallback OAuth callback : si Supabase redirige sur la home avec un hash
+// d'access_token (cas où la redirect URL n'est pas whitelistée), on renvoie
+// l'utilisateur vers l'outil d'origine en préservant le hash, pour que le
+// SDK Supabase puisse parser la session.
+(function(){
+  try {
+    var h = window.location.hash || '';
+    if (h.indexOf('access_token=') !== -1 || h.indexOf('error=') !== -1) {
+      var target = localStorage.getItem('enomia_oauth_target') || '/simulateur-lcd';
+      localStorage.removeItem('enomia_oauth_target');
+      // Sécurité : n'autorise que des chemins relatifs internes
+      if (target.charAt(0) !== '/' || target.indexOf('//') === 0) target = '/simulateur-lcd';
+      window.location.replace(target + h);
+    }
+  } catch(_){}
+})();
+</script>
 <title>Enomia — La gestion locative courte durée, repensée par l'IA.</title>
 <meta name="description" content="Enomia est le logiciel de gestion locative courte durée pensé pour les propriétaires solo. IA conversationnelle, zéro double booking, +24% de revenus en moyenne.">
 <meta name="google-site-verification" content="c98WPmDK_YX9uDWNpTHKAxTDhN9yY4qYjpffnHFkQt8" />

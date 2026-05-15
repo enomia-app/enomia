@@ -59,6 +59,30 @@ const CH_CITIES = [
   'Aigle', 'Monthey', 'Rolle', 'Coppet', 'Évian-les-Bains' // Évian géographiquement FR mais visé par CH
 ];
 
+// DOM-TOM français (db=fr)
+const DOM_TOM_CITIES = [
+  // La Réunion
+  'Saint-Denis Réunion', 'Saint-Pierre Réunion', 'Saint-Paul Réunion', 'Le Tampon',
+  'Saint-Louis Réunion', 'Saint-André Réunion', 'Saint-Benoît Réunion', 'Saint-Joseph Réunion',
+  'Sainte-Marie Réunion', 'Saint-Leu', 'Saint-Gilles-les-Bains', 'L\'Étang-Salé',
+  'La Possession', 'Cilaos', 'Salazie', 'Hell-Bourg',
+  // Polynésie française (Tahiti et alentours)
+  'Papeete', 'Faa\'a', 'Punaauia', 'Pirae', 'Mahina', 'Arue', 'Paea', 'Papara',
+  'Moorea', 'Bora Bora', 'Huahine', 'Raiatea',
+  // Guadeloupe
+  'Pointe-à-Pitre', 'Le Gosier', 'Saint-François Guadeloupe', 'Sainte-Anne Guadeloupe',
+  'Basse-Terre', 'Saint-Claude Guadeloupe', 'Deshaies', 'Bouillante',
+  // Martinique
+  'Fort-de-France', 'Les Trois-Îlets', 'Sainte-Anne Martinique', 'Sainte-Luce',
+  'Le Marin', 'Le Diamant', 'Le François Martinique', 'Le Vauclin',
+  // Guyane
+  'Cayenne', 'Kourou', 'Saint-Laurent-du-Maroni',
+  // Mayotte
+  'Mamoudzou', 'Dzaoudzi',
+  // Nouvelle-Calédonie
+  'Nouméa', 'Dumbéa', 'Le Mont-Dore'
+];
+
 // ─── Charger villes FR ──────────────────────────────────
 function loadFrenchCities() {
   const fullPath = path.join(ROOT, 'scripts/cities-rentabilite-full.json');
@@ -140,6 +164,22 @@ async function main() {
       if (vol >= THRESHOLD) {
         candidates.push({ ville, country: 'BE', region: 'Wallonie/Bruxelles', vol, kd, kw: `conciergerie ${ville}` });
         console.log(`  ✅ ${ville.padEnd(30)} vol=${vol} kd=${kd}`);
+      }
+      await new Promise(r => setTimeout(r, 50));
+    }
+  }
+
+  // DOM-TOM (db=fr)
+  if (COUNTRIES.includes('domtom') || COUNTRIES.includes('fr')) {
+    console.log('\n🏝️ DOM-TOM (Réunion, Tahiti, Antilles, Guyane, Mayotte, Calédonie) :');
+    for (const ville of DOM_TOM_CITIES) {
+      if (existing.has(normalize(ville.replace(/ (Réunion|Guadeloupe|Martinique)$/i, '')))) continue;
+      const queryVille = ville.replace(/ (Réunion|Guadeloupe|Martinique)$/i, '');
+      const { vol, kd } = await semrushVol(`conciergerie ${queryVille}`, 'fr');
+      totalQueries++;
+      if (vol >= THRESHOLD) {
+        candidates.push({ ville: queryVille, country: 'FR-DOMTOM', region: ville.includes('Réunion') ? 'La Réunion' : '?', vol, kd, kw: `conciergerie ${queryVille}` });
+        console.log(`  ✅ ${queryVille.padEnd(30)} vol=${vol} kd=${kd}`);
       }
       await new Promise(r => setTimeout(r, 50));
     }

@@ -8,62 +8,6 @@
     "kw": "conciergerie Lausanne"
   },
   {
-    "ville": "Toulouse",
-    "country": "FR",
-    "region": "?",
-    "vol": 1000,
-    "kd": 18,
-    "kw": "conciergerie Toulouse"
-  },
-  {
-    "ville": "Nice",
-    "country": "FR",
-    "region": "?",
-    "vol": 1000,
-    "kd": 22,
-    "kw": "conciergerie Nice"
-  },
-  {
-    "ville": "Lyon",
-    "country": "FR",
-    "region": "?",
-    "vol": 880,
-    "kd": 25,
-    "kw": "conciergerie Lyon"
-  },
-  {
-    "ville": "Marseille",
-    "country": "FR",
-    "region": "?",
-    "vol": 720,
-    "kd": 18,
-    "kw": "conciergerie Marseille"
-  },
-  {
-    "ville": "Bordeaux",
-    "country": "FR",
-    "region": "?",
-    "vol": 720,
-    "kd": 9,
-    "kw": "conciergerie Bordeaux"
-  },
-  {
-    "ville": "Strasbourg",
-    "country": "FR",
-    "region": "?",
-    "vol": 480,
-    "kd": 12,
-    "kw": "conciergerie Strasbourg"
-  },
-  {
-    "ville": "Lille",
-    "country": "FR",
-    "region": "?",
-    "vol": 480,
-    "kd": 14,
-    "kw": "conciergerie Lille"
-  },
-  {
     "ville": "Quimper",
     "country": "FR",
     "region": "?",
@@ -142,5 +86,21 @@
     "vol": 70,
     "kd": 11,
     "kw": "conciergerie Bourges"
+  },
+  {
+    "ville": "Saint-Gilles-les-Bains",
+    "country": "FR-DOMTOM",
+    "region": "?",
+    "vol": 70,
+    "kd": null,
+    "kw": "conciergerie Saint-Gilles-les-Bains"
+  },
+  {
+    "ville": "Saint-Louis",
+    "country": "FR-DOMTOM",
+    "region": "La Réunion",
+    "vol": 50,
+    "kd": 17,
+    "kw": "conciergerie Saint-Louis"
   }
 ]

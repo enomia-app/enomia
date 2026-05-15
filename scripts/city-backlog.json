@@ -229,14 +229,15 @@
     "num": 25,
     "ville": "Reims",
     "region": "Grand Est",
-    "regionSlug": "grand-est",
+    "regionSlug": "alsace",
     "citySlug": "reims",
-    "newUrl": "/conciergerie-airbnb/grand-est/reims",
+    "newUrl": "/conciergerie-airbnb/alsace/reims",
     "oldSlug": "/conciergerie-airbnb-reims",
     "kw": "conciergerie reims",
     "vol": 510,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-15"
   },
   {
     "num": 26,
@@ -248,8 +249,9 @@
     "oldSlug": "/conciergerie-airbnb-caen",
     "kw": "conciergerie caen",
     "vol": 460,
-    "status": "À faire",
-    "kd": 19
+    "status": "Publié",
+    "kd": 19,
+    "publishedAt": "2026-05-15"
   },
   {
     "num": 27,

@@ -4537,6 +4537,404 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-05-15',
   },
+  // ==========================================================================
+  // REIMS
+  // ==========================================================================
+  {
+    slug: 'reims',
+    displayName: 'Reims',
+    region: 'Grand Est',
+    regionSlug: 'alsace',
+    title: 'Conciergerie Reims Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Reims : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Reims. Tarifs (15-25 %), services, avis Google, réglementation 2026, quartiers rentables (Cathédrale, Boulingrin).',
+    kwPrincipal: 'conciergerie reims',
+    kwSecondaires: [
+      'conciergerie airbnb reims',
+      'home conciergerie reims',
+      'la conciergerie reims',
+      'gestion locative reims',
+      'location courte durée reims',
+      'meublé touristique reims',
+    ],
+    population: 180000,
+    tourists: 4500000,
+    activeListings: 1400,
+    priceLow: 55,
+    priceHigh: 130,
+    occupancyRate: 58,
+    revpar: 45,
+    seasonality:
+      "Saisonnalité lissée par la **route du Champagne** et le tourisme œnologique toute l'année. Pic absolu **mai à septembre** (occupation 70-80 %, clientèle internationale premium pour les visites de caves Veuve Clicquot, Pommery, Taittinger, Ruinart). Les **Fêtes Johanniques** en juin et les **Sacre de Reims** (animations cathédrale) ajoutent des pics ponctuels. Reims bénéficie aussi d'un **tourisme d'affaires** régulier (45 min de Paris en TGV) qui lisse la semaine. Creux relatif janvier-février.",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un appartement à **Reims** que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les **caves de Champagne** qui attirent une clientèle internationale toute l'année, la proximité de **Paris à 45 min en TGV**, et la nouvelle obligation d'**enregistrement en mairie** instaurée fin 2026, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** parmi la dizaine d'acteurs rémois ?",
+    marketIntro:
+      "Reims est le **premier marché LCD du Grand Est** avec environ **1 400 annonces actives** et un revenu moyen par annonce autour de 15 000-20 000 €/an. La ville bénéficie d'un mix unique : **tourisme œnologique premium** (caves Veuve Clicquot, Pommery, Taittinger, Ruinart, Mumm), **patrimoine UNESCO** (cathédrale Notre-Dame de Reims, basilique Saint-Rémi, palais du Tau) et **proximité immédiate de Paris** (45 min en TGV, gare Champagne-Ardenne TGV).\n\nLa **route du Champagne** attire **4,5 millions de nuitées par an** dont 1,8 million de touristes internationaux (Japonais, Américains, Britanniques, Chinois) — un volume comparable à des destinations balnéaires majeures, mais avec une saisonnalité bien plus lissée.\n\nLe tourisme d'affaires (Reims Champagne Congrès, NEOMA Business School) ajoute une demande régulière en semaine, particulièrement appréciée des conciergeries qui peuvent ainsi maintenir une occupation 55-65 % toute l'année.\n\n**Reims n'est pas encore en zone tendue** au sens strict, mais la mairie a délibéré en faveur de l'**instauration du numéro d'enregistrement obligatoire au 4e trimestre 2026** pour mieux encadrer le marché LCD.",
+    conciergeries: [
+      {
+        name: 'Nalis',
+        url: 'https://nalis-immo.com/',
+        commission: '15-25 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 64,
+        biensGeres: 50,
+        specialty: 'Grille dégressive 25 % puis 15 %, service structuré',
+        description:
+          "Nalis est l'une des conciergeries les mieux notées de Reims avec une **note Google parfaite de 5.0/5 sur 64 avis**. Grille de commission **dégressive** : 25 % TTC sur la première tranche de revenus, puis 15 % au-delà — un modèle qui aligne les intérêts conciergerie et propriétaire dès que les performances décollent. Ménage refacturé au voyageur. Service structuré couvrant création annonce, photos pro, diffusion Airbnb/Booking/Abritel, accueil, ménage et reporting. Idéale pour un propriétaire qui veut **maximiser la marge nette** sur un bien à fort potentiel (centre, Boulingrin).",
+      },
+      {
+        name: 'DameRose Conciergerie',
+        url: 'https://dameroseconciergerie.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 29,
+        biensGeres: 35,
+        specialty: 'Nettoyage haut de gamme, services complémentaires',
+        description:
+          "DameRose Conciergerie applique une commission unique de **20 % TTC** sur les revenus collectés, avec un focus marqué sur la **qualité du ménage** et des services complémentaires (linge hôtelier, fournitures d'accueil champenoises). Note Google 4.9/5 sur 29 avis avec des retours clients qui soulignent la constance qualitative — un atout direct pour la note Airbnb (impact sur la visibilité). Ménage refacturé au voyageur. Bon choix pour un T2-T3 dans l'hypercentre où la clientèle œnologique internationale est exigeante sur la propreté et le sourcing local.",
+      },
+      {
+        name: 'Soloca',
+        url: 'https://soloca.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 18,
+        biensGeres: 25,
+        specialty: 'Maintenance 7j/7, couverture Reims + Épernay',
+        description:
+          "Soloca, dirigée par Aurore, gère les logements LCD à **Reims et Épernay** (capitale du Champagne à 25 min). Commission 20 % TTC, ménage refacturé voyageur. Particularité : **maintenance 7j/7** et gestion transparente avec reporting mensuel détaillé. Note Google 5.0/5 sur 18 avis. Pertinente pour un propriétaire multi-biens entre Reims et Épernay qui veut un interlocuteur unique sur l'ensemble de la route du Champagne.",
+      },
+      {
+        name: 'Aux Clefs des Sacres',
+        url: 'https://auxclefsdessacres.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 26,
+        biensGeres: 30,
+        specialty: 'Gestion complète courte durée, ancrage rémois',
+        description:
+          "Aux Clefs des Sacres applique une **commission unique de 20 % TTC** sur les revenus collectés, sans frais fixes ni frais cachés. Note Google parfaite 5.0/5 sur 26 avis. Couverture complète du cycle locatif : création et diffusion annonce, gestion des réservations, accueil voyageurs 7j/7, ménage pro, linge hôtelier, maintenance et reporting financier mensuel. Ancrage 100 % rémois, équipe terrain réactive — idéal pour un T1-T3 en hypercentre ou autour de la Cathédrale.",
+      },
+      {
+        name: 'La Conciergerie des Sacres',
+        url: 'https://www.conciergerie-des-sacres.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.2,
+        reviews: 52,
+        biensGeres: 60,
+        specialty: 'Accompagnement propriétaires, acteur local volumique',
+        description:
+          "La Conciergerie des Sacres est l'un des acteurs locaux historiques de Reims avec **52 avis Google** (volume le plus élevé du marché rémois) et une note 4.2/5. Tarification sur devis adaptée à chaque bien et niveau de service — généralement aligné sur le marché rémois (18-22 %). Offre clé en main : annonce, diffusion multi-plateformes, accueil, ménage, maintenance. Bon profil pour un propriétaire qui valorise l'expérience d'un acteur volumique avec un track record long.",
+      },
+      {
+        name: 'Iviloc',
+        url: 'https://ivilocconciergerie.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 8,
+        biensGeres: 15,
+        specialty: 'Conseils agencement et home staging',
+        description:
+          "Iviloc applique une commission de **20 % TTC** avec une spécificité : un **accompagnement amont sur l'agencement et le home staging** du bien avant mise en location, pour maximiser l'attractivité de l'annonce et le tarif moyen. Note Google 5.0/5 sur 8 avis. Approche sur mesure adaptée à un propriétaire qui rénove un bien avant LCD ou qui souhaite repositionner un bien sous-performant.",
+      },
+      {
+        name: 'Loca Ren\'t',
+        url: 'https://reimsconciergerie.fr/',
+        commission: '25-30 %',
+        menage: 'refacturé voyageur',
+        rating: 4.2,
+        reviews: 10,
+        biensGeres: 20,
+        specialty: 'Automatisation poussée, accompagnement voyageurs',
+        description:
+          "Loca Ren't (reimsconciergerie.fr) applique une grille **25-30 % TTC** plus haute que la moyenne rémoise, justifiée par une **automatisation poussée** (smart lock, pricing dynamique, automatisation des messages) et un accompagnement renforcé des voyageurs sur la découverte de Reims et de la route du Champagne. Note Google 4.2/5 sur 10 avis. Pertinent pour un propriétaire qui résiste à distance et veut un process techno-driven.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Cathédrale / Carré d\'Or',
+        pricePerNight: '90-160 €',
+        occupancy: 70,
+        description:
+          "Cœur historique autour de la cathédrale Notre-Dame (UNESCO), parvis du palais du Tau, hôtels particuliers du Carré d'Or. Tarifs au m² à l'achat parmi les plus élevés de Reims (>4 500 €/m²). Clientèle 100 % touristique premium (œnologie, mariages, congrès). T2 à partir de 280 000 €.",
+        roiBrut: '4,5 à 5,5 %',
+      },
+      {
+        name: 'Boulingrin / Halles',
+        pricePerNight: '80-140 €',
+        occupancy: 65,
+        description:
+          "Quartier le plus dynamique de Reims avec les Halles Art Déco rénovées, restaurants, bars à champagne. Mix tourisme + locaux urbains. Très demandé sur séjours courts (2-3 nuits) typiques du tourisme œnologique. T2 à partir de 240 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Saint-Rémi',
+        pricePerNight: '70-120 €',
+        occupancy: 60,
+        description:
+          "Quartier-village autour de la basilique Saint-Rémi (UNESCO), à 15 min à pied de la cathédrale. Charme authentique, demande lissée sur l'année grâce aux voyageurs culturels. Ticket d'entrée plus accessible (T2 dès 200 000 €).",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Gare Centre / Reims Champagne TGV',
+        pricePerNight: '70-110 €',
+        occupancy: 62,
+        description:
+          "Périmètre autour de la gare centre (45 min Paris) et de NEOMA Business School. Forte demande **tourisme d'affaires** en semaine, tourisme œnologique le week-end. Excellente occupation lissée. Tarifs accessibles. T2 dès 180 000 €.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Cernay / Maison Blanche',
+        pricePerNight: '60-100 €',
+        occupancy: 55,
+        description:
+          "Quartiers résidentiels au sud du centre, mix maisons et immeubles modestes. Demande tourisme + relocation professionnelle. Tarifs d'achat les plus bas du centre élargi. Réservé aux investisseurs en quête de cashflow brut.",
+        roiBrut: '7 à 8 %',
+      },
+      {
+        name: 'Périphérie Champagne (Épernay 25 min)',
+        pricePerNight: '80-140 €',
+        occupancy: 60,
+        description:
+          "Pour les villages de la route du Champagne (Hautvillers, Aÿ, Verzenay) à 15-25 min de Reims : gîtes ruraux et maisons de vigneron. Clientèle œnologique haut de gamme, séjours de 3-5 nuits. Saisonnalité plus marquée mai-septembre. Maison T3 dès 230 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Reims a **délibéré en faveur de l'instauration du numéro d'enregistrement obligatoire** pour les meublés de tourisme, dont l'entrée en vigueur effective est annoncée pour le **4e trimestre 2026**. À cette date, tout loueur devra obtenir un numéro à 13 chiffres auprès de la mairie et le faire figurer sur chaque annonce, sous peine d'amende jusqu'à **10 000 €**.\n\n**Résidence principale.** La location en meublé de tourisme reste plafonnée à **120 nuitées par an** au niveau national (résidence principale du loueur). Au-delà, le bien bascule en résidence secondaire au sens de l'administration.\n\n**Loi Le Meur 2024 et calendrier national.** L'enregistrement national via téléservice unique (apimeubles.finances.gouv.fr) est obligatoire pour tous les meublés de tourisme. Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC est passé à 30 % pour les meublés non classés (50 % pour les classés tourisme). Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Reims applique le tarif de la Communauté Urbaine du Grand Reims (télédéclaration sur reims.taxesejour.fr) : de 0,65 € à 4,30 € par nuit et par personne selon le classement de l'hébergement, collectée automatiquement par Airbnb.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 95,
+      neighborhood: 'Boulingrin',
+      revenuBrut: 20100,
+      commissionRate: 0.20,
+      menageCount: 75,
+      menageUnitCost: 65,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il un numéro d\'enregistrement pour louer en Airbnb à Reims en 2026 ?',
+        a: "Reims a délibéré en faveur de l'instauration du numéro d'enregistrement, avec une entrée en vigueur annoncée pour le **4e trimestre 2026** (la mairie de Reims a reporté la date initiale du 20 mai 2026). À partir de cette date, tout loueur — résidence principale comme secondaire — devra obtenir un numéro à 13 chiffres auprès de la mairie et le faire figurer sur chaque annonce Airbnb, Booking ou Abritel. Sans numéro après l'entrée en vigueur, l'annonce sera automatiquement désactivée par les plateformes et le loueur s'expose à une amende jusqu'à **10 000 €**.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Reims pendant la haute saison œnologique ?',
+        a: "La haute saison rémoise s'étale de **mai à septembre** avec un pic absolu juin-août (Fêtes Johanniques, vendanges, salons). Un T2 dans le Carré d'Or se loue **120-160 €/nuit en haute saison** contre 80-95 € en basse saison, avec une occupation 75-85 % en juin-août. Sur l'année complète, un T2 bien placé en hypercentre génère **18 000 à 24 000 € bruts** (avant commission). Les **vendanges en septembre** et les **fêtes de fin d'année autour des maisons de Champagne** créent des pics tarifaires supplémentaires (+30-40 %).",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Reims ?',
+        a: "Pour un objectif **rentabilité + sécurité**, le quartier **Boulingrin** est le meilleur compromis : Halles Art Déco, restaurants, demande mixte tourisme/locaux, T2 à partir de 240 000 € et ROI brut 5-6 %. Le **Carré d'Or** autour de la Cathédrale offre les meilleurs tarifs nuitée (90-160 €) mais avec un ticket d'entrée plus élevé (>280 000 €). Pour un **profil cashflow agressif**, viser la **zone gare** (45 min Paris en TGV, NEOMA Business School) : demande lissée tourisme + business, tickets dès 180 000 €. À éviter pour le LCD pur : Croix-Rouge / Murigny (forte concentration HLM, demande Airbnb très faible).",
+      },
+    ],
+    updatedAt: '2026-05-15',
+  },
+  // ==========================================================================
+  // CAEN
+  // ==========================================================================
+  {
+    slug: 'caen',
+    displayName: 'Caen',
+    region: 'Normandie',
+    regionSlug: 'normandie',
+    title: 'Conciergerie Caen Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Caen : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Caen. Tarifs (15-25 %), services, avis Google, réglementation 2026, quartiers rentables (Vaugueux, Saint-Pierre).',
+    kwPrincipal: 'conciergerie caen',
+    kwSecondaires: [
+      'conciergerie airbnb caen',
+      'ma conciergerie en normandie caen',
+      'location saisonnière caen',
+      'gestion locative caen',
+      'meublé touristique caen',
+      'conciergerie privée normandie',
+    ],
+    population: 106000,
+    tourists: 1200000,
+    activeListings: 950,
+    priceLow: 55,
+    priceHigh: 120,
+    occupancyRate: 55,
+    revpar: 38,
+    seasonality:
+      "Saisonnalité tirée par les **plages du Débarquement** (commémorations du 6 juin, mémoriaux d'Omaha Beach, Arromanches) et le **Festival international du film de Cabourg** voisin. Pic absolu **mai-septembre** (occupation 65-75 %). Le **Mémorial de Caen** (1er site touristique de Normandie hors Mont-Saint-Michel) lisse la saison avec une demande culturelle continue. Pics ponctuels lors du **Tour de France** (passage à Caen en 2025), du **D-Day Festival** (juin) et du **millénaire de la ville** (2025). Creux marqué novembre-février.",
+    rankNational: 28,
+    introCustom:
+      "Vous avez un appartement à **Caen** que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les **plages du Débarquement** à 30 min, le **Mémorial de Caen** (1er site de Normandie hors Mont-Saint-Michel), une demande étudiante stable (Campus 1) et la nouvelle obligation d'enregistrement, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** parmi la dizaine d'acteurs caennais ?",
+    marketIntro:
+      "Caen est l'un des marchés LCD les plus stables de Normandie avec environ **950 annonces actives** et un revenu moyen par annonce autour de 12 000-16 000 €/an. La ville bénéficie d'un mix unique : **tourisme mémoriel** (Mémorial de Caen, plages du Débarquement à 30 min, Pointe du Hoc, Omaha Beach), **patrimoine médiéval** (château de Guillaume le Conquérant, Abbaye aux Hommes, Abbaye aux Dames) et **proximité immédiate de la mer** (Ouistreham et la Côte de Nacre à 15 min).\n\nLa **Normandie a enregistré 13 millions de nuitées en 2025** (+7,2 % sur 2024, 2e meilleure progression de France métropolitaine). Caen-la-Mer a profité du **passage du Tour de France** et du **millénaire de la ville** pour booster la fréquentation estivale de 5,4 %.\n\nLe **tourisme étudiant** (Université de Caen Normandie, ~30 000 étudiants) ajoute une demande relocation/visite famille toute l'année, particulièrement pratique pour maintenir une occupation 50-60 % hors-saison balnéaire.\n\n**Caen figure dans les communes en zone tendue** où la mairie peut imposer un permis de louer et le numéro d'enregistrement obligatoire — démarches à valider avant tout investissement LCD.",
+    conciergeries: [
+      {
+        name: 'Mana Conciergerie',
+        url: 'https://mana-conciergerie.fr/',
+        commission: '15 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 146,
+        biensGeres: 80,
+        specialty: 'Commission la plus basse du marché caennais',
+        description:
+          "Mana est la conciergerie la plus volumique et la mieux notée de Caen avec **146 avis Google et une note 4.9/5**. Commission **15 % HT** — l'une des plus basses du marché normand. Approche moderne et qualitative : optimisation des annonces, accueil voyageurs, ménage professionnel, suivi quotidien des réservations. Idéale pour un propriétaire qui veut **maximiser sa marge nette** sur un bien T2-T3 en centre ou autour du château.",
+      },
+      {
+        name: 'Ma Conciergerie en Normandie (MCEN)',
+        url: 'https://www.maconciergerieennormandie.fr/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 169,
+        biensGeres: 120,
+        specialty: 'Gestion standing multi-villes (Deauville, Rouen, Le Havre)',
+        description:
+          "MCEN est l'**acteur normand multi-villes** par excellence : antennes à Caen, Deauville, Trouville, Rouen et Le Havre. Commission 25 % TTC sur le revenu généré, sans engagement de durée. Note Google 4.7/5 sur **169 avis** (volume le plus élevé du marché normand). Spécialisation sur les **biens de standing** : photos pro, pricing dynamique, gestion technique des villas et appartements haut de gamme, reporting financier mensuel. Pertinente pour un propriétaire multi-biens entre Caen et la Côte Fleurie.",
+      },
+      {
+        name: 'Beauséjour Conciergerie',
+        url: 'https://beausejour-conciergerie.com/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 35,
+        biensGeres: 40,
+        specialty: 'Ameublement et décoration inclus',
+        description:
+          "Beauséjour Conciergerie applique une commission de **25 % HT** avec une spécificité : un **accompagnement amont sur l'ameublement et la décoration** du bien avant mise en location, pour positionner l'annonce sur un segment qualitatif. Note Google 4.8/5 sur 35 avis. Pertinent pour un propriétaire qui rénove un bien avant LCD ou qui souhaite repositionner un bien sous-performant en haut de gamme.",
+      },
+      {
+        name: 'Ammaj',
+        url: 'https://ammaj.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 17,
+        biensGeres: 25,
+        specialty: 'Multi-plateformes (Airbnb, Booking, Abritel)',
+        description:
+          "Ammaj, basée à Caen, propose des services de gestion locative complets pour les propriétaires normands. Commission 20 % TTC, ménage refacturé voyageur. Diffusion sur **Airbnb, Booking et Abritel** simultanément pour maximiser le taux de remplissage. Couverture complète : optimisation annonces, accueil, ménage, maintenance. Note Google 4.6/5 sur 17 avis. Bon choix pour un propriétaire qui veut industrialiser la diffusion multi-plateformes sans gérer lui-même les calendriers.",
+      },
+      {
+        name: 'CALM Conciergerie',
+        url: 'https://calm-conciergerie.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 21,
+        biensGeres: 30,
+        specialty: 'Approche personnalisée et rassurante',
+        description:
+          "CALM Conciergerie applique une commission de **20 % TTC** avec une approche relationnelle assumée : un interlocuteur unique, une transparence forte sur le reporting, et un accompagnement personnalisé sur chaque bien. Note Google 4.6/5 sur 21 avis. Pertinente pour un **primo-investisseur LCD** qui veut se faire la main avec un partenaire pédagogue et accessible.",
+      },
+      {
+        name: 'Conciergerie Caennaise',
+        url: 'https://www.la-conciergerie-caennaise.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 8,
+        biensGeres: 15,
+        specialty: 'Expertise 100 % locale Caen intra-muros',
+        description:
+          "Conciergerie Caennaise est **100 % focalisée sur Caen intra-muros** (Vaugueux, Saint-Pierre, Saint-Jean, Vaucelles). Commission 20 % TTC, note Google parfaite 5.0/5 sur 8 avis. Acteur boutique, équipe terrain réactive, idéal pour un propriétaire d'un T1-T2 en centre piéton qui valorise la connaissance fine du tissu local.",
+      },
+      {
+        name: 'Fovéa Conciergerie',
+        url: 'https://fovea-conciergerie.fr/',
+        commission: '15 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 12,
+        biensGeres: 20,
+        specialty: 'Stratégie personnalisée, commission basse',
+        description:
+          "Fovéa Conciergerie applique l'une des **commissions les plus basses du marché caennais** (15 % TTC) avec un positionnement sur la **stratégie personnalisée** : yield management adapté au bien, accompagnement éditorial sur l'annonce, photos pro. Couverture Caen et premières communes de la Côte de Nacre. Pertinent pour un propriétaire qui veut un acteur local avec une marge nette élevée.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vaugueux / Château',
+        pricePerNight: '85-130 €',
+        occupancy: 68,
+        description:
+          "Quartier médiéval emblématique au pied du château de Guillaume le Conquérant : ruelles pavées, maisons à colombages, restaurants gastronomiques. Le plus prisé pour le LCD touristique. Clientèle 100 % touristique avec rotation rapide (2-3 nuits). T2 à partir de 230 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Saint-Pierre / Centre piéton',
+        pricePerNight: '75-115 €',
+        occupancy: 65,
+        description:
+          "Cœur piéton autour de l'église Saint-Pierre : commerces, marchés, Abbaye aux Hommes à 10 min à pied. Demande touristique forte et lissée sur l'année (mémoriel + culturel). T2 à partir de 200 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Saint-Jean / Port',
+        pricePerNight: '70-100 €',
+        occupancy: 60,
+        description:
+          "Quartier autour de l'église Saint-Jean et du port de Caen, à proximité du bassin Saint-Pierre. Mix tourisme et locaux urbains. Tarifs d'achat plus accessibles que Vaugueux. Bon compromis ticket/rendement. T2 dès 180 000 €.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Vaucelles / Gare',
+        pricePerNight: '60-95 €',
+        occupancy: 58,
+        description:
+          "Quartier résidentiel rive gauche, à 7 min à pied de la gare et 15 min du centre. Forte demande **tourisme d'affaires** en semaine (UFR Caen, hôpitaux) et tourisme mémoriel le week-end. Tickets d'achat les plus bas du centre élargi. T2 dès 160 000 €.",
+        roiBrut: '6,5 à 7,5 %',
+      },
+      {
+        name: 'Université / Campus 1',
+        pricePerNight: '55-85 €',
+        occupancy: 50,
+        description:
+          "Périmètre autour de l'Université de Caen Normandie (~30 000 étudiants) : demande visite famille, relocation, séminaires. Demande lissée mais tarifs nuitée plus bas. Pertinent pour du LCD mixte avec bail mobilité 1-9 mois.",
+        roiBrut: '7 à 8 %',
+      },
+      {
+        name: 'Côte de Nacre (Ouistreham 15 min)',
+        pricePerNight: '85-150 €',
+        occupancy: 55,
+        description:
+          "Pour les communes balnéaires de la Côte de Nacre (Ouistreham, Lion-sur-Mer, Riva-Bella) à 15 min de Caen. Saisonnalité très marquée mai-septembre (familles, plages du Débarquement). Maison T3 dès 250 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Caen est classée en **zone tendue** au sens du décret n°2023-822, ce qui déclenche l'encadrement des loyers longue durée, la taxe sur les logements vacants et la possibilité pour la mairie d'imposer le numéro d'enregistrement obligatoire pour les meublés de tourisme. La mairie de Caen propose un **téléservice d'enregistrement** : tout loueur doit déclarer son meublé et obtenir un numéro à 13 chiffres à faire figurer sur chaque annonce.\n\n**Résidence principale.** La location en meublé de tourisme reste plafonnée à **120 nuitées par an** au niveau national (résidence principale du loueur).\n\n**Permis de louer.** En zone tendue, la mairie peut imposer une **autorisation préalable de mise en location** (permis de louer) délivrée après contrôle de la salubrité et de la décence du logement. À vérifier directement auprès de la direction de l'urbanisme de Caen avant tout investissement dédié LCD.\n\n**Loi Le Meur 2024.** L'enregistrement national sur téléservice unique (apimeubles.finances.gouv.fr) est obligatoire. Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC est passé à 30 % pour les meublés non classés (50 % pour les classés tourisme). Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Caen applique le tarif intercommunal de Caen-la-Mer : de 0,65 € à 4,30 € par nuit et par personne selon le classement, collectée automatiquement par Airbnb.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 85,
+      neighborhood: 'Saint-Pierre',
+      revenuBrut: 17000,
+      commissionRate: 0.20,
+      menageCount: 70,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il un permis de louer ou un numéro d\'enregistrement pour louer en Airbnb à Caen ?',
+        a: "Oui, sur les deux plans. Caen étant en **zone tendue**, la mairie impose un **permis de louer** (autorisation préalable de mise en location) délivré après contrôle de la salubrité du logement. Par ailleurs, tout loueur de meublé de tourisme doit obtenir un **numéro d'enregistrement à 13 chiffres** auprès de la mairie via le téléservice d'enregistrement, et le faire figurer sur chaque annonce Airbnb, Booking ou Abritel. Sans numéro, l'annonce est automatiquement désactivée par les plateformes et le loueur s'expose à une amende jusqu'à **10 000 €**.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Caen pendant les commémorations du Débarquement ?',
+        a: "Les commémorations du **6 juin** et le **D-Day Festival** (1er au 10 juin) attirent une clientèle internationale haut de gamme — anciens combattants, descendants, presse, historiens — prête à payer **+50 à +80 %** par rapport aux tarifs standards de juin. Un T2 dans le Vaugueux qui se loue 95 €/nuit en haute saison atteint 140-170 €/nuit pendant la première semaine de juin, avec un minimum 3-4 nuits imposé. Sur ces 10 jours, un bien bien placé peut générer **1 800 à 2 500 € bruts** uniquement sur cette période, soit l'équivalent d'un mois entier hors-saison.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Caen ?',
+        a: "Pour un objectif **rentabilité + sécurité**, le quartier **Saint-Pierre** est le meilleur compromis : centre piéton, demande lissée tourisme + culturel, T2 à partir de 200 000 € et ROI brut 5,5-6,5 %. Le **Vaugueux** (médiéval, château) offre les meilleurs tarifs nuitée (85-130 €) mais avec un ticket d'entrée plus élevé (>230 000 €). Pour un **profil cashflow agressif**, viser **Vaucelles** (proximité gare + tourisme d'affaires en semaine) : tickets dès 160 000 €, ROI brut 6,5-7,5 %. Pour un profil **balnéaire saisonnier**, regarder la Côte de Nacre (Ouistreham, Lion-sur-Mer) à 15 min de Caen.",
+      },
+    ],
+    updatedAt: '2026-05-15',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

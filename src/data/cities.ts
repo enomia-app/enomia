@@ -4140,6 +4140,403 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-04-30',
   },
+  // ==========================================================================
+  // AIX-EN-PROVENCE
+  // ==========================================================================
+  {
+    slug: 'aix-en-provence',
+    displayName: 'Aix-en-Provence',
+    region: 'Provence-Alpes-Côte d\'Azur',
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie Aix-en-Provence Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Aix-en-Provence : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Aix-en-Provence. Tarifs (17-22 %), services, avis Google, zone tendue, quartiers rentables (Mazarin, centre).',
+    kwPrincipal: 'conciergerie aix en provence',
+    kwSecondaires: [
+      'conciergerie airbnb aix en provence',
+      'conciergerie de luxe aix en provence',
+      'gestion locative aix en provence',
+      'location courte durée aix en provence',
+      'meublé touristique aix en provence',
+    ],
+    population: 145325,
+    tourists: 3000000,
+    activeListings: 2200,
+    priceLow: 70,
+    priceHigh: 220,
+    occupancyRate: 65,
+    revpar: 70,
+    seasonality:
+      "Saisonnalité forte avril-octobre, dopée par le **Festival d'art lyrique** en juillet (clientèle internationale haut de gamme), les universités et écoles (Sciences Po, IAE) qui amènent un flux étudiant/business toute l'année, et la proximité Marseille (30 min en TER). Pics tarifaires en juillet/août et lors des grands événements culturels. Creux décembre-février. Le tourisme d'affaires lié à Aéroport Marseille-Provence (25 km) lisse la saisonnalité.",
+    rankNational: 18,
+    introCustom:
+      "Vous avez un appartement à **Aix-en-Provence** que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre le **Festival d'art lyrique** en juillet, la clientèle universitaire et business toute l'année, le **classement en zone tendue** et la nouvelle loi Le Meur, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** parmi la dizaine d'acteurs aixois ?",
+    marketIntro:
+      "Aix-en-Provence est l'un des marchés LCD les plus stables de France, porté par trois moteurs distincts : le **tourisme patrimonial et culturel** (Cours Mirabeau, Atelier Cézanne, Cité du Livre), le **Festival d'art lyrique** en juillet (clientèle internationale premium) et un **vivier universitaire et économique** (Aix-Marseille Université, Sciences Po, IAE, technopôle de l'Arbois) qui crée une demande continue.\n\nAvec environ **2 200 annonces actives** et un revenu moyen par annonce autour de 25 000-30 000 €/an, le marché aixois affiche un taux d'occupation annuel proche de **65 %** sur les biens bien placés (Mazarin, centre historique).\n\nLa proximité immédiate avec **Marseille** (30 min en TER) et l'aéroport Marseille-Provence (25 km) attire une clientèle d'affaires qui lisse la saisonnalité, contrairement à des villes purement balnéaires.\n\n**Aix-en-Provence est en zone tendue** : numéro d'enregistrement obligatoire en mairie, plafond de 120 nuitées par an pour les résidences principales, et autorisation de changement d'usage exigée pour les résidences secondaires (procédure en évolution avec la loi Le Meur).",
+    conciergeries: [
+      {
+        name: 'L\'Aixcapade',
+        url: 'https://laixcapade.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 28,
+        biensGeres: 35,
+        specialty: 'Conciergerie 100 % aixoise, note Google parfaite',
+        description:
+          "L'Aixcapade est une conciergerie boutique exclusivement focalisée sur Aix-en-Provence et ses environs immédiats (Le Tholonet, Meyreuil, Bouc-Bel-Air). Commission de 20 % TTC sur les revenus de réservation, ménage refacturé au voyageur. Note Google parfaite de 5.0/5 sur une trentaine d'avis. Création et optimisation de l'annonce, photos pro, pricing dynamique, accueil 7j/7. Idéale pour un propriétaire qui veut un interlocuteur unique très réactif sur un T1-T3 en centre-ville ou dans le Mazarin.",
+      },
+      {
+        name: 'Le Mazarin Conciergerie',
+        url: 'https://www.lemazarin.com/conciergerie/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 28,
+        biensGeres: 45,
+        specialty: 'Formule unique 20 %, sans frais cachés',
+        description:
+          "Le Mazarin applique une commission unique de **20 % sur les revenus collectés**, sans frais fixes ni frais cachés. Couvre l'ensemble du cycle locatif : création et diffusion annonce, gestion des réservations, accueil voyageurs, ménage pro, linge hôtelier, maintenance et reporting financier mensuel. Particulièrement bien implantée dans le quartier Mazarin et le centre historique, avec une approche prestige assumée pour les biens haut de gamme.",
+      },
+      {
+        name: 'My Home Conciergerie',
+        url: 'https://www.myhome-conciergerie.fr/',
+        commission: '18-20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 15,
+        biensGeres: 25,
+        specialty: '18 % avec engagement 1 an, optimisation des tarifs',
+        description:
+          "My Home Conciergerie propose une grille à deux niveaux : **18 % TTC avec engagement d'un an** ou **20 % TTC sans engagement**. Ménage refacturé au voyageur. Positionnement haut de gamme avec un travail fin sur l'optimisation tarifaire (yield management saisonnier et événementiel autour du Festival d'art lyrique). Note Google 5.0/5 sur une quinzaine d'avis. Bon choix pour les propriétaires qui veulent maximiser le revenu d'un bien dans le Mazarin ou autour du Cours Mirabeau.",
+      },
+      {
+        name: 'Conciergerie Blanc',
+        url: 'https://www.conciergerieblanc.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 36,
+        biensGeres: 40,
+        specialty: 'Spécialiste ménage et linge écoresponsable',
+        description:
+          "Conciergerie Blanc se distingue par un positionnement écoresponsable : produits d'entretien biosourcés, linge en circuit court, fournitures d'accueil sourcées en Provence. Commission 20 % TTC, ménage refacturé. Note Google 4.9/5 sur 36 avis avec des retours clients qui soulignent la constance qualitative — un atout important pour la note moyenne Airbnb (impact direct sur la visibilité). Idéal pour un bien dans l'hypercentre où les voyageurs sont exigeants sur la propreté.",
+      },
+      {
+        name: 'NG Conciergerie Pays d\'Aix',
+        url: 'https://www.ngconciergerie.fr/',
+        commission: '17-22 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 26,
+        biensGeres: 35,
+        specialty: 'Prestation à la carte, grille modulable',
+        description:
+          "NG Conciergerie propose une **grille modulable de 17 à 22 %** selon le périmètre de service choisi (formule de base sans création annonce ou formule complète avec yield). Couvre Aix intra-muros et le Pays d'Aix élargi (Venelles, Bouc-Bel-Air, Gardanne). Note Google 4.8/5. Idéal pour un propriétaire déjà autonome sur certains aspects (création d'annonce, photos) qui veut négocier précisément le périmètre de la conciergerie.",
+      },
+      {
+        name: 'YourHostHelper Aix-en-Provence',
+        url: 'https://yourhosthelper.com/conciergerie-aix-en-provence/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 95,
+        biensGeres: 80,
+        specialty: 'Réseau national, présence Aix consolidée',
+        description:
+          "YourHostHelper est un réseau national né à Cannes en 2017, présent à Aix-en-Provence depuis plusieurs années avec une équipe dédiée. Commission de 20 % sans frais fixes, ménage refacturé au voyageur. Photos pro incluses, pricing dynamique, diffusion multi-plateformes (Airbnb, Booking, Vrbo). Bon rapport process-industrialisés / réactivité locale pour les propriétaires multi-biens ou qui résident à distance.",
+      },
+      {
+        name: 'HostnFly Aix-en-Provence',
+        url: 'https://hostnfly.com/conciergerie-airbnb/aix-en-provence',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 110,
+        biensGeres: 90,
+        specialty: 'Algorithme de pricing dynamique propriétaire',
+        description:
+          "Solution clé en main avec **algorithme de tarification dynamique propriétaire** et 150 000+ réservations gérées par an au niveau national. Commission à partir de 20 %, ménage refacturé voyageur, diffusion 10+ plateformes, assurance incluse. Le pricing automatisé est un vrai atout sur un marché comme Aix où les pics (Festival d'art lyrique, rentrée universitaire, week-ends prolongés) doivent être captés finement.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Quartier Mazarin',
+        pricePerNight: '150-250 €',
+        occupancy: 72,
+        description:
+          "Quartier patrimonial XVIIe au sud du Cours Mirabeau : hôtels particuliers, places ombragées, calme résidentiel. Le secteur le plus prisé d'Aix pour le LCD haut de gamme, avec les meilleures occupations (>85 % en haute saison). T2 à partir de 350 000 €.",
+        roiBrut: '4,5 à 5,5 %',
+      },
+      {
+        name: 'Centre historique / Cours Mirabeau',
+        pricePerNight: '100-180 €',
+        occupancy: 68,
+        description:
+          "Cœur piéton autour du Cours Mirabeau et de la place des Cardeurs : restaurants, marchés provençaux, terrasses. Clientèle 100 % touristique avec rotation rapide (séjours 2-4 nuits). Excellent compromis occupation/prix pour un T1-T2.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Saint-Jean-de-Malte',
+        pricePerNight: '120-200 €',
+        occupancy: 65,
+        description:
+          "Quartier patrimonial autour de l'église Saint-Jean-de-Malte et du musée Granet. Charme aixois authentique, à 5 min à pied du Cours Mirabeau. Apprécié des couples et voyageurs culturels. T2 à partir de 320 000 €.",
+        roiBrut: '5 à 5,5 %',
+      },
+      {
+        name: 'Sextius-Mirabeau / Encagnane',
+        pricePerNight: '70-130 €',
+        occupancy: 60,
+        description:
+          "Quartier en mutation autour de la gare TGV et de Sciences Po : mix étudiants, business et tourisme. Tarifs accessibles, demande très lissée sur l'année (semaine = business, week-end = tourisme). Ticket d'entrée plus bas (T2 dès 220 000 €).",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Jas de Bouffan',
+        pricePerNight: '70-120 €',
+        occupancy: 55,
+        description:
+          "Quartier résidentiel à l'ouest, autour de l'Atelier Cézanne et du complexe sportif. Réservé aux familles et longs séjours, moins concurrentiel. Bon ticket d'entrée pour un premier investissement LCD à Aix.",
+        roiBrut: '6,5 à 7 %',
+      },
+      {
+        name: 'La Torse / Pont de l\'Arc',
+        pricePerNight: '80-140 €',
+        occupancy: 58,
+        description:
+          "Quartiers résidentiels au sud-est, proches de la rocade et de l'autoroute A8. Maisons individuelles avec piscine très demandées en été par les familles. Tarifs estivaux élevés mais saisonnalité plus marquée.",
+        roiBrut: '5,5 à 6 %',
+      },
+    ],
+    regulation:
+      "Aix-en-Provence est classée **zone tendue** et figure parmi les villes où Airbnb bloque automatiquement les réservations au-delà des seuils autorisés. Tout loueur doit obtenir un **numéro d'enregistrement à 13 chiffres** auprès de la mairie avant toute mise en location. La résidence principale est plafonnée à **120 nuitées par an** au niveau national.\n\n**Changement d'usage pour résidence secondaire.** En tant que ville de plus de 50 000 habitants en zone tendue, Aix-en-Provence impose l'autorisation de changement d'usage pour transformer un logement en meublé de tourisme dédié. Les modalités précises (compensation, durée, périmètre) évoluent — consulter directement la direction de l'urbanisme de la mairie avant tout investissement dédié LCD.\n\n**Loi Le Meur 2024 et calendrier 2026.** L'enregistrement national sur téléservice unique est obligatoire avant le **20 mai 2026**, sous peine de désactivation automatique des annonces par les plateformes (Booking, Airbnb). Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC passe à 30 % pour les meublés non classés (50 % pour les classés tourisme). Amendes jusqu'à **10 000 € pour défaut d'enregistrement** et **20 000 € pour fausse déclaration**.\n\n**Taxe de séjour.** Variable de 0,75 € à 4,30 € par nuit et par personne selon le classement de l'hébergement, collectée automatiquement par Airbnb depuis 2019.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 135,
+      neighborhood: 'Quartier Mazarin',
+      revenuBrut: 28000,
+      commissionRate: 0.20,
+      menageCount: 80,
+      menageUnitCost: 75,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation pour louer en Airbnb à Aix-en-Provence ?',
+        a: "Oui. Tout loueur doit déclarer son meublé de tourisme à la mairie et obtenir un **numéro d'enregistrement à 13 chiffres** à faire figurer sur chaque annonce. Pour une résidence principale, la location reste plafonnée à 120 nuitées par an. Pour une résidence secondaire, une **autorisation de changement d'usage** est exigée (procédure auprès de la direction de l'urbanisme). À partir du 20 mai 2026, l'enregistrement passera par un téléservice national unique, et toute annonce sans numéro sera automatiquement désactivée par Airbnb et Booking.",
+      },
+      {
+        q: 'Combien peut-on gagner avec un Airbnb pendant le Festival d\'art lyrique d\'Aix ?',
+        a: "Le Festival d'art lyrique (3 semaines fin juin à mi-juillet) attire une clientèle internationale haut de gamme (mélomanes, professionnels du spectacle, presse) prête à payer **+50 à +100 %** par rapport aux tarifs standards de juillet. Un T2 dans le Mazarin qui se loue 150 €/nuit en haute saison atteint 230-280 €/nuit pendant le Festival, avec un minimum 3-4 nuits imposé. Sur les 3 semaines, un bien bien placé peut générer **4 500 à 6 000 € bruts** uniquement sur cette période, contre 3 200 € en juillet « standard ». Une conciergerie experte ouvre les dates 12 mois à l'avance et applique un yield précis.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Aix-en-Provence ?',
+        a: "Pour un objectif **rentabilité + sécurité**, le quartier **Mazarin** reste la valeur sûre : occupations records (>85 % en saison), tarifs élevés, clientèle premium, mais ticket d'entrée >350 000 € pour un T2. Pour un **ticket plus accessible avec demande lissée**, **Sextius-Mirabeau** ou **Encagnane** (proximité gare TGV et Sciences Po) offrent une demande mixte étudiants/business/tourisme avec des prix d'achat 30 % plus bas. À éviter si vous visez le LCD pur : les hauteurs résidentielles éloignées (Puyricard, Eguilles) où la demande Airbnb reste faible hors juillet-août.",
+      },
+    ],
+    updatedAt: '2026-05-15',
+  },
+  // ==========================================================================
+  // HYÈRES
+  // ==========================================================================
+  {
+    slug: 'hyeres',
+    displayName: 'Hyères',
+    region: 'Provence-Alpes-Côte d\'Azur',
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie Hyères Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Hyères : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Hyères. Tarifs (10-25 %), spécialités Giens & La Capte, zone tendue, quartiers rentables, exemple concret.',
+    kwPrincipal: 'conciergerie hyeres',
+    kwSecondaires: [
+      'conciergerie airbnb hyeres',
+      'conciergerie hyères',
+      'hyeres conciergerie',
+      'gestion locative hyeres',
+      'location courte durée presqu\'ile de giens',
+      'meublé touristique hyeres',
+    ],
+    population: 56799,
+    tourists: 2500000,
+    activeListings: 3800,
+    priceLow: 60,
+    priceHigh: 220,
+    occupancyRate: 55,
+    revpar: 52,
+    seasonality:
+      "Saisonnalité très marquée : pic absolu juillet-août (occupation >90 %, tarifs ×2 à ×2,5), épaule mai-juin et septembre (60-75 % d'occupation), creux profond novembre-mars (<25 %). La **Presqu'île de Giens** et **La Capte** captent la clientèle balnéaire, tandis que le **centre médiéval** et le port maintiennent une activité d'arrière-saison (séniors, voyages culturels, salons nautiques). Les **Îles d'Or** (Porquerolles, Port-Cros) attirent un tourisme premium qui transite par Hyères.",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un appartement ou une villa à **Hyères** que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **Presqu'île de Giens** et ses tarifs estivaux records, la clientèle balnéaire ultra-saisonnière de **La Capte** et le **classement en zone tendue**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** parmi les acteurs hyérois et varois ?",
+    marketIntro:
+      "Hyères est l'un des marchés balnéaires les plus dynamiques du Var avec environ **3 800 annonces actives** et un revenu moyen par annonce qui peut dépasser **20 000 €/an** sur les biens bord de mer.\n\nLa ville bénéficie d'une **géographie exceptionnelle** : la **Presqu'île de Giens** (double tombolo unique en France), les plages de **La Capte** et de **l'Almanarre** (spot de kitesurf de niveau mondial), l'embarquement vers les **Îles d'Or** (Porquerolles, Port-Cros) et un centre médiéval perché qui maintient une attractivité culturelle hors-saison.\n\nLe marché est **très saisonnier** : 70 % du revenu annuel se concentre sur juin-septembre, avec des pics où les tarifs sont **multipliés par 2 à 2,5**. La clientèle vient majoritairement de France (PACA, Île-de-France, Rhône-Alpes) avec une part croissante d'Allemands, Suisses et Belges.\n\n**Hyères est classée zone tendue** (décret 2023-822) : numéro d'enregistrement obligatoire, plafond 120 nuitées pour les résidences principales, et procédure de changement d'usage en cours de déploiement pour les résidences secondaires (loi Le Meur).",
+    conciergeries: [
+      {
+        name: 'Bonni',
+        url: 'https://bonni.fr/conciergerie-airbnb-hyeres/',
+        commission: '10-18 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 30,
+        biensGeres: 35,
+        specialty: 'Commission progressive dès 10 %',
+        description:
+          "Conciergerie locale fondée en 2023, Bonni couvre l'ensemble du périmètre hyérois : **Giens, La Capte, Port d'Hyères, Costebelle, Les Salins, L'Almanarre** et centre médiéval. Commission progressive **à partir de 10 % du chiffre d'affaires net**, sans frais fixes ni engagement. Note Google 4.9/5 sur une trentaine d'avis. Annonce un objectif de **+35 % de revenus en moyenne** sur les biens repris, grâce à un yield agressif et à une présence terrain 7j/7. Profil idéal pour un propriétaire qui veut tester un partenaire local sans engagement.",
+      },
+      {
+        name: 'YourHostHelper Hyères',
+        url: 'https://yourhosthelper.com/conciergerie-hyeres/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 65,
+        biensGeres: 60,
+        specialty: 'Réseau national, expertise villa avec piscine',
+        description:
+          "Antenne locale du réseau national YourHostHelper, pilotée par Jade Brunet à Hyères. Commission 20 % sur le revenu généré, ménage refacturé. Photos pro, création d'annonce, diffusion multi-plateformes (Airbnb, Booking, Abritel), pricing dynamique, gestion ménage et linge hôtelier. Spécialisation prononcée sur les **villas avec piscine** de Giens, Costebelle et La Capte qui demandent une gestion technique (entretien piscine, jardinier, prestataires bord de mer).",
+      },
+      {
+        name: 'ILIOS Conciergerie',
+        url: 'https://www.iliosconciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 100,
+        biensGeres: 70,
+        specialty: 'Acteur local historique, 100+ avis Google',
+        description:
+          "Conciergerie hyéroise installée 24 avenue Ambroise Thomas, ILIOS est l'un des acteurs locaux les plus établis avec **100+ avis Google « Excellent »**. Création d'annonces performantes, gestion quotidienne (réservations, communication voyageurs, check-in/out), ménage pro, maintenance. Couverture Airbnb, Booking, Abritel. Tarification sur devis selon le bien et le niveau de service — généralement aligné sur le marché varois (18-22 %). À privilégier pour un propriétaire qui valorise la relation humaine et la stabilité d'un partenaire local de longue date.",
+      },
+      {
+        name: 'Hyères Conciergerie',
+        url: 'https://www.hyeres-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 45,
+        biensGeres: 40,
+        specialty: 'Conciergerie dédiée Hyères et alentours',
+        description:
+          "Conciergerie 100 % focalisée sur Hyères et sa proche périphérie (Carqueiranne, La Crau, Le Pradet). Offre clé en main couvrant l'annonce, la diffusion, la communication voyageurs, l'accueil, le ménage et la maintenance. Tarification sur devis adaptée à la typologie du bien (studio, T2, villa). Bonne réputation locale et réactivité rapide, particulièrement appréciée pour la gestion des **villas avec piscine** sur la Presqu'île de Giens et à Costebelle.",
+      },
+      {
+        name: 'HostnFly Hyères',
+        url: 'https://hostnfly.com/conciergerie-airbnb/hyeres',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 75,
+        biensGeres: 65,
+        specialty: 'Tech + algorithme yield, diffusion 10+ plateformes',
+        description:
+          "Solution clé en main avec algorithme de tarification dynamique propriétaire et 150 000+ réservations gérées par an au niveau national. Commission à partir de 20 %, ménage refacturé, diffusion sur 10+ plateformes (Airbnb, Booking, Vrbo, Abritel, Expedia), assurance incluse. Le yield automatisé est un vrai atout sur un marché aussi saisonnier qu'Hyères où chaque pic estival (Tour Voile, salons nautiques) doit être capté finement.",
+      },
+      {
+        name: 'Welkeys Hyères',
+        url: 'https://www.welkeys.com/conciergerie-airbnb/hyeres',
+        commission: '22-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 55,
+        biensGeres: 50,
+        specialty: 'Premium national, biens standing bord de mer',
+        description:
+          "Acteur national premium, Welkeys cible les biens de standing : villas Giens, Costebelle, La Capte, avec un suivi qualitatif renforcé et un pricing agressif pendant les pics estivaux. Commission 22-25 % selon le niveau de service, ménage refacturé voyageur. Reporting financier détaillé, gestion stricte des avis (impact direct sur la visibilité Airbnb). Pertinent pour les propriétaires multi-biens ou résidant à distance qui veulent un process industrialisé.",
+      },
+      {
+        name: 'AllForHost Hyères',
+        url: 'https://allforhost.com/la-conciergerie-airbnb-a-hyeres/',
+        commission: '15-18 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 35,
+        biensGeres: 30,
+        specialty: 'Commission basse, formule revenu réel',
+        description:
+          "AllForHost propose une grille parmi les plus accessibles du marché hyérois : **15 % sur une offre standard** ou **18 % sur la formule au revenu réel** (avec optimisation tarifaire poussée). Ménage refacturé au voyageur. Couvre l'annonce, la communication, l'accueil, le ménage pro et la maintenance courante. Bon choix pour un propriétaire qui veut maximiser la marge nette sur un bien moyen de gamme (T2-T3 La Capte ou centre).",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Presqu\'île de Giens',
+        pricePerNight: '120-280 €',
+        occupancy: 70,
+        description:
+          "Joyau géographique d'Hyères : double tombolo unique en France, plages sauvages, embarquement pour Porquerolles. Clientèle haut de gamme française et internationale. Pics tarifaires juillet-août sur les villas avec piscine vue mer. Marché tendu, peu d'offre disponible. Villa T3 à partir de 650 000 €.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'La Capte',
+        pricePerNight: '90-180 €',
+        occupancy: 65,
+        description:
+          "Village balnéaire le long de la route du sel, plages familiales et campings. Très accessible, idéal pour les familles avec enfants. Saisonnalité marquée juin-septembre. T2 à partir de 280 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Centre médiéval / Vieille ville',
+        pricePerNight: '70-130 €',
+        occupancy: 55,
+        description:
+          "Cœur historique perché avec ruelles pavées, parc Saint-Bernard et collégiale Saint-Paul. Clientèle culturelle et arrière-saison (septembre-octobre, mai-juin). Excellent rapport occupation/prix pour un T1-T2 hors juillet-août. T2 à partir de 220 000 €.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Port d\'Hyères',
+        pricePerNight: '85-160 €',
+        occupancy: 62,
+        description:
+          "Quartier du port commercial et de plaisance, proche des commerces, restaurants et plage. Animation toute l'année, salons nautiques au printemps et à l'automne (Tour Voile, salon du nautisme). Compromis intéressant entre balnéaire et urbain.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'L\'Almanarre',
+        pricePerNight: '90-170 €',
+        occupancy: 60,
+        description:
+          "Spot de kitesurf et planche à voile de niveau mondial, vaste plage face aux salins. Clientèle sportive internationale (Allemands, Suisses, Britanniques) sur des séjours d'une semaine. Saisonnalité étendue grâce aux conditions de vent (mars à novembre).",
+        roiBrut: '5,5 à 6 %',
+      },
+      {
+        name: 'Costebelle',
+        pricePerNight: '110-220 €',
+        occupancy: 58,
+        description:
+          "Quartier résidentiel chic sur les hauteurs, vue mer panoramique sur Giens et les Îles d'Or. Villas avec piscine prisées des familles aisées et des séjours longs (10-15 nuits). Moins concurrentiel que Giens, ticket d'entrée plus accessible (T3 dès 380 000 €).",
+        roiBrut: '4,5 à 5,5 %',
+      },
+    ],
+    regulation:
+      "Hyères est classée **zone tendue** depuis le décret n°2023-822 du 25 août 2023, ce qui déclenche la taxe sur les logements vacants, l'encadrement des loyers longue durée et la possibilité pour la mairie d'imposer le changement d'usage en LCD. Tout loueur doit déclarer son meublé en mairie et obtenir un **numéro d'enregistrement** à faire figurer sur chaque annonce.\n\n**Résidence principale.** La location en meublé de tourisme reste plafonnée à **120 nuitées par an** au niveau national. Au-delà, le bien bascule en résidence secondaire au sens de l'administration et doit respecter les obligations associées.\n\n**Loi Le Meur 2024 et calendrier 2026.** L'enregistrement national sur téléservice unique est obligatoire avant le **20 mai 2026**, sous peine de désactivation automatique des annonces par Booking et Airbnb. Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC passe à 30 % pour les meublés non classés (50 % pour les classés tourisme). Amendes : **10 000 €** pour défaut d'enregistrement, **20 000 €** pour fausse déclaration ou numéro falsifié.\n\n**Taxe de séjour.** Hyères applique le tarif intercommunal de la Métropole Toulon-Provence-Méditerranée : de 0,65 € à 3,80 € par nuit et par personne selon le classement, collectée automatiquement par Airbnb.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 110,
+      neighborhood: 'La Capte',
+      revenuBrut: 18700,
+      commissionRate: 0.20,
+      menageCount: 65,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: 'Vaut-il mieux louer à Giens, à La Capte ou en centre médiéval ?',
+        a: "Cela dépend de votre **profil de propriétaire** et de votre **horizon de revenu**. **Giens** offre les meilleurs tarifs estivaux (120-280 €/nuit pour une villa) mais avec un ticket d'entrée élevé (>650 000 €) et une saisonnalité marquée. **La Capte** est le meilleur compromis ticket/rendement (T2 à 280 000 €, occupation 65 %, ROI 5,5-6,5 %). Le **centre médiéval** est plus accessible (T2 dès 220 000 €) et lisse la saisonnalité grâce au tourisme culturel d'arrière-saison — idéal pour un premier investissement LCD à Hyères.",
+      },
+      {
+        q: 'Comment optimiser un Airbnb pendant la saison estivale à Hyères ?',
+        a: "Trois leviers à activer dès **mars-avril** pour la saison à venir : (1) **ouvrir le calendrier 12 mois à l'avance** sur Airbnb + Booking + Abritel pour capter les réservations précoces des familles allemandes et suisses ; (2) **appliquer un minimum 5-7 nuits** en juillet-août pour limiter le turnover et maximiser le tarif nuitée ; (3) **augmenter les tarifs +15 % deux semaines avant l'ouverture** si le calendrier se remplit vite (signal de tension du marché). Une conciergerie locale comme Bonni, ILIOS ou YourHostHelper applique ces réflexes automatiquement.",
+      },
+      {
+        q: 'Hyères est-elle vraiment intéressante hors saison balnéaire ?',
+        a: "Oui, mais sur **3 niches précises** : (1) le **kitesurf à l'Almanarre** qui amène une clientèle internationale de mars à novembre (Allemands, Suisses, Britanniques) sur des séjours d'une semaine ; (2) les **salons nautiques** au printemps et automne (Tour Voile, salon du nautisme) ; (3) le **tourisme culturel** vers le centre médiéval, le parc Saint-Bernard et les départs vers Porquerolles (très fréquentés en septembre-octobre par une clientèle senior). Sur un bien centre médiéval bien placé, l'occupation peut atteindre 50 % en octobre-novembre avec des tarifs autour de 70-90 €/nuit.",
+      },
+    ],
+    updatedAt: '2026-05-15',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

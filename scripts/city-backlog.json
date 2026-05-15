@@ -204,8 +204,9 @@
     "oldSlug": "/conciergerie-airbnb-aix-en-provence",
     "kw": "conciergerie aix en provence",
     "vol": 570,
-    "status": "À faire",
-    "kd": 7
+    "status": "Publié",
+    "kd": 7,
+    "publishedAt": "2026-05-15"
   },
   {
     "num": 24,
@@ -217,8 +218,9 @@
     "oldSlug": "/conciergerie-airbnb-hyeres",
     "kw": "conciergerie hyeres",
     "vol": 540,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-15"
   },
   {
     "num": 25,

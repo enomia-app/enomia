@@ -218,11 +218,25 @@ Logique :
 - Au moins 1 intervention requise → sujet `[tech-watchdog] ⚠️ N intervention(s) requise(s)`
 - Prod cassée → sujet `[tech-watchdog] 🚨 PROD CASSÉE`
 
-Mail.app est configuré sur le Mac mini avec `marc@enomia.app`, toujours ouvert. Envoi via AppleScript :
+Envoi via le script `scripts/tech-watchdog/send-report.sh` (utilise l'API Resend, lit la clé depuis `.env`) :
+
+**Usage** : `./scripts/tech-watchdog/send-report.sh "Subject" < body.txt` ou `echo "body" | ./scripts/tech-watchdog/send-report.sh "Subject"`.
+
+Le script :
+- Lit `RESEND_API_KEY` depuis `.env` du repo
+- POST vers `https://api.resend.com/emails`
+- From : `tech-watchdog <marc@enomia.app>`
+- To : `marc@enomia.app`
+- Sujet : 1er argument
+- Corps texte : stdin (multilignes OK, échappement géré via Python json)
+- Retourne exit 0 + ID Resend si succès, exit 2 + détails si échec
+
+Exemple :
 
 ```bash
 SUBJECT="[tech-watchdog] ⚠️ 2 intervention(s) requise(s)"
-BODY="$(cat <<'EOF'
+
+./scripts/tech-watchdog/send-report.sh "$SUBJECT" <<EOF
 Run du YYYY-MM-DD HH:MM
 
 Synthèse :
@@ -239,20 +253,11 @@ Synthèse :
 Rapport complet :
   scripts/tech-watchdog/logs/YYYY-MM-DD.md
 EOF
-)"
-
-osascript <<APPLESCRIPT
-tell application "Mail"
-  set newMessage to make new outgoing message with properties {subject:"$SUBJECT", content:"$BODY", visible:false}
-  tell newMessage
-    make new to recipient at end of to recipients with properties {address:"marc@enomia.app"}
-  end tell
-  send newMessage
-end tell
-APPLESCRIPT
 ```
 
-⚠ Échapper les `"` et `\` dans `$BODY` si présents (utiliser `printf %q` au besoin).
+⚠ Si l'envoi échoue (exit != 0) : logger l'erreur dans le rapport markdown mais ne PAS faire échouer le watchdog entier. La notif macOS et le rapport disque restent les sources de vérité.
+
+**Pourquoi Resend et pas Mail.app/AppleScript** : Mail.app peut hanger (constaté 2026-05-14 et 2026-05-15 matin). Resend = HTTP API direct, fiable, headless, pas de dépendance à une app GUI.
 
 Body règles :
 - Court, scannable au tel (pas de dump du rapport complet)

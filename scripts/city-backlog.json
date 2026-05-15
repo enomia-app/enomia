@@ -100,8 +100,9 @@
     "oldSlug": "/conciergerie-airbnb-marrakech",
     "kw": "conciergerie marrakech",
     "vol": 700,
-    "status": "En attente review",
-    "kd": 6
+    "status": "Publié",
+    "kd": 6,
+    "publishedAt": "2026-05-15"
   },
   {
     "num": 16,
@@ -139,8 +140,9 @@
     "oldSlug": "/conciergerie-airbnb-cap-d-agde",
     "kw": "conciergerie cap d agde (H1) + conciergerie airbnb cap d'agde (H2)",
     "vol": 680,
-    "status": "En attente review",
-    "kd": 11
+    "status": "Publié",
+    "kd": 11,
+    "publishedAt": "2026-05-15"
   },
   {
     "num": 19,
@@ -152,8 +154,9 @@
     "oldSlug": "/conciergerie-airbnb-arcachon",
     "kw": "conciergerie arcachon",
     "vol": 660,
-    "status": "En attente review",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-15"
   },
   {
     "num": 20,

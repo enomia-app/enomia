@@ -2,18 +2,20 @@
 /**
  * Étend city-backlog.json avec de nouvelles villes éligibles via SEMrush.
  *
- * Pour chaque ville candidate (FR / BE / CH), interroge SEMrush sur
- * "conciergerie [ville]" et garde celles avec vol >= 50.
+ * Pour chaque ville candidate (FR / BE / CH / DOM-TOM), interroge SEMrush
+ * sur plusieurs KW LCD (conciergerie, gestion locative courte durée, gestion airbnb)
+ * et garde celles avec vol >= 50 sur AU MOINS un KW.
  *
- * Coût : ~150-200 unités SEMrush (1 par ville). Négligeable.
+ * Parallélisé : 5 requêtes simultanées pour vitesse.
  *
  * Output : `scripts/conciergerie-backlog-candidates.json`
  * Pas de merge automatique — Marc valide d'abord.
  *
  * Usage :
  *   node scripts/conciergerie-expand-backlog.mjs
- *   node scripts/conciergerie-expand-backlog.mjs --threshold=30  # vol minimum
- *   node scripts/conciergerie-expand-backlog.mjs --country=fr,be,ch
+ *   node scripts/conciergerie-expand-backlog.mjs --threshold=30
+ *   node scripts/conciergerie-expand-backlog.mjs --country=fr,be,ch,domtom
+ *   node scripts/conciergerie-expand-backlog.mjs --concurrency=10
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -27,7 +29,8 @@ try { process.loadEnvFile(path.join(ROOT, '.env')); } catch {}
 // ─── Args ───────────────────────────────────────────────
 const args = process.argv.slice(2);
 const THRESHOLD = parseInt(args.find(a => a.startsWith('--threshold='))?.replace('--threshold=', '') || '50', 10);
-const COUNTRIES = (args.find(a => a.startsWith('--country='))?.replace('--country=', '') || 'fr,be,ch').split(',');
+const COUNTRIES = (args.find(a => a.startsWith('--country='))?.replace('--country=', '') || 'fr,be,ch,domtom').split(',');
+const CONCURRENCY = parseInt(args.find(a => a.startsWith('--concurrency='))?.replace('--concurrency=', '') || '5', 10);
 
 // ─── SEMrush API key ────────────────────────────────────
 function getApiKey() {
@@ -42,7 +45,7 @@ function getApiKey() {
 }
 const SEMRUSH_KEY = getApiKey();
 
-// ─── Villes BE & CH (manuelle) ──────────────────────────
+// ─── Listes BE / CH / DOM-TOM ───────────────────────────
 const BE_CITIES = [
   'Bruxelles', 'Liège', 'Charleroi', 'Namur', 'Mons', 'Tournai', 'Wavre', 'Verviers',
   'La Louvière', 'Mouscron', 'Arlon', 'Spa', 'Durbuy', 'Bouillon', 'Bastogne',
@@ -56,17 +59,16 @@ const CH_CITIES = [
   'Yverdon-les-Bains', 'Bulle', 'Martigny', 'Morges', 'Nyon', 'Renens', 'Pully',
   'Verbier', 'Crans-Montana', 'Zermatt', 'Gstaad', 'Saas-Fee', 'Les Diablerets',
   'Champéry', 'Villars-sur-Ollon', 'Leysin', 'Château-d\'Œx', 'La Chaux-de-Fonds',
-  'Aigle', 'Monthey', 'Rolle', 'Coppet', 'Évian-les-Bains' // Évian géographiquement FR mais visé par CH
+  'Aigle', 'Monthey', 'Rolle', 'Coppet'
 ];
 
-// DOM-TOM français (db=fr)
 const DOM_TOM_CITIES = [
   // La Réunion
   'Saint-Denis Réunion', 'Saint-Pierre Réunion', 'Saint-Paul Réunion', 'Le Tampon',
   'Saint-Louis Réunion', 'Saint-André Réunion', 'Saint-Benoît Réunion', 'Saint-Joseph Réunion',
-  'Sainte-Marie Réunion', 'Saint-Leu', 'Saint-Gilles-les-Bains', 'L\'Étang-Salé',
-  'La Possession', 'Cilaos', 'Salazie', 'Hell-Bourg',
-  // Polynésie française (Tahiti et alentours)
+  'Sainte-Marie Réunion', 'Saint-Gilles-les-Bains', 'L\'Étang-Salé',
+  'Cilaos', 'Salazie', 'Hell-Bourg',
+  // Polynésie française
   'Papeete', 'Faa\'a', 'Punaauia', 'Pirae', 'Mahina', 'Arue', 'Paea', 'Papara',
   'Moorea', 'Bora Bora', 'Huahine', 'Raiatea',
   // Guadeloupe
@@ -83,15 +85,23 @@ const DOM_TOM_CITIES = [
   'Nouméa', 'Dumbéa', 'Le Mont-Dore'
 ];
 
-// ─── Charger villes FR ──────────────────────────────────
-function loadFrenchCities() {
-  const fullPath = path.join(ROOT, 'scripts/cities-rentabilite-full.json');
-  if (!existsSync(fullPath)) {
-    console.warn(`⚠️  ${fullPath} introuvable`);
-    return [];
-  }
-  const data = JSON.parse(readFileSync(fullPath, 'utf8'));
-  return Object.values(data).map(c => c.nom || c.slug).filter(Boolean);
+// KW à tester par ville (pour BE/CH où "conciergerie" est moins répandu)
+const LCD_KW_PATTERNS_RICH = [
+  'conciergerie {ville}',
+  'gestion locative courte durée {ville}',
+  'gestion airbnb {ville}',
+];
+const LCD_KW_PATTERNS_BASIC = [
+  'conciergerie {ville}',
+];
+
+// ─── Charger villes FR via INSEE > 5k habitants ─────────
+async function loadFrenchCities() {
+  console.log('🔗 Fetch INSEE communes > 5k habitants...');
+  const res = await fetch('https://geo.api.gouv.fr/communes?fields=nom,population&pop=5000:');
+  const data = await res.json();
+  console.log(`  → ${data.length} communes récupérées`);
+  return data.map(c => c.nom).filter(Boolean);
 }
 
 // ─── Charger backlog existant pour dédoublonner ────────
@@ -102,6 +112,15 @@ function loadExistingBacklog() {
   return new Set(data.map(e => normalize(e.ville)));
 }
 
+function loadCitiesTs() {
+  const p = path.join(ROOT, 'src/data/cities.ts');
+  if (!existsSync(p)) return new Set();
+  const content = readFileSync(p, 'utf8');
+  const set = new Set();
+  for (const m of content.matchAll(/slug: '([^']+)'/g)) set.add(m[1]);
+  return set;
+}
+
 function normalize(s) {
   return (s || '').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '').replace(/[^a-z]+/g, '-');
 }
@@ -109,111 +128,106 @@ function normalize(s) {
 // ─── SEMrush phrase_this ────────────────────────────────
 async function semrushVol(phrase, db = 'fr') {
   const url = `https://api.semrush.com/?type=phrase_this&key=${SEMRUSH_KEY}&phrase=${encodeURIComponent(phrase)}&database=${db}&export_columns=Ph,Nq,Kd,Cp`;
-  const res = await fetch(url);
-  const text = await res.text();
-  if (text.includes('NOTHING FOUND')) return { vol: 0, kd: null };
-  if (text.includes('ERROR')) {
-    console.error(`  ⚠️  SEMrush error pour "${phrase}" : ${text.trim()}`);
-    return { vol: null, kd: null };
+  try {
+    const res = await fetch(url);
+    const text = await res.text();
+    if (text.includes('NOTHING FOUND')) return { vol: 0, kd: null };
+    if (text.includes('ERROR')) return { vol: null, kd: null, err: text.trim() };
+    const lines = text.trim().split('\n');
+    if (lines.length < 2) return { vol: 0, kd: null };
+    const cols = lines[1].split(';');
+    return { vol: parseInt(cols[1], 10) || 0, kd: parseFloat(cols[2]) || null };
+  } catch (e) {
+    return { vol: null, kd: null, err: e.message };
   }
-  // Réponse format : "Ph;Nq;Kd;Cp\nconciergerie paris;500;25;0.5"
-  const lines = text.trim().split('\n');
-  if (lines.length < 2) return { vol: 0, kd: null };
-  const cols = lines[1].split(';');
-  return { vol: parseInt(cols[1], 10) || 0, kd: parseFloat(cols[2]) || null };
+}
+
+// ─── Concurrent map (parallélisation contrôlée) ─────────
+async function pMap(items, fn, concurrency) {
+  const results = [];
+  const queue = items.slice();
+  const workers = Array.from({ length: concurrency }, async () => {
+    while (queue.length > 0) {
+      const item = queue.shift();
+      const result = await fn(item);
+      if (result != null) results.push(result);  // exclut null ET undefined
+    }
+  });
+  await Promise.all(workers);
+  return results;
+}
+
+// ─── Tester une ville avec plusieurs KW ─────────────────
+async function probeVille(ville, db, patterns, country, region) {
+  const results = [];
+  for (const pattern of patterns) {
+    const kw = pattern.replace('{ville}', ville);
+    const { vol, kd } = await semrushVol(kw, db);
+    if (vol >= THRESHOLD) {
+      results.push({ ville, country, region, kw, vol, kd });
+    }
+  }
+  // Garde le meilleur KW (vol max)
+  if (results.length === 0) return null;
+  return results.sort((a, b) => b.vol - a.vol)[0];
 }
 
 // ─── Main ───────────────────────────────────────────────
 async function main() {
-  console.log(`🔍 Expansion conciergerie backlog (threshold ${THRESHOLD}, countries: ${COUNTRIES.join(',')})\n`);
+  console.log(`🔍 Expansion conciergerie backlog (threshold ${THRESHOLD}, concurrency ${CONCURRENCY}, countries: ${COUNTRIES.join(',')})\n`);
 
-  const existing = loadExistingBacklog();
-  console.log(`Villes déjà dans backlog : ${existing.size}\n`);
+  const inBacklog = loadExistingBacklog();
+  const inCities = loadCitiesTs();
+  console.log(`Déjà connues : ${inBacklog.size} backlog + ${inCities.size} cities.ts\n`);
 
   const candidates = [];
-  let count = 0;
   let totalQueries = 0;
+  const startTime = Date.now();
 
-  // FR
+  // Helper pour batch un pays
+  async function probeCountry(name, cities, db, patterns, country, region) {
+    console.log(`\n${name} : ${cities.length} villes`);
+    const toProbe = cities.filter(v => !inBacklog.has(normalize(v)) && !inCities.has(normalize(v)));
+    console.log(`  → ${toProbe.length} à tester (après dedup)`);
+    const found = await pMap(toProbe, async (ville) => {
+      const result = await probeVille(ville, db, patterns, country, region);
+      totalQueries += patterns.length;
+      if (result) {
+        console.log(`  ✅ ${result.ville.padEnd(30)} vol=${result.vol} kd=${result.kd ?? '?'} kw="${result.kw}"`);
+      }
+      return result;
+    }, CONCURRENCY);
+    candidates.push(...found);
+  }
+
   if (COUNTRIES.includes('fr')) {
-    console.log('🇫🇷 France :');
-    const frVilles = loadFrenchCities();
-    console.log(`  ${frVilles.length} villes à tester`);
-    for (const ville of frVilles) {
-      if (existing.has(normalize(ville))) {
-        continue; // skip déjà présent
-      }
-      const { vol, kd } = await semrushVol(`conciergerie ${ville}`, 'fr');
-      totalQueries++;
-      if (vol >= THRESHOLD) {
-        candidates.push({ ville, country: 'FR', region: '?', vol, kd, kw: `conciergerie ${ville}` });
-        console.log(`  ✅ ${ville.padEnd(30)} vol=${vol} kd=${kd}`);
-      }
-      // Petit délai pour éviter rate limit
-      await new Promise(r => setTimeout(r, 50));
-    }
+    const frVilles = await loadFrenchCities();
+    await probeCountry('🇫🇷 France', frVilles, 'fr', LCD_KW_PATTERNS_BASIC, 'FR', '?');
   }
-
-  // BE
+  if (COUNTRIES.includes('domtom')) {
+    await probeCountry('🏝️ DOM-TOM', DOM_TOM_CITIES.map(v => v.replace(/ (Réunion|Guadeloupe|Martinique)$/i, '')), 'fr', LCD_KW_PATTERNS_BASIC, 'FR-DOMTOM', 'DOM-TOM');
+  }
   if (COUNTRIES.includes('be')) {
-    console.log('\n🇧🇪 Belgique francophone :');
-    for (const ville of BE_CITIES) {
-      if (existing.has(normalize(ville))) continue;
-      const { vol, kd } = await semrushVol(`conciergerie ${ville}`, 'be');
-      totalQueries++;
-      if (vol >= THRESHOLD) {
-        candidates.push({ ville, country: 'BE', region: 'Wallonie/Bruxelles', vol, kd, kw: `conciergerie ${ville}` });
-        console.log(`  ✅ ${ville.padEnd(30)} vol=${vol} kd=${kd}`);
-      }
-      await new Promise(r => setTimeout(r, 50));
-    }
+    await probeCountry('🇧🇪 Belgique francophone', BE_CITIES, 'be', LCD_KW_PATTERNS_RICH, 'BE', 'Wallonie/Bruxelles');
   }
-
-  // DOM-TOM (db=fr)
-  if (COUNTRIES.includes('domtom') || COUNTRIES.includes('fr')) {
-    console.log('\n🏝️ DOM-TOM (Réunion, Tahiti, Antilles, Guyane, Mayotte, Calédonie) :');
-    for (const ville of DOM_TOM_CITIES) {
-      if (existing.has(normalize(ville.replace(/ (Réunion|Guadeloupe|Martinique)$/i, '')))) continue;
-      const queryVille = ville.replace(/ (Réunion|Guadeloupe|Martinique)$/i, '');
-      const { vol, kd } = await semrushVol(`conciergerie ${queryVille}`, 'fr');
-      totalQueries++;
-      if (vol >= THRESHOLD) {
-        candidates.push({ ville: queryVille, country: 'FR-DOMTOM', region: ville.includes('Réunion') ? 'La Réunion' : '?', vol, kd, kw: `conciergerie ${queryVille}` });
-        console.log(`  ✅ ${queryVille.padEnd(30)} vol=${vol} kd=${kd}`);
-      }
-      await new Promise(r => setTimeout(r, 50));
-    }
-  }
-
-  // CH
   if (COUNTRIES.includes('ch')) {
-    console.log('\n🇨🇭 Suisse romande :');
-    for (const ville of CH_CITIES) {
-      if (existing.has(normalize(ville))) continue;
-      const { vol, kd } = await semrushVol(`conciergerie ${ville}`, 'ch');
-      totalQueries++;
-      if (vol >= THRESHOLD) {
-        candidates.push({ ville, country: 'CH', region: 'Romandie', vol, kd, kw: `conciergerie ${ville}` });
-        console.log(`  ✅ ${ville.padEnd(30)} vol=${vol} kd=${kd}`);
-      }
-      await new Promise(r => setTimeout(r, 50));
-    }
+    await probeCountry('🇨🇭 Suisse romande', CH_CITIES, 'ch', LCD_KW_PATTERNS_RICH, 'CH', 'Romandie');
   }
 
-  // Tri par volume desc
   candidates.sort((a, b) => b.vol - a.vol);
 
-  // Output
   const outPath = path.join(ROOT, 'scripts/conciergerie-backlog-candidates.json');
   writeFileSync(outPath, JSON.stringify(candidates, null, 2));
-  console.log(`\n📊 Bilan : ${candidates.length} nouvelles villes candidates (>= vol ${THRESHOLD})`);
-  console.log(`  • SEMrush queries : ${totalQueries}`);
+
+  const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+  console.log(`\n📊 Bilan : ${candidates.length} villes candidates (>= vol ${THRESHOLD})`);
+  console.log(`  • Requêtes SEMrush : ${totalQueries}`);
+  console.log(`  • Durée : ${elapsed}s`);
   console.log(`  • Output : ${outPath}`);
-  console.log(`\nTop 10 :`);
-  for (const c of candidates.slice(0, 10)) {
-    console.log(`  ${c.country}  ${c.ville.padEnd(25)} vol=${c.vol}`);
+  console.log(`\nTop 15 :`);
+  for (const c of candidates.slice(0, 15)) {
+    console.log(`  ${c.country.padEnd(10)} ${c.ville.padEnd(25)} vol=${c.vol.toString().padEnd(5)} kw="${c.kw}"`);
   }
-  console.log(`\nÀ examiner et merger dans city-backlog.json manuellement (ou via script de merge).`);
 }
 
 main().catch(e => {

@@ -2,7 +2,7 @@ Tu es l'agent de production des pages conciergerie ville Enomia, exécuté par l
 
 ## Mission
 
-Produire **3 nouvelles villes** par run, push direct en prod (Vercel auto-deploy), email récap à Marc.
+Produire **4 nouvelles villes** par run, push direct en prod (Vercel auto-deploy), email récap à Marc.
 
 ## Setup
 
@@ -21,14 +21,14 @@ Produire **3 nouvelles villes** par run, push direct en prod (Vercel auto-deploy
 
 ## Workflow
 
-### Étape 1 — Identifier les 3 villes du jour
+### Étape 1 — Identifier les 4 villes du jour
 
 Lire `scripts/city-backlog.json`. Filtrer :
 - `status == "À faire"`
 - Tri par `vol` DESC (volume SEMrush)
-- Prendre les **3 premiers**
+- Prendre les **4 premiers**
 
-Si moins de 3 villes restantes → traiter ce qu'il y a + email "pipeline bientôt vide".
+Si moins de 4 villes restantes → traiter ce qu'il y a + email "pipeline bientôt vide".
 
 ### Étape 2 — Pour chaque ville, recherche
 
@@ -105,7 +105,7 @@ Format exact d'une entry (cf villes existantes dans `src/data/cities.ts` pour le
 
 ### Étape 4 — Ajouter au fichier `src/data/cities.ts`
 
-Lire le fichier, identifier l'array `export const cities = [...]`, **ajouter les 3 nouvelles entries à la fin de l'array** (avant la dernière `]`). Préserver l'ordre / formatage existant.
+Lire le fichier, identifier l'array `export const cities = [...]`, **ajouter les 4 nouvelles entries à la fin de l'array** (avant la dernière `]`). Préserver l'ordre / formatage existant.
 
 #### ⚠️ Convention markdown — champs renderRich vs champs littéraux
 
@@ -136,22 +136,23 @@ Pour chaque ville traitée : `status` → `Publié`, ajouter `publishedAt` au fo
 
 ```bash
 git add src/data/cities.ts scripts/city-backlog.json
-git commit -m "feat(conciergerie): +3 villes (VILLE1, VILLE2) — production auto"
+git commit -m "feat(conciergerie): +4 villes (VILLE1, VILLE2) — production auto"
 git push origin main
 ```
 
 ### Étape 7 — Email récap via Resend
 
 ```bash
-./scripts/tech-watchdog/send-report.sh "[conciergerie] +3 villes en ligne : VILLE1, VILLE2, VILLE3" <<EMAIL
+./scripts/tech-watchdog/send-report.sh "[conciergerie] +4 villes en ligne : VILLE1, VILLE2, VILLE3, VILLE4" <<EMAIL
 Production auto du DATE.
 
 Nouvelles villes publiées (vol SEMrush) :
 1. VILLE1 (vol: X) → https://www.enomia.app/conciergerie-airbnb/REGION1/SLUG1
 2. VILLE2 (vol: Y) → https://www.enomia.app/conciergerie-airbnb/REGION2/SLUG2
 3. VILLE3 (vol: Z) → https://www.enomia.app/conciergerie-airbnb/REGION3/SLUG3
+4. VILLE4 (vol: W) → https://www.enomia.app/conciergerie-airbnb/REGION4/SLUG4
 
-Conciergeries listées : N agences VILLE1, M agences VILLE2, P agences VILLE3.
+Conciergeries listées : N agences VILLE1, M agences VILLE2, P agences VILLE3, Q agences VILLE4.
 
 Vercel deploy en cours (auto sur push main, ~2 min).
 

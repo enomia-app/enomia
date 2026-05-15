@@ -12,9 +12,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { google } from 'googleapis';
+import { getGscAuthClient } from './lib/gsc-auth.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
+try { process.loadEnvFile(path.join(ROOT, '.env')); } catch {}
 const SITE_URL = 'sc-domain:enomia.app';
 const BASE_URL = 'https://www.enomia.app';
 
@@ -89,11 +91,8 @@ async function inspectUrl(sc, url) {
 }
 
 async function main() {
-  console.log('🔐 Auth ADC...');
-  const auth = new google.auth.GoogleAuth({
-    scopes: ['https://www.googleapis.com/auth/webmasters.readonly'],
-  });
-  const authClient = await auth.getClient();
+  console.log('🔐 Auth OAuth...');
+  const authClient = getGscAuthClient();
   const sc = google.searchconsole({ version: 'v1', auth: authClient });
 
   const urls = await buildUrlList();

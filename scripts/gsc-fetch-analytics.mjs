@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Récupère les analytics GSC (impressions, clics, CTR, position) par URL sur 28 jours.
- * Utilise Application Default Credentials (gcloud auth application-default login).
+ * Auth : OAuth refresh_token via scripts/lib/gsc-auth.mjs (voir gsc-oauth-bootstrap.mjs).
  *
  * Output : .claude/gsc-tracking/analytics.json
  * Usage : node scripts/gsc-fetch-analytics.mjs
@@ -11,9 +11,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { google } from 'googleapis';
+import { getGscAuthClient } from './lib/gsc-auth.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
+try { process.loadEnvFile(path.join(ROOT, '.env')); } catch {}
 const SITE_URL = 'sc-domain:enomia.app';
 
 function dateAgo(days) {
@@ -23,11 +25,8 @@ function dateAgo(days) {
 }
 
 async function main() {
-  console.log('🔐 Auth ADC...');
-  const auth = new google.auth.GoogleAuth({
-    scopes: ['https://www.googleapis.com/auth/webmasters.readonly'],
-  });
-  const authClient = await auth.getClient();
+  console.log('🔐 Auth OAuth...');
+  const authClient = getGscAuthClient();
   const sc = google.searchconsole({ version: 'v1', auth: authClient });
 
   const endDate = dateAgo(2);   // GSC data has ~2 days lag

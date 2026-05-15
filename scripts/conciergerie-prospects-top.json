@@ -1,0 +1,300 @@
+[
+  {
+    "name": "HostnFly Cap d",
+    "url": "https://www.hostnfly.com/conciergerie-airbnb/cap-d-agde",
+    "rating": 4.6,
+    "reviews": 4000,
+    "commission": "20 %",
+    "specialty": "#1 France en volume, diffusion multi-plateforme",
+    "city": "Agde",
+    "score": 38.15377820074328
+  },
+  {
+    "name": "HostnFly",
+    "url": "https://www.hostnfly.com/conciergerie-airbnb/les-sables-d-olonne",
+    "rating": 4.6,
+    "reviews": 4000,
+    "commission": "à partir de 20 %",
+    "specialty": "Réseau national, diffusion 10+ plateformes",
+    "score": 38.15377820074328
+  },
+  {
+    "name": "HostnFly Cap d",
+    "url": "https://hostnfly.com/conciergerie-airbnb/cap-d-agde",
+    "rating": 4.6,
+    "reviews": 4000,
+    "commission": "20 %",
+    "specialty": "Leader national, 10+ plateformes, 0 frais fixe",
+    "score": 38.15377820074328
+  },
+  {
+    "name": "HostnFly",
+    "url": "https://hostnfly.com/",
+    "rating": 4.6,
+    "reviews": 3600,
+    "commission": "25 %",
+    "specialty": "Volume & automatisation à grande échelle",
+    "city": "Paris",
+    "score": 37.669247572784826
+  },
+  {
+    "name": "Welkeys",
+    "url": "https://www.welkeys.com/",
+    "rating": 4.4,
+    "reviews": 850,
+    "commission": "22 %",
+    "specialty": "Technologie & reporting propriétaire",
+    "city": "Paris",
+    "score": 29.68421336572285
+  },
+  {
+    "name": "Check My Guest",
+    "url": "https://www.checkmyguest.fr/",
+    "rating": 4.5,
+    "reviews": 600,
+    "commission": "18 %",
+    "specialty": "Accompagnement investisseurs & gestion à grande échelle",
+    "city": "Paris",
+    "score": 28.793677205408436
+  },
+  {
+    "name": "Guester",
+    "url": "https://www.guester.com/",
+    "rating": 4.9,
+    "reviews": 320,
+    "commission": "18 %",
+    "specialty": "Excellence opérationnelle & ménage internalisé",
+    "city": "Paris",
+    "score": 28.28006150333708
+  },
+  {
+    "name": "2KEYS",
+    "url": "https://2keys.fr/conciergerie-airbnb-angers/",
+    "rating": 4.9,
+    "reviews": 170,
+    "commission": "à partir de 15 %",
+    "specialty": "Référence angevine, 900+ séjours/an",
+    "city": "Angers",
+    "score": 25.194151426863037
+  },
+  {
+    "name": "Cocoonr Bordeaux",
+    "url": "https://cocoonr.fr/conciergerie-bnb-bordeaux/",
+    "rating": 4.7,
+    "reviews": 210,
+    "commission": "20 %",
+    "specialty": "Réseau national, couverture large",
+    "city": "Auvergne-Rhône-Alpes",
+    "score": 25.153733227337515
+  },
+  {
+    "name": "Les Clés d",
+    "url": "https://lesclesdalfred.fr/",
+    "rating": 4.8,
+    "reviews": 180,
+    "commission": "17,5 % saisonnier / 15 % moyenne durée",
+    "specialty": "Transparence & appli mobile",
+    "city": "Auvergne-Rhône-Alpes",
+    "score": 24.952785750075964
+  },
+  {
+    "name": "YourHostHelper Cannes",
+    "url": "https://yourhosthelper.com/conciergerie-cannes/",
+    "rating": 4.8,
+    "reviews": 180,
+    "commission": "20 %",
+    "specialty": "Réseau fondé à Cannes en 2017",
+    "city": "Cannes",
+    "score": 24.952785750075964
+  },
+  {
+    "name": "GuestReady",
+    "url": "https://www.guestready.com/",
+    "rating": 4.4,
+    "reviews": 280,
+    "commission": "20 %",
+    "specialty": "Couverture internationale & portfolio large",
+    "city": "Paris",
+    "score": 24.80876054506848
+  },
+  {
+    "name": "Welkeys Cannes",
+    "url": "https://www.welkeys.com/conciergerie-airbnb/cannes",
+    "rating": 4.6,
+    "reviews": 210,
+    "commission": "22-25 %",
+    "specialty": "Premium & pricing agressif événements",
+    "city": "Cannes",
+    "score": 24.618547413989905
+  },
+  {
+    "name": "YourHostHelper Rouen",
+    "url": "https://yourhosthelper.com/conciergerie-rouen/",
+    "rating": 4.7,
+    "reviews": 180,
+    "commission": "20 %",
+    "specialty": "Réseau national, formule 15 services",
+    "city": "Rouen",
+    "score": 24.432936046949383
+  },
+  {
+    "name": "YourHostHelper Angers",
+    "url": "https://yourhosthelper.com/",
+    "rating": 4.7,
+    "reviews": 180,
+    "commission": "20 %",
+    "specialty": "Réseau national, formule clé en main",
+    "city": "Angers",
+    "score": 24.432936046949383
+  },
+  {
+    "name": "YourHostHelper Paris",
+    "url": "https://yourhosthelper.com/conciergerie-paris-2/",
+    "rating": 4.5,
+    "reviews": 210,
+    "commission": "20 %",
+    "specialty": "Photos pros & pricing dynamique",
+    "city": "Paris",
+    "score": 24.0833616006423
+  },
+  {
+    "name": "YourHostHelper Montpellier",
+    "url": "https://yourhosthelper.com/conciergerie-montpellier/",
+    "rating": 4.6,
+    "reviews": 180,
+    "commission": "20 %",
+    "specialty": "Réseau national, présence locale",
+    "city": "Montpellier",
+    "score": 23.913086343822798
+  },
+  {
+    "name": "Hostnfly Lyon",
+    "url": "https://hostnfly.com/conciergerie-airbnb/lyon",
+    "rating": 4.5,
+    "reviews": 185,
+    "commission": "20 %",
+    "specialty": "#1 France en volume",
+    "city": "Lyon",
+    "score": 23.51586003170941
+  },
+  {
+    "name": "WeHost Nantes",
+    "url": "https://www.wehost.fr/conciergerie-airbnb-nantes/",
+    "rating": 4.3,
+    "reviews": 230,
+    "commission": "20 %",
+    "specialty": "Réseau national, technologie pricing dynamique",
+    "city": "Nantes",
+    "score": 23.40239615524371
+  },
+  {
+    "name": "Hostnfly Lille",
+    "url": "https://www.hostnfly.com/conciergerie-airbnb/lille",
+    "rating": 4.5,
+    "reviews": 165,
+    "commission": "20 %",
+    "specialty": "Leader national",
+    "city": "Lille",
+    "score": 23.003945047604446
+  },
+  {
+    "name": "GuestReady Lyon",
+    "url": "https://www.guestready.com/airbnb-management/lyon/",
+    "rating": 4.5,
+    "reviews": 160,
+    "commission": "25 %",
+    "specialty": "Réseau international",
+    "city": "Lyon",
+    "score": 22.866319642430085
+  },
+  {
+    "name": "YourHostHelper Bordeaux",
+    "url": "https://yourhosthelper.com/agence-bordeaux/",
+    "rating": 4.6,
+    "reviews": 140,
+    "commission": "20 %",
+    "specialty": "Photos pros & pricing dynamique",
+    "city": "Auvergne-Rhône-Alpes",
+    "score": 22.764295495739574
+  },
+  {
+    "name": "Welkeys Lyon",
+    "url": "https://www.welkeys.com/conciergerie-airbnb/lyon",
+    "rating": 4.6,
+    "reviews": 140,
+    "commission": "20-22 %",
+    "specialty": "Technologie & reporting",
+    "city": "Lyon",
+    "score": 22.764295495739574
+  },
+  {
+    "name": "Hostnfly Strasbourg",
+    "url": "https://hostnfly.com/conciergerie-airbnb/strasbourg",
+    "rating": 4.5,
+    "reviews": 155,
+    "commission": "20 %",
+    "specialty": "Leader national en volume",
+    "city": "Strasbourg",
+    "score": 22.724352032622917
+  },
+  {
+    "name": "HostnFly Arcachon",
+    "url": "https://hostnfly.com/conciergerie-airbnb/arcachon",
+    "rating": 4.5,
+    "reviews": 150,
+    "commission": "20 %",
+    "specialty": "Algo pricing IA, 10+ plateformes",
+    "city": "Arcachon",
+    "score": 22.577759265667158
+  },
+  {
+    "name": "Mary Poppins",
+    "url": "https://www.marypoppins-conciergerie.fr/",
+    "rating": 4.7,
+    "reviews": 120,
+    "commission": "20-22 %",
+    "specialty": "Service à l",
+    "city": "Auvergne-Rhône-Alpes",
+    "score": 22.540215564304685
+  },
+  {
+    "name": "YourHostHelper Marrakech",
+    "url": "https://yourhosthelper.com/en/agences-conciergerie-maroc/",
+    "rating": 4.7,
+    "reviews": 120,
+    "commission": "20 %",
+    "specialty": "Réseau France + Maroc, dashboard propriétaire",
+    "city": "Marrakech",
+    "score": 22.540215564304685
+  },
+  {
+    "name": "Tranquille Emile",
+    "url": "https://www.tranquilleemile.com/",
+    "rating": 4.6,
+    "reviews": 130,
+    "commission": "20 %",
+    "specialty": "Biens de charme & service haut de gamme",
+    "city": "Paris",
+    "score": 22.425907686725292
+  },
+  {
+    "name": "BnB Groom Services",
+    "url": "https://bnbgroomservices.com/",
+    "rating": 4.9,
+    "reviews": 95,
+    "commission": "22 %",
+    "specialty": "Conciergerie + agence immobilière",
+    "city": "Cannes",
+    "score": 22.3653061381924
+  },
+  {
+    "name": "HostnFly Cannes",
+    "url": "https://hostnfly.com/conciergerie-airbnb/cannes",
+    "rating": 4.5,
+    "reviews": 140,
+    "commission": "20 %",
+    "specialty": "Tech + yield management algorithmique",
+    "city": "Cannes",
+    "score": 22.26941950670176
+  }
+]

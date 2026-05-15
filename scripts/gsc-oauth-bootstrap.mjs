@@ -25,7 +25,10 @@ try { process.loadEnvFile(path.join(ROOT, '.env')); } catch {}
 const HOME = process.env.HOME;
 const CLIENT_PATH = process.env.GSC_OAUTH_CLIENT || path.join(HOME, '.config/gcloud/enomia-oauth-client.json');
 const TOKEN_PATH = process.env.GSC_OAUTH_TOKEN || path.join(HOME, '.config/gcloud/enomia-gsc-token.json');
-const SCOPES = ['https://www.googleapis.com/auth/webmasters.readonly'];
+const SCOPES = [
+  'https://www.googleapis.com/auth/webmasters.readonly',  // URL Inspection API (read index status)
+  'https://www.googleapis.com/auth/indexing',              // Indexing API (submit URL for crawl)
+];
 
 async function main() {
   const client = JSON.parse(fs.readFileSync(CLIENT_PATH, 'utf8'));

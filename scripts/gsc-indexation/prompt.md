@@ -2,26 +2,36 @@ Tu es l'agent d'indexation Google Search Console quotidienne, exécuté par laun
 
 ## Setup
 - CWD = ~/projects/eunomia (déjà set par run.sh)
-- Chrome est ouvert sur Mac mini avec compte marc@enomia.app logué + extension Claude installée
-- Auth GSC API OAuth Desktop App via ~/.config/gcloud/enomia-gsc-token.json
-- Skill complet : `.claude/skills/gsc-indexation-quotidienne/SKILL.md` — lis-le pour le workflow détaillé
+- Auth GSC API OAuth Desktop App via ~/.config/gcloud/enomia-gsc-token.json (scopes : webmasters.readonly + indexing)
+- Skill de référence : `.claude/skills/gsc-indexation-quotidienne/SKILL.md` (workflow logique, mais on SUBSTITUE l'étape "Chrome MCP" par l'API directe)
 
 ## Mission
 
-1. Lire `.claude/skills/gsc-indexation-quotidienne/SKILL.md` et suivre son workflow
-2. Refresh data via `node scripts/gsc-fetch-index-status.mjs` si fichier > 24h
-3. Identifier les top 5 URLs non-indexées par volume SEMrush (cf section "Calculer top 5 candidates" du skill)
-4. Si déjà tourné aujourd'hui (check `last_run` dans `.claude/gsc-tracking/urls.json`) → STOP, log "Already ran today" et exit
-5. Pour chaque URL : soumettre via Chrome MCP (skill section "Ouvrir GSC via Chrome MCP")
-6. Update `.claude/gsc-tracking/urls.json` avec les demandes du jour
-7. Commit + push : `chore(gsc): indexation +N URLs YYYY-MM-DD`
+1. **Refresh data** : `node scripts/gsc-fetch-index-status.mjs` si `.claude/gsc-tracking/index-status.json` > 24h
+2. **Diagnostiquer le pipeline** depuis `.claude/gsc-tracking/index-status.json` + `.claude/gsc-tracking/urls.json` :
+   - Calculer Top 5 URLs non-indexées par volume SEMrush (skill section "Calculer top 5 candidates")
+   - Filtrer : skip URLs déjà demandées < 14j, skip coverage states non-indexables (redirect, noindex, etc.)
+3. **Check anti-doublon journalier** : si `urls.json.last_run == today` → STOP, log "Already ran today", aller direct à l'étape email
+4. **Soumettre via l'Indexing API** (PAS Chrome MCP) :
+   ```bash
+   echo "url1
+   url2
+   url3" | node scripts/gsc-indexing-submit.mjs
+   ```
+   Ce script utilise le refresh_token OAuth + scope `indexing` pour POST `https://indexing.googleapis.com/v3/urlNotifications:publish`. Quota : 200/jour officiel (largement OK pour 5).
+5. **Update `.claude/gsc-tracking/urls.json`** : pour chaque URL soumise OK, ajouter `last_requested = today`, `status = requested`. Update aussi `last_run = today`.
+6. **Commit + push** : `chore(gsc): indexation +N URLs YYYY-MM-DD`
 
 ## Garde-fous
 
-- Max 5 URLs/jour (quota dur GSC : ~10-12)
-- Anti-doublon : skip si URL déjà demandée < 14 jours (cf tracking.urls[url].last_requested)
-- Si Chrome MCP indisponible ou Google ne répond pas → envoyer email d'alerte via `scripts/tech-watchdog/send-report.sh "[gsc-indexation] échec" < (diagnostic)`
-- Si quota GSC dépassé (erreur API) → arrêter proprement, retenter demain
+- Max 5 URLs/jour (le quota API est 200 mais on garde Marc's convention 5)
+- Anti-doublon : skip si URL déjà demandée < 14 jours
+- Si le script `gsc-indexing-submit.mjs` retourne erreur :
+  - HTTP 403 + "indexing api not enabled" → désactiver routine, alerter Marc (besoin activation API côté GCP)
+  - HTTP 403 + "PERMISSION_DENIED" / "not an owner" → site pas owner du projet, alerter
+  - HTTP 429 → quota dépassé, arrêter, retenter demain
+  - Autre → logger, alerter, mais ne pas crash
+- Envoyer email d'alerte via `scripts/tech-watchdog/send-report.sh` si erreur
 
 ## Email de rapport (TOUJOURS envoyer)
 

@@ -186,7 +186,7 @@ export const citiesRentabilite: CityRentabilite[] = [
     t2: { caAnnualMin: 13000, caAnnualMax: 23000, occupancyMin: 65, occupancyMax: 80, nightlyMin: 70, nightlyMax: 115, rendementNetMin: 9, rendementNetMax: 16 },
     reliability: 'medium',
     publishAt: '2026-05-14',
-    status: 'brouillon',
+    status: 'en-ligne',
     neighbors: ['nimes', 'perpignan', 'avignon'],
     context: 'Demande étudiants (8e ville étudiante de France) + tourisme. Quartiers premium : Écusson, Antigone, Comédie. Rendements solides grâce aux prix d\'achat encore accessibles.',
   },

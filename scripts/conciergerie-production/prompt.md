@@ -107,6 +107,27 @@ Format exact d'une entry (cf villes existantes dans `src/data/cities.ts` pour le
 
 Lire le fichier, identifier l'array `export const cities = [...]`, **ajouter les 2 nouvelles entries à la fin de l'array** (avant la dernière `]`). Préserver l'ordre / formatage existant.
 
+#### ⚠️ Convention markdown — champs renderRich vs champs littéraux
+
+Le template `[region]/[ville].astro` applique `renderRich()` uniquement sur 3 champs :
+- **`introCustom`** : Markdown light (paragraphes `\n\n`, gras `**x**`, liens `[txt](url)`)
+- **`marketIntro`** : idem
+- **`regulation`** : idem
+
+**Tous les autres champs sont rendus en TEXTE LITTÉRAL** (pas de Markdown). Donc :
+- ❌ Ne PAS mettre `**` dans `seasonality`, `conciergeries[].description`, `quartiers[].description`, `exempleConret`, `faqLocale[].reponse`, etc. — ils s'afficheraient en littéral sur la page
+- ✅ OK de mettre `**` ET `[texte](/url)` dans `introCustom`, `marketIntro`, `regulation`
+
+#### Lien obligatoire vers `/calcul-taxe-de-sejour`
+
+Dans le champ `regulation`, **toujours** linker la mention "Taxe de séjour" vers le calculateur Enomia :
+
+```
+**[Taxe de séjour](/calcul-taxe-de-sejour).** De 0,75 € à 4,30 € par nuit...
+```
+
+C'est une convention de maillage interne SEO.
+
 ### Étape 5 — Update `scripts/city-backlog.json`
 
 Pour chaque ville traitée : `status` → `Publié`, ajouter `publishedAt` au format ISO date.

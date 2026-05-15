@@ -6,7 +6,7 @@ set -euo pipefail
 
 # Résoudre les chemins relatifs au script lui-même
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 LOGS_DIR="$SCRIPT_DIR/logs"
 DATE_TAG="$(date +%Y-%m-%d)"
 RUN_LOG="$LOGS_DIR/run-$DATE_TAG.log"

@@ -200,7 +200,7 @@ export const citiesRentabilite: CityRentabilite[] = [
     t2: { caAnnualMin: 12000, caAnnualMax: 21000, occupancyMin: 65, occupancyMax: 80, nightlyMin: 65, nightlyMax: 105, rendementNetMin: 10, rendementNetMax: 17 },
     reliability: 'medium',
     publishAt: '2026-05-16',
-    status: 'brouillon',
+    status: 'en-ligne',
     neighbors: ['roubaix', 'tourcoing', 'arras'],
     context: 'Demande dominée par voyageurs d\'affaires (Eurostar, Bruxelles 35min). Quartiers premium : Vieux-Lille, Centre, Wazemmes. Prix d\'achat les plus bas du top 10 = meilleurs rendements net.',
   },

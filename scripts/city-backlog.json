@@ -1192,16 +1192,15 @@
   {
     "num": 99,
     "ville": "Lausanne",
-    "region": "?",
-    "regionSlug": "?",
+    "region": "Suisse romande",
+    "regionSlug": "suisse",
     "citySlug": "lausanne",
-    "newUrl": "/conciergerie-airbnb/?/lausanne",
+    "newUrl": "/conciergerie-airbnb/suisse/lausanne",
     "kw": "conciergerie Lausanne",
     "vol": 1900,
     "kd": "14",
-    "status": "Hors scope",
-    "source": "semrush-expand-2026-05-15",
-    "notes": "Suisse — hors roadmap France/Maroc"
+    "status": "À faire",
+    "source": "semrush-expand-2026-05-15"
   },
   {
     "num": 100,

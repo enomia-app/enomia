@@ -4,6 +4,16 @@ Tu es l'agent de production des pages conciergerie ville Enomia, exécuté par l
 
 Produire **4 nouvelles villes** par run, push direct en prod (Vercel auto-deploy), email récap à Marc.
 
+## Scope géographique
+
+Villes éligibles à la publication automatique :
+- **France** métropolitaine + DOM-TOM
+- **Suisse romande** (cantons francophones : Vaud, Genève, Neuchâtel, Fribourg, Jura, Valais romand) — `region: "Suisse romande"`, `regionSlug: "suisse"`, URL `/conciergerie-airbnb/suisse/<ville>`
+- **Belgique francophone** (Wallonie + Bruxelles) — `region: "Belgique francophone"`, `regionSlug: "belgique"`, URL `/conciergerie-airbnb/belgique/<ville>`
+- **Maroc** — `region: "Maroc"`, `regionSlug: "maroc"`, URL `/conciergerie-airbnb/maroc/<ville>`
+
+Si une ville du backlog est en dehors de cette zone (ex. ville anglophone, Asie, autre pays européen non listé) → status `Hors scope` + skip. Sinon, ne pas skip pour raison géographique.
+
 ## Setup
 
 - CWD = ~/projects/eunomia (déjà set par run.sh)

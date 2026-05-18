@@ -61,7 +61,9 @@ Recherche WebFetch sur Google :
 
 Pour chaque conciergerie : nom, URL, commission (chercher dans pages tarifs/contact), rating Google Maps, nombre d'avis, nombre de biens si trouvé, spécialité.
 
-**Si tu trouves < 5 conciergeries pertinentes** : skip la ville, status → `À reprendre manuel`, notes : "Pas assez de conciergeries identifiables auto, intervention humaine requise". Passer à la suivante.
+**Si tu trouves < 2 conciergeries pertinentes** : skip la ville, status → `À reprendre manuel`, notes : "Pas assez de conciergeries identifiables auto, intervention humaine requise". Passer à la suivante.
+
+**Sur les ratings Google Maps** : ils sont récupérables via les snippets Google search (`★ 4.X — N avis` dans les résultats) ou les sites comparatifs. **Ne PAS tenter `WebFetch` direct sur `maps.google.com`** (bloqué). Si rating introuvable pour 1-2 conciergeries sur N (où N ≥ 3) → omettre ces lignes-là plutôt que skip toute la ville. Skip pour rating uniquement si AUCUNE conciergerie n'a de rating vérifiable.
 
 #### 2c. Stats ville (population, tourists)
 

@@ -263,8 +263,9 @@
     "oldSlug": "/conciergerie-airbnb-antibes",
     "kw": "conciergerie antibes",
     "vol": 390,
-    "status": "À faire",
-    "kd": 12
+    "status": "Publié",
+    "kd": 12,
+    "publishedAt": "2026-05-18"
   },
   {
     "num": 28,
@@ -276,8 +277,9 @@
     "oldSlug": "/conciergerie-airbnb-toulon",
     "kw": "conciergerie toulon",
     "vol": 390,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-18"
   },
   {
     "num": 29,
@@ -289,8 +291,9 @@
     "oldSlug": "/conciergerie-airbnb-metz",
     "kw": "conciergerie metz",
     "vol": 380,
-    "status": "À faire",
-    "kd": 15
+    "status": "À reprendre manuel",
+    "kd": 15,
+    "notes": "Pas assez de conciergeries identifiables auto avec ratings Google vérifiables, intervention humaine requise"
   },
   {
     "num": 30,
@@ -302,8 +305,9 @@
     "oldSlug": "/conciergerie-airbnb-chamonix",
     "kw": "conciergerie chamonix",
     "vol": 380,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-18"
   },
   {
     "num": 31,
@@ -315,8 +319,9 @@
     "oldSlug": "/conciergerie-airbnb-tours",
     "kw": "conciergerie tours",
     "vol": 350,
-    "status": "À faire",
-    "kd": 9
+    "status": "Publié",
+    "kd": 9,
+    "publishedAt": "2026-05-18"
   },
   {
     "num": 32,
@@ -1194,8 +1199,9 @@
     "kw": "conciergerie Lausanne",
     "vol": 1900,
     "kd": "14",
-    "status": "À faire",
-    "source": "semrush-expand-2026-05-15"
+    "status": "Hors scope",
+    "source": "semrush-expand-2026-05-15",
+    "notes": "Suisse — hors roadmap France/Maroc"
   },
   {
     "num": 100,

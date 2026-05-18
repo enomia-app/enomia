@@ -42,6 +42,7 @@ export const regions: Region[] = [
   { slug: 'pays-de-la-loire', displayName: 'Pays de la Loire', description: 'Des Sables-d\'Olonne à La Baule en passant par Nantes, la région combine littoral atlantique, îles et métropoles. La Vendée est le 2e département touristique de France avec un marché LCD très saisonnier.' },
   { slug: 'bretagne', displayName: 'Bretagne', description: 'De Rennes à Saint-Malo en passant par Brest et Quiberon, la Bretagne combine tourisme balnéaire, patrimoine celte et marché étudiant. Rennes est un des marchés locatifs les plus tendus de France.' },
   { slug: 'normandie', displayName: 'Normandie', description: 'Rouen, Honfleur, Deauville, Étretat : la Normandie mixe tourisme culturel, impressionnisme et plages du Débarquement. Proximité immédiate de Paris et événements emblématiques (L\'Armada, Festival du Film Américain).' },
+  { slug: 'centre-val-de-loire', displayName: 'Centre-Val de Loire', description: 'Tours, Amboise, Chinon et la Vallée de la Loire (UNESCO) : châteaux royaux, vins de Loire et 1h05 de TGV depuis Paris. Un marché LCD porté par 5 millions de visiteurs annuels sur les châteaux.' },
   { slug: 'maroc', displayName: 'Maroc', description: 'Marrakech, Essaouira et Agadir attirent les investisseurs francophones avec des rendements locatifs de 6 à 8 %. Un marché LCD en pleine reprise, porté par le tourisme international et une fiscalité compétitive.' },
 ];
 
@@ -4934,6 +4935,783 @@ export const cities: City[] = [
       },
     ],
     updatedAt: '2026-05-15',
+  },
+  // ==========================================================================
+  // ANTIBES
+  // ==========================================================================
+  {
+    slug: 'antibes',
+    displayName: 'Antibes',
+    region: "Provence-Alpes-Côte d'Azur",
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie Antibes Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Antibes : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Antibes & Juan-les-Pins. Tarifs (15-25 %), services, avis Google, réglementation 90 nuits 2026, quartiers rentables.',
+    kwPrincipal: 'conciergerie antibes',
+    kwSecondaires: [
+      'conciergerie airbnb antibes',
+      'conciergerie juan les pins',
+      'airbnb antibes',
+      'gestion locative antibes',
+      'location saisonnière antibes',
+      'meublé touristique antibes',
+    ],
+    population: 76600,
+    tourists: 5000000,
+    activeListings: 3262,
+    priceLow: 95,
+    priceHigh: 200,
+    occupancyRate: 63,
+    revpar: 100,
+    seasonality:
+      "Saisonnalité Côte d'Azur très marquée. Pic absolu juin à septembre (occupation 80-90 %, clientèle internationale : Britanniques, Italiens, Allemands, Américains). Événements majeurs qui tendent les tarifs : Festival de Cannes en mai (Antibes/Juan en zone retombée), Grand Prix de Monaco fin mai, Jazz à Juan en juillet, Yachting Festival en septembre. Vacances de la Toussaint et fêtes de fin d'année ajoutent un pic court. Creux marqué novembre-mars (occupation 35-45 %) à l'exception des week-ends prolongés et du tourisme d'affaires Sophia Antipolis voisin.",
+    rankNational: 11,
+    introCustom:
+      "Vous avez un appartement à **Antibes**, à Juan-les-Pins ou au Cap d'Antibes, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **limite de 90 nuits par an** entrée en vigueur en janvier 2026 (zone tendue), l'obligation d'enregistrement Declaloc au 20 mai 2026, la **clientèle internationale premium** des grands événements (Festival de Cannes, Grand Prix de Monaco, Jazz à Juan, Yachting Festival) et la concurrence d'une dizaine d'acteurs locaux, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre Vieil Antibes, Juan-les-Pins et Cap d'Antibes ?",
+    marketIntro:
+      "Antibes est l'un des **marchés LCD les plus tendus de France** avec environ **3 200 annonces actives** (mars 2026) sur une commune de 76 000 habitants, soit l'un des plus forts ratios annonces/habitants de la Côte d'Azur. Le **tarif moyen nuitée atteint 163 €** (source AirDNA) — un niveau premium qui place Antibes au-dessus de Nice et au niveau de Cannes.\n\nLa **Côte d'Azur génère plus de 12 millions de nuitées par an** dont une part significative captée par Antibes-Juan, particulièrement grâce au triangle Vieil Antibes / Juan-les-Pins / Cap d'Antibes : plages, marché provençal, marina de Port Vauban (l'une des plus grandes d'Europe), Picasso, festivals.\n\nLe **tourisme d'affaires Sophia Antipolis** (la plus grande technopole d'Europe, à 10 min en voiture) ajoute une demande régulière en semaine hors-saison balnéaire : ingénieurs, consultants, formations longues.\n\n**Antibes est en zone tendue** au sens du décret n°2023-822 et applique depuis janvier 2026 la **limite stricte de 90 nuits par an** pour la location en résidence principale, avec **enregistrement Declaloc obligatoire au plus tard le 20 mai 2026** et sanctions jusqu'à 20 000 € par logement.",
+    conciergeries: [
+      {
+        name: 'Azurenting',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 88,
+        biensGeres: 70,
+        specialty: "Ménage + linge, accueil voyageurs, Airbnb + Booking",
+        description:
+          "Azurenting est l'une des conciergeries les mieux notées d'Antibes avec une note Google 4.9/5 sur 88 avis (volume parmi les plus élevés du marché antibois). Commission 20 % TTC, ménage refacturé au voyageur. Service couvrant création annonce, photos pro, diffusion Airbnb et Booking, accueil voyageurs, ménage et fourniture du linge hôtelier. Approche multi-plateformes pour maximiser le taux de remplissage face à la concurrence des 3 200 annonces actives de la commune. Pertinente pour un T2-T3 dans le Vieil Antibes ou à Juan-les-Pins où la demande internationale exige une réactivité 7j/7.",
+      },
+      {
+        name: 'Manasteos',
+        url: 'https://manasteos.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 38,
+        biensGeres: 35,
+        specialty: 'Gestion complète + photos pro, équipe locale',
+        description:
+          "Manasteos applique une commission de 20 % TTC avec une note Google parfaite 5.0/5 sur 38 avis. Gestion complète : création annonce, shooting photo professionnel, diffusion multi-plateformes, accueil voyageurs, ménage pro, linge hôtelier, maintenance et reporting financier. Équipe 100 % locale Antibes / Juan-les-Pins. Pertinente pour un propriétaire qui privilégie la qualité de service à la volume, sur un bien premium en Vieil Antibes ou Cap d'Antibes.",
+      },
+      {
+        name: 'Bird Renting',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 48,
+        biensGeres: 50,
+        specialty: 'Équipe locale Côte d\'Azur 7j/7',
+        description:
+          "Bird Renting opère sur l'ensemble de la Côte d'Azur (Antibes, Cannes, Nice, Mougins) avec une équipe locale 24/7 réactive sur la gestion technique des biens. Commission alignée sur le marché azuréen (20-25 % selon le bien et les services). Note Google 4.6/5 sur 48 avis. Bon profil pour un propriétaire multi-biens entre Antibes et Cannes qui veut un interlocuteur unique sur le triangle azuréen.",
+      },
+      {
+        name: 'Conciergerie Enjoy and Stay',
+        commission: '22-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 66,
+        biensGeres: 60,
+        specialty: 'Volume Côte d\'Azur, gestion premium internationale',
+        description:
+          "Enjoy and Stay est un acteur volumique reconnu de la Côte d'Azur (66 avis Google, note 4.5/5). Tarification 22-25 % TTC selon le bien et la formule choisie. Approche premium adaptée à la clientèle internationale dominante d'Antibes : accueil multilingue, fournitures d'accueil haut de gamme, coordination avec les concierges privés et chauffeurs des grands événements (Festival de Cannes, Grand Prix). Pertinente pour un bien à fort potentiel international au Cap d'Antibes ou à Juan-les-Pins.",
+      },
+      {
+        name: 'Bonnaud Estates',
+        commission: '24 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 71,
+        biensGeres: 45,
+        specialty: 'Acteur immobilier local, gestion sur mesure',
+        description:
+          "Bonnaud Estates est un acteur immobilier local d'Antibes qui propose la gestion LCD en complément de son activité de transaction et location longue durée. Commission 24 % TTC, note Google 4.3/5 sur 71 avis. Pertinent pour un propriétaire qui souhaite une approche immobilière 360 : gestion LCD le temps d'optimiser la rentabilité, puis bascule éventuelle en location annuelle ou cession via le même interlocuteur.",
+      },
+      {
+        name: 'Riviera Collection',
+        url: 'https://collectionriviera.com/conciergerie-airbnb-antibes/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 25,
+        biensGeres: 40,
+        specialty: 'Équipe 100 % locale Antibes / Juan / Cap d\'Antibes',
+        description:
+          "Riviera Collection met en avant une équipe 100 % locale basée à Antibes, Juan-les-Pins et Cap d'Antibes : connaissance fine des rues, saisonnalité et opportunités des grands événements (Jazz à Juan, Yachting Festival, Festival de Cannes, Grand Prix de Monaco). Tarification sur devis adaptée au bien et au niveau de service. Pertinente pour un propriétaire qui valorise l'ancrage hyper-local et la capacité à capitaliser sur les pics tarifaires événementiels.",
+      },
+      {
+        name: 'Host by A',
+        url: 'https://www.hostbya.com/conciergerie-antibes',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 18,
+        biensGeres: 25,
+        specialty: 'Réactivité 24/7, accompagnement personnalisé',
+        description:
+          "Host by A se positionne sur la réactivité voyageurs avec une disponibilité 24/7 affichée et un accompagnement personnalisé par bien. Commission 20 % TTC, note Google 4.8/5 sur 18 avis. Présence terrain constante. Pertinente pour un primo-investisseur LCD sur Antibes qui veut un interlocuteur unique et accessible plutôt qu'un grand acteur volumique.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieil Antibes / Marché provençal',
+        pricePerNight: '110-200 €',
+        occupancy: 72,
+        description:
+          "Cœur historique d'Antibes, ruelles pavées, marché provençal couvert, remparts Vauban, musée Picasso. Le plus prisé pour le LCD touristique premium. Clientèle 100 % touristique avec rotation rapide (2-4 nuits). T2 à partir de 360 000 €.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Juan-les-Pins',
+        pricePerNight: '130-230 €',
+        occupancy: 75,
+        description:
+          "Station balnéaire mythique, plage de la Pinède, casino, Jazz à Juan (juillet). Saisonnalité très marquée (90 % d'occupation juin-août). Clientèle internationale festive. Tarifs nuitée parmi les plus élevés d'Antibes. T2 à partir de 380 000 €.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Cap d\'Antibes',
+        pricePerNight: '180-400 €',
+        occupancy: 65,
+        description:
+          "Presqu'île luxueuse : villas, hôtels du Cap, plages confidentielles (Garoupe, Joli Bois). Ticket d'entrée très élevé (T2 > 500 000 €, villas multi-millions). LCD réservé aux investisseurs haut de gamme, clientèle yachting et stars du cinéma en mai.",
+        roiBrut: '3 à 4 %',
+      },
+      {
+        name: 'Salis / Hauts d\'Antibes',
+        pricePerNight: '95-160 €',
+        occupancy: 65,
+        description:
+          "Quartiers résidentiels entre Vieil Antibes et Cap d'Antibes, accès plages de la Salis, calme et balades en bord de mer. Mix tourisme + résidentiel. Bon compromis ticket/rendement. T2 à partir de 290 000 €.",
+        roiBrut: '4,5 à 5,5 %',
+      },
+      {
+        name: 'La Fontonne / Antibes-les-Pins',
+        pricePerNight: '85-140 €',
+        occupancy: 58,
+        description:
+          "Quartiers résidentiels au nord-est de la commune, accès rapide à Sophia Antipolis (10 min). Demande mixte tourisme d'été + tourisme d'affaires (ingénieurs, consultants). Tickets d'achat accessibles. T2 dès 250 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'La Brague / Marenda',
+        pricePerNight: '75-130 €',
+        occupancy: 55,
+        description:
+          "Périphérie nord d'Antibes, proche Marineland et Sophia Antipolis. Profil familial (parcs d'attractions, plages de la Brague). Saisonnalité estivale marquée. Tickets d'achat les plus accessibles de la commune. Maison T3 dès 320 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+    ],
+    regulation:
+      "Antibes est classée en **zone tendue** au sens du décret n°2023-822 et applique depuis **janvier 2026 la limite stricte de 90 nuitées par an** pour la location en résidence principale (la résidence principale étant celle que vous occupez au moins 8 mois par an). Au-delà des 90 nuits, le bien bascule en résidence secondaire et est soumis à une **autorisation de changement d'usage** délivrée par la mairie.\n\n**Enregistrement Declaloc.** Tout loueur doit obtenir un numéro d'enregistrement à 13 chiffres via le téléservice national (apimeubles.finances.gouv.fr ou via la mairie d'Antibes) et le faire figurer sur chaque annonce Airbnb, Booking ou Abritel. Date limite d'entrée en vigueur : **20 mai 2026**.\n\n**Sanctions.** Le quota de 90 nuits dépassé entraîne une amende jusqu'à **15 000 €**. Le défaut d'enregistrement coûte jusqu'à **10 000 €**. La fausse déclaration ou l'utilisation d'un numéro falsifié est sanctionnée jusqu'à **20 000 € par logement**.\n\n**Loi Le Meur 2024 et calendrier national.** Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC est passé à 30 % pour les meublés non classés (50 % pour les classés tourisme). Les biens classés F ou G au DPE sont désormais interdits à la location courte durée.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Antibes applique le tarif communal voté chaque année. De 0,80 € à 4,30 € par nuit et par personne selon le classement de l'hébergement, collectée automatiquement par Airbnb depuis 2019.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 130,
+      neighborhood: 'Vieil Antibes',
+      revenuBrut: 28000,
+      commissionRate: 0.20,
+      menageCount: 95,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: 'Quelle est la limite de location Airbnb à Antibes en 2026 ?',
+        a: "Antibes applique depuis janvier 2026 la limite stricte de 90 nuitées par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). Au-delà, le bien doit basculer en résidence secondaire avec autorisation de changement d'usage délivrée par la mairie. L'enregistrement Declaloc est obligatoire au plus tard le 20 mai 2026 : un numéro à 13 chiffres à faire figurer sur chaque annonce. Sanctions : 15 000 € pour dépassement des 90 nuits, 10 000 € pour défaut d'enregistrement, 20 000 € pour fausse déclaration.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Antibes pendant le Festival de Cannes et le Grand Prix de Monaco ?',
+        a: "Antibes capte la retombée hôtelière de deux événements majeurs en mai : le Festival de Cannes (10 jours mi-mai) et le Grand Prix de Monaco (4 jours fin mai). Sur ces deux fenêtres, les tarifs nuitée à Juan-les-Pins et au Cap d'Antibes peuvent doubler : un T2 qui se loue 130 €/nuit en mai standard atteint 260-350 €/nuit pendant ces 2 semaines, avec minimum 3-7 nuits imposé. Sur 14 jours, un bien bien placé peut générer 4 000 à 6 500 € bruts, soit l'équivalent de 2 mois standards.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Antibes ?',
+        a: "Pour un objectif rentabilité + sécurité, le quartier La Fontonne / Antibes-les-Pins est le meilleur compromis : ticket d'achat accessible (T2 dès 250 000 €), demande mixte tourisme + Sophia Antipolis en semaine, ROI brut 5-6 %. Le Vieil Antibes et Juan-les-Pins offrent les meilleurs tarifs nuitée (110-230 €) mais avec un ticket d'entrée plus élevé (>360 000 €) et un ROI brut plus faible (4-5 %). Le Cap d'Antibes est réservé aux profils patrimoniaux haut de gamme. À éviter pour le LCD pur : Les Semboules / Saint-Maymes (résidentiel pur, demande Airbnb très faible).",
+      },
+    ],
+    updatedAt: '2026-05-18',
+  },
+  // ==========================================================================
+  // TOULON
+  // ==========================================================================
+  {
+    slug: 'toulon',
+    displayName: 'Toulon',
+    region: "Provence-Alpes-Côte d'Azur",
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie Toulon Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Toulon : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Toulon (Var). Tarifs (15-25 %), services, avis Google, réglementation 2026, quartiers rentables (Mourillon, Vieille Ville).',
+    kwPrincipal: 'conciergerie toulon',
+    kwSecondaires: [
+      'conciergerie airbnb toulon',
+      'conciergerie var',
+      'airbnb toulon pas cher',
+      'conciergerie clé en main toulon',
+      'conciergerie gestion locative toulon',
+      'location saisonnière toulon',
+    ],
+    population: 170000,
+    tourists: 4500000,
+    activeListings: 1440,
+    priceLow: 60,
+    priceHigh: 140,
+    occupancyRate: 59,
+    revpar: 50,
+    seasonality:
+      "Saisonnalité méditerranéenne marquée. Pic absolu juillet à août (occupation 85-90 %, familles, clientèle internationale, plages du Mourillon). Pic secondaire mai-juin et septembre (météo encore favorable, prix plus accessibles, retraités et seniors). Événements qui tendent les tarifs : Jazz à Toulon en juillet, Voiles Latines, Fêtes de la Mer, escales militaires. Tourisme de croisière régulier (port militaire et commercial). Creux marqué novembre-mars (occupation 35-45 %) compensé par le tourisme d'affaires (TPM, ports, Marine nationale, ferries Corse).",
+    rankNational: 18,
+    introCustom:
+      "Vous avez un appartement à **Toulon**, au Mourillon ou en Vieille Ville, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les **1 440 annonces actives** de la commune (croissance forte ces dernières années), la nouvelle obligation d'**enregistrement Declaloc au 20 mai 2026** et la dizaine d'acteurs locaux qui se partagent le marché, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre Mourillon, Vieille Ville et Cap Brun ?",
+    marketIntro:
+      "Toulon est l'un des **marchés LCD les plus dynamiques du Var** avec environ **1 440 annonces actives** (avril 2026) et un revenu moyen par annonce autour de 18 400 €/an. La ville bénéficie d'un mix unique : **plages du Mourillon** (les plus prisées de la métropole TPM), **vieille ville rénovée** (place Puget, Cours Lafayette, marché provençal), **port militaire** (le plus grand port militaire d'Europe, escales internationales) et **proximité immédiate des îles d'Or** (Porquerolles, Port-Cros via ferries).\n\nLa **Côte Varoise génère plus de 4,5 millions de nuitées par an** dont Toulon-Provence-Méditerranée capte environ 1,3 million. Le tarif moyen nuitée est de **86 €** (source AirDNA) — un niveau plus accessible que Cannes ou Nice, ce qui ouvre le marché à une clientèle familiale et seniors.\n\nLe **tourisme d'affaires** (Marine nationale, ports commerciaux, université Toulon-Var, ferries Corse) ajoute une demande lissée en semaine hors-saison balnéaire.\n\n**Toulon est en zone tendue** au sens du décret n°2023-822 (métropole TPM), avec **enregistrement Declaloc obligatoire au plus tard le 20 mai 2026** et un plafond de **120 nuitées par an** pour la location en résidence principale.",
+    conciergeries: [
+      {
+        name: 'Happy Home',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 80,
+        biensGeres: 70,
+        specialty: 'Services complets : annonce, accueil, ménage, déco',
+        description:
+          "Happy Home est l'une des conciergeries les mieux notées de Toulon avec une note Google parfaite 5.0/5 sur 80 avis (volume parmi les plus élevés du marché toulonnais). Tarification sur devis adaptée au bien et au niveau de service. Offre complète : mise en ligne de l'annonce, accueil voyageurs, ménage, conseils décoration et home staging amont. Pertinente pour un propriétaire qui veut un service tout-en-un avec une approche conseil sur la valorisation du bien avant mise en location.",
+      },
+      {
+        name: 'La Conciergerie Intendance de Marjory',
+        commission: '20-24 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 88,
+        biensGeres: 80,
+        specialty: 'Volume Toulon-Var, relation personnalisée',
+        description:
+          "La Conciergerie Intendance de Marjory est l'un des acteurs volumiques de Toulon avec 88 avis Google (volume le plus élevé du marché) et une note 4.6/5. Commission 20-24 % HT selon le bien. Approche relationnelle assumée avec un interlocuteur unique sur la durée. Bon profil pour un propriétaire qui valorise le track record long et le suivi humain plutôt que la techno-driven.",
+      },
+      {
+        name: 'Loca\'Zen',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 40,
+        biensGeres: 45,
+        specialty: 'Home staging et coordination artisans',
+        description:
+          "Loca'Zen applique une commission de 20 % TTC avec une note Google 4.9/5 sur 40 avis. Spécificité : un accompagnement amont sur le home staging et la coordination des artisans avant mise en location (peinture, électricité, plomberie, mobilier). Pertinente pour un propriétaire qui rénove un bien avant LCD et veut un partenaire unique du chantier à la première arrivée voyageur.",
+      },
+      {
+        name: 'Azuréa Conciergerie',
+        url: 'https://www.info83.fr/conciergerie-airbnb-toulon/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 12,
+        biensGeres: 25,
+        specialty: 'Optimisation propriété, expertise ménage',
+        description:
+          "Azuréa Conciergerie, dirigée par Gioia et Jonathan, applique une commission unique de 20 % HT sur les revenus collectés. Note Google parfaite 5.0/5 sur 12 avis. L'équipe vient d'un background ménage professionnel : les retours clients soulignent la constance qualitative — un atout direct pour la note Airbnb (impact sur la visibilité). Pertinente pour un T2-T3 au Mourillon ou en Vieille Ville où la rotation rapide exige une exécution ménage irréprochable.",
+      },
+      {
+        name: 'Confidences de Conciergerie',
+        commission: '20-30 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 12,
+        biensGeres: 20,
+        specialty: 'Formules flexibles, gardiennage et location',
+        description:
+          "Confidences de Conciergerie propose des formules flexibles entre 20 et 30 % TTC selon le périmètre choisi (gardiennage simple, gestion partielle, gestion complète clé en main). Note Google parfaite 5.0/5 sur 12 avis. Pertinente pour un propriétaire qui ne souhaite pas tout déléguer (par exemple, garder la gestion des annonces et déléguer uniquement accueil + ménage) ou qui combine résidence secondaire occupée 4-6 mois par an et LCD le reste de l'année.",
+      },
+      {
+        name: 'SK Solutions',
+        commission: '15-20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 9,
+        biensGeres: 18,
+        specialty: 'Commission basse, gestion complète',
+        description:
+          "SK Solutions applique l'une des commissions les plus basses du marché toulonnais : 15-20 % HT selon le niveau de service. Note Google parfaite 5.0/5 sur 9 avis. Offre clé en main couvrant annonce, diffusion multi-plateformes, accueil voyageurs, ménage et maintenance. Pertinente pour un propriétaire qui veut maximiser la marge nette sur un T2-T3 standard, sans services premium superflus.",
+      },
+      {
+        name: 'Maya Conciergerie',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 6,
+        biensGeres: 15,
+        specialty: 'Yield management et maintenance continue',
+        description:
+          "Maya Conciergerie applique une commission de 20 % HT avec une approche orientée yield management : ajustement tarifaire continu en fonction des événements, de l'occupation et de la concurrence locale. Note Google 5.0/5 sur 6 avis. Maintenance continue incluse (petites interventions, dépannage). Pertinente pour un propriétaire qui valorise la performance tarifaire plutôt que le volume.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Le Mourillon',
+        pricePerNight: '85-140 €',
+        occupancy: 70,
+        description:
+          "Quartier balnéaire emblématique de Toulon : plages des Sablettes, port de plaisance, restaurants, ambiance familiale et mer. Le plus prisé pour le LCD touristique. Saisonnalité estivale très marquée. T2 à partir de 280 000 €.",
+        roiBrut: '4,5 à 5,5 %',
+      },
+      {
+        name: 'Vieille Ville / Place Puget',
+        pricePerNight: '70-115 €',
+        occupancy: 62,
+        description:
+          "Cœur historique rénové autour de la place Puget, Cours Lafayette (marché provençal) et l'opéra. Mix tourisme + locaux urbains. Demande lissée sur l'année. T2 à partir de 200 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Port / Darse Vieille',
+        pricePerNight: '75-125 €',
+        occupancy: 60,
+        description:
+          "Quartier autour du port militaire et de la darse vieille, ferries pour la Corse et les îles d'Or. Demande mixte tourisme + Marine nationale + ferries. Tickets d'achat accessibles. T2 dès 220 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Cap Brun / Pomets',
+        pricePerNight: '95-160 €',
+        occupancy: 60,
+        description:
+          "Quartiers résidentiels prisés sur les hauteurs entre Mourillon et le Pradet, vues mer, calme. Profil familial et seniors. Tickets d'achat plus élevés. Maison T4 dès 500 000 €.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Saint-Roch / La Serinette',
+        pricePerNight: '60-95 €',
+        occupancy: 55,
+        description:
+          "Quartiers résidentiels à l'ouest du centre, accès rapide gare TGV et hôpitaux. Demande tourisme + relocation professionnelle et médicale. Tickets d'achat parmi les plus bas. T2 dès 160 000 €.",
+        roiBrut: '6,5 à 7,5 %',
+      },
+      {
+        name: 'Le Pradet / Côtes Varoises (15 min)',
+        pricePerNight: '85-150 €',
+        occupancy: 58,
+        description:
+          "Communes balnéaires à 15 min de Toulon : Le Pradet, Carqueiranne, Six-Fours-les-Plages. Saisonnalité estivale très marquée (familles, plages). Maison T3 dès 320 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+    ],
+    regulation:
+      "Toulon est classée en **zone tendue** au sens du décret n°2023-822 (métropole Toulon-Provence-Méditerranée), ce qui déclenche l'encadrement des loyers longue durée, la taxe sur les logements vacants et la possibilité pour la mairie d'imposer le numéro d'enregistrement obligatoire pour les meublés de tourisme.\n\n**Résidence principale.** La location en meublé de tourisme reste plafonnée à **120 nuitées par an** pour la résidence principale (celle que vous occupez au moins 8 mois par an). Au-delà, le bien bascule en résidence secondaire au sens de l'administration.\n\n**Résidence secondaire.** À Toulon, vous n'avez pas besoin d'autorisation de changement d'usage (contrairement à Paris ou Nice). Vous devez en revanche impérativement déclarer votre meublé de tourisme auprès de la mairie.\n\n**Enregistrement Declaloc.** L'enregistrement national via téléservice unique (apimeubles.finances.gouv.fr) est obligatoire au plus tard le **20 mai 2026** avec un numéro à 13 chiffres à faire figurer sur chaque annonce Airbnb, Booking ou Abritel. Sans numéro après l'entrée en vigueur, l'annonce est désactivée automatiquement par les plateformes.\n\n**Loi Le Meur 2024.** Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC est passé à 30 % pour les meublés non classés (50 % pour les classés tourisme). Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**. Les biens classés F ou G au DPE sont interdits à la location courte durée.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Toulon applique le tarif intercommunal TPM : de 0,75 € à 4,30 € par nuit et par personne selon le classement de l'hébergement, collectée automatiquement par Airbnb.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 90,
+      neighborhood: 'Le Mourillon',
+      revenuBrut: 19400,
+      commissionRate: 0.20,
+      menageCount: 80,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il un numéro d\'enregistrement pour louer en Airbnb à Toulon en 2026 ?',
+        a: "Oui. Toulon étant en zone tendue (métropole TPM), tout loueur doit obtenir un numéro d'enregistrement à 13 chiffres via le téléservice national Declaloc (apimeubles.finances.gouv.fr) au plus tard le 20 mai 2026 et le faire figurer sur chaque annonce Airbnb, Booking ou Abritel. Sans numéro, l'annonce est automatiquement désactivée par les plateformes et le loueur s'expose à une amende jusqu'à 10 000 €. Pour une résidence secondaire, il n'y a pas d'autorisation de changement d'usage requise à Toulon, mais la déclaration mairie reste obligatoire.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb au Mourillon pendant l\'été ?',
+        a: "La haute saison toulonnaise s'étale de juillet à août. Un T2 au Mourillon qui se loue 85-95 €/nuit en moyenne annuelle atteint 130-180 €/nuit pendant ces deux mois, avec une occupation 85-90 % et un minimum 3-5 nuits imposé. Sur 60 jours de pleine saison, un bien bien placé peut générer 7 500 à 10 000 € bruts, soit l'équivalent de 5-6 mois d'occupation standard. Les événements comme Jazz à Toulon (juillet) ou les escales internationales du port militaire ajoutent des pics ponctuels de +20 à +30 %.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Toulon ?',
+        a: "Pour un objectif rentabilité + sécurité, le quartier Vieille Ville / Place Puget est le meilleur compromis : centre piéton, demande lissée tourisme + locaux, T2 à partir de 200 000 € et ROI brut 5,5-6,5 %. Le Mourillon offre les meilleurs tarifs nuitée (85-140 €) mais avec un ticket d'entrée plus élevé (>280 000 €). Pour un profil cashflow agressif, viser Saint-Roch / La Serinette (proximité gare + hôpitaux) : tickets dès 160 000 €, ROI brut 6,5-7,5 %. Pour un profil balnéaire saisonnier, regarder Le Pradet ou Carqueiranne à 15 min de Toulon.",
+      },
+    ],
+    updatedAt: '2026-05-18',
+  },
+  // ==========================================================================
+  // CHAMONIX
+  // ==========================================================================
+  {
+    slug: 'chamonix',
+    displayName: 'Chamonix-Mont-Blanc',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Chamonix Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Chamonix : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Chamonix-Mont-Blanc. Tarifs (20-25 %), services, avis Google, réglementation 2025 changement d\'usage, chalets et appartements.',
+    kwPrincipal: 'conciergerie chamonix',
+    kwSecondaires: [
+      'chamonix conciergerie',
+      'conciergerie airbnb chamonix',
+      'agence de gestion locative chamonix',
+      'agence immobiliere chamonix location',
+      'conciergerie saint gervais les bains',
+      'location saisonnière chamonix',
+    ],
+    population: 10000,
+    tourists: 3000000,
+    activeListings: 2500,
+    priceLow: 90,
+    priceHigh: 280,
+    occupancyRate: 65,
+    revpar: 100,
+    seasonality:
+      "Double saisonnalité montagne très marquée. Pic absolu hiver de mi-décembre à mi-avril (occupation 85-90 %, semaines complètes obligatoires en haute saison, ski Mont-Blanc Unlimited, freeride Vallée Blanche, clientèle internationale). Pic secondaire été juillet à août (occupation 80-85 %, randonnée, alpinisme, Ultra-Trail du Mont-Blanc en août, Mer de Glace, Aiguille du Midi). Inter-saisons octobre-novembre et mai-juin très creux (occupation 25-35 %), souvent fermeture de remontées et météo capricieuse. Tarifs nuitée hiver vacances scolaires 2-3 fois plus élevés qu'en basse saison.",
+    rankNational: 8,
+    introCustom:
+      "Vous avez un appartement ou un chalet à **Chamonix-Mont-Blanc**, aux Houches, à Argentière ou ailleurs dans la vallée, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **nouvelle réglementation entrée en vigueur le 1er mai 2025** (1 seule autorisation de changement d'usage par personne physique à Chamonix et Les Houches), la **double saisonnalité hiver/été** qui dicte des semaines complètes en haute saison, l'**Ultra-Trail du Mont-Blanc** qui tend les tarifs en août, et la dizaine d'acteurs locaux qui se partagent un marché de **4 000 biens** dans la vallée, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre Chamonix centre, Les Praz, Argentière et la vallée ?",
+    marketIntro:
+      "Chamonix-Mont-Blanc est le **premier marché LCD de montagne de France** par tarif et l'un des plus tendus en autorisation de mise en location. La **vallée de Chamonix a presque doublé son parc Airbnb en quatre ans** : 2 700 biens en 2020 → environ **4 000 biens en 2024**, dont la majorité concentrée sur Chamonix commune (estimé à 2 500 annonces actives). Le tarif moyen nuitée atteint **160 €** (avec un envol jusqu'à 280-400 € en haute saison hiver sur les chalets), un niveau qui place Chamonix au sommet du marché alpin français.\n\nLa **vallée de Chamonix-Mont-Blanc reçoit plus de 3 millions de nuitées par an** dont 60 % concentrées sur 6 mois (déc-avril + juil-août). Le mix unique : **domaine skiable Mont-Blanc Unlimited** (Chamonix, Les Houches, Argentière), **mythes alpins** (Aiguille du Midi, Mer de Glace, Vallée Blanche), **Ultra-Trail du Mont-Blanc** fin août (170 000 spectateurs, 10 000 coureurs, tarifs 2-4× la normale), **clientèle internationale** (Britanniques, Scandinaves, Américains, Coréens).\n\nLes **prix au m² à Chamonix atteignent 10 000 à 18 000 €** (pic 22 000 € sur les chalets de prestige) — un niveau qui place la commune au top 5 des prix immobiliers de France hors Paris.\n\n**Réglementation pionnière en station de montagne.** Depuis le **1er mai 2025**, Chamonix-Mont-Blanc et Les Houches limitent à **1 seule autorisation de changement d'usage par personne physique** pour les meublés de tourisme. Servoz autorise 2 autorisations, Vallorcine reste libre. Personnes morales (sociétés) concernées à partir du 1er mai 2026.",
+    conciergeries: [
+      {
+        name: 'Care Concierge',
+        url: 'https://careconcierge.fr/en/property-management/chamonix/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 159,
+        biensGeres: 130,
+        specialty: 'Volume vallée Mont-Blanc (130+ biens)',
+        description:
+          "Care Concierge est l'acteur volumique de référence dans la vallée Mont-Blanc avec plus de 130 biens gérés à Chamonix, Saint-Gervais et Megève. Note Google 4.8/5 sur 159 avis (volume le plus élevé du marché). Commission 20 % TTC, ménage refacturé au voyageur. Couverture complète : annonce, diffusion multi-plateformes, accueil voyageurs, ménage pro, linge hôtelier, maintenance, reporting. Pertinente pour un propriétaire multi-biens sur la vallée Mont-Blanc qui veut un interlocuteur unique sur les 3 stations principales.",
+      },
+      {
+        name: 'Chamonix Immobilier',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 65,
+        biensGeres: 80,
+        specialty: '26 ans d\'ancrage Chamonix, transaction + LCD',
+        description:
+          "Chamonix Immobilier est un acteur immobilier local avec 26 ans d'ancrage dans la vallée. Tarification sur devis adaptée à chaque bien et niveau de service. Note Google 4.9/5 sur 65 avis. L'offre LCD complète l'activité de transaction et location annuelle. Pertinent pour un propriétaire qui souhaite une approche immobilière 360 : gestion LCD le temps d'optimiser la rentabilité, puis bascule éventuelle en location annuelle ou cession via le même interlocuteur historique.",
+      },
+      {
+        name: 'Mont Blanc Conciergerie',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 49,
+        biensGeres: 60,
+        specialty: 'Qualité et réactivité, focus vallée',
+        description:
+          "Mont Blanc Conciergerie applique une grille 20-25 % TTC selon le bien et le niveau de service. Note Google 4.5/5 sur 49 avis. Positionnement sur la qualité du service voyageur et la réactivité terrain — un atout direct face à la concurrence des grands acteurs nationaux (HostnFly, Welkeys) qui opèrent à distance. Pertinente pour un propriétaire qui valorise un interlocuteur local accessible plutôt qu'une plateforme.",
+      },
+      {
+        name: 'Pangea',
+        commission: '60 €/mois ou 600 €/an',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 19,
+        biensGeres: 30,
+        specialty: 'Forfait fixe (pas de commission), services premium',
+        description:
+          "Pangea casse le modèle de la commission au pourcentage avec un forfait fixe : 60 €/mois ou 600 €/an, indépendamment du chiffre d'affaires généré. Note Google 4.8/5 sur 19 avis. Services premium inclus : conciergerie 24/7, chef à domicile, location d'équipement (skis, randonnée), transferts aéroport. Pertinente pour un propriétaire dont le bien performe au-dessus de la moyenne (chalet > 50 000 € de revenus annuels) — au-delà d'un certain volume, le forfait Pangea bat largement les 20-25 % du marché.",
+      },
+      {
+        name: 'Poulard & Co',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 18,
+        biensGeres: 25,
+        specialty: 'Gestion complète, assistance 24/7',
+        description:
+          "Poulard & Co applique une commission de 20 % TTC sur les revenus collectés. Note Google 4.8/5 sur 18 avis. Offre clé en main : annonce, diffusion, accueil voyageurs, ménage, maintenance, assistance 24/7. Pertinente pour un propriétaire qui veut une exécution standard du marché sans services premium, avec un acteur local à taille humaine.",
+      },
+      {
+        name: 'Chamkeys Prestige',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 11,
+        biensGeres: 18,
+        specialty: 'Premium : chef, transferts aéroport, gardiennage',
+        description:
+          "Chamkeys Prestige se positionne sur le segment chalet de prestige avec une note Google parfaite 5.0/5 sur 11 avis. Tarification sur devis (généralement 25-30 % TTC selon le bien). Services premium inclus : chef à domicile sur demande, transferts aéroport Genève, gardiennage hors-saison, coordination travaux. Pertinente pour un chalet > 1,5 M€ au Lavancher, aux Praz ou à Argentière où la clientèle internationale (Émirats, Russie, États-Unis) exige du service hôtelier 5*.",
+      },
+      {
+        name: 'Cham\'Concierge',
+        url: 'https://www.chamconcierge.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 6,
+        biensGeres: 15,
+        specialty: 'Diffusion multi-plateformes (Airbnb, Booking, Expedia)',
+        description:
+          "Cham'Concierge crée et diffuse les annonces sur Airbnb, Booking, Hotels.com, Expedia et Google Hotel Ads — couverture multi-plateformes parmi les plus larges du marché chamoniard. Commission 20 % TTC, note Google parfaite 5.0/5 sur 6 avis. Approche slogan « Clients à l'arrivée, amis au départ ». Pertinente pour un propriétaire qui veut maximiser le taux de remplissage via la multi-diffusion plutôt que la mono-plateforme Airbnb.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Chamonix Centre / Sud',
+        pricePerNight: '120-280 €',
+        occupancy: 75,
+        description:
+          "Cœur de Chamonix autour de l'église, rue du Docteur Paccard, place du Triangle de l'Amitié, départ téléphérique Aiguille du Midi. Le plus prisé pour le LCD touristique. Prix au m² 12 000-18 000 €. Studio dès 250 000 €, T2 dès 450 000 €.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Les Praz de Chamonix',
+        pricePerNight: '150-380 €',
+        occupancy: 70,
+        description:
+          "Village authentique à 5 min de Chamonix centre, pied des pistes de la Flégère, calme et chalets traditionnels. Très prisé clientèle premium. Prix au m² 14 000-20 000 €. Chalet T4 dès 1,2 M€.",
+        roiBrut: '3,5 à 4,5 %',
+      },
+      {
+        name: 'Argentière / Le Tour',
+        pricePerNight: '110-240 €',
+        occupancy: 68,
+        description:
+          "Village à 15 min de Chamonix, départ Grands Montets (le freeride mythique) et Le Tour-Vallorcine. Clientèle freeride et ski-touring. Prix au m² légèrement plus accessibles (8 000-12 000 €). T2 dès 350 000 €.",
+        roiBrut: '4,5 à 5,5 %',
+      },
+      {
+        name: 'Les Houches',
+        pricePerNight: '95-200 €',
+        occupancy: 65,
+        description:
+          "Commune voisine de Chamonix (10 min), domaine ski-débutants/intermédiaires Les Houches-Saint-Gervais. Famille et budgets plus accessibles. Prix au m² 6 000-9 000 €. T2 dès 280 000 €. Réglementation : 1 seule autorisation par personne physique (comme Chamonix).",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Vallorcine / Servoz (vallée)',
+        pricePerNight: '85-160 €',
+        occupancy: 55,
+        description:
+          "Communes voisines à 20-30 min de Chamonix. Servoz autorise 2 autorisations par personne physique. Vallorcine reste sans limitation (mais autorisation annuelle). Bonne option pour échapper aux restrictions chamoniardes. Maison T3 dès 350 000 €.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Saint-Gervais-les-Bains (20 min)',
+        pricePerNight: '90-180 €',
+        occupancy: 60,
+        description:
+          "Station thermale et ski Mont-Blanc Unlimited à 20 min de Chamonix. Mix tourisme thermal (été) + ski (hiver). Tickets d'achat plus accessibles. T2 dès 230 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Chamonix-Mont-Blanc applique depuis le **1er mai 2025** la réglementation la plus stricte des stations de montagne françaises pour les meublés de tourisme — un dispositif pionnier mobilisé par la mairie face à la pression locative qui a presque doublé en 4 ans (2 700 → 4 000 biens dans la vallée).\n\n**Autorisation de changement d'usage limitée.** À Chamonix-Mont-Blanc et aux Houches, **1 seule autorisation de changement d'usage par personne physique** est délivrée pour les meublés de tourisme. À Servoz, 2 autorisations par personne physique. À Vallorcine, pas de limitation du nombre de biens, mais l'autorisation reste annuelle. À partir du **1er mai 2026**, les personnes morales (sociétés) sont également soumises à ces limitations.\n\n**Enregistrement Declaloc.** Tout meublé de tourisme doit être enregistré via le téléservice national (apimeubles.finances.gouv.fr ou via le portail mutualisé valleedechamonix.declaloc.fr). Un numéro d'enregistrement à 13 chiffres doit figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**Loi Le Meur 2024.** Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC est passé à 30 % pour les meublés non classés (50 % pour les classés tourisme). Les biens classés F ou G au DPE sont interdits à la location courte durée. Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Communauté de Communes de la Vallée de Chamonix-Mont-Blanc applique une taxe additionnelle classement-dépendante : de 1,10 € à 5,30 € par nuit et par personne (taux les plus élevés du marché alpin), collectée automatiquement par Airbnb.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 180,
+      neighborhood: 'Chamonix centre',
+      revenuBrut: 42000,
+      commissionRate: 0.20,
+      menageCount: 65,
+      menageUnitCost: 95,
+    },
+    extraFaq: [
+      {
+        q: 'Peut-on encore acheter un appartement à Chamonix pour le mettre en Airbnb en 2026 ?',
+        a: "Oui, mais avec de fortes restrictions. Depuis le 1er mai 2025, Chamonix-Mont-Blanc et Les Houches limitent à 1 seule autorisation de changement d'usage par personne physique pour les meublés de tourisme : vous ne pouvez détenir qu'un seul bien dédié au LCD sur ces deux communes. Au 1er mai 2026, les sociétés (personnes morales) sont également soumises à cette limitation. Si vous visez plusieurs biens LCD dans la vallée, regardez Servoz (2 autorisations) ou Vallorcine (sans limitation, autorisation annuelle). Pour un seul bien LCD à Chamonix, le marché reste viable : les rendements bruts oscillent entre 4 et 6 % selon le quartier, avec un revenu annuel moyen de 35 000 à 60 000 € pour un T2 bien placé en centre ou aux Praz.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Chamonix pendant la haute saison hiver ?',
+        a: "La haute saison hiver chamoniarde s'étale de mi-décembre à mi-avril avec un pic absolu pendant les vacances scolaires (Noël/Nouvel An, février européen et britannique, vacances de Pâques). Un T2 en centre qui se loue 180 €/nuit en moyenne annuelle atteint 280-380 €/nuit pendant les vacances de Noël/Nouvel An et Pâques, avec une semaine complète obligatoire (samedi-samedi). Sur 4 mois de haute saison hiver, un T2 bien placé peut générer 18 000 à 28 000 € bruts, soit 60-70 % du chiffre d'affaires annuel. L'Ultra-Trail du Mont-Blanc fin août ajoute un pic ponctuel exceptionnel (+150 à +300 % sur 10 jours).",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Chamonix ?',
+        a: "Pour un objectif rentabilité maximale, le quartier Argentière / Le Tour est le meilleur compromis : prix au m² plus accessibles (8 000-12 000 €), clientèle freeride et ski-touring, ROI brut 4,5-5,5 %. Chamonix Centre offre les meilleurs tarifs nuitée (120-280 €) mais avec un ticket d'entrée plus élevé (>450 000 € pour un T2). Les Praz et Le Lavancher sont réservés aux profils patrimoniaux haut de gamme (chalet > 1 M€, clientèle internationale premium). Pour échapper à la restriction d'1 autorisation par personne, regarder Servoz (2 autorisations), Vallorcine (sans limitation), ou Saint-Gervais à 20 min.",
+      },
+    ],
+    updatedAt: '2026-05-18',
+  },
+  // ==========================================================================
+  // TOURS
+  // ==========================================================================
+  {
+    slug: 'tours',
+    displayName: 'Tours',
+    region: 'Centre-Val de Loire',
+    regionSlug: 'centre-val-de-loire',
+    title: 'Conciergerie Tours Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Tours : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Tours et Amboise. Tarifs (18-25 %), services, avis Google, réglementation 2026, quartiers rentables (Vieux-Tours, Plumereau).',
+    kwPrincipal: 'conciergerie tours',
+    kwSecondaires: [
+      'conciergerie airbnb tours',
+      'conciergerie amboise',
+      'location courte durée tours',
+      'gestion locative tours',
+      'meublé touristique tours',
+      'conciergerie indre-et-loire',
+    ],
+    population: 137000,
+    tourists: 5000000,
+    activeListings: 1300,
+    priceLow: 50,
+    priceHigh: 110,
+    occupancyRate: 65,
+    revpar: 45,
+    seasonality:
+      "Saisonnalité tirée par les châteaux de la Loire (1er site touristique régional). Pic absolu avril à septembre (occupation 75-85 %, vacances scolaires françaises et européennes, mariages au château). Pics ponctuels : Festival international des Jardins de Chaumont-sur-Loire (avril-novembre), Vitiloire en mai, Festival de l'Histoire à Chinon. Tourisme d'affaires régulier en semaine (Tours Métropole, université, hôpital Trousseau, Stade rennais en déplacement) qui lisse l'occupation hors saison. Creux marqué décembre-février (occupation 40-50 %) à l'exception des marchés de Noël.",
+    rankNational: 25,
+    introCustom:
+      "Vous avez un appartement à **Tours**, en plein Vieux-Tours autour de la place Plumereau, ou à proximité d'Amboise, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les **5 millions de visiteurs annuels** des châteaux de la Loire (Chenonceau, Chambord, Amboise, Villandry, Azay-le-Rideau), la **nouvelle obligation d'enregistrement Declaloc au 20 mai 2026**, et la dizaine d'acteurs locaux qui se partagent un marché de **1 300 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre Vieux-Tours, Cathédrale et la couronne touristique Amboise/Loches ?",
+    marketIntro:
+      "Tours est le **premier marché LCD du Centre-Val de Loire** avec environ **1 300 annonces actives** et un revenu moyen par annonce autour de 14 000-18 000 €/an. La ville bénéficie d'un mix unique : **châteaux de la Loire** (Chenonceau, Chambord à 1h, Amboise à 25 min, Villandry, Azay-le-Rideau, Loches), **patrimoine UNESCO** (Val de Loire entre Sully-sur-Loire et Chalonnes), **vins de Loire** (Vouvray, Chinon, Bourgueil, Saint-Nicolas-de-Bourgueil) et **TGV 1h05 de Paris-Montparnasse** (un atout majeur pour le week-end).\n\nLa **région Centre-Val de Loire accueille plus de 5 millions de visiteurs annuels** sur les châteaux et le val classé UNESCO. Tours capte une part significative de ce flux comme **base d'hébergement régionale** : le tarif moyen nuitée est de **56-83 €** (source AirDNA) — un niveau accessible qui ouvre le marché à une clientèle familiale et seniors.\n\nLe **tourisme d'affaires Tours Métropole** (université, hôpital Trousseau, Tours Évènements, Polytech) ajoute une demande régulière en semaine. La **place Plumereau** dans le Vieux-Tours est l'une des plus animées de France (bars, restaurants, vie nocturne) — un atout pour la clientèle 25-40 ans en week-end.\n\n**Tours n'est pas en zone tendue dure** au sens du décret n°2023-822 (moins de 200 000 habitants stricts), mais l'enregistrement Declaloc est obligatoire au plus tard le **20 mai 2026** et la résidence secondaire dédiée LCD nécessite une autorisation de changement d'usage à vérifier directement auprès de la mairie.",
+    conciergeries: [
+      {
+        name: 'Louloue Tours',
+        url: 'https://louloue.com/louloue-tours/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 142,
+        biensGeres: 130,
+        specialty: 'Volume Touraine, full A-Z management',
+        description:
+          "Louloue est le leader volumique de la Touraine avec plus de 130 biens gérés à Tours, Amboise et Poitiers. Note Google 4.4/5 sur 142 avis (volume le plus élevé du marché tourangeau). Commission 20 % TTC, ménage refacturé au voyageur. Gestion full A-Z : création annonce, photos pro, diffusion multi-plateformes, pricing dynamique, accueil voyageurs, ménage pro, linge hôtelier, maintenance et reporting financier mensuel. Pertinente pour un propriétaire multi-biens entre Tours, Amboise et Île-de-France qui veut un interlocuteur unique sur la chaîne Loire / Paris.",
+      },
+      {
+        name: 'PrestiPlace',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 117,
+        biensGeres: 75,
+        specialty: 'Haut de gamme spécialisé LCD',
+        description:
+          "PrestiPlace se positionne sur le segment haut de gamme avec une note Google parfaite 5.0/5 sur 117 avis (volume le plus élevé du marché tourangeau pour une note 5/5). Tarification sur devis adaptée au niveau de service premium : photos pro, fournitures d'accueil signées, accueil multilingue, gestion fine de la communication voyageurs. Pertinente pour un T2-T3 dans le Vieux-Tours, Cathédrale ou Plumereau, ou pour un bien de charme à proximité d'Amboise.",
+      },
+      {
+        name: 'GTH Conciergerie',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 81,
+        biensGeres: 65,
+        specialty: 'Solutions personnalisées propriétaire/locataire',
+        description:
+          "GTH Conciergerie propose des services de conciergerie et gestion locative personnalisés à Tours et alentours. Commission 20 % TTC, note Google 4.4/5 sur 81 avis. Approche assumée de l'accompagnement client : interlocuteur dédié, transparence du reporting, ajustements personnalisés selon le bien. Pertinente pour un propriétaire qui valorise une relation suivie plutôt qu'un service standardisé.",
+      },
+      {
+        name: 'Pillow and Paw',
+        url: 'https://pillowandpaw.com/',
+        commission: '22 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 11,
+        biensGeres: 20,
+        specialty: 'Pet-friendly Tours et Amboise',
+        description:
+          "Pillow and Paw se positionne sur le segment de niche pet-friendly à Tours et Amboise : biens acceptant les animaux, fournitures d'accueil animaux (gamelles, panier, sachets), partenariats avec vétérinaires et pet-sitters locaux. Commission 22 % TTC, note Google parfaite 5.0/5 sur 11 avis. Le segment pet-friendly capte 20-25 % de la demande Airbnb sans concurrencer la majorité des biens classiques — une niche très rentable pour un propriétaire de chalet ou maison avec jardin.",
+      },
+      {
+        name: 'Les Clés de Touraine',
+        url: 'https://www.lesclesdetouraine.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 19,
+        biensGeres: 30,
+        specialty: '3 piliers : sécurité, qualité, rentabilité',
+        description:
+          "Les Clés de Touraine, fondée en 2019, structure son offre autour de 3 piliers explicites : sécurité du bien, qualité de service voyageur, rentabilité pour le propriétaire. Note Google 4.4/5 sur 19 avis. Particularité : sélection volontairement limitée des biens gérés (qualité plutôt que volume) selon leur emplacement, leur charme et leur attractivité touristique/professionnelle. Commission 20 % TTC. Pertinente pour un bien de caractère en Vieux-Tours, autour de la Cathédrale ou sur les bords de Loire.",
+      },
+      {
+        name: 'Éloge Touraine',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 10,
+        biensGeres: 18,
+        specialty: 'Luxe et patrimoine, approche châteaux',
+        description:
+          "Éloge Touraine se positionne sur le segment patrimoine et luxe avec une commission de 20 % HT et une note Google parfaite 5.0/5 sur 10 avis. Approche dédiée aux biens de caractère : ancien rénové, hôtels particuliers, gîtes près des châteaux. Coordination avec les acteurs touristiques régionaux (visites privées de château, dégustations vins de Loire, gastronomie). Pertinente pour un propriétaire d'un bien atypique haut de gamme à Tours, Amboise ou en couronne château.",
+      },
+      {
+        name: 'Coderi',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 11,
+        biensGeres: 22,
+        specialty: 'Focus culture locale, expérience voyageur',
+        description:
+          "Coderi applique une commission de 25 % HT — légèrement au-dessus de la moyenne tourangeau — justifiée par une approche centrée sur la culture locale : guides personnalisés, partenariats avec restaurants et caves de Vouvray/Chinon, expériences exclusives. Note Google parfaite 5.0/5 sur 11 avis. Pertinente pour un propriétaire qui valorise une expérience voyageur premium (note Airbnb plus haute → meilleur classement → meilleur taux d'occupation) plutôt qu'une commission basse.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieux-Tours / Place Plumereau',
+        pricePerNight: '75-130 €',
+        occupancy: 75,
+        description:
+          "Cœur historique autour de la place Plumereau (maisons à colombages, terrasses, vie nocturne), rue Colbert, basilique Saint-Martin. Le plus prisé pour le LCD touristique. Clientèle 100 % touristique avec rotation rapide (2-3 nuits). T2 à partir de 200 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Cathédrale Saint-Gatien',
+        pricePerNight: '70-115 €',
+        occupancy: 70,
+        description:
+          "Quartier autour de la cathédrale Saint-Gatien (gothique), musée des Beaux-Arts, château de Tours. Calme, charme historique, demande lissée tourisme + culturel. T2 à partir de 180 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Prébendes / Verdun',
+        pricePerNight: '60-95 €',
+        occupancy: 60,
+        description:
+          "Quartiers résidentiels au sud du centre, autour du jardin des Prébendes (Art Nouveau). Mix tourisme + résidentiel cadres. Tickets d'achat accessibles. T2 dès 160 000 €.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Rive gauche / Saint-Cyr-sur-Loire',
+        pricePerNight: '60-100 €',
+        occupancy: 58,
+        description:
+          "Rive nord de la Loire, Saint-Cyr-sur-Loire et Tours-Nord. Demande mixte tourisme + tourisme d'affaires (Polytech, ZA Nord). Tickets d'achat les plus bas du périmètre central. T2 dès 140 000 €.",
+        roiBrut: '6,5 à 7,5 %',
+      },
+      {
+        name: 'Berthelot / Halles',
+        pricePerNight: '65-110 €',
+        occupancy: 65,
+        description:
+          "Quartier autour des Halles centrales et de la rue Berthelot, à 5 min à pied de Plumereau. Excellent compromis charme historique + tickets accessibles. T2 dès 175 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Amboise / Couronne Loire (25 min)',
+        pricePerNight: '90-180 €',
+        occupancy: 65,
+        description:
+          "Communes touristiques à 20-30 min de Tours : Amboise (château royal, Clos Lucé Léonard de Vinci), Vouvray, Montlouis-sur-Loire. Demande touristique forte et saisonnalité avril-octobre marquée. Maison T3 dès 240 000 €. Gîte rural haut de gamme jusqu'à 300 €/nuit en haute saison.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Tours **n'est pas classée en zone tendue dure** au sens du décret n°2023-822 (moins de 200 000 habitants stricts), ce qui laisse aujourd'hui une marge de manœuvre plus large pour les loueurs que les grandes métropoles. Néanmoins, l'enregistrement Declaloc et la déclaration mairie restent obligatoires, et la mairie peut à tout moment instaurer le numéro d'enregistrement obligatoire et l'autorisation de changement d'usage si la pression locative s'accentue.\n\n**Enregistrement Declaloc.** L'enregistrement national via téléservice unique (apimeubles.finances.gouv.fr) est obligatoire au plus tard le **20 mai 2026** avec un numéro à 13 chiffres à faire figurer sur chaque annonce Airbnb, Booking ou Abritel. Sans numéro après l'entrée en vigueur, l'annonce est automatiquement désactivée par les plateformes.\n\n**Résidence principale.** La location en meublé de tourisme reste plafonnée à **120 nuitées par an** au niveau national pour la résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**Résidence secondaire dédiée LCD.** Selon la délibération en vigueur à la date de votre projet, un changement d'usage peut être exigé. À vérifier directement auprès de la direction de l'urbanisme de Tours avant tout investissement.\n\n**Loi Le Meur 2024.** Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC est passé à 30 % pour les meublés non classés (50 % pour les classés tourisme). Les biens classés F ou G au DPE sont interdits à la location courte durée. Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Tours Métropole Val de Loire applique une taxe de séjour intercommunale : de 0,65 € à 4,30 € par nuit et par personne selon le classement de l'hébergement, collectée automatiquement par Airbnb.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 80,
+      neighborhood: 'Vieux-Tours',
+      revenuBrut: 17600,
+      commissionRate: 0.20,
+      menageCount: 80,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il un numéro d\'enregistrement pour louer en Airbnb à Tours en 2026 ?',
+        a: "Oui. À partir du 20 mai 2026, tout loueur (résidence principale ou secondaire) doit obtenir un numéro d'enregistrement à 13 chiffres via le téléservice national Declaloc (apimeubles.finances.gouv.fr) ou auprès de la mairie, et le faire figurer sur chaque annonce Airbnb, Booking ou Abritel. Tours n'est pas en zone tendue dure (moins de 200 000 habitants stricts), donc pas d'obligation actuelle d'autorisation de changement d'usage pour la résidence secondaire — mais cette situation peut évoluer si la mairie délibère, à vérifier directement auprès de la direction de l'urbanisme.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Tours pendant la haute saison châteaux ?',
+        a: "La haute saison tourangelle s'étale d'avril à septembre, avec un pic absolu juillet-août (vacances scolaires, châteaux de la Loire ouverts, festivals). Un T2 dans le Vieux-Tours qui se loue 80 €/nuit en moyenne annuelle atteint 110-150 €/nuit pendant ces deux mois, avec une occupation 80-90 % et un minimum 2-3 nuits imposé. Les événements comme Vitiloire en mai, le Festival des Jardins de Chaumont (avril-nov) ou les mariages au château ajoutent des pics tarifaires (+30 à +50 %). Sur l'année complète, un T2 bien placé en Vieux-Tours génère 14 000 à 22 000 € bruts (avant commission).",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Tours ?',
+        a: "Pour un objectif rentabilité + sécurité, le quartier Cathédrale Saint-Gatien est le meilleur compromis : centre historique calme, demande lissée tourisme + culturel, T2 à partir de 180 000 € et ROI brut 5,5-6,5 %. Le Vieux-Tours / Plumereau offre les meilleurs tarifs nuitée (75-130 €) mais avec un ticket d'entrée plus élevé (>200 000 €). Pour un profil cashflow agressif, viser Rive gauche / Saint-Cyr (tickets dès 140 000 €, ROI brut 6,5-7,5 %). Pour un profil tourisme château, regarder Amboise à 25 min : gîtes ruraux et maisons de caractère, saisonnalité avril-octobre très marquée.",
+      },
+    ],
+    updatedAt: '2026-05-18',
   },
 ];
 

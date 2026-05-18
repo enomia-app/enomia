@@ -291,8 +291,9 @@
     "oldSlug": "/conciergerie-airbnb-metz",
     "kw": "conciergerie metz",
     "vol": 380,
-    "status": "À faire",
-    "kd": 15
+    "status": "Publié",
+    "kd": 15,
+    "publishedAt": "2026-05-18"
   },
   {
     "num": 30,
@@ -332,8 +333,9 @@
     "oldSlug": "/conciergerie-airbnb-nimes",
     "kw": "conciergerie nimes",
     "vol": 350,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-18"
   },
   {
     "num": 33,
@@ -345,8 +347,9 @@
     "oldSlug": "/conciergerie-airbnb-sete",
     "kw": "conciergerie sete",
     "vol": 330,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-18"
   },
   {
     "num": 34,
@@ -371,8 +374,9 @@
     "oldSlug": "/conciergerie-airbnb-deauville",
     "kw": "conciergerie deauville",
     "vol": 320,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-18"
   },
   {
     "num": 36,
@@ -1198,8 +1202,9 @@
     "kw": "conciergerie Lausanne",
     "vol": 1900,
     "kd": "14",
-    "status": "À faire",
-    "source": "semrush-expand-2026-05-15"
+    "status": "À reprendre manuel",
+    "source": "semrush-expand-2026-05-15",
+    "notes": "Conciergeries identifiées (8+) mais ratings Google non vérifiables via web search. Validation manuelle requise sur Google Maps direct."
   },
   {
     "num": 100,

@@ -5713,6 +5713,751 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-05-18',
   },
+  // ==========================================================================
+  // METZ
+  // ==========================================================================
+  {
+    slug: 'metz',
+    displayName: 'Metz',
+    region: 'Grand Est',
+    regionSlug: 'alsace',
+    title: 'Conciergerie Metz Airbnb : comparatif 2026 des 5 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Metz : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      'Comparatif des 5 meilleures conciergeries Airbnb à Metz. Tarifs (15-22 %), services, avis Google, réglementation 2026, quartiers rentables (Sablon, Outre-Seille, Centre).',
+    kwPrincipal: 'conciergerie metz',
+    kwSecondaires: [
+      'conciergerie airbnb metz',
+      'conciergerie moselle',
+      'location courte durée metz',
+      'meublé courte durée metz',
+      'airbnb metz',
+    ],
+    population: 120000,
+    tourists: 1300000,
+    activeListings: 900,
+    priceLow: 50,
+    priceHigh: 95,
+    occupancyRate: 62,
+    revpar: 45,
+    seasonality:
+      "Saisonnalité tirée par les événements et le tourisme culturel. Pic absolu décembre avec le Marché de Noël de Metz (l'un des plus visités de France, 2,5 millions de visiteurs en moyenne), occupation 80-90 % et tarifs 1,5-2× la normale. Pic secondaire mai à septembre porté par le Centre Pompidou-Metz, le Festival Constellations (mappings vidéo gratuits juin-septembre), Mirabelle Festival fin août. Tourisme d'affaires régulier en semaine (UE Luxembourg à 1h, Saarbrücken à 50 min) qui lisse l'occupation toute l'année. Creux marqué janvier-février (occupation 40-45 %).",
+    rankNational: 27,
+    introCustom:
+      "Vous avez un appartement à **Metz**, en plein centre près de la cathédrale Saint-Étienne, dans le quartier dynamique du Sablon, ou à proximité de la gare TGV, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre le **Marché de Noël qui draine 2,5 millions de visiteurs en décembre**, le **Centre Pompidou-Metz** qui attire un tourisme culturel toute l'année, la **proximité du Luxembourg** (siège européen à 1h, attractif pour la clientèle business multilingue), et la dizaine d'acteurs locaux qui se partagent un marché d'environ **900 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre Metz Centre, Sablon, Outre-Seille et la couronne Thionville/Nancy ?",
+    marketIntro:
+      "Metz est le **deuxième marché LCD du Grand Est** derrière Strasbourg, avec environ **900 annonces actives** et un revenu moyen par annonce de l'ordre de **15 500 €/an** (source EstimOpti). La ville bénéficie d'un mix unique : **cathédrale Saint-Étienne** (3e plus grande de France, 6 500 m² de vitraux), **Centre Pompidou-Metz** (350 000-400 000 visiteurs annuels), **Marché de Noël** classé parmi les plus visités d'Europe, et **position stratégique** au cœur de la Grande Région (Luxembourg, Sarre, Belgique à moins d'une heure).\n\nLa **clientèle est mixte** : tourisme culturel européen (Allemands, Belges, Luxembourgeois, Néerlandais), tourisme d'affaires (Eurométropole de Metz, université de Lorraine, BLIIIDA campus innovation), tourisme événementiel (Marché de Noël, Mirabelle Festival, festival Constellations). Le **tarif moyen nuitée est de 50-75 €** (source AirDNA) avec des pics à 130-160 € en décembre (Marché de Noël) et juillet-août (clientèle européenne).\n\n**Metz n'est pas en zone tendue dure** au sens du décret n°2023-822, ce qui laisse aux loueurs une marge de manœuvre plus large que les grandes métropoles : **pas d'autorisation de changement d'usage obligatoire**, **pas de plafond de 90 nuitées**, **pas de quota communal**. La déclaration en mairie via formulaire 14004 reste obligatoire et délivre le numéro à 13 chiffres requis sur chaque annonce.",
+    conciergeries: [
+      {
+        name: 'Rock in Share',
+        url: 'https://www.rock-in-share.com/fr/',
+        commission: 'sur devis (~20 %)',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 93,
+        biensGeres: 120,
+        specialty: 'Volume Grand Est, multi-villes',
+        description:
+          "Rock in Share est l'acteur volumique de référence sur l'axe Metz/Nancy/Thionville/Strasbourg avec expansion vers Luxembourg, Paris et Gérardmer. Note Google 4.6/5 sur 93 avis — le volume d'avis le plus élevé du marché messin. Couverture complète : photos pro, diffusion multi-plateformes (Airbnb, Booking, Abritel, Expedia, VRBO, Leboncoin), accueil voyageurs, ménage hôtelier, linge, pricing dynamique. Pertinente pour un propriétaire multi-biens sur la Grande Région qui veut un interlocuteur unique sur l'axe Metz/Nancy/Thionville/Luxembourg.",
+      },
+      {
+        name: "Un Séjour à Metz",
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.2,
+        reviews: 34,
+        biensGeres: 25,
+        specialty: 'Appartements meublés tout équipés, événementiel',
+        description:
+          "Un Séjour à Metz cible le segment appartements meublés tout équipés à Metz centre. Note Google 4.2/5 sur 34 avis. Spécialité : privatisation d'immeubles pour événements (jusqu'à 15 personnes), conciergerie pour gîtes urbains de plus de 100 m². Approche personnalisée et présence de proximité, particulièrement adaptée aux propriétaires d'un seul bien atypique à Metz centre (grand T3-T4, plateau loft, appartement de standing).",
+      },
+      {
+        name: 'Vigelio',
+        url: 'https://www.vigelio.fr/',
+        commission: '20 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 8,
+        biensGeres: 30,
+        specialty: 'Multi-départements 57/54/55, axe Luxembourg',
+        description:
+          "Vigelio applique une commission fixe de 20 % TTC sur les revenus collectés, calculée après déduction des frais plateforme et ménage. Note Google 4.5/5 sur 8 avis. Couverture : Moselle (57), Meurthe-et-Moselle (54), Meuse (55) sur l'axe Nancy/Metz/Luxembourg. Services complets : création annonce, accueil voyageurs, maintenance, petites réparations, optimisation taux d'occupation sur Airbnb/Booking/Abritel. Pertinente pour un propriétaire qui valorise la transparence tarifaire (20 % fixe, pas de surprise) et une couverture transfrontalière.",
+      },
+      {
+        name: 'Vahine Conciergerie',
+        url: 'https://vahine-conciergerie.fr/conciergerie-airbnb-metz/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 6,
+        biensGeres: 15,
+        specialty: 'Hôtellerie de luxe, standards 5 étoiles',
+        description:
+          "Vahine Conciergerie est fondée par Mélissa, professionnelle issue de l'hôtellerie de luxe. Note Google 5.0/5 sur les premiers avis (acteur récent, faible volume d'avis). Particularité : suivi personnalisé, contrôle qualité strict avec standards hôteliers, communication voyageurs 7/7, check-in/check-out professionnels, optimisation taux d'occupation. Pertinente pour un propriétaire d'un bien de standing (T3+ centre, Sablon premium) qui veut une exécution hôtelière plutôt qu'un service industriel.",
+      },
+      {
+        name: 'Cledici',
+        url: 'https://cledici.fr/conciergerie-metz/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 12,
+        biensGeres: 18,
+        specialty: 'Biens de prestige, présence internationale',
+        description:
+          "Cledici se positionne sur le segment LCD de prestige avec plus de 5 ans d'expérience à Metz et à Villeurbanne. Commission 20 % TTC sur les revenus. Note Google estimée 4.7/5 sur premiers avis. Services premium : gestion complète, stratégie pricing optimisée, visibilité plateformes, partenaires locaux sélectionnés. Pertinente pour un propriétaire d'un bien haut de gamme (T3-T4 centre, appartement de standing Sablon-Amphithéâtre) qui valorise un service patrimonial plutôt qu'un volume de transactions.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Metz Centre / Cathédrale',
+        pricePerNight: '70-130 €',
+        occupancy: 70,
+        description:
+          "Cœur historique autour de la cathédrale Saint-Étienne, place Saint-Louis (arcades médiévales), rue Serpenoise (commerces), Centre Pompidou-Metz à proximité. Le plus prisé pour le LCD touristique. Clientèle 70 % touristique avec rotation rapide (2-3 nuits). T2 à partir de 200 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Sablon / Amphithéâtre',
+        pricePerNight: '55-90 €',
+        occupancy: 65,
+        description:
+          "Quartier moderne autour du Centre Pompidou-Metz, gare TGV et amphithéâtre. Prix au m² 2 320-2 500 €. Mix tourisme culturel + tourisme d'affaires (TGV 1h22 Paris). Le meilleur compromis prix d'achat / rendement à Metz. T2 dès 130 000 €.",
+        roiBrut: '6,5 à 7,5 %',
+      },
+      {
+        name: 'Outre-Seille',
+        pricePerNight: '60-100 €',
+        occupancy: 65,
+        description:
+          "Quartier patrimonial à l'est de la Moselle : musées Cour d'Or, conservatoire, théâtre, archives municipales. Demande culturelle lissée. Charme historique préservé. T2 à partir de 170 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Île du Saulcy / Pontiffroy',
+        pricePerNight: '55-85 €',
+        occupancy: 60,
+        description:
+          "Quartiers résidentiels au nord, autour de l'université du Saulcy et du port. Mix tourisme + étudiants Erasmus (bail mobilité). Tickets d'achat parmi les plus accessibles. T2 dès 140 000 €.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Queuleu / Plantières',
+        pricePerNight: '50-85 €',
+        occupancy: 55,
+        description:
+          "Quartiers résidentiels au sud-est, proche du parc de la Seille. Demande mixte cadres + tourisme léger. Tickets d'achat bas. T2 dès 130 000 €. Préférer un emplacement proche du bus mettis pour assurer l'accessibilité centre.",
+        roiBrut: '6,5 à 7,5 %',
+      },
+      {
+        name: 'Devant-les-Ponts / Lothaire',
+        pricePerNight: '55-90 €',
+        occupancy: 60,
+        description:
+          "Quartier au nord du centre, rénové récemment autour de la place de la République. Proximité immédiate du centre historique (10 min à pied). Tickets d'achat accessibles. T2 dès 150 000 €.",
+        roiBrut: '6 à 7 %',
+      },
+    ],
+    regulation:
+      "Metz **n'est pas classée en zone tendue dure** au sens du décret n°2023-822, ce qui laisse aujourd'hui une marge de manœuvre plus large pour les loueurs que les grandes métropoles. Aucune autorisation de changement d'usage n'est exigée pour la résidence secondaire dédiée au LCD, et aucun quota communal n'est en vigueur.\n\n**Déclaration en mairie obligatoire.** Pour se conformer à l'article L324-1-1 du code du tourisme et permettre la collecte automatique de la taxe de séjour par les plateformes, vous devez déclarer votre logement en mairie via le formulaire **Cerfa 14004**, qui délivre un numéro d'enregistrement spécifique à porter sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Enregistrement Declaloc national au 20 mai 2026.** À cette date, le téléservice national unique (apimeubles.finances.gouv.fr) deviendra obligatoire. Sans numéro à 13 chiffres, les plateformes désactiveront automatiquement les annonces.\n\n**Résidence principale.** La location en meublé de tourisme reste plafonnée à **120 nuitées par an** au niveau national pour la résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**Loi Le Meur 2024.** Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC est passé à 30 % pour les meublés non classés (50 % pour les classés tourisme). Les biens classés F ou G au DPE sont interdits à la location courte durée. Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** L'Eurométropole de Metz applique une taxe de séjour intercommunale, de 0,75 € à 4,30 € par nuit et par personne selon le classement de l'hébergement, collectée automatiquement par Airbnb depuis le 1er janvier 2026.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 70,
+      neighborhood: 'Sablon-Amphithéâtre',
+      revenuBrut: 15800,
+      commissionRate: 0.20,
+      menageCount: 75,
+      menageUnitCost: 45,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il un numéro d\'enregistrement pour louer en Airbnb à Metz en 2026 ?',
+        a: "Oui. Toute mise en location meublée courte durée à Metz nécessite une déclaration préalable en mairie via le formulaire Cerfa 14004, qui délivre un numéro d'enregistrement à porter sur chaque annonce. À partir du 20 mai 2026, ce numéro deviendra à 13 chiffres via le téléservice national Declaloc (apimeubles.finances.gouv.fr). Sans ce numéro, les plateformes (Airbnb, Booking, Abritel) désactiveront automatiquement votre annonce. Metz n'est pas en zone tendue dure, donc pas d'obligation d'autorisation de changement d'usage pour la résidence secondaire dédiée au LCD — un avantage compétitif majeur par rapport à Strasbourg, Paris ou Bordeaux.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Metz pendant le Marché de Noël ?',
+        a: "Le Marché de Noël de Metz (fin novembre à fin décembre, l'un des plus visités de France avec 2,5 millions de visiteurs) déclenche le pic absolu de la saisonnalité messine. Un T2 en centre qui se loue 70 €/nuit en moyenne annuelle atteint 130-180 €/nuit pendant les 5 semaines du marché, avec une occupation 90-95 % et un minimum 2-3 nuits imposé. Sur les 5 semaines, un T2 bien placé génère 4 000 à 6 500 € bruts — soit 30-40 % du chiffre d'affaires annuel. La clientèle est majoritairement allemande, belge, luxembourgeoise et néerlandaise, sensible à la qualité photos et au niveau d'équipement (clim, machine à laver, fibre).",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Metz ?',
+        a: "Pour un objectif rentabilité maximale, le Sablon-Amphithéâtre est le meilleur compromis : prix au m² 2 320-2 500 € (les plus accessibles du centre), proximité immédiate du Centre Pompidou-Metz et de la gare TGV, ROI brut 6,5-7,5 %. Metz Centre / Cathédrale offre les meilleurs tarifs nuitée (70-130 €) mais avec un ticket d'entrée plus élevé (>200 000 € pour un T2). Pour un profil cashflow agressif, viser Queuleu, Plantières ou Île du Saulcy (T2 dès 130-140 000 €, ROI brut 6,5-7,5 %). Pour échapper aux pics saisonniers (Marché de Noël surchargé), regarder Devant-les-Ponts ou Outre-Seille à 10 min du centre.",
+      },
+    ],
+    updatedAt: '2026-05-18',
+  },
+  // ==========================================================================
+  // NÎMES
+  // ==========================================================================
+  {
+    slug: 'nimes',
+    displayName: 'Nîmes',
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title: 'Conciergerie Nîmes Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Nîmes : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Nîmes. Tarifs (17-24 %), services, avis Google, réglementation 2026, quartiers rentables (Écusson, Gambetta, Maison Carrée).',
+    kwPrincipal: 'conciergerie nimes',
+    kwSecondaires: [
+      'conciergerie airbnb nimes',
+      'conciergerie gard',
+      'conciergerie nîmes',
+      'meilleure conciergerie nimes',
+      'tarif conciergerie nimes',
+    ],
+    population: 149000,
+    tourists: 2000000,
+    activeListings: 1500,
+    priceLow: 55,
+    priceHigh: 105,
+    occupancyRate: 66,
+    revpar: 50,
+    seasonality:
+      "Saisonnalité tirée par les arènes romaines et les événements taurins. Pic absolu en septembre lors de la Feria des Vendanges (occupation 95-100 %, tarifs 2-3× la normale, séjour minimum 3 nuits imposé). Autre pic majeur en mai-juin : Feria de Pentecôte (le rendez-vous taurin le plus suivi d'Europe avec 1 million de visiteurs sur 6 jours), suivi des Arènes Festival (concerts juillet-août) et du Festival de Nîmes. Tourisme culturel régulier d'avril à octobre (Maison Carrée UNESCO 2023, Arènes, Pont du Gard à 25 min). Creux marqué décembre-février (occupation 45-50 %).",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un appartement à **Nîmes**, en plein Écusson autour des Arènes ou de la Maison Carrée (inscrite UNESCO en 2023), ou à proximité du Pont du Gard, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **Feria de Pentecôte qui draine 1 million de visiteurs en 6 jours**, la **Feria des Vendanges en septembre** (pic tarifaire 2-3× la normale), l'**enregistrement Declaloc obligatoire à partir du 20 mai 2026**, et la dizaine d'acteurs locaux qui se partagent un marché d'environ **1 500 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre Écusson, Gambetta et la couronne Pont du Gard ?",
+    marketIntro:
+      "Nîmes est le **deuxième marché LCD du Gard** après les communes balnéaires (Grau-du-Roi) et un des plus actifs d'Occitanie. La ville bénéficie d'un mix unique : **monuments romains exceptionnels** (Arènes, Maison Carrée inscrite UNESCO en 2023, Tour Magne), **Pont du Gard à 25 min** (1,5 million de visiteurs par an), **culture taurine** (Ferias de Pentecôte et des Vendanges parmi les plus suivies d'Europe), **TGV 3h de Paris** et **proximité Avignon, Montpellier, Arles** (axes de fréquentation croisés).\n\n**Tourisme** : Nîmes a enregistré près de **400 000 nuitées de janvier à avril 2026** (source Office de Tourisme), avec une clientèle à 50/50 française et étrangère (Allemands, Britanniques, Néerlandais, Italiens). Le **tarif moyen nuitée est de 65-95 €** (source AirDNA) avec des pics à 180-260 € lors des Ferias.\n\nLes **prix au m² à Nîmes restent accessibles** : 1 800-2 200 €/m² en Gambetta, 2 500-3 200 €/m² en Écusson, jusqu'à 3 800 €/m² sur les ilots les mieux placés (place de l'Horloge, rue de l'Aspic). Le **rendement brut LCD** se situe entre 5,5 et 7 % selon le quartier — supérieur à Montpellier (4,5-5 %) et Marseille (4,2-4,5 %).\n\n**Nîmes a instauré l'enregistrement Airbnb** depuis plusieurs années et figure dans la liste officielle des communes avec déclaration obligatoire. À partir du 20 mai 2026, le téléservice national Declaloc devient incontournable.",
+    conciergeries: [
+      {
+        name: 'La Conciergerie du Croco',
+        url: 'https://laconciergerieducroco.fr/',
+        commission: '24 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 109,
+        biensGeres: 80,
+        specialty: 'Volume Nîmes (30+ ans), full A-Z management',
+        description:
+          "La Conciergerie du Croco est l'acteur volumique de référence à Nîmes avec plus de 30 ans d'ancrage local. Note Google 4.8/5 sur 109 avis — le volume d'avis le plus élevé du marché nîmois. Commission 24 % TTC affichée publiquement (rare dans le métier). Couverture : Nîmes, Redessan, Langlade, Poulx, Remoulins, Gallargues, Le Grau du Roi. Services complets : création/optimisation annonces, communication voyageurs 7/7, ménage rigoureux, accueil personnalisé, pricing dynamique propriétaire. Pertinente pour un propriétaire qui valorise la transparence tarifaire et une couverture géographique large autour de Nîmes.",
+      },
+      {
+        name: 'CB Conciergerie de Nîmes',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 53,
+        biensGeres: 45,
+        specialty: 'Volume avis local + tarification flexible',
+        description:
+          "CB Conciergerie figure parmi les acteurs établis du marché nîmois avec une note Google 4.6/5 sur 53 avis — deuxième volume d'avis du marché. Tarification sur devis adaptée à la taille et à la typologie du bien. Services complets : annonces, accueil, ménage, communication voyageurs. Pertinente pour un propriétaire d'un T1-T3 standard qui cherche un acteur établi sans premium price.",
+      },
+      {
+        name: 'Homa Conciergerie',
+        url: 'https://www.homa-france.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 35,
+        biensGeres: 35,
+        specialty: 'Premium turnkey, assistance 9h-21h 7/7',
+        description:
+          "Homa Conciergerie propose un service premium clé en main pour locations saisonnières. Note Google parfaite 5.0/5 sur 35 avis. Services : création et optimisation annonces, communication voyageurs, check-in/check-out, ménage, linge, maintenance. Assistance disponible 9h-21h, 7 jours sur 7. Pertinente pour un propriétaire qui priorise l'expérience voyageur (note Airbnb plus haute → meilleur classement → meilleur taux d'occupation) plutôt qu'une commission basse.",
+      },
+      {
+        name: 'Excellence En Provence',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 24,
+        biensGeres: 28,
+        specialty: 'Provence + Nîmes, biens de caractère',
+        description:
+          "Excellence En Provence couvre l'axe Provence + Nîmes avec une approche dédiée aux biens de caractère (mas, demeures rénovées, appartements de standing en Écusson). Note Google parfaite 5.0/5 sur 24 avis. Tarification sur devis adaptée au niveau de service premium. Pertinente pour un propriétaire d'un bien atypique haut de gamme à Nîmes Écusson ou en couronne provençale.",
+      },
+      {
+        name: 'YourHostHelper Nîmes',
+        url: 'https://yourhosthelper.com/en/conciergerie-nimes/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 20,
+        biensGeres: 40,
+        specialty: 'Réseau national 20+ villes, photos & pricing dynamique',
+        description:
+          "Filiale de YourHostHelper (présent dans 20+ villes françaises), cette conciergerie mise sur l'optimisation du revenu via un pricing dynamique quotidien et des photos professionnelles incluses gratuitement au lancement. Commission 20 %, ménage refacturé voyageur. Note Google parfaite 5.0/5 sur 20 avis à Nîmes. Le propriétaire bénéficie d'un dashboard avec prévisions de revenus. Moins adaptée aux biens atypiques ou de luxe, mais excellent sur les T1-T2 standards en centre-ville.",
+      },
+      {
+        name: 'Concierge BB',
+        url: 'https://www.conciergebb.fr/',
+        commission: 'à partir de 17 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 3,
+        biensGeres: 12,
+        specialty: 'Commission la plus basse du marché nîmois',
+        description:
+          "Concierge BB se positionne sur la commission la plus basse du marché nîmois (à partir de 17 %, vs 20-24 % chez la concurrence). Note Google 4.7/5 sur 3 avis (acteur récent, faible volume d'avis). Le modèle tient grâce à l'automatisation (messagerie voyageurs semi-auto, planning ménage algorithmique). Pertinente pour un propriétaire sensible au prix qui a déjà l'expérience LCD et n'a pas besoin de premium service.",
+      },
+      {
+        name: 'LYS Conciergerie',
+        url: 'https://www.lys-conciergerie.fr',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 9,
+        biensGeres: 18,
+        specialty: 'Expertise locale Gard, tarifs compétitifs',
+        description:
+          "LYS Conciergerie se distingue par son expertise locale dans le Gard, sa rigueur et ses tarifs compétitifs. Note Google parfaite 5.0/5 sur 9 avis. Services complets : préparation du bien, gestion des réservations, ménage, blanchisserie. Disponibilité réactive de l'équipe. Pertinente pour un propriétaire qui valorise un acteur 100 % local (vs réseaux nationaux) et une relation directe avec le gérant.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: "Écusson / Maison Carrée / Arènes",
+        pricePerNight: '85-150 €',
+        occupancy: 75,
+        description:
+          "Cœur historique de Nîmes autour des Arènes romaines, de la Maison Carrée (UNESCO 2023) et de la place de l'Horloge. Le plus prisé pour le LCD touristique. Clientèle 80 % touristique avec rotation rapide (2-3 nuits). Prix au m² 2 500-3 800 €. T2 à partir de 220 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Gambetta',
+        pricePerNight: '60-100 €',
+        occupancy: 65,
+        description:
+          "Quartier mixte familles + étudiants au nord-ouest de l'Écusson. Prix au m² 1 847 €/m² (l'un des plus accessibles de Nîmes). Mix tourisme + résidentiel cadres. T2 dès 140 000 €. Excellent compromis ticket d'achat / rendement.",
+        roiBrut: '6,5 à 7,5 %',
+      },
+      {
+        name: "Jean Jaurès / Hôtel de Ville",
+        pricePerNight: '70-115 €',
+        occupancy: 68,
+        description:
+          "Quartier autour du boulevard Jean Jaurès et de l'Hôtel de Ville. Demande lissée tourisme + culturel + business. T2 à partir de 180 000 €. Charme historique préservé.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Richelieu / Carmes',
+        pricePerNight: '65-105 €',
+        occupancy: 62,
+        description:
+          "Quartiers résidentiels au sud-est, autour du quartier Richelieu et du jardin de la Fontaine. Mix tourisme + résidentiel cadres. Tickets d'achat accessibles. T2 dès 160 000 €.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Mas de Mingue / Capouchiné',
+        pricePerNight: '55-85 €',
+        occupancy: 55,
+        description:
+          "Quartiers périphériques au sud, plus accessibles en tickets d'achat. Demande mixte tourisme + tourisme d'affaires. T2 dès 110 000 €. Préférer une localisation proche du tramway ou du bus pour assurer l'accessibilité au centre.",
+        roiBrut: '7 à 8 %',
+      },
+      {
+        name: 'Couronne Pont du Gard / Uzès (25 min)',
+        pricePerNight: '95-180 €',
+        occupancy: 65,
+        description:
+          "Communes touristiques à 20-30 min de Nîmes : Pont du Gard (1,5M visiteurs/an), Uzès (Duché médiéval), Vers-Pont-du-Gard, Castillon. Demande touristique forte et saisonnalité avril-octobre marquée. Mas et maisons de caractère à partir de 280 000 €.",
+        roiBrut: '6 à 7 %',
+      },
+    ],
+    regulation:
+      "Nîmes figure dans la liste officielle des communes ayant instauré l'**enregistrement obligatoire** pour les meublés de tourisme depuis plusieurs années — un dispositif anticipé par rapport au cadre national. La mairie de Nîmes a annoncé en 2026 préparer un encadrement renforcé des logements Airbnb pour répondre à la pression sur le marché locatif intra-Écusson.\n\n**Enregistrement obligatoire.** Toute location meublée touristique doit être déclarée à la mairie, qui attribue un **numéro d'enregistrement à 13 caractères** à porter sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Enregistrement Declaloc national au 20 mai 2026.** À cette date, le téléservice national unique (apimeubles.finances.gouv.fr) deviendra incontournable et l'absence de numéro déclenche la désactivation automatique des annonces par les plateformes.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**Résidence secondaire dédiée LCD.** Selon la délibération à la date de votre projet, un changement d'usage peut être exigé (mairie préparant un encadrement renforcé en 2026). À vérifier directement auprès de la direction de l'urbanisme avant tout investissement.\n\n**Loi Le Meur 2024.** Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC est passé à 30 % pour les meublés non classés (50 % pour les classés tourisme). Les biens classés F ou G au DPE sont interdits à la location courte durée. Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La ville de Nîmes applique une taxe de séjour de 0,75 € à 5 € par nuit et par personne adulte selon le classement de l'hébergement, **plus une taxe additionnelle de 10 % au profit du Conseil départemental du Gard** — un dispositif spécifique à surveiller.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 80,
+      neighborhood: 'Gambetta',
+      revenuBrut: 19200,
+      commissionRate: 0.20,
+      menageCount: 80,
+      menageUnitCost: 50,
+    },
+    extraFaq: [
+      {
+        q: 'Quel impact des Ferias de Nîmes sur la rentabilité Airbnb ?',
+        a: "Les Ferias de Pentecôte (mai-juin) et des Vendanges (septembre) sont les deux pics absolus de la saisonnalité nîmoise. Sur les 6 jours de la Feria de Pentecôte (1 million de visiteurs), un T2 en Écusson qui se loue 90 €/nuit en moyenne annuelle atteint 220-320 €/nuit avec un séjour minimum 3-4 nuits imposé. La Feria des Vendanges (septembre) génère un pic similaire sur 4-5 jours. À elles deux, les Ferias peuvent représenter 15-20 % du chiffre d'affaires annuel d'un T2 bien placé en Écusson. Veillez aux conditions de copropriété : certaines copropriétés limitent ou interdisent la sous-location pendant les Ferias en raison du niveau sonore.",
+      },
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Nîmes en 2026 ?',
+        a: "À ce jour, Nîmes n'impose pas systématiquement d'autorisation de changement d'usage pour la résidence secondaire dédiée au LCD — la ville n'est pas classée en zone tendue dure au sens du décret n°2023-822. Toutefois, la mairie a annoncé en 2026 préparer un encadrement renforcé pour répondre à la pression sur le marché locatif intra-Écusson. La situation peut donc évoluer rapidement. Avant tout investissement, vérifiez directement auprès de la direction de l'urbanisme de la mairie si votre projet est réalisable dans le quartier visé.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Nîmes ?',
+        a: "Pour un objectif rentabilité maximale, Gambetta est le meilleur compromis : prix au m² 1 847 € (le plus accessible du périmètre central), demande mixte tourisme + cadres, ROI brut 6,5-7,5 %. L'Écusson / Maison Carrée offre les meilleurs tarifs nuitée (85-150 €) mais avec un ticket d'entrée plus élevé (>220 000 € pour un T2). Pour un profil cashflow agressif, viser Mas de Mingue ou Capouchiné (T2 dès 110 000 €, ROI brut 7-8 %), à condition d'être bien desservi en transports. Pour un profil tourisme premium, regarder Uzès ou la couronne Pont du Gard : mas et demeures de caractère, saisonnalité avril-octobre très marquée, tarifs nuitée 95-180 €.",
+      },
+    ],
+    updatedAt: '2026-05-18',
+  },
+  // ==========================================================================
+  // SÈTE
+  // ==========================================================================
+  {
+    slug: 'sete',
+    displayName: 'Sète',
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title: 'Conciergerie Sète Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Sète : Comparatif 2026 (tarifs & avis)',
+    metaDescription:
+      'Comparatif des 7 meilleures conciergeries Airbnb à Sète. Tarifs (18-25 %), services, avis Google, réglementation 2026, quartiers rentables (Mont-Saint-Clair, Pointe Courte, Centre).',
+    kwPrincipal: 'conciergerie sete',
+    kwSecondaires: [
+      'conciergerie airbnb sete',
+      'thau conciergerie',
+      'conciergerie sète',
+      'conciergerie frontignan',
+      'cette conciergerie',
+    ],
+    population: 45000,
+    tourists: 2500000,
+    activeListings: 1800,
+    priceLow: 70,
+    priceHigh: 180,
+    occupancyRate: 68,
+    revpar: 65,
+    seasonality:
+      "Saisonnalité balnéaire ultra-marquée. Pic absolu juillet-août (occupation 92-95 %, tarifs 2,5-3× la normale, semaines complètes obligatoires en haute saison). Pic culturel fin août lors de la Fête de la Saint-Louis (joutes nautiques sur le canal Royal, classées au patrimoine immatériel de l'UNESCO, 100 000 spectateurs en une semaine), suivie d'Escale à Sète (grand rassemblement maritime tous les 2 ans, 600 000 visiteurs). Tourisme culturel régulier avril-juin (festival Worldwide Music, Théâtre de la Mer Jean Vilar). Creux marqué novembre-février (occupation 35-45 %), à l'exception des séjours thermaux à Balaruc-les-Bains à proximité.",
+    rankNational: 18,
+    introCustom:
+      "Vous avez un appartement à **Sète**, sur les quais du canal Royal, sur la corniche dominant la Méditerranée, ou un cabanon à la Pointe Courte que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les **8,4 millions de nuitées du Bassin de Thau en 2024**, les **joutes nautiques de la Saint-Louis** (classées UNESCO), l'**enregistrement Declaloc obligatoire à partir du 20 mai 2026**, et la quinzaine d'acteurs locaux qui se partagent un marché d'environ **1 800 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre Mont-Saint-Clair, Pointe Courte, centre-ville et la couronne Balaruc / Frontignan ?",
+    marketIntro:
+      "Sète est le **premier marché LCD de l'Hérault hors Montpellier** avec environ **1 800 annonces actives** et un revenu moyen par annonce de l'ordre de 18 000-25 000 €/an sur les biens bien placés. La ville bénéficie d'un mix unique : **Venise du Languedoc** (canaux, ponts mobiles, joutes nautiques classées UNESCO), **Mont-Saint-Clair** (panoramas sur la Méditerranée et l'étang de Thau), **patrimoine maritime vivant** (port de pêche actif, conserveries, ostréiculture sur l'étang de Thau), et **proximité Montpellier 30 min**.\n\nLa **destination Sète-Archipel de Thau a accueilli près de 10 millions de touristes en 2025** dont 8,4 millions de nuitées en 2024 (70 % clientèle française, 30 % étrangère : Belges, Allemands, Néerlandais, Suisses). L'étang de Thau (7 500 hectares, le plus grand du Languedoc) produit 11 000 tonnes d'huîtres et 3 000 tonnes de moules par an, ce qui ancre un **tourisme gastronomique** très dynamique (Bouzigues, Mèze, Marseillan).\n\nLe **tarif moyen nuitée est de 90-130 €** (source AirDNA) avec des pics à 220-320 € en haute saison juillet-août sur le Mont-Saint-Clair et la corniche. Les **prix au m² à Sète atteignent 3 000 €/m² en moyenne**, jusqu'à **5 200 €/m² sur le Mont-Saint-Clair** (le quartier le plus cher de la ville).\n\n**Sète a instauré l'enregistrement Airbnb** depuis avril 2022 et figure dans la liste officielle des communes avec déclaration obligatoire. La résidence secondaire dédiée LCD peut nécessiter une autorisation de changement d'usage — à vérifier auprès de l'urbanisme avant achat.",
+    conciergeries: [
+      {
+        name: '7 OU NET',
+        url: 'https://7ounet.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 78,
+        biensGeres: 75,
+        specialty: 'Volume Sète, objectif Superhost Airbnb',
+        description:
+          "7 OU NET est l'acteur volumique de référence à Sète avec une note Google 4.9/5 sur 78 avis — le volume d'avis le plus élevé du marché sétois. Services complets : gestion locative, check-in/check-out, ménage professionnel, consigne bagages voyageurs. Approche centrée sur l'expérience voyageur : objectif Superhost Airbnb, note moyenne 5/5 sur les biens gérés. Pertinente pour un propriétaire qui valorise la performance Airbnb (notes voyageurs → classement → taux d'occupation) plutôt qu'une commission basse.",
+      },
+      {
+        name: 'ConciLogis',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 49,
+        biensGeres: 50,
+        specialty: 'Volume bassin de Thau, gestion généraliste',
+        description:
+          "ConciLogis figure parmi les acteurs établis du bassin de Thau avec une note Google 4.4/5 sur 49 avis. Couverture : Sète, Frontignan, Balaruc, Mèze, Marseillan. Services complets : annonces, accueil, ménage, communication voyageurs. Tarification sur devis adaptée à la taille et à la typologie du bien. Pertinente pour un propriétaire d'un T1-T3 standard qui cherche un acteur volumique sans premium service.",
+      },
+      {
+        name: 'Thau Conciergerie',
+        url: 'https://thauconciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 32,
+        biensGeres: 40,
+        specialty: 'Archipel de Thau (Sète-Balaruc-Frontignan-Mèze)',
+        description:
+          "Thau Conciergerie opère sur l'Archipel de Thau depuis 2020 avec une approche dédiée aux séjours haut de gamme dans des hébergements classés 3 à 5 étoiles. Note Google 4.6/5 sur 32 avis. Services premium : linge hôtelier, livraison petit-déjeuner, produits locaux, réservations excursions, navette aéroport/gare. Couverture : Balaruc-les-Bains, Sète, Frontignan, Mèze, Bouzigues. Pertinente pour un propriétaire d'un bien classé 3-5* qui veut maximiser la satisfaction d'une clientèle thermale (Balaruc) ou gastronomique.",
+      },
+      {
+        name: 'Monconcierge-a-sete',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 26,
+        biensGeres: 25,
+        specialty: 'Note Google parfaite, approche personnalisée',
+        description:
+          "Monconcierge-a-sete affiche une note Google parfaite 5.0/5 sur 26 avis. Approche personnalisée : un seul interlocuteur par propriétaire, communication directe. Services complets : préparation, communication voyageurs, ménage, maintenance. Pertinente pour un propriétaire d'un seul bien (résidence principale en bail mobilité, résidence secondaire) qui valorise une relation humaine plutôt qu'un volume industriel.",
+      },
+      {
+        name: 'Patrimonia Concept',
+        url: 'https://www.patrimonia-concept.com/nos-services-immobiliers/conciergerie-sete/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 24,
+        biensGeres: 30,
+        specialty: 'Approche patrimoniale (transaction + LCD + gestion annuelle)',
+        description:
+          "Patrimonia Concept est un acteur immobilier local qui complète son activité de transaction et de location annuelle par une offre LCD. Note Google 4.7/5 sur 24 avis. Approche patrimoniale 360 : gestion LCD le temps d'optimiser la rentabilité, puis bascule éventuelle en location annuelle ou cession via le même interlocuteur historique. Pertinente pour un propriétaire qui souhaite garder l'option d'une revente ou d'un bail meublé classique sans changer d'interlocuteur.",
+      },
+      {
+        name: 'Cette Conciergerie',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 23,
+        biensGeres: 20,
+        specialty: 'Acteur local, identité sétoise forte',
+        description:
+          "Cette Conciergerie (jeu de mots assumé entre « Sète » et « cette ») affiche une note Google 4.9/5 sur 23 avis. Acteur 100 % local, identité sétoise revendiquée. Services complets : gestion annonces, accueil, ménage, blanchisserie. Pertinente pour un propriétaire qui valorise l'ancrage local (vs réseaux nationaux) et une connaissance fine du tissu sétois (artisans, fournisseurs, événementiel).",
+      },
+      {
+        name: 'La Conciergerie du Littoral',
+        url: 'https://laconciergeriedulittoral.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 20,
+        biensGeres: 28,
+        specialty: 'Couverture littoral large (Sète + Languedoc)',
+        description:
+          "La Conciergerie du Littoral couvre Sète et le littoral languedocien avec une approche sérieuse, efficace et réactive (verbatim avis). Note Google 4.4/5 sur 20 avis. Couverture géographique élargie (Sète, Frontignan, Marseillan, Cap d'Agde). Pertinente pour un propriétaire multi-biens sur le littoral languedocien qui veut un interlocuteur unique.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Mont-Saint-Clair',
+        pricePerNight: '130-280 €',
+        occupancy: 75,
+        description:
+          "Quartier haut de gamme perché sur le Mont-Saint-Clair, panoramas exceptionnels sur Méditerranée et étang de Thau. Le plus prisé pour le LCD touristique premium. Prix au m² 5 200 €/m² en moyenne (le plus cher de Sète). T3 dès 350 000 €, villas avec vue de 600 000 € à 1,5 M€.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Centre-ville / Canal Royal',
+        pricePerNight: '95-180 €',
+        occupancy: 72,
+        description:
+          "Cœur historique le long du canal Royal (joutes nautiques de la Saint-Louis), Vieux-Port, quai du Mistral, halles centrales. Clientèle 80 % touristique avec rotation rapide. Prix au m² 3 200-4 000 €. T2 à partir de 220 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Corniche / Plages',
+        pricePerNight: '110-220 €',
+        occupancy: 70,
+        description:
+          "Corniche en bord de Méditerranée (8 km de plages, du Lido au Lazaret). Clientèle 90 % balnéaire avec saisonnalité juillet-août très marquée. Prix au m² 3 500-4 500 €. T2 dès 240 000 €. Studio cabine de plage dès 130 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'La Pointe Courte',
+        pricePerNight: '80-160 €',
+        occupancy: 65,
+        description:
+          "Quartier de pêcheurs typique à l'embouchure de l'étang de Thau, cabanons colorés, ambiance Petite Camargue. Charme atypique très demandé sur Airbnb (clientèle 100 % loisirs). Prix au m² 2 800-3 800 €. Cabanon dès 180 000 €, T2 dès 200 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+      {
+        name: 'Quartier Haut / Île de Thau',
+        pricePerNight: '70-120 €',
+        occupancy: 58,
+        description:
+          "Quartier populaire qui gentrifie au-dessus du centre, vues sur les canaux et le Mont-Saint-Clair. Mix résidentiel + saisonnier. Tickets d'achat les plus accessibles de Sète intra-muros. T2 dès 150 000 €.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Couronne Balaruc / Frontignan / Mèze (10-20 min)',
+        pricePerNight: '75-160 €',
+        occupancy: 65,
+        description:
+          "Communes du bassin de Thau autour de Sète : Balaruc-les-Bains (1ère station thermale française, 350 000 curistes/an), Frontignan (vins muscat AOC), Mèze (port et conchyliculture), Bouzigues (huîtres). Saisonnalité avril-octobre marquée + clientèle thermale toute l'année à Balaruc. T2 dès 160 000 €.",
+        roiBrut: '5,5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Sète a instauré l'**enregistrement obligatoire** des meublés de tourisme en avril 2022 — un dispositif anticipé par rapport au cadre national. La pression locative sur le centre-ville et les quartiers prisés (Mont-Saint-Clair, Corniche) reste forte, avec des contrôles renforcés depuis 2024.\n\n**Enregistrement obligatoire.** Toute location meublée touristique doit être déclarée à la mairie de Sète depuis avril 2022, qui attribue un **numéro d'enregistrement à 13 caractères** à porter sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Enregistrement Declaloc national au 20 mai 2026.** À cette date, le téléservice national unique (apimeubles.finances.gouv.fr) devient incontournable et l'absence de numéro déclenche la désactivation automatique des annonces par les plateformes.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**Résidence secondaire dédiée LCD.** Pour proposer une résidence secondaire en LCD, une **autorisation de changement d'usage** avec compensation doit être obtenue avant tout achat — à vérifier directement auprès de l'urbanisme de Sète. Dans le département de l'Hérault, le tribunal judiciaire de Montpellier a condamné en avril 2026 deux propriétaires pour location en meublé courte durée sans autorisation préalable de changement d'usage (11 000 € d'amendes cumulées) — un signal fort sur le durcissement des contrôles.\n\n**Loi Le Meur 2024.** Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC est passé à 30 % pour les meublés non classés (50 % pour les classés tourisme). Les biens classés F ou G au DPE sont interdits à la location courte durée. Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Sète Agglopôle Méditerranée applique une taxe de séjour intercommunale de 0,75 € à 4,30 € par nuit et par personne selon le classement de l'hébergement, collectée automatiquement par Airbnb.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 110,
+      neighborhood: 'Centre-ville Canal Royal',
+      revenuBrut: 27000,
+      commissionRate: 0.20,
+      menageCount: 75,
+      menageUnitCost: 65,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb à Sète pendant la Saint-Louis et l\'été ?',
+        a: "La haute saison sétoise s'étale de mi-juin à mi-septembre avec un pic absolu en juillet-août (occupation 92-95 %, séjours d'1 semaine minimum) et un pic culturel fin août lors de la Fête de la Saint-Louis (joutes nautiques classées UNESCO, 100 000 spectateurs). Un T2 sur les quais du canal Royal qui se loue 110 €/nuit en moyenne annuelle atteint 220-300 €/nuit pendant les 8 semaines de juillet-août. Sur les 3 mois de haute saison, un T2 bien placé peut générer 16 000 à 24 000 € bruts, soit 55-70 % du chiffre d'affaires annuel. Tous les 2 ans, Escale à Sète (grand rassemblement maritime, 600 000 visiteurs) ajoute un pic ponctuel exceptionnel sur 6 jours.",
+      },
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Sète pour une résidence secondaire LCD ?',
+        a: "Oui, dès lors que vous dédiez votre bien (résidence secondaire) à la location meublée touristique, une autorisation de changement d'usage avec compensation peut être exigée par la mairie de Sète. Cela peut nécessiter de convertir un autre logement ailleurs sur la commune en logement à usage d'habitation pour compenser la perte. Dans l'Hérault, le tribunal judiciaire de Montpellier a condamné en avril 2026 deux propriétaires pour défaut d'autorisation (11 000 € d'amendes cumulées). Avant tout achat dédié au LCD à Sète, vérifiez directement auprès du service urbanisme de la mairie si votre projet est réalisable dans le quartier visé.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Sète ?',
+        a: "Pour un objectif rentabilité maximale, le Quartier Haut / Île de Thau est le meilleur compromis : prix au m² 2 800-3 200 € (les plus accessibles intra-muros), gentrification en cours, ROI brut 6-7 %. Le Centre-ville / Canal Royal offre les meilleurs tarifs nuitée (95-180 €) avec un ticket d'entrée intermédiaire (>220 000 € pour un T2) et une demande lissée tourisme + culturel. Pour un profil prestige, viser le Mont-Saint-Clair (panoramas, T3 à partir de 350 000 €) ou la Corniche (plages, T2 dès 240 000 €). Pour un profil cashflow, regarder la couronne Frontignan / Mèze / Marseillan : tickets dès 160 000 €, demande balnéaire forte avril-octobre, accès à la clientèle thermale Balaruc toute l'année.",
+      },
+    ],
+    updatedAt: '2026-05-18',
+  },
+  // ==========================================================================
+  // DEAUVILLE
+  // ==========================================================================
+  {
+    slug: 'deauville',
+    displayName: 'Deauville',
+    region: 'Normandie',
+    regionSlug: 'normandie',
+    title: 'Conciergerie Deauville Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Deauville : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 6 meilleures conciergeries Airbnb à Deauville et Trouville. Tarifs (18-25 %), services, avis Google, réglementation 2026, quartiers rentables (Planches, Villas, Centre).',
+    kwPrincipal: 'conciergerie deauville',
+    kwSecondaires: [
+      'conciergerie airbnb deauville',
+      'conciergerie trouville',
+      'conciergerie normandie',
+      'conciergerie privée normandie',
+      'air bnb deauville',
+    ],
+    population: 3500,
+    tourists: 4000000,
+    activeListings: 1100,
+    priceLow: 90,
+    priceHigh: 220,
+    occupancyRate: 60,
+    revpar: 75,
+    seasonality:
+      "Saisonnalité événementielle ultra-marquée. Pic absolu en septembre lors du Festival du Cinéma Américain de Deauville (occupation 95-100 %, tarifs 2,5-3,5× la normale, séjours minimum 3-4 nuits imposés, clientèle internationale). Autres pics majeurs : course hippique Prix de Diane et meeting de Deauville (été), Polo Master Deauville, Yearling Sale (vente de chevaux fin août, 5 000 acheteurs internationaux), Marché de Noël. Week-ends parisiens toute l'année (clientèle 50 % francilienne, surnom « 21e arrondissement de Paris »). Creux marqué janvier-février et novembre (occupation 30-40 %).",
+    rankNational: 16,
+    introCustom:
+      "Vous avez un appartement à **Deauville**, sur les Planches ou à proximité du Casino, ou un cottage normand à Trouville-sur-Mer, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre le **Festival du Cinéma Américain** qui draine une clientèle internationale en septembre, les **week-ends parisiens** qui rythment toute l'année (50 % des nuitées touristiques), l'**enregistrement Airbnb obligatoire** déjà en vigueur (Deauville fait partie des 3 communes du Calvados pionnières sur l'enregistrement Airbnb), et la dizaine d'acteurs locaux qui se partagent un marché d'environ **1 100 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre les Planches, le quartier des Villas et la couronne Trouville/Honfleur ?",
+    marketIntro:
+      "Deauville est la **première destination LCD de la Côte Fleurie** et l'une des plus prestigieuses de France. La ville et sa voisine Trouville-sur-Mer forment **la région la plus touristique de Normandie** avec 1/5e des nuitées touristiques régionales (loin devant la Vallée de la Seine à 1/7e). La clientèle est **essentiellement nationale** (50 % parisienne, surnommée localement « le 21e arrondissement de Paris ») avec 20 % de clientèle étrangère (Britanniques, Belges, Néerlandais, Américains).\n\nLa **Côte Fleurie cumule environ 4 millions de visiteurs par an** sur l'axe Deauville-Trouville-Cabourg-Honfleur. La ville bénéficie d'un mix unique : **Planches** (promenade emblématique, 643 mètres de bois exotique avec parasols multicolores), **Casino de Deauville** (l'un des plus prestigieux d'Europe), **hippodromes** (Clairefontaine et La Touques), **Festival du Cinéma Américain** (50e édition en 2024, plus de 60 000 spectateurs), **proximité Paris** (2h en TGV ou voiture).\n\nLes **prix au m² à Deauville atteignent 6 200 à 7 000 €/m²** en moyenne — un niveau qui place la commune dans le top 10 français hors métropoles. Sur le **quartier des Villas** (Belle Époque), les prix peuvent dépasser **10 000 €/m²**.\n\nLe **tarif moyen nuitée est de 130-180 €** (source AirDNA) avec des pics à 280-450 € lors du Festival du Cinéma Américain, des week-ends d'été et des Yearling Sale. La **clientèle premium internationale** (Polo Master, Yearling Sale) tire les tarifs vers le haut sur les biens haut de gamme.\n\n**Deauville fait partie des 3 communes du Calvados** où Airbnb a déployé l'enregistrement obligatoire dès 2022 — un dispositif anticipé par rapport au cadre national. La déclaration en mairie est exigée dès la première nuit de location.",
+    conciergeries: [
+      {
+        name: 'MYPacôme Conciergerie',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 41,
+        biensGeres: 45,
+        specialty: 'Volume Deauville-Trouville, exécution premium',
+        description:
+          "MYPacôme Conciergerie est l'acteur volumique haut de gamme du marché deauvillais avec une note Google 4.9/5 sur 41 avis. Couverture : Deauville, Trouville-sur-Mer, Côte Fleurie. Services complets : annonces multi-plateformes, accueil voyageurs (clientèle parisienne et internationale), ménage hôtelier, linge premium, maintenance. Pertinente pour un propriétaire d'un T2-T4 sur les Planches, à proximité du Casino ou dans le quartier des Villas qui valorise l'excellence d'exécution face à une clientèle exigeante.",
+      },
+      {
+        name: 'Ma Conciergerie en Normandie',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 21,
+        biensGeres: 30,
+        specialty: 'Ancrage Normandie, approche personnalisée',
+        description:
+          "Ma Conciergerie en Normandie affiche une note Google 4.9/5 sur 21 avis. Acteur 100 % local avec ancrage Côte Fleurie. Approche personnalisée : un seul interlocuteur par propriétaire, communication directe, partenaires locaux sélectionnés (femmes de ménage, artisans, fleuristes). Pertinente pour un propriétaire qui valorise l'ancrage local (vs réseaux nationaux) et une relation humaine plutôt qu'un service standardisé.",
+      },
+      {
+        name: 'YourHostHelper Deauville',
+        url: 'https://yourhosthelper.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 36,
+        biensGeres: 40,
+        specialty: 'Réseau national 20+ villes, dashboard propriétaire',
+        description:
+          "Filiale de YourHostHelper (présent dans 20+ villes françaises), cette conciergerie mise sur l'optimisation du revenu via un pricing dynamique quotidien et des photos professionnelles incluses gratuitement au lancement. Commission 20 %, ménage refacturé voyageur. Note Google 4.5/5 sur 36 avis à Deauville. Dashboard propriétaire avec prévisions de revenus et recommandations d'optimisation. Bien adaptée aux T1-T2 standards et aux propriétaires multi-villes (intégration dashboard unique).",
+      },
+      {
+        name: 'Interhome Deauville',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.2,
+        reviews: 68,
+        biensGeres: 70,
+        specialty: 'Réseau international (50+ pays), volume avis le plus élevé',
+        description:
+          "Interhome est un acteur international (réseau dans plus de 50 pays). Note Google 4.2/5 sur 68 avis — le volume d'avis le plus élevé du marché deauvillais. Couverture : Deauville, Trouville, Côte Fleurie. Services complets avec diffusion sur le réseau international Interhome (forte clientèle européenne : Allemands, Suisses, Britanniques, Belges, Néerlandais). Pertinente pour un propriétaire qui veut maximiser l'accès à la clientèle étrangère (20 % du marché deauvillais) via une marque internationale reconnue.",
+      },
+      {
+        name: 'Conciergerie Privée Deauville',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 3.9,
+        reviews: 7,
+        biensGeres: 15,
+        specialty: 'Service à la carte, biens de standing',
+        description:
+          "Conciergerie Privée Deauville cible le segment biens de standing et résidences secondaires haut de gamme. Note Google 3.9/5 sur 7 avis (volume d'avis limité, acteur sélectif). Services à la carte : selon le propriétaire, gestion partielle (uniquement check-in/check-out) ou totale. Pertinente pour un propriétaire qui veut garder la main sur certains aspects (annonce, pricing) tout en déléguant l'exécution opérationnelle.",
+      },
+      {
+        name: 'Conciergerie Deauvillaise',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 3.0,
+        reviews: 7,
+        biensGeres: 12,
+        specialty: 'Petit acteur local, tarification souple',
+        description:
+          "La Conciergerie Deauvillaise est un petit acteur local avec une note Google 3.0/5 sur 7 avis (volume d'avis limité, retours mitigés à surveiller dans la décision). Services standards conciergerie : accueil, ménage, communication voyageurs. Pertinente pour un propriétaire qui privilégie une tarification souple sans engagement long terme — à mettre en balance avec la note inférieure aux concurrents.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Les Planches / Casino',
+        pricePerNight: '170-380 €',
+        occupancy: 70,
+        description:
+          "Quartier emblématique en bord de mer autour des Planches (promenade 643 m), Casino Barrière, Hôtel Normandy, Hôtel Royal. Le plus prisé pour le LCD premium. Clientèle internationale et parisienne week-end. Prix au m² 7 500-10 500 €. T2 à partir de 380 000 €, appartement Belle Époque dès 700 000 €.",
+        roiBrut: '3,5 à 4,5 %',
+      },
+      {
+        name: 'Quartier des Villas (Belle Époque)',
+        pricePerNight: '180-420 €',
+        occupancy: 65,
+        description:
+          "Quartier résidentiel haut de gamme à l'est du Casino, somptueuses villas Belle Époque inscrites au PLU. Clientèle premium familiale et événementielle. Prix au m² 8 000-12 000 €. Villa T5 dès 1,5 M€. ROI brut bas mais valeur patrimoniale exceptionnelle.",
+        roiBrut: '3 à 4 %',
+      },
+      {
+        name: 'Centre-ville / Marché',
+        pricePerNight: '120-220 €',
+        occupancy: 68,
+        description:
+          "Cœur de Deauville autour du marché couvert, place du Casino et rues commerçantes (rue Mirabeau, rue Désiré Le Hoc). Mix tourisme + commerce. Prix au m² 6 200-7 200 €. T2 dès 320 000 €. Excellent compromis pour un premier investissement à Deauville.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Hippodromes / Touques',
+        pricePerNight: '100-180 €',
+        occupancy: 62,
+        description:
+          "Quartiers à proximité des hippodromes de la Touques et de Clairefontaine. Clientèle équestre (meeting d'été, Yearling Sale, Prix de Diane) très forte juillet-août. Prix au m² 5 200-6 200 €. T2 dès 240 000 €.",
+        roiBrut: '4,5 à 5,5 %',
+      },
+      {
+        name: 'Trouville-sur-Mer (Pont des Belges, 5 min)',
+        pricePerNight: '95-180 €',
+        occupancy: 70,
+        description:
+          "Commune voisine de Deauville (5 min par le Pont des Belges) avec un caractère plus authentique (port de pêche, halles Boudin, plages). Prix au m² 5 000-5 700 € (10-15 % moins cher que Deauville). T2 dès 200 000 €. Excellent compromis Côte Fleurie pour un investisseur cherchant un meilleur ROI.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Couronne Honfleur / Cabourg / Houlgate (15-25 min)',
+        pricePerNight: '110-220 €',
+        occupancy: 65,
+        description:
+          "Communes touristiques de la Côte Fleurie : Honfleur (port pittoresque, 1,5M visiteurs/an), Cabourg (Grand Hôtel Proust, casino), Houlgate (architecture balnéaire 19e). Saisonnalité avril-octobre marquée. T2 dès 180 000 €. Maison de caractère normande dès 350 000 €.",
+        roiBrut: '5 à 6 %',
+      },
+    ],
+    regulation:
+      "Deauville fait partie des **3 communes pionnières du Calvados** où Airbnb a déployé l'enregistrement obligatoire dès 2022 — un dispositif anticipé par rapport au cadre national. La ville assume une politique d'encadrement actif des meublés de tourisme pour préserver l'équilibre entre tourisme premium et marché locatif résidentiel.\n\n**Déclaration en mairie obligatoire.** Toute location meublée touristique, y compris pour la résidence principale, doit être déclarée à la mairie de Deauville dès la première nuit de location. La mairie délivre un **numéro d'enregistrement** à porter sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Enregistrement Declaloc national au 20 mai 2026.** À cette date, le téléservice national unique (apimeubles.finances.gouv.fr) deviendra obligatoire pour toutes les communes françaises et harmonisera les numéros à 13 chiffres. Sans ce numéro, les plateformes désactiveront automatiquement les annonces.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (celle que vous occupez au moins 8 mois par an, sauf obligation professionnelle, raison de santé ou force majeure).\n\n**Changement d'usage en copropriété.** Si votre logement fait partie d'une copropriété, vérifiez que le règlement de copropriété ne contient pas de clause d'usage exclusivement résidentiel. À Deauville, plusieurs copropriétés Belle Époque ont voté de telles clauses pour préserver le calme — un facteur à vérifier avant tout achat dans le quartier des Villas ou sur les Planches.\n\n**Loi Le Meur 2024.** Le DPE classe E minimum est obligatoire (classe D à partir de 2034), et l'abattement micro-BIC est passé à 30 % pour les meublés non classés (50 % pour les classés tourisme). Les biens classés F ou G au DPE sont interdits à la location courte durée. Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La communauté de communes Cœur Côte Fleurie applique une taxe de séjour de 1,10 € à 5,30 € par nuit et par personne adulte selon le classement de l'hébergement — l'une des plus élevées du littoral français hors Côte d'Azur, collectée automatiquement par Airbnb.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 165,
+      neighborhood: 'Centre-ville Deauville',
+      revenuBrut: 36000,
+      commissionRate: 0.20,
+      menageCount: 70,
+      menageUnitCost: 90,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb à Deauville pendant le Festival du Cinéma Américain ?',
+        a: "Le Festival du Cinéma Américain de Deauville (1ère quinzaine de septembre, plus de 60 000 spectateurs sur 10 jours, clientèle internationale et professionnelle du cinéma) déclenche le pic absolu de la saisonnalité deauvillaise. Un T2 en centre qui se loue 165 €/nuit en moyenne annuelle atteint 320-450 €/nuit pendant les 10 jours du festival, avec un séjour minimum 3-4 nuits imposé. Sur les 10 jours, un T2 bien placé peut générer 3 500 à 5 500 € bruts. Les autres pics annuels (Yearling Sale fin août, Polo Master, week-ends d'été, marché de Noël) ajoutent 30-40 % de chiffre d'affaires concentré sur 6-8 semaines hors festival.",
+      },
+      {
+        q: 'Faut-il déclarer un Airbnb à Deauville dès la première location ?',
+        a: "Oui, depuis 2022, Deauville fait partie des 3 communes pionnières du Calvados où Airbnb a déployé l'enregistrement obligatoire — un dispositif anticipé par rapport au cadre national. La déclaration en mairie est exigée dès la première nuit de location, y compris pour la résidence principale. La mairie délivre un numéro d'enregistrement à porter sur chaque annonce. À partir du 20 mai 2026, ce numéro passera à 13 chiffres via le téléservice national Declaloc (apimeubles.finances.gouv.fr). Sans ce numéro, les plateformes (Airbnb, Booking, Abritel) désactiveront automatiquement votre annonce. Pour la résidence principale, la limite nationale de 120 nuitées par an reste en vigueur.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Deauville ?',
+        a: "Pour un objectif rentabilité, le centre-ville / marché est le meilleur compromis : prix au m² 6 200-7 200 € (les plus accessibles intra-muros), demande lissée tourisme + commerce, ROI brut 4-5,5 %. Les Planches / Casino offrent les meilleurs tarifs nuitée (170-380 €) mais avec un ticket d'entrée >380 000 € et un ROI brut limité (3,5-4,5 %). Pour un profil cashflow, regarder Trouville-sur-Mer (10-15 % moins cher que Deauville, ROI brut 5-6 %) ou la couronne Honfleur/Cabourg/Houlgate (T2 dès 180 000 €). Pour un profil patrimonial pur, viser le quartier des Villas Belle Époque (valeur refuge, valorisation long terme, ROI brut 3-4 % accepté en contrepartie).",
+      },
+    ],
+    updatedAt: '2026-05-18',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

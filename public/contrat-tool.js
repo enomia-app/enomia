@@ -143,6 +143,20 @@
   }
 
   // ─── AUTH ───────────────────────────────────────────────────────
+  // Sync user to Brevo après sign-in (Google OAuth ou magic link).
+  // Idempotent côté serveur (updateEnabled: true).
+  function _ctSyncToBrevo(user) {
+    try {
+      var meta = user.user_metadata || {};
+      var firstName = meta.prenom || meta.given_name || ((meta.full_name || meta.name || '').split(' ')[0]) || '';
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: user.email, firstName: firstName, source: 'Contrat' })
+      }).catch(function(){});
+    } catch(_){}
+  }
+
   _ctSb.auth.onAuthStateChange(async (event, session) => {
     _ctUser = session && session.user;
     _ctToken = session && session.access_token;
@@ -151,6 +165,7 @@
       // Migrate guest data to DB on first login
       var expecting = localStorage.getItem('ct_expecting_signin') === '1';
       localStorage.removeItem('ct_expecting_signin');
+      if (expecting && _ctUser) _ctSyncToBrevo(_ctUser);
       if (expecting) {
         await ctMigrateLocalToDb();
       }
@@ -171,47 +186,42 @@
     ctBootstrap();
   }
 
-  window.ctOpenLoginModal = function () {
-    document.getElementById('ctmodal').classList.add('show');
-  };
-  window.toolLogin = function () { ctOpenLoginModal(); };
-  window.ctCloseModal = function () {
-    document.getElementById('ctmodal').classList.remove('show');
-  };
+  // AuthModal — composant unique. ctOpenLoginModal devient un alias.
+  window.ctOpenLoginModal = function () { if (window.authOpen) window.authOpen('Se connecter'); };
+  window.toolLogin = function () { window.ctOpenLoginModal(); };
+  window.ctCloseModal = function () { if (window.authClose) window.authClose(); };
+
   window.ctSignInGoogle = async function () {
     localStorage.setItem('ct_expecting_signin', '1');
+    localStorage.setItem('enomia_oauth_target', '/contrat-lcd-dashboard');
     const redirectTo = window.location.origin + '/contrat-lcd-dashboard';
     await _ctSb.auth.signInWithOAuth({
       provider: 'google',
       options: { redirectTo, queryParams: { prompt: 'select_account' } }
     });
   };
-  window.ctSendMagicLink = async function () {
-    const email = document.getElementById('ctmodal-email').value.trim();
-    const fb = document.getElementById('ctmodal-feedback');
-    if (!email || !email.includes('@')) {
-      fb.textContent = 'Email invalide';
-      fb.style.color = 'var(--ct-red)';
-      fb.style.display = 'block';
-      return;
-    }
-    fb.textContent = 'Envoi…';
-    fb.style.color = 'var(--ct-muted)';
-    fb.style.display = 'block';
+
+  // Hooks consommés par AuthModal
+  window.toolSignInGoogle = function () { return window.ctSignInGoogle(); };
+  window.toolSendMagicLink = async function ({ email, prenom }) {
     localStorage.setItem('ct_expecting_signin', '1');
+    localStorage.setItem('enomia_oauth_target', '/contrat-lcd-dashboard');
     const { error } = await _ctSb.auth.signInWithOtp({
-      email,
-      options: { emailRedirectTo: window.location.origin + '/contrat-lcd-dashboard' }
+      email: email,
+      options: {
+        emailRedirectTo: window.location.origin + '/contrat-lcd-dashboard',
+        data: { prenom: prenom || '' }
+      }
     });
-    if (error) {
-      fb.textContent = 'Erreur : ' + error.message;
-      fb.style.color = 'var(--ct-red)';
-    } else {
-      fb.textContent = '✓ Lien envoyé à ' + email + '. Vérifiez votre boîte.';
-      fb.style.color = 'var(--ct-green)';
-      fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, source: 'Contrat' }) }).catch(function () {});
-    }
+    if (error) throw new Error(error.message || 'Erreur magic link');
+    fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email, firstName: prenom || '', source: 'Contrat' })
+    }).catch(function () {});
+    return true;
   };
+  window.ctSendMagicLink = function () { /* legacy alias, ouvre le modal */ window.ctOpenLoginModal(); };
   window.ctLogout = async function () {
     await _ctSb.auth.signOut();
   };

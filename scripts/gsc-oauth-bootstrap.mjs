@@ -28,6 +28,8 @@ const TOKEN_PATH = process.env.GSC_OAUTH_TOKEN || path.join(HOME, '.config/gclou
 const SCOPES = [
   'https://www.googleapis.com/auth/webmasters.readonly',  // URL Inspection API (read index status)
   'https://www.googleapis.com/auth/indexing',              // Indexing API (submit URL for crawl)
+  'https://www.googleapis.com/auth/gmail.send',            // Pipeline backlinks : envoi pitches
+  'https://www.googleapis.com/auth/gmail.readonly',        // Pipeline backlinks : tracking réponses
 ];
 
 async function main() {
@@ -96,10 +98,18 @@ async function main() {
   }
 
   fs.mkdirSync(path.dirname(TOKEN_PATH), { recursive: true });
+
+  if (fs.existsSync(TOKEN_PATH)) {
+    const backupPath = TOKEN_PATH + '.bak-' + new Date().toISOString().replace(/[:.]/g, '-');
+    fs.copyFileSync(TOKEN_PATH, backupPath);
+    fs.chmodSync(backupPath, 0o600);
+    console.log(`📦 Backup du token précédent : ${backupPath}`);
+  }
+
   fs.writeFileSync(
     TOKEN_PATH,
     JSON.stringify(
-      { refresh_token: tokens.refresh_token, client_id, client_secret, obtained_at: new Date().toISOString() },
+      { refresh_token: tokens.refresh_token, client_id, client_secret, obtained_at: new Date().toISOString(), scopes: SCOPES },
       null,
       2,
     ),
@@ -107,6 +117,7 @@ async function main() {
   );
 
   console.log(`✅ Refresh token sauvegardé : ${TOKEN_PATH}`);
+  console.log(`   Scopes : ${SCOPES.length} (GSC + Gmail send/read)`);
 }
 
 main().catch((e) => {

@@ -216,7 +216,7 @@ export const citiesRentabilite: CityRentabilite[] = [
     t2: { caAnnualMin: 22000, caAnnualMax: 42000, occupancyMin: 55, occupancyMax: 72, nightlyMin: 100, nightlyMax: 220, rendementNetMin: 5, rendementNetMax: 11 },
     reliability: 'high',
     publishAt: '2026-05-18',
-    status: 'brouillon',
+    status: 'en-ligne',
     neighbors: ['antibes', 'nice', 'saint-tropez'],
     context: 'Très forte saisonnalité (juin-août + Festival = 60% du CA). Pricing dynamique indispensable. Quartiers premium : Croisette, Forville, Suquet. Prix d\'achat élevés tirent le rendement net vers le bas.',
   },

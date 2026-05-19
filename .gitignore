@@ -37,3 +37,5 @@ patch-vercel-config.mjs
 
 # Données brutes téléchargées (DELTA OCSITAN = ~180 Mo, re-téléchargé par l'agent annuel)
 data/taxe-sejour/*.csv
+scripts/rs-lcd/fb-cookies.json
+data/rs-lcd/*.json

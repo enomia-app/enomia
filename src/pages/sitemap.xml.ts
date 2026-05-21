@@ -20,6 +20,7 @@ const staticPages = [
   { url: '/contrat-airbnb', changefreq: 'monthly', priority: '0.9' },
   { url: '/contrat-location-gite', changefreq: 'monthly', priority: '0.9' },
   { url: '/contrat-location-mobil-home', changefreq: 'monthly', priority: '0.9' },
+  { url: '/calcul-taxe-de-sejour', changefreq: 'monthly', priority: '0.9' },
 ];
 
 export async function GET() {

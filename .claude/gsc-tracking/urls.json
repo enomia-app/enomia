@@ -2,7 +2,7 @@
   "property": "sc-domain:enomia.app",
   "property_url": "https://search.google.com/search-console?resource_id=sc-domain%3Aenomia.app",
   "last_run": "2026-05-21",
-  "daily_quota": 5,
+  "daily_quota": 10,
   "notes": "Ne traiter QUE le motif 'Détectée, actuellement non indexée'. Les autres motifs (redirections, noindex, 4xx, canoniques) ne doivent pas passer par demande d'indexation — ce sont des bugs techniques à fixer ou des comportements intentionnels.",
   "urls": {
     "https://www.enomia.app/conciergerie-lille": {

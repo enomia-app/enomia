@@ -1,0 +1,363 @@
+{
+  "property": "sc-domain:enomia.app",
+  "property_url": "https://search.google.com/search-console?resource_id=sc-domain%3Aenomia.app",
+  "last_run": "2026-05-21",
+  "daily_quota": 5,
+  "notes": "Ne traiter QUE le motif 'Détectée, actuellement non indexée'. Les autres motifs (redirections, noindex, 4xx, canoniques) ne doivent pas passer par demande d'indexation — ce sont des bugs techniques à fixer ou des comportements intentionnels.",
+  "urls": {
+    "https://www.enomia.app/conciergerie-lille": {
+      "status": "failed",
+      "last_requested": "2026-04-17",
+      "request_count": 1,
+      "reason": "Redirection 308→301 corrigé dans vercel.json (2026-05-11) — URL source non indexable"
+    },
+    "https://www.enomia.app/conciergerie-lyon": {
+      "status": "failed",
+      "last_requested": "2026-04-17",
+      "request_count": 1,
+      "reason": "Redirection 308→301 corrigé dans vercel.json (2026-05-11) — URL source non indexable"
+    },
+    "https://www.enomia.app/conciergerie-marseille": {
+      "status": "failed",
+      "last_requested": "2026-04-17",
+      "request_count": 1,
+      "reason": "Redirection 308→301 corrigé dans vercel.json (2026-05-11) — URL source non indexable"
+    },
+    "https://www.enomia.app/conciergerie-nice": {
+      "status": "failed",
+      "last_requested": "2026-04-17",
+      "request_count": 1,
+      "reason": "Redirection 308→301 corrigé dans vercel.json (2026-05-11) — URL source non indexable"
+    },
+    "https://www.enomia.app/conciergerie-strasbourg": {
+      "status": "failed",
+      "last_requested": "2026-04-17",
+      "request_count": 1,
+      "reason": "Redirection 308→301 corrigé dans vercel.json (2026-05-11) — URL source non indexable"
+    },
+    "https://www.enomia.app/conciergerie-toulouse": {
+      "status": "failed",
+      "last_requested": "2026-04-20",
+      "request_count": 1,
+      "reason": "Redirection 308→301 corrigé dans vercel.json (2026-05-11) — URL source non indexable"
+    },
+    "https://www.enomia.app/contrat-airbnb": {
+      "status": "requested",
+      "last_requested": "2026-05-11",
+      "request_count": 2,
+      "reason": "Détectée, actuellement non indexée"
+    },
+    "https://www.enomia.app/contrat-lcd-dashboard": {
+      "status": "indexed",
+      "last_requested": "2026-04-27",
+      "request_count": 1,
+      "reason": "Confirmé indexée le 2026-05-11"
+    },
+    "https://www.enomia.app/contrat-location-gite": {
+      "status": "indexed",
+      "last_requested": "2026-04-20",
+      "request_count": 1,
+      "reason": "Confirmé indexée le 2026-05-11"
+    },
+    "https://www.enomia.app/contrat-location-mobil-home": {
+      "status": "indexed",
+      "last_requested": "2026-04-27",
+      "request_count": 1,
+      "reason": "Confirmé indexée le 2026-05-11"
+    },
+    "https://www.enomia.app/contrat-location-saisonniere": {
+      "status": "indexed",
+      "last_requested": "2026-04-27",
+      "request_count": 1,
+      "reason": "Confirmé indexée le 2026-05-11"
+    },
+    "https://www.enomia.app/facture-airbnb": {
+      "status": "indexed",
+      "last_requested": "2026-04-20",
+      "request_count": 1,
+      "reason": "Confirmé indexée le 2026-05-11"
+    },
+    "https://www.enomia.app/facture-booking": {
+      "status": "indexed",
+      "last_requested": "2026-04-20",
+      "request_count": 1,
+      "reason": "Confirmé indexée le 2026-05-11"
+    },
+    "https://www.enomia.app/facture-location-saisonniere": {
+      "status": "indexed",
+      "last_requested": "2026-04-21",
+      "request_count": 1,
+      "reason": "Confirmé indexée le 2026-05-11"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/bordeaux": {
+      "status": "indexed",
+      "last_requested": null,
+      "request_count": 0,
+      "reason": "Confirmé indexée le 2026-05-11"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/lyon": {
+      "status": "requested",
+      "last_requested": "2026-05-11",
+      "request_count": 1,
+      "reason": "Détectée, actuellement non indexée"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/ile-de-france/paris": {
+      "status": "requested",
+      "last_requested": "2026-05-11",
+      "request_count": 1,
+      "reason": "Détectée, actuellement non indexée"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/marseille": {
+      "status": "requested",
+      "last_requested": "2026-05-11",
+      "request_count": 1,
+      "reason": "Détectée, actuellement non indexée"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/nice": {
+      "status": "requested",
+      "last_requested": "2026-05-11",
+      "request_count": 1,
+      "reason": "Détectée, actuellement non indexée"
+    },
+    "https://www.enomia.app/blog/fiscalite-airbnb": {
+      "status": "requested",
+      "last_requested": "2026-05-12",
+      "request_count": 1,
+      "vol_at_request": 4400,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée"
+    },
+    "https://www.enomia.app/blog/loi-le-meur-airbnb": {
+      "status": "requested",
+      "last_requested": "2026-05-12",
+      "request_count": 1,
+      "vol_at_request": 4400,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée"
+    },
+    "https://www.enomia.app/blog/pricing-airbnb-tarif-dynamique": {
+      "status": "requested",
+      "last_requested": "2026-05-12",
+      "request_count": 1,
+      "vol_at_request": 110,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée"
+    },
+    "https://www.enomia.app/blog/taux-occupation-par-ville": {
+      "status": "requested",
+      "last_requested": "2026-05-12",
+      "request_count": 1,
+      "vol_at_request": 70,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée"
+    },
+    "https://www.enomia.app/estimation-airbnb": {
+      "status": "requested",
+      "last_requested": "2026-05-12",
+      "request_count": 1,
+      "vol_at_request": 0,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/arcachon": {
+      "status": "requested",
+      "last_requested": "2026-05-15",
+      "request_count": 1,
+      "vol_at_request": 660,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/annecy": {
+      "status": "requested",
+      "last_requested": "2026-05-15",
+      "request_count": 1,
+      "vol_at_request": 660,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/avignon": {
+      "status": "requested",
+      "last_requested": "2026-05-15",
+      "request_count": 1,
+      "vol_at_request": 640,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire/nantes": {
+      "status": "requested",
+      "last_requested": "2026-05-15",
+      "request_count": 1,
+      "vol_at_request": 620,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/tarif-conciergerie-airbnb": {
+      "status": "requested",
+      "last_requested": "2026-05-15",
+      "request_count": 1,
+      "vol_at_request": 480,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/aix-en-provence": {
+      "status": "requested",
+      "last_requested": "2026-05-16",
+      "request_count": 1,
+      "vol_at_request": 570
+    },
+    "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/hyeres": {
+      "status": "requested",
+      "last_requested": "2026-05-16",
+      "request_count": 1,
+      "vol_at_request": 540
+    },
+    "https://www.enomia.app/conciergerie-airbnb/alsace/reims": {
+      "status": "requested",
+      "last_requested": "2026-05-16",
+      "request_count": 1,
+      "vol_at_request": 510
+    },
+    "https://www.enomia.app/conciergerie-airbnb/alsace/strasbourg": {
+      "status": "requested",
+      "last_requested": "2026-05-16",
+      "request_count": 1,
+      "vol_at_request": 480
+    },
+    "https://www.enomia.app/conciergerie-airbnb/normandie/caen": {
+      "status": "requested",
+      "last_requested": "2026-05-16",
+      "request_count": 1,
+      "vol_at_request": 460
+    },
+    "https://www.enomia.app/rentabilite-airbnb": {
+      "status": "requested",
+      "last_requested": "2026-05-17",
+      "request_count": 1,
+      "vol_at_request": 40,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/normandie": {
+      "status": "requested",
+      "last_requested": "2026-05-17",
+      "request_count": 1,
+      "vol_at_request": 40,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/alsace": {
+      "status": "requested",
+      "last_requested": "2026-05-17",
+      "request_count": 1,
+      "vol_at_request": 20,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/ile-de-france": {
+      "status": "requested",
+      "last_requested": "2026-05-17",
+      "request_count": 1,
+      "vol_at_request": 20,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/bretagne": {
+      "status": "requested",
+      "last_requested": "2026-05-17",
+      "request_count": 1,
+      "vol_at_request": 20,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/rentabilite-airbnb/paris": {
+      "status": "requested",
+      "last_requested": "2026-05-18",
+      "request_count": 1,
+      "vol_at_request": 120,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/maroc": {
+      "status": "requested",
+      "last_requested": "2026-05-18",
+      "request_count": 1,
+      "vol_at_request": 20,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/rentabilite-airbnb/marseille": {
+      "status": "requested",
+      "last_requested": "2026-05-18",
+      "request_count": 1,
+      "vol_at_request": 20,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/rentabilite-airbnb/bordeaux": {
+      "status": "requested",
+      "last_requested": "2026-05-18",
+      "request_count": 1,
+      "vol_at_request": 10,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/rentabilite-airbnb/montpellier": {
+      "status": "requested",
+      "last_requested": "2026-05-18",
+      "request_count": 1,
+      "vol_at_request": 10,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/antibes": {
+      "status": "requested",
+      "last_requested": "2026-05-19",
+      "request_count": 1,
+      "vol_at_request": 390,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/toulon": {
+      "status": "requested",
+      "last_requested": "2026-05-19",
+      "request_count": 1,
+      "vol_at_request": 390,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/chamonix": {
+      "status": "requested",
+      "last_requested": "2026-05-19",
+      "request_count": 1,
+      "vol_at_request": 380,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/centre-val-de-loire/tours": {
+      "status": "requested",
+      "last_requested": "2026-05-19",
+      "request_count": 1,
+      "vol_at_request": 350,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/occitanie/nimes": {
+      "status": "requested",
+      "last_requested": "2026-05-19",
+      "request_count": 1,
+      "vol_at_request": 350,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/occitanie/sete": {
+      "status": "requested",
+      "last_requested": "2026-05-21",
+      "request_count": 1,
+      "vol_at_request": 330,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/normandie/deauville": {
+      "status": "requested",
+      "last_requested": "2026-05-21",
+      "request_count": 1,
+      "vol_at_request": 320,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes": {
+      "status": "requested",
+      "last_requested": "2026-05-21",
+      "request_count": 1,
+      "vol_at_request": 0,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/hauts-de-france": {
+      "status": "requested",
+      "last_requested": "2026-05-21",
+      "request_count": 1,
+      "vol_at_request": 0,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine": {
+      "status": "requested",
+      "last_requested": "2026-05-21",
+      "request_count": 1,
+      "vol_at_request": 0,
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+    }
+  }
+}

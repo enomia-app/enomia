@@ -1,4 +1,4 @@
-name: E2E Weekly Smoke
+name: Weekly Test Outils Enomia
 
 on:
   schedule:

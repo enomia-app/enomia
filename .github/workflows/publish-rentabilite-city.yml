@@ -6,11 +6,11 @@ name: Publish Rentabilite City
 # dont publishAt <= today. Commit + push automatique.
 
 on:
-  schedule:
-    # Tous les jours impairs (1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31)
-    # = environ 1 fois tous les 2 jours
-    - cron: '11 5 1-31/2 * *'
-  workflow_dispatch: # Manual trigger pour tester
+  # PAUSE 2026-05-21 : contenu cities-rentabilite.ts pas de qualité satisfaisante.
+  # Reprendre la publication progressive après audit/refresh du contenu.
+  # schedule:
+  #   - cron: '11 5 1-31/2 * *'
+  workflow_dispatch: # Manual trigger (encore actif si besoin de publier manuellement)
 
 permissions:
   contents: write

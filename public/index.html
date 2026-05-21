@@ -312,74 +312,74 @@ main {
   line-height: 1.5;
 }
 
-/* ═══ FOOTER ═══ */
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 24px 40px;
-  border-top: 1px solid var(--border);
+/* ═══ FOOTER (3 cols, aligné Footer.astro) ═══ */
+.site-footer {
+  background: #1f2120;
+  margin-top: 64px;
+  color: #a8a59f;
+}
+.sf-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 3fr;
+  gap: 56px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 56px 40px 36px;
+}
+.sf-brand { display: flex; flex-direction: column; gap: 14px; }
+.sf-logo-row { display: flex; align-items: center; gap: 10px; }
+.sf-logo {
+  width: 28px; height: 28px;
+  background: rgba(255,255,255,0.08); border-radius: 6px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 2px; padding: 6px;
+  box-sizing: border-box;
+}
+.sf-logo .bar {
+  width: 100%; height: 1.5px;
+  background: #e8e4dc; border-radius: 1px;
+}
+.sf-logo .bar:nth-child(2) { width: 65%; align-self: flex-start; }
+.sf-name {
+  color: #f0ece4;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 19px; font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.sf-tagline {
+  font-size: 13px; line-height: 1.55; color: #a8a59f;
+  margin: 0; max-width: 240px;
 }
 
-.footer-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.sf-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
-
-.footer-logo-icon {
-  width: 32px;
-  height: 32px;
-  background: var(--bg-input);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  padding: 7px;
+.sf-col { display: flex; flex-direction: column; gap: 11px; }
+.sf-col-title {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: #f0ece4;
+  margin-bottom: 6px;
 }
-
-.footer-logo-icon .bar {
-  width: 100%;
-  height: 1.5px;
-  background: var(--text);
-  border-radius: 1px;
-}
-
-.footer-logo-icon .bar:nth-child(2) {
-  width: 70%;
-  align-self: flex-start;
-}
-
-.footer-name {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.footer-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.footer-links a {
-  font-size: 14px;
-  color: var(--text-muted);
+.sf-col a {
+  font-size: 13.5px; line-height: 1.45;
+  color: #a8a59f;
   text-decoration: none;
   transition: color 0.15s;
 }
+.sf-col a:hover { color: #f0ece4; }
 
-.footer-links a:hover { color: var(--text); }
-.footer-links a:visited { color: var(--text-muted); }
-
-.footer-copy {
-  font-size: 14px;
-  color: var(--text-dim);
+.sf-copy {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 40px;
+  max-width: 1120px;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #807d77;
+  text-align: left;
 }
 
 /* ═══ RESPONSIVE ═══ */
@@ -395,13 +395,23 @@ footer {
   .hero-title { margin-bottom: 12px; }
   .hero-subtitle { margin-bottom: 36px; }
   .metrics { grid-template-columns: repeat(2, 1fr); }
-  footer { padding: 16px 20px; flex-direction: column; gap: 12px; }
   .waitlist-row { flex-direction: column; }
+}
+
+@media (max-width: 720px) {
+  .sf-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 40px 24px 28px;
+  }
+  .sf-cols { gap: 28px; }
+  .sf-copy { padding: 18px 24px; text-align: center; }
 }
 
 @media (max-width: 480px) {
   .metric-value { font-size: 28px; }
   .metric-desc { font-size: 13px; }
+  .sf-cols { grid-template-columns: 1fr 1fr; gap: 24px; }
 }
 
 /* ─── Animations ─── */
@@ -566,21 +576,41 @@ footer {
 </main>
 
 <!-- ═══ FOOTER ═══ -->
-<footer>
-  <div class="footer-left">
-    <div class="footer-logo-icon"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
-    Enomia
+<footer class="site-footer">
+  <div class="sf-inner">
+    <div class="sf-brand">
+      <div class="sf-logo-row">
+        <div class="sf-logo"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+        <span class="sf-name">Enomia</span>
+      </div>
+      <p class="sf-tagline">La méthode 97%© pour une LCD vraiment rentable.</p>
+    </div>
+
+    <div class="sf-cols">
+      <div class="sf-col">
+        <div class="sf-col-title">Outils gratuits</div>
+        <a href="/estimation-airbnb">Simulateur de rendement LCD</a>
+        <a href="/contrat-location-saisonniere">Générateur de contrat</a>
+        <a href="/calcul-taxe-de-sejour">Calculateur taxe de séjour</a>
+        <a href="/facture-location-saisonniere">Générateur de facture</a>
+      </div>
+
+      <div class="sf-col">
+        <div class="sf-col-title">Ressources</div>
+        <a href="/conciergerie-airbnb">Conciergerie par ville</a>
+        <a href="/rentabilite-airbnb">Rentabilité par ville</a>
+        <a href="/blog">Blog</a>
+      </div>
+
+      <div class="sf-col">
+        <div class="sf-col-title">Légal</div>
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/confidentialite">Confidentialité</a>
+      </div>
+    </div>
   </div>
-  <div class="footer-links">
-    <a href="/blog">Blog</a>
-    <a href="/estimation-airbnb">Simulateur</a>
-    <a href="/facture-location-saisonniere">Facture LCD</a>
-    <a href="/contrat-location-saisonniere">Contrat LCD</a>
-    <a href="/calcul-taxe-de-sejour">Taxe de séjour</a>
-    <a href="/mentions-legales">Mentions légales</a>
-    <a href="/confidentialite">Confidentialité</a>
-  </div>
-  <span class="footer-copy">© Enomia 2026</span>
+
+  <div class="sf-copy">© Enomia 2026</div>
 </footer>
 
 <!-- ═══ WAITLIST SCRIPT ═══ -->

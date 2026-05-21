@@ -22,14 +22,16 @@ Calculer depuis le CRM :
 
 ### Activité de la semaine (J-7 à J)
 - **Pitches préparés** : nb prospects dont `notes` contient `[Pitch préparé auto YYYY-MM-DD]` avec date dans la fenêtre
-- **Pitches envoyés** : nb prospects avec `date_envoi` dans la fenêtre
+- **Pitches envoyés (total)** : nb prospects avec `date_envoi` dans la fenêtre, split par mode :
+  - par email (status `envoye` ou status derivé)
+  - via formulaire Chrome MCP (`envoye_via_formulaire`)
 - **Pitches à envoyer manuellement** créés cette semaine : `status: pitch_a_envoyer_manuel`
 - **Relances envoyées** : nb avec `date_relance_1` ou `date_relance_2` dans la fenêtre
 - **Réponses reçues** : nb avec `date_reponse` dans la fenêtre, split par `reponse_recue` (positive / negative / spam / question / autre)
 - **Backlinks obtenus** : nb avec `backlink_date_obtention` dans la fenêtre
 
 ### Stats globales (cumulé depuis le début)
-- **Total envoyés (depuis toujours)** : `status ∈ {envoye, relance_1, relance_2, pas_de_reponse, repondu_positif, repondu_negatif, spam, lien_obtenu, lien_perdu}`
+- **Total envoyés (depuis toujours)** : `status ∈ {envoye, envoye_via_formulaire, relance_1, relance_2, pas_de_reponse, repondu_positif, repondu_negatif, spam, lien_obtenu, lien_perdu}`
 - **Total réponses positives** : `status: repondu_positif` (cumulé)
 - **Total backlinks obtenus** : `status: lien_obtenu` (cumulé)
 - **Taux de réponse global** : (positive + negative + question) / total envoyés × 100
@@ -40,7 +42,8 @@ Calculer depuis le CRM :
 - `a_enrichir` : count
 - `pitch_pret_a_envoyer` : count (en attente de validation Marc)
 - `pitch_a_envoyer_manuel` : count (Marc doit copier-coller dans formulaires)
-- `envoye` : count (en attente de réponse, J-0 à J-5)
+- `envoye` : count (en attente de réponse email, J-0 à J-5)
+- `envoye_via_formulaire` : count (envoyés via Chrome MCP, pas de tracking auto)
 - `relance_1` : count (en attente, J-5 à J-10)
 - `relance_2` : count (en attente, J-10 à J-15)
 - `pas_de_reponse` : count (cumulé)

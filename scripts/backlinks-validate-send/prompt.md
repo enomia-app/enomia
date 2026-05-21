@@ -107,16 +107,29 @@ N+1. <NOM>  |  ...
 
 Extrait par regex les lignes `^(\d+)\. (.+?)  \|  trafic SEMrush` → mapping `numero → nom_entreprise`. Pour chaque entrée, trouve dans le CRM le prospect avec `nom_entreprise` matching (compare case-insensitive).
 
-### 3.2 — Parser la réponse Marc (dernier message)
+### 3.2 — Parser la réponse Marc en langage naturel
 
-Format attendu (flexible) :
-- `OK 1, 3, 5` ou `OK 1 3 5` ou `Ok: 1,3,5` → liste de numéros "valider tels quels"
-- `MODIF 2: <nouveau pitch sur plusieurs lignes>` → remplacer le pitch_pret du 2 par le texte qui suit jusqu'à la prochaine instruction
-- `SKIP 4` ou `Skip 4` → marquer 4 en rejete_non_pertinent
+Marc ne suit PAS forcément un format strict. Il peut écrire en français naturel comme :
+- "ok pour 1, 3 et 5"
+- "valide les 1, 2, 4, refuse le 3"
+- "le 2 modifie comme ça : <pitch>"
+- "ok tout sauf le 7"
+- "skip 4 5 6, ok le reste"
+- "Pour le 3, change la 2e phrase par : ..."
+- etc.
 
-Construis `actions = [{numero, type: 'OK'|'MODIF'|'SKIP', new_pitch?}]`.
+Tu es Claude, tu comprends le français. Lis la réponse de Marc, détermine pour chaque numéro de prospect (1 à N) son intention parmi :
+- **OK** : envoyer tel quel
+- **MODIF** : remplacer le `pitch_pret` (capture le nouveau texte fourni par Marc)
+- **SKIP** : ne pas envoyer, marquer en `rejete_non_pertinent`
 
-⚠️ Si la réponse Marc est ambiguë (format inhabituel, instructions contradictoires, etc.), **NE rien envoyer pour ce thread**. Envoyer un email à `marc@enomia.app` avec subject `[backlinks] Réponse non comprise, peux-tu reformuler ?` contenant la réponse originale + le récap original.
+Construis `actions = [{numero, type: 'OK'|'MODIF'|'SKIP', new_pitch?}]` pour tous les numéros mentionnés explicitement dans la réponse de Marc.
+
+⚠️ **Pour les numéros non mentionnés** : ne rien faire (pas d'action). Marc validera plus tard ou on les retentera.
+
+⚠️ **Anti-hallucination** : si la réponse Marc est ambiguë sur un numéro (ex: "j'sais pas pour le 4"), classer ce numéro en "ambigu" et l'inclure dans le mail de confirmation pour que Marc clarifie. Ne pas inventer une action.
+
+⚠️ Si la réponse Marc est complètement incompréhensible (vide, hors-sujet, langue inconnue), **NE rien envoyer pour ce thread**. Envoyer un email à `marc@enomia.app` avec subject `[backlinks] Réponse non comprise, peux-tu reformuler ?` contenant la réponse originale + le récap original. **NE PAS marquer le thread traité** (on retentera après que Marc reformule).
 
 ### 3.3 — Pour chaque action
 
@@ -142,9 +155,35 @@ CAS A — Le prospect a un `email` :
 - `dernier_contact` = ISO now
 
 CAS B — Le prospect a SEULEMENT `url_formulaire` (pas d'email) :
-- **NE PAS envoyer automatiquement** (les formulaires de contact ne sont pas automatisables sans Playwright)
+
+Tenter l'envoi automatique via **Chrome MCP** (tools `mcp__Claude_in_Chrome__*`). Si Chrome MCP non dispo ou échec → fallback en `pitch_a_envoyer_manuel`.
+
+**Procédure Chrome MCP** :
+1. `navigate` vers `url_formulaire`
+2. `get_page_text` pour analyser la structure du formulaire (champs nom, email, sujet, message, autres)
+3. **Détection captcha** : chercher dans le contenu "captcha", "recaptcha", "hcaptcha", "je ne suis pas un robot", "I'm not a robot", iframe Google captcha, etc. Si captcha détecté → abandon, fallback `pitch_a_envoyer_manuel`.
+4. `form_input` pour remplir les champs identifiés :
+   - **Nom / Prénom / Name** → "Marc Chenut"
+   - **Email** → "marc@enomia.app"
+   - **Sujet / Objet / Subject** → l'objet du pitch (1re ligne du `pitch_pret` après "Objet : ")
+   - **Message / Texte / Demande** → le corps du pitch (tout après l'objet)
+   - **Téléphone** (si requis et bloquant) → laisser vide ou abandonner si bloquant
+   - **Société / Entreprise** → "Enomia"
+   - **Cases à cocher RGPD / acceptation** → cocher (acceptation des CGU pour soumettre)
+5. Trouve le bouton submit (cherche "envoyer", "soumettre", "send", "submit", "valider") et clique
+6. Attend 3s puis `get_page_text` pour vérifier le retour :
+   - Si message de confirmation ("merci", "envoyé", "thanks", "success") → succès
+   - Si erreur visible ou page inchangée → fail
+
+**Si succès** :
+- `status` → `envoye_via_formulaire`
+- `date_envoi` = ISO today
+- `dernier_contact` = ISO now
+- `notes` += `"[Envoyé via formulaire Chrome MCP YYYY-MM-DD]"`
+
+**Si fail (captcha, champ obligatoire bloquant, erreur soumission, ou Chrome MCP indispo)** :
 - `status` → `pitch_a_envoyer_manuel`
-- `notes` += `"[À envoyer manuellement via formulaire YYYY-MM-DD]"`
+- `notes` += `"[Chrome MCP fail YYYY-MM-DD : <raison brève>, à envoyer manuellement]"`
 - Ajouter à la liste `manual_todo` pour le mail de confirmation à Marc
 
 ### 3.4 — Marquer le thread comme traité
@@ -167,12 +206,17 @@ Salut Marc,
 
 Validation du <date du thread> traitée. Bilan :
 
-Envoyés automatiquement (N) :
+Envoyés par email (N) :
   1. <nom_entreprise> → <email> | Gmail id <messageId>
   2. ...
 
-À envoyer manuellement via formulaire (X) :
+Envoyés via formulaire Chrome MCP (M) :
   1. <nom_entreprise> → <url_formulaire>
+  2. ...
+
+À envoyer manuellement via formulaire (X, captcha ou Chrome MCP fail) :
+  1. <nom_entreprise> → <url_formulaire>
+     Raison fail : <raison>
      Objet : <subject>
      Pitch :
      <pitch_pret intégral>
@@ -181,6 +225,10 @@ Envoyés automatiquement (N) :
 
 Skippés (Y) :
   - <nom_entreprise>
+  - ...
+
+Ambigus (à clarifier par Marc dans une réponse) :
+  - n°<numero> <nom_entreprise> : <ce que Marc a écrit qui était ambigu>
   - ...
 
 Threads traités : <threadIds>

@@ -103,11 +103,12 @@ Surveillance technique du site (probable : check 200/500 sur URLs critiques, cer
 1. Scan Gmail les threads `from:marc@enomia.app subject:"[backlinks]"` des 14 derniers jours
 2. Filtre via `.claude/backlinks-validation-state.json` (anti-doublon par threadId)
 3. Pour chaque thread avec réponse Marc : parse le format `OK 1, 3 / MODIF 2: <pitch> / SKIP 4` + extrait l'ordre des prospects du récap initial
-4. Pour les OK/MODIF avec `email` : envoie le pitch au destinataire via Gmail API, update CRM (`status=envoye`, `date_envoi`, `dernier_contact`)
-5. Pour les OK/MODIF avec seulement `url_formulaire` : status → `pitch_a_envoyer_manuel`, ajout à la liste manuelle du mail de confirmation
-6. Pour les SKIP : status → `rejete_non_pertinent`
-7. Envoie 1 mail confirmation à `marc@enomia.app` avec le bilan + liste des pitches à envoyer manuellement (copy-paste friendly)
-8. Marque le threadId dans le state local
+4. **Parsing en langage naturel** : Marc répond en français libre ("ok pour 1, 3 / change le 2 par : ... / skip 4 5"), l'agent Claude interprète sans format strict
+5. Pour les OK/MODIF avec `email` : envoie le pitch au destinataire via Gmail API, update CRM (`status=envoye`, `date_envoi`, `dernier_contact`)
+6. Pour les OK/MODIF avec seulement `url_formulaire` : **tente l'envoi via Chrome MCP** (navigate + form_input). Si succès → `status=envoye_via_formulaire`. Si captcha détecté ou fail → fallback `pitch_a_envoyer_manuel`, ajout à la liste manuelle du mail de confirmation
+7. Pour les SKIP : status → `rejete_non_pertinent`
+8. Envoie 1 mail confirmation à `marc@enomia.app` avec le bilan (envoyés par email / envoyés via formulaire / à envoyer manuellement / skippés / ambigus)
+9. Marque le threadId dans le state local
 
 **État local** : `.claude/backlinks-validation-state.json` (gitignored)
 **Logs** : `scripts/backlinks-validate-send/logs/run-YYYY-MM-DD.log`

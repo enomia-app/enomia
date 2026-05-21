@@ -25,7 +25,9 @@ Lis le CRM.
 
 ## ÉTAPE 1 — Détecter les nouvelles réponses prospects
 
-Pour chaque prospect avec `status ∈ {envoye, relance_1, relance_2}` ET `email` défini, query Gmail pour les messages reçus de cet email depuis `date_envoi` (ou `date_relance_1` / `date_relance_2` si relance déjà partie) :
+Pour chaque prospect avec `status ∈ {envoye, relance_1, relance_2}` ET `email` défini, query Gmail pour les messages reçus de cet email depuis `date_envoi` (ou `date_relance_1` / `date_relance_2` si relance déjà partie).
+
+⚠️ **`envoye_via_formulaire` exclu** : pas de tracking auto pour les pitches envoyés via Chrome MCP sur un formulaire (on n'a pas l'email du destinataire, juste `url_formulaire`). Marc voit ces envois dans le mail de confirmation de la routine `backlinks-validate-send`, charge à lui de surveiller manuellement si quelqu'un répond par email à `marc@enomia.app` à partir d'un nom qui correspond à un prospect.
 
 ```bash
 cd /Users/marc/projects/eunomia && node -e "
@@ -95,7 +97,9 @@ Calculer pour chaque prospect avec `status ∈ {envoye, relance_1}` et SANS rép
 | `status: relance_1` | `date_relance_1` >= J-5 (donc J-10 depuis envoi initial) | Envoyer Template T3 (relance 2). Update : `date_relance_2=today`, `status=relance_2` |
 | `status: relance_2` | `date_relance_2` >= J-5 (donc J-15 depuis envoi initial) | NE PAS envoyer. Juste update : `status=pas_de_reponse` |
 
-Pour les CAS B (`pitch_a_envoyer_manuel`, pas d'email donc pas de relance auto) : skip.
+Pour les status suivants, pas de relance auto :
+- `pitch_a_envoyer_manuel` (Marc doit envoyer à la main)
+- `envoye_via_formulaire` (relance via formulaire pas triviale, Marc gère manuellement si besoin)
 
 ### Construire les relances
 

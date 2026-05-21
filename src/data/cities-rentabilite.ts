@@ -230,7 +230,7 @@ export const citiesRentabilite: CityRentabilite[] = [
     t2: { caAnnualMin: 20000, caAnnualMax: 38000, occupancyMin: 55, occupancyMax: 72, nightlyMin: 95, nightlyMax: 200, rendementNetMin: 5, rendementNetMax: 10 },
     reliability: 'high',
     publishAt: '2026-05-20',
-    status: 'brouillon',
+    status: 'en-ligne',
     neighbors: ['bayonne', 'saint-jean-de-luz', 'hossegor'],
     context: 'Saisonnalité marquée (juin-septembre = 55% du CA). Quartiers premium : Centre, Côte des Basques, Beaurivage. Marché tendu avec quota d\'autorisations Loi Le Meur.',
   },

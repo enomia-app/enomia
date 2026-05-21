@@ -12,7 +12,7 @@ const canonical = 'https://www.enomia.app/confidentialite';
 >
   <main class="legal-page">
     <h1>Politique de confidentialité</h1>
-    <p class="legal-updated">Dernière mise à jour : 13 avril 2026</p>
+    <p class="legal-updated">Dernière mise à jour : 21 mai 2026</p>
 
     <p class="legal-intro">
       La protection de vos données personnelles est une priorité pour Enomia. La présente politique de confidentialité a pour objet de vous informer sur la manière dont vos données sont collectées, traitées et protégées lors de votre utilisation du site <strong>enomia.app</strong>, conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée.
@@ -36,9 +36,11 @@ const canonical = 'https://www.enomia.app/confidentialite';
       <p>Dans le cadre de l'utilisation du Site, les données suivantes peuvent être collectées :</p>
 
       <h3>a) Données de navigation (collecte automatique)</h3>
-      <p>
-        Le Site utilise <strong>Vercel Analytics</strong>, un outil d'analyse respectueux de la vie privée. Les données collectées sont strictement anonymes et agrégées : pages visitées, durée de visite, type d'appareil, pays d'origine. <strong>Aucun cookie n'est déposé</strong> et aucune donnée personnelle identifiable n'est collectée par cet outil.
-      </p>
+      <p>Le Site utilise deux outils de mesure d'audience :</p>
+      <ul>
+        <li><strong>Vercel Analytics</strong> — outil d'analyse anonyme, activé par défaut, fonctionnant <strong>sans aucun cookie</strong>. Données strictement anonymes et agrégées : pages visitées, durée de visite, type d'appareil, pays d'origine. Aucune donnée personnelle identifiable.</li>
+        <li><strong>Google Analytics 4</strong> — activé <strong>uniquement après votre consentement explicite</strong> via le bandeau affiché lors de votre première visite. Les données sont collectées avec anonymisation d'IP, sans publicité, sans remarketing, sans partage avec d'autres services Google.</li>
+      </ul>
 
       <h3>b) Adresse e-mail (collecte volontaire)</h3>
       <p>
@@ -77,9 +79,14 @@ const canonical = 'https://www.enomia.app/confidentialite';
         </thead>
         <tbody>
           <tr>
-            <td>Mesure d'audience et amélioration du Site</td>
+            <td>Mesure d'audience anonyme (Vercel Analytics)</td>
             <td>Intérêt légitime</td>
             <td>Données de navigation anonymes</td>
+          </tr>
+          <tr>
+            <td>Mesure d'audience avec cookies (Google Analytics 4)</td>
+            <td>Consentement</td>
+            <td>Données de navigation, identifiant client GA</td>
           </tr>
           <tr>
             <td>Envoi de la newsletter</td>
@@ -103,13 +110,16 @@ const canonical = 'https://www.enomia.app/confidentialite';
     <section>
       <h2>4. Cookies et traceurs</h2>
       <p>
-        Enomia utilise <strong>Vercel Analytics</strong>, un service d'analyse qui fonctionne <strong>sans aucun cookie</strong> et sans collecte de données personnelles identifiables. Ce service est conforme au RGPD par conception (<em>privacy by design</em>).
+        <strong>Vercel Analytics</strong> est activé par défaut et fonctionne <strong>sans aucun cookie</strong>, conformément au RGPD par conception (<em>privacy by design</em>).
       </p>
       <p>
-        <strong>Aucun cookie publicitaire</strong>, de tracking tiers, de retargeting ou de réseau social n'est déposé sur le Site.
+        <strong>Google Analytics 4</strong> dépose des cookies (<code>_ga</code>, <code>_ga_*</code>) <strong>uniquement après votre consentement explicite</strong> via le bandeau affiché lors de votre première visite. Ces cookies ont une durée maximale de 13 mois. Vous pouvez retirer votre consentement à tout moment (voir section <a href="#consentement">Gestion de votre consentement</a>).
       </p>
       <p>
-        Le Site peut utiliser le <strong>stockage local du navigateur</strong> (<code>localStorage</code>) pour sauvegarder temporairement vos données de formulaire afin de faciliter votre expérience. Ces données restent sur votre appareil et ne sont jamais transmises à des tiers.
+        <strong>Aucun cookie publicitaire</strong>, de retargeting ou de réseau social n'est déposé sur le Site.
+      </p>
+      <p>
+        Le Site peut utiliser le <strong>stockage local du navigateur</strong> (<code>localStorage</code>) pour sauvegarder temporairement vos données de formulaire et mémoriser votre choix de consentement aux cookies. Ces données restent sur votre appareil et ne sont jamais transmises à des tiers.
       </p>
     </section>
 
@@ -124,8 +134,12 @@ const canonical = 'https://www.enomia.app/confidentialite';
         </thead>
         <tbody>
           <tr>
-            <td>Données de navigation</td>
+            <td>Données de navigation (Vercel Analytics)</td>
             <td>Agrégées et anonymisées — conservées tant que Vercel Analytics est actif</td>
+          </tr>
+          <tr>
+            <td>Cookies Google Analytics 4</td>
+            <td>13 mois maximum</td>
           </tr>
           <tr>
             <td>Adresse e-mail (newsletter)</td>
@@ -161,6 +175,12 @@ const canonical = 'https://www.enomia.app/confidentialite';
             <td>Hébergement du site et analytics</td>
             <td>États-Unis</td>
             <td>Clauses contractuelles types (CCT)</td>
+          </tr>
+          <tr>
+            <td><strong>Google LLC</strong></td>
+            <td>Mesure d'audience (Google Analytics 4)</td>
+            <td>États-Unis</td>
+            <td>Clauses contractuelles types (CCT) + Data Privacy Framework</td>
           </tr>
           <tr>
             <td><strong>Supabase Inc.</strong></td>
@@ -230,8 +250,20 @@ const canonical = 'https://www.enomia.app/confidentialite';
       </div>
     </section>
 
+    <section id="consentement">
+      <h2>10. Gestion de votre consentement</h2>
+      <p>
+        Vous pouvez à tout moment modifier ou retirer votre consentement aux cookies de mesure d'audience (Google Analytics 4) en cliquant sur le bouton ci-dessous. Le bandeau de consentement sera alors réaffiché pour que vous puissiez faire un nouveau choix.
+      </p>
+      <p>
+        <button type="button" class="consent-reset-btn" onclick="window.enomiaResetCookieChoice && window.enomiaResetCookieChoice()">
+          Modifier mon choix de cookies
+        </button>
+      </p>
+    </section>
+
     <section>
-      <h2>10. Modifications</h2>
+      <h2>11. Modifications</h2>
       <p>
         La présente politique de confidentialité peut être modifiée à tout moment. En cas de modification substantielle, une notification sera affichée sur le Site. La date de dernière mise à jour est indiquée en haut de cette page.
       </p>
@@ -338,4 +370,19 @@ const canonical = 'https://www.enomia.app/confidentialite';
   .legal-table td {
     font-size: 0.88rem;
   }
+  .consent-reset-btn {
+    appearance: none;
+    background: var(--bg-dark);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-family: var(--font);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.05s;
+  }
+  .consent-reset-btn:hover { background: var(--bg-dark-soft); }
+  .consent-reset-btn:active { transform: translateY(1px); }
 </style>

@@ -48,6 +48,13 @@ const relatedPosts = allPosts
 const catLabel = CAT_LABELS[post.data.category];
 const readTime = readingTime(post.body);
 
+const seeAlsoClusters = post.data.relatedClusters && post.data.relatedClusters.length > 0
+  ? post.data.relatedClusters
+  : [
+      { label: 'Conciergerie Airbnb par région', href: '/conciergerie-airbnb' },
+      { label: 'Rentabilité Airbnb : 30 villes', href: '/rentabilite-airbnb' },
+    ];
+
 // JSON-LD Article
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -209,19 +216,17 @@ const faqLd = faqItems.length > 0 ? {
         <Content />
       </div>
 
-      <!-- Star rating -->
-      <div class="rating-block" data-slug={post.slug}>
-        <div class="rating-label">Cet article vous a été utile ?</div>
-        <div class="rating-stars" id="rating-stars">
-          <span class="star" data-v="1">★</span>
-          <span class="star" data-v="2">★</span>
-          <span class="star" data-v="3">★</span>
-          <span class="star" data-v="4">★</span>
-          <span class="star" data-v="5">★</span>
+      <aside class="see-also">
+        <h3 class="see-also-title">Pour aller plus loin</h3>
+        <div class="see-also-grid">
+          {seeAlsoClusters.map((c) => (
+            <a href={c.href} class="see-also-card">
+              <span class="see-also-card-label">{c.label}</span>
+              <span class="see-also-card-arrow">→</span>
+            </a>
+          ))}
         </div>
-        <div class="rating-count" id="rating-count"></div>
-        <div class="rating-thanks" id="rating-thanks" style="display:none">Merci pour votre avis !</div>
-      </div>
+      </aside>
 
       <NewsletterBlock id="article-nl-form" />
     </article>
@@ -335,87 +340,4 @@ const faqLd = faqItems.length > 0 ? {
     )}
 
   </div>
-  <script>
-    // Star rating interaction + API
-    (async () => {
-      const block  = document.querySelector('.rating-block');
-      const slug   = block?.getAttribute('data-slug');
-      const stars  = document.querySelectorAll('.star');
-      const thanks = document.getElementById('rating-thanks');
-      const count  = document.getElementById('rating-count');
-      if (!slug) return;
-
-      // Check if user already voted (localStorage)
-      const VOTED_KEY = `enomia_rated_${slug}`;
-      let rated = !!localStorage.getItem(VOTED_KEY);
-      if (rated) stars.forEach(s => s.style.cursor = 'default');
-
-      // Load current aggregate
-      async function loadAggregate() {
-        try {
-          const res = await fetch('/api/ratings', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ action: 'get', slug }),
-          });
-          const d = await res.json();
-          if (d.count > 0 && count) {
-            count.textContent = `${d.average}/5 · ${d.count} avis`;
-            count.style.display = 'block';
-          }
-        } catch (_) {}
-      }
-      // Defer: only fetch when rating block is near viewport (not on critical path)
-      if (block && 'IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries) => {
-          if (entries.some(e => e.isIntersecting)) {
-            io.disconnect();
-            loadAggregate();
-          }
-        }, { rootMargin: '400px' });
-        io.observe(block);
-      } else {
-        // Fallback: idle callback
-        const schedule = window.requestIdleCallback || ((cb) => setTimeout(cb, 2000));
-        schedule(loadAggregate);
-      }
-
-      stars.forEach(star => {
-        star.addEventListener('mouseover', () => {
-          if (rated) return;
-          const v = Number(star.getAttribute('data-v'));
-          stars.forEach(s => s.classList.toggle('active', Number(s.getAttribute('data-v')) <= v));
-        });
-        star.addEventListener('mouseleave', () => {
-          if (rated) return;
-          stars.forEach(s => s.classList.remove('active'));
-        });
-        star.addEventListener('click', async () => {
-          if (rated) return;
-          rated = true;
-          localStorage.setItem(VOTED_KEY, '1');
-          const v = Number(star.getAttribute('data-v'));
-          stars.forEach(s => {
-            s.classList.toggle('active', Number(s.getAttribute('data-v')) <= v);
-            s.style.cursor = 'default';
-          });
-          if (thanks) thanks.style.display = 'block';
-          // Submit vote + refresh count
-          try {
-            const res = await fetch('/api/ratings', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ action: 'rate', slug, rating: v }),
-            });
-            const d = await res.json();
-            if (d.count > 0 && count) {
-              count.textContent = `${d.average}/5 · ${d.count} avis`;
-              count.style.display = 'block';
-            }
-          } catch (_) {}
-        });
-      });
-    })();
-
-  </script>
 </BlogLayout>

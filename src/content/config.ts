@@ -22,6 +22,10 @@ const blog = defineCollection({
     status: z.enum(['brouillon', 'en-ligne']).default('brouillon'),
     articleType: z.enum(['pilier', 'satellite']).default('satellite'),
     pillarKeyword: z.string().optional(),
+    relatedClusters: z.array(z.object({
+      label: z.string(),
+      href: z.string(),
+    })).optional(),
   }),
 });
 

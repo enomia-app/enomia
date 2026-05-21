@@ -64,6 +64,12 @@ const breadcrumbLd = {
     .rg-back { display: inline-block; font-size: 13px; color: #8a8985; text-decoration: none; transition: color 0.15s; }
     .rg-back:hover { color: #1a1a1a; }
 
+    .rg-other-regions { margin: 48px 0 40px; padding-top: 36px; border-top: 1px solid #e5e3de; }
+    .rg-other-regions h3 { font-family: 'Newsreader', Georgia, serif; font-size: 20px; font-weight: 600; color: #1a1a1a; margin: 0 0 18px; letter-spacing: -0.005em; }
+    .rg-other-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .rg-other-grid a { display: inline-block; padding: 8px 14px; background: #f7f6f3; border: 1px solid #e5e3de; border-radius: 100px; font-size: 13px; color: #52524e; text-decoration: none; transition: all 0.15s; }
+    .rg-other-grid a:hover { background: #fff; border-color: #8a8985; color: #1a1a1a; }
+
     @media (max-width: 700px) {
       .rg-wrap { padding: 24px 20px 40px; }
       .rg-grid { grid-template-columns: 1fr; }
@@ -114,6 +120,15 @@ const breadcrumbLd = {
       <h3>Simulez votre rentabilité en {region.displayName}</h3>
       <p>Notre outil gratuit calcule votre cashflow avec et sans conciergerie. Fiscalité LMNP, charges, taux d'occupation. 2 minutes.</p>
       <a href="/estimation-airbnb">→ Simuler ma rentabilité</a>
+    </div>
+
+    <div class="rg-other-regions">
+      <h3>Conciergerie Airbnb dans les autres régions</h3>
+      <div class="rg-other-grid">
+        {regions.filter(r => r.slug !== region.slug).map(r => (
+          <a href={`/conciergerie-airbnb/${r.slug}`}>{r.displayName}</a>
+        ))}
+      </div>
     </div>
 
     <a href="/conciergerie-airbnb" class="rg-back">← Retour au guide national</a>

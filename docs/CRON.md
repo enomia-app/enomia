@@ -12,9 +12,12 @@ Les plists sources sont versionnés dans le repo, les copies actives sont dans `
 | `app.enomia.gsc-indexation` | 7h03 quotidien | Demande indexation Google des top URLs prioritaires | actif |
 | `app.enomia.tech-watchdog` | 8h00 quotidien | Watchdog santé technique du site | actif |
 | `app.enomia.conciergerie-production` | Lun/Mer/Ven 8h30 | Cycle de production landing conciergerie | actif |
+| `app.enomia.backlinks-track-replies` | 9h00 quotidien | Tracking réponses prospects backlinks + relances J+5/J+10 | actif |
 | `com.enomia.fb-check-replies` | 9h00 quotidien | Check réponses sous commentaires FB Marc | actif |
 | `com.enomia.fb-monthly-insights` | 1er du mois 9h00 | Rapport mensuel opportunités SEO + features | actif |
 | `app.enomia.backlinks-pitches-daily` | 10h00 quotidien | Prépare ≤10 pitches backlinks + envoie email récap à valider | actif |
+| `app.enomia.backlinks-validate-send` | 10h30, 14h, 17h, 20h | Parse replies Marc + envoie pitches validés aux destinataires | actif |
+| `app.enomia.backlinks-weekly-report` | Dim 18h00 | Récap hebdo backlinks (envoyés, réponses, taux, pipeline) | actif |
 | `com.enomia.fb-watch` | toutes les 15 min | Détecte réponses email Marc et poste sur FB | actif |
 
 ---
@@ -92,6 +95,54 @@ Surveillance technique du site (probable : check 200/500 sur URLs critiques, cer
 **Logs** : `scripts/backlinks-pitches-daily/logs/run-YYYY-MM-DD.log` + `launchd-{stdout,stderr}.log`
 **Coût Claude API** : à calibrer après quelques runs (estimation : 10-20c/run avec WebFetch + drafting 10 pitches sonnet/opus)
 **Pipeline** : Phase 3.1 du plan D backlinks. Remplace l'ancienne routine cloud `prospection-backlinks-enrich-5h` (désactivée 2026-05-21).
+
+### `app.enomia.backlinks-validate-send` — 10h30, 14h, 17h, 20h
+**Script** : `scripts/backlinks-validate-send/run.sh`
+**Prompt** : `scripts/backlinks-validate-send/prompt.md`
+**Fait** :
+1. Scan Gmail les threads `from:marc@enomia.app subject:"[backlinks]"` des 14 derniers jours
+2. Filtre via `.claude/backlinks-validation-state.json` (anti-doublon par threadId)
+3. Pour chaque thread avec réponse Marc : parse le format `OK 1, 3 / MODIF 2: <pitch> / SKIP 4` + extrait l'ordre des prospects du récap initial
+4. Pour les OK/MODIF avec `email` : envoie le pitch au destinataire via Gmail API, update CRM (`status=envoye`, `date_envoi`, `dernier_contact`)
+5. Pour les OK/MODIF avec seulement `url_formulaire` : status → `pitch_a_envoyer_manuel`, ajout à la liste manuelle du mail de confirmation
+6. Pour les SKIP : status → `rejete_non_pertinent`
+7. Envoie 1 mail confirmation à `marc@enomia.app` avec le bilan + liste des pitches à envoyer manuellement (copy-paste friendly)
+8. Marque le threadId dans le state local
+
+**État local** : `.claude/backlinks-validation-state.json` (gitignored)
+**Logs** : `scripts/backlinks-validate-send/logs/run-YYYY-MM-DD.log`
+**Coût Claude API** : modéré (~5-10c/run quand il y a des threads à traiter)
+**Pipeline** : Phase 3.2 du plan D backlinks.
+
+### `app.enomia.backlinks-track-replies` — 9h00 quotidien
+**Script** : `scripts/backlinks-track-replies/run.sh`
+**Prompt** : `scripts/backlinks-track-replies/prompt.md`
+**Fait** :
+1. Lit le CRM, filtre les prospects avec `status ∈ {envoye, relance_1, relance_2}` + `email`
+2. Pour chaque : query Gmail pour réponses du prospect depuis `date_envoi`/`date_relance_X`
+3. Classifie chaque réponse (l'agent Claude lui-même) en `positive | negative | spam | question | autre`
+4. Update CRM : `reponse_recue`, `date_reponse`, `status` → `repondu_positif | repondu_negatif | spam | (inchangé si autre)`
+5. Envoie les relances dues :
+   - J+5 sans réponse : Template T2 (relance neutre), `status=relance_1`
+   - J+10 sans réponse : Template T3 (relance soft opt-out + propose appel), `status=relance_2`
+   - J+15 sans réponse : `status=pas_de_reponse` (pas d'envoi)
+6. Si réponses ou relances : envoie 1 mail à Marc avec récap (positives à traiter, négatives, relances envoyées)
+
+**Logs** : `scripts/backlinks-track-replies/logs/run-YYYY-MM-DD.log`
+**Coût Claude API** : faible (~5c/run, dépend du nb de réponses à classifier)
+**Pipeline** : Phase 3.3 du plan D backlinks.
+
+### `app.enomia.backlinks-weekly-report` — Dim 18h00
+**Script** : `scripts/backlinks-weekly-report/run.sh`
+**Prompt** : `scripts/backlinks-weekly-report/prompt.md`
+**Fait** :
+1. Lit le CRM, calcule stats de la semaine écoulée (J-7 → J) + stats cumulées
+2. Compile : pitches préparés/envoyés, relances envoyées, réponses (par classe), backlinks obtenus, taux de réponse, taux de conversion, pipeline restant par status, top 3 réponses positives à traiter
+3. Envoie 1 mail récap à `marc@enomia.app`
+
+**Logs** : `scripts/backlinks-weekly-report/logs/run-YYYY-MM-DD.log`
+**Coût Claude API** : très faible (~2c/run)
+**Pipeline** : Phase 3.4 du plan D backlinks.
 
 ### `app.enomia.conciergerie-production` — Lun/Mer/Ven 8h30
 **Script** : `scripts/conciergerie-production/run.sh`

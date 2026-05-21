@@ -1,7 +1,14 @@
-# Cron Enomia — vue d'ensemble
+# Cron Enomia — source unique de vérité
 
-Tous les jobs tournent en **launchd** sur le Mac mini (`marcs-mac-mini-1.home`).
-Les plists sources sont versionnés dans le repo, les copies actives sont dans `~/Library/LaunchAgents/`.
+Inventaire **complet** de toutes les automatisations Enomia, sur les 4 environnements :
+- 🖥️ **launchd Mac mini** (always-on, fait le gros du travail)
+- 🖥️ **launchd MBP** (uniquement `git-pull` pour rester sync)
+- ⚙️ **GitHub Actions** (workflows cloud GitHub)
+- ☁️ **Cloud routines Anthropic** (`/schedule`)
+
+Les plists launchd sources sont versionnés dans `scripts/`, les copies actives sont dans `~/Library/LaunchAgents/` de chaque machine.
+
+**Convention** : à chaque création / modification / suppression d'une automatisation, **mettre à jour ce fichier** (commit + push). C'est la source unique de vérité.
 
 ## Vue d'ensemble
 
@@ -151,6 +158,57 @@ Cycle de production des landings/articles de conciergerie (3 fois par semaine).
 
 ---
 
+## 🖥️ launchd MBP
+
+### `app.enomia.git-pull` (MBP)
+- **Plist** : `~/Library/LaunchAgents/app.enomia.git-pull.plist`
+- **Script** : `~/Desktop/eunomia/scripts/git-pull-eunomia.sh`
+- **Cron** : toutes les heures + `RunAtLoad true` (donc fire au login/wake)
+- **Fait** : `git pull origin main` sur `~/Desktop/eunomia` pour rester sync avec Mac mini/GitHub
+- **Note** : sur MBP fermé, le launchd se met en pause → redémarre à l'ouverture
+- **Log** : `~/Desktop/eunomia/.git/last-pull.log`
+
+C'est le **seul** launchd actif sur MBP. Tout le reste tourne sur le Mac mini. Le MBP est le bureau de dev (toi + Claude Code), pas un robot d'exécution.
+
+---
+
+## ⚙️ GitHub Actions
+
+Cron cloud côté GitHub. Workflows dans `.github/workflows/`.
+
+| Workflow | Cron | Rôle | Statut |
+|---|---|---|---|
+| `ci-build.yml` | sur PR/push main | Build CI Astro (`npm ci` + `npm run build`) | actif |
+| `weekly-test-outils-enomia.yml` | lundi 07:23 UTC (09:23 Paris) | Tests Playwright E2E sur prod : simulateur, contrat, facture | actif |
+| `refresh-taxe-sejour.yml` | 1er nov 06:00 UTC (annuel) | Import fichier DELTA DGFiP → Supabase (tarifs N+1) | actif |
+| `publish-rentabilite-city.yml` | (cron commenté) | Flip `brouillon`→`en-ligne` dans `cities-rentabilite.ts` | ⏸️ **EN PAUSE** (contenu pas quali, à reviewer) |
+
+`workflow_dispatch` reste actif sur tous (manual trigger via UI GitHub).
+
+**Supprimés 2026-05-21** :
+- 🗑️ `daily-freshness.yml` — technique "freshness fake" sur articles blog, borderline spam SEO
+- 🗑️ `semrush-villes-cron.yml` — audit batch SEMrush mensuel, remplacé par audits ponctuels
+
+---
+
+## ☁️ Cloud routines Anthropic (`/schedule`)
+
+Routines qui tournent sur infrastructure Anthropic (cloud sandbox), pas sur les machines de Marc. Gérées via `claude.ai/code/routines` ou MCP `scheduled-tasks`.
+
+| Task | Cron | Rôle | Statut |
+|---|---|---|---|
+| `jova-batch-audit-notes` | Manual only | Batch SEO audit notes pour contacts Jova CRM | actif (on-demand) |
+| `monthly-qa-tools-enomia` | 1er du mois 09:27 | Check qualitatif des 3 outils enomia.app + BDD + Brevo | actif (next 2026-06-01) |
+
+**Supprimées 2026-05-21** (migrées vers Mac mini launchd) :
+- 🗑️ `enrich-city-data` → remplacé par `app.enomia.conciergerie-production`
+- 🗑️ `veille-communautaire-lcd` → remplacé par 4 launchd `com.enomia.fb-*`
+- 🗑️ `gsc-indexation-enomia` → remplacé par `app.enomia.gsc-indexation`
+- 🗑️ `prospection-backlinks-hebdo` → plus utilisé
+- 🗑️ `prospection-backlinks-enrich-5h` → remplacé par `app.enomia.backlinks-pitches-daily` + `validate-send` + `track-replies`
+
+---
+
 ## Commandes utiles
 
 ### Lister les agents actifs
@@ -205,6 +263,45 @@ done
 3. **Cookies FB expirés** (~90j) : refaire l'export Cookie-Editor dans Chrome → `scripts/rs-lcd/fb-cookies.json`.
 4. **OAuth Gmail expiré** : relancer `node scripts/gsc-oauth-bootstrap.mjs`.
 5. **Lock fb-post bloqué** : `rm /tmp/fb-post-running.lock`.
+
+---
+
+## ⚠️ Issues connues / Incidents résolus
+
+### Coupure de courant → Mac mini bloqué FileVault (RÉSOLU 2026-05-21)
+
+- **Symptôme** : Mac mini reboot après coupure mais bloqué sur écran FileVault (demande mdp pour déchiffrer disque). Tous les services (Tailscale, SSH, launchd) down jusqu'à intervention physique.
+- **Fix appliqué** :
+  1. `sudo fdesetup disable` — FileVault off (disque non chiffré, risque vol physique accepté pour home server)
+  2. Auto-login user `marc` via System Settings > Users & Groups
+  3. `sudo pmset -a autorestart 1` — reboot auto après coupure
+  4. (déjà actif) `pmset sleep=0`, `disksleep=0`, `womp=1`
+- **Trade-off** : qui vole le Mac mini physiquement lit tokens API (Anthropic, SEMrush, Gmail OAuth, Supabase, Vercel, RESEND). Acceptable car home server.
+
+### Rattrapage manuel d'un job launchd : utiliser `launchctl kickstart`, PAS `nohup ssh`
+
+- **Symptôme** : lancer `ssh macmini 'nohup bash run.sh &'` → claude voit "Not logged in" après ~6s.
+- **Cause** : SSH user session ≠ session GUI. Le token OAuth Claude est dans le **keychain `login`**, accessible uniquement depuis la session GUI auto-loggée. SSH a son propre contexte sans keychain.
+- **Solution** : déclencher dans le bon contexte launchd :
+  ```bash
+  ssh macmini 'launchctl kickstart -k "gui/501/<job-label>"'
+  ```
+- **Note** : les launchd scheduled (firent à leur cron) tournent déjà dans `gui/UID/` → marchent normalement. Le bug n'apparaît QUE pour les rattrapages manuels en SSH.
+
+### Keychain login pas accessible depuis SSH (informatif)
+
+- `security show-keychain-info ~/Library/Keychains/login.keychain-db` retourne `User interaction is not allowed` en SSH. C'est NORMAL — le keychain est attaché à la session GUI user, pas SSH.
+- N'affecte pas les launchd scheduled. Affecte uniquement les commandes manuelles SSH qui ont besoin du keychain.
+- Solution si vraiment besoin depuis SSH : `sudo launchctl asuser 501 <command>` (nécessite sudo TTY).
+
+### Sessions Claude actives sur Mac mini = source de divergence Git (RÉSOLU 2026-05-21)
+
+- **Symptôme** : modifs faites en session Claude Code sur le Mac mini → invisibles depuis MBP, perdues si pas commit/push.
+- **Cause** : 2 clones Git distincts (MBP `~/Desktop/eunomia/` + Mac mini `~/projects/eunomia/`). Sync uniquement via GitHub.
+- **Règle adoptée 2026-05-21** :
+  - **Mac mini = robot d'exécution uniquement** (launchd jobs qui commit+push leurs résultats)
+  - **MBP = bureau de dev** (toi + Claude Code, modifs versionnées via PR/commit)
+  - Plus de sessions Claude Code humaines directement sur Mac mini.
 
 ---
 

@@ -15,7 +15,7 @@
  */
 
 import { chromium } from 'playwright';
-import { readFileSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { homedir } from 'os';
@@ -23,6 +23,27 @@ import { homedir } from 'os';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const USER_DATA_DIR = join(homedir(), '.playwright-fb-scan');
 const COOKIES_FILE = join(__dirname, 'fb-cookies.json');
+const HISTORY_FILE = join(__dirname, '../../data/rs-lcd/fb-history.json');
+const ARCHIVE_FILE = join(__dirname, '../../data/rs-lcd/fb-archive.json');
+const HISTORY_MAX_AGE_DAYS = 30;
+
+function loadJsonArray(p) {
+  if (!existsSync(p)) return [];
+  try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return []; }
+}
+
+function appendHistory(entry) {
+  mkdirSync(dirname(HISTORY_FILE), { recursive: true });
+  // History : 30 jours glissants
+  const cutoff = Date.now() - HISTORY_MAX_AGE_DAYS * 24 * 3600 * 1000;
+  const history = loadJsonArray(HISTORY_FILE).filter(h => new Date(h.postedAt).getTime() > cutoff);
+  history.push(entry);
+  writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2));
+  // Archive : append-only (long terme pour analyse SEO/produit)
+  const archive = loadJsonArray(ARCHIVE_FILE);
+  archive.push(entry);
+  writeFileSync(ARCHIVE_FILE, JSON.stringify(archive, null, 2));
+}
 
 function convertCookies(raw) {
   return raw.map(c => {
@@ -50,6 +71,24 @@ function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
+async function clickButton(page, ariaLabel) {
+  // Récupère les coordonnées du bouton visible (1er match) et clique via mouse (event trusted)
+  const coords = await page.evaluate((label) => {
+    const btns = document.querySelectorAll(`[aria-label="${label}"][role="button"]`);
+    for (const b of btns) {
+      if (b.offsetParent !== null) {
+        const r = b.getBoundingClientRect();
+        return { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) };
+      }
+    }
+    return null;
+  }, ariaLabel);
+  if (!coords) throw new Error(`Bouton "${ariaLabel}" introuvable`);
+  await page.mouse.move(coords.x, coords.y);
+  await page.waitForTimeout(150);
+  await page.mouse.click(coords.x, coords.y);
+}
+
 async function postComment(page, url, text) {
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 40000 });
   await page.waitForTimeout(3000 + randomBetween(0, 1500));
@@ -58,24 +97,34 @@ async function postComment(page, url, text) {
   await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
   await page.waitForTimeout(2000);
 
-  // Clic JS direct sur le bouton "Laissez un commentaire" (bypass overlays FB)
-  const clicked = await page.evaluate(() => {
-    const btns = document.querySelectorAll('[aria-label="Laissez un commentaire"][role="button"]');
-    for (const b of btns) {
-      if (b.offsetParent !== null) { b.click(); return true; }
-    }
-    return false;
-  });
-  if (!clicked) throw new Error('Bouton "Laissez un commentaire" introuvable');
+  // Vraie souris sur "Laissez un commentaire" pour ouvrir le composer
+  await clickButton(page, 'Laissez un commentaire');
   await page.waitForTimeout(1800 + randomBetween(0, 500));
 
-  // Focus dans le composer après le clic, on tape directement
-  await page.keyboard.type(text, { delay: randomBetween(20, 60) });
-  await page.waitForTimeout(1200 + randomBetween(0, 800));
+  // Inject text via execCommand (déclenche les events que Lexical écoute, contrairement à keyboard.type)
+  const injected = await page.evaluate((t) => {
+    const editors = [...document.querySelectorAll('[contenteditable="true"][role="textbox"]')]
+      .filter(e => e.offsetParent !== null);
+    if (editors.length === 0) return { ok: false, reason: 'aucun composer visible' };
+    const editor = editors[0];
+    editor.focus();
+    document.execCommand('insertText', false, t);
+    return { ok: true, count: editors.length, label: editor.getAttribute('aria-label') };
+  }, text);
+  if (!injected.ok) throw new Error('Composer : ' + injected.reason);
+  await page.waitForTimeout(1500 + randomBetween(0, 800));
 
-  // Envoi avec Ctrl+Enter
-  await page.keyboard.press('Control+Enter');
-  await page.waitForTimeout(3500);
+  // Vérifier que le bouton "Publier" est bien actif maintenant
+  const ready = await page.evaluate(() => {
+    const b = [...document.querySelectorAll('[aria-label="Publier le commentaire"][role="button"]')]
+      .find(x => x.offsetParent !== null);
+    return b && b.getAttribute('aria-disabled') !== 'true';
+  });
+  if (!ready) throw new Error('Bouton "Publier" reste désactivé — Lexical n\'a pas enregistré le texte');
+
+  // Vraie souris sur "Publier le commentaire" pour envoyer
+  await clickButton(page, 'Publier le commentaire');
+  await page.waitForTimeout(4000);
 }
 
 async function isLoggedIn(page) {
@@ -129,6 +178,12 @@ async function main() {
       await postComment(page, url, text);
       console.log(`   ✓ Posté`);
       posted++;
+      appendHistory({
+        postId,
+        postUrl: url,
+        commentText: text,
+        postedAt: new Date().toISOString(),
+      });
     } catch (e) {
       console.error(`   ✗ Échec: ${e.message}`);
       failed++;

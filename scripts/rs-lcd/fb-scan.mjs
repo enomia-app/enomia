@@ -134,11 +134,10 @@ async function main() {
   const cookies = convertCookies(rawCookies);
 
   const context = await chromium.launchPersistentContext(USER_DATA_DIR, {
-    headless: false,
+    headless: true,
     viewport: { width: 1280, height: 900 },
     userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
     locale: 'fr-FR',
-    args: ['--window-size=1280,900'],
   });
 
   await context.addCookies(cookies);

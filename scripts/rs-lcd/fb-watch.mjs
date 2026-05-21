@@ -1,0 +1,384 @@
+#!/usr/bin/env node
+/**
+ * fb-watch.mjs — Cron local Mac mini (toutes les 15 min via launchd)
+ *
+ * Détecte les réponses Marc aux emails "[FB scan]" et lance le posting auto.
+ *
+ * Pipeline :
+ *   1. Lock /tmp/fb-post-running.lock (anti-race)
+ *   2. Gmail OAuth → cherche threads "FB scan" non labelisés "fb-scan-traité" avec réponse Marc
+ *   3. Pour chaque thread : parse la réponse via Claude API → format strict
+ *   4. Pipe vers fb-build-validated.mjs
+ *   5. Lance fb-post.mjs (Playwright local)
+ *   6. Label thread Gmail "fb-scan-traité"
+ *   7. Email confirmation
+ *
+ * Usage : node scripts/rs-lcd/fb-watch.mjs
+ * Log :   ~/projects/eunomia/data/rs-lcd/fb-watch.log
+ */
+
+import { google } from 'googleapis';
+import Anthropic from '@anthropic-ai/sdk';
+import { readFileSync, writeFileSync, existsSync, statSync, unlinkSync, appendFileSync } from 'fs';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+import path from 'path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, '../..');
+function loadEnv(file) {
+  if (!existsSync(file)) return;
+  for (const line of readFileSync(file, 'utf8').split(/\r?\n/)) {
+    const m = line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
+  }
+}
+loadEnv(path.join(ROOT, '.env'));
+
+const LOCK = '/tmp/fb-post-running.lock';
+const LOG = join(ROOT, 'data/rs-lcd/fb-watch.log');
+const VALIDATION_TMP = '/tmp/fb-validation.txt';
+
+// Deux modes :
+// - scan : email "[FB scan]" → drafts fb-drafts.json → post via fb-post.mjs
+// - replies : email "[FB replies]" → drafts fb-reply-drafts.json → post via fb-reply.mjs
+const MODES = {
+  scan: {
+    subjectMatch: 'FB scan',
+    draftsFile: 'data/rs-lcd/fb-drafts.json',
+    outputFile: 'data/rs-lcd/fb-validated.json',
+    postScript: 'scripts/rs-lcd/fb-post.mjs',
+    subjectPrefix: '[FB scan] Postés',
+  },
+  replies: {
+    subjectMatch: 'FB replies',
+    draftsFile: 'data/rs-lcd/fb-reply-drafts.json',
+    outputFile: 'data/rs-lcd/fb-reply-validated.json',
+    postScript: 'scripts/rs-lcd/fb-reply.mjs',
+    subjectPrefix: '[FB replies] Postées',
+  },
+};
+
+const GMAIL_TOKEN = process.env.GSC_OAUTH_TOKEN || path.join(process.env.HOME, '.config/gcloud/enomia-gsc-token.json');
+const GMAIL_CLIENT = process.env.GSC_OAUTH_CLIENT || path.join(process.env.HOME, '.config/gcloud/enomia-oauth-client.json');
+const LABEL_TRAITE = 'fb-scan-traité';
+
+function log(msg) {
+  const line = `[${new Date().toISOString()}] ${msg}\n`;
+  process.stdout.write(line);
+  try { appendFileSync(LOG, line); } catch {}
+}
+
+function fail(msg) { log(`ERREUR: ${msg}`); cleanup(); process.exit(1); }
+function cleanup() { try { unlinkSync(LOCK); } catch {} }
+
+// Lock anti-race : si run précédent < 60 min, on saute ce tour
+function acquireLock() {
+  if (existsSync(LOCK)) {
+    const age = Date.now() - statSync(LOCK).mtimeMs;
+    if (age < 60 * 60 * 1000) {
+      log(`Lock présent (${Math.round(age/60000)} min), skip ce tour`);
+      process.exit(0);
+    }
+    log('Lock stale (>60 min), récupération');
+  }
+  writeFileSync(LOCK, String(process.pid));
+}
+
+async function getGmailClient() {
+  const client = JSON.parse(readFileSync(GMAIL_CLIENT, 'utf8'));
+  const token = JSON.parse(readFileSync(GMAIL_TOKEN, 'utf8'));
+  const { client_id, client_secret } = client.installed || client.web;
+  const oauth2 = new google.auth.OAuth2(client_id, client_secret);
+  oauth2.setCredentials(token);
+  return google.gmail({ version: 'v1', auth: oauth2 });
+}
+
+async function findOrCreateLabel(gmail, name) {
+  const labels = await gmail.users.labels.list({ userId: 'me' });
+  const existing = labels.data.labels.find(l => l.name === name);
+  if (existing) return existing.id;
+  const created = await gmail.users.labels.create({
+    userId: 'me',
+    requestBody: { name, labelListVisibility: 'labelShow', messageListVisibility: 'show' },
+  });
+  return created.data.id;
+}
+
+async function listCandidateThreads(gmail) {
+  // newer_than:3d pour avoir une marge si on tombe en panne quelques jours
+  const res = await gmail.users.threads.list({
+    userId: 'me',
+    q: `(subject:"FB scan" OR subject:"FB replies") newer_than:3d -label:${LABEL_TRAITE}`,
+    maxResults: 20,
+  });
+  return res.data.threads || [];
+}
+
+// Détecte le mode (scan ou replies) depuis le subject du premier message
+function detectMode(thread) {
+  if (!thread.messages || thread.messages.length === 0) return null;
+  const subject = getMessageHeader(thread.messages[0], 'Subject');
+  if (subject.includes(MODES.replies.subjectMatch)) return 'replies';
+  if (subject.includes(MODES.scan.subjectMatch)) return 'scan';
+  return null;
+}
+
+async function getThreadDetails(gmail, threadId) {
+  const res = await gmail.users.threads.get({
+    userId: 'me',
+    id: threadId,
+    format: 'full',
+  });
+  return res.data;
+}
+
+function decodeBody(part) {
+  if (!part) return '';
+  if (part.body && part.body.data) {
+    return Buffer.from(part.body.data, 'base64').toString('utf8');
+  }
+  if (part.parts) {
+    for (const p of part.parts) {
+      if (p.mimeType === 'text/plain') return decodeBody(p);
+    }
+    for (const p of part.parts) {
+      const t = decodeBody(p);
+      if (t) return t;
+    }
+  }
+  return '';
+}
+
+function getMessageHeader(message, name) {
+  const h = message.payload.headers.find(x => x.name.toLowerCase() === name.toLowerCase());
+  return h ? h.value : '';
+}
+
+// Trouve le dernier message du thread où Marc répond (subject "Re:")
+function findMarcReply(thread) {
+  if (!thread.messages || thread.messages.length === 0) return null;
+  for (let i = thread.messages.length - 1; i >= 0; i--) {
+    const m = thread.messages[i];
+    const subject = getMessageHeader(m, 'Subject');
+    const from = getMessageHeader(m, 'From');
+    if (subject.startsWith('Re:') && from.includes('marc@enomia.app')) {
+      const body = decodeBody(m.payload);
+      // Retire le quote de l'email original (tout après "Le ... a écrit :")
+      const cleaned = body.split(/Le\s.*?a\s+écrit\s*:/)[0].trim();
+      return cleaned;
+    }
+  }
+  return null;
+}
+
+async function parseValidationViaClaude(replyText, drafts) {
+  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  const postIds = Object.keys(drafts).join(', ');
+
+  const prompt = `Tu reçois une réponse email de Marc à un récap de propositions de commentaires Facebook. Convertis sa réponse en format STRICT.
+
+Propositions disponibles (postIds) : ${postIds}
+
+Pour chaque proposition, drafts[postId] contient {url, text}. Le text actuel contient parfois un lien Enomia (URL https://www.enomia.app/...). Pour les EDIT type "garde la version sans lien" : retire la phrase finale qui contient l'URL Enomia.
+
+drafts JSON :
+${JSON.stringify(drafts, null, 2)}
+
+Réponse de Marc à interpréter :
+"""
+${replyText}
+"""
+
+Réponds UNIQUEMENT en JSON avec cette structure exacte :
+{
+  "ok": ["X.X", "X.X", ...],
+  "skip": ["X.X", ...],
+  "edits": { "X.X": "nouveau texte complet", ... },
+  "ambiguous": false,
+  "reason": "explication courte si ambigu"
+}
+
+Règles :
+- Si Marc dit "ok pour tout" : "ok" contient TOUS les postIds disponibles
+- Si Marc dit "tout sauf X" : "ok" = tous SAUF X, et X dans "skip" si refus, ou "edits" si modification
+- Si Marc reformule un commentaire entièrement, mets le nouveau texte dans "edits"
+- Si la réponse est ambiguë ou vide, mets "ambiguous": true et explique dans "reason"
+- "ok" et "edits" peuvent contenir le même postId (alors on prend l'edit)
+- Pas de markdown, juste du JSON pur.`;
+
+  const resp = await client.messages.create({
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: 4096,
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  const text = resp.content[0].text.trim();
+  // Strip ```json ... ``` si présent
+  const cleaned = text.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, '');
+  return JSON.parse(cleaned);
+}
+
+function buildValidationText(parsed) {
+  const lines = [];
+  if (parsed.ok && parsed.ok.length) lines.push(`OK: ${parsed.ok.join(', ')}`);
+  if (parsed.skip && parsed.skip.length) lines.push(`SKIP: ${parsed.skip.join(', ')}`);
+  if (parsed.edits) {
+    for (const [id, txt] of Object.entries(parsed.edits)) {
+      lines.push(`EDIT ${id}: ${txt}`);
+    }
+  }
+  return lines.join('\n');
+}
+
+async function labelThread(gmail, threadId, labelId) {
+  await gmail.users.threads.modify({
+    userId: 'me',
+    id: threadId,
+    requestBody: { addLabelIds: [labelId] },
+  });
+}
+
+function sendConfirmation(subject, body) {
+  execSync(
+    `./scripts/tech-watchdog/send-report.sh "${subject.replace(/"/g, '\\"')}"`,
+    { cwd: ROOT, input: body, encoding: 'utf8', stdio: ['pipe', 'inherit', 'inherit'] }
+  );
+}
+
+async function processThread(gmail, threadId, labelId) {
+  log(`Thread ${threadId} : récupération`);
+  const thread = await getThreadDetails(gmail, threadId);
+
+  const mode = detectMode(thread);
+  if (!mode) {
+    log(`Thread ${threadId} : mode non détecté, skip`);
+    return { skipped: true };
+  }
+  const cfg = MODES[mode];
+  log(`Thread ${threadId} : mode=${mode}`);
+
+  const reply = findMarcReply(thread);
+  if (!reply) {
+    log(`Thread ${threadId} : pas de réponse Marc — skip (pas de label)`);
+    return { skipped: true };
+  }
+  log(`Thread ${threadId} : réponse Marc trouvée (${reply.length} chars)`);
+
+  const draftsPath = join(ROOT, cfg.draftsFile);
+  if (!existsSync(draftsPath)) {
+    log(`Thread ${threadId} : ${cfg.draftsFile} absent — impossible de traiter`);
+    return { error: 'no drafts' };
+  }
+  const drafts = JSON.parse(readFileSync(draftsPath, 'utf8'));
+
+  log(`Thread ${threadId} : parsing via Claude API`);
+  const parsed = await parseValidationViaClaude(reply, drafts);
+
+  if (parsed.ambiguous) {
+    log(`Thread ${threadId} : réponse ambiguë — ${parsed.reason}`);
+    sendConfirmation(
+      `[${mode === 'scan' ? 'FB scan' : 'FB replies'}] Clarification demandée`,
+      `Ta réponse n'a pas pu être interprétée automatiquement.\n\nRaison : ${parsed.reason}\n\nTa réponse :\n${reply}\n\nMerci de répondre avec un format plus explicite (OK: X.X, X.X / SKIP: X.X / EDIT X.X: texte).`
+    );
+    return { ambiguous: true };
+  }
+
+  const validationText = buildValidationText(parsed);
+  log(`Validation :\n${validationText}`);
+  writeFileSync(VALIDATION_TMP, validationText);
+
+  log('Build validated');
+  execSync(
+    `cat ${VALIDATION_TMP} | node scripts/rs-lcd/fb-build-validated.mjs --drafts=${cfg.draftsFile} --output=${cfg.outputFile}`,
+    { cwd: ROOT, stdio: 'inherit' }
+  );
+
+  log(`Lancement ${cfg.postScript} (peut prendre 15-25 min)`);
+  let postResult = { ok: true };
+  try {
+    execSync(`node ${cfg.postScript} ${cfg.outputFile}`, {
+      cwd: ROOT,
+      stdio: 'inherit',
+      timeout: 35 * 60 * 1000,
+    });
+  } catch (e) {
+    postResult = { ok: false, error: e.message };
+    log(`${cfg.postScript} erreur : ${e.message}`);
+  }
+
+  log(`Labélisation thread ${threadId}`);
+  await labelThread(gmail, threadId, labelId);
+
+  // Email confirmation
+  const validated = JSON.parse(readFileSync(join(ROOT, cfg.outputFile), 'utf8'));
+  const liens = validated.map(v => `  ${v.postId} — ${v.url}`).join('\n');
+  const subject = postResult.ok
+    ? `${cfg.subjectPrefix} — ${validated.length}`
+    : `${cfg.subjectPrefix.replace('Postés','Erreur').replace('Postées','Erreur')}`;
+  const body = postResult.ok
+    ? `Validations parsées :
+  OK   : ${(parsed.ok || []).join(', ') || '(aucun)'}
+  SKIP : ${(parsed.skip || []).join(', ') || '(aucun)'}
+  EDIT : ${Object.keys(parsed.edits || {}).join(', ') || '(aucun)'}
+
+Résultat : ${validated.length} commentaires postés.
+
+Liens FB :
+${liens}
+`
+    : `Erreur pendant fb-post.mjs : ${postResult.error}
+
+Validations parsées (essayées) :
+  OK   : ${(parsed.ok || []).join(', ')}
+  SKIP : ${(parsed.skip || []).join(', ')}
+  EDIT : ${Object.keys(parsed.edits || {}).join(', ')}
+
+Posts ciblés :
+${liens}
+
+Thread Gmail labélisé "fb-scan-traité" malgré l'erreur (pour éviter retry en boucle).`;
+
+  sendConfirmation(subject, body);
+  log(`Thread ${threadId} : terminé (${postResult.ok ? 'OK' : 'erreur'})`);
+  return postResult;
+}
+
+async function main() {
+  acquireLock();
+  process.on('exit', cleanup);
+  process.on('SIGINT', () => { cleanup(); process.exit(130); });
+  process.on('SIGTERM', () => { cleanup(); process.exit(143); });
+
+  if (!process.env.ANTHROPIC_API_KEY) {
+    fail('ANTHROPIC_API_KEY absent dans .env');
+  }
+
+  log('fb-watch démarré');
+  const gmail = await getGmailClient();
+  const labelId = await findOrCreateLabel(gmail, LABEL_TRAITE);
+  log(`Label "${LABEL_TRAITE}" id=${labelId}`);
+
+  const threads = await listCandidateThreads(gmail);
+  log(`${threads.length} threads candidats`);
+
+  if (threads.length === 0) {
+    log('Rien à traiter');
+    cleanup();
+    return;
+  }
+
+  for (const t of threads) {
+    try {
+      await processThread(gmail, t.id, labelId);
+    } catch (e) {
+      log(`Thread ${t.id} : EXCEPTION ${e.message}`);
+    }
+  }
+
+  log('fb-watch terminé');
+  cleanup();
+}
+
+main().catch(e => fail(e.message));

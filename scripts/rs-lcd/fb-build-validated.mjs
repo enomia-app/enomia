@@ -17,8 +17,18 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DRAFTS_FILE = join(__dirname, '../../data/rs-lcd/fb-drafts.json');
-const OUTPUT_FILE = join(__dirname, '../../data/rs-lcd/fb-validated.json');
+
+// Permet --drafts=path et --output=path en argv (par défaut : scan/post)
+const args = Object.fromEntries(process.argv.slice(2)
+  .filter(a => a.startsWith('--'))
+  .map(a => a.replace(/^--/, '').split('=')));
+
+const DRAFTS_FILE = args.drafts
+  ? (args.drafts.startsWith('/') ? args.drafts : join(__dirname, '../../', args.drafts))
+  : join(__dirname, '../../data/rs-lcd/fb-drafts.json');
+const OUTPUT_FILE = args.output
+  ? (args.output.startsWith('/') ? args.output : join(__dirname, '../../', args.output))
+  : join(__dirname, '../../data/rs-lcd/fb-validated.json');
 
 function parseValidation(text) {
   const result = { ok: [], skip: [], edits: {} };
@@ -85,9 +95,10 @@ function main() {
       console.warn(`  ⚠ postId ${postId} est dans OK ET SKIP — on skip`);
       continue;
     }
+    // Propage tous les champs du draft (marcComment, etc.) + override text si EDIT
     validated.push({
+      ...draft,
       postId,
-      url: draft.url,
       text: v.edits[postId] || draft.text,
       edited: !!v.edits[postId],
     });

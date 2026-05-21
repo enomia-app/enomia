@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.enomia.fb-monthly-insights</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/node</string>
+        <string>/Users/marc/projects/eunomia/scripts/rs-lcd/fb-monthly-insights.mjs</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/marc/projects/eunomia</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>/Users/marc</string>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/bin:/bin</string>
+    </dict>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Day</key>
+        <integer>1</integer>
+        <key>Hour</key>
+        <integer>9</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/marc/projects/eunomia/data/rs-lcd/fb-monthly-insights.stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/marc/projects/eunomia/data/rs-lcd/fb-monthly-insights.stderr.log</string>
+</dict>
+</plist>

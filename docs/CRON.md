@@ -15,17 +15,19 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 | Agent | Fréquence | Rôle | Statut |
 |-------|-----------|------|--------|
 | `app.enomia.git-pull` | toutes les heures | Garde le repo Mac mini à jour avec GitHub | actif |
-| `com.enomia.fb-daily-scan` | 7h00 quotidien | Scan FB matinal + drafte commentaires + email | actif |
+| `com.enomia.fb-daily-scan` | 7h17 quotidien | Scan FB matinal + drafte commentaires + email | actif |
 | `app.enomia.gsc-indexation` | 7h03 quotidien | Demande indexation Google des top URLs prioritaires | actif |
-| `app.enomia.tech-watchdog` | 8h00 quotidien | Watchdog santé technique du site | actif |
-| `app.enomia.conciergerie-production` | Lun/Mer/Ven 8h30 | Cycle de production landing conciergerie | actif |
-| `app.enomia.backlinks-track-replies` | 9h00 quotidien | Tracking réponses prospects backlinks + relances J+5/J+10 | actif |
-| `com.enomia.fb-check-replies` | 9h00 quotidien | Check réponses sous commentaires FB Marc | actif |
-| `com.enomia.fb-monthly-insights` | 1er du mois 9h00 | Rapport mensuel opportunités SEO + features | actif |
-| `app.enomia.backlinks-pitches-daily` | 10h00 quotidien | Prépare ≤10 pitches backlinks + envoie email récap à valider | actif |
-| `app.enomia.backlinks-validate-send` | 10h30, 14h, 17h, 20h | Parse replies Marc + envoie pitches validés aux destinataires | actif |
-| `app.enomia.backlinks-weekly-report` | Dim 18h00 | Récap hebdo backlinks (envoyés, réponses, taux, pipeline) | actif |
-| `com.enomia.fb-watch` | toutes les 15 min | Détecte réponses email Marc et poste sur FB | actif |
+| `app.enomia.tech-watchdog` | 8h11 quotidien | Watchdog santé technique du site | actif |
+| `app.enomia.conciergerie-production` | Lun/Mer/Ven 8h37 | Cycle de production landing conciergerie | actif |
+| `app.enomia.backlinks-track-replies` | 9h13 quotidien | Tracking réponses prospects backlinks + relances J+5/J+10 | actif |
+| `com.enomia.fb-check-replies` | 9h23 quotidien | Check réponses sous commentaires FB Marc | actif |
+| `com.enomia.fb-monthly-insights` | 1er du mois 9h31 | Rapport mensuel opportunités SEO + features | actif |
+| `app.enomia.backlinks-pitches-daily` | 10h17 quotidien | Prépare ≤10 pitches backlinks + envoie email récap à valider | actif |
+| `app.enomia.backlinks-validate-send` | 10h37, 14h23, 17h19, 20h41 | Parse replies Marc + envoie pitches validés aux destinataires | actif |
+| `app.enomia.backlinks-weekly-report` | Dim 18h43 | Récap hebdo backlinks (envoyés, réponses, taux, pipeline) | actif |
+| `com.enomia.fb-watch` | xh07, xh22, xh37, xh52 (4×/h) | Détecte réponses email Marc et poste sur FB | actif |
+
+**Note horaires** : tous les jobs qui appellent l'API Anthropic sont volontairement décalés sur des minutes "improbables" (pas :00 :15 :30 :45) pour éviter les pics d'overload (HTTP 529) sur les heures rondes — où plein d'autres cron tapent l'API simultanément. Chaque job a une minute distincte des autres dans la même heure.
 
 ---
 
@@ -33,7 +35,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 
 4 agents qui forment une chaîne complète d'engagement communautaire.
 
-### `com.enomia.fb-daily-scan` — 7h00
+### `com.enomia.fb-daily-scan` — 7h17
 **Script** : `scripts/rs-lcd/fb-daily-scan.mjs`
 **Fait** :
 1. Lance `fb-scan.mjs` qui scrape les 8 groupes Facebook LCD via Playwright headless
@@ -45,7 +47,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 **Logs** : `data/rs-lcd/fb-daily-scan.stdout.log`
 **Coût Claude API** : ~5c par run
 
-### `com.enomia.fb-watch` — toutes les 15 min
+### `com.enomia.fb-watch` — xh07, xh22, xh37, xh52 (4×/h)
 **Script** : `scripts/rs-lcd/fb-watch.mjs`
 **Fait** :
 1. Cherche dans Gmail les threads "[FB scan]" ou "[FB replies]" avec réponse Marc, non labelisés `fb-scan-traité`
@@ -58,7 +60,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 **Logs** : `data/rs-lcd/fb-watch.log` + `.stdout.log` + `.stderr.log`
 **Coût** : ~1c par parse
 
-### `com.enomia.fb-check-replies` — 9h00
+### `com.enomia.fb-check-replies` — 9h23
 **Script** : `scripts/rs-lcd/fb-check-replies.mjs`
 **Fait** :
 1. Lit `data/rs-lcd/fb-history.json` (commentaires Marc des 30 derniers jours)
@@ -69,7 +71,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 
 **Logs** : `data/rs-lcd/fb-check-replies.stdout.log`
 
-### `com.enomia.fb-monthly-insights` — 1er du mois 9h00
+### `com.enomia.fb-monthly-insights` — 1er du mois 9h31
 **Script** : `scripts/rs-lcd/fb-monthly-insights.mjs`
 **Fait** : analyse mensuelle de `fb-archive.json` (questions captées) cross-référencée avec articles + outils existants → rapport email avec 3 sections (articles à créer, features à imaginer, outils gratuits lead gen).
 
@@ -85,11 +87,11 @@ Garde la copie locale du repo synchronisée avec GitHub. Évite que le Mac mini 
 **Script** : `scripts/gsc-indexation/run.sh`
 Vérifie les URLs prioritaires (par volume SEMrush) non-indexées et envoie une demande d'indexation à Google Search Console. Limite 5/jour (quota GSC).
 
-### `app.enomia.tech-watchdog` — 8h00 quotidien
+### `app.enomia.tech-watchdog` — 8h11 quotidien
 **Script** : `scripts/tech-watchdog/run.sh`
 Surveillance technique du site (probable : check 200/500 sur URLs critiques, certif SSL, etc.). Envoie un email si problème via Resend.
 
-### `app.enomia.backlinks-pitches-daily` — 10h00 quotidien
+### `app.enomia.backlinks-pitches-daily` — 10h17 quotidien
 **Script** : `scripts/backlinks-pitches-daily/run.sh`
 **Prompt** : `scripts/backlinks-pitches-daily/prompt.md`
 **Fait** :
@@ -103,7 +105,7 @@ Surveillance technique du site (probable : check 200/500 sur URLs critiques, cer
 **Coût Claude API** : à calibrer après quelques runs (estimation : 10-20c/run avec WebFetch + drafting 10 pitches sonnet/opus)
 **Pipeline** : Phase 3.1 du plan D backlinks. Remplace l'ancienne routine cloud `prospection-backlinks-enrich-5h` (désactivée 2026-05-21).
 
-### `app.enomia.backlinks-validate-send` — 10h30, 14h, 17h, 20h
+### `app.enomia.backlinks-validate-send` — 10h37, 14h23, 17h19, 20h41
 **Script** : `scripts/backlinks-validate-send/run.sh`
 **Prompt** : `scripts/backlinks-validate-send/prompt.md`
 **Fait** :
@@ -122,7 +124,7 @@ Surveillance technique du site (probable : check 200/500 sur URLs critiques, cer
 **Coût Claude API** : modéré (~5-10c/run quand il y a des threads à traiter)
 **Pipeline** : Phase 3.2 du plan D backlinks.
 
-### `app.enomia.backlinks-track-replies` — 9h00 quotidien
+### `app.enomia.backlinks-track-replies` — 9h13 quotidien
 **Script** : `scripts/backlinks-track-replies/run.sh`
 **Prompt** : `scripts/backlinks-track-replies/prompt.md`
 **Fait** :
@@ -140,7 +142,7 @@ Surveillance technique du site (probable : check 200/500 sur URLs critiques, cer
 **Coût Claude API** : faible (~5c/run, dépend du nb de réponses à classifier)
 **Pipeline** : Phase 3.3 du plan D backlinks.
 
-### `app.enomia.backlinks-weekly-report` — Dim 18h00
+### `app.enomia.backlinks-weekly-report` — Dim 18h43
 **Script** : `scripts/backlinks-weekly-report/run.sh`
 **Prompt** : `scripts/backlinks-weekly-report/prompt.md`
 **Fait** :
@@ -152,7 +154,7 @@ Surveillance technique du site (probable : check 200/500 sur URLs critiques, cer
 **Coût Claude API** : très faible (~2c/run)
 **Pipeline** : Phase 3.4 du plan D backlinks.
 
-### `app.enomia.conciergerie-production` — Lun/Mer/Ven 8h30
+### `app.enomia.conciergerie-production` — Lun/Mer/Ven 8h37
 **Script** : `scripts/conciergerie-production/run.sh`
 Cycle de production des landings/articles de conciergerie (3 fois par semaine).
 

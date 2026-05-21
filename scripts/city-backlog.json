@@ -361,8 +361,9 @@
     "oldSlug": "/conciergerie-airbnb-perpignan",
     "kw": "conciergerie perpignan",
     "vol": 320,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-21"
   },
   {
     "num": 35,
@@ -388,8 +389,9 @@
     "oldSlug": "/conciergerie-airbnb-frejus",
     "kw": "conciergerie frejus",
     "vol": 310,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-21"
   },
   {
     "num": 37,
@@ -401,8 +403,9 @@
     "oldSlug": "/conciergerie-airbnb-porto-vecchio",
     "kw": "conciergerie porto vecchio",
     "vol": 310,
-    "status": "À faire",
-    "kd": 0
+    "status": "À reprendre manuel",
+    "kd": 0,
+    "notes": "Skip auto 2026-05-21 : <3 conciergeries identifiables avec ratings Google vérifiables. Marché dominé par acteurs sans présence Google Maps tracée. Intervention humaine requise pour identifier conciergeries pertinentes."
   },
   {
     "num": 38,
@@ -414,8 +417,9 @@
     "oldSlug": "/conciergerie-airbnb-grenoble",
     "kw": "conciergerie grenoble",
     "vol": 300,
-    "status": "À faire",
-    "kd": 14
+    "status": "Publié",
+    "kd": 14,
+    "publishedAt": "2026-05-21"
   },
   {
     "num": 39,
@@ -1209,15 +1213,16 @@
   {
     "num": 100,
     "ville": "Royan",
-    "region": "?",
-    "regionSlug": "?",
+    "region": "Nouvelle-Aquitaine",
+    "regionSlug": "nouvelle-aquitaine",
     "citySlug": "royan",
-    "newUrl": "/conciergerie-airbnb/?/royan",
+    "newUrl": "/conciergerie-airbnb/nouvelle-aquitaine/royan",
     "kw": "conciergerie Royan",
     "vol": 320,
     "kd": "15",
-    "status": "À faire",
-    "source": "semrush-expand-2026-05-15"
+    "status": "Publié",
+    "source": "semrush-expand-2026-05-15",
+    "publishedAt": "2026-05-21"
   },
   {
     "num": 101,

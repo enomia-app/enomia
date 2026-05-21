@@ -6458,6 +6458,742 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-05-18',
   },
+  // ==========================================================================
+  // PERPIGNAN
+  // ==========================================================================
+  {
+    slug: 'perpignan',
+    displayName: 'Perpignan',
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title: 'Conciergerie Perpignan Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Perpignan : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Perpignan. Tarifs (18-25 %), services, avis Google, permis de louer Saint-Jacques, La Réal, Saint-Matthieu, quartiers rentables.",
+    kwPrincipal: 'conciergerie perpignan',
+    kwSecondaires: [
+      'conciergerie airbnb perpignan',
+      'conciergerie 66',
+      'conciergerie canet en roussillon',
+      'conciergerie collioure',
+      'conciergerie barcares',
+    ],
+    population: 121616,
+    tourists: 1200000,
+    activeListings: 850,
+    priceLow: 55,
+    priceHigh: 95,
+    occupancyRate: 62,
+    revpar: 38,
+    seasonality:
+      "Saisonnalité méditerranéenne marquée. Pic juillet-août (occupation 85-92 %, tarifs ×1,8 vs basse saison, clientèle française et espagnole, séjours 7 nuits dominants sur la Côte Vermeille). Visa pour l'Image en septembre (festival international de photojournalisme, 50e édition en 2024, 200 000 visiteurs sur 15 jours, occupation 85-95 % en centre, tarifs ×1,4-1,6). Bonne tenue d'avril à octobre grâce au climat (2 488 heures de soleil/an, l'un des taux les plus élevés de France). Creux marqué décembre-janvier (occupation 30-40 %), atténué en centre par les marchés de Noël catalans et les week-ends courts pour les amateurs de Pyrénées (Canigou, Pyrénées-Orientales).",
+    rankNational: 24,
+    introCustom:
+      "Vous avez un appartement à **Perpignan**, en centre historique près du Castillet ou dans la couronne (Vernet, Moulin-à-Vent), ou un cabanon sur la **Côte Vermeille** (Canet-en-Roussillon, Le Barcarès, Saint-Cyprien), que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre le **Visa pour l'Image** qui draine 200 000 visiteurs en septembre, la **clientèle espagnole** week-end (Barcelone à 1h45), le **permis de louer** désormais exigé dans les quartiers historiques (Saint-Jacques, La Réal, Saint-Matthieu, Action Cœur de Ville), et la dizaine d'acteurs locaux qui se partagent un marché d'environ **850 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre Perpignan intra-muros, la couronne et la Côte Vermeille à 13 km ?",
+    marketIntro:
+      "Perpignan est la **capitale catalane française** et le hub LCD du département **66 (Pyrénées-Orientales)**. La ville compte **121 616 habitants** (INSEE 2023, +1,2 % depuis 2017) et une aire urbaine de 209 325 résidents. Position stratégique : **13 km de la Méditerranée**, **25 km de la frontière espagnole**, **190 km de Barcelone**, **2 488 heures de soleil par an** (l'un des records de France métropolitaine).\n\nLa **clientèle est mixte** : touristes français (familles cherchant la Côte Vermeille à prix accessible vs Côte d'Azur), Espagnols week-end (Barcelone-Perpignan en TGV), Britanniques et Néerlandais saison estivale, professionnels du tourisme et de l'agroalimentaire (premier port de marchandises français pour les fruits/légumes d'Espagne). Le **Visa pour l'Image** (festival international du photojournalisme, septembre) attire 200 000 visiteurs sur 15 jours et déclenche le 2e pic annuel.\n\nLes **prix au m² à Perpignan restent accessibles** : 1 800-2 600 €/m² en centre, 2 800-3 500 €/m² dans les quartiers prisés (Saint-Assiscle, La Lunette), bien en dessous des moyennes méditerranéennes — un avantage clair pour les nouveaux investisseurs LCD vs Montpellier ou Aix-en-Provence.\n\nLe **tarif moyen nuitée est de 65-85 €** en centre (T1-T2 standards), 90-130 € pour un bien rénové vue Castillet ou cathédrale, 110-180 € sur Canet-en-Roussillon en pleine saison estivale.\n\nLa ville a **instauré un permis de louer** dans ses quartiers historiques dégradés (Saint-Jacques, La Réal, Saint-Matthieu) et un dispositif Action Cœur de Ville sur l'hyper-centre — un cadre à anticiper avant tout achat dans le périmètre intra-muros.",
+    conciergeries: [
+      {
+        name: 'CoolKeys Conciergerie',
+        url: 'https://www.cool-keys.com/',
+        commission: '25 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 29,
+        biensGeres: 35,
+        specialty: 'Volume Perpignan + Côte Vermeille, gestion clé en main',
+        description:
+          "CoolKeys Conciergerie est l'un des acteurs volumiques du marché perpignanais avec une note Google 5.0/5 sur 29 avis. Commission 25 % TTC, ménage refacturé voyageur. Couverture : Perpignan intra-muros, couronne, Canet-en-Roussillon, Saint-Cyprien, Le Barcarès. Services complets : annonces multi-plateformes, accueil voyageurs, ménage hôtelier, linge, maintenance, gestion 7j/7. Pertinente pour un propriétaire qui veut déléguer la totalité (annonce + opérationnel) sur un T1-T3 standard et tirer parti du double marché ville + littoral.",
+      },
+      {
+        name: 'Sud Séjour Conciergerie',
+        url: 'https://www.sudsejourconciergerie.com/',
+        commission: '24 % HT',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 20,
+        biensGeres: 22,
+        specialty: 'Expertise locale, optimisation attractivité',
+        description:
+          "Sud Séjour Conciergerie affiche une note Google 5.0/5 sur 20 avis. Commission 24 % HT, ménage refacturé voyageur. Acteur 100 % local avec une approche centrée sur l'optimisation de l'attractivité des biens (photos, annonces, pricing dynamique). Pertinente pour un propriétaire qui débute en LCD et cherche un accompagnement complet avec un interlocuteur unique — vs les réseaux nationaux plus standardisés.",
+      },
+      {
+        name: 'Rent and Breathe',
+        url: 'https://www.rentandbreathe.fr/',
+        commission: '25 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 10,
+        biensGeres: 14,
+        specialty: 'Service premium, clientèle haut de gamme',
+        description:
+          "Rent and Breathe se positionne sur le segment haut de gamme avec une note Google 5.0/5 sur 10 avis. Commission 25 % TTC. Approche premium : welcome pack, conciergerie voyageur (réservation restaurants, activités, transferts), linge hôtelier, photos professionnelles. Pertinente pour un propriétaire d'un T3-T4 en centre rénové ou d'une maison de standing qui valorise une expérience voyageur différenciante face à la concurrence Airbnb sur le 66.",
+      },
+      {
+        name: 'Conciergerie du Roussillon',
+        url: 'https://www.conciergerieduroussillon.com/',
+        commission: '20 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 7,
+        biensGeres: 10,
+        specialty: 'Gestion complète, commission contenue',
+        description:
+          "Conciergerie du Roussillon affiche une note Google 5.0/5 sur 7 avis. Commission 20 % TTC — la plus basse du panel à note maximale. Gestion complète de la création de l'annonce jusqu'au départ des locataires, avec ménage refacturé voyageur. Pertinente pour un propriétaire qui veut une commission contenue (20 %) tout en bénéficiant d'un service intégral, sans monter en gamme premium.",
+      },
+      {
+        name: 'Viva Conciergerie',
+        url: 'https://vivaconciergerie.com/',
+        commission: '18-22 % TTC (dégressif)',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 1,
+        biensGeres: 6,
+        specialty: 'Tarification dégressive, stratégie tarifaire dynamique',
+        description:
+          "Viva Conciergerie applique une commission dégressive 18 à 22 % TTC selon le volume de biens confiés et la durée d'engagement — la commission la plus basse du marché perpignanais pour les multi-propriétaires. Note Google 5.0/5 sur 1 avis seulement (volume trop limité pour conclure, acteur récent à surveiller dans la durée). Stratégie tarifaire dynamique mise en avant (pricing quotidien). Pertinente pour un investisseur multi-biens à Perpignan qui veut minimiser la commission via volume.",
+      },
+      {
+        name: 'SPS66 La Conciergerie Catalane',
+        url: 'https://www.conciergerie66.fr/',
+        commission: 'à partir de 60 € TTC ou sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 3,
+        biensGeres: 8,
+        specialty: 'Tarif à la prestation (vs % commission), souplesse',
+        description:
+          "SPS66 La Conciergerie Catalane propose un modèle tarifaire à la prestation (à partir de 60 € TTC par intervention ou sur devis personnalisé) plutôt qu'une commission en pourcentage. Note Google 5.0/5 sur 3 avis seulement (volume d'avis limité à surveiller). Approche logistique : arrivées/départs, ménage, maintenance, gestion sur mesure. Pertinente pour un propriétaire occasionnel (résidence secondaire louée 4-8 semaines/an) qui veut éviter le modèle commission % et payer uniquement les prestations consommées.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre historique / Castillet',
+        pricePerNight: '70-130 €',
+        occupancy: 68,
+        description:
+          "Cœur médiéval autour du Castillet (porte de la ville, 1368), Loge de Mer, Cathédrale Saint-Jean-Baptiste, Palais des Rois de Majorque. Mix tourisme + commerce, le secteur le plus prisé en LCD. Attention : périmètre Action Cœur de Ville → autorisation de louer requise au plus tard 15 jours après signature du bail. Prix au m² 1 900-2 600 €. T2 dès 110 000 €.",
+        roiBrut: '7 à 9,5 %',
+      },
+      {
+        name: 'Saint-Jacques / La Réal / Saint-Matthieu',
+        pricePerNight: '55-85 €',
+        occupancy: 60,
+        description:
+          "Quartiers historiques classés en quartiers dégradés. Tickets d'entrée parmi les plus bas de France métropolitaine (T2 dès 60 000 €). MAIS permis de louer obligatoire (demande au moins 1 mois avant mise en location) — refus possible si le bien ne respecte pas les normes de décence ou si la copropriété présente des risques. Prix au m² 1 200-1 800 €. À considérer après audit énergétique + visite mairie.",
+        roiBrut: '8 à 11 %',
+      },
+      {
+        name: 'Saint-Assiscle / La Lunette / Le Vernet',
+        pricePerNight: '60-95 €',
+        occupancy: 64,
+        description:
+          "Couronne résidentielle moderne (Saint-Assiscle au sud, La Lunette à l'est, Le Vernet à l'ouest), proche gare TGV (10 min à pied) et autoroute A9. Clientèle mixte : touristes en transit Espagne/Pyrénées, professionnels du tourisme, week-end Barcelone. Prix au m² 2 200-3 200 €. T2 dès 140 000 €. Hors périmètre permis de louer — démarches simplifiées.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Canet-en-Roussillon (13 km)',
+        pricePerNight: '90-180 €',
+        occupancy: 58,
+        description:
+          "Station balnéaire la plus proche, 13 km à l'est. 2e ville du 66 par les nuitées touristiques. Plage 8,5 km, port de plaisance 1 100 anneaux. Clientèle 100 % saisonnière (mai-octobre), pic juillet-août très marqué. Prix au m² 3 200-4 500 €. T2 dès 165 000 €. Occupation lissée annuelle plus faible (58 %) mais tarifs nuit estivaux ×2,5.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Le Barcarès / Saint-Cyprien (15-20 km)',
+        pricePerNight: '80-160 €',
+        occupancy: 55,
+        description:
+          "Stations balnéaires de la Côte Vermeille au nord (Le Barcarès, 15 km) et au sud (Saint-Cyprien, 20 km). Forte concurrence camping/résidence de tourisme. Prix au m² 2 800-4 000 €. T2 dès 130 000 €. Saisonnalité encore plus marquée qu'à Canet (4 mois actifs). À privilégier en investissement secondaire vs résidence principale louée.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Collioure / Côte Vermeille rocheuse (35 km)',
+        pricePerNight: '120-220 €',
+        occupancy: 62,
+        description:
+          "Collioure, port catalan classé, 1,5 million de visiteurs/an. Argelès-sur-Mer, Port-Vendres, Banyuls-sur-Mer en couronne. Marché LCD premium (clientèle internationale, demande forte hors saison aussi : peinture, randonnée, dégustation vin). Prix au m² 4 500-6 500 €. Tickets d'entrée plus élevés (T2 dès 220 000 €) mais ROI brut résilient grâce à la saisonnalité étalée.",
+        roiBrut: '5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Perpignan applique un **dispositif de [permis de louer](https://permis-de-louer.perpignan.fr/demande-autorisation)** dans plusieurs quartiers historiques classés en habitat dégradé. Un cadre à anticiper impérativement avant tout achat dans le périmètre intra-muros.\n\n**Permis de louer Saint-Jacques, La Réal, Saint-Matthieu.** Demande d'autorisation à déposer **au moins 1 mois avant la mise en location**. La mairie peut refuser si le logement ne respecte pas les normes de décence (surface minimale, ventilation, électricité, plomberie) ou si la copropriété présente des risques (péril, insalubrité). Le périmètre couvre l'essentiel du centre médiéval — beaucoup d'immeubles anciens nécessitant des travaux.\n\n**Action Cœur de Ville.** Sur l'hyper-centre (Castillet, Loge, Cathédrale), la déclaration en mairie est exigée **au plus tard 15 jours après la signature du contrat de location**. Cadre moins restrictif que le permis de louer (pas d'autorisation préalable) mais déclaration obligatoire.\n\n**Enregistrement Declaloc national au 20 mai 2026.** À cette date, le téléservice national unique (apimeubles.finances.gouv.fr) deviendra obligatoire pour toutes les communes françaises et harmonisera les numéros à 13 chiffres. Sans ce numéro, les plateformes (Airbnb, Booking, Abritel) désactiveront automatiquement les annonces.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (celle que vous occupez au moins 8 mois par an, sauf obligation professionnelle, raison de santé ou force majeure). Perpignan n'a pas (encore) abaissé ce plafond à 90 jours, contrairement à certaines communes touristiques.\n\n**Loi Le Meur 2024.** DPE classe E minimum obligatoire (classe D à partir de 2034), abattement micro-BIC à 30 % pour les meublés non classés (50 % pour les classés tourisme). Biens classés F ou G au DPE interdits à la location courte durée à partir du 1er janvier 2028. Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Perpignan Méditerranée Métropole applique une taxe de séjour de 0,80 € à 4,30 € par nuit et par personne adulte selon le classement de l'hébergement, collectée automatiquement par Airbnb. La taxe est plus élevée à Canet-en-Roussillon et sur la Côte Vermeille (jusqu'à 5 € pour un palace 5*).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 78,
+      neighborhood: 'Centre historique Perpignan',
+      revenuBrut: 17600,
+      commissionRate: 0.22,
+      menageCount: 70,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Faut-il une autorisation pour louer un Airbnb à Perpignan en 2026 ?",
+        a: "Cela dépend du quartier. Dans les quartiers historiques classés en habitat dégradé (Saint-Jacques, La Réal, Saint-Matthieu), un permis de louer est exigé : demande à déposer au moins 1 mois avant la mise en location, avec contrôle des normes de décence (surface, ventilation, électricité, plomberie). Refus possible si le bien ou la copropriété présente des risques. Sur le périmètre Action Cœur de Ville (Castillet, Loge, Cathédrale), la déclaration en mairie est obligatoire au plus tard 15 jours après la signature du bail. Hors de ces périmètres (Vernet, Saint-Assiscle, La Lunette), seule la déclaration générale de meublé de tourisme s'applique. À partir du 20 mai 2026, le numéro Declaloc national à 13 chiffres deviendra obligatoire pour toutes les annonces, partout en France.",
+      },
+      {
+        q: "Combien rapporte un Airbnb à Perpignan pendant le Visa pour l'Image ?",
+        a: "Le Visa pour l'Image (festival international du photojournalisme, 2e quinzaine de septembre, 200 000 visiteurs sur 15 jours, presse internationale et professionnels du photoreportage) déclenche le 2e pic annuel après l'été. Un T2 en centre qui se loue 78 €/nuit en moyenne annuelle atteint 110-160 €/nuit pendant les 15 jours du festival, avec une occupation 85-95 %. Sur les 15 jours, un T2 bien placé peut générer 1 800 à 2 400 € bruts. Le festival apporte une clientèle haut de gamme (rédacteurs en chef, photographes, attachés de presse) plus exigeante sur l'hébergement (équipement bureau, wifi haut débit, calme) — un investissement décoration utile pour capter ce segment.",
+      },
+      {
+        q: 'Vaut-il mieux investir en LCD à Perpignan centre ou sur Canet-en-Roussillon ?',
+        a: "Pour un objectif rentabilité annuelle lissée, le centre de Perpignan est le meilleur compromis : prix au m² 1 900-2 600 € (T2 dès 110 000 €), occupation 68 % grâce à la demande mixte tourisme + Visa pour l'Image + clientèle pro, ROI brut 7-9,5 %. Canet-en-Roussillon offre des tarifs nuit estivaux supérieurs (90-180 € contre 70-130 € en centre) mais une occupation 58 % seulement à cause de la saisonnalité 100 % balnéaire (mai-octobre actif, novembre-avril 30-40 %). Ticket d'entrée plus élevé à Canet (T2 dès 165 000 €) → ROI brut 5,5-7 %. Pour un profil cashflow, Saint-Jacques / La Réal offre les tickets d'entrée les plus bas (T2 dès 60 000 €) MAIS conditionnés à l'obtention du permis de louer — audit obligatoire avant toute décision.",
+      },
+    ],
+    updatedAt: '2026-05-21',
+  },
+  // ==========================================================================
+  // ROYAN
+  // ==========================================================================
+  {
+    slug: 'royan',
+    displayName: 'Royan',
+    region: 'Nouvelle-Aquitaine',
+    regionSlug: 'nouvelle-aquitaine',
+    title: 'Conciergerie Royan Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Royan : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Royan. Tarifs (15-25 %), services, avis Google, autorisation changement d'usage 2025, quartiers rentables (Pontaillac, Foncillon).",
+    kwPrincipal: 'conciergerie royan',
+    kwSecondaires: [
+      'conciergerie airbnb royan',
+      'conciergerie charente maritime',
+      'conciergerie saint palais sur mer',
+      'conciergerie royan atlantique',
+      'meublé tourisme royan',
+    ],
+    population: 19425,
+    tourists: 1000000,
+    activeListings: 800,
+    priceLow: 80,
+    priceHigh: 160,
+    occupancyRate: 56,
+    revpar: 50,
+    seasonality:
+      "Saisonnalité balnéaire ultra-marquée. Pic juillet-août absolu (occupation 92-98 %, tarifs ×2,2 vs basse saison, séjours 7-14 nuits dominants, clientèle familles nationales). Bonne tenue mai-juin et septembre (occupation 65-75 %, week-ends courts). Creux marqué novembre-mars (occupation 25-35 %), atténué uniquement par les week-ends gourmets (huîtres Marennes-Oléron) et les courts séjours seniors. La Côte de Beauté absorbe environ 90 000 visiteurs estivaux en pointe — la population de la commune double en haute saison.",
+    rankNational: 28,
+    introCustom:
+      "Vous avez un appartement à **Royan**, sur la Grande-Conche, à Pontaillac ou à Foncillon, ou une villa Belle Époque à proximité, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **clientèle 100 % saisonnière** qui concentre 60-65 % du chiffre d'affaires annuel sur juillet-août, le **numéro d'enregistrement obligatoire depuis le 1er juillet 2025** (Royan fait partie des communes pionnières avec autorisation de changement d'usage 3 ans), et la dizaine d'acteurs locaux qui se partagent un marché d'environ **800 annonces actives** sur la Côte de Beauté, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre Royan intra-muros, Saint-Palais-sur-Mer et la couronne Vaux-sur-Mer / Saint-Georges-de-Didonne ?",
+    marketIntro:
+      "Royan est la **première destination LCD de la Côte de Beauté** et l'une des stations balnéaires majeures du littoral atlantique français. La commune compte **19 425 habitants** (INSEE 2023) avec une aire d'attraction de 74 917 personnes, mais sa **population double en juillet-août** (environ 90 000 visiteurs estivaux en pointe). La ville a l'une des plus fortes attractions touristiques de France parmi les communes de moins de 20 000 habitants.\n\nLa **clientèle est très majoritairement française** : familles parisiennes et bordelaises (Bordeaux à 1h45 en voiture), retraités locataires longue saison sur la Grande-Conche et Pontaillac, week-ends courts gourmets autour des **huîtres Marennes-Oléron** (1er bassin ostréicole européen, à 30 minutes). Clientèle étrangère minoritaire : Britanniques, Belges, Allemands sur juillet-août.\n\nLes **prix au m² à Royan oscillent entre 3 500 et 5 500 €** en moyenne, avec des pics à 7 500 €/m² sur Pontaillac front de mer et le quartier du Parc (vue Grande-Conche). Le **tarif moyen nuitée est de 95-150 €** hors saison, 180-280 € en haute saison juillet-août, avec des pics à 320-450 € sur les villas Belle Époque ou les biens vue mer Pontaillac.\n\nRoyan présente une **architecture moderniste de la Reconstruction** (1947-1965) unique en France : église Notre-Dame en béton, marché central couvert classé, Palais des Congrès de Foncillon — un patrimoine de plus en plus valorisé par une clientèle touristique sensible à l'architecture du XXe siècle.\n\n**Royan a anticipé la réglementation nationale dès le 1er juillet 2025** : numéro d'enregistrement obligatoire ET autorisation de changement d'usage (durée 3 ans renouvelable) pour les résidences secondaires en LCD. Un dispositif renforcé à intégrer dans tout business plan avant achat.",
+    conciergeries: [
+      {
+        name: 'A la Hauteur',
+        url: 'https://www.conciergerie-alahauteur.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 211,
+        biensGeres: 90,
+        specialty: 'Volume avis le plus élevé Royan, rentabilisation résidences secondaires',
+        description:
+          "A la Hauteur est l'acteur référent du marché royannais avec une note Google 4.9/5 sur 211 avis — de loin le volume d'avis le plus élevé sur la Côte de Beauté. Positionnement explicite sur la rentabilisation des résidences secondaires : préparation du bien pour la location, entretien continu, accueil voyageurs. Pertinente pour un propriétaire d'un T2-T4 sur la Grande-Conche, Foncillon ou Pontaillac qui valorise un track record sur le marché plutôt qu'une nouvelle entrée.",
+      },
+      {
+        name: 'Odyssey',
+        url: 'https://odysseyroyan.com/',
+        commission: 'sur devis (à la prestation)',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 140,
+        biensGeres: 55,
+        specialty: '2e volume avis, modèle à la prestation, partenaires artisans',
+        description:
+          "Odyssey affiche une note Google 5.0/5 sur 140 avis — le 2e volume d'avis du marché royannais. Modèle tarifaire à la prestation (sur devis personnalisé) plutôt que commission % : services facturés à l'unité (ménage, accueil, blanchisserie, gestion artisans). Réseau de femmes de ménage et artisans locaux sélectionnés. Pertinente pour un propriétaire qui veut piloter finement chaque ligne de coût et éviter le modèle commission % — typiquement un investisseur déjà familier avec le LCD.",
+      },
+      {
+        name: 'ZE-Royan',
+        url: 'https://www.ze-royan.fr/',
+        commission: '15 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 18,
+        biensGeres: 18,
+        specialty: 'Commission la plus basse Royan, gestion complète + disponibilité 24/7',
+        description:
+          "ZE-Royan applique une commission 15 % TTC — la plus basse du marché royannais (vs 20-25 % chez les concurrents). Note Google 4.7/5 sur 18 avis. Gestion complète : optimisation annonces, check-in/check-out, ménage, disponibilité 24/7. Pertinente pour un propriétaire qui veut maximiser le cashflow net via une commission contenue, en acceptant un volume d'avis plus modeste et un acteur récent en plein développement.",
+      },
+      {
+        name: 'Conciergerie de Fanny',
+        url: 'https://conciergeriedefanny.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 17,
+        biensGeres: 15,
+        specialty: 'Approche humaine, relation personnalisée 7j/7',
+        description:
+          "Conciergerie de Fanny affiche une note Google 5.0/5 sur 17 avis. Approche explicitement personnalisée : un interlocuteur unique par propriétaire, relations directes avec les locataires, support 7j/7. Acteur à taille humaine. Pertinente pour un propriétaire qui valorise la proximité relationnelle (vs réseaux standardisés) et un échange direct sur chaque dossier — typiquement résidence secondaire familiale à laquelle on tient.",
+      },
+      {
+        name: 'La Clé Conciergerie',
+        url: 'https://www.lacleconciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 4,
+        biensGeres: 8,
+        specialty: 'Accueil voyageurs et préparation logement LCD',
+        description:
+          "La Clé Conciergerie affiche une note Google 5.0/5 sur 4 avis (volume d'avis limité, acteur récent à surveiller dans la durée). Services centrés sur l'accueil voyageurs et la préparation des logements pour la location courte durée. Pertinente pour un propriétaire qui cherche une conciergerie en phase de croissance avec une approche personnalisée — à privilégier sur les biens à faible turn (locations longue durée 2 semaines+) plutôt que sur du week-end intensif.",
+      },
+      {
+        name: 'Alpo Conciergerie',
+        url: 'https://alpo-conciergerie.fr/',
+        commission: '20 % HT',
+        menage: 'refacturé voyageur',
+        rating: 4.0,
+        reviews: 4,
+        biensGeres: 7,
+        specialty: 'Tarification claire, optimisation rentabilité',
+        description:
+          "Alpo Conciergerie applique une commission claire 20 % HT. Note Google 4.0/5 sur 4 avis seulement (volume d'avis limité, retours mitigés à surveiller dans la décision). Positionnement sur l'optimisation de rentabilité et l'expérience client. Pertinente pour un propriétaire qui privilégie une grille tarifaire transparente sans devis sur mesure — à mettre en balance avec la note inférieure aux principaux concurrents royannais et le faible volume d'avis.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Pontaillac',
+        pricePerNight: '140-280 €',
+        occupancy: 70,
+        description:
+          "Quartier résidentiel haut de gamme à l'ouest, plage en demi-lune classée parmi les plus belles de la côte atlantique, villas Belle Époque (Villa Frégate, Villa Saraza). Clientèle premium familiale, séjours 7-14 nuits. Prix au m² 5 500-7 500 €. T2 dès 240 000 €, villa Belle Époque dès 750 000 €. Le secteur le plus prisé en LCD royannais.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Foncillon / Centre',
+        pricePerNight: '110-200 €',
+        occupancy: 65,
+        description:
+          "Quartier emblématique de la Reconstruction (1947-1965) autour du Palais des Congrès, port de plaisance (1 100 anneaux), marché central couvert classé. Architecture moderniste valorisée par une clientèle culturelle. Prix au m² 3 800-4 800 €. T2 dès 165 000 €. Excellent compromis entre tarif d'achat et tarif location.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Le Parc / Grande-Conche',
+        pricePerNight: '160-320 €',
+        occupancy: 68,
+        description:
+          "Quartier résidentiel haut de gamme surplombant la Grande-Conche (plage 2 km), avenue de Pontaillac. Architecture mixte Belle Époque + reconstruction. Clientèle premium internationale en haute saison. Prix au m² 5 200-7 200 €. T2 dès 220 000 €. ROI brut bas mais valeur patrimoniale forte.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Saint-Pierre / Vieille Ville',
+        pricePerNight: '90-160 €',
+        occupancy: 62,
+        description:
+          "Quartier historique antérieur à la Reconstruction (l'un des rares secteurs épargnés par les bombardements 1945), autour de l'église Saint-Pierre et du Château de Mons. Charme XIXe et architecture pré-Belle Époque. Prix au m² 3 200-4 200 €. T2 dès 140 000 €. Hors front de mer mais à 5-10 min des plages.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Saint-Palais-sur-Mer (3 km)',
+        pricePerNight: '110-220 €',
+        occupancy: 60,
+        description:
+          "Commune voisine à l'ouest, plage du Bureau, falaises de la Côte Sauvage. Architecture villégiature plus authentique, ambiance familiale moins urbaine que Royan. Clientèle nationale 100 % saisonnière. Prix au m² 4 200-5 800 €. T2 dès 180 000 €. Bon compromis pour un investisseur cherchant un cadre plus calme.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Vaux-sur-Mer / Saint-Georges-de-Didonne (5-7 km)',
+        pricePerNight: '90-180 €',
+        occupancy: 58,
+        description:
+          "Communes de la couronne royannaise. Vaux-sur-Mer (5 km, golf, immobilier familial), Saint-Georges-de-Didonne (7 km, plage de la Grande Conche prolongée, pinède classée). Architecture plus rurale, plages familiales. Prix au m² 3 000-4 200 €. T2 dès 140 000 €. Excellent profil cashflow pour un investisseur cherchant un meilleur ROI brut.",
+        roiBrut: '5,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Royan fait partie des **communes pionnières de Charente-Maritime** ayant anticipé le cadre national : depuis le **1er juillet 2025**, tous les hébergeurs en meublé de tourisme doivent obligatoirement s'enregistrer ET demander une autorisation de changement d'usage. Un dispositif renforcé à intégrer dans tout business plan d'investissement avant achat.\n\n**Numéro d'enregistrement obligatoire depuis le 1er juillet 2025.** Tout meublé de tourisme (résidence principale ou secondaire) doit être enregistré auprès de la mairie de Royan. La déclaration génère un numéro à porter obligatoirement sur chaque annonce Airbnb, Booking, Abritel. Sans ce numéro, les plateformes désactivent automatiquement les annonces.\n\n**Autorisation de changement d'usage (résidences secondaires).** Pour les biens loués hors résidence principale, une autorisation de changement d'usage de 3 ans (renouvelable) est exigée par la mairie. Le dispositif vise à limiter la transformation du parc résidentiel en meublés touristiques. À privilégier : déposer la demande avant l'achat pour valider l'éligibilité du bien, plutôt qu'après acquisition.\n\n**Enregistrement Declaloc national au 20 mai 2026.** À cette date, le téléservice national unique (apimeubles.finances.gouv.fr) deviendra obligatoire pour toutes les communes françaises et harmonisera les numéros à 13 chiffres. Royan est déjà conforme — la transition sera transparente pour les hébergeurs déjà enregistrés.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (celle que vous occupez au moins 8 mois par an, sauf obligation professionnelle, raison de santé ou force majeure). Royan n'a pas (encore) abaissé ce plafond à 90 jours.\n\n**Loi Le Meur 2024.** DPE classe E minimum obligatoire (classe D à partir de 2034), abattement micro-BIC à 30 % pour les meublés non classés (50 % pour les classés tourisme). Biens classés F ou G au DPE interdits à la location courte durée à partir du 1er janvier 2028. Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration**, **jusqu'à 50 000 € pour changement d'usage illégal**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Communauté d'Agglomération Royan Atlantique (CARA) applique une taxe de séjour de 0,75 € à 4,30 € par nuit et par personne adulte selon le classement de l'hébergement, collectée automatiquement par Airbnb. Recettes affectées au tourisme et à la protection du littoral.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 130,
+      neighborhood: 'Foncillon / centre Royan',
+      revenuBrut: 24000,
+      commissionRate: 0.20,
+      menageCount: 75,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il obtenir une autorisation pour louer un Airbnb à Royan en 2026 ?',
+        a: "Oui — Royan a anticipé la réglementation dès le 1er juillet 2025. Tout meublé de tourisme (résidence principale ou secondaire) doit obtenir un numéro d'enregistrement auprès de la mairie. Pour les résidences secondaires louées en LCD, une autorisation de changement d'usage de 3 ans renouvelable est en plus obligatoire. La demande est à déposer avant la mise en location (idéalement avant l'achat du bien pour sécuriser l'investissement). Sans numéro d'enregistrement, les plateformes (Airbnb, Booking, Abritel) désactivent automatiquement les annonces. À partir du 20 mai 2026, le numéro Declaloc national à 13 chiffres remplacera le système actuel — la transition est transparente pour les hébergeurs déjà enregistrés à Royan.",
+      },
+      {
+        q: "Combien rapporte un Airbnb à Royan en juillet-août ?",
+        a: "La haute saison juillet-août concentre 60 à 65 % du chiffre d'affaires annuel d'un Airbnb royannais. Un T2 sur Foncillon qui se loue 130 €/nuit en moyenne annuelle atteint 220-280 €/nuit en juillet-août, avec une occupation 92-98 % et des séjours 7-14 nuits dominants (familles en vacances). Sur les 9 semaines de haute saison, un T2 bien placé peut générer 14 000 à 18 000 € bruts — soit environ 60 % du revenu brut annuel. Pour maximiser : viser un bien équipé pour 4-6 personnes (T2 cabine, T3) avec extérieur (terrasse, balcon), à proximité piétonne d'une plage. La clientèle saisonnière est exigeante sur le linge, l'équipement bébé et la climatisation.",
+      },
+      {
+        q: 'Vaut-il mieux investir à Pontaillac, Foncillon ou Saint-Palais-sur-Mer ?',
+        a: "Pour un objectif rentabilité, Foncillon est le meilleur compromis : prix au m² 3 800-4 800 € (les plus accessibles intra-muros), occupation 65 % grâce à la demande mixte Palais des Congrès + plage + marché central, ROI brut 5,5-7 %. Pontaillac offre les meilleurs tarifs nuitée (140-280 €) mais avec un ticket d'entrée >240 000 € et un ROI brut limité (4-5,5 %) — à privilégier pour un profil patrimonial pur (valeur Belle Époque). Saint-Palais-sur-Mer (3 km) propose des tickets d'entrée intermédiaires (T2 dès 180 000 €) et une ambiance plus familiale, ROI brut 5-6,5 %. Pour un profil cashflow, regarder Vaux-sur-Mer ou Saint-Georges-de-Didonne (T2 dès 140 000 €, ROI brut 5,5-7 %).",
+      },
+    ],
+    updatedAt: '2026-05-21',
+  },
+  // ==========================================================================
+  // FRÉJUS
+  // ==========================================================================
+  {
+    slug: 'frejus',
+    displayName: 'Fréjus',
+    region: 'Provence-Alpes-Côte d\'Azur',
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie Fréjus Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Fréjus : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Fréjus et Saint-Raphaël. Tarifs (20-25 %), services, avis Google, réglementation 2026, quartiers rentables (Fréjus-Plage, Valescure, Saint-Aygulf).",
+    kwPrincipal: 'conciergerie frejus',
+    kwSecondaires: [
+      'conciergerie airbnb frejus',
+      'conciergerie saint raphael',
+      'conciergerie fréjus',
+      'conciergerie saint aygulf',
+      'gestion locative frejus',
+    ],
+    population: 59719,
+    tourists: 2200000,
+    activeListings: 1100,
+    priceLow: 80,
+    priceHigh: 170,
+    occupancyRate: 64,
+    revpar: 60,
+    seasonality:
+      "Saisonnalité méditerranéenne intense. Pic juillet-août (occupation 90-96 %, tarifs ×2 vs basse saison, clientèle familles françaises et nord-européennes, séjours 7-14 nuits dominants sur Fréjus-Plage et Saint-Aygulf). Bonne tenue avril-juin et septembre-octobre (occupation 65-78 %, week-ends courts, tourisme culturel autour des vestiges romains). Festival Sons et Cinéma de Fréjus (août) et événements nautiques au Port-Fréjus. Creux décembre-février (occupation 35-45 %), atténué par la clientèle senior nord-européenne (Belges, Allemands, Britanniques) en location longue saison hivernale.",
+    rankNational: 19,
+    introCustom:
+      "Vous avez un appartement à **Fréjus**, en centre ancien près de l'amphithéâtre romain, sur Fréjus-Plage le long des 6 km de sable, ou à **Saint-Aygulf** côté ouest, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **plage continue de 6 km** qui draine 2,2 millions de visiteurs annuels (avec Saint-Raphaël jumelée), les **vestiges romains** (Forum Julii, 2e concentration française après Arles) qui étalent la saison sur les ailes de saison, et la quinzaine d'acteurs qui se partagent un marché d'environ **1 100 annonces actives** sur Fréjus-Saint-Raphaël, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre Fréjus intra-muros, Fréjus-Plage et la couronne Saint-Aygulf / Saint-Raphaël ?",
+    marketIntro:
+      "Fréjus est le **pôle économique, culturel et touristique de l'Est du Var**, avec sa voisine immédiate **Saint-Raphaël** (les deux villes forment de fait un même marché LCD). La commune compte **59 719 habitants** (INSEE 2023, +13,4 % depuis 2017, l'une des croissances démographiques les plus fortes de la Côte d'Azur).\n\nLa ville cumule deux atouts uniques : **6 km de plage de sable blond presque continue** (de Saint-Aygulf à Saint-Raphaël) — une rareté sur la Côte d'Azur dominée par les criques rocheuses — et **la plus grande concentration française de vestiges antiques après Arles** (amphithéâtre romain, aqueduc, Porte des Gaules, ancien port romain Forum Julii). Cette combinaison plage + patrimoine étale la saison touristique sur les ailes de saison (avril-juin, septembre-octobre).\n\nLa **clientèle est mixte** : familles françaises sur juillet-août (60 % du CA annuel), nord-Européens en location longue saison (Belges, Allemands, Britanniques, Néerlandais — résidents fréjusiens hivernaux), couples seniors hors saison sur le tourisme culturel romain, plaisanciers via le **Port-Fréjus** (ferry vers Saint-Tropez et Cannes en saison).\n\nLes **prix au m² à Fréjus oscillent entre 4 000 et 6 500 €** en moyenne, avec des pics à 8 500 €/m² sur Valescure (résidentiel haut de gamme) et 7 500 €/m² front de mer Saint-Aygulf. Le **tarif moyen nuitée est de 100-160 €** hors saison, 200-320 € en haute saison juillet-août, avec des pics à 380-550 € sur les villas Valescure ou les biens vue mer Port-Fréjus.\n\nFréjus suit le **cadre national de l'enregistrement** sans dispositif local renforcé spécifique au-delà du Declaloc obligatoire au 20 mai 2026 — un avantage pour les investisseurs vs Royan ou les communes côtières en tension (Cannes, Antibes, Saint-Tropez).",
+    conciergeries: [
+      {
+        name: 'Agence La Clé d\'Hermès',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 73,
+        biensGeres: 65,
+        specialty: 'Volume avis le plus élevé Fréjus, services immobiliers complets',
+        description:
+          "Agence La Clé d'Hermès est l'acteur référent de Fréjus avec une note Google 4.9/5 sur 73 avis — le volume d'avis le plus élevé du marché fréjusien. Approche immobilière globale : vente, location longue durée, gestion locative LCD, estimations, programmes neufs. Pertinente pour un propriétaire qui veut un interlocuteur unique sur l'ensemble du parcours (achat + mise en location + revente éventuelle) plutôt qu'une conciergerie pure LCD.",
+      },
+      {
+        name: 'Estérel Conciergerie Fréjus-Saint-Raphaël',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 36,
+        biensGeres: 40,
+        specialty: 'Issue de l\'hôtellerie professionnelle, locations 2-8 personnes',
+        description:
+          "Estérel Conciergerie affiche une note Google 4.9/5 sur 36 avis. Équipe issue de l'hôtellerie professionnelle — un différenciateur fort sur l'accueil voyageurs (standards de service hôteliers : linge premium, welcome pack, communication fluide). Disponibilité annuelle (vs acteurs saisonniers). Couverture : Fréjus, Saint-Raphaël, Saint-Aygulf, Boulouris. Pertinente pour un propriétaire qui valorise une exécution premium face à une clientèle exigeante (familles haut de gamme, plaisanciers Port-Fréjus).",
+      },
+      {
+        name: 'Clés d\'Azur',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 26,
+        biensGeres: 30,
+        specialty: 'Locations vacances haut de gamme Côte d\'Azur',
+        description:
+          "Clés d'Azur affiche une note Google 5.0/5 sur 26 avis. Positionnement sur le segment haut de gamme Côte d'Azur (locations vacances premium, biens 80m²+, vue mer, prestations différenciantes). Gestion réservations, assistance clientèle, partenaires locaux. Pertinente pour un propriétaire d'un T3-T4 sur Fréjus-Plage rénové ou d'une villa Valescure / Saint-Aygulf qui cible une clientèle premium internationale plutôt que le segment famille standard.",
+      },
+      {
+        name: 'Bibo Conciergerie',
+        url: 'https://bibo-conciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 33,
+        biensGeres: 32,
+        specialty: 'Couverture Fréjus + Saint-Raphaël + Saint-Aygulf, gestion saisonnière',
+        description:
+          "Bibo Conciergerie affiche une note Google 5.0/5 sur 33 avis. Couverture explicite Fréjus, Saint-Raphaël et Saint-Aygulf — le périmètre marché complet. Gestion locative saisonnière intégrale : accueil, ménage, entretien linge, maintenance, travaux. Pertinente pour un propriétaire dont le bien se situe entre Fréjus centre et la couronne ouest (Saint-Aygulf) et qui veut une équipe locale couvrant les deux secteurs sans intermédiaire.",
+      },
+      {
+        name: 'CapitalChic Conciergerie',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 22,
+        biensGeres: 18,
+        specialty: 'Luxe, gastronomie, bien-être, services premium personnalisés',
+        description:
+          "CapitalChic Conciergerie est l'acteur luxe du marché fréjusien avec une note Google 5.0/5 sur 22 avis. Positionnement explicite sur la conciergerie de luxe : gastronomie (réservations Michelin, chef à domicile), bien-être (massages, yoga, coaching), services premium personnalisés (transferts, location voiture/yacht). Pertinente pour un propriétaire d'une villa de standing à Valescure, Caïs ou front de mer Port-Fréjus qui cherche à différencier son offre sur Airbnb Luxe / Plum Guide / Welcome Beyond.",
+      },
+      {
+        name: 'Interhome Fréjus',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.0,
+        reviews: 55,
+        biensGeres: 50,
+        specialty: 'Réseau international 50+ pays, optimisation revenus, service 24/7',
+        description:
+          "Interhome est un acteur international (réseau dans plus de 50 pays). Note Google 4.0/5 sur 55 avis — volume élevé mais note plus faible que les concurrents locaux. Commission 20-25 %, ménage refacturé voyageur. Forte diffusion sur la clientèle européenne (Allemands, Suisses, Britanniques, Belges, Néerlandais — segments majeurs à Fréjus en location longue saison hivernale). Service 24/7. Pertinente pour un propriétaire qui veut maximiser l'accès à la clientèle étrangère et pré-saison hivernale via une marque internationale reconnue — à mettre en balance avec la note inférieure aux acteurs locaux.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Fréjus-Plage',
+        pricePerNight: '120-280 €',
+        occupancy: 72,
+        description:
+          "Le secteur balnéaire emblématique de Fréjus, 2,5 km de plage de sable continue, restaurants, bars de plage, animations estivales. Clientèle famille française très dominante juillet-août. Prix au m² 4 800-6 800 €. T2 dès 195 000 €. Le plus liquide à la revente — demande LCD constante.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Centre ancien / Vestiges romains',
+        pricePerNight: '90-180 €',
+        occupancy: 66,
+        description:
+          "Cœur historique autour de l'amphithéâtre romain, Porte des Gaules, Place Formigé, Cathédrale Saint-Léonce. Mix tourisme culturel + commerce. Étalement saisonnier grâce au patrimoine (vestiges romains visités d'avril à octobre). Prix au m² 3 500-4 800 €. T2 dès 145 000 €. Excellent compromis cashflow + valeur patrimoniale.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Saint-Aygulf',
+        pricePerNight: '110-220 €',
+        occupancy: 68,
+        description:
+          "Station balnéaire à l'ouest de Fréjus (côté Sainte-Maxime), plage du Pébrier, calanques de Saint-Aygulf, ambiance plus familiale et résidentielle que Fréjus-Plage. Clientèle 100 % saisonnière. Prix au m² 4 500-6 200 €. T2 dès 175 000 €. Bon compromis pour un investisseur cherchant un cadre plus calme tout en restant en ALPC.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Valescure',
+        pricePerNight: '160-380 €',
+        occupancy: 60,
+        description:
+          "Quartier résidentiel haut de gamme à l'est, golf 18 trous de Valescure, villas Belle Époque dans la pinède, calme absolu. Clientèle premium familiale et événementielle. Prix au m² 5 500-8 500 €. Villa T5 dès 950 000 €. ROI brut plus faible mais valeur patrimoniale forte et clientèle fidélisée long terme.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Port-Fréjus',
+        pricePerNight: '130-260 €',
+        occupancy: 65,
+        description:
+          "Port de plaisance moderne (750 anneaux), ferry vers Saint-Tropez et Cannes en saison estivale, restaurants front de port, immobilier neuf années 1990-2010. Clientèle plaisanciers + couples week-end. Prix au m² 5 200-7 000 €. T2 dès 210 000 €. Très liquide à la revente.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Saint-Raphaël (jumelle, 3 km)',
+        pricePerNight: '120-260 €',
+        occupancy: 68,
+        description:
+          "Commune immédiatement à l'est de Fréjus, plage du Veillat, basilique Notre-Dame-de-la-Victoire, gare TGV directe Paris (5h30) — un atout LCD majeur. Marché jumeau avec Fréjus, prix au m² 5 000-6 800 €. T2 dès 200 000 €. Gare TGV = clientèle parisienne week-end forte d'avril à octobre.",
+        roiBrut: '5,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Fréjus suit le **cadre national de l'enregistrement des meublés de tourisme** sans dispositif local renforcé spécifique — un avantage pour les investisseurs vs Royan ou les communes côtières en tension (Cannes, Antibes, Saint-Tropez).\n\n**Enregistrement Declaloc national au 20 mai 2026.** À cette date, le téléservice national unique (apimeubles.finances.gouv.fr) deviendra obligatoire pour toutes les communes françaises et harmonisera les numéros à 13 chiffres. La déclaration en mairie reste exigée pour tout meublé de tourisme (résidence principale ou secondaire). Sans ce numéro, les plateformes (Airbnb, Booking, Abritel) désactiveront automatiquement les annonces.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (celle que vous occupez au moins 8 mois par an, sauf obligation professionnelle, raison de santé ou force majeure). Les maires peuvent désormais décider d'abaisser ce seuil à 90 jours — Fréjus n'a pas (à ce jour) actionné cette option.\n\n**Changement d'usage en copropriété.** Si votre logement fait partie d'une copropriété, vérifiez que le règlement de copropriété ne contient pas de clause d'usage exclusivement résidentiel. À Fréjus, plusieurs copropriétés Valescure et Port-Fréjus ont voté de telles clauses ces dernières années pour préserver le calme — un facteur à vérifier avant tout achat dans ces secteurs.\n\n**Loi Le Meur 2024.** DPE classe E minimum obligatoire (classe D à partir de 2034), abattement micro-BIC à 30 % pour les meublés non classés (50 % pour les classés tourisme). Biens classés F ou G au DPE interdits à la location courte durée à partir du 1er janvier 2028. Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Communauté d'Agglomération Var Estérel Méditerranée (CAVEM) applique une taxe de séjour de 0,85 € à 4,30 € par nuit et par personne adulte selon le classement de l'hébergement, collectée automatiquement par Airbnb. Recettes affectées au tourisme, aux plages et à la préservation des espaces naturels (massif de l'Estérel).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 145,
+      neighborhood: 'Fréjus-Plage',
+      revenuBrut: 30000,
+      commissionRate: 0.22,
+      menageCount: 78,
+      menageUnitCost: 75,
+    },
+    extraFaq: [
+      {
+        q: "Quels quartiers privilégier pour investir en LCD à Fréjus ?",
+        a: "Pour un objectif rentabilité, Fréjus-Plage est le meilleur compromis : prix au m² 4 800-6 800 € (T2 dès 195 000 €), occupation 72 % la plus élevée de la commune, ROI brut 5,5-7 %. Le centre ancien autour des vestiges romains offre des tickets d'entrée plus bas (T2 dès 145 000 €), occupation 66 % grâce à la demande lissée tourisme culturel + commerce, ROI brut 6-8 % — souvent le meilleur cashflow. Saint-Aygulf (3 km à l'ouest) propose une ambiance plus familiale (T2 dès 175 000 €, ROI brut 5,5-7 %). Pour un profil patrimonial pur, viser Valescure (villas Belle Époque, ROI brut 3,5-5 % mais valeur refuge). Port-Fréjus est très liquide à la revente mais ROI brut intermédiaire (5-6,5 %).",
+      },
+      {
+        q: "Combien rapporte un Airbnb à Fréjus en juillet-août ?",
+        a: "La haute saison juillet-août concentre 50 à 55 % du chiffre d'affaires annuel d'un Airbnb fréjusien — moins concentrée qu'à Royan grâce aux ailes de saison étalées (vestiges romains, clientèle senior nord-européenne hivernale). Un T2 sur Fréjus-Plage qui se loue 145 €/nuit en moyenne annuelle atteint 240-320 €/nuit en juillet-août, avec une occupation 90-96 % et des séjours 7-14 nuits dominants. Sur les 9 semaines de haute saison, un T2 bien placé peut générer 16 000 à 21 000 € bruts. La climatisation est devenue indispensable (été 32-38°C la journée) et conditionne fortement les avis voyageurs sur Airbnb.",
+      },
+      {
+        q: "Faut-il une autorisation pour louer un Airbnb à Fréjus en 2026 ?",
+        a: "Fréjus suit le cadre national sans dispositif renforcé spécifique. La déclaration en mairie est obligatoire pour tout meublé de tourisme (résidence principale ou secondaire), avec génération d'un numéro d'enregistrement à porter sur chaque annonce. À partir du 20 mai 2026, le numéro Declaloc national à 13 chiffres remplacera les systèmes locaux. Pour la résidence principale, la limite nationale de 120 nuitées par an reste en vigueur (Fréjus n'a pas activé l'abaissement à 90 jours autorisé par la loi Le Meur 2024). Attention au règlement de copropriété : plusieurs immeubles à Valescure et Port-Fréjus ont voté des clauses d'usage exclusivement résidentiel — à vérifier avant tout achat dans ces secteurs.",
+      },
+    ],
+    updatedAt: '2026-05-21',
+  },
+  // ==========================================================================
+  // GRENOBLE
+  // ==========================================================================
+  {
+    slug: 'grenoble',
+    displayName: 'Grenoble',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Grenoble Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Grenoble : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Grenoble. Tarifs (15-25 %), services, avis Google, autorisation changement d'usage zone tendue, quartiers rentables (Vieille Ville, Bonne).",
+    kwPrincipal: 'conciergerie grenoble',
+    kwSecondaires: [
+      'conciergerie airbnb grenoble',
+      'gestion locative grenoble',
+      'conciergerie chamrousse',
+      'conciergerie airbnb alpes',
+      'meublé tourisme grenoble',
+    ],
+    population: 156140,
+    tourists: 2500000,
+    activeListings: 1300,
+    priceLow: 55,
+    priceHigh: 110,
+    occupancyRate: 68,
+    revpar: 50,
+    seasonality:
+      "Saisonnalité bimodale ville + montagne. Pic hiver décembre-mars (occupation 80-90 %, clientèle skieurs Chamrousse à 14 km, séjours week-end et semaine, tarifs ×1,5-1,8). Pic été juillet-août (occupation 75-85 %, randonneurs Chartreuse-Belledonne-Vercors, festivals, clientèle internationale culturelle). Mi-saison printemps + automne soutenue par la clientèle universitaire (université Grenoble Alpes, 60 000 étudiants, marché étudiant moyen-long terme via Airbnb), événements (Festival Cabaret Frappé, Foire des Rameaux, salons CES type technologies). Creux limité à novembre (entre saison ski et toussaint).",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un appartement à **Grenoble**, en centre piéton autour de la place Grenette ou de Notre-Dame, dans l'éco-quartier de Bonne, à proximité de l'**université Grenoble Alpes** (60 000 étudiants), que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **clientèle ski en hiver** (Chamrousse à 14 km, Les 7 Laux, Alpe d'Huez à 1h, séjours week-ends + semaines), la **clientèle universitaire et professionnelle** lissée toute l'année (CEA, Schneider Electric, Atos, ST Microelectronics), l'**autorisation de changement d'usage** désormais exigée par la mairie avec **compensation à partir du 2e meublé** (zone tendue), et la quinzaine d'acteurs qui se partagent un marché d'environ **1 300 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre Grenoble intra-muros, la couronne universitaire (Saint-Martin-d'Hères, Gières) et l'axe stations de ski (Uriage, Chamrousse) ?",
+    marketIntro:
+      "Grenoble est la **capitale des Alpes françaises** et la 2e agglomération d'Auvergne-Rhône-Alpes derrière Lyon. La commune compte **156 140 habitants** (INSEE 2023), une aire urbaine de **457 409 résidents** — un marché LCD urbain dense doublé d'un hub touristique alpin majeur. Position stratégique : **encerclée par 3 massifs** (Chartreuse, Belledonne, Vercors), **14 km de Chamrousse**, **1h des Deux-Alpes / Alpe d'Huez**, **45 min de Lyon Saint-Exupéry** en train.\n\nLa **clientèle est mixte et lissée** sur l'année : skieurs hivernaux (décembre-mars, séjours week-end depuis Paris/Genève/Marseille via TGV ou avion via Lyon-Saint-Exupéry), randonneurs et amateurs de montagne estivaux (juillet-août, Tour du Mont-Blanc à 2h, Vercors via Villard-de-Lans à 35 min), professionnels du high-tech (Grenoble est l'un des principaux pôles européens en nanotechnologies, photonique, énergie — CEA, Schneider Electric, ST Microelectronics, Atos, Inria), étudiants internationaux (60 000 étudiants à l'université Grenoble Alpes, séjours 1-6 mois).\n\nLes **prix au m² à Grenoble restent accessibles** : 2 800-4 200 €/m² en centre, 4 200-5 800 €/m² sur les quartiers prisés (Notre-Dame, hyper-centre piéton, Île Verte) — un niveau bien inférieur à Lyon (5 500-8 000 €) ou Annecy (6 500-9 500 €), un avantage clair pour les nouveaux investisseurs LCD en Auvergne-Rhône-Alpes.\n\nLe **tarif moyen nuitée est de 65-95 €** en moyenne annuelle, 110-160 € en haute saison hiver (week-end ski), 80-130 € en saison estivale randonnée et événements.\n\nGrenoble est classée en **zone tendue** : la mairie exige une **autorisation de changement d'usage** pour transformer un logement résidentiel en meublé de tourisme, avec **compensation obligatoire à partir du 2e meublé** transformé. Un dispositif renforcé à intégrer dans tout business plan avant achat. Amendes pouvant atteindre **50 000 €** pour changement d'usage illégal.",
+    conciergeries: [
+      {
+        name: 'Capsule Corp Conciergerie Airbnb',
+        url: 'https://www.capsulecorp-conciergerie-grenoble.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 28,
+        biensGeres: 35,
+        specialty: 'Note maximale, gestion complète + adossée agence immobilière',
+        description:
+          "Capsule Corp Conciergerie Airbnb affiche une note Google 5.0/5 sur 28 avis. Gestion complète : annonces, réservations, check-in/check-out, ménage professionnel, gestion du linge, pricing dynamique. Acteur adossé à une agence immobilière locale (Agence Immobilière Capsule Corp, 4,6/5 sur 111 avis) — un atout pour les investisseurs sur l'ensemble du parcours achat-location. Pertinente pour un propriétaire qui veut un service intégré et un interlocuteur unique sur tout le cycle LCD grenoblois.",
+      },
+      {
+        name: 'Premier Hôte',
+        url: 'https://premierhote.com/conciergerie-grenoble/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 23,
+        biensGeres: 28,
+        specialty: 'Optimisation revenus, gestion 360°',
+        description:
+          "Premier Hôte affiche une note Google 5.0/5 sur 23 avis. Positionnement explicite sur la maximisation des revenus locatifs sans effort propriétaire : optimisation pricing, photos professionnelles, communication voyageurs, gestion opérationnelle. Pertinente pour un propriétaire actif (job temps plein) qui veut un service totalement déléguant et un suivi régulier des KPIs (taux d'occupation, tarif moyen nuitée).",
+      },
+      {
+        name: 'YourHostHelper Grenoble',
+        url: 'https://yourhosthelper.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 24,
+        biensGeres: 30,
+        specialty: 'Réseau national 20+ villes, dashboard propriétaire, pricing dynamique',
+        description:
+          "Filiale de YourHostHelper (présent dans 20+ villes françaises), cette conciergerie mise sur l'optimisation du revenu via un pricing dynamique quotidien et des photos professionnelles incluses gratuitement au lancement. Commission 20 %, ménage refacturé voyageur. Dashboard propriétaire avec prévisions de revenus et recommandations d'optimisation. Note Google 4,5/5 sur 24 avis à Grenoble. Bien adaptée aux T1-T2 standards et aux propriétaires multi-villes (intégration dashboard unique).",
+      },
+      {
+        name: 'Home Partner — LA CONCIERGERIE',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 6,
+        biensGeres: 10,
+        specialty: 'Réseau national, services personnalisés voyageur',
+        description:
+          "Home Partner LA CONCIERGERIE affiche une note Google 5.0/5 sur 6 avis. Réseau national avec services personnalisés voyageur : welcome kit, location d'équipement (lit bébé, ski, raquettes), réservation d'activités (cours de ski Chamrousse, restaurants). Pertinente pour un propriétaire d'un T3-T4 qui cherche à différencier l'expérience voyageur via des services additionnels (clientèle skieurs week-end et randonneurs).",
+      },
+      {
+        name: 'Nomade Conciergerie',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 3,
+        biensGeres: 6,
+        specialty: 'Optimisation LCD, photos pro, calendrier multi-plateformes',
+        description:
+          "Nomade Conciergerie affiche une note Google 5.0/5 sur 3 avis seulement (volume d'avis limité, acteur récent à surveiller dans la durée). Services orientés optimisation LCD : annonce, photos professionnelles, gestion calendrier multi-plateformes (Airbnb + Booking + Abritel synchronisés), maintenance. Pertinente pour un propriétaire qui veut un acteur en croissance avec une approche personnalisée — à privilégier sur les biens à fort potentiel d'optimisation initial (annonce existante sous-performante).",
+      },
+      {
+        name: 'HelloFrancis',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 2,
+        biensGeres: 5,
+        specialty: 'Grenoble + Aix-les-Bains, +20-30 % revenu annoncé',
+        description:
+          "HelloFrancis affiche une note Google 5.0/5 sur 2 avis seulement (volume d'avis très limité, acteur récent à surveiller). Couverture Grenoble + Aix-les-Bains (axe Alpes). Positionnement explicite sur l'augmentation de revenu locatif (+20-30 % annoncé vs gestion propriétaire). Pertinente pour un propriétaire multi-biens sur l'axe Grenoble-Aix-les-Bains qui veut un acteur unique, en acceptant un faible volume d'avis à ce stade.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Hyper-centre piéton / Notre-Dame',
+        pricePerNight: '75-130 €',
+        occupancy: 75,
+        description:
+          "Cœur historique piéton autour de la place Grenette, place Notre-Dame, place Saint-André et place Grenette. Restaurants, terrasses, marché de Noël en décembre. Demande LCD lissée toute l'année (week-ends, professionnels, étudiants). Prix au m² 3 800-5 200 €. T2 dès 165 000 €. Le secteur le plus liquide en LCD à Grenoble.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Vieille Ville / Saint-Hugues',
+        pricePerNight: '70-120 €',
+        occupancy: 72,
+        description:
+          "Quartier médiéval autour de l'ancien évêché (Saint-Hugues), Maison Stendhal, jardin de Ville. Mix charme historique + résidentiel calme à 5 min du tram. Demande touristique + week-end pro. Prix au m² 3 500-4 800 €. T2 dès 150 000 €. Excellent compromis charme + accessibilité.",
+        roiBrut: '6 à 8,5 %',
+      },
+      {
+        name: 'Bonne (éco-quartier)',
+        pricePerNight: '70-115 €',
+        occupancy: 70,
+        description:
+          "Éco-quartier moderne primé (Grand Prix national EcoQuartier), bâtiments énergie positive, parc Hoche, commerces neufs. Clientèle CSP+ professionnels high-tech + week-ends courts. Prix au m² 4 200-5 500 €. T2 dès 180 000 €. DPE A-B garanti — anticipation parfaite des normes Le Meur 2028.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Île Verte / Berges de l\'Isère',
+        pricePerNight: '70-110 €',
+        occupancy: 68,
+        description:
+          "Quartier résidentiel familial entre l'Isère et la voie ferrée, vue Bastille (téléphérique des Bulles), école centrale de Grenoble à proximité. Clientèle famille + universitaire. Prix au m² 3 200-4 200 €. T2 dès 135 000 €. Bon compromis prix d'achat + occupation.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Chorier-Berriat / Saint-Bruno',
+        pricePerNight: '65-100 €',
+        occupancy: 65,
+        description:
+          "Quartier en gentrification rapide à l'ouest du centre, ancien quartier ouvrier devenu hipster (cafés, ateliers d'artistes, marché Saint-Bruno). Clientèle jeunes pros + courts séjours. Prix au m² 2 800-3 800 €. T2 dès 115 000 €. Ticket d'entrée le plus accessible intra-muros, potentiel de valorisation.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Axe Chamrousse / Uriage (14-20 km)',
+        pricePerNight: '85-160 €',
+        occupancy: 62,
+        description:
+          "Axe stations de ski au sud-est : Uriage-les-Bains (20 min, station thermale + golf), Chamrousse (40 min, station olympique 1968, 2 000-2 250m). Clientèle ski hiver + bien-être été. Prix au m² 3 000-4 500 € à Uriage, 3 500-5 500 € à Chamrousse. T2 dès 120 000 € à Uriage. Saisonnalité plus marquée (60-70 % du CA sur 5 mois ski).",
+        roiBrut: '5,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Grenoble est classée en **zone tendue** : la commune applique un cadre renforcé pour la location en meublé de tourisme, avec des sanctions financières parmi les plus lourdes de France.\n\n**Autorisation de changement d'usage obligatoire.** Pour transformer un logement résidentiel en meublé de tourisme à Grenoble, une autorisation de changement d'usage est exigée par la mairie. La **compensation est obligatoire à partir du 2e logement** transformé en meublé : le propriétaire doit, en parallèle, transformer une surface équivalente de local commercial en résidentiel — un dispositif visant à protéger le parc locatif résidentiel grenoblois.\n\n**Numéro d'enregistrement 13 chiffres.** Toute location de meublé de tourisme (résidence principale ou secondaire) requiert un numéro d'enregistrement délivré par la mairie de Grenoble (formulaire CERFA, Service Relations aux Usagers - Réglementation, 11 boulevard Jean Pain). À porter sur chaque annonce Airbnb, Booking, Abritel. À partir du 20 mai 2026, le téléservice national unique (apimeubles.finances.gouv.fr) prendra le relais avec harmonisation à 13 chiffres.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (celle que vous occupez au moins 8 mois par an, sauf obligation professionnelle, raison de santé ou force majeure). Grenoble n'a pas (à ce jour) activé l'abaissement à 90 jours autorisé par la loi Le Meur 2024.\n\n**Loi Le Meur 2024.** DPE classe E minimum obligatoire (classe D à partir de 2034), abattement micro-BIC à 30 % pour les meublés non classés (50 % pour les classés tourisme). **Biens classés F ou G au DPE interdits à la location courte durée à partir du 1er janvier 2028** — un point critique à Grenoble où le parc ancien des quartiers Saint-Bruno, Saint-Laurent et Chorier-Berriat compte de nombreux F et G à rénover. Amendes : **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration**, **jusqu'à 50 000 € pour changement d'usage illégal**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Grenoble-Alpes Métropole applique une taxe de séjour de 0,75 € à 4,30 € par nuit et par personne adulte selon le classement de l'hébergement, collectée automatiquement par Airbnb. Recettes affectées au tourisme métropolitain et à la promotion de la destination Alpes.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 85,
+      neighborhood: 'Hyper-centre piéton Grenoble',
+      revenuBrut: 20800,
+      commissionRate: 0.20,
+      menageCount: 80,
+      menageUnitCost: 50,
+    },
+    extraFaq: [
+      {
+        q: "Faut-il une autorisation pour louer un Airbnb à Grenoble en 2026 ?",
+        a: "Oui — Grenoble est classée en zone tendue et applique un cadre renforcé. Pour les résidences principales, la déclaration en mairie suffit (numéro d'enregistrement obligatoire, limite 120 nuitées/an). Pour les résidences secondaires en LCD, une autorisation de changement d'usage est exigée par la mairie. Point critique : la compensation est obligatoire à partir du 2e logement transformé — il faut alors transformer une surface équivalente de local commercial en résidentiel. À partir du 20 mai 2026, le téléservice national Declaloc remplacera le système local avec harmonisation à 13 chiffres. Sanctions : amendes jusqu'à 10 000 € pour défaut d'enregistrement et jusqu'à 50 000 € pour changement d'usage illégal. Avant tout achat, déposer la demande de changement d'usage à la mairie pour valider l'éligibilité.",
+      },
+      {
+        q: "Combien rapporte un Airbnb à Grenoble en saison ski ?",
+        a: "La saison ski décembre-mars est l'un des deux pics de la saisonnalité grenobloise (l'autre étant juillet-août). Un T2 hyper-centre qui se loue 85 €/nuit en moyenne annuelle atteint 110-160 €/nuit en saison ski, avec une occupation 80-90 % et des séjours week-end ski + semaines de vacances scolaires (Noël, février). Sur les 4 mois de saison ski, un T2 bien placé peut générer 8 000 à 11 000 € bruts — soit environ 45-50 % du CA annuel. La clientèle skieuse cherche un bien à proximité du tram pour rejoindre la gare routière (cars vers Chamrousse, Les 7 Laux) ou pour bénéficier du parking facile. Équipement utile : casier à skis sécurisé, sèche-chaussures.",
+      },
+      {
+        q: 'Vaut-il mieux investir en LCD intra-muros ou à Chamrousse / Uriage ?',
+        a: "Pour un objectif rentabilité lissée annuelle, l'intra-muros Grenoble est le meilleur compromis : prix au m² 2 800-5 200 €, occupation 65-75 % grâce à la demande lissée (touristes + pros + étudiants), ROI brut 6-9 %. L'hyper-centre piéton et la Vieille Ville sont les secteurs les plus liquides. Chorier-Berriat offre le ticket d'entrée le plus bas (T2 dès 115 000 €, ROI brut 7-9 %) avec potentiel de valorisation. Chamrousse / Uriage offre des tarifs nuit ski supérieurs (110-160 €) mais une occupation 62 % seulement à cause de la saisonnalité bimodale (5 mois ski + été modéré), avec des charges de copropriété plus élevées en station. À privilégier en investissement secondaire bi-actif (autoconsommation ski hiver + location aux ailes de saison) plutôt que pure rentabilité.",
+      },
+    ],
+    updatedAt: '2026-05-21',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

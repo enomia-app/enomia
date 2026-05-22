@@ -39,3 +39,5 @@ patch-vercel-config.mjs
 data/taxe-sejour/*.csv
 scripts/rs-lcd/fb-cookies.json
 data/rs-lcd/*.json
+scripts/gsc-indexation/gsc-cookies.json
+scripts/gsc-indexation/candidates-today.json

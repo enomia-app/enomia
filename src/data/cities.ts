@@ -43,6 +43,7 @@ export const regions: Region[] = [
   { slug: 'bretagne', displayName: 'Bretagne', description: 'De Rennes à Saint-Malo en passant par Brest et Quiberon, la Bretagne combine tourisme balnéaire, patrimoine celte et marché étudiant. Rennes est un des marchés locatifs les plus tendus de France.' },
   { slug: 'normandie', displayName: 'Normandie', description: 'Rouen, Honfleur, Deauville, Étretat : la Normandie mixe tourisme culturel, impressionnisme et plages du Débarquement. Proximité immédiate de Paris et événements emblématiques (L\'Armada, Festival du Film Américain).' },
   { slug: 'centre-val-de-loire', displayName: 'Centre-Val de Loire', description: 'Tours, Amboise, Chinon et la Vallée de la Loire (UNESCO) : châteaux royaux, vins de Loire et 1h05 de TGV depuis Paris. Un marché LCD porté par 5 millions de visiteurs annuels sur les châteaux.' },
+  { slug: 'bourgogne-franche-comte', displayName: 'Bourgogne-Franche-Comté', description: 'Dijon, Beaune et la Côte d\'Or — Climats de Bourgogne classés UNESCO et Cité Internationale de la Gastronomie. Un marché LCD porté par l\'œnotourisme et la gastronomie, à 1h35 de TGV depuis Paris.' },
   { slug: 'maroc', displayName: 'Maroc', description: 'Marrakech, Essaouira et Agadir attirent les investisseurs francophones avec des rendements locatifs de 6 à 8 %. Un marché LCD en pleine reprise, porté par le tourisme international et une fiscalité compétitive.' },
 ];
 
@@ -7193,6 +7194,747 @@ export const cities: City[] = [
       },
     ],
     updatedAt: '2026-05-21',
+  },
+  // ==========================================================================
+  // BIARRITZ
+  // ==========================================================================
+  {
+    slug: 'biarritz',
+    displayName: 'Biarritz',
+    region: 'Nouvelle-Aquitaine',
+    regionSlug: 'nouvelle-aquitaine',
+    title: 'Conciergerie Biarritz Airbnb : comparatif 2026 des 7 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Biarritz : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 7 meilleures conciergeries Airbnb à Biarritz. Tarifs (20-26 %), services, avis Google, réglementation Côte basque 2026, quartiers rentables (Grande Plage, Côte des Basques).",
+    kwPrincipal: 'conciergerie biarritz',
+    kwSecondaires: [
+      'conciergerie airbnb biarritz',
+      'conciergerie pays basque',
+      'gestion locative biarritz',
+      'location saisonniere biarritz',
+      'conciergerie anglet',
+    ],
+    population: 25404,
+    tourists: 5000000,
+    activeListings: 3500,
+    priceLow: 80,
+    priceHigh: 280,
+    occupancyRate: 64,
+    revpar: 95,
+    seasonality:
+      "Saisonnalité estivale ultra-marquée : pic juillet-août (occupation 90-95 %, clientèle balnéaire + surf + familles espagnoles à 30 min de la frontière, tarifs ×2 à ×3 vs hors saison). Saison forte avril-octobre dopée par les festivals (Biarritz Amérique latine en octobre, Big Festival en juin), le circuit WSL surf et le golf. Creux limité à novembre-février, soutenu par la clientèle thalasso et bien-être (Sofitel Le Miramar, Thalassa Sea & Spa) et le tourisme d'affaires (Casino Barrière, Halle d'Iraty).",
+    rankNational: 5,
+    introCustom:
+      "Vous avez un appartement à **Biarritz** — face à la Grande Plage, sur la Côte des Basques, au Phare ou dans le quartier des Halles — que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **clientèle estivale qui paye 250 €/nuit en juillet-août**, la concurrence des thalassos et hôtels haut de gamme, la **réglementation Côte basque** durcie depuis 2024 sur les meublés touristiques (compensation activée à Bayonne et Saint-Jean-de-Luz mais **pas à Biarritz commune**), et la quinzaine de conciergeries qui se disputent un marché d'environ **3 500 annonces actives** sur Biarritz + Anglet, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre les acteurs locaux haut de gamme (Cocoonr, Caborne, Sweet Home), les réseaux nationaux (HostnFly, WeHost) et les conciergeries de proximité ?",
+    marketIntro:
+      "Biarritz est la **station balnéaire emblématique de la Côte basque**, classée parmi les **5 destinations LCD les plus rentables de France** par Welkeys (2025) avec un revenu Airbnb moyen de **2 374 €/mois** et un taux d'occupation annuel de **64 %**. La commune de 25 000 habitants accueille **environ 5 millions de visiteurs par an** — un ratio touriste/habitant parmi les plus élevés de France.\n\nLa **clientèle est mixte et haut de gamme** : touristes balnéaires juillet-août (familles françaises, Espagnols à 30 min de la frontière de Hendaye), surfeurs internationaux toute l'année (la Côte des Basques est l'un des spots de surf majeurs d'Europe), clientèle thalasso et bien-être, événementiel haut de gamme (Festival Biarritz Amérique latine, Big Festival), tourisme d'affaires (Casino, Halle d'Iraty), Britanniques et Américains attirés par le golf (Golf de Biarritz Le Phare, Aguiléra).\n\nLes **prix immobiliers à Biarritz sont parmi les plus élevés du littoral atlantique** : 7 500-12 000 €/m² en centre, 12 000-18 000 €/m² avec vue mer (Côte des Basques, Phare-Miramar, Beaurivage). Un T2 vue mer 40 m² démarre à 480 000 €, un appartement standard centre à 300 000 €.\n\nLe **tarif moyen nuitée est de 130-180 €** en moyenne annuelle, **220-350 €** en haute saison juillet-août vue mer, 80-110 € en saison creuse (occupation 35-45 % de novembre à février).\n\n**Particularité Côte basque** : Biarritz commune **n'impose pas de compensation pour les résidences secondaires en LCD**, contrairement à Bayonne et Saint-Jean-de-Luz qui ont activé ce dispositif. Un atout stratégique pour les investisseurs LCD à valider avant tout achat.",
+    conciergeries: [
+      {
+        name: 'Cocoonr Pays Basque (ex Easy Clés)',
+        url: 'https://cocoonr.fr/conciergerie-bnb-pays-basque/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 127,
+        biensGeres: 90,
+        specialty: 'Acteur historique Côte basque, réseau Cocoonr 6 villes',
+        description:
+          "Cocoonr Pays Basque (anciennement Easy Clés, rebrandé Cocoonr en 2024) est l'un des acteurs les plus établis de la Côte basque avec une note Google 4,9/5 sur 127 avis. Adresse : Quartier des Docks, 44 Rue Luis Mariano, Biarritz. Gestion complète : annonces, réservations, paiements, ménage, blanchisserie, accueil voyageurs. Filiale du réseau Cocoonr (présent aussi à Rennes, Bordeaux, Nantes, Vannes, Morbihan) — un atout pour les propriétaires multi-villes qui veulent un interlocuteur unique. Pertinente pour un propriétaire qui veut un acteur local éprouvé avec la force d'un réseau national derrière.",
+      },
+      {
+        name: 'Caborne Housing',
+        url: 'https://www.caborneconciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 36,
+        biensGeres: 25,
+        specialty: 'Bidart / Biarritz / Guéthary, gestion clé en main',
+        description:
+          "Caborne Housing affiche une note Google 5,0/5 et est classée 1ère parmi les 26 agences immobilières de Bidart. Adresse : Rue du Jaizkibel, 64210 Bidart. Couverture : Bidart, Biarritz sud, Guéthary et alentours. Service clé en main : rédaction et gestion des annonces, check-in/check-out, ménage, blanchisserie, entretien des espaces verts, supervision travaux, sécurité, communication locataires. Pertinente pour un propriétaire à Bidart ou sud-Biarritz qui cherche un acteur ultra-local avec un service intégré sur tout le cycle locatif.",
+      },
+      {
+        name: 'Sweet Home Holidays',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 27,
+        biensGeres: 20,
+        specialty: 'Conciergerie haut de gamme, services voyageurs premium',
+        description:
+          "Sweet Home Holidays affiche une note Google 5,0/5 sur 27 avis et se positionne sur le segment luxe de la Côte basque. Services premium voyageurs : welcome kit personnalisé, réservation activités (surf lessons Côte des Basques, dégustation vins Irouléguy, chef privé), conciergerie 24/7. Pertinente pour propriétaires de villas vue mer ou T3-T4 standing intra-muros qui ciblent une clientèle internationale exigeante (Américains, Britanniques, Espagnols haut de gamme) prête à payer 250-400 €/nuit pour un standing hôtelier.",
+      },
+      {
+        name: "La Conciergerie d'Emy",
+        commission: '20 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 10,
+        biensGeres: 12,
+        specialty: 'Conciergerie locale humaine, gestion complète',
+        description:
+          "La Conciergerie d'Emy affiche une note Google 5,0/5 sur 10 avis avec une commission claire à 20 % TTC. Acteur récent à dimension humaine (volume d'avis encore limité à surveiller dans la durée), gestion complète : annonce, communication voyageurs, check-in/check-out, ménage pro, optimisation tarifaire dynamique. Adapté pour un premier passage en LCD ou un propriétaire qui cherche un interlocuteur direct plutôt qu'une grande structure, en acceptant un volume d'avis encore faible.",
+      },
+      {
+        name: 'Les Clés Biarrotes',
+        commission: '26 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'Gestion complète propriétaires absents, commission haut de fourchette',
+        description:
+          "Les Clés Biarrotes affiche une note Google 4,5/5 sur 18 avis avec une commission haut de fourchette à 26 % TTC — justifiée par un service de gestion complète orienté propriétaires non-résidents (Parisiens, Bordelais, internationaux). Inclus : annonce, check-in/out, ménage, maintenance, gestion technique, gestion administrative déclaration meublé. Pertinente pour propriétaires éloignés qui veulent zéro charge mentale en contrepartie d'une commission élevée. La note 4,5/5 (vs 5,0 chez certains concurrents) reflète quelques retours mitigés mais une activité éprouvée dans la durée.",
+      },
+      {
+        name: 'HostnFly Biarritz',
+        url: 'https://www.hostnfly.com/conciergerie-airbnb/biarritz-bayonne-saint-jean-de-luz',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 3600,
+        biensGeres: 40,
+        specialty: 'Réseau national 130+ villes, dashboard propriétaire, +30 % revenu',
+        description:
+          "HostnFly est le 1er réseau de conciergeries Airbnb en France (130+ villes, 4,6/5 sur 3 600 avis Google nationaux). À Biarritz, l'agence couvre Biarritz + Bayonne + Saint-Jean-de-Luz avec une commission 20 % + ménage refacturé voyageur, et annonce un revenu locatif +30 % par rapport à une gestion propriétaire en direct. Dashboard propriétaire avec KPIs temps réel et prévisions de revenus. Pertinente pour propriétaires multi-villes (intégration dashboard unique) ou pour un premier passage en LCD via une structure éprouvée avec un volume d'avis très important.",
+      },
+      {
+        name: 'WeHost Pays Basque',
+        url: 'https://www.wehost.fr/conciergerie-airbnb-biarritz/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 700,
+        biensGeres: 35,
+        specialty: 'Côte basque + zones balnéaires, 7 ans expérience',
+        description:
+          "WeHost est un acteur national présent sur la Côte basque et les zones balnéaires françaises (4,3/5 sur 700 avis Google nationaux + 4,3/5 sur 230 avis Trustpilot). Sept ans d'expérience hospitality. Sur Biarritz : services personnalisés, gestion clé en main, optimisation des annonces multi-plateformes. À noter : certains avis pointent une variabilité du service sur les zones saisonnières (disponibilité ménage en juillet-août, délais de réponse). Adapté pour propriétaires qui acceptent un acteur national avec un coût de service raisonnable et un service plus standardisé que les acteurs locaux haut de gamme.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Grande Plage / Centre-ville',
+        pricePerNight: '150-280 €',
+        occupancy: 75,
+        description:
+          "Cœur emblématique de Biarritz : Hôtel du Palais, Casino Barrière, Grande Plage et place Bellevue. Restaurants, boutiques de luxe, vie nocturne. Demande LCD ultra-soutenue toute la saison (avril-octobre). Prix au m² 9 500-14 000 €. T2 dès 400 000 €. Le quartier le plus liquide en LCD à Biarritz, idéal pour clientèle balnéaire + événementiel.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Côte des Basques / Phare-Miramar',
+        pricePerNight: '160-300 €',
+        occupancy: 72,
+        description:
+          "Quartier surf emblématique (Côte des Basques) et résidentiel haut de gamme (Phare-Miramar, Beaurivage). Vue océan, demande surfeurs internationaux toute l'année. Prix au m² 11 000-18 000 € vue mer. T2 vue mer dès 480 000 €. Tarifs nuitées les plus élevés de Biarritz, clientèle internationale exigeante.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Bibi-Beaurivage',
+        pricePerNight: '130-220 €',
+        occupancy: 70,
+        description:
+          "Quartier résidentiel avec villas Belle Époque et immeubles bourgeois, proche Plage Marbella et golf de Biarritz Le Phare. Clientèle famille + golf + thalasso. Prix au m² 8 500-12 000 €. T2 dès 350 000 €. Bon compromis prestige + accessibilité, marché LCD plus calme que le centre.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Saint-Charles / Halles',
+        pricePerNight: '110-180 €',
+        occupancy: 68,
+        description:
+          "Quartier des Halles authentique avec marché couvert, restaurants de quartier et ambiance basque. À 10 min à pied de la Grande Plage. Prix au m² 6 500-9 500 €. T2 dès 280 000 €. Ticket d'entrée plus accessible avec une demande LCD soutenue toute l'année (touristes culture, mid-range).",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Lac de Marion / Aguiléra (Anglet limitrophe)',
+        pricePerNight: '90-150 €',
+        occupancy: 62,
+        description:
+          "Limite Biarritz-Anglet, quartier résidentiel calme avec golf d'Aguiléra et stade Anoeta (Biarritz Olympique rugby). Clientèle famille + sport. Prix au m² 5 500-8 000 €. T2 dès 230 000 €. ROI brut le plus élevé des quartiers Biarritz, demande estivale forte mais creux hivernal plus marqué (50 % d'occupation décembre-février).",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Bidart (sud, 5 km)',
+        pricePerNight: '110-200 €',
+        occupancy: 65,
+        description:
+          "Commune voisine sud de Biarritz, village basque authentique avec plages sauvages (Erretegia, Pavillon Royal, Uhabia). Cible familles + surfeurs cherchant un cadre plus tranquille que Biarritz centre. Prix au m² 6 000-10 000 €. T2 dès 260 000 €. Saisonnalité plus marquée (mai-septembre = 75 % du CA annuel).",
+        roiBrut: '5,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Biarritz est située en **zone tendue** (Pays basque, décret n°2023-822 du 25 août 2023) mais **n'impose pas de compensation pour les résidences secondaires en LCD**, contrairement à ses voisines Bayonne et Saint-Jean-de-Luz qui ont activé ce dispositif depuis 2024. Cette nuance change tout pour un investisseur LCD sur la Côte basque.\n\n**Numéro d'enregistrement obligatoire.** Toute location de meublé de tourisme (résidence principale ou secondaire) requiert une déclaration en mairie de Biarritz avec délivrance d'un numéro d'enregistrement à mentionner sur chaque annonce Airbnb, Booking, Abritel. À partir du 20 mai 2026, le téléservice national unique prend le relais avec harmonisation à 13 chiffres pour tous les meublés.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (logement occupé au moins 8 mois par an, sauf raison professionnelle, santé ou force majeure). Biarritz n'a pas (à ce jour) activé l'abaissement à 90 jours autorisé par la loi Le Meur 2024 en zone tendue.\n\n**Compensation : pas activée à Biarritz commune.** Bayonne et Saint-Jean-de-Luz exigent une compensation (transformation d'un local commercial équivalent en logement résidentiel) pour transformer un logement en meublé de tourisme. À Biarritz, ce mécanisme n'est **pas en vigueur** — un atout stratégique majeur pour les investisseurs LCD résidence secondaire sur la commune.\n\n**Loi Le Meur 2024.** DPE classe E minimum obligatoire (D à partir de 2034), abattement micro-BIC à 30 % pour les meublés non classés (50 % pour les classés tourisme), plafond chiffre d'affaires à 15 000 € en non classé. Biens classés F ou G au DPE **interdits à la location courte durée à partir du 1er janvier 2028**.\n\n**Sanctions Côte basque.** **5 000 €** pour défaut d'enregistrement, **10 000 €** pour dépassement des 120 jours, **20 000 €** pour fausse déclaration de résidence principale. Pour les communes qui appliquent la compensation (Bayonne, Saint-Jean-de-Luz — pas Biarritz à date), amende jusqu'à **50 000 €** pour changement d'usage illégal.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Communauté d'Agglomération Pays Basque applique une taxe de séjour de 0,75 € à 4,30 € par nuit et par personne adulte selon le classement de l'hébergement, collectée automatiquement par Airbnb. Recettes affectées à la promotion touristique du Pays basque et à la gestion des flux estivaux.",
+    concreteExample: {
+      bienType: 'T2 vue mer',
+      surface: 38,
+      pricePerNight: 145,
+      neighborhood: 'Côte des Basques',
+      revenuBrut: 33500,
+      commissionRate: 0.20,
+      menageCount: 85,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: "Faut-il une autorisation de changement d'usage à Biarritz en 2026 ?",
+        a: "Non. À ce jour, Biarritz commune n'exige pas d'autorisation de changement d'usage pour transformer une résidence secondaire en meublé de tourisme. C'est une particularité stratégique à connaître : Bayonne et Saint-Jean-de-Luz, communes voisines du Pays basque, ont activé ce dispositif et imposent la compensation (transformer un local commercial équivalent en résidentiel). À Biarritz, seul le numéro d'enregistrement en mairie + le respect des 120 nuitées résidence principale s'appliquent. Pour les résidences secondaires en LCD, la location est libre tant que le règlement de copropriété ne l'interdit pas (vérification critique avant achat). À surveiller : la loi Le Meur 2024 permet aux communes en zone tendue d'activer ce dispositif à tout moment par délibération municipale — un risque réglementaire à intégrer dans tout business plan d'achat.",
+      },
+      {
+        q: "Combien rapporte un Airbnb à Biarritz en juillet-août ?",
+        a: "Pendant les 2 mois de haute saison (juillet-août), les tarifs Airbnb à Biarritz grimpent à 220-350 €/nuit pour un T2 vue mer (×2 à ×3 vs hors saison), avec une occupation à 90-95 %. Sur 60 jours, un T2 vue mer Côte des Basques peut générer 13 000 à 18 000 € bruts — soit environ 45-55 % du CA annuel. Pour un T2 centre-ville Grande Plage hors vue mer, compter 180-250 €/nuit avec une occupation 85-90 %, soit 10 000 à 14 000 € bruts sur les 2 mois. Ajoutez les ailes de saison (juin et septembre, surf + golf) qui maintiennent 70-75 % d'occupation à 130-180 €/nuit. Verrouillez les réservations dès janvier — les familles parisiennes et les surfeurs internationaux réservent 5-6 mois à l'avance, et le pic du Festival Biarritz Amérique latine (octobre) génère un troisième pic ponctuel.",
+      },
+      {
+        q: "Vaut-il mieux investir LCD à Biarritz centre, Bidart ou Anglet ?",
+        a: "Biarritz centre (Grande Plage, Saint-Charles) offre la meilleure liquidité LCD : occupation 68-75 % toute la saison, demande lissée par tourisme balnéaire + thalasso + événementiel. Ticket d'entrée élevé (T2 dès 280 000 € hors vue mer, 480 000 € vue mer). Anglet (Aguiléra, Chambre d'Amour) offre un meilleur ROI brut (6-7,5 %) avec un ticket d'entrée 30 % moins cher, mais une occupation hivernale plus faible (50 %). Bidart combine charme village basque + plages sauvages + proximité Biarritz : ticket d'entrée intermédiaire (T2 dès 260 000 €), occupation 65 % avec une saison de mai à septembre dominante. Pour pure rentabilité, Anglet ou Bidart. Pour valorisation patrimoniale + occupation lissée, Biarritz Grande Plage. Pour clientèle internationale haut de gamme prête à payer 250-400 €/nuit, Côte des Basques ou Phare-Miramar.",
+      },
+      {
+        q: "Quelle conciergerie choisir si je n'habite pas sur la Côte basque ?",
+        a: "Pour un propriétaire non-résident (Paris, Bordeaux, Toulouse, international), 3 options selon le profil de bien. Bien standard T2 centre : HostnFly Biarritz (20 % commission, dashboard propriétaire, +30 % revenu annoncé, réseau éprouvé 130+ villes) ou Cocoonr Pays Basque (acteur local historique avec 127 avis Google, réseau national présent dans 6 villes pour les multi-investisseurs). Bien haut de gamme vue mer ou villa : Sweet Home Holidays (segment luxe, clientèle internationale, services premium voyageurs). Bien éloigné du centre ou propriétaire totalement absent : Les Clés Biarrotes (26 % TTC justifié par gestion complète zéro charge mentale et administration déclaration meublé). À éviter pour un non-résident : les conciergeries solo récentes (< 20 avis Google) qui peuvent ne pas tenir le pic de demande en juillet-août sans renforts staff.",
+      },
+    ],
+    updatedAt: '2026-05-22',
+  },
+  // ==========================================================================
+  // VANNES
+  // ==========================================================================
+  {
+    slug: 'vannes',
+    displayName: 'Vannes',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Vannes Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Vannes : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Vannes. Tarifs (17-25 %), services, avis Google, réglementation Morbihan 2026, quartiers rentables (intra-muros, Port, Conleau).",
+    kwPrincipal: 'conciergerie vannes',
+    kwSecondaires: [
+      'conciergerie airbnb vannes',
+      'conciergerie morbihan',
+      'cocoonr vannes',
+      'conciergerie golfe du morbihan',
+      'gestion locative vannes',
+    ],
+    population: 55976,
+    tourists: 2200000,
+    activeListings: 1400,
+    priceLow: 65,
+    priceHigh: 160,
+    occupancyRate: 68,
+    revpar: 65,
+    seasonality:
+      "Saisonnalité estivale marquée portée par le Golfe du Morbihan : pic juillet-août (occupation 85-92 %, clientèle balnéaire + îles Aix/Arz/Houat, tarifs ×1,5-2 vs hors saison). Saison forte avril-octobre dopée par le tourisme golfique (Golfe Morbihan), les festivals (Festival de Cornouaille à 1h30, Vannes Jazz Festival), la Semaine du Golfe tous les 2 ans. Mi-saison soutenue par la clientèle universitaire (Université Bretagne Sud, IUT) et les week-ends Rennes-Vannes (1h25 en TER). Creux limité à décembre-février.",
+    rankNational: 28,
+    introCustom:
+      "Vous avez un appartement à **Vannes** — intra-muros autour de la place Henri IV et de la cathédrale Saint-Pierre, près du port de plaisance, à Conleau ou dans le quartier Saint-Patern — que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **clientèle estivale Golfe du Morbihan** (touristes français, week-ends rennais et nantais, embarquements îles d'Arz et Houat), la **clientèle universitaire** lissée toute l'année (Université Bretagne Sud, 8 000 étudiants), la **réglementation nationale 2026** (numéro d'enregistrement 13 chiffres obligatoire à partir du 20 mai 2026, loi Le Meur), et la quinzaine de conciergeries qui se partagent un marché d'environ **1 400 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre les acteurs locaux (Les Clefs de Faustine, La Conciergerie Étoilée, Conciergerie Bienvenue) et le réseau national Cocoonr Vannes-Morbihan ?",
+    marketIntro:
+      "Vannes est la **préfecture du Morbihan** et la 3e ville de Bretagne par sa population, avec **55 976 habitants** (INSEE 2026) et une agglomération Golfe du Morbihan-Vannes Agglomération de 180 000 résidents. La commune combine **patrimoine médiéval intact** (remparts XVe siècle, ville d'art et d'histoire, cathédrale Saint-Pierre), **port de plaisance** (au cœur du Golfe du Morbihan, l'une des plus belles baies du monde labellisée), et **tissu universitaire dynamique** (Université Bretagne Sud, 8 000 étudiants).\n\nLa **clientèle LCD est mixte et lissée** : touristes balnéaires juillet-août (familles, embarquements quotidiens vers les îles d'Arz, Houat, Hoëdic depuis Port-Navalo et Conleau), week-ends rennais/nantais toute l'année (1h25 TER depuis Rennes, 1h30 voiture depuis Nantes), professionnels de la santé (CHU de Vannes-Auray) et de l'agroalimentaire, clientèle universitaire (séjours 1-6 mois via Airbnb), événementiel (Semaine du Golfe biannuelle, festivals).\n\nLes **prix immobiliers à Vannes sont accessibles** : 3 800-5 500 €/m² intra-muros, 4 500-6 500 €/m² en bord de port / Conleau, 3 000-4 200 €/m² dans les quartiers résidentiels. Un T2 intra-muros démarre à 175 000 €, un T2 vue port à 230 000 €.\n\nLe **tarif moyen nuitée est de 80-110 €** en moyenne annuelle, **120-180 €** en haute saison juillet-août intra-muros, 60-90 € en saison creuse (mais l'occupation reste à 50-60 % grâce à la clientèle universitaire et week-end pro).\n\nVannes **n'est pas classée en zone tendue par décret national** à ce jour. La déclaration en mairie reste obligatoire et le numéro d'enregistrement national sera obligatoire pour tous les meublés de tourisme à partir du 20 mai 2026 (loi Le Meur 2024).",
+    conciergeries: [
+      {
+        name: 'La Conciergerie Étoilée',
+        url: 'https://laconciergerie-etoilee.fr/',
+        commission: '17-25 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 85,
+        biensGeres: 60,
+        specialty: 'Golfe du Morbihan, équipe 10 personnes, Superhost depuis 2022',
+        description:
+          "La Conciergerie Étoilée affiche une note Google 5,0/5 sur 85 avis. Fondée en 2022 par Maïwenn et Geoffrey (passionnés voyage et LCD, Superhost Airbnb depuis 2022), équipe locale d'une dizaine de personnes. Couverture : Vannes, Baden, Arradon, Larmor Baden, Golfe du Morbihan. Grille progressive 17-25 % selon volume et services. Gestion complète : annonces, ménage, blanchisserie, optimisation tarifaire, accueil voyageurs. Pertinente pour un propriétaire qui veut le meilleur acteur local sur le Golfe du Morbihan avec une équipe étoffée capable de tenir le pic juillet-août.",
+      },
+      {
+        name: 'Les Clefs de Faustine',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 67,
+        biensGeres: 45,
+        specialty: 'Gestion sur-mesure, support 24/7, gestion immobilière',
+        description:
+          "Les Clefs de Faustine affiche une note Google 4,9/5 sur 67 avis. Positionnement sur la gestion locative et immobilière sur mesure : accueil personnalisé, services à la carte selon la typologie du bien (T2 standard vs villa de prestige). Support 24/7 pour voyageurs et propriétaires. Adapté pour propriétaires qui veulent un service flexible (commission ajustable selon le périmètre confié) et un interlocuteur unique côté gestion locative + immobilier.",
+      },
+      {
+        name: 'Conciergerie Bienvenue',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 52,
+        biensGeres: 35,
+        specialty: 'Service voyageur personnalisé, commission claire 20 %',
+        description:
+          "Conciergerie Bienvenue affiche une note Google 5,0/5 sur 52 avis avec une commission claire à 20 % TTC. Positionnement explicite sur l'expérience voyageur personnalisée : welcome kit local, recommandations restaurants/activités Golfe du Morbihan, contact direct hôte-voyageur. Inclus : annonce, ménage, linge, accueil. Adapté pour propriétaires d'un T2 ou T3 centre-ville qui privilégient la qualité de l'expérience voyageur pour fidéliser et générer du bouche-à-oreille (clientèle famille + couples week-end).",
+      },
+      {
+        name: 'Location Concept',
+        url: 'https://www.location-concept.fr/',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 60,
+        biensGeres: 50,
+        specialty: 'Vannes + Arradon + Baden, équipe dirigée par Axel Marie',
+        description:
+          "Location Concept affiche une note Google 4,9/5 sur 60 avis. Adresse : 78 Bis Avenue du 4 Août 1944, 56000 Vannes. Couverture Vannes, Arradon, Baden et alentours. Société de sous-location et conciergerie dirigée par Axel Marie. Gestion complète : annonces, communication voyageurs, accueil, ménage, linge, gestion technique. Réputation forte sur la réactivité et le professionnalisme. Adapté pour propriétaires Vannes ouest (Arradon, Baden) qui veulent un acteur ancré dans le Golfe avec une équipe réactive.",
+      },
+      {
+        name: 'Cocoonr Vannes-Morbihan',
+        url: 'https://cocoonr.fr/conciergerie-bnb-morbihan/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 52,
+        biensGeres: 70,
+        specialty: 'Réseau national Cocoonr, Vannes + Presqu\'île de Rhuys',
+        description:
+          "Cocoonr Vannes-Morbihan affiche 52 avis Google avec une note moyenne autour de 4,7/5 (Cocoonr Presqu'île de Rhuys note Google 4,7/5 sur 14 avis pour la branche Rhuys). Adresse : 10 Place de la Madeleine, 56000 Vannes. Filiale du réseau Cocoonr (Rennes, Bordeaux, Nantes, Pays basque, Morbihan) — un atout majeur pour propriétaires multi-villes qui veulent un interlocuteur national unique. Gestion complète : réservations, paiements, préparation/maintenance, blanchisserie, accueil. Adapté pour propriétaires Vannes + Rhuys ou multi-villes.",
+      },
+      {
+        name: 'HostnFly Vannes',
+        url: 'https://hostnfly.com/conciergerie-airbnb/vannes',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 3600,
+        biensGeres: 25,
+        specialty: 'Réseau national 130+ villes, dashboard propriétaire',
+        description:
+          "HostnFly Vannes fait partie du 1er réseau de conciergeries Airbnb en France (130+ villes, 4,6/5 sur 3 600 avis Google nationaux). Commission 20 % + ménage refacturé voyageur. Revenu locatif annoncé +30 % vs gestion propriétaire. Dashboard propriétaire avec KPIs temps réel, photos professionnelles, pricing dynamique. Pertinent pour propriétaires multi-villes ou pour un premier passage en LCD via une structure éprouvée avec un volume d'avis très important. À noter : présence locale plus récente à Vannes que les acteurs historiques (Cocoonr, Conciergerie Étoilée).",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Intra-muros / Cathédrale Saint-Pierre',
+        pricePerNight: '95-180 €',
+        occupancy: 75,
+        description:
+          "Cœur médiéval intra-muros, remparts XVe siècle, place Henri IV, cathédrale Saint-Pierre, maisons à colombages. Restaurants, boutiques, marché des Lices. Demande LCD ultra-soutenue toute la saison touristique. Prix au m² 4 500-5 500 €. T2 dès 175 000 €. Le quartier le plus liquide en LCD à Vannes.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Port de plaisance / La Rabine',
+        pricePerNight: '90-160 €',
+        occupancy: 72,
+        description:
+          "Port de plaisance au cœur du Golfe du Morbihan, embarcadère vers les îles (Arz, Houat, Hoëdic). Tourisme nautique fort. Promenade Pargo + Conleau accessibles. Prix au m² 4 800-6 500 €. T2 dès 200 000 €. Excellente liquidité été, bonne demande week-end toute l'année.",
+        roiBrut: '5,5 à 7,5 %',
+      },
+      {
+        name: 'Saint-Patern',
+        pricePerNight: '75-130 €',
+        occupancy: 70,
+        description:
+          "Quartier authentique adossé à l'intra-muros, dans le périmètre médiéval avec rues commerçantes piétonnes (rue Saint-Patern). Cible touristes culture + clientèle pro week-end. Prix au m² 3 800-4 800 €. T2 dès 165 000 €. Bon compromis charme + ticket d'entrée accessible.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Conleau',
+        pricePerNight: '85-150 €',
+        occupancy: 65,
+        description:
+          "Presqu'île résidentielle bord de mer au sud de Vannes, vue Golfe, plage de Conleau, embarcadère vers l'Île d'Arz (15 min de bateau). Cible familles + retraités + clientèle nautique. Prix au m² 4 500-6 000 €. T2 dès 195 000 €. Saisonnalité plus marquée (avril-octobre = 70 % du CA).",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Beaupré-Lalande / Tohannic (Université)',
+        pricePerNight: '60-100 €',
+        occupancy: 62,
+        description:
+          "Quartier résidentiel sud-est, à proximité du campus Université Bretagne Sud (Tohannic) et du CHU de Vannes-Auray. Clientèle universitaire (séjours 1-6 mois) + clientèle médicale + pro. Prix au m² 3 000-4 000 €. T2 dès 130 000 €. ROI brut le plus élevé des quartiers vannetais, demande lissée toute l'année grâce au mix étudiant + pro.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Presqu\'île de Rhuys (Arzon, Sarzeau, 25-35 km)',
+        pricePerNight: '110-200 €',
+        occupancy: 60,
+        description:
+          "Sud du Golfe du Morbihan : Arzon (Port-Navalo, Port du Crouesty), Sarzeau, Saint-Gildas-de-Rhuys. Plages, embarcadère vers Houat-Hoëdic, golf de Saint-Laurent. Cible familles + retraités + golfeurs. Prix au m² 4 200-6 500 €. T2 dès 220 000 €. Saisonnalité très marquée (70 % du CA mai-septembre).",
+        roiBrut: '5,5 à 7,5 %',
+      },
+    ],
+    regulation:
+      "Vannes **n'est pas classée en zone tendue par décret national** à ce jour (la commune n'apparaît pas dans le décret n°2023-822 du 25 août 2023 listant les communes en zone tendue de la Loi Élan). Le cadre réglementaire reste donc le régime de droit commun, durci par la loi Le Meur 2024.\n\n**Numéro d'enregistrement obligatoire.** Toute location de meublé de tourisme (résidence principale ou secondaire) requiert une déclaration en mairie de Vannes avec délivrance d'un numéro d'enregistrement à mentionner sur chaque annonce Airbnb, Booking, Abritel. À partir du 20 mai 2026, le téléservice national unique (apimeubles.finances.gouv.fr) prendra le relais avec harmonisation à 13 chiffres pour tous les meublés.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (logement occupé au moins 8 mois par an, sauf raison professionnelle, santé ou force majeure). Vannes n'étant pas en zone tendue par décret, l'abaissement à 90 jours autorisé par la loi Le Meur ne s'applique pas.\n\n**Pas d'autorisation de changement d'usage à ce jour.** Vannes (moins de 200 000 habitants et hors zone tendue par décret) n'a pas activé l'autorisation de changement d'usage pour les résidences secondaires en LCD. La location de meublé de tourisme reste libre tant que le règlement de copropriété ne l'interdit pas (vérification critique avant achat).\n\n**Loi Le Meur 2024.** DPE classe E minimum obligatoire (D à partir de 2034), abattement micro-BIC à 30 % pour les meublés non classés (50 % pour les classés tourisme), plafond chiffre d'affaires à 15 000 € en non classé. Biens classés F ou G au DPE **interdits à la location courte durée à partir du 1er janvier 2028** — un point à anticiper sur le parc ancien intra-muros vannetais (maisons à colombages, immeubles anciens).\n\n**Sanctions nationales.** **5 000 €** pour défaut d'enregistrement, **10 000 €** pour dépassement des 120 jours, **20 000 €** pour fausse déclaration de résidence principale.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Golfe du Morbihan-Vannes Agglomération applique une taxe de séjour de 0,75 € à 4,30 € par nuit et par personne adulte selon le classement de l'hébergement, collectée automatiquement par Airbnb. Recettes affectées à la promotion touristique du Golfe du Morbihan (labellisé Baie la plus belle du monde) et à la gestion des flux estivaux îles + ports.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 95,
+      neighborhood: 'Intra-muros Vannes',
+      revenuBrut: 24300,
+      commissionRate: 0.20,
+      menageCount: 75,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Vannes est-elle classée en zone tendue pour Airbnb en 2026 ?",
+        a: "Non. À la date de mai 2026, Vannes n'apparaît pas dans la liste des communes classées en zone tendue par le décret n°2023-822 du 25 août 2023 (qui liste les communes éligibles aux mesures renforcées de la loi Élan). Conséquence directe : la limite de 120 nuitées/an pour les résidences principales s'applique (pas d'abaissement à 90 jours possible sans classement zone tendue), il n'y a pas d'autorisation de changement d'usage obligatoire pour les résidences secondaires, et la commune ne peut pas activer la compensation (transformer un local commercial en résidentiel pour transformer un logement en meublé de tourisme). Le régime reste donc le droit commun : déclaration en mairie, numéro d'enregistrement national obligatoire à partir du 20 mai 2026, respect du règlement de copropriété, respect du DPE (classe E minimum). C'est un atout pour les investisseurs LCD à Vannes par rapport à Rennes (zone tendue, abaissement à 90 jours possible).",
+      },
+      {
+        q: "Combien rapporte un Airbnb à Vannes en été ?",
+        a: "Pendant les 2 mois de haute saison (juillet-août), un T2 intra-muros Vannes (place Henri IV, cathédrale) se loue 130-180 €/nuit avec une occupation 85-92 %, soit 7 000 à 10 000 € bruts sur les 2 mois. Un T2 vue port (Rabine) atteint 140-200 €/nuit avec la même occupation, soit 7 500 à 11 000 €. Sur la presqu'île de Rhuys (Arzon, Sarzeau), les tarifs grimpent à 150-250 €/nuit pour un T2 vue Golfe avec une occupation 90 % — mais la saison est concentrée mai-septembre (70 % du CA annuel sur 5 mois). Ajoutez les ailes de saison (mai-juin et septembre, embarquements îles + golfeurs Saint-Laurent) qui maintiennent 65-75 % d'occupation à 90-130 €/nuit. La Semaine du Golfe (biannuelle, mi-mai) génère un pic de réservations dès janvier-février.",
+      },
+      {
+        q: "Vaut-il mieux louer en LCD à Vannes intra-muros ou sur la presqu'île de Rhuys ?",
+        a: "Vannes intra-muros offre la meilleure liquidité LCD : occupation 75 % sur 10 mois grâce au mix touristes (juillet-août), week-ends pro Rennes/Nantes, étudiants Université Bretagne Sud (séjours 1-6 mois via Airbnb), et clientèle CHU. Ticket d'entrée : T2 dès 175 000 €. ROI brut 6-8 %. La presqu'île de Rhuys (Arzon, Sarzeau, Port-Navalo) offre des tarifs nuitées 30-50 % plus élevés en été (150-250 €/nuit pour un T2 vue Golfe) mais une saison concentrée mai-septembre, avec un creux hivernal sévère (30-40 % d'occupation novembre-mars). Ticket d'entrée plus élevé (T2 dès 220 000 €). Pour pure rentabilité lissée annuelle, Vannes intra-muros ou Saint-Patern. Pour pur revenu estival + investissement plaisir + autoconsommation été, Rhuys. Pour ROI brut maximal, Beaupré-Lalande (proche Université + CHU) à 7-9 % grâce à la demande étudiante long séjour.",
+      },
+    ],
+    updatedAt: '2026-05-22',
+  },
+  // ==========================================================================
+  // AMIENS
+  // ==========================================================================
+  {
+    slug: 'amiens',
+    displayName: 'Amiens',
+    region: 'Hauts-de-France',
+    regionSlug: 'hauts-de-france',
+    title: 'Conciergerie Amiens Airbnb : comparatif 2026 des 5 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Amiens : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 5 meilleures conciergeries Airbnb à Amiens. Tarifs (15-25 %), services, avis Google, réglementation 2026, quartiers rentables (Saint-Leu, Hyper-centre, Henriville).",
+    kwPrincipal: 'conciergerie amiens',
+    kwSecondaires: [
+      'conciergerie airbnb amiens',
+      'gestion locative amiens',
+      'location courte duree amiens',
+      'meuble tourisme amiens',
+      'airbnb saint-leu amiens',
+    ],
+    population: 136331,
+    tourists: 1500000,
+    activeListings: 850,
+    priceLow: 50,
+    priceHigh: 110,
+    occupancyRate: 62,
+    revpar: 42,
+    seasonality:
+      "Saisonnalité plus lissée que les villes balnéaires, avec un pic estival modéré (occupation 75-82 % juin-août, tourisme cathédrale UNESCO + Maison Jules Verne + hortillonnages). Pic ponctuel décembre lors du Marché de Noël (l'un des plus grands du Nord, 130 chalets, 2 millions de visiteurs). Demande pro et événementielle toute l'année (CHU d'Amiens, Université de Picardie Jules Verne, salons), week-ends parisiens via TGV (1h10). Festival International du Film en novembre (4e plus important festival film français). Creux limité à janvier-février.",
+    rankNational: 38,
+    introCustom:
+      "Vous avez un appartement à **Amiens** — dans le quartier pittoresque de Saint-Leu avec ses canaux, en hyper-centre près du Beffroi et de la cathédrale Notre-Dame UNESCO, à Henriville ou près de la gare TGV — que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **clientèle culture toute l'année** (cathédrale Notre-Dame d'Amiens, plus grande cathédrale gothique de France, classée UNESCO, 800 000 visiteurs annuels), la **clientèle pro** (CHU d'Amiens, université Jules Verne, salons), les **week-ends parisiens** (TGV 1h10 depuis Paris-Nord, 6 trains/jour), le **Marché de Noël** qui draine 2 millions de visiteurs en décembre, et la dizaine de conciergeries qui se partagent un marché d'environ **850 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre les acteurs locaux (GET IMMO, AmBiens, Athéna) et les réseaux (Primo, YourHostHelper) ?",
+    marketIntro:
+      "Amiens est la **préfecture de la Somme** et la capitale régionale historique de la Picardie avec **136 331 habitants** (INSEE 2026) et une métropole d'**184 392 résidents**. La ville combine **patrimoine UNESCO majeur** (cathédrale Notre-Dame d'Amiens, plus grande cathédrale gothique de France, 1220, 800 000 visiteurs/an), **héritage Jules Verne** (Maison de l'écrivain où il a vécu 18 ans), **hortillonnages** (300 hectares de jardins flottants accessibles en barque, emblème de la ville), et **quartier Saint-Leu** (Venise du Nord, canaux pittoresques, restaurants, vie nocturne).\n\nLa **clientèle LCD est très lissée** : tourisme culture toute l'année (cathédrale UNESCO + Maison Jules Verne + Cirque d'hiver Jules Verne), Marché de Noël décembre (l'un des plus grands de France, 2 millions de visiteurs, 130 chalets), Festival International du Film d'Amiens en novembre (4e festival français), professionnels CHU (1 850 lits, recrutement national) + Université Picardie Jules Verne (30 000 étudiants), week-ends parisiens via TGV (1h10 depuis Paris-Nord, 6 trains directs/jour).\n\nLes **prix immobiliers à Amiens sont parmi les plus accessibles de France** : 2 200-3 000 €/m² en centre, 2 800-3 800 €/m² à Saint-Leu (le quartier le plus prisé), 1 800-2 500 €/m² dans les quartiers résidentiels. Un T2 hyper-centre démarre à **95 000 €**, un T2 Saint-Leu vue canal à 135 000 €.\n\nLe **tarif moyen nuitée est de 65-90 €** en moyenne annuelle, **90-130 €** en haute saison (juin-août + Marché de Noël), 50-70 € en saison creuse (mais l'occupation reste à 55-65 % grâce au mix pro + universitaire + cathédrale).\n\nAmiens **n'est pas classée en zone tendue par décret national** à ce jour et applique le régime de droit commun (déclaration en mairie obligatoire, 120 nuitées résidence principale, numéro d'enregistrement national à partir du 20 mai 2026).",
+    conciergeries: [
+      {
+        name: 'Primo Conciergerie Amiens',
+        url: 'https://www.primoconciergerie.fr/conciergerie-amiens/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 25,
+        biensGeres: 30,
+        specialty: 'Réseau national 90 agences, équipe locale dédiée Amiens',
+        description:
+          "Primo Conciergerie Amiens affiche une note Google 5,0/5 (équipe locale François et Igor, gérants franchisés du réseau Primo Conciergerie présent dans 90 villes françaises). Gestion complète : annonces, ménage, blanchisserie, accueil voyageurs, maintenance, optimisation tarifaire dynamique. Disponibilité 24/7. Adapté pour propriétaires qui veulent à la fois la rigueur d'un réseau national et la proximité d'une équipe locale dédiée Amiens + alentours.",
+      },
+      {
+        name: 'GET IMMO',
+        url: 'https://get-immo-lille.fr/index.php/conciergerie-airbnb-amiens-douai/',
+        commission: 'sur revenu',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 2000,
+        biensGeres: 50,
+        specialty: 'Amiens + Douai, gestion 50+ biens depuis 2020, note Airbnb 4,81',
+        description:
+          "GET IMMO est l'acteur le plus établi sur Amiens (et Douai) avec **50+ biens gérés depuis 2020** et une note Airbnb 4,81/5 sur 2 000+ avis voyageurs vérifiés. Gestion clé en main : annonces optimisées, ménage professionnel, accueil voyageurs, support 24/7. Gaetan (fondateur) accompagne propriétaires et investisseurs pour valoriser et maximiser les rendements via Airbnb et Booking. Pertinente pour propriétaires multi-biens ou investisseurs débutants qui veulent un acteur éprouvé avec un volume d'avis voyageurs très important.",
+      },
+      {
+        name: 'Conciergerie AmBiens',
+        url: 'https://conciergerie-ambiens.fr/a-propos/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 13,
+        biensGeres: 15,
+        specialty: 'Conciergerie de proximité, dimension familiale',
+        description:
+          "Conciergerie AmBiens affiche une note Google 5,0/5 sur 13 avis. Structure à taille humaine et dimension familiale (volume d'avis encore limité à surveiller dans la durée). Service complet ou à la carte selon les besoins du propriétaire. Pertinente pour un propriétaire d'un T2-T3 amienois qui privilégie la proximité et un interlocuteur unique plutôt qu'une grande structure, en acceptant un volume d'avis encore réduit.",
+      },
+      {
+        name: 'Athéna Conciergerie',
+        url: 'https://athenaconciergerie.fr/',
+        commission: 'sur devis ou forfait',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 12,
+        biensGeres: 12,
+        specialty: 'Haut de gamme, gestion biens de prestige Amiens',
+        description:
+          "Athéna Conciergerie se positionne sur le segment haut de gamme à Amiens, spécialisée dans la gestion de biens de prestige (4,7/5 sur 12 avis Google, volume encore limité). Excellence + discrétion + attention aux détails, service 24/7. Annonces optimisées, gestion réservations, communication voyageurs. Choix commission sur revenu OU forfait fixe selon le profil du bien. Rapports détaillés performance. Pertinente pour propriétaires de biens haut de gamme intra-muros ou maisons de caractère qui ciblent une clientèle CSP+.",
+      },
+      {
+        name: 'YourHostHelper Amiens',
+        url: 'https://yourhosthelper.com/conciergerie-amiens/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 24,
+        biensGeres: 18,
+        specialty: 'Réseau national 20+ villes, dashboard propriétaire, pricing dynamique',
+        description:
+          "YourHostHelper Amiens fait partie du réseau national YourHostHelper (présent dans 20+ villes françaises). Commission fixe à 20 % sur le revenu brut + ménage refacturé voyageur. Pas de frais si le logement n'est pas loué. Service inclus : annonces optimisées, photos professionnelles, pricing dynamique quotidien, synchronisation multi-plateformes (Airbnb + Booking + Abritel), accueil 24/7, ménage professionnel. Adapté pour propriétaires multi-villes (intégration dashboard unique) ou pour un premier passage en LCD via une structure éprouvée.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Saint-Leu (Venise du Nord)',
+        pricePerNight: '85-150 €',
+        occupancy: 70,
+        description:
+          "Quartier emblématique d'Amiens, surnommé la Venise du Nord pour ses canaux pittoresques traversant les maisons colorées. Restaurants, bars, vie nocturne. À 5 min à pied de la cathédrale. Demande LCD ultra-soutenue : tourisme culture + Marché de Noël + nuits étudiantes. Prix au m² 2 800-3 800 €. T2 dès 135 000 €. Le quartier le plus liquide en LCD à Amiens.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Hyper-centre (Beffroi / Cathédrale)',
+        pricePerNight: '75-130 €',
+        occupancy: 68,
+        description:
+          "Cœur historique autour du Beffroi (UNESCO), cathédrale Notre-Dame d'Amiens (UNESCO), place Gambetta. Boutiques, restaurants, marché des Halles. À 5 min à pied de la gare TGV. Demande LCD lissée (touristes culture + pro + Marché de Noël). Prix au m² 2 400-3 200 €. T2 dès 110 000 €. Excellente liquidité, ticket d'entrée accessible.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Henriville',
+        pricePerNight: '70-110 €',
+        occupancy: 65,
+        description:
+          "Quartier résidentiel haut de gamme au sud-est, immeubles bourgeois Belle Époque, hôtels particuliers, proximité Parc Saint-Pierre. Cible familles + clientèle CSP+ + week-ends pro. Prix au m² 2 600-3 400 €. T2 dès 120 000 €. Bon compromis standing + accessibilité, demande lissée toute l'année.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Saint-Acheul / Faubourg de Hem (Université)',
+        pricePerNight: '55-90 €',
+        occupancy: 62,
+        description:
+          "Quartiers résidentiels sud, à proximité de l'Université Picardie Jules Verne (30 000 étudiants) et du CHU. Clientèle étudiante (séjours 1-6 mois) + médicale + pro. Prix au m² 1 800-2 400 €. T2 dès 85 000 €. Ticket d'entrée le plus accessible d'Amiens, ROI brut maximal, demande lissée grâce au mix étudiant + médical + pro.",
+        roiBrut: '8 à 10 %',
+      },
+      {
+        name: 'Saint-Pierre / Hortillonnages',
+        pricePerNight: '70-120 €',
+        occupancy: 64,
+        description:
+          "Quartier nord-est aux portes des Hortillonnages (300 hectares de jardins flottants emblématiques), Maison Jules Verne à 10 min. Cible familles + touristes culture + week-end nature. Prix au m² 2 100-2 800 €. T2 dès 100 000 €. Demande touristique forte avril-octobre (visites guidées hortillonnages en barque), creux hivernal.",
+        roiBrut: '7 à 8,5 %',
+      },
+      {
+        name: 'Quartier Gare / Saint-Honoré',
+        pricePerNight: '65-105 €',
+        occupancy: 66,
+        description:
+          "Quartier autour de la gare TGV Amiens, proche centre commercial Amiens-Glisy et de l'A16. Cible voyageurs TGV Paris-Amiens (1h10), clientèle pro courte durée, événementiel CHU. Prix au m² 2 000-2 700 €. T2 dès 90 000 €. Bon ROI brut grâce à un mix demande pro + touristes en transit.",
+        roiBrut: '7,5 à 9 %',
+      },
+    ],
+    regulation:
+      "Amiens **n'est pas classée en zone tendue par décret national** à ce jour (la commune n'apparaît pas dans le décret n°2023-822 du 25 août 2023 listant les communes en zone tendue). La taille de la commune (136 331 habitants, sous le seuil des 200 000) et l'absence de classement zone tendue maintiennent un cadre réglementaire de droit commun, durci par la loi Le Meur 2024.\n\n**Numéro d'enregistrement obligatoire.** Toute location de meublé de tourisme (résidence principale ou secondaire) requiert une déclaration en mairie d'Amiens (formulaire CERFA 14004, service urbanisme tel. 03.21.87.80.62 — vérifier le contact à jour). À partir du 20 mai 2026, le téléservice national unique (apimeubles.finances.gouv.fr) prendra le relais avec harmonisation à 13 chiffres pour tous les meublés.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (logement occupé au moins 8 mois par an, sauf raison professionnelle, santé ou force majeure). Amiens n'étant pas en zone tendue, l'abaissement à 90 jours autorisé par la loi Le Meur ne s'applique pas.\n\n**Pas d'autorisation de changement d'usage à ce jour.** Amiens (moins de 200 000 habitants et hors zone tendue par décret) n'a pas activé l'autorisation de changement d'usage pour les résidences secondaires en LCD. La location de meublé de tourisme reste libre tant que le règlement de copropriété ne l'interdit pas — point à vérifier avant tout achat, notamment sur les copropriétés Belle Époque d'Henriville et Saint-Leu où certains règlements anciens peuvent interdire la location courte durée.\n\n**Loi Le Meur 2024.** DPE classe E minimum obligatoire (D à partir de 2034), abattement micro-BIC à 30 % pour les meublés non classés (50 % pour les classés tourisme), plafond chiffre d'affaires à 15 000 € en non classé. Biens classés F ou G au DPE **interdits à la location courte durée à partir du 1er janvier 2028** — un point critique sur le parc ancien amienois (immeubles XIXe Saint-Leu, hôtels particuliers Henriville).\n\n**Sanctions nationales.** **5 000 €** pour défaut d'enregistrement, **10 000 €** pour dépassement des 120 jours, **20 000 €** pour fausse déclaration de résidence principale.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Amiens Métropole applique une taxe de séjour de 0,55 € à 4,30 € par nuit et par personne adulte selon le classement de l'hébergement, collectée automatiquement par Airbnb. Recettes affectées à la promotion touristique de la métropole et au financement d'événements (Marché de Noël, Festival International du Film, hortillonnages).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 75,
+      neighborhood: 'Saint-Leu (Venise du Nord)',
+      revenuBrut: 17600,
+      commissionRate: 0.20,
+      menageCount: 70,
+      menageUnitCost: 45,
+    },
+    extraFaq: [
+      {
+        q: "Pourquoi le ticket d'entrée immobilier à Amiens est-il aussi bas ?",
+        a: "Amiens combine un parc immobilier ancien important (immeubles XIXe + Belle Époque) hérité de son passé industriel textile, un foncier abondant en périphérie (commune étendue de 49 km², 5e plus vaste commune française), et un marché locatif principalement résidentiel longue durée (CHU + Université + emploi tertiaire) qui n'a pas connu la pression LCD des villes touristiques majeures. Conséquence : un T2 hyper-centre démarre à 95 000 €, un T2 Saint-Leu vue canal à 135 000 €. À comparer avec Lille (4 500 €/m² centre) ou Reims (3 800 €/m² centre). Pour les investisseurs LCD débutants ou multi-biens, Amiens offre un excellent ratio ticket d'entrée / revenu locatif : un T2 hyper-centre à 110 000 € peut générer 9 000 à 12 000 € bruts annuels en LCD, soit un ROI brut de 8-10 %.",
+      },
+      {
+        q: "Le Marché de Noël d'Amiens vaut-il la peine pour un Airbnb ?",
+        a: "Oui — c'est l'un des deux pics annuels de la saisonnalité amienoise (l'autre étant juillet-août). Le Marché de Noël d'Amiens (l'un des plus grands de France, 130 chalets, 2 millions de visiteurs sur 5 semaines fin novembre à fin décembre) génère un afflux massif de visiteurs du Nord, d'Île-de-France, de Belgique et des Pays-Bas. Pour un T2 Saint-Leu ou hyper-centre, les tarifs grimpent à 110-160 €/nuit (vs 70-90 € hors saison) avec une occupation 85-95 % sur les week-ends et 70-80 % en semaine. Sur les 5 semaines, un T2 bien placé peut générer 3 500 à 5 500 € bruts — soit environ 25-30 % du CA annuel. Verrouillez les dates dès septembre — les familles flamandes et néerlandaises réservent 3-4 mois à l'avance pour les week-ends marché de Noël.",
+      },
+      {
+        q: "Quel quartier offre le meilleur ROI brut à Amiens ?",
+        a: "Saint-Acheul / Faubourg de Hem (sud, proche Université Picardie Jules Verne et CHU) offre le ROI brut maximal à Amiens (8-10 %). Combinaison : ticket d'entrée le plus bas (T2 dès 85 000 €), demande lissée toute l'année grâce au mix étudiant (30 000 étudiants à l'université, séjours Airbnb 1-6 mois pour échanges Erasmus + visiteurs familles + stagiaires CHU) + médical (CHU 1 850 lits, recrutement national, séjours 1-3 mois pour internat) + pro. Pour pure rentabilité, c'est le meilleur choix. Saint-Leu offre une meilleure liquidité touristique (ROI 6,5-8 %) mais ticket d'entrée plus élevé (T2 dès 135 000 €). Hyper-centre offre un excellent compromis (ROI 7-9 %, T2 dès 110 000 €) avec une demande lissée touristes + pro grâce à la proximité gare TGV (1h10 Paris-Nord).",
+      },
+    ],
+    updatedAt: '2026-05-22',
+  },
+  // ==========================================================================
+  // DIJON
+  // ==========================================================================
+  {
+    slug: 'dijon',
+    displayName: 'Dijon',
+    region: 'Bourgogne-Franche-Comté',
+    regionSlug: 'bourgogne-franche-comte',
+    title: 'Conciergerie Dijon Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Dijon : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Dijon. Tarifs (15-25 %), services, avis Google, réglementation 2026, quartiers rentables (Palais des Ducs, Darcy, Université).",
+    kwPrincipal: 'conciergerie dijon',
+    kwSecondaires: [
+      'conciergerie airbnb dijon',
+      'gestion locative dijon',
+      'location courte duree dijon',
+      'airbnb climats bourgogne',
+      'meuble tourisme dijon',
+    ],
+    population: 163780,
+    tourists: 6000000,
+    activeListings: 1100,
+    priceLow: 55,
+    priceHigh: 130,
+    occupancyRate: 66,
+    revpar: 50,
+    seasonality:
+      "Saisonnalité lissée toute l'année grâce au tourisme gastronomique et œnotouristique : pic juin-octobre (occupation 75-85 %, vendanges Côte d'Or septembre-octobre, Foire Internationale Gastronomique d'Automne en novembre — l'une des plus importantes de France), mi-saison printemps (Climats UNESCO, Cité Internationale Gastronomie et Vin), creux limité à janvier-février. Pic ponctuel décembre avec le Marché de Noël. Demande pro lissée (CHU de Dijon, Université de Bourgogne, INRAE, Vitagora pôle de compétitivité gastronomie).",
+    rankNational: 25,
+    introCustom:
+      "Vous avez un appartement à **Dijon** — autour du Palais des Ducs et des États de Bourgogne (place de la Libération, place François Rude), dans le quartier Darcy près de la gare, à Wilson ou au cœur du quartier universitaire — que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **clientèle œnotouristique** (Climats du vignoble de Bourgogne classés UNESCO, Route des Grands Crus jusqu'à Beaune, Cité Internationale de la Gastronomie et du Vin ouverte en 2022), le **tourisme patrimonial** (Palais des Ducs, secteur sauvegardé, hôtels particuliers Renaissance), la **demande pro** (CHU, Université de Bourgogne, Vitagora, salons), les **6 millions de visiteurs annuels** estimés sur Dijon Métropole, et la quinzaine de conciergeries qui se partagent un marché d'environ **1 100 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre les acteurs locaux haut de gamme (Lux'Apart, La Conciergerie d'Émile) et les réseaux nationaux (Primo, YourHostHelper) ?",
+    marketIntro:
+      "Dijon est la **préfecture de la Côte d'Or** et la capitale historique du duché de Bourgogne avec **163 780 habitants** (INSEE 2026) et une métropole de **252 000 résidents**. La ville est devenue ces dernières années un **pôle touristique de premier plan** porté par trois leviers : les **Climats du vignoble de Bourgogne classés UNESCO** depuis 2015 (1 247 climats viticoles s'étendant de Dijon à Santenay), la **Cité Internationale de la Gastronomie et du Vin** (CIGV, ouverte en mai 2022, projet de 250 millions d'euros), et le **secteur sauvegardé Palais des Ducs et anciens hôtels particuliers Renaissance** (5e secteur sauvegardé de France par sa superficie).\n\nLa **clientèle LCD est très lissée** : tourisme œnotouristique d'avril à octobre (vendanges Côte d'Or en septembre-octobre, dégustations sur la Route des Grands Crus de Dijon à Beaune), gastronomique toute l'année (Foire Internationale Gastronomique d'Automne en novembre — l'une des 10 plus importantes de France, 1 600 exposants, 150 000 visiteurs), week-ends parisiens (TGV 1h35 depuis Paris Gare de Lyon, 22 trains/jour), pro lissés (CHU de Dijon, Université de Bourgogne 27 000 étudiants, INRAE, Vitagora pôle de compétitivité gastronomie).\n\nLes **prix immobiliers à Dijon restent accessibles** : 2 800-4 000 €/m² en centre, 3 800-5 500 €/m² dans le secteur sauvegardé (Palais des Ducs, rue de la Liberté), 2 200-3 200 €/m² dans les quartiers résidentiels. Un T2 hyper-centre démarre à 130 000 €, un T2 secteur sauvegardé Palais des Ducs à 175 000 €.\n\nLe **tarif moyen nuitée est de 75-100 €** en moyenne annuelle, **110-160 €** en haute saison (vendanges + Foire Gastronomique + Marché de Noël), 55-80 € en saison creuse (mais l'occupation reste à 55-65 % grâce au mix pro + universitaire + œnotouristique).\n\nDijon **n'est pas classée en zone tendue par décret national** à ce jour (la métropole n'apparaît pas dans le décret n°2023-822 du 25 août 2023). Le régime reste celui du droit commun, durci par la loi Le Meur 2024.",
+    conciergeries: [
+      {
+        name: "Lux'Apart",
+        url: 'https://luxapart.fr/conciergerie-dijon/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 17,
+        biensGeres: 25,
+        specialty: 'Dijon centre, 9 Bd Carnot, gestion 7j/7',
+        description:
+          "Lux'Apart affiche une note Google 5,0/5 sur 17 avis. Adresse : 9 Boulevard Carnot, Dijon. Ouvert 7j/7 à partir de 9h. Commission claire à 25 % par réservation. Gestion complète : check-in/check-out, ménage professionnel, blanchisserie, gestion consommables, communication voyageurs, annonces optimisées, gestion réservations, optimisation calendrier et tarifs. Société dynamique spécialisée dans la LCD sur Dijon et alentours. Adapté pour propriétaires hyper-centre qui veulent une équipe locale réactive avec un acteur établi disposant d'un véritable bureau de proximité.",
+      },
+      {
+        name: "La Conciergerie d'Émile",
+        url: 'https://laconciergeriedemile.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 37,
+        biensGeres: 40,
+        specialty: 'Plusieurs packages, gestion personnalisée locale',
+        description:
+          "La Conciergerie d'Émile affiche une note Google 4,9/5 sur 37 avis (plus gros volume d'avis vérifiés à Dijon). Plusieurs formules disponibles selon le niveau de délégation : pack basique (annonce + ménage), pack premium (gestion complète + optimisation tarifaire), pack sur-mesure (services voyageurs additionnels). Acteur ancré dans le centre de Dijon avec une expertise locale solide. Adapté pour propriétaires qui veulent une gestion personnalisée plutôt qu'une commission standardisée et qui apprécient un acteur avec un historique d'avis vérifiés.",
+      },
+      {
+        name: 'Zenica Conciergerie',
+        url: 'https://zenica-conciergerie.fr/',
+        commission: '20,5-21,5 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 20,
+        biensGeres: 30,
+        specialty: 'Saint-Apollinaire (Dijon est), gestion complète',
+        description:
+          "Zenica Conciergerie affiche une note Google 5,0/5. Adresse : 21850 Saint-Apollinaire (banlieue est de Dijon, proche A38). Disponible 7j/7 de 9h à 19h. Commission moyenne 20,5-21,5 % du revenu locatif total. Gestion complète : annonces, réservations, ménage hôtelier, linge professionnel, consommables, accueil voyageurs, optimisation tarifaire. Approche rigoureuse et personnalisée. Pertinente pour propriétaires Dijon est + Saint-Apollinaire + Quetigny + Chevigny qui veulent un acteur proche géographiquement.",
+      },
+      {
+        name: 'At\'Home B&B',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 16,
+        biensGeres: 20,
+        specialty: 'Annonces multi-plateformes, support 24/7',
+        description:
+          "At'Home B&B affiche une note Google 5,0/5 sur 16 avis. Gestion multi-plateformes (Airbnb + Booking + Abritel synchronisés en temps réel via channel manager), support 24/7 pour voyageurs et propriétaires. Service inclus : annonces optimisées, photos professionnelles, pricing dynamique quotidien, accueil voyageurs, ménage professionnel. Adapté pour propriétaires qui veulent maximiser le taux d'occupation via la diffusion multi-plateformes plutôt que la seule visibilité Airbnb.",
+      },
+      {
+        name: 'Les Suites Indivio',
+        url: 'https://www.les-suites-indivio.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 5.0,
+        reviews: 8,
+        biensGeres: 10,
+        specialty: 'Dijon + Beaune + Côte des Vins, standing hôtelier',
+        description:
+          "Les Suites Indivio affiche une note Google 5,0/5 sur 8 avis (volume encore réduit, acteur récent à surveiller dans la durée). Positionnement explicite sur la combinaison location saisonnière + excellence hôtelière. Couverture Dijon + Beaune + Côte des Vins (axe Route des Grands Crus). Service exclusif et personnalisé. Ménage inclus dans la commission (rare sur le marché). Pertinente pour propriétaires de biens haut de gamme intra-muros Dijon ou Beaune visant une clientèle œnotouristique internationale (Américains, Britanniques, Asiatiques).",
+      },
+      {
+        name: 'La Conciergerie de Cindy',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 14,
+        biensGeres: 12,
+        specialty: 'Conciergerie locale, attention aux détails',
+        description:
+          "La Conciergerie de Cindy affiche une note Google 5,0/5 sur 14 avis. Structure à dimension humaine portée sur l'attention personnalisée à chaque bien et chaque voyageur (volume d'avis encore réduit à surveiller dans la durée). Adaptée pour propriétaires d'un T2-T3 dijonnais qui privilégient un service ultra-personnalisé plutôt qu'une grande structure de réseau. Bonne option pour un premier passage en LCD avec un interlocuteur unique disponible.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Secteur sauvegardé / Palais des Ducs',
+        pricePerNight: '100-160 €',
+        occupancy: 75,
+        description:
+          "Cœur historique et secteur sauvegardé (5e plus vaste de France) : Palais des Ducs et des États de Bourgogne, place de la Libération, place François Rude (\"Bareuzai\"), rue des Forges, hôtels particuliers Renaissance. Restaurants étoilés, boutiques, vie culturelle. Demande LCD ultra-soutenue toute l'année. Prix au m² 3 800-5 500 €. T2 dès 175 000 €. Le quartier le plus liquide en LCD à Dijon.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Darcy / Gare TGV',
+        pricePerNight: '85-130 €',
+        occupancy: 72,
+        description:
+          "Quartier Darcy autour du Jardin Darcy et de la gare TGV (1h35 Paris Gare de Lyon, 22 trains/jour). Bourgeois XIXe + immeubles haussmanniens. Demande LCD lissée (touristes culture + pro + week-ends parisiens). Prix au m² 2 800-3 800 €. T2 dès 130 000 €. Excellente liquidité grâce à la proximité gare + centre.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Wilson / République',
+        pricePerNight: '75-115 €',
+        occupancy: 68,
+        description:
+          "Quartier résidentiel cossu autour de la place Wilson et de la rue de la République, immeubles bourgeois Belle Époque, hôtels particuliers, ambiance plus calme que le centre. Cible familles + clientèle CSP+ + week-ends pro. Prix au m² 2 600-3 600 €. T2 dès 125 000 €. Bon compromis standing + accessibilité.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Université (Mansart / Montmuzard)',
+        pricePerNight: '60-95 €',
+        occupancy: 64,
+        description:
+          "Quartier universitaire est, à proximité du campus de l'Université de Bourgogne (27 000 étudiants, INRAE, Vitagora). Clientèle étudiante (Erasmus, séjours 1-6 mois) + médicale (CHU à 10 min) + pro. Prix au m² 2 200-3 000 €. T2 dès 110 000 €. ROI brut élevé grâce à la demande lissée étudiant + médical + pro toute l'année.",
+        roiBrut: '7 à 8,5 %',
+      },
+      {
+        name: 'Faubourg Raines / Maladière',
+        pricePerNight: '65-100 €',
+        occupancy: 62,
+        description:
+          "Quartier résidentiel sud-est, ambiance village avec petits commerces et marché. À 10 min en tram du centre. Clientèle pro + touristes en transit + universitaires. Prix au m² 2 100-2 800 €. T2 dès 100 000 €. Ticket d'entrée accessible avec une demande lissée pro + week-end.",
+        roiBrut: '7 à 8,5 %',
+      },
+      {
+        name: 'Axe Côte des Vins (Beaune 45 km / Gevrey 10 km)',
+        pricePerNight: '120-220 €',
+        occupancy: 68,
+        description:
+          "Côte de Nuits + Côte de Beaune sud de Dijon : Gevrey-Chambertin, Vougeot, Nuits-Saint-Georges, Beaune (45 km). Cible œnotourisme international (Américains, Britanniques, Asiatiques) et vendanges septembre-octobre. Prix au m² 3 000-5 500 € à Beaune, 2 500-4 200 € à Nuits-Saint-Georges. T2 dès 160 000 € à Nuits-Saint-Georges. Saisonnalité marquée (60-70 % du CA sur 5 mois mai-octobre + Marché de Noël Beaune).",
+        roiBrut: '5 à 7 %',
+      },
+    ],
+    regulation:
+      "Dijon **n'apparaît pas à ce jour dans la liste des communes classées en zone tendue par décret national** (le décret n°2023-822 du 25 août 2023 ne mentionne pas Dijon métropole). Le cadre réglementaire reste donc le régime de droit commun, durci par la loi Le Meur 2024.\n\n**Numéro d'enregistrement obligatoire.** Toute location de meublé de tourisme (résidence principale ou secondaire) requiert une déclaration en mairie de Dijon avec délivrance d'un numéro d'enregistrement à mentionner sur chaque annonce Airbnb, Booking, Abritel. À partir du 20 mai 2026, le téléservice national unique (apimeubles.finances.gouv.fr) prendra le relais avec harmonisation à 13 chiffres pour tous les meublés. Service Réglementation à contacter directement en mairie pour validation des documents.\n\n**Résidence principale.** Limite nationale de **120 nuitées par an** pour la location en résidence principale (logement occupé au moins 8 mois par an, sauf raison professionnelle, santé ou force majeure). Dijon n'étant pas en zone tendue par décret, l'abaissement à 90 jours autorisé par la loi Le Meur ne s'applique pas (à surveiller : la métropole pourrait demander son inscription en zone tendue en cas de tension croissante sur le marché locatif).\n\n**Pas d'autorisation de changement d'usage à ce jour.** Dijon (moins de 200 000 habitants et hors zone tendue par décret) n'a pas activé l'autorisation de changement d'usage pour les résidences secondaires en LCD. La location de meublé de tourisme reste libre tant que le règlement de copropriété ne l'interdit pas — point critique à vérifier sur le secteur sauvegardé (5e plus vaste de France) où certaines copropriétés Renaissance peuvent imposer des restrictions strictes.\n\n**Loi Le Meur 2024.** DPE classe E minimum obligatoire (D à partir de 2034), abattement micro-BIC à 30 % pour les meublés non classés (50 % pour les classés tourisme), plafond chiffre d'affaires à 15 000 € en non classé. Biens classés F ou G au DPE **interdits à la location courte durée à partir du 1er janvier 2028** — un point critique sur le parc ancien dijonnais (hôtels particuliers Renaissance secteur sauvegardé, immeubles XIXe Wilson + Darcy).\n\n**Sanctions nationales.** **5 000 €** pour défaut d'enregistrement, **10 000 €** pour dépassement des 120 jours, **20 000 €** pour fausse déclaration de résidence principale.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Dijon Métropole applique une taxe de séjour de 0,55 € à 4,30 € par nuit et par personne adulte selon le classement de l'hébergement, collectée automatiquement par Airbnb. Recettes affectées à la promotion de la destination Dijon + Climats UNESCO et au financement d'événements (Foire Internationale Gastronomique d'Automne, Marché de Noël, Cité Internationale Gastronomie et Vin).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 85,
+      neighborhood: 'Secteur sauvegardé (Palais des Ducs)',
+      revenuBrut: 20500,
+      commissionRate: 0.21,
+      menageCount: 75,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Le tourisme œnotouristique génère-t-il une vraie demande LCD à Dijon ?",
+        a: "Oui — c'est même devenu l'un des moteurs majeurs de la demande LCD dijonnaise depuis le classement UNESCO des Climats du vignoble de Bourgogne en 2015 et l'ouverture en 2022 de la Cité Internationale de la Gastronomie et du Vin (projet 250 millions d'euros, 32 000 m² sur l'ancien hôpital général). La clientèle œnotouristique vient principalement de l'international (Américains, Britanniques, Australiens, Japonais, Suisses, Belges) pour des séjours de 3 à 7 nuits combinant Dijon + Route des Grands Crus + Beaune. Tarifs nuitées : 110-160 €/nuit pour un T2 secteur sauvegardé en saison œnotouristique (mai-octobre), avec un pic vendanges septembre-octobre à 140-200 €/nuit. Sur 6 mois (mai-octobre), un T2 bien placé peut générer 11 000 à 15 000 € bruts. Hors saison, la clientèle pro + universitaire + Marché de Noël maintient l'occupation à 55-65 %.",
+      },
+      {
+        q: "Faut-il acheter à Dijon ou à Beaune pour un Airbnb œnotouristique ?",
+        a: "Les deux options sont valables avec des profils différents. Dijon offre une **demande lissée toute l'année** grâce au mix touristes (Palais des Ducs, secteur sauvegardé, Cité Gastronomie) + pro (CHU, université Bourgogne) + œnotouristique (départ Route des Grands Crus). Occupation 66 % annuelle, T2 dès 130 000 €, ROI brut 6-8 %. Beaune offre **les tarifs nuitées les plus élevés de la Côte d'Or** (140-220 €/nuit pour un T2 centre Beaune) mais une saison concentrée mai-octobre + Marché de Noël Beaune en décembre (l'un des plus prisés de Bourgogne). Ticket d'entrée plus élevé (T2 dès 160 000 € à Beaune intra-muros). Occupation 60-65 % avec creux hivernal marqué. Stratégie : Dijon pour pure rentabilité lissée annuelle, Beaune pour CA estival maximisé + autoconsommation hors saison + plus-value patrimoniale liée à la marque Beaune.",
+      },
+      {
+        q: "Quelle conciergerie choisir pour un Airbnb haut de gamme Dijon / Beaune ?",
+        a: "Pour un bien haut de gamme ciblant la clientèle œnotouristique internationale, 3 options solides selon le profil. **Les Suites Indivio** (couverture Dijon + Beaune + Côte des Vins, standing hôtelier, 5,0/5 sur 8 avis Google encore réduit mais positionnement clairement luxe, ménage inclus dans la commission). **Lux'Apart** (5,0/5 sur 17 avis Google, équipe Dijon centre, bureau réel 9 Bd Carnot, commission 25 % claire) pour les biens hyper-centre Dijon. **La Conciergerie d'Émile** (4,9/5 sur 37 avis Google, plus gros volume d'avis vérifiés, plusieurs packages selon le niveau de délégation) pour les propriétaires qui veulent un acteur ancré avec historique. À éviter pour haut de gamme : les conciergeries généralistes nationales sans positionnement clair œnotourisme, qui peuvent ne pas tenir l'expérience clientèle internationale haut de gamme.",
+      },
+    ],
+    updatedAt: '2026-05-22',
   },
 ];
 

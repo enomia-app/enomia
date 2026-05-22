@@ -59,10 +59,22 @@ function getVolume(url, { cities, tools, blog }) {
   return 0;
 }
 
+// Une URL est "vraiment soumise récemment" SEULEMENT si la dernière demande
+// est passée par Chrome MCP / URL Inspection Tool / Playwright. Les demandes
+// faites uniquement via l'Indexing API ne comptent pas (Google les ignore
+// pour le contenu web standard). Voir project_gsc_enomia.md.
 function isRequestedRecently(track, days = 14) {
   if (!track?.last_requested) return false;
   const ageDays = (Date.now() - new Date(track.last_requested).getTime()) / 86400000;
-  return ageDays < days;
+  if (ageDays >= days) return false;
+
+  const reason = (track.reason || '').toLowerCase();
+  const isRealSubmission =
+    reason.includes('chrome mcp') ||
+    reason.includes('url inspection') ||
+    reason.includes('playwright');
+
+  return isRealSubmission;
 }
 
 function main() {

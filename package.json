@@ -28,6 +28,8 @@
     "@vercel/og": "^0.6.2",
     "astro": "^5.18.1",
     "googleapis": "^171.4.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },

@@ -1,6 +1,6 @@
-# GSC Indexation Quotidienne (Playwright autonome)
+# GSC Indexation Quotidienne (Playwright + profil Chrome dédié)
 
-Pipeline cron qui soumet 10 URLs/jour à l'URL Inspection Tool de Google Search Console, via Playwright + Chrome headless + cookies persistés. Aucune dépendance à Claude Code ou Chrome MCP.
+Pipeline cron qui soumet 10 URLs/jour à l'URL Inspection Tool de Google Search Console, via Playwright + un profil Chromium persistant où Marc s'est logué une fois manuellement. Aucune dépendance à Claude Code, Chrome MCP, ou export de cookies.
 
 ## Architecture
 
@@ -8,73 +8,67 @@ Pipeline cron qui soumet 10 URLs/jour à l'URL Inspection Tool de Google Search 
 launchd Mac mini 7h03
 └── run.sh
     ├── jq anti-doublon (last_run == today → STOP)
-    ├── node gsc-fetch-index-status.mjs  (si > 24h)
-    ├── node compute-candidates.mjs       → candidates-today.json (top 10)
-    ├── node submit-via-chrome.mjs        → Playwright + update urls.json
+    ├── node gsc-fetch-index-status.mjs    (si > 24h)
+    ├── node compute-candidates.mjs        → candidates-today.json (top 10)
+    ├── node submit-via-chrome.mjs         → Playwright profil dédié, update urls.json
     ├── git commit + push (urls.json)
-    └── send-report.sh                    → email récap
+    └── node build-email-report.mjs | send-report.sh   → email récap
 ```
 
-## Setup initial (une fois par machine)
+## Setup initial (une fois par machine, **VNC obligatoire**)
 
-### 1. Installer Playwright (déjà installé via `@playwright/test`)
-```bash
-npx playwright install chromium
-```
+Le mode `--setup` ouvre Chrome avec écran (`headless: false`), donc il faut accès au desktop du Mac mini. Via VNC :
 
-### 2. Exporter les cookies GSC
-
-Sur le Mac mini, dans Chrome :
-
-1. Installer l'extension [Cookie-Editor](https://chromewebstore.google.com/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm)
-2. Aller sur https://search.google.com/search-console (loggué avec marc@enomia.app)
-3. Cliquer l'icône Cookie-Editor → Export → Export as JSON
-4. Coller le contenu dans :
+1. Sur Mac mini, terminal :
+   ```bash
+   cd ~/projects/eunomia
+   node scripts/gsc-indexation/submit-via-chrome.mjs --setup
    ```
-   scripts/gsc-indexation/gsc-cookies.json
-   ```
-5. Refaire l'opération sur le domaine `google.com` (toujours via Cookie-Editor) si la première extraction ne contient pas les cookies SID/HSID/SSID. Ajouter les nouveaux à la liste JSON existante.
+2. Une fenêtre Chrome s'ouvre sur GSC. Logge-toi avec un compte **Owner** de la propriété enomia.app (`marchenut@gmail.com` ou `marc@enomia.app`).
+3. Confirme que tu vois bien le dashboard GSC enomia.app.
+4. **Ferme la fenêtre Chrome** (clic sur la croix rouge).
+5. Le profil est sauvé dans `~/.playwright-gsc-indexation/`.
 
-Le fichier est `.gitignored` — il ne sera jamais committé.
+Les runs suivants sont 100% automatiques en headless, sans réauthentification.
 
-### 3. Test manuel
+## Pourquoi un profil Chrome dédié et pas un export de cookies ?
 
-```bash
-node scripts/gsc-indexation/compute-candidates.mjs
-node scripts/gsc-indexation/submit-via-chrome.mjs
-```
+Tenté en PR #16 : export cookies via Cookie-Editor → JSON → `addCookies` Playwright. Marche pour le scan FB mais **pas pour GSC** : Google a invalidé la session SID/HSID/SSID au premier run cron, parce que le user-agent Playwright + IP différente du Chrome natif d'origine = fingerprint suspect.
 
-Si tout marche, le cron de demain matin (7h03) prendra le relais.
+Avec un profil dédié, le user-data-dir contient tous les states (cookies + localStorage + IndexedDB + device fingerprint) et Playwright le réutilise tel quel. Google n'a aucune raison de flag suspect. Pattern identique à `scripts/rs-lcd/fb-scan.mjs`.
 
 ## Fichiers
 
 | Fichier | Rôle |
 |---|---|
 | `run.sh` | Wrapper launchd. Orchestre compute → submit → commit → email. |
-| `compute-candidates.mjs` | Lit index-status + volumes SEMrush. Écrit `candidates-today.json`. |
-| `submit-via-chrome.mjs` | Lit candidates. Soumet via Playwright. Update `urls.json`. |
-| `gsc-cookies.json` | **Privé, gitignored.** Cookies GSC exportés via Cookie-Editor. |
-| `candidates-today.json` | **Généré, gitignored.** Top 10 du jour calculé. |
-| `logs/` | Logs journaliers (run-YYYY-MM-DD.log + YYYY-MM-DD.json). |
+| `compute-candidates.mjs` | Calcule top N par volume SEMrush. Sortie : `candidates-today.json`. |
+| `submit-via-chrome.mjs` | `--setup` (one-time) ou normal. Playwright + profil dédié. |
+| `build-email-report.mjs` | Génère le récap email structuré (sans dump log brut). |
+| `~/.playwright-gsc-indexation/` | **Hors repo.** Profil Chromium persistant. |
+| `candidates-today.json` | **Gitignored, généré.** Top N du jour. |
+| `logs/` | Logs journaliers (run-YYYY-MM-DD.log + YYYY-MM-DD.json + screenshots debug). |
 
 ## Exit codes
 
 | Code | Sens | Action |
 |---|---|---|
-| 0 | OK, toutes soumissions passées | rien |
-| 2 | fichiers manquants (cookies/candidates) | faire le setup |
-| 3 | cookies expirés (pas loggué à GSC) | refaire l'export Cookie-Editor |
-| 4 | stoppé en cours (quota Google ou CAPTCHA) | attendre demain |
-| autre | erreur fatale | check log |
+| 0 | OK | rien |
+| 2 | candidates-today.json manquant | lancer compute-candidates avant |
+| 3 | profil Chrome pas loggué | relancer en `--setup` via VNC |
+| 4 | stoppé en cours (quota / CAPTCHA / auth perdue) | check log + email récap |
+| autre | erreur fatale | check log complet |
 
 ## Maintenance
 
-- **Cookies expirent** (typique : 30j à 2 ans selon les cookies). Quand exit 3 → refaire l'export.
+- **Session Google peut expirer** (typique : 1-6 mois sans activité). Si l'exit 3 apparaît → relancer en `--setup` une fois.
 - **Quota Google** : ~10-12/jour par propriété. Si throttling fréquent → baisser `daily_quota` dans `.claude/gsc-tracking/urls.json`.
-- **Logs** : `logs/` n'est pas auto-purgé. Faire un cleanup manuel tous les 6 mois.
+- **Logs** : `logs/` n'est pas auto-purgé. Cleanup manuel tous les 6 mois.
+- **Screenshots de debug** : si bouton introuvable, un PNG est sauvé dans `logs/debug-YYYY-MM-DD-<urlencoded>.png`.
 
 ## Historique
 
 - **Avant 2026-05-21** : appelait `gsc-indexing-submit.mjs` (Indexing API). Google ignorait silencieusement.
-- **2026-05-21 (PR #14)** : tentative via `claude -p` + skill Chrome MCP. Échec : `claude -p` n'a pas le pairing Chrome MCP.
-- **2026-05-22 (ce PR)** : Playwright autonome. Pas de Claude, pas d'extension. Robuste.
+- **2026-05-21 (PR #14)** : tentative via `claude -p` + skill Chrome MCP. Échec : `claude -p` n'a pas le pairing extension.
+- **2026-05-22 (PR #16)** : Playwright + cookies JSON exportés. Test manuel OK. Cron du 23 a échoué : session révoquée par Google (fingerprint suspect).
+- **2026-05-23 (ce PR)** : profil Chrome dédié, identique au pattern fb-scan qui tourne stable depuis des mois. Email récap reformaté.

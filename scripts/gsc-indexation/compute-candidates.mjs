@@ -90,7 +90,13 @@ function main() {
       const t = tracking.urls[url];
       if (!t) return true;
       if (t.status === 'indexed') return false;
-      if (t.status === 'failed') return false;
+      // status='failed' = soit un vrai échec (404, redirect, noindex) à garder
+      // skipped, soit un bug script (ex: "Bouton introuvable") qu'on peut
+      // ré-essayer. On distingue par le reason.
+      if (t.status === 'failed') {
+        const reason = (t.reason || '').toLowerCase();
+        return reason.includes('bouton') || reason.includes('exception');
+      }
       return !isRequestedRecently(t, 14);
     })
     .map(([url, d]) => ({

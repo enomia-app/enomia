@@ -394,6 +394,10 @@ ${skipped.length === 0 ? '  (aucun)' : skipped.map(c => `  • ${c.site} : ${c.r
 
 ${bcc ? '🔍 Tu reçois en BCC les copies des emails envoyés aujourd\'hui (jour audit).' : ''}
 
+🔍 Postmaster Tools (check 1x par jour, 10s) :
+   https://postmaster.google.com/managedomains?cd=enomia.app
+   Spam Rate doit rester < 0.3%. Domain Reputation = High ou Medium.
+
 Prochain run demain 10h17 (jour ouvré).
 `;
 

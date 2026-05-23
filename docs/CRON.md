@@ -16,7 +16,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 |-------|-----------|------|--------|
 | `app.enomia.git-pull` | toutes les heures | Garde le repo Mac mini à jour avec GitHub | actif |
 | `com.enomia.fb-daily-scan` | 7h17 quotidien | Scan FB matinal + drafte commentaires + email | actif |
-| `app.enomia.gsc-indexation` | 7h03 quotidien | Demande indexation Google des top URLs prioritaires | actif |
+| ~~`app.enomia.gsc-indexation`~~ | ~~7h03~~ | **Désactivé 2026-05-23** — remplacé par routine cloud `gsc-indexation-quotidienne` (À distance, 9h18) | ⏹️ unloaded |
 | `app.enomia.tech-watchdog` | 8h11 quotidien | Watchdog santé technique du site | actif |
 | `app.enomia.conciergerie-production` | Lun/Mer/Ven 8h37 | Cycle de production landing conciergerie | actif |
 | `app.enomia.backlinks-track-replies-v2` | Lun-Ven 10h31 | Pipeline v2 : tracking réponses + bounces + relances auto J+5/J+10/J+15 (10h31 = 14 min après send-daily 10h17 → chope les hard bounces immédiats du jour) | actif |
@@ -87,9 +87,10 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 **Script** : `scripts/git-pull-eunomia.sh`
 Garde la copie locale du repo synchronisée avec GitHub. Évite que le Mac mini parte en désync.
 
-### `app.enomia.gsc-indexation` — 7h03 quotidien
-**Script** : `scripts/gsc-indexation/run.sh`
-Vérifie les URLs prioritaires (par volume SEMrush) non-indexées et envoie une demande d'indexation à Google Search Console. Limite 5/jour (quota GSC).
+### ~~`app.enomia.gsc-indexation`~~ — désactivé 2026-05-23
+**Status** : Launchd **unloaded** le 2026-05-23. Le plist reste sur disque (`~/Library/LaunchAgents/`) mais n'est plus chargé. Remplacé par la routine cloud Anthropic `gsc-indexation-quotidienne` (À distance, 9h18).
+**Pourquoi le doublon avait été créé** : `app.enomia.gsc-indexation` (launchd à 7h03) avait été créé pendant la migration des routines cloud → launchd Mac mini en 2026-05-21. Mais Marc a aussi conservé/recréé la routine cloud `gsc-indexation-quotidienne` (À distance) pour utiliser les exécutions distantes gratuites incluses dans son plan Anthropic.
+**Pour réactiver le launchd plus tard si besoin** : `launchctl load ~/Library/LaunchAgents/app.enomia.gsc-indexation.plist`. Mais s'assurer que la routine cloud est désactivée d'abord.
 
 ### `app.enomia.tech-watchdog` — 8h11 quotidien
 **Script** : `scripts/tech-watchdog/run.sh`
@@ -214,8 +215,10 @@ Routines qui tournent sur infrastructure Anthropic (cloud sandbox), pas sur les 
 
 | Task | Cron | Rôle | Statut |
 |---|---|---|---|
-| `jova-batch-audit-notes` | Manual only | Batch SEO audit notes pour contacts Jova CRM | actif (on-demand) |
-| `monthly-qa-tools-enomia` | 1er du mois 09:27 | Check qualitatif des 3 outils enomia.app + BDD + Brevo | actif (next 2026-06-01) |
+| `jova-batch-audit-notes` | Manual only | Batch SEO audit notes pour contacts Jova CRM | actif (on-demand, Local) |
+| `monthly-qa-tools-enomia` | 1er du mois 09:27 | Check qualitatif des 3 outils enomia.app + BDD + Brevo | actif (Local, next 2026-06-01) |
+| `gsc-indexation-quotidienne` | Chaque jour 9:18 | Demande indexation Google des top URLs prioritaires (remplace l'ancien launchd Mac mini) | actif (À distance) |
+| `fb-scan-watch-replies` | Horaire (toutes les heures) | À vérifier — peut-être doublon avec launchd `com.enomia.fb-watch` | actif (À distance) |
 
 **Supprimées 2026-05-21** (migrées vers Mac mini launchd) :
 - 🗑️ `enrich-city-data` → remplacé par `app.enomia.conciergerie-production`

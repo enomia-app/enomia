@@ -138,6 +138,7 @@ async function runSetup() {
 
   const context = await chromium.launchPersistentContext(USER_DATA_DIR, {
     headless: false,
+    channel: 'chrome', // Vrai Chrome (pas Chromium) — Google bloque le login dans Chromium
     viewport: { width: 1400, height: 900 },
     locale: 'fr-FR',
   });
@@ -175,6 +176,7 @@ async function runNormal() {
 
   const context = await chromium.launchPersistentContext(USER_DATA_DIR, {
     headless: true,
+    channel: 'chrome', // Vrai Chrome (pas Chromium) — pour matcher le profil créé en --setup
     viewport: { width: 1400, height: 900 },
     locale: 'fr-FR',
   });

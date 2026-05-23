@@ -119,6 +119,73 @@ export const CONCIERGERIE_TEXT_PATTERNS = [
   'conciergerie locative',
 ];
 
+// ─── DETECTION BLOG vs SITE SERVICE ─────────────────────────────────────
+// On veut cibler UNIQUEMENT les blogs (rédacteur édite son article) et pas
+// les sites service (SaaS, agences immo, etc. → formulaire client, ne répondront pas).
+
+export const BLOG_URL_PATH_PATTERNS = [
+  /\/blog(\/|$)/i,
+  /\/articles?(\/|$)/i,
+  /\/journal(\/|$)/i,
+  /\/news(\/|$)/i,
+  /\/posts?(\/|$)/i,
+  /\/ressources?(\/|$)/i,
+  /\/dossiers?(\/|$)/i,
+  /\/actualites?(\/|$)/i,
+  /\/conseils?(\/|$)/i,
+  /\/guides?(\/|$)/i,
+  /\/magazine(\/|$)/i,
+];
+
+export const BLOG_URL_HOST_PATTERNS = [
+  /^blog\./i,
+  /^journal\./i,
+  /^news\./i,
+  /^le-blog\./i,
+  /^magazine\./i,
+];
+
+// Signal de site SERVICE (à ne pas pitcher) : présence de CTA commercial dominant
+export const SERVICE_TEXT_PATTERNS = [
+  'demandez une démo',
+  'réservez un appel',
+  'essai gratuit 14 jours',
+  'commencer mon essai',
+  'inscrivez-vous gratuitement',
+  'créer mon compte gratuit',
+  'demande de devis',
+  'estimation gratuite en ligne',
+  'rejoignez nos propriétaires',
+  'confiez-nous votre bien',
+];
+
+export function detectBlog(url, html) {
+  // Signal 1 (HIGH CONFIDENCE) : URL pattern
+  try {
+    const u = new URL(url);
+    if (BLOG_URL_HOST_PATTERNS.some(p => p.test(u.hostname))) return true;
+    if (BLOG_URL_PATH_PATTERNS.some(p => p.test(u.pathname))) return true;
+  } catch {}
+
+  if (!html) return false;
+
+  // Signal 2 : HTML markup d'article (structured data, balise <article>, meta)
+  if (/<article\b/i.test(html)) return true;
+  if (/article:published_time/i.test(html)) return true;
+  if (/"@type"\s*:\s*"(blogposting|article|newsarticle)"/i.test(html)) return true;
+
+  // Signal 3 : byline / date publication FR
+  const lower = html.toLowerCase();
+  if (/(?:publié|posté|paru|écrit)\s+(?:le\s+)?\d/i.test(lower)) return true;
+  if (/<meta[^>]*name=["']author["']/i.test(html)) return true;
+  if (/<time\b/i.test(html)) return true;
+
+  // Si on a un signal SERVICE fort ET aucun signal blog → définitivement pas un blog
+  if (SERVICE_TEXT_PATTERNS.some(p => lower.includes(p.toLowerCase()))) return false;
+
+  return false; // par défaut : pas blog (conservateur)
+}
+
 // ─── HELPERS ────────────────────────────────────────────────────────────
 
 export function extractDomain(url) {
@@ -193,8 +260,8 @@ export async function detectConciergerie(domain, homeUrl) {
 }
 
 /**
- * Détecte présentTools + isConciergerie en 1 seul fetch quand l'URL est la même.
- * Retourne { tools, is_conciergerie } ou null.
+ * Détecte présentTools + isConciergerie + isBlog en 1 seul fetch.
+ * Retourne { tools, is_conciergerie, is_blog } ou null.
  */
 export async function detectAll(pageUrl, domain) {
   const html = await fetchHtml(pageUrl);
@@ -208,7 +275,6 @@ export async function detectAll(pageUrl, domain) {
     }
   }
 
-  // Conciergerie : check domain d'abord, sinon scan text
   let is_conciergerie = false;
   if (domain && CONCIERGERIE_DOMAIN_PATTERNS.some(p => p.test(domain))) {
     is_conciergerie = true;
@@ -216,7 +282,9 @@ export async function detectAll(pageUrl, domain) {
     is_conciergerie = true;
   }
 
-  return { tools, is_conciergerie };
+  const is_blog = detectBlog(pageUrl, html);
+
+  return { tools, is_conciergerie, is_blog };
 }
 
 /**

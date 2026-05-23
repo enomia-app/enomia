@@ -168,6 +168,7 @@ async function main() {
       }
       c.outils_presents = detection.tools;
       c.is_conciergerie = detection.is_conciergerie;
+      c.is_blog = detection.is_blog;
       c.fetch_status = 'ok';
 
       // Tente d'extraire contact en même temps

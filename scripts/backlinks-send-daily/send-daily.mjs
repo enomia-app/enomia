@@ -117,30 +117,71 @@ function saveBacklog(merged) {
 
 function pickProspects(candidates, max) {
   // Priorité de pick :
-  //   1. Email connu (envoi auto)
-  //   2. Formulaire connu (Marc remplit à la main)
-  //   3. Pending fetch (mining — sera fetché au moment du send)
-  // Au sein de chaque catégorie : tri par trafic SERP desc
+  //   1. is_blog + email connu (envoi auto le plus rentable)
+  //   2. is_blog + form connu (Marc remplit à la main, rentable)
+  //   3. is_blog encore inconnu (pending_fetch — fetch + détection au send)
+  //   4. is_blog === false → on skip explicitement (cibles non rentables)
   function bucket(c) {
+    // Skip explicite si is_blog a été détecté ET vaut false (site service)
+    if (c.is_blog === false) return 99; // hors pool
+    // Sinon : blog confirmé OU non encore détecté (pending_fetch)
     if (c.email) return 0;
     if (c.url_formulaire) return 1;
-    return 2;
+    return 2; // pending fetch (mining)
   }
   return candidates
     .filter(c => c.status === 'pending')
+    .map(c => ({ c, b: bucket(c) }))
+    .filter(({ b }) => b < 99)
     .sort((a, b) => {
-      const ba = bucket(a);
-      const bb = bucket(b);
-      if (ba !== bb) return ba - bb;
-      const ta = a.serp_traffic || 0;
-      const tb = b.serp_traffic || 0;
+      if (a.b !== b.b) return a.b - b.b;
+      const ta = a.c.serp_traffic || 0;
+      const tb = b.c.serp_traffic || 0;
       if (ta !== tb) return tb - ta;
-      return (a.rank_serp || 99) - (b.rank_serp || 99);
+      return (a.c.rank_serp || 99) - (b.c.rank_serp || 99);
     })
-    .slice(0, max);
+    .slice(0, max)
+    .map(({ c }) => c);
 }
 
-async function scanPage(url) {
+/**
+ * Valide un nom détecté comme prénom plausible.
+ * Filtre : longueur 2-20, lettres+accents+tirets uniquement, pas tout majuscules,
+ * pas dans la blacklist des mots non-prénoms.
+ */
+function validatePrenom(raw) {
+  if (!raw) return null;
+  const cleaned = raw.trim().replace(/&#x27;|&#39;/g, "'").replace(/&amp;/g, '&').split(/\s+/)[0]; // premier mot uniquement
+  if (cleaned.length < 2 || cleaned.length > 20) return null;
+  if (/\d/.test(cleaned)) return null;
+  if (!/^[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ'-]+$/.test(cleaned)) return null;
+  if (cleaned === cleaned.toUpperCase()) return null;
+  // Doit commencer par majuscule + au moins 1 minuscule (= forme prénom typique)
+  if (!/^[A-ZÀ-Ý][a-zà-ÿ]/.test(cleaned)) return null;
+
+  const blacklist = [
+    // Génériques email/contact
+    'admin', 'administrator', 'administrateur', 'contact', 'service', 'support',
+    'team', 'équipe', 'equipe', 'webmaster', 'noreply', 'no-reply',
+    'editor', 'éditeur', 'editeur', 'rédaction', 'redaction',
+    'newsletter', 'info', 'hello', 'salut', 'bonjour',
+    'auteur', 'author', 'rédacteur', 'redacteur', 'journaliste',
+    'staff', 'membre', 'invité', 'utilisateur', 'user', 'visiteur',
+    // Mots techniques (souvent dans meta author)
+    'google', 'github', 'wordpress', 'wpbakery', 'finsweet', 'webflow',
+    'elementor', 'divi', 'gutenberg', 'yoast', 'shopify', 'wix',
+    'category', 'tag', 'archive', 'post', 'page',
+    'going', 'enomia',
+    // Mots structurels
+    'site', 'article', 'blog', 'partager', 'mentions', 'légales', 'legales',
+    'département', 'departements', 'départements', 'departement', 'région',
+    'conditions', 'minut', 'redacteur', 'rédacteur',
+  ];
+  if (blacklist.some(b => cleaned.toLowerCase() === b)) return null;
+  return cleaned;
+}
+
+async function fetchHtmlDecoded(url) {
   try {
     const r = await fetch(url, {
       headers: {
@@ -149,29 +190,71 @@ async function scanPage(url) {
       },
     });
     if (!r.ok) return null;
-    const html = await r.text();
-
-    const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
-    const og = html.match(/<meta[^>]*property=["']og:title["'][^>]*content=["']([^"']+)["']/i)?.[1];
-    const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1];
-    const rawTitle = (h1 || og || title || '').replace(/<[^>]+>/g, '').trim();
-
-    const textOnly = html
-      .replace(/<script[\s\S]*?<\/script>/gi, '')
-      .replace(/<style[\s\S]*?<\/style>/gi, '')
-      .replace(/<[^>]+>/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim()
-      .slice(0, 3000);
-
-    const authorMatch = html.match(/(?:by|par|author|écrit\s+par)\s*[:\s]*<[^>]*>\s*([A-ZÀ-Ý][a-zà-ÿ]+)(?:\s+[A-ZÀ-Ý][a-zà-ÿ]+)?\s*</i)
-      || html.match(/<meta[^>]*name=["']author["'][^>]*content=["']([^"' ]+)/i);
-    const prenom = authorMatch?.[1] || null;
-
-    return { title: rawTitle, text: textOnly, prenom };
+    const buf = Buffer.from(await r.arrayBuffer());
+    // Détecter charset
+    const ct = r.headers.get('content-type') || '';
+    let charset = ct.match(/charset=([^;\s]+)/i)?.[1]?.toLowerCase() || null;
+    if (!charset) {
+      const head = buf.slice(0, 4000).toString('utf-8');
+      charset = head.match(/<meta[^>]*charset=["']?([^"'>\s]+)/i)?.[1]?.toLowerCase()
+        || head.match(/<meta[^>]*content=["'][^"']*charset=([^"';\s]+)/i)?.[1]?.toLowerCase()
+        || null;
+    }
+    if (charset && charset !== 'utf-8' && charset !== 'utf8') {
+      try {
+        return new TextDecoder(charset).decode(buf);
+      } catch {
+        // fallback UTF-8 si charset inconnu
+      }
+    }
+    return buf.toString('utf-8');
   } catch {
     return null;
   }
+}
+
+async function scanPage(url) {
+  const html = await fetchHtmlDecoded(url);
+  if (!html) return null;
+
+  const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
+  const og = html.match(/<meta[^>]*property=["']og:title["'][^>]*content=["']([^"']+)["']/i)?.[1];
+  const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1];
+  const rawTitle = (h1 || og || title || '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&#x27;|&#39;/g, "'")
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&nbsp;/g, ' ')
+    .trim();
+
+  const textOnly = html
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 3000);
+
+  // Détection prénom — UNIQUEMENT depuis patterns explicites d'auteur d'article.
+  // On évite délibérément <meta name="author"> qui contient souvent le CMS/marque/template.
+  // Mieux vaut "Bonjour," neutre qu'un faux prénom ridicule ("Bonjour Finsweet,").
+  const candidates = [
+    // Structured data JSON-LD : "author": { "name": "..." } — souvent fiable
+    html.match(/"author"\s*:\s*{[^}]*"name"\s*:\s*"([^"]+?)"/i)?.[1],
+    // Patterns français explicites dans le contenu
+    html.match(/(?:écrit|posté|publié|rédigé)\s+par\s+<[^>]*>\s*([A-ZÀ-Ý][a-zà-ÿ'-]+)/i)?.[1],
+    html.match(/(?:écrit|posté|publié|rédigé)\s+par\s+([A-ZÀ-Ý][a-zà-ÿ'-]+)\b/i)?.[1],
+    // Classe CSS auteur (élément article)
+    html.match(/<(?:span|a|div|p)[^>]+(?:class|itemprop)=["'][^"']*\b(?:author|byline)\b[^"']*["'][^>]*>\s*([A-ZÀ-Ý][a-zà-ÿ'-]+)/i)?.[1],
+  ];
+  let prenom = null;
+  for (const cand of candidates) {
+    const v = validatePrenom(cand);
+    if (v) { prenom = v; break; }
+  }
+
+  return { title: rawTitle, text: textOnly, prenom };
 }
 
 async function generateObservation({ title, text, outil }) {
@@ -265,9 +348,11 @@ async function main() {
   log(`📨 BCC Marc : ${bccState.bcc} (${bccState.reason})`);
 
   const MAX = computeDailyMax();
-  const picked = pickProspects(backlog.candidates, MAX);
+  // Pré-pick MAX × 5 pour avoir une marge si beaucoup de candidats sont skippés
+  // (not_blog, qa_fail, page_unreadable, etc.)
+  const picked = pickProspects(backlog.candidates, MAX * 5);
   const pendingCount = backlog.candidates.filter(c => c.status === 'pending').length;
-  log(`📋 ${picked.length} prospects sélectionnés sur ${pendingCount} pending (MAX=${MAX} via ramp-up)`);
+  log(`📋 ${picked.length} prospects pré-sélectionnés sur ${pendingCount} pending (cible envois auto = ${MAX})`);
 
   const sentEmail = [];
   const sentManual = [];
@@ -277,15 +362,21 @@ async function main() {
   if (!DRY) gm = await getGmailClient();
 
   for (const c of picked) {
+    // Stop dès qu'on atteint la cible d'envois auto (compte email + manual)
+    if (sentEmail.length + sentManual.length >= MAX) {
+      log(`\n✋ Cible atteinte (${MAX} envois traités), stop.`);
+      break;
+    }
     log(`\n→ ${c.site}`);
 
     // 1. Re-fetch + détection si fetch_status pas OK
-    if (c.fetch_status !== 'ok' || c.outils_presents === undefined) {
+    if (c.fetch_status !== 'ok' || c.outils_presents === undefined || c.is_blog === undefined) {
       log(`  🔍 Re-fetch (status précédent: ${c.fetch_status})`);
       const det = await detectAll(c.page_cible, c.site);
       if (det) {
         c.outils_presents = det.tools;
         c.is_conciergerie = det.is_conciergerie;
+        c.is_blog = det.is_blog;
         c.fetch_status = 'ok';
         if (!c.email && !c.url_formulaire) {
           const contact = await extractContact(c.page_cible);
@@ -301,7 +392,15 @@ async function main() {
       }
     }
 
-    // 2. Pas de contact → skip
+    // 2. Skip si ce n'est pas un blog (= site service, ne répondra pas)
+    if (c.is_blog === false) {
+      c.status = 'skip_not_blog';
+      skipped.push({ ...c, reason: 'not_blog' });
+      log(`  ⏭ not_blog (site service)`);
+      continue;
+    }
+
+    // 3. Pas de contact → skip
     if (!c.email && !c.url_formulaire) {
       c.status = 'no_contact';
       skipped.push({ ...c, reason: 'no_contact' });

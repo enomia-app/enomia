@@ -139,6 +139,10 @@ async function runSetup() {
   const context = await chromium.launchPersistentContext(USER_DATA_DIR, {
     headless: false,
     channel: 'chrome', // Vrai Chrome (pas Chromium) — Google bloque le login dans Chromium
+    // Masquer les flags d'automation (sinon Google bloque le login avec
+    // "Impossible de se connecter dans ce navigateur non sécurisé")
+    ignoreDefaultArgs: ['--enable-automation'],
+    args: ['--disable-blink-features=AutomationControlled'],
     viewport: { width: 1400, height: 900 },
     locale: 'fr-FR',
   });
@@ -177,6 +181,10 @@ async function runNormal() {
   const context = await chromium.launchPersistentContext(USER_DATA_DIR, {
     headless: true,
     channel: 'chrome', // Vrai Chrome (pas Chromium) — pour matcher le profil créé en --setup
+    // Masquer les flags d'automation pour ne pas faire révoquer la session
+    // Google entre 2 runs.
+    ignoreDefaultArgs: ['--enable-automation'],
+    args: ['--disable-blink-features=AutomationControlled'],
     viewport: { width: 1400, height: 900 },
     locale: 'fr-FR',
   });

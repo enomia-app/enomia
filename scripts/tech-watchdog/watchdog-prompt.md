@@ -208,15 +208,37 @@ Logique :
 - **Au moins 1 intervention requise** : titre `tech-watchdog`, subtitle `⚠️ Y interventions requises`, son = `Sosumi`
 - **Site prod cassé (Vercel ERROR > 1h)** : titre `tech-watchdog`, subtitle `🚨 PROD CASSÉE`, son = `Sosumi`
 
-### 8.2 — Email à marc@enomia.app (UNIQUEMENT si intervention requise OU prod cassée)
-
-**Ne PAS envoyer d'email** si :
-- Aucune alerte (`status=ok` sans fix)
-- Tout auto-résolu (Marc consulte le log s'il veut, pas urgent)
+### 8.2 — Email à marc@enomia.app
 
 **Envoyer un email** si :
 - Au moins 1 intervention requise → sujet `[tech-watchdog] ⚠️ N intervention(s) requise(s)`
 - Prod cassée → sujet `[tech-watchdog] 🚨 PROD CASSÉE`
+- **C'est dimanche** (heartbeat hebdo) → sujet `[tech-watchdog] ✅ Heartbeat hebdo — tout OK`
+
+**Ne PAS envoyer d'email** si :
+- Aucune alerte, pas dimanche, tout auto-résolu (Marc consulte le log s'il veut, pas urgent)
+
+**Heartbeat hebdo (dimanche uniquement)** :
+
+Détecter si c'est dimanche : `JOUR=$(date +%u)` — si `$JOUR == 7`, envoyer ce récap même si status=ok :
+
+```bash
+SUBJECT="[tech-watchdog] ✅ Heartbeat hebdo — tout OK"
+
+./scripts/tech-watchdog/send-report.sh "$SUBJECT" <<EOF
+Heartbeat du $(date +%A\ %d\ %B\ %Y)
+
+Bilan 7 jours :
+- GSC : <N alertes semaine> alerte(s) reçue(s)
+- Vercel : <N deploys> deploy(s) READY, <N erreurs> runtime error(s)
+- Supabase : <N advisors> advisor(s) actifs (inchangé / +X / -X vs semaine dernière)
+
+Dernière intervention requise : <DATE ou "aucune cette semaine">
+Dernière alerte email : <DATE ou "aucune">
+
+Watchdog actif, prochain heartbeat dimanche.
+EOF
+```
 
 Envoi via le script `scripts/tech-watchdog/send-report.sh` (utilise l'API Resend, lit la clé depuis `.env`) :
 

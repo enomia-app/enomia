@@ -61,6 +61,8 @@ async function draftAllViaClaude(posts) {
     url: p.url,
     author: p.author,
     text: (p.text || '').slice(0, 1500),
+    reactions: p.reactions ?? null,
+    commentsCount: p.commentsCount ?? null,
   }));
 
   const prompt = `Tu es Marc Chenut, expert location courte durée français (LCD/Airbnb). Tu commentes des posts dans des groupes Facebook de propriétaires.
@@ -87,6 +89,7 @@ Pour chaque post FB ci-dessous, décide :
 1. **RELEVANCE** : est-ce un post où Marc devrait commenter ?
    - SKIP : spam, recrutement commercial, demande de message privé, hors-LCD, post sans question/pain point clair
    - GO : question d'hôte, retour d'expérience qui invite au dialogue, débat utile
+   - Signal de priorisation : un post avec beaucoup de "reactions" et/ou "commentsCount" a déjà de la traction → plus visible, à privilégier si pertinent
 2. Si GO : drafte une réponse dans le ton Marc (3-6 phrases généralement)
 3. Décide si un lien Enomia est PILE-POIL pertinent (la question correspond exactement au contenu d'un article/outil) → max ~20% des drafts avec lien (sur 10 drafts, 1-2 avec lien max).
 
@@ -158,9 +161,16 @@ ${skipped.length > 0
       ? post.text.length > 1200 ? post.text.slice(0, 1200) + '\n[...tronqué]' : post.text
       : '(post original introuvable)';
 
+    const engagementParts = [];
+    if (post?.reactions != null) engagementParts.push(`${post.reactions} réactions`);
+    if (post?.commentsCount != null) engagementParts.push(`${post.commentsCount} commentaires`);
+    const engagementLine = engagementParts.length
+      ? `\nEngagement : ${engagementParts.join(' · ')}`
+      : '';
+
     return `════════════════════════════════════════
 POST ${id} — ${group} — par ${author}
-URL : ${d.url}
+URL : ${d.url}${engagementLine}
 
 POST ORIGINAL :
 ${originalText}

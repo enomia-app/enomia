@@ -56,6 +56,40 @@ async function extractPosts(page, groupId, groupName) {
     const out = [];
     const seen = new Set();
 
+    function extractMessage(item) {
+      // 1) Sélecteurs DOM ciblés (FB classic + comet)
+      const messageEl = item.querySelector(
+        '[data-ad-preview="message"], [data-ad-comet-preview="message"]'
+      );
+      if (messageEl) return (messageEl.innerText || '').trim();
+
+      // 2) Fallback : textContent brut, on coupe avant les commentaires
+      let raw = item.textContent || '';
+      raw = raw.split(
+        /Voir plus de (?:réponses|commentaires)|Voir \d+ (?:réponse|commentaire)|Répondre en tant que/i
+      )[0];
+      raw = raw.replace(/^.*?Partagé avec\s*:\s*(?:Groupe\s+(?:privé|public)|Public|Privé)\s*/s, '');
+      raw = raw.replace(/\s*Voir plus\s*$/, '');
+      raw = raw.replace(/Facebook\s*/g, '').replace(/\s{3,}/g, '\n');
+      return raw.slice(0, 3000).trim();
+    }
+
+    function extractReactions(item) {
+      // Préfère les aria-labels explicites "X réactions"
+      for (const el of item.querySelectorAll('[aria-label]')) {
+        const label = el.getAttribute('aria-label') || '';
+        const m = label.match(/^([\d\s]+)\s*(?:réactions?|reactions?|J'aime|Like)\b/i);
+        if (m) return parseInt(m[1].replace(/\s/g, ''), 10);
+      }
+      return null;
+    }
+
+    function extractCommentsCount(item) {
+      const text = item.textContent || '';
+      const m = text.match(/(\d+)\s*(?:commentaires?|réponses?)/i);
+      return m ? parseInt(m[1], 10) : null;
+    }
+
     // Stratégie 1 : enfants directs du feed
     document.querySelectorAll('div[role="feed"] > div').forEach(item => {
       const links = item.querySelectorAll('a[href*="/posts/"]');
@@ -67,14 +101,13 @@ async function extractPosts(page, groupId, groupName) {
         const authorLink = item.querySelector('strong a, h2 a, h3 a');
         const author = authorLink ? authorLink.textContent.trim() : 'Inconnu';
 
-        const raw = (item.textContent || '')
-          .replace(/Facebook\s*/g, '')
-          .replace(/\s{3,}/g, '\n')
-          .slice(0, 3000)
-          .trim();
+        const text = extractMessage(item);
+        if (text.length < 60) continue;
 
-        if (raw.length < 60) continue;
-        out.push({ groupId, groupName, url, author, text: raw });
+        const reactions = extractReactions(item);
+        const commentsCount = extractCommentsCount(item);
+
+        out.push({ groupId, groupName, url, author, text, reactions, commentsCount });
         break;
       }
     });
@@ -85,7 +118,7 @@ async function extractPosts(page, groupId, groupName) {
         const url = l.href.split('?')[0];
         if (!url.match(/\/groups\/[^/]+\/posts\/[0-9]+/) || seen.has(url)) return;
         seen.add(url);
-        out.push({ groupId, groupName, url, author: '', text: '' });
+        out.push({ groupId, groupName, url, author: '', text: '', reactions: null, commentsCount: null });
       });
     }
 

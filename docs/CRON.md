@@ -102,7 +102,7 @@ Surveillance technique du site (probable : check 200/500 sur URLs critiques, cer
 5. Envoie 1 email récap à `marc@enomia.app` avec les N pitches numérotés + instructions de validation (`OK 1, 3 / MODIF 2: ... / SKIP 4`). Phase 3.2 (à venir) parsera cette réponse pour envoyer aux destinataires.
 
 **Logs** : `scripts/backlinks-pitches-daily/logs/run-YYYY-MM-DD.log` + `launchd-{stdout,stderr}.log`
-**Coût Claude API** : à calibrer après quelques runs (estimation : 10-20c/run avec WebFetch + drafting 10 pitches sonnet/opus)
+**Auth Claude** : ✅ **OAuth Max** depuis 2026-05-23 (le wrapper `unset ANTHROPIC_API_KEY` après `source .env` → `claude -p` retombe sur le token Max du keychain login, accessible car launchd tourne en `gui/UID/`). Tape sur les limites hebdo Max au lieu de l'API. Économie estimée ~3-6€/mois.
 **Pipeline** : Phase 3.1 du plan D backlinks. Remplace l'ancienne routine cloud `prospection-backlinks-enrich-5h` (désactivée 2026-05-21).
 
 ### `app.enomia.backlinks-validate-send` — 10h37, 14h23, 17h19, 20h41
@@ -121,7 +121,7 @@ Surveillance technique du site (probable : check 200/500 sur URLs critiques, cer
 
 **État local** : `.claude/backlinks-validation-state.json` (gitignored)
 **Logs** : `scripts/backlinks-validate-send/logs/run-YYYY-MM-DD.log`
-**Coût Claude API** : modéré (~5-10c/run quand il y a des threads à traiter)
+**Auth Claude** : ✅ **OAuth Max** depuis 2026-05-23 (même setup que `pitches-daily` : `unset ANTHROPIC_API_KEY` dans le wrapper). Économie estimée ~6-12€/mois (gros poste car 4 runs/jour).
 **Pipeline** : Phase 3.2 du plan D backlinks.
 
 ### `app.enomia.backlinks-track-replies` — 9h13 quotidien
@@ -249,12 +249,17 @@ done
 
 ## Coûts API estimés (mensuel)
 
-| Service | Estimation |
-|---------|------------|
-| Anthropic API (parsing réponses + drafting + insights) | ~5-10€ |
-| Resend (envoi emails) | gratuit (volume faible) |
-| Google API (Gmail + GSC) | gratuit (quotas) |
-| SEMrush | déjà payé (Neocamino) |
+| Service | Estimation | Note |
+|---------|------------|------|
+| Anthropic API (fb-* + tech-watchdog + autres) | **~3-4€/mois** | Depuis switch backlinks vers Max le 2026-05-23. Avant : ~13€/mois constatés. |
+| Claude Max (subscription) | déjà payé | Désormais utilisé par `backlinks-pitches-daily` + `backlinks-validate-send` via OAuth. Attention aux limites hebdo si usage interactif intensif. |
+| Resend (envoi emails) | gratuit (volume faible) | |
+| Google API (Gmail + GSC) | gratuit (quotas) | |
+| SEMrush | déjà payé (Neocamino) | |
+
+### Historique des switches Max vs API
+
+- **2026-05-23** — Switch `backlinks-pitches-daily` + `backlinks-validate-send` vers OAuth Max (unset `ANTHROPIC_API_KEY` dans wrappers). Économie estimée ~10-15€/mois. Les fb-*.mjs restent en API (utilisent le SDK Anthropic directement, refacto vers `claude -p` jugée non rentable pour ~3-4€/mois).
 
 ---
 

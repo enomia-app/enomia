@@ -24,11 +24,18 @@
  *   4 : stoppé en cours (quota Google ou CAPTCHA)
  */
 
-import { chromium } from 'playwright';
+import { chromium } from 'playwright-extra';
+import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { homedir } from 'node:os';
+
+// Stealth plugin : masque navigator.webdriver + tous les autres signaux que
+// Google check pour détecter l'automation (navigator.plugins, navigator.languages,
+// navigator.permissions, window.chrome, etc.). C'est la solution canonique au
+// blocage "Impossible de se connecter dans ce navigateur non sécurisé".
+chromium.use(StealthPlugin());
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..');
@@ -189,16 +196,8 @@ async function runNormal() {
     locale: 'fr-FR',
   });
 
-  // Masquer navigator.webdriver côté JS — Google check ça sur l'URL Inspection
-  // Tool et révoque la session si détecté.
-  await context.addInitScript(() => {
-    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-    // Quelques autres signaux qu'utilise Google pour détecter l'automation
-    Object.defineProperty(navigator, 'languages', { get: () => ['fr-FR', 'fr', 'en'] });
-    Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
-    // Chrome présent (sinon détectable comme bot)
-    if (!window.chrome) window.chrome = { runtime: {} };
-  });
+  // Le stealth plugin (chargé en haut) handle déjà navigator.webdriver et
+  // toutes les autres détections automation.
 
   const page = await context.newPage();
 

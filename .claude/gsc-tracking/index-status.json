@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-05-21T10:09:13.215Z",
+  "fetchedAt": "2026-05-23T05:13:29.329Z",
   "byUrl": {
     "https://www.enomia.app/": {
       "source": "home",
@@ -7,10 +7,10 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexingState": "INDEXING_ALLOWED",
-      "lastCrawlTime": "2026-05-10T13:16:01Z",
+      "lastCrawlTime": "2026-05-22T13:44:13Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/",
-      "checkedAt": "2026-05-21T10:02:04.222Z"
+      "checkedAt": "2026-05-23T05:03:10.029Z"
     },
     "https://www.enomia.app/blog": {
       "source": "hub",
@@ -21,7 +21,7 @@
       "lastCrawlTime": "2026-05-12T20:53:04Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/blog",
-      "checkedAt": "2026-05-21T10:02:11.166Z"
+      "checkedAt": "2026-05-23T05:03:16.990Z"
     },
     "https://www.enomia.app/simulateur-rentabilite-airbnb": {
       "source": "tool",
@@ -32,7 +32,7 @@
       "lastCrawlTime": "2026-05-11T22:12:47Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/simulateur-rentabilite-airbnb",
-      "checkedAt": "2026-05-21T10:02:18.091Z"
+      "checkedAt": "2026-05-23T05:03:23.990Z"
     },
     "https://www.enomia.app/estimation-airbnb": {
       "source": "tool",
@@ -43,7 +43,7 @@
       "lastCrawlTime": "2026-05-12T05:28:15Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/estimation-airbnb",
-      "checkedAt": "2026-05-21T10:02:24.962Z"
+      "checkedAt": "2026-05-23T05:03:30.958Z"
     },
     "https://www.enomia.app/rentabilite-airbnb": {
       "source": "hub",
@@ -54,18 +54,18 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:02:32.042Z"
+      "checkedAt": "2026-05-23T05:03:37.987Z"
     },
     "https://www.enomia.app/tarif-conciergerie-airbnb": {
       "source": "tool",
       "slug": "tarif-conciergerie-airbnb",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "lastCrawlTime": null,
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:02:38.899Z"
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-05-21T14:57:35Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://www.enomia.app/tarif-conciergerie-airbnb",
+      "checkedAt": "2026-05-23T05:03:44.884Z"
     },
     "https://www.enomia.app/facture-location-saisonniere": {
       "source": "tool",
@@ -76,7 +76,7 @@
       "lastCrawlTime": "2026-05-12T21:05:43Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/facture-location-saisonniere",
-      "checkedAt": "2026-05-21T10:02:45.879Z"
+      "checkedAt": "2026-05-23T05:03:51.803Z"
     },
     "https://www.enomia.app/facture-airbnb": {
       "source": "tool",
@@ -87,7 +87,7 @@
       "lastCrawlTime": "2026-05-15T23:44:56Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/facture-airbnb",
-      "checkedAt": "2026-05-21T10:02:52.841Z"
+      "checkedAt": "2026-05-23T05:03:58.713Z"
     },
     "https://www.enomia.app/facture-booking": {
       "source": "tool",
@@ -98,7 +98,7 @@
       "lastCrawlTime": "2026-05-14T18:55:08Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/facture-booking",
-      "checkedAt": "2026-05-21T10:02:59.784Z"
+      "checkedAt": "2026-05-23T05:04:05.839Z"
     },
     "https://www.enomia.app/contrat-location-saisonniere": {
       "source": "tool",
@@ -109,7 +109,7 @@
       "lastCrawlTime": "2026-05-18T04:48:41Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/contrat-location-saisonniere",
-      "checkedAt": "2026-05-21T10:03:06.757Z"
+      "checkedAt": "2026-05-23T05:04:12.687Z"
     },
     "https://www.enomia.app/contrat-airbnb": {
       "source": "tool",
@@ -120,7 +120,7 @@
       "lastCrawlTime": "2026-05-11T04:39:41Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/contrat-airbnb",
-      "checkedAt": "2026-05-21T10:03:13.640Z"
+      "checkedAt": "2026-05-23T05:04:19.764Z"
     },
     "https://www.enomia.app/contrat-location-gite": {
       "source": "tool",
@@ -131,7 +131,7 @@
       "lastCrawlTime": "2026-05-15T15:41:03Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/contrat-location-gite",
-      "checkedAt": "2026-05-21T10:03:20.595Z"
+      "checkedAt": "2026-05-23T05:04:26.720Z"
     },
     "https://www.enomia.app/contrat-location-mobil-home": {
       "source": "tool",
@@ -142,7 +142,7 @@
       "lastCrawlTime": "2026-04-27T10:48:36Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/contrat-location-mobil-home",
-      "checkedAt": "2026-05-21T10:03:27.547Z"
+      "checkedAt": "2026-05-23T05:04:33.693Z"
     },
     "https://www.enomia.app/conciergerie-airbnb": {
       "source": "hub",
@@ -153,7 +153,7 @@
       "lastCrawlTime": "2026-04-13T10:10:03Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb",
-      "checkedAt": "2026-05-21T10:03:34.429Z"
+      "checkedAt": "2026-05-23T05:04:47.683Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes": {
       "source": "conc-region",
@@ -164,7 +164,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:03:41.274Z"
+      "checkedAt": "2026-05-23T05:04:54.563Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/alsace": {
       "source": "conc-region",
@@ -175,7 +175,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:03:48.204Z"
+      "checkedAt": "2026-05-23T05:05:01.484Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/hauts-de-france": {
       "source": "conc-region",
@@ -186,7 +186,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:04:10.340Z"
+      "checkedAt": "2026-05-23T05:05:08.404Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine": {
       "source": "conc-region",
@@ -197,29 +197,29 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:04:17.323Z"
+      "checkedAt": "2026-05-23T05:05:15.470Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/occitanie": {
       "source": "conc-region",
       "slug": "occitanie",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "lastCrawlTime": null,
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:04:24.257Z"
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-05-21T14:45:34Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/occitanie",
+      "checkedAt": "2026-05-23T05:05:22.368Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur": {
       "source": "conc-region",
       "slug": "provence-alpes-cote-dazur",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "lastCrawlTime": null,
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:04:31.221Z"
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-05-21T14:47:33Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur",
+      "checkedAt": "2026-05-23T05:05:29.294Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/ile-de-france": {
       "source": "conc-region",
@@ -230,7 +230,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:04:38.213Z"
+      "checkedAt": "2026-05-23T05:05:36.360Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire": {
       "source": "conc-region",
@@ -241,7 +241,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:04:45.278Z"
+      "checkedAt": "2026-05-23T05:05:43.439Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/bretagne": {
       "source": "conc-region",
@@ -252,7 +252,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:04:52.217Z"
+      "checkedAt": "2026-05-23T05:05:50.389Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/normandie": {
       "source": "conc-region",
@@ -263,7 +263,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:04:59.133Z"
+      "checkedAt": "2026-05-23T05:05:57.304Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/maroc": {
       "source": "conc-region",
@@ -274,7 +274,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:05:12.878Z"
+      "checkedAt": "2026-05-23T05:06:18.651Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/bordeaux": {
       "source": "conc",
@@ -286,7 +286,7 @@
       "lastCrawlTime": "2026-05-08T09:36:55Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/bordeaux",
-      "checkedAt": "2026-05-21T10:05:19.860Z"
+      "checkedAt": "2026-05-23T05:06:25.717Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/lyon": {
       "source": "conc",
@@ -298,7 +298,7 @@
       "lastCrawlTime": "2026-05-11T04:45:40Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/lyon",
-      "checkedAt": "2026-05-21T10:05:26.829Z"
+      "checkedAt": "2026-05-23T05:06:32.714Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/nice": {
       "source": "conc",
@@ -310,7 +310,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:05:33.717Z"
+      "checkedAt": "2026-05-23T05:06:39.816Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/marseille": {
       "source": "conc",
@@ -322,7 +322,7 @@
       "lastCrawlTime": "2026-05-11T04:52:18Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/marseille",
-      "checkedAt": "2026-05-21T10:05:44.162Z"
+      "checkedAt": "2026-05-23T05:06:46.699Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/occitanie/toulouse": {
       "source": "conc",
@@ -334,7 +334,7 @@
       "lastCrawlTime": "2026-05-14T05:46:03Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/occitanie/toulouse",
-      "checkedAt": "2026-05-21T10:05:51.161Z"
+      "checkedAt": "2026-05-23T05:06:53.556Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/alsace/strasbourg": {
       "source": "conc",
@@ -346,7 +346,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:05:58.188Z"
+      "checkedAt": "2026-05-23T05:07:00.463Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/hauts-de-france/lille": {
       "source": "conc",
@@ -358,7 +358,7 @@
       "lastCrawlTime": "2026-05-08T09:39:12Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/hauts-de-france/lille",
-      "checkedAt": "2026-05-21T10:06:05.153Z"
+      "checkedAt": "2026-05-23T05:07:07.464Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/ile-de-france/paris": {
       "source": "conc",
@@ -370,7 +370,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:06:12.117Z"
+      "checkedAt": "2026-05-23T05:07:14.358Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/occitanie/agde": {
       "source": "conc",
@@ -382,7 +382,7 @@
       "lastCrawlTime": "2026-05-14T05:48:04Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/occitanie/agde",
-      "checkedAt": "2026-05-21T10:06:19.015Z"
+      "checkedAt": "2026-05-23T05:07:21.322Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire/les-sables-d-olonne": {
       "source": "conc",
@@ -394,7 +394,7 @@
       "lastCrawlTime": "2026-05-14T05:44:02Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire/les-sables-d-olonne",
-      "checkedAt": "2026-05-21T10:06:26.042Z"
+      "checkedAt": "2026-05-23T05:07:28.283Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/cannes": {
       "source": "conc",
@@ -406,7 +406,7 @@
       "lastCrawlTime": "2026-05-14T05:48:04Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/cannes",
-      "checkedAt": "2026-05-21T10:06:33.108Z"
+      "checkedAt": "2026-05-23T05:07:35.247Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/bretagne/rennes": {
       "source": "conc",
@@ -418,7 +418,7 @@
       "lastCrawlTime": "2026-05-14T05:50:09Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/bretagne/rennes",
-      "checkedAt": "2026-05-21T10:06:40.072Z"
+      "checkedAt": "2026-05-23T05:07:42.112Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/normandie/rouen": {
       "source": "conc",
@@ -430,7 +430,7 @@
       "lastCrawlTime": "2026-05-15T07:27:37Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/normandie/rouen",
-      "checkedAt": "2026-05-21T10:06:47.010Z"
+      "checkedAt": "2026-05-23T05:07:49.072Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire/angers": {
       "source": "conc",
@@ -442,7 +442,7 @@
       "lastCrawlTime": "2026-05-15T07:29:38Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire/angers",
-      "checkedAt": "2026-05-21T10:06:53.897Z"
+      "checkedAt": "2026-05-23T05:07:55.889Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/occitanie/montpellier": {
       "source": "conc",
@@ -454,7 +454,7 @@
       "lastCrawlTime": "2026-05-15T07:29:38Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/occitanie/montpellier",
-      "checkedAt": "2026-05-21T10:07:00.778Z"
+      "checkedAt": "2026-05-23T05:08:02.741Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/la-rochelle": {
       "source": "conc",
@@ -466,7 +466,7 @@
       "lastCrawlTime": "2026-05-15T07:31:53Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/la-rochelle",
-      "checkedAt": "2026-05-21T10:07:07.706Z"
+      "checkedAt": "2026-05-23T05:08:09.597Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/occitanie/cap-d-agde": {
       "source": "conc",
@@ -478,19 +478,19 @@
       "lastCrawlTime": "2026-05-15T07:31:53Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/occitanie/cap-d-agde",
-      "checkedAt": "2026-05-21T10:07:14.577Z"
+      "checkedAt": "2026-05-23T05:08:16.534Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/arcachon": {
       "source": "conc",
       "slug": "arcachon",
       "region": "nouvelle-aquitaine",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "lastCrawlTime": null,
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:07:21.499Z"
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-05-21T14:51:50Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/arcachon",
+      "checkedAt": "2026-05-23T05:08:23.580Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/maroc/marrakech": {
       "source": "conc",
@@ -502,43 +502,43 @@
       "lastCrawlTime": "2026-05-08T09:36:55Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/maroc/marrakech",
-      "checkedAt": "2026-05-21T10:07:28.408Z"
+      "checkedAt": "2026-05-23T05:08:30.446Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/annecy": {
       "source": "conc",
       "slug": "annecy",
       "region": "auvergne-rhone-alpes",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "lastCrawlTime": null,
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:07:35.368Z"
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-05-21T14:53:37Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/annecy",
+      "checkedAt": "2026-05-23T05:08:37.407Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/avignon": {
       "source": "conc",
       "slug": "avignon",
       "region": "provence-alpes-cote-dazur",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "lastCrawlTime": null,
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:07:42.433Z"
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-05-21T14:55:37Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/avignon",
+      "checkedAt": "2026-05-23T05:08:44.268Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire/nantes": {
       "source": "conc",
       "slug": "nantes",
       "region": "pays-de-la-loire",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "lastCrawlTime": null,
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:07:49.399Z"
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-05-21T14:55:37Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire/nantes",
+      "checkedAt": "2026-05-23T05:08:51.127Z"
     },
     "https://www.enomia.app/rentabilite-airbnb/paris": {
       "source": "rent",
@@ -549,7 +549,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:37:03.007Z"
+      "checkedAt": "2026-05-23T05:11:17.644Z"
     },
     "https://www.enomia.app/rentabilite-airbnb/lyon": {
       "source": "rent",
@@ -560,7 +560,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:37:09.928Z"
+      "checkedAt": "2026-05-23T05:11:24.492Z"
     },
     "https://www.enomia.app/rentabilite-airbnb/marseille": {
       "source": "rent",
@@ -571,7 +571,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:37:16.866Z"
+      "checkedAt": "2026-05-23T05:11:31.387Z"
     },
     "https://www.enomia.app/rentabilite-airbnb/bordeaux": {
       "source": "rent",
@@ -582,7 +582,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:37:23.883Z"
+      "checkedAt": "2026-05-23T05:11:38.204Z"
     },
     "https://www.enomia.app/rentabilite-airbnb/toulouse": {
       "source": "rent",
@@ -593,7 +593,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:37:30.838Z"
+      "checkedAt": "2026-05-23T05:11:45.108Z"
     },
     "https://www.enomia.app/rentabilite-airbnb/nice": {
       "source": "rent",
@@ -604,7 +604,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:37:37.813Z"
+      "checkedAt": "2026-05-23T05:11:52.058Z"
     },
     "https://www.enomia.app/rentabilite-airbnb/nantes": {
       "source": "rent",
@@ -615,7 +615,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:37:44.825Z"
+      "checkedAt": "2026-05-23T05:11:59.034Z"
     },
     "https://www.enomia.app/blog/channel-manager-comparatif": {
       "source": "blog",
@@ -626,7 +626,7 @@
       "lastCrawlTime": "2026-05-02T01:04:31Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/blog/channel-manager-comparatif",
-      "checkedAt": "2026-05-19T10:38:20.745Z"
+      "checkedAt": "2026-05-23T05:12:40.767Z"
     },
     "https://www.enomia.app/blog/fiscalite-airbnb": {
       "source": "blog",
@@ -637,7 +637,7 @@
       "lastCrawlTime": "2026-05-14T06:46:43Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/blog/fiscalite-airbnb",
-      "checkedAt": "2026-05-19T10:38:27.723Z"
+      "checkedAt": "2026-05-23T05:12:47.662Z"
     },
     "https://www.enomia.app/blog/lmnp-airbnb": {
       "source": "blog",
@@ -648,7 +648,7 @@
       "lastCrawlTime": "2026-05-02T02:27:19Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/blog/lmnp-airbnb",
-      "checkedAt": "2026-05-19T10:38:34.770Z"
+      "checkedAt": "2026-05-23T05:12:54.499Z"
     },
     "https://www.enomia.app/blog/louer-airbnb-rentable": {
       "source": "blog",
@@ -659,7 +659,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:38:41.777Z"
+      "checkedAt": "2026-05-23T05:13:08.242Z"
     },
     "https://www.enomia.app/blog/taux-occupation-par-ville": {
       "source": "blog",
@@ -670,7 +670,7 @@
       "lastCrawlTime": "2026-05-14T06:48:06Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/blog/taux-occupation-par-ville",
-      "checkedAt": "2026-05-19T10:38:48.731Z"
+      "checkedAt": "2026-05-23T05:13:28.826Z"
     },
     "https://www.enomia.app/blog/pricing-airbnb-tarif-dynamique": {
       "source": "blog",
@@ -681,7 +681,7 @@
       "lastCrawlTime": "2026-05-14T06:49:30Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/blog/pricing-airbnb-tarif-dynamique",
-      "checkedAt": "2026-05-19T10:38:55.585Z"
+      "checkedAt": "2026-05-23T05:13:15.083Z"
     },
     "https://www.enomia.app/blog/serrure-connectee-airbnb": {
       "source": "blog",
@@ -692,7 +692,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:39:02.743Z"
+      "checkedAt": "2026-05-23T05:13:21.981Z"
     },
     "https://www.enomia.app/blog/loi-le-meur-airbnb": {
       "source": "blog",
@@ -703,7 +703,7 @@
       "lastCrawlTime": "2026-05-14T06:47:24Z",
       "pageFetchState": "SUCCESSFUL",
       "googleCanonical": "https://www.enomia.app/blog/loi-le-meur-airbnb",
-      "checkedAt": "2026-05-19T10:39:09.809Z"
+      "checkedAt": "2026-05-23T05:13:01.397Z"
     },
     "https://www.enomia.app/rentabilite-airbnb/strasbourg": {
       "source": "rent",
@@ -714,7 +714,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:37:51.777Z"
+      "checkedAt": "2026-05-23T05:12:05.997Z"
     },
     "https://www.enomia.app/rentabilite-airbnb/montpellier": {
       "source": "rent",
@@ -725,7 +725,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:37:59.404Z"
+      "checkedAt": "2026-05-23T05:12:13.066Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/aix-en-provence": {
       "source": "conc",
@@ -737,7 +737,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:07:56.361Z"
+      "checkedAt": "2026-05-23T05:08:58.092Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/hyeres": {
       "source": "conc",
@@ -749,7 +749,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:08:03.426Z"
+      "checkedAt": "2026-05-23T05:09:05.008Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/alsace/reims": {
       "source": "conc",
@@ -761,7 +761,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:08:10.286Z"
+      "checkedAt": "2026-05-23T05:09:11.916Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/normandie/caen": {
       "source": "conc",
@@ -773,7 +773,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:08:17.251Z"
+      "checkedAt": "2026-05-23T05:09:18.878Z"
     },
     "https://www.enomia.app/rentabilite-airbnb/lille": {
       "source": "rent",
@@ -784,7 +784,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:38:06.472Z"
+      "checkedAt": "2026-05-23T05:12:20.130Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/centre-val-de-loire": {
       "source": "conc-region",
@@ -795,43 +795,43 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:05:05.984Z"
+      "checkedAt": "2026-05-23T05:06:04.392Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/antibes": {
       "source": "conc",
       "slug": "antibes",
       "region": "provence-alpes-cote-dazur",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "lastCrawlTime": null,
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:08:24.180Z"
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-05-21T14:57:35Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/antibes",
+      "checkedAt": "2026-05-23T05:09:25.726Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/toulon": {
       "source": "conc",
       "slug": "toulon",
       "region": "provence-alpes-cote-dazur",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "lastCrawlTime": null,
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:08:31.281Z"
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-05-21T14:59:42Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/toulon",
+      "checkedAt": "2026-05-23T05:09:32.641Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/chamonix": {
       "source": "conc",
       "slug": "chamonix",
       "region": "auvergne-rhone-alpes",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "lastCrawlTime": null,
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:08:38.447Z"
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-05-21T14:59:42Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/chamonix",
+      "checkedAt": "2026-05-23T05:09:39.519Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/centre-val-de-loire/tours": {
       "source": "conc",
@@ -843,7 +843,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:08:45.460Z"
+      "checkedAt": "2026-05-23T05:09:47.902Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/alsace/metz": {
       "source": "conc",
@@ -855,7 +855,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:08:52.343Z"
+      "checkedAt": "2026-05-23T05:09:54.788Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/occitanie/nimes": {
       "source": "conc",
@@ -867,7 +867,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:08:59.315Z"
+      "checkedAt": "2026-05-23T05:10:01.604Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/occitanie/sete": {
       "source": "conc",
@@ -879,7 +879,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:09:06.297Z"
+      "checkedAt": "2026-05-23T05:10:08.466Z"
     },
     "https://www.enomia.app/conciergerie-airbnb/normandie/deauville": {
       "source": "conc",
@@ -891,7 +891,7 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-21T10:09:13.214Z"
+      "checkedAt": "2026-05-23T05:10:15.494Z"
     },
     "https://www.enomia.app/rentabilite-airbnb/cannes": {
       "source": "rent",
@@ -902,7 +902,136 @@
       "lastCrawlTime": null,
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "googleCanonical": null,
-      "checkedAt": "2026-05-19T10:38:13.817Z"
+      "checkedAt": "2026-05-23T05:12:27.092Z"
+    },
+    "https://www.enomia.app/calcul-taxe-de-sejour": {
+      "source": "tool",
+      "slug": "calcul-taxe-de-sejour",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "checkedAt": "2026-05-23T05:04:40.756Z"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/bourgogne-franche-comte": {
+      "source": "conc-region",
+      "slug": "bourgogne-franche-comte",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "checkedAt": "2026-05-23T05:06:11.476Z"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/occitanie/perpignan": {
+      "source": "conc",
+      "slug": "perpignan",
+      "region": "occitanie",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "checkedAt": "2026-05-23T05:10:22.445Z"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/royan": {
+      "source": "conc",
+      "slug": "royan",
+      "region": "nouvelle-aquitaine",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "checkedAt": "2026-05-23T05:10:29.361Z"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/frejus": {
+      "source": "conc",
+      "slug": "frejus",
+      "region": "provence-alpes-cote-dazur",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "checkedAt": "2026-05-23T05:10:36.294Z"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/grenoble": {
+      "source": "conc",
+      "slug": "grenoble",
+      "region": "auvergne-rhone-alpes",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "checkedAt": "2026-05-23T05:10:43.257Z"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/biarritz": {
+      "source": "conc",
+      "slug": "biarritz",
+      "region": "nouvelle-aquitaine",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "checkedAt": "2026-05-23T05:10:50.121Z"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/bretagne/vannes": {
+      "source": "conc",
+      "slug": "vannes",
+      "region": "bretagne",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "checkedAt": "2026-05-23T05:10:56.995Z"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/hauts-de-france/amiens": {
+      "source": "conc",
+      "slug": "amiens",
+      "region": "hauts-de-france",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "checkedAt": "2026-05-23T05:11:03.842Z"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/bourgogne-franche-comte/dijon": {
+      "source": "conc",
+      "slug": "dijon",
+      "region": "bourgogne-franche-comte",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "checkedAt": "2026-05-23T05:11:10.707Z"
+    },
+    "https://www.enomia.app/rentabilite-airbnb/biarritz": {
+      "source": "rent",
+      "slug": "biarritz",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "googleCanonical": null,
+      "checkedAt": "2026-05-23T05:12:33.935Z"
     }
   }
 }

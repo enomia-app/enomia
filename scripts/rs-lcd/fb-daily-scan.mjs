@@ -18,6 +18,7 @@ import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import path from 'path';
+import { injectUtmInEnomiaLinks } from './fb-utils.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -237,9 +238,10 @@ async function main() {
   const result = await draftAllViaClaude(posts);
 
   // 3. Sauvegarde fb-drafts.json (format simple pour fb-build-validated)
+  // Post-processing : injecte UTM dans les liens Enomia (pour tracking GA4)
   const draftsSimple = {};
   for (const [id, d] of Object.entries(result.drafts || {})) {
-    draftsSimple[id] = { url: d.url, text: d.text };
+    draftsSimple[id] = { url: d.url, text: injectUtmInEnomiaLinks(d.text, id) };
   }
   mkdirSync(dirname(DRAFTS_OUT), { recursive: true });
   writeFileSync(DRAFTS_OUT, JSON.stringify(draftsSimple, null, 2));

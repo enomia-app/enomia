@@ -17,6 +17,7 @@ import { readdirSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import path from 'path';
+import { injectUtmInEnomiaLinks } from './fb-utils.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -119,7 +120,16 @@ Règles de sortie :
 
   const text = resp.content[0].text.trim();
   const cleaned = text.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, '');
-  return JSON.parse(cleaned);
+  const result = JSON.parse(cleaned);
+
+  // Post-processing : ajouter UTM aux liens Enomia (pour tracking GA4)
+  if (result.drafts) {
+    for (const d of result.drafts) {
+      if (d.text) d.text = injectUtmInEnomiaLinks(d.text, d.postId);
+    }
+  }
+
+  return result;
 }
 
 /**

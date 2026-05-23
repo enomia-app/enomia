@@ -19,7 +19,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 | `app.enomia.gsc-indexation` | 7h03 quotidien | Demande indexation Google des top URLs prioritaires | actif |
 | `app.enomia.tech-watchdog` | 8h11 quotidien | Watchdog santé technique du site | actif |
 | `app.enomia.conciergerie-production` | Lun/Mer/Ven 8h37 | Cycle de production landing conciergerie | actif |
-| `app.enomia.backlinks-track-replies-v2` | Lun-Ven 9h13 | Pipeline v2 : tracking réponses + relances auto J+5/J+10/J+15 | actif |
+| `app.enomia.backlinks-track-replies-v2` | Lun-Ven 10h31 | Pipeline v2 : tracking réponses + bounces + relances auto J+5/J+10/J+15 (10h31 = 14 min après send-daily 10h17 → chope les hard bounces immédiats du jour) | actif |
 | `com.enomia.fb-check-replies` | 9h23 quotidien | Check réponses sous commentaires FB Marc | actif |
 | `com.enomia.fb-monthly-insights` | 1er du mois 9h31 | Rapport mensuel opportunités SEO + features | actif |
 | `app.enomia.backlinks-source-monthly` | 1er du mois 9h47 | Pipeline v2 : sourcing SEMrush 75 KW, filtres, check outil concurrent, output `data/backlinks-YYYY-MM.json` | actif |
@@ -131,7 +131,7 @@ Pipeline refactoré : envoi auto sans validation Marc, 3 outils prioritaires (si
 **Coût Claude Haiku** : ~$0.10/mois (15 prospects × 22 jours × ~$0.0003/call) via `fetch` direct (pas `claude -p`, donc pas d'OAuth Max).
 **Throttle** : 10s entre 2 envois Gmail (anti-spam)
 
-### `app.enomia.backlinks-track-replies-v2` — Lun-Ven 9h13
+### `app.enomia.backlinks-track-replies-v2` — Lun-Ven 10h31
 **Script** : `scripts/backlinks-track-replies-v2/run.sh`
 **Code** : `track-replies.mjs`
 **Fait** :

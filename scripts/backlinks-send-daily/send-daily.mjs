@@ -39,7 +39,33 @@ const ROOT = path.resolve(__dirname, '../..');
 
 const args = process.argv.slice(2);
 const DRY = args.includes('--dry');
-const MAX = parseInt(args.find(a => a.startsWith('--max='))?.split('=')[1] || '15', 10);
+const MAX_OVERRIDE = args.find(a => a.startsWith('--max='))?.split('=')[1];
+
+/**
+ * Ramp-up automatique du volume quotidien (domaine jeune, < 12 sem d'historique).
+ * Lit first_send_date depuis bcc-state.json (ou aujourd'hui si pas encore initialisé).
+ * Retourne le max quotidien selon le nombre de semaines écoulées depuis le démarrage.
+ */
+function computeDailyMax() {
+  if (MAX_OVERRIDE) return parseInt(MAX_OVERRIDE, 10);
+  const statePath = path.join(ROOT, 'data', 'backlinks-send-state.json');
+  let firstSendDate = null;
+  if (fs.existsSync(statePath)) {
+    try {
+      const s = JSON.parse(fs.readFileSync(statePath, 'utf-8'));
+      firstSendDate = s.first_send_date;
+    } catch {}
+  }
+  if (!firstSendDate) return 5;
+  const weeksSince = Math.floor((Date.now() - new Date(firstSendDate).getTime()) / (7 * 86400000));
+  if (weeksSince < 1) return 5;
+  if (weeksSince < 2) return 8;
+  if (weeksSince < 3) return 12;
+  if (weeksSince < 4) return 15;
+  if (weeksSince < 6) return 20;
+  if (weeksSince < 8) return 25;
+  return 30;
+}
 
 function readEnvKey(key) {
   if (process.env[key]) return process.env[key].trim();
@@ -225,9 +251,10 @@ async function main() {
   const bccState = DRY ? { bcc: false, reason: 'dry' } : shouldBccToday(BCC_STATE_PATH);
   log(`📨 BCC Marc : ${bccState.bcc} (${bccState.reason})`);
 
+  const MAX = computeDailyMax();
   const picked = pickProspects(backlog.candidates, MAX);
   const pendingCount = backlog.candidates.filter(c => c.status === 'pending').length;
-  log(`📋 ${picked.length} prospects sélectionnés (sur ${pendingCount} pending)`);
+  log(`📋 ${picked.length} prospects sélectionnés sur ${pendingCount} pending (MAX=${MAX} via ramp-up)`);
 
   const sentEmail = [];
   const sentManual = [];
@@ -392,11 +419,14 @@ ${c.pitch_body.split('\n').map(l => '      ' + l).join('\n')}
 ⏭ Skippés (${skipped.length})
 ${skipped.length === 0 ? '  (aucun)' : skipped.map(c => `  • ${c.site} : ${c.reason}${c.qa_reasons ? ' (' + c.qa_reasons.join(', ') + ')' : ''}`).join('\n')}
 
-${bcc ? '🔍 Tu reçois en BCC les copies des emails envoyés aujourd\'hui (jour audit).' : ''}
-
+${bcc ? '🔍 Tu reçois en BCC les copies des emails envoyés aujourd\'hui (jour audit).\n' : ''}
 🔍 Postmaster Tools (check 1x par jour, 10s) :
    https://postmaster.google.com/managedomains?cd=enomia.app
    Spam Rate doit rester < 0.3%. Domain Reputation = High ou Medium.
+
+📈 Ramp-up volume (domaine jeune, 40 jours d'historique au démarrage) :
+   Sem 1=5/j, Sem 2=8, Sem 3=12, Sem 4=15, Sem 5-6=20, Sem 7-8=25, Sem 9+=30
+   Auto-géré : passe au pallier suivant chaque semaine si bounce rate < 3% et reputation High/Medium.
 
 Prochain run demain 10h17 (jour ouvré).
 `;

@@ -48,11 +48,18 @@ function listEnomiaTools() {
     .filter(s => !['index', 'auteur', 'preview', 'mentions-legales', 'confidentialite'].some(x => s.includes(x)));
 }
 
+function loadMarcFeedback() {
+  const file = join(ROOT, 'scripts/rs-lcd/feedback-marc.md');
+  if (!existsSync(file)) return '';
+  return readFileSync(file, 'utf8');
+}
+
 async function draftAllViaClaude(posts) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
   const articles = listEnomiaArticles();
   const tools = listEnomiaTools();
+  const marcFeedback = loadMarcFeedback();
 
   // Compacte les posts pour le prompt (texte tronqué à 1500 chars pour limiter le coût)
   const compactPosts = posts.map(p => ({
@@ -76,7 +83,12 @@ async function draftAllViaClaude(posts) {
 - Boîte à code mécanique, pas serrure connectée (cf article enomia)
 - Pas d'auto-promo aveugle, max 1 lien Enomia par commentaire, jamais 2
 
-# RESSOURCES ENOMIA DISPONIBLES POUR LIENS
+${marcFeedback ? `# APPRENTISSAGES DES RETOURS PRÉCÉDENTS DE MARC
+Ces règles, nuances, anecdotes et corrections proviennent des retours de Marc sur les drafts des vagues précédentes. APPLIQUE-LES quand le sujet du post matche.
+
+${marcFeedback}
+
+` : ''}# RESSOURCES ENOMIA DISPONIBLES POUR LIENS
 
 ## Articles blog (slug → URL https://www.enomia.app/blog/{slug})
 ${articles.join(', ')}

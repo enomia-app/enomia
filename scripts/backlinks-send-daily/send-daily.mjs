@@ -116,9 +116,22 @@ function saveBacklog(merged) {
 }
 
 function pickProspects(candidates, max) {
+  // Priorité de pick :
+  //   1. Email connu (envoi auto)
+  //   2. Formulaire connu (Marc remplit à la main)
+  //   3. Pending fetch (mining — sera fetché au moment du send)
+  // Au sein de chaque catégorie : tri par trafic SERP desc
+  function bucket(c) {
+    if (c.email) return 0;
+    if (c.url_formulaire) return 1;
+    return 2;
+  }
   return candidates
     .filter(c => c.status === 'pending')
     .sort((a, b) => {
+      const ba = bucket(a);
+      const bb = bucket(b);
+      if (ba !== bb) return ba - bb;
       const ta = a.serp_traffic || 0;
       const tb = b.serp_traffic || 0;
       if (ta !== tb) return tb - ta;

@@ -149,7 +149,7 @@ function pickProspects(candidates, max) {
  * Filtre : longueur 2-20, lettres+accents+tirets uniquement, pas tout majuscules,
  * pas dans la blacklist des mots non-prénoms.
  */
-function validatePrenom(raw) {
+function validatePrenom(raw, siteDomain = null) {
   if (!raw) return null;
   const cleaned = raw.trim().replace(/&#x27;|&#39;/g, "'").replace(/&amp;/g, '&').split(/\s+/)[0]; // premier mot uniquement
   if (cleaned.length < 2 || cleaned.length > 20) return null;
@@ -158,6 +158,28 @@ function validatePrenom(raw) {
   if (cleaned === cleaned.toUpperCase()) return null;
   // Doit commencer par majuscule + au moins 1 minuscule (= forme prénom typique)
   if (!/^[A-ZÀ-Ý][a-zà-ÿ]/.test(cleaned)) return null;
+  // Si > 12 chars sans séparateur (apostrophe/tiret), c'est suspect (handle compacté)
+  if (cleaned.length > 12 && !/['-]/.test(cleaned)) return null;
+
+  const lower = cleaned.toLowerCase();
+
+  // Si contient un segment significatif du domaine (handle de marque), reject
+  // Comparaison normalisée (sans accents) pour catcher "Dreaméo" vs "dreameo.fr"
+  const normalize = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const normPrenom = normalize(cleaned);
+  if (siteDomain) {
+    const SKIP_SEGMENTS = new Set(['www', 'blog', 'news', 'shop', 'store', 'app', 'mail', 'le-blog', 'magazine', 'journal', 'com', 'fr', 'net', 'org', 'co', 'io', 'eu', 'be', 'ch', 'ca']);
+    const segments = normalize(siteDomain).split('.').filter(s => s.length >= 4 && !SKIP_SEGMENTS.has(s));
+    for (const seg of segments) {
+      if (normPrenom.includes(seg) || seg.includes(normPrenom)) return null;
+    }
+  }
+
+  // Termine par un suffix de marque/business → handle
+  const brandSuffixes = ['bnb', 'airbnb', 'host', 'stay', 'rental', 'rentals', 'casa', 'loca', 'rent', 'immo', 'pro', 'app', 'tech', 'fr', 'paris'];
+  for (const suffix of brandSuffixes) {
+    if (lower.endsWith(suffix) && lower.length > suffix.length + 2) return null;
+  }
 
   const blacklist = [
     // Génériques email/contact
@@ -176,6 +198,9 @@ function validatePrenom(raw) {
     'site', 'article', 'blog', 'partager', 'mentions', 'légales', 'legales',
     'département', 'departements', 'départements', 'departement', 'région',
     'conditions', 'minut', 'redacteur', 'rédacteur',
+    // Entités organisationnelles génériques (faux positifs fréquents)
+    'société', 'societe', 'groupe', 'marque', 'entreprise', 'association',
+    'agence', 'agency', 'office', 'cabinet', 'studio',
   ];
   if (blacklist.some(b => cleaned.toLowerCase() === b)) return null;
   return cleaned;
@@ -216,6 +241,8 @@ async function fetchHtmlDecoded(url) {
 async function scanPage(url) {
   const html = await fetchHtmlDecoded(url);
   if (!html) return null;
+  let siteDomain = null;
+  try { siteDomain = new URL(url).hostname.replace(/^www\./, ''); } catch {}
 
   const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
   const og = html.match(/<meta[^>]*property=["']og:title["'][^>]*content=["']([^"']+)["']/i)?.[1];
@@ -250,7 +277,7 @@ async function scanPage(url) {
   ];
   let prenom = null;
   for (const cand of candidates) {
-    const v = validatePrenom(cand);
+    const v = validatePrenom(cand, siteDomain);
     if (v) { prenom = v; break; }
   }
 

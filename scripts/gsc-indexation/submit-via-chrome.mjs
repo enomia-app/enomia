@@ -188,6 +188,18 @@ async function runNormal() {
     viewport: { width: 1400, height: 900 },
     locale: 'fr-FR',
   });
+
+  // Masquer navigator.webdriver côté JS — Google check ça sur l'URL Inspection
+  // Tool et révoque la session si détecté.
+  await context.addInitScript(() => {
+    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+    // Quelques autres signaux qu'utilise Google pour détecter l'automation
+    Object.defineProperty(navigator, 'languages', { get: () => ['fr-FR', 'fr', 'en'] });
+    Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
+    // Chrome présent (sinon détectable comme bot)
+    if (!window.chrome) window.chrome = { runtime: {} };
+  });
+
   const page = await context.newPage();
 
   if (!(await isLoggedIn(page))) {

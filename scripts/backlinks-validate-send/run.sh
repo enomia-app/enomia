@@ -15,12 +15,17 @@ mkdir -p "$LOGS_DIR"
 
 cd "$REPO_ROOT"
 
+# Sourcer .env du repo pour récupérer les vars Gmail/Resend/etc.
+# IMPORTANT : on unset ANTHROPIC_API_KEY juste après pour forcer claude -p à
+# utiliser l'OAuth Max du keychain login (gratuit) plutôt que l'API key (payant).
+# Le keychain login est accessible car les jobs launchd tournent dans gui/UID/.
 if [[ -f "$REPO_ROOT/.env" ]]; then
   set -a
   # shellcheck source=/dev/null
   source "$REPO_ROOT/.env"
   set +a
 fi
+unset ANTHROPIC_API_KEY
 
 echo "===== backlinks-validate-send start $(date -Iseconds) =====" | tee -a "$RUN_LOG"
 

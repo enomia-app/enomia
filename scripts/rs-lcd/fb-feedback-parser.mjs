@@ -13,10 +13,34 @@
  */
 
 import Anthropic from '@anthropic-ai/sdk';
+import { readdirSync, existsSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+import path from 'path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, '../..');
+
+function listEnomiaArticles() {
+  const dir = join(ROOT, 'src/content/blog');
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir).filter(f => f.endsWith('.mdoc')).map(f => f.replace(/\.mdoc$/, ''));
+}
+
+function listEnomiaTools() {
+  const dir = join(ROOT, 'src/pages');
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter(f => f.endsWith('.astro') && !f.startsWith('_'))
+    .map(f => f.replace(/\.astro$/, ''))
+    .filter(s => !['index', 'auteur', 'preview', 'mentions-legales', 'confidentialite'].some(x => s.includes(x)));
+}
 
 export async function applyMarcFeedback(replyText, drafts) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const postIds = Object.keys(drafts);
+  const articles = listEnomiaArticles();
+  const tools = listEnomiaTools();
 
   const prompt = `Tu analyses une réponse email de Marc Chenut à un récap de propositions de commentaires Facebook que l'agent veut poster pour lui. Marc valide ou modifie chaque draft.
 
@@ -48,7 +72,19 @@ Types de retours possibles à traiter :
 - ZÉRO emoji, ZÉRO tiret long (—), ZÉRO signature
 - 3-6 phrases généralement (peut être plus long si Marc ajoute du contenu)
 - Pas d'auto-promo aveugle, max 1 lien Enomia par commentaire
-- Si Marc demande d'ajouter un lien Enomia (ex: "On peut mettre l'outil de contrat ici") : insère le lien en intégrant le contexte ("tu peux utiliser X qui fait Y, c'est ici : URL"), max 1 par draft
+
+# RESSOURCES ENOMIA DISPONIBLES (UTILISE UNIQUEMENT CES URLS — N'EN INVENTE PAS D'AUTRES)
+
+## Articles blog (URL : https://www.enomia.app/blog/{slug})
+${articles.join(', ')}
+
+## Outils / landings (URL : https://www.enomia.app/{slug})
+${tools.join(', ')}
+
+Si Marc demande d'ajouter un lien Enomia (ex: "On peut mettre l'outil de contrat ici") :
+- IDENTIFIE le slug le plus pertinent dans les listes ci-dessus
+- INSÈRE le lien en intégrant le contexte ("tu peux utiliser X qui fait Y, c'est ici : URL")
+- Si AUCUN slug ne matche exactement la demande de Marc : NE PAS inventer d'URL — produis le texte sans lien et signale dans marcFeedback "lien demandé par Marc mais pas de ressource Enomia correspondante"
 
 # FORMAT DE SORTIE — JSON STRICT, RIEN D'AUTRE (pas de markdown, pas de \`\`\`)
 

@@ -23,6 +23,7 @@ import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import path from 'path';
+import { fetchGa4WeeklyStats, fetchGa4FacebookTotal } from './fb-ga4-fetch.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -111,7 +112,7 @@ function fmtDate(d) {
   return d.toISOString().slice(0, 10);
 }
 
-function buildBody(thisWeek, lastWeek, weekStart, weekEnd) {
+function buildBody(thisWeek, lastWeek, weekStart, weekEnd, ga4, ga4Error) {
   const lines = [];
 
   lines.push(`Récap semaine du ${fmtDate(weekStart)} au ${fmtDate(new Date(weekEnd - 86400000))}.`);
@@ -155,9 +156,29 @@ function buildBody(thisWeek, lastWeek, weekStart, weekEnd) {
 
   // === GA4 ===
   lines.push('═══ GA4 — TRAFIC & ENGAGEMENT ═══');
-  lines.push('(Phase 2 — à brancher après autorisation OAuth + scope analytics.readonly.');
-  lines.push(' Property ID : 538537095. Une fois OAuth refait, ce bloc affichera sessions,');
-  lines.push(' bounce rate, durée moyenne, conversions par utm_content.)');
+  if (ga4) {
+    if (ga4.facebookTotal) {
+      lines.push(`Total trafic Facebook (toutes campagnes) : ${ga4.facebookTotal.sessions} sessions, dont ${ga4.facebookTotal.engagedSessions} engagées.`);
+    }
+    if (ga4.byUtmContent && ga4.byUtmContent.length > 0) {
+      lines.push(`Détail par commentaire (utm_campaign=lcd-veille) :`);
+      for (const r of ga4.byUtmContent) {
+        const br = (r.bounceRate * 100).toFixed(0);
+        const dur = r.avgDurationSec.toFixed(0);
+        lines.push(`  ${r.utmContent} : ${r.sessions} sessions, bounce ${br}%, durée ${dur}s, engagées ${r.engagedSessions}${r.conversions > 0 ? `, conv ${r.conversions}` : ''}`);
+      }
+    } else {
+      lines.push(`Aucune session attribuée à utm_campaign=lcd-veille cette semaine.`);
+      lines.push(`(Normal si les UTM ont été ajoutés récemment — attendre 7 jours de data complète.)`);
+    }
+    if (ga4.error) {
+      lines.push('');
+      lines.push(`⚠️ Erreur partielle GA4 : ${ga4.error}`);
+    }
+  } else {
+    lines.push(`(GA4 non disponible : ${ga4Error || 'OAuth scope analytics.readonly absent'}.`);
+    lines.push(` Relance scripts/gsc-oauth-bootstrap.mjs pour étendre le scope.)`);
+  }
   lines.push('');
 
   // === Note ===
@@ -175,7 +196,7 @@ function sendReport(subject, body) {
   );
 }
 
-function main() {
+async function main() {
   const archive = loadArchive();
   console.log(`Archive : ${archive.length} entrées`);
 
@@ -193,8 +214,22 @@ function main() {
   const thisWeek = computeStats(thisWeekEntries);
   const lastWeek = computeStats(lastWeekEntries);
 
+  // GA4 stats (peut échouer si scope OAuth pas encore élargi)
+  let ga4 = null;
+  let ga4Error = null;
+  try {
+    const [byUtmContent, facebookTotal] = await Promise.all([
+      fetchGa4WeeklyStats({ days: 7 }),
+      fetchGa4FacebookTotal({ days: 7 }),
+    ]);
+    ga4 = { byUtmContent, facebookTotal };
+  } catch (e) {
+    ga4Error = e.message;
+    console.warn(`GA4 indisponible : ${e.message}`);
+  }
+
   const subject = `[FB veille hebdo] ${thisWeek.total} commentaires — semaine du ${fmtDate(weekStart)}`;
-  const body = buildBody(thisWeek, lastWeek, weekStart, weekEnd);
+  const body = buildBody(thisWeek, lastWeek, weekStart, weekEnd, ga4, ga4Error);
 
   console.log(body);
   console.log('---');
@@ -202,4 +237,4 @@ function main() {
   console.log(`✓ Récap envoyé : ${subject}`);
 }
 
-main();
+main().catch(e => { console.error(e); process.exit(1); });

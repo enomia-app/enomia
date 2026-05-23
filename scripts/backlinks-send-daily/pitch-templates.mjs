@@ -1,5 +1,6 @@
 // scripts/backlinks-send-daily/pitch-templates.mjs
-// Templates des 3 pitches Enomia (simulateur, contrat, facture).
+// 4 templates pitch Enomia (simulateur, contrat, facture, taxe_sejour).
+// Pipeline v2.1 — l'outil à pitcher est choisi dynamiquement par send-daily.
 
 const TEMPLATES = {
   simulateur: {
@@ -70,14 +71,37 @@ Marc Chenut
 marc@enomia.app
 `.replace('Bonjour ,', 'Bonjour,'),
   },
+
+  taxe_sejour: {
+    url: 'https://www.enomia.app/calcul-taxe-de-sejour',
+    subject_options: [
+      'Calculateur de taxe de séjour pour vos lecteurs',
+      'Outil de calcul taxe de séjour, en complément de votre article',
+      'Compléter votre article avec un calculateur taxe de séjour ?',
+    ],
+    body: ({ prenom, titre, observation }) => `Bonjour ${prenom || ''},
+
+J'ai lu votre article "${titre}". ${observation}
+
+Nous avons développé chez Enomia un calculateur de taxe de séjour gratuit, qui couvre toutes les communes françaises avec leurs tarifs à jour (mise à jour automatique chaque année via le fichier officiel DGFiP). Il sort le montant exact à collecter selon la commune, le type de logement et le nombre de nuitées. Vos lecteurs qui prennent des réservations en direct, hors plateforme, n'ont jamais à se demander combien collecter.
+
+Je vous propose de l'ajouter en ressource dans votre article, ça donne à vos lecteurs un outil concret qu'ils peuvent utiliser à chaque réservation :
+https://www.enomia.app/calcul-taxe-de-sejour
+
+Qu'en pensez-vous ?
+
+Marc Chenut
+marc@enomia.app
+`.replace('Bonjour ,', 'Bonjour,'),
+  },
 };
 
 /**
- * Construit le pitch complet (subject + body) pour un prospect.
+ * Construit le pitch complet (subject + body) pour un prospect + un outil.
  */
-export function buildPitch({ outil_cible, prenom, titre, observation }) {
-  const tpl = TEMPLATES[outil_cible];
-  if (!tpl) throw new Error(`Outil inconnu: ${outil_cible}`);
+export function buildPitch({ outil, prenom, titre, observation }) {
+  const tpl = TEMPLATES[outil];
+  if (!tpl) throw new Error(`Outil inconnu: ${outil}`);
   const subject = tpl.subject_options[Math.floor(Math.random() * tpl.subject_options.length)];
   const body = tpl.body({ prenom, titre, observation });
   return { subject, body, outil_url: tpl.url };
@@ -87,46 +111,77 @@ export function buildPitch({ outil_cible, prenom, titre, observation }) {
  * QA auto sur le pitch avant envoi.
  * Retourne { ok: bool, reasons: string[] }.
  */
-export function qaPitch(pitch, prospect) {
+export function qaPitch(pitch) {
   const reasons = [];
   const { subject, body, outil_url } = pitch;
 
-  // 1. Longueur body
   const wc = body.split(/\s+/).length;
-  if (wc < 80 || wc > 350) reasons.push(`longueur (${wc} mots, attendu 80-350)`);
+  if (wc < 80 || wc > 400) reasons.push(`longueur (${wc} mots, attendu 80-400)`);
 
-  // 2. URL outil présente
   if (!body.includes(outil_url)) reasons.push('URL outil absente du body');
-
-  // 3. Signature présente
   if (!body.includes('marc@enomia.app')) reasons.push('signature email absente');
   if (!body.includes('Marc Chenut')) reasons.push('signature nom absente');
 
-  // 4. Pas de placeholder
   const placeholders = [
     '[titre]', '[Prénom]', '[prenom]', '[Nom]', '[observation]',
     '{', '}', 'undefined', '[object Object]',
   ];
   const lowerBody = body.toLowerCase();
   for (const p of placeholders) {
-    if (lowerBody.includes(p.toLowerCase())) reasons.push(`placeholder "${p}" présent`);
+    if (lowerBody.includes(p.toLowerCase())) reasons.push(`placeholder "${p}"`);
   }
 
-  // 5. Pas d'emoji
   if (/[\u{1F300}-\u{1F9FF}\u{2600}-\u{27BF}]/u.test(body)) reasons.push('emoji détecté');
-
-  // 6. Pas de tirets cadratins / longs / flèches
   if (body.includes('—') || body.includes('–') || body.includes('→')) {
-    reasons.push('tiret cadratin/long/flèche détecté');
+    reasons.push('tiret cadratin/long/flèche');
   }
 
-  // 7. Subject pas vide
   if (!subject || subject.length < 10) reasons.push('subject trop court');
-
-  // 8. Observation présente (pas juste "")
   if (body.match(/J'ai lu votre article "[^"]+"\.\s*\.\s*\n/)) {
-    reasons.push('observation manquante après le titre');
+    reasons.push('observation manquante après titre');
   }
 
   return { ok: reasons.length === 0, reasons };
+}
+
+/**
+ * Choisit dynamiquement quel outil pitcher pour un candidat donné.
+ *
+ * Règles :
+ *   - Si is_conciergerie ET simulateur pas présent → simulateur (seul outil non-conflictuel)
+ *   - Si is_conciergerie ET simulateur déjà présent → null (skip, conflit d'intérêt sur autres outils)
+ *   - Sinon : priorité simulateur > facture > contrat > taxe_sejour, on prend le premier MANQUANT
+ *   - Si tous présents → null (skip)
+ *
+ * Bias selon kw_origin_bucket : si le KW source est dans le bucket "contrat" et qu'on a
+ * le choix entre 2 outils manquants → on privilégie celui aligné avec le KW source.
+ *
+ * @returns string | null
+ */
+export function chooseOutilToPitch({ outils_presents = [], is_conciergerie = false, kw_origin_bucket = 'generic_lcd' }) {
+  const present = new Set(outils_presents);
+
+  if (is_conciergerie) {
+    return present.has('simulateur') ? null : 'simulateur';
+  }
+
+  // Tous présents → skip
+  if (present.has('simulateur') && present.has('facture') && present.has('contrat') && present.has('taxe_sejour')) {
+    return null;
+  }
+
+  // Ordre de priorité par défaut
+  const defaultOrder = ['simulateur', 'facture', 'contrat', 'taxe_sejour'];
+
+  // Bias selon bucket KW : on remonte l'outil aligné en première position
+  const bucketAlign = { simulateur: 'simulateur', contrat: 'contrat', facture: 'facture' };
+  const aligned = bucketAlign[kw_origin_bucket];
+  const order = aligned && !present.has(aligned)
+    ? [aligned, ...defaultOrder.filter(o => o !== aligned)]
+    : defaultOrder;
+
+  for (const o of order) {
+    if (!present.has(o)) return o;
+  }
+  return null;
 }

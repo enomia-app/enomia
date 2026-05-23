@@ -1,22 +1,25 @@
 #!/usr/bin/env node
 /**
- * Sourcing mensuel SEMrush — pipeline backlinks v2.
+ * Sourcing mensuel SEMrush — pipeline backlinks v2.1.
  *
- * Pour chaque outil (simulateur, contrat, facture) :
- *   - Query SEMrush phrase_organic sur ~25 KW
- *   - Récupère le top 30 SERP par KW
+ * Pour chaque bucket de KW (simulateur, contrat, facture, generic_lcd) :
+ *   - Query SEMrush phrase_organic top 30 SERP par KW
  *   - Dedup par domaine, blacklist filter
- *   - Visit chaque page candidate, vérifie qu'il n'y a PAS d'outil concurrent
- *   - Tente d'extraire email + url_formulaire
- *   - Output data/backlinks-YYYY-MM.json
+ *   - Pour chaque candidat survivant, visit la page cible :
+ *       * Détecte la liste des outils Enomia déjà présents (array)
+ *       * Détecte si c'est une conciergerie (bool)
+ *       * Extrait email/formulaire de contact
+ *   - On garde TOUS les candidats (le choix d'outil à pitcher se fait au send-daily)
+ *   - Output : data/backlinks-YYYY-MM.json
  *
  * Usage :
- *   node scripts/backlinks-source-monthly/source-monthly.mjs                 (run réel)
+ *   node scripts/backlinks-source-monthly/source-monthly.mjs                 (run réel complet)
  *   node scripts/backlinks-source-monthly/source-monthly.mjs --dry           (sans appel API)
- *   node scripts/backlinks-source-monthly/source-monthly.mjs --kw-limit=3    (test sur 3 KW par outil)
+ *   node scripts/backlinks-source-monthly/source-monthly.mjs --kw-limit=3    (test sur 3 KW par bucket)
  *   node scripts/backlinks-source-monthly/source-monthly.mjs --skip-fetch    (skip visite des pages)
+ *   node scripts/backlinks-source-monthly/source-monthly.mjs --fetch-concurrency=5 (par défaut 5)
  *
- * Coût SEMrush : ~75 KW × phrase_organic display_limit=30 = ~750 units. Négligeable.
+ * Coût SEMrush : ~2500 units pour ~250 KW. Négligeable sur quota Neocamino.
  */
 
 import fs from 'node:fs';
@@ -25,7 +28,7 @@ import { fileURLToPath } from 'node:url';
 import {
   isBlacklisted,
   extractDomain,
-  hasCompetingTool,
+  detectAll,
   extractContact,
 } from './filters.mjs';
 
@@ -33,42 +36,32 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
 const KW_LIST_PATH = path.join(__dirname, 'kw-list.json');
 
-// ─── CLI args ───────────────────────────────────────────────────────────
 const args = process.argv.slice(2);
 const DRY = args.includes('--dry');
 const SKIP_FETCH = args.includes('--skip-fetch');
 const KW_LIMIT = parseInt(args.find(a => a.startsWith('--kw-limit='))?.split('=')[1] || '999', 10);
+const FETCH_CONCURRENCY = parseInt(args.find(a => a.startsWith('--fetch-concurrency='))?.split('=')[1] || '5', 10);
 
-// ─── Env ────────────────────────────────────────────────────────────────
 function readEnvKey(key) {
   if (process.env[key]) return process.env[key].trim();
   const envPath = path.join(ROOT, '.env');
   if (fs.existsSync(envPath)) {
-    const env = fs.readFileSync(envPath, 'utf-8');
-    const m = env.match(new RegExp(`^${key}=(.+)$`, 'm'));
+    const m = fs.readFileSync(envPath, 'utf-8').match(new RegExp(`^${key}=(.+)$`, 'm'));
     if (m) return m[1].trim();
   }
   return null;
 }
 const SEMRUSH_KEY = readEnvKey('SEMRUSH_API_KEY');
 if (!SEMRUSH_KEY && !DRY) {
-  console.error('❌ SEMRUSH_API_KEY introuvable (env var ou .env)');
+  console.error('❌ SEMRUSH_API_KEY introuvable');
   process.exit(1);
 }
 
-// ─── Helpers ────────────────────────────────────────────────────────────
-const MONTH = new Date().toISOString().slice(0, 7); // YYYY-MM
+const MONTH = new Date().toISOString().slice(0, 7);
 const OUTPUT_PATH = path.join(ROOT, 'data', `backlinks-${MONTH}.json`);
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+const log = (...a) => console.log(`[${new Date().toISOString().slice(11, 19)}]`, ...a);
 
-function log(...args) {
-  console.log(`[${new Date().toISOString().slice(11, 19)}]`, ...args);
-}
-
-/**
- * Query SEMrush phrase_organic pour récupérer le top SERP d'un KW.
- * Retourne un array de { url, position, domain }.
- */
 async function querySerp(kw, displayLimit = 30) {
   if (DRY) {
     log(`  [DRY] would query SEMrush for "${kw}"`);
@@ -76,17 +69,10 @@ async function querySerp(kw, displayLimit = 30) {
   }
   const url = `https://api.semrush.com/?type=phrase_organic&key=${SEMRUSH_KEY}&phrase=${encodeURIComponent(kw)}&database=fr&display_limit=${displayLimit}&export_columns=Po,Ur,Tr`;
   const r = await fetch(url);
-  if (!r.ok) {
-    log(`  ❌ SEMrush HTTP ${r.status} pour "${kw}"`);
-    return [];
-  }
+  if (!r.ok) { log(`  ❌ HTTP ${r.status} pour "${kw}"`); return []; }
   const text = await r.text();
-  if (text.includes('ERROR')) {
-    log(`  ❌ SEMrush ${text.trim()} pour "${kw}"`);
-    return [];
-  }
-  // CSV : Po;Ur;Tr (Position;Url;Trafic)
-  const lines = text.trim().split('\n').slice(1); // skip header
+  if (text.includes('ERROR')) { log(`  ⚠️ ${text.trim().slice(0, 60)} pour "${kw}"`); return []; }
+  const lines = text.trim().split('\n').slice(1);
   return lines.map(line => {
     const [position, url, traffic] = line.split(';');
     return {
@@ -98,23 +84,50 @@ async function querySerp(kw, displayLimit = 30) {
   }).filter(r => r.domain);
 }
 
-// ─── Main ───────────────────────────────────────────────────────────────
+// Parallel fetch helper avec limit de concurrence
+async function fetchAllInParallel(items, fn, concurrency = 5, progressCb) {
+  const results = new Array(items.length);
+  let inFlight = 0;
+  let nextIndex = 0;
+  let done = 0;
+
+  return new Promise((resolve) => {
+    const launchNext = () => {
+      while (inFlight < concurrency && nextIndex < items.length) {
+        const idx = nextIndex++;
+        inFlight++;
+        fn(items[idx], idx).then(res => {
+          results[idx] = res;
+          inFlight--;
+          done++;
+          if (progressCb) progressCb(done, items.length);
+          if (done === items.length) resolve(results);
+          else launchNext();
+        });
+      }
+    };
+    if (items.length === 0) resolve([]);
+    else launchNext();
+  });
+}
+
 async function main() {
-  log(`🚀 Sourcing backlinks ${MONTH} ${DRY ? '(DRY RUN)' : ''}`);
+  log(`🚀 Sourcing backlinks ${MONTH} ${DRY ? '(DRY)' : ''} ${SKIP_FETCH ? '(NO-FETCH)' : ''}`);
 
-  const kwsByOutil = JSON.parse(fs.readFileSync(KW_LIST_PATH, 'utf-8'));
-  delete kwsByOutil._comment;
+  const buckets = JSON.parse(fs.readFileSync(KW_LIST_PATH, 'utf-8'));
+  delete buckets._comment;
 
-  // Étape 1 — Query SEMrush
-  const allCandidates = new Map(); // key = domain, value = best entry
+  // ─── ÉTAPE 1 — Query SEMrush ──────────────────────────────────────────
+  const allCandidates = new Map();
   let totalSerps = 0;
+  let totalKwQueried = 0;
 
-  for (const [outil, kws] of Object.entries(kwsByOutil)) {
+  for (const [bucket, kws] of Object.entries(buckets)) {
     const limited = kws.slice(0, KW_LIMIT);
-    log(`\n=== Outil: ${outil} (${limited.length} KW) ===`);
+    log(`\n=== Bucket: ${bucket} (${limited.length} KW) ===`);
 
     for (const kw of limited) {
-      log(`  → "${kw}"`);
+      totalKwQueried++;
       const results = await querySerp(kw);
       totalSerps += results.length;
 
@@ -125,8 +138,8 @@ async function main() {
           allCandidates.set(r.domain, {
             site: r.domain,
             page_cible: r.url,
-            outil_cible: outil,
-            kw_origin: kw,
+            kw_origin_bucket: bucket,
+            kw_origin_phrase: kw,
             rank_serp: r.position,
             serp_traffic: r.traffic,
           });
@@ -136,79 +149,98 @@ async function main() {
     }
   }
 
-  log(`\n📊 Après dedup + blacklist : ${allCandidates.size} domaines uniques (sur ${totalSerps} SERP results)`);
+  log(`\n📊 Query terminé : ${totalKwQueried} KW queried, ${totalSerps} SERP results, ${allCandidates.size} domaines uniques après dedup+blacklist`);
 
-  // Étape 2 — Pour chaque candidat, visit la page et check si outil concurrent
   const candidates = Array.from(allCandidates.values());
-  const final = [];
 
+  // ─── ÉTAPE 2 — Pour chaque candidat, fetch + détecte outils + conciergerie ─
+  let processed = candidates;
   if (!SKIP_FETCH && !DRY) {
-    log(`\n🔍 Visite des pages pour détecter outils concurrents...`);
-    let checked = 0;
-    for (const c of candidates) {
-      checked++;
-      if (checked % 20 === 0) log(`  ${checked}/${candidates.length}`);
+    log(`\n🔍 Fetch + détection (${candidates.length} candidats, concurrency=${FETCH_CONCURRENCY})...`);
 
-      const hasComp = await hasCompetingTool(c.page_cible, c.outil_cible);
-      if (hasComp === true) {
-        c.skip_reason = 'has_competing_tool';
-        continue;
+    processed = await fetchAllInParallel(candidates, async (c) => {
+      const detection = await detectAll(c.page_cible, c.site);
+      if (!detection) {
+        c.outils_presents = [];
+        c.is_conciergerie = false;
+        c.fetch_status = 'fail';
+        return c;
       }
-      if (hasComp === null) {
-        c.skip_reason = 'fetch_failed';
-        continue;
-      }
+      c.outils_presents = detection.tools;
+      c.is_conciergerie = detection.is_conciergerie;
+      c.fetch_status = 'ok';
 
-      // Tente d'extraire un contact
+      // Tente d'extraire contact en même temps
       const contact = await extractContact(c.page_cible);
       c.email = contact.email;
       c.url_formulaire = contact.url_formulaire;
-      c.status = 'pending';
-      c.created_at = new Date().toISOString();
-      final.push(c);
-
-      await sleep(500); // poli avec les serveurs
-    }
+      return c;
+    }, FETCH_CONCURRENCY, (done, total) => {
+      if (done % 50 === 0 || done === total) log(`  ${done}/${total} fetched`);
+    });
   } else {
-    log(`\n⏭ Skip fetch (--skip-fetch ou --dry)`);
+    log(`\n⏭ Skip fetch`);
     for (const c of candidates) {
+      c.outils_presents = [];
+      c.is_conciergerie = false;
+      c.fetch_status = 'skipped';
       c.email = null;
       c.url_formulaire = null;
-      c.status = 'pending_fetch';
-      c.created_at = new Date().toISOString();
-      final.push(c);
     }
   }
 
-  // Étape 3 — Output
+  // ─── ÉTAPE 3 — Format final + ajout status pending ────────────────────
+  const final = processed.map(c => ({
+    ...c,
+    status: 'pending',
+    created_at: new Date().toISOString(),
+  }));
+
+  // Stats
+  const fetchOk = final.filter(c => c.fetch_status === 'ok').length;
+  const conciergeries = final.filter(c => c.is_conciergerie).length;
+  const withEmail = final.filter(c => c.email).length;
+  const withForm = final.filter(c => !c.email && c.url_formulaire).length;
+  const byBucket = {};
+  for (const c of final) byBucket[c.kw_origin_bucket] = (byBucket[c.kw_origin_bucket] || 0) + 1;
+  const distribOutils = {};
+  for (const c of final) {
+    for (const t of c.outils_presents) {
+      distribOutils[t] = (distribOutils[t] || 0) + 1;
+    }
+  }
+
   const output = {
     month: MONTH,
     generated_at: new Date().toISOString(),
-    total_serps_scanned: totalSerps,
-    total_domains_after_dedup: allCandidates.size,
-    total_candidates_qualified: final.length,
-    by_outil: {
-      simulateur: final.filter(c => c.outil_cible === 'simulateur').length,
-      contrat: final.filter(c => c.outil_cible === 'contrat').length,
-      facture: final.filter(c => c.outil_cible === 'facture').length,
+    stats: {
+      total_kw_queried: totalKwQueried,
+      total_serps_scanned: totalSerps,
+      total_domains_after_dedup_blacklist: allCandidates.size,
+      total_candidates: final.length,
+      fetch_ok: fetchOk,
+      fetch_fail: final.length - fetchOk,
+      conciergeries: conciergeries,
+      with_email: withEmail,
+      with_form_only: withForm,
+      no_contact: final.length - withEmail - withForm,
+      by_bucket: byBucket,
+      outils_presents_distrib: distribOutils,
     },
     candidates: final,
   };
 
-  // Append au fichier mensuel si existe (cas où on relance dans le mois)
-  let existing = null;
+  // Append si fichier existe déjà
+  let existingCount = 0;
   if (fs.existsSync(OUTPUT_PATH)) {
-    existing = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf-8'));
+    const existing = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf-8'));
     const existingDomains = new Set(existing.candidates.map(c => c.site));
     const newOnes = final.filter(c => !existingDomains.has(c.site));
-    log(`\n📝 Fichier existant trouvé. Ajout de ${newOnes.length} nouveaux (${final.length - newOnes.length} déjà présents).`);
+    existingCount = existing.candidates.length;
+    log(`\n📝 Fichier existant : ${existingCount} candidats. Ajout : ${newOnes.length}.`);
     output.candidates = [...existing.candidates, ...newOnes];
-    output.total_candidates_qualified = output.candidates.length;
-    output.by_outil = {
-      simulateur: output.candidates.filter(c => c.outil_cible === 'simulateur').length,
-      contrat: output.candidates.filter(c => c.outil_cible === 'contrat').length,
-      facture: output.candidates.filter(c => c.outil_cible === 'facture').length,
-    };
+    output.stats.total_candidates = output.candidates.length;
+    output.stats.appended_this_run = newOnes.length;
   }
 
   if (!DRY) {
@@ -218,17 +250,15 @@ async function main() {
   }
 
   log(`\n📈 Bilan :`);
-  log(`  SERP scanned          : ${totalSerps}`);
-  log(`  Domaines uniques      : ${allCandidates.size}`);
-  log(`  Candidats qualifiés   : ${final.length}`);
-  log(`    - simulateur        : ${output.by_outil.simulateur}`);
-  log(`    - contrat           : ${output.by_outil.contrat}`);
-  log(`    - facture           : ${output.by_outil.facture}`);
-
-  return output;
+  log(`  KW queried       : ${totalKwQueried}`);
+  log(`  SERP scanned     : ${totalSerps}`);
+  log(`  Candidats finaux : ${output.candidates.length} ${existingCount ? `(${existingCount} déjà + ${output.candidates.length - existingCount} nouveaux)` : ''}`);
+  log(`  Fetch OK         : ${fetchOk}/${final.length}`);
+  log(`  Conciergeries    : ${conciergeries}`);
+  log(`  Avec email       : ${withEmail}`);
+  log(`  Avec formulaire  : ${withForm}`);
+  log(`  Par bucket KW    : ${JSON.stringify(byBucket)}`);
+  log(`  Outils présents (sur les candidats fetched) : ${JSON.stringify(distribOutils)}`);
 }
 
-main().catch(e => {
-  console.error('❌ Fatal:', e);
-  process.exit(1);
-});
+main().catch(e => { console.error('❌ Fatal:', e); process.exit(1); });

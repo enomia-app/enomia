@@ -44,31 +44,31 @@ fi
 echo "→ Compute top candidates..." | tee -a "$RUN_LOG"
 node scripts/gsc-indexation/compute-candidates.mjs >> "$RUN_LOG" 2>&1
 
-# 3. Soumettre via Playwright
-echo "→ Submit via Playwright (Chrome headless + cookies persistés)..." | tee -a "$RUN_LOG"
+# 3. Soumettre via Playwright (profil Chrome dédié)
+echo "→ Submit via Playwright (profil Chrome dédié)..." | tee -a "$RUN_LOG"
 SUBMIT_EXIT=0
 node scripts/gsc-indexation/submit-via-chrome.mjs >> "$RUN_LOG" 2>&1 || SUBMIT_EXIT=$?
 
 # 4. Commit + push si urls.json changé
 if ! git diff --quiet "$TRACKING_FILE" 2>/dev/null; then
-  git add "$TRACKING_FILE" "$INDEX_STATUS_FILE" 2>/dev/null || true
+  git add -f "$TRACKING_FILE" "$INDEX_STATUS_FILE" 2>/dev/null || true
   git commit -m "chore(gsc): indexation $DATE_TAG" >> "$RUN_LOG" 2>&1 || true
   git push origin main >> "$RUN_LOG" 2>&1 || \
     echo "WARN push échoué (sera retenté demain)" | tee -a "$RUN_LOG"
 fi
 
-# 5. Email récap
+# 5. Email récap structuré (pas le dump du log brut)
 SUBJECT="[gsc-indexation] $DATE_TAG"
 case $SUBMIT_EXIT in
   0) SUBJECT="$SUBJECT — OK" ;;
-  2) SUBJECT="$SUBJECT — ⚠️ fichiers manquants (cookies ou candidates)" ;;
-  3) SUBJECT="$SUBJECT — ⚠️ cookies GSC expirés, refaire export Cookie-Editor" ;;
-  4) SUBJECT="$SUBJECT — ⚠️ stoppé en cours (quota Google ou CAPTCHA)" ;;
+  2) SUBJECT="$SUBJECT — ⚠️ candidates manquantes" ;;
+  3) SUBJECT="$SUBJECT — ⚠️ profil Chrome pas loggué (lancer --setup)" ;;
+  4) SUBJECT="$SUBJECT — ⚠️ stoppé en cours (quota / CAPTCHA / auth perdue)" ;;
   *) SUBJECT="$SUBJECT — ❌ erreur fatale (exit $SUBMIT_EXIT)" ;;
 esac
 
 if [[ -x "$SEND_REPORT" ]]; then
-  tail -150 "$RUN_LOG" | "$SEND_REPORT" "$SUBJECT" >> "$RUN_LOG" 2>&1 || \
+  node scripts/gsc-indexation/build-email-report.mjs | "$SEND_REPORT" "$SUBJECT" >> "$RUN_LOG" 2>&1 || \
     echo "WARN email échoué" | tee -a "$RUN_LOG"
 fi
 

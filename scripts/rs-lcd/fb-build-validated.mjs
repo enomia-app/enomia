@@ -33,8 +33,8 @@ const OUTPUT_FILE = args.output
 function parseValidation(text) {
   const result = { ok: [], skip: [], edits: {} };
 
-  // OK: 1.1, 1.3, 4.3
-  const okMatch = text.match(/OK\s*:\s*([0-9., ()v]+)/i);
+  // OK: g1.1, g1.3, g4.3 (préfixe 'g' optionnel pour rétrocompat)
+  const okMatch = text.match(/OK\s*:\s*([g0-9., ()v]+)/i);
   if (okMatch) {
     result.ok = okMatch[1]
       .split(',')
@@ -42,8 +42,8 @@ function parseValidation(text) {
       .filter(Boolean);
   }
 
-  // SKIP: 1.2, 4.1
-  const skipMatch = text.match(/SKIP\s*:\s*([0-9., ()v]+)/i);
+  // SKIP: g1.2, g4.1
+  const skipMatch = text.match(/SKIP\s*:\s*([g0-9., ()v]+)/i);
   if (skipMatch) {
     result.skip = skipMatch[1]
       .split(',')
@@ -51,8 +51,8 @@ function parseValidation(text) {
       .filter(Boolean);
   }
 
-  // EDIT X.X: nouveau texte (jusqu'au prochain EDIT/OK/SKIP ou fin)
-  const editRegex = /EDIT\s+([0-9.]+)\s*:\s*([\s\S]+?)(?=\n\s*(?:EDIT|OK|SKIP)\s*[: ]|\n\s*$|$)/gi;
+  // EDIT gX.X: nouveau texte (jusqu'au prochain EDIT/OK/SKIP ou fin)
+  const editRegex = /EDIT\s+([g0-9.]+)\s*:\s*([\s\S]+?)(?=\n\s*(?:EDIT|OK|SKIP)\s*[: ]|\n\s*$|$)/gi;
   let m;
   while ((m = editRegex.exec(text)) !== null) {
     result.edits[m[1].trim()] = m[2].trim();

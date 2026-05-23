@@ -18,12 +18,12 @@
  */
 
 import { google } from 'googleapis';
-import Anthropic from '@anthropic-ai/sdk';
 import { readFileSync, writeFileSync, existsSync, statSync, unlinkSync, appendFileSync } from 'fs';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import path from 'path';
+import { applyMarcFeedback, toValidatedArray } from './fb-feedback-parser.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -38,7 +38,6 @@ loadEnv(path.join(ROOT, '.env'));
 
 const LOCK = '/tmp/fb-post-running.lock';
 const LOG = join(ROOT, 'data/rs-lcd/fb-watch.log');
-const VALIDATION_TMP = '/tmp/fb-validation.txt';
 
 // Deux modes :
 // - scan : email "[FB scan]" → drafts fb-drafts.json → post via fb-post.mjs
@@ -173,65 +172,6 @@ function findMarcReply(thread) {
   return null;
 }
 
-async function parseValidationViaClaude(replyText, drafts) {
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-  const postIds = Object.keys(drafts).join(', ');
-
-  const prompt = `Tu reçois une réponse email de Marc à un récap de propositions de commentaires Facebook. Convertis sa réponse en format STRICT.
-
-Propositions disponibles (postIds) : ${postIds}
-
-Pour chaque proposition, drafts[postId] contient {url, text}. Le text actuel contient parfois un lien Enomia (URL https://www.enomia.app/...). Pour les EDIT type "garde la version sans lien" : retire la phrase finale qui contient l'URL Enomia.
-
-drafts JSON :
-${JSON.stringify(drafts, null, 2)}
-
-Réponse de Marc à interpréter :
-"""
-${replyText}
-"""
-
-Réponds UNIQUEMENT en JSON avec cette structure exacte :
-{
-  "ok": ["X.X", "X.X", ...],
-  "skip": ["X.X", ...],
-  "edits": { "X.X": "nouveau texte complet", ... },
-  "ambiguous": false,
-  "reason": "explication courte si ambigu"
-}
-
-Règles :
-- Si Marc dit "ok pour tout" : "ok" contient TOUS les postIds disponibles
-- Si Marc dit "tout sauf X" : "ok" = tous SAUF X, et X dans "skip" si refus, ou "edits" si modification
-- Si Marc reformule un commentaire entièrement, mets le nouveau texte dans "edits"
-- Si la réponse est ambiguë ou vide, mets "ambiguous": true et explique dans "reason"
-- "ok" et "edits" peuvent contenir le même postId (alors on prend l'edit)
-- Pas de markdown, juste du JSON pur.`;
-
-  const resp = await client.messages.create({
-    model: 'claude-haiku-4-5-20251001',
-    max_tokens: 4096,
-    messages: [{ role: 'user', content: prompt }],
-  });
-
-  const text = resp.content[0].text.trim();
-  // Strip ```json ... ``` si présent
-  const cleaned = text.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, '');
-  return JSON.parse(cleaned);
-}
-
-function buildValidationText(parsed) {
-  const lines = [];
-  if (parsed.ok && parsed.ok.length) lines.push(`OK: ${parsed.ok.join(', ')}`);
-  if (parsed.skip && parsed.skip.length) lines.push(`SKIP: ${parsed.skip.join(', ')}`);
-  if (parsed.edits) {
-    for (const [id, txt] of Object.entries(parsed.edits)) {
-      lines.push(`EDIT ${id}: ${txt}`);
-    }
-  }
-  return lines.join('\n');
-}
-
 async function labelThread(gmail, threadId, labelId) {
   await gmail.users.threads.modify({
     userId: 'me',
@@ -273,27 +213,29 @@ async function processThread(gmail, threadId, labelId) {
   }
   const drafts = JSON.parse(readFileSync(draftsPath, 'utf8'));
 
-  log(`Thread ${threadId} : parsing via Claude API`);
-  const parsed = await parseValidationViaClaude(reply, drafts);
+  log(`Thread ${threadId} : application des retours Marc via Sonnet`);
+  const parsed = await applyMarcFeedback(reply, drafts);
 
   if (parsed.ambiguous) {
     log(`Thread ${threadId} : réponse ambiguë — ${parsed.reason}`);
     sendConfirmation(
       `[${mode === 'scan' ? 'FB scan' : 'FB replies'}] Clarification demandée`,
-      `Ta réponse n'a pas pu être interprétée automatiquement.\n\nRaison : ${parsed.reason}\n\nTa réponse :\n${reply}\n\nMerci de répondre avec un format plus explicite (OK: X.X, X.X / SKIP: X.X / EDIT X.X: texte).`
+      `Ta réponse n'a pas pu être interprétée automatiquement.\n\nRaison : ${parsed.reason}\n\nTa réponse :\n${reply}\n\nMerci de reformuler.`
     );
     return { ambiguous: true };
   }
 
-  const validationText = buildValidationText(parsed);
-  log(`Validation :\n${validationText}`);
-  writeFileSync(VALIDATION_TMP, validationText);
+  // Écrit directement validated.json depuis le résultat Sonnet (plus de regex intermédiaire)
+  const validated = toValidatedArray(parsed);
+  writeFileSync(join(ROOT, cfg.outputFile), JSON.stringify(validated, null, 2));
 
-  log('Build validated');
-  execSync(
-    `cat ${VALIDATION_TMP} | node scripts/rs-lcd/fb-build-validated.mjs --drafts=${cfg.draftsFile} --output=${cfg.outputFile}`,
-    { cwd: ROOT, stdio: 'inherit' }
-  );
+  // Log compact des actions
+  const summary = parsed.drafts.map(d => {
+    const fb = d.marcFeedback ? ` — ${d.marcFeedback}` : '';
+    const flag = d.action === 'skip' ? 'SKIP' : (d.edited ? 'EDIT' : 'OK');
+    return `  ${d.postId} ${flag}${fb}`;
+  }).join('\n');
+  log(`Drafts traités (${validated.length} à poster) :\n${summary}`);
 
   log(`Lancement ${cfg.postScript} (peut prendre 15-25 min)`);
   let postResult = { ok: true };
@@ -312,31 +254,29 @@ async function processThread(gmail, threadId, labelId) {
   await labelThread(gmail, threadId, labelId);
 
   // Email confirmation
-  const validated = JSON.parse(readFileSync(join(ROOT, cfg.outputFile), 'utf8'));
-  const liens = validated.map(v => `  ${v.postId} — ${v.url}`).join('\n');
+  const postedValidated = JSON.parse(readFileSync(join(ROOT, cfg.outputFile), 'utf8'));
+  const skipped = parsed.drafts.filter(d => d.action === 'skip');
+
+  const detailLines = parsed.drafts.map(d => {
+    const action = d.action === 'skip' ? '⏭ SKIP' : (d.edited ? '✎ EDIT' : '✓ OK  ');
+    const fb = d.marcFeedback ? `\n      ↳ ${d.marcFeedback}` : '';
+    return `  ${action} ${d.postId} — ${d.url}${fb}`;
+  }).join('\n');
+
   const subject = postResult.ok
-    ? `${cfg.subjectPrefix} — ${validated.length}`
+    ? `${cfg.subjectPrefix} — ${postedValidated.length}`
     : `${cfg.subjectPrefix.replace('Postés','Erreur').replace('Postées','Erreur')}`;
+
   const body = postResult.ok
-    ? `Validations parsées :
-  OK   : ${(parsed.ok || []).join(', ') || '(aucun)'}
-  SKIP : ${(parsed.skip || []).join(', ') || '(aucun)'}
-  EDIT : ${Object.keys(parsed.edits || {}).join(', ') || '(aucun)'}
+    ? `Résultat : ${postedValidated.length} commentaires postés (${skipped.length} skippés).
 
-Résultat : ${validated.length} commentaires postés.
-
-Liens FB :
-${liens}
+Détail par draft :
+${detailLines}
 `
     : `Erreur pendant fb-post.mjs : ${postResult.error}
 
-Validations parsées (essayées) :
-  OK   : ${(parsed.ok || []).join(', ')}
-  SKIP : ${(parsed.skip || []).join(', ')}
-  EDIT : ${Object.keys(parsed.edits || {}).join(', ')}
-
-Posts ciblés :
-${liens}
+Détail par draft :
+${detailLines}
 
 Thread Gmail labélisé "fb-scan-traité" malgré l'erreur (pour éviter retry en boucle).`;
 

@@ -14,7 +14,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 
 | Agent | Fréquence | Rôle | Statut |
 |-------|-----------|------|--------|
-| `app.enomia.git-pull` | toutes les heures | Garde le repo Mac mini à jour avec GitHub | actif |
+| `app.enomia.git-pull` | toutes les 5 min | Garde le repo Mac mini à jour avec GitHub | actif |
 | `com.enomia.fb-daily-scan` | 7h17 quotidien | Scan FB matinal + drafte commentaires + email | actif |
 | `app.enomia.gsc-indexation` | 9h18 quotidien | Wrapper `claude -p` qui lance la skill `gsc-indexation-quotidienne` (refresh GSC API + soumissions Chrome MCP top 10 URLs prioritaires par volume SEMrush) | actif |
 | `app.enomia.tech-watchdog` | 8h11 quotidien | Watchdog santé technique du site | actif |
@@ -83,7 +83,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 
 ## Autres agents Enomia
 
-### `app.enomia.git-pull` — toutes les heures
+### `app.enomia.git-pull` — toutes les 5 min
 **Script** : `scripts/git-pull-eunomia.sh`
 Garde la copie locale du repo synchronisée avec GitHub. Évite que le Mac mini parte en désync.
 

@@ -107,9 +107,11 @@ async function findOrCreateLabel(gmail, name) {
 
 async function listCandidateThreads(gmail) {
   // newer_than:3d pour avoir une marge si on tombe en panne quelques jours
+  // Exclure les subjects qui sont des notifications (Postés, Clarification, Erreur)
+  // pour ne traiter QUE les threads de validation initiaux.
   const res = await gmail.users.threads.list({
     userId: 'me',
-    q: `(subject:"FB scan" OR subject:"FB replies") newer_than:3d -label:${LABEL_TRAITE}`,
+    q: `(subject:"FB scan" OR subject:"FB replies") -subject:"Postés" -subject:"Postées" -subject:"Clarification" -subject:"Erreur" newer_than:3d -label:${LABEL_TRAITE}`,
     maxResults: 20,
   });
   return res.data.threads || [];
@@ -220,8 +222,15 @@ async function processThread(gmail, threadId, labelId) {
     log(`Thread ${threadId} : réponse ambiguë — ${parsed.reason}`);
     sendConfirmation(
       `[${mode === 'scan' ? 'FB scan' : 'FB replies'}] Clarification demandée`,
-      `Ta réponse n'a pas pu être interprétée automatiquement.\n\nRaison : ${parsed.reason}\n\nTa réponse :\n${reply}\n\nMerci de reformuler.`
+      `Ta réponse n'a pas pu être interprétée automatiquement.\n\nRaison : ${parsed.reason}\n\nTa réponse :\n${reply}\n\nIntervention manuelle requise (le thread est labelisé fb-scan-posted pour éviter le spam de clarifications).`
     );
+    // Labelliser pour éviter le retry en boucle (spam toutes les 15 min)
+    try {
+      await labelThread(gmail, threadId, labelId);
+      log(`Thread ${threadId} : labelisé fb-scan-posted (ambigu, pas de retry)`);
+    } catch (e) {
+      log(`Thread ${threadId} : ERREUR labélisation (${e.message}) — risque de retry`);
+    }
     return { ambiguous: true };
   }
 

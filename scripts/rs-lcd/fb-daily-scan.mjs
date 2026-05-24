@@ -18,6 +18,7 @@ import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import path from 'path';
+import { injectUtmInEnomiaLinks } from './fb-utils.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -48,11 +49,18 @@ function listEnomiaTools() {
     .filter(s => !['index', 'auteur', 'preview', 'mentions-legales', 'confidentialite'].some(x => s.includes(x)));
 }
 
+function loadMarcFeedback() {
+  const file = join(ROOT, 'scripts/rs-lcd/feedback-marc.md');
+  if (!existsSync(file)) return '';
+  return readFileSync(file, 'utf8');
+}
+
 async function draftAllViaClaude(posts) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
   const articles = listEnomiaArticles();
   const tools = listEnomiaTools();
+  const marcFeedback = loadMarcFeedback();
 
   // Compacte les posts pour le prompt (texte tronqué à 1500 chars pour limiter le coût)
   const compactPosts = posts.map(p => ({
@@ -76,7 +84,12 @@ async function draftAllViaClaude(posts) {
 - Boîte à code mécanique, pas serrure connectée (cf article enomia)
 - Pas d'auto-promo aveugle, max 1 lien Enomia par commentaire, jamais 2
 
-# RESSOURCES ENOMIA DISPONIBLES POUR LIENS
+${marcFeedback ? `# APPRENTISSAGES DES RETOURS PRÉCÉDENTS DE MARC
+Ces règles, nuances, anecdotes et corrections proviennent des retours de Marc sur les drafts des vagues précédentes. APPLIQUE-LES quand le sujet du post matche.
+
+${marcFeedback}
+
+` : ''}# RESSOURCES ENOMIA DISPONIBLES POUR LIENS
 
 ## Articles blog (slug → URL https://www.enomia.app/blog/{slug})
 ${articles.join(', ')}
@@ -225,9 +238,10 @@ async function main() {
   const result = await draftAllViaClaude(posts);
 
   // 3. Sauvegarde fb-drafts.json (format simple pour fb-build-validated)
+  // Post-processing : injecte UTM dans les liens Enomia (pour tracking GA4)
   const draftsSimple = {};
   for (const [id, d] of Object.entries(result.drafts || {})) {
-    draftsSimple[id] = { url: d.url, text: d.text };
+    draftsSimple[id] = { url: d.url, text: injectUtmInEnomiaLinks(d.text, id) };
   }
   mkdirSync(dirname(DRAFTS_OUT), { recursive: true });
   writeFileSync(DRAFTS_OUT, JSON.stringify(draftsSimple, null, 2));

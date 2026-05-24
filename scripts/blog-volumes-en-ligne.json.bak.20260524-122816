@@ -59,14 +59,5 @@
     "title": ">-",
     "pillarKeyword": "taux occupation airbnb par ville",
     "fallback": false
-  },
-  "serrure-connectee-airbnb": {
-    "phrase": "serrure connectée airbnb",
-    "vol": 590,
-    "kd": 15,
-    "cpc": 0.28,
-    "title": "Serrure connectée Airbnb",
-    "pillarKeyword": "serrure connectée airbnb",
-    "source": "semrush-2026-05-24"
   }
 }

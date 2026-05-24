@@ -3,33 +3,37 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>app.enomia.backlinks-track-replies</string>
+    <string>app.enomia.backlinks-source-monthly</string>
 
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/marc/projects/eunomia/scripts/backlinks-track-replies/run.sh</string>
+        <string>/Users/marc/projects/eunomia/scripts/backlinks-source-monthly/run.sh</string>
     </array>
 
     <key>StartCalendarInterval</key>
     <dict>
-        <key>Hour</key><integer>9</integer>
-        <key>Minute</key><integer>13</integer>
+        <key>Day</key>
+        <integer>1</integer>
+        <key>Hour</key>
+        <integer>9</integer>
+        <key>Minute</key>
+        <integer>47</integer>
     </dict>
 
     <key>RunAtLoad</key>
     <false/>
 
     <key>StandardOutPath</key>
-    <string>/Users/marc/projects/eunomia/scripts/backlinks-track-replies/logs/launchd-stdout.log</string>
+    <string>/Users/marc/projects/eunomia/scripts/backlinks-source-monthly/logs/launchd-stdout.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/marc/projects/eunomia/scripts/backlinks-track-replies/logs/launchd-stderr.log</string>
+    <string>/Users/marc/projects/eunomia/scripts/backlinks-source-monthly/logs/launchd-stderr.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>
-        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Users/marc/.claude/local</string>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
         <key>HOME</key>
         <string>/Users/marc</string>
     </dict>

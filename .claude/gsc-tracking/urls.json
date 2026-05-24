@@ -1,7 +1,7 @@
 {
   "property": "sc-domain:enomia.app",
   "property_url": "https://search.google.com/search-console?resource_id=sc-domain%3Aenomia.app",
-  "last_run": "2026-05-23",
+  "last_run": "2026-05-24",
   "daily_quota": 10,
   "notes": "Ne traiter QUE le motif 'Détectée, actuellement non indexée'. Les autres motifs (redirections, noindex, 4xx, canoniques) ne doivent pas passer par demande d'indexation — ce sont des bugs techniques à fixer ou des comportements intentionnels.",
   "urls": {
@@ -96,133 +96,133 @@
       "reason": "Confirmé indexée le 2026-05-11"
     },
     "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/lyon": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-11",
       "request_count": 1,
-      "reason": "Détectée, actuellement non indexée"
+      "reason": "Détectée, actuellement non indexée — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/ile-de-france/paris": {
-      "status": "failed",
-      "last_requested": "2026-05-11",
-      "request_count": 1,
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "status": "indexed",
+      "last_requested": "2026-05-23",
+      "request_count": 2,
+      "reason": "Demandée via URL Inspection manuel par Marc (2026-05-23) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/marseille": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-11",
       "request_count": 1,
-      "reason": "Détectée, actuellement non indexée"
+      "reason": "Détectée, actuellement non indexée — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/nice": {
-      "status": "failed",
-      "last_requested": "2026-05-11",
-      "request_count": 1,
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "status": "indexed",
+      "last_requested": "2026-05-23",
+      "request_count": 2,
+      "reason": "Demandée via URL Inspection manuel par Marc (2026-05-23) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/blog/fiscalite-airbnb": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-12",
       "request_count": 1,
       "vol_at_request": 4400,
-      "reason": "URL inconnue de Google — demande d'indexation envoyée"
+      "reason": "URL inconnue de Google — demande d'indexation envoyée — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/blog/loi-le-meur-airbnb": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-12",
       "request_count": 1,
       "vol_at_request": 4400,
-      "reason": "URL inconnue de Google — demande d'indexation envoyée"
+      "reason": "URL inconnue de Google — demande d'indexation envoyée — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/blog/pricing-airbnb-tarif-dynamique": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-12",
       "request_count": 1,
       "vol_at_request": 110,
-      "reason": "URL inconnue de Google — demande d'indexation envoyée"
+      "reason": "URL inconnue de Google — demande d'indexation envoyée — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/blog/taux-occupation-par-ville": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-12",
       "request_count": 1,
       "vol_at_request": 70,
-      "reason": "URL inconnue de Google — demande d'indexation envoyée"
+      "reason": "URL inconnue de Google — demande d'indexation envoyée — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/estimation-airbnb": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-12",
       "request_count": 1,
       "vol_at_request": 0,
-      "reason": "URL inconnue de Google — demande d'indexation envoyée"
+      "reason": "URL inconnue de Google — demande d'indexation envoyée — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/arcachon": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-21",
       "request_count": 2,
       "vol_at_request": 660,
-      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante)"
+      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/annecy": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-21",
       "request_count": 2,
       "vol_at_request": 660,
-      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante)"
+      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/avignon": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-21",
       "request_count": 2,
       "vol_at_request": 640,
-      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante)"
+      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire/nantes": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-21",
       "request_count": 2,
       "vol_at_request": 620,
-      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante)"
+      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/tarif-conciergerie-airbnb": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-21",
       "request_count": 2,
       "vol_at_request": 480,
-      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante)"
+      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/aix-en-provence": {
-      "status": "failed",
-      "last_requested": "2026-05-16",
-      "request_count": 1,
+      "status": "indexed",
+      "last_requested": "2026-05-23",
+      "request_count": 2,
       "vol_at_request": 570,
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "reason": "Demandée via URL Inspection manuel par Marc (2026-05-23) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/hyeres": {
-      "status": "failed",
-      "last_requested": "2026-05-16",
-      "request_count": 1,
+      "status": "indexed",
+      "last_requested": "2026-05-23",
+      "request_count": 2,
       "vol_at_request": 540,
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "reason": "Demandée via URL Inspection manuel par Marc (2026-05-23) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/alsace/reims": {
-      "status": "failed",
-      "last_requested": "2026-05-16",
-      "request_count": 1,
+      "status": "indexed",
+      "last_requested": "2026-05-23",
+      "request_count": 2,
       "vol_at_request": 510,
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "reason": "Demandée via URL Inspection manuel par Marc (2026-05-23) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/alsace/strasbourg": {
-      "status": "failed",
-      "last_requested": "2026-05-16",
-      "request_count": 1,
+      "status": "indexed",
+      "last_requested": "2026-05-23",
+      "request_count": 2,
       "vol_at_request": 480,
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "reason": "Demandée via URL Inspection manuel par Marc (2026-05-23) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/normandie/caen": {
-      "status": "failed",
-      "last_requested": "2026-05-16",
-      "request_count": 1,
+      "status": "indexed",
+      "last_requested": "2026-05-23",
+      "request_count": 2,
       "vol_at_request": 460,
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "reason": "Demandée via URL Inspection manuel par Marc (2026-05-23) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/rentabilite-airbnb": {
       "status": "requested",
@@ -253,11 +253,11 @@
       "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
     },
     "https://www.enomia.app/conciergerie-airbnb/bretagne": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-17",
       "request_count": 1,
       "vol_at_request": 20,
-      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
+      "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/rentabilite-airbnb/paris": {
       "status": "requested",
@@ -295,46 +295,39 @@
       "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/antibes": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-21",
       "request_count": 2,
       "vol_at_request": 390,
-      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante)"
+      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/toulon": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-21",
       "request_count": 2,
       "vol_at_request": 390,
-      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante)"
+      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/chamonix": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-21",
       "request_count": 2,
       "vol_at_request": 380,
-      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante)"
+      "reason": "Soumis via URL Inspection Tool (Chrome MCP, resoumission après Indexing API insuffisante) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/centre-val-de-loire/tours": {
-      "status": "failed",
-      "last_requested": "2026-05-19",
-      "request_count": 1,
+      "status": "indexed",
+      "last_requested": "2026-05-23",
+      "request_count": 2,
       "vol_at_request": 350,
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "reason": "Demandée via URL Inspection manuel par Marc (2026-05-23) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/occitanie/nimes": {
-      "status": "failed",
-      "last_requested": "2026-05-19",
-      "request_count": 1,
+      "status": "requested",
+      "last_requested": "2026-05-23",
+      "request_count": 2,
       "vol_at_request": 350,
-      "reason": "Bouton \"Demander une indexation\" introuvable"
-    },
-    "https://www.enomia.app/conciergerie-airbnb/occitanie/sete": {
-      "status": "failed",
-      "last_requested": "2026-05-21",
-      "request_count": 1,
-      "vol_at_request": 330,
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "reason": "Demandée via URL Inspection manuel par Marc (2026-05-23)"
     },
     "https://www.enomia.app/conciergerie-airbnb/normandie/deauville": {
       "status": "requested",
@@ -365,68 +358,148 @@
       "reason": "URL inconnue de Google — demande d'indexation envoyée (Indexing API)"
     },
     "https://www.enomia.app/conciergerie-airbnb/occitanie": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-21",
       "request_count": 1,
       "vol_at_request": 0,
-      "reason": "Soumis via URL Inspection Tool (Chrome MCP) — Hub régional vol 0 — soumis par erreur (filtre initial avant correction Indexing API)"
+      "reason": "Soumis via URL Inspection Tool (Chrome MCP) — Hub régional vol 0 — soumis par erreur (filtre initial avant correction Indexing API) — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur": {
-      "status": "requested",
+      "status": "indexed",
       "last_requested": "2026-05-21",
       "request_count": 1,
       "vol_at_request": 0,
-      "reason": "Soumis via URL Inspection Tool (Chrome MCP) — Hub régional vol 0 — soumis pendant batch interrompu"
+      "reason": "Soumis via URL Inspection Tool (Chrome MCP) — Hub régional vol 0 — soumis pendant batch interrompu — Confirmé indexé le 2026-05-24"
     },
     "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire": {
-      "request_count": 0,
-      "status": "failed",
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "request_count": 1,
+      "status": "requested",
+      "last_requested": "2026-05-23",
+      "reason": "Soumis manuellement par Marc (2026-05-23) — cooldown 14j jusqu'au 2026-06-06"
     },
     "https://www.enomia.app/rentabilite-airbnb/lyon": {
-      "request_count": 0,
-      "status": "failed",
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "request_count": 1,
+      "status": "requested",
+      "last_requested": "2026-05-23",
+      "reason": "Soumis manuellement par Marc (2026-05-23) — cooldown 14j jusqu'au 2026-06-06"
     },
     "https://www.enomia.app/rentabilite-airbnb/toulouse": {
-      "request_count": 0,
-      "status": "failed",
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "request_count": 1,
+      "status": "requested",
+      "last_requested": "2026-05-23",
+      "reason": "Soumis manuellement par Marc (2026-05-23) — cooldown 14j jusqu'au 2026-06-06"
     },
     "https://www.enomia.app/rentabilite-airbnb/nice": {
-      "request_count": 0,
-      "status": "failed",
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "request_count": 1,
+      "status": "requested",
+      "last_requested": "2026-05-23",
+      "reason": "Soumis manuellement par Marc (2026-05-23) — cooldown 14j jusqu'au 2026-06-06"
     },
     "https://www.enomia.app/rentabilite-airbnb/nantes": {
-      "request_count": 0,
-      "status": "failed",
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "request_count": 1,
+      "status": "requested",
+      "last_requested": "2026-05-23",
+      "reason": "Soumis manuellement par Marc (2026-05-23) — cooldown 14j jusqu'au 2026-06-06"
     },
     "https://www.enomia.app/blog/louer-airbnb-rentable": {
-      "request_count": 0,
-      "status": "failed",
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "request_count": 1,
+      "status": "requested",
+      "last_requested": "2026-05-23",
+      "reason": "Soumis manuellement par Marc (2026-05-23) — cooldown 14j jusqu'au 2026-06-06"
     },
     "https://www.enomia.app/blog/serrure-connectee-airbnb": {
-      "request_count": 0,
-      "status": "failed",
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "request_count": 1,
+      "status": "requested",
+      "last_requested": "2026-05-23",
+      "reason": "Soumis manuellement par Marc (2026-05-23) — cooldown 14j jusqu'au 2026-06-06"
     },
     "https://www.enomia.app/rentabilite-airbnb/strasbourg": {
-      "request_count": 0,
-      "status": "failed",
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "request_count": 1,
+      "status": "requested",
+      "last_requested": "2026-05-23",
+      "reason": "Soumis manuellement par Marc (2026-05-23) — cooldown 14j jusqu'au 2026-06-06"
     },
     "https://www.enomia.app/rentabilite-airbnb/lille": {
-      "request_count": 0,
-      "status": "failed",
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "request_count": 1,
+      "status": "requested",
+      "last_requested": "2026-05-23",
+      "reason": "Soumis manuellement par Marc (2026-05-23) — cooldown 14j jusqu'au 2026-06-06"
     },
     "https://www.enomia.app/conciergerie-airbnb/centre-val-de-loire": {
-      "request_count": 0,
-      "status": "failed",
-      "reason": "Bouton \"Demander une indexation\" introuvable"
+      "request_count": 1,
+      "status": "requested",
+      "last_requested": "2026-05-23",
+      "reason": "Soumis manuellement par Marc (2026-05-23) — cooldown 14j jusqu'au 2026-06-06"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/occitanie/perpignan": {
+      "status": "requested",
+      "last_requested": "2026-05-24",
+      "request_count": 1,
+      "vol_at_request": 320,
+      "reason": "Demande indexation via URL Inspection Tool (Chrome MCP, 2026-05-24)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/royan": {
+      "status": "requested",
+      "last_requested": "2026-05-24",
+      "request_count": 1,
+      "vol_at_request": 320,
+      "reason": "Demande indexation via URL Inspection Tool (Chrome MCP, 2026-05-24)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/provence-alpes-cote-dazur/frejus": {
+      "status": "requested",
+      "last_requested": "2026-05-24",
+      "request_count": 1,
+      "vol_at_request": 310,
+      "reason": "Demande indexation via URL Inspection Tool (Chrome MCP, 2026-05-24)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/grenoble": {
+      "status": "requested",
+      "last_requested": "2026-05-24",
+      "request_count": 1,
+      "vol_at_request": 300,
+      "reason": "Demande indexation via URL Inspection Tool (Chrome MCP, 2026-05-24)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/nouvelle-aquitaine/biarritz": {
+      "status": "requested",
+      "last_requested": "2026-05-24",
+      "request_count": 1,
+      "vol_at_request": 280,
+      "reason": "Demande indexation via URL Inspection Tool (Chrome MCP, 2026-05-24)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/bretagne/vannes": {
+      "status": "requested",
+      "last_requested": "2026-05-24",
+      "request_count": 1,
+      "vol_at_request": 260,
+      "reason": "Détectée, actuellement non indexée — demande via URL Inspection Tool (Chrome MCP, 2026-05-24)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/hauts-de-france/amiens": {
+      "status": "requested",
+      "last_requested": "2026-05-24",
+      "request_count": 1,
+      "vol_at_request": 260,
+      "reason": "Détectée, actuellement non indexée — demande via URL Inspection Tool (Chrome MCP, 2026-05-24)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/bourgogne-franche-comte/dijon": {
+      "status": "requested",
+      "last_requested": "2026-05-24",
+      "request_count": 1,
+      "vol_at_request": 260,
+      "reason": "Détectée, actuellement non indexée — demande via URL Inspection Tool (Chrome MCP, 2026-05-24)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/alsace/metz": {
+      "status": "requested",
+      "last_requested": "2026-05-24",
+      "request_count": 1,
+      "vol_at_request": 0,
+      "reason": "Google ne reconnaît pas cette URL — demande via URL Inspection Tool (Chrome MCP, 2026-05-24)"
+    },
+    "https://www.enomia.app/rentabilite-airbnb/cannes": {
+      "status": "requested",
+      "last_requested": "2026-05-24",
+      "request_count": 1,
+      "vol_at_request": 0,
+      "reason": "Détectée, actuellement non indexée — demande via URL Inspection Tool (Chrome MCP, 2026-05-24)"
     }
   }
 }

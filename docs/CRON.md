@@ -19,12 +19,16 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 | `app.enomia.gsc-indexation` | 7h03 quotidien | Demande indexation Google des top URLs prioritaires | actif |
 | `app.enomia.tech-watchdog` | 8h11 quotidien | Watchdog santé technique du site | actif |
 | `app.enomia.conciergerie-production` | Lun/Mer/Ven 8h37 | Cycle de production landing conciergerie | actif |
-| `app.enomia.backlinks-track-replies` | 9h13 quotidien | Tracking réponses prospects backlinks + relances J+5/J+10 | actif |
+| `app.enomia.backlinks-track-replies-v2` | Lun-Ven 10h31 | Pipeline v2 : tracking réponses + bounces + relances auto J+5/J+10/J+15 (10h31 = 14 min après send-daily 10h17 → chope les hard bounces immédiats du jour) | actif |
 | `com.enomia.fb-check-replies` | 9h23 quotidien | Check réponses sous commentaires FB Marc | actif |
+| `com.enomia.fb-weekly-recap` | Ven 17h00 | Récap hebdo volume + liens Enomia partagés + (phase 2 : GA4 perfs par utm_content) | actif |
 | `com.enomia.fb-monthly-insights` | 1er du mois 9h31 | Rapport mensuel opportunités SEO + features | actif |
-| `app.enomia.backlinks-pitches-daily` | 10h17 quotidien | Prépare ≤10 pitches backlinks + envoie email récap à valider | actif |
-| `app.enomia.backlinks-validate-send` | 10h37, 14h23, 17h19, 20h41 | Parse replies Marc + envoie pitches validés aux destinataires | actif |
-| `app.enomia.backlinks-weekly-report` | Dim 18h43 | Récap hebdo backlinks (envoyés, réponses, taux, pipeline) | actif |
+| `app.enomia.backlinks-source-monthly` | 1er du mois 9h47 | Pipeline v2 : sourcing SEMrush 75 KW, filtres, check outil concurrent, output `data/backlinks-YYYY-MM.json` | actif |
+| `app.enomia.backlinks-send-daily` | Lun-Ven 10h17 | Pipeline v2 : envoi auto 15 pitches/jour via Gmail API (BCC Marc J1-5 puis 1/5 jours aléatoire) | actif |
+| `app.enomia.backlinks-report-monthly` | 1er du mois 10h53 | Pipeline v2 : récap mensuel envois/réponses/backlinks par outil | actif |
+| `app.enomia.backlinks-report-quarterly` | 1er jan/avr/juil/oct 11h17 | Pipeline v2 : récap trimestriel | actif |
+| `app.enomia.backlinks-report-yearly` | 1er janvier 11h43 | Pipeline v2 : récap annuel | actif |
+| `app.enomia.backlinks-report-weekly` | Dim 18h43 | Pipeline v2 : récap hebdo envois/réponses/backlinks/pipeline | actif |
 | `com.enomia.fb-watch` | xh07, xh22, xh37, xh52 (4×/h) | Détecte réponses email Marc et poste sur FB | actif |
 
 **Note horaires** : tous les jobs qui appellent l'API Anthropic sont volontairement décalés sur des minutes "improbables" (pas :00 :15 :30 :45) pour éviter les pics d'overload (HTTP 529) sur les heures rondes — où plein d'autres cron tapent l'API simultanément. Chaque job a une minute distincte des autres dans la même heure.
@@ -91,68 +95,79 @@ Vérifie les URLs prioritaires (par volume SEMrush) non-indexées et envoie une 
 **Script** : `scripts/tech-watchdog/run.sh`
 Surveillance technique du site (probable : check 200/500 sur URLs critiques, certif SSL, etc.). Envoie un email si problème via Resend.
 
-### `app.enomia.backlinks-pitches-daily` — 10h17 quotidien
-**Script** : `scripts/backlinks-pitches-daily/run.sh`
-**Prompt** : `scripts/backlinks-pitches-daily/prompt.md`
+## Pipeline backlinks v2 (2026-05-23)
+
+Pipeline refactoré : envoi auto sans validation Marc, 3 outils prioritaires (simulateur, contrat, facture), data dans `data/backlinks-YYYY-MM.json` (gitignored). Templates dans la memory `domains/prospection-backlinks/reference_pitches_templates.md`.
+
+### `app.enomia.backlinks-source-monthly` — 1er du mois 9h47
+**Script** : `scripts/backlinks-source-monthly/run.sh`
+**Code** : `source-monthly.mjs` + `filters.mjs` + `send-recap-mail.mjs`
+**KW list** : `scripts/backlinks-source-monthly/kw-list.json` (25 KW × 3 outils = 75 KW)
 **Fait** :
-1. Pull `enomia-memory` dans `/tmp/enomia-memory` puis charge les 9 fichiers contexte voix Marc (identité, méthode 97, livre, anti-hallucination, backlinks reference)
-2. Sélectionne ≤10 prospects du CRM `.claude/backlinks-data.json` (priorité 1 = `a_enrichir` top traffic, priorité 2 = `a_qualifier` traffic 100-5000 tag blog/conciergerie)
-3. Pour chaque : scan site via WebFetch, identifie email/formulaire de contact, détecte compétition (simulateur/fiscalité/loi/etc déjà présents), mappe ressource Enomia COMPLÉMENTAIRE, rédige `pitch_pret` en voix Marc avec soft opt-out
-4. Update CRM : `status: pitch_pret_a_envoyer` + champs (email, article_cible, ressource_enomia_proposee, pitch_pret, dernier_contact, etc.). Les prospects sans contact détecté → `rejete_pas_de_contact`
-5. Envoie 1 email récap à `marc@enomia.app` avec les N pitches numérotés + instructions de validation (`OK 1, 3 / MODIF 2: ... / SKIP 4`). Phase 3.2 (à venir) parsera cette réponse pour envoyer aux destinataires.
+1. Pour chaque outil (simulateur/contrat/facture), query SEMrush `phrase_organic` sur 25 KW, top 30 SERP par KW
+2. Dedup par domaine, filter blacklist (~60 domaines : concurrents, presse nationale, sociaux, sites gouv, comparateurs grand public)
+3. Pour chaque candidat survivant, visit la page cible et check si outil concurrent présent (regex sur HTML : "simulateur de rentabilité", "modèle de contrat", "générateur de facture", etc.)
+4. Si pas de concurrent : tente d'extraire email (`mailto:`) ou url_formulaire (`/contact`)
+5. Output `data/backlinks-YYYY-MM.json` (append si déjà existant)
+6. Envoie mail récap à Marc avec bilan : domaines uniques, qualifiés, top 10 par trafic
 
-**Logs** : `scripts/backlinks-pitches-daily/logs/run-YYYY-MM-DD.log` + `launchd-{stdout,stderr}.log`
-**Auth Claude** : ✅ **OAuth Max** depuis 2026-05-23 (le wrapper `unset ANTHROPIC_API_KEY` après `source .env` → `claude -p` retombe sur le token Max du keychain login, accessible car launchd tourne en `gui/UID/`). Tape sur les limites hebdo Max au lieu de l'API. Économie estimée ~3-6€/mois.
-**Pipeline** : Phase 3.1 du plan D backlinks. Remplace l'ancienne routine cloud `prospection-backlinks-enrich-5h` (désactivée 2026-05-21).
+**Logs** : `scripts/backlinks-source-monthly/logs/run-YYYY-MM-DD.log`
+**Coût SEMrush** : ~750 units / run mensuel (négligeable sur quota Neocamino)
 
-### `app.enomia.backlinks-validate-send` — 10h37, 14h23, 17h19, 20h41
-**Script** : `scripts/backlinks-validate-send/run.sh`
-**Prompt** : `scripts/backlinks-validate-send/prompt.md`
+### `app.enomia.backlinks-send-daily` — Lun-Ven 10h17
+**Script** : `scripts/backlinks-send-daily/run.sh`
+**Code** : `send-daily.mjs` + `pitch-templates.mjs` + `bcc-state.mjs`
 **Fait** :
-1. Scan Gmail les threads `from:marc@enomia.app subject:"[backlinks]"` des 14 derniers jours
-2. Filtre via `.claude/backlinks-validation-state.json` (anti-doublon par threadId)
-3. Pour chaque thread avec réponse Marc : parse le format `OK 1, 3 / MODIF 2: <pitch> / SKIP 4` + extrait l'ordre des prospects du récap initial
-4. **Parsing en langage naturel** : Marc répond en français libre ("ok pour 1, 3 / change le 2 par : ... / skip 4 5"), l'agent Claude interprète sans format strict
-5. Pour les OK/MODIF avec `email` : envoie le pitch au destinataire via Gmail API, update CRM (`status=envoye`, `date_envoi`, `dernier_contact`)
-6. Pour les OK/MODIF avec seulement `url_formulaire` : **tente l'envoi via Chrome MCP** (navigate + form_input). Si succès → `status=envoye_via_formulaire`. Si captcha détecté ou fail → fallback `pitch_a_envoyer_manuel`, ajout à la liste manuelle du mail de confirmation
-7. Pour les SKIP : status → `rejete_non_pertinent`
-8. Envoie 1 mail confirmation à `marc@enomia.app` avec le bilan (envoyés par email / envoyés via formulaire / à envoyer manuellement / skippés / ambigus)
-9. Marque le threadId dans le state local
+1. Charge backlog mois courant + précédent (`data/backlinks-*.json`)
+2. Pick 15 prospects en `status: pending` (priorité = trafic SERP desc, rank asc)
+3. Pour chaque : retry extract contact si manquant, scan page cible, call Claude Haiku pour générer 1 phrase d'observation contextuelle
+4. Construit le pitch via template (1 des 3, selon `outil_cible`), QA auto (longueur 80-350 mots, URL outil présente, pas de placeholder/emoji/tiret cadratin/flèche)
+5. Si email → envoi auto via Gmail API (BCC marc@enomia.app J1-J5 + 1 jour aléatoire tous les 5 jours après — état dans `data/backlinks-send-state.json`)
+6. Si formulaire only → ajoute à la liste manuelle du mail récap
+7. Update backlog statuses (`sent`, `manual_form`, `no_contact`, `qa_fail`, `send_fail`)
+8. Envoie mail récap quotidien à Marc avec : envoyés par email, formulaires à faire manuellement (avec lien + pitch intégral), skippés
 
-**État local** : `.claude/backlinks-validation-state.json` (gitignored)
-**Logs** : `scripts/backlinks-validate-send/logs/run-YYYY-MM-DD.log`
-**Auth Claude** : ✅ **OAuth Max** depuis 2026-05-23 (même setup que `pitches-daily` : `unset ANTHROPIC_API_KEY` dans le wrapper). Économie estimée ~6-12€/mois (gros poste car 4 runs/jour).
-**Pipeline** : Phase 3.2 du plan D backlinks.
+**État local** : `data/backlinks-send-state.json` (audit BCC)
+**Logs** : `scripts/backlinks-send-daily/logs/run-YYYY-MM-DD.log`
+**Coût Claude Haiku** : ~$0.10/mois (15 prospects × 22 jours × ~$0.0003/call) via `fetch` direct (pas `claude -p`, donc pas d'OAuth Max).
+**Throttle** : 10s entre 2 envois Gmail (anti-spam)
 
-### `app.enomia.backlinks-track-replies` — 9h13 quotidien
-**Script** : `scripts/backlinks-track-replies/run.sh`
-**Prompt** : `scripts/backlinks-track-replies/prompt.md`
+### `app.enomia.backlinks-track-replies-v2` — Lun-Ven 10h31
+**Script** : `scripts/backlinks-track-replies-v2/run.sh`
+**Code** : `track-replies.mjs`
 **Fait** :
-1. Lit le CRM, filtre les prospects avec `status ∈ {envoye, relance_1, relance_2}` + `email`
-2. Pour chaque : query Gmail pour réponses du prospect depuis `date_envoi`/`date_relance_X`
-3. Classifie chaque réponse (l'agent Claude lui-même) en `positive | negative | spam | question | autre`
-4. Update CRM : `reponse_recue`, `date_reponse`, `status` → `repondu_positif | repondu_negatif | spam | (inchangé si autre)`
-5. Envoie les relances dues :
-   - J+5 sans réponse : Template T2 (relance neutre), `status=relance_1`
-   - J+10 sans réponse : Template T3 (relance soft opt-out + propose appel), `status=relance_2`
-   - J+15 sans réponse : `status=pas_de_reponse` (pas d'envoi)
-6. Si réponses ou relances : envoie 1 mail à Marc avec récap (positives à traiter, négatives, relances envoyées)
+1. Charge backlog, filter prospects avec `status ∈ {sent, relance_1, relance_2}` + email
+2. Pour chaque : query Gmail pour réponses depuis `date_envoi` ou `date_relance_X`
+3. Si réponse : classifie via Haiku (positive / negative / neutre / spam), update status + `date_reponse` + `gmail_reply_id`
+4. Si pas de réponse :
+   - J+5 → envoi relance T2 (court, neutre), `status=relance_1`
+   - J+10 → envoi relance T3 (proposition visio), `status=relance_2`
+   - J+15 → `status=pas_de_reponse` (silencieux)
+5. Si actions : envoie mail récap à Marc avec lien direct vers thread Gmail pour les positives
 
-**Logs** : `scripts/backlinks-track-replies/logs/run-YYYY-MM-DD.log`
-**Coût Claude API** : faible (~5c/run, dépend du nb de réponses à classifier)
-**Pipeline** : Phase 3.3 du plan D backlinks.
+**Logs** : `scripts/backlinks-track-replies-v2/logs/run-YYYY-MM-DD.log`
+**Coût Claude Haiku** : faible (~5c/run quand replies à classifier)
 
-### `app.enomia.backlinks-weekly-report` — Dim 18h43
-**Script** : `scripts/backlinks-weekly-report/run.sh`
-**Prompt** : `scripts/backlinks-weekly-report/prompt.md`
-**Fait** :
-1. Lit le CRM, calcule stats de la semaine écoulée (J-7 → J) + stats cumulées
-2. Compile : pitches préparés/envoyés, relances envoyées, réponses (par classe), backlinks obtenus, taux de réponse, taux de conversion, pipeline restant par status, top 3 réponses positives à traiter
-3. Envoie 1 mail récap à `marc@enomia.app`
+### Rapports — script unique `scripts/backlinks-reports/reports.mjs`
 
-**Logs** : `scripts/backlinks-weekly-report/logs/run-YYYY-MM-DD.log`
-**Coût Claude API** : très faible (~2c/run)
-**Pipeline** : Phase 3.4 du plan D backlinks.
+Le script accepte `--period={week|month|quarter|year}` et envoie un mail récap à Marc avec : envois (par outil), relances, réponses (positive/negative/neutre/spam), backlinks obtenus, taux de conv, pipeline restant, formulaires à faire.
+
+| Plist | Cron | Période |
+|---|---|---|
+| `app.enomia.backlinks-report-weekly` | Dim 18h43 | week (7 derniers jours) |
+| `app.enomia.backlinks-report-monthly` | 1er du mois 10h53 | month (mois en cours) |
+| `app.enomia.backlinks-report-quarterly` | 1er jan/avr/juil/oct 11h17 | quarter |
+| `app.enomia.backlinks-report-yearly` | 1er janvier 11h43 | year |
+
+**Logs** : `scripts/backlinks-reports/logs/run-{period}-YYYY-MM-DD.log`
+
+### Notes pipeline v2
+
+- **Pas de CRM intermédiaire** : tout vit dans `data/backlinks-YYYY-MM.json` (gitignored). Un fichier par mois, recyclage automatique du reliquat non-contacté.
+- **Pas de validation Marc** par défaut : envoi auto. Sauf BCC les 5 premiers jours + 1 jour aléatoire tous les 5 jours pour spot-check.
+- **Volume cible** : 15/jour ouvré × 22 jours = 330 envois/mois. À 3% conv réaliste = ~10 backlinks/mois. Phase 2 (mois 3+) : scale à 30/jour si délivrabilité OK.
+- **Monitoring spam** : Google Postmaster Tools (à activer sur enomia.app) + watch bounces dans track-replies.
+- **DMARC** : actuellement `p=none`. Roadmap upgrade dans memory `domains/prospection-backlinks/reference_dmarc_upgrade.md`.
 
 ### `app.enomia.conciergerie-production` — Lun/Mer/Ven 8h37
 **Script** : `scripts/conciergerie-production/run.sh`
@@ -207,7 +222,14 @@ Routines qui tournent sur infrastructure Anthropic (cloud sandbox), pas sur les 
 - 🗑️ `veille-communautaire-lcd` → remplacé par 4 launchd `com.enomia.fb-*`
 - 🗑️ `gsc-indexation-enomia` → remplacé par `app.enomia.gsc-indexation`
 - 🗑️ `prospection-backlinks-hebdo` → plus utilisé
-- 🗑️ `prospection-backlinks-enrich-5h` → remplacé par `app.enomia.backlinks-pitches-daily` + `validate-send` + `track-replies`
+- 🗑️ `prospection-backlinks-enrich-5h` → remplacé par pipeline v2 (`backlinks-source-monthly` + `send-daily` + `track-replies-v2` + `reports`)
+
+**Refonte 2026-05-23 — pipeline backlinks v2** :
+- 🗑️ `backlinks-pitches-daily` (validation Marc requise) → remplacé par `backlinks-send-daily` (envoi auto)
+- 🗑️ `backlinks-validate-send` (parsait les replies Marc) → plus nécessaire (envoi direct)
+- 🗑️ `backlinks-track-replies` (sur CRM `.claude/backlinks-data.json`) → remplacé par `backlinks-track-replies-v2` (sur `data/backlinks-*.json`)
+- 🗑️ `backlinks-weekly-report` → remplacé par script générique `backlinks-reports.mjs --period={week|month|quarter|year}` (4 plists distincts)
+- Note OAuth Max (`unset ANTHROPIC_API_KEY` pour retomber sur le token Max du keychain login) : technique applicable aux jobs `claude -p`. Le pipeline v2 utilise `fetch` direct vers Anthropic API (Haiku ~$0.10/mois), donc OAuth Max ne s'applique pas ici.
 
 ---
 

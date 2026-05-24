@@ -1,16 +1,16 @@
 /**
  * submit-via-chrome.mjs — Soumet les top N URLs via URL Inspection Tool GSC.
  *
- * Utilise Playwright + un profil Chrome dédié (user-data-dir persisté) où Marc
- * s'est logué manuellement la première fois. Plus de cookies JSON volatiles —
- * Google considère le profil comme un "vrai navigateur" et ne révoque pas la
- * session.
+ * Architecture (depuis 2026-05-23) :
+ *   - Chrome stable lancé en background sur Mac mini avec
+ *     --remote-debugging-port=9222 et --user-data-dir=~/.playwright-gsc-indexation
+ *   - Ce script se connecte au Chrome via CDP (Chrome DevTools Protocol)
+ *   - Pas de Playwright qui lance Chrome → pas de détection automation Google
+ *   - Le profil reste loggué entre les runs (Chrome tourne en permanence)
  *
- * SETUP (une fois sur Mac mini, via VNC pour avoir l'écran) :
+ * SETUP (une fois sur Mac mini, via VNC) :
  *   node scripts/gsc-indexation/submit-via-chrome.mjs --setup
- *   → Chrome s'ouvre. Logge-toi avec un compte Owner de la propriété
- *     (marchenut@gmail.com ou marc@enomia.app), navigue jusqu'au dashboard
- *     GSC enomia.app, puis ferme la fenêtre. Le profil est sauvé.
+ *   → Lance Chrome avec CDP + ouvre GSC, attends que Marc se logue.
  *
  * RUNS QUOTIDIENS (cron) :
  *   node scripts/gsc-indexation/compute-candidates.mjs
@@ -19,23 +19,17 @@
  * Exit codes :
  *   0 : tout OK
  *   1 : erreur fatale
- *   2 : fichiers manquants (candidates)
- *   3 : pas loggué (lancer en --setup)
+ *   2 : candidates manquantes
+ *   3 : Chrome CDP pas accessible (pas lancé / pas le bon port)
  *   4 : stoppé en cours (quota Google ou CAPTCHA)
  */
 
-import { chromium } from 'playwright-extra';
-import StealthPlugin from 'puppeteer-extra-plugin-stealth';
+import { chromium } from 'playwright';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { homedir } from 'node:os';
-
-// Stealth plugin : masque navigator.webdriver + tous les autres signaux que
-// Google check pour détecter l'automation (navigator.plugins, navigator.languages,
-// navigator.permissions, window.chrome, etc.). C'est la solution canonique au
-// blocage "Impossible de se connecter dans ce navigateur non sécurisé".
-chromium.use(StealthPlugin());
+import { spawn } from 'node:child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..');
@@ -45,12 +39,36 @@ const TRACKING_FILE = join(ROOT, '.claude/gsc-tracking/urls.json');
 const PROPERTY = 'sc-domain:enomia.app';
 const GSC_INSPECT_BASE = `https://search.google.com/search-console/inspect?resource_id=${encodeURIComponent(PROPERTY)}`;
 const GSC_DASHBOARD = `https://search.google.com/search-console?resource_id=${encodeURIComponent(PROPERTY)}`;
+const CDP_URL = 'http://localhost:9222';
 const TODAY = new Date().toISOString().slice(0, 10);
 const SETUP_MODE = process.argv.includes('--setup');
 
+async function isChromeRunning() {
+  try {
+    const res = await fetch(`${CDP_URL}/json/version`, { signal: AbortSignal.timeout(2000) });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+function launchChromeBackground() {
+  console.log('Démarrage de Chrome en background avec CDP port 9222...');
+  spawn('open', ['-na', 'Google Chrome', '--args',
+    '--remote-debugging-port=9222',
+    `--user-data-dir=${USER_DATA_DIR}`,
+  ], { detached: true, stdio: 'ignore' }).unref();
+}
+
+async function waitForChrome(maxAttempts = 15) {
+  for (let i = 0; i < maxAttempts; i++) {
+    await new Promise(r => setTimeout(r, 1000));
+    if (await isChromeRunning()) return true;
+  }
+  return false;
+}
+
 async function isLoggedIn(page) {
-  // Test sur une page qui EXIGE auth : le dashboard de la propriété.
-  // Si pas loggué, Google redirige vers accounts.google.com.
   await page.goto(GSC_DASHBOARD, { waitUntil: 'domcontentloaded', timeout: 30000 });
   await page.waitForTimeout(4000);
   const url = page.url();
@@ -65,7 +83,6 @@ async function inspectAndRequest(page, targetUrl) {
   await page.goto(inspectUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await page.waitForTimeout(12000);
 
-  // Détection redirection vers login (cookies expirés au milieu du run)
   if (page.url().includes('accounts.google.com')) {
     return { status: 'auth_lost', reason: 'Redirigé vers login en cours de run — session expirée' };
   }
@@ -103,11 +120,10 @@ async function inspectAndRequest(page, targetUrl) {
         clicked = true;
         break;
       }
-    } catch { /* try next selector */ }
+    } catch { /* try next */ }
   }
 
   if (!clicked) {
-    // Screenshot pour debug futur
     const debugDir = join(__dirname, 'logs');
     mkdirSync(debugDir, { recursive: true });
     const safe = targetUrl.replace(/[^a-z0-9]+/gi, '_').slice(0, 80);
@@ -131,38 +147,58 @@ async function inspectAndRequest(page, targetUrl) {
     afterText.includes('demande envoyée') ||
     afterText.includes('request submitted')
   ) {
-    return { status: 'requested', reason: 'Demandée via Playwright (URL Inspection Tool)' };
+    return { status: 'requested', reason: 'Demandée via Playwright CDP (URL Inspection Tool)' };
   }
 
   return { status: 'unknown', reason: 'État indéterminé après click' };
 }
 
-async function runSetup() {
-  console.log('🛠️  Mode setup : ouvre Chrome avec profil persistant.\n');
-  console.log('Logge-toi avec un compte Owner de la propriété GSC enomia.app');
-  console.log('(marchenut@gmail.com ou marc@enomia.app), confirme que tu vois le');
-  console.log('dashboard, puis FERME LA FENÊTRE Chrome quand c\'est fait.\n');
+async function getBrowserContext() {
+  let chromeReady = await isChromeRunning();
+  if (!chromeReady) {
+    launchChromeBackground();
+    chromeReady = await waitForChrome();
+    if (!chromeReady) {
+      throw new Error('Chrome CDP introuvable après 15s. Vérifier que Chrome est lancé et accessible.');
+    }
+  }
 
-  const context = await chromium.launchPersistentContext(USER_DATA_DIR, {
-    headless: false,
-    channel: 'chrome', // Vrai Chrome (pas Chromium) — Google bloque le login dans Chromium
-    // Masquer les flags d'automation (sinon Google bloque le login avec
-    // "Impossible de se connecter dans ce navigateur non sécurisé")
-    ignoreDefaultArgs: ['--enable-automation'],
-    args: ['--disable-blink-features=AutomationControlled'],
-    viewport: { width: 1400, height: 900 },
-    locale: 'fr-FR',
-  });
+  const browser = await chromium.connectOverCDP(CDP_URL);
+  const contexts = browser.contexts();
+  const context = contexts[0] || await browser.newContext({ locale: 'fr-FR' });
+  return { browser, context };
+}
+
+async function runSetup() {
+  console.log('🛠️  Mode setup\n');
+
+  if (await isChromeRunning()) {
+    console.log('✓ Chrome déjà lancé avec CDP. Va dans cette fenêtre, vérifie que tu vois');
+    console.log('  le dashboard GSC enomia.app. Si pas loggué, connecte-toi.\n');
+  } else {
+    launchChromeBackground();
+    console.log('Lancement de Chrome avec CDP...');
+    if (!(await waitForChrome())) {
+      console.error('Échec : Chrome n\'a pas démarré sur le port 9222.');
+      process.exit(1);
+    }
+    console.log('✓ Chrome lancé. Va dans la fenêtre Chrome, logge-toi à GSC avec un');
+    console.log('  compte Owner de la propriété enomia.app (marchenut@gmail.com ou');
+    console.log('  marc@enomia.app), puis confirme que tu vois le dashboard.\n');
+  }
+
+  // Ouvre GSC dans un onglet via CDP
+  const { browser, context } = await getBrowserContext();
   const page = await context.newPage();
   await page.goto(GSC_DASHBOARD);
 
-  // Attendre que l'utilisateur ferme manuellement la fenêtre
-  await new Promise(resolve => {
-    context.on('close', resolve);
-  });
+  console.log('Chrome reste ouvert. Quand tu confirmes que le dashboard GSC est');
+  console.log('accessible, tu peux fermer ce terminal (Ctrl+C). Chrome continuera de');
+  console.log('tourner en background avec son profil loggué — c\'est ce que cron va');
+  console.log('utiliser.\n');
 
-  console.log('✓ Fenêtre fermée. Profil sauvegardé dans :', USER_DATA_DIR);
-  console.log('Tu peux maintenant lancer la routine normale.');
+  await browser.close();
+  process.exit(0);
 }
 
 async function runNormal() {
@@ -183,95 +219,89 @@ async function runNormal() {
     process.exit(0);
   }
 
-  console.log(`📨 Soumission de ${candidatesData.candidates.length} URL(s) via Playwright (profil dédié)...\n`);
+  console.log(`📨 Soumission de ${candidatesData.candidates.length} URL(s) via Chrome CDP...\n`);
 
-  const context = await chromium.launchPersistentContext(USER_DATA_DIR, {
-    headless: true,
-    channel: 'chrome', // Vrai Chrome (pas Chromium) — pour matcher le profil créé en --setup
-    // Masquer les flags d'automation pour ne pas faire révoquer la session
-    // Google entre 2 runs.
-    ignoreDefaultArgs: ['--enable-automation'],
-    args: ['--disable-blink-features=AutomationControlled'],
-    viewport: { width: 1400, height: 900 },
-    locale: 'fr-FR',
-  });
+  let browser;
+  try {
+    const result = await getBrowserContext();
+    browser = result.browser;
+    const { context } = result;
+    const page = await context.newPage();
 
-  // Le stealth plugin (chargé en haut) handle déjà navigator.webdriver et
-  // toutes les autres détections automation.
+    if (!(await isLoggedIn(page))) {
+      console.error('ERREUR: Chrome connecté via CDP mais pas loggué à GSC.');
+      console.error('Lance --setup pour te logger dans la fenêtre Chrome.');
+      await browser.close();
+      process.exit(3);
+    }
+    console.log('✓ Connecté à GSC via Chrome CDP\n');
 
-  const page = await context.newPage();
+    const results = [];
+    let stopReason = null;
 
-  if (!(await isLoggedIn(page))) {
-    console.error('ERREUR: Profil pas loggué à GSC.');
-    console.error('Lance d\'abord : node scripts/gsc-indexation/submit-via-chrome.mjs --setup');
-    await context.close();
-    process.exit(3);
+    for (const c of candidatesData.candidates) {
+      console.log(`→ ${c.url}  [vol=${c.vol}]`);
+      let r;
+      try {
+        r = await inspectAndRequest(page, c.url);
+      } catch (e) {
+        r = { status: 'failed', reason: `Exception : ${e.message}` };
+      }
+      console.log(`   ${r.status} — ${r.reason}`);
+      results.push({ ...c, ...r, submittedAt: new Date().toISOString() });
+
+      const t = tracking.urls[c.url] || { request_count: 0 };
+      if (r.status === 'requested') {
+        t.status = 'requested';
+        t.last_requested = TODAY;
+        t.request_count = (t.request_count || 0) + 1;
+        t.reason = 'Demandée via Playwright CDP (URL Inspection Tool)';
+        tracking.urls[c.url] = t;
+      } else if (r.status === 'indexed') {
+        t.status = 'indexed';
+        t.reason = 'Confirmée indexée via URL Inspection';
+        tracking.urls[c.url] = t;
+      } else if (r.status === 'failed') {
+        t.status = 'pending';
+        t.last_attempt = TODAY;
+        t.last_attempt_reason = r.reason;
+        tracking.urls[c.url] = t;
+      }
+
+      if (r.status === 'quota_exceeded' || r.status === 'captcha' || r.status === 'auth_lost') {
+        stopReason = r;
+        break;
+      }
+
+      await page.waitForTimeout(5000 + Math.floor(Math.random() * 3000));
+    }
+
+    await page.close();
+    await browser.close(); // Ferme la connexion CDP, Chrome reste ouvert
+
+    tracking.last_run = TODAY;
+    writeFileSync(TRACKING_FILE, JSON.stringify(tracking, null, 2));
+
+    const logDir = join(__dirname, 'logs');
+    mkdirSync(logDir, { recursive: true });
+    writeFileSync(
+      join(logDir, `${TODAY}.json`),
+      JSON.stringify({ date: TODAY, total: candidatesData.candidates.length, results, stopReason }, null, 2)
+    );
+
+    const submitted = results.filter(r => r.status === 'requested').length;
+    const indexed = results.filter(r => r.status === 'indexed').length;
+    const failed = results.filter(r => ['failed', 'unknown'].includes(r.status)).length;
+
+    console.log(`\n📊 Bilan : ${submitted} soumises, ${indexed} déjà indexées, ${failed} échec(s)`);
+    if (stopReason) console.log(`⚠️ STOP : ${stopReason.status} — ${stopReason.reason}`);
+
+    console.log(`\nGSC_INDEXATION_DONE submitted=${submitted} indexed=${indexed} failed=${failed}${stopReason ? ` stop=${stopReason.status}` : ''}`);
+    process.exit(stopReason ? 4 : 0);
+  } catch (e) {
+    if (browser) await browser.close().catch(() => {});
+    throw e;
   }
-  console.log('✓ Connecté à GSC (profil dédié)\n');
-
-  const results = [];
-  let stopReason = null;
-
-  for (const c of candidatesData.candidates) {
-    console.log(`→ ${c.url}  [vol=${c.vol}]`);
-    let result;
-    try {
-      result = await inspectAndRequest(page, c.url);
-    } catch (e) {
-      result = { status: 'failed', reason: `Exception : ${e.message}` };
-    }
-    console.log(`   ${result.status} — ${result.reason}`);
-    results.push({ ...c, ...result, submittedAt: new Date().toISOString() });
-
-    const t = tracking.urls[c.url] || { request_count: 0 };
-    if (result.status === 'requested') {
-      t.status = 'requested';
-      t.last_requested = TODAY;
-      t.request_count = (t.request_count || 0) + 1;
-      t.reason = 'Demandée via Playwright (URL Inspection Tool)';
-      tracking.urls[c.url] = t;
-    } else if (result.status === 'indexed') {
-      t.status = 'indexed';
-      t.reason = 'Confirmée indexée via URL Inspection';
-      tracking.urls[c.url] = t;
-    } else if (result.status === 'failed') {
-      // Ne PAS marquer status='failed' (sinon l'URL est skip définitivement
-      // par compute-candidates). Garder en 'pending' pour ré-essayer demain.
-      t.status = 'pending';
-      t.last_attempt = TODAY;
-      t.last_attempt_reason = result.reason;
-      tracking.urls[c.url] = t;
-    }
-
-    if (result.status === 'quota_exceeded' || result.status === 'captcha' || result.status === 'auth_lost') {
-      stopReason = result;
-      break;
-    }
-
-    await page.waitForTimeout(5000 + Math.floor(Math.random() * 3000));
-  }
-
-  await context.close();
-
-  tracking.last_run = TODAY;
-  writeFileSync(TRACKING_FILE, JSON.stringify(tracking, null, 2));
-
-  const logDir = join(__dirname, 'logs');
-  mkdirSync(logDir, { recursive: true });
-  writeFileSync(
-    join(logDir, `${TODAY}.json`),
-    JSON.stringify({ date: TODAY, total: candidatesData.candidates.length, results, stopReason }, null, 2)
-  );
-
-  const submitted = results.filter(r => r.status === 'requested').length;
-  const indexed = results.filter(r => r.status === 'indexed').length;
-  const failed = results.filter(r => ['failed', 'unknown'].includes(r.status)).length;
-
-  console.log(`\n📊 Bilan : ${submitted} soumises, ${indexed} déjà indexées, ${failed} échec(s)`);
-  if (stopReason) console.log(`⚠️ STOP : ${stopReason.status} — ${stopReason.reason}`);
-
-  console.log(`\nGSC_INDEXATION_DONE submitted=${submitted} indexed=${indexed} failed=${failed}${stopReason ? ` stop=${stopReason.status}` : ''}`);
-  process.exit(stopReason ? 4 : 0);
 }
 
 async function main() {

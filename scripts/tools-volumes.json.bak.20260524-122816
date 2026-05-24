@@ -154,13 +154,5 @@
     "vol": 20,
     "kd": 0,
     "cpc": 0.78
-  },
-  "https://www.enomia.app/calcul-taxe-de-sejour": {
-    "kw": "calcul taxe de séjour",
-    "vol": 210,
-    "kd": 24,
-    "cpc": 0,
-    "source": "semrush-2026-05-24",
-    "note": "taxe de séjour airbnb = vol 590 KD 32, intention plus broad, à envisager comme secondary"
   }
 }

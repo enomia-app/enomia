@@ -3,35 +3,38 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>app.enomia.backlinks-pitches-daily</string>
+    <string>app.enomia.backlinks-report-monthly</string>
 
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/marc/projects/eunomia/scripts/backlinks-pitches-daily/run.sh</string>
+        <string>/Users/marc/projects/eunomia/scripts/backlinks-reports/run.sh</string>
+        <string>month</string>
     </array>
 
     <key>StartCalendarInterval</key>
     <dict>
+        <key>Day</key>
+        <integer>1</integer>
         <key>Hour</key>
         <integer>10</integer>
         <key>Minute</key>
-        <integer>17</integer>
+        <integer>53</integer>
     </dict>
 
     <key>RunAtLoad</key>
     <false/>
 
     <key>StandardOutPath</key>
-    <string>/Users/marc/projects/eunomia/scripts/backlinks-pitches-daily/logs/launchd-stdout.log</string>
+    <string>/Users/marc/projects/eunomia/scripts/backlinks-reports/logs/launchd-monthly-stdout.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/marc/projects/eunomia/scripts/backlinks-pitches-daily/logs/launchd-stderr.log</string>
+    <string>/Users/marc/projects/eunomia/scripts/backlinks-reports/logs/launchd-monthly-stderr.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>
-        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Users/marc/.claude/local</string>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
         <key>HOME</key>
         <string>/Users/marc</string>
     </dict>

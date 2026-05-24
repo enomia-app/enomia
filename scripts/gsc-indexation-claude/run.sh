@@ -2,7 +2,7 @@
 # gsc-indexation-claude — wrapper launchd Mac mini, 9h18 quotidien.
 # Lance la skill « gsc-indexation-quotidienne » via claude -p,
 # puis envoie un récap email via Resend (scripts/tech-watchdog/send-report.sh).
-# Backup de l'ancien pipeline Playwright en scripts/gsc-indexation/run.sh.bak.*
+# (Ancien pipeline Playwright supprimé 2026-05-24 ; historique dans la branche wip/macmini-rescue-2026-05-24)
 
 set -euo pipefail
 

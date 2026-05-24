@@ -106,6 +106,8 @@ Pour chaque post FB ci-dessous, décide :
 2. Si GO : drafte une réponse dans le ton Marc (3-6 phrases généralement)
 3. Décide si un lien Enomia est PILE-POIL pertinent (la question correspond exactement au contenu d'un article/outil) → max ~20% des drafts avec lien (sur 10 drafts, 1-2 avec lien max).
 
+⚠️ IMPORTANT POUR LES LIENS ENOMIA : si tu décides de mettre un lien, tu DOIS intégrer l'URL COMPLÈTE directement dans le champ "text" en l'attachant à une phrase naturelle (ex: "tu peux jeter un œil ici : https://www.enomia.app/contrat-location-saisonniere"). N'utilise PAS de champ séparé pour l'URL — elle doit être DANS le commentaire qui sera posté.
+
 # POSTS À TRAITER
 ${JSON.stringify(compactPosts, null, 2)}
 
@@ -114,10 +116,8 @@ ${JSON.stringify(compactPosts, null, 2)}
 {
   "drafts": {
     "<postId>": {
-      "url": "<url originale>",
-      "text": "<ta réponse Marc complète>",
-      "withEnomiaLink": <true|false>,
-      "enomiaUrl": "<URL https://www.enomia.app/... si lien, sinon null>"
+      "url": "<url originale du post Facebook>",
+      "text": "<ta réponse Marc complète — INCLUT l'URL Enomia intégrée dans une phrase si tu mets un lien>"
     }
   },
   "skipped": [
@@ -136,7 +136,19 @@ Pas de markdown, pas de \`\`\`, juste le JSON pur.`;
 
   const text = resp.content[0].text.trim();
   const cleaned = text.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, '');
-  return JSON.parse(cleaned);
+  const result = JSON.parse(cleaned);
+
+  // Déduit withEnomiaLink/enomiaUrl par regex sur le text (réalité du commentaire)
+  // plutôt que de faire confiance à Sonnet qui pouvait ranger l'URL dans un champ séparé.
+  if (result.drafts) {
+    for (const [, d] of Object.entries(result.drafts)) {
+      const urlMatch = (d.text || '').match(/https?:\/\/(?:www\.)?enomia\.app\/[^\s)\]>,;]*/i);
+      d.withEnomiaLink = !!urlMatch;
+      d.enomiaUrl = urlMatch ? urlMatch[0] : null;
+    }
+  }
+
+  return result;
 }
 
 function buildEmailBody(result, posts) {

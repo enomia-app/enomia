@@ -147,9 +147,32 @@ async function main() {
     process.exit(1);
   }
 
-  const validations = JSON.parse(readFileSync(inputFile, 'utf8'));
+  const allValidations = JSON.parse(readFileSync(inputFile, 'utf8'));
   const cookies = convertCookies(JSON.parse(readFileSync(COOKIES_FILE, 'utf8')));
-  console.log(`\n${validations.length} commentaires à poster\n`);
+
+  // Dedupe : skip les URLs déjà commentées dans les 24 dernières heures.
+  // Protège contre les ré-exécutions accidentelles (rattrapage manuel, cron qui re-tape...).
+  const recentUrls = new Set(
+    loadJsonArray(HISTORY_FILE)
+      .filter(h => Date.now() - new Date(h.postedAt).getTime() < 24 * 3600 * 1000)
+      .map(h => h.postUrl)
+  );
+  const skippedDedupe = [];
+  const validations = allValidations.filter(v => {
+    if (recentUrls.has(v.url)) {
+      skippedDedupe.push(v.postId || v.url);
+      return false;
+    }
+    return true;
+  });
+  if (skippedDedupe.length > 0) {
+    console.log(`\n⏭  ${skippedDedupe.length} commentaire(s) skippé(s) (déjà postés < 24h) : ${skippedDedupe.join(', ')}\n`);
+  }
+  console.log(`${validations.length} commentaires à poster\n`);
+  if (validations.length === 0) {
+    console.log('Rien à faire.');
+    return;
+  }
 
   const context = await chromium.launchPersistentContext(USER_DATA_DIR, {
     headless: true,

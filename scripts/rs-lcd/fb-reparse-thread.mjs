@@ -150,8 +150,17 @@ async function main() {
   console.log(`\n✓ ${validated.length} drafts → ${OUTPUT_FILE}`);
 
   if (EXECUTE_POST) {
-    console.log(`\nLancement fb-post.mjs...`);
-    execSync(`node scripts/rs-lcd/fb-post.mjs ${OUTPUT_FILE}`, { cwd: ROOT, stdio: 'inherit' });
+    // Détaché via nohup : le process survit même si SSH coupe (MBP sleep, WiFi switch...)
+    // Critique pour les rattrapages manuels lancés depuis le MBP via SSH.
+    const logFile = `/tmp/fb-post-${Date.now()}.log`;
+    console.log(`\nLancement fb-post.mjs en arrière-plan détaché...`);
+    console.log(`Log : ${logFile}`);
+    execSync(
+      `nohup node scripts/rs-lcd/fb-post.mjs ${OUTPUT_FILE} > ${logFile} 2>&1 < /dev/null &`,
+      { cwd: ROOT, stdio: 'inherit', shell: '/bin/bash' }
+    );
+    console.log(`✓ Process détaché, survit aux coupures SSH.`);
+    console.log(`Pour suivre l'avancement : ssh marc@100.81.185.92 "tail -f ${logFile}"`);
   } else {
     console.log(`\nPour poster : node scripts/rs-lcd/fb-post.mjs ${OUTPUT_FILE}`);
     console.log(`Ou relance avec --execute pour enchaîner.`);

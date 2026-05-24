@@ -6,11 +6,11 @@
  *
  * Pipeline :
  *   1. Lock /tmp/fb-post-running.lock (anti-race)
- *   2. Gmail OAuth → cherche threads "FB scan" non labelisés "fb-scan-traité" avec réponse Marc
+ *   2. Gmail OAuth → cherche threads "FB scan" non labelisés "fb-scan-posted" avec réponse Marc
  *   3. Pour chaque thread : parse la réponse via Claude API → format strict
  *   4. Pipe vers fb-build-validated.mjs
  *   5. Lance fb-post.mjs (Playwright local)
- *   6. Label thread Gmail "fb-scan-traité"
+ *   6. Label thread Gmail "fb-scan-posted"
  *   7. Email confirmation
  *
  * Usage : node scripts/rs-lcd/fb-watch.mjs
@@ -61,7 +61,7 @@ const MODES = {
 
 const GMAIL_TOKEN = process.env.GSC_OAUTH_TOKEN || path.join(process.env.HOME, '.config/gcloud/enomia-gsc-token.json');
 const GMAIL_CLIENT = process.env.GSC_OAUTH_CLIENT || path.join(process.env.HOME, '.config/gcloud/enomia-oauth-client.json');
-const LABEL_TRAITE = 'fb-scan-traité';
+const LABEL_TRAITE = 'fb-scan-posted';
 
 function log(msg) {
   const line = `[${new Date().toISOString()}] ${msg}\n`;
@@ -278,7 +278,7 @@ ${detailLines}
 Détail par draft :
 ${detailLines}
 
-Thread Gmail labélisé "fb-scan-traité" malgré l'erreur (pour éviter retry en boucle).`;
+Thread Gmail labélisé "fb-scan-posted" malgré l'erreur (pour éviter retry en boucle).`;
 
   sendConfirmation(subject, body);
   log(`Thread ${threadId} : terminé (${postResult.ok ? 'OK' : 'erreur'})`);

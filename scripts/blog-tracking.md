@@ -97,9 +97,43 @@ Recall SEMrush effectué le 2026-05-25 a montré des écarts (-9% à -86%) **mê
 
 ### Articles ajoutés depuis le tracking original Marc (avril 2026)
 
-| Slug | KW | Vol SEMrush | Statut |
-|---|---|---|---|
-| /taxe-habitation-airbnb | taxe habitation airbnb | 90 | en-ligne |
+| Slug | KW | Vol SEMrush | KD | Statut |
+|---|---|---|---|---|
+| /taxe-habitation-airbnb | taxe habitation airbnb | 90 | 19 | en-ligne |
+
+### 🆕 Articles "X avis" identifiés au 2026-05-25 (audit "avis [outil]")
+
+Manquants du tracking original Marc, ~640 vol/mois cumulés. Tous KD ≤ 21.
+
+| Slug à créer | KW | Vol | KD | Catégorie | Priorité |
+|---|---|---|---|---|---|
+| `airdna-avis` | airdna avis | 110 | **7** ⭐⭐ | outils-automatisation | P2 (data intelligence LCD) |
+| `pricelabs-avis` | pricelabs avis | 140 | 14 ⭐ | outils-automatisation | P2 (distinct du pricelabs-vs-wheelhouse) |
+| `octorate-avis` | octorate avis | 110 | 14 ⭐ | outils-automatisation | P2 |
+| `cloudbeds-avis` | cloudbeds avis | 90 | 15 | outils-automatisation | P2 |
+| `hostaway-avis` | hostaway avis | 110 | 21 | outils-automatisation | P2 |
+| `beds24-avis` | beds24 avis | 70 | 13 | outils-automatisation | P3 |
+
+### ❌ Articles "X avis" à NE PAS créer (vol confirmé trop bas le 2026-05-25)
+
+| KW testé | Vol | Verdict |
+|---|---|---|
+| `wheelhouse avis`, `avis wheelhouse` | 0 | KW inexistant — garder uniquement `pricelabs-vs-wheelhouse` |
+| `hostfully avis` | 10 | trop bas |
+| `hospitable avis` | 0 (NOTHING FOUND) | inexistant |
+| `avantio avis` | 30 | trop bas |
+| `mews avis` | 20 | trop bas |
+| `guesty avis` | 40 | trop bas |
+| `siteminder avis` | 20 | trop bas |
+| `beyond pricing avis` | 20 | trop bas |
+
+### ❌ Combinaisons "X vs Y" à NE PAS créer (audit 2026-05-25)
+
+Le marché LCD FR ne génère pas de recherches comparatives binaires. **20 combinaisons testées**, seul `smoobu vs lodgify` (140 vol KD 19) ressort — déjà couvert par `smoobu-vs-lodgify-amenitiz` dans le backlog.
+
+Autres "X vs Y" testés à 0 vol : smoobu vs beds24, smoobu vs amenitiz, smoobu vs superhote, lodgify vs beds24, lodgify vs amenitiz (20 vol marginal), lodgify vs superhote, amenitiz vs beds24, amenitiz vs superhote, superhote vs beds24, hostfully vs smoobu, hospitable vs smoobu, beds24 vs hostfully, avantio vs smoobu, octorate vs smoobu, etc.
+
+**Stratégie corrigée** : concentrer sur les "X avis" individuels (où est le vol) + 1 article comparatif global (`channel-manager-comparatif` en ligne) + 1 article "X vs Y" populaire (`smoobu-vs-lodgify-amenitiz` à publier).
 
 ## Top ROI réel à attaquer (basé sur SEMrush mai 2026)
 

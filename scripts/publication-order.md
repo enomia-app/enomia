@@ -1,5 +1,7 @@
 # Ordre de publication du blog Enomia
 
+> 📋 **Voir aussi `scripts/blog-tracking.md`** — source de vérité enrichie avec colonnes Vol Marc (avril 2026) + Vol SEMrush actuel + KD + Statut, recopié depuis le Numbers Marc pour ne plus perdre la donnée entre sessions.
+>
 > Dernière mise à jour : 2026-05-25 (post-audit statuts réels + scoring ROI)
 > Principe : **publier les piliers avant les satellites** pour que le maillage interne fonctionne dès la première publication.
 > Scoring : **ROI = volume / KD** — favorise les KW gros volume ET accessibles.

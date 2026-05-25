@@ -1,0 +1,127 @@
+---
+import { getCollection } from 'astro:content';
+import blogVolumes from '../../scripts/blog-volumes-en-ligne.json';
+
+interface Props {
+  excludeSlug?: string;
+  title?: string;
+  limit?: number;
+}
+
+const { excludeSlug, title = 'Articles à lire', limit = 20 } = Astro.props;
+
+const CAT_LABELS: Record<string, string> = {
+  'chiffres-rentabilite': '💰 Chiffres & Rentabilité',
+  'outils-automatisation': '🔧 Outils & Automatisation',
+  'fiscal-juridique': '🏛️ Fiscal & Juridique',
+  'gestion': '🏠 Gestion',
+};
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function readingTime(body: string | undefined) {
+  if (!body) return 1;
+  const words = body.split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
+const allPosts = await getCollection('blog', ({ data }) => data.status === 'en-ligne');
+const volOf = (slug: string) => (blogVolumes as Record<string, { vol?: number }>)[slug]?.vol ?? 0;
+const posts = allPosts
+  .filter(p => !excludeSlug || p.slug !== excludeSlug)
+  .sort((a, b) => {
+    const vDiff = volOf(b.slug) - volOf(a.slug);
+    if (vDiff !== 0) return vDiff;
+    return new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime();
+  })
+  .slice(0, limit);
+---
+
+{posts.length > 0 && (
+  <section class="rba">
+    <div class="rba-head">
+      <span class="rba-title">{title}</span>
+      <a href="/blog" class="rba-link">Voir tout →</a>
+    </div>
+    <div class="rba-rail">
+      {posts.map(post => (
+        <a href={`/blog/${post.slug}`} class="rba-card">
+          <div class="rba-card-img">
+            {post.data.featuredImage
+              ? <img src={post.data.featuredImage.src} alt={post.data.featuredImage.alt} loading="lazy" />
+              : <div class="rba-card-img-ph"></div>
+            }
+          </div>
+          <div class="rba-card-body">
+            <div class="rba-card-cat">{CAT_LABELS[post.data.category]}</div>
+            <div class="rba-card-title">{post.data.title}</div>
+            <p class="rba-card-excerpt">{post.data.excerpt}</p>
+            <div class="rba-card-meta">{formatDate(post.data.publishedAt)} · {readingTime(post.body)} min</div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .rba { margin: 40px 0 32px; }
+  .rba-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; }
+  .rba-title { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #8a8985; }
+  .rba-link { font-size: 13px; font-weight: 500; color: #8a8985; text-decoration: none; transition: color 0.15s; }
+  .rba-link:hover { color: #1a1a1a; }
+
+  /* Rail — horizontal scroll desktop, vertical stack mobile */
+  .rba-rail {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 4px 14px;
+    margin: 0 -4px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.18) transparent;
+  }
+  .rba-rail::-webkit-scrollbar { height: 6px; }
+  .rba-rail::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 4px; }
+  .rba-rail::-webkit-scrollbar-track { background: transparent; }
+
+  .rba-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    background: #ffffff;
+    border: 1px solid #e5e3de;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.15s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .rba-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); transform: translateY(-2px); }
+
+  .rba-card-img {
+    aspect-ratio: 16/10;
+    background: linear-gradient(145deg, #e4e2dc 0%, #d5d3cd 100%);
+    overflow: hidden;
+  }
+  .rba-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .rba-card-img-ph { width: 100%; height: 100%; }
+
+  .rba-card-body { padding: 18px 20px 20px; }
+  .rba-card-cat { font-size: 11px; font-weight: 600; color: #3fbd71; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .rba-card-title { font-family: 'Newsreader', Georgia, serif; font-size: 17px; font-weight: 600; line-height: 1.35; color: #1a1a1a; margin-bottom: 8px; }
+  .rba-card:hover .rba-card-title { text-decoration: underline; text-underline-offset: 2px; }
+  .rba-card-excerpt { font-size: 13px; color: #52524e; line-height: 1.55; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .rba-card-meta { font-size: 12px; color: #8a8985; }
+
+  /* Mobile : stack vertical */
+  @media (max-width: 768px) {
+    .rba-rail { flex-direction: column; overflow-x: visible; padding: 0; margin: 0; scroll-snap-type: none; }
+    .rba-card { flex: 1 1 auto; scroll-snap-align: none; width: 100%; }
+    .rba-card-title { font-size: 16px; }
+  }
+</style>

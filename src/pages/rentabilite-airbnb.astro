@@ -2,6 +2,7 @@
 import ToolLayout from '../layouts/ToolLayout.astro';
 import ContratLandingStyles from '../components/ContratLandingStyles.astro';
 import NewsletterBlock from '../components/NewsletterBlock.astro';
+import RelatedBlogArticles from '../components/RelatedBlogArticles.astro';
 import { citiesRentabilite, getPublishedCitiesRentabilite } from '../data/cities-rentabilite';
 
 const title = "Rentabilité Airbnb par ville 2026 : classement et analyse des 30 meilleures villes";
@@ -42,36 +43,42 @@ const upcomingCount = citiesRentabilite.length - publishedCities.length;
     <p>Tableau chiffré pour un T2 standard de 35&nbsp;m&sup2; bien équipé, avec stratégie de pricing dynamique. Le rendement net intègre les charges d'exploitation et le coût moyen du financement. À ajuster avec votre projet réel via le calculateur.</p>
     <p style="font-size:13px; color:#666; margin-top:-12px;"><em>Données 2026 calibrées par catégorie de marché. Pour la précision sur VOTRE projet, lancez le calculateur. Les villes en cours de publication apparaîtront ici progressivement.</em></p>
 
-    <table class="ranking-table">
-      <thead>
-        <tr>
-          <th>Ville</th>
-          <th>Catégorie</th>
-          <th>CA T2 / an</th>
-          <th>Occupation</th>
-          <th>Rendement net</th>
-          <th>Page détail</th>
-        </tr>
-      </thead>
-      <tbody>
-        {allCities.map((c) => (
-          <tr>
-            <td><strong>{c.name}</strong> <span style="color:#888; font-size:12px;">, {c.region}</span></td>
-            <td><span class={`cat cat-${c.category}`}>{c.category.replace(/-/g, ' ')}</span></td>
-            <td>{c.t2.caAnnualMin.toLocaleString('fr-FR')} - {c.t2.caAnnualMax.toLocaleString('fr-FR')}&nbsp;€</td>
-            <td>{c.t2.occupancyMin}-{c.t2.occupancyMax}%</td>
-            <td><strong>{c.t2.rendementNetMin}-{c.t2.rendementNetMax}%</strong></td>
-            <td>
-              {c.status === 'en-ligne' ? (
-                <a href={`/rentabilite-airbnb/${c.slug}`}>Voir →</a>
-              ) : (
-                <span style="color:#aaa; font-size:13px;">À venir</span>
-              )}
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div class="ranking-wrap">
+      <div class="ranking-scroll">
+        <table class="ranking-table">
+          <thead>
+            <tr>
+              <th>Ville</th>
+              <th>Catégorie</th>
+              <th>CA T2 / an</th>
+              <th>Occupation</th>
+              <th>Rendement net</th>
+              <th>Page détail</th>
+            </tr>
+          </thead>
+          <tbody>
+            {allCities.map((c) => (
+              <tr>
+                <td><strong>{c.name}</strong> <span style="color:#888; font-size:12px;">, {c.region}</span></td>
+                <td><span class={`cat cat-${c.category}`}>{c.category.replace(/-/g, ' ')}</span></td>
+                <td>{c.t2.caAnnualMin.toLocaleString('fr-FR')} - {c.t2.caAnnualMax.toLocaleString('fr-FR')}&nbsp;€</td>
+                <td>{c.t2.occupancyMin}-{c.t2.occupancyMax}%</td>
+                <td><strong>{c.t2.rendementNetMin}-{c.t2.rendementNetMax}%</strong></td>
+                <td>
+                  {c.status === 'en-ligne' ? (
+                    <a href={`/rentabilite-airbnb/${c.slug}`}>Voir →</a>
+                  ) : (
+                    <span style="color:#aaa; font-size:13px;">À venir</span>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div class="ranking-fade" aria-hidden="true"></div>
+      <p class="ranking-hint">Glissez horizontalement pour voir toutes les colonnes →</p>
+    </div>
 
     <p style="margin-top:14px; font-size:13px; color:#666;"><em>{publishedCities.length} villes publiées avec analyse détaillée. {upcomingCount} villes à venir (1 publication tous les 2 jours).</em></p>
 
@@ -249,11 +256,19 @@ const upcomingCount = citiesRentabilite.length - publishedCities.length;
   </div>
 
   <NewsletterBlock source="RentabiliteVille" />
+
+  <RelatedBlogArticles title="Articles à lire pour aller plus loin" />
   </div>
 
   <style>
-    .ranking-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
-    .ranking-table th, .ranking-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e8e4dc; }
+    .ranking-wrap { position: relative; margin: 20px 0; }
+    .ranking-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid #e8e4dc; border-radius: 8px; scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.18) transparent; }
+    .ranking-scroll::-webkit-scrollbar { height: 6px; }
+    .ranking-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 4px; }
+    .ranking-scroll::-webkit-scrollbar-track { background: transparent; }
+    .ranking-table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 14px; }
+    .ranking-table th, .ranking-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e8e4dc; white-space: nowrap; }
+    .ranking-table td:first-child { white-space: normal; }
     .ranking-table th { background: #f7f5f0; font-weight: 600; color: #3a3c3a; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
     .ranking-table tr:hover { background: #faf8f3; }
     .ranking-table td a { color: #2b6cb0; font-weight: 600; text-decoration: none; }
@@ -265,10 +280,14 @@ const upcomingCount = citiesRentabilite.length - publishedCities.length;
     .cat-patrimoine { background: #e8d4c4; color: #6b4226; }
     .cat-peripherie { background: #d4e8d4; color: #2d5a2d; }
     .cat-tourisme-affaires { background: #f0e0c0; color: #6b5a26; }
+    /* Fade gradient + hint — only on mobile */
+    .ranking-fade { display: none; }
+    .ranking-hint { display: none; }
     @media (max-width: 720px) {
       .ranking-table { font-size: 12px; }
-      .ranking-table th, .ranking-table td { padding: 8px 6px; }
-      .ranking-table th:nth-child(2), .ranking-table td:nth-child(2) { display: none; }
+      .ranking-table th, .ranking-table td { padding: 8px 8px; }
+      .ranking-fade { display: block; position: absolute; top: 0; right: 0; width: 32px; height: calc(100% - 32px); pointer-events: none; background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92)); border-radius: 0 8px 8px 0; }
+      .ranking-hint { display: block; font-size: 11px; color: #8a8985; margin: 8px 0 0; text-align: center; }
     }
   </style>
 

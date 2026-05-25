@@ -98,7 +98,18 @@ async function fetchRepliesUnderMarcComment(page, postUrl, marcCommentText) {
     return out;
   }, marcSnippet);
 
-  return replies;
+  // Dédup : FB remount les articles dans le DOM après le scroll (lazy load + version
+  // compacte/étendue), une même réponse peut donc apparaître plusieurs fois. On dédup
+  // par (author, premiers 200 chars du text) avant de renvoyer.
+  const seen = new Set();
+  const deduped = [];
+  for (const r of replies) {
+    const key = `${r.author}::${r.text.slice(0, 200)}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    deduped.push(r);
+  }
+  return deduped;
 }
 
 async function draftReplyViaClaude(originalPostContext, marcComment, newReply, drafts) {
@@ -119,22 +130,26 @@ TON DE MARC (CRITIQUE) :
 
 RÉPONSE :
 - 1-3 phrases max (tu réponds à une réplique, pas à une question initiale)
-- Si la personne te remercie/valide → réponse cordiale courte
 - Si elle apporte un complément → reconnais + ajoute une nuance utile
 - Si elle te contredit → reste pair-à-pair, factuel, pas d'attaque
 - Si elle pose une nouvelle question → réponse concise + invite à creuser
 
+QUAND SKIP (ne PAS répondre) :
+- Spam, troll évident, off-topic → skip
+- Ack/remerciement de fin de conversation SANS question ni relance (ex. "Merci pour ta réponse", "Bonne journée", "Ok parfait", "Top merci", "Cool merci") → skip. Sur FB, on ne répond pas à un merci, ça brise la fluidité et fait artificiel ("De rien"). Laisse la conversation se terminer naturellement.
+- Réponse vide ou quasi vide (1-2 mots non-question) → skip
+
+Quand tu skipes, mets "reason" précis (ex. "ack de fin de conv : merci + bonne journée, pas de question").
+
 Réponds UNIQUEMENT en JSON :
 {
-  "text": "ta réponse complète",
+  "text": "ta réponse complète (vide si skip)",
   "skip": false,
   "reason": "explication si skip"
-}
-
-Mets "skip": true si la réponse ne mérite pas qu'on intervienne (spam, troll évident, off-topic). Sinon "skip": false.`;
+}`;
 
   const resp = await client.messages.create({
-    model: 'claude-haiku-4-5-20251001',
+    model: 'claude-opus-4-7',
     max_tokens: 800,
     messages: [{ role: 'user', content: prompt }],
   });

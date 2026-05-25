@@ -7936,6 +7936,684 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-05-22',
   },
+  // ==========================================================================
+  // LA BAULE
+  // ==========================================================================
+  {
+    slug: 'la-baule',
+    displayName: 'La Baule',
+    region: 'Pays de la Loire',
+    regionSlug: 'pays-de-la-loire',
+    title: 'Conciergerie La Baule Airbnb : comparatif 2026 des 4 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb La Baule : comparatif & avis 2026',
+    metaDescription:
+      "Comparatif des meilleures conciergeries Airbnb de La Baule : tarifs, services, avis Google, réglementation 2026 et quartiers rentables de la presqu'île guérandaise.",
+    kwPrincipal: 'conciergerie la baule',
+    kwSecondaires: [
+      'conciergerie airbnb la baule',
+      'les concierges la baule',
+      'conciergerie pornichet',
+      'gestion locative la baule',
+      'meublé tourisme la baule',
+    ],
+    population: 16900,
+    tourists: 2000000,
+    activeListings: 2400,
+    priceLow: 80,
+    priceHigh: 170,
+    occupancyRate: 58,
+    revpar: 58,
+    seasonality:
+      "Saisonnalité très marquée de station balnéaire atlantique. Pic estival massif juillet-août (occupation 85-95 %, tarifs 1,5 à 2,5× la moyenne annuelle, réservations bouclées plusieurs mois à l'avance) porté par les 8 km de plage de la baie et une clientèle famille et haut de gamme. Ailes de saison soutenues d'avril à juin et en septembre (week-ends prolongés, ponts, golf, thalasso). Creux hivernal net (occupation 30-40 %) hors vacances de la Toussaint et de Noël. Le parc composé à près de 80 % de résidences secondaires alimente une offre LCD abondante mais souvent gérée à distance.",
+    rankNational: 30,
+    introCustom:
+      "Vous possédez un appartement sur le **Remblai**, une villa à **La Baule-les-Pins** ou un studio proche du marché central, que vous louez sur Airbnb ou que vous comptez mettre en location saisonnière.\n\nEntre les **8 km de plage** qui remplissent la baie de juin à septembre, une clientèle famille et haut de gamme exigeante, des rotations hebdomadaires en plein été, et un parc composé à près de **80 % de résidences secondaires**, la question n'est pas de savoir s'il y a de la demande — mais comment la capter sans y passer vos week-ends.\n\nUne conciergerie peut s'en charger. Reste à choisir la bonne, et à vérifier qu'elle vous laisse une marge nette qui en vaut la peine.",
+    marketIntro:
+      "La Baule est l'une des stations balnéaires les plus cotées de la façade atlantique et l'un des marchés saisonniers les plus actifs des Pays de la Loire. Le marché y est dominé par la résidence secondaire (près de 80 % du parc), ce qui crée une offre LCD abondante mais souvent mal optimisée : beaucoup de propriétaires gèrent depuis Paris, Nantes ou Rennes et ne sont pas sur place pour les arrivées.\n\nLa clientèle est majoritairement française, familiale et plutôt aisée, avec un pic estival très concentré (juillet-août) et des tarifs nuitée qui peuvent doubler en haute saison. Les biens **vue mer ou à moins de 300 m de la plage** se louent à prime, tandis qu'un secteur comme Escoublac offre un ticket d'entrée plus accessible.\n\nDans ce contexte, une conciergerie locale sérieuse se rentabilise vite sur la fenêtre estivale — à condition de cadrer précisément le traitement du ménage et des frais annexes. Notre [simulateur de rentabilité](/estimation-airbnb) permet de comparer gestion autonome et conciergerie sur votre cas.",
+    conciergeries: [
+      {
+        name: 'Les Concierges',
+        url: 'https://www.les-concierges.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 108,
+        biensGeres: 47,
+        specialty: 'Haut de gamme face mer, presqu’île',
+        description:
+          "Les Concierges est l'acteur le plus établi de la presqu'île guérandaise, avec le plus gros volume d'avis du marché baulois (4,9/5 sur 108 avis Google). L'agence affiche un catalogue d'une quarantaine de biens sélectionnés entre La Baule, Pornichet, Le Pouliguen et Batz-sur-Mer, positionnés sur le segment locations de vacances haut de gamme « face mer ». Service sur-mesure (sélection rigoureuse des biens, accueil personnalisé, attentions d'arrivée). Pertinente pour un propriétaire d'un bien de standing vue mer ou hyper-centre qui cherche un partenaire ancré localement avec une vraie réputation.",
+      },
+      {
+        name: 'Conciergerie La Baule',
+        url: 'https://conciergerielabaule.fr/',
+        commission: '20 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 10,
+        biensGeres: 15,
+        specialty: 'Premium front de mer, volume limité',
+        description:
+          "Conciergerie La Baule se présente comme partenaire Airbnb et revendique un nombre de biens volontairement limité, exclusivement premium (front de mer, vue mer, hyper-centre). Note Google 4,8/5 sur 10 avis. Commission annoncée de 20 % TTC sur les revenus locatifs. Gestion clé en main et présence également à Rennes et sur l'île de Ré. Pertinente pour un propriétaire d'un bien premium qui privilégie un suivi resserré plutôt qu'un acteur volumique.",
+      },
+      {
+        name: 'Zen Weekey',
+        commission: '20 % HT',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 31,
+        biensGeres: 20,
+        specialty: 'Approche humaine, reporting de performance',
+        description:
+          "Zen Weekey mise sur une approche humaine et un accompagnement de proximité, avec note Google 4,9/5 sur 31 avis. Commission annoncée de 20 % HT sur les revenus locatifs. Particularités mises en avant : rapports de performance réguliers et conseils déco pour valoriser le bien. Pertinente pour un propriétaire qui veut un interlocuteur disponible et des retours chiffrés sur l'occupation et le revenu, sans basculer chez un acteur national standardisé.",
+      },
+      {
+        name: 'La Baule Sweet Home',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 30,
+        biensGeres: 18,
+        specialty: 'Home staging & intendance de maison',
+        description:
+          "La Baule Sweet Home combine conciergerie locative et services d'intendance de résidence : home staging, organisation d'événements, aide à l'acquisition et gestion de maison. Note Google 4,3/5 sur 30 avis. Positionnement plus large que la seule gestion Airbnb, utile pour un propriétaire de résidence secondaire qui veut un interlocuteur unique pour la location saisonnière et l'entretien du bien hors période louée.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Le Remblai / front de mer',
+        pricePerNight: '110-260 €',
+        occupancy: 65,
+        description:
+          "La promenade qui longe la baie sur plusieurs kilomètres, bordée d'immeubles avec vue mer. Le secteur le plus prisé et le plus rentable en LCD : la vue mer se loue à prime et l'occupation estivale frôle la saturation. Ticket d'entrée élevé (T2 souvent au-delà de 280 000 €).",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'La Baule-les-Pins',
+        pricePerNight: '95-200 €',
+        occupancy: 60,
+        description:
+          "Quartier résidentiel chic autour de la place des Palmiers, villas sous les pins, ambiance familiale et haut de gamme. Recherché pour les séjours en famille et les locations de maisons. Prix d'achat élevés mais demande estivale très solide.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Centre / hyper-centre',
+        pricePerNight: '85-160 €',
+        occupancy: 60,
+        description:
+          "Autour du marché central, des commerces et de la gare. Apprécié pour les séjours « tout à pied » sans voiture, à quelques minutes de la plage. Bon compromis entre prix d'achat et taux d'occupation, avec une saison un peu plus étalée que le front de mer.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Plage Benoît',
+        pricePerNight: '85-170 €',
+        occupancy: 58,
+        description:
+          "À l'ouest de la baie, plage plus familiale et calme, large estran à marée basse. Clientèle famille recherchant la tranquillité. Tickets d'achat un peu plus accessibles que le cœur du Remblai pour une proximité plage comparable.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Escoublac',
+        pricePerNight: '70-120 €',
+        occupancy: 52,
+        description:
+          "Bourg historique au cœur de la commune, près de la forêt d'Escoublac, en retrait du front de mer. Le secteur le plus abordable de La Baule : tickets d'achat plus bas, clientèle qui accepte d'être à quelques minutes en voiture de la plage. Meilleur rendement brut de la commune.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Pornichet / Le Pouliguen',
+        pricePerNight: '80-180 €',
+        occupancy: 58,
+        description:
+          "Communes limitrophes de la même baie, sur lesquelles opèrent la plupart des conciergeries bauloises. Pornichet (côté est, port) et Le Pouliguen (côté ouest, port de plaisance) offrent une demande estivale comparable avec des tickets d'achat parfois plus accessibles qu'à La Baule intra-muros.",
+        roiBrut: '4,5 à 6 %',
+      },
+    ],
+    regulation:
+      "La Baule-Escoublac fait partie des stations balnéaires qui ont **encadré la location de meublés de tourisme**. La commune a instauré une **autorisation préalable de changement d'usage** pour les meublés de tourisme qui ne constituent pas la résidence principale du loueur, motivée par un parc composé à près de 80 % de résidences secondaires. Avant de louer un bien en courte durée toute l'année, il faut donc vérifier le régime applicable auprès du service urbanisme de la mairie.\n\n**Déclaration et numéro d'enregistrement.** Toute mise en location d'un meublé de tourisme doit être déclarée en mairie, ce qui délivre un numéro d'enregistrement à porter sur chaque annonce Airbnb, Booking ou Abritel. À partir du 20 mai 2026, ce numéro bascule vers le téléservice national unique (apimeubles.finances.gouv.fr), à 13 chiffres pour tous les meublés.\n\n**Résidence principale.** La location de la résidence principale (logement occupé au moins 8 mois par an) reste plafonnée à **120 nuitées par an** au niveau national.\n\n**Loi Le Meur 2024.** DPE classe E minimum, abattement micro-BIC ramené à 30 % pour les meublés non classés (50 % pour les classés tourisme), et interdiction progressive des passoires thermiques (F puis G) à la location. Sanctions : jusqu'à 10 000 € pour défaut d'enregistrement et 20 000 € pour fausse déclaration.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La commune applique une taxe de séjour de l'ordre de 0,75 € à 4,30 € par nuit et par personne selon le classement de l'hébergement, collectée automatiquement par les plateformes.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 100,
+      neighborhood: 'Le Remblai (front de mer)',
+      revenuBrut: 21000,
+      commissionRate: 0.20,
+      menageCount: 50,
+      menageUnitCost: 75,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation pour louer en Airbnb à La Baule en 2026 ?',
+        a: "Cela dépend du statut du bien. Pour une résidence secondaire louée en meublé de tourisme toute l'année, La Baule applique une autorisation préalable de changement d'usage, justifiée par un parc composé à près de 80 % de résidences secondaires : il faut vérifier le régime auprès du service urbanisme de la mairie avant de se lancer. Dans tous les cas, une déclaration en mairie est obligatoire et délivre un numéro d'enregistrement à porter sur chaque annonce (numéro qui bascule vers le téléservice national à 13 chiffres à partir du 20 mai 2026). Pour une résidence principale, la location reste possible dans la limite de 120 nuitées par an.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à La Baule pendant l\'été ?',
+        a: "L'été concentre l'essentiel du chiffre d'affaires baulois. Un T2 proche de la plage qui se loue 90-110 €/nuit en moyenne annuelle peut grimper à 150-260 €/nuit en juillet-août, avec une occupation de 85-95 % et un minimum de plusieurs nuits imposé. Sur les deux mois d'été, un bien bien placé génère couramment 30 à 45 % de son revenu annuel. La contrepartie : des rotations hebdomadaires intenses (check-out le samedi, ménage, check-in dans la foulée) qui rendent une conciergerie locale précieuse quand on n'habite pas sur place.",
+      },
+      {
+        q: 'Quel quartier choisir pour investir en LCD à La Baule ?',
+        a: "Pour la prime à la nuitée et l'occupation estivale maximale, le Remblai et le front de mer restent imbattables, mais avec le ticket d'entrée le plus élevé (rendement brut souvent sous 5 %). La Baule-les-Pins offre le standing familial haut de gamme. Pour un meilleur rendement brut, le centre et la plage Benoît sont de bons compromis prix/occupation, et Escoublac, en retrait du front de mer, offre les tickets d'achat les plus accessibles de la commune (rendement brut jusqu'à 6-7 %). Les communes voisines Pornichet et Le Pouliguen partagent la même baie avec des prix parfois plus doux.",
+      },
+    ],
+    updatedAt: '2026-05-25',
+  },
+  // ==========================================================================
+  // BREST
+  // ==========================================================================
+  {
+    slug: 'brest',
+    displayName: 'Brest',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Brest Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Brest : comparatif 2026 (tarifs)',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb de Brest : tarifs (18-33 %), services, avis Google, réglementation zone tendue 2026 et quartiers rentables.",
+    kwPrincipal: 'conciergerie brest',
+    kwSecondaires: [
+      'conciergerie airbnb brest',
+      'gestion locative courte durée brest',
+      'conciergerie finistère',
+      'meublé tourisme brest',
+      'airbnb brest',
+    ],
+    population: 142000,
+    tourists: 1500000,
+    activeListings: 1200,
+    priceLow: 55,
+    priceHigh: 105,
+    occupancyRate: 63,
+    revpar: 45,
+    seasonality:
+      "Saisonnalité plus étalée que les stations balnéaires pures. Demande de fond toute l'année portée par le tourisme d'affaires (base navale, port, technopôle Brest-Iroise), le pôle universitaire (UBO, environ 20 000 étudiants) et les visites de familles. Pic estival juin-septembre tiré par Océanopolis, le littoral, la rade et le rôle de Brest comme porte d'entrée vers la pointe du Finistère, Crozon et les îles. Pic exceptionnel tous les quatre ans avec les Fêtes Maritimes Internationales (environ 500 000 visiteurs en six jours en 2024), qui saturent l'hébergement et tendent fortement le marché LCD.",
+    rankNational: 34,
+    introCustom:
+      "Vous avez un appartement à **Brest**, dans le quartier de Siam, à Recouvrance ou près d'Océanopolis, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nBrest n'est pas une station balnéaire : ici la demande tient autant au **tourisme d'affaires**, à l'**université** et au port qu'aux vacanciers. C'est une bonne nouvelle — l'occupation est plus régulière sur l'année — mais cela suppose une gestion réactive en semaine comme le week-end.\n\nEntre les arrivées tardives, les messages voyageurs et le ménage entre deux séjours, déléguer à une conciergerie peut avoir du sens. Encore faut-il choisir un acteur réellement ancré à Brest, et pas une marque nationale de passage.",
+    marketIntro:
+      "Brest est la deuxième ville de Bretagne (environ 142 000 habitants, près de 210 000 sur la métropole) et un marché LCD porté par un mix singulier : tourisme d'affaires lié à la base navale et au port, pôle universitaire de l'UBO, équipements phares comme Océanopolis (environ 300 000 visiteurs par an) et rôle de tête de pont vers la pointe du Finistère.\n\nLa demande y est **plus régulière qu'en station balnéaire**, avec une occupation qui tient en semaine grâce aux déplacements professionnels et aux visites familiales d'étudiants, puis un pic estival sur le littoral et la rade. Les Fêtes Maritimes Internationales, tous les quatre ans, créent un appel d'air spectaculaire sur l'hébergement.\n\nCôté réglementation, Brest est classée en **zone tendue** depuis 2023, ce qui impose une vigilance accrue (déclaration, numéro d'enregistrement) et autorise la collectivité à durcir les règles. Notre [simulateur de rentabilité](/estimation-airbnb) aide à comparer gestion autonome et conciergerie sur votre bien.",
+    conciergeries: [
+      {
+        name: "Conciergerie Finist'Armor",
+        url: 'https://www.conciergerie-finistarmor.fr/',
+        commission: '18 à 33 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 28,
+        biensGeres: 40,
+        specialty: 'Couverture Finistère, agence établie',
+        description:
+          "Finist'Armor est une structure finistérienne établie qui propose un service de conciergerie courte durée et saisonnière clé en main sur un large secteur (de Brest à Quimper, d'Audierne à Roscoff). Note Google 4,9/5 sur 28 avis pour son activité conciergerie. Grille de commission affichée entre 18 et 33 % TTC selon le niveau de délégation et les services inclus. Pertinente pour un propriétaire qui veut un acteur régional solide capable de gérer des biens hors du seul centre brestois.",
+      },
+      {
+        name: 'NM Conciergerie',
+        url: 'https://www.nmconciergerie.fr/',
+        commission: '24 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 6,
+        biensGeres: 15,
+        specialty: 'Centre-ville Brest, sur-mesure',
+        description:
+          "NM Conciergerie est basée en plein centre de Brest et accompagne les propriétaires sur leur activité de location courte et moyenne durée. Note Google 5,0/5 sur 6 avis. Commission annoncée de 24 % TTC. Services : ménage, gestion du linge, consommables, et mise en relation avec décorateurs, architectes d'intérieur et artisans pour valoriser le bien. Pertinente pour un propriétaire d'un bien en centre-ville qui veut un interlocuteur de proximité et un service personnalisé.",
+      },
+      {
+        name: 'Concierge BB',
+        url: 'https://www.conciergebb.fr/',
+        commission: '20 à 25 %',
+        menage: 'refacturé voyageur',
+        rating: 3.8,
+        reviews: 22,
+        biensGeres: 30,
+        specialty: 'Partenaire local multi-quartiers',
+        description:
+          "Concierge BB est une marque multi-villes disposant d'une présence locale à Brest, avec gestion complète : optimisation des annonces, accueil voyageurs 7j/7, ménage hôtelier, photos professionnelles, suivi technique. Note Google 3,8/5 sur 22 avis (avis partagés entre propriétaires satisfaits et voyageurs plus critiques sur la communication). Commission généralement annoncée entre 20 et 25 %. Couvre les quartiers Centre, Recouvrance, Saint-Marc et Lambézellec. À comparer attentivement avec les acteurs purement locaux.",
+      },
+      {
+        name: 'Concigreen',
+        url: 'https://www.concigreen.fr/',
+        commission: '20 à 25 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 7,
+        biensGeres: 15,
+        specialty: 'Conciergerie éco-responsable',
+        description:
+          "Concigreen est une conciergerie locale brestoise positionnée sur le créneau éco-responsable (ménage écologique, démarche durable), fondée par Rebecca Trémintin et présente à Brest et au Relecq-Kerhuon. Note Google 5,0/5 sur 7 avis. Commission annoncée entre 20 et 25 % des revenus, avec un forfait de lancement. Petite structure de proximité, pertinente pour un propriétaire sensible à une gestion responsable et à un contact direct avec la fondatrice.",
+      },
+      {
+        name: 'Hestia Conciergerie',
+        url: 'https://www.hestiaconciergerie.bzh/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 22,
+        biensGeres: 20,
+        specialty: 'Pays d’Iroise & nord Finistère',
+        description:
+          "Hestia Conciergerie (SAS dirigée par Sébastien Bellec) est ancrée à l'ouest de Brest, vers Saint-Renan et Lampaul-Ploudalmézeau, sur le Pays d'Iroise et les Abers. Note Google 4,7/5 sur 22 avis. Gestion de locations saisonnières (appartements, maisons et villas, dont des biens vue mer) avec accueil personnalisé. Pertinente pour un propriétaire d'un bien situé sur la côte au nord-ouest de Brest, hors de l'hyper-centre, où les acteurs du centre-ville sont moins présents.",
+      },
+      {
+        name: "Need'Air Conciergerie",
+        commission: '20 % dégressif',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 5,
+        biensGeres: 12,
+        specialty: 'Tarif dégressif, gestion complète',
+        description:
+          "Need'Air est une conciergerie brestoise proposant une gestion complète de la location courte durée avec une commission annoncée à partir de 20 %, dégressive selon le volume. Note Google 5,0/5 sur 5 avis (acteur récent, faible volume d'avis). Positionnement service complet (annonces, accueil, ménage, suivi). Pertinente pour un propriétaire multi-biens à Brest sensible à un barème de commission dégressif.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Siam / Brest-centre',
+        pricePerNight: '60-110 €',
+        occupancy: 68,
+        description:
+          "Cœur de ville autour de la rue de Siam, de la place de la Liberté au pont de Recouvrance : commerces, restaurants, transports, château et port à proximité. Le secteur le plus demandé pour le city-break et le tourisme d'affaires, avec une occupation lissée toute l'année.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Recouvrance / Les Capucins',
+        pricePerNight: '55-100 €',
+        occupancy: 62,
+        description:
+          "Quartier historique rive droite de la Penfeld (Tour Tanguy, pont levant) et plateau des Ateliers des Capucins, desservi par le téléphérique. Forte identité patrimoniale et vues sur le port, attractif pour la clientèle touristique. Tickets d'achat plus accessibles que l'hyper-centre.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Le Port de commerce',
+        pricePerNight: '55-100 €',
+        occupancy: 60,
+        description:
+          "Zone animée le soir (bars, restaurants, sorties) proche des départs maritimes. Clientèle festive, événementielle et de passage. Bon compromis pour un bien destiné aux courts séjours et aux week-ends.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Saint-Marc',
+        pricePerNight: '55-95 €',
+        occupancy: 60,
+        description:
+          "Quartier résidentiel calme à l'est, vue sur la rade, à proximité d'Océanopolis et de la plage du Moulin Blanc. Idéal pour les séjours familiaux et la clientèle estivale. Tickets d'achat raisonnables pour un cadre verdoyant.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Lambézellec',
+        pricePerNight: '50-90 €',
+        occupancy: 58,
+        description:
+          "Au nord de Brest, ambiance village, marchés de quartier et commerces de proximité. Plutôt adapté aux séjours moyenne durée et aux voyageurs cherchant le calme. Parmi les tickets d'achat les plus accessibles de la commune.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Saint-Pierre / Quatre-Moulins',
+        pricePerNight: '50-90 €',
+        occupancy: 57,
+        description:
+          "Quartiers de l'ouest brestois, résidentiels, proches de l'arsenal et des plages de la presqu'île. Demande mixte (déplacements professionnels, familles). Bon rendement brut grâce à des prix d'achat contenus, à condition de soigner l'accès au centre.",
+        roiBrut: '6,5 à 8 %',
+      },
+    ],
+    regulation:
+      "Brest est classée en **zone tendue** depuis l'arrêté ministériel du 3 octobre 2023 (révision du zonage), confirmé en 2024. Ce classement traduit une pression sur le logement et **autorise la collectivité à renforcer la régulation** des meublés de tourisme (autorisation de changement d'usage, abaissement possible du plafond à 90 nuitées pour la résidence principale). À ce jour, l'activation effective de ces leviers par Brest Métropole n'est pas confirmée publiquement : à vérifier auprès de la métropole avant de lancer une location secondaire à l'année.\n\n**Déclaration et numéro d'enregistrement.** Brest Métropole impose la déclaration des meublés de tourisme via le téléservice DéclaLoc, qui attribue un **numéro d'enregistrement à 13 caractères** obligatoire sur chaque annonce. Le registre national unique prévu par la loi Le Meur est en cours de déploiement et devrait prendre le relais courant 2026.\n\n**Résidence principale.** Location plafonnée à **120 nuitées par an** au niveau national (abaissable à 90 en zone tendue sur délibération).\n\n**Loi Le Meur 2024.** DPE classe E minimum, abattement micro-BIC à 30 % pour les meublés non classés (50 % pour les classés), interdiction progressive des passoires thermiques. Sanctions : jusqu'à 10 000 € pour défaut d'enregistrement, 20 000 € pour fausse déclaration.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Brest Métropole applique une taxe de séjour, de l'ordre de 0,75 € à 4,30 € par nuit et par personne selon le classement de l'hébergement, collectée automatiquement par les plateformes.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 70,
+      neighborhood: 'Siam / Brest-centre',
+      revenuBrut: 16000,
+      commissionRate: 0.20,
+      menageCount: 75,
+      menageUnitCost: 50,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il un numéro d\'enregistrement pour louer en Airbnb à Brest en 2026 ?',
+        a: "Oui. Brest Métropole impose la déclaration de tout meublé de tourisme via le téléservice DéclaLoc, qui délivre un numéro d'enregistrement à 13 caractères à reporter sur chaque annonce Airbnb, Booking ou Abritel. Sans ce numéro, les plateformes désactivent l'annonce. Brest étant classée en zone tendue depuis 2023, la collectivité peut par ailleurs durcir les règles (autorisation de changement d'usage, plafond abaissé à 90 nuitées pour la résidence principale) : il est prudent de vérifier l'état exact du dispositif auprès de la métropole avant de lancer une location de résidence secondaire à l'année.",
+      },
+      {
+        q: 'Le marché Airbnb de Brest est-il très saisonnier ?',
+        a: "Moins que les stations balnéaires. La demande brestoise repose largement sur le tourisme d'affaires (base navale, port, technopôle), l'université (UBO, environ 20 000 étudiants) et les visites familiales, ce qui maintient une occupation correcte en semaine et hors été. Le pic touristique reste estival (Océanopolis, rade, départ vers la pointe du Finistère et Crozon), et les Fêtes Maritimes Internationales, tous les quatre ans, génèrent un pic exceptionnel (environ 500 000 visiteurs en six jours en 2024) qui sature l'hébergement. Cette régularité relative est un atout pour amortir une conciergerie sur l'année.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour un Airbnb à Brest ?',
+        a: "Pour une occupation lissée toute l'année, le secteur Siam / Brest-centre est le plus sûr (commerces, transports, clientèle affaires et city-break). Recouvrance et le plateau des Capucins offrent identité patrimoniale et vues sur le port avec des prix d'achat plus accessibles. Saint-Marc, calme et proche d'Océanopolis et de la plage du Moulin Blanc, est idéal pour la clientèle familiale estivale. Pour viser le meilleur rendement brut, Lambézellec et l'ouest brestois (Saint-Pierre, Quatre-Moulins) affichent des tickets d'achat contenus, à condition de soigner l'accès au centre.",
+      },
+    ],
+    updatedAt: '2026-05-25',
+  },
+  // ==========================================================================
+  // NANCY
+  // ==========================================================================
+  {
+    slug: 'nancy',
+    displayName: 'Nancy',
+    region: 'Grand Est',
+    regionSlug: 'alsace',
+    title: 'Conciergerie Nancy Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Nancy : comparatif 2026 (avis)',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb de Nancy : tarifs, services, avis Google, réglementation 2026 et quartiers rentables (Stanislas, Charles III).",
+    kwPrincipal: 'conciergerie nancy',
+    kwSecondaires: [
+      'conciergerie airbnb nancy',
+      'cocoonr nancy',
+      'location courte durée nancy',
+      'meublé tourisme nancy',
+      'airbnb nancy',
+    ],
+    population: 104000,
+    tourists: 2000000,
+    activeListings: 950,
+    priceLow: 55,
+    priceHigh: 95,
+    occupancyRate: 62,
+    revpar: 44,
+    seasonality:
+      "Saisonnalité tirée par un calendrier culturel et événementiel dense, complétée par les déplacements professionnels et le tourisme étudiant. Pic majeur en décembre avec les Fêtes de Saint-Nicolas, tradition lorraine emblématique (marché, défilé), qui tendent fortement l'hébergement. Double pic de rentrée en septembre avec Le Livre sur la Place (premier grand salon littéraire de la rentrée) et le Jardin éphémère installé sur la place Stanislas. Tourisme d'affaires régulier en semaine (centre de congrès, quartier Saint-Sébastien/Charles III) et clientèle UNESCO loisirs au printemps-été. Creux estival partiel lié au départ des étudiants.",
+    rankNational: 32,
+    introCustom:
+      "Vous avez un appartement à **Nancy**, à deux pas de la **place Stanislas**, dans la Ville-Vieille ou près de la gare, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nNancy combine plusieurs demandes : le **tourisme culturel** porté par l'ensemble classé à l'UNESCO et l'Art nouveau de l'École de Nancy, les **déplacements professionnels** autour du centre de congrès, et une forte population **étudiante**. Le calendrier événementiel — Saint-Nicolas, Livre sur la Place, Jardin éphémère — crée des pics réguliers.\n\nDéléguer la gestion à une conciergerie peut faire sens, surtout si vous n'êtes pas sur place. Reste à choisir un acteur fiable parmi une offre locale qui s'est densifiée ces dernières années.",
+    marketIntro:
+      "Nancy (environ 104 000 habitants, près de 260 000 sur la métropole du Grand Nancy) est un marché LCD porté par un trio d'atouts : un **patrimoine d'exception** avec l'ensemble place Stanislas - place de la Carrière - place d'Alliance classé à l'UNESCO depuis 1983 et l'Art nouveau de l'École de Nancy, une **vie étudiante** dense (université de Lorraine) et un **tourisme d'affaires** structuré autour du centre de congrès et du quartier Saint-Sébastien/Charles III.\n\nLa demande est **lissée par les courts séjours** (Paris à environ 1h30 en TGV) et rythmée par des temps forts : les Fêtes de Saint-Nicolas en décembre, Le Livre sur la Place et le Jardin éphémère en septembre. Les tarifs nuitée restent accessibles par rapport aux grandes métropoles, ce qui maintient des tickets d'entrée raisonnables pour l'investissement.\n\nL'offre de conciergeries s'est étoffée, avec un mix d'acteurs locaux récents et de marques nationales. Notre [simulateur de rentabilité](/estimation-airbnb) permet de comparer gestion autonome et conciergerie sur votre bien.",
+    conciergeries: [
+      {
+        name: 'CÔME Conciergerie',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 9,
+        biensGeres: 15,
+        specialty: 'Gestion complète clé en main',
+        description:
+          "CÔME Conciergerie propose une gestion complète de la location courte durée à Nancy : optimisation des annonces, accueil voyageurs 7j/7, ménage et maintenance. Note Google 5,0/5 sur 9 avis. Positionnement service intégré, pertinent pour un propriétaire qui veut déléguer l'ensemble du cycle locatif à un interlocuteur local et disponible.",
+      },
+      {
+        name: 'MasterKey',
+        url: 'https://masterkeyservices.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 11,
+        biensGeres: 20,
+        specialty: 'Annonces dynamiques, support 24/7',
+        description:
+          "MasterKey met l'accent sur la gestion dynamique des annonces (pricing, visibilité multi-plateformes) et un support voyageurs 24/7. Note Google 5,0/5 sur 11 avis, le plus gros volume parmi les acteurs locaux les mieux notés de Nancy. Commission sur devis. Pertinente pour un propriétaire qui veut optimiser le taux d'occupation et la réactivité voyageurs sans gérer lui-même les messages.",
+      },
+      {
+        name: 'MAHÉ',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 7,
+        biensGeres: 12,
+        specialty: 'Gestion locative & valorisation',
+        description:
+          "MAHÉ propose une gestion locative clé en main avec un accent sur la valorisation et l'entretien des logements. Note Google 5,0/5 sur 7 avis. Commission sur devis. Profil de conciergerie de proximité, adaptée à un propriétaire qui cherche un suivi soigné de son bien sur le long terme plutôt qu'un volume de transactions.",
+      },
+      {
+        name: 'Clés & Anne',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 3,
+        biensGeres: 8,
+        specialty: 'Proximité, du studio au thématisé',
+        description:
+          "Clés & Anne est une petite structure axée sur la proximité et la réactivité, gérant aussi bien des studios que des appartements thématisés. Note Google 5,0/5 sur 3 avis (acteur récent, faible volume d'avis). Commission sur devis. Pertinente pour un propriétaire d'un ou deux biens qui privilégie un contact direct et un service très personnalisé.",
+      },
+      {
+        name: 'Rock in Share',
+        url: 'https://www.rock-in-share.com/fr/',
+        commission: 'sur devis (~20 %)',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 16,
+        biensGeres: 120,
+        specialty: 'Volume axe lorrain Metz / Nancy',
+        description:
+          "Rock in Share est l'acteur volumique de l'axe lorrain (Nancy, Metz, Thionville, Strasbourg), avec un bureau à Nancy. Note Google 4,7/5 sur 16 avis pour l'agence nancéienne. Couverture complète (photos, diffusion multi-plateformes, accueil, ménage hôtelier, pricing) et orientation marquée vers la clientèle d'affaires. Pertinente pour un propriétaire multi-biens cherchant un interlocuteur unique sur la Lorraine.",
+      },
+      {
+        name: 'GuestReady',
+        url: 'https://www.guestready.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 3.8,
+        reviews: 34,
+        biensGeres: 50,
+        specialty: 'Acteur national, gestion tech',
+        description:
+          "GuestReady est un acteur national présent à Nancy, appuyé sur une plateforme technologique pour la gestion courte et moyenne durée. Note Google 3,8/5 sur 34 avis (le plus gros volume d'avis du comparatif, avis plus partagés que les acteurs locaux). Commission sur devis. Pertinente pour un propriétaire qui privilégie un process industrialisé et un reporting standardisé, à comparer avec les conciergeries locales sur la qualité du suivi.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Place Stanislas / Centre',
+        pricePerNight: '65-110 €',
+        occupancy: 68,
+        description:
+          "Cœur touristique autour de l'ensemble UNESCO (places Stanislas, Carrière, Alliance), commerces, musées et restaurants. Le secteur le plus prisé pour la clientèle loisirs, avec une rotation rapide et une demande premium. Ticket d'entrée le plus élevé de la ville.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Ville-Vieille',
+        pricePerNight: '60-100 €',
+        occupancy: 64,
+        description:
+          "Quartier historique médiéval (Grande-Rue, Palais des Ducs de Lorraine, Porte de la Craffe) au fort cachet. Idéal pour les séjours culturels. Charme préservé et proximité immédiate du centre, pour des tickets d'achat un peu plus accessibles que la place Stanislas.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Saint-Sébastien / Charles III',
+        pricePerNight: '55-95 €',
+        occupancy: 65,
+        description:
+          "Quartier commerçant et d'affaires autour du marché central et du centre de congrès. Clientèle business et courts séjours en semaine. Bon compromis prix/occupation, avec une demande lissée par le tourisme professionnel.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Quartier Gare',
+        pricePerNight: '55-90 €',
+        occupancy: 64,
+        description:
+          "Autour de la gare TGV (Paris à environ 1h30), hyper-pratique pour les voyageurs d'affaires et de transit. Check-in faciles, demande régulière en semaine. Tickets d'achat raisonnables pour une localisation très fonctionnelle.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Saurupt / École de Nancy',
+        pricePerNight: '60-100 €',
+        occupancy: 58,
+        description:
+          "Secteur résidentiel chic marqué par les façades Art nouveau de l'École de Nancy et le musée éponyme. Cadre recherché pour des séjours plus longs et une clientèle sensible au patrimoine. Demande un peu moins touristique mais des biens de caractère.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Rives de Meurthe',
+        pricePerNight: '55-90 €',
+        occupancy: 60,
+        description:
+          "Quartiers en renouvellement le long de la Meurthe, mix résidentiel et nouveaux programmes. Tickets d'achat parmi les plus accessibles du centre élargi, pour un rendement brut intéressant, à condition de soigner la liaison avec le cœur touristique.",
+        roiBrut: '6 à 7,5 %',
+      },
+    ],
+    regulation:
+      "Nancy s'inscrit dans une agglomération classée en **zone tendue** (plusieurs communes du Grand Nancy ont été reclassées en zone tendue au 1er janvier 2024). Ce statut traduit une pression sur le marché locatif et **autorise la collectivité à encadrer** les meublés de tourisme. Plusieurs sources professionnelles évoquent une autorisation de changement d'usage pour les meublés hors résidence principale : ce point n'étant pas confirmé par une délibération publique consultable, il est prudent de le vérifier auprès de la mairie de Nancy ou de la Métropole du Grand Nancy avant de lancer une location secondaire à l'année.\n\n**Déclaration et numéro d'enregistrement.** La location d'un meublé de tourisme nécessite une déclaration et un numéro d'enregistrement à porter sur chaque annonce. La loi Le Meur généralise un téléservice national unique d'enregistrement, dont l'entrée en vigueur est prévue au plus tard le 20 mai 2026, avec un numéro à 13 chiffres pour tous les meublés (y compris les résidences principales).\n\n**Résidence principale.** Location plafonnée à **120 nuitées par an** au niveau national (abaissable à 90 en zone tendue sur délibération).\n\n**Loi Le Meur 2024.** DPE classe E minimum, abattement micro-BIC ramené à 30 % pour les meublés non classés (50 % pour les classés tourisme), plafond de chiffre d'affaires à 15 000 € en non classé, interdiction progressive des passoires thermiques. Sanctions pouvant atteindre 10 000 € à 20 000 € selon l'infraction.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Métropole du Grand Nancy applique une taxe de séjour, de l'ordre de 0,75 € à 4,30 € par nuit et par personne selon le classement de l'hébergement, collectée automatiquement par les plateformes.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 68,
+      neighborhood: 'Place Stanislas / Centre',
+      revenuBrut: 15300,
+      commissionRate: 0.20,
+      menageCount: 75,
+      menageUnitCost: 45,
+    },
+    extraFaq: [
+      {
+        q: 'Quelle réglementation Airbnb s\'applique à Nancy en 2026 ?',
+        a: "Nancy fait partie d'une agglomération classée en zone tendue, ce qui impose une vigilance sur la déclaration et le numéro d'enregistrement et autorise la collectivité à encadrer les meublés de tourisme. La loi Le Meur généralise un numéro d'enregistrement national à 13 chiffres, obligatoire au plus tard le 20 mai 2026 pour tous les meublés, y compris les résidences principales (plafonnées à 120 nuitées par an). Certaines sources évoquent une autorisation de changement d'usage pour les résidences secondaires : ce point doit être vérifié directement auprès de la mairie de Nancy ou de la Métropole du Grand Nancy, faute de délibération publique clairement consultable.",
+      },
+      {
+        q: 'La Saint-Nicolas dope-t-elle vraiment les Airbnb à Nancy ?',
+        a: "Oui. Les Fêtes de Saint-Nicolas (de fin novembre à début décembre) sont un temps fort emblématique de la Lorraine, avec marché, illuminations et grand défilé, qui attirent un large public régional et au-delà. Sur cette période, la demande d'hébergement se tend nettement et les tarifs nuitée montent. C'est, avec la rentrée culturelle de septembre (Le Livre sur la Place et le Jardin éphémère sur la place Stanislas), l'un des deux pics annuels où un bien bien positionné en centre se loue au prix fort. Le reste de l'année, l'occupation tient grâce au tourisme d'affaires et aux courts séjours culturels.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour un Airbnb rentable à Nancy ?',
+        a: "Pour la clientèle loisirs et la prime à la nuitée, le secteur place Stanislas / Centre et la Ville-Vieille sont les plus demandés, avec les tickets d'entrée les plus élevés. Pour une occupation lissée par le tourisme d'affaires, Saint-Sébastien/Charles III (centre de congrès, marché central) et le quartier Gare (TGV Paris à environ 1h30) sont d'excellents compromis prix/occupation. Pour viser un meilleur rendement brut, les Rives de Meurthe offrent des tickets d'achat plus accessibles, à condition de soigner la liaison avec le cœur touristique. Saurupt séduit une clientèle sensible à l'Art nouveau pour des séjours plus longs.",
+      },
+    ],
+    updatedAt: '2026-05-25',
+  },
+  // ==========================================================================
+  // VICHY
+  // ==========================================================================
+  {
+    slug: 'vichy',
+    displayName: 'Vichy',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Vichy Airbnb : comparatif 2026 des 3 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Vichy : comparatif 2026 (avis)',
+    metaDescription:
+      "Comparatif des meilleures conciergeries Airbnb de Vichy : tarifs, services, avis Google, réglementation 2026 et quartiers rentables de la ville thermale UNESCO.",
+    kwPrincipal: 'conciergerie vichy',
+    kwSecondaires: [
+      'conciergerie airbnb vichy',
+      'gestion locative vichy',
+      'meublé tourisme vichy',
+      'conciergerie thermale vichy',
+      'airbnb vichy',
+    ],
+    population: 26000,
+    tourists: 600000,
+    activeListings: 650,
+    priceLow: 55,
+    priceHigh: 105,
+    occupancyRate: 60,
+    revpar: 45,
+    seasonality:
+      "Saisonnalité particulière, structurée par le thermalisme. Saison thermale d'avril à octobre : les cures conventionnées de trois semaines génèrent une demande de séjours longs, récurrente et étalée, qui lisse l'occupation bien au-delà du seul été. Pic touristique estival juin-septembre porté par le patrimoine UNESCO, les parcs, le lac d'Allier et l'Opéra. Demande complémentaire toute l'année liée à l'événementiel et au pôle sport (CREPS, hippodrome, stages et compétitions). Creux hivernal plus marqué hors vacances. La clientèle curiste est l'atout LCD distinctif de Vichy : elle réduit la dépendance au pic estival.",
+    rankNational: 47,
+    introCustom:
+      "Vous avez un appartement à **Vichy**, dans le quartier thermal, près des Sources ou en bord d'Allier, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nVichy a une particularité qui change tout : le **thermalisme**. Les curistes viennent pour des séjours de **trois semaines**, d'avril à octobre, ce qui lisse l'occupation et réduit la dépendance au seul pic estival — mais demande une gestion adaptée (séjours longs, clientèle souvent senior, peu de rotations mais des attentes de confort élevées).\n\nClassée à l'UNESCO comme grande ville d'eaux d'Europe, Vichy attire aussi un tourisme patrimonial. Déléguer à une conciergerie peut faire sens, à condition de choisir un acteur qui connaît cette clientèle curiste.",
+    marketIntro:
+      "Vichy (environ 26 000 habitants, près de 84 000 sur Vichy Communauté) est la plus prestigieuse station thermale française, inscrite à l'UNESCO depuis 2021 au titre des **Grandes villes d'eaux d'Europe**. Le marché LCD y est porté par un moteur singulier : le **thermalisme**, avec des cures conventionnées de trois semaines qui créent une demande de séjours longs, récurrente d'avril à octobre.\n\nCette clientèle curiste est l'atout distinctif de Vichy : elle **lisse l'occupation** et réduit les rotations (donc les coûts de ménage) par rapport à une station purement estivale. S'y ajoute un tourisme patrimonial (Opéra, Hall des Sources, parcs Belle Époque, lac d'Allier) et un pôle sport reconnu (CREPS, hippodrome) qui génère une demande d'événementiel et de stages.\n\nL'offre de conciergeries reste resserrée et locale, avec des acteurs souvent spécialisés sur la clientèle thermale. Notre [simulateur de rentabilité](/estimation-airbnb) permet de comparer gestion autonome et conciergerie sur votre bien.",
+    conciergeries: [
+      {
+        name: 'Conciergerie Thermale de Vichy',
+        url: 'https://conciergerie-auvergne.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 4,
+        biensGeres: 10,
+        specialty: 'Spécialiste curistes & thermal',
+        description:
+          "La Conciergerie Thermale de Vichy est positionnée sur la clientèle curiste et le tourisme thermal, avec un service personnalisé (échange de clés, linge, ménage, voire livraison de repas). Note Google 5,0/5 sur 4 avis (acteur de proximité, faible volume d'avis). Catalogue d'une dizaine de logements sur Vichy et l'agglomération. Pertinente pour un propriétaire d'un bien proche des thermes ciblant les cures de trois semaines, qui veut un interlocuteur rodé aux attentes des curistes.",
+      },
+      {
+        name: 'Conciergerie Les Grandes Maisons',
+        url: 'https://www.les-grandes-maisons.com/',
+        commission: '20 % des revenus',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 6,
+        biensGeres: 12,
+        specialty: 'Conciergerie + rénovation',
+        description:
+          "Les Grandes Maisons combine conciergerie locative et expertise en rénovation/aménagement (plus de vingt ans d'activité dans la rénovation immobilière), sur Vichy, Clermont et Gannat. Note Google 4,7/5 sur 6 avis. Commission affichée de 20 % des revenus pour la formule « revenu réel », avec des options chiffrées (ménage/maintenance, création d'annonce, site web). Pertinente pour un propriétaire qui veut à la fois faire gérer son bien et le valoriser par des travaux.",
+      },
+      {
+        name: 'Vichy Conciergerie',
+        url: 'https://www.vichyconciergerie.com/',
+        commission: 'forfaits (dès 50 €/mois)',
+        menage: 'refacturé voyageur',
+        rating: 4.0,
+        reviews: 12,
+        biensGeres: 15,
+        specialty: 'Packs modulables à la carte',
+        description:
+          "Vichy Conciergerie propose un modèle par forfaits plutôt qu'une commission au pourcentage : un pack de lancement (analyse tarifaire, création d'annonce, photos) et un pack de gestion mensuel à partir de 50 € HT par mois pour le suivi des calendriers et des réservations. Note Google 4,0/5 sur 12 avis (retours partagés sur la communication). Pertinente pour un propriétaire autonome qui veut déléguer seulement une partie des tâches et garder la main sur le reste.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Quartier thermal / Vieux Vichy',
+        pricePerNight: '70-130 €',
+        occupancy: 66,
+        description:
+          "Cœur Belle Époque autour du Hall des Sources et du parc Napoléon III, villas et immeubles de caractère. Le secteur le plus demandé par les curistes premium, à quelques minutes des thermes. Occupation lissée par les cures de trois semaines, prime aux biens de standing.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Centre-ville / Les Sources',
+        pricePerNight: '60-105 €',
+        occupancy: 62,
+        description:
+          "Hyper-centre commerçant autour de l'Opéra et des sources, idéal pour les séjours « tout à pied » sans voiture. Bon compromis entre demande curiste, tourisme patrimonial et courts séjours. Tickets d'achat raisonnables pour une localisation très centrale.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Les Bains / République',
+        pricePerNight: '60-100 €',
+        occupancy: 60,
+        description:
+          "Secteur proche du centre thermal et des berges de l'Allier, cadre verdoyant (club nautique, espaces sportifs). Apprécié pour le calme et la proximité de l'eau. Demande mixte curistes et tourisme détente.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: "Les Parcs / lac d'Allier",
+        pricePerNight: '60-100 €',
+        occupancy: 58,
+        description:
+          "Le long des parcs Belle Époque et du plan d'eau de l'Allier, cadre vert prisé pour les balades et les activités nautiques. Cible familles et séjours détente. Biens avec vue sur le lac particulièrement recherchés en été.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Bellerive-sur-Allier',
+        pricePerNight: '55-90 €',
+        occupancy: 58,
+        description:
+          "Rive gauche de l'Allier, plus résidentielle et calme, avec espaces verts. Tickets d'achat plus accessibles que le centre de Vichy pour une proximité immédiate (passerelles et ponts). Bon rendement brut pour un budget contenu.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Cusset',
+        pricePerNight: '50-85 €',
+        occupancy: 55,
+        description:
+          "Petite ville dynamique de l'agglomération, commerces et patrimoine, à quelques minutes de Vichy. Alternative résidentielle abordable au centre thermal, adaptée aux séjours moyenne durée et à une clientèle qui dispose d'un véhicule.",
+        roiBrut: '6,5 à 8 %',
+      },
+    ],
+    regulation:
+      "Vichy relève à ce jour du **régime national de droit commun** : aucun dispositif local restrictif spécifique (autorisation de changement d'usage, quota, compensation) n'a été identifié pour la commune ni pour Vichy Communauté, et Vichy ne figure pas dans les listes de zones tendues des grandes métropoles. La location de meublé de tourisme y reste donc relativement libre, sous réserve du règlement de copropriété et d'une vérification en mairie, les règles locales pouvant évoluer.\n\n**Déclaration et numéro d'enregistrement.** La loi Le Meur généralise un téléservice national unique d'enregistrement des meublés de tourisme, dont l'entrée en vigueur est prévue au plus tard le 20 mai 2026, avec un numéro à 13 chiffres à porter sur chaque annonce, y compris pour les résidences principales.\n\n**Résidence principale.** Location plafonnée à **120 nuitées par an** au niveau national pour le logement occupé au moins 8 mois par an.\n\n**Loi Le Meur 2024.** DPE classe E minimum, abattement micro-BIC ramené à 30 % pour les meublés non classés (50 % pour les classés tourisme), plafond de chiffre d'affaires à 15 000 € en non classé, interdiction progressive des passoires thermiques (F puis G) à la location.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Vichy Communauté applique une taxe de séjour, de l'ordre de 0,75 € à 4,30 € par nuit et par personne selon le classement de l'hébergement, collectée automatiquement par les plateformes.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 70,
+      neighborhood: 'Quartier thermal',
+      revenuBrut: 15300,
+      commissionRate: 0.20,
+      menageCount: 35,
+      menageUnitCost: 50,
+    },
+    extraFaq: [
+      {
+        q: 'Quelle réglementation Airbnb s\'applique à Vichy en 2026 ?',
+        a: "À ce jour, Vichy relève du régime national de droit commun : aucun dispositif local restrictif spécifique (autorisation de changement d'usage, quota) n'a été identifié, et la ville ne figure pas parmi les zones tendues des grandes métropoles. La location de meublé de tourisme y reste donc relativement libre, sous réserve du règlement de copropriété. Le cadre national s'applique néanmoins : la loi Le Meur généralise un numéro d'enregistrement national à 13 chiffres, obligatoire au plus tard le 20 mai 2026, et la résidence principale reste plafonnée à 120 nuitées par an. Il est prudent de confirmer l'absence de dispositif local en mairie, les règles pouvant évoluer.",
+      },
+      {
+        q: 'La clientèle curiste change-t-elle la gestion d\'un Airbnb à Vichy ?',
+        a: "Oui, et c'est l'atout de Vichy. Les cures thermales conventionnées durent trois semaines et s'étalent d'avril à octobre : un bien loué à des curistes enchaîne des séjours longs plutôt que des week-ends, ce qui lisse l'occupation et réduit fortement le nombre de ménages (donc les coûts) par rapport à une station purement estivale. En contrepartie, la clientèle, souvent senior, attend un confort élevé et des équipements adaptés (literie de qualité, ascenseur, proximité des thermes). Une conciergerie qui connaît cette clientèle sait calibrer les annonces et les tarifs sur la saison thermale, ce qui fait une vraie différence sur le revenu annuel.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour un Airbnb à Vichy ?',
+        a: "Pour cibler les curistes premium, le quartier thermal / Vieux Vichy, à quelques minutes du Hall des Sources, offre la meilleure prime à la nuitée et une occupation lissée par les cures. Le centre-ville autour de l'Opéra et des sources est idéal pour les séjours « tout à pied » et combine clientèle curiste, patrimoniale et courts séjours. Pour un meilleur rendement brut avec un budget plus contenu, Bellerive-sur-Allier (rive gauche) et Cusset, dans l'agglomération, offrent des tickets d'achat plus accessibles à quelques minutes du centre thermal.",
+      },
+    ],
+    updatedAt: '2026-05-25',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

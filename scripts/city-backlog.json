@@ -501,8 +501,9 @@
     "oldSlug": "/conciergerie-airbnb-la-baule",
     "kw": "conciergerie la baule",
     "vol": 260,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 16,
+    "publishedAt": "2026-05-25"
   },
   {
     "num": 45,
@@ -514,8 +515,9 @@
     "oldSlug": "/conciergerie-airbnb-brest",
     "kw": "conciergerie brest",
     "vol": 260,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 26,
+    "publishedAt": "2026-05-25"
   },
   {
     "num": 46,
@@ -527,21 +529,23 @@
     "oldSlug": "/conciergerie-airbnb-le-grau-du-roi",
     "kw": "conciergerie grau du roi",
     "vol": 250,
-    "status": "À faire",
-    "kd": 0
+    "status": "À reprendre manuel",
+    "kd": 0,
+    "notes": "Skip auto 2026-05-25 : 1 seule conciergerie avec note Google robuste (OUI Conciergerie 4,3/5 - 55 avis). Locamargue 5,0/5 sur 2 avis seulement (+ note divergente 3,4/5 ailleurs) = trop fragile. Autres acteurs locaux réels (Conciergerie Ludo, SeasonLoc, Aurore Multiservices) sans note Google vérifiable (ratings Facebook/PagesJaunes uniquement). Intervention manuelle requise (Google Maps direct via Mac mini) pour identifier 2+ conciergeries supplémentaires avec notes vérifiables. Vol live SEMrush 110 (vs 250 backlog)."
   },
   {
     "num": 47,
     "ville": "Nancy",
     "region": "Grand Est",
-    "regionSlug": "grand-est",
+    "regionSlug": "alsace",
     "citySlug": "nancy",
-    "newUrl": "/conciergerie-airbnb/grand-est/nancy",
+    "newUrl": "/conciergerie-airbnb/alsace/nancy",
     "oldSlug": "/conciergerie-airbnb-nancy",
     "kw": "conciergerie nancy",
     "vol": 240,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 15,
+    "publishedAt": "2026-05-25"
   },
   {
     "num": 48,
@@ -553,8 +557,10 @@
     "oldSlug": "/conciergerie-airbnb-vichy",
     "kw": "conciergerie vichy",
     "vol": 240,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 15,
+    "publishedAt": "2026-05-25",
+    "notes": "Backfill du run 2026-05-25 (remplace Le Grau-du-Roi skippé). Vol live SEMrush 170 (vs 240 backlog)."
   },
   {
     "num": 49,

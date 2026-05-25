@@ -134,6 +134,23 @@ Score = Vol × (60 − KD) / 60. Top 10 :
 | `/channel-manager` (backlog) | Doublon strict de `/channel-manager-comparatif` (en-ligne) |
 | `/serrure-connectee-airbnb` (backlog) | Doublon de l'article en ligne |
 
+## 🔁 Audits récurrents planifiés
+
+| Quand | Quoi | Skill / Procédure |
+|---|---|---|
+| **2026-06-25** (event Google Calendar) | Audit complet meta title + meta description de tous les articles blog en ligne | Comme fait le 2026-05-25 sur `/difference-location-saisonniere-meuble-tourisme` : recall SEMrush KW exact, vérifier metaTitle ≤ 60 chars contient KW principal, metaDescription 140-160 chars, H1 aligné, détection cannibalisations, update updatedAt |
+| **2026-08-25** | Audit complet SEMrush sur tous les pillarKeyword (refresh volumes) | Refaire un recall phrase_this + phrase_related sur les 50+ KW du tableau. Mettre à jour la colonne "Vol SEMrush actuel". Détecter les KW qui ont basculé sous le seuil de rentabilité. |
+| Tous les 3 mois | Vérification anti-cannibalisation interne | grep des pillarKeyword + scan des metaTitle pour s'assurer qu'aucun couple d'articles ne cible le même KW |
+| Annuel (janvier) | Refresh "année courante" dans H1/meta de tous les articles temporels | Passer 2026 → 2027 dans les metaTitle / metaDescription / H1 de tous les articles. Slug évergreen reste stable (cf. convention slug). |
+
+**Procédure d'audit meta title/description** :
+1. Pour chaque article en ligne (src/content/blog/*.mdoc) : recall SEMrush sur le pillarKeyword exact (avec tous les petits mots intacts)
+2. Vérifier que metaTitle ≤ 60 chars contient le KW principal
+3. Vérifier que metaDescription 140-160 chars contient KW principal + KW secondaire
+4. Vérifier que H1 contient le KW principal (proche du KW exact SEMrush)
+5. Détecter cannibalisations (2 articles → même intent)
+6. Update updatedAt pour signal fraîcheur GSC
+
 ## Méthodologie pour les futurs audits
 
 1. **À chaque création/refresh d'article** : update les colonnes correspondantes

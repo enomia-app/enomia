@@ -1,9 +1,9 @@
 {
   "property": "sc-domain:enomia.app",
   "property_url": "https://search.google.com/search-console?resource_id=sc-domain%3Aenomia.app",
-  "last_run": "2026-05-24",
+  "last_run": "2026-05-25",
   "daily_quota": 10,
-  "notes": "Ne traiter QUE le motif 'Détectée, actuellement non indexée'. Les autres motifs (redirections, noindex, 4xx, canoniques) ne doivent pas passer par demande d'indexation — ce sont des bugs techniques à fixer ou des comportements intentionnels.",
+  "notes": "Motifs traités par la skill gsc-indexation-quotidienne (source de vérité : .claude/skills/gsc-indexation-quotidienne/SKILL.md) : 'URL is unknown to Google', 'Discovered - currently not indexed', 'Crawled - currently not indexed', 'Detected - currently not indexed'. À SKIP : 'Page with redirect', 'Excluded by noindex tag', 'Soft 404', 'Not found (404)', 'Duplicate without user-selected canonical' — bugs techniques à fixer ou comportements intentionnels, pas des cibles pour la demande d'indexation.",
   "urls": {
     "https://www.enomia.app/conciergerie-lille": {
       "status": "failed",
@@ -500,6 +500,72 @@
       "request_count": 1,
       "vol_at_request": 0,
       "reason": "Détectée, actuellement non indexée — demande via URL Inspection Tool (Chrome MCP, 2026-05-24)"
+    },
+    "https://www.enomia.app/conciergerie-airbnb/pays-de-la-loire/la-baule": {
+      "status": "requested",
+      "last_requested": "2026-05-25",
+      "request_count": 1,
+      "coverage_state_at_request": "URL is unknown to Google",
+      "vol_at_request": 260
+    },
+    "https://www.enomia.app/conciergerie-airbnb/bretagne/brest": {
+      "status": "requested",
+      "last_requested": "2026-05-25",
+      "request_count": 1,
+      "coverage_state_at_request": "URL is unknown to Google",
+      "vol_at_request": 260
+    },
+    "https://www.enomia.app/conciergerie-airbnb/alsace/nancy": {
+      "status": "requested",
+      "last_requested": "2026-05-25",
+      "request_count": 1,
+      "coverage_state_at_request": "URL is unknown to Google",
+      "vol_at_request": 240
+    },
+    "https://www.enomia.app/conciergerie-airbnb/auvergne-rhone-alpes/vichy": {
+      "status": "requested",
+      "last_requested": "2026-05-25",
+      "request_count": 1,
+      "coverage_state_at_request": "URL is unknown to Google",
+      "vol_at_request": 240
+    },
+    "https://www.enomia.app/calcul-taxe-de-sejour": {
+      "status": "requested",
+      "last_requested": "2026-05-25",
+      "request_count": 1,
+      "coverage_state_at_request": "Discovered - currently not indexed",
+      "vol_at_request": 210
+    },
+    "https://www.enomia.app/blog/commissions-airbnb": {
+      "status": "requested",
+      "last_requested": "2026-05-25",
+      "request_count": 1,
+      "coverage_state_at_request": "URL is unknown to Google",
+      "vol_at_request": 880
+    },
+    "https://www.enomia.app/blog/automatiser-airbnb": {
+      "status": "requested",
+      "last_requested": "2026-05-25",
+      "request_count": 1,
+      "coverage_state_at_request": "URL is unknown to Google"
+    },
+    "https://www.enomia.app/blog/difference-location-saisonniere-meuble-tourisme": {
+      "status": "requested",
+      "last_requested": "2026-05-25",
+      "request_count": 1,
+      "coverage_state_at_request": "URL is unknown to Google"
+    },
+    "https://www.enomia.app/blog/numero-enregistrement-airbnb": {
+      "status": "requested",
+      "last_requested": "2026-05-25",
+      "request_count": 1,
+      "coverage_state_at_request": "URL is unknown to Google"
+    },
+    "https://www.enomia.app/blog/taxe-habitation-airbnb": {
+      "status": "requested",
+      "last_requested": "2026-05-25",
+      "request_count": 1,
+      "coverage_state_at_request": "URL is unknown to Google"
     }
   }
 }

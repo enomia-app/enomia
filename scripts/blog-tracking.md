@@ -5,16 +5,24 @@
 >
 > Origine : tableau Numbers `Enomia_Suivi_Blog.numbers` que Marc avait fait en avril 2026 (57 articles, 79 170 vol/mois cumulé annoncé). Recopiation en Markdown versionné Git le 2026-05-25 pour ne plus perdre cette mémoire entre sessions.
 
-## ⚠️ Note importante sur la fraîcheur SEMrush
+## ⚠️ Note importante sur les écarts de volume Marc vs SEMrush actuel
 
-Recall SEMrush effectué le **2026-05-25** : énormes écarts détectés entre les volumes d'avril 2026 (snapshot Marc) et mai 2026 (SEMrush actuel). Voir colonne "Vol SEMrush actuel".
+Recall SEMrush effectué le **2026-05-25** + investigation phrase_related : la cause des écarts massifs (-50% à -99%) sur certains KW est désormais identifiée.
 
-Hypothèses pour les écarts (-50% à -99% sur certains KW) :
-- **Saisonnalité LCD** : avril = pic recherches préparation saison, mai = redescente
-- **Update mensuel SEMrush** : nouvel agrégat statistique
-- **Database différente consultée** par Marc à l'origine (US, globale, autre période ?)
+**Cause confirmée par Marc** : lors du search manuel d'avril 2026, certaines variantes orthographiques erronées ont été saisies, ou des KW associés différents ont été cumulés. Les vrais KW à fort volume sont des variantes proches mais distinctes.
 
-**Règle pour piloter** : se fier aux volumes SEMrush actuels pour les décisions stratégiques, mais conserver le snapshot Marc comme référence historique.
+**Exemples corrigés** :
+| KW noté avril 2026 | Vrai KW SEMrush | Vrai vol |
+|---|---|---|
+| `différence location saisonnière et meublé de tourisme` (1100) | `différence **entre** location saisonnière **et** meublé de tourisme` | 1 000 KD 15 ⭐ |
+| `frais ménage airbnb` (2570) | cluster cumulé : `frais airbnb` (1000) + `airbnb menage` (880) + `frais de ménage airbnb` (590) | ~3000 cumulé |
+| `sous location airbnb` (3830) | `sous location` (4400, sans airbnb) | 4 400 ⭐ |
+| `meublé tourisme classé` (4400) | `meublé de tourisme` (2900) + `classement meublé de tourisme` (720) | ~3600 cumulé |
+| `livret d'accueil airbnb` (2400) | cluster ~1500 cumulé (KW principal `livret d'accueil airbnb` 390) | ~1500 cumulé |
+| `assurance airbnb propriétaire` (870) | `assurance airbnb` (720) ou `assurance location saisonnière` (720) | 720 |
+| `boîte à clés airbnb` (1130) | aucune variante > 90 vol — KW niche réel | ~90 max |
+
+**Règle pour piloter** : se fier aux **vrais KW SEMrush actuels** (colonne "Vol SEMrush corrigé"). Pour chaque article, identifier le **KW racine du cluster** via `phrase_related` avant rédaction.
 
 ## Tableau de suivi (57 articles)
 

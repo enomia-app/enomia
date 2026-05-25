@@ -328,6 +328,45 @@ const { title, description, ogImage, canonical } = Astro.props;
     /* Article body */
     .article-body h2 { font-family: var(--serif); font-size: 24px; font-weight: 600; margin: 36px 0 14px; letter-spacing: -0.01em; }
     .article-body h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; }
+
+    /* FAQ accordion — auto-transformé depuis ## **FAQ** + ### **Question?** par script JS post-process (cf. fin de body) */
+    .article-body details.faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      margin: 0;
+    }
+    .article-body details.faq-item:first-of-type {
+      border-top: 1px solid var(--border);
+      margin-top: 16px;
+    }
+    .article-body details.faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      position: relative;
+      padding: 6px 40px 6px 0;
+      margin: 0;
+      line-height: 1.45;
+    }
+    .article-body details.faq-item summary::-webkit-details-marker { display: none; }
+    .article-body details.faq-item summary::after {
+      content: '+';
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--green);
+      line-height: 1;
+      transition: transform 0.2s;
+    }
+    .article-body details.faq-item[open] summary::after { content: '−'; }
+    .article-body details.faq-item > *:not(summary) { margin-top: 10px; }
+    .article-body details.faq-item p { margin-bottom: 10px; }
+    .article-body details.faq-item p:last-child { margin-bottom: 4px; }
     .article-body p { font-size: 16px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 18px; }
     .article-body ul, .article-body ol { font-size: 16px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 18px; padding-left: 24px; }
     .article-body li { margin-bottom: 6px; }
@@ -550,6 +589,51 @@ const { title, description, ogImage, canonical } = Astro.props;
   <script>
     import { inject } from '@vercel/analytics';
     inject();
+  </script>
+
+  <!-- FAQ accordion post-process : transforme les H3 sous "## **FAQ ..**" en <details><summary> -->
+  <script is:inline>
+    (function () {
+      function transformFaq() {
+        var body = document.querySelector('.article-body');
+        if (!body) return;
+        var h2s = body.querySelectorAll('h2');
+        var faqH2 = null;
+        for (var i = 0; i < h2s.length; i++) {
+          if (/FAQ/i.test(h2s[i].textContent || '')) { faqH2 = h2s[i]; break; }
+        }
+        if (!faqH2) return;
+        var node = faqH2.nextElementSibling;
+        while (node && node.tagName !== 'H2') {
+          if (node.tagName === 'H3') {
+            // Collecte les éléments suivants jusqu'au prochain H3 ou H2
+            var contentNodes = [];
+            var cursor = node.nextElementSibling;
+            while (cursor && cursor.tagName !== 'H3' && cursor.tagName !== 'H2') {
+              var tmp = cursor.nextElementSibling;
+              contentNodes.push(cursor);
+              cursor = tmp;
+            }
+            // Crée <details class="faq-item"><summary>question</summary>...contenu...</details>
+            var details = document.createElement('details');
+            details.className = 'faq-item';
+            var summary = document.createElement('summary');
+            summary.textContent = (node.textContent || '').trim();
+            details.appendChild(summary);
+            for (var j = 0; j < contentNodes.length; j++) details.appendChild(contentNodes[j]);
+            node.replaceWith(details);
+            node = details.nextElementSibling;
+          } else {
+            node = node.nextElementSibling;
+          }
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', transformFaq);
+      } else {
+        transformFaq();
+      }
+    })();
   </script>
 </body>
 </html>

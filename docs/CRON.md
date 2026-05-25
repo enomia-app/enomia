@@ -24,7 +24,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 | `com.enomia.fb-weekly-recap` | Ven 17h00 | Récap hebdo volume + liens Enomia partagés + (phase 2 : GA4 perfs par utm_content) | actif |
 | `com.enomia.fb-monthly-insights` | 1er du mois 9h31 | Rapport mensuel opportunités SEO + features | actif |
 | `app.enomia.backlinks-source-monthly` | 1er du mois 9h47 | Pipeline v2 : sourcing SEMrush 75 KW, filtres, check outil concurrent, output `data/backlinks-YYYY-MM.json` | actif |
-| `app.enomia.backlinks-send-daily` | Lun-Ven 10h17 | Pipeline v2 : envoi auto 15 pitches/jour via Gmail API (BCC Marc J1-5 puis 1/5 jours aléatoire) | actif |
+| `app.enomia.backlinks-send-daily` | Lun-Ven 10h17 | Pipeline v2 : envoi auto via Gmail API, ramp-up 5→30/j sur 8 sem (BCC Marc J1-5 puis 1/5 jours aléatoire) | actif |
 | `app.enomia.backlinks-report-monthly` | 1er du mois 10h53 | Pipeline v2 : récap mensuel envois/réponses/backlinks par outil | actif |
 | `app.enomia.backlinks-report-quarterly` | 1er jan/avr/juil/oct 11h17 | Pipeline v2 : récap trimestriel | actif |
 | `app.enomia.backlinks-report-yearly` | 1er janvier 11h43 | Pipeline v2 : récap annuel | actif |
@@ -126,17 +126,18 @@ Pipeline refactoré : envoi auto sans validation Marc, 3 outils prioritaires (si
 **Code** : `send-daily.mjs` + `pitch-templates.mjs` + `bcc-state.mjs`
 **Fait** :
 1. Charge backlog mois courant + précédent (`data/backlinks-*.json`)
-2. Pick 15 prospects en `status: pending` (priorité = trafic SERP desc, rank asc)
-3. Pour chaque : retry extract contact si manquant, scan page cible, call Claude Haiku pour générer 1 phrase d'observation contextuelle
-4. Construit le pitch via template (1 des 3, selon `outil_cible`), QA auto (longueur 80-350 mots, URL outil présente, pas de placeholder/emoji/tiret cadratin/flèche)
-5. Si email → envoi auto via Gmail API (BCC marc@enomia.app J1-J5 + 1 jour aléatoire tous les 5 jours après — état dans `data/backlinks-send-state.json`)
-6. Si formulaire only → ajoute à la liste manuelle du mail récap
-7. Update backlog statuses (`sent`, `manual_form`, `no_contact`, `qa_fail`, `send_fail`)
-8. Envoie mail récap quotidien à Marc avec : envoyés par email, formulaires à faire manuellement (avec lien + pitch intégral), skippés
+2. Calcule le `dailyMax` via ramp-up basé sur `first_send_date` : sem 0 = **5/j**, sem 1 = 8, sem 2 = 12, sem 3 = 15, sem 4-5 = 20, sem 6-7 = 25, sem 8+ = 30. Override possible via `--max=N`.
+3. Pick `dailyMax` prospects en `status: pending` (priorité = trafic SERP desc, rank asc)
+4. Pour chaque : retry extract contact si manquant, scan page cible, call Claude Haiku pour générer 1 phrase d'observation contextuelle
+5. Construit le pitch via template (1 des 3, selon `outil_cible`), QA auto (longueur 80-350 mots, URL outil présente, pas de placeholder/emoji/tiret cadratin/flèche)
+6. Si email → envoi auto via Gmail API (BCC marc@enomia.app J1-J5 + 1 jour aléatoire tous les 5 jours après — état dans `data/backlinks-send-state.json`)
+7. Si formulaire only → ajoute à la liste manuelle du mail récap
+8. Update backlog statuses (`sent`, `manual_form`, `no_contact`, `qa_fail`, `send_fail`)
+9. Envoie mail récap quotidien à Marc avec : envoyés par email, formulaires à faire manuellement (avec lien + pitch intégral), skippés
 
 **État local** : `data/backlinks-send-state.json` (audit BCC)
 **Logs** : `scripts/backlinks-send-daily/logs/run-YYYY-MM-DD.log`
-**Coût Claude Haiku** : ~$0.10/mois (15 prospects × 22 jours × ~$0.0003/call) via `fetch` direct (pas `claude -p`, donc pas d'OAuth Max).
+**Coût Claude Haiku** : ~$0.10/mois en plateau (15-30 prospects × 22 jours × ~$0.0003/call) via `fetch` direct (pas `claude -p`, donc pas d'OAuth Max).
 **Throttle** : 10s entre 2 envois Gmail (anti-spam)
 
 ### `app.enomia.backlinks-track-replies-v2` — Lun-Ven 10h31

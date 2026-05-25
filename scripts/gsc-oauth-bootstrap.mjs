@@ -29,7 +29,7 @@ const SCOPES = [
   'https://www.googleapis.com/auth/webmasters.readonly',  // URL Inspection API (read index status)
   'https://www.googleapis.com/auth/indexing',              // Indexing API (submit URL for crawl)
   'https://www.googleapis.com/auth/gmail.send',            // Pipeline backlinks : envoi pitches
-  'https://www.googleapis.com/auth/gmail.readonly',        // Pipeline backlinks : tracking réponses
+  'https://www.googleapis.com/auth/gmail.modify',          // Pipeline backlinks + fb-watch : lire + modifier labels
   'https://www.googleapis.com/auth/analytics.readonly',    // GA4 Data API : récap hebdo FB par utm_content
 ];
 

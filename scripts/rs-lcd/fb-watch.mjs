@@ -260,7 +260,13 @@ async function processThread(gmail, threadId, labelId) {
   }
 
   log(`Labélisation thread ${threadId}`);
-  await labelThread(gmail, threadId, labelId);
+  let labelOk = true;
+  try {
+    await labelThread(gmail, threadId, labelId);
+  } catch (e) {
+    labelOk = false;
+    log(`Thread ${threadId} : ERREUR labélisation (${e.message}) — mail "Postés" envoyé quand même, risque de retry au prochain tick`);
+  }
 
   // Email confirmation
   const postedValidated = JSON.parse(readFileSync(join(ROOT, cfg.outputFile), 'utf8'));
@@ -276,14 +282,18 @@ async function processThread(gmail, threadId, labelId) {
     ? `${cfg.subjectPrefix} — ${postedValidated.length}`
     : `${cfg.subjectPrefix.replace('Postés','Erreur').replace('Postées','Erreur')}`;
 
+  const labelWarning = labelOk
+    ? ''
+    : `\n⚠️ Labélisation Gmail "fb-scan-posted" ÉCHOUÉE — le thread sera retraité au prochain tick fb-watch (skip fb-post via dedupe URL < 24h, mais coût Sonnet). Labélise manuellement ce thread pour stopper la boucle.\n`;
+
   const body = postResult.ok
     ? `Résultat : ${postedValidated.length} commentaires postés (${skipped.length} skippés).
-
+${labelWarning}
 Détail par draft :
 ${detailLines}
 `
     : `Erreur pendant fb-post.mjs : ${postResult.error}
-
+${labelWarning}
 Détail par draft :
 ${detailLines}
 

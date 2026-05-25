@@ -5,6 +5,7 @@ import { getCollection, getEntry } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import NewsletterBlock from '../../components/NewsletterBlock.astro';
 import { marcChenut } from '../../data/author';
+import blogVolumes from '../../../scripts/blog-volumes-en-ligne.json';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => data.status === 'en-ligne');
@@ -38,12 +39,18 @@ function getInitials(name: string) {
   return name.split(' ').map(n => n.charAt(0).toUpperCase()).join('').slice(0, 2);
 }
 
-// Related articles: same category, exclude current, exclude drafts
+// Related articles: top traffic (by SEMrush vol), exclude current, exclude drafts
+// Fallback to publishedAt desc for articles without volume data
 const allPosts = await getCollection('blog', ({ data }) => data.status === 'en-ligne');
+const volOf = (slug: string) => (blogVolumes as Record<string, { vol?: number }>)[slug]?.vol ?? 0;
 const relatedPosts = allPosts
-  .filter(p => p.slug !== post.slug && p.data.category === post.data.category)
-  .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())
-  .slice(0, 2);
+  .filter(p => p.slug !== post.slug)
+  .sort((a, b) => {
+    const vDiff = volOf(b.slug) - volOf(a.slug);
+    if (vDiff !== 0) return vDiff;
+    return new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime();
+  })
+  .slice(0, 20);
 
 const catLabel = CAT_LABELS[post.data.category];
 const readTime = readingTime(post.body);
@@ -308,22 +315,98 @@ const faqLd = faqItems.length > 0 ? {
         </a>
       </div>
 
+      <!-- Contrat widget -->
+      <div class="sb-sim">
+        <div class="sb-sim-header">
+          <div class="sb-sim-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <path d="M9 15h6"/>
+              <path d="M9 11h6"/>
+            </svg>
+          </div>
+          <div class="sb-sim-title">Contrat de location saisonnière</div>
+        </div>
+        <div class="sb-sim-badge">Gratuit</div>
+        <p class="sb-sim-desc">Générez un contrat LCD conforme : clauses légales, dépôt de garantie, état des lieux, signature électronique.</p>
+        <div class="sb-sim-stats">
+          <div class="sb-sim-stat">
+            <div class="sb-sim-stat-val">3min</div>
+            <div class="sb-sim-stat-lbl">par contrat</div>
+          </div>
+          <div class="sb-sim-stat">
+            <div class="sb-sim-stat-val">FR/EN</div>
+            <div class="sb-sim-stat-lbl">bilingue</div>
+          </div>
+          <div class="sb-sim-stat">
+            <div class="sb-sim-stat-val">PDF</div>
+            <div class="sb-sim-stat-lbl">export</div>
+          </div>
+        </div>
+        <a href="/contrat-location-saisonniere" class="sb-sim-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13 17 18 12 13 7"></polyline>
+            <polyline points="6 17 11 12 6 7"></polyline>
+          </svg>
+          Générer un contrat
+        </a>
+      </div>
+
+      <!-- Taxe de séjour widget -->
+      <div class="sb-sim">
+        <div class="sb-sim-header">
+          <div class="sb-sim-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+              <line x1="12" y1="6" x2="12" y2="8"/>
+              <line x1="12" y1="16" x2="12" y2="18"/>
+            </svg>
+          </div>
+          <div class="sb-sim-title">Calcul taxe de séjour</div>
+        </div>
+        <div class="sb-sim-badge">Gratuit</div>
+        <p class="sb-sim-desc">Tarif officiel par commune française : barèmes 2026, calcul automatique par nuit et par voyageur.</p>
+        <div class="sb-sim-stats">
+          <div class="sb-sim-stat">
+            <div class="sb-sim-stat-val">36k+</div>
+            <div class="sb-sim-stat-lbl">communes</div>
+          </div>
+          <div class="sb-sim-stat">
+            <div class="sb-sim-stat-val">Auto</div>
+            <div class="sb-sim-stat-lbl">par nuit</div>
+          </div>
+          <div class="sb-sim-stat">
+            <div class="sb-sim-stat-val">2026</div>
+            <div class="sb-sim-stat-lbl">à jour</div>
+          </div>
+        </div>
+        <a href="/calcul-taxe-de-sejour" class="sb-sim-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13 17 18 12 13 7"></polyline>
+            <polyline points="6 17 11 12 6 7"></polyline>
+          </svg>
+          Calculer la taxe
+        </a>
+      </div>
+
       <NewsletterBlock id="sb-nl-form" compact />
     </aside>
 
-    <!-- Related articles -->
+    <!-- Related articles — horizontal scroll desktop, vertical mobile -->
     {relatedPosts.length > 0 && (
       <section class="related">
         <div class="sec-head">
           <span class="sec-title">Articles liés</span>
-          <a href={`/blog?cat=${post.data.category}`} class="sec-link">Voir tout →</a>
+          <a href="/blog" class="sec-link">Voir tout →</a>
         </div>
-        <div class="grid-2">
+        <div class="related-rail">
           {relatedPosts.map(related => (
-            <a href={`/blog/${related.slug}`} class="card">
+            <a href={`/blog/${related.slug}`} class="card related-card">
               <div class="card-img">
                 {related.data.featuredImage
-                  ? <img src={related.data.featuredImage.src} alt={related.data.featuredImage.alt} />
+                  ? <img src={related.data.featuredImage.src} alt={related.data.featuredImage.alt} loading="lazy" />
                   : <div class="card-img-placeholder" style="width:100%;height:100%;"></div>
                 }
               </div>

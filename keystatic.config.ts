@@ -84,16 +84,6 @@ export default config({
           label: 'ID Vidéo YouTube (ex: dQw4w9WgXcQ)',
           description: 'Uniquement l\'ID, pas l\'URL complète',
         }),
-        ratingValue: fields.number({
-          label: 'Note de l\'article (ex: 4.8)',
-          description: 'Entre 1 et 5 — apparaît dans les étoiles Google',
-          validation: { isRequired: false },
-        }),
-        ratingCount: fields.integer({
-          label: 'Nombre d\'avis',
-          description: 'Utilisé pour le schema.org AggregateRating',
-          validation: { isRequired: false },
-        }),
         authorName: fields.text({
           label: 'Nom de l\'auteur',
           validation: { isRequired: true },

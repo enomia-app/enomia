@@ -15,8 +15,6 @@ const blog = defineCollection({
     featured: z.boolean().default(false),
     formationStep: z.number().optional(),
     youtubeVideoId: z.string().optional(),
-    ratingValue: z.number().optional(),
-    ratingCount: z.number().optional(),
     authorName: z.string(),
     authorBio: z.string().optional(),
     status: z.enum(['brouillon', 'en-ligne']).default('brouillon'),

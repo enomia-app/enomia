@@ -122,6 +122,23 @@ export default config({
           label: 'Mot-clé pilier',
           description: 'Le mot-clé principal du cluster SEO (ex: channel manager, fiscalité airbnb)',
         }),
+        relatedClusters: fields.array(
+          fields.object({
+            label: fields.text({
+              label: 'Libellé du lien',
+              validation: { isRequired: true },
+            }),
+            href: fields.text({
+              label: 'URL (interne ex: /conciergerie-airbnb)',
+              validation: { isRequired: true },
+            }),
+          }),
+          {
+            label: 'Clusters liés (section "Pour aller plus loin")',
+            description: 'Si vide, deux liens par défaut sont affichés (Conciergerie + Rentabilité villes).',
+            itemLabel: (props) => props.fields.label.value || 'Sans libellé',
+          },
+        ),
         content: fields.markdoc({
           label: 'Contenu de l\'article',
           options: {

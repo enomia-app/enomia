@@ -39,8 +39,14 @@ const KW_LIST_PATH = path.join(__dirname, 'kw-list.json');
 const args = process.argv.slice(2);
 const DRY = args.includes('--dry');
 const SKIP_FETCH = args.includes('--skip-fetch');
+const SKIP_TRAFFIC = args.includes('--skip-traffic');
 const KW_LIMIT = parseInt(args.find(a => a.startsWith('--kw-limit='))?.split('=')[1] || '999', 10);
 const FETCH_CONCURRENCY = parseInt(args.find(a => a.startsWith('--fetch-concurrency='))?.split('=')[1] || '5', 10);
+// Seuil organic traffic au-delà duquel on rejette le domaine (proxy "trop gros").
+// 50k visites/mois ≈ Authority Score ~50, exclut les gros groupes (Vinci, presse, etc.)
+// sans tuer les blogs niche LCD pertinents qui font 5-30k visites/mois.
+// SEMrush n'expose pas l'AS direct via domain_ranks (besoin pack Backlinks séparé).
+const MAX_TRAFFIC = parseInt(args.find(a => a.startsWith('--max-traffic='))?.split('=')[1] || '50000', 10);
 
 function readEnvKey(key) {
   if (process.env[key]) return process.env[key].trim();
@@ -61,6 +67,27 @@ const MONTH = new Date().toISOString().slice(0, 7);
 const OUTPUT_PATH = path.join(ROOT, 'data', `backlinks-${MONTH}.json`);
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const log = (...a) => console.log(`[${new Date().toISOString().slice(11, 19)}]`, ...a);
+
+async function queryDomainTraffic(domain) {
+  if (DRY) return { organic_traffic: 0, organic_kw: 0, rank: 0, notFound: false };
+  const url = `https://api.semrush.com/?type=domain_ranks&key=${SEMRUSH_KEY}&export_columns=Dn,Rk,Or,Ot&domain=${encodeURIComponent(domain)}&database=fr`;
+  try {
+    const r = await fetch(url);
+    const text = await r.text();
+    if (text.includes('ERROR 50')) return { organic_traffic: 0, organic_kw: 0, rank: 0, notFound: true };
+    if (text.includes('ERROR')) return { error: text.trim().slice(0, 60) };
+    const lines = text.trim().split('\n');
+    if (lines.length < 2) return { organic_traffic: 0, organic_kw: 0, rank: 0, notFound: true };
+    const cols = lines[1].split(';');
+    return {
+      rank: parseInt(cols[1], 10) || 0,
+      organic_kw: parseInt(cols[2], 10) || 0,
+      organic_traffic: parseInt(cols[3], 10) || 0,
+    };
+  } catch (e) {
+    return { error: e.message?.slice(0, 60) || 'fetch error' };
+  }
+}
 
 async function querySerp(kw, displayLimit = 30) {
   if (DRY) {
@@ -151,7 +178,38 @@ async function main() {
 
   log(`\n📊 Query terminé : ${totalKwQueried} KW queried, ${totalSerps} SERP results, ${allCandidates.size} domaines uniques après dedup+blacklist`);
 
-  const candidates = Array.from(allCandidates.values());
+  let candidates = Array.from(allCandidates.values());
+
+  // ─── ÉTAPE 1bis — Filtre organic_traffic (proxy AS) ───────────────────
+  let rejectedTooBig = 0;
+  if (!SKIP_TRAFFIC && !DRY) {
+    log(`\n🏋️  Filtre taille via SEMrush domain_ranks (seuil ${MAX_TRAFFIC.toLocaleString()} visites/mois)...`);
+    const trafficResults = await fetchAllInParallel(candidates, async (c) => {
+      const r = await queryDomainTraffic(c.site);
+      if (!r.error) {
+        c.organic_traffic = r.organic_traffic || 0;
+        c.organic_kw = r.organic_kw || 0;
+        c.semrush_rank = r.rank || 0;
+      } else {
+        c.organic_traffic = null;
+        c.semrush_traffic_error = r.error;
+      }
+      return c;
+    }, FETCH_CONCURRENCY, (done, total) => {
+      if (done % 50 === 0 || done === total) log(`  ${done}/${total} domain_ranks queried`);
+    });
+
+    candidates = trafficResults.filter(c => {
+      if (c.organic_traffic !== null && c.organic_traffic >= MAX_TRAFFIC) {
+        rejectedTooBig++;
+        return false;
+      }
+      return true;
+    });
+    log(`  → ${rejectedTooBig} domaines rejetés (traffic ≥ ${MAX_TRAFFIC.toLocaleString()}), ${candidates.length} restants`);
+  } else if (SKIP_TRAFFIC) {
+    log(`\n⏭ Skip filtre traffic (--skip-traffic)`);
+  }
 
   // ─── ÉTAPE 2 — Pour chaque candidat, fetch + détecte outils + conciergerie ─
   let processed = candidates;
@@ -218,6 +276,8 @@ async function main() {
       total_kw_queried: totalKwQueried,
       total_serps_scanned: totalSerps,
       total_domains_after_dedup_blacklist: allCandidates.size,
+      rejected_too_big_traffic: rejectedTooBig,
+      max_traffic_threshold: MAX_TRAFFIC,
       total_candidates: final.length,
       fetch_ok: fetchOk,
       fetch_fail: final.length - fetchOk,
@@ -253,6 +313,7 @@ async function main() {
   log(`\n📈 Bilan :`);
   log(`  KW queried       : ${totalKwQueried}`);
   log(`  SERP scanned     : ${totalSerps}`);
+  log(`  Rejetés trop gros: ${rejectedTooBig} (traffic ≥ ${MAX_TRAFFIC.toLocaleString()})`);
   log(`  Candidats finaux : ${output.candidates.length} ${existingCount ? `(${existingCount} déjà + ${output.candidates.length - existingCount} nouveaux)` : ''}`);
   log(`  Fetch OK         : ${fetchOk}/${final.length}`);
   log(`  Conciergeries    : ${conciergeries}`);

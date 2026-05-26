@@ -38,6 +38,12 @@ export const BLACKLIST_DOMAINS = [
   'meilleursagents.com', 'efficity.com', 'orpi.com',
   'fnaim.fr', 'century21.fr', 'laforet.com',
 
+  // Gros groupes immo / promoteurs (filiales CAC 40, SBF 120, etc.)
+  // Ne linkeront jamais vers un outil tiers, et adresses contact servent au support client
+  'vinci-immobilier.com', 'bouygues-immobilier.com', 'nexity.fr',
+  'kaufmanbroad.fr', 'icade.fr', 'altarea.com', 'eiffageimmobilier.fr',
+  'gecina.fr', 'unibail-rodamco-westfield.com',
+
   // Wikis et encyclopédies
   'wikipedia.org', 'wiktionary.org',
 

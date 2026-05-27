@@ -572,8 +572,9 @@
     "oldSlug": "/conciergerie-airbnb-calais",
     "kw": "conciergerie calais",
     "vol": 230,
-    "status": "À faire",
-    "kd": 0
+    "status": "À reprendre manuel",
+    "kd": 0,
+    "notes": "Skip auto 2026-05-27 : aucune conciergerie avec note Google robuste vérifiable via web (seul Alex Hocine 3,7/5 - 3 avis, profil individuel). Bonappart, N&C/NC, Elfée, L&J, Homerez sans note Google traçable. Idem Boulogne-sur-Mer (Côte d Opale). Intervention manuelle Google Maps requise. Vol live SEMrush 140 (vs 230 backlog)."
   },
   {
     "num": 50,
@@ -585,8 +586,9 @@
     "oldSlug": "/conciergerie-airbnb-dinard",
     "kw": "conciergerie dinard",
     "vol": 210,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-27"
   },
   {
     "num": 51,
@@ -598,8 +600,9 @@
     "oldSlug": "/conciergerie-airbnb-ajaccio",
     "kw": "conciergerie ajaccio",
     "vol": 210,
-    "status": "À faire",
-    "kd": 0
+    "status": "À reprendre manuel",
+    "kd": 0,
+    "notes": "Skip auto 2026-05-27 : 1 seule note Google vérifiable et fragile (Welhome Conciergerie 5,0/5 - 3 avis). <2 conciergeries robustes. Marché corse dominé par acteurs sans présence Google Maps tracée (idem Porto-Vecchio). Région Corse NON ajoutée au tableau regions[]. Intervention manuelle requise."
   },
   {
     "num": 52,
@@ -611,8 +614,9 @@
     "oldSlug": "/conciergerie-airbnb-clermont-ferrand",
     "kw": "conciergerie clermont ferrand",
     "vol": 210,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-27"
   },
   {
     "num": 53,
@@ -624,8 +628,9 @@
     "oldSlug": "/conciergerie-airbnb-lorient",
     "kw": "conciergerie lorient",
     "vol": 210,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-27"
   },
   {
     "num": 54,
@@ -637,8 +642,9 @@
     "oldSlug": "/conciergerie-airbnb-carcassonne",
     "kw": "conciergerie carcassonne",
     "vol": 210,
-    "status": "À faire",
-    "kd": 0
+    "status": "À reprendre manuel",
+    "kd": 0,
+    "notes": "Skip auto 2026-05-27 : 1 seule note Google propre vérifiable (CarcaHome 4,6/5 - 10 avis). Oc Keys note conflictuelle (5,0 GMB vs 4,5/347 Trustindex cross-plateforme, count non vérifiable), Dame Carcas 3,1/5 - 22 avis (médiocre), Conciergerie Carcassonnaise / Bel la / Escapade sans note Google traçable. Backfill par Pau. Intervention manuelle Google Maps requise. Vol live SEMrush 210."
   },
   {
     "num": 55,
@@ -779,8 +785,10 @@
     "oldSlug": "/conciergerie-airbnb-pau",
     "kw": "conciergerie pau",
     "vol": 170,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-27",
+    "notes": "Vol live SEMrush 170 (= backlog). Backfill du run 2026-05-27 (remplace Carcassonne skippé)."
   },
   {
     "num": 66,

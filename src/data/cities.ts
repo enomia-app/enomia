@@ -8614,6 +8614,702 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-05-25',
   },
+  // ==========================================================================
+  // DINARD (production auto 2026-05-27)
+  // ==========================================================================
+  {
+    slug: 'dinard',
+    displayName: 'Dinard',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Dinard Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Dinard Airbnb : comparatif 2026 (avis & tarifs)',
+    metaDescription:
+      "Comparatif neutre des 6 meilleures conciergeries Airbnb de Dinard et de la Côte d'Émeraude. Tarifs, avis Google, réglementation 2026, quartiers rentables.",
+    kwPrincipal: 'conciergerie dinard',
+    kwSecondaires: [
+      'conciergerie airbnb dinard',
+      'conciergerie dinard airbnb',
+      "conciergerie côte d'émeraude",
+      'meilleure conciergerie dinard',
+      'conciergerie saint-malo dinard',
+    ],
+    population: 10600,
+    tourists: 500000,
+    activeListings: 800,
+    priceLow: 90,
+    priceHigh: 160,
+    occupancyRate: 60,
+    revpar: 65,
+    seasonality: "Pic estival marqué juillet-août (familles, plages de l'Écluse et du Prieuré, voile). Pics secondaires aux ponts de mai, à Pâques et lors du Festival du Film Britannique (fin septembre / début octobre). Creux hivernal prononcé, partiellement lissé par les courts séjours et les week-ends sur la Côte d'Émeraude.",
+    rankNational: 19,
+    introCustom:
+      "Vous avez un appartement ou une maison à Dinard, peut-être hérité ou acheté comme résidence secondaire, et vous le louez sur Airbnb une partie de l'année. Entre deux saisons, les arrivées du samedi, le ménage de fond et les voyageurs qui réclament la vue mer, la question revient vite : faut-il déléguer à une conciergerie, et laquelle ?\n\nDinard n'est pas un marché comme un autre. C'est une station chic, très saisonnière, où la qualité de l'accueil fait la différence sur le prix à la nuit. J'ai comparé pour vous les conciergeries actives sur la ville et la Côte d'Émeraude, à partir de leurs avis Google, de leurs tarifs et de leur ancrage local réel.",
+    marketIntro:
+      "Dinard est l'une des **stations balnéaires les plus prisées de Bretagne nord**, en face de Saint-Malo, avec environ **10 600 habitants** mais une fréquentation touristique sans commune mesure avec sa taille. La part de **résidences secondaires** y est très élevée, ce qui alimente un parc Airbnb dense et une saisonnalité forte.\n\nLa ville cultive un **héritage Belle Époque** (villas classées, casino, front de mer) et une clientèle haut de gamme, française et britannique de longue date. Le ticket d'entrée reste élevé : un T2 avec vue mer dépasse facilement **300 000 €**. En contrepartie, les tarifs à la nuit en pleine saison sont parmi les plus hauts de la côte bretonne, ce qui rend la **qualité de gestion** déterminante pour tenir un taux d'occupation correct hors juillet-août.",
+    conciergeries: [
+      {
+        name: 'Check-In Conciergerie',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 30,
+        biensGeres: 50,
+        specialty: "Gestion complète Côte d'Émeraude",
+        description:
+          "Avec une note Google de 4,7/5 sur une trentaine d'avis, Check-In Conciergerie figure parmi les acteurs les mieux installés sur Saint-Malo, Dinard et Dinan. L'offre est une gestion complète : création et optimisation de l'annonce, accueil et remise des clés, ménage, blanchisserie et assistance voyageurs 7j/7. C'est un profil adapté aux propriétaires qui veulent déléguer entièrement, sans suivi quotidien. La commission n'est pas affichée publiquement : demandez une grille écrite et la façon dont le ménage est facturé (au voyageur ou prélevé sur vos revenus), car c'est ce qui fait la différence sur la rentabilité réelle d'un bien très saisonnier comme à Dinard. Vérifiez aussi le nombre de biens réellement gérés sur la commune même, et non sur l'ensemble de la côte.",
+      },
+      {
+        name: "La Clé d'Émeraude",
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 5.0,
+        reviews: 29,
+        biensGeres: 45,
+        specialty: 'Saint-Malo & Dinard, note maximale',
+        description:
+          "La Clé d'Émeraude affiche une note Google de 5/5 sur près de 30 avis, l'une des meilleures de la zone, avec une couverture Saint-Malo et Côte d'Émeraude qui inclut Dinard. Le positionnement est celui d'une conciergerie de proximité : interlocuteur unique, réactivité, soin de l'accueil. Pour un propriétaire dinardais, l'intérêt est d'avoir une équipe qui connaît la copropriété, les artisans locaux et les pics de demande (ponts, festival, été). La commission se négocie au cas par cas : faites préciser ce qui est inclus (photos, linge, maintenance) et les conditions de sortie du contrat. Une note élevée sur un volume d'avis encore modéré reste plus fragile qu'un historique de plusieurs centaines d'avis : lisez les retours un par un avant de signer.",
+      },
+      {
+        name: 'Ma Conciergerie Sérénité',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.9,
+        reviews: 17,
+        biensGeres: 35,
+        specialty: 'Service premium personnalisé',
+        description:
+          "Notée 4,9/5 sur Google, Ma Conciergerie Sérénité se positionne sur un service personnalisé à l'échelle bretonne, avec une présence sur la Côte d'Émeraude. Le discours est centré sur la tranquillité du propriétaire : gestion de bout en bout, communication voyageurs, entretien et reporting. C'est un profil intéressant pour une résidence secondaire que vous occupez vous-même une partie de l'année et que vous louez le reste du temps, car ce type de structure gère bien les calendriers mixtes. Le tarif n'étant pas public, demandez un devis détaillé et comparez le coût « tout compris » (commission + ménage + frais annexes) plutôt que la seule commission affichée. Le volume d'avis reste modeste : un bon signal, mais à recouper avec des références locales concrètes.",
+      },
+      {
+        name: 'La Bretonnerie',
+        commission: '20 % HT (24 % TTC)',
+        menage: 'variable',
+        rating: 5.0,
+        reviews: 17,
+        biensGeres: 30,
+        specialty: 'Transparence tarifaire',
+        description:
+          "La Bretonnerie a le mérite d'afficher clairement sa commission : 20 % HT, soit 24 % TTC, ce qui reste dans la moyenne basse du marché de la Côte d'Émeraude où les tarifs grimpent souvent à 25-26 % TTC. Note Google de 5/5 sur 17 avis. L'offre couvre les fondamentaux d'une conciergerie complète sur Dinard et ses environs : annonce, accueil, ménage, assistance. La transparence tarifaire est un bon point de départ, mais vérifiez deux choses : si le ménage est en plus de la commission ou refacturé au voyageur, et si la TVA s'applique à votre cas. Sur un bien très saisonnier, une commission claire facilite le calcul de votre revenu net réel et la comparaison avec les agences qui ne communiquent qu'« sur devis ».",
+      },
+      {
+        name: "L'Agence 1907",
+        commission: '23-26 % TTC',
+        menage: 'variable',
+        rating: 5.0,
+        reviews: 9,
+        biensGeres: 25,
+        specialty: 'Gestion clé en main',
+        description:
+          "L'Agence 1907 propose une gestion clé en main sur la Côte d'Émeraude avec une fourchette de commission annoncée entre 23 et 26 % TTC, selon le niveau de service. Note Google de 5/5, mais sur un nombre d'avis encore faible (9) : le signal qualitatif est bon, l'historique reste court. Le positionnement « tout inclus » convient aux propriétaires qui ne veulent gérer aucune logistique, à condition d'accepter une commission dans le haut du marché. Demandez le détail de ce que couvre la fourchette haute par rapport à la fourchette basse (photos professionnelles, pricing dynamique, maintenance, linge premium), et faites-vous communiquer des exemples de revenus nets sur des biens comparables au vôtre à Dinard. Comme pour toute structure récente, recoupez les avis avec des références vérifiables.",
+      },
+      {
+        name: "L'Intendance du Bord de Mer",
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.8,
+        reviews: 6,
+        biensGeres: 20,
+        specialty: 'Petite structure locale',
+        description:
+          "L'Intendance du Bord de Mer est une petite structure locale, notée 4,8/5 sur Google, qui mise sur la proximité et un nombre de biens limité. Pour un propriétaire dinardais, ce type d'acteur a un avantage réel : disponibilité, connaissance fine du terrain, capacité à intervenir vite en cas d'incident. Le revers est la capacité : une petite équipe peut afficher complet en haute saison et avoir moins de moyens technologiques (channel manager, serrure connectée, pricing dynamique) qu'un réseau plus important. Le tarif est à demander. Avec seulement quelques avis publiés, prenez le temps d'échanger avec des propriétaires déjà clients et de visiter, si possible, un bien qu'ils gèrent, pour juger du niveau d'accueil et d'entretien avant de confier le vôtre.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: "Plage de l'Écluse / front de mer",
+        pricePerNight: '120-180 €',
+        occupancy: 65,
+        description:
+          "Le cœur balnéaire de Dinard : grande plage, casino, villas Belle Époque et promenade du Clair de Lune. La prime à la nuit y est la plus forte de la ville, surtout avec une vue mer, mais le ticket d'achat est élevé (T2 vue mer à 300 000 € et plus).",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Saint-Énogat',
+        pricePerNight: '100-150 €',
+        occupancy: 60,
+        description:
+          "Ancien village de pêcheurs à l'ouest, plus calme et familial, avec sa propre plage. Apprécié des familles et des séjours longs. Tarifs un cran sous le front de mer, ambiance résidentielle, bon compromis entre cachet et accessibilité.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'La Vicomté',
+        pricePerNight: '110-160 €',
+        occupancy: 58,
+        description:
+          "Quartier résidentiel chic à l'est, autour de la pointe du Moulinet, avec de grandes demeures et de belles vues sur Saint-Malo. Clientèle haut de gamme, demande plus concentrée sur la belle saison. Tickets d'achat élevés, rotation plus faible hors été.",
+        roiBrut: '4 %',
+      },
+      {
+        name: 'Le Prieuré',
+        pricePerNight: '90-130 €',
+        occupancy: 60,
+        description:
+          "Autour de la plage du Prieuré, au sud, avec un accès direct à la digue-promenade vers le centre. Cadre agréable, un peu plus abordable que le front de mer principal. Bon équilibre entre tarif à la nuit et prix d'achat pour un premier investissement.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Centre-ville / halles',
+        pricePerNight: '90-120 €',
+        occupancy: 62,
+        description:
+          "Le centre commerçant autour du marché et des halles : tout se fait à pied, ce qui plaît aux courts séjours et aux voyageurs sans voiture. Occupation un peu mieux lissée sur l'année grâce aux week-ends. Tickets d'achat plus accessibles que sur le front de mer.",
+        roiBrut: '5 %',
+      },
+    ],
+    regulation:
+      "Dinard est une **commune littorale très tendue** : la part de résidences secondaires y est largement supérieure à la moyenne nationale, ce qui place la location courte durée sous une surveillance croissante.\n\nLe cadre national s'applique pleinement. La **loi Le Meur** généralise le **numéro d'enregistrement à 13 chiffres**, obligatoire au plus tard le **20 mai 2026** et à afficher sur chaque annonce. Une **résidence principale** reste plafonnée à **120 nuitées par an**, et les communes en zone tendue peuvent abaisser ce seuil jusqu'à 90 jours sur délibération.\n\nPour une **résidence secondaire**, une **autorisation de changement d'usage** peut être exigée par délibération du conseil municipal : c'est précisément le type de dispositif que les communes de la Côte d'Émeraude sont habilitées à adopter. Avant d'investir à Dinard, vérifiez en mairie l'existence d'un règlement de changement d'usage et d'éventuelles règles de compensation.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Comme dans toutes les stations classées, elle est due par nuit et par voyageur et son montant dépend du classement du meublé. Utilisez le calculateur pour l'estimer avant de fixer vos tarifs.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 110,
+      neighborhood: "la Plage de l'Écluse",
+      revenuBrut: 24000,
+      commissionRate: 0.20,
+      menageCount: 45,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique à Dinard en 2026 ?",
+        a: "Le cadre national de la loi Le Meur s'applique : numéro d'enregistrement à 13 chiffres obligatoire au plus tard le 20 mai 2026 et affiché sur l'annonce, plafond de 120 nuitées par an pour une résidence principale. Dinard étant une commune littorale très tendue avec beaucoup de résidences secondaires, une autorisation de changement d'usage peut être instaurée par délibération municipale, et le seuil de nuitées abaissé jusqu'à 90 jours. Avant tout investissement, confirmez en mairie l'existence d'un règlement local de changement d'usage et d'éventuelles règles de compensation.",
+      },
+      {
+        q: "Vaut-il mieux une conciergerie de Dinard ou de Saint-Malo ?",
+        a: "Les deux peuvent convenir, car la plupart des conciergeries de la Côte d'Émeraude couvrent à la fois Saint-Malo, Dinard et Dinan. L'important n'est pas l'adresse du siège mais le nombre de biens réellement gérés sur Dinard même, la rapidité d'intervention en cas d'incident et la connaissance de votre type de bien. Demandez depuis quand l'agence opère sur la commune et combien de logements elle y suit. À qualité égale, une équipe qui intervient vite sur place vaut mieux qu'un réseau plus gros mais distant.",
+      },
+      {
+        q: "Combien coûte une conciergerie à Dinard ?",
+        a: "Sur la Côte d'Émeraude, les commissions observées vont d'environ 20 % HT (soit autour de 24 % TTC) jusqu'à 25-26 % TTC pour les offres clé en main les plus complètes. À cela s'ajoutent souvent les frais de ménage, qui peuvent être refacturés au voyageur ou prélevés sur vos revenus. C'est cette dernière distinction qui pèse le plus sur votre net : exigez toujours une grille écrite et le mode de facturation du ménage avant de signer.",
+      },
+      {
+        q: "La forte saisonnalité de Dinard est-elle un problème pour louer ?",
+        a: "C'est la principale spécificité du marché. La demande explose en juillet-août et reste forte aux ponts, à Pâques et pendant le Festival du Film Britannique, mais l'hiver est creux. Une bonne conciergerie compense en jouant sur les courts séjours, les week-ends et un pricing dynamique pour capter chaque pic. Sur un bien vue mer bien géré, la haute saison concentre une part importante du revenu annuel : la qualité de l'accueil et des photos y est déterminante pour tenir des tarifs élevés.",
+      },
+    ],
+    updatedAt: '2026-05-27',
+  },
+  // ==========================================================================
+  // CLERMONT-FERRAND (production auto 2026-05-27)
+  // ==========================================================================
+  {
+    slug: 'clermont-ferrand',
+    displayName: 'Clermont-Ferrand',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Clermont-Ferrand Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Clermont-Ferrand Airbnb : comparatif 2026',
+    metaDescription:
+      "Comparatif neutre des 6 meilleures conciergeries Airbnb de Clermont-Ferrand. Tarifs (12-25 %), avis Google, réglementation 2026, quartiers rentables.",
+    kwPrincipal: 'conciergerie clermont ferrand',
+    kwSecondaires: [
+      'conciergerie airbnb clermont-ferrand',
+      'conciergerie clermont',
+      'meilleure conciergerie clermont-ferrand',
+      'gestion locative clermont-ferrand',
+      'conciergerie airbnb clermont',
+    ],
+    population: 146000,
+    tourists: 1200000,
+    activeListings: 1000,
+    priceLow: 55,
+    priceHigh: 95,
+    occupancyRate: 62,
+    revpar: 48,
+    seasonality: "Demande bien lissée sur l'année grâce au tourisme d'affaires (Michelin, congrès, université) et au Festival International du Court Métrage début février, l'un des plus grands au monde. Pics estivaux liés au Puy de Dôme et aux Volcans d'Auvergne (juillet-août) et lors des grands week-ends. Creux modéré, atténué par la clientèle professionnelle en semaine.",
+    rankNational: 22,
+    introCustom:
+      "Vous louez un appartement à Clermont-Ferrand sur Airbnb, ou vous y songez après avoir vu les rendements affichés dans la région. Le marché clermontois a un atout que beaucoup de villes touristiques n'ont pas : une demande qui ne s'effondre pas l'hiver, portée par Michelin, l'université et les congrès. Mais entre les arrivées en semaine, le ménage et la gestion des annonces, la conciergerie devient vite une option.\n\nJ'ai comparé les conciergeries actives sur Clermont à partir de leurs avis Google, de leurs commissions affichées et de leur ancrage local. Bonne nouvelle : ici, les écarts de commission sont importants, de 12 % à 25 %, et bien choisir peut représenter plusieurs milliers d'euros par an.",
+    marketIntro:
+      "Clermont-Ferrand, environ **146 000 habitants**, est un marché LCD plus mûr et plus régulier qu'il n'y paraît. La ville combine un **tourisme d'affaires solide** (siège mondial de Michelin, congrès, pôle universitaire de plus de 35 000 étudiants) et un **tourisme nature** porté par le Puy de Dôme et la chaîne des Volcans d'Auvergne, classée UNESCO.\n\nLe **Festival International du Court Métrage**, début février, est l'un des plus grands au monde et tend fortement les tarifs sur une dizaine de jours en plein cœur de l'hiver. Cette diversité de demande donne au marché clermontois une **saisonnalité plus douce** que les villes purement balnéaires ou de montagne : le revenu y est plus prévisible, ce qui rassure pour un premier investissement. Le ticket d'entrée reste accessible, avec des prix d'achat nettement inférieurs à ceux de Lyon ou d'Annecy.",
+    conciergeries: [
+      {
+        name: 'Bienvenue Chez Nous',
+        commission: '20 % TTC',
+        menage: 'variable',
+        rating: 4.2,
+        reviews: 418,
+        biensGeres: 180,
+        specialty: 'Gestion complète + activités locales',
+        description:
+          "Avec plus de 400 avis Google, Bienvenue Chez Nous (parfois « Bienvenue Chez Nous 63 ») est de loin la conciergerie la plus établie de Clermont-Ferrand en volume. La note de 4,2/5 est plus modérée que celle de structures plus petites, mais elle repose sur un historique large, donc plus fiable : c'est exactement le genre d'écart qu'il faut savoir lire (200 avis à 4,2 valent mieux qu'une poignée d'avis à 5). Commission de 20 % TTC, gestion complète, et une offre qui inclut des recommandations d'activités locales pour les voyageurs. C'est un choix rassurant pour déléguer entièrement sur un T2 ou T3 standard du centre. Lisez en priorité les avis négatifs pour repérer les points de friction récurrents (délais, ménage, communication) et demandez comment le ménage est facturé.",
+      },
+      {
+        name: 'Ecolavage Clermont',
+        commission: '15 % HT',
+        menage: 'variable',
+        rating: 5.0,
+        reviews: 193,
+        biensGeres: 120,
+        specialty: 'Spécialiste ménage & blanchisserie',
+        description:
+          "Ecolavage Clermont affiche une note rare : 5/5 sur près de 200 avis, ce qui en fait l'une des références les mieux notées de la ville sur un volume significatif. À l'origine spécialiste du ménage et de la blanchisserie, l'entreprise propose une gestion locative à 15 % HT, sous la moyenne du marché. Ce positionnement est intéressant si la propreté et la rotation rapide du linge sont vos priorités, ce qui est souvent le cas sur les biens à forte rotation. Vérifiez l'étendue exacte de la prestation à 15 % (communication voyageurs, pricing, assistance 7j/7) par rapport à une conciergerie « full service », car une commission basse peut couvrir un périmètre plus restreint. Demandez une simulation de revenu net sur votre bien pour comparer à périmètre égal.",
+      },
+      {
+        name: 'Clermont Conciergerie',
+        commission: '12 % HT',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 40,
+        biensGeres: 70,
+        specialty: 'Commission basse, tourisme responsable',
+        description:
+          "Clermont Conciergerie se distingue par la commission la plus basse de notre sélection : 12 % HT, très en dessous du marché, avec un positionnement axé sur un tourisme responsable et local. Note Google de 4,7/5 sur une quarantaine d'avis. Sur le papier, l'économie de commission est substantielle : sur un revenu brut de 15 000 €, 12 % au lieu de 20 % représente près de 1 200 € gardés chaque année. Le revers possible d'une commission basse est un périmètre de services plus ciblé ou une équipe plus réduite : faites préciser ce qui est inclus, le mode de facturation du ménage et la réactivité en cas d'incident. Pour un propriétaire attentif au coût total et sensible à l'argument local, c'est une option à étudier sérieusement.",
+      },
+      {
+        name: 'La Conciergerie des Puys',
+        commission: '20 % HT',
+        menage: 'variable',
+        rating: 4.6,
+        reviews: 11,
+        biensGeres: 40,
+        specialty: 'Gestion complète + ménage',
+        description:
+          "La Conciergerie des Puys propose une gestion complète à 20 % HT, incluant l'entretien et le ménage, avec une grille tarifaire qui mentionne aussi des formules à commission plus élevée pour les services premium. Note Google de 4,6/5, sur un nombre d'avis encore modeste. Le profil est celui d'une conciergerie clermontoise classique, qui s'occupe de l'annonce, de l'accueil et de la logistique. Pour juger, demandez depuis combien de temps l'équipe opère sur Clermont, combien de biens elle gère dans la ville et un exemple de reporting mensuel. Sur un volume d'avis limité, l'échange direct avec des propriétaires déjà clients reste le meilleur moyen de vérifier la qualité réelle du service avant de s'engager.",
+      },
+      {
+        name: 'La Conciergerie Terre et Volcans',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 5.0,
+        reviews: 24,
+        biensGeres: 45,
+        specialty: 'Orientée familles, sélection voyageurs',
+        description:
+          "La Conciergerie Terre et Volcans affiche une note Google de 5/5 sur une vingtaine d'avis et un positionnement orienté familles, avec une attention particulière à la vérification des voyageurs. Pour un propriétaire qui craint les dégradations ou les fêtes, ce filtrage à l'entrée est un argument concret. L'offre couvre la gestion complète de l'annonce à l'accueil. La commission n'est pas publique : demandez un devis détaillé et comparez le coût « tout compris » plutôt que la commission seule. Comme pour toute structure au volume d'avis encore réduit, recoupez les retours en ligne avec des références locales et vérifiez la couverture exacte sur Clermont intra-muros par rapport aux communes périphériques de l'agglomération.",
+      },
+      {
+        name: 'Dôme Conciergerie',
+        commission: '15 % HT',
+        menage: 'variable',
+        rating: 5.0,
+        reviews: 17,
+        biensGeres: 35,
+        specialty: 'Expert local clermontois',
+        description:
+          "Dôme Conciergerie se présente comme un acteur local clermontois, noté 5/5 sur Google avec une commission de 15 % HT, soit un bon rapport entre prix et service complet. L'ancrage local est ici l'argument central : connaissance du terrain, des artisans et des spécificités de la demande clermontoise (affaires en semaine, tourisme nature le week-end). Le volume d'avis reste modéré, mais la note et la commission sont attractives. Avant de signer, demandez le détail de la prestation à 15 % HT (pricing dynamique, communication voyageurs, assistance, maintenance), la façon dont le ménage est facturé et le nombre de biens gérés dans la ville. Pour un T2 ou T3 du centre, ce type de structure locale et bien notée mérite d'être mise en concurrence avec les plus gros réseaux.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Jaude / centre-ville',
+        pricePerNight: '60-90 €',
+        occupancy: 64,
+        description:
+          "La place de Jaude et son hypercentre commerçant, à proximité de la gare et des grands axes. Demande mixte affaires et tourisme, occupation bien lissée sur l'année. C'est le secteur le plus recherché pour un Airbnb « tout à pied », avec un bon équilibre entre tarif à la nuit et prix d'achat.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Vieux Montferrand',
+        pricePerNight: '55-85 €',
+        occupancy: 58,
+        description:
+          "L'ancienne cité médiévale de Montferrand, avec ses hôtels particuliers Renaissance et son cachet patrimonial unique dans la ville. Clientèle sensible à l'authenticité. Un peu excentré du cœur de Clermont, ce qui pèse sur l'occupation hivernale, mais des tickets d'achat souvent intéressants.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Les Carmes / Cathédrale',
+        pricePerNight: '60-90 €',
+        occupancy: 62,
+        description:
+          "Le cœur historique en pierre de Volvic, autour de la cathédrale noire et de la vieille ville. Très prisé des courts séjours culturels. Tarifs à la nuit dans le haut de la fourchette clermontoise, occupation soutenue grâce à la marche à pied vers tous les sites.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'La Pardieu',
+        pricePerNight: '55-80 €',
+        occupancy: 60,
+        description:
+          "Pôle tertiaire et d'affaires desservi par sa propre gare, La Pardieu capte une forte demande professionnelle en semaine (cadres, missions, formations). Occupation régulière hors vacances, idéale pour un bien orienté moyenne durée et bail mobilité en complément du courte durée.",
+        roiBrut: '6 %',
+      },
+      {
+        name: 'Chamalières',
+        pricePerNight: '65-95 €',
+        occupancy: 60,
+        description:
+          "Commune limitrophe résidentielle et prisée, à la réputation chic, avec ses thermes et sa proximité immédiate du centre de Clermont. Tarifs à la nuit plus élevés, mais prix d'achat supérieurs : un rendement brut plus serré, compensé par une clientèle de qualité.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Université / Gravanches',
+        pricePerNight: '50-75 €',
+        occupancy: 58,
+        description:
+          "Secteurs proches du campus et des zones d'activité, où les tickets d'achat sont les plus accessibles. Forte demande étudiante et de moyenne durée, intéressante pour mixer courte durée en été et locations plus longues le reste de l'année afin de sécuriser le rendement.",
+        roiBrut: '6 à 7 %',
+      },
+    ],
+    regulation:
+      "À ce jour, Clermont-Ferrand relève **largement du régime national de droit commun** : aucun dispositif local de quota spécifique n'a été identifié, et la ville (environ **146 000 habitants**) ne figure pas parmi les métropoles les plus restrictives sur la location courte durée.\n\nLe cadre national s'impose néanmoins. La **loi Le Meur** rend obligatoire le **numéro d'enregistrement à 13 chiffres** au plus tard le **20 mai 2026**, à mentionner sur chaque annonce, et un **SIRET** est désormais requis pour tout loueur de meublé de tourisme. La location d'une **résidence principale** reste limitée à **120 nuitées par an**.\n\nClermont Auvergne Métropole pouvant faire évoluer ses règles, il est prudent de **confirmer en mairie** l'absence d'autorisation de changement d'usage avant de se lancer, en particulier pour une résidence secondaire en hypercentre.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Elle est perçue par nuit et par voyageur ; le calculateur vous permet d'estimer le montant à collecter selon le type et le classement de votre logement.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 65,
+      neighborhood: 'Jaude',
+      revenuBrut: 14700,
+      commissionRate: 0.20,
+      menageCount: 50,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique à Clermont-Ferrand en 2026 ?",
+        a: "Clermont-Ferrand relève à ce jour du régime national de droit commun, sans quota local spécifique identifié. Le cadre national s'applique : numéro d'enregistrement à 13 chiffres obligatoire au plus tard le 20 mai 2026 et affiché sur l'annonce, SIRET requis pour tout loueur de meublé, et plafond de 120 nuitées par an pour une résidence principale. La métropole pouvant faire évoluer ses règles, confirmez en mairie l'absence d'autorisation de changement d'usage avant d'investir, surtout en hypercentre.",
+      },
+      {
+        q: "Pourquoi le marché de Clermont est-il moins saisonnier que d'autres villes ?",
+        a: "Parce que la demande ne dépend pas seulement du tourisme. Clermont-Ferrand combine le siège mondial de Michelin, un pôle universitaire de plus de 35 000 étudiants et de nombreux congrès, ce qui alimente une clientèle d'affaires en semaine toute l'année. S'y ajoutent le tourisme nature (Puy de Dôme, Volcans d'Auvergne) l'été et le Festival International du Court Métrage début février. Résultat : une occupation plus régulière et un revenu plus prévisible que dans une station purement balnéaire ou de montagne.",
+      },
+      {
+        q: "Quelle commission de conciergerie viser à Clermont-Ferrand ?",
+        a: "Les écarts y sont importants : notre comparatif va de 12 % HT à 25 % HT selon les agences et le niveau de service. Une commission basse (12-15 %) peut faire gagner plus de mille euros par an sur un bien moyen, mais elle couvre parfois un périmètre plus restreint. La bonne méthode est de comparer à périmètre égal : demandez à chaque conciergerie une simulation de revenu net sur votre logement, ménage compris, plutôt que de regarder la seule commission affichée.",
+      },
+    ],
+    updatedAt: '2026-05-27',
+  },
+  // ==========================================================================
+  // LORIENT (production auto 2026-05-27)
+  // ==========================================================================
+  {
+    slug: 'lorient',
+    displayName: 'Lorient',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Lorient Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Lorient Airbnb : comparatif 2026 (avis & tarifs)',
+    metaDescription:
+      "Comparatif neutre des 6 meilleures conciergeries Airbnb de Lorient. Tarifs (20-25 %), avis Google, réglementation 2026, quartiers rentables. Guide complet.",
+    kwPrincipal: 'conciergerie lorient',
+    kwSecondaires: [
+      'conciergerie airbnb lorient',
+      'conciergerie lorient airbnb',
+      'meilleure conciergerie lorient',
+      'gestion locative lorient',
+      'conciergerie morbihan',
+    ],
+    population: 57000,
+    tourists: 800000,
+    activeListings: 750,
+    priceLow: 65,
+    priceHigh: 110,
+    occupancyRate: 60,
+    revpar: 52,
+    seasonality: "Pic absolu pendant le Festival Interceltique de Lorient (août, une dizaine de jours, plus de 700 000 visiteurs), qui sature l'hébergement et fait flamber les tarifs. Été balnéaire soutenu (Larmor-Plage, rade, îles). Demande lissée hors saison par le tourisme d'affaires (port de pêche de Keroman, Naval Group, course au large). Creux hivernal modéré.",
+    rankNational: 24,
+    introCustom:
+      "Vous avez un bien à Lorient que vous louez en courte durée, ou vous regardez la ville pour investir, attiré par le festival, la rade et le port de pêche. Le marché lorientais a une particularité que peu de villes partagent : une semaine d'août, celle de l'Interceltique, peut à elle seule représenter une part énorme de votre revenu annuel si votre bien est bien géré.\n\nEncore faut-il une conciergerie capable de tenir le choc de cette montée en charge et de remplir le reste de l'année. J'ai comparé les acteurs présents sur Lorient et le pays de Lorient à partir de leurs avis Google, de leurs commissions affichées et de leur sérieux apparent. Les écarts de note sont nets : certains acteurs sont à éviter, d'autres sortent vraiment du lot.",
+    marketIntro:
+      "Lorient, environ **57 000 habitants** au cœur du Morbihan, est un marché LCD à double moteur. Côté tourisme, la ville vit au rythme du **Festival Interceltique** (plus de 700 000 visiteurs sur une dizaine de jours en août), de la **rade**, de la voile (Lorient La Base, course au large) et des plages toutes proches de **Larmor-Plage**.\n\nCôté économie, le **port de pêche de Keroman**, **Naval Group** et un tissu industriel solide alimentent une demande d'affaires lissée en semaine, hors saison. Ce mélange donne au marché une **occupation plus régulière** que les stations purement estivales du littoral breton. Les tickets d'achat restent **accessibles** comparés à Vannes ou à la côte morbihannaise huppée, ce qui en fait un terrain intéressant pour un investissement courte durée bien calibré, à condition de viser les quartiers qui captent à la fois la demande touristique et professionnelle.",
+    conciergeries: [
+      {
+        name: 'Homelok',
+        commission: '20 % TTC',
+        menage: 'variable',
+        rating: 4.6,
+        reviews: 322,
+        biensGeres: 180,
+        specialty: 'Plateforme tech, large couverture',
+        description:
+          "Avec plus de 320 avis Google et une note de 4,6/5, Homelok est de loin l'acteur le plus établi de notre sélection lorientaise en volume d'avis. C'est le profil « plateforme » : process structurés, outils technologiques (channel manager, suivi en ligne), large couverture géographique. Commission de 20 % TTC, dans la moyenne du marché. Pour un propriétaire qui veut déléguer sans surprise et bénéficier d'un acteur rodé, c'est une valeur sûre. Le revers d'une grosse structure peut être une relation moins personnalisée qu'avec une petite conciergerie de quartier : si la proximité compte beaucoup pour vous, comparez la réactivité réelle. Comme toujours, lisez en priorité les avis négatifs pour repérer les irritants récurrents, et faites préciser si le ménage est refacturé au voyageur ou prélevé sur vos revenus.",
+      },
+      {
+        name: 'Air et Mer Vacances',
+        commission: '25 % TTC',
+        menage: 'variable',
+        rating: 4.3,
+        reviews: 59,
+        biensGeres: 80,
+        specialty: 'Spécialiste littoral & voile',
+        description:
+          "Air et Mer Vacances affiche une note de 4,3/5 sur une soixantaine d'avis et un positionnement orienté littoral, cohérent avec la demande balnéaire et nautique du pays de Lorient (Larmor-Plage, rade, événements voile). La commission de 25 % TTC se situe dans le haut du marché : il faut donc que les services inclus le justifient. Demandez le détail (photos professionnelles, pricing dynamique, accueil physique, linge, maintenance) et une estimation de revenu net sur votre bien. Sur un logement très saisonnier qui se remplit surtout l'été et pendant l'Interceltique, une commission élevée peut rester rentable si l'agence optimise vraiment les tarifs en haute saison. Vérifiez la couverture exacte sur Lorient intra-muros et les communes balnéaires voisines.",
+      },
+      {
+        name: 'Happy Home 56',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 5.0,
+        reviews: 58,
+        biensGeres: 75,
+        specialty: 'Service haut de gamme Morbihan',
+        description:
+          "Happy Home 56 affiche une note Google de 5/5 sur près de 60 avis, performance remarquable sur un volume déjà significatif, avec un positionnement haut de gamme à l'échelle du Morbihan. C'est un signal de qualité fort : une note maximale tenue sur des dizaines d'avis est bien plus fiable qu'un 5/5 sur une poignée de retours. La commission n'étant pas publique, demandez un devis détaillé et comparez le coût « tout compris ». Le profil convient aux propriétaires exigeants sur l'accueil et la présentation du bien, prêts à payer pour un service soigné. Faites préciser le nombre de logements gérés sur Lorient même et la capacité de l'équipe à absorber le pic de l'Interceltique, période où la qualité de gestion fait toute la différence sur le revenu.",
+      },
+      {
+        name: 'Alb Conciergerie',
+        commission: '24 % TTC',
+        menage: 'variable',
+        rating: 4.9,
+        reviews: 39,
+        biensGeres: 55,
+        specialty: 'Relation propriétaire soignée',
+        description:
+          "Alb Conciergerie combine une excellente note Google (4,9/5 sur une quarantaine d'avis) et une commission de 24 % TTC, dans le haut du marché lorientais. Le positionnement met l'accent sur la relation propriétaire et le soin apporté à chaque bien, ce qui correspond à une structure à taille humaine plutôt qu'à une plateforme industrielle. Pour un propriétaire qui veut un interlocuteur identifié et réactif, c'est un bon profil. La commission élevée doit s'accompagner d'un périmètre de services complet : demandez ce qui est inclus, le mode de facturation du ménage et un exemple de reporting. Une note proche du maximum sur un volume correct est rassurante, mais vérifiez tout de même la couverture sur votre secteur précis et la disponibilité en haute saison.",
+      },
+      {
+        name: 'Groom Conciergerie',
+        commission: '25 % TTC',
+        menage: 'variable',
+        rating: 4.9,
+        reviews: 39,
+        biensGeres: 55,
+        specialty: 'Accueil voyageurs premium',
+        description:
+          "Groom Conciergerie affiche elle aussi une note de 4,9/5 sur une quarantaine d'avis, avec une commission de 25 % TTC et un positionnement axé sur la qualité de l'accueil voyageurs. C'est un profil premium : l'expérience client soignée vise à générer de bons avis, donc un meilleur classement de votre annonce et des tarifs plus élevés. Sur un marché comme Lorient où l'Interceltique attire une clientèle internationale, cet effet peut compenser une commission dans le haut de la fourchette. Avant de signer, demandez des exemples concrets d'optimisation de revenus, le détail des prestations couvertes par les 25 % et la façon dont le ménage est traité. Comparez à note égale avec Alb Conciergerie pour départager sur le service et la couverture géographique.",
+      },
+      {
+        name: "Les Cocons d'Agathe",
+        commission: '16-25 % TTC',
+        menage: 'variable',
+        rating: 4.8,
+        reviews: 35,
+        biensGeres: 50,
+        specialty: 'Formules modulables',
+        description:
+          "Les Cocons d'Agathe se distinguent par une grille modulable, de 16 % à 25 % TTC selon le niveau de service choisi, et une note Google de 4,8/5. Cette souplesse est intéressante : un propriétaire autonome qui veut seulement déléguer l'accueil et le ménage paiera moins qu'un autre qui confie tout, communication et optimisation comprises. C'est une bonne option pour ajuster le coût à vos besoins réels. Demandez précisément ce que couvre chaque palier de commission et faites une simulation de revenu net pour la formule qui vous correspond. Vérifiez aussi, comme pour les autres, la capacité de l'équipe à gérer la montée en charge du mois d'août et la couverture sur votre quartier. Une note élevée sur un volume correct constitue un bon point de départ.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre-ville / Merville',
+        pricePerNight: '70-110 €',
+        occupancy: 62,
+        description:
+          "L'hypercentre reconstruit, commerçant, proche de la gare et des quais. Demande mixte tourisme et affaires, occupation bien lissée. C'est le secteur idéal pour un Airbnb « tout à pied » et pour capter à la fois la clientèle de l'Interceltique et les déplacements professionnels en semaine.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Quartier de la Base / Keroman',
+        pricePerNight: '70-110 €',
+        occupancy: 60,
+        description:
+          "Autour de la base sous-marine, de Lorient La Base et du port de pêche de Keroman : un secteur en plein essor, porté par la course au large et les événements voile. Demande mixte touristes, passionnés de nautisme et professionnels du port. Tarifs soutenus lors des grands événements.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Larmor-Plage',
+        pricePerNight: '90-140 €',
+        occupancy: 58,
+        description:
+          "Commune balnéaire limitrophe, la plus prisée du secteur pour ses plages. Forte saisonnalité estivale et tarifs à la nuit élevés en juillet-août. Tickets d'achat supérieurs au centre de Lorient : rendement brut plus serré, mais clientèle vacances de qualité et bonne valorisation patrimoniale.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Kerentrech / Nouvelle Ville',
+        pricePerNight: '65-95 €',
+        occupancy: 60,
+        description:
+          "Quartiers résidentiels proches du centre et de la gare, appréciés pour leur calme et leur accessibilité. Bon compromis entre prix d'achat et demande régulière. Adaptés à un investissement orienté courte durée en été et moyenne durée le reste de l'année.",
+        roiBrut: '6 %',
+      },
+      {
+        name: 'Lanester',
+        pricePerNight: '60-90 €',
+        occupancy: 58,
+        description:
+          "Commune voisine de l'autre côté du Scorff, avec les tickets d'achat les plus accessibles du secteur. Demande lissée par la proximité des zones d'emploi et du port. Idéale pour viser un rendement brut élevé en mixant courte durée et locations plus longues.",
+        roiBrut: '6 à 7 %',
+      },
+    ],
+    regulation:
+      "Lorient relève aujourd'hui **du régime national de droit commun** : la ville (environ **57 000 habitants**) n'a pas mis en place de dispositif de quota comparable aux grandes métropoles tendues.\n\nLe cadre national s'applique. La **loi Le Meur** généralise le **numéro d'enregistrement à 13 chiffres**, obligatoire au plus tard le **20 mai 2026** et affiché sur l'annonce, et impose un **SIRET** à tout loueur de meublé de tourisme. Une **résidence principale** ne peut être louée plus de **120 nuitées par an**.\n\nLe marché lorientais combinant balnéaire (Larmor-Plage, rade) et demande d'affaires (port de pêche de Keroman, Naval Group), la pression locative existe : il est prudent de **vérifier en mairie** qu'aucune autorisation de changement d'usage n'a été instaurée depuis, notamment pour une résidence secondaire.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Due par nuit et par voyageur, son montant dépend du classement du meublé. Estimez-la avec le calculateur avant de publier vos tarifs.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 44,
+      pricePerNight: 80,
+      neighborhood: 'le centre-ville',
+      revenuBrut: 17500,
+      commissionRate: 0.20,
+      menageCount: 48,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique à Lorient en 2026 ?",
+        a: "Lorient relève à ce jour du régime national de droit commun, sans quota local spécifique identifié. Le cadre national s'applique : numéro d'enregistrement à 13 chiffres obligatoire au plus tard le 20 mai 2026 et affiché sur l'annonce, SIRET requis pour tout loueur de meublé, et plafond de 120 nuitées par an pour une résidence principale. La pression locative existant sur le pays de Lorient, vérifiez en mairie qu'aucune autorisation de changement d'usage n'a été instaurée avant d'investir, en particulier pour une résidence secondaire.",
+      },
+      {
+        q: "Le Festival Interceltique change-t-il la stratégie de location à Lorient ?",
+        a: "Oui, c'est l'événement clé du marché. Pendant une dizaine de jours en août, le festival attire plus de 700 000 visiteurs et sature l'hébergement : les tarifs à la nuit peuvent doubler ou tripler. Une bonne conciergerie anticipe en ouvrant les disponibilités tôt, en ajustant les prix au plus haut et en gérant un flux d'arrivées intense. Cette seule période peut représenter une part importante du revenu annuel d'un bien bien placé. C'est aussi un test de la capacité de l'agence à absorber une forte charge sans dégrader l'accueil.",
+      },
+      {
+        q: "Quel quartier choisir pour un Airbnb rentable à Lorient ?",
+        a: "Pour une occupation lissée toute l'année, le centre-ville et Merville captent à la fois les touristes et la clientèle d'affaires, à pied de la gare et des commerces. Le secteur de la Base et de Keroman monte en puissance grâce à la voile et à la course au large. Pour un meilleur rendement brut avec un budget plus contenu, Kerentrech, la Nouvelle Ville et surtout Lanester offrent des tickets d'achat plus accessibles. Larmor-Plage vise une clientèle vacances haut de gamme mais avec une saisonnalité plus marquée.",
+      },
+    ],
+    updatedAt: '2026-05-27',
+  },
+  // ==========================================================================
+  // PAU (production auto 2026-05-27)
+  // ==========================================================================
+  {
+    slug: 'pau',
+    displayName: 'Pau',
+    region: 'Nouvelle-Aquitaine',
+    regionSlug: 'nouvelle-aquitaine',
+    title: 'Conciergerie Pau Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Pau Airbnb : comparatif 2026 (avis & tarifs)',
+    metaDescription:
+      "Comparatif neutre des 6 meilleures conciergeries Airbnb de Pau. Tarifs (15-27 %), avis Google, réglementation 2026, quartiers rentables. Guide complet Béarn.",
+    kwPrincipal: 'conciergerie pau',
+    kwSecondaires: [
+      'conciergerie airbnb pau',
+      'conciergerie pau airbnb',
+      'meilleure conciergerie pau',
+      'gestion locative pau',
+      'conciergerie béarn',
+    ],
+    population: 80000,
+    tourists: 600000,
+    activeListings: 800,
+    priceLow: 60,
+    priceHigh: 100,
+    occupancyRate: 58,
+    revpar: 48,
+    seasonality: "Demande lissée par le tourisme d'affaires et les étudiants (université de Pau et des Pays de l'Adour). Pic au Grand Prix de Pau (mai, course automobile historique en plein centre-ville). Demande hivernale soutenue par la proximité des stations de ski béarnaises (Gourette, Artouze) et le rôle de porte des Pyrénées. Été plus calme en ville, compensé par les excursions montagne.",
+    rankNational: 28,
+    introCustom:
+      "Vous louez un appartement à Pau sur Airbnb, ou vous étudiez la ville pour investir, séduit par des prix d'achat encore raisonnables et un cadre de vie reconnu. Le marché palois a un atout sous-estimé : il n'est pas soumis au tour de vis « anti-Airbnb » qui frappe le Pays basque voisin, ce qui en fait l'un des marchés les plus accessibles du Sud-Ouest.\n\nReste à bien gérer, entre la demande d'affaires en semaine, les étudiants et les pics d'événements comme le Grand Prix. J'ai comparé les conciergeries actives sur Pau et le Béarn à partir de leurs avis Google et de leurs commissions affichées. Les tarifs vont de 15 % à 27 %, et le choix de l'agence pèse directement sur votre rentabilité.",
+    marketIntro:
+      "Pau, environ **80 000 habitants** et cœur d'une agglomération de plus de **200 000 habitants**, est la capitale du Béarn et l'une des **portes des Pyrénées**. La ville cultive un **héritage de villégiature Belle Époque** (villas anglo-basques, Boulevard des Pyrénées avec sa vue panoramique sur la chaîne) hérité de la clientèle britannique et américaine du XIXe siècle.\n\nLe marché LCD y est porté par un mélange équilibré : **tourisme d'affaires**, **université** (UPPA), événements comme le **Grand Prix de Pau** en mai, et une fonction de **camp de base vers les stations de ski** béarnaises l'hiver. Le château d'Henri IV et le centre historique attirent une clientèle culturelle toute l'année. Surtout, contrairement à Bayonne ou Biarritz, Pau est restée **à l'écart des restrictions du Pays basque**, ce qui maintient des prix d'achat accessibles et une réglementation souple, deux atouts rares dans le Sud-Ouest pour un investissement courte durée.",
+    conciergeries: [
+      {
+        name: 'Home Invest 64',
+        commission: '20 % TTC',
+        menage: 'variable',
+        rating: 4.5,
+        reviews: 51,
+        biensGeres: 90,
+        specialty: 'Gestion + accompagnement investissement',
+        description:
+          "Home Invest 64 est l'un des acteurs les plus établis de Pau en volume d'avis (4,5/5 sur une cinquantaine d'avis Google) et combine conciergerie et accompagnement à l'investissement immobilier. Commission de 20 % TTC, dans la moyenne du marché. Ce double positionnement est intéressant si vous achetez pour louer : la même équipe peut vous aider à choisir le bien puis à le gérer. Attention toutefois à bien distinguer les deux prestations et leurs coûts respectifs. Pour la partie conciergerie, demandez le détail des services inclus dans les 20 %, la façon dont le ménage est facturé et une simulation de revenu net sur votre logement. Un volume d'avis correct et une note solide en font un point de comparaison fiable face aux structures plus petites mais moins éprouvées.",
+      },
+      {
+        name: 'Helpy Conciergerie',
+        commission: '23 % TTC',
+        menage: 'variable',
+        rating: 4.5,
+        reviews: 32,
+        biensGeres: 60,
+        specialty: 'Gestion complète Béarn',
+        description:
+          "Helpy Conciergerie propose une gestion complète sur Pau et le Béarn, notée 4,5/5 sur une trentaine d'avis Google, avec une commission de 23 % TTC, un cran au-dessus de la moyenne. Le profil est celui d'une conciergerie full service classique : annonce, accueil, ménage, assistance voyageurs. Pour justifier la commission, demandez ce qui distingue son offre (pricing dynamique, photos professionnelles, reporting détaillé) et comparez le coût total, ménage compris, avec les acteurs à 20 %. Sur un marché palois où l'occupation est lissée mais pas explosive, chaque point de commission compte pour la rentabilité. Vérifiez aussi la couverture précise sur votre quartier et la réactivité de l'équipe, en lisant en priorité les éventuels avis négatifs publiés.",
+      },
+      {
+        name: 'Niles Conciergerie',
+        commission: '15-21 % TTC',
+        menage: 'variable',
+        rating: 4.6,
+        reviews: 18,
+        biensGeres: 40,
+        specialty: 'Commission modulable',
+        description:
+          "Niles Conciergerie a l'avantage d'une grille modulable, de 15 % à 21 % TTC selon le niveau de service, et d'une note Google de 4,6/5. Cette souplesse permet d'ajuster le coût à vos besoins : déléguer seulement l'accueil et le ménage, ou confier la gestion complète avec optimisation des tarifs. Pour un propriétaire un peu autonome, le palier bas peut représenter une vraie économie par rapport aux agences à commission fixe élevée. Demandez précisément ce que couvre chaque palier et faites une simulation pour la formule qui vous correspond. Le volume d'avis reste modéré : recoupez avec des références locales et vérifiez l'ancienneté de l'équipe sur Pau ainsi que sa connaissance des spécificités de la demande (affaires, étudiants, événements).",
+      },
+      {
+        name: 'ONLOC',
+        commission: '23-27 % TTC',
+        menage: 'variable',
+        rating: 4.8,
+        reviews: 13,
+        biensGeres: 30,
+        specialty: 'Service premium',
+        description:
+          "ONLOC affiche une note Google élevée (4,8/5) et un positionnement premium, avec une commission comprise entre 23 et 27 % TTC, dans le haut du marché palois. Ce type d'offre vise les propriétaires qui veulent un service très complet et soigné, sans rien gérer eux-mêmes. La commission haute n'a de sens que si elle s'accompagne d'une vraie optimisation du revenu : demandez des exemples concrets de gains obtenus sur des biens comparables, le détail des prestations couvertes par la fourchette haute et le mode de facturation du ménage. Le nombre d'avis reste limité, donc le signal qualitatif, bien que bon, est à confirmer par des références. Comparez le coût total avec les acteurs à 20 % pour vérifier que le premium se justifie sur votre bien.",
+      },
+      {
+        name: 'Myra Conciergerie',
+        commission: '24 % TTC',
+        menage: 'variable',
+        rating: 4.6,
+        reviews: 11,
+        biensGeres: 30,
+        specialty: 'Accompagnement personnalisé',
+        description:
+          "Myra Conciergerie mise sur un accompagnement personnalisé, avec une note Google de 4,6/5 et une commission de 24 % TTC. Le profil est celui d'une structure à taille humaine, qui privilégie la relation directe avec le propriétaire et un suivi attentif de chaque bien. Pour qui valorise la proximité et un interlocuteur unique, c'est un argument réel. La commission étant dans le haut du marché, demandez le détail des services inclus, la façon dont le ménage est traité et un exemple de reporting mensuel. Le volume d'avis reste faible : prenez le temps d'échanger avec des propriétaires déjà clients et vérifiez la capacité de l'équipe à couvrir votre secteur et à gérer les pics d'événements comme le Grand Prix de Pau.",
+      },
+      {
+        name: 'La Conciergerie Paloise',
+        commission: '20 % TTC',
+        menage: 'variable',
+        rating: 5.0,
+        reviews: 11,
+        biensGeres: 30,
+        specialty: 'Spécialiste local palois',
+        description:
+          "La Conciergerie Paloise revendique un ancrage 100 % local et affiche une note Google de 5/5, avec une commission de 20 % TTC, dans la moyenne du marché. L'argument central est la connaissance fine de Pau : quartiers, artisans, réglementation locale (l'agence publie d'ailleurs du contenu sur les règles de location courte durée à Pau). Pour un propriétaire palois, ce type d'acteur de proximité a un intérêt évident en cas d'incident ou de besoin d'intervention rapide. La note maximale repose sur un nombre d'avis encore modeste : un bon signal, à confirmer par des références concrètes. Demandez le périmètre exact des 20 %, le mode de facturation du ménage et le nombre de biens gérés dans la ville. À commission équivalente, l'ancrage local peut faire pencher la balance.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre historique / Château',
+        pricePerNight: '65-100 €',
+        occupancy: 60,
+        description:
+          "Le cœur touristique autour du château d'Henri IV, du Boulevard des Pyrénées et de sa vue panoramique sur la chaîne. Vieille ville piétonne, commerces, musées. C'est le secteur le plus recherché pour un Airbnb « tout à pied », avec une occupation soutenue toute l'année par la clientèle culturelle et d'affaires.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Trespoëy',
+        pricePerNight: '80-130 €',
+        occupancy: 56,
+        description:
+          "Le quartier le plus chic de Pau, à l'est, avec ses villas anglo-basques héritées de la villégiature Belle Époque et des prix dépassant 3 000 €/m². Clientèle haut de gamme, tarifs à la nuit élevés, mais tickets d'achat importants : un rendement brut plus serré, compensé par une forte valorisation patrimoniale.",
+        roiBrut: '3 à 4 %',
+      },
+      {
+        name: 'Le Hédas',
+        pricePerNight: '60-95 €',
+        occupancy: 58,
+        description:
+          "Le plus ancien quartier de Pau, dans le vallon en contrebas de la vieille ville, réaménagé et animé par ses bars et restaurants. Ambiance authentique qui plaît aux courts séjours. Proche de tout à pied, c'est un secteur prisé pour un Airbnb de caractère à tarif raisonnable.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Quartier de la Gare / rive gauche',
+        pricePerNight: '55-85 €',
+        occupancy: 58,
+        description:
+          "Autour de la gare (accès TGV) et de la rive gauche du Gave, dont le secteur de la Croix du Prince. Prix d'achat plus accessibles, demande pratique pour les voyageurs en transit et en déplacement professionnel. Bon compromis entre coût d'entrée et occupation régulière.",
+        roiBrut: '6 %',
+      },
+      {
+        name: 'Saragosse / Université',
+        pricePerNight: '50-80 €',
+        occupancy: 56,
+        description:
+          "Secteurs proches du campus de l'UPPA, où les tickets d'achat sont les plus bas de la ville. Forte demande étudiante et de moyenne durée. Stratégie intéressante : mixer courte durée pendant les événements et l'été avec des locations plus longues le reste de l'année pour sécuriser le rendement.",
+        roiBrut: '6 à 7 %',
+      },
+    ],
+    regulation:
+      "Bonne nouvelle pour les investisseurs : **Pau n'est pas soumise au régime « anti-Airbnb » du Pays basque**. Le durcissement validé en justice (changement d'usage avec compensation) concerne la Communauté d'agglomération Pays basque (Bayonne, Biarritz…), pas l'agglomération Pau Béarn Pyrénées, restée bien plus accessible.\n\nLe cadre national s'applique malgré tout. La **loi Le Meur** rend le **numéro d'enregistrement à 13 chiffres** obligatoire au plus tard le **20 mai 2026**, à afficher sur chaque annonce, et impose désormais un **SIRET** à tout loueur de meublé. Une **résidence principale** reste plafonnée à **120 nuitées par an**.\n\nPau pouvant faire évoluer ses règles, **confirmez en mairie** l'absence d'autorisation de changement d'usage avant d'investir, en particulier sur des quartiers prisés comme l'hypercentre ou Trespoëy.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Perçue par nuit et par voyageur selon le classement du logement, elle s'estime en quelques secondes avec le calculateur.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 70,
+      neighborhood: 'le centre historique',
+      revenuBrut: 14800,
+      commissionRate: 0.20,
+      menageCount: 48,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique à Pau en 2026 ?",
+        a: "Contrairement au Pays basque voisin (Bayonne, Biarritz), qui a instauré un régime de changement d'usage avec compensation, Pau et l'agglomération Pau Béarn Pyrénées relèvent du régime national de droit commun, bien plus souple. Le cadre national s'applique : numéro d'enregistrement à 13 chiffres obligatoire au plus tard le 20 mai 2026 et affiché sur l'annonce, SIRET requis pour tout loueur de meublé, plafond de 120 nuitées par an pour une résidence principale. Par prudence, confirmez en mairie l'absence d'autorisation de changement d'usage avant d'investir.",
+      },
+      {
+        q: "Pourquoi Pau est-elle considérée comme un marché accessible ?",
+        a: "Pour deux raisons. D'abord les prix d'achat, nettement inférieurs à ceux du littoral basque ou des grandes métropoles du Sud-Ouest, ce qui améliore mécaniquement le rendement. Ensuite la réglementation : Pau est restée à l'écart des restrictions « anti-Airbnb » qui frappent le Pays basque, où le changement d'usage avec compensation rend désormais l'investissement courte durée très difficile. Cette combinaison de prix bas et de règles souples est rare dans la région et fait de Pau une alternative crédible pour un projet LCD.",
+      },
+      {
+        q: "La demande à Pau est-elle suffisante toute l'année ?",
+        a: "Elle est surtout régulière, plus que spectaculaire. Le tourisme d'affaires, l'université (UPPA) et la fonction de porte des Pyrénées soutiennent l'occupation en semaine et l'hiver, tandis que le château, le centre historique et des événements comme le Grand Prix de Pau en mai apportent des pics. L'été en ville est plus calme, mais compensé par les excursions vers la montagne. Une conciergerie qui sait cibler la clientèle d'affaires en semaine et les week-ends culturels tient une occupation correcte sur l'année.",
+      },
+    ],
+    updatedAt: '2026-05-27',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

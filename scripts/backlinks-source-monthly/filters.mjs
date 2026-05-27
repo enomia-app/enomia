@@ -1,6 +1,8 @@
 // scripts/backlinks-source-monthly/filters.mjs
 // Filtres + détection outils + détection conciergerie. Pipeline v2.1.
 
+import { resolveMx } from 'node:dns/promises';
+
 // ─── BLACKLIST ──────────────────────────────────────────────────────────
 // Domaines à exclure : trop gros (DR>70 généralement), concurrents directs Enomia,
 // sociaux/marketplaces, sites institutionnels (qui ne linkeront pas vers un outil tiers).
@@ -262,6 +264,33 @@ export function isPitchableEmail(email, siteDomain) {
   return true;
 }
 
+// ─── DNS MX LOOKUP (vérif domaine email avant pitch) ────────────────────
+// Vérifie qu'un domaine a au moins 1 enregistrement MX (= peut recevoir des mails).
+// Gratuit, ~50-300ms par domaine (timeout 5s). Cache mémoire intra-run.
+// Capture les sous-domaines orphelins (test.*, dev.*) qui n'ont pas de MX.
+
+const mxCache = new Map();
+
+export async function hasValidMX(domain) {
+  if (!domain) return false;
+  const clean = domain.toLowerCase().replace(/^www\./, '');
+  if (mxCache.has(clean)) return mxCache.get(clean);
+
+  try {
+    const records = await Promise.race([
+      resolveMx(clean),
+      new Promise((_, rej) => setTimeout(() => rej(new Error('mx timeout')), 5000)),
+    ]);
+    const ok = Array.isArray(records) && records.length > 0;
+    mxCache.set(clean, ok);
+    return ok;
+  } catch (e) {
+    // ENODATA, ENOTFOUND, ESERVFAIL, timeout → considéré comme sans MX
+    mxCache.set(clean, false);
+    return false;
+  }
+}
+
 // ─── HELPERS ────────────────────────────────────────────────────────────
 
 export function extractDomain(url) {
@@ -411,8 +440,6 @@ export async function extractContact(url) {
     .map(e => ({ email: e, score: scoreEmail(e) }))
     .sort((a, b) => b.score - a.score);
 
-  const email = candidates.length > 0 ? candidates[0].email : null;
-
   // URL de formulaire (fallback si pas d'email)
   const contactMatch = html.match(/href="(\/?contact[^"]*|\/?a-propos[^"]*|\/?equipe[^"]*|\/?about[^"]*)"/i);
   let url_formulaire = null;
@@ -421,5 +448,15 @@ export async function extractContact(url) {
     url_formulaire = p.startsWith('http') ? p : `https://${domain}${p.startsWith('/') ? '' : '/'}${p}`;
   }
 
-  return { email, url_formulaire };
+  // Vérif MX : on parcourt les candidats par score décroissant, on garde
+  // le premier dont le domaine email a un serveur MX. Élimine les sous-domaines
+  // orphelins (test.*, dev.*) et les domaines morts.
+  for (const cand of candidates) {
+    const emailDomain = cand.email.split('@')[1];
+    if (await hasValidMX(emailDomain)) {
+      return { email: cand.email, url_formulaire };
+    }
+  }
+
+  return { email: null, url_formulaire };
 }

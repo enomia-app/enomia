@@ -192,6 +192,76 @@ export function detectBlog(url, html) {
   return false; // par défaut : pas blog (conservateur)
 }
 
+// ─── QUALIFICATION EMAIL EXTRAIT ────────────────────────────────────────
+// Évite de pitcher des adresses "fonction" (signalement, abuse, noreply…) qui
+// rejettent systématiquement, ou des emails de staging/dev mal indexés.
+
+// Local-parts (avant @) qui ne sont JAMAIS un contact pertinent
+const BAD_EMAIL_LOCAL_PARTS = new Set([
+  // anti-fraude / abus
+  'signalement', 'signalements', 'abuse', 'abus', 'fraud', 'fraude',
+  // auto-replies / pas de réponse
+  'noreply', 'no-reply', 'donotreply', 'do-not-reply', 'donot-reply',
+  'ne-pas-repondre', 'nepasrepondre', 'nepas-repondre', 'pasdereponse',
+  'postmaster', 'mailer-daemon', 'mailerdaemon', 'daemon',
+  // légal / RGPD / juridique
+  'rgpd', 'gdpr', 'dpo', 'privacy', 'confidentialite', 'legal',
+  // press / recrutement / fonctions internes
+  'press', 'presse', 'media', 'medias', 'rp',
+  'recrutement', 'recrutements', 'jobs', 'careers', 'hr', 'rh',
+  'comptabilite', 'compta', 'finance', 'paie',
+  // marketing automation / listes
+  'newsletter', 'newsletters', 'notification', 'notifications',
+  'alert', 'alerts', 'alerte', 'alertes', 'list', 'lists',
+  'unsubscribe', 'desabonnement', 'opt-out', 'optout',
+  'spam', 'junk',
+]);
+
+// Hostnames manifestement non-prod
+const BAD_EMAIL_HOSTNAME_PATTERNS = [
+  /^test\./i, /\.test\./i,
+  /^staging\./i, /\.staging\./i,
+  /^dev\./i, /\.dev\./i,
+  /^localhost/i, /\.local$/i, /\.localhost$/i,
+  /example\.(com|org|net|fr)$/i,
+  /domain\.(com|tld)$/i,
+  /\.invalid$/i,
+];
+
+/**
+ * Vérifie qu'un email candidat est utilisable pour un pitch.
+ * Retourne true si OK, false sinon (et un log de la raison).
+ */
+export function isPitchableEmail(email, siteDomain) {
+  if (!email || typeof email !== 'string') return false;
+  if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) return false;
+
+  const [localPart, hostname] = email.toLowerCase().split('@');
+  if (!localPart || !hostname) return false;
+
+  // 1. Local-part fonction → skip
+  if (BAD_EMAIL_LOCAL_PARTS.has(localPart)) return false;
+  // Variantes avec séparateurs (signalement-fraude@, abuse-report@…)
+  const localRoot = localPart.split(/[-_.]/)[0];
+  if (BAD_EMAIL_LOCAL_PARTS.has(localRoot)) return false;
+
+  // 2. Hostname suspect (test., staging., dev., .local, etc.)
+  if (BAD_EMAIL_HOSTNAME_PATTERNS.some(p => p.test(hostname))) return false;
+
+  // 3. Sanity check : pas un placeholder évident ("votre-email", "your-name", etc.)
+  // On garde admin@/root@ comme acceptables (sur petits blogs c'est parfois le fondateur).
+  if (['user', 'username', 'name', 'votre', 'your', 'monemail', 'exemple', 'example'].includes(localPart)) return false;
+
+  // 4. Si siteDomain fourni, l'email DOIT être sur ce domaine ou sous-domaine.
+  // Évite d'extraire un email random d'un blog tiers cité dans la page.
+  if (siteDomain) {
+    const cleanSite = siteDomain.replace(/^www\./, '').toLowerCase();
+    if (hostname !== cleanSite && !hostname.endsWith('.' + cleanSite)) return false;
+  }
+
+  return true;
+}
+
 // ─── HELPERS ────────────────────────────────────────────────────────────
 
 export function extractDomain(url) {
@@ -294,16 +364,56 @@ export async function detectAll(pageUrl, domain) {
 }
 
 /**
- * Tente d'extraire un email visible sur la page (mailto: ou texte).
+ * Score une adresse email candidate : plus haut = meilleur contact.
+ * Préfère contact@, redaction@, prénom@ ; pénalise admin@, info@ (catchall fréquent).
+ */
+function scoreEmail(email) {
+  const local = email.toLowerCase().split('@')[0];
+  // Meilleures adresses humaines
+  if (['contact', 'bonjour', 'hello', 'hi', 'salut'].includes(local)) return 100;
+  if (['redaction', 'rédaction', 'editorial', 'editor'].includes(local)) return 95;
+  // Probable prénom (lettres uniquement, longueur raisonnable)
+  if (/^[a-zà-ÿ]{3,15}$/i.test(local)) return 85;
+  // prenom.nom@ ou prenom-nom@ → bon signal humain
+  if (/^[a-zà-ÿ]{2,}[._-][a-zà-ÿ]{2,}$/i.test(local)) return 80;
+  // info@, hello@ generic
+  if (['info', 'infos', 'mail', 'email'].includes(local)) return 60;
+  // admin@, support@, webmaster@ → souvent catchall mais peut marcher
+  if (['admin', 'support', 'webmaster', 'sales', 'service'].includes(local)) return 40;
+  // par défaut
+  return 50;
+}
+
+/**
+ * Tente d'extraire un email visible sur la page (mailto: ou texte brut).
+ * Récupère TOUS les emails, filtre les "fonction"/staging via isPitchableEmail,
+ * et garde le mieux scoré.
  */
 export async function extractContact(url) {
   const html = await fetchHtml(url);
   if (!html) return { email: null, url_formulaire: null };
 
-  const mailtoMatch = html.match(/mailto:([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
-  const email = mailtoMatch ? mailtoMatch[1] : null;
-
   const domain = extractDomain(url);
+
+  // Collecte tous les emails (mailto: + texte brut)
+  const found = new Set();
+  const mailtoRe = /mailto:([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/gi;
+  let m;
+  while ((m = mailtoRe.exec(html))) found.add(m[1].toLowerCase());
+
+  // Texte brut : on cherche aussi (mais souvent obfusqué, donc bonus si mailto: existe)
+  const textRe = /\b([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})\b/gi;
+  while ((m = textRe.exec(html))) found.add(m[1].toLowerCase());
+
+  // Filtre + score
+  const candidates = Array.from(found)
+    .filter(e => isPitchableEmail(e, domain))
+    .map(e => ({ email: e, score: scoreEmail(e) }))
+    .sort((a, b) => b.score - a.score);
+
+  const email = candidates.length > 0 ? candidates[0].email : null;
+
+  // URL de formulaire (fallback si pas d'email)
   const contactMatch = html.match(/href="(\/?contact[^"]*|\/?a-propos[^"]*|\/?equipe[^"]*|\/?about[^"]*)"/i);
   let url_formulaire = null;
   if (contactMatch && domain) {

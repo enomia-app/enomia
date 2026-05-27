@@ -189,9 +189,59 @@ Sortir un récap :
 - Schema injecté (Article + Person + FAQ) — pas d'AggregateRating, retiré depuis warnings GSC
 - URL preview locale (`http://localhost:4321/blog/<slug>` ou `/<slug>`)
 
+## ⚠️ Chiffres tiers vérifiables (anti-hallucination — règle critique)
+
+**Contexte** : un audit du 2026-05-27 a révélé que les notes Google, nombres d'avis et "biens gérés" pour 5 des 7 conciergeries Lyon dans `cities.ts` étaient inventés ou copiés depuis des comparatifs concurrents qui se copient entre eux. Risque réputationnel direct sur le positionnement "comparatif neutre, données vérifiables" + Google qui pénalise les faits invérifiables.
+
+**Règle absolue** : pour toute donnée chiffrée concernant un tiers (note Google, nombre d'avis Google/Trustpilot, biens gérés, ancienneté, effectif, CA…) dans `cities.ts`, `cities-rentabilite.ts`, ou tout article comparant des entreprises :
+
+1. **Source publique vérifiable obligatoire** avant d'écrire :
+   - Note + nombre d'avis : fiche **Google Business** publique (panel knowledge à droite des SERP) — vérifiée à la date du jour
+   - Si pas de fiche Google Business locale (cas des réseaux nationaux : Hostnfly, Welkeys, GuestReady) → utiliser **Trustpilot** ou **note Google nationale** et **mentionner explicitement "national"** dans la description
+   - Biens gérés : **uniquement** si publié sur leur site officiel ou communiqué de presse — sinon mettre `0` (le template affichera "n.c.") OU préciser que c'est une estimation dans la description
+   - Ancienneté/fondation : Sirene/Pappers/site officiel "About"
+
+2. **Interdictions** :
+   - ❌ Ne PAS copier les chiffres depuis des comparatifs concurrents (liwango, toploc, guestready blog, etc.) — ils se copient entre eux et l'IA ne lit pas la fiche Google réelle
+   - ❌ Ne PAS générer un chiffre "plausible" (ex : "180 biens gérés" parce que ça sonne bien)
+   - ❌ Ne PAS afficher `5.0 ★ sur 65 avis` — statistiquement quasi impossible. Un 5.0 ne peut tenir que sur < 25 avis. Au-delà, c'est forcément 4.7-4.9. Si tu vois ça dans une source, **suspicion** — c'est inventé.
+
+3. **Procédure quand la fiche Google n'est pas accessible (WebFetch bloqué sur Google Maps)** :
+   - Demander à Marc de checker manuellement la fiche Google
+   - OU lancer le script Google Places API (à créer : `scripts/refresh-conciergeries-google.mjs`) qui appelle Find Place + Place Details et met à jour `cities.ts` automatiquement (coût ~$0.034/lieu, gratuit grâce au crédit $200/mois Google Maps Platform)
+   - OU **retirer** la conciergerie du comparatif si la source est trop fragile
+
+4. **Mention dans le template** : sur les pages programmatic (conciergerie + rentabilité), afficher systématiquement `« Données vérifiées le DD/MM/YYYY »` près du tableau. Le champ `updatedAt` doit refléter la **dernière vérification réelle** (pas juste la date d'édition cosmétique).
+
+5. **Schema JSON-LD** : ne JAMAIS injecter `AggregateRating` avec `reviewCount: 0` ou `ratingValue: 0` — Google rejette ces schemas et peut désindexer la page. Le template `[ville].astro` conditionne déjà l'injection sur `rating > 0 && reviews > 0` depuis le 2026-05-27.
+
+6. **Pour les nouvelles villes** : avant publication, audit obligatoire ligne par ligne. Convention : `0/0/0` pour rating/reviews/biensGeres = "non vérifié publiquement, à compléter via Places API" — le template gère gracieusement avec "n.c."
+
+7. **🚨 Règle d'or : JAMAIS de chiffres dans les descriptions textuelles**
+
+   Une description (`description: "..."`) est du **texte libre**. Si on y écrit "Note Google 4,5/5 sur 195 avis", ce chiffre est **figé dans le texte** : un refresh Places API met à jour `rating`/`reviews` (champs structurés affichés dans le tableau + meta de card) mais **pas le texte**. Résultat : le tableau affiche `n.c.` ou `4.6/359` pendant que le paragraphe sous la card dit encore `4,5/5 sur 195 avis`. Incohérence visible sur la même page → décrédibilise tout le « comparatif vérifié ».
+
+   **Ce qui va dans `description` (texte libre)** :
+   - Positionnement (premium, low-cost, indé, réseau national…)
+   - Spécialité (cible clientèle, types de biens, méthodologie)
+   - Services concrets (channel manager, serrures connectées, photos pro…)
+   - Zone d'intervention géographique
+   - Anecdote / différenciant qualitatif
+   - Limites / risques (volume faible, jeune structure, etc.) **sans citer le chiffre**
+
+   **Ce qui ne va JAMAIS dans `description`** :
+   - ❌ `4,5/5`, `4.5/5`, etc. → reste dans `rating`
+   - ❌ `sur 195 avis`, `~150 avis`, `2 146 avis Trustpilot` → reste dans `reviews`
+   - ❌ `Note Google ...`, `Note Trustpilot ...`, `Fiche Google Business ...` → information dérivable de `rating`/`reviews`
+   - ❌ Toute mention chiffrée d'évaluation publique d'un tiers
+
+   **Pourquoi cette règle est dure** : un cleanup massif a été nécessaire le 2026-05-27 (156 descriptions sur 290 conciergeries contenaient des chiffres désynchronisés après refresh Places API). Le script `scripts/clean-conciergerie-descriptions.mjs` peut être relancé si la règle est à nouveau violée, mais c'est de la dette inutile.
+
+   **Script disponible** : `node scripts/clean-conciergerie-descriptions.mjs --dry-run` pour auditer / `--apply` pour nettoyer. Le script supprime toute phrase contenant `\d+[,.]\d+/5`, `sur N avis`, `Note Google`, `Note Trustpilot`, `Fiche Google`.
+
 ## Règles dures (à ne jamais violer)
 
-- **Pas de mock / pas de chiffres inventés** — si data manque, dire "à compléter" plutôt qu'inventer
+- **Pas de mock / pas de chiffres inventés** — si data manque, dire "à compléter" plutôt qu'inventer. **Spécifiquement pour les chiffres tiers vérifiables (notes, avis, biens gérés) : voir section "Chiffres tiers vérifiables" ci-dessus — règle absolue, ZÉRO tolérance.**
 - **Pas plus de 5 publications/jour** (toutes pages confondues : blog + conciergerie + rentabilité ville)
 - **⚠️ Workflow blog : Claude écrit en `status: brouillon`, Marc passe en `en-ligne` lui-même via Keystatic UI** après relecture. Ne JAMAIS écrire `status: en-ligne` dans le frontmatter — c'est Marc qui clique. Workflow concret : (1) Claude crée l'article `.mdoc` avec `status: brouillon` (2) commit + push branche feature (3) merge sur main (4) Marc voit l'article dans Keystatic prod en brouillon (5) Marc clique "En ligne" → Keystatic crée un commit auto qui change le status.
 - **Refresh manuel** d'un article existant : update SEULEMENT `updatedAt`, ne pas toucher au status.

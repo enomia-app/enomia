@@ -61,9 +61,13 @@ const sortedConc = [...c.conciergeries].sort(
   (a, b) => b.rating * Math.log(b.reviews + 1) - a.rating * Math.log(a.reviews + 1)
 );
 
-// Compute weighted aggregate rating across all conciergeries in this city
-const totalReviews = sortedConc.reduce((s, cc) => s + cc.reviews, 0);
-const weightedRating = sortedConc.reduce((s, cc) => s + cc.rating * cc.reviews, 0) / totalReviews;
+// Compute weighted aggregate rating across conciergeries with verified reviews only
+const ratedConc = sortedConc.filter((cc) => cc.reviews > 0 && cc.rating > 0);
+const totalReviews = ratedConc.reduce((s, cc) => s + cc.reviews, 0);
+const weightedRating =
+  totalReviews > 0
+    ? ratedConc.reduce((s, cc) => s + cc.rating * cc.reviews, 0) / totalReviews
+    : 0;
 
 // Average commission used in FAQ and aggregateRating
 const avgCommission = Math.round(
@@ -113,6 +117,7 @@ const reviewLd = {
 };
 
 // JSON-LD: ItemList of the reviewed conciergeries
+// aggregateRating is only emitted when we have verified rating + reviews — Google rejects 0-review schemas.
 const itemListLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -127,13 +132,17 @@ const itemListLd = {
       description: conc.specialty,
       url: conc.url ?? canonical,
       areaServed: c.displayName,
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: conc.rating.toFixed(1),
-        reviewCount: conc.reviews,
-        bestRating: 5,
-        worstRating: 1,
-      },
+      ...(conc.rating > 0 && conc.reviews > 0
+        ? {
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: conc.rating.toFixed(1),
+              reviewCount: conc.reviews,
+              bestRating: 5,
+              worstRating: 1,
+            },
+          }
+        : {}),
     },
   })),
 };
@@ -317,9 +326,11 @@ const faqLd = {
         <li>
           Commission moyenne à <strong>{c.displayName}</strong> : <strong>{avgCommission} %</strong> HT hors ménage
         </li>
-        <li>
-          Note moyenne des conciergeries : <strong>{weightedRating.toFixed(1)} ★ / 5</strong> sur {totalReviews.toLocaleString('fr-FR')} avis Google
-        </li>
+        {totalReviews > 0 && (
+          <li>
+            Note moyenne pondérée : <strong>{weightedRating.toFixed(1)} ★ / 5</strong> sur {totalReviews.toLocaleString('fr-FR')} avis Google vérifiés
+          </li>
+        )}
         <li>
           Taux d'occupation moyen : <strong>{c.occupancyRate} %</strong> · Prix moyen /nuit :
           <strong>
@@ -427,7 +438,7 @@ const faqLd = {
                 <th>Ménage</th>
                 <th>Note</th>
                 <th>Avis</th>
-                <th>Biens</th>
+                <th>Biens (estim.)</th>
                 <th>Spécialité</th>
               </tr>
             </thead>
@@ -437,9 +448,13 @@ const faqLd = {
                   <td><strong>{conc.name}</strong></td>
                   <td>{conc.commission}</td>
                   <td>{conc.menage}</td>
-                  <td><span class="rating">{conc.rating.toFixed(1)} ★</span></td>
-                  <td>{conc.reviews}</td>
-                  <td>~{conc.biensGeres}</td>
+                  <td>
+                    {conc.rating > 0 && conc.reviews > 0
+                      ? <span class="rating">{conc.rating.toFixed(1)} ★</span>
+                      : <span style="color:#8a8985;">n.c.</span>}
+                  </td>
+                  <td>{conc.reviews > 0 ? conc.reviews : <span style="color:#8a8985;">n.c.</span>}</td>
+                  <td>{conc.biensGeres > 0 ? `~${conc.biensGeres}` : <span style="color:#8a8985;">n.c.</span>}</td>
                   <td>{conc.specialty}</td>
                 </tr>
               ))}
@@ -448,6 +463,9 @@ const faqLd = {
         </div>
         <div class="comp-fade" aria-hidden="true"></div>
         <p class="comp-hint">Glissez horizontalement pour voir toutes les colonnes →</p>
+        <p style="font-size:11px;color:#8a8985;margin-top:10px;font-style:italic;">
+          Données vérifiées le {new Date(c.updatedAt).toLocaleDateString('fr-FR')} sur Google Business public et sites officiels des conciergeries. Le nombre de biens gérés est une estimation. « n.c. » = non communiqué publiquement.
+        </p>
       </div>
 
       {sortedConc.map((conc, i) => (
@@ -456,8 +474,12 @@ const faqLd = {
           <div class="meta">
             <span>Commission : <strong>{conc.commission}</strong></span>
             <span>Ménage : <strong>{conc.menage}</strong></span>
-            <span>Note : <strong>{conc.rating.toFixed(1)} ★ ({conc.reviews} avis)</strong></span>
-            <span>~{conc.biensGeres} biens gérés</span>
+            {conc.rating > 0 && conc.reviews > 0 ? (
+              <span>Note : <strong>{conc.rating.toFixed(1)} ★ ({conc.reviews.toLocaleString('fr-FR')} avis)</strong></span>
+            ) : (
+              <span>Note : <strong style="color:#8a8985;">non communiquée</strong></span>
+            )}
+            {conc.biensGeres > 0 && <span>~{conc.biensGeres} biens gérés (estim.)</span>}
           </div>
           <p>{conc.description}</p>
         </div>
@@ -501,6 +523,15 @@ const faqLd = {
           </div>
         ))}
       </div>
+
+      <p style="font-size:11px;color:#8a8985;margin:-12px 0 24px;font-style:italic;">
+        Sources de référence pour vérifier ces chiffres :{' '}
+        <a href={`https://www.airdna.co/vacation-rental-data/app/fr/default/${c.slug}/overview`} target="_blank" rel="noopener">AirDNA MarketMinder {c.displayName}</a>
+        {' · '}
+        <a href="https://insideairbnb.com/get-the-data/" target="_blank" rel="noopener">Inside Airbnb (open data)</a>
+        {' · '}
+        observations Enomia 2025. Prix et taux d'occupation à comprendre comme des moyennes indicatives — variables selon saison, typologie et standing du bien.
+      </p>
 
       <h2>Et si vous vouliez gérer vous-même votre Airbnb à {c.displayName} ?</h2>
       <p>

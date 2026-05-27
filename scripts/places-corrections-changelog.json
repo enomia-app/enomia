@@ -1,0 +1,3966 @@
+[
+  {
+    "slug": "bordeaux",
+    "conciergerie": "Les Clés d",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 180
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 36
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "bordeaux",
+    "conciergerie": "Cocoonr Bordeaux",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 210
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 54
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "bordeaux",
+    "conciergerie": "YourHostHelper Bordeaux",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 140
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "bordeaux",
+    "conciergerie": "Hôte de Gamme",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 75
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 51
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "bordeaux",
+    "conciergerie": "Mary Poppins",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 120
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 47
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "bordeaux",
+    "conciergerie": "YouNeedMe Bordeaux",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 95
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "bordeaux",
+    "conciergerie": "Ze-Bordeaux",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 60
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "lyon",
+    "conciergerie": "Conciergerie Tête d",
+    "type": "no_change",
+    "target": {
+      "rating": 4.7,
+      "reviews": 56,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "lyon",
+    "conciergerie": "Lulu Conciergerie",
+    "type": "no_change",
+    "target": {
+      "rating": 4.8,
+      "reviews": 53,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "lyon",
+    "conciergerie": "Welkeys Lyon",
+    "type": "no_change",
+    "target": {
+      "rating": 0,
+      "reviews": 0,
+      "reason": "name_mismatch"
+    }
+  },
+  {
+    "slug": "lyon",
+    "conciergerie": "GuestReady Lyon",
+    "type": "no_change",
+    "target": {
+      "rating": 4.6,
+      "reviews": 359,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "lyon",
+    "conciergerie": "Hostnfly Lyon",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 61
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "lyon",
+    "conciergerie": "Conciergerie Shaouch Lyonnais",
+    "type": "no_change",
+    "target": {
+      "rating": 0,
+      "reviews": 0,
+      "reason": "no_match"
+    }
+  },
+  {
+    "slug": "lyon",
+    "conciergerie": "All in Lyon",
+    "type": "no_change",
+    "target": {
+      "rating": 4.4,
+      "reviews": 103,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "nice",
+    "conciergerie": "BnbLord Nice",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 220
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "nice",
+    "conciergerie": "Hostnfly Nice",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 195
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "nice",
+    "conciergerie": "GuestReady Nice",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 160
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "nice",
+    "conciergerie": "Conciergerie Azur",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 85
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 9
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nice",
+    "conciergerie": "Nice Conciergerie Premium",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 60
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "marseille",
+    "conciergerie": "Welkeys Marseille",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 115
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 2159
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "marseille",
+    "conciergerie": "Hostnfly Marseille",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 130
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "marseille",
+    "conciergerie": "Marseille Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 80
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 44
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "marseille",
+    "conciergerie": "BnbLord Marseille",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 95
+    },
+    "to": {
+      "rating": 4.5,
+      "reviews": 11
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "marseille",
+    "conciergerie": "Le Panier Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 55
+    },
+    "to": {
+      "rating": 3.9,
+      "reviews": 9
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "toulouse",
+    "conciergerie": "Hostnfly Toulouse",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 145
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "toulouse",
+    "conciergerie": "Welkeys Toulouse",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 105
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 2159
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "toulouse",
+    "conciergerie": "Toulouse Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 85
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 41
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "toulouse",
+    "conciergerie": "YourHostHelper Toulouse",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 95
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "toulouse",
+    "conciergerie": "Conciergerie Rose",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 60
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "strasbourg",
+    "conciergerie": "La Conciergerie de l",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 85
+    },
+    "to": {
+      "rating": 4.5,
+      "reviews": 46
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "strasbourg",
+    "conciergerie": "Nestify Strasbourg",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 120
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "strasbourg",
+    "conciergerie": "Hostnfly Strasbourg",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 155
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "strasbourg",
+    "conciergerie": "La Conciergerie de Strasbourg",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 70
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "strasbourg",
+    "conciergerie": "WeHost Strasbourg",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 95
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "strasbourg",
+    "conciergerie": "Prost Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 55
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "strasbourg",
+    "conciergerie": "La Conciergerie des Rosiers",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 40
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 7
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "lille",
+    "conciergerie": "BnBeFree Lille",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 95
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 131
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "lille",
+    "conciergerie": "Hostnfly Lille",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 165
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "lille",
+    "conciergerie": "Welkeys Lille",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 125
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 2159
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "lille",
+    "conciergerie": "Conciergerie Magnifique",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 80
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 6
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "lille",
+    "conciergerie": "QELIO Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 70
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 21
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "lille",
+    "conciergerie": "Hôtecœur",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 60
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "lille",
+    "conciergerie": "Conciergerie Lille",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 90
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 14
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "paris",
+    "conciergerie": "Guester",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 320
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 66
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "paris",
+    "conciergerie": "HostnFly",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 3600
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "paris",
+    "conciergerie": "GuestReady",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 280
+    },
+    "to": {
+      "rating": 4.5,
+      "reviews": 1517
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "paris",
+    "conciergerie": "Welkeys",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 850
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 2159
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "paris",
+    "conciergerie": "Tranquille Emile",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 130
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 29
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "paris",
+    "conciergerie": "Check My Guest",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 600
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "paris",
+    "conciergerie": "YourHostHelper Paris",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 210
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "agde",
+    "conciergerie": "HostnFly Cap d",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 4000
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "agde",
+    "conciergerie": "POM Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 45
+    },
+    "to": {
+      "rating": 4.4,
+      "reviews": 19
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "agde",
+    "conciergerie": "FLT Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 30
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 15
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "agde",
+    "conciergerie": "YourHostHelper Agde",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 90
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 6
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "agde",
+    "conciergerie": "Conciergerie du Cap d",
+    "type": "updated",
+    "from": {
+      "rating": 4,
+      "reviews": 34
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 201
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "agde",
+    "conciergerie": "BnB Cap d",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 25
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "les-sables-d-olonne",
+    "conciergerie": "La Clé Chaumoise",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 84
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 94
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "les-sables-d-olonne",
+    "conciergerie": "Simeo Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 43
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 44
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "les-sables-d-olonne",
+    "conciergerie": "On est là pour Toit",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 25
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 16
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "les-sables-d-olonne",
+    "conciergerie": "HostnFly",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 4000
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "les-sables-d-olonne",
+    "conciergerie": "La Petite Conciergerie Vendéenne",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 10
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "les-sables-d-olonne",
+    "conciergerie": "Hôte de Gamme",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 75
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 148
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "cannes",
+    "conciergerie": "YourHostHelper Cannes",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 180
+    },
+    "to": {
+      "rating": 4.5,
+      "reviews": 203
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "cannes",
+    "conciergerie": "Welkeys Cannes",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 210
+    },
+    "to": {
+      "rating": 4.4,
+      "reviews": 19
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "cannes",
+    "conciergerie": "Manasteos Cannes",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 55
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 80
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "cannes",
+    "conciergerie": "BnB Groom Services",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 95
+    },
+    "to": {
+      "rating": 4.2,
+      "reviews": 13
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "cannes",
+    "conciergerie": "HostnFly Cannes",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 140
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "cannes",
+    "conciergerie": "Croceo",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 70
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 10
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "cannes",
+    "conciergerie": "Nestify Cannes",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 85
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "rennes",
+    "conciergerie": "Cocoonr Rennes",
+    "type": "updated",
+    "from": {
+      "rating": 4.2,
+      "reviews": 95
+    },
+    "to": {
+      "rating": 3.8,
+      "reviews": 172
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "rennes",
+    "conciergerie": "Rennes Host",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 42
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "rennes",
+    "conciergerie": "Nooma & Co",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 58
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 9
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "rennes",
+    "conciergerie": "JustUnToit Rennes",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 35
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 34
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "rennes",
+    "conciergerie": "YourHostHelper Rennes",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 48
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "rennes",
+    "conciergerie": "HostnFly Rennes",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 30
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "rennes",
+    "conciergerie": "CheckIn Conciergerie Rennes",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 22
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "rouen",
+    "conciergerie": "Olympe Services",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 32
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 35
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "rouen",
+    "conciergerie": "GMS Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 45
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "rouen",
+    "conciergerie": "YourHostHelper Rouen",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 180
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "rouen",
+    "conciergerie": "Rouen Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 95
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 74
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "rouen",
+    "conciergerie": "Ma Conciergerie en Normandie (MCEN)",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 60
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 19
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "rouen",
+    "conciergerie": "LB Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 40
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 74
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "rouen",
+    "conciergerie": "M&A Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 28
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 9
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "angers",
+    "conciergerie": "2KEYS",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 170
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 29
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "angers",
+    "conciergerie": "Mayordom",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 85
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "angers",
+    "conciergerie": "YourHostHelper Angers",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 180
+    },
+    "to": {
+      "rating": 4.5,
+      "reviews": 203
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "angers",
+    "conciergerie": "LocAndSmile Angers",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 45
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "angers",
+    "conciergerie": "HostnFly Angers",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 120
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "angers",
+    "conciergerie": "Nestify Angers",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 75
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 31
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "angers",
+    "conciergerie": "Welkeys Angers",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 95
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 2159
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "montpellier",
+    "conciergerie": "Groomi",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 80
+    },
+    "to": {
+      "rating": 4.2,
+      "reviews": 84
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "montpellier",
+    "conciergerie": "Welchome34",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 65
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 55
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "montpellier",
+    "conciergerie": "Cynergy",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 103
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "montpellier",
+    "conciergerie": "Occitania Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 55
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "montpellier",
+    "conciergerie": "Halo Butler",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 60
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 49
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "montpellier",
+    "conciergerie": "WeCARE BnB34",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 40
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "montpellier",
+    "conciergerie": "YourHostHelper Montpellier",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 180
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 5
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "la-rochelle",
+    "conciergerie": "ZeRochelle",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 90
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 149
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "la-rochelle",
+    "conciergerie": "La Conciergerie de Lucas",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 55
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "la-rochelle",
+    "conciergerie": "BNB Conciergerie La Rochelle",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 65
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 33
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "la-rochelle",
+    "conciergerie": "HostnFly La Rochelle",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 110
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "la-rochelle",
+    "conciergerie": "Conciergerie BB La Rochelle",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 70
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "la-rochelle",
+    "conciergerie": "Nestify La Rochelle",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 80
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 149
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "cap-d-agde",
+    "conciergerie": "HostnFly Cap d",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 4000
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "cap-d-agde",
+    "conciergerie": "Dell",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 60
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "cap-d-agde",
+    "conciergerie": "CapConciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 55
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "cap-d-agde",
+    "conciergerie": "BnB Cap d",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 30
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "cap-d-agde",
+    "conciergerie": "F&G Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 40
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 15
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "cap-d-agde",
+    "conciergerie": "NFG Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 35
+    },
+    "to": {
+      "rating": 4.7,
+      "reviews": 59
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "arcachon",
+    "conciergerie": "YourHostHelper Arcachon",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 80
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "arcachon",
+    "conciergerie": "Sejourneur Arcachon",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 90
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "arcachon",
+    "conciergerie": "La Conciergerie du Bassin",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 65
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "arcachon",
+    "conciergerie": "Welkeys Arcachon",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 120
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "arcachon",
+    "conciergerie": "BNB Conciergerie Arcachon",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 75
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "arcachon",
+    "conciergerie": "HostnFly Arcachon",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 150
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "marrakech",
+    "conciergerie": "Morokeys",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 90
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "marrakech",
+    "conciergerie": "Dar & Keys",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 75
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "marrakech",
+    "conciergerie": "YourHostHelper Marrakech",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 120
+    },
+    "to": {
+      "rating": 4.4,
+      "reviews": 59
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "marrakech",
+    "conciergerie": "Nippy House",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 60
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "marrakech",
+    "conciergerie": "Hospitality Conciergerie Marrakech",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 55
+    },
+    "to": {
+      "rating": 4.4,
+      "reviews": 59
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "marrakech",
+    "conciergerie": "HostLux Marrakech",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 50
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "annecy",
+    "conciergerie": "La Conciergerie du Lac",
+    "type": "updated",
+    "from": {
+      "rating": 3.6,
+      "reviews": 175
+    },
+    "to": {
+      "rating": 4.1,
+      "reviews": 400
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "annecy",
+    "conciergerie": "Save My Bed",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 63
+    },
+    "to": {
+      "rating": 4.5,
+      "reviews": 181
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "annecy",
+    "conciergerie": "Margaret Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 19
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "annecy",
+    "conciergerie": "Like your Bed",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 50
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 106
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "annecy",
+    "conciergerie": "16Bis Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 15
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 44
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "annecy",
+    "conciergerie": "Cygne Blanc",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 30
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 19
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "annecy",
+    "conciergerie": "Welkeys Annecy",
+    "type": "updated",
+    "from": {
+      "rating": 3.8,
+      "reviews": 100
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 43
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "avignon",
+    "conciergerie": "Merci Conciergerie Avignon",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 50
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 33
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "avignon",
+    "conciergerie": "Serena Place",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 35
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 20
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "avignon",
+    "conciergerie": "Capsule Corp Conciergerie Avignon",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 28
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "avignon",
+    "conciergerie": "Rachel Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 22
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 14
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "avignon",
+    "conciergerie": "Week Where",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 18
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 16
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "avignon",
+    "conciergerie": "MM Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 15
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 33
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "avignon",
+    "conciergerie": "La Fine Équipe (LFEC)",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 20
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 21
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nantes",
+    "conciergerie": "Cocoonr Nantes",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 42
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 91
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nantes",
+    "conciergerie": "Conciergerie Lulu",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 29
+    },
+    "to": {
+      "rating": 3.7,
+      "reviews": 32
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nantes",
+    "conciergerie": "Conciergerie Océane",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 80
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "nantes",
+    "conciergerie": "Kerbnb",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 25
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 10
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nantes",
+    "conciergerie": "Hoomy Nantes",
+    "type": "updated",
+    "from": {
+      "rating": 4.3,
+      "reviews": 60
+    },
+    "to": {
+      "rating": 4,
+      "reviews": 622
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nantes",
+    "conciergerie": "WeHost Nantes",
+    "type": "updated",
+    "from": {
+      "rating": 4.3,
+      "reviews": 230
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "nantes",
+    "conciergerie": "Conciergerie Nantaise",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 35
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "aix-en-provence",
+    "conciergerie": "L\\",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 28
+    },
+    "to": {
+      "rating": 4.7,
+      "reviews": 51
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "aix-en-provence",
+    "conciergerie": "Le Mazarin Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 28
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "aix-en-provence",
+    "conciergerie": "My Home Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 15
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 18
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "aix-en-provence",
+    "conciergerie": "Conciergerie Blanc",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 36
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 35
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "aix-en-provence",
+    "conciergerie": "NG Conciergerie Pays d\\",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 26
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "aix-en-provence",
+    "conciergerie": "YourHostHelper Aix-en-Provence",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 95
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 17
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "aix-en-provence",
+    "conciergerie": "HostnFly Aix-en-Provence",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 110
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "hyeres",
+    "conciergerie": "Bonni",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 30
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "hyeres",
+    "conciergerie": "YourHostHelper Hyères",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 65
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "hyeres",
+    "conciergerie": "ILIOS Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 100
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "hyeres",
+    "conciergerie": "Hyères Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 45
+    },
+    "to": {
+      "rating": 4.7,
+      "reviews": 80
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "hyeres",
+    "conciergerie": "HostnFly Hyères",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 75
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 27
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "hyeres",
+    "conciergerie": "Welkeys Hyères",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 55
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 12
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "hyeres",
+    "conciergerie": "AllForHost Hyères",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 35
+    },
+    "to": {
+      "rating": 4.7,
+      "reviews": 80
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "reims",
+    "conciergerie": "Nalis",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 64
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 70
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "reims",
+    "conciergerie": "DameRose Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 29
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 33
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "reims",
+    "conciergerie": "Soloca",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 18
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "reims",
+    "conciergerie": "Aux Clefs des Sacres",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 26
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 55
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "reims",
+    "conciergerie": "La Conciergerie des Sacres",
+    "type": "updated",
+    "from": {
+      "rating": 4.2,
+      "reviews": 52
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 55
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "reims",
+    "conciergerie": "Iviloc",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 8
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "reims",
+    "conciergerie": "Loca Ren\\",
+    "type": "no_change",
+    "target": {
+      "rating": 4.2,
+      "reviews": 10,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "caen",
+    "conciergerie": "Mana Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 146
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "caen",
+    "conciergerie": "Ma Conciergerie en Normandie (MCEN)",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 169
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 18
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "caen",
+    "conciergerie": "Beauséjour Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 35
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 36
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "caen",
+    "conciergerie": "Ammaj",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 17
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 19
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "caen",
+    "conciergerie": "CALM Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 21
+    },
+    "to": {
+      "rating": 4.5,
+      "reviews": 22
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "caen",
+    "conciergerie": "Conciergerie Caennaise",
+    "type": "no_change",
+    "target": {
+      "rating": 5,
+      "reviews": 8,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "caen",
+    "conciergerie": "Fovéa Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 12
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "antibes",
+    "conciergerie": "Azurenting",
+    "type": "no_change",
+    "target": {
+      "rating": 4.9,
+      "reviews": 88,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "antibes",
+    "conciergerie": "Manasteos",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 38
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 40
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "antibes",
+    "conciergerie": "Bird Renting",
+    "type": "no_change",
+    "target": {
+      "rating": 4.6,
+      "reviews": 48,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "antibes",
+    "conciergerie": "Conciergerie Enjoy and Stay",
+    "type": "no_change",
+    "target": {
+      "rating": 4.5,
+      "reviews": 66,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "antibes",
+    "conciergerie": "Bonnaud Estates",
+    "type": "updated",
+    "from": {
+      "rating": 4.3,
+      "reviews": 71
+    },
+    "to": {
+      "rating": 4.2,
+      "reviews": 74
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "antibes",
+    "conciergerie": "Riviera Collection",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 25
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "antibes",
+    "conciergerie": "Host by A",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 18
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "toulon",
+    "conciergerie": "Happy Home",
+    "type": "no_change",
+    "target": {
+      "rating": 5,
+      "reviews": 80,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "toulon",
+    "conciergerie": "La Conciergerie Intendance de Marjory",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 88
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 102
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "toulon",
+    "conciergerie": "Loca\\",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 40
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 44
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "toulon",
+    "conciergerie": "Azuréa Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 12
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 13
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "toulon",
+    "conciergerie": "Confidences de Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 12
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "toulon",
+    "conciergerie": "SK Solutions",
+    "type": "no_change",
+    "target": {
+      "rating": 5,
+      "reviews": 9,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "toulon",
+    "conciergerie": "Maya Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 6
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 10
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "chamonix",
+    "conciergerie": "Care Concierge",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 159
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 214
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "chamonix",
+    "conciergerie": "Chamonix Immobilier",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 65
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 8
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "chamonix",
+    "conciergerie": "Mont Blanc Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 49
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 56
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "chamonix",
+    "conciergerie": "Pangea",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 19
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 29
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "chamonix",
+    "conciergerie": "Poulard & Co",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 18
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 16
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "chamonix",
+    "conciergerie": "Chamkeys Prestige",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 11
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 18
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "chamonix",
+    "conciergerie": "Cham\\",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 6
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 8
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "tours",
+    "conciergerie": "Louloue Tours",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 142
+    },
+    "to": {
+      "rating": 1.6,
+      "reviews": 5
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "tours",
+    "conciergerie": "PrestiPlace",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 117
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 129
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "tours",
+    "conciergerie": "GTH Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 81
+    },
+    "to": {
+      "rating": 4.4,
+      "reviews": 85
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "tours",
+    "conciergerie": "Pillow and Paw",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 11
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 12
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "tours",
+    "conciergerie": "Les Clés de Touraine",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 19
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "tours",
+    "conciergerie": "Éloge Touraine",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 10
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "tours",
+    "conciergerie": "Coderi",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 11
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "metz",
+    "conciergerie": "Rock in Share",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 93
+    },
+    "to": {
+      "rating": 4.5,
+      "reviews": 125
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "metz",
+    "conciergerie": "Un Séjour à Metz",
+    "type": "updated",
+    "from": {
+      "rating": 4.2,
+      "reviews": 34
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 212
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "metz",
+    "conciergerie": "Vigelio",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 8
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "metz",
+    "conciergerie": "Vahine Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 6
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 13
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "metz",
+    "conciergerie": "Cledici",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 12
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 24
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nimes",
+    "conciergerie": "La Conciergerie du Croco",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 109
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 110
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nimes",
+    "conciergerie": "CB Conciergerie de Nîmes",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 53
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "nimes",
+    "conciergerie": "Homa Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 35
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 36
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nimes",
+    "conciergerie": "Excellence En Provence",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 24
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "nimes",
+    "conciergerie": "YourHostHelper Nîmes",
+    "type": "no_change",
+    "target": {
+      "rating": 5,
+      "reviews": 20,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "nimes",
+    "conciergerie": "Concierge BB",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 3
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "nimes",
+    "conciergerie": "LYS Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 9
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 11
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "sete",
+    "conciergerie": "7 OU NET",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 78
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 23
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "sete",
+    "conciergerie": "ConciLogis",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 49
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 56
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "sete",
+    "conciergerie": "Thau Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 32
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 44
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "sete",
+    "conciergerie": "Monconcierge-a-sete",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 26
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 31
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "sete",
+    "conciergerie": "Patrimonia Concept",
+    "type": "no_change",
+    "target": {
+      "rating": 4.7,
+      "reviews": 24,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "sete",
+    "conciergerie": "Cette Conciergerie",
+    "type": "no_change",
+    "target": {
+      "rating": 4.9,
+      "reviews": 23,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "sete",
+    "conciergerie": "La Conciergerie du Littoral",
+    "type": "updated",
+    "from": {
+      "rating": 4.4,
+      "reviews": 20
+    },
+    "to": {
+      "rating": 4.2,
+      "reviews": 49
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "deauville",
+    "conciergerie": "MYPacôme Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 41
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 68
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "deauville",
+    "conciergerie": "Ma Conciergerie en Normandie",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 21
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 25
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "deauville",
+    "conciergerie": "YourHostHelper Deauville",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 36
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 40
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "deauville",
+    "conciergerie": "Interhome Deauville",
+    "type": "updated",
+    "from": {
+      "rating": 4.2,
+      "reviews": 68
+    },
+    "to": {
+      "rating": 4.2,
+      "reviews": 85
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "deauville",
+    "conciergerie": "Conciergerie Privée Deauville",
+    "type": "updated",
+    "from": {
+      "rating": 3.9,
+      "reviews": 7
+    },
+    "to": {
+      "rating": 4.2,
+      "reviews": 10
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "deauville",
+    "conciergerie": "Conciergerie Deauvillaise",
+    "type": "updated",
+    "from": {
+      "rating": 3,
+      "reviews": 7
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "perpignan",
+    "conciergerie": "CoolKeys Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 29
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "perpignan",
+    "conciergerie": "Sud Séjour Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 20
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 21
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "perpignan",
+    "conciergerie": "Rent and Breathe",
+    "type": "no_change",
+    "target": {
+      "rating": 5,
+      "reviews": 10,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "perpignan",
+    "conciergerie": "Conciergerie du Roussillon",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 7
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "perpignan",
+    "conciergerie": "Viva Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 1
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "perpignan",
+    "conciergerie": "SPS66 La Conciergerie Catalane",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 3
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "royan",
+    "conciergerie": "A la Hauteur",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 211
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 222
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "royan",
+    "conciergerie": "Odyssey",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 140
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 143
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "royan",
+    "conciergerie": "ZE-Royan",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 18
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "royan",
+    "conciergerie": "Conciergerie de Fanny",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 17
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 18
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "royan",
+    "conciergerie": "La Clé Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 4
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "royan",
+    "conciergerie": "Alpo Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4,
+      "reviews": 4
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "frejus",
+    "conciergerie": "Agence La Clé d\\",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 73
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 43
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "frejus",
+    "conciergerie": "Estérel Conciergerie Fréjus-Saint-Raphaël",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 36
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 39
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "frejus",
+    "conciergerie": "Clés d\\",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 26
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 43
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "frejus",
+    "conciergerie": "Bibo Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 33
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 44
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "frejus",
+    "conciergerie": "CapitalChic Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 22
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 47
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "frejus",
+    "conciergerie": "Interhome Fréjus",
+    "type": "updated",
+    "from": {
+      "rating": 4,
+      "reviews": 55
+    },
+    "to": {
+      "rating": 4.1,
+      "reviews": 65
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "grenoble",
+    "conciergerie": "Capsule Corp Conciergerie Airbnb",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 28
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 71
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "grenoble",
+    "conciergerie": "Premier Hôte",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 23
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 24
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "grenoble",
+    "conciergerie": "YourHostHelper Grenoble",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 24
+    },
+    "to": {
+      "rating": 4.2,
+      "reviews": 5
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "grenoble",
+    "conciergerie": "Home Partner — LA CONCIERGERIE",
+    "type": "no_change",
+    "target": {
+      "rating": 5,
+      "reviews": 6,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "grenoble",
+    "conciergerie": "Nomade Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 3
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "grenoble",
+    "conciergerie": "HelloFrancis",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 2
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "biarritz",
+    "conciergerie": "Cocoonr Pays Basque (ex Easy Clés)",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 127
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 132
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "biarritz",
+    "conciergerie": "Caborne Housing",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 36
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 12
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "biarritz",
+    "conciergerie": "Sweet Home Holidays",
+    "type": "no_change",
+    "target": {
+      "rating": 5,
+      "reviews": 27,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "biarritz",
+    "conciergerie": "La Conciergerie d",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 10
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 35
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "biarritz",
+    "conciergerie": "Les Clés Biarrotes",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 18
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 22
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "biarritz",
+    "conciergerie": "HostnFly Biarritz",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 3600
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "biarritz",
+    "conciergerie": "WeHost Pays Basque",
+    "type": "updated",
+    "from": {
+      "rating": 4.3,
+      "reviews": 700
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "vannes",
+    "conciergerie": "La Conciergerie Étoilée",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 85
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 85
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "vannes",
+    "conciergerie": "Les Clefs de Faustine",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 67
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 74
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "vannes",
+    "conciergerie": "Conciergerie Bienvenue",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 52
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 53
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "vannes",
+    "conciergerie": "Location Concept",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 60
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 105
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "vannes",
+    "conciergerie": "Cocoonr Vannes-Morbihan",
+    "type": "no_change",
+    "target": {
+      "rating": 4.7,
+      "reviews": 52,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "vannes",
+    "conciergerie": "HostnFly Vannes",
+    "type": "updated",
+    "from": {
+      "rating": 4.6,
+      "reviews": 3600
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 85
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "amiens",
+    "conciergerie": "Primo Conciergerie Amiens",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 25
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "low_volume"
+  },
+  {
+    "slug": "amiens",
+    "conciergerie": "GET IMMO",
+    "type": "updated",
+    "from": {
+      "rating": 4.8,
+      "reviews": 2000
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 27
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "amiens",
+    "conciergerie": "Conciergerie AmBiens",
+    "type": "no_change",
+    "target": {
+      "rating": 5,
+      "reviews": 13,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "amiens",
+    "conciergerie": "Athéna Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 12
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "amiens",
+    "conciergerie": "YourHostHelper Amiens",
+    "type": "updated",
+    "from": {
+      "rating": 4.5,
+      "reviews": 24
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 27
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "dijon",
+    "conciergerie": "Lux",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 17
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 26
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "dijon",
+    "conciergerie": "La Conciergerie d",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 37
+    },
+    "to": {
+      "rating": 4.9,
+      "reviews": 69
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "dijon",
+    "conciergerie": "Zenica Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 20
+    },
+    "to": {
+      "rating": 4.7,
+      "reviews": 31
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "dijon",
+    "conciergerie": "At\\",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 16
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 22
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "dijon",
+    "conciergerie": "Les Suites Indivio",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 8
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "dijon",
+    "conciergerie": "La Conciergerie de Cindy",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 14
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 17
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "la-baule",
+    "conciergerie": "Les Concierges",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 108
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "la-baule",
+    "conciergerie": "Conciergerie La Baule",
+    "type": "no_change",
+    "target": {
+      "rating": 4.8,
+      "reviews": 10,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "la-baule",
+    "conciergerie": "Zen Weekey",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 31
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "la-baule",
+    "conciergerie": "La Baule Sweet Home",
+    "type": "updated",
+    "from": {
+      "rating": 4.3,
+      "reviews": 30
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "brest",
+    "conciergerie": "Conciergerie Finist",
+    "type": "updated",
+    "from": {
+      "rating": 4.9,
+      "reviews": 28
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "name_mismatch"
+  },
+  {
+    "slug": "brest",
+    "conciergerie": "NM Conciergerie",
+    "type": "no_change",
+    "target": {
+      "rating": 5,
+      "reviews": 6,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "brest",
+    "conciergerie": "Concierge BB",
+    "type": "updated",
+    "from": {
+      "rating": 3.8,
+      "reviews": 22
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 114
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "brest",
+    "conciergerie": "Concigreen",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 7
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "brest",
+    "conciergerie": "Hestia Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 22
+    },
+    "to": {
+      "rating": 4.8,
+      "reviews": 46
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "brest",
+    "conciergerie": "Need",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 5
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 8
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nancy",
+    "conciergerie": "CÔME Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 9
+    },
+    "to": {
+      "rating": 4.7,
+      "reviews": 13
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nancy",
+    "conciergerie": "MasterKey",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 11
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 21
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nancy",
+    "conciergerie": "MAHÉ",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 7
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "weak_match"
+  },
+  {
+    "slug": "nancy",
+    "conciergerie": "Clés & Anne",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 3
+    },
+    "to": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "reason": "no_match"
+  },
+  {
+    "slug": "nancy",
+    "conciergerie": "Rock in Share",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 16
+    },
+    "to": {
+      "rating": 4.4,
+      "reviews": 21
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "nancy",
+    "conciergerie": "GuestReady",
+    "type": "no_change",
+    "target": {
+      "rating": 3.8,
+      "reviews": 34,
+      "reason": "strong"
+    }
+  },
+  {
+    "slug": "vichy",
+    "conciergerie": "Conciergerie Thermale de Vichy",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 4
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 7
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "vichy",
+    "conciergerie": "Conciergerie Les Grandes Maisons",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 6
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 9
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "vichy",
+    "conciergerie": "Vichy Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4,
+      "reviews": 12
+    },
+    "to": {
+      "rating": 4.1,
+      "reviews": 18
+    },
+    "reason": "strong"
+  }
+]

@@ -2872,5 +2872,15 @@
     "kd": "16",
     "status": "À faire",
     "source": "semrush-expand-2026-05-15"
+  },
+  {
+    "num": 227,
+    "ville": "Saint-Malo",
+    "region": "Bretagne",
+    "citySlug": "saint-malo",
+    "kw": "conciergerie saint malo",
+    "vol": 320,
+    "kd": 19,
+    "status": "À faire"
   }
 ]

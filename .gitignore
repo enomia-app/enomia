@@ -50,3 +50,4 @@ scripts/gsc-indexation/candidates-today.json
 scripts/*/logs/
 data/backlinks-*.json
 data/backlinks-send-state.json
+cities.ts.bak

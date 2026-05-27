@@ -18,6 +18,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -27,8 +28,42 @@ const dryRun = process.argv.includes('--dry-run');
 const TODAY = new Date().toISOString().slice(0, 10);
 const REVIEW_THRESHOLD = 5;
 
+const TARGET = path.join(ROOT, 'src/data/cities.ts');
+const BACKUP = TARGET + '.bak';
+
 const report = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/places-audit-output.json'), 'utf8'));
-let content = fs.readFileSync(path.join(ROOT, 'src/data/cities.ts'), 'utf8');
+const originalContent = fs.readFileSync(TARGET, 'utf8');
+let content = originalContent;
+
+// --- Couche 2: assertions de cohérence -----------------------------------
+function structuralStats(src) {
+  const cities = (src.match(/^  \{\s*\n\s+slug:\s*'/gm) || []).length;
+  const concs = (src.match(/^\s+\{\s*name:\s*["']/gm) || []).length;
+  const ratings = [...src.matchAll(/rating:\s*([\d.]+)/g)].map((m) => parseFloat(m[1]));
+  const reviews = [...src.matchAll(/reviews:\s*(\d+)/g)].map((m) => parseInt(m[1], 10));
+  return { cities, concs, ratings, reviews, length: src.length };
+}
+
+function assertSafe(before, after) {
+  const issues = [];
+  if (before.cities !== after.cities) issues.push(`ville count: ${before.cities} → ${after.cities}`);
+  if (before.concs !== after.concs) issues.push(`conciergerie count: ${before.concs} → ${after.concs}`);
+  if (after.length < before.length * 0.7) issues.push(`size shrunk ${before.length} → ${after.length} (>30% loss)`);
+  if (after.length > before.length * 1.5) issues.push(`size grew ${before.length} → ${after.length} (>50% gain)`);
+  for (const r of after.ratings) {
+    if (isNaN(r) || r < 0 || r > 5) {
+      issues.push(`invalid rating value: ${r}`);
+      break;
+    }
+  }
+  for (const r of after.reviews) {
+    if (isNaN(r) || r < 0 || !Number.isInteger(r)) {
+      issues.push(`invalid reviews value: ${r}`);
+      break;
+    }
+  }
+  return issues;
+}
 
 function escapeRegex(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -174,12 +209,91 @@ if (dryRun) {
     }
   }
 } else {
-  fs.writeFileSync(path.join(ROOT, 'src/data/cities.ts'), content);
+  // ===== GARDE-FOUS pré-write =====
+  const before = structuralStats(originalContent);
+  const after = structuralStats(content);
+  const issues = assertSafe(before, after);
+
+  if (issues.length > 0) {
+    console.error('🚨 Garde-fou structurel BLOQUÉ — écriture ANNULÉE :');
+    for (const i of issues) console.error('   ✗ ' + i);
+    console.error('   → cities.ts est resté intact');
+    process.exit(1);
+  }
+  console.log('✓ Garde-fou structurel OK : villes ' + before.cities + ' inchangé, conciergeries ' + before.concs + ' inchangé');
+
+  // ===== Compte les erreurs TypeScript AVANT modif =====
+  function countTscErrors() {
+    try {
+      execSync(
+        `npx --no-install tsc --noEmit --target es2022 --module esnext --moduleResolution node --skipLibCheck "${TARGET}"`,
+        { cwd: ROOT, stdio: 'pipe' },
+      );
+      return 0;
+    } catch (e) {
+      const out = (e.stdout?.toString() || '') + (e.stderr?.toString() || '');
+      return (out.match(/error TS/g) || []).length;
+    }
+  }
+
+  // ===== Backup + write =====
+  fs.copyFileSync(TARGET, BACKUP);
+  const errorsBefore = countTscErrors();
+  fs.writeFileSync(TARGET, content);
+  console.log(`✓ Backup → ${path.relative(ROOT, BACKUP)}`);
+
+  // ===== Validation TypeScript post-write (compare counts) =====
+  const errorsAfter = countTscErrors();
+  if (errorsAfter > errorsBefore) {
+    console.error(`🚨 TypeScript NOUVELLES erreurs après écriture (${errorsBefore} → ${errorsAfter}) — rollback automatique`);
+    fs.copyFileSync(BACKUP, TARGET);
+    console.error('   → cities.ts restauré depuis ' + path.relative(ROOT, BACKUP));
+    process.exit(2);
+  }
+  console.log(`✓ TypeScript stable (${errorsBefore} erreurs préexistantes, aucune ajoutée)`);
+
+  // ===== Couche 4 : test fonctionnel HTTP (best-effort) =====
+  // Si un dev server tourne sur :4321, on teste 3 URLs random pour valider le rendu.
+  // URLs avec leurs vraies régions (extraites de cities.ts pour éviter faux positifs).
+  // Rollback uniquement si HTTP 5xx (erreur serveur = corruption probable).
+  // HTTP 404/000 = silencieux (dev server non actif ou URL inconnue côté serveur).
+  try {
+    const fresh = fs.readFileSync(TARGET, 'utf8');
+    const testUrls = [];
+    for (const slug of ['lyon', 'paris', 'marseille']) {
+      const m = fresh.match(new RegExp(`slug:\\s*'${slug}',[\\s\\S]*?regionSlug:\\s*'([^']+)'`));
+      if (m) testUrls.push({ slug, region: m[1] });
+    }
+
+    let serverErr = null;
+    for (const { slug, region } of testUrls) {
+      try {
+        const code = execSync(
+          `curl -sL -o /dev/null -w "%{http_code}" --max-time 5 "http://localhost:4321/conciergerie-airbnb/${region}/${slug}" 2>/dev/null || true`,
+          { encoding: 'utf8' },
+        ).trim();
+        if (code.startsWith('5')) {
+          serverErr = `/${region}/${slug} → HTTP ${code}`;
+          break;
+        }
+      } catch {}
+    }
+    if (serverErr) {
+      console.error(`🚨 Test HTTP : erreur 5xx détectée (${serverErr}) — rollback automatique`);
+      fs.copyFileSync(BACKUP, TARGET);
+      console.error('   → cities.ts restauré');
+      process.exit(3);
+    }
+    console.log('✓ Test HTTP OK (aucune erreur 5xx)');
+  } catch {}
+
+
   const updated = changes.filter((c) => c.type === 'updated').length;
   console.log(`✅ ${updated} conciergeries mises à jour dans src/data/cities.ts`);
   console.log(`📅 updatedAt des villes touchées bumpé à ${TODAY}`);
   const missing = changes.filter((c) => c.type === 'block_not_found' || c.type === 'city_not_found').length;
   if (missing > 0) console.log(`⚠️ ${missing} blocs non trouvés (voir détails avec --dry-run)`);
+  console.log(`💡 Pour rollback manuel : cp ${path.relative(ROOT, BACKUP)} ${path.relative(ROOT, TARGET)}`);
 }
 
 // Save full changelog

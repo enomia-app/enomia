@@ -25,7 +25,21 @@ const USER_DATA_DIR = join(homedir(), '.playwright-fb-scan');
 const COOKIES_FILE = join(__dirname, 'fb-cookies.json');
 const HISTORY_FILE = join(__dirname, '../../data/rs-lcd/fb-history.json');
 const ARCHIVE_FILE = join(__dirname, '../../data/rs-lcd/fb-archive.json');
+const RESULTS_FILE = join(__dirname, '../../data/rs-lcd/fb-post-results.json');
 const HISTORY_MAX_AGE_DAYS = 30;
+
+// Résultats par draft, persistés à chaque post pour que fb-watch puisse
+// construire le mail récap (et survivre à un timeout/crash en plein run).
+// Format : [{postId, url, status: 'posted'|'failed'|'skipped-dedupe', error?}]
+const results = [];
+function persistResults() {
+  mkdirSync(dirname(RESULTS_FILE), { recursive: true });
+  writeFileSync(RESULTS_FILE, JSON.stringify(results, null, 2));
+}
+function pushResult(entry) {
+  results.push(entry);
+  persistResults();
+}
 
 function loadJsonArray(p) {
   if (!existsSync(p)) return [];
@@ -150,6 +164,10 @@ async function main() {
   const allValidations = JSON.parse(readFileSync(inputFile, 'utf8'));
   const cookies = convertCookies(JSON.parse(readFileSync(COOKIES_FILE, 'utf8')));
 
+  // Reset results.json au début du run (sinon fb-watch lirait l'état du run précédent
+  // en cas de crash catastrophique avant le 1er pushResult).
+  persistResults();
+
   // Dedupe : skip les URLs déjà commentées dans les 24 dernières heures.
   // Protège contre les ré-exécutions accidentelles (rattrapage manuel, cron qui re-tape...).
   const recentUrls = new Set(
@@ -161,6 +179,7 @@ async function main() {
   const validations = allValidations.filter(v => {
     if (recentUrls.has(v.url)) {
       skippedDedupe.push(v.postId || v.url);
+      pushResult({ postId: v.postId, url: v.url, status: 'skipped-dedupe' });
       return false;
     }
     return true;
@@ -207,9 +226,11 @@ async function main() {
         commentText: text,
         postedAt: new Date().toISOString(),
       });
+      pushResult({ postId, url, status: 'posted' });
     } catch (e) {
       console.error(`   ✗ Échec: ${e.message}`);
       failed++;
+      pushResult({ postId, url, status: 'failed', error: e.message });
     }
 
     if (i < validations.length - 1) {

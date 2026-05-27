@@ -268,36 +268,68 @@ async function processThread(gmail, threadId, labelId) {
     log(`Thread ${threadId} : ERREUR labélisation (${e.message}) — mail "Postés" envoyé quand même, risque de retry au prochain tick`);
   }
 
-  // Email confirmation
-  const postedValidated = JSON.parse(readFileSync(join(ROOT, cfg.outputFile), 'utf8'));
-  const skipped = parsed.drafts.filter(d => d.action === 'skip');
+  // Lecture des résultats réels écrits par fb-post (un par draft, status posted/failed/skipped-dedupe).
+  // Le fichier peut être absent / vide si fb-post crashe avant le 1er pushResult.
+  const resultsPath = join(ROOT, 'data/rs-lcd/fb-post-results.json');
+  let postResults = [];
+  try {
+    postResults = JSON.parse(readFileSync(resultsPath, 'utf8'));
+  } catch (e) {
+    log(`fb-post-results.json illisible (${e.message}) — mail sans statut détaillé`);
+  }
+  const resultByPostId = new Map(postResults.map(r => [r.postId, r]));
+
+  const STATUS_LABEL = {
+    'posted': '✓ POSTÉ ',
+    'failed': '✗ ÉCHEC ',
+    'skipped-dedupe': '⏭ DEDUPE',
+  };
+
+  const skipMarc = parsed.drafts.filter(d => d.action === 'skip').length;
+  const counts = { posted: 0, failed: 0, 'skipped-dedupe': 0, unknown: 0 };
 
   const detailLines = parsed.drafts.map(d => {
-    const action = d.action === 'skip' ? '⏭ SKIP' : (d.edited ? '✎ EDIT' : '✓ OK  ');
-    const fb = d.marcFeedback ? `\n      ↳ ${d.marcFeedback}` : '';
-    return `  ${action} ${d.postId} — ${d.url}${fb}`;
+    let statusLabel, errorMsg;
+    if (d.action === 'skip') {
+      statusLabel = '⏭ SKIP  ';
+    } else {
+      const r = resultByPostId.get(d.postId);
+      if (!r) {
+        statusLabel = '? INCONNU';
+        counts.unknown++;
+      } else {
+        statusLabel = STATUS_LABEL[r.status] || `? ${r.status}`;
+        errorMsg = r.error;
+        counts[r.status] = (counts[r.status] || 0) + 1;
+      }
+    }
+    const editMark = d.edited ? ' ✎' : '';
+    const lines = [`  ${statusLabel} ${d.postId}${editMark} — ${d.url}`];
+    if (errorMsg) lines.push(`      ↳ erreur : ${errorMsg}`);
+    if (d.marcFeedback) lines.push(`      ↳ retour Marc : ${d.marcFeedback}`);
+    return lines.join('\n');
   }).join('\n');
 
+  const totalToPost = counts.posted + counts.failed + counts.unknown;
+  const summaryLine = `${counts.posted} posté(s), ${counts.failed} échec(s), ${skipMarc} skip Marc, ${counts['skipped-dedupe']} dedupe${counts.unknown ? `, ${counts.unknown} non-traité(s)` : ''}.`;
+
   const subject = postResult.ok
-    ? `${cfg.subjectPrefix} — ${postedValidated.length}`
-    : `${cfg.subjectPrefix.replace('Postés','Erreur').replace('Postées','Erreur')}`;
+    ? `${cfg.subjectPrefix} — ${counts.posted}`
+    : `${cfg.subjectPrefix.replace('Postés','Erreur').replace('Postées','Erreur')} — ${counts.failed}/${totalToPost} échec${counts.failed > 1 ? 's' : ''}`;
 
   const labelWarning = labelOk
     ? ''
     : `\n⚠️ Labélisation Gmail "fb-scan-posted" ÉCHOUÉE — le thread sera retraité au prochain tick fb-watch (skip fb-post via dedupe URL < 24h, mais coût Sonnet). Labélise manuellement ce thread pour stopper la boucle.\n`;
 
-  const body = postResult.ok
-    ? `Résultat : ${postedValidated.length} commentaires postés (${skipped.length} skippés).
-${labelWarning}
-Détail par draft :
-${detailLines}
-`
-    : `Erreur pendant fb-post.mjs : ${postResult.error}
-${labelWarning}
-Détail par draft :
-${detailLines}
+  const errorBanner = postResult.ok
+    ? ''
+    : `⚠️ fb-post.mjs s'est terminé avec une erreur (${postResult.error}). Détails par draft ci-dessous.\n\n`;
 
-Thread Gmail labélisé "fb-scan-posted" malgré l'erreur (pour éviter retry en boucle).`;
+  const body = `${errorBanner}Résultat : ${summaryLine}
+${labelWarning}
+Détail par draft :
+${detailLines}
+${postResult.ok ? '' : "\nThread Gmail labélisé \"fb-scan-posted\" malgré l'erreur (pour éviter retry en boucle)."}`;
 
   sendConfirmation(subject, body);
   log(`Thread ${threadId} : terminé (${postResult.ok ? 'OK' : 'erreur'})`);

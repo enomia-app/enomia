@@ -5,14 +5,14 @@
  * Pipeline :
  *   1. Lance fb-scan.mjs (scan des 8 groupes FB → fb-scan-candidates.json)
  *   2. Lit les 27 posts captés
- *   3. Appelle Claude API : drafte les réponses Marc + filtre les non-pertinents
+ *   3. Appelle Claude Max (Sonnet via `claude -p`) : drafte les réponses Marc + filtre les non-pertinents
  *   4. Génère fb-drafts.json
  *   5. Envoie email "[FB scan] N propositions à valider" à marc@enomia.app
  *
  * Marc valide depuis son tel → fb-watch (15 min) détecte → fb-post poste tout.
  */
 
-import Anthropic from '@anthropic-ai/sdk';
+import { callClaudeMaxJson } from '../lib/claude-cli.mjs';
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'fs';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
@@ -56,8 +56,6 @@ function loadMarcFeedback() {
 }
 
 async function draftAllViaClaude(posts) {
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
   const articles = listEnomiaArticles();
   const tools = listEnomiaTools();
   const marcFeedback = loadMarcFeedback();
@@ -127,16 +125,10 @@ ${JSON.stringify(compactPosts, null, 2)}
 
 Pas de markdown, pas de \`\`\`, juste le JSON pur.`;
 
-  console.log(`Appel Claude (sonnet, ${compactPosts.length} posts)...`);
-  const resp = await client.messages.create({
-    model: 'claude-sonnet-4-6',
-    max_tokens: 16000,
-    messages: [{ role: 'user', content: prompt }],
-  });
-
-  const text = resp.content[0].text.trim();
-  const cleaned = text.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, '');
-  const result = JSON.parse(cleaned);
+  console.log(`Appel Claude Max (opus, ${compactPosts.length} posts)...`);
+  // callClaudeMaxJson : `claude -p` via OAuth Max (pas l'API), retry sur 529 transient,
+  // strip code fences markdown, parse JSON. Cf scripts/lib/claude-cli.mjs.
+  const result = await callClaudeMaxJson(prompt, { model: 'claude-opus-4-7' });
 
   // Déduit withEnomiaLink/enomiaUrl par regex sur le text (réalité du commentaire)
   // plutôt que de faire confiance à Sonnet qui pouvait ranger l'URL dans un champ séparé.
@@ -224,10 +216,8 @@ Une fois reçu, le posting tourne dans les 15 min via fb-watch.`;
 }
 
 async function main() {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    console.error('ANTHROPIC_API_KEY absent');
-    process.exit(1);
-  }
+  // Plus de check ANTHROPIC_API_KEY : on passe par `claude -p` (OAuth Max) via
+  // scripts/lib/claude-cli.mjs. L'auth est gérée par le CLI Claude Code.
 
   // 1. Lance le scan FB (peut prendre 2-3 min)
   console.log('Lancement fb-scan.mjs...');

@@ -4,7 +4,7 @@
  * Remplace l'ancien parseValidationViaClaude (Haiku + format OK/SKIP/EDIT trop rigide) +
  * fb-build-validated.mjs (regex sur texte intermédiaire, brittle).
  *
- * Approche : Sonnet lit le mail de Marc en langage naturel + les drafts originaux,
+ * Approche : Opus lit le mail de Marc en langage naturel + les drafts originaux,
  * et produit directement les drafts finaux prêts à poster (texte modifié intégrant
  * les ajouts/corrections/nuances de Marc, ou inchangé s'il a juste validé).
  *
@@ -12,7 +12,7 @@
  * alimenter à terme une mémoire d'apprentissage (`feedback_drafts_marc.md`).
  */
 
-import Anthropic from '@anthropic-ai/sdk';
+import { callClaudeMaxJson } from '../lib/claude-cli.mjs';
 import { readdirSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -38,7 +38,6 @@ function listEnomiaTools() {
 }
 
 export async function applyMarcFeedback(replyText, drafts) {
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const postIds = Object.keys(drafts);
   const articles = listEnomiaArticles();
   const tools = listEnomiaTools();
@@ -66,6 +65,7 @@ Types de retours possibles à traiter :
 - **NUANCE / MODIFICATION** (ex: "Pas vrai pour les T2, oui pour les T5") → reformule pour intégrer la nuance proprement
 - **RÉÉCRITURE COMPLÈTE** (Marc fournit une nouvelle version) → utilise la version Marc telle quelle
 - **SKIP / refus** (ex: "vire celui-là", "skip g1.4") → action="skip"
+- **VALIDATION + QUESTION ANNEXE** (ex: "Ok pour tout. C'est fait par Opus ou Sonnet ?", "Parfait, au fait tu peux changer la fréquence du cron ?") → traite la VALIDATION normalement (tous les drafts en action="post", inchangés), et IGNORE la question/remarque hors-sujet éditorial : elle sera gérée séparément par l'agent, ce n'est PAS une instruction de modification sur un draft. Ne pars PAS en ambiguous.
 
 # RÈGLES DE STYLE (à TOUJOURS respecter dans le texte final)
 - Tutoiement
@@ -109,18 +109,12 @@ Règles de sortie :
 - action="post" par défaut, "skip" UNIQUEMENT si Marc demande explicitement de virer
 - edited=true si le texte diffère du draft original (même léger), false si strictement identique
 - marcFeedback = résumé court utile pour mémoire d'apprentissage (ex: "Préfère T2 avec checkout 11h, 6h uniquement pour grands biens 200m2"). Vide si Marc n'a rien dit pour ce draft.
-- Si la réponse de Marc est totalement vide ou hors-sujet : ambiguous=true + reason explicative`;
+- ambiguous=true UNIQUEMENT en dernier recours : si AUCUNE intention de validation NI de modification n'est identifiable (réponse totalement vide, ou sans rapport au point de ne pas savoir s'il valide ou refuse). Si Marc valide clairement (ok / parfait / go / "ok pour tout" / "c'est bon") — même accompagné d'une question ou remarque hors-sujet — ce n'est PAS ambiguous : on poste. Dans le doute entre "valide" et "ambiguous", privilégie "valide" si un signal d'accord explicite est présent.`;
 
-  console.log(`Appel Sonnet (${postIds.length} drafts à traiter)...`);
-  const resp = await client.messages.create({
-    model: 'claude-sonnet-4-6',
-    max_tokens: 16000,
-    messages: [{ role: 'user', content: prompt }],
-  });
-
-  const text = resp.content[0].text.trim();
-  const cleaned = text.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, '');
-  const result = JSON.parse(cleaned);
+  console.log(`Appel Opus Max (${postIds.length} drafts à traiter)...`);
+  // callClaudeMaxJson : `claude -p` via OAuth Max (pas l'API), retry sur 529 transient,
+  // strip code fences markdown, parse JSON. Cf scripts/lib/claude-cli.mjs.
+  const result = await callClaudeMaxJson(prompt, { model: 'claude-opus-4-7' });
 
   // Post-processing : ajouter UTM aux liens Enomia (pour tracking GA4)
   if (result.drafts) {

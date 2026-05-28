@@ -18,7 +18,7 @@
  * Envoie le rapport par email.
  */
 
-import Anthropic from '@anthropic-ai/sdk';
+import { callClaudeMax } from '../lib/claude-cli.mjs';
 import { readFileSync, existsSync, readdirSync, statSync } from 'fs';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
@@ -67,8 +67,6 @@ function loadScanCandidates() {
 }
 
 async function analyzeViaClaude(archive, scanCandidates, articles, tools) {
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
   // Compile les questions/textes des derniers 30 jours
   const archiveCorpus = archive.map(e =>
     `[${e.postId}] Réponse Marc : ${e.commentText}`
@@ -113,20 +111,14 @@ CONTRAINTES :
 
 Réponds uniquement avec le rapport markdown (pas de préambule).`;
 
-  const resp = await client.messages.create({
-    model: 'claude-opus-4-7',
-    max_tokens: 8000,
-    messages: [{ role: 'user', content: prompt }],
-  });
-
-  return resp.content[0].text;
+  // callClaudeMax : `claude -p` via OAuth Max (pas l'API). Retourne le markdown brut
+  // (pas de parse JSON ici, le rapport est du texte). Cf scripts/lib/claude-cli.mjs.
+  return await callClaudeMax(prompt, { model: 'claude-opus-4-7' });
 }
 
 async function main() {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    console.error('ANTHROPIC_API_KEY absent');
-    process.exit(1);
-  }
+  // Plus de check ANTHROPIC_API_KEY : on passe par `claude -p` (OAuth Max) via
+  // scripts/lib/claude-cli.mjs. L'auth est gérée par le CLI Claude Code.
 
   const archive = loadArchive();
   const scanCandidates = loadScanCandidates();

@@ -2,6 +2,27 @@
 // 4 templates pitch Enomia (simulateur, contrat, facture, taxe_sejour).
 // Pipeline v2.1 — l'outil à pitcher est choisi dynamiquement par send-daily.
 
+// ─── CONTEXTE pour la génération d'observation (chargé dans le prompt Opus) ──
+// Donne au modèle qui on est, qui on contacte, qui sont leurs lecteurs, et
+// pourquoi. Permet une observation fine et juste plutôt que générique.
+export const OUTREACH_BRIEF = `Contexte de la mission :
+
+Tu écris pour Enomia, un éditeur français d'outils gratuits en ligne dédiés à la location courte durée (Airbnb, Booking, locations saisonnières). Marc Chenut, le fondateur, contacte par email des blogs et médias spécialisés pour leur proposer d'ajouter l'un de nos outils gratuits en complément de leurs articles, comme ressource utile à leurs lecteurs. L'objectif est qu'ils citent l'outil avec un lien (backlink), donc le message doit être sincère, utile et donnant-donnant, jamais quémandeur.
+
+La cible qu'on contacte : des blogueurs, rédacteurs et médias de niche sur la location courte durée, l'investissement locatif Airbnb, la fiscalité LMNP, la gestion locative, les conciergeries. Ce sont des gens qui connaissent leur sujet et publient du contenu de fond. On s'adresse à un confrère qui maîtrise le domaine, pas à un débutant.
+
+Leurs lecteurs : des propriétaires et investisseurs en courte durée, des hôtes Airbnb, des personnes qui veulent se lancer ou optimiser leur location saisonnière. Ils cherchent du concret : combien ça rapporte, comment être en règle, quels documents utiliser, combien de taxe collecter.
+
+Nos outils sont gratuits, sans inscription, et pensés spécifiquement pour la courte durée, là où les outils génériques (modèles de bail classiques, calculs de rentabilité immobilière standard) ne couvrent pas les spécificités du métier.`;
+
+// Description riche de chaque outil (pour informer le modèle, pas pour citation directe).
+export const OUTIL_DETAILS = {
+  simulateur: "un simulateur de rentabilité gratuit spécifique à la courte durée, qui intègre toutes les charges souvent oubliées par les investisseurs (ménage, conciergerie, blanchisserie, taxe de séjour, maintenance, logiciel, comptable) pour chiffrer concrètement un projet de location Airbnb",
+  contrat: "un modèle de contrat de location saisonnière gratuit, à jour de la loi Le Meur, avec les clauses spécifiques à la courte durée que les modèles génériques oublient (caution, ménage, départ anticipé, état des lieux)",
+  facture: "un générateur de factures gratuit pour la courte durée, qui pré-remplit les mentions obligatoires (TVA, numérotation), gère les commissions Airbnb et Booking en déduction et sauvegarde l'historique pour la compta",
+  taxe_sejour: "un calculateur de taxe de séjour gratuit couvrant toutes les communes françaises avec leurs tarifs à jour, qui sort le montant exact à collecter selon la commune, le type de logement et le nombre de nuitées",
+};
+
 const TEMPLATES = {
   simulateur: {
     url: 'https://www.enomia.app/simulateur-rentabilite-airbnb',

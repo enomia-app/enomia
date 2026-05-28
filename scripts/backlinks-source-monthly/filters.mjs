@@ -291,6 +291,53 @@ export async function hasValidMX(domain) {
   }
 }
 
+// ─── DECODE ENTITÉS HTML ────────────────────────────────────────────────
+// Décode les entités HTML d'un texte extrait (titre d'article, etc.) avant
+// de l'insérer dans un pitch. Gère :
+//   - numériques décimales (&#233;) et hexadécimales (&#xE9;)
+//   - entités nommées courantes (accents français + ponctuation)
+// Le décodage partiel précédent ne gérait que ' & " nbsp, d'où les
+// "&egrave;" / "&agrave;" / "&eacute;" bruts dans les titres français.
+
+const NAMED_ENTITIES = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'",
+  nbsp: ' ', laquo: '«', raquo: '»', hellip: '…',
+  // minuscules accentuées
+  eacute: 'é', egrave: 'è', ecirc: 'ê', euml: 'ë',
+  agrave: 'à', acirc: 'â', auml: 'ä', aacute: 'á', atilde: 'ã', aring: 'å',
+  ugrave: 'ù', uacute: 'ú', ucirc: 'û', uuml: 'ü',
+  igrave: 'ì', iacute: 'í', icirc: 'î', iuml: 'ï',
+  ograve: 'ò', oacute: 'ó', ocirc: 'ô', ouml: 'ö', otilde: 'õ', oslash: 'ø',
+  ccedil: 'ç', ntilde: 'ñ', yacute: 'ý', yuml: 'ÿ',
+  // majuscules accentuées
+  Eacute: 'É', Egrave: 'È', Ecirc: 'Ê', Euml: 'Ë',
+  Agrave: 'À', Aacute: 'Á', Acirc: 'Â', Auml: 'Ä',
+  Ugrave: 'Ù', Uacute: 'Ú', Ucirc: 'Û', Uuml: 'Ü',
+  Igrave: 'Ì', Iacute: 'Í', Icirc: 'Î', Iuml: 'Ï',
+  Ograve: 'Ò', Oacute: 'Ó', Ocirc: 'Ô', Ouml: 'Ö',
+  Ccedil: 'Ç', Ntilde: 'Ñ',
+  // ponctuation / symboles
+  rsquo: '’', lsquo: '‘', ldquo: '“', rdquo: '”', sbquo: '‚', bdquo: '„',
+  mdash: '—', ndash: '–', deg: '°', euro: '€', pound: '£', cent: '¢',
+  times: '×', divide: '÷', middot: '·', bull: '•',
+};
+
+export function decodeEntities(str) {
+  if (!str) return str;
+  return str
+    // numériques décimales : &#233;
+    .replace(/&#(\d+);/g, (_, n) => {
+      try { return String.fromCodePoint(parseInt(n, 10)); } catch { return _; }
+    })
+    // numériques hexadécimales : &#xE9;
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, n) => {
+      try { return String.fromCodePoint(parseInt(n, 16)); } catch { return _; }
+    })
+    // nommées
+    .replace(/&([a-zA-Z][a-zA-Z0-9]*);/g, (m, name) =>
+      Object.prototype.hasOwnProperty.call(NAMED_ENTITIES, name) ? NAMED_ENTITIES[name] : m);
+}
+
 // ─── HELPERS ────────────────────────────────────────────────────────────
 
 export function extractDomain(url) {

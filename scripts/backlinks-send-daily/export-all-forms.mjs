@@ -25,6 +25,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { google } from 'googleapis';
 import { buildPitch, qaPitch, chooseOutilToPitch } from './pitch-templates.mjs';
+import { decodeEntities } from '../backlinks-source-monthly/filters.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -109,7 +110,7 @@ async function scanPage(url) {
   const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
   const og = html.match(/<meta[^>]*property=["']og:title["'][^>]*content=["']([^"']+)["']/i)?.[1];
   const t = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1];
-  const rawTitle = (h1 || og || t || '').replace(/<[^>]+>/g, '').replace(/&#x27;|&#39;/g, "'").replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&nbsp;/g, ' ').trim();
+  const rawTitle = decodeEntities((h1 || og || t || '').replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
 
   const textOnly = html.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 3000);
 

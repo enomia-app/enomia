@@ -8660,7 +8660,7 @@ export const cities: City[] = [
         biensGeres: 50,
         specialty: "Gestion complète Côte d'Émeraude",
         description:
-          "Avec une note Google de 4,7/5 sur une trentaine d'avis, Check-In Conciergerie figure parmi les acteurs les mieux installés sur Saint-Malo, Dinard et Dinan. L'offre est une gestion complète : création et optimisation de l'annonce, accueil et remise des clés, ménage, blanchisserie et assistance voyageurs 7j/7. C'est un profil adapté aux propriétaires qui veulent déléguer entièrement, sans suivi quotidien. La commission n'est pas affichée publiquement : demandez une grille écrite et la façon dont le ménage est facturé (au voyageur ou prélevé sur vos revenus), car c'est ce qui fait la différence sur la rentabilité réelle d'un bien très saisonnier comme à Dinard. Vérifiez aussi le nombre de biens réellement gérés sur la commune même, et non sur l'ensemble de la côte.",
+          "L'offre est une gestion complète : création et optimisation de l'annonce, accueil et remise des clés, ménage, blanchisserie et assistance voyageurs 7j/7. C'est un profil adapté aux propriétaires qui veulent déléguer entièrement, sans suivi quotidien. La commission n'est pas affichée publiquement : demandez une grille écrite et la façon dont le ménage est facturé (au voyageur ou prélevé sur vos revenus), car c'est ce qui fait la différence sur la rentabilité réelle d'un bien très saisonnier comme à Dinard. Vérifiez aussi le nombre de biens réellement gérés sur la commune même, et non sur l'ensemble de la côte.",
       },
       {
         name: "La Clé d'Émeraude",
@@ -8671,7 +8671,7 @@ export const cities: City[] = [
         biensGeres: 45,
         specialty: 'Saint-Malo & Dinard, note maximale',
         description:
-          "La Clé d'Émeraude affiche une note Google de 5/5 sur près de 30 avis, l'une des meilleures de la zone, avec une couverture Saint-Malo et Côte d'Émeraude qui inclut Dinard. Le positionnement est celui d'une conciergerie de proximité : interlocuteur unique, réactivité, soin de l'accueil. Pour un propriétaire dinardais, l'intérêt est d'avoir une équipe qui connaît la copropriété, les artisans locaux et les pics de demande (ponts, festival, été). La commission se négocie au cas par cas : faites préciser ce qui est inclus (photos, linge, maintenance) et les conditions de sortie du contrat. Une note élevée sur un volume d'avis encore modéré reste plus fragile qu'un historique de plusieurs centaines d'avis : lisez les retours un par un avant de signer.",
+          "Le positionnement est celui d'une conciergerie de proximité : interlocuteur unique, réactivité, soin de l'accueil. Pour un propriétaire dinardais, l'intérêt est d'avoir une équipe qui connaît la copropriété, les artisans locaux et les pics de demande (ponts, festival, été). La commission se négocie au cas par cas : faites préciser ce qui est inclus (photos, linge, maintenance) et les conditions de sortie du contrat. Une note élevée sur un volume d'avis encore modéré reste plus fragile qu'un historique de plusieurs centaines d'avis : lisez les retours un par un avant de signer.",
       },
       {
         name: 'Ma Conciergerie Sérénité',
@@ -8682,7 +8682,7 @@ export const cities: City[] = [
         biensGeres: 35,
         specialty: 'Service premium personnalisé',
         description:
-          "Notée 4,9/5 sur Google, Ma Conciergerie Sérénité se positionne sur un service personnalisé à l'échelle bretonne, avec une présence sur la Côte d'Émeraude. Le discours est centré sur la tranquillité du propriétaire : gestion de bout en bout, communication voyageurs, entretien et reporting. C'est un profil intéressant pour une résidence secondaire que vous occupez vous-même une partie de l'année et que vous louez le reste du temps, car ce type de structure gère bien les calendriers mixtes. Le tarif n'étant pas public, demandez un devis détaillé et comparez le coût « tout compris » (commission + ménage + frais annexes) plutôt que la seule commission affichée. Le volume d'avis reste modeste : un bon signal, mais à recouper avec des références locales concrètes.",
+          "Le discours est centré sur la tranquillité du propriétaire : gestion de bout en bout, communication voyageurs, entretien et reporting. C'est un profil intéressant pour une résidence secondaire que vous occupez vous-même une partie de l'année et que vous louez le reste du temps, car ce type de structure gère bien les calendriers mixtes. Le tarif n'étant pas public, demandez un devis détaillé et comparez le coût « tout compris » (commission + ménage + frais annexes) plutôt que la seule commission affichée. Le volume d'avis reste modeste : un bon signal, mais à recouper avec des références locales concrètes.",
       },
       {
         name: 'La Bretonnerie',
@@ -8693,7 +8693,7 @@ export const cities: City[] = [
         biensGeres: 30,
         specialty: 'Transparence tarifaire',
         description:
-          "La Bretonnerie a le mérite d'afficher clairement sa commission : 20 % HT, soit 24 % TTC, ce qui reste dans la moyenne basse du marché de la Côte d'Émeraude où les tarifs grimpent souvent à 25-26 % TTC. Note Google de 5/5 sur 17 avis. L'offre couvre les fondamentaux d'une conciergerie complète sur Dinard et ses environs : annonce, accueil, ménage, assistance. La transparence tarifaire est un bon point de départ, mais vérifiez deux choses : si le ménage est en plus de la commission ou refacturé au voyageur, et si la TVA s'applique à votre cas. Sur un bien très saisonnier, une commission claire facilite le calcul de votre revenu net réel et la comparaison avec les agences qui ne communiquent qu'« sur devis ».",
+          "La Bretonnerie a le mérite d'afficher clairement sa commission : 20 % HT, soit 24 % TTC, ce qui reste dans la moyenne basse du marché de la Côte d'Émeraude où les tarifs grimpent souvent à 25-26 % TTC. L'offre couvre les fondamentaux d'une conciergerie complète sur Dinard et ses environs : annonce, accueil, ménage, assistance. La transparence tarifaire est un bon point de départ, mais vérifiez deux choses : si le ménage est en plus de la commission ou refacturé au voyageur, et si la TVA s'applique à votre cas. Sur un bien très saisonnier, une commission claire facilite le calcul de votre revenu net réel et la comparaison avec les agences qui ne communiquent qu'« sur devis ».",
       },
       {
         name: "L'Agence 1907",
@@ -8704,7 +8704,7 @@ export const cities: City[] = [
         biensGeres: 25,
         specialty: 'Gestion clé en main',
         description:
-          "L'Agence 1907 propose une gestion clé en main sur la Côte d'Émeraude avec une fourchette de commission annoncée entre 23 et 26 % TTC, selon le niveau de service. Note Google de 5/5, mais sur un nombre d'avis encore faible (9) : le signal qualitatif est bon, l'historique reste court. Le positionnement « tout inclus » convient aux propriétaires qui ne veulent gérer aucune logistique, à condition d'accepter une commission dans le haut du marché. Demandez le détail de ce que couvre la fourchette haute par rapport à la fourchette basse (photos professionnelles, pricing dynamique, maintenance, linge premium), et faites-vous communiquer des exemples de revenus nets sur des biens comparables au vôtre à Dinard. Comme pour toute structure récente, recoupez les avis avec des références vérifiables.",
+          "L'Agence 1907 propose une gestion clé en main sur la Côte d'Émeraude avec une fourchette de commission annoncée entre 23 et 26 % TTC, selon le niveau de service. Le positionnement « tout inclus » convient aux propriétaires qui ne veulent gérer aucune logistique, à condition d'accepter une commission dans le haut du marché. Demandez le détail de ce que couvre la fourchette haute par rapport à la fourchette basse (photos professionnelles, pricing dynamique, maintenance, linge premium), et faites-vous communiquer des exemples de revenus nets sur des biens comparables au vôtre à Dinard. Comme pour toute structure récente, recoupez les avis avec des références vérifiables.",
       },
       {
         name: "L'Intendance du Bord de Mer",
@@ -8715,7 +8715,7 @@ export const cities: City[] = [
         biensGeres: 20,
         specialty: 'Petite structure locale',
         description:
-          "L'Intendance du Bord de Mer est une petite structure locale, notée 4,8/5 sur Google, qui mise sur la proximité et un nombre de biens limité. Pour un propriétaire dinardais, ce type d'acteur a un avantage réel : disponibilité, connaissance fine du terrain, capacité à intervenir vite en cas d'incident. Le revers est la capacité : une petite équipe peut afficher complet en haute saison et avoir moins de moyens technologiques (channel manager, serrure connectée, pricing dynamique) qu'un réseau plus important. Le tarif est à demander. Avec seulement quelques avis publiés, prenez le temps d'échanger avec des propriétaires déjà clients et de visiter, si possible, un bien qu'ils gèrent, pour juger du niveau d'accueil et d'entretien avant de confier le vôtre.",
+          "Pour un propriétaire dinardais, ce type d'acteur a un avantage réel : disponibilité, connaissance fine du terrain, capacité à intervenir vite en cas d'incident. Le revers est la capacité : une petite équipe peut afficher complet en haute saison et avoir moins de moyens technologiques (channel manager, serrure connectée, pricing dynamique) qu'un réseau plus important. Le tarif est à demander. Avec seulement quelques avis publiés, prenez le temps d'échanger avec des propriétaires déjà clients et de visiter, si possible, un bien qu'ils gèrent, pour juger du niveau d'accueil et d'entretien avant de confier le vôtre.",
       },
     ],
     neighborhoods: [
@@ -8835,7 +8835,7 @@ export const cities: City[] = [
         biensGeres: 180,
         specialty: 'Gestion complète + activités locales',
         description:
-          "Avec plus de 400 avis Google, Bienvenue Chez Nous (parfois « Bienvenue Chez Nous 63 ») est de loin la conciergerie la plus établie de Clermont-Ferrand en volume. La note de 4,2/5 est plus modérée que celle de structures plus petites, mais elle repose sur un historique large, donc plus fiable : c'est exactement le genre d'écart qu'il faut savoir lire (200 avis à 4,2 valent mieux qu'une poignée d'avis à 5). Commission de 20 % TTC, gestion complète, et une offre qui inclut des recommandations d'activités locales pour les voyageurs. C'est un choix rassurant pour déléguer entièrement sur un T2 ou T3 standard du centre. Lisez en priorité les avis négatifs pour repérer les points de friction récurrents (délais, ménage, communication) et demandez comment le ménage est facturé.",
+          "Commission de 20 % TTC, gestion complète, et une offre qui inclut des recommandations d'activités locales pour les voyageurs. C'est un choix rassurant pour déléguer entièrement sur un T2 ou T3 standard du centre. Lisez en priorité les avis négatifs pour repérer les points de friction récurrents (délais, ménage, communication) et demandez comment le ménage est facturé.",
       },
       {
         name: 'Ecolavage Clermont',
@@ -8857,7 +8857,7 @@ export const cities: City[] = [
         biensGeres: 70,
         specialty: 'Commission basse, tourisme responsable',
         description:
-          "Clermont Conciergerie se distingue par la commission la plus basse de notre sélection : 12 % HT, très en dessous du marché, avec un positionnement axé sur un tourisme responsable et local. Note Google de 4,7/5 sur une quarantaine d'avis. Sur le papier, l'économie de commission est substantielle : sur un revenu brut de 15 000 €, 12 % au lieu de 20 % représente près de 1 200 € gardés chaque année. Le revers possible d'une commission basse est un périmètre de services plus ciblé ou une équipe plus réduite : faites préciser ce qui est inclus, le mode de facturation du ménage et la réactivité en cas d'incident. Pour un propriétaire attentif au coût total et sensible à l'argument local, c'est une option à étudier sérieusement.",
+          "Clermont Conciergerie se distingue par la commission la plus basse de notre sélection : 12 % HT, très en dessous du marché, avec un positionnement axé sur un tourisme responsable et local. Sur le papier, l'économie de commission est substantielle : sur un revenu brut de 15 000 €, 12 % au lieu de 20 % représente près de 1 200 € gardés chaque année. Le revers possible d'une commission basse est un périmètre de services plus ciblé ou une équipe plus réduite : faites préciser ce qui est inclus, le mode de facturation du ménage et la réactivité en cas d'incident. Pour un propriétaire attentif au coût total et sensible à l'argument local, c'est une option à étudier sérieusement.",
       },
       {
         name: 'La Conciergerie des Puys',
@@ -8868,7 +8868,7 @@ export const cities: City[] = [
         biensGeres: 40,
         specialty: 'Gestion complète + ménage',
         description:
-          "La Conciergerie des Puys propose une gestion complète à 20 % HT, incluant l'entretien et le ménage, avec une grille tarifaire qui mentionne aussi des formules à commission plus élevée pour les services premium. Note Google de 4,6/5, sur un nombre d'avis encore modeste. Le profil est celui d'une conciergerie clermontoise classique, qui s'occupe de l'annonce, de l'accueil et de la logistique. Pour juger, demandez depuis combien de temps l'équipe opère sur Clermont, combien de biens elle gère dans la ville et un exemple de reporting mensuel. Sur un volume d'avis limité, l'échange direct avec des propriétaires déjà clients reste le meilleur moyen de vérifier la qualité réelle du service avant de s'engager.",
+          "La Conciergerie des Puys propose une gestion complète à 20 % HT, incluant l'entretien et le ménage, avec une grille tarifaire qui mentionne aussi des formules à commission plus élevée pour les services premium. Le profil est celui d'une conciergerie clermontoise classique, qui s'occupe de l'annonce, de l'accueil et de la logistique. Pour juger, demandez depuis combien de temps l'équipe opère sur Clermont, combien de biens elle gère dans la ville et un exemple de reporting mensuel. Sur un volume d'avis limité, l'échange direct avec des propriétaires déjà clients reste le meilleur moyen de vérifier la qualité réelle du service avant de s'engager.",
       },
       {
         name: 'La Conciergerie Terre et Volcans',
@@ -8879,7 +8879,7 @@ export const cities: City[] = [
         biensGeres: 45,
         specialty: 'Orientée familles, sélection voyageurs',
         description:
-          "La Conciergerie Terre et Volcans affiche une note Google de 5/5 sur une vingtaine d'avis et un positionnement orienté familles, avec une attention particulière à la vérification des voyageurs. Pour un propriétaire qui craint les dégradations ou les fêtes, ce filtrage à l'entrée est un argument concret. L'offre couvre la gestion complète de l'annonce à l'accueil. La commission n'est pas publique : demandez un devis détaillé et comparez le coût « tout compris » plutôt que la commission seule. Comme pour toute structure au volume d'avis encore réduit, recoupez les retours en ligne avec des références locales et vérifiez la couverture exacte sur Clermont intra-muros par rapport aux communes périphériques de l'agglomération.",
+          "Pour un propriétaire qui craint les dégradations ou les fêtes, ce filtrage à l'entrée est un argument concret. L'offre couvre la gestion complète de l'annonce à l'accueil. La commission n'est pas publique : demandez un devis détaillé et comparez le coût « tout compris » plutôt que la commission seule. Comme pour toute structure au volume d'avis encore réduit, recoupez les retours en ligne avec des références locales et vérifiez la couverture exacte sur Clermont intra-muros par rapport aux communes périphériques de l'agglomération.",
       },
       {
         name: 'Dôme Conciergerie',
@@ -9014,7 +9014,7 @@ export const cities: City[] = [
         biensGeres: 180,
         specialty: 'Plateforme tech, large couverture',
         description:
-          "Avec plus de 320 avis Google et une note de 4,6/5, Homelok est de loin l'acteur le plus établi de notre sélection lorientaise en volume d'avis. C'est le profil « plateforme » : process structurés, outils technologiques (channel manager, suivi en ligne), large couverture géographique. Commission de 20 % TTC, dans la moyenne du marché. Pour un propriétaire qui veut déléguer sans surprise et bénéficier d'un acteur rodé, c'est une valeur sûre. Le revers d'une grosse structure peut être une relation moins personnalisée qu'avec une petite conciergerie de quartier : si la proximité compte beaucoup pour vous, comparez la réactivité réelle. Comme toujours, lisez en priorité les avis négatifs pour repérer les irritants récurrents, et faites préciser si le ménage est refacturé au voyageur ou prélevé sur vos revenus.",
+          "C'est le profil « plateforme » : process structurés, outils technologiques (channel manager, suivi en ligne), large couverture géographique. Commission de 20 % TTC, dans la moyenne du marché. Pour un propriétaire qui veut déléguer sans surprise et bénéficier d'un acteur rodé, c'est une valeur sûre. Le revers d'une grosse structure peut être une relation moins personnalisée qu'avec une petite conciergerie de quartier : si la proximité compte beaucoup pour vous, comparez la réactivité réelle. Comme toujours, lisez en priorité les avis négatifs pour repérer les irritants récurrents, et faites préciser si le ménage est refacturé au voyageur ou prélevé sur vos revenus.",
       },
       {
         name: 'Air et Mer Vacances',
@@ -9025,7 +9025,7 @@ export const cities: City[] = [
         biensGeres: 80,
         specialty: 'Spécialiste littoral & voile',
         description:
-          "Air et Mer Vacances affiche une note de 4,3/5 sur une soixantaine d'avis et un positionnement orienté littoral, cohérent avec la demande balnéaire et nautique du pays de Lorient (Larmor-Plage, rade, événements voile). La commission de 25 % TTC se situe dans le haut du marché : il faut donc que les services inclus le justifient. Demandez le détail (photos professionnelles, pricing dynamique, accueil physique, linge, maintenance) et une estimation de revenu net sur votre bien. Sur un logement très saisonnier qui se remplit surtout l'été et pendant l'Interceltique, une commission élevée peut rester rentable si l'agence optimise vraiment les tarifs en haute saison. Vérifiez la couverture exacte sur Lorient intra-muros et les communes balnéaires voisines.",
+          "La commission de 25 % TTC se situe dans le haut du marché : il faut donc que les services inclus le justifient. Demandez le détail (photos professionnelles, pricing dynamique, accueil physique, linge, maintenance) et une estimation de revenu net sur votre bien. Sur un logement très saisonnier qui se remplit surtout l'été et pendant l'Interceltique, une commission élevée peut rester rentable si l'agence optimise vraiment les tarifs en haute saison. Vérifiez la couverture exacte sur Lorient intra-muros et les communes balnéaires voisines.",
       },
       {
         name: 'Happy Home 56',
@@ -9036,7 +9036,7 @@ export const cities: City[] = [
         biensGeres: 75,
         specialty: 'Service haut de gamme Morbihan',
         description:
-          "Happy Home 56 affiche une note Google de 5/5 sur près de 60 avis, performance remarquable sur un volume déjà significatif, avec un positionnement haut de gamme à l'échelle du Morbihan. C'est un signal de qualité fort : une note maximale tenue sur des dizaines d'avis est bien plus fiable qu'un 5/5 sur une poignée de retours. La commission n'étant pas publique, demandez un devis détaillé et comparez le coût « tout compris ». Le profil convient aux propriétaires exigeants sur l'accueil et la présentation du bien, prêts à payer pour un service soigné. Faites préciser le nombre de logements gérés sur Lorient même et la capacité de l'équipe à absorber le pic de l'Interceltique, période où la qualité de gestion fait toute la différence sur le revenu.",
+          "C'est un signal de qualité fort : une note maximale tenue sur des dizaines d'avis est bien plus fiable qu'un 5/5 sur une poignée de retours. La commission n'étant pas publique, demandez un devis détaillé et comparez le coût « tout compris ». Le profil convient aux propriétaires exigeants sur l'accueil et la présentation du bien, prêts à payer pour un service soigné. Faites préciser le nombre de logements gérés sur Lorient même et la capacité de l'équipe à absorber le pic de l'Interceltique, période où la qualité de gestion fait toute la différence sur le revenu.",
       },
       {
         name: 'Alb Conciergerie',
@@ -9047,7 +9047,7 @@ export const cities: City[] = [
         biensGeres: 55,
         specialty: 'Relation propriétaire soignée',
         description:
-          "Alb Conciergerie combine une excellente note Google (4,9/5 sur une quarantaine d'avis) et une commission de 24 % TTC, dans le haut du marché lorientais. Le positionnement met l'accent sur la relation propriétaire et le soin apporté à chaque bien, ce qui correspond à une structure à taille humaine plutôt qu'à une plateforme industrielle. Pour un propriétaire qui veut un interlocuteur identifié et réactif, c'est un bon profil. La commission élevée doit s'accompagner d'un périmètre de services complet : demandez ce qui est inclus, le mode de facturation du ménage et un exemple de reporting. Une note proche du maximum sur un volume correct est rassurante, mais vérifiez tout de même la couverture sur votre secteur précis et la disponibilité en haute saison.",
+          "Le positionnement met l'accent sur la relation propriétaire et le soin apporté à chaque bien, ce qui correspond à une structure à taille humaine plutôt qu'à une plateforme industrielle. Pour un propriétaire qui veut un interlocuteur identifié et réactif, c'est un bon profil. La commission élevée doit s'accompagner d'un périmètre de services complet : demandez ce qui est inclus, le mode de facturation du ménage et un exemple de reporting. Une note proche du maximum sur un volume correct est rassurante, mais vérifiez tout de même la couverture sur votre secteur précis et la disponibilité en haute saison.",
       },
       {
         name: 'Groom Conciergerie',
@@ -9058,7 +9058,7 @@ export const cities: City[] = [
         biensGeres: 55,
         specialty: 'Accueil voyageurs premium',
         description:
-          "Groom Conciergerie affiche elle aussi une note de 4,9/5 sur une quarantaine d'avis, avec une commission de 25 % TTC et un positionnement axé sur la qualité de l'accueil voyageurs. C'est un profil premium : l'expérience client soignée vise à générer de bons avis, donc un meilleur classement de votre annonce et des tarifs plus élevés. Sur un marché comme Lorient où l'Interceltique attire une clientèle internationale, cet effet peut compenser une commission dans le haut de la fourchette. Avant de signer, demandez des exemples concrets d'optimisation de revenus, le détail des prestations couvertes par les 25 % et la façon dont le ménage est traité. Comparez à note égale avec Alb Conciergerie pour départager sur le service et la couverture géographique.",
+          "C'est un profil premium : l'expérience client soignée vise à générer de bons avis, donc un meilleur classement de votre annonce et des tarifs plus élevés. Sur un marché comme Lorient où l'Interceltique attire une clientèle internationale, cet effet peut compenser une commission dans le haut de la fourchette. Avant de signer, demandez des exemples concrets d'optimisation de revenus, le détail des prestations couvertes par les 25 % et la façon dont le ménage est traité. Comparez à note égale avec Alb Conciergerie pour départager sur le service et la couverture géographique.",
       },
       {
         name: "Les Cocons d'Agathe",
@@ -9069,7 +9069,7 @@ export const cities: City[] = [
         biensGeres: 50,
         specialty: 'Formules modulables',
         description:
-          "Les Cocons d'Agathe se distinguent par une grille modulable, de 16 % à 25 % TTC selon le niveau de service choisi, et une note Google de 4,8/5. Cette souplesse est intéressante : un propriétaire autonome qui veut seulement déléguer l'accueil et le ménage paiera moins qu'un autre qui confie tout, communication et optimisation comprises. C'est une bonne option pour ajuster le coût à vos besoins réels. Demandez précisément ce que couvre chaque palier de commission et faites une simulation de revenu net pour la formule qui vous correspond. Vérifiez aussi, comme pour les autres, la capacité de l'équipe à gérer la montée en charge du mois d'août et la couverture sur votre quartier. Une note élevée sur un volume correct constitue un bon point de départ.",
+          "Cette souplesse est intéressante : un propriétaire autonome qui veut seulement déléguer l'accueil et le ménage paiera moins qu'un autre qui confie tout, communication et optimisation comprises. C'est une bonne option pour ajuster le coût à vos besoins réels. Demandez précisément ce que couvre chaque palier de commission et faites une simulation de revenu net pour la formule qui vous correspond. Vérifiez aussi, comme pour les autres, la capacité de l'équipe à gérer la montée en charge du mois d'août et la couverture sur votre quartier. Une note élevée sur un volume correct constitue un bon point de départ.",
       },
     ],
     neighborhoods: [
@@ -9185,7 +9185,7 @@ export const cities: City[] = [
         biensGeres: 90,
         specialty: 'Gestion + accompagnement investissement',
         description:
-          "Home Invest 64 est l'un des acteurs les plus établis de Pau en volume d'avis (4,5/5 sur une cinquantaine d'avis Google) et combine conciergerie et accompagnement à l'investissement immobilier. Commission de 20 % TTC, dans la moyenne du marché. Ce double positionnement est intéressant si vous achetez pour louer : la même équipe peut vous aider à choisir le bien puis à le gérer. Attention toutefois à bien distinguer les deux prestations et leurs coûts respectifs. Pour la partie conciergerie, demandez le détail des services inclus dans les 20 %, la façon dont le ménage est facturé et une simulation de revenu net sur votre logement. Un volume d'avis correct et une note solide en font un point de comparaison fiable face aux structures plus petites mais moins éprouvées.",
+          "Commission de 20 % TTC, dans la moyenne du marché. Ce double positionnement est intéressant si vous achetez pour louer : la même équipe peut vous aider à choisir le bien puis à le gérer. Attention toutefois à bien distinguer les deux prestations et leurs coûts respectifs. Pour la partie conciergerie, demandez le détail des services inclus dans les 20 %, la façon dont le ménage est facturé et une simulation de revenu net sur votre logement. Un volume d'avis correct et une note solide en font un point de comparaison fiable face aux structures plus petites mais moins éprouvées.",
       },
       {
         name: 'Helpy Conciergerie',
@@ -9196,7 +9196,7 @@ export const cities: City[] = [
         biensGeres: 60,
         specialty: 'Gestion complète Béarn',
         description:
-          "Helpy Conciergerie propose une gestion complète sur Pau et le Béarn, notée 4,5/5 sur une trentaine d'avis Google, avec une commission de 23 % TTC, un cran au-dessus de la moyenne. Le profil est celui d'une conciergerie full service classique : annonce, accueil, ménage, assistance voyageurs. Pour justifier la commission, demandez ce qui distingue son offre (pricing dynamique, photos professionnelles, reporting détaillé) et comparez le coût total, ménage compris, avec les acteurs à 20 %. Sur un marché palois où l'occupation est lissée mais pas explosive, chaque point de commission compte pour la rentabilité. Vérifiez aussi la couverture précise sur votre quartier et la réactivité de l'équipe, en lisant en priorité les éventuels avis négatifs publiés.",
+          "Le profil est celui d'une conciergerie full service classique : annonce, accueil, ménage, assistance voyageurs. Pour justifier la commission, demandez ce qui distingue son offre (pricing dynamique, photos professionnelles, reporting détaillé) et comparez le coût total, ménage compris, avec les acteurs à 20 %. Sur un marché palois où l'occupation est lissée mais pas explosive, chaque point de commission compte pour la rentabilité. Vérifiez aussi la couverture précise sur votre quartier et la réactivité de l'équipe, en lisant en priorité les éventuels avis négatifs publiés.",
       },
       {
         name: 'Niles Conciergerie',
@@ -9207,7 +9207,7 @@ export const cities: City[] = [
         biensGeres: 40,
         specialty: 'Commission modulable',
         description:
-          "Niles Conciergerie a l'avantage d'une grille modulable, de 15 % à 21 % TTC selon le niveau de service, et d'une note Google de 4,6/5. Cette souplesse permet d'ajuster le coût à vos besoins : déléguer seulement l'accueil et le ménage, ou confier la gestion complète avec optimisation des tarifs. Pour un propriétaire un peu autonome, le palier bas peut représenter une vraie économie par rapport aux agences à commission fixe élevée. Demandez précisément ce que couvre chaque palier et faites une simulation pour la formule qui vous correspond. Le volume d'avis reste modéré : recoupez avec des références locales et vérifiez l'ancienneté de l'équipe sur Pau ainsi que sa connaissance des spécificités de la demande (affaires, étudiants, événements).",
+          "Cette souplesse permet d'ajuster le coût à vos besoins : déléguer seulement l'accueil et le ménage, ou confier la gestion complète avec optimisation des tarifs. Pour un propriétaire un peu autonome, le palier bas peut représenter une vraie économie par rapport aux agences à commission fixe élevée. Demandez précisément ce que couvre chaque palier et faites une simulation pour la formule qui vous correspond. Le volume d'avis reste modéré : recoupez avec des références locales et vérifiez l'ancienneté de l'équipe sur Pau ainsi que sa connaissance des spécificités de la demande (affaires, étudiants, événements).",
       },
       {
         name: 'ONLOC',
@@ -9218,7 +9218,7 @@ export const cities: City[] = [
         biensGeres: 30,
         specialty: 'Service premium',
         description:
-          "ONLOC affiche une note Google élevée (4,8/5) et un positionnement premium, avec une commission comprise entre 23 et 27 % TTC, dans le haut du marché palois. Ce type d'offre vise les propriétaires qui veulent un service très complet et soigné, sans rien gérer eux-mêmes. La commission haute n'a de sens que si elle s'accompagne d'une vraie optimisation du revenu : demandez des exemples concrets de gains obtenus sur des biens comparables, le détail des prestations couvertes par la fourchette haute et le mode de facturation du ménage. Le nombre d'avis reste limité, donc le signal qualitatif, bien que bon, est à confirmer par des références. Comparez le coût total avec les acteurs à 20 % pour vérifier que le premium se justifie sur votre bien.",
+          "Ce type d'offre vise les propriétaires qui veulent un service très complet et soigné, sans rien gérer eux-mêmes. La commission haute n'a de sens que si elle s'accompagne d'une vraie optimisation du revenu : demandez des exemples concrets de gains obtenus sur des biens comparables, le détail des prestations couvertes par la fourchette haute et le mode de facturation du ménage. Le nombre d'avis reste limité, donc le signal qualitatif, bien que bon, est à confirmer par des références. Comparez le coût total avec les acteurs à 20 % pour vérifier que le premium se justifie sur votre bien.",
       },
       {
         name: 'Myra Conciergerie',
@@ -9229,7 +9229,7 @@ export const cities: City[] = [
         biensGeres: 30,
         specialty: 'Accompagnement personnalisé',
         description:
-          "Myra Conciergerie mise sur un accompagnement personnalisé, avec une note Google de 4,6/5 et une commission de 24 % TTC. Le profil est celui d'une structure à taille humaine, qui privilégie la relation directe avec le propriétaire et un suivi attentif de chaque bien. Pour qui valorise la proximité et un interlocuteur unique, c'est un argument réel. La commission étant dans le haut du marché, demandez le détail des services inclus, la façon dont le ménage est traité et un exemple de reporting mensuel. Le volume d'avis reste faible : prenez le temps d'échanger avec des propriétaires déjà clients et vérifiez la capacité de l'équipe à couvrir votre secteur et à gérer les pics d'événements comme le Grand Prix de Pau.",
+          "Le profil est celui d'une structure à taille humaine, qui privilégie la relation directe avec le propriétaire et un suivi attentif de chaque bien. Pour qui valorise la proximité et un interlocuteur unique, c'est un argument réel. La commission étant dans le haut du marché, demandez le détail des services inclus, la façon dont le ménage est traité et un exemple de reporting mensuel. Le volume d'avis reste faible : prenez le temps d'échanger avec des propriétaires déjà clients et vérifiez la capacité de l'équipe à couvrir votre secteur et à gérer les pics d'événements comme le Grand Prix de Pau.",
       },
       {
         name: 'La Conciergerie Paloise',
@@ -9240,7 +9240,7 @@ export const cities: City[] = [
         biensGeres: 30,
         specialty: 'Spécialiste local palois',
         description:
-          "La Conciergerie Paloise revendique un ancrage 100 % local et affiche une note Google de 5/5, avec une commission de 20 % TTC, dans la moyenne du marché. L'argument central est la connaissance fine de Pau : quartiers, artisans, réglementation locale (l'agence publie d'ailleurs du contenu sur les règles de location courte durée à Pau). Pour un propriétaire palois, ce type d'acteur de proximité a un intérêt évident en cas d'incident ou de besoin d'intervention rapide. La note maximale repose sur un nombre d'avis encore modeste : un bon signal, à confirmer par des références concrètes. Demandez le périmètre exact des 20 %, le mode de facturation du ménage et le nombre de biens gérés dans la ville. À commission équivalente, l'ancrage local peut faire pencher la balance.",
+          "L'argument central est la connaissance fine de Pau : quartiers, artisans, réglementation locale (l'agence publie d'ailleurs du contenu sur les règles de location courte durée à Pau). Pour un propriétaire palois, ce type d'acteur de proximité a un intérêt évident en cas d'incident ou de besoin d'intervention rapide. La note maximale repose sur un nombre d'avis encore modeste : un bon signal, à confirmer par des références concrètes. Demandez le périmètre exact des 20 %, le mode de facturation du ménage et le nombre de biens gérés dans la ville. À commission équivalente, l'ancrage local peut faire pencher la balance.",
       },
     ],
     neighborhoods: [

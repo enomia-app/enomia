@@ -54,7 +54,8 @@ for (const match of content.matchAll(/^  \{\s*\n\s+slug:\s*'([^']+)',/gm)) {
 
   const namesSeen = new Set();
   for (const cb of concs) {
-    const name = cb.match(/name:\s*["']([^"']+)["']/)?.[1] || '?';
+    // Nom : gère les apostrophes échappées dans les noms (ex. "L'Agence", 'Finist\'Armor')
+    const name = (cb.match(/name:\s*"((?:\\.|[^"\\])*)"/) || cb.match(/name:\s*'((?:\\.|[^'\\])*)'/))?.[1] || '?';
     if (namesSeen.has(name)) issues.push(`${slug}: doublon de nom "${name}"`);
     namesSeen.add(name);
 
@@ -75,7 +76,7 @@ for (const match of content.matchAll(/^  \{\s*\n\s+slug:\s*'([^']+)',/gm)) {
   }
 }
 
-if (cityCount !== 46) issues.push(`Nombre de villes = ${cityCount} (attendu 46)`);
+if (cityCount !== 50) issues.push(`Nombre de villes = ${cityCount} (attendu 50)`);
 
 // TypeScript
 let tsErrors = 0;

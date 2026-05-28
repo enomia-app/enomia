@@ -46,6 +46,12 @@ for (const match of content.matchAll(/^  \{\s*\n\s+slug:\s*'([^']+)',/gm)) {
   if (concs.length < 3) issues.push(`${slug}: seulement ${concs.length} conciergeries (min 3)`);
   if (concs.length > 8) issues.push(`${slug}: ${concs.length} conciergeries (max 8)`);
 
+  // Cohérence du compteur "des N meilleures" (title + metaDescription) avec le nb réel de fiches
+  const titleNum = block.match(/title:\s*'[^']*?des (\d+) meilleures/)?.[1];
+  const metaNum = block.match(/des (\d+) meilleures conciergeries/)?.[1];
+  if (titleNum && +titleNum !== concs.length) issues.push(`${slug}: titre annonce ${titleNum} agences mais ${concs.length} listées`);
+  if (metaNum && +metaNum !== concs.length) issues.push(`${slug}: meta annonce ${metaNum} mais ${concs.length} listées`);
+
   const namesSeen = new Set();
   for (const cb of concs) {
     const name = cb.match(/name:\s*["']([^"']+)["']/)?.[1] || '?';

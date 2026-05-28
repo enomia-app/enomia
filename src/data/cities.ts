@@ -100,10 +100,10 @@ export const cities: City[] = [
     displayName: 'Bordeaux',
     region: 'Nouvelle-Aquitaine',
     regionSlug: 'nouvelle-aquitaine',
-    title: 'Conciergerie Bordeaux Airbnb : comparatif 2026 des 7 meilleures agences',
+    title: 'Conciergerie Bordeaux Airbnb : comparatif 2026 des 8 meilleures agences',
     metaTitle: 'Conciergerie Bordeaux Airbnb : Comparatif 2026 (tarifs & avis)',
     metaDescription:
-      "Comparatif neutre des 7 meilleures conciergeries Airbnb de Bordeaux. Tarifs (15-30%), services, avis, réglementation 2026, quartiers rentables. Guide complet.",
+      "Comparatif neutre des 8 meilleures conciergeries Airbnb de Bordeaux. Tarifs (15-30%), services, avis, réglementation 2026, quartiers rentables. Guide complet.",
     kwPrincipal: 'conciergerie bordeaux',
     kwSecondaires: [
       'conciergerie airbnb bordeaux',
@@ -1472,9 +1472,9 @@ export const cities: City[] = [
     displayName: 'Paris',
     region: 'Île-de-France',
     regionSlug: 'ile-de-france',
-    title: 'Conciergerie Paris Airbnb : comparatif 2026 des 7 meilleures agences',
+    title: 'Conciergerie Paris Airbnb : comparatif 2026 des 8 meilleures agences',
     metaTitle: 'Conciergerie Paris Airbnb : Comparatif 2026 (tarifs & avis)',
-    metaDescription: 'Comparatif neutre des 7 meilleures conciergeries Airbnb à Paris. Tarifs (15-25 %), services, avis, réglementation 2026, quartiers rentables. Guide complet.',
+    metaDescription: 'Comparatif neutre des 8 meilleures conciergeries Airbnb à Paris. Tarifs (15-25 %), services, avis, réglementation 2026, quartiers rentables. Guide complet.',
     kwPrincipal: 'conciergerie airbnb paris',
     kwSecondaires: ['conciergerie paris', 'conciergerie paris airbnb', 'meilleure conciergerie paris', 'gestion locative airbnb paris', 'tarif conciergerie paris'],
     population: 2100000,
@@ -1659,7 +1659,7 @@ export const cities: City[] = [
     regionSlug: 'occitanie',
     title: "Conciergerie Agde / Cap d'Agde Airbnb : comparatif 2026 des meilleures agences",
     metaTitle: "Conciergerie Agde & Cap d'Agde Airbnb : Comparatif 2026 (tarifs & avis)",
-    metaDescription: "Comparatif neutre des 6 meilleures conciergeries Airbnb d'Agde et du Cap d'Agde. Commission (20 %), services, avis, réglementation 2026, quartiers rentables. Guide complet.",
+    metaDescription: "Comparatif neutre des 5 meilleures conciergeries Airbnb d'Agde et du Cap d'Agde. Commission (20 %), services, avis, réglementation 2026, quartiers rentables. Guide complet.",
     kwPrincipal: 'conciergerie agde',
     kwSecondaires: ["conciergerie cap d'agde", "conciergerie airbnb cap d'agde", 'conciergerie location saisonnière agde', 'gestion locative agde', "meilleure conciergerie cap d'agde"],
     population: 29612,
@@ -1802,10 +1802,10 @@ export const cities: City[] = [
     displayName: "Les Sables-d'Olonne",
     region: 'Pays de la Loire',
     regionSlug: 'pays-de-la-loire',
-    title: "Conciergerie Les Sables-d'Olonne : comparatif 2026 des 6 meilleures agences",
+    title: "Conciergerie Les Sables-d'Olonne : comparatif 2026 des 8 meilleures agences",
     metaTitle: "Conciergerie Les Sables-d'Olonne : Comparatif 2026 (tarifs & avis)",
     metaDescription:
-      "Comparatif neutre des 6 meilleures conciergeries Airbnb aux Sables-d'Olonne. Tarifs (18-30 %), services, avis, réglementation 2026, quartiers rentables. Guide complet.",
+      "Comparatif neutre des 8 meilleures conciergeries Airbnb aux Sables-d'Olonne. Tarifs (18-30 %), services, avis, réglementation 2026, quartiers rentables. Guide complet.",
     kwPrincipal: 'conciergerie aux sables d olonne',
     kwSecondaires: [
       'conciergerie airbnb les sables d olonne',
@@ -2003,10 +2003,10 @@ export const cities: City[] = [
     displayName: 'Cannes',
     region: "Provence-Alpes-Côte d'Azur",
     regionSlug: 'provence-alpes-cote-dazur',
-    title: 'Conciergerie Cannes Airbnb : comparatif 2026 des 7 meilleures agences',
+    title: 'Conciergerie Cannes Airbnb : comparatif 2026 des 8 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Cannes : Comparatif 2026 (tarifs & avis)',
     metaDescription:
-      'Comparatif des 7 meilleures conciergeries Airbnb à Cannes. Tarifs (18-25 %), stratégie Festival & MIPIM, réglementation zone tendue, quartiers rentables.',
+      'Comparatif des 8 meilleures conciergeries Airbnb à Cannes. Tarifs (18-25 %), stratégie Festival & MIPIM, réglementation zone tendue, quartiers rentables.',
     kwPrincipal: 'conciergerie airbnb cannes',
     kwSecondaires: [
       'conciergerie cannes',
@@ -2609,10 +2609,10 @@ export const cities: City[] = [
     displayName: 'Angers',
     region: 'Pays de la Loire',
     regionSlug: 'pays-de-la-loire',
-    title: 'Conciergerie Angers Airbnb : comparatif 2026 des 7 meilleures agences',
+    title: 'Conciergerie Angers Airbnb : comparatif 2026 des 6 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Angers : Comparatif 2026 (tarifs & avis)',
     metaDescription:
-      "Comparatif des 7 meilleures conciergeries Airbnb à Angers. Tarifs (15-22 %), réglementation zone tendue, quartiers rentables, stratégie Château d'Angers & Accroche-Cœurs.",
+      "Comparatif des 6 meilleures conciergeries Airbnb à Angers. Tarifs (15-22 %), réglementation zone tendue, quartiers rentables, stratégie Château d'Angers & Accroche-Cœurs.",
     kwPrincipal: 'conciergerie airbnb angers',
     kwSecondaires: [
       'conciergerie angers',
@@ -2795,10 +2795,10 @@ export const cities: City[] = [
     displayName: 'Montpellier',
     region: 'Occitanie',
     regionSlug: 'occitanie',
-    title: 'Conciergerie Montpellier Airbnb : comparatif 2026 des 7 meilleures agences',
+    title: 'Conciergerie Montpellier Airbnb : comparatif 2026 des 8 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Montpellier : Comparatif 2026 (tarifs & avis)',
     metaDescription:
-      "Comparatif des 7 meilleures conciergeries Airbnb à Montpellier. Tarifs (18-22 %), quota Écusson 770 logements, 90 jours/an, quartiers rentables hors quota.",
+      "Comparatif des 8 meilleures conciergeries Airbnb à Montpellier. Tarifs (18-22 %), quota Écusson 770 logements, 90 jours/an, quartiers rentables hors quota.",
     kwPrincipal: 'conciergerie airbnb montpellier',
     kwSecondaires: [
       'conciergerie montpellier',
@@ -3005,10 +3005,10 @@ export const cities: City[] = [
     displayName: 'La Rochelle',
     region: 'Nouvelle-Aquitaine',
     regionSlug: 'nouvelle-aquitaine',
-    title: 'Conciergerie La Rochelle Airbnb : comparatif 2026 des 6 meilleures agences',
+    title: 'Conciergerie La Rochelle Airbnb : comparatif 2026 des 8 meilleures agences',
     metaTitle: 'Conciergerie Airbnb La Rochelle : Comparatif 2026 (tarifs & avis)',
     metaDescription:
-      "Comparatif des 6 meilleures conciergeries Airbnb à La Rochelle. Tarifs (18-22 %), autorisation obligatoire Agglo 2025, quartiers rentables, Francofolies & Grand Pavois.",
+      "Comparatif des 8 meilleures conciergeries Airbnb à La Rochelle. Tarifs (18-22 %), autorisation obligatoire Agglo 2025, quartiers rentables, Francofolies & Grand Pavois.",
     kwPrincipal: 'conciergerie airbnb la rochelle',
     kwSecondaires: [
       'conciergerie la rochelle',
@@ -3571,10 +3571,10 @@ export const cities: City[] = [
     displayName: 'Marrakech',
     region: 'Maroc',
     regionSlug: 'maroc',
-    title: 'Conciergerie Marrakech Airbnb : comparatif 2026 des 6 meilleures agences',
+    title: 'Conciergerie Marrakech Airbnb : comparatif 2026 des 5 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Marrakech : Comparatif 2026 (tarifs & avis)',
     metaDescription:
-      'Comparatif des 6 meilleures conciergeries Airbnb à Marrakech. Tarifs (15-22 %), riads Médina, Guéliz, Palmeraie, réglementation loi 80-14, fiscalité Maroc 2026.',
+      'Comparatif des 5 meilleures conciergeries Airbnb à Marrakech. Tarifs (15-22 %), riads Médina, Guéliz, Palmeraie, réglementation loi 80-14, fiscalité Maroc 2026.',
     kwPrincipal: 'conciergerie marrakech',
     kwSecondaires: [
       'conciergerie airbnb marrakech',
@@ -3737,10 +3737,10 @@ export const cities: City[] = [
     displayName: 'Annecy',
     region: 'Auvergne-Rhône-Alpes',
     regionSlug: 'auvergne-rhone-alpes',
-    title: 'Conciergerie Annecy Airbnb : comparatif 2026 des 7 meilleures agences',
+    title: 'Conciergerie Annecy Airbnb : comparatif 2026 des 8 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Annecy : Comparatif 2026 (tarifs & avis)',
     metaDescription:
-      'Comparatif des 7 meilleures conciergeries Airbnb à Annecy. Tarifs (17-25 %), nouveau quota mairie 2 660 meublés, quartiers rentables et stratégie lac.',
+      'Comparatif des 8 meilleures conciergeries Airbnb à Annecy. Tarifs (17-25 %), nouveau quota mairie 2 660 meublés, quartiers rentables et stratégie lac.',
     kwPrincipal: 'conciergerie airbnb annecy',
     kwSecondaires: [
       'conciergerie annecy',

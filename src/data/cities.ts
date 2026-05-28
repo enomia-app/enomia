@@ -3999,16 +3999,16 @@ export const cities: City[] = [
           "Conciergerie fondée par Johanne et Chloé qui couvre Avignon, la Provence et la Côte Bleue jusqu'à Martigues. Propose une offre clé en main et une formule flexible à la carte pour les propriétaires qui veulent garder la main sur certaines tâches.",
       },
       {
-        name: 'Capsule Corp Conciergerie Avignon',
-        url: 'https://www.capsulecorp-conciergerie-avignon.fr/',
-        commission: '20 %',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 30,
-        specialty: 'Sans engagement, sans frais cachés',
+        name: 'Keys Manager Conciergerie Avignon',
+        url: 'https://www.keysmanager.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 5,
+        reviews: 17,
+        biensGeres: 0,
+        specialty: 'Réseau national, Avignon & Vaucluse',
         description:
-          "Conciergerie Airbnb sans contrat longue durée et sans frais cachés, qui gère la communication voyageurs, les check-in/out, le ménage pro et l'optimisation tarifaire dynamique. Filiale du groupe Capsule Corp Immo, également présent à Grenoble et Nîmes.",
+          "Agence avignonnaise du réseau national Keys Manager, couvrant Avignon et le Vaucluse. Gestion complète : création et optimisation des annonces, photographie professionnelle, communication voyageurs, accueil personnalisé, ménage et blanchisserie après chaque séjour, optimisation tarifaire et maintenance.",
       },
       {
         name: 'Rachel Conciergerie',
@@ -4145,10 +4145,10 @@ export const cities: City[] = [
     displayName: 'Nantes',
     region: 'Pays de la Loire',
     regionSlug: 'pays-de-la-loire',
-    title: 'Conciergerie Nantes Airbnb : comparatif 2026 des 7 meilleures agences',
+    title: 'Conciergerie Nantes Airbnb : comparatif 2026 des 6 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Nantes : Comparatif 2026 (tarifs & avis)',
     metaDescription:
-      'Comparatif des 7 meilleures conciergeries Airbnb à Nantes. Tarifs (13-25 %), changement d\'usage obligatoire, quartiers rentables, stratégie Voyage à Nantes.',
+      'Comparatif des 6 meilleures conciergeries Airbnb à Nantes. Tarifs (13-25 %), changement d\'usage obligatoire, quartiers rentables, stratégie Voyage à Nantes.',
     kwPrincipal: 'conciergerie nantes',
     kwSecondaires: [
       'conciergerie airbnb nantes',
@@ -4197,16 +4197,16 @@ export const cities: City[] = [
           "Conciergerie portée par Benjamin Luzeau et Isabelle depuis août 2023, structurée en SAS. Modèle volontairement épuré avec une commission unique de **20 % HT tout inclus** (ménage forfait inclus dans la commission) et la carte professionnelle d'agent immobilier — rare sur le marché nantais.",
       },
       {
-        name: 'Conciergerie Océane',
-        url: 'https://www.conciergerie-oceane.com/',
-        commission: '20 %',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 50,
-        specialty: 'Conciergerie historique nantaise, full service A à Z',
+        name: 'Concierge BB Nantes',
+        url: 'https://www.conciergebb.fr/pages/conciergerie-airbnb-nantes-gestion-pro-rendement-optimise',
+        commission: '20-25 %',
+        menage: 'inclus dans commission',
+        rating: 4.7,
+        reviews: 13,
+        biensGeres: 0,
+        specialty: 'Tout inclus, Nantes & Pays de la Loire',
         description:
-          "Conciergerie créée par Mickaël Mary, qui gère plus de 50 logements à Nantes et sa métropole. Approche « comme si c'était chez nous » et présence physique systématique aux check-in et check-out. Bonne option pour propriétaires qui veulent une gestion humaine et proche.",
+          "Conciergerie Airbnb couvrant Nantes et la région Pays de la Loire. Formule tout inclus de 20 à 25 % des revenus : création d'annonce, photographies professionnelles, gestion des réservations 24/7, accueil voyageurs, ménage professionnel et linge hôtelier, maintenance et optimisation tarifaire.",
       },
       {
         name: 'Kerbnb',
@@ -4242,19 +4242,7 @@ export const cities: City[] = [
         biensGeres: 80,
         specialty: 'Réseau national, technologie pricing dynamique',
         description:
-          "Antenne nantaise du réseau national WeHost (commission 20 %), qui industrialise la gestion Airbnb avec optimisation tarifaire et calendrier. Linge et photos pro en suppléments — modèle plus modulaire que tout-inclus. 230+ avis Trustpilot.",
-      },
-      {
-        name: 'Conciergerie Nantaise',
-        url: 'https://www.conciergerie-nantaise.fr/',
-        commission: '0-8 %',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 40,
-        specialty: 'Modèle disruptif « 0 % commission », facturation à l\'acte',
-        description:
-          "Conciergerie nantaise active depuis 2020 avec un positionnement disruptif : **0 ou 8 % de commission** selon les services choisis, et facturation à la prestation plutôt qu'au pourcentage. Reporting mensuel détaillé. À étudier de près si vous générez de gros revenus locatifs.",
+          "Antenne nantaise du réseau national WeHost (commission 20 %), qui industrialise la gestion Airbnb avec optimisation tarifaire et calendrier. Linge et photos pro en suppléments — modèle plus modulaire que tout-inclus.",
       },
     ],
     neighborhoods: [
@@ -4541,10 +4529,10 @@ export const cities: City[] = [
     displayName: 'Hyères',
     region: 'Provence-Alpes-Côte d\'Azur',
     regionSlug: 'provence-alpes-cote-dazur',
-    title: 'Conciergerie Hyères Airbnb : comparatif 2026 des 7 meilleures agences',
+    title: 'Conciergerie Hyères Airbnb : comparatif 2026 des 8 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Hyères : Comparatif 2026 (tarifs & avis)',
     metaDescription:
-      'Comparatif des 7 meilleures conciergeries Airbnb à Hyères. Tarifs (10-25 %), spécialités Giens & La Capte, zone tendue, quartiers rentables, exemple concret.',
+      'Comparatif des 8 meilleures conciergeries Airbnb à Hyères. Tarifs (10-25 %), spécialités Giens & La Capte, zone tendue, quartiers rentables, exemple concret.',
     kwPrincipal: 'conciergerie hyeres',
     kwSecondaires: [
       'conciergerie airbnb hyeres',
@@ -4570,16 +4558,16 @@ export const cities: City[] = [
       "Hyères est l'un des marchés balnéaires les plus dynamiques du Var avec environ **3 800 annonces actives** et un revenu moyen par annonce qui peut dépasser **20 000 €/an** sur les biens bord de mer.\n\nLa ville bénéficie d'une **géographie exceptionnelle** : la **Presqu'île de Giens** (double tombolo unique en France), les plages de **La Capte** et de **l'Almanarre** (spot de kitesurf de niveau mondial), l'embarquement vers les **Îles d'Or** (Porquerolles, Port-Cros) et un centre médiéval perché qui maintient une attractivité culturelle hors-saison.\n\nLe marché est **très saisonnier** : 70 % du revenu annuel se concentre sur juin-septembre, avec des pics où les tarifs sont **multipliés par 2 à 2,5**. La clientèle vient majoritairement de France (PACA, Île-de-France, Rhône-Alpes) avec une part croissante d'Allemands, Suisses et Belges.\n\n**Hyères est classée zone tendue** (décret 2023-822) : numéro d'enregistrement obligatoire, plafond 120 nuitées pour les résidences principales, et procédure de changement d'usage en cours de déploiement pour les résidences secondaires (loi Le Meur).",
     conciergeries: [
       {
-        name: 'Bonni',
-        url: 'https://bonni.fr/conciergerie-airbnb-hyeres/',
-        commission: '10-18 %',
+        name: 'Knock\'in Conciergerie',
+        url: 'https://knockin.fr/',
+        commission: '20 %',
         menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 35,
-        specialty: 'Commission progressive dès 10 %',
+        rating: 5,
+        reviews: 68,
+        biensGeres: 0,
+        specialty: 'Var (Hyères → Bandol), multi-plateformes',
         description:
-          "Conciergerie locale fondée en 2023, Bonni couvre l'ensemble du périmètre hyérois : Giens, La Capte, Port d'Hyères, Costebelle, Les Salins, L'Almanarre et centre médiéval. Commission progressive à partir de 10 % du chiffre d'affaires net, sans frais fixes ni engagement. Annonce un objectif de +35 % de revenus en moyenne sur les biens repris, grâce à un yield agressif et à une présence terrain 7j/7. Profil idéal pour un propriétaire qui veut tester un partenaire local sans engagement.",
+          "Conciergerie couvrant Hyères, Toulon, Sanary-sur-Mer, Bandol et La Londe-les-Maures. Commission de 20 %, frais de ménage refacturés aux voyageurs. Création et gestion des annonces sur Airbnb, Booking et Abritel, photographies professionnelles, vérification d'identité des voyageurs, assistance 24h/24 et maintenance.",
       },
       {
         name: 'YourHostHelper Hyères',
@@ -4594,16 +4582,16 @@ export const cities: City[] = [
           "Antenne locale du réseau national YourHostHelper, pilotée par Jade Brunet à Hyères. Commission 20 % sur le revenu généré, ménage refacturé. Photos pro, création d'annonce, diffusion multi-plateformes (Airbnb, Booking, Abritel), pricing dynamique, gestion ménage et linge hôtelier. Spécialisation prononcée sur les villas avec piscine de Giens, Costebelle et La Capte qui demandent une gestion technique (entretien piscine, jardinier, prestataires bord de mer).",
       },
       {
-        name: 'ILIOS Conciergerie',
-        url: 'https://www.iliosconciergerie.fr/',
+        name: 'La Conciergerie des Palmiers',
+        url: 'https://laconciergeriedespalmiers.com/',
         commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 70,
-        specialty: 'Acteur local historique, 100+ avis Google',
+        menage: 'variable',
+        rating: 4.9,
+        reviews: 46,
+        biensGeres: 30,
+        specialty: 'La Londe / Hyères / Bormes, réservation directe',
         description:
-          "Conciergerie hyéroise installée 24 avenue Ambroise Thomas, ILIOS est l'un des acteurs locaux les plus établis avec 100+ avis Google « Excellent ». Création d'annonces performantes, gestion quotidienne (réservations, communication voyageurs, check-in/out), ménage pro, maintenance. Couverture Airbnb, Booking, Abritel. Tarification sur devis selon le bien et le niveau de service — généralement aligné sur le marché varois (18-22 %). À privilégier pour un propriétaire qui valorise la relation humaine et la stabilité d'un partenaire local de longue date.",
+          "Conciergerie de locations courte durée couvrant La Londe-les-Maures, Hyères et Bormes-les-Mimosas. Gestion complète des biens (ménage, accueil voyageurs, disponibilité 7j/7) et site de réservation en direct permettant aux voyageurs de réserver sans passer par la commission des plateformes.",
       },
       {
         name: 'Hyères Conciergerie',
@@ -4652,6 +4640,18 @@ export const cities: City[] = [
         specialty: 'Commission basse, formule revenu réel',
         description:
           "AllForHost propose une grille parmi les plus accessibles du marché hyérois : 15 % sur une offre standard ou 18 % sur la formule au revenu réel (avec optimisation tarifaire poussée). Ménage refacturé au voyageur. Couvre l'annonce, la communication, l'accueil, le ménage pro et la maintenance courante. Bon choix pour un propriétaire qui veut maximiser la marge nette sur un bien moyen de gamme (T2-T3 La Capte ou centre).",
+      },
+      {
+        name: 'Majestia Conciergerie',
+        url: 'https://majestia-conciergerie.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 5,
+        reviews: 42,
+        biensGeres: 0,
+        specialty: 'Hyères & presqu\'île de Giens, services premium',
+        description:
+          "Conciergerie couvrant Hyères, la presqu'île de Giens, Carqueiranne et Le Pradet. Au-delà de la gestion locative, propose des services de conciergerie haut de gamme aux voyageurs : réservation de restaurants, activités nautiques et massages à domicile. Tarification sur devis.",
       },
     ],
     neighborhoods: [
@@ -4723,7 +4723,7 @@ export const cities: City[] = [
       },
       {
         q: 'Comment optimiser un Airbnb pendant la saison estivale à Hyères ?',
-        a: "Trois leviers à activer dès mars-avril pour la saison à venir : (1) ouvrir le calendrier 12 mois à l'avance sur Airbnb + Booking + Abritel pour capter les réservations précoces des familles allemandes et suisses ; (2) appliquer un minimum 5-7 nuits en juillet-août pour limiter le turnover et maximiser le tarif nuitée ; (3) augmenter les tarifs +15 % deux semaines avant l'ouverture si le calendrier se remplit vite (signal de tension du marché). Une conciergerie locale comme Bonni, ILIOS ou YourHostHelper applique ces réflexes automatiquement.",
+        a: "Trois leviers à activer dès mars-avril pour la saison à venir : (1) ouvrir le calendrier 12 mois à l'avance sur Airbnb + Booking + Abritel pour capter les réservations précoces des familles allemandes et suisses ; (2) appliquer un minimum 5-7 nuits en juillet-août pour limiter le turnover et maximiser le tarif nuitée ; (3) augmenter les tarifs +15 % deux semaines avant l'ouverture si le calendrier se remplit vite (signal de tension du marché). Une conciergerie locale comme Knock'in, Hyères Conciergerie ou YourHostHelper applique ces réflexes automatiquement.",
       },
       {
         q: 'Hyères est-elle vraiment intéressante hors saison balnéaire ?',
@@ -4740,10 +4740,10 @@ export const cities: City[] = [
     displayName: 'Reims',
     region: 'Grand Est',
     regionSlug: 'alsace',
-    title: 'Conciergerie Reims Airbnb : comparatif 2026 des 7 meilleures agences',
+    title: 'Conciergerie Reims Airbnb : comparatif 2026 des 6 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Reims : Comparatif 2026',
     metaDescription:
-      'Comparatif des 7 meilleures conciergeries Airbnb à Reims. Tarifs (15-25 %), services, avis Google, réglementation 2026, quartiers rentables (Cathédrale, Boulingrin).',
+      'Comparatif des 6 meilleures conciergeries Airbnb à Reims. Tarifs (15-25 %), services, avis Google, réglementation 2026, quartiers rentables (Cathédrale, Boulingrin).',
     kwPrincipal: 'conciergerie reims',
     kwSecondaires: [
       'conciergerie airbnb reims',
@@ -4793,16 +4793,16 @@ export const cities: City[] = [
           "DameRose Conciergerie applique une commission unique de **20 % TTC** sur les revenus collectés, avec un focus marqué sur la **qualité du ménage** et des services complémentaires (linge hôtelier, fournitures d'accueil champenoises). Ménage refacturé au voyageur. Bon choix pour un T2-T3 dans l'hypercentre où la clientèle œnologique internationale est exigeante sur la propreté et le sourcing local.",
       },
       {
-        name: 'Soloca',
-        url: 'https://soloca.fr/',
-        commission: '20 %',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 25,
-        specialty: 'Maintenance 7j/7, couverture Reims + Épernay',
+        name: 'GLAM Conciergerie',
+        url: 'https://www.glam-conciergerie.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 5,
+        reviews: 7,
+        biensGeres: 0,
+        specialty: 'Reims & région, services voyageurs',
         description:
-          "Soloca, dirigée par Aurore, gère les logements LCD à **Reims et Épernay** (capitale du Champagne à 25 min). Commission 20 % TTC, ménage refacturé voyageur. Particularité : **maintenance 7j/7** et gestion transparente avec reporting mensuel détaillé. Pertinente pour un propriétaire multi-biens entre Reims et Épernay qui veut un interlocuteur unique sur l'ensemble de la route du Champagne.",
+          "Conciergerie Airbnb à Reims et sa région (Bezannes). Gestion complète pour propriétaires : création et diffusion des annonces, ménage, remise des clés, état des lieux et relation voyageurs. Services voyageurs en complément : visite guidée, réservation de restaurant et livraison de courses. Tarification sur devis.",
       },
       {
         name: 'Aux Clefs des Sacres',
@@ -4827,18 +4827,6 @@ export const cities: City[] = [
         specialty: 'Accompagnement propriétaires, acteur local volumique',
         description:
           "Tarification sur devis adaptée à chaque bien et niveau de service — généralement aligné sur le marché rémois (18-22 %). Offre clé en main : annonce, diffusion multi-plateformes, accueil, ménage, maintenance. Bon profil pour un propriétaire qui valorise l'expérience d'un acteur volumique avec un track record long.",
-      },
-      {
-        name: 'Iviloc',
-        url: 'https://ivilocconciergerie.fr/',
-        commission: '20 %',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 15,
-        specialty: 'Conseils agencement et home staging',
-        description:
-          "Iviloc applique une commission de **20 % TTC** avec une spécificité : un **accompagnement amont sur l'agencement et le home staging** du bien avant mise en location, pour maximiser l'attractivité de l'annonce et le tarif moyen. Approche sur mesure adaptée à un propriétaire qui rénove un bien avant LCD ou qui souhaite repositionner un bien sous-performant.",
       },
       {
         name: 'Loca Ren\'t',

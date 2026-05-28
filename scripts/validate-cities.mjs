@@ -65,11 +65,13 @@ for (const match of content.matchAll(/^  \{\s*\n\s+slug:\s*'([^']+)',/gm)) {
     if (reviews === undefined) issues.push(`${slug}/${name}: reviews manquant`);
     if (biens === undefined) issues.push(`${slug}/${name}: biensGeres manquant`);
 
-    // Chiffres d'avis dans la description ?
+    // Chiffres d'avis dans la description OU le champ specialty ?
     const desc = cb.match(/description:\s*\n?\s*"((?:\\.|[^"\\])*)"/)?.[1] || '';
-    if (/\d+[,.]\d+\s*\/\s*5\b/.test(desc) || /\bsur\s+~?\s*\d[\d\s]*\s*avis\b/i.test(desc) || /\bnote\s+google\b/i.test(desc)) {
-      issues.push(`${slug}/${name}: chiffre d'avis dans la description`);
-    }
+    const specialty = cb.match(/specialty:\s*["']((?:\\.|[^"'\\])*)["']/)?.[1] || '';
+    const hasReviewNumber = (s) =>
+      /\d+[,.]\d+\s*\/\s*5\b/.test(s) || /\bsur\s+~?\s*\d[\d\s]*\s*avis\b/i.test(s) || /\bnote\s+(google|airbnb)\b/i.test(s);
+    if (hasReviewNumber(desc)) issues.push(`${slug}/${name}: chiffre d'avis dans la description`);
+    if (hasReviewNumber(specialty)) issues.push(`${slug}/${name}: chiffre d'avis dans le champ specialty`);
   }
 }
 

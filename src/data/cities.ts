@@ -2062,7 +2062,7 @@ export const cities: City[] = [
         rating: 4.9,
         reviews: 80,
         biensGeres: 60,
-        specialty: 'Note Google 5,0/5, outil propriétaire',
+        specialty: 'Outil propriétaire, reporting transparent',
         description:
           "Commission 20 % HT all-inclusive, ménage refacturé au voyageur. Plébiscitée par les investisseurs cannois qui cherchent un reporting transparent et une qualité opérationnelle sans accroc.",
       },
@@ -3428,7 +3428,7 @@ export const cities: City[] = [
         rating: 0,
         reviews: 0,
         biensGeres: 100,
-        specialty: 'Note Google 5/5, 4 agences sur le Bassin',
+        specialty: 'Réseau national, 4 agences sur le Bassin',
         description:
           "Commission fixe à 20 %, ménage refacturé voyageur, photos pro incluses, pricing dynamique et dashboard propriétaire en temps réel. Excellent réseau local pour gérer des biens sur tout le Bassin.",
       },
@@ -4366,7 +4366,7 @@ export const cities: City[] = [
         rating: 4.7,
         reviews: 51,
         biensGeres: 35,
-        specialty: 'Conciergerie 100 % aixoise, note Google parfaite',
+        specialty: 'Conciergerie 100 % aixoise, ancrage local fort',
         description:
           "L'Aixcapade est une conciergerie boutique exclusivement focalisée sur Aix-en-Provence et ses environs immédiats (Le Tholonet, Meyreuil, Bouc-Bel-Air). Commission de 20 % TTC sur les revenus de réservation, ménage refacturé au voyageur. Création et optimisation de l'annonce, photos pro, pricing dynamique, accueil 7j/7. Idéale pour un propriétaire qui veut un interlocuteur unique très réactif sur un T1-T3 en centre-ville ou dans le Mazarin.",
       },
@@ -5368,7 +5368,7 @@ export const cities: City[] = [
         biensGeres: 25,
         specialty: 'Optimisation propriété, expertise ménage',
         description:
-          "Azuréa Conciergerie, dirigée par Gioia et Jonathan, applique une commission unique de 20 % HT sur les revenus collectés. L'équipe vient d'un background ménage professionnel : les retours clients soulignent la constance qualitative — un atout direct pour la note Airbnb (impact sur la visibilité). Pertinente pour un T2-T3 au Mourillon ou en Vieille Ville où la rotation rapide exige une exécution ménage irréprochable.",
+          "Azuréa Conciergerie, dirigée par Gioia et Jonathan, applique une commission unique de 20 % HT sur les revenus collectés. L'équipe vient d'un background ménage professionnel : les retours clients soulignent la constance qualitative — un atout direct pour la visibilité de l'annonce. Pertinente pour un T2-T3 au Mourillon ou en Vieille Ville où la rotation rapide exige une exécution ménage irréprochable.",
       },
       {
         name: 'La Clé Conciergerie Toulon',
@@ -6106,7 +6106,7 @@ export const cities: City[] = [
         biensGeres: 35,
         specialty: 'Premium turnkey, assistance 9h-21h 7/7',
         description:
-          "Homa Conciergerie propose un service premium clé en main pour locations saisonnières. Services : création et optimisation annonces, communication voyageurs, check-in/check-out, ménage, linge, maintenance. Assistance disponible 9h-21h, 7 jours sur 7. Pertinente pour un propriétaire qui priorise l'expérience voyageur (note Airbnb plus haute → meilleur classement → meilleur taux d'occupation) plutôt qu'une commission basse.",
+          "Homa Conciergerie propose un service premium clé en main pour locations saisonnières. Services : création et optimisation annonces, communication voyageurs, check-in/check-out, ménage, linge, maintenance. Assistance disponible 9h-21h, 7 jours sur 7. Pertinente pour un propriétaire qui priorise l'expérience voyageur (meilleure visibilité → meilleur classement → meilleur taux d'occupation) plutôt qu'une commission basse.",
       },
       {
         name: 'YourHostHelper Nîmes',
@@ -6288,7 +6288,7 @@ export const cities: City[] = [
         rating: 5,
         reviews: 31,
         biensGeres: 25,
-        specialty: 'Note Google parfaite, approche personnalisée',
+        specialty: 'Approche personnalisée, ancrage sétois',
         description:
           "Approche personnalisée : un seul interlocuteur par propriétaire, communication directe. Services complets : préparation, communication voyageurs, ménage, maintenance. Pertinente pour un propriétaire d'un seul bien (résidence principale en bail mobilité, résidence secondaire) qui valorise une relation humaine plutôt qu'un volume industriel.",
       },
@@ -7633,10 +7633,10 @@ export const cities: City[] = [
     displayName: 'Amiens',
     region: 'Hauts-de-France',
     regionSlug: 'hauts-de-france',
-    title: 'Conciergerie Amiens Airbnb : comparatif 2026 des 5 meilleures agences',
+    title: 'Conciergerie Amiens Airbnb : comparatif 2026 des 3 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Amiens : Comparatif 2026',
     metaDescription:
-      "Comparatif des 5 meilleures conciergeries Airbnb à Amiens. Tarifs (15-25 %), services, avis Google, réglementation 2026, quartiers rentables (Saint-Leu, Hyper-centre, Henriville).",
+      "Comparatif des 3 meilleures conciergeries Airbnb à Amiens. Tarifs (15-25 %), services, avis Google, réglementation 2026, quartiers rentables (Saint-Leu, Hyper-centre, Henriville).",
     kwPrincipal: 'conciergerie amiens',
     kwSecondaires: [
       'conciergerie airbnb amiens',
@@ -7656,22 +7656,10 @@ export const cities: City[] = [
       "Saisonnalité plus lissée que les villes balnéaires, avec un pic estival modéré (occupation 75-82 % juin-août, tourisme cathédrale UNESCO + Maison Jules Verne + hortillonnages). Pic ponctuel décembre lors du Marché de Noël (l'un des plus grands du Nord, 130 chalets, 2 millions de visiteurs). Demande pro et événementielle toute l'année (CHU d'Amiens, Université de Picardie Jules Verne, salons), week-ends parisiens via TGV (1h10). Festival International du Film en novembre (4e plus important festival film français). Creux limité à janvier-février.",
     rankNational: 38,
     introCustom:
-      "Vous avez un appartement à **Amiens** — dans le quartier pittoresque de Saint-Leu avec ses canaux, en hyper-centre près du Beffroi et de la cathédrale Notre-Dame UNESCO, à Henriville ou près de la gare TGV — que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **clientèle culture toute l'année** (cathédrale Notre-Dame d'Amiens, plus grande cathédrale gothique de France, classée UNESCO, 800 000 visiteurs annuels), la **clientèle pro** (CHU d'Amiens, université Jules Verne, salons), les **week-ends parisiens** (TGV 1h10 depuis Paris-Nord, 6 trains/jour), le **Marché de Noël** qui draine 2 millions de visiteurs en décembre, et la dizaine de conciergeries qui se partagent un marché d'environ **850 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre les acteurs locaux (GET IMMO, AmBiens, Athéna) et les réseaux (Primo, YourHostHelper) ?",
+      "Vous avez un appartement à **Amiens** — dans le quartier pittoresque de Saint-Leu avec ses canaux, en hyper-centre près du Beffroi et de la cathédrale Notre-Dame UNESCO, à Henriville ou près de la gare TGV — que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **clientèle culture toute l'année** (cathédrale Notre-Dame d'Amiens, plus grande cathédrale gothique de France, classée UNESCO, 800 000 visiteurs annuels), la **clientèle pro** (CHU d'Amiens, université Jules Verne, salons), les **week-ends parisiens** (TGV 1h10 depuis Paris-Nord, 6 trains/jour), le **Marché de Noël** qui draine 2 millions de visiteurs en décembre, et la dizaine de conciergeries qui se partagent un marché d'environ **850 annonces actives**, vous vous demandez si confier la gestion à une conciergerie est vraiment rentable.\n\nEt surtout : **laquelle choisir** entre les acteurs locaux (GET IMMO, AmBiens) et le réseau national YourHostHelper ?",
     marketIntro:
       "Amiens est la **préfecture de la Somme** et la capitale régionale historique de la Picardie avec **136 331 habitants** (INSEE 2026) et une métropole d'**184 392 résidents**. La ville combine **patrimoine UNESCO majeur** (cathédrale Notre-Dame d'Amiens, plus grande cathédrale gothique de France, 1220, 800 000 visiteurs/an), **héritage Jules Verne** (Maison de l'écrivain où il a vécu 18 ans), **hortillonnages** (300 hectares de jardins flottants accessibles en barque, emblème de la ville), et **quartier Saint-Leu** (Venise du Nord, canaux pittoresques, restaurants, vie nocturne).\n\nLa **clientèle LCD est très lissée** : tourisme culture toute l'année (cathédrale UNESCO + Maison Jules Verne + Cirque d'hiver Jules Verne), Marché de Noël décembre (l'un des plus grands de France, 2 millions de visiteurs, 130 chalets), Festival International du Film d'Amiens en novembre (4e festival français), professionnels CHU (1 850 lits, recrutement national) + Université Picardie Jules Verne (30 000 étudiants), week-ends parisiens via TGV (1h10 depuis Paris-Nord, 6 trains directs/jour).\n\nLes **prix immobiliers à Amiens sont parmi les plus accessibles de France** : 2 200-3 000 €/m² en centre, 2 800-3 800 €/m² à Saint-Leu (le quartier le plus prisé), 1 800-2 500 €/m² dans les quartiers résidentiels. Un T2 hyper-centre démarre à **95 000 €**, un T2 Saint-Leu vue canal à 135 000 €.\n\nLe **tarif moyen nuitée est de 65-90 €** en moyenne annuelle, **90-130 €** en haute saison (juin-août + Marché de Noël), 50-70 € en saison creuse (mais l'occupation reste à 55-65 % grâce au mix pro + universitaire + cathédrale).\n\nAmiens **n'est pas classée en zone tendue par décret national** à ce jour et applique le régime de droit commun (déclaration en mairie obligatoire, 120 nuitées résidence principale, numéro d'enregistrement national à partir du 20 mai 2026).",
     conciergeries: [
-      {
-        name: 'Primo Conciergerie Amiens',
-        url: 'https://www.primoconciergerie.fr/conciergerie-amiens/',
-        commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 30,
-        specialty: 'Réseau national 90 agences, équipe locale dédiée Amiens',
-        description:
-          "Gestion complète : annonces, ménage, blanchisserie, accueil voyageurs, maintenance, optimisation tarifaire dynamique. Disponibilité 24/7. Adapté pour propriétaires qui veulent à la fois la rigueur d'un réseau national et la proximité d'une équipe locale dédiée Amiens + alentours.",
-      },
       {
         name: 'GET IMMO',
         url: 'https://get-immo-lille.fr/index.php/conciergerie-airbnb-amiens-douai/',
@@ -7680,7 +7668,7 @@ export const cities: City[] = [
         rating: 5,
         reviews: 27,
         biensGeres: 50,
-        specialty: 'Amiens + Douai, gestion 50+ biens depuis 2020, note Airbnb 4,81',
+        specialty: 'Amiens + Douai, gestion 50+ biens depuis 2020',
         description:
           "Gestion clé en main : annonces optimisées, ménage professionnel, accueil voyageurs, support 24/7. Gaetan (fondateur) accompagne propriétaires et investisseurs pour valoriser et maximiser les rendements via Airbnb et Booking. Pertinente pour propriétaires multi-biens ou investisseurs débutants qui veulent un acteur éprouvé avec un volume d'avis voyageurs très important.",
       },
@@ -7695,18 +7683,6 @@ export const cities: City[] = [
         specialty: 'Conciergerie de proximité, dimension familiale',
         description:
           "Structure à taille humaine et dimension familiale (volume d'avis encore limité à surveiller dans la durée). Service complet ou à la carte selon les besoins du propriétaire. Pertinente pour un propriétaire d'un T2-T3 amienois qui privilégie la proximité et un interlocuteur unique plutôt qu'une grande structure, en acceptant un volume d'avis encore réduit.",
-      },
-      {
-        name: 'Athéna Conciergerie',
-        url: 'https://athenaconciergerie.fr/',
-        commission: 'sur devis ou forfait',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 12,
-        specialty: 'Haut de gamme, gestion biens de prestige Amiens',
-        description:
-          "Excellence + discrétion + attention aux détails, service 24/7. Annonces optimisées, gestion réservations, communication voyageurs. Choix commission sur revenu OU forfait fixe selon le profil du bien. Rapports détaillés performance. Pertinente pour propriétaires de biens haut de gamme intra-muros ou maisons de caractère qui ciblent une clientèle CSP+.",
       },
       {
         name: 'YourHostHelper Amiens',
@@ -7882,16 +7858,16 @@ export const cities: City[] = [
           "Gestion multi-plateformes (Airbnb + Booking + Abritel synchronisés en temps réel via channel manager), support 24/7 pour voyageurs et propriétaires. Service inclus : annonces optimisées, photos professionnelles, pricing dynamique quotidien, accueil voyageurs, ménage professionnel. Adapté pour propriétaires qui veulent maximiser le taux d'occupation via la diffusion multi-plateformes plutôt que la seule visibilité Airbnb.",
       },
       {
-        name: 'Les Suites Indivio',
-        url: 'https://www.les-suites-indivio.com/',
+        name: 'Espace Temps Conciergerie',
+        url: 'https://www.espace-temps-conciergerie.fr/',
         commission: 'sur devis',
-        menage: 'inclus dans commission',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 10,
-        specialty: 'Dijon + Beaune + Côte des Vins, standing hôtelier',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 24,
+        biensGeres: 0,
+        specialty: 'Dijon agglo, gestion LCD + services à domicile',
         description:
-          "Positionnement explicite sur la combinaison location saisonnière + excellence hôtelière. Couverture Dijon + Beaune + Côte des Vins (axe Route des Grands Crus). Service exclusif et personnalisé. Ménage inclus dans la commission (rare sur le marché). Pertinente pour propriétaires de biens haut de gamme intra-muros Dijon ou Beaune visant une clientèle œnotouristique internationale (Américains, Britanniques, Asiatiques).",
+          "Conciergerie couvrant Dijon et son agglomération. Gestion des locations courte durée et services à domicile (ménage, repassage, petit bricolage et jardinage), ainsi que des prestations pour les syndics. Tarification communiquée sur devis.",
       },
       {
         name: 'La Conciergerie de Cindy',
@@ -7978,7 +7954,7 @@ export const cities: City[] = [
       },
       {
         q: "Quelle conciergerie choisir pour un Airbnb haut de gamme Dijon / Beaune ?",
-        a: "Pour un bien haut de gamme ciblant la clientèle œnotouristique internationale, 3 options solides selon le profil. **Les Suites Indivio** (couverture Dijon + Beaune + Côte des Vins, standing hôtelier, 5,0/5 sur 8 avis Google encore réduit mais positionnement clairement luxe, ménage inclus dans la commission). **Lux'Apart** (5,0/5 sur 17 avis Google, équipe Dijon centre, bureau réel 9 Bd Carnot, commission 25 % claire) pour les biens hyper-centre Dijon. **La Conciergerie d'Émile** (4,9/5 sur 37 avis Google, plus gros volume d'avis vérifiés, plusieurs packages selon le niveau de délégation) pour les propriétaires qui veulent un acteur ancré avec historique. À éviter pour haut de gamme : les conciergeries généralistes nationales sans positionnement clair œnotourisme, qui peuvent ne pas tenir l'expérience clientèle internationale haut de gamme.",
+        a: "Pour un bien haut de gamme ciblant la clientèle œnotouristique internationale, plusieurs options selon le profil. **La Conciergerie d'Émile** (le plus gros volume d'avis vérifiés à Dijon, plusieurs formules selon le niveau de délégation) pour un acteur ancré avec un historique solide. **Lux'Apart** (équipe Dijon centre, bureau réel 9 Bd Carnot, commission 25 % claire) pour les biens d'hyper-centre. **Zenica Conciergerie** pour un suivi de proximité personnalisé. À éviter pour le haut de gamme : les conciergeries généralistes nationales sans positionnement œnotourisme clair, qui peuvent ne pas tenir l'expérience d'une clientèle internationale exigeante.",
       },
     ],
     updatedAt: '2026-05-27',
@@ -7991,7 +7967,7 @@ export const cities: City[] = [
     displayName: 'La Baule',
     region: 'Pays de la Loire',
     regionSlug: 'pays-de-la-loire',
-    title: 'Conciergerie La Baule Airbnb : comparatif 2026 des 4 meilleures agences',
+    title: 'Conciergerie La Baule Airbnb : comparatif 2026 des 3 meilleures agences',
     metaTitle: 'Conciergerie Airbnb La Baule : comparatif & avis 2026',
     metaDescription:
       "Comparatif des meilleures conciergeries Airbnb de La Baule : tarifs, services, avis Google, réglementation 2026 et quartiers rentables de la presqu'île guérandaise.",
@@ -8019,16 +7995,16 @@ export const cities: City[] = [
       "La Baule est l'une des stations balnéaires les plus cotées de la façade atlantique et l'un des marchés saisonniers les plus actifs des Pays de la Loire. Le marché y est dominé par la résidence secondaire (près de 80 % du parc), ce qui crée une offre LCD abondante mais souvent mal optimisée : beaucoup de propriétaires gèrent depuis Paris, Nantes ou Rennes et ne sont pas sur place pour les arrivées.\n\nLa clientèle est majoritairement française, familiale et plutôt aisée, avec un pic estival très concentré (juillet-août) et des tarifs nuitée qui peuvent doubler en haute saison. Les biens **vue mer ou à moins de 300 m de la plage** se louent à prime, tandis qu'un secteur comme Escoublac offre un ticket d'entrée plus accessible.\n\nDans ce contexte, une conciergerie locale sérieuse se rentabilise vite sur la fenêtre estivale — à condition de cadrer précisément le traitement du ménage et des frais annexes. Notre [simulateur de rentabilité](/estimation-airbnb) permet de comparer gestion autonome et conciergerie sur votre cas.",
     conciergeries: [
       {
-        name: 'Les Concierges',
-        url: 'https://www.les-concierges.com/',
+        name: 'Clé de la Baie',
+        url: 'https://cledelabaie.fr/',
         commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 47,
-        specialty: 'Haut de gamme face mer, presqu’île',
+        menage: 'variable',
+        rating: 4.5,
+        reviews: 15,
+        biensGeres: 0,
+        specialty: 'Pornichet & La Baule, gestion meublés',
         description:
-          "L'agence affiche un catalogue d'une quarantaine de biens sélectionnés entre La Baule, Pornichet, Le Pouliguen et Batz-sur-Mer, positionnés sur le segment locations de vacances haut de gamme « face mer ». Service sur-mesure (sélection rigoureuse des biens, accueil personnalisé, attentions d'arrivée). Pertinente pour un propriétaire d'un bien de standing vue mer ou hyper-centre qui cherche un partenaire ancré localement avec une vraie réputation.",
+          "Conciergerie de meublés à Pornichet, La Baule et autour de la baie (Loire-Atlantique). Accueil et check-in des voyageurs, ménage et préparation des lits, maintenance du bien et optimisation des réservations sur les plateformes. Tarification sur devis.",
       },
       {
         name: 'Conciergerie La Baule',
@@ -8043,26 +8019,16 @@ export const cities: City[] = [
           "Conciergerie La Baule se présente comme partenaire Airbnb et revendique un nombre de biens volontairement limité, exclusivement premium (front de mer, vue mer, hyper-centre). Commission annoncée de 20 % TTC sur les revenus locatifs. Gestion clé en main et présence également à Rennes et sur l'île de Ré. Pertinente pour un propriétaire d'un bien premium qui privilégie un suivi resserré plutôt qu'un acteur volumique.",
       },
       {
-        name: 'Zen Weekey',
+        name: 'ZenWeeKey',
+        url: 'https://www.zenweekey.com/',
         commission: '20 % HT',
         menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 20,
-        specialty: 'Approche humaine, reporting de performance',
+        rating: 4.8,
+        reviews: 34,
+        biensGeres: 0,
+        specialty: 'Presqu\'île de Guérande, reporting de performance',
         description:
-          "Commission annoncée de 20 % HT sur les revenus locatifs. Particularités mises en avant : rapports de performance réguliers et conseils déco pour valoriser le bien. Pertinente pour un propriétaire qui veut un interlocuteur disponible et des retours chiffrés sur l'occupation et le revenu, sans basculer chez un acteur national standardisé.",
-      },
-      {
-        name: 'La Baule Sweet Home',
-        commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 18,
-        specialty: 'Home staging & intendance de maison',
-        description:
-          "La Baule Sweet Home combine conciergerie locative et services d'intendance de résidence : home staging, organisation d'événements, aide à l'acquisition et gestion de maison. Positionnement plus large que la seule gestion Airbnb, utile pour un propriétaire de résidence secondaire qui veut un interlocuteur unique pour la location saisonnière et l'entretien du bien hors période louée.",
+          "Conciergerie de la presqu'île de Guérande (La Baule, Pornichet, Guérande). Commission annoncée de 20 % HT sur les revenus locatifs. Particularités mises en avant : rapports de performance réguliers et conseils déco pour valoriser le bien. Pertinente pour un propriétaire qui veut un interlocuteur disponible et des retours chiffrés sur l'occupation et le revenu, sans basculer chez un acteur national standardisé.",
       },
     ],
     neighborhoods: [
@@ -8183,10 +8149,10 @@ export const cities: City[] = [
         url: 'https://www.conciergerie-finistarmor.fr/',
         commission: '18 à 33 % TTC',
         menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
+        rating: 4.9,
+        reviews: 34,
         biensGeres: 40,
-        specialty: 'Couverture Finistère, agence établie',
+        specialty: 'Couverture Finistère, carte professionnelle',
         description:
           "Finist'Armor est une structure finistérienne établie qui propose un service de conciergerie courte durée et saisonnière clé en main sur un large secteur (de Brest à Quimper, d'Audierne à Roscoff). Grille de commission affichée entre 18 et 33 % TTC selon le niveau de délégation et les services inclus. Pertinente pour un propriétaire qui veut un acteur régional solide capable de gérer des biens hors du seul centre brestois.",
       },
@@ -8215,18 +8181,6 @@ export const cities: City[] = [
           "Concierge BB est une marque multi-villes disposant d'une présence locale à Brest, avec gestion complète : optimisation des annonces, accueil voyageurs 7j/7, ménage hôtelier, photos professionnelles, suivi technique. Commission généralement annoncée entre 20 et 25 %. Couvre les quartiers Centre, Recouvrance, Saint-Marc et Lambézellec. À comparer attentivement avec les acteurs purement locaux.",
       },
       {
-        name: 'Concigreen',
-        url: 'https://www.concigreen.fr/',
-        commission: '20 à 25 %',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 15,
-        specialty: 'Conciergerie éco-responsable',
-        description:
-          "Concigreen est une conciergerie locale brestoise positionnée sur le créneau éco-responsable (ménage écologique, démarche durable), fondée par Rebecca Trémintin et présente à Brest et au Relecq-Kerhuon. Commission annoncée entre 20 et 25 % des revenus, avec un forfait de lancement. Petite structure de proximité, pertinente pour un propriétaire sensible à une gestion responsable et à un contact direct avec la fondatrice.",
-      },
-      {
         name: 'Hestia Conciergerie',
         url: 'https://www.hestiaconciergerie.bzh/',
         commission: 'sur devis',
@@ -8248,6 +8202,18 @@ export const cities: City[] = [
         specialty: 'Tarif dégressif, gestion complète',
         description:
           "Need'Air est une conciergerie brestoise proposant une gestion complète de la location courte durée avec une commission annoncée à partir de 20 %, dégressive selon le volume. Positionnement service complet (annonces, accueil, ménage, suivi). Pertinente pour un propriétaire multi-biens à Brest sensible à un barème de commission dégressif.",
+      },
+      {
+        name: 'Justuntoit Conciergerie',
+        url: 'https://www.justuntoit.fr/',
+        commission: '15-20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 272,
+        biensGeres: 0,
+        specialty: 'Brest & Finistère, carte professionnelle G',
+        description:
+          "Conciergerie couvrant Brest, Landerneau et le Finistère. Commission de 20 % (15 % à partir de 3 logements), frais de ménage refacturés aux voyageurs. Création d'annonce, photographies professionnelles, sélection des voyageurs, gestion des clés et des arrivées/départs, ménage complet et assurance incluse. Titulaire de la carte professionnelle G.",
       },
     ],
     neighborhoods: [
@@ -8336,10 +8302,10 @@ export const cities: City[] = [
     displayName: 'Nancy',
     region: 'Grand Est',
     regionSlug: 'alsace',
-    title: 'Conciergerie Nancy Airbnb : comparatif 2026 des 6 meilleures agences',
+    title: 'Conciergerie Nancy Airbnb : comparatif 2026 des 5 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Nancy : comparatif 2026 (avis)',
     metaDescription:
-      "Comparatif des 6 meilleures conciergeries Airbnb de Nancy : tarifs, services, avis Google, réglementation 2026 et quartiers rentables (Stanislas, Charles III).",
+      "Comparatif des 5 meilleures conciergeries Airbnb de Nancy : tarifs, services, avis Google, réglementation 2026 et quartiers rentables (Stanislas, Charles III).",
     kwPrincipal: 'conciergerie nancy',
     kwSecondaires: [
       'conciergerie airbnb nancy',
@@ -8387,26 +8353,16 @@ export const cities: City[] = [
           "MasterKey met l'accent sur la gestion dynamique des annonces (pricing, visibilité multi-plateformes) et un support voyageurs 24/7. Commission sur devis. Pertinente pour un propriétaire qui veut optimiser le taux d'occupation et la réactivité voyageurs sans gérer lui-même les messages.",
       },
       {
-        name: 'MAHÉ',
+        name: 'Haussmann Conciergerie Nancy',
+        url: 'https://haussmannconciergerienancy.fr/',
         commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 12,
-        specialty: 'Gestion locative & valorisation',
+        menage: 'variable',
+        rating: 4.9,
+        reviews: 101,
+        biensGeres: 0,
+        specialty: 'Grand Nancy, gestion Superhost',
         description:
-          "MAHÉ propose une gestion locative clé en main avec un accent sur la valorisation et l'entretien des logements. Commission sur devis. Profil de conciergerie de proximité, adaptée à un propriétaire qui cherche un suivi soigné de son bien sur le long terme plutôt qu'un volume de transactions.",
-      },
-      {
-        name: 'Clés & Anne',
-        commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 8,
-        specialty: 'Proximité, du studio au thématisé',
-        description:
-          "Clés & Anne est une petite structure axée sur la proximité et la réactivité, gérant aussi bien des studios que des appartements thématisés. Commission sur devis. Pertinente pour un propriétaire d'un ou deux biens qui privilégie un contact direct et un service très personnalisé.",
+          "Conciergerie présentée comme la référence sur le Grand Nancy en location courte durée. Gestion professionnelle des annonces avec statut Superhost Airbnb, accueil voyageurs, ménage et suivi des réservations. Tarification sur devis.",
       },
       {
         name: 'Rock in Share',

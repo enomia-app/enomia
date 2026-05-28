@@ -4,7 +4,7 @@
  * Remplace l'ancien parseValidationViaClaude (Haiku + format OK/SKIP/EDIT trop rigide) +
  * fb-build-validated.mjs (regex sur texte intermédiaire, brittle).
  *
- * Approche : Sonnet lit le mail de Marc en langage naturel + les drafts originaux,
+ * Approche : Opus lit le mail de Marc en langage naturel + les drafts originaux,
  * et produit directement les drafts finaux prêts à poster (texte modifié intégrant
  * les ajouts/corrections/nuances de Marc, ou inchangé s'il a juste validé).
  *
@@ -12,7 +12,7 @@
  * alimenter à terme une mémoire d'apprentissage (`feedback_drafts_marc.md`).
  */
 
-import Anthropic from '@anthropic-ai/sdk';
+import { callClaudeMaxJson } from '../lib/claude-cli.mjs';
 import { readdirSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -38,7 +38,6 @@ function listEnomiaTools() {
 }
 
 export async function applyMarcFeedback(replyText, drafts) {
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const postIds = Object.keys(drafts);
   const articles = listEnomiaArticles();
   const tools = listEnomiaTools();
@@ -111,16 +110,10 @@ Règles de sortie :
 - marcFeedback = résumé court utile pour mémoire d'apprentissage (ex: "Préfère T2 avec checkout 11h, 6h uniquement pour grands biens 200m2"). Vide si Marc n'a rien dit pour ce draft.
 - Si la réponse de Marc est totalement vide ou hors-sujet : ambiguous=true + reason explicative`;
 
-  console.log(`Appel Sonnet (${postIds.length} drafts à traiter)...`);
-  const resp = await client.messages.create({
-    model: 'claude-sonnet-4-6',
-    max_tokens: 16000,
-    messages: [{ role: 'user', content: prompt }],
-  });
-
-  const text = resp.content[0].text.trim();
-  const cleaned = text.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, '');
-  const result = JSON.parse(cleaned);
+  console.log(`Appel Opus Max (${postIds.length} drafts à traiter)...`);
+  // callClaudeMaxJson : `claude -p` via OAuth Max (pas l'API), retry sur 529 transient,
+  // strip code fences markdown, parse JSON. Cf scripts/lib/claude-cli.mjs.
+  const result = await callClaudeMaxJson(prompt, { model: 'claude-opus-4-7' });
 
   // Post-processing : ajouter UTM aux liens Enomia (pour tracking GA4)
   if (result.drafts) {

@@ -5923,16 +5923,16 @@ export const cities: City[] = [
           "Un Séjour à Metz cible le segment appartements meublés tout équipés à Metz centre. Spécialité : privatisation d'immeubles pour événements (jusqu'à 15 personnes), conciergerie pour gîtes urbains de plus de 100 m². Approche personnalisée et présence de proximité, particulièrement adaptée aux propriétaires d'un seul bien atypique à Metz centre (grand T3-T4, plateau loft, appartement de standing).",
       },
       {
-        name: 'Vigelio',
-        url: 'https://www.vigelio.fr/',
-        commission: '20 % TTC',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 30,
-        specialty: 'Multi-départements 57/54/55, axe Luxembourg',
+        name: 'LocaTendance',
+        url: 'https://www.locatendance.fr/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 5,
+        reviews: 5,
+        biensGeres: 0,
+        specialty: 'Metz & Lorraine, courte et moyenne durée',
         description:
-          "Vigelio applique une commission fixe de 20 % TTC sur les revenus collectés, calculée après déduction des frais plateforme et ménage. Couverture : Moselle (57), Meurthe-et-Moselle (54), Meuse (55) sur l'axe Nancy/Metz/Luxembourg. Services complets : création annonce, accueil voyageurs, maintenance, petites réparations, optimisation taux d'occupation sur Airbnb/Booking/Abritel. Pertinente pour un propriétaire qui valorise la transparence tarifaire (20 % fixe, pas de surprise) et une couverture transfrontalière.",
+          "Conciergerie spécialisée en location courte et moyenne durée à Metz et en Lorraine. Prend en charge la mise en ligne de l'annonce, la communication voyageurs, l'intendance et l'assistance. Tarification communiquée sur devis.",
       },
       {
         name: 'Vahine Conciergerie',
@@ -6045,10 +6045,10 @@ export const cities: City[] = [
     displayName: 'Nîmes',
     region: 'Occitanie',
     regionSlug: 'occitanie',
-    title: 'Conciergerie Nîmes Airbnb : comparatif 2026 des 7 meilleures agences',
+    title: 'Conciergerie Nîmes Airbnb : comparatif 2026 des 5 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Nîmes : Comparatif 2026 (tarifs & avis)',
     metaDescription:
-      'Comparatif des 7 meilleures conciergeries Airbnb à Nîmes. Tarifs (17-24 %), services, avis Google, réglementation 2026, quartiers rentables (Écusson, Gambetta, Maison Carrée).',
+      'Comparatif des 5 meilleures conciergeries Airbnb à Nîmes. Tarifs (17-24 %), services, avis Google, réglementation 2026, quartiers rentables (Écusson, Gambetta, Maison Carrée).',
     kwPrincipal: 'conciergerie nimes',
     kwSecondaires: [
       'conciergerie airbnb nimes',
@@ -6085,15 +6085,16 @@ export const cities: City[] = [
           "La Conciergerie du Croco est l'acteur volumique de référence à Nîmes avec plus de 30 ans d'ancrage local. Commission 24 % TTC affichée publiquement (rare dans le métier). Couverture : Nîmes, Redessan, Langlade, Poulx, Remoulins, Gallargues, Le Grau du Roi. Services complets : création/optimisation annonces, communication voyageurs 7/7, ménage rigoureux, accueil personnalisé, pricing dynamique propriétaire. Pertinente pour un propriétaire qui valorise la transparence tarifaire et une couverture géographique large autour de Nîmes.",
       },
       {
-        name: 'CB Conciergerie de Nîmes',
+        name: 'Home Service Conciergerie',
+        url: 'https://homeserviceconciergerie.com/',
         commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 45,
-        specialty: 'Volume avis local + tarification flexible',
+        menage: 'variable',
+        rating: 5,
+        reviews: 20,
+        biensGeres: 0,
+        specialty: 'Nîmes, 3 formules (gestion / gardiennage)',
         description:
-          "Tarification sur devis adaptée à la taille et à la typologie du bien. Services complets : annonces, accueil, ménage, communication voyageurs. Pertinente pour un propriétaire d'un T1-T3 standard qui cherche un acteur établi sans premium price.",
+          "Conciergerie Airbnb à Nîmes et alentours proposant trois formules : Essentiel (conseils et gestion d'annonce), Premium (délégation complète avec ménage et maintenance) et Gardiennage (surveillance et entretien du bien). Tarification communiquée sur devis.",
       },
       {
         name: 'Homa Conciergerie',
@@ -6108,17 +6109,6 @@ export const cities: City[] = [
           "Homa Conciergerie propose un service premium clé en main pour locations saisonnières. Services : création et optimisation annonces, communication voyageurs, check-in/check-out, ménage, linge, maintenance. Assistance disponible 9h-21h, 7 jours sur 7. Pertinente pour un propriétaire qui priorise l'expérience voyageur (note Airbnb plus haute → meilleur classement → meilleur taux d'occupation) plutôt qu'une commission basse.",
       },
       {
-        name: 'Excellence En Provence',
-        commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 28,
-        specialty: 'Provence + Nîmes, biens de caractère',
-        description:
-          "Excellence En Provence couvre l'axe Provence + Nîmes avec une approche dédiée aux biens de caractère (mas, demeures rénovées, appartements de standing en Écusson). Tarification sur devis adaptée au niveau de service premium. Pertinente pour un propriétaire d'un bien atypique haut de gamme à Nîmes Écusson ou en couronne provençale.",
-      },
-      {
         name: 'YourHostHelper Nîmes',
         url: 'https://yourhosthelper.com/en/conciergerie-nimes/',
         commission: '20 %',
@@ -6129,18 +6119,6 @@ export const cities: City[] = [
         specialty: 'Réseau national 20+ villes, photos & pricing dynamique',
         description:
           "Filiale de YourHostHelper (présent dans 20+ villes françaises), cette conciergerie mise sur l'optimisation du revenu via un pricing dynamique quotidien et des photos professionnelles incluses gratuitement au lancement. Commission 20 %, ménage refacturé voyageur. Le propriétaire bénéficie d'un dashboard avec prévisions de revenus. Moins adaptée aux biens atypiques ou de luxe, mais excellent sur les T1-T2 standards en centre-ville.",
-      },
-      {
-        name: 'Concierge BB',
-        url: 'https://www.conciergebb.fr/',
-        commission: 'à partir de 17 %',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 12,
-        specialty: 'Commission la plus basse du marché nîmois',
-        description:
-          "Concierge BB se positionne sur la commission la plus basse du marché nîmois (à partir de 17 %, vs 20-24 % chez la concurrence). Le modèle tient grâce à l'automatisation (messagerie voyageurs semi-auto, planning ménage algorithmique). Pertinente pour un propriétaire sensible au prix qui a déjà l'expérience LCD et n'a pas besoin de premium service.",
       },
       {
         name: 'LYS Conciergerie',
@@ -6436,10 +6414,10 @@ export const cities: City[] = [
     displayName: 'Deauville',
     region: 'Normandie',
     regionSlug: 'normandie',
-    title: 'Conciergerie Deauville Airbnb : comparatif 2026 des 6 meilleures agences',
+    title: 'Conciergerie Deauville Airbnb : comparatif 2026 des 5 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Deauville : Comparatif 2026',
     metaDescription:
-      'Comparatif des 6 meilleures conciergeries Airbnb à Deauville et Trouville. Tarifs (18-25 %), services, avis Google, réglementation 2026, quartiers rentables (Planches, Villas, Centre).',
+      'Comparatif des 5 meilleures conciergeries Airbnb à Deauville et Trouville. Tarifs (18-25 %), services, avis Google, réglementation 2026, quartiers rentables (Planches, Villas, Centre).',
     kwPrincipal: 'conciergerie deauville',
     kwSecondaires: [
       'conciergerie airbnb deauville',
@@ -6518,17 +6496,6 @@ export const cities: City[] = [
         specialty: 'Service à la carte, biens de standing',
         description:
           "Conciergerie Privée Deauville cible le segment biens de standing et résidences secondaires haut de gamme. Services à la carte : selon le propriétaire, gestion partielle (uniquement check-in/check-out) ou totale. Pertinente pour un propriétaire qui veut garder la main sur certains aspects (annonce, pricing) tout en déléguant l'exécution opérationnelle.",
-      },
-      {
-        name: 'Conciergerie Deauvillaise',
-        commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 12,
-        specialty: 'Petit acteur local, tarification souple',
-        description:
-          "Services standards conciergerie : accueil, ménage, communication voyageurs. Pertinente pour un propriétaire qui privilégie une tarification souple sans engagement long terme — à mettre en balance avec la note inférieure aux concurrents.",
       },
     ],
     neighborhoods: [
@@ -6617,10 +6584,10 @@ export const cities: City[] = [
     displayName: 'Perpignan',
     region: 'Occitanie',
     regionSlug: 'occitanie',
-    title: 'Conciergerie Perpignan Airbnb : comparatif 2026 des 6 meilleures agences',
+    title: 'Conciergerie Perpignan Airbnb : comparatif 2026 des 4 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Perpignan : Comparatif 2026',
     metaDescription:
-      "Comparatif des 6 meilleures conciergeries Airbnb à Perpignan. Tarifs (18-25 %), services, avis Google, permis de louer Saint-Jacques, La Réal, Saint-Matthieu, quartiers rentables.",
+      "Comparatif des 4 meilleures conciergeries Airbnb à Perpignan. Tarifs (18-25 %), services, avis Google, permis de louer Saint-Jacques, La Réal, Saint-Matthieu, quartiers rentables.",
     kwPrincipal: 'conciergerie perpignan',
     kwSecondaires: [
       'conciergerie airbnb perpignan',
@@ -6679,30 +6646,6 @@ export const cities: City[] = [
         specialty: 'Service premium, clientèle haut de gamme',
         description:
           "Commission 25 % TTC. Approche premium : welcome pack, conciergerie voyageur (réservation restaurants, activités, transferts), linge hôtelier, photos professionnelles. Pertinente pour un propriétaire d'un T3-T4 en centre rénové ou d'une maison de standing qui valorise une expérience voyageur différenciante face à la concurrence Airbnb sur le 66.",
-      },
-      {
-        name: 'Conciergerie du Roussillon',
-        url: 'https://www.conciergerieduroussillon.com/',
-        commission: '20 % TTC',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 10,
-        specialty: 'Gestion complète, commission contenue',
-        description:
-          "Commission 20 % TTC — la plus basse du panel à note maximale. Gestion complète de la création de l'annonce jusqu'au départ des locataires, avec ménage refacturé voyageur. Pertinente pour un propriétaire qui veut une commission contenue (20 %) tout en bénéficiant d'un service intégral, sans monter en gamme premium.",
-      },
-      {
-        name: 'Viva Conciergerie',
-        url: 'https://vivaconciergerie.com/',
-        commission: '18-22 % TTC (dégressif)',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 6,
-        specialty: 'Tarification dégressive, stratégie tarifaire dynamique',
-        description:
-          "Viva Conciergerie applique une commission dégressive 18 à 22 % TTC selon le volume de biens confiés et la durée d'engagement — la commission la plus basse du marché perpignanais pour les multi-propriétaires. Stratégie tarifaire dynamique mise en avant (pricing quotidien). Pertinente pour un investisseur multi-biens à Perpignan qui veut minimiser la commission via volume.",
       },
       {
         name: 'SPS66 La Conciergerie Catalane',

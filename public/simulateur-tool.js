@@ -125,14 +125,39 @@ async function _initAuth() {
   }
   _updateNavAuth();
   _updateAuthHint();
-  // Pré-fetch silencieux si l'utilisateur est déjà connecté (session restaurée)
-  if (_user && _token && !sharedSim) {
-    _prefetchSims();
-  }
-  // Render dashboard (shows empty state with login CTA for guests)
+  // Écran d'arrivée : calculateur pour engager (invités + connectés sans
+  // simulation), dashboard pour les connectés qui ont déjà des sims.
   if (!sharedSim) {
-    try { renderDash(); } catch (_) {}
+    try { await _decideLandingScreen(); } catch (_) { _openCalcFresh(); }
   }
+}
+
+// Ouvre le calculateur sur son état par défaut. Sliders déjà initialisés et
+// calculés au chargement du script — on garantit juste l'écran visible.
+function _openCalcFresh() {
+  showScreen('screen-calc');
+  compute();
+}
+
+// Décide l'écran d'arrivée pour maximiser l'engagement :
+//  - invité : son dashboard n'est qu'un CTA de connexion → calculateur ;
+//  - connecté avec des simulations → dashboard ;
+//  - connecté sans simulation → calculateur.
+// Cache froid (nouveau terminal) : on récupère les sims avant de décider pour ne
+// pas atterrir sur le mauvais écran.
+async function _decideLandingScreen() {
+  if (!_user || !_token) { _openCalcFresh(); return; }
+  let sims = _loadSimsCache();
+  if (sims === null) {
+    try {
+      const data = await _apiPost('/api/simulations', { action: 'fetch' }, true);
+      sims = data.simulations || [];
+      _dbSims = sims;
+      _saveSimsCache(sims);
+    } catch (_) { sims = []; }
+  }
+  if (sims.length) { _doShowDashboard(); }
+  else { _openCalcFresh(); }
 }
 
 function _updateNavAuth() {
@@ -778,6 +803,9 @@ async function subscribeNL(){
   }catch(_){btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.textContent=orig;},2000);}
 }
 initSliders();
+// Calcule dès le chargement : le calculateur étant l'écran d'arrivée par défaut,
+// les résultats doivent s'afficher immédiatement (pas de "—").
+compute();
 
 // Save popup
 function showSavePopup(){document.getElementById('save-popup').style.display='flex';}

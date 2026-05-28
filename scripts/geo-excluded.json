@@ -1,0 +1,105 @@
+[
+  {
+    "slug": "agde",
+    "name": "HostnFly Cap d",
+    "reason": "mentionne cap d",
+    "cp": null
+  },
+  {
+    "slug": "agde",
+    "name": "BnB Cap d",
+    "reason": "mentionne cap d",
+    "cp": null
+  },
+  {
+    "slug": "cap-d-agde",
+    "name": "GuestReady - Conciergerie Airbnb Lyon",
+    "cp": "69001",
+    "region": "ara",
+    "expected": "occ"
+  },
+  {
+    "slug": "cap-d-agde",
+    "name": "Lulu Conciergerie – Gestion Airbnb & Location Courte Durée Lyon",
+    "cp": "69006",
+    "region": "ara",
+    "expected": "occ"
+  },
+  {
+    "slug": "cap-d-agde",
+    "name": "Hosting Services - Conciergerie Airbnb Lyon",
+    "cp": "69007",
+    "region": "ara",
+    "expected": "occ"
+  },
+  {
+    "slug": "les-sables-d-olonne",
+    "name": "GuestReady - Conciergerie Airbnb Lyon",
+    "cp": "69001",
+    "region": "ara",
+    "expected": "pdl"
+  },
+  {
+    "slug": "les-sables-d-olonne",
+    "name": "Conciergerie Tête d'Or - Gestion Airbnb Lyon",
+    "cp": "69006",
+    "region": "ara",
+    "expected": "pdl"
+  },
+  {
+    "slug": "les-sables-d-olonne",
+    "name": "Conciergerie STAY ROOTED LYON",
+    "cp": "69003",
+    "region": "ara",
+    "expected": "pdl"
+  },
+  {
+    "slug": "montpellier",
+    "name": "Halo Butler",
+    "cp": "85800",
+    "region": "pdl",
+    "expected": "occ"
+  },
+  {
+    "slug": "nimes",
+    "name": "Excellence En Provence",
+    "cp": "13940",
+    "region": "paca",
+    "expected": "occ"
+  },
+  {
+    "slug": "strasbourg",
+    "name": "Prost Conciergerie",
+    "cp": "71700",
+    "region": "bfc",
+    "expected": "ge"
+  },
+  {
+    "slug": "tours",
+    "name": "GuestReady - Conciergerie Airbnb Lyon",
+    "cp": "69001",
+    "region": "ara",
+    "expected": "cvl"
+  },
+  {
+    "slug": "tours",
+    "name": "Lulu Conciergerie – Gestion Airbnb & Location Courte Durée Lyon",
+    "cp": "69006",
+    "region": "ara",
+    "expected": "cvl"
+  },
+  {
+    "slug": "tours",
+    "name": "Hosting Services - Conciergerie Airbnb Lyon",
+    "cp": "69007",
+    "region": "ara",
+    "expected": "cvl"
+  },
+  {
+    "slug": "tours",
+    "name": "Tranquille Émile - Conciergerie Airbnb Luxe à Paris",
+    "cp": "75010",
+    "region": "idf",
+    "expected": "cvl"
+  }
+]

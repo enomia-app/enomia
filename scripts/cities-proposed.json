@@ -1,7 +1,7 @@
 {
   "agde": {
     "ville": "Agde",
-    "finalCount": 7,
+    "finalCount": 5,
     "items": [
       {
         "source": "current",
@@ -14,18 +14,6 @@
         "website": "https://yourhosthelper.com/",
         "place_id": "ChIJ2Qc5-7xLsRIRo-VN9-gn3u0",
         "biensGeres": 80
-      },
-      {
-        "source": "current",
-        "isNational": true,
-        "name": "HostnFly Cap d",
-        "rating": 0,
-        "reviews": 0,
-        "score": "0.00",
-        "address": "",
-        "website": "https://www.hostnfly.com/conciergerie-airbnb/cap-d-agde",
-        "place_id": null,
-        "biensGeres": 100
       },
       {
         "source": "current",
@@ -75,18 +63,6 @@
         "website": "http://www.pomconciergerie.com/",
         "place_id": "ChIJs3tIpMojsRIRfwgartMRvN4",
         "biensGeres": 60
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "BnB Cap d",
-        "rating": 0,
-        "reviews": 0,
-        "score": "0.00",
-        "address": "",
-        "website": "https://www.bnbcapdagde.com/",
-        "place_id": null,
-        "biensGeres": 30
       }
     ]
   },
@@ -1241,34 +1217,8 @@
   },
   "cap-d-agde": {
     "ville": "Cap d",
-    "finalCount": 8,
+    "finalCount": 6,
     "items": [
-      {
-        "source": "discovered",
-        "isNational": true,
-        "name": "GuestReady - Conciergerie Airbnb Lyon",
-        "rating": 4.6,
-        "reviews": 359,
-        "score": "27.08",
-        "address": "2 Rue Royale, 69001 Lyon",
-        "website": "https://www.guestready.com/fr/conciergerie-airbnb/lyon/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing-lyon",
-        "phone": "01 76 44 04 31",
-        "place_id": "ChIJ___v-e3q9EcR7auFCPO9yHE",
-        "biensGeres": 0
-      },
-      {
-        "source": "discovered",
-        "isNational": true,
-        "name": "Hosting Services - Conciergerie Airbnb Lyon",
-        "rating": 4.5,
-        "reviews": 61,
-        "score": "18.57",
-        "address": "2 Pl. du Prado, 69007 Lyon",
-        "website": "https://hostingservices.fr/",
-        "phone": "09 83 72 37 95",
-        "place_id": "ChIJc4QXwkHr9EcRQ-7eT4F4SYg",
-        "biensGeres": 0
-      },
       {
         "source": "current",
         "isNational": true,
@@ -1306,19 +1256,6 @@
         "biensGeres": 45
       },
       {
-        "source": "discovered",
-        "isNational": false,
-        "name": "Lulu Conciergerie – Gestion Airbnb & Location Courte Durée Lyon",
-        "rating": 4.8,
-        "reviews": 53,
-        "score": "19.15",
-        "address": "73 Rue Duquesne, 69006 Lyon",
-        "website": "https://luluconciergerie.squarespace.com/",
-        "phone": "07 83 74 78 20",
-        "place_id": "ChIJ7VgjHvTr9EcRJtLIiBXuLis",
-        "biensGeres": 0
-      },
-      {
         "source": "current",
         "isNational": false,
         "name": "F&G Conciergerie",
@@ -1341,6 +1278,18 @@
         "website": "https://capdagdeconciergerie.fr/",
         "place_id": "ChIJwSwz2gMjsRIRxeIQeerLjs8",
         "biensGeres": 70
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "BnB Cap d",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "",
+        "website": "https://www.bnbcapdagde.com/",
+        "place_id": null,
+        "biensGeres": 40
       }
     ]
   },
@@ -2045,19 +1994,6 @@
         "biensGeres": 100
       },
       {
-        "source": "discovered",
-        "isNational": true,
-        "name": "GuestReady - Conciergerie Airbnb Lyon",
-        "rating": 4.6,
-        "reviews": 359,
-        "score": "27.08",
-        "address": "2 Rue Royale, 69001 Lyon",
-        "website": "https://www.guestready.com/fr/conciergerie-airbnb/lyon/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing-lyon",
-        "phone": "01 76 44 04 31",
-        "place_id": "ChIJ___v-e3q9EcR7auFCPO9yHE",
-        "biensGeres": 0
-      },
-      {
         "source": "current",
         "isNational": false,
         "name": "Hôte de Gamme",
@@ -2095,19 +2031,6 @@
         "biensGeres": 0
       },
       {
-        "source": "discovered",
-        "isNational": false,
-        "name": "Conciergerie Tête d'Or - Gestion Airbnb Lyon",
-        "rating": 4.7,
-        "reviews": 56,
-        "score": "19.00",
-        "address": "133 Rue Vauban, 69006 Lyon",
-        "website": "https://conciergerietetedor.fr/",
-        "phone": "06 52 03 85 25",
-        "place_id": "ChIJf5jHRaLr9EcRuRYLSAy45Nc",
-        "biensGeres": 0
-      },
-      {
         "source": "current",
         "isNational": false,
         "name": "Simeo Conciergerie",
@@ -2131,6 +2054,31 @@
         "phone": "06 64 73 15 14",
         "place_id": "ChIJ5fVymQqNbwMRbfc02mE4eGI",
         "biensGeres": 0
+      },
+      {
+        "source": "discovered",
+        "isNational": false,
+        "name": "La conciergerie du centre",
+        "rating": 4.6,
+        "reviews": 21,
+        "score": "14.22",
+        "address": "30 Rue de la Caisse d'Épargne, 85100 Les Sables-d'Olonne",
+        "website": "https://conciergerieducentre.wixsite.com/lcdc",
+        "phone": "06 84 44 82 49",
+        "place_id": "ChIJ51tiC6hnBEgRV-jE_EQFKv4",
+        "biensGeres": 0
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "On est là pour Toit",
+        "rating": 5,
+        "reviews": 16,
+        "score": "14.17",
+        "address": "9 Rue des Deux Phares, 85100 Les Sables-d'Olonne",
+        "website": "http://www.onestlapourtoit.fr/",
+        "place_id": "ChIJIzF4AVhdBEgRgYgaj3B0IPE",
+        "biensGeres": 35
       }
     ]
   },
@@ -2715,18 +2663,6 @@
         "biensGeres": 0
       },
       {
-        "source": "current",
-        "isNational": false,
-        "name": "Halo Butler",
-        "rating": 4.9,
-        "reviews": 49,
-        "score": "19.17",
-        "address": "26 Quai de la République, 85800 Saint-Gilles-Croix-de-Vie",
-        "website": "http://www.haloconcierge.fr/",
-        "place_id": "ChIJb825qihXBEgR6ngxihZJJYA",
-        "biensGeres": 55
-      },
-      {
         "source": "discovered",
         "isNational": false,
         "name": "Eximia Conciergerie Premium – Montpellier",
@@ -2750,6 +2686,19 @@
         "website": "http://www.conciergerie-groomi.fr/",
         "place_id": "ChIJXR8wTtylthIRgG_S7GXKd58",
         "biensGeres": 60
+      },
+      {
+        "source": "discovered",
+        "isNational": false,
+        "name": "CBC Home Conciergerie",
+        "rating": 4.6,
+        "reviews": 52,
+        "score": "18.26",
+        "address": "Rue François Henry d'Harcourt, 34080 Montpellier",
+        "website": "http://www.cbchome.fr/",
+        "phone": "06 08 74 01 36",
+        "place_id": "ChIJ724GYQnt9i0RMydTHIAX_-E",
+        "biensGeres": 0
       }
     ]
   },
@@ -3058,7 +3007,7 @@
   },
   "nimes": {
     "ville": "Nîmes",
-    "finalCount": 8,
+    "finalCount": 7,
     "items": [
       {
         "source": "current",
@@ -3132,18 +3081,6 @@
         "website": "https://www.lys-conciergerie.fr/",
         "place_id": "ChIJI0zDXPBVGkEROoWSYtUFhQ8",
         "biensGeres": 18
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "Excellence En Provence",
-        "rating": 5,
-        "reviews": 6,
-        "score": "9.73",
-        "address": "110 Chem. du Mas Créma, 13940 Mollégès",
-        "website": "http://www.leconciergedesalpilles.fr/",
-        "place_id": "ChIJmS5TxMH7tRIRAC98KH94j2A",
-        "biensGeres": 28
       },
       {
         "source": "current",
@@ -4152,32 +4089,6 @@
     "finalCount": 8,
     "items": [
       {
-        "source": "discovered",
-        "isNational": true,
-        "name": "GuestReady - Conciergerie Airbnb Lyon",
-        "rating": 4.6,
-        "reviews": 359,
-        "score": "27.08",
-        "address": "2 Rue Royale, 69001 Lyon",
-        "website": "https://www.guestready.com/fr/conciergerie-airbnb/lyon/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing-lyon",
-        "phone": "01 76 44 04 31",
-        "place_id": "ChIJ___v-e3q9EcR7auFCPO9yHE",
-        "biensGeres": 0
-      },
-      {
-        "source": "discovered",
-        "isNational": true,
-        "name": "Hosting Services - Conciergerie Airbnb Lyon",
-        "rating": 4.5,
-        "reviews": 61,
-        "score": "18.57",
-        "address": "2 Pl. du Prado, 69007 Lyon",
-        "website": "https://hostingservices.fr/",
-        "phone": "09 83 72 37 95",
-        "place_id": "ChIJc4QXwkHr9EcRQ-7eT4F4SYg",
-        "biensGeres": 0
-      },
-      {
         "source": "current",
         "isNational": false,
         "name": "PrestiPlace",
@@ -4204,32 +4115,6 @@
       {
         "source": "discovered",
         "isNational": false,
-        "name": "Lulu Conciergerie – Gestion Airbnb & Location Courte Durée Lyon",
-        "rating": 4.8,
-        "reviews": 53,
-        "score": "19.15",
-        "address": "73 Rue Duquesne, 69006 Lyon",
-        "website": "https://luluconciergerie.squarespace.com/",
-        "phone": "07 83 74 78 20",
-        "place_id": "ChIJ7VgjHvTr9EcRJtLIiBXuLis",
-        "biensGeres": 0
-      },
-      {
-        "source": "discovered",
-        "isNational": false,
-        "name": "Tranquille Émile - Conciergerie Airbnb Luxe à Paris",
-        "rating": 5,
-        "reviews": 29,
-        "score": "17.01",
-        "address": "104 Rue La Fayette, 75010 Paris",
-        "website": "http://www.tranquilleemile.com/",
-        "phone": "09 82 55 96 07",
-        "place_id": "ChIJJfYmizRu5kcR8z_B-LHmLyI",
-        "biensGeres": 0
-      },
-      {
-        "source": "discovered",
-        "isNational": false,
         "name": "HOMÉO CONCIERGERIE",
         "rating": 5,
         "reviews": 13,
@@ -4251,6 +4136,56 @@
         "website": "https://www.pillowandpaw.com/",
         "place_id": "ChIJ-xnYs4htN2ARyYdNio7guP4",
         "biensGeres": 20
+      },
+      {
+        "source": "discovered",
+        "isNational": false,
+        "name": "AIRCA - Conciergerie Airbnb TOURS",
+        "rating": 5,
+        "reviews": 8,
+        "score": "10.99",
+        "address": "29 Rue Albert Camus, 37100 Tours",
+        "website": "https://airca-conciergerie.fr/",
+        "phone": "06 23 23 13 76",
+        "place_id": "ChIJwdG29M0WTSARbHZNYYuczc0",
+        "biensGeres": 0
+      },
+      {
+        "source": "discovered",
+        "isNational": false,
+        "name": "Ghurfat Sharqa",
+        "rating": 5,
+        "reviews": 6,
+        "score": "9.73",
+        "address": "32 Rue de la Tonnelle, 37700 Saint-Pierre-des-Corps",
+        "website": "",
+        "phone": "07 67 35 45 51",
+        "place_id": "ChIJYTPApjbV_EcRB9zq6WOqezE",
+        "biensGeres": 0
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "Éloge Touraine",
+        "rating": 5,
+        "reviews": 2,
+        "score": "5.49",
+        "address": "40 Av. de la Tranchée, 37100 Tours",
+        "website": "https://logetourangelle.fr/",
+        "place_id": "ChIJiQ2bsyLdGGMRBAepxJqjgSM",
+        "biensGeres": 18
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "Coderi",
+        "rating": 5,
+        "reviews": 1,
+        "score": "3.47",
+        "address": "67 bis Rue Roger Salengro, 37000 Tours",
+        "website": "https://www.facebook.com/Conciergerie-Zerosouci-931720280276223/",
+        "place_id": "ChIJTWcUysfV_EcROLpWH2lbC8c",
+        "biensGeres": 22
       }
     ]
   },

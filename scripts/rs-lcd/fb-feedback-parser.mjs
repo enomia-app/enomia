@@ -65,6 +65,7 @@ Types de retours possibles à traiter :
 - **NUANCE / MODIFICATION** (ex: "Pas vrai pour les T2, oui pour les T5") → reformule pour intégrer la nuance proprement
 - **RÉÉCRITURE COMPLÈTE** (Marc fournit une nouvelle version) → utilise la version Marc telle quelle
 - **SKIP / refus** (ex: "vire celui-là", "skip g1.4") → action="skip"
+- **VALIDATION + QUESTION ANNEXE** (ex: "Ok pour tout. C'est fait par Opus ou Sonnet ?", "Parfait, au fait tu peux changer la fréquence du cron ?") → traite la VALIDATION normalement (tous les drafts en action="post", inchangés), et IGNORE la question/remarque hors-sujet éditorial : elle sera gérée séparément par l'agent, ce n'est PAS une instruction de modification sur un draft. Ne pars PAS en ambiguous.
 
 # RÈGLES DE STYLE (à TOUJOURS respecter dans le texte final)
 - Tutoiement
@@ -108,7 +109,7 @@ Règles de sortie :
 - action="post" par défaut, "skip" UNIQUEMENT si Marc demande explicitement de virer
 - edited=true si le texte diffère du draft original (même léger), false si strictement identique
 - marcFeedback = résumé court utile pour mémoire d'apprentissage (ex: "Préfère T2 avec checkout 11h, 6h uniquement pour grands biens 200m2"). Vide si Marc n'a rien dit pour ce draft.
-- Si la réponse de Marc est totalement vide ou hors-sujet : ambiguous=true + reason explicative`;
+- ambiguous=true UNIQUEMENT en dernier recours : si AUCUNE intention de validation NI de modification n'est identifiable (réponse totalement vide, ou sans rapport au point de ne pas savoir s'il valide ou refuse). Si Marc valide clairement (ok / parfait / go / "ok pour tout" / "c'est bon") — même accompagné d'une question ou remarque hors-sujet — ce n'est PAS ambiguous : on poste. Dans le doute entre "valide" et "ambiguous", privilégie "valide" si un signal d'accord explicite est présent.`;
 
   console.log(`Appel Opus Max (${postIds.length} drafts à traiter)...`);
   // callClaudeMaxJson : `claude -p` via OAuth Max (pas l'API), retry sur 529 transient,

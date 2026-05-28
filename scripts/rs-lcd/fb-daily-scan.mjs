@@ -125,10 +125,10 @@ ${JSON.stringify(compactPosts, null, 2)}
 
 Pas de markdown, pas de \`\`\`, juste le JSON pur.`;
 
-  console.log(`Appel Claude Max (sonnet, ${compactPosts.length} posts)...`);
+  console.log(`Appel Claude Max (opus, ${compactPosts.length} posts)...`);
   // callClaudeMaxJson : `claude -p` via OAuth Max (pas l'API), retry sur 529 transient,
   // strip code fences markdown, parse JSON. Cf scripts/lib/claude-cli.mjs.
-  const result = await callClaudeMaxJson(prompt, { model: 'claude-sonnet-4-6' });
+  const result = await callClaudeMaxJson(prompt, { model: 'claude-opus-4-7' });
 
   // Déduit withEnomiaLink/enomiaUrl par regex sur le text (réalité du commentaire)
   // plutôt que de faire confiance à Sonnet qui pouvait ranger l'URL dans un champ séparé.

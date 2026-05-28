@@ -125,7 +125,19 @@ async function postComment(page, url, text) {
     document.execCommand('insertText', false, t);
     return { ok: true, count: editors.length, label: editor.getAttribute('aria-label') };
   }, text);
-  if (!injected.ok) throw new Error('Composer : ' + injected.reason);
+  if (!injected.ok) {
+    // Diagnostic : explique POURQUOI le composer manque (mail récap plus parlant que
+    // "aucun composer visible"). Post-mortem only — pas de throw précoce (évite faux positif).
+    const diag = await page.evaluate(() => {
+      const t = document.body.innerText || '';
+      if (/n'est pas disponible|isn'?t available|contenu introuvable|page isn'?t available/i.test(t)) {
+        return 'post inaccessible (supprimé ou confidentialité modifiée)';
+      }
+      if (document.querySelector('input[name="pass"]')) return 'mur de login FB (cookies expirés)';
+      return 'commentaires fermés ou DOM inattendu';
+    });
+    throw new Error(`Composer introuvable : ${diag}`);
+  }
   await page.waitForTimeout(1500 + randomBetween(0, 800));
 
   // Vérifier que le bouton "Publier" est bien actif maintenant

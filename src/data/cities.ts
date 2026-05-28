@@ -6746,10 +6746,10 @@ export const cities: City[] = [
     displayName: 'Royan',
     region: 'Nouvelle-Aquitaine',
     regionSlug: 'nouvelle-aquitaine',
-    title: 'Conciergerie Royan Airbnb : comparatif 2026 des 6 meilleures agences',
+    title: 'Conciergerie Royan Airbnb : comparatif 2026 des 3 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Royan : Comparatif 2026',
     metaDescription:
-      "Comparatif des 6 meilleures conciergeries Airbnb à Royan. Tarifs (15-25 %), services, avis Google, autorisation changement d'usage 2025, quartiers rentables (Pontaillac, Foncillon).",
+      "Comparatif des 3 meilleures conciergeries Airbnb à Royan. Tarifs (15-25 %), services, avis Google, autorisation changement d'usage 2025, quartiers rentables (Pontaillac, Foncillon).",
     kwPrincipal: 'conciergerie royan',
     kwSecondaires: [
       'conciergerie airbnb royan',
@@ -6798,18 +6798,6 @@ export const cities: City[] = [
           "Modèle tarifaire à la prestation (sur devis personnalisé) plutôt que commission % : services facturés à l'unité (ménage, accueil, blanchisserie, gestion artisans). Réseau de femmes de ménage et artisans locaux sélectionnés. Pertinente pour un propriétaire qui veut piloter finement chaque ligne de coût et éviter le modèle commission % — typiquement un investisseur déjà familier avec le LCD.",
       },
       {
-        name: 'ZE-Royan',
-        url: 'https://www.ze-royan.fr/',
-        commission: '15 % TTC',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 18,
-        specialty: 'Commission la plus basse Royan, gestion complète + disponibilité 24/7',
-        description:
-          "ZE-Royan applique une commission 15 % TTC — la plus basse du marché royannais (vs 20-25 % chez les concurrents). Gestion complète : optimisation annonces, check-in/check-out, ménage, disponibilité 24/7. Pertinente pour un propriétaire qui veut maximiser le cashflow net via une commission contenue, en acceptant un volume d'avis plus modeste et un acteur récent en plein développement.",
-      },
-      {
         name: 'Conciergerie de Fanny',
         url: 'https://conciergeriedefanny.fr/',
         commission: 'sur devis',
@@ -6820,30 +6808,6 @@ export const cities: City[] = [
         specialty: 'Approche humaine, relation personnalisée 7j/7',
         description:
           "Approche explicitement personnalisée : un interlocuteur unique par propriétaire, relations directes avec les locataires, support 7j/7. Acteur à taille humaine. Pertinente pour un propriétaire qui valorise la proximité relationnelle (vs réseaux standardisés) et un échange direct sur chaque dossier — typiquement résidence secondaire familiale à laquelle on tient.",
-      },
-      {
-        name: 'La Clé Conciergerie',
-        url: 'https://www.lacleconciergerie.com/',
-        commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 8,
-        specialty: 'Accueil voyageurs et préparation logement LCD',
-        description:
-          "Services centrés sur l'accueil voyageurs et la préparation des logements pour la location courte durée. Pertinente pour un propriétaire qui cherche une conciergerie en phase de croissance avec une approche personnalisée — à privilégier sur les biens à faible turn (locations longue durée 2 semaines+) plutôt que sur du week-end intensif.",
-      },
-      {
-        name: 'Alpo Conciergerie',
-        url: 'https://alpo-conciergerie.fr/',
-        commission: '20 % HT',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 7,
-        specialty: 'Tarification claire, optimisation rentabilité',
-        description:
-          "Alpo Conciergerie applique une commission claire 20 % HT. Positionnement sur l'optimisation de rentabilité et l'expérience client. Pertinente pour un propriétaire qui privilégie une grille tarifaire transparente sans devis sur mesure — à mettre en balance avec la note inférieure aux principaux concurrents royannais et le faible volume d'avis.",
       },
     ],
     neighborhoods: [
@@ -6932,10 +6896,10 @@ export const cities: City[] = [
     displayName: 'Fréjus',
     region: 'Provence-Alpes-Côte d\'Azur',
     regionSlug: 'provence-alpes-cote-dazur',
-    title: 'Conciergerie Fréjus Airbnb : comparatif 2026 des 6 meilleures agences',
+    title: 'Conciergerie Fréjus Airbnb : comparatif 2026 des 7 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Fréjus : Comparatif 2026',
     metaDescription:
-      "Comparatif des 6 meilleures conciergeries Airbnb à Fréjus et Saint-Raphaël. Tarifs (20-25 %), services, avis Google, réglementation 2026, quartiers rentables (Fréjus-Plage, Valescure, Saint-Aygulf).",
+      "Comparatif des 7 meilleures conciergeries Airbnb à Fréjus et Saint-Raphaël. Tarifs (20-25 %), services, avis Google, réglementation 2026, quartiers rentables (Fréjus-Plage, Valescure, Saint-Aygulf).",
     kwPrincipal: 'conciergerie frejus',
     kwSecondaires: [
       'conciergerie airbnb frejus',
@@ -7026,6 +6990,18 @@ export const cities: City[] = [
         description:
           "Interhome est un acteur international (réseau dans plus de 50 pays). Commission 20-25 %, ménage refacturé voyageur. Forte diffusion sur la clientèle européenne (Allemands, Suisses, Britanniques, Belges, Néerlandais — segments majeurs à Fréjus en location longue saison hivernale). Service 24/7. Pertinente pour un propriétaire qui veut maximiser l'accès à la clientèle étrangère et pré-saison hivernale via une marque internationale reconnue — à mettre en balance avec la note inférieure aux acteurs locaux.",
       },
+      {
+        name: 'Holidays Service Conciergerie',
+        url: 'https://www.holidaysserviceconciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 5,
+        reviews: 43,
+        biensGeres: 0,
+        specialty: 'Fréjus & Saint-Raphaël, accueil + linge',
+        description:
+          "Conciergerie couvrant Fréjus, Saint-Raphaël et environs. Accueil personnalisé des voyageurs, check-in/check-out avec état des lieux, ménage et remise au propre, panier de bienvenue avec produits locaux, location de linge de lit et de bain. Tarification sur devis.",
+      },
     ],
     neighborhoods: [
       {
@@ -7113,10 +7089,10 @@ export const cities: City[] = [
     displayName: 'Grenoble',
     region: 'Auvergne-Rhône-Alpes',
     regionSlug: 'auvergne-rhone-alpes',
-    title: 'Conciergerie Grenoble Airbnb : comparatif 2026 des 6 meilleures agences',
+    title: 'Conciergerie Grenoble Airbnb : comparatif 2026 des 4 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Grenoble : Comparatif 2026',
     metaDescription:
-      "Comparatif des 6 meilleures conciergeries Airbnb à Grenoble. Tarifs (15-25 %), services, avis Google, autorisation changement d'usage zone tendue, quartiers rentables (Vieille Ville, Bonne).",
+      "Comparatif des 4 meilleures conciergeries Airbnb à Grenoble. Tarifs (15-25 %), services, avis Google, autorisation changement d'usage zone tendue, quartiers rentables (Vieille Ville, Bonne).",
     kwPrincipal: 'conciergerie grenoble',
     kwSecondaires: [
       'conciergerie airbnb grenoble',
@@ -7186,28 +7162,6 @@ export const cities: City[] = [
         specialty: 'Réseau national, services personnalisés voyageur',
         description:
           "Réseau national avec services personnalisés voyageur : welcome kit, location d'équipement (lit bébé, ski, raquettes), réservation d'activités (cours de ski Chamrousse, restaurants). Pertinente pour un propriétaire d'un T3-T4 qui cherche à différencier l'expérience voyageur via des services additionnels (clientèle skieurs week-end et randonneurs).",
-      },
-      {
-        name: 'Nomade Conciergerie',
-        commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 6,
-        specialty: 'Optimisation LCD, photos pro, calendrier multi-plateformes',
-        description:
-          "Services orientés optimisation LCD : annonce, photos professionnelles, gestion calendrier multi-plateformes (Airbnb + Booking + Abritel synchronisés), maintenance. Pertinente pour un propriétaire qui veut un acteur en croissance avec une approche personnalisée — à privilégier sur les biens à fort potentiel d'optimisation initial (annonce existante sous-performante).",
-      },
-      {
-        name: 'HelloFrancis',
-        commission: 'sur devis',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 5,
-        specialty: 'Grenoble + Aix-les-Bains, +20-30 % revenu annoncé',
-        description:
-          "Couverture Grenoble + Aix-les-Bains (axe Alpes). Positionnement explicite sur l'augmentation de revenu locatif (+20-30 % annoncé vs gestion propriétaire). Pertinente pour un propriétaire multi-biens sur l'axe Grenoble-Aix-les-Bains qui veut un acteur unique, en acceptant un faible volume d'avis à ce stade.",
       },
     ],
     neighborhoods: [

@@ -22,22 +22,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { google } from 'googleapis';
+import { callClaudeMax } from '../lib/claude-cli.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
 
 const DRY = process.argv.includes('--dry');
 
-function readEnvKey(key) {
-  if (process.env[key]) return process.env[key].trim();
-  const envPath = path.join(ROOT, '.env');
-  if (fs.existsSync(envPath)) {
-    const m = fs.readFileSync(envPath, 'utf-8').match(new RegExp(`^${key}=(.+)$`, 'm'));
-    if (m) return m[1].trim();
-  }
-  return null;
-}
-const ANTHROPIC_KEY = readEnvKey('ANTHROPIC_API_KEY');
+// Note : la classification des réponses passe par Claude Max (OAuth) dans
+// classifyReply, plus aucune clé API Anthropic n'est lue ici.
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const MONTH = TODAY.slice(0, 7);
@@ -137,35 +130,26 @@ async function sendMail(gm, { to, subject, body, inReplyTo }) {
   return res.data.id;
 }
 
-// ─── Anthropic Haiku ────────────────────────────────────────────────────
+// ─── Classification réponse (Sonnet via Claude Max, OAuth) ──────────────
 async function classifyReply(text) {
-  if (!ANTHROPIC_KEY) return 'unknown';
-  const prompt = `Classifie cette réponse à un email de prospection backlink (outil gratuit proposé).
+  const prompt = `Classifie cette réponse à un email de prospection backlink (outil gratuit proposé à un blog pour qu'il l'ajoute en ressource dans un article).
 
-Réponse :
+Réponse reçue :
 """
 ${text.slice(0, 1500)}
 """
 
-Réponds par UN seul mot parmi : positive (intéressé, demande plus d'info, ok pour ajouter le lien) | negative (refus poli ou non) | spam (auto-reply, hors sujet, robot) | neutre (question, demande de précision sans engagement clair).`;
+Réponds par UN seul mot parmi :
+- positive : intéressé, demande plus d'info, ok pour ajouter le lien, veut en discuter
+- negative : refus (poli ou non), pas intéressé, demande de ne plus être contacté
+- spam : auto-reply (absence, accusé de réception), hors sujet, robot, signature seule
+- neutre : question ou demande de précision sans engagement clair dans un sens ou l'autre
+
+Réponds UNIQUEMENT par le mot, rien d'autre.`;
 
   try {
-    const r = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'x-api-key': ANTHROPIC_KEY,
-        'anthropic-version': '2023-06-01',
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5',
-        max_tokens: 20,
-        messages: [{ role: 'user', content: prompt }],
-      }),
-    });
-    if (!r.ok) return 'unknown';
-    const data = await r.json();
-    const w = data.content?.[0]?.text?.trim().toLowerCase().match(/(positive|negative|spam|neutre)/);
+    const out = await callClaudeMax(prompt, { model: 'claude-sonnet-4-6' });
+    const w = (out || '').trim().toLowerCase().match(/(positive|negative|spam|neutre)/);
     return w?.[1] || 'unknown';
   } catch {
     return 'unknown';
@@ -257,6 +241,18 @@ async function main() {
   const tracked = backlog.candidates.filter(c => ['sent', 'relance_1', 'relance_2'].includes(c.status) && c.email);
   log(`📋 ${tracked.length} prospects à tracker (sent/relance_1/relance_2 avec email)`);
 
+  // Périmètre détection bounces : tous les envois des 14 derniers jours avec email,
+  // indépendamment du status (couvre pas_de_reponse, repondu_spam, etc.).
+  // Un NDR peut arriver en retard ou après que le status ait changé.
+  const fourteenDaysAgo = new Date(Date.now() - 14 * 86400000).toISOString().slice(0, 10);
+  const bounceScope = backlog.candidates.filter(c =>
+    c.email
+    && c.status !== 'bounced'
+    && c.date_envoi
+    && c.date_envoi.slice(0, 10) >= fourteenDaysAgo
+  );
+  log(`🔭 ${bounceScope.length} prospects dans le scope bounces (envois ≤ 14j, tous statuts)`);
+
   const gm = DRY ? null : await getGmailClient();
   const positives = [];
   const negatives = [];
@@ -264,12 +260,12 @@ async function main() {
   const pasDeReponse = [];
   const bouncedCandidates = [];
 
-  // ─── Détection bounces (toujours, même si tracked vide) ─────────────────
-  if (!DRY && tracked.length > 0) {
+  // ─── Détection bounces (sur scope élargi : tous envois récents) ─────────
+  if (!DRY && bounceScope.length > 0) {
     log(`\n🔎 Détection des bounces...`);
-    const bounces = await detectBounces(gm, tracked);
+    const bounces = await detectBounces(gm, bounceScope);
     for (const b of bounces) {
-      const c = tracked.find(c => c.email === b.email);
+      const c = bounceScope.find(c => c.email === b.email);
       if (!c) continue;
       c.status = 'bounced';
       c.bounce_detected_at = new Date().toISOString();
@@ -282,8 +278,11 @@ async function main() {
   }
 
   if (!tracked.length) {
-    log('rien à tracker.');
+    log('rien à tracker (replies/relances).');
     if (!DRY) saveBacklog(backlog);
+    if (bouncedCandidates.length && !DRY) {
+      await sendTrackRecap(gm, { positives, negatives, relancesEnvoyees, pasDeReponse, bouncedCandidates, bounceAlert: `⚠ ${bouncedCandidates.length} bounce(s) détecté(s).`, bounceRate7d: 0, sentLast7Count: 0 });
+    }
     return;
   }
 

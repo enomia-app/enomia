@@ -30,9 +30,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { google } from 'googleapis';
-import { extractContact, detectAll } from '../backlinks-source-monthly/filters.mjs';
+import { extractContact, detectAll, decodeEntities } from '../backlinks-source-monthly/filters.mjs';
 import { buildPitch, qaPitch, chooseOutilToPitch } from './pitch-templates.mjs';
 import { shouldBccToday } from './bcc-state.mjs';
+import { generateObservation } from './observation.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -67,16 +68,8 @@ function computeDailyMax() {
   return 30;
 }
 
-function readEnvKey(key) {
-  if (process.env[key]) return process.env[key].trim();
-  const envPath = path.join(ROOT, '.env');
-  if (fs.existsSync(envPath)) {
-    const m = fs.readFileSync(envPath, 'utf-8').match(new RegExp(`^${key}=(.+)$`, 'm'));
-    if (m) return m[1].trim();
-  }
-  return null;
-}
-const ANTHROPIC_KEY = readEnvKey('ANTHROPIC_API_KEY');
+// Note : l'observation est générée via Claude Max (OAuth) dans observation.mjs,
+// plus aucune clé API Anthropic n'est lue ici.
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const MONTH = TODAY.slice(0, 7);
@@ -247,12 +240,8 @@ async function scanPage(url) {
   const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
   const og = html.match(/<meta[^>]*property=["']og:title["'][^>]*content=["']([^"']+)["']/i)?.[1];
   const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1];
-  const rawTitle = (h1 || og || title || '')
-    .replace(/<[^>]+>/g, '')
-    .replace(/&#x27;|&#39;/g, "'")
-    .replace(/&amp;/g, '&')
-    .replace(/&quot;/g, '"')
-    .replace(/&nbsp;/g, ' ')
+  const rawTitle = decodeEntities((h1 || og || title || '').replace(/<[^>]+>/g, ''))
+    .replace(/\s+/g, ' ')
     .trim();
 
   const textOnly = html
@@ -282,58 +271,6 @@ async function scanPage(url) {
   }
 
   return { title: rawTitle, text: textOnly, prenom };
-}
-
-async function generateObservation({ title, text, outil }) {
-  if (!ANTHROPIC_KEY) return 'L\'angle abordé est intéressant.';
-
-  const outilContext = {
-    simulateur: 'simulateur de rentabilité gratuit',
-    contrat: 'modèle de contrat de location saisonnière gratuit',
-    facture: 'générateur de factures gratuit',
-    taxe_sejour: 'calculateur de taxe de séjour gratuit',
-  }[outil] || 'outil';
-
-  const prompt = `Tu lis un article de blog sur la location courte durée / Airbnb. Tu dois écrire UNE SEULE phrase d'observation courte (8-15 mots) sur le contenu, qui sera utilisée dans un email de prospection.
-
-Règles STRICTES :
-- 1 seule phrase, 8-15 mots
-- En français, vouvoiement implicite
-- Observation honnête sur 1 point précis (méthodologie, angle, clarté, exemple, etc.)
-- PAS de superlatif ("excellent", "génial", "passionnant")
-- PAS de tirets cadratins (—), pas de flèches (→), pas d'emoji
-- Ton humain, comme un confrère qui commente
-- Doit pouvoir s'enchaîner après : J'ai lu votre article "[titre]". ${'<TA_PHRASE>'} Nous avons développé...
-
-Titre de l'article : "${title}"
-
-Contenu (extrait) :
-${text.slice(0, 2000)}
-
-L'outil que je veux pitcher : ${outilContext}.
-
-Réponds UNIQUEMENT par la phrase, sans guillemets, sans intro.`;
-
-  try {
-    const r = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'x-api-key': ANTHROPIC_KEY,
-        'anthropic-version': '2023-06-01',
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5',
-        max_tokens: 80,
-        messages: [{ role: 'user', content: prompt }],
-      }),
-    });
-    if (!r.ok) return 'L\'angle abordé est intéressant.';
-    const data = await r.json();
-    return data.content?.[0]?.text?.trim().replace(/^["']|["']$/g, '') || 'L\'angle abordé est intéressant.';
-  } catch {
-    return 'L\'angle abordé est intéressant.';
-  }
 }
 
 async function sendEmail(gm, { to, bcc, subject, body }) {
@@ -465,8 +402,8 @@ async function main() {
     }
     log(`  📄 titre: "${page.title.slice(0, 60)}..."`);
 
-    // 5. Génère 1 phrase d'observation Haiku
-    const observation = await generateObservation({ title: page.title, text: page.text, outil });
+    // 5. Génère l'observation personnalisée (Opus via Claude Max)
+    const observation = await generateObservation({ title: page.title, text: page.text, outil }, log);
     log(`  💬 obs: "${observation}"`);
 
     // 6. Build pitch

@@ -21,6 +21,11 @@ echo "===== tech-watchdog start $(date -Iseconds) =====" | tee -a "$RUN_LOG"
 echo "Repo: $REPO_ROOT" | tee -a "$RUN_LOG"
 echo "Prompt: $PROMPT_FILE" | tee -a "$RUN_LOG"
 
+# Pre-check : working tree Mac mini sync. Si pollué depuis longtemps,
+# envoie un mail séparé à Marc. N'arrête pas le watchdog.
+echo "Pre-check git sync..." | tee -a "$RUN_LOG"
+"$SCRIPT_DIR/check-git-sync.sh" >> "$RUN_LOG" 2>&1 || true
+
 # Localiser le binaire claude (PATH minimal sous launchd)
 CLAUDE_BIN="$(which claude 2>/dev/null || true)"
 if [[ -z "$CLAUDE_BIN" ]]; then

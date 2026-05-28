@@ -16,8 +16,8 @@
       <div class="snav-title">Simulateur <em>LCD</em></div>
     </div>
     <div class="snav-tabs">
-      <button class="snav-tab active" id="snav-tab-dash" onclick="showDashboard()">📊 Mes simulations</button>
-      <button class="snav-tab" id="snav-tab-new" onclick="newSimulation()">+ Nouvelle simulation</button>
+      <button class="snav-tab" id="snav-tab-dash" onclick="showDashboard()">📊 Mes simulations</button>
+      <button class="snav-tab active" id="snav-tab-new" onclick="newSimulation()">+ Nouvelle simulation</button>
     </div>
     <div class="snav-right">
       <div class="snav-user" id="snav-user-badge" onclick="showLoginModal()">
@@ -28,7 +28,7 @@
   </div>
 
   <!-- DASHBOARD -->
-  <div class="screen active" id="screen-dashboard">
+  <div class="screen" id="screen-dashboard">
     <div class="dashboard">
       <div class="dash-header">
         <div>
@@ -41,7 +41,7 @@
   </div>
 
   <!-- CALCULATEUR -->
-  <div class="screen" id="screen-calc">
+  <div class="screen active" id="screen-calc">
     <div class="calc-actions">
       <input type="text" id="sim-name-input" class="calc-name-input" placeholder="Nom de la simulation (optionnel)" value="">
       <span id="save-status" class="calc-save-status"></span>

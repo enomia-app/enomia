@@ -14,7 +14,7 @@
  */
 
 import { chromium } from 'playwright';
-import Anthropic from '@anthropic-ai/sdk';
+import { callClaudeMaxJson } from '../lib/claude-cli.mjs';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
@@ -113,7 +113,6 @@ async function fetchRepliesUnderMarcComment(page, postUrl, marcCommentText) {
 }
 
 async function draftReplyViaClaude(originalPostContext, marcComment, newReply, drafts) {
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const prompt = `Tu es Marc Chenut, expert location courte durée (LCD), tu réponds à un commentaire sur Facebook dans un groupe de propriétaires Airbnb.
 
 CONTEXTE :
@@ -148,15 +147,9 @@ Réponds UNIQUEMENT en JSON :
   "reason": "explication si skip"
 }`;
 
-  const resp = await client.messages.create({
-    model: 'claude-opus-4-7',
-    max_tokens: 800,
-    messages: [{ role: 'user', content: prompt }],
-  });
-
-  const text = resp.content[0].text.trim();
-  const cleaned = text.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, '');
-  return JSON.parse(cleaned);
+  // callClaudeMaxJson : appelle `claude -p` via OAuth Max (pas l'API), retry sur
+  // 529 transient, strip code fences markdown, parse JSON.
+  return await callClaudeMaxJson(prompt, { model: 'claude-opus-4-7' });
 }
 
 async function main() {
@@ -164,10 +157,8 @@ async function main() {
     console.log('fb-history.json absent — rien à checker');
     return;
   }
-  if (!process.env.ANTHROPIC_API_KEY) {
-    console.error('ANTHROPIC_API_KEY absent dans .env');
-    process.exit(1);
-  }
+  // Plus de check ANTHROPIC_API_KEY : on passe par `claude -p` (OAuth Max) via
+  // scripts/lib/claude-cli.mjs. L'auth est gérée par le CLI Claude Code.
 
   const history = JSON.parse(readFileSync(HISTORY_FILE, 'utf8'));
   if (history.length === 0) {

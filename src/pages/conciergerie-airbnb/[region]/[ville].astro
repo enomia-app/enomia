@@ -1,6 +1,8 @@
 ---
 export const prerender = true;
 import ToolLayout from '../../../layouts/ToolLayout.astro';
+import NewsletterBlock from '../../../components/NewsletterBlock.astro';
+import RelatedBlogArticles from '../../../components/RelatedBlogArticles.astro';
 import { cities, getCityBySlug, getRegionBySlug, type City } from '../../../data/cities';
 import { getRentabiliteLinkForVille } from '../../../utils/getRentabilitePathForVille';
 
@@ -214,19 +216,25 @@ const faqLd = {
     .stat .v { font-size: 22px; font-weight: 700; color: #1a1a1a; font-family: 'Newsreader', serif; }
     .stat .d { font-size: 12px; color: #52524e; margin-top: 4px; }
 
-    /* Comparison table */
-    .comp { border: 1px solid #e5e3de; border-radius: 12px; margin: 24px 0 36px; background: #fff; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    /* Comparison table — horizontal scroll with fade hint on mobile */
+    .comp-wrap { position: relative; margin: 24px 0 36px; }
+    .comp { border: 1px solid #e5e3de; border-radius: 12px; background: #fff; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.18) transparent; }
+    .comp::-webkit-scrollbar { height: 6px; }
+    .comp::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 4px; }
+    .comp::-webkit-scrollbar-track { background: transparent; }
     .comp table { width: 100%; border-collapse: collapse; min-width: 600px; }
     .comp th { background: #2b2d2b; color: #fff; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; padding: 14px 12px; text-align: left; white-space: nowrap; }
     .comp td { padding: 14px 12px; font-size: 13px; color: #52524e; border-top: 1px solid #f0eee8; vertical-align: top; }
     .comp tbody tr:hover { background: #fafaf7; }
     .comp td strong { color: #1a1a1a; }
     .comp .rating { color: #f0a83a; font-weight: 700; white-space: nowrap; }
-    .comp .mobile-note { display: none; font-size: 11px; color: #8a8985; margin-top: 8px; }
+    /* Fade gradient on right edge — only visible on mobile to hint horizontal scroll */
+    .comp-fade { display: none; }
+    .comp-hint { display: none; }
     @media (max-width: 700px) {
       .comp { font-size: 12px; }
-      .comp .col-biens, .comp .col-reviews { display: none; }
-      .comp .mobile-note { display: block; }
+      .comp-fade { display: block; position: absolute; top: 0; right: 0; width: 32px; height: calc(100% - 14px); pointer-events: none; background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92)); border-radius: 0 12px 12px 0; }
+      .comp-hint { display: block; font-size: 11px; color: #8a8985; margin-top: 8px; text-align: center; }
     }
 
     /* Conciergerie card */
@@ -409,34 +417,37 @@ const faqLd = {
         Notre sélection est basée sur l'ancienneté locale, le nombre d'avis Google, la transparence tarifaire, les services inclus et la couverture géographique sur {c.displayName} métropole.
       </p>
 
-      <div class="comp">
-        <table>
-          <thead>
-            <tr>
-              <th>Conciergerie</th>
-              <th>Commission</th>
-              <th>Ménage</th>
-              <th>Note</th>
-              <th class="col-reviews">Avis</th>
-              <th class="col-biens">Biens</th>
-              <th>Spécialité</th>
-            </tr>
-          </thead>
-          <tbody>
-            {sortedConc.map((conc) => (
+      <div class="comp-wrap">
+        <div class="comp">
+          <table>
+            <thead>
               <tr>
-                <td><strong>{conc.name}</strong></td>
-                <td>{conc.commission}</td>
-                <td>{conc.menage}</td>
-                <td><span class="rating">{conc.rating.toFixed(1)} ★</span></td>
-                <td class="col-reviews">{conc.reviews}</td>
-                <td class="col-biens">~{conc.biensGeres}</td>
-                <td>{conc.specialty}</td>
+                <th>Conciergerie</th>
+                <th>Commission</th>
+                <th>Ménage</th>
+                <th>Note</th>
+                <th>Avis</th>
+                <th>Biens</th>
+                <th>Spécialité</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <div class="mobile-note">Avis et nombre de biens visibles sur écran large.</div>
+            </thead>
+            <tbody>
+              {sortedConc.map((conc) => (
+                <tr>
+                  <td><strong>{conc.name}</strong></td>
+                  <td>{conc.commission}</td>
+                  <td>{conc.menage}</td>
+                  <td><span class="rating">{conc.rating.toFixed(1)} ★</span></td>
+                  <td>{conc.reviews}</td>
+                  <td>~{conc.biensGeres}</td>
+                  <td>{conc.specialty}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div class="comp-fade" aria-hidden="true"></div>
+        <p class="comp-hint">Glissez horizontalement pour voir toutes les colonnes →</p>
       </div>
 
       {sortedConc.map((conc, i) => (
@@ -561,6 +572,10 @@ const faqLd = {
             </a>
           ))}
       </div>
+
+      <NewsletterBlock source={`Conciergerie-${c.slug}`} />
+
+      <RelatedBlogArticles title="Articles à lire pour aller plus loin" />
     </div>
   </div>
 </ToolLayout>

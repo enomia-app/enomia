@@ -1,6 +1,8 @@
 // scripts/backlinks-source-monthly/filters.mjs
 // Filtres + détection outils + détection conciergerie. Pipeline v2.1.
 
+import { resolveMx } from 'node:dns/promises';
+
 // ─── BLACKLIST ──────────────────────────────────────────────────────────
 // Domaines à exclure : trop gros (DR>70 généralement), concurrents directs Enomia,
 // sociaux/marketplaces, sites institutionnels (qui ne linkeront pas vers un outil tiers).
@@ -37,6 +39,12 @@ export const BLACKLIST_DOMAINS = [
   'seloger.com', 'logic-immo.com', 'pap.fr', 'bienici.com',
   'meilleursagents.com', 'efficity.com', 'orpi.com',
   'fnaim.fr', 'century21.fr', 'laforet.com',
+
+  // Gros groupes immo / promoteurs (filiales CAC 40, SBF 120, etc.)
+  // Ne linkeront jamais vers un outil tiers, et adresses contact servent au support client
+  'vinci-immobilier.com', 'bouygues-immobilier.com', 'nexity.fr',
+  'kaufmanbroad.fr', 'icade.fr', 'altarea.com', 'eiffageimmobilier.fr',
+  'gecina.fr', 'unibail-rodamco-westfield.com',
 
   // Wikis et encyclopédies
   'wikipedia.org', 'wiktionary.org',
@@ -186,6 +194,150 @@ export function detectBlog(url, html) {
   return false; // par défaut : pas blog (conservateur)
 }
 
+// ─── QUALIFICATION EMAIL EXTRAIT ────────────────────────────────────────
+// Évite de pitcher des adresses "fonction" (signalement, abuse, noreply…) qui
+// rejettent systématiquement, ou des emails de staging/dev mal indexés.
+
+// Local-parts (avant @) qui ne sont JAMAIS un contact pertinent
+const BAD_EMAIL_LOCAL_PARTS = new Set([
+  // anti-fraude / abus
+  'signalement', 'signalements', 'abuse', 'abus', 'fraud', 'fraude',
+  // auto-replies / pas de réponse
+  'noreply', 'no-reply', 'donotreply', 'do-not-reply', 'donot-reply',
+  'ne-pas-repondre', 'nepasrepondre', 'nepas-repondre', 'pasdereponse',
+  'postmaster', 'mailer-daemon', 'mailerdaemon', 'daemon',
+  // légal / RGPD / juridique
+  'rgpd', 'gdpr', 'dpo', 'privacy', 'confidentialite', 'legal',
+  // press / recrutement / fonctions internes
+  'press', 'presse', 'media', 'medias', 'rp',
+  'recrutement', 'recrutements', 'jobs', 'careers', 'hr', 'rh',
+  'comptabilite', 'compta', 'finance', 'paie',
+  // marketing automation / listes
+  'newsletter', 'newsletters', 'notification', 'notifications',
+  'alert', 'alerts', 'alerte', 'alertes', 'list', 'lists',
+  'unsubscribe', 'desabonnement', 'opt-out', 'optout',
+  'spam', 'junk',
+]);
+
+// Hostnames manifestement non-prod
+const BAD_EMAIL_HOSTNAME_PATTERNS = [
+  /^test\./i, /\.test\./i,
+  /^staging\./i, /\.staging\./i,
+  /^dev\./i, /\.dev\./i,
+  /^localhost/i, /\.local$/i, /\.localhost$/i,
+  /example\.(com|org|net|fr)$/i,
+  /domain\.(com|tld)$/i,
+  /\.invalid$/i,
+];
+
+/**
+ * Vérifie qu'un email candidat est utilisable pour un pitch.
+ * Retourne true si OK, false sinon (et un log de la raison).
+ */
+export function isPitchableEmail(email, siteDomain) {
+  if (!email || typeof email !== 'string') return false;
+  if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) return false;
+
+  const [localPart, hostname] = email.toLowerCase().split('@');
+  if (!localPart || !hostname) return false;
+
+  // 1. Local-part fonction → skip
+  if (BAD_EMAIL_LOCAL_PARTS.has(localPart)) return false;
+  // Variantes avec séparateurs (signalement-fraude@, abuse-report@…)
+  const localRoot = localPart.split(/[-_.]/)[0];
+  if (BAD_EMAIL_LOCAL_PARTS.has(localRoot)) return false;
+
+  // 2. Hostname suspect (test., staging., dev., .local, etc.)
+  if (BAD_EMAIL_HOSTNAME_PATTERNS.some(p => p.test(hostname))) return false;
+
+  // 3. Sanity check : pas un placeholder évident ("votre-email", "your-name", etc.)
+  // On garde admin@/root@ comme acceptables (sur petits blogs c'est parfois le fondateur).
+  if (['user', 'username', 'name', 'votre', 'your', 'monemail', 'exemple', 'example'].includes(localPart)) return false;
+
+  // 4. Si siteDomain fourni, l'email DOIT être sur ce domaine ou sous-domaine.
+  // Évite d'extraire un email random d'un blog tiers cité dans la page.
+  if (siteDomain) {
+    const cleanSite = siteDomain.replace(/^www\./, '').toLowerCase();
+    if (hostname !== cleanSite && !hostname.endsWith('.' + cleanSite)) return false;
+  }
+
+  return true;
+}
+
+// ─── DNS MX LOOKUP (vérif domaine email avant pitch) ────────────────────
+// Vérifie qu'un domaine a au moins 1 enregistrement MX (= peut recevoir des mails).
+// Gratuit, ~50-300ms par domaine (timeout 5s). Cache mémoire intra-run.
+// Capture les sous-domaines orphelins (test.*, dev.*) qui n'ont pas de MX.
+
+const mxCache = new Map();
+
+export async function hasValidMX(domain) {
+  if (!domain) return false;
+  const clean = domain.toLowerCase().replace(/^www\./, '');
+  if (mxCache.has(clean)) return mxCache.get(clean);
+
+  try {
+    const records = await Promise.race([
+      resolveMx(clean),
+      new Promise((_, rej) => setTimeout(() => rej(new Error('mx timeout')), 5000)),
+    ]);
+    const ok = Array.isArray(records) && records.length > 0;
+    mxCache.set(clean, ok);
+    return ok;
+  } catch (e) {
+    // ENODATA, ENOTFOUND, ESERVFAIL, timeout → considéré comme sans MX
+    mxCache.set(clean, false);
+    return false;
+  }
+}
+
+// ─── DECODE ENTITÉS HTML ────────────────────────────────────────────────
+// Décode les entités HTML d'un texte extrait (titre d'article, etc.) avant
+// de l'insérer dans un pitch. Gère :
+//   - numériques décimales (&#233;) et hexadécimales (&#xE9;)
+//   - entités nommées courantes (accents français + ponctuation)
+// Le décodage partiel précédent ne gérait que ' & " nbsp, d'où les
+// "&egrave;" / "&agrave;" / "&eacute;" bruts dans les titres français.
+
+const NAMED_ENTITIES = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'",
+  nbsp: ' ', laquo: '«', raquo: '»', hellip: '…',
+  // minuscules accentuées
+  eacute: 'é', egrave: 'è', ecirc: 'ê', euml: 'ë',
+  agrave: 'à', acirc: 'â', auml: 'ä', aacute: 'á', atilde: 'ã', aring: 'å',
+  ugrave: 'ù', uacute: 'ú', ucirc: 'û', uuml: 'ü',
+  igrave: 'ì', iacute: 'í', icirc: 'î', iuml: 'ï',
+  ograve: 'ò', oacute: 'ó', ocirc: 'ô', ouml: 'ö', otilde: 'õ', oslash: 'ø',
+  ccedil: 'ç', ntilde: 'ñ', yacute: 'ý', yuml: 'ÿ',
+  // majuscules accentuées
+  Eacute: 'É', Egrave: 'È', Ecirc: 'Ê', Euml: 'Ë',
+  Agrave: 'À', Aacute: 'Á', Acirc: 'Â', Auml: 'Ä',
+  Ugrave: 'Ù', Uacute: 'Ú', Ucirc: 'Û', Uuml: 'Ü',
+  Igrave: 'Ì', Iacute: 'Í', Icirc: 'Î', Iuml: 'Ï',
+  Ograve: 'Ò', Oacute: 'Ó', Ocirc: 'Ô', Ouml: 'Ö',
+  Ccedil: 'Ç', Ntilde: 'Ñ',
+  // ponctuation / symboles
+  rsquo: '’', lsquo: '‘', ldquo: '“', rdquo: '”', sbquo: '‚', bdquo: '„',
+  mdash: '—', ndash: '–', deg: '°', euro: '€', pound: '£', cent: '¢',
+  times: '×', divide: '÷', middot: '·', bull: '•',
+};
+
+export function decodeEntities(str) {
+  if (!str) return str;
+  return str
+    // numériques décimales : &#233;
+    .replace(/&#(\d+);/g, (_, n) => {
+      try { return String.fromCodePoint(parseInt(n, 10)); } catch { return _; }
+    })
+    // numériques hexadécimales : &#xE9;
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, n) => {
+      try { return String.fromCodePoint(parseInt(n, 16)); } catch { return _; }
+    })
+    // nommées
+    .replace(/&([a-zA-Z][a-zA-Z0-9]*);/g, (m, name) =>
+      Object.prototype.hasOwnProperty.call(NAMED_ENTITIES, name) ? NAMED_ENTITIES[name] : m);
+}
+
 // ─── HELPERS ────────────────────────────────────────────────────────────
 
 export function extractDomain(url) {
@@ -288,16 +440,54 @@ export async function detectAll(pageUrl, domain) {
 }
 
 /**
- * Tente d'extraire un email visible sur la page (mailto: ou texte).
+ * Score une adresse email candidate : plus haut = meilleur contact.
+ * Préfère contact@, redaction@, prénom@ ; pénalise admin@, info@ (catchall fréquent).
+ */
+function scoreEmail(email) {
+  const local = email.toLowerCase().split('@')[0];
+  // Meilleures adresses humaines
+  if (['contact', 'bonjour', 'hello', 'hi', 'salut'].includes(local)) return 100;
+  if (['redaction', 'rédaction', 'editorial', 'editor'].includes(local)) return 95;
+  // Probable prénom (lettres uniquement, longueur raisonnable)
+  if (/^[a-zà-ÿ]{3,15}$/i.test(local)) return 85;
+  // prenom.nom@ ou prenom-nom@ → bon signal humain
+  if (/^[a-zà-ÿ]{2,}[._-][a-zà-ÿ]{2,}$/i.test(local)) return 80;
+  // info@, hello@ generic
+  if (['info', 'infos', 'mail', 'email'].includes(local)) return 60;
+  // admin@, support@, webmaster@ → souvent catchall mais peut marcher
+  if (['admin', 'support', 'webmaster', 'sales', 'service'].includes(local)) return 40;
+  // par défaut
+  return 50;
+}
+
+/**
+ * Tente d'extraire un email visible sur la page (mailto: ou texte brut).
+ * Récupère TOUS les emails, filtre les "fonction"/staging via isPitchableEmail,
+ * et garde le mieux scoré.
  */
 export async function extractContact(url) {
   const html = await fetchHtml(url);
   if (!html) return { email: null, url_formulaire: null };
 
-  const mailtoMatch = html.match(/mailto:([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
-  const email = mailtoMatch ? mailtoMatch[1] : null;
-
   const domain = extractDomain(url);
+
+  // Collecte tous les emails (mailto: + texte brut)
+  const found = new Set();
+  const mailtoRe = /mailto:([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/gi;
+  let m;
+  while ((m = mailtoRe.exec(html))) found.add(m[1].toLowerCase());
+
+  // Texte brut : on cherche aussi (mais souvent obfusqué, donc bonus si mailto: existe)
+  const textRe = /\b([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})\b/gi;
+  while ((m = textRe.exec(html))) found.add(m[1].toLowerCase());
+
+  // Filtre + score
+  const candidates = Array.from(found)
+    .filter(e => isPitchableEmail(e, domain))
+    .map(e => ({ email: e, score: scoreEmail(e) }))
+    .sort((a, b) => b.score - a.score);
+
+  // URL de formulaire (fallback si pas d'email)
   const contactMatch = html.match(/href="(\/?contact[^"]*|\/?a-propos[^"]*|\/?equipe[^"]*|\/?about[^"]*)"/i);
   let url_formulaire = null;
   if (contactMatch && domain) {
@@ -305,5 +495,15 @@ export async function extractContact(url) {
     url_formulaire = p.startsWith('http') ? p : `https://${domain}${p.startsWith('/') ? '' : '/'}${p}`;
   }
 
-  return { email, url_formulaire };
+  // Vérif MX : on parcourt les candidats par score décroissant, on garde
+  // le premier dont le domaine email a un serveur MX. Élimine les sous-domaines
+  // orphelins (test.*, dev.*) et les domaines morts.
+  for (const cand of candidates) {
+    const emailDomain = cand.email.split('@')[1];
+    if (await hasValidMX(emailDomain)) {
+      return { email: cand.email, url_formulaire };
+    }
+  }
+
+  return { email: null, url_formulaire };
 }

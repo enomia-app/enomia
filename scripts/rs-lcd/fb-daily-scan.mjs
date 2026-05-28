@@ -33,6 +33,12 @@ loadEnv(path.join(ROOT, '.env'));
 
 const SCAN_CANDIDATES = join(ROOT, 'data/rs-lcd/fb-scan-candidates.json');
 const DRAFTS_OUT = join(ROOT, 'data/rs-lcd/fb-drafts.json');
+const HISTORY_FILE = join(ROOT, 'data/rs-lcd/fb-history.json');
+
+function loadJsonArray(p) {
+  if (!existsSync(p)) return [];
+  try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return []; }
+}
 
 function listEnomiaArticles() {
   const dir = join(ROOT, 'src/content/blog');
@@ -228,8 +234,19 @@ async function main() {
     process.exit(1);
   }
   const scanData = JSON.parse(readFileSync(SCAN_CANDIDATES, 'utf8'));
-  const posts = (scanData.posts || []).filter(p => (p.text || '').length > 80);
-  console.log(`${posts.length} posts utiles dans le scan\n`);
+  const allPosts = (scanData.posts || []).filter(p => (p.text || '').length > 80);
+  // Dédup au drafting : écarte les posts déjà commentés < 24h. Indispensable avec
+  // 2 scans/jour (7h17 + 19h17) — sinon le scan du soir re-drafte les posts du matin
+  // → re-validation Marc inutile + tokens gaspillés. fb-post a aussi son dedupe au post,
+  // mais ici on évite que le draft remonte jusque dans le mail.
+  const recentUrls = new Set(
+    loadJsonArray(HISTORY_FILE)
+      .filter(h => Date.now() - new Date(h.postedAt).getTime() < 24 * 3600 * 1000)
+      .map(h => h.postUrl)
+  );
+  const posts = allPosts.filter(p => !recentUrls.has(p.url));
+  const dedupCount = allPosts.length - posts.length;
+  console.log(`${posts.length} posts utiles dans le scan${dedupCount ? ` (${dedupCount} déjà commentés < 24h, écartés)` : ''}\n`);
 
   if (posts.length === 0) {
     console.log('Aucun post à traiter aujourd\'hui');

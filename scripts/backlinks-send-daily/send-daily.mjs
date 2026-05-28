@@ -31,9 +31,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { google } from 'googleapis';
 import { extractContact, detectAll, decodeEntities } from '../backlinks-source-monthly/filters.mjs';
-import { buildPitch, qaPitch, chooseOutilToPitch, OUTREACH_BRIEF, OUTIL_DETAILS } from './pitch-templates.mjs';
+import { buildPitch, qaPitch, chooseOutilToPitch } from './pitch-templates.mjs';
 import { shouldBccToday } from './bcc-state.mjs';
-import { callClaudeMax } from '../lib/claude-cli.mjs';
+import { generateObservation } from './observation.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -68,16 +68,8 @@ function computeDailyMax() {
   return 30;
 }
 
-function readEnvKey(key) {
-  if (process.env[key]) return process.env[key].trim();
-  const envPath = path.join(ROOT, '.env');
-  if (fs.existsSync(envPath)) {
-    const m = fs.readFileSync(envPath, 'utf-8').match(new RegExp(`^${key}=(.+)$`, 'm'));
-    if (m) return m[1].trim();
-  }
-  return null;
-}
-const ANTHROPIC_KEY = readEnvKey('ANTHROPIC_API_KEY');
+// Note : l'observation est générée via Claude Max (OAuth) dans observation.mjs,
+// plus aucune clé API Anthropic n'est lue ici.
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const MONTH = TODAY.slice(0, 7);
@@ -281,52 +273,6 @@ async function scanPage(url) {
   return { title: rawTitle, text: textOnly, prenom };
 }
 
-// Fallback positif et neutre si la génération échoue (jamais une critique).
-const OBSERVATION_FALLBACK = 'Votre manière d\'aborder le sujet est vraiment concrète pour vos lecteurs.';
-
-async function generateObservation({ title, text, outil }) {
-  const outilDesc = OUTIL_DETAILS[outil] || 'un outil gratuit pour les loueurs en courte durée';
-
-  const prompt = `${OUTREACH_BRIEF}
-
-Ta tâche : écrire l'observation personnalisée qui sera insérée dans l'email, juste après la phrase "J'ai lu votre article «[titre]»." et juste avant la présentation de notre outil gratuit. C'est le moment où Marc montre qu'il a vraiment lu l'article.
-
-Règles de ton (TRÈS IMPORTANT) :
-- Compliment SINCÈRE et SPÉCIFIQUE : pointe une vraie qualité de l'article (un angle bien vu, un exemple concret, une explication claire, une donnée utile, une structure pédagogique). Quelque chose qu'on ne pourrait pas dire d'un autre article.
-- JAMAIS de critique, jamais de manque. N'écris JAMAIS "vous ne parlez pas de", "il manque", "vous n'abordez pas", "mais", "cependant", "dommage que". On valorise leur travail, on ne pointe aucun défaut. C'est une règle absolue.
-- Le ton est celui d'un confrère du métier qui a lu et apprécié, pas d'un commercial ni d'un élève qui récite.
-- 1 à 2 phrases courtes, 12 à 30 mots au total.
-- Français, vouvoiement.
-- Pas de superlatif marketing creux ("article exceptionnel", "incroyable"). Un compliment précis vaut mieux qu'un éloge vague.
-- Pas d'emoji, pas de tiret cadratin (—), pas de tiret long (–), pas de flèche (→).
-- Ne mentionne PAS notre outil ni Enomia (la suite de l'email s'en charge). Ici, on parle UNIQUEMENT de leur article.
-
-Pour ton information seulement (ne le cite pas), l'outil que Marc proposera ensuite : ${outilDesc}.
-
-Titre de l'article : "${title}"
-
-Contenu de l'article (extrait) :
-${text.slice(0, 2500)}
-
-Réponds UNIQUEMENT par l'observation (1 à 2 phrases), sans guillemets, sans préfixe, sans commentaire.`;
-
-  try {
-    const out = await callClaudeMax(prompt, { model: 'claude-opus-4-7' });
-    const cleaned = (out || '').trim().replace(/^["'«»]+|["'«»]+$/g, '').trim();
-    // Garde-fou : si le modèle pointe quand même un manque, on retombe sur le fallback positif.
-    const lower = cleaned.toLowerCase();
-    const negative = /\b(il manque|manque de|vous ne |n'abordez|n'évoquez|n'aborde|dommage|regrette|aurait pu|aurait été|cependant)\b/.test(lower);
-    if (!cleaned || cleaned.length < 10 || negative) {
-      if (negative) log(`  ⚠️ observation négative filtrée: "${cleaned.slice(0, 80)}" → fallback`);
-      return OBSERVATION_FALLBACK;
-    }
-    return cleaned;
-  } catch (e) {
-    log(`  ⚠️ generateObservation fallback (${e.message?.slice(0, 80)})`);
-    return OBSERVATION_FALLBACK;
-  }
-}
-
 async function sendEmail(gm, { to, bcc, subject, body }) {
   const subjectEncoded = '=?UTF-8?B?' + Buffer.from(subject, 'utf8').toString('base64') + '?=';
   const headers = [
@@ -456,8 +402,8 @@ async function main() {
     }
     log(`  📄 titre: "${page.title.slice(0, 60)}..."`);
 
-    // 5. Génère 1 phrase d'observation Haiku
-    const observation = await generateObservation({ title: page.title, text: page.text, outil });
+    // 5. Génère l'observation personnalisée (Opus via Claude Max)
+    const observation = await generateObservation({ title: page.title, text: page.text, outil }, log);
     log(`  💬 obs: "${observation}"`);
 
     // 6. Build pitch

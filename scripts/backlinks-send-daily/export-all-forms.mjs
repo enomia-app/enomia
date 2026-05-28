@@ -26,6 +26,7 @@ import { fileURLToPath } from 'node:url';
 import { google } from 'googleapis';
 import { buildPitch, qaPitch, chooseOutilToPitch } from './pitch-templates.mjs';
 import { decodeEntities } from '../backlinks-source-monthly/filters.mjs';
+import { generateObservation } from './observation.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -34,16 +35,8 @@ const args = process.argv.slice(2);
 const DRY = args.includes('--dry');
 const MAX = parseInt(args.find(a => a.startsWith('--max='))?.split('=')[1] || '999', 10);
 
-function readEnvKey(key) {
-  if (process.env[key]) return process.env[key].trim();
-  const envPath = path.join(ROOT, '.env');
-  if (fs.existsSync(envPath)) {
-    const m = fs.readFileSync(envPath, 'utf-8').match(new RegExp(`^${key}=(.+)$`, 'm'));
-    if (m) return m[1].trim();
-  }
-  return null;
-}
-const ANTHROPIC_KEY = readEnvKey('ANTHROPIC_API_KEY');
+// Note : l'observation est générée via Claude Max (OAuth) dans observation.mjs,
+// plus aucune clé API Anthropic n'est lue ici.
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const MONTH = TODAY.slice(0, 7);
@@ -128,34 +121,8 @@ async function scanPage(url) {
   return { title: rawTitle, text: textOnly, prenom };
 }
 
-async function generateObservation({ title, text, outil }) {
-  if (!ANTHROPIC_KEY) return 'L\'angle abordé est intéressant.';
-  const outilContext = { simulateur: 'simulateur de rentabilité gratuit', contrat: 'modèle de contrat de location saisonnière gratuit', facture: 'générateur de factures gratuit', taxe_sejour: 'calculateur de taxe de séjour gratuit' }[outil] || 'outil';
-  const prompt = `Tu lis un article de blog sur la location courte durée / Airbnb. Tu dois écrire UNE SEULE phrase d'observation courte (8-15 mots) sur le contenu, qui sera utilisée dans un email de prospection.
-
-Règles STRICTES :
-- 1 seule phrase, 8-15 mots
-- En français, vouvoiement implicite
-- Observation honnête sur 1 point précis
-- PAS de superlatif, PAS de tirets cadratins (—), pas de flèches (→), pas d'emoji
-- Ton humain, comme un confrère qui commente
-- Doit pouvoir s'enchaîner après : J'ai lu votre article "[titre]". <TA_PHRASE> Nous avons développé...
-
-Titre : "${title}"
-
-Contenu (extrait) :
-${text.slice(0, 2000)}
-
-Outil pitché : ${outilContext}.
-
-Réponds UNIQUEMENT par la phrase, sans guillemets, sans intro.`;
-  try {
-    const r = await fetch('https://api.anthropic.com/v1/messages', { method: 'POST', headers: { 'x-api-key': ANTHROPIC_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' }, body: JSON.stringify({ model: 'claude-haiku-4-5', max_tokens: 80, messages: [{ role: 'user', content: prompt }] }) });
-    if (!r.ok) return 'L\'angle abordé est intéressant.';
-    const d = await r.json();
-    return d.content?.[0]?.text?.trim().replace(/^["']|["']$/g, '') || 'L\'angle abordé est intéressant.';
-  } catch { return 'L\'angle abordé est intéressant.'; }
-}
+// generateObservation : importé de ./observation.mjs (Opus via Claude Max,
+// ton positif + contexte chargé). Mutualisé avec send-daily.mjs.
 
 // ─── Main ───────────────────────────────────────────────────────────────
 async function main() {
@@ -206,7 +173,7 @@ async function main() {
     }
     log(`  📄 titre: "${titre.slice(0, 60)}..."`);
 
-    const observation = await generateObservation({ title: titre, text: article?.text || '', outil });
+    const observation = await generateObservation({ title: titre, text: article?.text || '', outil }, log);
     log(`  💬 obs: "${observation.slice(0, 80)}..."`);
 
     const pitch = buildPitch({ outil, prenom: article?.prenom, titre, observation });

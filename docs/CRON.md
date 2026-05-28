@@ -30,6 +30,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 | `app.enomia.backlinks-report-yearly` | 1er janvier 11h43 | Pipeline v2 : récap annuel | actif |
 | `app.enomia.backlinks-report-weekly` | Dim 18h43 | Pipeline v2 : récap hebdo envois/réponses/backlinks/pipeline | actif |
 | `com.enomia.fb-watch` | xh07, xh22, xh37, xh52 (4×/h) | Détecte réponses email Marc et poste sur FB | actif |
+| `app.enomia.conciergerie-refresh` | 3 du mois 6h13 | Refresh mensuel notes Google conciergeries + bump date « MAJ » des pages, commit/push main (déterministe, **pas de `claude -p`** → 0 coût LLM) | **à installer** (après merge sur main) |
 
 **Note horaires** : tous les jobs qui appellent l'API Anthropic sont volontairement décalés sur des minutes "improbables" (pas :00 :15 :30 :45) pour éviter les pics d'overload (HTTP 529) sur les heures rondes — où plein d'autres cron tapent l'API simultanément. Chaque job a une minute distincte des autres dans la même heure.
 
@@ -279,6 +280,26 @@ done
 
 ---
 
+## Refresh conciergeries mensuel
+
+### `app.enomia.conciergerie-refresh` — 3 du mois 6h13
+**Dossier** : `scripts/refresh-conciergeries-monthly/` (`run.sh` + `plist.template` + `install.sh`)
+**Fait** (100 % déterministe, **aucun `claude -p`**) :
+1. Vérifie `main` + working tree clean, `git pull --ff-only`.
+2. `refresh-conciergeries-google.mjs --json` → snapshot Places API.
+3. `apply-places-corrections.mjs` → applique rating/reviews réels (garde-fous 4 couches, `n.c.` si <5 avis).
+4. `bump-updated-dates.mjs` → tous les `updatedAt` de `cities.ts` à la date du jour + badge `index.astro`.
+5. `validate-cities.mjs` + `npm run audit:blog-links`.
+6. Si changement : commit + push `main` (Vercel redéploie).
+7. Email récap Resend (`build-recap.mjs`). Toute erreur → rollback `git checkout -- .` + email d'alerte.
+
+**Logs** : `scripts/refresh-conciergeries-monthly/logs/`
+**Coût** : Google Places ~$10/run (crédit gratuit $200/mois Maps Platform). **0€ LLM.**
+**Dépendances Mac mini** : `GOOGLE_PLACES_API_KEY` accessible (env ou `Neocamino/.env` ou `repo/.env`) + `RESEND_API_KEY` dans `repo/.env`.
+**Installation** : `bash scripts/refresh-conciergeries-monthly/install.sh` (sur Mac mini, après merge sur `main`).
+
+---
+
 ## Coûts API estimés (mensuel)
 
 | Service | Estimation | Note |
@@ -287,6 +308,7 @@ done
 | Claude Max (subscription) | déjà payé | Désormais utilisé par `backlinks-pitches-daily` + `backlinks-validate-send` via OAuth. Attention aux limites hebdo si usage interactif intensif. |
 | Resend (envoi emails) | gratuit (volume faible) | |
 | Google API (Gmail + GSC) | gratuit (quotas) | |
+| Google Places API (conciergerie-refresh) | gratuit (crédit $200/mois) | ~$10/run mensuel, largement couvert |
 | SEMrush | déjà payé (Neocamino) | |
 
 ### Historique des switches Max vs API

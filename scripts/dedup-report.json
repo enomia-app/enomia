@@ -12,39 +12,15 @@
     "reason": "lower_score"
   },
   {
-    "slug": "angers",
-    "kept": "Nestify Angers",
-    "dropped": "Angers Conciergerie Services",
-    "reason": "lower_score"
-  },
-  {
     "slug": "avignon",
     "kept": "Merci Conciergerie Avignon",
     "dropped": "MM Conciergerie",
     "reason": "lower_score"
   },
   {
-    "slug": "avignon",
-    "kept": "Merci Conciergerie Avignon",
-    "dropped": "Les Meilleurs Concierges - Conciergerie N°1 à Avignon",
-    "reason": "lower_score"
-  },
-  {
-    "slug": "brest",
-    "kept": "Conciergerie Finist",
-    "dropped": "Finistarmor : Conciergerie à Brest & dans le Finistère",
-    "reason": "lower_score"
-  },
-  {
     "slug": "caen",
     "kept": "Beauséjour Conciergerie",
     "dropped": "Fovéa Conciergerie",
-    "reason": "lower_score"
-  },
-  {
-    "slug": "cannes",
-    "kept": "Nestify Cannes",
-    "dropped": "BNB SWEET DREAMS Conciergerie Airbnb",
     "reason": "lower_score"
   },
   {
@@ -66,21 +42,9 @@
     "reason": "lower_score"
   },
   {
-    "slug": "grenoble",
-    "kept": "Capsule Corp Conciergerie Airbnb",
-    "dropped": "Conciergerie Airbnb Grenoble Capsule Corp",
-    "reason": "lower_score"
-  },
-  {
     "slug": "hyeres",
     "kept": "Hyères Conciergerie",
     "dropped": "AllForHost Hyères",
-    "reason": "lower_score"
-  },
-  {
-    "slug": "la-baule",
-    "kept": "Zen Weekey",
-    "dropped": "ZenWeeKey - Conciergerie sur la Presqu'île",
     "reason": "lower_score"
   },
   {
@@ -90,22 +54,10 @@
     "reason": "lower_score"
   },
   {
-    "slug": "la-rochelle",
-    "kept": "La Conciergerie de Lucas",
-    "dropped": "Le Studio Conciergerie La Rochelle",
-    "reason": "lower_score"
-  },
-  {
     "slug": "lille",
-    "kept": "Hôtecœur",
-    "dropped": "Conciergerie Lille",
-    "reason": "lower_score"
-  },
-  {
-    "slug": "lyon",
-    "kept": "Hostnfly Lyon",
-    "dropped": "Hosting Services - Conciergerie Airbnb Lyon",
-    "reason": "lower_score"
+    "kept": "Conciergerie Lille",
+    "dropped": "Hôtecœur",
+    "reason": "better_score_or_current"
   },
   {
     "slug": "marrakech",
@@ -114,39 +66,9 @@
     "reason": "lower_score"
   },
   {
-    "slug": "marrakech",
-    "kept": "YourHostHelper Marrakech",
-    "dropped": "Conciergerie Luxe - Marrakech Concierge - Gestion Locative Riad",
-    "reason": "lower_score"
-  },
-  {
-    "slug": "marrakech",
-    "kept": "Nippy House",
-    "dropped": "Conciergerie Marrakech - Maison Madeleines",
-    "reason": "lower_score"
-  },
-  {
-    "slug": "marseille",
-    "kept": "Marseille Conciergerie",
-    "dropped": "La Conciergerie du Soleil - Marseille",
-    "reason": "lower_score"
-  },
-  {
-    "slug": "metz",
-    "kept": "Vigelio",
-    "dropped": "conciergerie UnSejourAMetz",
-    "reason": "lower_score"
-  },
-  {
     "slug": "montpellier",
     "kept": "Welchome34",
     "dropped": "WeCARE BnB34",
-    "reason": "lower_score"
-  },
-  {
-    "slug": "nice",
-    "kept": "BnbLord Nice",
-    "dropped": "Bnb Groom Services - Conciergerie Nice",
     "reason": "lower_score"
   },
   {
@@ -157,15 +79,9 @@
   },
   {
     "slug": "rennes",
-    "kept": "Rennes Host",
-    "dropped": "JustUnToit Rennes",
-    "reason": "lower_score"
-  },
-  {
-    "slug": "rennes",
-    "kept": "CheckIn Conciergerie Rennes",
-    "dropped": "Conciergerie Check In - Rennes",
-    "reason": "lower_score"
+    "kept": "JustUnToit Rennes",
+    "dropped": "Rennes Host",
+    "reason": "better_score_or_current"
   },
   {
     "slug": "rouen",
@@ -177,12 +93,6 @@
     "slug": "sete",
     "kept": "7 OU NET",
     "dropped": "Cette Conciergerie",
-    "reason": "lower_score"
-  },
-  {
-    "slug": "toulouse",
-    "kept": "YourHostHelper Toulouse",
-    "dropped": "MyHote Conciergerie BNB, serrures numérique et ménage",
     "reason": "lower_score"
   },
   {

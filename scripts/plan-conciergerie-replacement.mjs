@@ -94,20 +94,57 @@ function scoreOf(rating, reviews) {
 // Group by city
 const byCity = {};
 
-// 1. Add currents (with Places API data)
-for (const entry of places) {
-  if (!byCity[entry.slug]) byCity[entry.slug] = { ville: entry.ville, items: [] };
-  byCity[entry.slug].items.push({
-    source: 'current',
-    name: entry.conciergerie,
-    rating: entry.google?.rating ?? 0,
-    reviews: entry.google?.userRatingCount ?? 0,
-    address: entry.google?.address ?? '',
-    website: entry.google?.website ?? entry.actuel?.url ?? '',
-    place_id: entry.google?.place_id ?? null,
-    matchQuality: entry.google?.matchQuality,
-    biensGeres: entry.actuel?.biensGeres ?? 0,
-  });
+// Parse cities.ts pour l'ÉTAT RÉEL des conciergeries actuelles (post-apply Places).
+// = source de vérité pour rating/reviews/biensGeres des "current" (pas places-audit qui est brut).
+function parseCurrentCities() {
+  const content = fs.readFileSync(path.join(ROOT, 'src/data/cities.ts'), 'utf8');
+  const out = {}; // slug → { ville, byName: { name → {rating, reviews, biensGeres, url} } }
+  for (const match of content.matchAll(/^  \{\s*\n\s+slug:\s*'([^']+)',/gm)) {
+    const slug = match[1];
+    let depth = 0, end = match.index;
+    for (let i = match.index; i < content.length; i++) {
+      if (content[i] === '{') depth++;
+      else if (content[i] === '}') { depth--; if (depth === 0) { end = i + 1; break; } }
+    }
+    const block = content.slice(match.index, end);
+    const ville = block.match(/displayName:\s*["']([^"']+)["']/)?.[1] || slug;
+    const concBlock = block.match(/conciergeries:\s*\[([\s\S]+?)\],\s*\n\s+neighborhoods/)?.[1] || '';
+    const byName = {};
+    for (const cb of concBlock.match(/\{\s*name:[\s\S]*?\},/g) || []) {
+      const name = cb.match(/name:\s*["']([^"']+)["']/)?.[1];
+      if (!name) continue;
+      byName[name] = {
+        rating: parseFloat(cb.match(/rating:\s*([\d.]+)/)?.[1] || '0'),
+        reviews: parseInt(cb.match(/reviews:\s*(\d+)/)?.[1] || '0', 10),
+        biensGeres: parseInt(cb.match(/biensGeres:\s*(\d+)/)?.[1] || '0', 10),
+        url: cb.match(/url:\s*["']([^"']+)["']/)?.[1] || '',
+      };
+    }
+    out[slug] = { ville, byName };
+  }
+  return out;
+}
+const currentCities = parseCurrentCities();
+
+// Lookup adresse Places (pour le filtre géo) par slug+nom — places-audit a les adresses Google
+const addrLookup = {};
+for (const entry of places) addrLookup[entry.slug + '|' + entry.conciergerie] = entry.google?.address || '';
+
+// 1. Add currents — rating/reviews/biensGeres depuis cities.ts (vérité), adresse depuis places-audit (géo)
+for (const [slug, { ville, byName }] of Object.entries(currentCities)) {
+  if (!byCity[slug]) byCity[slug] = { ville, items: [] };
+  for (const [name, data] of Object.entries(byName)) {
+    byCity[slug].items.push({
+      source: 'current',
+      name,
+      rating: data.rating,
+      reviews: data.reviews,
+      address: addrLookup[slug + '|' + name] || '',
+      website: data.url,
+      place_id: null,
+      biensGeres: data.biensGeres,
+    });
+  }
 }
 
 // 2. Add discoveries

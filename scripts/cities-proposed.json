@@ -11,8 +11,8 @@
         "reviews": 6,
         "score": "9.73",
         "address": "2 Rue des Alizés Bat D appt 55, 34540 Balaruc-les-Bains",
-        "website": "https://yourhosthelper.com/",
-        "place_id": "ChIJ2Qc5-7xLsRIRo-VN9-gn3u0",
+        "website": "https://yourhosthelper.com/conciergerie-agde/",
+        "place_id": null,
         "biensGeres": 80
       },
       {
@@ -23,8 +23,8 @@
         "reviews": 201,
         "score": "26.01",
         "address": "Résidence Grand Foc, 6 Rue des Vaisseaux, 34300 Le Cap d'Agde",
-        "website": "http://www.conciergerie-capdagde.com/",
-        "place_id": "ChIJiT1LRok7sRIROfWHWFeA3D0",
+        "website": "https://www.conciergerie-capdagde.com",
+        "place_id": null,
         "biensGeres": 40
       },
       {
@@ -48,8 +48,8 @@
         "reviews": 15,
         "score": "13.86",
         "address": "2b Rue de la Conque, 34300 Le Cap D'Agde",
-        "website": "https://conciergeriecapdagde.com/",
-        "place_id": "ChIJhz0ng787sRIRed8AiLBD0hU",
+        "website": "https://www.fltconciergerie.fr/",
+        "place_id": null,
         "biensGeres": 50
       },
       {
@@ -60,8 +60,8 @@
         "reviews": 19,
         "score": "13.18",
         "address": "6 Rue Raffanel, 34300 Agde",
-        "website": "http://www.pomconciergerie.com/",
-        "place_id": "ChIJs3tIpMojsRIRfwgartMRvN4",
+        "website": "https://pomconciergerie.com/",
+        "place_id": null,
         "biensGeres": 60
       }
     ]
@@ -79,7 +79,7 @@
         "score": "14.45",
         "address": "1 Bd Victor Coq, 13400 Aix-en-Provence",
         "website": "https://yourhosthelper.com/conciergerie-aix-en-provence/",
-        "place_id": "ChIJEQbwZImNyRIR_gGOLkk2Ij4",
+        "place_id": null,
         "biensGeres": 80
       },
       {
@@ -102,8 +102,8 @@
         "reviews": 51,
         "score": "18.57",
         "address": "5 Rue Emeric David, 13100 Aix-en-Provence",
-        "website": "http://www.laconciergeriedaix.com/",
-        "place_id": "ChIJv7mW0e-NyRIRLr8V2rVLSWo",
+        "website": "https://laixcapade.fr/",
+        "place_id": null,
         "biensGeres": 35
       },
       {
@@ -114,21 +114,9 @@
         "reviews": 35,
         "score": "17.56",
         "address": "346 Av. du Petit Barthélémy, 13090 Aix-en-Provence",
-        "website": "https://conciergerieblanc.odoo.com/",
-        "place_id": "ChIJ4TB0KNQY70YRs-mZQodftvE",
+        "website": "https://www.conciergerieblanc.fr/",
+        "place_id": null,
         "biensGeres": 40
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "NG Conciergerie Pays d\\",
-        "rating": 4.8,
-        "reviews": 30,
-        "score": "16.48",
-        "address": "1 Av. Saint-Jérôme, 13100 Aix-en-Provence",
-        "website": "https://www.ng-conciergerie-pays-daix.fr/",
-        "place_id": "ChIJ57S1yUCNyRIRgk86g0AsO8U",
-        "biensGeres": 35
       },
       {
         "source": "current",
@@ -138,9 +126,21 @@
         "reviews": 18,
         "score": "14.13",
         "address": "Rue du Baou Trouca, 13320 Bouc-Bel-Air",
-        "website": "http://www.myhomeconciergerie.fr/",
-        "place_id": "ChIJu-BOu-KTyRIRig2NFl1BKm0",
+        "website": "https://www.myhome-conciergerie.fr/",
+        "place_id": null,
         "biensGeres": 25
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "NG Conciergerie Pays d\\",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "1 Av. Saint-Jérôme, 13100 Aix-en-Provence",
+        "website": "https://www.ngconciergerie.fr/",
+        "place_id": null,
+        "biensGeres": 35
       }
     ]
   },
@@ -156,8 +156,8 @@
         "reviews": 27,
         "score": "16.66",
         "address": "2 Rue Vivien, 80000 Amiens",
-        "website": "https://get-immo-lille.fr/",
-        "place_id": "ChIJbQnNYs-F50cRUdl343FW5RU",
+        "website": "https://get-immo-lille.fr/index.php/conciergerie-airbnb-amiens-douai/",
+        "place_id": null,
         "biensGeres": 50
       },
       {
@@ -168,8 +168,8 @@
         "reviews": 13,
         "score": "13.20",
         "address": "5 Rue de Québec, 80000 Amiens",
-        "website": "http://conciergerie-ambiens.fr/",
-        "place_id": "ChIJ8YzfnRvem4ERApfdTfLu84I",
+        "website": "https://conciergerie-ambiens.fr/a-propos/",
+        "place_id": null,
         "biensGeres": 15
       },
       {
@@ -181,7 +181,7 @@
         "score": "0.00",
         "address": "47 Pl. Alphonse Fiquet, 80000 Amiens",
         "website": "https://www.primoconciergerie.fr/conciergerie-amiens/",
-        "place_id": "ChIJ-1WCXLeF50cRYPu8s4zqMPk",
+        "place_id": null,
         "biensGeres": 30
       },
       {
@@ -205,25 +205,13 @@
       {
         "source": "current",
         "isNational": true,
-        "name": "HostnFly Angers",
-        "rating": 4.6,
-        "reviews": 5089,
-        "score": "39.26",
-        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
-        "website": "http://www.hostnfly.com/",
-        "place_id": "ChIJv9XUnm1u5kcRVW0nzcDeS1o",
-        "biensGeres": 80
-      },
-      {
-        "source": "current",
-        "isNational": true,
         "name": "Welkeys Angers",
         "rating": 4.3,
         "reviews": 2159,
         "score": "33.01",
         "address": "82 Av. du Maine, 75014 Paris",
-        "website": "http://www.welkeys.com/",
-        "place_id": "ChIJM9UFFBpu5kcRj50iZscKz9c",
+        "website": "https://www.welkeys.com/",
+        "place_id": null,
         "biensGeres": 65
       },
       {
@@ -234,9 +222,21 @@
         "reviews": 203,
         "score": "23.93",
         "address": "1 Rue des Mimosas, 06400 Cannes",
-        "website": "https://yourhosthelper.com/conciergerie-cannes/",
-        "place_id": "ChIJXYMeaAGBzhIRAWOBfGAlLHA",
+        "website": "https://yourhosthelper.com/",
+        "place_id": null,
         "biensGeres": 90
+      },
+      {
+        "source": "current",
+        "isNational": true,
+        "name": "Nestify Angers",
+        "rating": 4.8,
+        "reviews": 31,
+        "score": "16.64",
+        "address": "48 Av. du Grésillé, 49000 Angers",
+        "website": "https://www.nestify.fr/",
+        "place_id": null,
+        "biensGeres": 55
       },
       {
         "source": "discovered",
@@ -259,9 +259,22 @@
         "reviews": 29,
         "score": "17.01",
         "address": "51 Rue Toussaint, 49100 Angers",
-        "website": "https://2keys.fr/",
-        "place_id": "ChIJD8t1mRt5CEgRpGt9kcBcrRQ",
+        "website": "https://2keys.fr/conciergerie-airbnb-angers/",
+        "place_id": null,
         "biensGeres": 70
+      },
+      {
+        "source": "discovered",
+        "isNational": false,
+        "name": "Angers Conciergerie Services",
+        "rating": 4.8,
+        "reviews": 31,
+        "score": "16.64",
+        "address": "48 Av. du Grésillé, 49000 Angers",
+        "website": "https://angersconciergerieservices.fr/",
+        "phone": "06 48 10 15 06",
+        "place_id": "ChIJG5HUEMwwEqARc6w-ZYoEeXI",
+        "biensGeres": 0
       },
       {
         "source": "discovered",
@@ -288,18 +301,6 @@
         "phone": "06 32 44 96 18",
         "place_id": "ChIJQ-QR9E7ZB0gRVZENb_u5Okw",
         "biensGeres": 0
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "Mayordom",
-        "rating": 5,
-        "reviews": 19,
-        "score": "14.98",
-        "address": "25 Rue Lenepveu, 49100 Angers",
-        "website": "https://www.mayordom.fr/",
-        "place_id": "ChIJNewzCuR5CEgRn8z6XeLC_28",
-        "biensGeres": 50
       }
     ]
   },
@@ -315,8 +316,8 @@
         "reviews": 43,
         "score": "16.27",
         "address": "121 Rue du Général Muffat de Saint-Amour, 74120 Megève",
-        "website": "https://www.welkeys.com/",
-        "place_id": "ChIJMRwovevji0cRPw0ko6qzW5E",
+        "website": "https://www.welkeys.com/conciergerie-airbnb/annecy",
+        "place_id": null,
         "biensGeres": 80
       },
       {
@@ -327,8 +328,8 @@
         "reviews": 400,
         "score": "24.58",
         "address": "37 Rue Sommeiller, 74000 Annecy",
-        "website": "http://laconciergeriedulac.com/",
-        "place_id": "ChIJE4SN65OPi0cRp4tzl69_6Lg",
+        "website": "https://laconciergeriedulac.com/",
+        "place_id": null,
         "biensGeres": 100
       },
       {
@@ -339,8 +340,8 @@
         "reviews": 181,
         "score": "23.42",
         "address": "1 Rue Filaterie, 74000 Annecy",
-        "website": "http://www.savemybed.com/",
-        "place_id": "ChIJ8YQtcPyPi0cRBNmBh6O--ZQ",
+        "website": "https://www.savemybed.com/",
+        "place_id": null,
         "biensGeres": 40
       },
       {
@@ -351,8 +352,8 @@
         "reviews": 106,
         "score": "23.36",
         "address": "1 Pl. Marie Curie, 74000 Annecy",
-        "website": "https://www.conciergerie-annecy.fr/",
-        "place_id": "ChIJTdx_7wCnYkURt0_JkAPNgDQ",
+        "website": "https://likeyourbed.com/",
+        "place_id": null,
         "biensGeres": 35
       },
       {
@@ -364,7 +365,7 @@
         "score": "19.03",
         "address": "6 Av. de Genève, 74000 Annecy",
         "website": "https://16bisconciergerie.com/",
-        "place_id": "ChIJM7yuqXEqcCARSj737dkHJDU",
+        "place_id": null,
         "biensGeres": 20
       },
       {
@@ -389,7 +390,7 @@
         "score": "14.38",
         "address": "23 Av. de Chambéry, 74000 Annecy",
         "website": "https://cygne-blanc.fr/",
-        "place_id": "ChIJbeIa53yFi0cR14y_NbDacxU",
+        "place_id": null,
         "biensGeres": 35
       },
       {
@@ -419,8 +420,8 @@
         "reviews": 88,
         "score": "21.99",
         "address": "146 Av. de la Liberté, 06220 Vallauris",
-        "website": "https://azurenting.com/?utm_source=google&utm_medium=gbp&utm_campaign=golfe-juan",
-        "place_id": "ChIJqZt4DmmBzhIRWhwnkWka_Bw",
+        "website": "",
+        "place_id": null,
         "biensGeres": 70
       },
       {
@@ -444,8 +445,8 @@
         "reviews": 66,
         "score": "18.92",
         "address": "6 Av. Meissonnier, 06600 Antibes",
-        "website": "http://www.enjoyandstay.com/",
-        "place_id": "ChIJK1-pKqMvzBIRwYbWX8VRhwo",
+        "website": "",
+        "place_id": null,
         "biensGeres": 60
       },
       {
@@ -456,8 +457,8 @@
         "reviews": 40,
         "score": "18.57",
         "address": "540 1ère Avenue, 06600 Antibes",
-        "website": "https://manasteos.com/conciergerie/antibes/",
-        "place_id": "ChIJYZj5hW8hLIER5-xeUZ6EQns",
+        "website": "https://manasteos.com/",
+        "place_id": null,
         "biensGeres": 35
       },
       {
@@ -468,8 +469,8 @@
         "reviews": 74,
         "score": "18.13",
         "address": "14 Av. 24 Août, 06600 Antibes",
-        "website": "http://www.bnbrenting.com/",
-        "place_id": "ChIJVQ9evq3VzRIRNG_hkYkWSJ0",
+        "website": "",
+        "place_id": null,
         "biensGeres": 45
       },
       {
@@ -480,8 +481,8 @@
         "reviews": 48,
         "score": "17.90",
         "address": "4 Rue Fourmillière, 06600 Antibes",
-        "website": "http://www.bird-renting.com/",
-        "place_id": "ChIJq6qa-ZGBzhIR7qsEszY0sZY",
+        "website": "",
+        "place_id": null,
         "biensGeres": 50
       },
       {
@@ -500,14 +501,14 @@
       {
         "source": "current",
         "isNational": false,
-        "name": "Host by A",
-        "rating": 5,
-        "reviews": 9,
-        "score": "11.51",
-        "address": "25 Av. du Châtaignier, 06600 Antibes",
-        "website": "http://yacahost.com/",
-        "place_id": "ChIJM9WgWtPQrCYREu77c_xuQY8",
-        "biensGeres": 25
+        "name": "Riviera Collection",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "67 Av. de Nice, 06600 Antibes",
+        "website": "https://collectionriviera.com/conciergerie-airbnb-antibes/",
+        "place_id": null,
+        "biensGeres": 40
       }
     ]
   },
@@ -518,38 +519,38 @@
       {
         "source": "current",
         "isNational": true,
-        "name": "Welkeys Arcachon",
-        "rating": 5,
-        "reviews": 5,
-        "score": "8.96",
-        "address": "Rés les Grands Chênes, 33120 Arcachon",
-        "website": "https://lesclesdalize.lodgify.com/",
-        "place_id": "ChIJAaKwWyCfVA0RZyerrqUUPTI",
-        "biensGeres": 90
+        "name": "YourHostHelper Arcachon",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "1 Rue De La Grande Craste, 33470 Le Teich",
+        "website": "https://yourhosthelper.com/en/agence-arcachon/",
+        "place_id": null,
+        "biensGeres": 100
       },
       {
         "source": "current",
         "isNational": true,
         "name": "Sejourneur Arcachon",
-        "rating": 5,
-        "reviews": 4,
-        "score": "8.05",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "281 Bd de la Côte d'Argent, 33120 Arcachon",
-        "website": "https://www.elodieconciergerie.fr/",
-        "place_id": "ChIJmRe7bN6fVA0RsFBspKbyA7g",
+        "website": "https://www.sejourneur.com/conciergerie-a-arcachon/",
+        "place_id": null,
         "biensGeres": 80
       },
       {
         "source": "current",
         "isNational": true,
-        "name": "YourHostHelper Arcachon",
-        "rating": 5,
-        "reviews": 3,
-        "score": "6.93",
-        "address": "1 Rue De La Grande Craste, 33470 Le Teich",
-        "website": "https://yourhosthelper.com/agence-gujan-mestras/",
-        "place_id": "ChIJobD9OIVZyIgR0pAjFvWQ95I",
-        "biensGeres": 100
+        "name": "Welkeys Arcachon",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "Rés les Grands Chênes, 33120 Arcachon",
+        "website": "https://www.welkeys.com/conciergerie-airbnb/arcachon",
+        "place_id": null,
+        "biensGeres": 90
       },
       {
         "source": "discovered",
@@ -568,24 +569,24 @@
         "source": "current",
         "isNational": false,
         "name": "La Conciergerie du Bassin",
-        "rating": 5,
-        "reviews": 3,
-        "score": "6.93",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "21 Lot. la Forestière, 33740 Arès",
         "website": "https://laconciergeriedubassin.com/",
-        "place_id": "ChIJkfTdexelVA0Rp7ynTt-JkuY",
+        "place_id": null,
         "biensGeres": 55
       },
       {
         "source": "current",
         "isNational": false,
         "name": "BNB Conciergerie Arcachon",
-        "rating": 5,
-        "reviews": 2,
-        "score": "5.49",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "Av. Saint-François Xavier, 33120 Arcachon",
-        "website": "https://www.homesconciergerie.com/",
-        "place_id": "ChIJzcjMX5CfVA0RMx9NQLOvgJ4",
+        "website": "https://bnb-conciergerie.fr/conciergerie-airbnb-arcachon.html",
+        "place_id": null,
         "biensGeres": 60
       }
     ]
@@ -602,9 +603,22 @@
         "reviews": 33,
         "score": "17.28",
         "address": "Rue Lafare, 84000 Avignon",
-        "website": "http://lesmeilleursconcierges.com/",
-        "place_id": "ChIJx1XT3D4ODIgRe1phqEVwb40",
+        "website": "https://www.merci-conciergerie.fr/conciergerie-avignon",
+        "place_id": null,
         "biensGeres": 60
+      },
+      {
+        "source": "discovered",
+        "isNational": false,
+        "name": "Les Meilleurs Concierges - Conciergerie N°1 à Avignon",
+        "rating": 4.9,
+        "reviews": 33,
+        "score": "17.28",
+        "address": "Rue Lafare, 84000 Avignon",
+        "website": "http://lesmeilleursconcierges.com/",
+        "phone": "07 44 44 39 49",
+        "place_id": "ChIJx1XT3D4ODIgRe1phqEVwb40",
+        "biensGeres": 0
       },
       {
         "source": "current",
@@ -614,8 +628,8 @@
         "reviews": 20,
         "score": "15.22",
         "address": "234 Av. de la Libération, 84270 Vedène",
-        "website": "https://www.serenaplace.fr/",
-        "place_id": "ChIJUU2ojLIMAYgRoHXuPLcia_U",
+        "website": "https://serenaplace.fr/",
+        "place_id": null,
         "biensGeres": 40
       },
       {
@@ -639,8 +653,8 @@
         "reviews": 21,
         "score": "14.22",
         "address": "195 Rue Carreterie, 84000 Avignon",
-        "website": "http://www.lafineequipe-conciergerie.fr/",
-        "place_id": "ChIJ_VmZrOLttRIR84azXIjmZeg",
+        "website": "https://www.lafineequipe-conciergerie.fr/",
+        "place_id": null,
         "biensGeres": 25
       },
       {
@@ -651,8 +665,8 @@
         "reviews": 16,
         "score": "13.60",
         "address": "21 Rue de la Petite Fusterie, 84000 Avignon",
-        "website": "http://www.weekwhere.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=16008514541154217253",
-        "place_id": "ChIJA6rHSITrtRIRdw21evvqsW4",
+        "website": "https://www.weekwhere.com/",
+        "place_id": null,
         "biensGeres": 35
       },
       {
@@ -663,8 +677,8 @@
         "reviews": 14,
         "score": "12.46",
         "address": "Rue de la République, 84000 Avignon",
-        "website": "http://www.rachelconciergerie.com/",
-        "place_id": "ChIJ-13kgxLrtRIRkEdKoJfghlw",
+        "website": "https://www.rachelconciergerie.com/",
+        "place_id": null,
         "biensGeres": 25
       },
       {
@@ -679,18 +693,6 @@
         "phone": "04 11 92 00 14",
         "place_id": "ChIJ4yfTQgH5tRIRQsQdg-K0Ldk",
         "biensGeres": 0
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "Capsule Corp Conciergerie Avignon",
-        "rating": 0,
-        "reviews": 0,
-        "score": "0.00",
-        "address": "",
-        "website": "https://www.capsulecorp-conciergerie-avignon.fr/",
-        "place_id": null,
-        "biensGeres": 30
       }
     ]
   },
@@ -701,26 +703,26 @@
       {
         "source": "current",
         "isNational": true,
-        "name": "HostnFly Biarritz",
-        "rating": 4.6,
-        "reviews": 5089,
-        "score": "39.26",
-        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
-        "website": "http://www.hostnfly.com/",
-        "place_id": "ChIJv9XUnm1u5kcRVW0nzcDeS1o",
-        "biensGeres": 40
-      },
-      {
-        "source": "current",
-        "isNational": true,
         "name": "Cocoonr Pays Basque (ex Easy Clés)",
         "rating": 4.9,
         "reviews": 132,
         "score": "23.96",
         "address": "Quartier des Docks, 44 Rue Luis Mariano, 64200 Biarritz",
-        "website": "https://cocoonr.fr/location-court-sejour/agence/pays-basque/?arrival=&departure=&nb_persons=1",
-        "place_id": "ChIJwQTkesxqUQ0Rjqw0dLbfP20",
+        "website": "https://cocoonr.fr/conciergerie-bnb-pays-basque/",
+        "place_id": null,
         "biensGeres": 90
+      },
+      {
+        "source": "current",
+        "isNational": true,
+        "name": "HostnFly Biarritz",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
+        "website": "https://www.hostnfly.com/conciergerie-airbnb/biarritz-bayonne-saint-jean-de-luz",
+        "place_id": null,
+        "biensGeres": 40
       },
       {
         "source": "current",
@@ -730,8 +732,8 @@
         "reviews": 27,
         "score": "16.66",
         "address": "Rue Dalbarade, 64200 Biarritz",
-        "website": "https://sweethome-holidays.com/",
-        "place_id": "ChIJrwhAkJ0QVKsRB4DuK9yoc7M",
+        "website": "",
+        "place_id": null,
         "biensGeres": 20
       },
       {
@@ -742,8 +744,8 @@
         "reviews": 35,
         "score": "15.41",
         "address": "3 Imp. Valencia, 64200 Biarritz",
-        "website": "https://laconciergerie-biarritz.com/",
-        "place_id": "ChIJAadePT4VUQ0RQe_L4bHQLT8",
+        "website": "",
+        "place_id": null,
         "biensGeres": 12
       },
       {
@@ -754,8 +756,8 @@
         "reviews": 22,
         "score": "14.42",
         "address": "16 Rue de Vauréal, 64200 Biarritz",
-        "website": "http://lesclesbiarrotes.com/",
-        "place_id": "ChIJKRJH7CtrUQ0RmgIHJU8BQH8",
+        "website": "",
+        "place_id": null,
         "biensGeres": 22
       },
       {
@@ -767,7 +769,7 @@
         "score": "12.82",
         "address": "Rue de Jaizquibel, 64210 Bidart",
         "website": "https://www.caborneconciergerie.com/",
-        "place_id": "ChIJs9okaeAVUQ0RXcmVAQwdqsw",
+        "place_id": null,
         "biensGeres": 25
       },
       {
@@ -823,33 +825,21 @@
         "reviews": 54,
         "score": "17.23",
         "address": "9 Pl. Charles Gruet, 33000 Bordeaux",
-        "website": "https://cocoonr.fr/location-court-sejour/bordeaux-33/",
-        "place_id": "ChIJk-8Tp7onVQ0RJx_lMzJoWug",
+        "website": "https://cocoonr.fr/conciergerie-bnb-bordeaux/",
+        "place_id": null,
         "biensGeres": 180
       },
       {
         "source": "current",
         "isNational": true,
         "name": "YourHostHelper Bordeaux",
-        "rating": 4.6,
-        "reviews": 23,
-        "score": "14.62",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "77 Rue de la Rousselle, 33000 Bordeaux",
         "website": "https://yourhosthelper.com/agence-bordeaux/",
-        "place_id": "ChIJH8rr1cwnVQ0R-KQQm1dx-O4",
+        "place_id": null,
         "biensGeres": 150
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "YouNeedMe Bordeaux",
-        "rating": 4.6,
-        "reviews": 64,
-        "score": "19.20",
-        "address": "31 Cr du Médoc, 33000 Bordeaux",
-        "website": "https://www.youneedme-bordeaux.com",
-        "place_id": "ChIJrw4TP87XVA0Ro5IcKS5uEzo",
-        "biensGeres": 70
       },
       {
         "source": "current",
@@ -859,8 +849,8 @@
         "reviews": 51,
         "score": "18.97",
         "address": "5 Rue du Vergne Lac C, 33300 Bordeaux",
-        "website": "https://cocoonr.fr/location-court-sejour/departement/gironde/?arrival=&departure=&nb_persons=1",
-        "place_id": "ChIJ0TVGVnopVQ0Rrl6DTPd6voE",
+        "website": "https://hote-de-gamme.fr/conciergerie-gironde/conciergerie-a-bordeaux/",
+        "place_id": null,
         "biensGeres": 60
       },
       {
@@ -871,8 +861,8 @@
         "reviews": 47,
         "score": "17.81",
         "address": "24 Cr de l'Intendance, 33000 Bordeaux",
-        "website": "http://www.marypoppins-conciergerie.fr/",
-        "place_id": "ChIJ47wisQwoVQ0RVkYF0MqOlC4",
+        "website": "https://www.marypoppins-conciergerie.fr/",
+        "place_id": null,
         "biensGeres": 90
       },
       {
@@ -883,8 +873,8 @@
         "reviews": 36,
         "score": "17.69",
         "address": "3 Rue Lacornée, 33000 Bordeaux",
-        "website": "http://lesclesdalfred.fr/",
-        "place_id": "ChIJXQ6KeJQnVQ0ReNm3_ecZ7a4",
+        "website": "https://lesclesdalfred.fr/",
+        "place_id": null,
         "biensGeres": 250
       },
       {
@@ -898,6 +888,19 @@
         "website": "https://easylodge.fr/",
         "phone": "07 60 87 37 24",
         "place_id": "ChIJuYLZRkJY4akRn9CEHtyyBAQ",
+        "biensGeres": 0
+      },
+      {
+        "source": "discovered",
+        "isNational": false,
+        "name": "🗝️ Il Était Une Nuit - Conciergerie Location Courte Durée - Bègles - Bordeaux - Villenave d'Ornon - Mérignac - Pessac",
+        "rating": 3.9,
+        "reviews": 35,
+        "score": "13.98",
+        "address": "14 Rue des Terres Neuves, 33130 Bègles",
+        "website": "https://www.il-etait-une-nuit.fr/",
+        "phone": "06 46 71 84 91",
+        "place_id": "ChIJrQBZToInVQ0Rk09tkRQdS_o",
         "biensGeres": 0
       }
     ]
@@ -927,8 +930,8 @@
         "reviews": 114,
         "score": "20.40",
         "address": "9 Rue Saint-Saëns, 29200 Brest",
-        "website": "https://www.conciergebb.fr/pages/conciergerie-airbnb-brest-gestion-de-location-courte-duree",
-        "place_id": "ChIJiyajmEW5FkgRKufcSc1sIwg",
+        "website": "https://www.conciergebb.fr/",
+        "place_id": null,
         "biensGeres": 30
       },
       {
@@ -939,21 +942,22 @@
         "reviews": 46,
         "score": "18.48",
         "address": "2 Rue des Ateliers, 29290 Saint-Renan",
-        "website": "https://hestiaconciergerie.bzh/",
-        "place_id": "ChIJUxIcCVOeBgYR6xHfWY70ZS8",
+        "website": "https://www.hestiaconciergerie.bzh/",
+        "place_id": null,
         "biensGeres": 20
       },
       {
-        "source": "current",
+        "source": "discovered",
         "isNational": false,
-        "name": "Conciergerie Finist",
+        "name": "Finistarmor : Conciergerie à Brest & dans le Finistère",
         "rating": 4.9,
         "reviews": 34,
         "score": "17.42",
         "address": "25 Rue Robert Schuman, 29480 Le Relecq-Kerhuon",
         "website": "https://www.conciergerie-finistarmor.fr/",
+        "phone": "02 55 99 62 31",
         "place_id": "ChIJ1apOG0ixFkgRu8Ac1qmFYCE",
-        "biensGeres": 40
+        "biensGeres": 0
       },
       {
         "source": "discovered",
@@ -976,8 +980,8 @@
         "reviews": 8,
         "score": "10.99",
         "address": "140 Rue Anita Conti, 29200 Brest",
-        "website": "http://www.need-air.com/",
-        "place_id": "ChIJI3-yl-m7FkgRukftqQgkX18",
+        "website": "",
+        "place_id": null,
         "biensGeres": 12
       },
       {
@@ -988,21 +992,21 @@
         "reviews": 6,
         "score": "9.73",
         "address": "16 bis Rue de l'Observatoire, 29200 Brest",
-        "website": "http://www.nmconciergerie.fr/",
-        "place_id": "ChIJl2T9kym5FkgRmuz2UI8yr-U",
+        "website": "https://www.nmconciergerie.fr/",
+        "place_id": null,
         "biensGeres": 15
       },
       {
         "source": "current",
         "isNational": false,
-        "name": "Concigreen",
+        "name": "Conciergerie Finist",
         "rating": 0,
         "reviews": 0,
         "score": "0.00",
-        "address": "",
-        "website": "https://www.concigreen.fr/",
+        "address": "25 Rue Robert Schuman, 29480 Le Relecq-Kerhuon",
+        "website": "https://www.conciergerie-finistarmor.fr/",
         "place_id": null,
-        "biensGeres": 15
+        "biensGeres": 40
       }
     ]
   },
@@ -1031,8 +1035,8 @@
         "reviews": 36,
         "score": "17.33",
         "address": "69 Rue Saint-Martin, 14000 Caen",
-        "website": "https://www.beausejour-conciergerie.com/",
-        "place_id": "ChIJKfMS1WixZWIRAwwQ2FgCpd0",
+        "website": "https://beausejour-conciergerie.com/",
+        "place_id": null,
         "biensGeres": 40
       },
       {
@@ -1044,7 +1048,7 @@
         "score": "14.13",
         "address": "10 Rue aux Namps, 14000 Caen",
         "website": "https://www.maconciergerieennormandie.fr/",
-        "place_id": "ChIJ6SZjBf5DCkgRqyqkm0EJzFM",
+        "place_id": null,
         "biensGeres": 120
       },
       {
@@ -1056,7 +1060,7 @@
         "score": "14.11",
         "address": "28 Rue Caponière, 14000 Caen",
         "website": "https://calm-conciergerie.com/",
-        "place_id": "ChIJZZm3664VfIERZXQv-GgXNMs",
+        "place_id": null,
         "biensGeres": 30
       },
       {
@@ -1068,7 +1072,7 @@
         "score": "12.88",
         "address": "6 Pl. Saint-Martin, 14000 Caen",
         "website": "https://ammaj.fr/",
-        "place_id": "ChIJN4sZXPVDCkgR6SQjle4TgbU",
+        "place_id": null,
         "biensGeres": 25
       },
       {
@@ -1079,8 +1083,8 @@
         "reviews": 8,
         "score": "10.99",
         "address": "13 Rue Écuyère, 14000 Caen",
-        "website": "https://la-conciergerie-caennaise.com/",
-        "place_id": "ChIJFSk_fZv-2UIRNanaOkGCuEQ",
+        "website": "https://www.la-conciergerie-caennaise.com/",
+        "place_id": null,
         "biensGeres": 15
       },
       {
@@ -1123,20 +1127,8 @@
         "score": "23.93",
         "address": "1 Rue des Mimosas, 06400 Cannes",
         "website": "https://yourhosthelper.com/conciergerie-cannes/",
-        "place_id": "ChIJXYMeaAGBzhIRAWOBfGAlLHA",
+        "place_id": null,
         "biensGeres": 120
-      },
-      {
-        "source": "current",
-        "isNational": true,
-        "name": "Nestify Cannes",
-        "rating": 4.9,
-        "reviews": 39,
-        "score": "18.08",
-        "address": "15 Rue des Frères Pradignac, 06400 Cannes",
-        "website": "https://bnbsweetdreams.fr/",
-        "place_id": "ChIJu1vCnyhxyGwRuBXmuJ0_tck",
-        "biensGeres": 75
       },
       {
         "source": "current",
@@ -1146,9 +1138,21 @@
         "reviews": 19,
         "score": "13.18",
         "address": "81 Rue de France, 06000 Nice",
-        "website": "https://www.welkeys.com/",
-        "place_id": "ChIJfzesBQDRzRIRHawaepwwNHc",
+        "website": "https://www.welkeys.com/conciergerie-airbnb/cannes",
+        "place_id": null,
         "biensGeres": 150
+      },
+      {
+        "source": "current",
+        "isNational": true,
+        "name": "HostnFly Cannes",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "",
+        "website": "https://hostnfly.com/conciergerie-airbnb/cannes",
+        "place_id": null,
+        "biensGeres": 110
       },
       {
         "source": "discovered",
@@ -1185,8 +1189,21 @@
         "score": "21.53",
         "address": "45 Bd de la Croisette, 06400 Cannes",
         "website": "https://manasteos.com/conciergerie/cannes/",
-        "place_id": "ChIJy5z71q-BzhIRFcET6_azx0Q",
+        "place_id": null,
         "biensGeres": 60
+      },
+      {
+        "source": "discovered",
+        "isNational": false,
+        "name": "BNB SWEET DREAMS Conciergerie Airbnb",
+        "rating": 4.9,
+        "reviews": 39,
+        "score": "18.08",
+        "address": "15 Rue des Frères Pradignac, 06400 Cannes",
+        "website": "https://bnbsweetdreams.fr/",
+        "phone": "06 44 17 09 89",
+        "place_id": "ChIJu1vCnyhxyGwRuBXmuJ0_tck",
+        "biensGeres": 0
       },
       {
         "source": "current",
@@ -1197,21 +1214,8 @@
         "score": "11.99",
         "address": "37 Rue d'Antibes, 06400 Cannes",
         "website": "https://www.croceo.fr/conciergerie-airbnb-cannes",
-        "place_id": "ChIJ37qtPPqDzhIROzBrfxx93Tw",
+        "place_id": null,
         "biensGeres": 55
-      },
-      {
-        "source": "discovered",
-        "isNational": false,
-        "name": "Conciergerie Airbnb & Booking - Location courte durée Cannes",
-        "rating": 5,
-        "reviews": 10,
-        "score": "11.99",
-        "address": "68 Rue d'Antibes, 06400 Cannes",
-        "website": "https://bngo.fr/",
-        "phone": "06 59 26 38 14",
-        "place_id": "ChIJX1V0Z4qBzhIRl-R981jJ7sA",
-        "biensGeres": 0
       }
     ]
   },
@@ -1234,25 +1238,13 @@
       {
         "source": "current",
         "isNational": false,
-        "name": "CapConciergerie",
-        "rating": 4.9,
-        "reviews": 201,
-        "score": "26.01",
-        "address": "Résidence Grand Foc, 6 Rue des Vaisseaux, 34300 Le Cap d'Agde",
-        "website": "http://www.conciergerie-capdagde.com/",
-        "place_id": "ChIJiT1LRok7sRIROfWHWFeA3D0",
-        "biensGeres": 80
-      },
-      {
-        "source": "current",
-        "isNational": false,
         "name": "NFG Conciergerie",
         "rating": 4.7,
         "reviews": 59,
         "score": "19.24",
         "address": "32 Chem. des 7 Fonts, 34300 Agde",
-        "website": "http://www.nfgconciergerie-capdagde.com/",
-        "place_id": "ChIJzdPVwYg7sRIRhhIy1r98RAk",
+        "website": "https://nfgconciergerie-capdagde.com/",
+        "place_id": null,
         "biensGeres": 45
       },
       {
@@ -1264,20 +1256,32 @@
         "score": "13.86",
         "address": "2b Rue de la Conque, 34300 Le Cap D'Agde",
         "website": "https://conciergeriecapdagde.com/",
-        "place_id": "ChIJhz0ng787sRIRed8AiLBD0hU",
+        "place_id": null,
         "biensGeres": 50
       },
       {
         "source": "current",
         "isNational": false,
         "name": "Dell",
-        "rating": 5,
-        "reviews": 1,
-        "score": "3.47",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "Rue de l'Intendant Bezons, 34300 Agde",
-        "website": "https://capdagdeconciergerie.fr/",
-        "place_id": "ChIJwSwz2gMjsRIRxeIQeerLjs8",
+        "website": "https://dellaccio-conciergerie.fr/",
+        "place_id": null,
         "biensGeres": 70
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "CapConciergerie",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "Résidence Grand Foc, 6 Rue des Vaisseaux, 34300 Le Cap d'Agde",
+        "website": "http://capconciergerie.com/",
+        "place_id": null,
+        "biensGeres": 80
       },
       {
         "source": "current",
@@ -1305,8 +1309,8 @@
         "reviews": 214,
         "score": "25.78",
         "address": "275 Av. des Alpages, 74310 Les Houches",
-        "website": "https://www.careconcierge.fr/",
-        "place_id": "ChIJpbspjMBRiUcRnUjohzzV7g4",
+        "website": "https://careconcierge.fr/en/property-management/chamonix/",
+        "place_id": null,
         "biensGeres": 130
       },
       {
@@ -1317,8 +1321,8 @@
         "reviews": 56,
         "score": "18.60",
         "address": "75 Chem. du Genepi, 74170 Saint-Gervais-les-Bains",
-        "website": "https://mont-blanc-conciergerie.com/",
-        "place_id": "ChIJUbqxD7dXiUcREIUu57vzT94",
+        "website": "",
+        "place_id": null,
         "biensGeres": 60
       },
       {
@@ -1329,8 +1333,8 @@
         "reviews": 29,
         "score": "16.33",
         "address": "32 Pl. de la Fruitière, 74310 Les Houches",
-        "website": "https://www.pangeaservices.com/",
-        "place_id": "ChIJvxMl2FpMiUcRdWxJB9yLcME",
+        "website": "",
+        "place_id": null,
         "biensGeres": 30
       },
       {
@@ -1341,8 +1345,8 @@
         "reviews": 18,
         "score": "14.72",
         "address": "738 Rte des Praz, 74400 Chamonix-Mont-Blanc",
-        "website": "http://chamkeys.com/",
-        "place_id": "ChIJk2fSsjRPiUcRiYF98d1Uo7A",
+        "website": "",
+        "place_id": null,
         "biensGeres": 18
       },
       {
@@ -1353,8 +1357,8 @@
         "reviews": 16,
         "score": "13.60",
         "address": "Rue du Dr Paccard, 74400 Chamonix-Mont-Blanc",
-        "website": "https://www.poulardandco.com/",
-        "place_id": "ChIJOYmcaHMuQwQR_I-7l5cP0xM",
+        "website": "",
+        "place_id": null,
         "biensGeres": 25
       },
       {
@@ -1365,8 +1369,8 @@
         "reviews": 8,
         "score": "10.99",
         "address": "164 Chem. François Devouassoux, 74400 Chamonix-Mont-Blanc",
-        "website": "https://www.chamconcierge.com/",
-        "place_id": "ChIJBeEGff9PiUcRGXI_NkDNphM",
+        "website": "",
+        "place_id": null,
         "biensGeres": 80
       }
     ]
@@ -1384,7 +1388,7 @@
         "score": "17.08",
         "address": "Villa Gabrielle, 141 Av. de la République, 14800 Deauville",
         "website": "https://yourhosthelper.com/",
-        "place_id": "ChIJ7wgvHuPV4UcRxS4mNB5rfpM",
+        "place_id": null,
         "biensGeres": 40
       },
       {
@@ -1395,8 +1399,8 @@
         "reviews": 68,
         "score": "20.32",
         "address": "51 bis Av. Aristide Briand, 14800 Touques",
-        "website": "https://www.mypacome.fr/",
-        "place_id": "ChIJfUIOe0_T4UcRzbhjNNuGU4M",
+        "website": "",
+        "place_id": null,
         "biensGeres": 45
       },
       {
@@ -1407,8 +1411,8 @@
         "reviews": 85,
         "score": "18.71",
         "address": "6 Rue Thiers, 14800 Deauville",
-        "website": "https://www.interhome.fr/services-sur-place/interhome-deauville-fr090/?partnerid=&utm_source=gmb&utm_campaign=fr090-deauville&utm_medium=gmb&utm_locale=fr-fr",
-        "place_id": "ChIJ79a-z6vU4UcRfJ8qOmrbbkQ",
+        "website": "",
+        "place_id": null,
         "biensGeres": 70
       },
       {
@@ -1419,8 +1423,8 @@
         "reviews": 25,
         "score": "15.96",
         "address": "32 Rue Albert Fracasse, 14800 Deauville",
-        "website": "https://www.maconciergerieennormandie.fr/",
-        "place_id": "ChIJebtQFhvV4UcR-gxlUq9MKbU",
+        "website": "",
+        "place_id": null,
         "biensGeres": 30
       },
       {
@@ -1431,8 +1435,8 @@
         "reviews": 10,
         "score": "10.07",
         "address": "24 Av. des Maréchaux, 14800 Deauville",
-        "website": "https://www.conciergeriepriveedeauville.fr/",
-        "place_id": "ChIJe_wv3YLV4UcR0hNz1pvQ134",
+        "website": "",
+        "place_id": null,
         "biensGeres": 15
       }
     ]
@@ -1450,7 +1454,7 @@
         "score": "20.82",
         "address": "Pl. du Théâtre, 21000 Dijon",
         "website": "https://laconciergeriedemile.com/",
-        "place_id": "ChIJWwr8LJmd8kcRyTNecmy0X7M",
+        "place_id": null,
         "biensGeres": 40
       },
       {
@@ -1462,7 +1466,7 @@
         "score": "16.29",
         "address": "12 Bd Carnot, 21000 Dijon",
         "website": "https://zenica-conciergerie.fr/",
-        "place_id": "ChIJjx-eGdFa9oIRZHA6sG1dXbE",
+        "place_id": null,
         "biensGeres": 30
       },
       {
@@ -1473,8 +1477,8 @@
         "reviews": 26,
         "score": "15.82",
         "address": "10 Bd Carnot, 21000 Dijon",
-        "website": "https://luxapart.fr/",
-        "place_id": "ChIJ4TXYWFcNiwERhBVeofJrL84",
+        "website": "https://luxapart.fr/conciergerie-dijon/",
+        "place_id": null,
         "biensGeres": 25
       },
       {
@@ -1485,8 +1489,8 @@
         "reviews": 22,
         "score": "15.68",
         "address": "8 Rue Marcel Dassault, 21000 Dijon",
-        "website": "https://www.athomebnb.com/",
-        "place_id": "ChIJYcF-PVXiNwoR7EidhTp4QEg",
+        "website": "",
+        "place_id": null,
         "biensGeres": 20
       },
       {
@@ -1510,20 +1514,20 @@
         "reviews": 17,
         "score": "14.45",
         "address": "17 Rue du Fonteny, 21540 Sombernon",
-        "website": "https://conciergeriedecindy.fr/",
-        "place_id": "ChIJ3ZGgDGk9LkMRTVgd85cHkPM",
+        "website": "",
+        "place_id": null,
         "biensGeres": 12
       },
       {
         "source": "current",
         "isNational": false,
         "name": "Les Suites Indivio",
-        "rating": 4.7,
-        "reviews": 13,
-        "score": "12.40",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "23 Av. de Marbotte, 21000 Dijon",
-        "website": "https://www.bnbconciergerie.fr/",
-        "place_id": "ChIJAdfbUaud8kcRmwTLi0j1mkk",
+        "website": "https://www.les-suites-indivio.com/",
+        "place_id": null,
         "biensGeres": 10
       }
     ]
@@ -1540,8 +1544,8 @@
         "reviews": 47,
         "score": "19.36",
         "address": "719 Av. de Provence, 83600 Fréjus",
-        "website": "https://www.capitalchic.fr/",
-        "place_id": "ChIJnZfK2ZmhzhIRhQBMOaeL3Vg",
+        "website": "",
+        "place_id": null,
         "biensGeres": 18
       },
       {
@@ -1553,7 +1557,7 @@
         "score": "19.03",
         "address": "262 Rue Noël Garnier, 83600 Fréjus",
         "website": "https://bibo-conciergerie.com/",
-        "place_id": "ChIJ9xA_NMOXzhIRIxv8xE1JcsA",
+        "place_id": null,
         "biensGeres": 32
       },
       {
@@ -1577,8 +1581,8 @@
         "reviews": 43,
         "score": "18.16",
         "address": "608 Av. de Lattre de Tassigny, 83600 Fréjus",
-        "website": "https://clesdazur.com/",
-        "place_id": "ChIJaw6gcA5mw4UR2Ibr57bJ_LM",
+        "website": "",
+        "place_id": null,
         "biensGeres": 65
       },
       {
@@ -1589,8 +1593,8 @@
         "reviews": 39,
         "score": "18.08",
         "address": "47 Rue Germain Nouveau, 83600 Fréjus",
-        "website": "https://esterelconciergerie.wordpress.com/",
-        "place_id": "ChIJ95J2jqOXzhIR0GBB_Xcbb_A",
+        "website": "",
+        "place_id": null,
         "biensGeres": 40
       },
       {
@@ -1601,8 +1605,8 @@
         "reviews": 65,
         "score": "17.18",
         "address": "Bâtiment L'Amirauté, 7 Rue de la Foudre, 83600 Fréjus",
-        "website": "https://www.interhome.fr/services-sur-place/interhome-frejus-fr094/?partnerid=&utm_source=gmb&utm_campaign=fr094-frejus&utm_medium=gmb&utm_locale=fr-fr",
-        "place_id": "ChIJ07oEO-CXzhIRNZe0M11huB4",
+        "website": "",
+        "place_id": null,
         "biensGeres": 50
       },
       {
@@ -1622,7 +1626,7 @@
   },
   "grenoble": {
     "ville": "Grenoble",
-    "finalCount": 6,
+    "finalCount": 7,
     "items": [
       {
         "source": "current",
@@ -1632,8 +1636,8 @@
         "reviews": 5,
         "score": "7.53",
         "address": "33 Rue Général Ferrié, 38100 Grenoble",
-        "website": "https://yourhosthelper.com/conciergerie-grenoble/",
-        "place_id": "ChIJC59Tkgv1ikcRYhV0abytFWM",
+        "website": "https://yourhosthelper.com/",
+        "place_id": null,
         "biensGeres": 30
       },
       {
@@ -1645,8 +1649,21 @@
         "score": "20.96",
         "address": "7 Rue Général Ferrié, 38100 Grenoble",
         "website": "https://www.capsulecorp-conciergerie-grenoble.fr/",
-        "place_id": "ChIJgaz9SMn1ikcRZLiZpVZnu3k",
+        "place_id": null,
         "biensGeres": 35
+      },
+      {
+        "source": "discovered",
+        "isNational": false,
+        "name": "Conciergerie Airbnb Grenoble Capsule Corp",
+        "rating": 4.9,
+        "reviews": 71,
+        "score": "20.96",
+        "address": "7 Rue Général Ferrié, 38100 Grenoble",
+        "website": "https://www.capsulecorp-conciergerie-grenoble.fr/",
+        "phone": "09 79 18 21 09",
+        "place_id": "ChIJgaz9SMn1ikcRZLiZpVZnu3k",
+        "biensGeres": 0
       },
       {
         "source": "current",
@@ -1656,8 +1673,8 @@
         "reviews": 24,
         "score": "16.09",
         "address": "17 Bd de la Chantourne, 38700 La Tronche",
-        "website": "https://premierhote.com/",
-        "place_id": "ChIJebReXY31ikcRjitndHzEe34",
+        "website": "https://premierhote.com/conciergerie-grenoble/",
+        "place_id": null,
         "biensGeres": 28
       },
       {
@@ -1669,20 +1686,8 @@
         "score": "9.73",
         "address": "7 Rue Louis Vidal, 38100 Grenoble",
         "website": "",
-        "place_id": "ChIJWdO--oX1ikcRlhvhF3eQQgE",
+        "place_id": null,
         "biensGeres": 10
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "HelloFrancis",
-        "rating": 5,
-        "reviews": 2,
-        "score": "5.49",
-        "address": "3 Rue Charles Péguy, 38100 Grenoble",
-        "website": "https://www.hellofrancis.fr/",
-        "place_id": "ChIJU0QAfNP1ikcRWhTe60RDJfc",
-        "biensGeres": 5
       },
       {
         "source": "current",
@@ -1695,6 +1700,18 @@
         "website": "",
         "place_id": null,
         "biensGeres": 6
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "HelloFrancis",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "3 Rue Charles Péguy, 38100 Grenoble",
+        "website": "",
+        "place_id": null,
+        "biensGeres": 5
       }
     ]
   },
@@ -1710,8 +1727,8 @@
         "reviews": 27,
         "score": "16.66",
         "address": "Rue de Limans, 83400 Hyères",
-        "website": "https://www.hostnfly.com/",
-        "place_id": "ChIJGTNIELUjyRIRVquxE4DLtQA",
+        "website": "https://hostnfly.com/conciergerie-airbnb/hyeres",
+        "place_id": null,
         "biensGeres": 65
       },
       {
@@ -1722,8 +1739,8 @@
         "reviews": 12,
         "score": "12.82",
         "address": "436 Av. de la Crestade, 83400 Hyères",
-        "website": "https://lockeys-conciergerie.lodgify.com/",
-        "place_id": "ChIJKTY_1COOxGwRuxVMb3opLP0",
+        "website": "https://www.welkeys.com/conciergerie-airbnb/hyeres",
+        "place_id": null,
         "biensGeres": 50
       },
       {
@@ -1759,8 +1776,8 @@
         "reviews": 80,
         "score": "20.65",
         "address": "DOMAINE DU BEAU VEZE, 240 Chem. de Beau Vèze, 83320 Carqueiranne",
-        "website": "https://hyeres-conciergerie.fr/",
-        "place_id": "ChIJVXqr-skjyRIRUnEJP9yL6fg",
+        "website": "https://www.hyeres-conciergerie.fr/",
+        "place_id": null,
         "biensGeres": 40
       },
       {
@@ -1806,19 +1823,20 @@
   },
   "la-baule": {
     "ville": "La Baule",
-    "finalCount": 5,
+    "finalCount": 6,
     "items": [
       {
-        "source": "current",
+        "source": "discovered",
         "isNational": false,
-        "name": "Zen Weekey",
+        "name": "ZenWeeKey - Conciergerie sur la Presqu'île",
         "rating": 4.8,
         "reviews": 34,
         "score": "17.07",
         "address": "78 Av. des Noëlles, 44500 La Baule-Escoublac",
         "website": "https://www.zenweekey.com/",
+        "phone": "06 08 91 11 40",
         "place_id": "ChIJOUQdXLxfBUgRcLHC0sIbB-U",
-        "biensGeres": 20
+        "biensGeres": 0
       },
       {
         "source": "discovered",
@@ -1842,7 +1860,7 @@
         "score": "11.51",
         "address": "1 Av. du Général de Gaulle, 44500 La Baule-Escoublac",
         "website": "https://conciergerielabaule.fr/",
-        "place_id": "ChIJe1PYWEpdBUgRktotx4i4ZBY",
+        "place_id": null,
         "biensGeres": 15
       },
       {
@@ -1856,6 +1874,18 @@
         "website": "https://www.les-concierges.com/",
         "place_id": null,
         "biensGeres": 47
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "Zen Weekey",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "78 Av. des Noëlles, 44500 La Baule-Escoublac",
+        "website": "",
+        "place_id": null,
+        "biensGeres": 20
       },
       {
         "source": "current",
@@ -1883,8 +1913,8 @@
         "reviews": 0,
         "score": "0.00",
         "address": "29 All. du Foc, 17000 La Rochelle",
-        "website": "https://conciergerie.hostnfly.com/leisure-form?utm_page=conciergerie&utm_keyword=Conciergerie&utm_businesstype=conciergerie&utm_source=GMB&utm_location=La+Rochelle+et+alentours",
-        "place_id": "ChIJp5tcGY2Cdk8RV6DbYy5yesM",
+        "website": "https://hostnfly.com/conciergerie-airbnb/la-rochelle",
+        "place_id": null,
         "biensGeres": 85
       },
       {
@@ -1896,7 +1926,7 @@
         "score": "24.05",
         "address": "38 Rue du Brave Rondeau, 17000 La Rochelle",
         "website": "https://www.ze-rochelle.fr/",
-        "place_id": "ChIJ0WYqrTFRAUgRDXZKbivBMiE",
+        "place_id": null,
         "biensGeres": 70
       },
       {
@@ -1939,16 +1969,17 @@
         "biensGeres": 0
       },
       {
-        "source": "current",
+        "source": "discovered",
         "isNational": false,
-        "name": "La Conciergerie de Lucas",
+        "name": "Le Studio Conciergerie La Rochelle",
         "rating": 4.7,
         "reviews": 38,
         "score": "17.22",
         "address": "21 Rue Charles Gounod, 17000 La Rochelle",
         "website": "https://lestudioconciergerie.fr/",
+        "phone": "06 13 39 29 47",
         "place_id": "ChIJP21V4htNAUgRVDN6DQmy9kE",
-        "biensGeres": 40
+        "biensGeres": 0
       },
       {
         "source": "current",
@@ -1958,8 +1989,8 @@
         "reviews": 33,
         "score": "16.22",
         "address": "Rue de l'Ouvrage À Cornes, 17000 La Rochelle",
-        "website": "https://les-cles-de-colette.fr/",
-        "place_id": "ChIJ_VgF4v5TAUgRDX8_wi1E-EI",
+        "website": "https://www.bnb-conciergerie.fr/conciergerie-airbnb-la-rochelle.html",
+        "place_id": null,
         "biensGeres": 55
       },
       {
@@ -1985,12 +2016,12 @@
         "source": "current",
         "isNational": true,
         "name": "HostnFly",
-        "rating": 4.6,
-        "reviews": 5089,
-        "score": "39.26",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
-        "website": "http://www.hostnfly.com/",
-        "place_id": "ChIJv9XUnm1u5kcRVW0nzcDeS1o",
+        "website": "https://www.hostnfly.com/conciergerie-airbnb/les-sables-d-olonne",
+        "place_id": null,
         "biensGeres": 100
       },
       {
@@ -2001,8 +2032,8 @@
         "reviews": 148,
         "score": "24.02",
         "address": "21 Rue Claude Chappe, 85180 Les Sables-d'Olonne",
-        "website": "https://cocoonr.fr/location-court-sejour/agence/vendee/?arrival=&departure=&nb_persons=1",
-        "place_id": "ChIJU-A_jr9DKm0RlySyLiCNKeI",
+        "website": "https://hote-de-gamme.fr/conciergerie-vendee/conciergerie-les-sables-d-olonne/",
+        "place_id": null,
         "biensGeres": 30
       },
       {
@@ -2013,8 +2044,8 @@
         "reviews": 94,
         "score": "22.77",
         "address": "19 Rue de la Corvette, 85100 Les Sables-d'Olonne",
-        "website": "https://www.laclechaumoise.fr/",
-        "place_id": "ChIJM8s4EDVnBEgRoLPRQ_cl-Ng",
+        "website": "https://laclechaumoise.fr/",
+        "place_id": null,
         "biensGeres": 50
       },
       {
@@ -2038,8 +2069,8 @@
         "reviews": 44,
         "score": "18.65",
         "address": "1 Bis Chem. de la Gaisse, 85360 La Tranche-sur-Mer",
-        "website": "https://simeo-conciergerie.com/conciergerie-la-tranche-sur-mer/",
-        "place_id": "ChIJR2CJJA55uQQRfT3N1Fodvq8",
+        "website": "https://simeo-conciergerie.com/",
+        "place_id": null,
         "biensGeres": 40
       },
       {
@@ -2076,8 +2107,8 @@
         "reviews": 16,
         "score": "14.17",
         "address": "9 Rue des Deux Phares, 85100 Les Sables-d'Olonne",
-        "website": "http://www.onestlapourtoit.fr/",
-        "place_id": "ChIJIzF4AVhdBEgRgYgaj3B0IPE",
+        "website": "https://onestlapourtoit.fr/",
+        "place_id": null,
         "biensGeres": 35
       }
     ]
@@ -2089,26 +2120,26 @@
       {
         "source": "current",
         "isNational": true,
-        "name": "Hostnfly Lille",
-        "rating": 4.6,
-        "reviews": 5089,
-        "score": "39.26",
-        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
-        "website": "http://www.hostnfly.com/",
-        "place_id": "ChIJv9XUnm1u5kcRVW0nzcDeS1o",
-        "biensGeres": 200
-      },
-      {
-        "source": "current",
-        "isNational": true,
         "name": "Welkeys Lille",
         "rating": 4.3,
         "reviews": 2159,
         "score": "33.01",
         "address": "82 Av. du Maine, 75014 Paris",
-        "website": "http://www.welkeys.com/",
-        "place_id": "ChIJM9UFFBpu5kcRj50iZscKz9c",
+        "website": "https://www.welkeys.com/conciergerie-airbnb/lille",
+        "place_id": null,
         "biensGeres": 150
+      },
+      {
+        "source": "current",
+        "isNational": true,
+        "name": "Hostnfly Lille",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
+        "website": "https://www.hostnfly.com/conciergerie-airbnb/lille",
+        "place_id": null,
+        "biensGeres": 200
       },
       {
         "source": "current",
@@ -2119,7 +2150,7 @@
         "score": "23.93",
         "address": "26 Av. des Fleurs, 59110 La Madeleine",
         "website": "https://www.bnbefree.com/",
-        "place_id": "ChIJe_wprnQrw0cRYHFFqXKhOQ0",
+        "place_id": null,
         "biensGeres": 110
       },
       {
@@ -2144,19 +2175,19 @@
         "score": "14.22",
         "address": "284 Bd Victor Hugo, 59000 Lille",
         "website": "https://qelio.fr/",
-        "place_id": "ChIJjb7CXoCEqmARhx9q6tH713Y",
+        "place_id": null,
         "biensGeres": 65
       },
       {
         "source": "current",
         "isNational": false,
-        "name": "Hôtecœur",
+        "name": "Conciergerie Lille",
         "rating": 5,
         "reviews": 14,
         "score": "13.54",
         "address": "19 Bd Carnot, 59000 Lille",
-        "website": "https://conciergerie-lille.fr/",
-        "place_id": "ChIJCcqWWC7VwkcRZeMGnnHIhC4",
+        "website": "https://conciergerie-lille.com/",
+        "place_id": null,
         "biensGeres": 55
       },
       {
@@ -2167,8 +2198,8 @@
         "reviews": 6,
         "score": "9.73",
         "address": "9 Av. de Robersart, 59118 Wambrechies",
-        "website": "https://www.conciergerie-magnifique.com/",
-        "place_id": "ChIJI_VMKL-C5WQRBmFzvpXGKs4",
+        "website": "https://conciergerie-magnifique.com/",
+        "place_id": null,
         "biensGeres": 75
       }
     ]
@@ -2185,32 +2216,33 @@
         "reviews": 359,
         "score": "27.08",
         "address": "2 Rue Royale, 69001 Lyon",
-        "website": "https://www.guestready.com/fr/conciergerie-airbnb/lyon/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing-lyon",
-        "place_id": "ChIJ___v-e3q9EcR7auFCPO9yHE",
+        "website": "https://www.guestready.com/airbnb-management/lyon/",
+        "place_id": null,
         "biensGeres": 200
       },
       {
-        "source": "current",
+        "source": "discovered",
         "isNational": true,
-        "name": "Hostnfly Lyon",
+        "name": "Hosting Services - Conciergerie Airbnb Lyon",
         "rating": 4.5,
         "reviews": 61,
         "score": "18.57",
         "address": "2 Pl. du Prado, 69007 Lyon",
         "website": "https://hostingservices.fr/",
+        "phone": "09 83 72 37 95",
         "place_id": "ChIJc4QXwkHr9EcRQ-7eT4F4SYg",
-        "biensGeres": 220
+        "biensGeres": 0
       },
       {
         "source": "current",
         "isNational": true,
         "name": "Welkeys Lyon",
-        "rating": 5,
-        "reviews": 12,
-        "score": "12.82",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "31 Pl. Bellecour, 69002 Lyon",
-        "website": "https://welcomeasy.fr/",
-        "place_id": "ChIJXR5RcizH9EcR311ZR665CfM",
+        "website": "https://www.welkeys.com/conciergerie-airbnb/lyon",
+        "place_id": null,
         "biensGeres": 180
       },
       {
@@ -2221,8 +2253,8 @@
         "reviews": 103,
         "score": "20.44",
         "address": "25 bis Quai Romain Rolland, 69005 Lyon",
-        "website": "http://www.allinlyon.com/",
-        "place_id": "ChIJgZgiJavr9EcRtow83S0g3Wc",
+        "website": "https://www.allinlyon.com/",
+        "place_id": null,
         "biensGeres": 120
       },
       {
@@ -2233,8 +2265,8 @@
         "reviews": 53,
         "score": "19.15",
         "address": "73 Rue Duquesne, 69006 Lyon",
-        "website": "https://luluconciergerie.squarespace.com/",
-        "place_id": "ChIJ7VgjHvTr9EcRJtLIiBXuLis",
+        "website": "https://www.luluconciergerie.com/",
+        "place_id": null,
         "biensGeres": 0
       },
       {
@@ -2246,7 +2278,7 @@
         "score": "19.00",
         "address": "133 Rue Vauban, 69006 Lyon",
         "website": "https://conciergerietetedor.fr/",
-        "place_id": "ChIJf5jHRaLr9EcRuRYLSAy45Nc",
+        "place_id": null,
         "biensGeres": 0
       },
       {
@@ -2289,8 +2321,8 @@
         "reviews": 59,
         "score": "18.02",
         "address": "N° 5 Rue Sidi Mansour, Marrakech 40000, Maroc",
-        "website": "https://www.yourhost.ma/",
-        "place_id": "ChIJxVKkbwDvrw0R8k_cQwWZQxw",
+        "website": "https://yourhosthelper.com/en/agences-conciergerie-maroc/",
+        "place_id": null,
         "biensGeres": 150
       },
       {
@@ -2309,6 +2341,19 @@
       {
         "source": "discovered",
         "isNational": false,
+        "name": "Conciergerie Luxe - Marrakech Concierge - Gestion Locative Riad",
+        "rating": 4.4,
+        "reviews": 59,
+        "score": "18.02",
+        "address": "N° 5 Rue Sidi Mansour, Marrakech 40000, Maroc",
+        "website": "https://www.yourhost.ma/",
+        "phone": "07 70 07 04 09",
+        "place_id": "ChIJxVKkbwDvrw0R8k_cQwWZQxw",
+        "biensGeres": 0
+      },
+      {
+        "source": "discovered",
+        "isNational": false,
         "name": "Prime BNB Concierge",
         "rating": 5,
         "reviews": 26,
@@ -2318,18 +2363,6 @@
         "phone": "06 56 41 69 55",
         "place_id": "ChIJkZxtB0Xvrw0RGFSFiZnPPDw",
         "biensGeres": 0
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "Morokeys",
-        "rating": 5,
-        "reviews": 13,
-        "score": "13.20",
-        "address": "NAJD CD19, Rue, Marrakech 40000, Maroc",
-        "website": "https://conciergeservicemorocco.com/",
-        "place_id": "ChIJgwO8Mfvtrw0Ry7I5ADhAgnI",
-        "biensGeres": 100
       },
       {
         "source": "discovered",
@@ -2358,28 +2391,29 @@
         "biensGeres": 0
       },
       {
-        "source": "current",
+        "source": "discovered",
         "isNational": false,
-        "name": "Nippy House",
+        "name": "Conciergerie Marrakech - Maison Madeleines",
         "rating": 5,
         "reviews": 8,
         "score": "10.99",
         "address": "74 Av. Hassan II, Marrakech 40000, Maroc",
         "website": "https://www.maison-madeleines.com/",
+        "phone": "06 60 48 92 24",
         "place_id": "ChIJUeEBJXHvrw0Rvq8I56jpBo0",
-        "biensGeres": 70
+        "biensGeres": 0
       },
       {
         "source": "current",
         "isNational": false,
-        "name": "Dar & Keys",
+        "name": "Morokeys",
         "rating": 0,
         "reviews": 0,
         "score": "0.00",
-        "address": "",
-        "website": "https://darandkeys.com/",
+        "address": "NAJD CD19, Rue, Marrakech 40000, Maroc",
+        "website": "https://www.morokeys.com/",
         "place_id": null,
-        "biensGeres": 80
+        "biensGeres": 100
       }
     ]
   },
@@ -2390,25 +2424,13 @@
       {
         "source": "current",
         "isNational": true,
-        "name": "Hostnfly Marseille",
-        "rating": 4.6,
-        "reviews": 5089,
-        "score": "39.26",
-        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
-        "website": "http://www.hostnfly.com/",
-        "place_id": "ChIJv9XUnm1u5kcRVW0nzcDeS1o",
-        "biensGeres": 160
-      },
-      {
-        "source": "current",
-        "isNational": true,
         "name": "Welkeys Marseille",
         "rating": 4.3,
         "reviews": 2159,
         "score": "33.01",
         "address": "82 Av. du Maine, 75014 Paris",
-        "website": "http://www.welkeys.com/",
-        "place_id": "ChIJM9UFFBpu5kcRj50iZscKz9c",
+        "website": "",
+        "place_id": null,
         "biensGeres": 140
       },
       {
@@ -2422,6 +2444,18 @@
         "website": "https://yourhosthelper.com/",
         "place_id": "ChIJBb2HEoK_yRIRRmK5AhcD1MM",
         "biensGeres": 0
+      },
+      {
+        "source": "current",
+        "isNational": true,
+        "name": "BnbLord Marseille",
+        "rating": 4.5,
+        "reviews": 11,
+        "score": "11.18",
+        "address": "115 Av. André Zénatti, 13008 Marseille",
+        "website": "",
+        "place_id": null,
+        "biensGeres": 110
       },
       {
         "source": "discovered",
@@ -2470,21 +2504,21 @@
         "reviews": 44,
         "score": "18.27",
         "address": "150B Rue Paradis, 13006 Marseille",
-        "website": "https://laconciergeriedusoleil.fr/",
-        "place_id": "ChIJ4SXkvZ3ByRIRZP4C6hirZL0",
+        "website": "",
+        "place_id": null,
         "biensGeres": 70
       },
       {
         "source": "discovered",
         "isNational": false,
-        "name": "KosyLodge - Conciergerie Airbnb à Marseille et Aix-en-Provence",
-        "rating": 4.6,
-        "reviews": 48,
-        "score": "17.90",
-        "address": "16 Rue Michel Gachet, 13007 Marseille",
-        "website": "https://kosylodge.fr/",
-        "phone": "06 52 89 05 79",
-        "place_id": "ChIJx17KhAXByRIRAGWY4IeKdeE",
+        "name": "La Conciergerie du Soleil - Marseille",
+        "rating": 4.8,
+        "reviews": 44,
+        "score": "18.27",
+        "address": "150B Rue Paradis, 13006 Marseille",
+        "website": "https://laconciergeriedusoleil.fr/",
+        "phone": "06 29 93 42 70",
+        "place_id": "ChIJ4SXkvZ3ByRIRZP4C6hirZL0",
         "biensGeres": 0
       }
     ]
@@ -2501,8 +2535,8 @@
         "reviews": 212,
         "score": "24.66",
         "address": "86 Rue Jean Burger, 57070 Saint-Julien-lès-Metz",
-        "website": "http://un-sejour-a-part.com/",
-        "place_id": "ChIJMThPvbBwGwQRN4zM0e1GjjQ",
+        "website": "",
+        "place_id": null,
         "biensGeres": 25
       },
       {
@@ -2513,8 +2547,8 @@
         "reviews": 125,
         "score": "21.76",
         "address": "30 Rue Mazelle, 57000 Metz",
-        "website": "https://www.rock-in-share.com/",
-        "place_id": "ChIJcwLyio0jGaMRAtpg0ScvjGI",
+        "website": "https://www.rock-in-share.com/fr/",
+        "place_id": null,
         "biensGeres": 120
       },
       {
@@ -2531,16 +2565,17 @@
         "biensGeres": 0
       },
       {
-        "source": "current",
+        "source": "discovered",
         "isNational": false,
-        "name": "Vigelio",
+        "name": "conciergerie UnSejourAMetz",
         "rating": 4.2,
         "reviews": 36,
         "score": "15.17",
         "address": "3 Rue aux Ossons, 57000 Metz",
         "website": "http://unsejourametz.fr/",
+        "phone": "03 72 39 56 47",
         "place_id": "ChIJL2Nr68zdlEcRhLfOR4QmOng",
-        "biensGeres": 30
+        "biensGeres": 0
       },
       {
         "source": "current",
@@ -2550,8 +2585,8 @@
         "reviews": 24,
         "score": "14.81",
         "address": "27 Rue de la Gare, 88380 Arches",
-        "website": "https://cledici.fr/",
-        "place_id": "ChIJJ3zw5MKlk0cRz4S8uIBqjjY",
+        "website": "https://cledici.fr/conciergerie-metz/",
+        "place_id": null,
         "biensGeres": 18
       },
       {
@@ -2562,8 +2597,8 @@
         "reviews": 13,
         "score": "13.20",
         "address": "57255 Sainte-Marie-aux-Chênes",
-        "website": "https://vahine-conciergerie.com/",
-        "place_id": "ChIJy00kpmLTWQER7-JISEQuHmg",
+        "website": "https://vahine-conciergerie.fr/conciergerie-airbnb-metz/",
+        "place_id": null,
         "biensGeres": 15
       },
       {
@@ -2619,8 +2654,8 @@
         "reviews": 5,
         "score": "8.96",
         "address": "Le Scribe, 160 Av. de Fes, 34080 Montpellier",
-        "website": "https://yourhosthelper.com/agence-montpellier/",
-        "place_id": "ChIJxysCiB-vthIRyL2iC86-RzI",
+        "website": "https://yourhosthelper.com/conciergerie-montpellier/",
+        "place_id": null,
         "biensGeres": 110
       },
       {
@@ -2683,8 +2718,8 @@
         "reviews": 84,
         "score": "18.66",
         "address": "4 Bis rue des Frères Lumières, 34830 Jacou",
-        "website": "http://www.conciergerie-groomi.fr/",
-        "place_id": "ChIJXR8wTtylthIRgG_S7GXKd58",
+        "website": "https://www.conciergerie-groomi.fr/",
+        "place_id": null,
         "biensGeres": 60
       },
       {
@@ -2715,7 +2750,7 @@
         "score": "13.51",
         "address": "127 Av. du Général Leclerc, 54000 Nancy",
         "website": "https://www.guestready.com/",
-        "place_id": "ChIJmZwJqWKYlEcRmpnx4dgK6C4",
+        "place_id": null,
         "biensGeres": 50
       },
       {
@@ -2739,8 +2774,8 @@
         "reviews": 21,
         "score": "15.46",
         "address": "20 Pl. de la Carrière 54000, 54000 Nancy",
-        "website": "http://masterkeyservices.fr/",
-        "place_id": "ChIJHcEg4vGZlEcRZwjodRjG8-E",
+        "website": "https://masterkeyservices.fr/",
+        "place_id": null,
         "biensGeres": 20
       },
       {
@@ -2751,8 +2786,8 @@
         "reviews": 21,
         "score": "13.60",
         "address": "286 Av. du Général Leclerc, 54000 Nancy",
-        "website": "https://www.rock-in-share.com/",
-        "place_id": "ChIJ3d6fNSqZlEcRA1cSMhakGoE",
+        "website": "https://www.rock-in-share.com/fr/",
+        "place_id": null,
         "biensGeres": 120
       },
       {
@@ -2763,20 +2798,20 @@
         "reviews": 13,
         "score": "12.40",
         "address": "138 Rue Saint-Dizier, 54000 Nancy",
-        "website": "https://come-conciergerie.fr/",
-        "place_id": "ChIJ9_tBATSuEIMRUIxqK7WaHxo",
+        "website": "",
+        "place_id": null,
         "biensGeres": 15
       },
       {
         "source": "current",
         "isNational": false,
         "name": "MAHÉ",
-        "rating": 5,
-        "reviews": 7,
-        "score": "10.40",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "41 Pl. de la Carrière, 54000 Nancy",
-        "website": "https://maheconciergerie.fr/",
-        "place_id": "ChIJ61NOLWCZlEcRLxEtvk6K98I",
+        "website": "",
+        "place_id": null,
         "biensGeres": 12
       },
       {
@@ -2805,8 +2840,8 @@
         "reviews": 622,
         "score": "25.74",
         "address": "10 Rue Voltaire, 44000 Nantes",
-        "website": "https://www.hoomy.fr/?utm_source=siteweb&utm_medium=url&utm_campaign=gmb",
-        "place_id": "ChIJg3_iPaPoBUgRVE2rgbHVv80",
+        "website": "https://www.hoomy.fr/conciergeries/votre-conciergerie-a-nantes/",
+        "place_id": null,
         "biensGeres": 350
       },
       {
@@ -2817,8 +2852,8 @@
         "reviews": 91,
         "score": "20.80",
         "address": "2 Rue de l'Évêché, 44000 Nantes",
-        "website": "https://cocoonr.fr/location-court-sejour/nantes-44/",
-        "place_id": "ChIJ4Rs-xmzvBUgRekBqO00Y-co",
+        "website": "https://cocoonr.fr/conciergerie-bnb-nantes/",
+        "place_id": null,
         "biensGeres": 66
       },
       {
@@ -2843,7 +2878,7 @@
         "score": "12.94",
         "address": "19 Rue Léon Blum, 44000 Nantes",
         "website": "https://conciergerielulu.com/",
-        "place_id": "ChIJfY0X6NfvBUgRmjTpDdCM9YY",
+        "place_id": null,
         "biensGeres": 35
       },
       {
@@ -2867,21 +2902,9 @@
         "reviews": 10,
         "score": "11.99",
         "address": "20 All. de la Maison Rouge, 44000 Nantes",
-        "website": "http://kerbnb.fr/",
-        "place_id": "ChIJt-osg6LvBUgR-GB9egfK76A",
+        "website": "https://kerbnb.fr/",
+        "place_id": null,
         "biensGeres": 30
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "Conciergerie Nantaise",
-        "rating": 5,
-        "reviews": 2,
-        "score": "5.49",
-        "address": "23 Rue de Verdun, 44000 Nantes",
-        "website": "https://www.conciergerie-nantaise.fr/",
-        "place_id": "ChIJ1SioXbbvBUgRI0NGBi_JK9k",
-        "biensGeres": 40
       },
       {
         "source": "current",
@@ -2894,6 +2917,18 @@
         "website": "https://www.conciergerie-oceane.com/",
         "place_id": null,
         "biensGeres": 50
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "WeHost Nantes",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "",
+        "website": "https://www.wehost.fr/conciergerie-airbnb-nantes/",
+        "place_id": null,
+        "biensGeres": 80
       }
     ]
   },
@@ -2901,18 +2936,6 @@
     "ville": "Nice",
     "finalCount": 8,
     "items": [
-      {
-        "source": "current",
-        "isNational": true,
-        "name": "Hostnfly Nice",
-        "rating": 4.6,
-        "reviews": 5089,
-        "score": "39.26",
-        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
-        "website": "http://www.hostnfly.com/",
-        "place_id": "ChIJv9XUnm1u5kcRVW0nzcDeS1o",
-        "biensGeres": 240
-      },
       {
         "source": "discovered",
         "isNational": true,
@@ -2930,13 +2953,25 @@
         "source": "current",
         "isNational": true,
         "name": "BnbLord Nice",
-        "rating": 4.4,
-        "reviews": 82,
-        "score": "19.44",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "2 Av. Saint-Jean-Baptiste, 06000 Nice",
-        "website": "http://bnbgroomservices.com/",
-        "place_id": "ChIJ70aFyrDazRIRMJ8yKSUmEzg",
+        "website": "",
+        "place_id": null,
         "biensGeres": 280
+      },
+      {
+        "source": "current",
+        "isNational": true,
+        "name": "Hostnfly Nice",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
+        "website": "",
+        "place_id": null,
+        "biensGeres": 240
       },
       {
         "source": "discovered",
@@ -2949,6 +2984,19 @@
         "website": "https://manasteos.com/",
         "phone": "06 85 96 07 31",
         "place_id": "ChIJE95B9E_RzRIReC4RCFcQnd4",
+        "biensGeres": 0
+      },
+      {
+        "source": "discovered",
+        "isNational": false,
+        "name": "Bnb Groom Services - Conciergerie Nice",
+        "rating": 4.4,
+        "reviews": 82,
+        "score": "19.44",
+        "address": "2 Av. Saint-Jean-Baptiste, 06000 Nice",
+        "website": "http://bnbgroomservices.com/",
+        "phone": "06 19 21 51 61",
+        "place_id": "ChIJ70aFyrDazRIRMJ8yKSUmEzg",
         "biensGeres": 0
       },
       {
@@ -2989,19 +3037,6 @@
         "phone": "06 30 11 72 03",
         "place_id": "ChIJjxeLhybRzRIR6jujQQpMofU",
         "biensGeres": 0
-      },
-      {
-        "source": "discovered",
-        "isNational": false,
-        "name": "Happy Keys Conciergerie",
-        "rating": 4.9,
-        "reviews": 33,
-        "score": "17.28",
-        "address": "6 Rue Bavastro, 06300 Nice",
-        "website": "http://www.happykeysconciergerie.com/",
-        "phone": "06 98 42 86 36",
-        "place_id": "ChIJqVoZ46zRzRIRk5hK8ojdn4o",
-        "biensGeres": 0
       }
     ]
   },
@@ -3017,8 +3052,8 @@
         "reviews": 20,
         "score": "15.22",
         "address": "23 Av. Jean Jaurès, 30000 Nîmes",
-        "website": "https://yourhosthelper.com/conciergerie-nimes",
-        "place_id": "ChIJNxe8Jz0ttBIRUneBiOjvlqM",
+        "website": "https://yourhosthelper.com/en/conciergerie-nimes/",
+        "place_id": null,
         "biensGeres": 40
       },
       {
@@ -3030,20 +3065,8 @@
         "score": "22.61",
         "address": "2 Rue de l'École Vieille, 30000 Nîmes",
         "website": "https://laconciergerieducroco.fr/",
-        "place_id": "ChIJi0CnQzIttBIRTaPEDaZ3mt0",
+        "place_id": null,
         "biensGeres": 80
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "CB Conciergerie de Nîmes",
-        "rating": 4.9,
-        "reviews": 56,
-        "score": "19.81",
-        "address": "2 Rue de Beaucaire, 30000 Nîmes",
-        "website": "https://www.cbconciergerie.fr/",
-        "place_id": "ChIJyUUsEp4ttBIRlBJ8WwQHirA",
-        "biensGeres": 45
       },
       {
         "source": "current",
@@ -3054,7 +3077,7 @@
         "score": "18.05",
         "address": "30 Bd Victor Hugo, 30000 Nîmes",
         "website": "https://www.homa-france.com/",
-        "place_id": "ChIJvxvFJ_uY3gARphxCemMxsH0",
+        "place_id": null,
         "biensGeres": 35
       },
       {
@@ -3078,20 +3101,32 @@
         "reviews": 11,
         "score": "11.43",
         "address": "50 Bd Gambetta, 30000 Nîmes",
-        "website": "https://www.lys-conciergerie.fr/",
-        "place_id": "ChIJI0zDXPBVGkEROoWSYtUFhQ8",
+        "website": "https://www.lys-conciergerie.fr",
+        "place_id": null,
         "biensGeres": 18
       },
       {
         "source": "current",
         "isNational": false,
+        "name": "CB Conciergerie de Nîmes",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "2 Rue de Beaucaire, 30000 Nîmes",
+        "website": "",
+        "place_id": null,
+        "biensGeres": 45
+      },
+      {
+        "source": "current",
+        "isNational": false,
         "name": "Concierge BB",
-        "rating": 3.8,
-        "reviews": 4,
-        "score": "6.12",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "47 Rue Notre Dame, 30000 Nîmes",
-        "website": "https://www.conciergebb.fr/pages/contact",
-        "place_id": "ChIJC4kczdkttBIR7TRRBWQ1AMI",
+        "website": "https://www.conciergebb.fr/",
+        "place_id": null,
         "biensGeres": 12
       }
     ]
@@ -3103,25 +3138,13 @@
       {
         "source": "current",
         "isNational": true,
-        "name": "HostnFly",
-        "rating": 4.6,
-        "reviews": 5089,
-        "score": "39.26",
-        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
-        "website": "http://www.hostnfly.com/",
-        "place_id": "ChIJv9XUnm1u5kcRVW0nzcDeS1o",
-        "biensGeres": 3000
-      },
-      {
-        "source": "current",
-        "isNational": true,
         "name": "Welkeys",
         "rating": 4.3,
         "reviews": 2159,
         "score": "33.01",
         "address": "82 Av. du Maine, 75014 Paris",
-        "website": "http://www.welkeys.com/",
-        "place_id": "ChIJM9UFFBpu5kcRj50iZscKz9c",
+        "website": "https://www.welkeys.com/",
+        "place_id": null,
         "biensGeres": 1200
       },
       {
@@ -3132,9 +3155,21 @@
         "reviews": 1517,
         "score": "32.96",
         "address": "8 Rue de Sofia, 75018 Paris",
-        "website": "https://www.guestready.com/fr/conciergerie-airbnb/paris/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing-paris",
-        "place_id": "ChIJSVVlVg5u5kcRM-5iW3paVeg",
+        "website": "https://www.guestready.com/",
+        "place_id": null,
         "biensGeres": 1200
+      },
+      {
+        "source": "current",
+        "isNational": true,
+        "name": "Guester",
+        "rating": 4.9,
+        "reviews": 66,
+        "score": "20.60",
+        "address": "10/12 Rue Andras Beck, 92360 Meudon",
+        "website": "https://www.guester.com/",
+        "place_id": null,
+        "biensGeres": 400
       },
       {
         "source": "discovered",
@@ -3216,7 +3251,7 @@
         "score": "15.46",
         "address": "Rue Paul Rubens, 66000 Perpignan",
         "website": "https://www.sudsejourconciergerie.com/",
-        "place_id": "ChIJZzRXxhtvsBIRG6ksLo2HcpE",
+        "place_id": null,
         "biensGeres": 22
       },
       {
@@ -3227,21 +3262,9 @@
         "reviews": 10,
         "score": "11.99",
         "address": "20 Rue de la Chapelle, 66600 Opoul-Périllos",
-        "website": "http://www.rentandbreathe.fr/",
-        "place_id": "ChIJYfcd0Tra3ykRCxF-h0Wo9cQ",
+        "website": "https://www.rentandbreathe.fr/",
+        "place_id": null,
         "biensGeres": 14
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "Conciergerie du Roussillon",
-        "rating": 5,
-        "reviews": 7,
-        "score": "10.40",
-        "address": "1 Rue des Hortensias, 66330 Cabestany",
-        "website": "https://www.conciergerieduroussillon.com/",
-        "place_id": "ChIJX5ssbURusBIRuG-eqHFmxWY",
-        "biensGeres": 10
       },
       {
         "source": "discovered",
@@ -3259,30 +3282,6 @@
       {
         "source": "current",
         "isNational": false,
-        "name": "Viva Conciergerie",
-        "rating": 5,
-        "reviews": 4,
-        "score": "8.05",
-        "address": "4 Rue Mathurin Régnier B41, 66000 Perpignan",
-        "website": "https://vivaconciergerie.com/",
-        "place_id": "ChIJ--pHcJmJu0URyxc2WIbg26Y",
-        "biensGeres": 6
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "SPS66 La Conciergerie Catalane",
-        "rating": 5,
-        "reviews": 3,
-        "score": "6.93",
-        "address": "Avenue des, Av. du Balcon du Canigou, 66240 Saint-Estève",
-        "website": "http://www.conciergerie66.fr/",
-        "place_id": "ChIJQ7ZuwXVtsBIRZNtNwJNi8fY",
-        "biensGeres": 8
-      },
-      {
-        "source": "current",
-        "isNational": false,
         "name": "CoolKeys Conciergerie",
         "rating": 0,
         "reviews": 0,
@@ -3291,6 +3290,42 @@
         "website": "https://www.cool-keys.com/",
         "place_id": null,
         "biensGeres": 35
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "Conciergerie du Roussillon",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "1 Rue des Hortensias, 66330 Cabestany",
+        "website": "https://www.conciergerieduroussillon.com/",
+        "place_id": null,
+        "biensGeres": 10
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "Viva Conciergerie",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "4 Rue Mathurin Régnier B41, 66000 Perpignan",
+        "website": "https://vivaconciergerie.com/",
+        "place_id": null,
+        "biensGeres": 6
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "SPS66 La Conciergerie Catalane",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "Avenue des, Av. du Balcon du Canigou, 66240 Saint-Estève",
+        "website": "https://www.conciergerie66.fr/",
+        "place_id": null,
+        "biensGeres": 8
       }
     ]
   },
@@ -3306,8 +3341,8 @@
         "reviews": 70,
         "score": "21.31",
         "address": "15 Av. de Laon, 51100 Reims",
-        "website": "https://www.nalis-immo.com/",
-        "place_id": "ChIJ__eWCFad2SkRfZdLLfbOOgY",
+        "website": "https://nalis-immo.com/",
+        "place_id": null,
         "biensGeres": 50
       },
       {
@@ -3318,8 +3353,8 @@
         "reviews": 55,
         "score": "17.31",
         "address": "72 Rue Chanzy, 51100 Reims",
-        "website": "https://conciergerie-des-sacres.fr/",
-        "place_id": "ChIJp4zfyzR16UcR7hfAZawZYtM",
+        "website": "https://auxclefsdessacres.com/",
+        "place_id": null,
         "biensGeres": 30
       },
       {
@@ -3330,8 +3365,8 @@
         "reviews": 33,
         "score": "17.28",
         "address": "4 Rue Lanson, 51100 Reims",
-        "website": "https://npreview-dameroseconciergerie.lodgify.com/",
-        "place_id": "ChIJ-_sYT6916UcRhp7P-fplzrM",
+        "website": "https://dameroseconciergerie.com/",
+        "place_id": null,
         "biensGeres": 35
       },
       {
@@ -3356,7 +3391,7 @@
         "score": "10.07",
         "address": "41 Esp. Fléchambault, 51100 Reims",
         "website": "https://reimsconciergerie.fr/",
-        "place_id": "ChIJM0YWf17pmIQRF1mKxWuaUDs",
+        "place_id": null,
         "biensGeres": 20
       },
       {
@@ -3397,20 +3432,20 @@
         "reviews": 172,
         "score": "19.58",
         "address": "50 Rue d'Antrain, 35000 Rennes",
-        "website": "https://cocoonr.fr/location-court-sejour/rennes-35/?",
-        "place_id": "ChIJZafkbx_fDkgRdyRCG9Mshv0",
+        "website": "https://cocoonr.fr/conciergerie-bnb-rennes/",
+        "place_id": null,
         "biensGeres": 400
       },
       {
         "source": "current",
         "isNational": true,
         "name": "YourHostHelper Rennes",
-        "rating": 5,
-        "reviews": 2,
-        "score": "5.49",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
         "address": "77 Bd de Stalingrad, 69100 Villeurbanne",
-        "website": "https://yourhosthelper.com/conciergerie-villeurbanne",
-        "place_id": "ChIJgwSj-X3r9EcRqWb1GT0q8G8",
+        "website": "https://yourhosthelper.com/conciergerie-rennes/",
+        "place_id": null,
         "biensGeres": 55
       },
       {
@@ -3454,13 +3489,13 @@
       {
         "source": "current",
         "isNational": false,
-        "name": "Rennes Host",
+        "name": "JustUnToit Rennes",
         "rating": 4.9,
         "reviews": 34,
         "score": "17.42",
         "address": "118 Bd Villebois Mareuil, 35000 Rennes",
-        "website": "https://www.justuntoit.fr/",
-        "place_id": "ChIJnVpwZoDfDkgRCcvWVV-_RPA",
+        "website": "https://www.justuntoit.fr/la-conciergerie-a-rennes/",
+        "place_id": null,
         "biensGeres": 65
       },
       {
@@ -3504,7 +3539,7 @@
         "score": "0.00",
         "address": "1 Rue Guillaume le Conquérant, 76000 Rouen",
         "website": "https://yourhosthelper.com/conciergerie-rouen/",
-        "place_id": "ChIJ221iWHzd4EcRG6ajCLESLxo",
+        "place_id": null,
         "biensGeres": 120
       },
       {
@@ -3516,7 +3551,7 @@
         "score": "19.86",
         "address": "22 Rue Jacques Lelieur, 76000 Rouen",
         "website": "https://rouenconciergerie.fr/",
-        "place_id": "ChIJ46q864Df4EcRXZvMLar5k4A",
+        "place_id": null,
         "biensGeres": 170
       },
       {
@@ -3528,7 +3563,7 @@
         "score": "17.92",
         "address": "16 Rue Alsace Lorraine, 76000 Rouen",
         "website": "https://olympe.services/",
-        "place_id": "ChIJcfBuZ0mXvwAR36XSqhdi2t0",
+        "place_id": null,
         "biensGeres": 50
       },
       {
@@ -3540,7 +3575,7 @@
         "score": "14.68",
         "address": "83 Rue Orbe, 76000 Rouen",
         "website": "https://www.maconciergerieennormandie.fr/",
-        "place_id": "ChIJ7bTDfLDd4EcRdnmuJau1P8g",
+        "place_id": null,
         "biensGeres": 70
       },
       {
@@ -3564,8 +3599,8 @@
         "reviews": 9,
         "score": "11.51",
         "address": "51 bis Rue de l'Avalasse, 76000 Rouen",
-        "website": "https://metaconciergerie.fr/",
-        "place_id": "ChIJ_3JpSXfMJKURZj8PkBSIohk",
+        "website": "https://livretaccueil.com/",
+        "place_id": null,
         "biensGeres": 30
       },
       {
@@ -3576,8 +3611,8 @@
         "reviews": 0,
         "score": "0.00",
         "address": "Pl. du Vieux Marché, 76000 Rouen",
-        "website": "https://gmsconciergerie.com/",
-        "place_id": "ChIJlxxBqrfd4EcRTWBt6VH6SBk",
+        "website": "https://gmsconciergerie.com/rouen/",
+        "place_id": null,
         "biensGeres": 90
       }
     ]
@@ -3594,8 +3629,8 @@
         "reviews": 222,
         "score": "26.50",
         "address": "5 Rue Didier Daurat, 17200 Royan",
-        "website": "http://www.conciergerie-alahauteur.com/",
-        "place_id": "ChIJLcHHbTt3AUgRBvRB9mmADjk",
+        "website": "https://www.conciergerie-alahauteur.com/",
+        "place_id": null,
         "biensGeres": 90
       },
       {
@@ -3606,8 +3641,8 @@
         "reviews": 143,
         "score": "24.85",
         "address": "Bd de la République, 17200 Royan",
-        "website": "https://odysseyroyan.com/conciergerie-privee/",
-        "place_id": "ChIJF4EZXVMomysRH1MejCR8nLs",
+        "website": "https://odysseyroyan.com/",
+        "place_id": null,
         "biensGeres": 55
       },
       {
@@ -3619,20 +3654,8 @@
         "score": "14.72",
         "address": "29 Rue Neuve de la Vallée, 17140 Lagord",
         "website": "https://conciergeriedefanny.fr/",
-        "place_id": "ChIJq-3oQXOfAUgRJA5Cb-Qj9ag",
+        "place_id": null,
         "biensGeres": 15
-      },
-      {
-        "source": "current",
-        "isNational": false,
-        "name": "Alpo Conciergerie",
-        "rating": 4,
-        "reviews": 4,
-        "score": "6.44",
-        "address": "6 Chem. du Menada, 17200 Saint-Sulpice-de-Royan",
-        "website": "https://alpo-conciergerie.fr/royan/",
-        "place_id": "ChIJsf-rMAZ3AUgRZiPPbPGZ0vM",
-        "biensGeres": 7
       },
       {
         "source": "current",
@@ -3657,6 +3680,18 @@
         "website": "https://www.lacleconciergerie.com/",
         "place_id": null,
         "biensGeres": 8
+      },
+      {
+        "source": "current",
+        "isNational": false,
+        "name": "Alpo Conciergerie",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "6 Chem. du Menada, 17200 Saint-Sulpice-de-Royan",
+        "website": "https://alpo-conciergerie.fr/",
+        "place_id": null,
+        "biensGeres": 7
       }
     ]
   },
@@ -3685,8 +3720,8 @@
         "reviews": 44,
         "score": "17.51",
         "address": "1A Rue de Berlin, 34200 Sète",
-        "website": "http://www.thauconciergerie.fr/",
-        "place_id": "ChIJf63PU5FLsRIRVrhPCkMILBc",
+        "website": "https://thauconciergerie.fr/",
+        "place_id": null,
         "biensGeres": 40
       },
       {
@@ -3697,8 +3732,8 @@
         "reviews": 56,
         "score": "17.39",
         "address": "1 quai d'Alger, 28 Rue Lazare Carnot, 34200 Sète",
-        "website": "https://www.concilogis.fr/",
-        "place_id": "ChIJDcdZxpw1sRIRATIQ6-uOxII",
+        "website": "",
+        "place_id": null,
         "biensGeres": 50
       },
       {
@@ -3709,8 +3744,8 @@
         "reviews": 31,
         "score": "17.33",
         "address": "27 Rue Castillon, 34200 Sète",
-        "website": "https://monconcierge-a-sete-fr.webnode.fr/",
-        "place_id": "ChIJWz2CgKw1sRIRHCNeYXYcV0A",
+        "website": "",
+        "place_id": null,
         "biensGeres": 25
       },
       {
@@ -3722,7 +3757,7 @@
         "score": "16.43",
         "address": "41 Rue Montmorency, 34200 Sète",
         "website": "https://laconciergeriedulittoral.fr/",
-        "place_id": "ChIJjxIDQA0a_6ARtDzONJnaM2A",
+        "place_id": null,
         "biensGeres": 28
       },
       {
@@ -3733,8 +3768,8 @@
         "reviews": 23,
         "score": "15.57",
         "address": "Rue Bayard, 34200 Sète",
-        "website": "http://cetteconciergerie.com/",
-        "place_id": "ChIJq6oTb5k1sRIRwjHi-yZdYaY",
+        "website": "https://7ounet.fr/",
+        "place_id": null,
         "biensGeres": 75
       },
       {
@@ -3745,8 +3780,8 @@
         "reviews": 24,
         "score": "15.13",
         "address": "8 bis Rue des Jardins, 34200 Sète",
-        "website": "http://patrimonia-concept.com/",
-        "place_id": "ChIJY2jI7f83sRIRz2etfyP_ECI",
+        "website": "https://www.patrimonia-concept.com/nos-services-immobiliers/conciergerie-sete/",
+        "place_id": null,
         "biensGeres": 30
       },
       {
@@ -3768,18 +3803,6 @@
     "ville": "Strasbourg",
     "finalCount": 8,
     "items": [
-      {
-        "source": "current",
-        "isNational": true,
-        "name": "Hostnfly Strasbourg",
-        "rating": 4.6,
-        "reviews": 5089,
-        "score": "39.26",
-        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
-        "website": "http://www.hostnfly.com/",
-        "place_id": "ChIJv9XUnm1u5kcRVW0nzcDeS1o",
-        "biensGeres": 180
-      },
       {
         "source": "discovered",
         "isNational": true,
@@ -3808,14 +3831,26 @@
       },
       {
         "source": "current",
+        "isNational": true,
+        "name": "Nestify Strasbourg",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "36 Rue Boecklin, 67000 Strasbourg",
+        "website": "https://www.nestify.fr/conciergerie-airbnb-strasbourg/",
+        "place_id": null,
+        "biensGeres": 140
+      },
+      {
+        "source": "current",
         "isNational": false,
         "name": "La Conciergerie de l",
         "rating": 4.5,
         "reviews": 46,
         "score": "17.33",
         "address": "11 Rue Mercière, 67000 Strasbourg",
-        "website": "https://www.strasbourg.eu/-/webmag-conciergerie-cathedrale",
-        "place_id": "ChIJ9wiqoPbJlkcRnBvqrQPuZO4",
+        "website": "https://www.laconciergeriedelest.fr/",
+        "place_id": null,
         "biensGeres": 90
       },
       {
@@ -3865,8 +3900,8 @@
         "reviews": 7,
         "score": "10.40",
         "address": "2 RUE DES PEUPLIERS, 67270 Duntzenheim",
-        "website": "http://www.laconciergeriedesrosiers.fr/",
-        "place_id": "ChIJXxRekrndtycRkb2YRVjR-vA",
+        "website": "",
+        "place_id": null,
         "biensGeres": 30
       }
     ]
@@ -3896,8 +3931,8 @@
         "reviews": 80,
         "score": "21.97",
         "address": "45 Rue Clio, 83100 Toulon",
-        "website": "http://www.happyhomeconciergerie.com/",
-        "place_id": "ChIJ1fNyylcZyRIRf_B1IlklocI",
+        "website": "",
+        "place_id": null,
         "biensGeres": 70
       },
       {
@@ -3908,8 +3943,8 @@
         "reviews": 102,
         "score": "21.32",
         "address": "3 Rue Fougassière, 83000 Toulon",
-        "website": "https://www.laconciergeriedemarjory.fr/",
-        "place_id": "ChIJN_-9x-aqd2QRCjHGIJ8yMOE",
+        "website": "",
+        "place_id": null,
         "biensGeres": 80
       },
       {
@@ -3933,8 +3968,8 @@
         "reviews": 44,
         "score": "18.65",
         "address": "24 Rue July, 83000 Toulon",
-        "website": "https://www.locazen.eu/",
-        "place_id": "ChIJXXlJK5lf6KQRLJ-AbsQgcsI",
+        "website": "",
+        "place_id": null,
         "biensGeres": 45
       },
       {
@@ -3971,8 +4006,8 @@
         "reviews": 13,
         "score": "13.20",
         "address": "Rue docteur perrimond, 83200 Toulon",
-        "website": "https://azureaconciergerie.fr/",
-        "place_id": "ChIJJXbH1YEJmyIRpbvfQfD3V5s",
+        "website": "https://www.info83.fr/conciergerie-airbnb-toulon/",
+        "place_id": null,
         "biensGeres": 25
       }
     ]
@@ -3984,25 +4019,13 @@
       {
         "source": "current",
         "isNational": true,
-        "name": "Hostnfly Toulouse",
-        "rating": 4.6,
-        "reviews": 5089,
-        "score": "39.26",
-        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
-        "website": "http://www.hostnfly.com/",
-        "place_id": "ChIJv9XUnm1u5kcRVW0nzcDeS1o",
-        "biensGeres": 180
-      },
-      {
-        "source": "current",
-        "isNational": true,
         "name": "Welkeys Toulouse",
         "rating": 4.3,
         "reviews": 2159,
         "score": "33.01",
         "address": "82 Av. du Maine, 75014 Paris",
-        "website": "http://www.welkeys.com/",
-        "place_id": "ChIJM9UFFBpu5kcRj50iZscKz9c",
+        "website": "",
+        "place_id": null,
         "biensGeres": 120
       },
       {
@@ -4017,6 +4040,18 @@
         "phone": "09 70 70 08 59",
         "place_id": "ChIJ_d_MYTO7rhIR8Z2ChCdcWCw",
         "biensGeres": 0
+      },
+      {
+        "source": "current",
+        "isNational": true,
+        "name": "Hostnfly Toulouse",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "42 Rue Marguerite de Rochechouart, 75009 Paris",
+        "website": "",
+        "place_id": null,
+        "biensGeres": 180
       },
       {
         "source": "discovered",
@@ -4039,8 +4074,8 @@
         "reviews": 41,
         "score": "18.31",
         "address": "2 Rue du Moulin Bayard, 31000 Toulouse",
-        "website": "https://conciergeriedetoulouse.fr/",
-        "place_id": "ChIJzwFhGKa9rhIRiFRZJXU-nOY",
+        "website": "",
+        "place_id": null,
         "biensGeres": 75
       },
       {
@@ -4072,14 +4107,14 @@
       {
         "source": "discovered",
         "isNational": false,
-        "name": "Colette - La Conciergerie Airbnb Toulouse",
-        "rating": 5,
-        "reviews": 13,
-        "score": "13.20",
-        "address": "69 Bd de Strasbourg, 31000 Toulouse",
-        "website": "https://colettelaconciergerie.fr/",
-        "phone": "07 81 79 47 46",
-        "place_id": "ChIJxR6KJn-9rhIR90kAyuTz3gA",
+        "name": "MyHote Conciergerie BNB, serrures numérique et ménage",
+        "rating": 4.9,
+        "reviews": 15,
+        "score": "13.59",
+        "address": "52 Rue Achille Viadieu Magnier, 31400 Toulouse",
+        "website": "https://www.myhote.fr/",
+        "phone": "07 81 31 17 24",
+        "place_id": "ChIJJ239SVe9rhIR0PhgTTqAkIw",
         "biensGeres": 0
       }
     ]
@@ -4096,8 +4131,8 @@
         "reviews": 129,
         "score": "24.34",
         "address": "52 Rue Néricault Destouches, 37000 Tours",
-        "website": "https://conciergerie.prestiplace.com/",
-        "place_id": "ChIJNwru5efV_EcRNwYOLD-80xE",
+        "website": "",
+        "place_id": null,
         "biensGeres": 75
       },
       {
@@ -4108,8 +4143,8 @@
         "reviews": 85,
         "score": "19.60",
         "address": "4 Rue de Châteaudun, 37000 Tours",
-        "website": "http://www.gth-conciergerie.fr/",
-        "place_id": "ChIJo5Wtu03V_EcR2lvJCLiYWIo",
+        "website": "",
+        "place_id": null,
         "biensGeres": 65
       },
       {
@@ -4133,8 +4168,8 @@
         "reviews": 12,
         "score": "12.82",
         "address": "19 Rue Molière, 37700 Saint-Pierre-des-Corps",
-        "website": "https://www.pillowandpaw.com/",
-        "place_id": "ChIJ-xnYs4htN2ARyYdNio7guP4",
+        "website": "https://pillowandpaw.com/",
+        "place_id": null,
         "biensGeres": 20
       },
       {
@@ -4166,26 +4201,26 @@
       {
         "source": "current",
         "isNational": false,
-        "name": "Éloge Touraine",
-        "rating": 5,
-        "reviews": 2,
-        "score": "5.49",
-        "address": "40 Av. de la Tranchée, 37100 Tours",
-        "website": "https://logetourangelle.fr/",
-        "place_id": "ChIJiQ2bsyLdGGMRBAepxJqjgSM",
-        "biensGeres": 18
+        "name": "Louloue Tours",
+        "rating": 1.6,
+        "reviews": 5,
+        "score": "2.87",
+        "address": "12 Rue du Change, 37000 Tours",
+        "website": "https://louloue.com/louloue-tours/",
+        "place_id": null,
+        "biensGeres": 130
       },
       {
         "source": "current",
         "isNational": false,
-        "name": "Coderi",
-        "rating": 5,
-        "reviews": 1,
-        "score": "3.47",
-        "address": "67 bis Rue Roger Salengro, 37000 Tours",
-        "website": "https://www.facebook.com/Conciergerie-Zerosouci-931720280276223/",
-        "place_id": "ChIJTWcUysfV_EcROLpWH2lbC8c",
-        "biensGeres": 22
+        "name": "Les Clés de Touraine",
+        "rating": 0,
+        "reviews": 0,
+        "score": "0.00",
+        "address": "",
+        "website": "https://www.lesclesdetouraine.com/",
+        "place_id": null,
+        "biensGeres": 30
       }
     ]
   },
@@ -4201,8 +4236,8 @@
         "reviews": 52,
         "score": "18.66",
         "address": "10 Pl. de la Madeleine, 56000 Vannes",
-        "website": "https://cocoonr.fr/location-court-sejour/agence/morbihan/?arrival=&departure=&nb_persons=1",
-        "place_id": "ChIJt8XEu18fEEgRgbkClLn_FXY",
+        "website": "https://cocoonr.fr/conciergerie-bnb-morbihan/",
+        "place_id": null,
         "biensGeres": 70
       },
       {
@@ -4214,7 +4249,7 @@
         "score": "22.38",
         "address": "13 Rue Saint-Vincent, 56000 Vannes",
         "website": "https://www.location-concept.fr/",
-        "place_id": "ChIJ95xFwEkZEEgRBBYHISujOLA",
+        "place_id": null,
         "biensGeres": 50
       },
       {
@@ -4225,8 +4260,8 @@
         "reviews": 85,
         "score": "21.83",
         "address": "12 Rue Jean-Vincent Lhermitais, 56000 Vannes",
-        "website": "https://www.laconciergerie-etoilee.fr/",
-        "place_id": "ChIJD7oXXhLXvg0R3-lrwqVrU8c",
+        "website": "https://laconciergerie-etoilee.fr/",
+        "place_id": null,
         "biensGeres": 60
       },
       {
@@ -4237,8 +4272,8 @@
         "reviews": 74,
         "score": "21.16",
         "address": "4 Rue Pierre Ache, 56000 Vannes",
-        "website": "https://www.lesclefsdefaustine.fr/",
-        "place_id": "ChIJbd7A8XofEEgRdNpEJoRPXEo",
+        "website": "",
+        "place_id": null,
         "biensGeres": 45
       },
       {
@@ -4249,8 +4284,8 @@
         "reviews": 53,
         "score": "19.94",
         "address": "128 Av. de Verdun, 56000 Vannes",
-        "website": "http://www.conciergeriebienvenue.com/",
-        "place_id": "ChIJlQCp8xp4jIQRg7eJ9xd6VL0",
+        "website": "",
+        "place_id": null,
         "biensGeres": 35
       }
     ]
@@ -4267,8 +4302,8 @@
         "reviews": 18,
         "score": "12.07",
         "address": "7 Rue Nicolas Larbaud, 03200 Vichy",
-        "website": "http://vichyconciergerie.com/",
-        "place_id": "ChIJZ9Ww2sXN9kcRJePFHmCF8Qs",
+        "website": "https://www.vichyconciergerie.com/",
+        "place_id": null,
         "biensGeres": 15
       },
       {
@@ -4280,7 +4315,7 @@
         "score": "10.40",
         "address": "39 Rue Girard, 03200 Vichy",
         "website": "https://conciergerie-auvergne.fr/",
-        "place_id": "ChIJURBV7zfN9kcRWh9ambpi-HM",
+        "place_id": null,
         "biensGeres": 10
       },
       {
@@ -4292,7 +4327,7 @@
         "score": "9.90",
         "address": "25 Pl. Jean Epinat, 03200 Vichy",
         "website": "https://www.les-grandes-maisons.com/",
-        "place_id": "ChIJrw7EkbC-76gRERenGQrXDLE",
+        "place_id": null,
         "biensGeres": 12
       }
     ]

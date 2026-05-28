@@ -4331,10 +4331,10 @@ export const cities: City[] = [
     displayName: 'Aix-en-Provence',
     region: 'Provence-Alpes-Côte d\'Azur',
     regionSlug: 'provence-alpes-cote-dazur',
-    title: 'Conciergerie Aix-en-Provence Airbnb : comparatif 2026 des 7 meilleures agences',
+    title: 'Conciergerie Aix-en-Provence Airbnb : comparatif 2026 des 5 meilleures agences',
     metaTitle: 'Conciergerie Airbnb Aix-en-Provence : Comparatif 2026',
     metaDescription:
-      'Comparatif des 7 meilleures conciergeries Airbnb à Aix-en-Provence. Tarifs (17-22 %), services, avis Google, zone tendue, quartiers rentables (Mazarin, centre).',
+      'Comparatif des 5 meilleures conciergeries Airbnb à Aix-en-Provence. Tarifs (18-20 %), services, avis Google, zone tendue, quartiers rentables (Mazarin, centre).',
     kwPrincipal: 'conciergerie aix en provence',
     kwSecondaires: [
       'conciergerie airbnb aix en provence',
@@ -4371,18 +4371,6 @@ export const cities: City[] = [
           "L'Aixcapade est une conciergerie boutique exclusivement focalisée sur Aix-en-Provence et ses environs immédiats (Le Tholonet, Meyreuil, Bouc-Bel-Air). Commission de 20 % TTC sur les revenus de réservation, ménage refacturé au voyageur. Création et optimisation de l'annonce, photos pro, pricing dynamique, accueil 7j/7. Idéale pour un propriétaire qui veut un interlocuteur unique très réactif sur un T1-T3 en centre-ville ou dans le Mazarin.",
       },
       {
-        name: 'Le Mazarin Conciergerie',
-        url: 'https://www.lemazarin.com/conciergerie/',
-        commission: '20 %',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 45,
-        specialty: 'Formule unique 20 %, sans frais cachés',
-        description:
-          "Le Mazarin applique une commission unique de 20 % sur les revenus collectés, sans frais fixes ni frais cachés. Couvre l'ensemble du cycle locatif : création et diffusion annonce, gestion des réservations, accueil voyageurs, ménage pro, linge hôtelier, maintenance et reporting financier mensuel. Particulièrement bien implantée dans le quartier Mazarin et le centre historique, avec une approche prestige assumée pour les biens haut de gamme.",
-      },
-      {
         name: 'My Home Conciergerie',
         url: 'https://www.myhome-conciergerie.fr/',
         commission: '18-20 %',
@@ -4405,18 +4393,6 @@ export const cities: City[] = [
         specialty: 'Spécialiste ménage et linge écoresponsable',
         description:
           "Conciergerie Blanc se distingue par un positionnement écoresponsable : produits d'entretien biosourcés, linge en circuit court, fournitures d'accueil sourcées en Provence. Commission 20 % TTC, ménage refacturé. Idéal pour un bien dans l'hypercentre où les voyageurs sont exigeants sur la propreté.",
-      },
-      {
-        name: 'NG Conciergerie Pays d\'Aix',
-        url: 'https://www.ngconciergerie.fr/',
-        commission: '17-22 %',
-        menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
-        biensGeres: 35,
-        specialty: 'Prestation à la carte, grille modulable',
-        description:
-          "NG Conciergerie propose une grille modulable de 17 à 22 % selon le périmètre de service choisi (formule de base sans création annonce ou formule complète avec yield). Couvre Aix intra-muros et le Pays d'Aix élargi (Venelles, Bouc-Bel-Air, Gardanne). Idéal pour un propriétaire déjà autonome sur certains aspects (création d'annonce, photos) qui veut négocier précisément le périmètre de la conciergerie.",
       },
       {
         name: 'YourHostHelper Aix-en-Provence',

@@ -16,6 +16,14 @@
 - `npm run gsc:refresh` — refresh data GSC (index status + analytics + snapshot)
 - `npm run test:e2e` — Playwright
 
+## Supabase
+
+- Projet : `pesoidoedtjpihjvrnnc` (eu-west-1, PG 17)
+- **Nouvelle table dans `public`** : suivre `supabase/MIGRATION_TEMPLATE.sql`.
+  Le projet a opt-in (2026-05-27) au nouveau comportement Supabase : les
+  nouvelles tables NE sont PAS auto-exposées à l'API → GRANTs explicites
+  obligatoires sinon le front ne voit rien.
+
 ## Memory
 
 Le contexte projet (identité Marc, projets, conventions, méthode) vit dans

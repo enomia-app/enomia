@@ -185,6 +185,25 @@ Score = Vol × (60 − KD) / 60. Top 10 :
 5. Détecter cannibalisations (2 articles → même intent)
 6. Update updatedAt pour signal fraîcheur GSC
 
+## 📅 Stratégie de cadence de publication (anti content-dump)
+
+**Règle** : NE PAS publier tous les articles d'un coup. Pour un site jeune, le content-dump risque le filtre "scaled content abuse" (Google spam update 2024) + dilue le crawl budget. Publier **1 article tous les 2-3 jours**, piliers d'abord.
+
+**Ordre de publication des 6 brouillons ready (piliers + volume)** :
+
+| Ordre | Slug | KW | Vol | Type |
+|---|---|---|---|---|
+| 1 | sous-location-airbnb | sous location airbnb | 3 830 | pilier |
+| 2 | location-courte-duree | location courte durée | 2 900 | pilier |
+| 3 | amortissement-lmnp | amortissement lmnp | 3 600 | satellite gros vol |
+| 4 | reforme-lmnp | lmnp 2026 | 2 900 | satellite |
+| 5 | meuble-tourisme-classe | meublé de tourisme classé | 720 | satellite |
+| 6 | amenitiz-avis | amenitiz avis | 720 | satellite |
+
+**Après chaque publication** : le skill `gsc-indexation-quotidienne` (cron déjà en place, max 5 URLs/jour) demande l'indexation Google. Pas besoin de chaîner.
+
+**Protection E-E-A-T** : la qualité éditoriale (chiffres réels Marc, angle expérience vécue) protège du filtre content-dump bien plus que la cadence seule.
+
 ## Méthodologie pour les futurs audits
 
 1. **À chaque création/refresh d'article** : update les colonnes correspondantes

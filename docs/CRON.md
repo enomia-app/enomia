@@ -18,7 +18,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 | `com.enomia.fb-daily-scan` | 7h17 quotidien | Scan FB matinal + drafte commentaires + email | actif |
 | `app.enomia.gsc-indexation` | 9h18 quotidien | Wrapper `claude -p` qui lance la skill `gsc-indexation-quotidienne` (refresh GSC API + soumissions Chrome MCP top 10 URLs prioritaires par volume SEMrush) | actif |
 | `app.enomia.tech-watchdog` | 8h11 quotidien | Watchdog santé technique du site | actif |
-| `app.enomia.blog-publish-daily` | 8h17 quotidien (publie jours impairs, ~1/2j) | Publie 1 article blog brouillon → en-ligne dans l'ordre `scripts/blog-publish-queue.json`, commit/push + email récap Resend. Pas de claude -p (git+node pur). À installer sur Mac mini : `bash scripts/blog-publish-daily/install.sh` | à installer |
+| `app.enomia.blog-publish-daily` | 8h17 quotidien (publie jours impairs, ~1/2j) | Publie 1 article blog brouillon → en-ligne dans l'ordre `scripts/blog-publish-queue.json`, commit/push + email récap Resend. Pas de claude -p (git+node pur). | **actif** (installé Mac mini 2026-05-29) |
 | `app.enomia.conciergerie-production` | Lun/Mer/Ven 8h37 | Cycle de production landing conciergerie | actif |
 | `app.enomia.backlinks-track-replies-v2` | Lun-Ven 10h31 | Pipeline v2 : tracking réponses + bounces + relances auto J+5/J+10/J+15 (10h31 = 14 min après send-daily 10h17 → chope les hard bounces immédiats du jour) | actif |
 | `com.enomia.fb-check-replies` | 9h23 quotidien | Check réponses sous commentaires FB Marc | actif |

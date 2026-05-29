@@ -85,7 +85,9 @@ function parseCities() {
 
     const concBlocks = conciergeriesBlock.match(/\{\s*name:[\s\S]*?\},/g) || [];
     for (const c of concBlocks) {
-      const name = c.match(/name:\s*["']([^"']+)["']/)?.[1];
+      // Gère les apostrophes échappées (ex. 'La Clé d\'Émeraude') puis déséchappe pour la requête
+      const nameRaw = (c.match(/name:\s*"((?:\\.|[^"\\])*)"/) || c.match(/name:\s*'((?:\\.|[^'\\])*)'/))?.[1];
+      const name = nameRaw?.replace(/\\(['"])/g, '$1');
       const url = c.match(/url:\s*["']([^"']+)["']/)?.[1];
       const rating = parseFloat(c.match(/rating:\s*([\d.]+)/)?.[1] || '0');
       const reviews = parseInt(c.match(/reviews:\s*(\d+)/)?.[1] || '0', 10);

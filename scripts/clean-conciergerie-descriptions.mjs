@@ -34,6 +34,9 @@ const BAN_PATTERNS = [
   /\bTrustpilot\s+(?:national|mondial|France)/i,
   /\bfiche\s+Google\s+(?:Business|Lyon|locale|national|Paris)/i,
   /\b\d+\s+avis\s+(?:Google|Trustpilot)\b/i,
+  // Formulations LLM qualitatives sur le volume d'avis ou la note (désync après refresh Places)
+  /\b(?:dizaine|vingtaine|trentaine|quarantaine|cinquantaine|soixantaine|centaine)s?\s+d['’]avis/i,
+  /\bnote\s+(?:maximale|parfaite|quasi.?parfaite|excellente)\b/i,
 ];
 
 function shouldDrop(sentence) {

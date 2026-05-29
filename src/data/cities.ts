@@ -8671,7 +8671,7 @@ export const cities: City[] = [
         biensGeres: 45,
         specialty: 'Saint-Malo & Dinard, note maximale',
         description:
-          "Le positionnement est celui d'une conciergerie de proximité : interlocuteur unique, réactivité, soin de l'accueil. Pour un propriétaire dinardais, l'intérêt est d'avoir une équipe qui connaît la copropriété, les artisans locaux et les pics de demande (ponts, festival, été). La commission se négocie au cas par cas : faites préciser ce qui est inclus (photos, linge, maintenance) et les conditions de sortie du contrat. Une note élevée sur un volume d'avis encore modéré reste plus fragile qu'un historique de plusieurs centaines d'avis : lisez les retours un par un avant de signer.",
+          "Le positionnement est celui d'une conciergerie de proximité : interlocuteur unique, réactivité, soin de l'accueil. Pour un propriétaire dinardais, l'intérêt est d'avoir une équipe qui connaît la copropriété, les artisans locaux et les pics de demande (ponts, festival, été). La commission se négocie au cas par cas : faites préciser ce qui est inclus (photos, linge, maintenance) et les conditions de sortie du contrat.",
       },
       {
         name: 'Ma Conciergerie Sérénité',
@@ -9036,7 +9036,7 @@ export const cities: City[] = [
         biensGeres: 75,
         specialty: 'Service haut de gamme Morbihan',
         description:
-          "C'est un signal de qualité fort : une note maximale tenue sur des dizaines d'avis est bien plus fiable qu'un 5/5 sur une poignée de retours. La commission n'étant pas publique, demandez un devis détaillé et comparez le coût « tout compris ». Le profil convient aux propriétaires exigeants sur l'accueil et la présentation du bien, prêts à payer pour un service soigné. Faites préciser le nombre de logements gérés sur Lorient même et la capacité de l'équipe à absorber le pic de l'Interceltique, période où la qualité de gestion fait toute la différence sur le revenu.",
+          "La commission n'étant pas publique, demandez un devis détaillé et comparez le coût « tout compris ». Le profil convient aux propriétaires exigeants sur l'accueil et la présentation du bien, prêts à payer pour un service soigné. Faites préciser le nombre de logements gérés sur Lorient même et la capacité de l'équipe à absorber le pic de l'Interceltique, période où la qualité de gestion fait toute la différence sur le revenu.",
       },
       {
         name: 'Alb Conciergerie',
@@ -9240,7 +9240,7 @@ export const cities: City[] = [
         biensGeres: 30,
         specialty: 'Spécialiste local palois',
         description:
-          "L'argument central est la connaissance fine de Pau : quartiers, artisans, réglementation locale (l'agence publie d'ailleurs du contenu sur les règles de location courte durée à Pau). Pour un propriétaire palois, ce type d'acteur de proximité a un intérêt évident en cas d'incident ou de besoin d'intervention rapide. La note maximale repose sur un nombre d'avis encore modeste : un bon signal, à confirmer par des références concrètes. Demandez le périmètre exact des 20 %, le mode de facturation du ménage et le nombre de biens gérés dans la ville. À commission équivalente, l'ancrage local peut faire pencher la balance.",
+          "L'argument central est la connaissance fine de Pau : quartiers, artisans, réglementation locale (l'agence publie d'ailleurs du contenu sur les règles de location courte durée à Pau). Pour un propriétaire palois, ce type d'acteur de proximité a un intérêt évident en cas d'incident ou de besoin d'intervention rapide. Demandez le périmètre exact des 20 %, le mode de facturation du ménage et le nombre de biens gérés dans la ville. À commission équivalente, l'ancrage local peut faire pencher la balance.",
       },
     ],
     neighborhoods: [
@@ -9350,7 +9350,7 @@ export const cities: City[] = [
         commission: 'n.c.',
         menage: 'variable',
         rating: 4.4,
-        reviews: 100,
+        reviews: 165,
         biensGeres: 130,
         specialty: 'Agence régionale historique (depuis 2015)',
         description:
@@ -9360,8 +9360,8 @@ export const cities: City[] = [
         name: "Les Saisons d'Émeraude",
         commission: '20 %',
         menage: 'variable',
-        rating: 4.9,
-        reviews: 46,
+        rating: 0,
+        reviews: 0,
         biensGeres: 0,
         specialty: 'Haut de gamme, clé en main',
         description:
@@ -9371,19 +9371,19 @@ export const cities: City[] = [
         name: "La Clé d'Émeraude",
         commission: 'n.c.',
         menage: 'variable',
-        rating: 5.0,
-        reviews: 29,
+        rating: 5,
+        reviews: 2,
         biensGeres: 0,
         specialty: "Service personnalisé Côte d'Émeraude",
         description:
-          "Conciergerie de proximité à taille humaine, qui mise sur un service personnalisé et une relation directe avec le propriétaire, animée par une gérante identifiée. La note maximale, bâtie sur une trentaine d'avis, est un bon signal de satisfaction, à confirmer par des références concrètes. Pour qui valorise un interlocuteur unique et la souplesse, c'est un argument réel. Demandez le détail des services inclus, la commission et la façon dont le ménage est traité, ainsi que le nombre de biens gérés sur la Côte d'Émeraude. À service équivalent, l'ancrage local et la disponibilité peuvent faire la différence en cas d'incident.",
+          "Conciergerie de proximité à taille humaine, qui mise sur un service personnalisé et une relation directe avec le propriétaire, animée par une gérante identifiée. Pour qui valorise un interlocuteur unique et la souplesse, c'est un argument réel. Demandez le détail des services inclus, la commission et la façon dont le ménage est traité, ainsi que le nombre de biens gérés sur la Côte d'Émeraude. À service équivalent, l'ancrage local et la disponibilité peuvent faire la différence en cas d'incident.",
       },
       {
         name: 'Ma Conciergerie Bretonne',
         commission: '15-18 %',
         menage: 'variable',
-        rating: 4.6,
-        reviews: 26,
+        rating: 0,
+        reviews: 0,
         biensGeres: 0,
         specialty: "Spécialiste Côte d'Émeraude",
         description:
@@ -9394,7 +9394,7 @@ export const cities: City[] = [
         commission: 'n.c.',
         menage: 'variable',
         rating: 4.9,
-        reviews: 17,
+        reviews: 18,
         biensGeres: 0,
         specialty: 'Gestion sur mesure (pays malouin)',
         description:
@@ -9537,8 +9537,8 @@ export const cities: City[] = [
         name: 'Opale Conciergerie',
         commission: 'n.c.',
         menage: 'variable',
-        rating: 3.7,
-        reviews: 7,
+        rating: 3.3,
+        reviews: 12,
         biensGeres: 0,
         specialty: "Gestion locative Côte d'Opale (Étaples)",
         description:
@@ -9548,8 +9548,8 @@ export const cities: City[] = [
         name: 'Les Clés de la Côte',
         commission: 'n.c.',
         menage: 'variable',
-        rating: 5.0,
-        reviews: 3,
+        rating: 5,
+        reviews: 13,
         biensGeres: 0,
         specialty: 'Intendance et résidences secondaires',
         description:
@@ -9663,7 +9663,7 @@ export const cities: City[] = [
         commission: 'n.c.',
         menage: 'variable',
         rating: 4.7,
-        reviews: 130,
+        reviews: 166,
         biensGeres: 0,
         specialty: 'Gestion complète A→Z, garantie sans vacance',
         description:
@@ -9673,8 +9673,8 @@ export const cities: City[] = [
         name: 'C&C Conciergerie',
         commission: '8-20 %',
         menage: 'variable',
-        rating: 0,
-        reviews: 0,
+        rating: 4.5,
+        reviews: 16,
         biensGeres: 0,
         specialty: 'Indépendante Haute-Vienne (devis sur visite)',
         description:
@@ -9817,8 +9817,8 @@ export const cities: City[] = [
         name: 'Manasteos',
         commission: '20 %',
         menage: 'variable',
-        rating: 5.0,
-        reviews: 49,
+        rating: 5,
+        reviews: 55,
         biensGeres: 0,
         specialty: "Réseau Côte d'Azur, service hôtelier",
         description:
@@ -9828,8 +9828,8 @@ export const cities: City[] = [
         name: 'La Conciergerie des Citronniers',
         commission: 'n.c.',
         menage: 'variable',
-        rating: 4.7,
-        reviews: 57,
+        rating: 4.8,
+        reviews: 130,
         biensGeres: 0,
         specialty: 'Conciergerie locale mentonnaise',
         description:
@@ -9839,8 +9839,8 @@ export const cities: City[] = [
         name: 'We Care Conciergerie',
         commission: '20 % TTC',
         menage: 'variable',
-        rating: 4.6,
-        reviews: 29,
+        rating: 0,
+        reviews: 0,
         biensGeres: 0,
         specialty: 'Résidences secondaires Monaco / Menton',
         description:
@@ -9851,7 +9851,7 @@ export const cities: City[] = [
         commission: 'n.c.',
         menage: 'variable',
         rating: 4.8,
-        reviews: 21,
+        reviews: 23,
         biensGeres: 0,
         specialty: 'Gestion saisonnière locale',
         description:

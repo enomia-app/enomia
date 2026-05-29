@@ -4,7 +4,8 @@
  *
  * Règles :
  *   - strong match + reviews ≥ 5 → on prend rating + reviews Google
- *   - strong match + reviews < 5 → n.c. (rating=0, reviews=0) (non significatif statistiquement)
+ *   - strong match + reviews < 1 → n.c. (rating=0, reviews=0) (= 0 avis, aucune donnée)
+ *     (la vraie note Google prime même avec peu d'avis : 4 avis réels > "n.c." — décision Marc 2026-05)
  *   - weak match (résultat hors-métier) → n.c.
  *   - pas de match → n.c.
  *
@@ -26,7 +27,7 @@ const ROOT = path.resolve(__dirname, '..');
 const dryRun = process.argv.includes('--dry-run');
 
 const TODAY = new Date().toISOString().slice(0, 10);
-const REVIEW_THRESHOLD = 5;
+const REVIEW_THRESHOLD = 1; // garde la vraie note dès 1 avis (n.c. seulement si 0 avis)
 
 const TARGET = path.join(ROOT, 'src/data/cities.ts');
 const BACKUP = TARGET + '.bak';
@@ -145,10 +146,9 @@ for (const slug of slugList) {
     const target = targetValues(entry);
     // Match the whole conciergerie object starting with `name: '<name>'` or `name: "<name>"`
     // Name can contain apostrophes — we allow both quote styles by replacing ' with [\'"]
-    const namePart = entry.conciergerie.replace(/['"]/g, "['\"]"); // tolerant quote
-    const escName = namePart.replace(/[.*+?^${}()|[\]\\]/g, (c) =>
-      c === '[' || c === ']' || c === '\\' || c === '*' || c === '+' || c === '?' || c === '$' || c === '^' || c === '{' || c === '}' || c === '(' || c === ')' || c === '|' || c === '.' ? '\\' + c : c,
-    );
+    // Échappe les specials regex PUIS rend chaque apostrophe/guillemet tolérant à un backslash
+    // optionnel — car cities.ts stocke les apostrophes échappées : name: 'La Clé d\'Émeraude'
+    const escName = escapeRegex(entry.conciergerie).replace(/['"]/g, "\\\\?['\"]");
     const concRe = new RegExp(`(\\{\\s*name:\\s*["']${escName}["'][\\s\\S]*?)(rating:\\s*[\\d.]+,)([\\s\\S]*?)(reviews:\\s*\\d+,)([\\s\\S]*?\\},)`);
     const concMatch = block.match(concRe);
     if (!concMatch) {

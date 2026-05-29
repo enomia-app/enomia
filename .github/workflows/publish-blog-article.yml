@@ -26,6 +26,7 @@ jobs:
           node-version: '20'
 
       - name: Run blog publication script
+        id: publish
         run: node scripts/publish-next-blog-article.mjs
 
       - name: Commit and push
@@ -36,3 +37,29 @@ jobs:
           # Ne commit que s'il y a un changement (article publié)
           git diff --staged --quiet || git commit -m "chore(blog): publish next article ($(date +%Y-%m-%d))"
           git push
+
+      - name: Send recap email
+        # Ne s'exécute que si un article a effectivement été publié
+        if: steps.publish.outputs.published_slug != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "📝 Article blog publié : ${{ steps.publish.outputs.published_title }}"
+          to: marc@enomia.app
+          from: Enomia Bot <marc@enomia.app>
+          body: |
+            Nouvel article publié automatiquement sur le blog Enomia.
+
+            Titre : ${{ steps.publish.outputs.published_title }}
+            URL   : https://www.enomia.app/blog/${{ steps.publish.outputs.published_slug }}
+
+            Publié par le cron publish-blog-article (1 article tous les 2 jours).
+            Prochaine publication : prochain jour impair à 06:11 UTC.
+
+            Pour réordonner ou ajouter des articles : scripts/blog-publish-queue.json
+            Pour mettre en pause : commenter le bloc schedule dans
+            .github/workflows/publish-blog-article.yml

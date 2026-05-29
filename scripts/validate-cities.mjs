@@ -76,7 +76,9 @@ for (const match of content.matchAll(/^  \{\s*\n\s+slug:\s*'([^']+)',/gm)) {
   }
 }
 
-if (cityCount !== 50) issues.push(`Nombre de villes = ${cityCount} (attendu 50)`);
+// Plancher, pas un nombre exact : le cron `conciergerie-production` ajoute des villes
+// sur main en continu. On garde un garde-fou contre une suppression massive accidentelle.
+if (cityCount < 46) issues.push(`Nombre de villes = ${cityCount} (< 46 attendu — suppression accidentelle ?)`);
 
 // TypeScript
 let tsErrors = 0;

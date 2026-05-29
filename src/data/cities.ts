@@ -9365,7 +9365,7 @@ export const cities: City[] = [
         biensGeres: 0,
         specialty: 'Haut de gamme, clé en main',
         description:
-          "Conciergerie positionnée sur le haut de gamme et le clé en main, avec une commission affichée autour de 20 %. La note Google est excellente sur un volume d'avis correct, signe d'une clientèle de propriétaires satisfaite. Ce type d'offre vise ceux qui veulent un service très complet sans rien gérer eux-mêmes. La commission n'a de sens que si elle s'accompagne d'une vraie optimisation du revenu : demandez des exemples concrets de gains sur des biens comparables, le périmètre exact des prestations et le mode de facturation du ménage. Vérifiez aussi la couverture précise sur votre quartier et la réactivité de l'équipe.",
+          "Conciergerie positionnée sur le haut de gamme et le clé en main, avec une commission affichée autour de 20 %. Ce type d'offre vise ceux qui veulent un service très complet sans rien gérer eux-mêmes. La commission n'a de sens que si elle s'accompagne d'une vraie optimisation du revenu : demandez des exemples concrets de gains sur des biens comparables, le périmètre exact des prestations et le mode de facturation du ménage. Vérifiez aussi la couverture précise sur votre quartier et la réactivité de l'équipe.",
       },
       {
         name: "La Clé d'Émeraude",
@@ -9398,7 +9398,7 @@ export const cities: City[] = [
         biensGeres: 0,
         specialty: 'Gestion sur mesure (pays malouin)',
         description:
-          "Conciergerie basée aux portes de Saint-Malo, du côté de Combourg, qui propose une gestion sur mesure du pays malouin. La note Google est excellente mais repose sur un nombre d'avis encore modeste : un bon signal à confirmer par des références. Le positionnement de proximité peut convenir aux propriétaires cherchant un suivi attentif et un interlocuteur réactif. Demandez le périmètre exact des services, la commission et le mode de facturation du ménage, ainsi que le nombre de biens réellement gérés sur Saint-Malo intra-muros et alentour. Pour un bien éloigné de leur base, vérifiez les délais d'intervention en cas d'urgence.",
+          "Conciergerie basée aux portes de Saint-Malo, du côté de Combourg, qui propose une gestion sur mesure du pays malouin. Le positionnement de proximité peut convenir aux propriétaires cherchant un suivi attentif et un interlocuteur réactif. Demandez le périmètre exact des services, la commission et le mode de facturation du ménage, ainsi que le nombre de biens réellement gérés sur Saint-Malo intra-muros et alentour. Pour un bien éloigné de leur base, vérifiez les délais d'intervention en cas d'urgence.",
       },
     ],
     neighborhoods: [
@@ -9700,7 +9700,7 @@ export const cities: City[] = [
         biensGeres: 0,
         specialty: 'Gestion saisonnière (photos pro, accueil)',
         description:
-          "Conciergerie locale proposant une gestion saisonnière complète : photos professionnelles, accueil, et attentions pour les voyageurs. La note Google et le volume d'avis sont faibles : le signal est trop mince pour être considéré comme établi, et la note basse mérite d'être recoupée en lisant attentivement les avis publiés. Cela ne disqualifie pas le prestataire, mais impose la prudence et des références. Demandez la commission, le détail des services inclus, le mode de facturation du ménage et le nombre de biens réellement gérés à Limoges. Comparez systématiquement le coût total, ménage compris, avec les autres acteurs locaux avant de vous engager.",
+          "Conciergerie locale proposant une gestion saisonnière complète : photos professionnelles, accueil, et attentions pour les voyageurs. Cela ne disqualifie pas le prestataire, mais impose la prudence et des références. Demandez la commission, le détail des services inclus, le mode de facturation du ménage et le nombre de biens réellement gérés à Limoges. Comparez systématiquement le coût total, ménage compris, avec les autres acteurs locaux avant de vous engager.",
       },
     ],
     neighborhoods: [
@@ -9822,7 +9822,7 @@ export const cities: City[] = [
         biensGeres: 0,
         specialty: "Réseau Côte d'Azur, service hôtelier",
         description:
-          "Réseau de conciergerie haut de gamme actif sur la Côte d'Azur, de Menton à Nice et Cannes, avec un positionnement service hôtelier clé en main et une commission affichée autour de 20 %. La note Google sur la zone de Menton est excellente, sur un volume d'avis correct. Ce type d'acteur structuré convient aux propriétaires qui veulent déléguer entièrement, avec optimisation des tarifs et gestion multilingue adaptée à la clientèle internationale. Demandez des exemples concrets de revenus obtenus sur des biens comparables, le périmètre exact des prestations couvertes par la commission, et le mode de facturation du ménage. Sur un réseau multi-villes, vérifiez l'ancrage réel et la réactivité de l'équipe sur Menton précisément.",
+          "Réseau de conciergerie haut de gamme actif sur la Côte d'Azur, de Menton à Nice et Cannes, avec un positionnement service hôtelier clé en main et une commission affichée autour de 20 %. Ce type d'acteur structuré convient aux propriétaires qui veulent déléguer entièrement, avec optimisation des tarifs et gestion multilingue adaptée à la clientèle internationale. Demandez des exemples concrets de revenus obtenus sur des biens comparables, le périmètre exact des prestations couvertes par la commission, et le mode de facturation du ménage. Sur un réseau multi-villes, vérifiez l'ancrage réel et la réactivité de l'équipe sur Menton précisément.",
       },
       {
         name: 'La Conciergerie des Citronniers',
@@ -9844,7 +9844,7 @@ export const cities: City[] = [
         biensGeres: 0,
         specialty: 'Résidences secondaires Monaco / Menton',
         description:
-          "Conciergerie couvrant le secteur Monaco, Beausoleil, Roquebrune et Menton, avec une commission fixe affichée à 20 % TTC depuis plusieurs années — une transparence et une stabilité tarifaires appréciables. Le positionnement résidences secondaires correspond bien à la clientèle frontalière de Monaco. La note Google est bonne sur un volume d'avis correct. Demandez le périmètre exact couvert par les 20 %, la façon dont le ménage est facturé, et la couverture précise sur votre quartier de Menton. Pour un bien destiné à de la moyenne durée liée à Monaco, interrogez l'équipe sur sa capacité à arbitrer entre courte et moyenne durée selon les saisons, afin d'optimiser l'occupation annuelle.",
+          "Conciergerie couvrant le secteur Monaco, Beausoleil, Roquebrune et Menton, avec une commission fixe affichée à 20 % TTC depuis plusieurs années — une transparence et une stabilité tarifaires appréciables. Le positionnement résidences secondaires correspond bien à la clientèle frontalière de Monaco. Demandez le périmètre exact couvert par les 20 %, la façon dont le ménage est facturé, et la couverture précise sur votre quartier de Menton. Pour un bien destiné à de la moyenne durée liée à Monaco, interrogez l'équipe sur sa capacité à arbitrer entre courte et moyenne durée selon les saisons, afin d'optimiser l'occupation annuelle.",
       },
       {
         name: 'Keybnb Services Menton',
@@ -9855,7 +9855,7 @@ export const cities: City[] = [
         biensGeres: 0,
         specialty: 'Gestion saisonnière locale',
         description:
-          "Conciergerie locale proposant une gestion saisonnière clé en main sur Menton. La note Google est très bonne, sur un volume d'avis honnête, ce qui en fait un acteur crédible du marché mentonnais. Faute de commission publiée, demandez-la dès le premier échange, avec le détail des services inclus et le mode de facturation du ménage. L'ancrage local est un atout pour la réactivité et la connaissance des règles municipales. Faites préciser le nombre de biens gérés, la stratégie de tarification entre haute saison estivale, Fête du Citron et arrière-saison, et demandez une simulation de revenu net sur votre logement pour comparer avec les autres prestataires de la ville.",
+          "Conciergerie locale proposant une gestion saisonnière clé en main sur Menton. Faute de commission publiée, demandez-la dès le premier échange, avec le détail des services inclus et le mode de facturation du ménage. L'ancrage local est un atout pour la réactivité et la connaissance des règles municipales. Faites préciser le nombre de biens gérés, la stratégie de tarification entre haute saison estivale, Fête du Citron et arrière-saison, et demandez une simulation de revenu net sur votre logement pour comparer avec les autres prestataires de la ville.",
       },
       {
         name: 'Check-in Menton',
@@ -9866,7 +9866,7 @@ export const cities: City[] = [
         biensGeres: 0,
         specialty: 'Clé en main, photo pro, assistance 24/7',
         description:
-          "Conciergerie locale gérée par une interlocutrice identifiée, proposant un service clé en main avec photos professionnelles et assistance voyageurs 24/7. La note Google est très bonne, sur un volume d'avis correct : un bon signal de satisfaction. Le profil de proximité, avec un interlocuteur unique, séduit les propriétaires qui veulent un suivi personnalisé. Demandez la commission, le périmètre précis des prestations, et la façon dont le ménage est facturé. Vérifiez le nombre de biens gérés et la capacité de l'équipe à couvrir votre quartier ainsi qu'à exploiter l'arrière-saison mentonnaise. Une simulation de revenu net sur votre bien permettra de situer cette offre face aux autres conciergeries locales.",
+          "Conciergerie locale gérée par une interlocutrice identifiée, proposant un service clé en main avec photos professionnelles et assistance voyageurs 24/7. Le profil de proximité, avec un interlocuteur unique, séduit les propriétaires qui veulent un suivi personnalisé. Demandez la commission, le périmètre précis des prestations, et la façon dont le ménage est facturé. Vérifiez le nombre de biens gérés et la capacité de l'équipe à couvrir votre quartier ainsi qu'à exploiter l'arrière-saison mentonnaise. Une simulation de revenu net sur votre bien permettra de situer cette offre face aux autres conciergeries locales.",
       },
     ],
     neighborhoods: [

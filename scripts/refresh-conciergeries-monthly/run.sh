@@ -86,6 +86,12 @@ fi
 log "Bump dates MAJ..."
 node scripts/refresh-conciergeries-monthly/bump-updated-dates.mjs >>"$RUN_LOG" 2>&1 || { notify_fail "bump-updated-dates KO"; git checkout -- . ; exit 1; }
 
+# --- 4b. Auto-nettoyage des chiffres d'avis dans les descriptions ---------
+# Le cron conciergerie-production ajoute des villes "pré-fix" (chiffres d'avis en
+# prose) sur main. On purge avant le validate pour que le refresh ne plante pas.
+log "Clean descriptions (purge chiffres d'avis)..."
+node scripts/clean-conciergerie-descriptions.mjs >>"$RUN_LOG" 2>&1 || { notify_fail "clean-conciergerie-descriptions KO"; git checkout -- . ; exit 1; }
+
 # --- 5. Validation garde-fou ----------------------------------------------
 log "Validation cities..."
 if ! node scripts/validate-cities.mjs >>"$RUN_LOG" 2>&1; then

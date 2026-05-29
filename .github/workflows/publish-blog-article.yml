@@ -1,0 +1,38 @@
+name: Publish Blog Article
+
+# Publication progressive des articles blog (anti content-dump).
+# Tourne tous les 2 jours (jours impairs) à 06:11 UTC (08:11 Paris été, 07:11 hiver).
+# Le script publie le 1er article encore en status:brouillon dans la queue
+# scripts/blog-publish-queue.json (ordre piliers + volume). Commit + push automatique.
+#
+# Pour mettre en pause : commenter le bloc schedule (workflow_dispatch reste actif).
+
+on:
+  schedule:
+    - cron: '11 6 1-31/2 * *'
+  workflow_dispatch: # Déclenchement manuel possible depuis l'onglet Actions
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run blog publication script
+        run: node scripts/publish-next-blog-article.mjs
+
+      - name: Commit and push
+        run: |
+          git config user.name "Enomia Bot"
+          git config user.email "bot@enomia.app"
+          git add -A
+          # Ne commit que s'il y a un changement (article publié)
+          git diff --staged --quiet || git commit -m "chore(blog): publish next article ($(date +%Y-%m-%d))"
+          git push

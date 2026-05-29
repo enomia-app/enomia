@@ -9313,6 +9313,640 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-05-27',
   },
+  {
+    slug: 'saint-malo',
+    displayName: 'Saint-Malo',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Saint-Malo Airbnb : comparatif 2026 des 5 meilleures agences',
+    metaTitle: 'Conciergerie Saint-Malo Airbnb : comparatif 2026',
+    metaDescription:
+      "Comparatif neutre des 5 meilleures conciergeries Airbnb de Saint-Malo : tarifs, avis Google, réglementation 2026 (la plus stricte de France), quartiers.",
+    kwPrincipal: 'conciergerie saint malo',
+    kwSecondaires: [
+      'conciergerie airbnb saint-malo',
+      'conciergerie saint-malo airbnb',
+      'meilleure conciergerie saint-malo',
+      'cocoonr saint malo',
+      "conciergerie côte d'émeraude",
+    ],
+    population: 47439,
+    tourists: 2000000,
+    activeListings: 1700,
+    priceLow: 75,
+    priceHigh: 180,
+    occupancyRate: 66,
+    revpar: 65,
+    seasonality:
+      "Forte fréquentation d'avril à octobre, avec un pic estival (juillet-août) et des week-ends de Pâques et de la Toussaint très demandés. Les grands événements nautiques — Route du Rhum, Transat Québec-Saint-Malo, Quai des Bulles — créent des pointes ponctuelles. L'hiver est plus calme mais soutenu par le tourisme patrimonial et la clientèle d'affaires de l'agglomération rennaise toute proche.",
+    rankNational: 17,
+    introCustom:
+      "Vous louez un bien à Saint-Malo sur Airbnb, ou vous étudiez la cité corsaire pour investir, attiré par plus d'un million de visiteurs par an et des remparts qui ne désemplissent jamais. Soyez prévenu d'emblée : Saint-Malo est la ville la plus restrictive de France en matière de location courte durée. Depuis 2024, un même propriétaire ne peut détenir qu'une seule autorisation de meublé de tourisme, et l'intra-muros est saturé.\n\nDans ce contexte, bien choisir sa conciergerie ne change rien à la réglementation, mais cela change tout à votre rentabilité une fois l'autorisation obtenue. J'ai comparé les conciergeries actives sur Saint-Malo et la Côte d'Émeraude à partir de leurs avis Google et de leurs commissions affichées. Les écarts de prix et de service sont réels — voici ce qu'il faut regarder.",
+    marketIntro:
+      "Saint-Malo, environ **47 000 habitants**, est l'une des destinations touristiques les plus puissantes de Bretagne : **plus d'un million de visiteurs par an** et près de **1 700 annonces Airbnb actives** pour une ville de taille moyenne. La cité corsaire vit du tourisme patrimonial (remparts, intra-muros, Grand Aquarium), des grands événements nautiques comme la **Route du Rhum** et d'une fréquentation étalée du printemps à l'automne.\n\nCette pression touristique a une contrepartie : Saint-Malo encadre la location courte durée plus durement que n'importe quelle autre ville française. Le marché reste très rentable pour qui détient une autorisation, avec un taux d'occupation autour de **66 %** et des prix à la nuit élevés intra-muros, mais l'accès est désormais verrouillé. C'est un marché de stock plus que de flux : mieux vaut acheter un bien déjà autorisé que miser sur une nouvelle autorisation.",
+    conciergeries: [
+      {
+        name: 'Cocoonr',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 4.4,
+        reviews: 100,
+        biensGeres: 130,
+        specialty: 'Agence régionale historique (depuis 2015)',
+        description:
+          "Acteur régional historique de la location courte durée en Bretagne, présent à Saint-Malo depuis le milieu des années 2010 et gérant un parc important de logements. Sa taille est un atout : process rodés, channel manager, équipe dédiée et bonne couverture de la cité corsaire. Avec une note solide bâtie sur un grand nombre d'avis, c'est un point de comparaison fiable. Demandez le détail de la commission et des frais annexes, la façon dont le ménage est facturé, et une simulation de revenu net sur votre bien : sur un acteur de cette taille, la qualité de service peut varier selon le gestionnaire affecté, mieux vaut clarifier les engagements par écrit.",
+      },
+      {
+        name: "Les Saisons d'Émeraude",
+        commission: '20 %',
+        menage: 'variable',
+        rating: 4.9,
+        reviews: 46,
+        biensGeres: 0,
+        specialty: 'Haut de gamme, clé en main',
+        description:
+          "Conciergerie positionnée sur le haut de gamme et le clé en main, avec une commission affichée autour de 20 %. La note Google est excellente sur un volume d'avis correct, signe d'une clientèle de propriétaires satisfaite. Ce type d'offre vise ceux qui veulent un service très complet sans rien gérer eux-mêmes. La commission n'a de sens que si elle s'accompagne d'une vraie optimisation du revenu : demandez des exemples concrets de gains sur des biens comparables, le périmètre exact des prestations et le mode de facturation du ménage. Vérifiez aussi la couverture précise sur votre quartier et la réactivité de l'équipe.",
+      },
+      {
+        name: "La Clé d'Émeraude",
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 5.0,
+        reviews: 29,
+        biensGeres: 0,
+        specialty: "Service personnalisé Côte d'Émeraude",
+        description:
+          "Conciergerie de proximité à taille humaine, qui mise sur un service personnalisé et une relation directe avec le propriétaire, animée par une gérante identifiée. La note maximale, bâtie sur une trentaine d'avis, est un bon signal de satisfaction, à confirmer par des références concrètes. Pour qui valorise un interlocuteur unique et la souplesse, c'est un argument réel. Demandez le détail des services inclus, la commission et la façon dont le ménage est traité, ainsi que le nombre de biens gérés sur la Côte d'Émeraude. À service équivalent, l'ancrage local et la disponibilité peuvent faire la différence en cas d'incident.",
+      },
+      {
+        name: 'Ma Conciergerie Bretonne',
+        commission: '15-18 %',
+        menage: 'variable',
+        rating: 4.6,
+        reviews: 26,
+        biensGeres: 0,
+        specialty: "Spécialiste Côte d'Émeraude",
+        description:
+          "Spécialiste de la Côte d'Émeraude affichant des commissions plutôt basses pour le secteur, autour de 15 à 18 %. C'est un argument fort sur un marché où chaque point de commission pèse sur la rentabilité. La note est bonne sur un volume d'avis correct. Pour un propriétaire un peu autonome, le palier bas peut représenter une vraie économie face aux agences à commission élevée. Demandez précisément ce que couvre la commission, si le ménage est refacturé au voyageur ou pris sur votre marge, et une simulation de revenu net. Vérifiez aussi l'ancienneté de l'équipe et sa connaissance des spécificités malouines, notamment la réglementation locale très stricte.",
+      },
+      {
+        name: 'Ma Conciergerie Sérénité',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 4.9,
+        reviews: 17,
+        biensGeres: 0,
+        specialty: 'Gestion sur mesure (pays malouin)',
+        description:
+          "Conciergerie basée aux portes de Saint-Malo, du côté de Combourg, qui propose une gestion sur mesure du pays malouin. La note Google est excellente mais repose sur un nombre d'avis encore modeste : un bon signal à confirmer par des références. Le positionnement de proximité peut convenir aux propriétaires cherchant un suivi attentif et un interlocuteur réactif. Demandez le périmètre exact des services, la commission et le mode de facturation du ménage, ainsi que le nombre de biens réellement gérés sur Saint-Malo intra-muros et alentour. Pour un bien éloigné de leur base, vérifiez les délais d'intervention en cas d'urgence.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Intra-Muros',
+        pricePerNight: '110-180 €',
+        occupancy: 70,
+        description:
+          "La cité corsaire dans les remparts : le secteur le plus recherché de Saint-Malo, ultra-touristique toute l'année. Tarifs à la nuit élevés et occupation maximale, mais tickets d'achat très chers et autorisations de meublé de tourisme désormais saturées. Un Airbnb y est un actif rare autant qu'un produit d'appel.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Le Sillon',
+        pricePerNight: '100-170 €',
+        occupancy: 66,
+        description:
+          "Le grand front de mer entre intra-muros et Paramé, avec sa digue et sa vue sur la baie. Très prisé en saisonnier pour les vues mer et la proximité des plages. Demande forte, prix d'achat élevés, rendement serré mais valeur patrimoniale solide.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Courtoisville',
+        pricePerNight: '90-150 €',
+        occupancy: 64,
+        description:
+          "Quartier balnéaire calme adossé à la plage du Sillon, apprécié des familles. Bon compromis entre cadre résidentiel et proximité immédiate de la mer, avec une occupation saisonnière soutenue.",
+        roiBrut: '5 %',
+      },
+      {
+        name: 'Saint-Servan',
+        pricePerNight: '80-130 €',
+        occupancy: 62,
+        description:
+          "Ancienne commune au sud, ambiance village autour du port Solidor et de la tour. Plus paisible et un peu plus abordable qu'intra-muros, c'est un secteur recherché pour un Airbnb de caractère à tarif raisonnable.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Paramé',
+        pricePerNight: '75-120 €',
+        occupancy: 60,
+        description:
+          "Quartier résidentiel proche des plages du Grand et du Petit Bé, prisé des familles et des séjours plus longs. Prix d'achat plus accessibles : un bon terrain pour viser du rendement plutôt que du prestige.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Rothéneuf',
+        pricePerNight: '70-115 €',
+        occupancy: 58,
+        description:
+          "Le secteur le plus excentré, côté nature, avec ses criques et les Rochers sculptés. Demande plus saisonnière mais tickets d'entrée bas, qui en font le quartier au rendement brut le plus élevé pour un investisseur patient.",
+        roiBrut: '6 %',
+      },
+    ],
+    regulation:
+      "**Saint-Malo est la ville la plus restrictive de France** en matière de meublés de tourisme, et c'est un point à comprendre avant tout projet.\n\nDepuis octobre 2024, une règle inédite validée par le tribunal administratif de Rennes limite chaque personne physique à **une seule autorisation de changement d'usage** sur l'ensemble de la commune — impossible de détenir deux meublés de tourisme, même via des sociétés distinctes. À cela s'ajoutent une **autorisation de changement d'usage avec compensation** (créer un logement équivalent), des **quotas par quartier**, et un **intra-muros saturé** où les nouvelles autorisations sont quasi impossibles.\n\nLe cadre national s'applique par-dessus : la **loi Le Meur** impose le **numéro d'enregistrement à 13 chiffres** sur chaque annonce et un **SIRET** pour tout loueur. Une **résidence principale** reste plafonnée à **120 nuitées par an**. Les sanctions atteignent **50 000 €**.\n\nConcrètement : **vérifiez en mairie** l'existence d'une autorisation attachée au bien convoité avant d'acheter. Sans elle, votre projet de courte durée peut être mort-né.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Perçue par nuit et par voyageur selon le classement du logement, elle s'estime en quelques secondes avec le calculateur.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 110,
+      neighborhood: 'Intra-Muros',
+      revenuBrut: 22000,
+      commissionRate: 0.20,
+      menageCount: 50,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique à Saint-Malo en 2026 ?",
+        a: "Saint-Malo est la commune la plus restrictive de France. Depuis octobre 2024, une règle validée par le tribunal administratif de Rennes limite chaque propriétaire à une seule autorisation de meublé de tourisme sur toute la ville, même en passant par plusieurs sociétés. S'y ajoutent un changement d'usage avec compensation, des quotas par quartier et un intra-muros saturé. Le cadre national impose en plus le numéro d'enregistrement à 13 chiffres, un SIRET et un plafond de 120 nuitées par an pour une résidence principale. Vérifiez impérativement en mairie l'existence d'une autorisation avant tout achat.",
+      },
+      {
+        q: "Peut-on encore investir en location courte durée à Saint-Malo ?",
+        a: "C'est possible mais difficile, et la stratégie a changé. Comme une nouvelle autorisation est quasi impossible à obtenir intra-muros et limitée à une par personne, l'enjeu est d'acheter un bien disposant déjà d'une autorisation de changement d'usage, ou de se positionner sur les quartiers périphériques (Paramé, Saint-Servan, Rothéneuf) où la pression est moindre. Faites-vous confirmer par écrit le statut réglementaire du bien avant de signer : c'est le point qui fait ou défait la rentabilité à Saint-Malo.",
+      },
+      {
+        q: "Combien coûte une conciergerie Airbnb à Saint-Malo ?",
+        a: "Les commissions observées vont d'environ 15 % à 25 % du revenu locatif, hors frais de ménage. Les acteurs locaux de la Côte d'Émeraude comme Ma Conciergerie Bretonne affichent des taux plutôt bas (15-18 %), tandis que les offres haut de gamme et clé en main se situent vers 20-25 %. Demandez systématiquement ce que couvre la commission, comment le ménage est facturé, et une simulation de revenu net sur votre bien — l'écart de prix se justifie surtout par le niveau de service et l'optimisation des tarifs.",
+      },
+    ],
+    updatedAt: '2026-05-29',
+  },
+  {
+    slug: 'le-touquet',
+    displayName: 'Le Touquet',
+    region: 'Hauts-de-France',
+    regionSlug: 'hauts-de-france',
+    title: 'Conciergerie Le Touquet Airbnb : comparatif 2026 des 4 meilleures agences',
+    metaTitle: 'Conciergerie Le Touquet Airbnb : comparatif 2026',
+    metaDescription:
+      "Comparatif neutre des conciergeries Airbnb du Touquet-Paris-Plage : tarifs, avis Google, réglementation 2026 (changement d'usage), quartiers rentables.",
+    kwPrincipal: 'conciergerie le touquet',
+    kwSecondaires: [
+      'conciergerie airbnb le touquet',
+      'conciergerie touquet',
+      'meilleure conciergerie le touquet',
+      'gestion locative le touquet',
+      "conciergerie côte d'opale",
+    ],
+    population: 4224,
+    tourists: 2000000,
+    activeListings: 1000,
+    priceLow: 85,
+    priceHigh: 200,
+    occupancyRate: 57,
+    revpar: 62,
+    seasonality:
+      "Station dite « des quatre saisons », mais réalité très marquée par les week-ends et les vacances scolaires parisiennes. Pic estival (juillet-août) où la population grimpe jusqu'à 250 000 personnes, forte affluence aux ponts de printemps, à l'Enduropale (course de quads et motos sur la plage, fin janvier) et lors des compétitions de golf et d'équitation. Cœur d'hiver plus calme hors événements.",
+    rankNational: 24,
+    introCustom:
+      "Vous possédez un appartement ou une villa au Touquet, ou vous regardez la « station des quatre saisons » pour investir, séduit par sa clientèle parisienne fidèle et son standing balnéaire. Le marché touquettois est l'un des plus chers du Nord, mais aussi l'un des plus réglementés : louer une résidence secondaire en courte durée y suppose une autorisation de changement d'usage, à anticiper avant tout achat.\n\nUne fois ce cap passé, la gestion fait toute la différence sur un marché concentré sur les week-ends et l'été. J'ai comparé les conciergeries actives sur Le Touquet et la Côte d'Opale à partir de leurs avis Google et de leurs tarifs affichés. Le choix de l'agence, sur des biens souvent haut de gamme, pèse directement sur votre rentabilité.",
+    marketIntro:
+      "Le Touquet-Paris-Plage, à peine **4 200 habitants** permanents mais jusqu'à **250 000 personnes** au pic estival, est une station balnéaire chic héritée des années folles, surnommée la **station des quatre saisons**. Villas anglo-normandes, golf, équitation, thalasso et une digue animée : la ville cultive un positionnement haut de gamme et une clientèle de résidences secondaires majoritairement francilienne.\n\nLe marché de la location courte durée y est porté par les **week-ends parisiens**, les vacances scolaires et de grands événements comme l'**Enduropale**. La demande est forte mais concentrée, avec des tarifs à la nuit élevés et des prix d'achat parmi les plus hauts de la région. Surtout, Le Touquet a choisi d'**encadrer fermement** les meublés de tourisme : un cadre à intégrer dès l'étude d'un projet d'investissement.",
+    conciergeries: [
+      {
+        name: 'Groom-Services',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 4.3,
+        reviews: 23,
+        biensGeres: 0,
+        specialty: "Gestion saisonnière clé en main Côte d'Opale",
+        description:
+          "Conciergerie privée active sur Le Touquet et la Côte d'Opale, proposant une gestion saisonnière clé en main : accueil, ménage, linge, gestion des annonces sur Airbnb et Abritel. C'est l'acteur local au volume d'avis le plus solide, avec une note correcte qui en fait un point de comparaison fiable sur un marché où peu de prestataires affichent des évaluations vérifiables. Demandez la commission et la liste précise des services inclus, le mode de facturation du ménage, et une simulation de revenu net sur votre bien. Sur une station très saisonnière, interrogez l'équipe sur sa stratégie de tarification entre les week-ends, l'été et les périodes creuses.",
+      },
+      {
+        name: 'La Conciergerie du Touquet',
+        commission: '25 % TTC',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Acteur local, tarif affiché',
+        description:
+          "Acteur local au nom directement associé à la station, qui affiche publiquement une commission de 25 % TTC — une transparence tarifaire appréciable sur un marché où la plupart des prestataires restent discrets. Faute d'avis Google vérifiables en nombre, sa note n'est pas communiquée ici, ce qui ne préjuge pas de la qualité : demandez des références de propriétaires déjà clients. Le tarif, dans le haut du marché, n'a de sens que s'il s'accompagne d'un service complet et d'une vraie optimisation des revenus. Faites préciser le périmètre des 25 %, la façon dont le ménage et la taxe de séjour sont traités, et une estimation de revenu net sur votre logement.",
+      },
+      {
+        name: 'Opale Conciergerie',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 3.7,
+        reviews: 7,
+        biensGeres: 0,
+        specialty: "Gestion locative Côte d'Opale (Étaples)",
+        description:
+          "Conciergerie de la Côte d'Opale basée à Étaples, à proximité immédiate du Touquet, proposant une gestion locative avec disponibilité étendue. Le volume d'avis reste limité et la note moyenne : un signal à recouper avec des références locales avant de s'engager. Pour un bien situé côté Étaples ou en périphérie de la station, la proximité géographique peut être un atout en cas d'intervention. Demandez la commission, le détail des prestations couvertes, le mode de facturation du ménage et le nombre de biens gérés sur Le Touquet même. Lisez en priorité les avis négatifs pour comprendre les éventuels points de friction.",
+      },
+      {
+        name: 'Les Clés de la Côte',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 5.0,
+        reviews: 3,
+        biensGeres: 0,
+        specialty: 'Intendance et résidences secondaires',
+        description:
+          "Conciergerie orientée intendance et gestion de résidences secondaires sur la Côte d'Opale, profil pertinent pour les propriétaires de villas peu présents sur place. La note est maximale mais repose sur très peu d'avis : le signal qualitatif est trop mince pour être considéré comme établi, à confirmer impérativement par des références. Demandez le périmètre exact de la prestation (gestion à l'année, courte durée, simple intendance), la commission, le mode de facturation du ménage et le nombre de biens réellement gérés. Pour un projet de location courte durée pur, vérifiez que l'équipe maîtrise l'optimisation des annonces et la tarification dynamique, au-delà de la seule intendance.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Front de mer / digue',
+        pricePerNight: '110-200 €',
+        occupancy: 60,
+        description:
+          "Le cœur balnéaire, le long de la digue et du front de mer : la zone la plus prisée et la plus chère. Vues mer, animations et plage à pied. Tarifs à la nuit élevés mais tickets d'achat importants, donc un rendement brut serré compensé par une forte valeur patrimoniale.",
+        roiBrut: '3 à 4 %',
+      },
+      {
+        name: 'Centre-ville',
+        pricePerNight: '95-160 €',
+        occupancy: 58,
+        description:
+          "Autour de l'avenue Saint-Jean et de la rue de Metz : commerces, restaurants, marché et vie pratique toute l'année. Secteur idéal pour un Airbnb « tout à pied » qui séduit les courts séjours et les week-ends parisiens.",
+        roiBrut: '4 %',
+      },
+      {
+        name: 'Quartier des villas (forêt)',
+        pricePerNight: '120-200 €',
+        occupancy: 55,
+        description:
+          "Les grandes villas anglo-normandes nichées dans la pinède, vers le golf et la forêt. Clientèle haut de gamme et internationale, biens d'exception aux tarifs élevés, mais saisonnalité plus marquée et coûts d'entrée importants.",
+        roiBrut: '3 à 4 %',
+      },
+      {
+        name: 'Secteur du golf / aéroport',
+        pricePerNight: '90-150 €',
+        occupancy: 55,
+        description:
+          "À l'écart de l'agitation du front de mer, près du golf, de l'hippodrome et des équipements de loisirs. Bon compromis pour une clientèle sportive et familiale, avec des prix d'achat un peu plus raisonnables.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Stella-Plage (Cucq)',
+        pricePerNight: '85-140 €',
+        occupancy: 56,
+        description:
+          "La station sœur, à quelques kilomètres au sud : dunes, pinède et ambiance plus familiale et abordable. Une alternative intéressante pour viser du rendement sans le ticket d'entrée du Touquet centre.",
+        roiBrut: '4 à 5 %',
+      },
+    ],
+    regulation:
+      "Le Touquet-Paris-Plage **encadre fermement** la location courte durée, c'est un point à intégrer avant tout projet.\n\nLe **numéro d'enregistrement** en mairie est obligatoire pour tout meublé de tourisme — résidence principale comme secondaire — et doit figurer sur chaque annonce. Surtout, louer une **résidence secondaire** en courte durée suppose une **autorisation de changement d'usage**, à demander avant la première nuitée : elle est **personnelle, non attachée au bien et non transmissible**, et peut être refusée. Un mécanisme de **compensation** s'applique sur certains secteurs du centre-ville.\n\nLe cadre national se superpose : la **loi Le Meur** généralise le **numéro à 13 chiffres** au plus tard le **20 mai 2026** et impose un **SIRET** à tout loueur de meublé. Une **résidence principale** reste plafonnée à **120 nuitées par an**.\n\nConcrètement : **déposez votre demande de changement d'usage en mairie** et attendez la réponse avant de louer. C'est l'étape qui conditionne tout le reste au Touquet.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Perçue par nuit et par voyageur selon le classement du logement, elle s'estime en quelques secondes avec le calculateur.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 120,
+      neighborhood: 'deux pas du front de mer',
+      revenuBrut: 19000,
+      commissionRate: 0.22,
+      menageCount: 42,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique au Touquet en 2026 ?",
+        a: "Le Touquet-Paris-Plage encadre fermement la location courte durée. Le numéro d'enregistrement en mairie est obligatoire pour tout meublé, résidence principale comme secondaire, et doit figurer sur chaque annonce. Surtout, louer une résidence secondaire en meublé de tourisme suppose une autorisation de changement d'usage, à demander avant la première nuitée : elle est personnelle, non attachée au bien et non transmissible, et peut être refusée. Un mécanisme de compensation s'applique sur certains secteurs du centre. Le cadre national (loi Le Meur, numéro à 13 chiffres) se généralise au 20 mai 2026.",
+      },
+      {
+        q: "Faut-il une autorisation pour louer sa résidence secondaire au Touquet ?",
+        a: "Oui. Contrairement à beaucoup de communes, Le Touquet impose une autorisation de changement d'usage dès la première nuitée pour une résidence secondaire louée en courte durée. Le dossier se dépose en mairie et il faut attendre la réponse avant de mettre le bien en location ; un refus est possible. L'autorisation étant personnelle et non transmissible, elle ne se transmet pas automatiquement lors d'une revente. Anticipez cette démarche dans votre calendrier d'investissement.",
+      },
+      {
+        q: "Quelle est la commission d'une conciergerie au Touquet ?",
+        a: "Sur une station balnéaire chic comme Le Touquet, les commissions se situent généralement entre 20 % et 25 % du revenu locatif, hors ménage, La Conciergerie du Touquet affichant par exemple 25 % TTC. Le niveau s'explique par une clientèle exigeante, une forte saisonnalité et des biens souvent haut de gamme. Demandez le détail des services inclus, le mode de facturation du ménage et une estimation de revenu net : sur un marché où l'occupation est concentrée sur les week-ends et l'été, l'optimisation des tarifs par la conciergerie pèse lourd.",
+      },
+    ],
+    updatedAt: '2026-05-29',
+  },
+  {
+    slug: 'limoges',
+    displayName: 'Limoges',
+    region: 'Nouvelle-Aquitaine',
+    regionSlug: 'nouvelle-aquitaine',
+    title: 'Conciergerie Limoges Airbnb : comparatif 2026 des 4 meilleures agences',
+    metaTitle: 'Conciergerie Limoges Airbnb : comparatif 2026',
+    metaDescription:
+      "Comparatif neutre des conciergeries Airbnb de Limoges : tarifs (8-20 %), avis Google, réglementation 2026 (marché libre), quartiers rentables. Guide.",
+    kwPrincipal: 'conciergerie limoges',
+    kwSecondaires: [
+      'conciergerie airbnb limoges',
+      'meilleure conciergerie limoges',
+      'location courte durée limoges',
+      'gestion locative limoges',
+      'conciergerie haute-vienne',
+    ],
+    population: 129937,
+    tourists: 800000,
+    activeListings: 600,
+    priceLow: 55,
+    priceHigh: 95,
+    occupancyRate: 58,
+    revpar: 45,
+    seasonality:
+      "Demande lissée sur l'année, portée par le tourisme d'affaires, l'université et les déplacements professionnels en semaine. La gare des Bénédictins, hub du Limousin, alimente un flux régulier. Léger pic estival lié au tourisme de passage (porcelaine, Cité de la céramique, étape sur la route du Sud-Ouest), sans saisonnalité extrême.",
+    rankNational: 30,
+    introCustom:
+      "Vous louez un logement à Limoges sur Airbnb, ou vous étudiez la capitale de la porcelaine pour investir, attiré par des prix d'achat parmi les plus accessibles de Nouvelle-Aquitaine. Bonne nouvelle d'emblée : contrairement à Bordeaux ou aux villes du littoral, Limoges est un marché libre, sans autorisation de changement d'usage. C'est l'un des terrains les plus simples de la région pour se lancer.\n\nReste à bien gérer une demande régulière mais sans pic spectaculaire, entre tourisme d'affaires, université et voyageurs de passage. J'ai comparé les conciergeries actives sur Limoges et la Haute-Vienne à partir de leurs avis Google et de leurs commissions affichées. Les écarts de prix sont réels, de 8 % à 20 %, et le choix de l'agence pèse directement sur un rendement déjà attractif.",
+    marketIntro:
+      "Limoges, environ **130 000 habitants** et cœur d'une agglomération de plus de **280 000 habitants**, est la capitale historique de la **porcelaine** et de l'**émail**, et une ville étudiante animée. Sa gare des Bénédictins, joyau Art déco, fait office de hub du Limousin avec plus de **2,5 millions de voyageurs par an**.\n\nLe marché de la location courte durée y est porté par un mélange de **tourisme d'affaires**, de clientèle universitaire et de voyageurs de passage sur la route du Sud-Ouest. La fréquentation est régulière plus que saisonnière, avec des prix à la nuit modestes mais des **tickets d'achat très accessibles**. Résultat : des rendements bruts souvent supérieurs à ceux des grandes métropoles ou du littoral, dans un cadre réglementaire **libre**, sans changement d'usage — un atout rare pour un investissement courte durée.",
+    conciergeries: [
+      {
+        name: 'Alphino',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 130,
+        biensGeres: 0,
+        specialty: 'Gestion complète A→Z, garantie sans vacance',
+        description:
+          "Le leader local avéré de la conciergerie Airbnb à Limoges, avec une note solide bâtie sur un grand nombre d'avis — de loin le signal le plus fiable du marché limougeaud. L'offre couvre la gestion complète de A à Z, avec des formules de location courte durée et de sous-location proposant une garantie contre la vacance locative. Ce type de garantie peut sécuriser un revenu, mais elle se paie : demandez le détail du mécanisme, la commission ou le loyer garanti proposé, et comparez le revenu net attendu avec une gestion classique. Faites préciser ce que couvrent les services, la façon dont le ménage est facturé, et une simulation sur votre bien. Le volume d'avis en fait un point de départ crédible pour votre comparaison.",
+      },
+      {
+        name: 'C&C Conciergerie',
+        commission: '8-20 %',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Indépendante Haute-Vienne (devis sur visite)',
+        description:
+          "Conciergerie indépendante couvrant la Haute-Vienne, fondée par un duo de gérants, qui affiche une fourchette de commission large, d'environ 8 % à 20 % selon la formule, avec un devis établi après visite du bien. Cette souplesse permet d'ajuster le coût à vos besoins : simple intendance, gestion partielle ou prise en charge complète. Faute d'avis Google vérifiables en nombre, la note n'est pas communiquée ici : demandez des références de propriétaires. Le palier bas peut représenter une vraie économie pour un propriétaire un peu autonome ; faites préciser ce que couvre chaque niveau, le mode de facturation du ménage et une estimation de revenu net pour la formule qui vous correspond.",
+      },
+      {
+        name: 'La Chambre du Compagnon',
+        commission: '15 %',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Indépendante sur mesure',
+        description:
+          "Conciergerie indépendante limougeaude positionnée sur le sur-mesure et la discrétion, avec une commission affichée autour de 15 % hors frais de ménage — un taux compétitif pour le marché. Faute d'avis Google vérifiables en nombre, la note n'est pas communiquée ici, ce qui ne préjuge pas de la qualité : demandez des références concrètes. Le positionnement convient aux propriétaires recherchant une relation directe et un suivi attentif plutôt qu'une grosse structure. Demandez le périmètre exact des 15 %, la façon dont le ménage est facturé, le nombre de biens gérés et une simulation de revenu net sur votre logement avant de vous décider.",
+      },
+      {
+        name: "Les clés d'Isabelle",
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 3.0,
+        reviews: 4,
+        biensGeres: 0,
+        specialty: 'Gestion saisonnière (photos pro, accueil)',
+        description:
+          "Conciergerie locale proposant une gestion saisonnière complète : photos professionnelles, accueil, et attentions pour les voyageurs. La note Google et le volume d'avis sont faibles : le signal est trop mince pour être considéré comme établi, et la note basse mérite d'être recoupée en lisant attentivement les avis publiés. Cela ne disqualifie pas le prestataire, mais impose la prudence et des références. Demandez la commission, le détail des services inclus, le mode de facturation du ménage et le nombre de biens réellement gérés à Limoges. Comparez systématiquement le coût total, ménage compris, avec les autres acteurs locaux avant de vous engager.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Quartier de la Boucherie',
+        pricePerNight: '60-95 €',
+        occupancy: 60,
+        description:
+          "Le cœur historique médiéval, avec ses maisons à colombages et l'une des rues les plus touristiques de la ville. Secteur recherché pour un Airbnb de charme à pied du centre, avec une occupation soutenue par le tourisme de passage.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Cité / Cathédrale Saint-Étienne',
+        pricePerNight: '55-90 €',
+        occupancy: 58,
+        description:
+          "Le quartier ancien en bord de Vienne, autour de la cathédrale et des jardins de l'Évêché. Cadre patrimonial apprécié, idéal pour une clientèle culturelle, à des prix d'achat encore mesurés.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Gare des Bénédictins',
+        pricePerNight: '55-85 €',
+        occupancy: 60,
+        description:
+          "Autour de la célèbre gare Art déco, hub du Limousin. Emplacement pratique pour les voyageurs d'affaires et en transit, avec une demande régulière toute l'année et une bonne connexion au centre.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Centre-ville / Halles centrales',
+        pricePerNight: '55-90 €',
+        occupancy: 60,
+        description:
+          "Le centre commerçant et gastronomique, autour des Halles centrales. Vie de quartier animée, commerces et restauration : un secteur polyvalent qui plaît autant aux courts séjours qu'aux séjours d'affaires.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Carnot-Marceau',
+        pricePerNight: '50-80 €',
+        occupancy: 56,
+        description:
+          "Au nord du centre, un quartier marqué par l'histoire de la porcelaine, aux prix d'achat plus bas. Bon terrain pour viser le rendement, avec une demande plus locale et professionnelle.",
+        roiBrut: '7 %',
+      },
+      {
+        name: 'Landouge',
+        pricePerNight: '50-75 €',
+        occupancy: 54,
+        description:
+          "Quartier résidentiel à l'ouest, calme et verdoyant, où les tickets d'achat sont les plus accessibles de Limoges. Plutôt adapté à une stratégie mixte courte et moyenne durée pour sécuriser l'occupation.",
+        roiBrut: '7 à 8 %',
+      },
+    ],
+    regulation:
+      "Bonne nouvelle pour les investisseurs : **Limoges est un marché libre**. La ville ne figure pas parmi les communes imposant une **autorisation de changement d'usage** (comme Paris, Lyon ou Bordeaux), ce qui en fait l'un des terrains les plus accessibles de Nouvelle-Aquitaine pour la location courte durée.\n\nLe cadre national s'applique malgré tout. La **loi Le Meur** rend le **numéro d'enregistrement à 13 chiffres** obligatoire au plus tard le **20 mai 2026**, à afficher sur chaque annonce, et impose un **SIRET** à tout loueur de meublé. Une **résidence principale** reste plafonnée à **120 nuitées par an**.\n\nLimoges pouvant faire évoluer ses règles, **confirmez en mairie** l'absence de mesure locale spécifique avant d'investir, en particulier dans l'hypercentre.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Perçue par nuit et par voyageur selon le classement du logement, elle s'estime en quelques secondes avec le calculateur.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 65,
+      neighborhood: 'deux pas des Halles',
+      revenuBrut: 13000,
+      commissionRate: 0.15,
+      menageCount: 45,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique à Limoges en 2026 ?",
+        a: "Limoges est un marché libre : la ville ne figure pas parmi les communes imposant une autorisation de changement d'usage, contrairement à Paris, Lyon ou Bordeaux. Le cadre national s'applique néanmoins : déclaration en mairie et numéro d'enregistrement à 13 chiffres sur chaque annonce (généralisé au 20 mai 2026 avec la loi Le Meur), SIRET pour tout loueur de meublé, et plafond de 120 nuitées par an pour une résidence principale. Par prudence, confirmez en mairie l'absence de règle locale spécifique avant de vous lancer.",
+      },
+      {
+        q: "Limoges est-elle un bon marché pour la location courte durée ?",
+        a: "C'est un marché de rendement plus que de prestige. Les prix d'achat parmi les plus accessibles de Nouvelle-Aquitaine, combinés à une demande régulière (tourisme d'affaires, université, gare des Bénédictins), permettent des rendements bruts intéressants, souvent supérieurs à ceux des villes littorales. La contrepartie : des prix à la nuit modestes et une saisonnalité peu marquée. Une stratégie mixte courte durée / moyenne durée, notamment près du campus, peut sécuriser l'occupation sur l'année.",
+      },
+      {
+        q: "Combien coûte une conciergerie Airbnb à Limoges ?",
+        a: "Les commissions observées localement vont d'environ 8 % à 20 % du revenu locatif selon le niveau de service, certaines conciergeries indépendantes comme C&C affichant des taux d'entrée bas et La Chambre du Compagnon autour de 15 %. Le leader local, Alphino, propose aussi des formules de sous-location avec loyer garanti. Demandez toujours le détail de ce qui est inclus, le mode de facturation du ménage et une simulation de revenu net avant de choisir.",
+      },
+    ],
+    updatedAt: '2026-05-29',
+  },
+  {
+    slug: 'menton',
+    displayName: 'Menton',
+    region: 'Provence-Alpes-Côte d\'Azur',
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie Menton Airbnb : comparatif 2026 des 5 meilleures agences',
+    metaTitle: 'Conciergerie Menton Airbnb : comparatif 2026',
+    metaDescription:
+      "Comparatif neutre des 5 meilleures conciergeries Airbnb de Menton : tarifs, avis Google, réglementation 2026 (changement d'usage), quartiers Riviera.",
+    kwPrincipal: 'conciergerie menton',
+    kwSecondaires: [
+      'conciergerie airbnb menton',
+      'location menton airbnb',
+      'meilleure conciergerie menton',
+      'gestion locative menton',
+      "conciergerie côte d'azur",
+    ],
+    population: 30604,
+    tourists: 2000000,
+    activeListings: 1800,
+    priceLow: 80,
+    priceHigh: 230,
+    occupancyRate: 60,
+    revpar: 70,
+    seasonality:
+      "Microclimat exceptionnel qui étale la demande sur l'année. Pic estival classique de la Côte d'Azur, mais aussi forte affluence hivernale et de printemps grâce à la Fête du Citron (février-mars, environ 200 000 visiteurs), aux jardins et à une clientèle de retraités et de travailleurs frontaliers de Monaco. L'arrière-saison reste très active, atout rare pour la rentabilité annuelle.",
+    rankNational: 18,
+    introCustom:
+      "Vous louez un bien à Menton sur Airbnb, ou vous étudiez la « perle de la France » pour investir, séduit par son microclimat et sa position entre Monaco et l'Italie. L'atout du marché mentonnais est sous-estimé : grâce à la douceur de son climat, la demande ne se limite pas à l'été et l'occupation se tient sur une grande partie de l'année. Mais la ville encadre la location courte durée par un règlement qui lui est propre depuis 2017.\n\nUne fois la réglementation comprise, le choix de la conciergerie fait la différence sur un marché premium et exigeant. J'ai comparé les conciergeries actives sur Menton et la Riviera à partir de leurs avis Google et de leurs commissions affichées. Sur des biens proches de Monaco, chaque point de commission et chaque pourcentage d'occupation comptent pour la rentabilité.",
+    marketIntro:
+      "Menton, environ **30 000 habitants**, est la dernière ville française avant l'Italie, réputée pour son **microclimat**, ses **jardins** et sa **Fête du Citron** qui attire près de **200 000 visiteurs** chaque hiver. Vieille ville colorée, basilique Saint-Michel, plages et proximité immédiate de Monaco : la « perle de la France » concentre de forts atouts touristiques.\n\nLe marché de la location courte durée y bénéficie d'une **saisonnalité atténuée**, rare sur la Côte d'Azur : la douceur hivernale, les jardins et la clientèle frontalière de Monaco soutiennent l'occupation hors saison estivale. Les tarifs à la nuit sont élevés et la demande solide, mais Menton **encadre les meublés de tourisme** depuis 2017 via une autorisation de changement d'usage spécifique — un point à maîtriser avant d'investir.",
+    conciergeries: [
+      {
+        name: 'Manasteos',
+        commission: '20 %',
+        menage: 'variable',
+        rating: 5.0,
+        reviews: 49,
+        biensGeres: 0,
+        specialty: "Réseau Côte d'Azur, service hôtelier",
+        description:
+          "Réseau de conciergerie haut de gamme actif sur la Côte d'Azur, de Menton à Nice et Cannes, avec un positionnement service hôtelier clé en main et une commission affichée autour de 20 %. La note Google sur la zone de Menton est excellente, sur un volume d'avis correct. Ce type d'acteur structuré convient aux propriétaires qui veulent déléguer entièrement, avec optimisation des tarifs et gestion multilingue adaptée à la clientèle internationale. Demandez des exemples concrets de revenus obtenus sur des biens comparables, le périmètre exact des prestations couvertes par la commission, et le mode de facturation du ménage. Sur un réseau multi-villes, vérifiez l'ancrage réel et la réactivité de l'équipe sur Menton précisément.",
+      },
+      {
+        name: 'La Conciergerie des Citronniers',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 57,
+        biensGeres: 0,
+        specialty: 'Conciergerie locale mentonnaise',
+        description:
+          "Conciergerie locale mentonnaise au nom évocateur, qui affiche l'une des meilleures combinaisons note / volume d'avis de la ville — un signal de satisfaction fiable. L'ancrage local est un vrai atout sur un marché où la connaissance fine des quartiers et de la réglementation municipale, particulièrement stricte à Menton, fait la différence. Faute de commission publiée, demandez-la d'emblée, ainsi que le détail des services inclus et le mode de facturation du ménage. Faites préciser le nombre de biens gérés sur Menton et la capacité de l'équipe à gérer l'arrière-saison, atout majeur de la ville grâce au microclimat. Une simulation de revenu net sur votre bien permettra de comparer objectivement.",
+      },
+      {
+        name: 'We Care Conciergerie',
+        commission: '20 % TTC',
+        menage: 'variable',
+        rating: 4.6,
+        reviews: 29,
+        biensGeres: 0,
+        specialty: 'Résidences secondaires Monaco / Menton',
+        description:
+          "Conciergerie couvrant le secteur Monaco, Beausoleil, Roquebrune et Menton, avec une commission fixe affichée à 20 % TTC depuis plusieurs années — une transparence et une stabilité tarifaires appréciables. Le positionnement résidences secondaires correspond bien à la clientèle frontalière de Monaco. La note Google est bonne sur un volume d'avis correct. Demandez le périmètre exact couvert par les 20 %, la façon dont le ménage est facturé, et la couverture précise sur votre quartier de Menton. Pour un bien destiné à de la moyenne durée liée à Monaco, interrogez l'équipe sur sa capacité à arbitrer entre courte et moyenne durée selon les saisons, afin d'optimiser l'occupation annuelle.",
+      },
+      {
+        name: 'Keybnb Services Menton',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 4.8,
+        reviews: 21,
+        biensGeres: 0,
+        specialty: 'Gestion saisonnière locale',
+        description:
+          "Conciergerie locale proposant une gestion saisonnière clé en main sur Menton. La note Google est très bonne, sur un volume d'avis honnête, ce qui en fait un acteur crédible du marché mentonnais. Faute de commission publiée, demandez-la dès le premier échange, avec le détail des services inclus et le mode de facturation du ménage. L'ancrage local est un atout pour la réactivité et la connaissance des règles municipales. Faites préciser le nombre de biens gérés, la stratégie de tarification entre haute saison estivale, Fête du Citron et arrière-saison, et demandez une simulation de revenu net sur votre logement pour comparer avec les autres prestataires de la ville.",
+      },
+      {
+        name: 'Check-in Menton',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 4.8,
+        reviews: 19,
+        biensGeres: 0,
+        specialty: 'Clé en main, photo pro, assistance 24/7',
+        description:
+          "Conciergerie locale gérée par une interlocutrice identifiée, proposant un service clé en main avec photos professionnelles et assistance voyageurs 24/7. La note Google est très bonne, sur un volume d'avis correct : un bon signal de satisfaction. Le profil de proximité, avec un interlocuteur unique, séduit les propriétaires qui veulent un suivi personnalisé. Demandez la commission, le périmètre précis des prestations, et la façon dont le ménage est facturé. Vérifiez le nombre de biens gérés et la capacité de l'équipe à couvrir votre quartier ainsi qu'à exploiter l'arrière-saison mentonnaise. Une simulation de revenu net sur votre bien permettra de situer cette offre face aux autres conciergeries locales.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieille ville / Basilique Saint-Michel',
+        pricePerNight: '90-160 €',
+        occupancy: 62,
+        description:
+          "Le cœur historique aux ruelles colorées qui grimpent vers la basilique Saint-Michel. Très touristique, à deux pas du marché et des plages, c'est le secteur le plus recherché pour un Airbnb de caractère, malgré des biens souvent atypiques.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Garavan',
+        pricePerNight: '120-230 €',
+        occupancy: 58,
+        description:
+          "Le quartier chic à l'est, vers la frontière italienne : villas, jardins luxuriants et vues sur la baie. Clientèle haut de gamme et tarifs élevés, mais tickets d'achat importants et rendement brut plus serré.",
+        roiBrut: '3 à 4 %',
+      },
+      {
+        name: 'Promenade du Soleil / front de mer',
+        pricePerNight: '110-200 €',
+        occupancy: 62,
+        description:
+          "Le front de mer et ses plages, le long de la promenade. Vues mer très demandées en saison comme en arrière-saison grâce au microclimat. Forte occupation, prix d'achat élevés.",
+        roiBrut: '4 %',
+      },
+      {
+        name: 'Carnolès',
+        pricePerNight: '95-160 €',
+        occupancy: 60,
+        description:
+          "À l'ouest vers Roquebrune-Cap-Martin, autour du palais et des jardins Carnolès. Quartier résidentiel agréable, proche de la mer, au bon équilibre entre prix et demande.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Borrigo',
+        pricePerNight: '85-140 €',
+        occupancy: 58,
+        description:
+          "La vallée résidentielle un peu en retrait du front de mer, plus accessible à l'achat. Demande régulière, notamment de moyenne durée liée à la proximité de Monaco.",
+        roiBrut: '5 %',
+      },
+      {
+        name: 'Monti / hauteurs',
+        pricePerNight: '80-130 €',
+        occupancy: 56,
+        description:
+          "Les hauteurs et villages perchés au-dessus de Menton, calmes et verdoyants, aux tickets d'entrée les plus bas. Idéal pour viser le rendement avec une clientèle en quête de tranquillité et de vues panoramiques.",
+        roiBrut: '5 à 6 %',
+      },
+    ],
+    regulation:
+      "Menton **encadre la location courte durée depuis 2017**, par un règlement qui lui est propre — chose rare pour une ville de 30 000 habitants.\n\nLouer un meublé de tourisme qui n'est pas votre **résidence principale** suppose une **autorisation de changement d'usage** délivrée par la mairie. Les règles locales sont précises : **trois autorisations maximum par propriétaire**, autorisation **personnelle, non transférable et sans compensation**, valable **deux ans renouvelable** jusqu'à six ans. La **déclaration en mairie** avec numéro d'enregistrement est par ailleurs obligatoire.\n\nLe cadre national se superpose : la **loi Le Meur** généralise le **numéro à 13 chiffres** au plus tard le **20 mai 2026** et impose un **SIRET** à tout loueur. Une **résidence principale** reste plafonnée à **120 nuitées par an**.\n\nAvant d'investir, **vérifiez en mairie** le nombre d'autorisations encore disponibles et l'éligibilité de votre bien.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Perçue par nuit et par voyageur selon le classement du logement, elle s'estime en quelques secondes avec le calculateur.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 120,
+      neighborhood: 'la vieille ville',
+      revenuBrut: 21000,
+      commissionRate: 0.20,
+      menageCount: 48,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique à Menton en 2026 ?",
+        a: "Menton encadre la location courte durée depuis 2017 par une autorisation de changement d'usage (délibération municipale) pour tout meublé de tourisme qui n'est pas une résidence principale. Les règles locales sont précises : trois autorisations maximum par propriétaire, autorisation personnelle et non transférable, sans compensation, valable deux ans renouvelable jusqu'à six ans. La déclaration en mairie avec numéro d'enregistrement est obligatoire. Le cadre national (loi Le Meur, numéro à 13 chiffres) se généralise au 20 mai 2026. Une ville de 30 000 habitants dotée de son propre règlement, c'est rare : renseignez-vous en mairie avant d'investir.",
+      },
+      {
+        q: "Peut-on louer toute l'année à Menton ?",
+        a: "Oui, et c'est l'un des grands atouts de la ville. Grâce à son microclimat, Menton attire des visiteurs hors de la seule saison estivale : la Fête du Citron en février-mars draine environ 200 000 personnes, les jardins et la douceur hivernale séduisent retraités et clientèle internationale, et la proximité de Monaco soutient une demande de moyenne durée. Cette faible saisonnalité, rare sur la Côte d'Azur, améliore le taux d'occupation annuel et donc la rentabilité.",
+      },
+      {
+        q: "Quelle est la commission d'une conciergerie Airbnb à Menton ?",
+        a: "Les commissions se situent généralement autour de 20 % du revenu locatif, hors ménage : Manasteos et We Care affichent par exemple environ 20 % TTC. Sur un marché premium proche de Monaco, le niveau de service (accueil hôtelier, optimisation des tarifs, gestion multilingue) justifie ces taux. Comparez ce que couvre exactement la commission, la façon dont le ménage est facturé et la couverture géographique réelle sur Menton, puis demandez une simulation de revenu net sur votre bien.",
+      },
+    ],
+    updatedAt: '2026-05-29',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

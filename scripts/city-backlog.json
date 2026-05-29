@@ -656,8 +656,10 @@
     "oldSlug": "/conciergerie-airbnb-le-touquet",
     "kw": "conciergerie le touquet",
     "vol": 210,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-29",
+    "notes": "Vol live SEMrush 210 (= backlog). 4 conciergeries dont 3 notées (Groom-Services 4,3/23 robuste, Opale 3,7/7, Les Clés de la Côte 5,0/3) + La Conciergerie du Touquet (25% TTC, note n.c.). Borderline mais publié (>=2 notes vérifiables, données réelles). Réglementation : changement d usage résidence secondaire."
   },
   {
     "num": 56,
@@ -669,8 +671,9 @@
     "oldSlug": "/conciergerie-airbnb-cabourg",
     "kw": "conciergerie cabourg",
     "vol": 210,
-    "status": "À faire",
-    "kd": 0
+    "status": "À reprendre manuel",
+    "kd": 0,
+    "notes": "Skip auto 2026-05-29 : seulement 2 conciergeries avec note Google et fragiles (Interhome Cabourg 3,8/5 avec divergence 155 vs 58 avis selon source, + c est une agence Interhome pas une conciergerie LCD pure ; Ma Conciergerie Cabourg 3,8/5 - 18 avis via snippets). Comparatif à 2 acteurs notés 3,8 = trop mince et peu flatteur. Kings d Home, CLS/CMFP, Cabourg Vacances sans note Google. Intervention manuelle Google Maps requise."
   },
   {
     "num": 57,
@@ -682,8 +685,9 @@
     "oldSlug": "/conciergerie-airbnb-honfleur",
     "kw": "conciergerie honfleur",
     "vol": 210,
-    "status": "À faire",
-    "kd": 0
+    "status": "À reprendre manuel",
+    "kd": 0,
+    "notes": "Skip auto 2026-05-29 : 1 seule conciergerie avec note Google vérifiable (Conciergerie Rémi Griffoul 5,0/5 - 57 avis). Seuil de 2 non atteint. Sam Loc en liquidation judiciaire (06/2025). Boostars (avis sur son propre site, pas Google), Conciergerie Honfleuraise sans note Google fiable. Marché ultra-encadré (zone tendue, compensation assouplie 12/2025). Intervention manuelle Google Maps requise."
   },
   {
     "num": 58,
@@ -695,8 +699,10 @@
     "oldSlug": "/conciergerie-airbnb-limoges",
     "kw": "conciergerie limoges",
     "vol": 210,
-    "status": "À faire",
-    "kd": 6
+    "status": "Publié",
+    "kd": 6,
+    "publishedAt": "2026-05-29",
+    "notes": "Backfill du run 2026-05-29 (remplace Cabourg skippé). Vol live SEMrush 210. Anchor Alphino 4,7/130 robuste + C&C (8-20%) et La Chambre du Compagnon (15%) sans note Google + Les clés d Isabelle 3,0/4. Marché libre (pas de changement d usage)."
   },
   {
     "num": 59,
@@ -708,8 +714,10 @@
     "oldSlug": "/conciergerie-airbnb-menton",
     "kw": "conciergerie menton",
     "vol": 210,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-05-29",
+    "notes": "Backfill du run 2026-05-29 (remplace Honfleur skippé). Vol live SEMrush 210. 5 conciergeries notées solides (Manasteos 5,0/49 @20%, Citronniers 4,7/57, Keybnb 4,8/21, Check-in 4,8/19, We Care 4,6/29 @20%). Réglementation : changement d usage depuis 2017, max 3 autorisations/propriétaire."
   },
   {
     "num": 60,
@@ -722,7 +730,8 @@
     "kw": "conciergerie beziers",
     "vol": 210,
     "status": "À faire",
-    "kd": 0
+    "kd": 0,
+    "notes": "Recherché en backfill 2026-05-29 mais non retenu (ordre backlog : Limoges/Menton prioritaires). 3 conciergeries notées mais toutes très faibles en volume (La Conciergerie près de chez vous 5,0/4, WeLoc 5,0/~10, Sleep N Trip 4,3/7). Marché libre. Publiable en mode prudent au prochain run."
   },
   {
     "num": 61,
@@ -735,7 +744,8 @@
     "kw": "conciergerie le havre",
     "vol": 210,
     "status": "À faire",
-    "kd": 0
+    "kd": 0,
+    "notes": "Recherché en backfill 2026-05-29 mais non retenu (ordre backlog). 5 conciergeries notées solides identifiées (Ma Conciergerie en Normandie 4,7/166, B PAM 4,7/23, Bienfaits pour Toits 5,0/20, Westone 5,0/6 @20-25%, La Conciergerie Havraise 3,1/19). Réglementation restreinte (changement d usage). BON CANDIDAT PRIORITAIRE prochain run."
   },
   {
     "num": 62,
@@ -2889,6 +2899,9 @@
     "kw": "conciergerie saint malo",
     "vol": 320,
     "kd": 19,
-    "status": "À faire"
+    "status": "Publié",
+    "publishedAt": "2026-05-29",
+    "regionSlug": "bretagne",
+    "notes": "Vol live SEMrush 320 (= backlog). 5 conciergeries notées (Cocoonr 4,4/100+, Saisons d Émeraude 4,9/46 @20%, Clé d Émeraude 5,0/29, Ma Conciergerie Bretonne 4,6/26 @15-18%, Ma Conciergerie Sérénité 4,9/17). Angle réglementaire fort : ville la plus restrictive de France (1 autorisation max/personne depuis 2024)."
   }
 ]

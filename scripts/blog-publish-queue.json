@@ -1,0 +1,11 @@
+{
+  "description": "Ordre de publication progressive des articles blog (1 tous les 2 jours via GitHub Actions publish-blog-article.yml). Piliers d'abord, puis volume. Le script publish-next-blog-article.mjs passe le 1er slug encore en status:brouillon à en-ligne + met à jour publishedAt/updatedAt. Pour ajouter un article : append son slug à la fin de la queue. Pour changer l'ordre : réordonner. Un slug déjà en-ligne est simplement sauté.",
+  "queue": [
+    "sous-location-airbnb",
+    "location-courte-duree",
+    "amortissement-lmnp",
+    "reforme-lmnp",
+    "meuble-tourisme-classe",
+    "amenitiz-avis"
+  ]
+}

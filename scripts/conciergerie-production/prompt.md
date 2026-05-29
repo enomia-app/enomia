@@ -65,6 +65,8 @@ Pour chaque conciergerie : nom, URL, commission (chercher dans pages tarifs/cont
 
 **Sur les ratings Google Maps** : ils sont récupérables via les snippets Google search (`★ 4.X — N avis` dans les résultats) ou les sites comparatifs. **Ne PAS tenter `WebFetch` direct sur `maps.google.com`** (bloqué). Si rating introuvable pour 1-2 conciergeries sur N (où N ≥ 3) → omettre ces lignes-là plutôt que skip toute la ville. Skip pour rating uniquement si AUCUNE conciergerie n'a de rating vérifiable.
 
+> ℹ️ **Tes notes/avis ne sont qu'une estimation de secours.** Après ton run, `run.sh` lance automatiquement une **correction Places API** (`refresh-conciergeries-google.mjs` + `apply-places-corrections.mjs`) sur les villes que tu viens de créer : les `rating`/`reviews` sont écrasés par les vraies données Google, et passent en `n.c.` si aucune fiche fiable. Donne ta meilleure estimation, mais inutile de t'acharner — la source de vérité, c'est Places. **Ne mets JAMAIS de chiffre d'avis dans les `description` / `specialty`** (ils désyncent au refresh) : les chiffres vivent uniquement dans `rating`/`reviews`.
+
 #### 2c. Stats ville (population, tourists)
 
 - **Population** : WebFetch INSEE `https://www.insee.fr/fr/statistiques?ville=VILLE` ou page Wikipedia ville

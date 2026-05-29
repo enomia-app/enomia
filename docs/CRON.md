@@ -181,7 +181,8 @@ Le script accepte `--period={week|month|quarter|year}` et envoie un mail récap 
 
 ### `app.enomia.conciergerie-production` — Lun/Mer/Ven 8h37
 **Script** : `scripts/conciergerie-production/run.sh`
-Cycle de production des landings/articles de conciergerie (3 fois par semaine).
+Cycle de production des landings/articles de conciergerie (3 fois par semaine, 4 villes/run via `claude -p`).
+**Correction Places auto (post-claude)** : Claude estime les notes depuis des snippets Google (approximatives). `run.sh` détecte les villes nouvellement créées (diff des slugs avant/après) et lance `refresh-conciergeries-google.mjs` + `apply-places-corrections.mjs` + `clean-conciergerie-descriptions.mjs` dessus → notes/avis remplacés par les vraies données Places, puis 2e commit/push. Non-bloquant : si Places échoue, les villes restent en ligne (notes approx) et le refresh mensuel corrige.
 
 ---
 

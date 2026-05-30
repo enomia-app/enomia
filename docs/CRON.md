@@ -31,7 +31,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 | `app.enomia.backlinks-report-yearly` | 1er janvier 11h43 | Pipeline v2 : récap annuel | actif |
 | `app.enomia.backlinks-report-weekly` | Dim 18h43 | Pipeline v2 : récap hebdo envois/réponses/backlinks/pipeline | actif |
 | `com.enomia.fb-watch` | xh07, xh22, xh37, xh52 (4×/h) | Détecte réponses email Marc et poste sur FB | actif |
-| `app.enomia.conciergerie-refresh` | 3 du mois 6h13 | Refresh mensuel notes Google conciergeries + bump date « MAJ » des pages, commit/push main (déterministe, **pas de `claude -p`** → 0 coût LLM) | **à installer** (après merge sur main) |
+| `app.enomia.conciergerie-refresh` | 3 du mois 6h13 | Refresh mensuel notes Google conciergeries + bump date « MAJ » des pages, commit/push main (déterministe, **pas de `claude -p`** → 0 coût LLM) | actif |
 
 **Note horaires** : tous les jobs qui appellent l'API Anthropic sont volontairement décalés sur des minutes "improbables" (pas :00 :15 :30 :45) pour éviter les pics d'overload (HTTP 529) sur les heures rondes — où plein d'autres cron tapent l'API simultanément. Chaque job a une minute distincte des autres dans la même heure.
 
@@ -298,7 +298,7 @@ done
 **Logs** : `scripts/refresh-conciergeries-monthly/logs/`
 **Coût** : Google Places ~$10/run (crédit gratuit $200/mois Maps Platform). **0€ LLM.**
 **Dépendances Mac mini** : `GOOGLE_PLACES_API_KEY` accessible (env ou `Neocamino/.env` ou `repo/.env`) + `RESEND_API_KEY` dans `repo/.env`.
-**Installation** : `bash scripts/refresh-conciergeries-monthly/install.sh` (sur Mac mini, après merge sur `main`).
+**Installation** : `bash scripts/refresh-conciergeries-monthly/install.sh` (installé sur Mac mini).
 
 ---
 

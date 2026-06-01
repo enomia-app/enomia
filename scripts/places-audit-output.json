@@ -1,21 +1,146 @@
 [
   {
-    "ville": "Saint-Malo",
-    "slug": "saint-malo",
-    "conciergerie": "Cocoonr",
+    "ville": "Béziers",
+    "slug": "beziers",
+    "conciergerie": "La Conciergerie d'Anna",
     "actuel": {
-      "rating": 4.4,
-      "reviews": 100,
-      "biensGeres": 130
+      "rating": 0,
+      "reviews": 0,
+      "biensGeres": 0
     },
     "google": {
-      "displayName": "Cocoonr Saint-Malo - Agence de conciergerie et de location",
-      "rating": 4.4,
-      "userRatingCount": 165,
-      "address": "9 Av. Jean Jaurès, 35400 Saint-Malo",
-      "website": "https://cocoonr.fr/location-court-sejour/saint-malo-35/",
-      "place_id": "ChIJ76256NCBDkgRTrUt2VZeGZI",
-      "maps_url": "https://maps.google.com/?cid=10527549331059094862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "displayName": "Conciergerie Come and Rest",
+      "rating": 4.9,
+      "userRatingCount": 16,
+      "address": "66 All. Paul Riquet, 34500 Béziers",
+      "website": "https://comeandrest.fr/",
+      "place_id": "ChIJwRX2s6zAlA4R3AoqMlBLwEg",
+      "maps_url": "https://maps.google.com/?cid=5242272774070340316&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "Béziers",
+    "slug": "beziers",
+    "conciergerie": "Concierge Angels Béziers",
+    "actuel": {
+      "rating": 0,
+      "reviews": 0,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "Conciergerie Come and Rest",
+      "rating": 4.9,
+      "userRatingCount": 16,
+      "address": "66 All. Paul Riquet, 34500 Béziers",
+      "website": "https://comeandrest.fr/",
+      "place_id": "ChIJwRX2s6zAlA4R3AoqMlBLwEg",
+      "maps_url": "https://maps.google.com/?cid=5242272774070340316&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "Béziers",
+    "slug": "beziers",
+    "conciergerie": "Come And Rest",
+    "actuel": {
+      "rating": 0,
+      "reviews": 0,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "Conciergerie Come and Rest",
+      "rating": 4.9,
+      "userRatingCount": 16,
+      "address": "66 All. Paul Riquet, 34500 Béziers",
+      "website": "https://comeandrest.fr/",
+      "place_id": "ChIJwRX2s6zAlA4R3AoqMlBLwEg",
+      "maps_url": "https://maps.google.com/?cid=5242272774070340316&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "Béziers",
+    "slug": "beziers",
+    "conciergerie": "My Conciergery Béziers",
+    "actuel": {
+      "rating": 0,
+      "reviews": 0,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "My conciergerie luxury services à Béziers",
+      "rating": 4.6,
+      "userRatingCount": 11,
+      "address": "10 Av. Jean Moulin, 34500 Béziers",
+      "website": "https://conciergerie-luxury-beziers.com/",
+      "place_id": "ChIJ_d0CvfYPsRIR2DafkzSe220",
+      "maps_url": "https://maps.google.com/?cid=7916094718685951704&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "Béziers",
+    "slug": "beziers",
+    "conciergerie": "WeLoc Conciergerie",
+    "actuel": {
+      "rating": 5,
+      "reviews": 10,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "WeLoc Conciergerie & Services",
+      "rating": 5,
+      "userRatingCount": 14,
+      "address": "55 Av. Président Wilson, 34500 Béziers",
+      "website": "https://www.weloc-conciergerie.fr/",
+      "place_id": "ChIJQ5OBlfIPsRIR5DATHejo4Yw",
+      "maps_url": "https://maps.google.com/?cid=10151651118687662308&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "La Ciotat",
+    "slug": "la-ciotat",
+    "conciergerie": "HostnFly La Ciotat",
+    "actuel": {
+      "rating": 0,
+      "reviews": 0,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "YourHostHelper",
+      "rating": 3.8,
+      "userRatingCount": 10,
+      "address": "7 Rue Gueymard, 13600 La Ciotat",
+      "website": "https://yourhosthelper.com/agence-la-ciotat/",
+      "place_id": "ChIJIeG60LmvyRIRw9GcWlFDASY",
+      "maps_url": "https://maps.google.com/?cid=2738544065109610947&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
       "types": [
         "real_estate_agency",
         "service",
@@ -26,50 +151,128 @@
     }
   },
   {
-    "ville": "Saint-Malo",
-    "slug": "saint-malo",
-    "conciergerie": "Les Saisons d'Émeraude",
+    "ville": "La Ciotat",
+    "slug": "la-ciotat",
+    "conciergerie": "Welkeys La Ciotat",
     "actuel": {
-      "rating": 4.9,
-      "reviews": 46,
+      "rating": 0,
+      "reviews": 0,
       "biensGeres": 0
     },
     "google": {
-      "displayName": "Les Saisons d'Emeraude",
-      "rating": 5,
-      "userRatingCount": 90,
-      "address": "21 Rue Beauséjour, 35400 Saint-Malo",
-      "website": "https://www.saisons-emeraude.com/",
-      "place_id": "ChIJQcJpv96BDkgRRw9DUw51iGA",
-      "maps_url": "https://maps.google.com/?cid=6955938328860626759&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "displayName": "Welkeys",
+      "rating": 4.3,
+      "userRatingCount": 2169,
+      "address": "82 Av. du Maine, 75014 Paris",
+      "website": "http://www.welkeys.com/",
+      "place_id": "ChIJM9UFFBpu5kcRj50iZscKz9c",
+      "maps_url": "https://maps.google.com/?cid=15550659889861926287&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
       "types": [
+        "travel_agency",
+        "real_estate_agency",
         "service",
         "point_of_interest",
         "establishment"
       ],
-      "matchQuality": "weak"
+      "matchQuality": "strong"
     }
   },
   {
-    "ville": "Saint-Malo",
-    "slug": "saint-malo",
-    "conciergerie": "La Clé d'Émeraude",
+    "ville": "La Ciotat",
+    "slug": "la-ciotat",
+    "conciergerie": "AllForHost La Ciotat",
     "actuel": {
-      "rating": 5,
-      "reviews": 29,
+      "rating": 0,
+      "reviews": 0,
       "biensGeres": 0
     },
     "google": {
-      "displayName": "La Nuit d'Emeraude Conciergerie",
+      "displayName": "YourHostHelper",
+      "rating": 3.8,
+      "userRatingCount": 10,
+      "address": "7 Rue Gueymard, 13600 La Ciotat",
+      "website": "https://yourhosthelper.com/agence-la-ciotat/",
+      "place_id": "ChIJIeG60LmvyRIRw9GcWlFDASY",
+      "maps_url": "https://maps.google.com/?cid=2738544065109610947&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "real_estate_agency",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "La Ciotat",
+    "slug": "la-ciotat",
+    "conciergerie": "Merci Conciergerie",
+    "actuel": {
+      "rating": 0,
+      "reviews": 0,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "CONCIERGERIE LUCIE",
       "rating": 5,
       "userRatingCount": 2,
-      "address": "19 Bd de la République, 35400 Saint-Malo",
-      "website": "https://www.bordemer-real-estate.com/la-nuit-d-emeraude-conciergerie,119",
-      "place_id": "ChIJSRB1vKKBDkgRsinYJqX1GLU",
-      "maps_url": "https://maps.google.com/?cid=13049450009976121778&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "address": "1 bis Rue du Grand Madier, 13600 La Ciotat",
+      "website": "https://www.conciergerielucie.fr/details-quelle+entreprise+pour+remise+des+clefs+location+saisonniere+a+la+ciotat-30.html",
+      "place_id": "ChIJ_SHKdn2lyRIRTVb1qyBar8I",
+      "maps_url": "https://maps.google.com/?cid=14028530460652820045&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "La Ciotat",
+    "slug": "la-ciotat",
+    "conciergerie": "Mediterranea Conciergerie",
+    "actuel": {
+      "rating": 0,
+      "reviews": 0,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "Appartement MEDITERRANEA CONCIERGERIE Conciergerie – Suite Lumiere",
+      "rating": null,
+      "userRatingCount": null,
+      "address": "Rue Paul Philppa, 13600 La Ciotat",
+      "website": "http://airbnb.fr/h/bellevue-laciotat-38m2",
+      "place_id": "ChIJZ7GnagCvyRIRzTcdLgkxz3k",
+      "maps_url": "https://maps.google.com/?cid=8777288114266519501&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "lodging",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "Le Havre",
+    "slug": "le-havre",
+    "conciergerie": "Ma Conciergerie en Normandie",
+    "actuel": {
+      "rating": 4.7,
+      "reviews": 166,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "Ma Conciergerie en Normandie | Le Havre",
+      "rating": 4.7,
+      "userRatingCount": 168,
+      "address": "108 Rue Saint-Jacques, 76600 Le Havre",
+      "website": "http://www.maconciergerieennormandie.fr/",
+      "place_id": "ChIJ1wEMxWUr4EcRqpzQZl49I1U",
+      "maps_url": "https://maps.google.com/?cid=6134814593069915306&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
       "types": [
         "real_estate_agency",
-        "travel_agency",
+        "lodging",
         "service",
         "point_of_interest",
         "establishment"
@@ -78,258 +281,47 @@
     }
   },
   {
-    "ville": "Saint-Malo",
-    "slug": "saint-malo",
-    "conciergerie": "Ma Conciergerie Bretonne",
+    "ville": "Le Havre",
+    "slug": "le-havre",
+    "conciergerie": "B PAM Conciergerie",
     "actuel": {
-      "rating": 4.6,
-      "reviews": 26,
-      "biensGeres": 0
-    },
-    "google": {
-      "displayName": "Ma Conciergerie Sérénité",
-      "rating": 4.9,
-      "userRatingCount": 18,
-      "address": "Rue Dauphine, 35400 Saint-Malo",
-      "website": "https://www.maconciergerieserenite.com/",
-      "place_id": "ChIJM7zVNlCBDkgR-agd0BBemPQ",
-      "maps_url": "https://maps.google.com/?cid=17624940568018528505&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "types": [
-        "service",
-        "point_of_interest",
-        "establishment"
-      ],
-      "matchQuality": "strong"
-    }
-  },
-  {
-    "ville": "Saint-Malo",
-    "slug": "saint-malo",
-    "conciergerie": "Ma Conciergerie Sérénité",
-    "actuel": {
-      "rating": 4.9,
-      "reviews": 17,
-      "biensGeres": 0
-    },
-    "google": {
-      "displayName": "Ma Conciergerie Sérénité",
-      "rating": 4.9,
-      "userRatingCount": 18,
-      "address": "Rue Dauphine, 35400 Saint-Malo",
-      "website": "https://www.maconciergerieserenite.com/",
-      "place_id": "ChIJM7zVNlCBDkgR-agd0BBemPQ",
-      "maps_url": "https://maps.google.com/?cid=17624940568018528505&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "types": [
-        "point_of_interest",
-        "service",
-        "establishment"
-      ],
-      "matchQuality": "strong"
-    }
-  },
-  {
-    "ville": "Le Touquet",
-    "slug": "le-touquet",
-    "conciergerie": "Groom-Services",
-    "actuel": {
-      "rating": 4.3,
+      "rating": 4.7,
       "reviews": 23,
       "biensGeres": 0
     },
     "google": {
-      "displayName": "GROOM-SERVICES conciergerie privée Le Touquet Paris Plage",
-      "rating": 4.3,
-      "userRatingCount": 23,
-      "address": "121 Av. Maxence Van Der Meersch, 62780 Cucq",
-      "website": "https://groom-services.net/",
-      "place_id": "ChIJLxWn1SvR3UcRcpTA6htmJ8g",
-      "maps_url": "https://maps.google.com/?cid=14422608601765942386&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "types": [
-        "real_estate_agency",
-        "travel_agency",
-        "point_of_interest",
-        "service",
-        "establishment"
-      ],
-      "matchQuality": "strong"
-    }
-  },
-  {
-    "ville": "Le Touquet",
-    "slug": "le-touquet",
-    "conciergerie": "La Conciergerie du Touquet",
-    "actuel": {
-      "rating": 0,
-      "reviews": 0,
-      "biensGeres": 0
-    },
-    "google": {
-      "displayName": "Conciergerie Les Clés de la Côte",
+      "displayName": "Conciergerie AirBnb Le Havre - Les Hôtes Havrais",
       "rating": 5,
-      "userRatingCount": 13,
-      "address": "17 Rue de Paris, 62520 Le Touquet-Paris-Plage",
-      "website": "https://lesclesdelacote.com/",
-      "place_id": "ChIJ_dBCbwDR3UcReBXQh30soD0",
-      "maps_url": "https://maps.google.com/?cid=4440598150248404344&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "types": [
-        "travel_agency",
-        "real_estate_agency",
-        "lodging",
-        "service",
-        "point_of_interest",
-        "establishment"
-      ],
-      "matchQuality": "strong"
-    }
-  },
-  {
-    "ville": "Le Touquet",
-    "slug": "le-touquet",
-    "conciergerie": "Opale Conciergerie",
-    "actuel": {
-      "rating": 3.7,
-      "reviews": 7,
-      "biensGeres": 0
-    },
-    "google": {
-      "displayName": "conciergerie Privée Opale conciergerie",
-      "rating": 3.3,
-      "userRatingCount": 12,
-      "address": "65 Rue Saint-Jean, 62520 Le Touquet-Paris-Plage",
-      "website": "http://opaleconciergerie.com/",
-      "place_id": "ChIJcRjj2crR3UcRBvWpjHHQ_uA",
-      "maps_url": "https://maps.google.com/?cid=16212624894690194694&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "types": [
-        "lodging",
-        "travel_agency",
-        "point_of_interest",
-        "real_estate_agency",
-        "service",
-        "establishment"
-      ],
-      "matchQuality": "strong"
-    }
-  },
-  {
-    "ville": "Le Touquet",
-    "slug": "le-touquet",
-    "conciergerie": "Les Clés de la Côte",
-    "actuel": {
-      "rating": 5,
-      "reviews": 3,
-      "biensGeres": 0
-    },
-    "google": {
-      "displayName": "Conciergerie Les Clés de la Côte",
-      "rating": 5,
-      "userRatingCount": 13,
-      "address": "17 Rue de Paris, 62520 Le Touquet-Paris-Plage",
-      "website": "https://lesclesdelacote.com/",
-      "place_id": "ChIJ_dBCbwDR3UcReBXQh30soD0",
-      "maps_url": "https://maps.google.com/?cid=4440598150248404344&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "types": [
-        "lodging",
-        "real_estate_agency",
-        "travel_agency",
-        "point_of_interest",
-        "service",
-        "establishment"
-      ],
-      "matchQuality": "strong"
-    }
-  },
-  {
-    "ville": "Limoges",
-    "slug": "limoges",
-    "conciergerie": "Alphino",
-    "actuel": {
-      "rating": 4.7,
-      "reviews": 130,
-      "biensGeres": 0
-    },
-    "google": {
-      "displayName": "ALPHINO Conciergerie Limoges",
-      "rating": 4.7,
-      "userRatingCount": 166,
-      "address": "310 Rue François Perrin, 87000 Limoges",
-      "website": "https://alphinoconciergerie.com/",
-      "place_id": "ChIJw4VCd1r1NQ4REzwJjad_V50",
-      "maps_url": "https://maps.google.com/?cid=11337670944530971667&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "types": [
-        "service",
-        "point_of_interest",
-        "establishment"
-      ],
-      "matchQuality": "strong"
-    }
-  },
-  {
-    "ville": "Limoges",
-    "slug": "limoges",
-    "conciergerie": "C&C Conciergerie",
-    "actuel": {
-      "rating": 0,
-      "reviews": 0,
-      "biensGeres": 0
-    },
-    "google": {
-      "displayName": "C & C Conciergerie",
-      "rating": 4.5,
-      "userRatingCount": 16,
-      "address": "26 Rue Jouanet, 87240 Ambazac",
-      "website": "https://cnc-conciergerie.fr/",
-      "place_id": "ChIJK9qKHxXnS6QRF6BmpDL2R-U",
-      "maps_url": "https://maps.google.com/?cid=16521444455398940695&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "types": [
-        "point_of_interest",
-        "service",
-        "establishment"
-      ],
-      "matchQuality": "strong"
-    }
-  },
-  {
-    "ville": "Limoges",
-    "slug": "limoges",
-    "conciergerie": "La Chambre du Compagnon",
-    "actuel": {
-      "rating": 0,
-      "reviews": 0,
-      "biensGeres": 0
-    },
-    "google": {
-      "displayName": "ALPHINO Conciergerie Limoges",
-      "rating": 4.7,
-      "userRatingCount": 166,
-      "address": "310 Rue François Perrin, 87000 Limoges",
-      "website": "https://alphinoconciergerie.com/",
-      "place_id": "ChIJw4VCd1r1NQ4REzwJjad_V50",
-      "maps_url": "https://maps.google.com/?cid=11337670944530971667&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "types": [
-        "point_of_interest",
-        "service",
-        "establishment"
-      ],
-      "matchQuality": "strong"
-    }
-  },
-  {
-    "ville": "Limoges",
-    "slug": "limoges",
-    "conciergerie": "Les clés d'Isabelle",
-    "actuel": {
-      "rating": 3,
-      "reviews": 4,
-      "biensGeres": 0
-    },
-    "google": {
-      "displayName": "Les clés d'Isabelle, Conciergerie Limoges",
-      "rating": 3,
       "userRatingCount": 4,
-      "address": "431 Route de Montimbert, 87140 Compreignac",
-      "website": "https://www.conciergerie-bnb-les-cles-disabelle.com/",
-      "place_id": "ChIJz0O24ew1-UcRm93FXLzOE7M",
-      "maps_url": "https://maps.google.com/?cid=12903884665752247707&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "address": "Rue Béranger, 76600 Le Havre",
+      "website": "http://les-hotes-havrais.fr/",
+      "place_id": "ChIJgfygQAAv4EcRsMlf9bE3OJo",
+      "maps_url": "https://maps.google.com/?cid=11112693318002133424&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "Le Havre",
+    "slug": "le-havre",
+    "conciergerie": "Bienfaits pour Toits",
+    "actuel": {
+      "rating": 5,
+      "reviews": 20,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "Bienfaits pour Toits",
+      "rating": 5,
+      "userRatingCount": 27,
+      "address": "52 Rue de Bretagne, 76600 Le Havre",
+      "website": "http://bienfaitspourtoits-lehavre.fr/",
+      "place_id": "ChIJDaImeTAv4EcR8dC4HBkxofM",
+      "maps_url": "https://maps.google.com/?cid=17555366806392721649&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
       "types": [
         "lodging",
         "point_of_interest",
@@ -340,22 +332,100 @@
     }
   },
   {
-    "ville": "Menton",
-    "slug": "menton",
-    "conciergerie": "Manasteos",
+    "ville": "Le Havre",
+    "slug": "le-havre",
+    "conciergerie": "Westone Conciergerie",
     "actuel": {
       "rating": 5,
-      "reviews": 49,
+      "reviews": 6,
       "biensGeres": 0
     },
     "google": {
-      "displayName": "Manasteos - Conciergerie Bnb Menton",
+      "displayName": "Westone",
       "rating": 5,
-      "userRatingCount": 55,
-      "address": "5 Rue Victor Hugo, 06500 Menton",
-      "website": "https://manasteos.com/conciergerie/menton/",
-      "place_id": "ChIJKWhLX-XrzRIRItKTzD1pWC0",
-      "maps_url": "https://maps.google.com/?cid=3267477243803456034&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "userRatingCount": 6,
+      "address": "79 Rue Président Wilson, 76600 Le Havre",
+      "website": "http://www.conciergerie-westone.fr/",
+      "place_id": "ChIJp2CASFEv4EcRJm8bIEwan4M",
+      "maps_url": "https://maps.google.com/?cid=9484328254524059430&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "real_estate_agency",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "Le Havre",
+    "slug": "le-havre",
+    "conciergerie": "La Conciergerie Havraise",
+    "actuel": {
+      "rating": 3.1,
+      "reviews": 19,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "La conciergerie havraise",
+      "rating": 3.4,
+      "userRatingCount": 23,
+      "address": "48 Rue Gabriel Péri, 76600 Le Havre",
+      "website": "https://laconciergeriehavraise.fr/",
+      "place_id": "ChIJD_wCwWbY-KMR7vmIAX6JPyo",
+      "maps_url": "https://maps.google.com/?cid=3044303047410383342&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "Quiberon",
+    "slug": "quiberon",
+    "conciergerie": "Conciergerie Bienvenue",
+    "actuel": {
+      "rating": 0,
+      "reviews": 0,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "Conciergerie Bienvenue | Vannes - Auray - Carnac",
+      "rating": 5,
+      "userRatingCount": 53,
+      "address": "128 Av. de Verdun, 56000 Vannes",
+      "website": "http://www.conciergeriebienvenue.com/",
+      "place_id": "ChIJlQCp8xp4jIQRg7eJ9xd6VL0",
+      "maps_url": "https://maps.google.com/?cid=13642663414567909251&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "types": [
+        "real_estate_agency",
+        "travel_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "matchQuality": "strong"
+    }
+  },
+  {
+    "ville": "Quiberon",
+    "slug": "quiberon",
+    "conciergerie": "La Conciergerie du Soleil",
+    "actuel": {
+      "rating": 0,
+      "reviews": 0,
+      "biensGeres": 0
+    },
+    "google": {
+      "displayName": "Conciergerie du Soleil",
+      "rating": 4.7,
+      "userRatingCount": 24,
+      "address": "6 Rue du Roch Priol, 56170 Quiberon",
+      "website": "https://la-conciergerie-du-soleil.com/",
+      "place_id": "ChIJsdui1EV1EEgRLElQxATwvMY",
+      "maps_url": "https://maps.google.com/?cid=14320584818395466028&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
       "types": [
         "real_estate_agency",
         "travel_agency",
@@ -368,90 +438,64 @@
     }
   },
   {
-    "ville": "Menton",
-    "slug": "menton",
-    "conciergerie": "La Conciergerie des Citronniers",
+    "ville": "Quiberon",
+    "slug": "quiberon",
+    "conciergerie": "Ty'Accueil",
     "actuel": {
-      "rating": 4.7,
-      "reviews": 57,
-      "biensGeres": 0
-    },
-    "google": {
-      "displayName": "La Conciergerie des Citronniers",
-      "rating": 4.8,
-      "userRatingCount": 130,
-      "address": "9 Rue Jeanne, 06500 Menton",
-      "website": "https://www.conciergeriecitronniers.com/",
-      "place_id": "ChIJe0Ia01XrzRIRzImVn17B46E",
-      "maps_url": "https://maps.google.com/?cid=11665380071968180684&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "types": [
-        "real_estate_agency",
-        "lodging",
-        "service",
-        "point_of_interest",
-        "establishment"
-      ],
-      "matchQuality": "strong"
-    }
-  },
-  {
-    "ville": "Menton",
-    "slug": "menton",
-    "conciergerie": "We Care Conciergerie",
-    "actuel": {
-      "rating": 4.6,
-      "reviews": 29,
+      "rating": 0,
+      "reviews": 0,
       "biensGeres": 0
     },
     "google": null
   },
   {
-    "ville": "Menton",
-    "slug": "menton",
-    "conciergerie": "Keybnb Services Menton",
+    "ville": "Quiberon",
+    "slug": "quiberon",
+    "conciergerie": "La Conciergerie de Quiberon",
     "actuel": {
-      "rating": 4.8,
-      "reviews": 21,
+      "rating": 0,
+      "reviews": 0,
       "biensGeres": 0
     },
     "google": {
-      "displayName": "Keybnb Services Menton - Conciergerie bnb & Services",
-      "rating": 4.8,
-      "userRatingCount": 23,
-      "address": "24 Rue Partouneaux, 06500 Menton",
-      "website": "https://linktr.ee/keybnb",
-      "place_id": "ChIJPyDr12PrzRIRNsqfRaUQjlE",
-      "maps_url": "https://maps.google.com/?cid=5876652865788824118&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "displayName": "la conciergerie de quiberon",
+      "rating": 4.2,
+      "userRatingCount": 45,
+      "address": "28 Bd Anatole France, 56170 Quiberon",
+      "website": "http://www.laconciergeriedequiberon.fr/",
+      "place_id": "ChIJmwEZLMx3EEgRtQX1LA1H8gs",
+      "maps_url": "https://maps.google.com/?cid=860828600695588277&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
       "types": [
         "lodging",
-        "point_of_interest",
         "service",
+        "point_of_interest",
         "establishment"
       ],
       "matchQuality": "strong"
     }
   },
   {
-    "ville": "Menton",
-    "slug": "menton",
-    "conciergerie": "Check-in Menton",
+    "ville": "Quiberon",
+    "slug": "quiberon",
+    "conciergerie": "Guest Adom Quiberon",
     "actuel": {
-      "rating": 4.8,
-      "reviews": 19,
+      "rating": 0,
+      "reviews": 0,
       "biensGeres": 0
     },
     "google": {
-      "displayName": "Check-in Menton /conciergerie pour vos locations saisonnières à Menton",
-      "rating": 4.8,
-      "userRatingCount": 19,
-      "address": "1 Rue Partouneaux Le Majestic, 06500 Menton",
-      "website": "https://www.checkinmenton.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=14213240523812102157",
-      "place_id": "ChIJVVU5zYDpzRIRBRHQRTlK50o",
-      "maps_url": "https://maps.google.com/?cid=5397364288271683845&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "displayName": "Guestadom | Location de courte durée et conciergerie",
+      "rating": 4.1,
+      "userRatingCount": 120,
+      "address": "8 Bd des Manouvriers, 53810 Changé",
+      "website": "https://www.guest-adom.com/",
+      "place_id": "ChIJJRt4UgwDCUgRsZZQ-2jZ2AE",
+      "maps_url": "https://maps.google.com/?cid=133095233923618481&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
       "types": [
         "real_estate_agency",
-        "service",
+        "lodging",
         "point_of_interest",
+        "service",
         "establishment"
       ],
       "matchQuality": "strong"

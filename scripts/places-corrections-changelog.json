@@ -1,87 +1,7 @@
 [
   {
-    "slug": "saint-malo",
-    "conciergerie": "Cocoonr",
-    "type": "updated",
-    "from": {
-      "rating": 4.4,
-      "reviews": 100
-    },
-    "to": {
-      "rating": 4.4,
-      "reviews": 165
-    },
-    "reason": "strong"
-  },
-  {
-    "slug": "saint-malo",
-    "conciergerie": "Les Saisons d'Émeraude",
-    "type": "updated",
-    "from": {
-      "rating": 4.9,
-      "reviews": 46
-    },
-    "to": {
-      "rating": 0,
-      "reviews": 0
-    },
-    "reason": "weak_match"
-  },
-  {
-    "slug": "saint-malo",
-    "conciergerie": "La Clé d'Émeraude",
-    "type": "updated",
-    "from": {
-      "rating": 5,
-      "reviews": 29
-    },
-    "to": {
-      "rating": 5,
-      "reviews": 2
-    },
-    "reason": "strong"
-  },
-  {
-    "slug": "saint-malo",
-    "conciergerie": "Ma Conciergerie Bretonne",
-    "type": "updated",
-    "from": {
-      "rating": 4.6,
-      "reviews": 26
-    },
-    "to": {
-      "rating": 0,
-      "reviews": 0
-    },
-    "reason": "name_mismatch"
-  },
-  {
-    "slug": "saint-malo",
-    "conciergerie": "Ma Conciergerie Sérénité",
-    "type": "updated",
-    "from": {
-      "rating": 4.9,
-      "reviews": 17
-    },
-    "to": {
-      "rating": 4.9,
-      "reviews": 18
-    },
-    "reason": "strong"
-  },
-  {
-    "slug": "le-touquet",
-    "conciergerie": "Groom-Services",
-    "type": "no_change",
-    "target": {
-      "rating": 4.3,
-      "reviews": 23,
-      "reason": "strong"
-    }
-  },
-  {
-    "slug": "le-touquet",
-    "conciergerie": "La Conciergerie du Touquet",
+    "slug": "beziers",
+    "conciergerie": "La Conciergerie d'Anna",
     "type": "no_change",
     "target": {
       "rating": 0,
@@ -90,64 +10,60 @@
     }
   },
   {
-    "slug": "le-touquet",
-    "conciergerie": "Opale Conciergerie",
-    "type": "updated",
-    "from": {
-      "rating": 3.7,
-      "reviews": 7
-    },
-    "to": {
-      "rating": 3.3,
-      "reviews": 12
-    },
-    "reason": "strong"
+    "slug": "beziers",
+    "conciergerie": "Concierge Angels Béziers",
+    "type": "no_change",
+    "target": {
+      "rating": 0,
+      "reviews": 0,
+      "reason": "name_mismatch"
+    }
   },
   {
-    "slug": "le-touquet",
-    "conciergerie": "Les Clés de la Côte",
-    "type": "updated",
-    "from": {
-      "rating": 5,
-      "reviews": 3
-    },
-    "to": {
-      "rating": 5,
-      "reviews": 13
-    },
-    "reason": "strong"
-  },
-  {
-    "slug": "limoges",
-    "conciergerie": "Alphino",
-    "type": "updated",
-    "from": {
-      "rating": 4.7,
-      "reviews": 130
-    },
-    "to": {
-      "rating": 4.7,
-      "reviews": 166
-    },
-    "reason": "strong"
-  },
-  {
-    "slug": "limoges",
-    "conciergerie": "C&C Conciergerie",
+    "slug": "beziers",
+    "conciergerie": "Come And Rest",
     "type": "updated",
     "from": {
       "rating": 0,
       "reviews": 0
     },
     "to": {
-      "rating": 4.5,
+      "rating": 4.9,
       "reviews": 16
     },
     "reason": "strong"
   },
   {
-    "slug": "limoges",
-    "conciergerie": "La Chambre du Compagnon",
+    "slug": "beziers",
+    "conciergerie": "My Conciergery Béziers",
+    "type": "updated",
+    "from": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "to": {
+      "rating": 4.6,
+      "reviews": 11
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "beziers",
+    "conciergerie": "WeLoc Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 10
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 14
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "la-ciotat",
+    "conciergerie": "HostnFly La Ciotat",
     "type": "no_change",
     "target": {
       "rating": 0,
@@ -156,79 +72,175 @@
     }
   },
   {
-    "slug": "limoges",
-    "conciergerie": "Les clés d'Isabelle",
+    "slug": "la-ciotat",
+    "conciergerie": "Welkeys La Ciotat",
+    "type": "updated",
+    "from": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "to": {
+      "rating": 4.3,
+      "reviews": 2169
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "la-ciotat",
+    "conciergerie": "AllForHost La Ciotat",
     "type": "no_change",
     "target": {
-      "rating": 3,
-      "reviews": 4,
+      "rating": 0,
+      "reviews": 0,
+      "reason": "name_mismatch"
+    }
+  },
+  {
+    "slug": "la-ciotat",
+    "conciergerie": "Merci Conciergerie",
+    "type": "no_change",
+    "target": {
+      "rating": 0,
+      "reviews": 0,
+      "reason": "name_mismatch"
+    }
+  },
+  {
+    "slug": "la-ciotat",
+    "conciergerie": "Mediterranea Conciergerie",
+    "type": "no_change",
+    "target": {
+      "rating": 0,
+      "reviews": 0,
+      "reason": "low_volume"
+    }
+  },
+  {
+    "slug": "le-havre",
+    "conciergerie": "Ma Conciergerie en Normandie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 166
+    },
+    "to": {
+      "rating": 4.7,
+      "reviews": 168
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "le-havre",
+    "conciergerie": "B PAM Conciergerie",
+    "type": "updated",
+    "from": {
+      "rating": 4.7,
+      "reviews": 23
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 4
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "le-havre",
+    "conciergerie": "Bienfaits pour Toits",
+    "type": "updated",
+    "from": {
+      "rating": 5,
+      "reviews": 20
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 27
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "le-havre",
+    "conciergerie": "Westone Conciergerie",
+    "type": "no_change",
+    "target": {
+      "rating": 5,
+      "reviews": 6,
       "reason": "strong"
     }
   },
   {
-    "slug": "menton",
-    "conciergerie": "Manasteos",
+    "slug": "le-havre",
+    "conciergerie": "La Conciergerie Havraise",
     "type": "updated",
     "from": {
-      "rating": 5,
-      "reviews": 49
+      "rating": 3.1,
+      "reviews": 19
     },
     "to": {
-      "rating": 5,
-      "reviews": 55
-    },
-    "reason": "strong"
-  },
-  {
-    "slug": "menton",
-    "conciergerie": "La Conciergerie des Citronniers",
-    "type": "updated",
-    "from": {
-      "rating": 4.7,
-      "reviews": 57
-    },
-    "to": {
-      "rating": 4.8,
-      "reviews": 130
-    },
-    "reason": "strong"
-  },
-  {
-    "slug": "menton",
-    "conciergerie": "We Care Conciergerie",
-    "type": "updated",
-    "from": {
-      "rating": 4.6,
-      "reviews": 29
-    },
-    "to": {
-      "rating": 0,
-      "reviews": 0
-    },
-    "reason": "no_match"
-  },
-  {
-    "slug": "menton",
-    "conciergerie": "Keybnb Services Menton",
-    "type": "updated",
-    "from": {
-      "rating": 4.8,
-      "reviews": 21
-    },
-    "to": {
-      "rating": 4.8,
+      "rating": 3.4,
       "reviews": 23
     },
     "reason": "strong"
   },
   {
-    "slug": "menton",
-    "conciergerie": "Check-in Menton",
+    "slug": "quiberon",
+    "conciergerie": "Conciergerie Bienvenue",
+    "type": "updated",
+    "from": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "to": {
+      "rating": 5,
+      "reviews": 53
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "quiberon",
+    "conciergerie": "La Conciergerie du Soleil",
+    "type": "updated",
+    "from": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "to": {
+      "rating": 4.7,
+      "reviews": 24
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "quiberon",
+    "conciergerie": "Ty'Accueil",
     "type": "no_change",
     "target": {
-      "rating": 4.8,
-      "reviews": 19,
-      "reason": "strong"
+      "rating": 0,
+      "reviews": 0,
+      "reason": "no_match"
+    }
+  },
+  {
+    "slug": "quiberon",
+    "conciergerie": "La Conciergerie de Quiberon",
+    "type": "updated",
+    "from": {
+      "rating": 0,
+      "reviews": 0
+    },
+    "to": {
+      "rating": 4.2,
+      "reviews": 45
+    },
+    "reason": "strong"
+  },
+  {
+    "slug": "quiberon",
+    "conciergerie": "Guest Adom Quiberon",
+    "type": "no_change",
+    "target": {
+      "rating": 0,
+      "reviews": 0,
+      "reason": "name_mismatch"
     }
   }
 ]

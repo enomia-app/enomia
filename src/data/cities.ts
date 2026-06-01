@@ -9947,6 +9947,670 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-05-29',
   },
+  {
+    slug: 'le-havre',
+    displayName: 'Le Havre',
+    region: 'Normandie',
+    regionSlug: 'normandie',
+    title: 'Conciergerie Le Havre Airbnb : comparatif 2026 des 5 meilleures agences',
+    metaTitle: 'Conciergerie Le Havre Airbnb : comparatif 2026',
+    metaDescription:
+      "Comparatif neutre des 5 meilleures conciergeries Airbnb du Havre : tarifs, avis Google, réglementation 2026, quartiers UNESCO et port.",
+    kwPrincipal: 'conciergerie le havre',
+    kwSecondaires: [
+      'conciergerie airbnb le havre',
+      'gestion locative le havre',
+      'meilleure conciergerie le havre',
+      'conciergerie normandie',
+      'location courte durée le havre',
+    ],
+    population: 164954,
+    tourists: 2070000,
+    activeListings: 1100,
+    priceLow: 55,
+    priceHigh: 115,
+    occupancyRate: 58,
+    revpar: 42,
+    seasonality:
+      "Saison étalée portée par la diversité des flux : tourisme culturel autour du centre Perret classé UNESCO, escales de croisière (un des premiers ports français en escales touristiques), événements maritimes phares (Transat Jacques Vabre, Solitaire du Figaro, festival Un Été au Havre), tourisme d'affaires lié à HAROPA et au plus grand port à conteneurs de France, et excursions vers Étretat et la Côte d'Albâtre. La haute saison est l'été, mais l'arrière-saison et les ponts de printemps soutiennent l'occupation, avec une demande corporate régulière en semaine.",
+    rankNational: 25,
+    introCustom:
+      "Vous louez un bien au Havre sur Airbnb, ou vous étudiez la ville pour investir, séduit par son centre **classé UNESCO** depuis 2005 et son couple atypique tourisme culturel + tourisme d'affaires. C'est une destination encore sous-cotée à l'échelle nationale, dont la rentabilité tient à un mix particulier : touristes en escale, salariés du port et de la zone industrielle, croisiéristes, étudiants. La ville est passée le cap des **2 millions de touristes** en 2024, un record.\n\nMais le marché est encadré : Le Havre est en **zone tendue** et impose une déclaration en mairie avec numéro d'enregistrement. Sur un marché à deux vitesses (centre Perret patrimonial vs upper town résidentielle), le choix de la conciergerie change la rentabilité. J'ai comparé les acteurs présents sur la ville à partir de leurs avis Google, de leurs commissions affichées et de leur ancrage local.",
+    marketIntro:
+      "Le Havre, **environ 165 000 habitants**, est la deuxième ville de Normandie et le **premier port à conteneurs de France**. Reconstruite par **Auguste Perret** après 1945, son centre est **classé au patrimoine mondial UNESCO depuis 2005** — un atout rare pour le tourisme de courte durée.\n\nLe marché LCD y combine quatre demandes : **touristes culturels** (centre Perret, MuMa, Volcan d'Oscar Niemeyer), **excursionnistes** vers Étretat et la Côte d'Albâtre, **clientèle business** liée à HAROPA et à l'écosystème portuaire, et **croisiéristes** en escale. La ville a accueilli **2,07 millions de touristes en 2024**, soit +4 % sur un an. Les prix à la nuit restent accessibles (55-110 €), avec des biens plus rares et plus chers sur le front de mer et autour de la plage.",
+    conciergeries: [
+      {
+        name: 'Ma Conciergerie en Normandie',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 166,
+        biensGeres: 0,
+        specialty: 'Réseau régional Normandie, ancrage Havre',
+        description:
+          "Réseau de conciergeries présent sur cinq villes normandes, avec une agence havraise installée rue Saint-Jacques. Le volume d'avis Google est le plus élevé de la ville, signal de satisfaction robuste sur la durée. L'ancrage régional est un atout pour les propriétaires qui ont des biens sur plusieurs villes normandes ou qui veulent un acteur structuré, capable d'arbitrer entre flux touristiques (Perret, escales) et clientèle business. Demandez la commission précise, le périmètre des prestations couvertes et la façon dont le ménage est facturé. Vérifiez la couverture exacte sur votre quartier du Havre, notamment hors hyper-centre.",
+      },
+      {
+        name: 'B PAM Conciergerie',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 23,
+        biensGeres: 0,
+        specialty: 'Conciergerie locale havraise',
+        description:
+          "Conciergerie locale ancrée sur Le Havre, avec une combinaison note / avis solide pour sa taille. Le profil de proximité, avec interlocuteur unique, séduit les propriétaires qui veulent un suivi personnalisé sans passer par un réseau national. Demandez la commission, le détail des services couverts (accueil voyageurs, ménage, gestion du linge, photos, optimisation tarifaire), et la façon dont le ménage est refacturé au voyageur. Faites préciser le nombre de biens réellement gérés sur Le Havre et la capacité à arbitrer entre courte et moyenne durée selon les saisons (été, escales, demande corporate).",
+      },
+      {
+        name: 'Bienfaits pour Toits',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 5,
+        reviews: 20,
+        biensGeres: 0,
+        specialty: 'Conciergerie locale, gestion clé en main',
+        description:
+          "Conciergerie locale affichant des avis Google très élevés, signal de satisfaction sur la qualité de service même si le volume reste modéré. Le positionnement clé en main correspond aux propriétaires non résidents — fréquents au Havre vu la proximité avec Paris (2h10 par train) — qui veulent déléguer entièrement. Demandez la commission précise, ce qu'elle couvre, et le mode de facturation du ménage. Faites préciser la couverture géographique sur les différents quartiers (centre Perret, Eure, Sanvic, Saint-François) et la stratégie de pricing selon les escales de croisière et les événements de la ville (Transat Jacques Vabre, Un Été au Havre).",
+      },
+      {
+        name: 'Westone Conciergerie',
+        commission: '20 à 25 %',
+        menage: 'variable',
+        rating: 5,
+        reviews: 6,
+        biensGeres: 0,
+        specialty: 'Service haut de gamme, commission transparente',
+        description:
+          "Conciergerie locale affichant une commission claire entre 20 et 25 %, une transparence appréciable face à des acteurs qui restent flous sur le tarif. Le volume d'avis est encore modéré mais la note est maximale. Le positionnement service haut de gamme peut convenir à un bien situé front de mer, dans le centre Perret classé UNESCO ou à proximité immédiate des escales de croisière. Demandez ce qui distingue les 20 % des 25 % (services inclus, type de bien, niveau de réactivité), la façon dont le ménage est facturé, et une simulation de revenu net sur votre logement pour comparer concrètement.",
+      },
+      {
+        name: 'La Conciergerie Havraise',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 3.1,
+        reviews: 19,
+        biensGeres: 0,
+        specialty: 'Conciergerie locale, profil contrasté',
+        description:
+          "Conciergerie locale au profil contrasté : la note Google reste en-dessous des autres acteurs du Havre, sur un volume d'avis comparable à plusieurs concurrents directs. Cela ne disqualifie pas l'offre mais impose une vérification poussée. Lisez le détail des avis Google, identifiez les points récurrents (réactivité, qualité du ménage, communication), et demandez plusieurs références clients actives sur Le Havre. Faites préciser la commission, le périmètre couvert et la façon dont le ménage est refacturé. Sur un marché concurrentiel comme Le Havre, exigez une simulation de revenu net comparable aux autres devis avant de signer.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre Perret (UNESCO)',
+        pricePerNight: '70-130 €',
+        occupancy: 60,
+        description:
+          "Le cœur reconstruit par Auguste Perret, classé UNESCO depuis 2005 — atout d'image rare pour un Airbnb. Appartements en béton armé typiques, à deux pas de l'avenue Foch, de l'Hôtel de Ville et des grands axes. Demande soutenue toute l'année, mix touristes culturels et clientèle business.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Saint-François / front de mer',
+        pricePerNight: '85-150 €',
+        occupancy: 62,
+        description:
+          "Le plus ancien quartier du Havre, ses bassins, ses restaurants de poisson et son ambiance maritime. Très demandé en saison estivale et lors des escales de croisière, avec un cachet authentique difficile à trouver ailleurs en ville.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Quartier de l\'Eure',
+        pricePerNight: '65-120 €',
+        occupancy: 58,
+        description:
+          "Ancien quartier industriel en pleine transformation, où la ville et le port se rejoignent. Demande croissante des jeunes actifs et des courts séjours business, tickets d'achat encore raisonnables face au centre.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Sanvic / ville haute',
+        pricePerNight: '55-100 €',
+        occupancy: 56,
+        description:
+          "Quartier résidentiel en hauteur, ambiance village, commerces de proximité et marché hebdomadaire. Moins touristique mais demande régulière en moyenne durée et clientèle corporate.",
+        roiBrut: '6 %',
+      },
+      {
+        name: 'Plage / Sainte-Adresse limitrophe',
+        pricePerNight: '95-160 €',
+        occupancy: 64,
+        description:
+          "La grande plage du Havre et sa promenade. Très demandé en été et lors des grands événements (Un Été au Havre, Transat Jacques Vabre). Tarifs à la nuit les plus élevés de la ville, biens plus rares.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Perrey / Saint-Vincent',
+        pricePerNight: '60-110 €',
+        occupancy: 58,
+        description:
+          "Secteur résidentiel proche du centre et de la plage, équilibré entre prix d'achat et demande. Profil intéressant pour viser le rendement sans trop s'éloigner du tissu touristique.",
+        roiBrut: '5 à 6 %',
+      },
+    ],
+    regulation:
+      "Le Havre est classée **zone tendue** : à ce titre, la **déclaration en mairie** d'un meublé de tourisme avec **numéro d'enregistrement** est obligatoire, et toute transformation d'un logement qui n'est pas votre **résidence principale** en meublé de tourisme nécessite généralement une **autorisation de changement d'usage**.\n\nLa **résidence principale** peut être louée jusqu'à **120 nuitées par an** sur l'ensemble des plateformes. Au-delà, le statut bascule et l'autorisation préalable devient nécessaire. La **loi Le Meur** généralise par ailleurs le **numéro à 13 chiffres** au plus tard le **20 mai 2026** et impose un **SIRET** à tout loueur, avec des sanctions renforcées (jusqu'à **50 000 € d'amende** pour location sans autorisation et **10 000 €** pour défaut d'enregistrement).\n\nLes logements classés **F ou G au DPE** sont par ailleurs **interdits à la location courte durée** depuis le 1er janvier 2025.\n\nAvant d'investir, **vérifiez en mairie** les modalités précises en vigueur sur Le Havre, notamment l'éventuel quota ou seuil de changement d'usage applicable à votre adresse.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Perçue par nuit et par voyageur selon le classement du logement, elle s'estime en quelques secondes avec le calculateur.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 80,
+      neighborhood: 'le centre Perret',
+      revenuBrut: 17000,
+      commissionRate: 0.22,
+      menageCount: 45,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique au Havre en 2026 ?",
+        a: "Le Havre est en zone tendue : déclaration en mairie avec numéro d'enregistrement obligatoire, et autorisation de changement d'usage requise pour transformer en meublé de tourisme un logement qui n'est pas votre résidence principale. La résidence principale reste plafonnée à 120 nuitées par an sur l'ensemble des plateformes. La loi Le Meur généralise le numéro à 13 chiffres au plus tard le 20 mai 2026 et alourdit les sanctions (jusqu'à 50 000 € en cas d'infraction sur le changement d'usage). Les logements classés F ou G au DPE sont par ailleurs interdits à la location courte durée depuis 2025. Vérifiez en mairie les modalités exactes en vigueur sur votre adresse avant d'investir.",
+      },
+      {
+        q: "Le Havre est-elle une bonne ville pour investir en LCD ?",
+        a: "Le Havre est une destination encore sous-cotée à l'échelle nationale, mais la demande progresse : la ville a dépassé les 2 millions de touristes en 2024, un record en hausse de 4 % sur un an. La rentabilité repose sur un mix particulier : tourisme culturel autour du centre Perret classé UNESCO, escales de croisière, événements maritimes phares (Transat Jacques Vabre, Solitaire du Figaro), tourisme d'affaires lié à HAROPA, et étudiants. Les prix d'achat restent inférieurs à ceux du Sud, ce qui améliore le rendement brut. Le revers : zone tendue et réglementation à respecter. Comptez sur un T2 bien placé dans le centre Perret pour 17 000-20 000 € brut annuel.",
+      },
+      {
+        q: "Quelle est la commission d'une conciergerie Airbnb au Havre ?",
+        a: "Les commissions se situent généralement entre 20 et 25 % du revenu locatif, hors ménage. Westone affiche par exemple une fourchette claire à 20-25 %. Plusieurs conciergeries locales (Ma Conciergerie en Normandie, B PAM, Bienfaits pour Toits) restent en commission n.c. — un point à clarifier dès le premier échange. Demandez ce que couvre exactement la commission, la façon dont le ménage est refacturé au voyageur et le coût réel du ménage à la prestation, puis demandez une simulation de revenu net sur votre bien pour comparer objectivement.",
+      },
+    ],
+    updatedAt: '2026-06-01',
+  },
+  {
+    slug: 'beziers',
+    displayName: 'Béziers',
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title: 'Conciergerie Béziers Airbnb : comparatif 2026 des 5 meilleures agences',
+    metaTitle: 'Conciergerie Béziers Airbnb : comparatif 2026',
+    metaDescription:
+      "Comparatif neutre des 5 meilleures conciergeries Airbnb de Béziers : tarifs, avis Google, réglementation 2026, quartiers Allées Paul-Riquet.",
+    kwPrincipal: 'conciergerie beziers',
+    kwSecondaires: [
+      'conciergerie airbnb beziers',
+      'gestion locative beziers',
+      'meilleure conciergerie beziers',
+      'conciergerie herault',
+      'location saisonnière beziers',
+    ],
+    population: 83767,
+    tourists: 900000,
+    activeListings: 750,
+    priceLow: 55,
+    priceHigh: 105,
+    occupancyRate: 60,
+    revpar: 42,
+    seasonality:
+      "Saisonnalité marquée par l'été méditerranéen (forte demande de mi-juin à fin septembre, avec un pic en juillet-août sur la côte proche), et soutenue par la Feria de Béziers en août (un des grands événements taurins du Sud, 1 million de visiteurs annoncés sur la semaine). Hors saison, la demande est plus diffuse : œnotourisme dans le vignoble du Languedoc, week-ends courts depuis Toulouse et Montpellier, et clientèle business autour des activités viticoles et de l'aéroport Béziers Cap-d'Agde.",
+    rankNational: 35,
+    introCustom:
+      "Vous louez un bien à Béziers sur Airbnb, ou vous étudiez la ville pour investir, séduit par des tickets d'achat inférieurs au reste de la côte d'Occitanie et par la proximité immédiate des plages (Valras, Sérignan, Cap-d'Agde à 15-25 minutes). Béziers est une ville **2,5 fois plus grande qu'on ne le pense** (près de 84 000 habitants) avec une identité forte : Allées Paul-Riquet comparées aux Ramblas, Feria au mois d'août, cathédrale Saint-Nazaire perchée au-dessus de l'Orb.\n\nLe marché LCD est encore en construction : la **réglementation reste libre** (pas de compensation, pas de changement d'usage généralisé), et plusieurs conciergeries locales et régionales coexistent. J'ai comparé les acteurs présents sur la ville à partir de leurs avis Google et de leurs commissions affichées. Sur un marché à tickets bas et concurrence régionale, chaque point de commission compte.",
+    marketIntro:
+      "Béziers, **près de 84 000 habitants**, est la **deuxième ville de l'Hérault** après Montpellier et l'une des plus anciennes de France. Au cœur du **Languedoc viticole**, à 15-25 minutes des plages (Valras, Sérignan, Cap-d'Agde) et 10 minutes du **Canal du Midi classé UNESCO**, la ville cumule patrimoine, vin et littoral à des prix d'achat parmi les plus accessibles du Sud.\n\nLe marché de la location courte durée bénéficie d'une **saisonnalité estivale forte** soutenue par la **Feria de Béziers** en août — un des grands événements taurins du Sud avec environ **1 million de visiteurs** sur la semaine. Hors saison, l'œnotourisme et les week-ends courts depuis Toulouse et Montpellier soutiennent l'occupation. La **réglementation est encore libre** : pas de changement d'usage généralisé, pas de compensation — un atout face aux villes voisines en zone tendue.",
+    conciergeries: [
+      {
+        name: 'La Conciergerie d\'Anna',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Conciergerie locale, biens de charme',
+        description:
+          "Conciergerie locale spécialisée dans la location saisonnière de biens de caractère sur le secteur de Béziers et Murviel-lès-Béziers. Le positionnement haut de gamme s'adresse aux propriétaires de biens atypiques ou de charme, avec un service d'accueil de standing hôtelier et une intervention 7 jours sur 7. Demandez la commission précise, ce qu'elle couvre (annonces, photos, communication voyageurs, ménage, linge, optimisation tarifaire), et la façon dont le ménage est facturé. Faites préciser le nombre de biens gérés actuellement sur Béziers et la stratégie de pricing entre haute saison estivale (Feria), arrière-saison et hors saison.",
+      },
+      {
+        name: 'Concierge Angels Béziers',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Réseau national, méthode +30 % de revenus',
+        description:
+          "Antenne biterroise d'un réseau national présent dans plus de 300 villes en France et DOM-TOM, dont l'argument principal est une optimisation de l'annonce visant +30 % de revenus par rapport à une gestion en direct. Le réseau affiche un service complet : ménage hôtelier, linge fourni, accueil voyageurs, support 24/7. Demandez la commission précise, ce qu'elle couvre, et la façon dont le ménage est refacturé au voyageur. Vérifiez l'ancrage réel sur Béziers (équipe locale identifiée), le nombre de biens gérés en ville, et exigez des références clients actives sur place avant de signer.",
+      },
+      {
+        name: 'Come And Rest',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Conciergerie locale, gestion complète',
+        description:
+          "Conciergerie locale installée allées Paul-Riquet, au cœur du centre historique. Le positionnement complet couvre annonces, réservations, accueil voyageurs, entretien post-séjour et gestion du linge. L'ancrage local sur l'artère principale de Béziers est un atout pour la réactivité (remise des clés, dépannages, accueil). Demandez la commission précise, ce qu'elle inclut, et la façon dont le ménage est facturé. Faites préciser le nombre de biens gérés sur la ville et la stratégie tarifaire autour de la Feria, où la demande explose. Sur un marché à tickets bas, comparez systématiquement le revenu net simulé avec celui des autres acteurs.",
+      },
+      {
+        name: 'My Conciergery Béziers',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Réseau régional, équipe locale',
+        description:
+          "Réseau régional avec équipe locale identifiée à Béziers, proposant une gestion personnalisée des locations courtes et moyennes durées. L'argument du réseau est la double exigence : structure d'un acteur multi-villes et proximité d'une équipe ancrée localement. Demandez la commission précise, ce qu'elle couvre (annonces, communication voyageurs, ménage, linge, photos, dynamic pricing), et la façon dont le ménage est refacturé. Faites préciser le nombre de biens gérés sur Béziers, l'arbitrage courte / moyenne durée selon les saisons, et demandez une simulation de revenu net sur votre bien pour comparer objectivement.",
+      },
+      {
+        name: 'WeLoc Conciergerie',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 5,
+        reviews: 10,
+        biensGeres: 0,
+        specialty: 'Conciergerie locale, plateformes multiples',
+        description:
+          "Conciergerie locale couvrant Béziers et la région Hérault, avec une note Google maximale sur un volume d'avis encore modéré — signal positif mais à consolider dans le temps. L'offre couvre la gestion sur Airbnb, Booking et autres plateformes. Demandez la commission précise, ce qu'elle inclut, et la façon dont le ménage est refacturé au voyageur. Vérifiez le nombre de biens gérés sur Béziers, la stratégie tarifaire pendant la Feria et l'arrière-saison, et demandez des références clients actives. Sur un marché concurrentiel, exigez une simulation de revenu net comparable aux autres devis avant de signer.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre historique / Cathédrale Saint-Nazaire',
+        pricePerNight: '60-110 €',
+        occupancy: 62,
+        description:
+          "Le cœur ancien perché au-dessus de l'Orb, autour de la cathédrale Saint-Nazaire. Ruelles, vieilles pierres, ambiance médiévale et vues panoramiques sur le pont vieux. Très recherché pour un Airbnb de caractère, biens souvent atypiques mais à des tickets modérés.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Allées Paul-Riquet / Plateau des Poètes',
+        pricePerNight: '70-120 €',
+        occupancy: 65,
+        description:
+          "L'artère principale, comparée aux Ramblas de Barcelone, entre le théâtre et le Plateau des Poètes. Façades haussmanniennes, terrasses de cafés, marché aux fleurs le vendredi, grands événements (dont la Feria). Demande forte et tickets plus élevés que la moyenne.",
+        roiBrut: '5 à 7 %',
+      },
+      {
+        name: 'Quartier de la gare / Faubourg',
+        pricePerNight: '55-95 €',
+        occupancy: 58,
+        description:
+          "Secteur en transformation autour de la gare SNCF, pratique pour les courts séjours et la clientèle business. Tickets d'achat parmi les plus bas de la ville, intéressant pour viser le rendement.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Bord de l\'Orb / Pont Vieux',
+        pricePerNight: '65-115 €',
+        occupancy: 60,
+        description:
+          "Les rives de l'Orb avec vues sur le pont vieux et la cathédrale. Cadre photogénique apprécié, à 10 minutes à pied du centre. Demande régulière, profil équilibré entre rendement et cachet.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Capitoul / quartiers résidentiels nord',
+        pricePerNight: '55-90 €',
+        occupancy: 56,
+        description:
+          "Quartiers résidentiels plus calmes au nord du centre, prix d'achat les plus accessibles. Profil de moyenne durée et clientèle business, demande estivale plus diffuse.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Axe vers Valras / littoral',
+        pricePerNight: '70-130 €',
+        occupancy: 64,
+        description:
+          "Secteur sud vers Valras-Plage et Sérignan, à 15-25 minutes de la mer. Très demandé en saison estivale par les familles, occupation forte de juin à septembre, plus diffuse le reste de l'année.",
+        roiBrut: '6 à 8 %',
+      },
+    ],
+    regulation:
+      "Béziers est en **zone non tendue** : pas de **changement d'usage** généralisé, pas de **compensation** exigée pour transformer un logement en meublé de tourisme. C'est un atout face aux villes voisines (Montpellier, Cap-d'Agde) où la réglementation est nettement plus contraignante.\n\nLa **déclaration en mairie** d'un meublé de tourisme avec numéro d'enregistrement reste obligatoire. La **loi Le Meur** généralise le **numéro à 13 chiffres** au plus tard le **20 mai 2026** via un téléservice national (apimeubles.finances.gouv.fr) et impose un **SIRET** à tout loueur. Le numéro doit apparaître sur toutes vos annonces (Airbnb, Booking, Abritel).\n\nLa **résidence principale** reste plafonnée à **120 nuitées par an** sur l'ensemble des plateformes. Les **logements classés F ou G au DPE** sont **interdits** à la location courte durée depuis le 1er janvier 2025, puis E à partir de 2028 en zone tendue.\n\nLes sanctions ont été alourdies par la loi Le Meur : jusqu'à **10 000 € pour défaut d'enregistrement** et **20 000 €** pour fausse déclaration.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Perçue par nuit et par voyageur selon le classement du logement, elle s'estime en quelques secondes avec le calculateur.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 80,
+      neighborhood: 'les allées Paul-Riquet',
+      revenuBrut: 17500,
+      commissionRate: 0.20,
+      menageCount: 45,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique à Béziers en 2026 ?",
+        a: "Béziers est en zone non tendue : pas de changement d'usage généralisé, pas de compensation. C'est un atout face à Montpellier ou au Cap-d'Agde, beaucoup plus contraignantes. La déclaration en mairie d'un meublé de tourisme avec numéro d'enregistrement reste obligatoire. La loi Le Meur généralise le numéro à 13 chiffres au plus tard le 20 mai 2026, via un téléservice national, et impose un SIRET. La résidence principale reste plafonnée à 120 nuitées par an. Les logements F ou G au DPE sont interdits à la location courte durée depuis 2025. Vérifiez auprès du service habitat de la ville les modalités précises au moment de votre déclaration.",
+      },
+      {
+        q: "Béziers est-elle une bonne ville pour investir en LCD ?",
+        a: "Béziers cumule des atouts intéressants pour un investisseur : tickets d'achat parmi les plus bas du Sud, proximité immédiate de la mer (15-25 minutes), Canal du Midi classé UNESCO à 10 minutes, Feria au mois d'août qui attire environ 1 million de visiteurs sur la semaine, et une réglementation encore libre. La saisonnalité estivale est marquée mais la ville bénéficie aussi d'œnotourisme et de courts séjours depuis Toulouse et Montpellier. Les rendements bruts dans les quartiers résidentiels et autour de la gare dépassent souvent 7 %, ce qui est rare dans le Sud à proximité de la côte. Comptez sur un T2 bien placé pour 17 000-20 000 € brut annuel.",
+      },
+      {
+        q: "Quelle est la commission d'une conciergerie Airbnb à Béziers ?",
+        a: "Les commissions se situent généralement entre 15 et 25 % du revenu locatif, hors ménage. Sur Béziers, la majorité des conciergeries locales et régionales affichent leur tarif en n.c. — un point à clarifier dès le premier échange. Demandez ce que couvre exactement la commission (annonces, communication voyageurs, ménage, linge, photos, dynamic pricing), la façon dont le ménage est refacturé au voyageur, et le coût réel à la prestation. Sur un marché à tickets bas, chaque point de commission compte sur la rentabilité : exigez une simulation de revenu net comparable entre prestataires avant de signer.",
+      },
+    ],
+    updatedAt: '2026-06-01',
+  },
+  {
+    slug: 'quiberon',
+    displayName: 'Quiberon',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Quiberon Airbnb : comparatif 2026 des 5 meilleures agences',
+    metaTitle: 'Conciergerie Quiberon Airbnb : comparatif 2026',
+    metaDescription:
+      "Comparatif neutre des 5 meilleures conciergeries Airbnb de Quiberon : tarifs, avis Google, réglementation 2026, plages et Côte sauvage.",
+    kwPrincipal: 'conciergerie quiberon',
+    kwSecondaires: [
+      'conciergerie airbnb quiberon',
+      'gestion locative quiberon',
+      'meilleure conciergerie quiberon',
+      'conciergerie morbihan',
+      'location saisonnière presqu\'île quiberon',
+    ],
+    population: 5000,
+    tourists: 800000,
+    activeListings: 950,
+    priceLow: 85,
+    priceHigh: 200,
+    occupancyRate: 55,
+    revpar: 55,
+    seasonality:
+      "Saisonnalité parmi les plus marquées de France. La population de la presqu'île passe d'environ 7 000 habitants hors saison à près de 80 000 en été — un facteur 10. Le pic est intense de mi-juin à fin août, prolongé par les ailes de saison (mai, juin, septembre, vacances scolaires). L'arrière-saison reste limitée hors événements (Festival de Cinéma, marchés, surfeurs sur la Côte sauvage). Le mois d'août concentre une part disproportionnée du chiffre d'affaires annuel, ce qui rend la stratégie de pricing décisive.",
+    rankNational: 22,
+    introCustom:
+      "Vous louez un bien à Quiberon sur Airbnb, ou vous étudiez la presqu'île pour investir, séduit par ses plages, sa Côte sauvage et l'écart spectaculaire entre saison et hors saison. La presqu'île est un marché à part : **5 000 habitants à l'année, jusqu'à 80 000 en été**, avec une demande qui se concentre sur quelques mois. C'est à la fois une opportunité (tarifs très élevés en haute saison) et un risque (occupation hors saison limitée).\n\nLe **choix de la conciergerie est ici plus décisif qu'ailleurs** : sur un marché à demande hyper concentrée, la stratégie tarifaire (dynamic pricing été / arrière-saison, arbitrage courte vs moyenne durée hors été) fait des écarts massifs sur le revenu annuel. J'ai comparé les acteurs présents sur la presqu'île à partir de leurs avis Google, de leurs commissions affichées et de leur ancrage local.",
+    marketIntro:
+      "Quiberon, **5 000 habitants à l'année** sur une **presqu'île de 14 kilomètres**, est l'une des destinations balnéaires les plus emblématiques du Sud Morbihan. La presqu'île présente deux visages : à l'ouest la **Côte sauvage** et ses 8 km de falaises, à l'est la **Baie de Quiberon** et ses plages de sable abritées. Port-Maria, Saint-Julien, Penthièvre, la Grande Plage et la Thalassothérapie en font une destination ancrée dans l'imaginaire des vacances bretonnes.\n\nLe marché LCD se caractérise par une **saisonnalité parmi les plus extrêmes de France** : la population décuple en été (jusqu'à **80 000 personnes**), les tarifs à la nuit grimpent à 150-200 € sur juillet-août, mais l'occupation hors saison reste limitée. La stratégie de pricing est ici un levier majeur de rentabilité.",
+    conciergeries: [
+      {
+        name: 'Conciergerie Bienvenue',
+        commission: '20 %',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Co-hôte Expérimenté Airbnb, Baie de Quiberon',
+        description:
+          "Conciergerie locale couvrant la Baie de Quiberon et le Golfe du Morbihan, partenaire du programme Co-Hôtes Expérimentés d'Airbnb — un agrément qui certifie des critères de qualité et d'hospitalité. La commission affichée à 20 % est claire dès le départ, ce qui est appréciable sur un marché où beaucoup d'acteurs restent flous. Le réseau couvre Vannes en plus de Quiberon. Demandez ce que couvre exactement les 20 % (annonces, communication voyageurs, ménage, linge, photos, dynamic pricing), la façon dont le ménage est refacturé, et la stratégie tarifaire entre juillet-août (pic) et arrière-saison. Faites préciser le nombre de biens gérés sur Quiberon précisément.",
+      },
+      {
+        name: 'La Conciergerie du Soleil',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Conciergerie locale, équipe Elodie & Sébastien',
+        description:
+          "Conciergerie locale installée rue Roch Priol à Quiberon, gérée par une équipe identifiée (Elodie et Sébastien). Les retours clients mettent en avant la réactivité, la disponibilité et la qualité de l'accueil — éléments décisifs sur une presqu'île où chaque problème logistique en haute saison peut faire dérailler une réservation. Demandez la commission précise, ce qu'elle couvre, et la façon dont le ménage est refacturé au voyageur. Faites préciser le nombre de biens gérés et l'arbitrage entre haute saison (juillet-août) et ailes de saison (mai, juin, septembre, vacances scolaires) qui font l'écart de rentabilité annuelle.",
+      },
+      {
+        name: 'Ty\'Accueil',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Conciergerie locale Saint-Pierre-Quiberon',
+        description:
+          "Conciergerie locale installée à Saint-Pierre-Quiberon, sur la même presqu'île, avec une équipe dirigée par Marie. Le positionnement combine gestion locative saisonnière (annonces, ménage, linge, check-in / check-out) et services de conciergerie pour résidences secondaires (entretien hors saison). C'est intéressant pour les propriétaires qui ont une résidence secondaire utilisée quelques semaines par an et louée le reste du temps. Demandez la commission précise, ce qu'elle couvre, le mode de facturation du ménage, et la couverture exacte sur Quiberon vs Saint-Pierre-Quiberon. Vérifiez aussi la stratégie de pricing en haute saison où chaque nuit non louée pèse fort.",
+      },
+      {
+        name: 'La Conciergerie de Quiberon',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Conciergerie locale, sélection d\'appartements et maisons',
+        description:
+          "Conciergerie locale ancrée à Quiberon, avec une approche orientée sélection de biens (appartements, maisons) plutôt qu'agrégation massive. Le positionnement plus qualitatif convient aux propriétaires qui veulent un suivi soigné de leur bien, plutôt qu'une logique industrielle. Demandez la commission précise, ce qu'elle couvre, le mode de facturation du ménage, et le nombre de biens gérés actuellement. Faites préciser la stratégie tarifaire entre Port-Maria, la Grande Plage, Saint-Julien et la Côte sauvage, et entre haute saison et arrière-saison. Sur un marché à demande hyper concentrée, exigez une simulation de revenu net sur votre bien.",
+      },
+      {
+        name: 'Guest Adom Quiberon',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Réseau national, gestion clé en main',
+        description:
+          "Antenne quiberonnaise d'un réseau national de conciergerie issu du secteur des services à la personne. Le positionnement clé en main couvre l'ensemble des prestations (annonces, communication voyageurs, ménage, linge, optimisation tarifaire). Les retours clients sont contrastés sur l'ensemble du réseau, avec une réactivité du service client qui rassure sur la prise en compte des problèmes. Demandez la commission précise, ce qu'elle couvre, et la façon dont le ménage est refacturé. Vérifiez l'ancrage réel de l'équipe sur Quiberon (pas juste un nom commercial), le nombre de biens gérés en local, et exigez des références clients actives sur la presqu'île.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Port-Maria / Grande Plage',
+        pricePerNight: '100-200 €',
+        occupancy: 62,
+        description:
+          "Le port de pêche traditionnel et la Grande Plage du centre. Cœur touristique de la presqu'île, animation maximale en saison, à deux pas des commerces, restaurants et embarcadères vers Belle-Île. Tarifs à la nuit les plus élevés.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Saint-Julien',
+        pricePerNight: '90-170 €',
+        occupancy: 58,
+        description:
+          "Quartier au sud-ouest, agréable petite pinède, nombreux campings, plage du Drehen prisée des surfeurs. Demande forte en saison estivale, profil familial et sportif.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Penthièvre / nord de la presqu\'île',
+        pricePerNight: '85-160 €',
+        occupancy: 55,
+        description:
+          "Première plage de la presqu'île en arrivant, la plus longue (plusieurs kilomètres de sable blanc). Plus excentré du centre mais accès facile, demande estivale soutenue, kite-surf et activités nautiques.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Côte sauvage',
+        pricePerNight: '95-180 €',
+        occupancy: 56,
+        description:
+          "L'ouest de la presqu'île et ses 8 km de falaises battues par l'Atlantique. Biens plus rares, vues spectaculaires, ambiance préservée, clientèle en quête d'authenticité. Tarifs élevés en saison.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Centre-ville',
+        pricePerNight: '85-150 €',
+        occupancy: 60,
+        description:
+          "Le cœur de Quiberon, à pied des plages et des commerces. Profil équilibré, demande régulière, marché des locaux, embarquement vers Belle-Île en saison.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Saint-Pierre-Quiberon limitrophe',
+        pricePerNight: '80-150 €',
+        occupancy: 56,
+        description:
+          "La commune voisine au nord, encore sur la presqu'île, plus calme et résidentielle, tickets d'achat plus accessibles. Profil intéressant pour viser le rendement sans s'éloigner du tissu touristique.",
+        roiBrut: '5 à 6 %',
+      },
+    ],
+    regulation:
+      "Quiberon impose une **déclaration en mairie** avec **numéro d'enregistrement** pour tout meublé de tourisme, dès la première nuitée. L'enregistrement s'effectue en ligne sur la plateforme intercommunale **baiedequiberon.declaloc.fr**.\n\nPour une **résidence secondaire** ou un local à usage exclusif des locataires, une **autorisation de changement d'usage** est nécessaire — un point à clarifier en mairie avant tout investissement, la presqu'île étant en zone touristique tendue et sous pression résidentielle.\n\nLa **résidence principale** reste plafonnée à **120 nuitées par an** sur l'ensemble des plateformes. La **loi Le Meur** permet par ailleurs aux mairies d'abaisser ce seuil à **90 nuitées** par délibération du conseil municipal — une option à surveiller localement.\n\nLe cadre national s'applique : **numéro à 13 chiffres** généralisé au plus tard le **20 mai 2026** via un téléservice national, **SIRET** obligatoire pour tout loueur, et **logements F ou G au DPE interdits** à la location courte durée depuis 2025.\n\nLes sanctions ont été alourdies (jusqu'à **50 000 €** en cas d'infraction sur le changement d'usage, **10 000 €** pour défaut d'enregistrement).\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Perçue par nuit et par voyageur selon le classement du logement, elle s'estime en quelques secondes avec le calculateur.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 130,
+      neighborhood: 'le centre-ville',
+      revenuBrut: 22000,
+      commissionRate: 0.20,
+      menageCount: 50,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique à Quiberon en 2026 ?",
+        a: "Quiberon impose une déclaration en mairie avec numéro d'enregistrement pour tout meublé de tourisme, dès la première nuitée, via la plateforme intercommunale baiedequiberon.declaloc.fr. Pour une résidence secondaire ou un local à usage exclusif des locataires, une autorisation de changement d'usage est nécessaire — à clarifier en mairie avant investissement. La résidence principale reste plafonnée à 120 nuitées par an, avec la possibilité pour la commune d'abaisser le seuil à 90 nuitées par délibération du conseil municipal. Le numéro à 13 chiffres est généralisé au plus tard le 20 mai 2026. Les sanctions ont été alourdies (jusqu'à 50 000 € pour infraction sur le changement d'usage).",
+      },
+      {
+        q: "Comment gérer la saisonnalité extrême de Quiberon ?",
+        a: "C'est le sujet numéro un sur la presqu'île. La population passe de 5 000 à 80 000 en été, ce qui rend la stratégie de pricing décisive : tarifs très élevés sur juillet-août (130-200 €/nuit), arbitrage à faire sur les ailes de saison (mai, juin, septembre) où la concurrence se resserre, et arrière-saison où l'occupation chute fortement. Plusieurs leviers existent : positionnement sur Festival de Cinéma, vacances scolaires de Toussaint, marchés et événements locaux ; arbitrage courte / moyenne durée hors saison ; partenariats avec la thalassothérapie. Le choix de la conciergerie est ici plus décisif qu'ailleurs : exigez une stratégie tarifaire détaillée saison par saison, avec simulation de revenu annuel.",
+      },
+      {
+        q: "Quelle est la commission d'une conciergerie Airbnb à Quiberon ?",
+        a: "Les commissions se situent généralement entre 15 et 25 % du revenu locatif, hors ménage. Conciergerie Bienvenue affiche par exemple 20 % de commission, transparence appréciable. Plusieurs acteurs locaux restent en commission n.c. — un point à clarifier dès le premier échange. Sur un marché hyper saisonnier comme Quiberon, ce qui compte au-delà de la commission, c'est la stratégie de pricing : un point de commission supplémentaire peut être largement compensé par une optimisation tarifaire de +15 à 20 % sur l'été. Comparez systématiquement le revenu net simulé, pas juste le taux affiché.",
+      },
+    ],
+    updatedAt: '2026-06-01',
+  },
+  {
+    slug: 'la-ciotat',
+    displayName: 'La Ciotat',
+    region: 'Provence-Alpes-Côte d\'Azur',
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie La Ciotat Airbnb : comparatif 2026 des 5 meilleures agences',
+    metaTitle: 'Conciergerie La Ciotat Airbnb : comparatif 2026',
+    metaDescription:
+      "Comparatif neutre des 5 meilleures conciergeries Airbnb de La Ciotat : tarifs, avis Google, réglementation 2026, Mugel, Figuerolles, calanques.",
+    kwPrincipal: 'conciergerie la ciotat',
+    kwSecondaires: [
+      'conciergerie airbnb la ciotat',
+      'gestion locative la ciotat',
+      'meilleure conciergerie la ciotat',
+      'conciergerie paca',
+      'location saisonnière la ciotat',
+    ],
+    population: 38633,
+    tourists: 1500000,
+    activeListings: 1700,
+    priceLow: 80,
+    priceHigh: 180,
+    occupancyRate: 62,
+    revpar: 60,
+    seasonality:
+      "Forte saison méditerranéenne portée par les calanques du Mugel et de Figuerolles, la proximité du Parc National des Calanques, le Vieux Port et la baie. Pic estival classique (juin à septembre), prolongé par une arrière-saison soutenue grâce à la clientèle régionale (Marseille à 30 min, Aix-en-Provence à 40 min), aux week-ends courts toute l'année et aux escales nautiques (Port Vieux et Port de Plaisance). L'hiver reste actif sur les ponts et vacances scolaires, soutenu par les randonneurs et la douceur du climat.",
+    rankNational: 24,
+    introCustom:
+      "Vous louez un bien à La Ciotat sur Airbnb, ou vous étudiez la ville pour investir, séduit par sa baie, le **Parc du Mugel classé Jardin Remarquable**, ses calanques (Mugel, Figuerolles) et sa proximité immédiate avec Marseille (30 min) et le Parc National des Calanques. La Ciotat fait partie des **Bouches-du-Rhône** qui accueillent **9,2 millions de touristes par an** — un marché LCD dense et bien rodé.\n\nLe marché présente une vraie dualité : un **centre-ville Vieux Port** très demandé en saison et hors saison, et des **secteurs résidentiels avec vue mer ou accès calanques** (Mugel, Figuerolles, La Garde) où les tickets d'achat sont plus élevés mais l'occupation tient mieux. J'ai comparé les conciergeries présentes sur la ville à partir de leurs avis Google, de leurs commissions affichées et de leur ancrage local. Sur un marché aussi concurrentiel, le choix se joue autant sur la stratégie tarifaire que sur la commission elle-même.",
+    marketIntro:
+      "La Ciotat, **environ 38 000 habitants**, est l'une des principales stations balnéaires des Bouches-du-Rhône, à **30 minutes de Marseille** et **40 minutes d'Aix-en-Provence**. La ville cumule plusieurs atouts : un **Vieux Port** historique (lieu de naissance du cinéma avec les frères Lumière), le **Parc du Mugel** classé Jardin Remarquable (16 hectares), les **calanques du Mugel et de Figuerolles**, et la proximité immédiate du **Parc National des Calanques**.\n\nLe marché LCD bénéficie d'un **flux annuel exceptionnel** : les Bouches-du-Rhône accueillent **9,2 millions de touristes par an**, dont près d'un sur quatre visite les calanques. La saisonnalité est classique du Sud (pic estival juin-septembre), mais l'arrière-saison reste forte grâce à la clientèle régionale et aux week-ends courts. La **réglementation y est attentive** mais moins contraignante qu'à Marseille intra-muros.",
+    conciergeries: [
+      {
+        name: 'HostnFly La Ciotat',
+        commission: '20 % (à partir de)',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Réseau national, +30 % de revenus, assurance incluse',
+        description:
+          "Antenne ciotadenne d'un réseau national qui s'appuie sur la donnée pour optimiser les annonces et viser environ +30 % de revenus par rapport à une gestion en direct. La commission démarre à 20 %, avec une protection du logement intégrée (jusqu'à 800 000 € via la garantie Host d'Airbnb et 2 500 € via leur propre assurance). Les retours globaux sur le réseau sont solides à l'échelle nationale, mais l'ancrage local doit être vérifié. Demandez la commission précise applicable à votre bien, ce qu'elle couvre, la façon dont le ménage est refacturé, et le nombre de biens gérés à La Ciotat. Faites préciser la stratégie tarifaire entre Vieux Port, Mugel, Figuerolles et secteurs résidentiels.",
+      },
+      {
+        name: 'Welkeys La Ciotat',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Réseau premium, stratégie tarifaire dédiée',
+        description:
+          "Antenne ciotadenne d'un réseau premium présent sur les grandes destinations françaises. Le positionnement met l'accent sur la stratégie tarifaire adaptée à la destination, la gestion quotidienne des voyageurs, le suivi des avis et l'entretien rigoureux. Les retours nationaux sont contrastés — quelques signalements sur la qualité du ménage et la réactivité des équipes locales — un point à vérifier en demandant des références clients actives à La Ciotat. Demandez la commission précise, ce qu'elle couvre, la façon dont le ménage est refacturé, et faites un point sur la couverture des secteurs (Vieux Port, Mugel, Figuerolles, Saint-Jean, Ceyreste limitrophe).",
+      },
+      {
+        name: 'AllForHost La Ciotat',
+        commission: '15 à 18 %',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Commission transparente, deux formules',
+        description:
+          "Acteur présent à La Ciotat avec une **commission transparente** : environ 18 % sur la formule classique de gestion complète et environ 15 % sur la formule revenu garanti. Cette transparence est appréciable face à des concurrents qui restent flous sur le tarif. Le différentiel revenu garanti vs commission au pourcentage doit être analysé : qui assume le risque d'invendu en arrière-saison ? Demandez le détail des deux formules, ce qu'elles couvrent précisément, la façon dont le ménage est refacturé, et faites une simulation de revenu net sur 12 mois pour comparer les deux options sur votre bien.",
+      },
+      {
+        name: 'Merci Conciergerie',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Réseau régional Sud (13, 83, 84)',
+        description:
+          "Réseau régional couvrant Marseille, Aix-en-Provence, Toulon, Avignon et La Ciotat — donc l'ensemble des Bouches-du-Rhône, du Var et du Vaucluse. L'ancrage local à La Ciotat est confirmé, avec un positionnement gestion complète des locations courtes durées. Demandez la commission précise, ce qu'elle couvre, la façon dont le ménage est refacturé, et le nombre de biens gérés à La Ciotat précisément. Faites préciser la stratégie tarifaire entre haute saison estivale, arrière-saison, et clientèle régionale week-end. Sur un marché concurrentiel, exigez des références clients actives à La Ciotat et une simulation de revenu net comparable aux autres devis.",
+      },
+      {
+        name: 'Mediterranea Conciergerie',
+        commission: 'n.c.',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: 'Première conciergerie écoresponsable du Sud',
+        description:
+          "Conciergerie locale au positionnement original : **éco-responsabilité** mise en avant comme axe différenciant (produits d'entretien, gestion du linge, partenariats locaux). Sur un territoire sensible aux enjeux environnementaux (Parc National des Calanques, Parc du Mugel classé), c'est un argument qui peut résonner auprès de la clientèle. Demandez la commission précise, ce qu'elle couvre, la façon dont le ménage est refacturé, et faites préciser ce que l'éco-responsabilité change concrètement par rapport aux concurrents (au-delà du marketing). Vérifiez le nombre de biens gérés à La Ciotat et exigez une simulation de revenu net sur votre logement.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieux Port / centre-ville',
+        pricePerNight: '90-160 €',
+        occupancy: 64,
+        description:
+          "Le cœur historique autour du Vieux Port et de la rue des Poilus, artère commerçante. Lieu de naissance du cinéma (frères Lumière), animation toute l'année, restaurants, commerces, marchés. Demande très forte, biens à fort cachet.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Le Mugel',
+        pricePerNight: '110-180 €',
+        occupancy: 64,
+        description:
+          "Secteur résidentiel autour du Parc du Mugel classé Jardin Remarquable, calanque protégée, plages confidentielles. Tickets d'achat élevés mais demande très forte, clientèle premium en quête de calme et de vues mer.",
+        roiBrut: '3 à 4 %',
+      },
+      {
+        name: 'Figuerolles',
+        pricePerNight: '100-170 €',
+        occupancy: 62,
+        description:
+          "À 800 mètres du Mugel et 1 km du Vieux Port, autour de la calanque de Figuerolles et du Rocher du Capucin. Cadre exceptionnel, demande estivale très forte, biens rares.",
+        roiBrut: '3 à 4 %',
+      },
+      {
+        name: 'La Garde / Saint-Jean',
+        pricePerNight: '85-140 €',
+        occupancy: 60,
+        description:
+          "Secteurs résidentiels au-dessus du Vieux Port, vues mer et baie. Profil équilibré entre demande touristique et clientèle régionale week-end, prix d'achat plus accessibles que Mugel ou Figuerolles.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'La Salis / Liouquet',
+        pricePerNight: '90-150 €',
+        occupancy: 58,
+        description:
+          "À l'est vers Ceyreste, secteurs résidentiels avec accès plages et calanques de l'autre côté de la baie. Demande estivale soutenue, tickets d'achat modérés, intéressant pour viser le rendement.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Ceyreste limitrophe',
+        pricePerNight: '75-130 €',
+        occupancy: 56,
+        description:
+          "Le village ancien dans les terres, ancienne commune mère de La Ciotat. Cadre provençal authentique, prix d'achat les plus accessibles. Demande plus diffuse mais profil de moyenne durée intéressant.",
+        roiBrut: '5 à 6 %',
+      },
+    ],
+    regulation:
+      "La Ciotat impose une **déclaration en mairie** d'un meublé de tourisme avec **numéro d'enregistrement** pour toute location courte durée. La commune n'applique pas actuellement de **changement d'usage généralisé** comme Paris ou Lyon, mais la pression touristique sur le Parc National des Calanques et la Métropole Aix-Marseille rend ce point sensible.\n\nLa **résidence principale** reste plafonnée à **120 nuitées par an** sur l'ensemble des plateformes. La **loi Le Meur** permet aux mairies d'abaisser ce seuil à **90 nuitées** par délibération du conseil municipal — un point à surveiller localement, La Ciotat étant en zone tendue côtière.\n\nLe cadre national s'applique : **numéro à 13 chiffres** généralisé au plus tard le **20 mai 2026** via un téléservice national, **SIRET** obligatoire pour tout loueur, et **logements F ou G au DPE interdits** à la location courte durée depuis le 1er janvier 2025 (puis E à partir de 2028 en zone tendue).\n\nLes sanctions ont été alourdies par la loi Le Meur : jusqu'à **50 000 € pour infraction sur le changement d'usage**, **20 000 € pour fausse déclaration** et **10 000 € pour défaut d'enregistrement**.\n\nAvant d'investir, **vérifiez en mairie** les modalités précises en vigueur sur La Ciotat à la date de votre projet, ces dispositifs étant susceptibles d'évoluer.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Perçue par nuit et par voyageur selon le classement du logement, elle s'estime en quelques secondes avec le calculateur.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 120,
+      neighborhood: 'le Vieux Port',
+      revenuBrut: 22500,
+      commissionRate: 0.20,
+      menageCount: 50,
+      menageUnitCost: 65,
+    },
+    extraFaq: [
+      {
+        q: "Quelle réglementation Airbnb s'applique à La Ciotat en 2026 ?",
+        a: "La Ciotat impose une déclaration en mairie avec numéro d'enregistrement pour tout meublé de tourisme. La commune n'applique pas actuellement de changement d'usage généralisé comme Paris ou Lyon, mais cette situation est susceptible d'évoluer compte tenu de la pression touristique côtière. La résidence principale reste plafonnée à 120 nuitées par an, avec la possibilité pour la commune d'abaisser le seuil à 90 nuitées par délibération. Le numéro à 13 chiffres est généralisé au plus tard le 20 mai 2026. Les sanctions ont été alourdies (jusqu'à 50 000 € pour infraction sur le changement d'usage). Vérifiez en mairie les modalités précises à la date de votre projet.",
+      },
+      {
+        q: "La Ciotat est-elle une bonne ville pour investir en LCD ?",
+        a: "La Ciotat cumule des atouts puissants : proximité immédiate de Marseille (30 min) et Aix-en-Provence (40 min), Parc National des Calanques à la porte, Parc du Mugel classé Jardin Remarquable, Vieux Port historique. Les Bouches-du-Rhône accueillent 9,2 millions de touristes par an, dont près d'un sur quatre visite les calanques. La demande est forte en saison comme hors saison grâce à la clientèle régionale week-end. Les tickets d'achat restent plus accessibles qu'à Cassis et nettement plus que sur la Côte d'Azur, ce qui améliore le rendement brut. Comptez sur un T2 bien placé au Vieux Port ou en hauteur pour 22 000-26 000 € brut annuel.",
+      },
+      {
+        q: "Quelle est la commission d'une conciergerie Airbnb à La Ciotat ?",
+        a: "Les commissions se situent généralement entre 15 et 25 % du revenu locatif, hors ménage. AllForHost affiche par exemple une fourchette claire à 15-18 % selon la formule (revenu garanti vs commission au pourcentage), HostnFly démarre à 20 %. Plusieurs acteurs régionaux restent en commission n.c., un point à clarifier dès le premier échange. Sur un marché concurrentiel comme La Ciotat, ce qui compte au-delà du taux, c'est la stratégie tarifaire entre haute saison, arrière-saison et clientèle régionale week-end. Comparez systématiquement le revenu net simulé sur 12 mois entre prestataires, pas juste le pourcentage affiché.",
+      },
+    ],
+    updatedAt: '2026-06-01',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

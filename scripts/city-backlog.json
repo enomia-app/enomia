@@ -729,9 +729,10 @@
     "oldSlug": "/conciergerie-airbnb-beziers",
     "kw": "conciergerie beziers",
     "vol": 210,
-    "status": "À faire",
+    "status": "Publié",
     "kd": 0,
-    "notes": "Recherché en backfill 2026-05-29 mais non retenu (ordre backlog : Limoges/Menton prioritaires). 3 conciergeries notées mais toutes très faibles en volume (La Conciergerie près de chez vous 5,0/4, WeLoc 5,0/~10, Sleep N Trip 4,3/7). Marché libre. Publiable en mode prudent au prochain run."
+    "notes": "Recherché en backfill 2026-05-29 mais non retenu (ordre backlog : Limoges/Menton prioritaires). 3 conciergeries notées mais toutes très faibles en volume (La Conciergerie près de chez vous 5,0/4, WeLoc 5,0/~10, Sleep N Trip 4,3/7). Marché libre. Publiable en mode prudent au prochain run.",
+    "publishedAt": "2026-06-01"
   },
   {
     "num": 61,
@@ -743,9 +744,10 @@
     "oldSlug": "/conciergerie-airbnb-le-havre",
     "kw": "conciergerie le havre",
     "vol": 210,
-    "status": "À faire",
+    "status": "Publié",
     "kd": 0,
-    "notes": "Recherché en backfill 2026-05-29 mais non retenu (ordre backlog). 5 conciergeries notées solides identifiées (Ma Conciergerie en Normandie 4,7/166, B PAM 4,7/23, Bienfaits pour Toits 5,0/20, Westone 5,0/6 @20-25%, La Conciergerie Havraise 3,1/19). Réglementation restreinte (changement d usage). BON CANDIDAT PRIORITAIRE prochain run."
+    "notes": "Recherché en backfill 2026-05-29 mais non retenu (ordre backlog). 5 conciergeries notées solides identifiées (Ma Conciergerie en Normandie 4,7/166, B PAM 4,7/23, Bienfaits pour Toits 5,0/20, Westone 5,0/6 @20-25%, La Conciergerie Havraise 3,1/19). Réglementation restreinte (changement d usage). BON CANDIDAT PRIORITAIRE prochain run.",
+    "publishedAt": "2026-06-01"
   },
   {
     "num": 62,
@@ -757,8 +759,9 @@
     "oldSlug": "/conciergerie-airbnb-quiberon",
     "kw": "conciergerie quiberon",
     "vol": 210,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-06-01"
   },
   {
     "num": 63,
@@ -1263,8 +1266,9 @@
     "kw": "conciergerie La Ciotat",
     "vol": 210,
     "kd": "14",
-    "status": "À faire",
-    "source": "semrush-expand-2026-05-15"
+    "status": "Publié",
+    "source": "semrush-expand-2026-05-15",
+    "publishedAt": "2026-06-01"
   },
   {
     "num": 102,

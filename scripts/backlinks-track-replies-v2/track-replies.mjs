@@ -128,7 +128,8 @@ export function getHeader(msg, name) {
 export function pickLatestInbound(messages, ourAddress, afterMs = 0) {
   const inbound = (messages || []).filter(m => {
     const from = getHeader(m, 'From').toLowerCase();
-    if (!from || from.includes(ourAddress.toLowerCase())) return false;
+    if (!from || from.includes(ourAddress.toLowerCase())) return false; // nos propres messages
+    if (/mailer-daemon|postmaster/i.test(from)) return false;           // bounce/NDR, pas une réponse (géré par detectBounces)
     return Number(m.internalDate || 0) >= afterMs;
   });
   if (!inbound.length) return null;

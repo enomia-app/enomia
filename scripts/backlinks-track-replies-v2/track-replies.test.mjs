@@ -54,3 +54,25 @@ test('réponse antérieure à afterMs (vieux thread) → exclue', () => {
   const msgs = [msg('p@x.fr', '2026-05-20T09:00:00Z', 'old')];
   assert.equal(pickLatestInbound(msgs, OURS, afterMs), null);
 });
+
+test('bounce / NDR dans le thread (MAILER-DAEMON) → ignoré, pas une réponse', () => {
+  const msgs = [
+    msg('Marc Chenut <marc@enomia.app>', '2026-06-01T08:18:28Z', 'us'),
+    msg('Mail Delivery System <MAILER-DAEMON@mo551.mail-out.ovh.net>', '2026-06-01T08:18:33Z', 'ndr'),
+  ];
+  assert.equal(pickLatestInbound(msgs, OURS), null);
+});
+
+test('NDR postmaster → ignoré aussi', () => {
+  const msgs = [msg('postmaster@outlook.com', '2026-06-02T09:00:00Z', 'pm')];
+  assert.equal(pickLatestInbound(msgs, OURS), null);
+});
+
+test('vraie réponse + NDR dans le même thread → garde la vraie réponse', () => {
+  const msgs = [
+    msg('Marc Chenut <marc@enomia.app>', '2026-06-01T08:00:00Z', 'us'),
+    msg('MAILER-DAEMON@ovh.net', '2026-06-01T08:01:00Z', 'ndr'),
+    msg('Pauline <pauline@hosting-academy.com>', '2026-06-01T14:36:00Z', 'real'),
+  ];
+  assert.equal(pickLatestInbound(msgs, OURS).id, 'real');
+});

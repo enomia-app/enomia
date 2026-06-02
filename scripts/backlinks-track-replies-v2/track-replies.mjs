@@ -5,22 +5,29 @@
  * Workflow (1×/jour ouvré à 9h13) :
  *   1. Charge backlog mois courant + précédent
  *   2. Pour chaque prospect en status sent / relance_1 / relance_2 :
- *      a. Query Gmail pour réponses du prospect depuis date_envoi (ou date_relance)
- *      b. Si réponse → classifier via Haiku (positive/negative/neutre/spam) → update status
+ *      a. Récupère le THREAD Gmail (via gmail_thread_id, ou résolu depuis
+ *         gmail_id) et y cherche une réponse, quel que soit l'expéditeur.
+ *      b. Si réponse → classifier via Sonnet (positive/negative/neutre/spam) → update status
  *   3. Pour les non-répondus :
  *      a. J+5 → status relance_1 + envoi relance T2 auto
  *      b. J+10 → status relance_2 + envoi relance T3 auto
  *      c. J+15 → status pas_de_reponse (pas d'envoi)
  *   4. Si réponses positives → envoie 1 mail dédié à Marc avec liens Gmail
  *
+ * Détection par thread : capte les réponses venant d'une AUTRE adresse que
+ * celle pitchée (ex : on pitche contact@, la resp. marketing répond depuis
+ * son adresse perso). L'ancien filtre from:<adresse pitchée> les ratait, et
+ * laissait le prospect en `sent` → relance auto à tort.
+ *
  * Usage :
  *   node scripts/backlinks-track-replies-v2/track-replies.mjs
  *   node scripts/backlinks-track-replies-v2/track-replies.mjs --dry
+ *     --dry : lit Gmail (détection réelle) mais n'envoie rien et ne sauvegarde rien.
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { google } from 'googleapis';
 import { callClaudeMax } from '../lib/claude-cli.mjs';
 
@@ -107,6 +114,47 @@ function extractBody(msg) {
     return null;
   }
   return walk(msg.payload) || '';
+}
+
+const OUR_ADDRESS = 'marc@enomia.app';
+
+export function getHeader(msg, name) {
+  const h = (msg.payload?.headers || []).find(x => x.name?.toLowerCase() === name.toLowerCase());
+  return h?.value || '';
+}
+
+// Pur (testable sans Gmail) : parmi les messages d'un thread, renvoie le
+// dernier message ENTRANT (expéditeur != nous) daté au plus tôt à afterMs.
+export function pickLatestInbound(messages, ourAddress, afterMs = 0) {
+  const inbound = (messages || []).filter(m => {
+    const from = getHeader(m, 'From').toLowerCase();
+    if (!from || from.includes(ourAddress.toLowerCase())) return false;
+    return Number(m.internalDate || 0) >= afterMs;
+  });
+  if (!inbound.length) return null;
+  inbound.sort((a, b) => Number(b.internalDate || 0) - Number(a.internalDate || 0));
+  return inbound[0];
+}
+
+// Résout le threadId d'un candidat. Auto-répare depuis gmail_id si absent
+// (couvre les prospects envoyés avant l'ajout de gmail_thread_id → permet
+// l'audit rétroactif des réponses ratées).
+async function resolveThreadId(gm, c) {
+  if (c.gmail_thread_id) return c.gmail_thread_id;
+  const sendId = c.gmail_id || c.gmail_relance_2_id || c.gmail_relance_1_id;
+  if (!sendId) return null;
+  try {
+    const m = await gm.users.messages.get({ userId: 'me', id: sendId, format: 'minimal' });
+    if (m.data?.threadId) { c.gmail_thread_id = m.data.threadId; return m.data.threadId; }
+  } catch { /* message introuvable (supprimé / purgé) */ }
+  return null;
+}
+
+// Cherche une réponse dans le thread Gmail, quel que soit l'expéditeur.
+async function findThreadReply(gm, threadId, afterIso) {
+  const t = await gm.users.threads.get({ userId: 'me', id: threadId, format: 'full' });
+  const afterMs = afterIso ? Date.parse(afterIso.slice(0, 10)) : 0;
+  return pickLatestInbound(t.data?.messages || [], OUR_ADDRESS, afterMs);
 }
 
 async function sendMail(gm, { to, subject, body, inReplyTo }) {
@@ -253,7 +301,7 @@ async function main() {
   );
   log(`🔭 ${bounceScope.length} prospects dans le scope bounces (envois ≤ 14j, tous statuts)`);
 
-  const gm = DRY ? null : await getGmailClient();
+  const gm = await getGmailClient(); // connecté même en --dry (lectures seules)
   const positives = [];
   const negatives = [];
   const relancesEnvoyees = [];
@@ -292,29 +340,42 @@ async function main() {
     const refDate = c.date_relance_2 || c.date_relance_1 || c.date_envoi;
     log(`\n→ ${c.site} (status=${c.status}, dernier envoi=${refDate})`);
 
-    // 1. Check replies
-    if (!DRY) {
-      const replies = await searchReplies(gm, c.email, refDate);
-      if (replies.length) {
-        const body = extractBody(replies[0]);
-        const verdict = await classifyReply(body);
-        log(`  📬 réponse trouvée → ${verdict}`);
-        c.reponse_recue = verdict;
-        c.date_reponse = TODAY;
-        c.gmail_reply_id = replies[0].id;
-        if (verdict === 'positive') {
-          c.status = 'repondu_positif';
-          positives.push(c);
-        } else if (verdict === 'negative') {
-          c.status = 'repondu_negatif';
-          negatives.push(c);
-        } else if (verdict === 'spam') {
-          c.status = 'repondu_spam';
-        } else {
-          c.status = 'repondu_neutre';
-        }
-        continue;
+    // 1. Check replies — via le thread Gmail (capte une réponse depuis
+    //    N'IMPORTE QUELLE adresse, pas seulement celle qu'on a pitchée).
+    let reply = null;
+    try {
+      const threadId = await resolveThreadId(gm, c);
+      if (threadId) {
+        reply = await findThreadReply(gm, threadId, c.date_envoi);
+      } else {
+        // Fallback legacy : threadId non résolvable → ancienne recherche from:
+        const replies = await searchReplies(gm, c.email, refDate);
+        reply = replies[0] || null;
       }
+    } catch (e) {
+      log(`  ⚠️ erreur détection réponse: ${e.message}`);
+    }
+    if (reply) {
+      const body = extractBody(reply);
+      const verdict = await classifyReply(body);
+      const from = getHeader(reply, 'From');
+      log(`  📬 réponse trouvée (de ${from || '?'}) → ${verdict}`);
+      c.reponse_recue = verdict;
+      c.date_reponse = TODAY;
+      c.gmail_reply_id = reply.id;
+      c.reply_from = from;
+      if (verdict === 'positive') {
+        c.status = 'repondu_positif';
+        positives.push(c);
+      } else if (verdict === 'negative') {
+        c.status = 'repondu_negatif';
+        negatives.push(c);
+      } else if (verdict === 'spam') {
+        c.status = 'repondu_spam';
+      } else {
+        c.status = 'repondu_neutre';
+      }
+      continue;
     }
 
     // 2. Relances
@@ -436,4 +497,6 @@ Prochain tracking demain 9h13 (jour ouvré).
   log(`📧 Récap envoyé (gmail ${res.data.id})`);
 }
 
-main().catch(e => { console.error('❌ Fatal:', e); process.exit(1); });
+// Ne lance main() que si exécuté directement (pas à l'import depuis les tests).
+const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isMain) main().catch(e => { console.error('❌ Fatal:', e); process.exit(1); });

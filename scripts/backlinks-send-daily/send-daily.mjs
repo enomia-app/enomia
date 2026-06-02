@@ -288,7 +288,10 @@ async function sendEmail(gm, { to, bcc, subject, body }) {
   const encoded = Buffer.from(raw, 'utf8')
     .toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
   const res = await gm.users.messages.send({ userId: 'me', requestBody: { raw: encoded } });
-  return res.data.id;
+  // On renvoie l'id ET le threadId : le threadId permet à track-replies de
+  // détecter une réponse venant de N'IMPORTE QUELLE adresse (pas seulement
+  // celle qu'on a pitchée).
+  return { id: res.data.id, threadId: res.data.threadId };
 }
 
 async function getGmailClient() {
@@ -434,7 +437,7 @@ async function main() {
         log(`  ✉ Body preview:\n${pitch.body.split('\n').slice(0, 6).join('\n')}\n  ...`);
       } else {
         try {
-          const msgId = await sendEmail(gm, {
+          const sent = await sendEmail(gm, {
             to: c.email,
             bcc: bccState.bcc ? 'marc@enomia.app' : null,
             subject: pitch.subject,
@@ -442,10 +445,11 @@ async function main() {
           });
           c.status = 'sent';
           c.date_envoi = TODAY;
-          c.gmail_id = msgId;
+          c.gmail_id = sent.id;
+          c.gmail_thread_id = sent.threadId;
           c.dernier_contact = new Date().toISOString();
           sentEmail.push({ ...c });
-          log(`  ✅ sent (gmail ${msgId})`);
+          log(`  ✅ sent (gmail ${sent.id}, thread ${sent.threadId})`);
           await sleep(10000); // anti-spam
         } catch (e) {
           c.status = 'send_fail';

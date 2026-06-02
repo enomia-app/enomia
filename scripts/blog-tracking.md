@@ -46,7 +46,7 @@ Recall SEMrush effectué le 2026-05-25 a montré des écarts (-9% à -86%) **mê
 | 9 | P1 — Satellite | 🔑 Équipement | /serrure-connectee-airbnb | serrure connectée | 12 100 | 12 100 | 26 | en-ligne |
 | 10 | P1 — Pilier | 🏡 LCD | /location-courte-duree | location courte durée | — | 2 900 | 26 | **brouillon** (créé 2026-05-25, ex `/location-meublee-vs-location-courte-duree` 0 vol refactoré) |
 | 11 | P1 — Satellite | 💶 Fiscalité | /fiscalite-airbnb | fiscalité airbnb 2025 | 1 300 | 720 | 21-37 | en-ligne (KW exact à 720 ; "fiscalité airbnb" sans 2025 = 720 aussi) |
-| 12 | P1 — Satellite | 🔧 Channel Manager | /channel-manager-gratuit | channel manager gratuit | 320 | 320 | 8-12 | brouillon backlog ⭐⭐ |
+| 12 | P1 — Satellite | 🔧 Channel Manager | /channel-manager-gratuit | channel manager gratuit | 320 | 320 | 8-12 | brouillon — réécrit méthode courante 2026-06-02 (tables `{% table %}` Markdoc, liens `/blog/`, €/à, cluster KW airbnb/location saisonnière/meilleur fr) + déplacé `backlog→blog/`, prêt Keystatic ⭐⭐ |
 | 13 | P1 — Satellite | ⭐ Avis Outils | /superhote-avis | superhote avis | 260 | 320 | 13-19 | brouillon backlog |
 | 14 | P1 — Satellite | 🔧 Channel Manager | /channel-manager-conciergerie | channel manager conciergerie | 170 | 210 | 6-10 | brouillon backlog ⭐⭐ |
 | 15 | P1 — Nouveau | 🏛️ Réglementation | /loi-le-meur-airbnb | loi le meur | 6 450 | 4 400 | 26-34 | en-ligne (refresh 2026-05-25 : +KW loi airbnb 2025/2026) |
@@ -79,7 +79,7 @@ Recall SEMrush effectué le 2026-05-25 a montré des écarts (-9% à -86%) **mê
 | 42 | P2 — Satellite | ⚙️ Automatisation | /gestion-linge-airbnb | gestion linge airbnb | 50 | 40 | 0-12 | brouillon backlog (vol bas) |
 | 43 | P2 — Nouveau | 🧹 Ménage | /frais-menage-airbnb | frais de ménage airbnb | 2 570 | 590 (cluster `frais airbnb` 1000 + `airbnb menage` 880) | 20-27 | à rédiger |
 | 44 | P2 — Nouveau | 📖 Livret accueil | /livret-accueil-airbnb | livret d'accueil airbnb | 2 400 | 390 (cluster ~1500) | 16 | à rédiger |
-| 45 | P2 — Nouveau | 📝 Fiscalité | /declarer-revenus-airbnb-case-impot | déclaration revenus airbnb | 1 310 | 390 | 31 | à rédiger |
+| 45 | P2 — Satellite | 📝 Fiscalité | /declarer-revenus-airbnb-case-impot | déclaration airbnb impot | 1 310 | 1 100 | 29 | à rédiger — ⭐ intention DISTINCTE « déclaration airbnb impôt » confirmée Marc 2026-06-02 (capture SEMrush : 169 variantes, **1,1K vol cumulé**). Top KW : déclaration airbnb impot 210 KD29 · airbnb déclaration impots 170 KD31 · airbnb déclaration impot 90 KD29 · déclarer airbnb impots 90 KD24 · comment déclarer airbnb aux impots 40. + adjacents : déclaration revenus airbnb 390, calcul impôt airbnb 390 KD26. ⚠️ Leçon KW ordre des mots : « déclaration airbnb impot » porte le volume, « déclaration impôt airbnb » ≈ 0. Satellite = how-to déclaratif profond (cases, 2042-C-PRO, micro-BIC vs réel, dates, calcul). Cannibalisation pilier /fiscalite-airbnb (section « Déclaration pas à pas » existante) → alléger en résumé + lien (hub→détail). Proposé : 1 seule page consolidant impôt+revenus+calcul pour éviter l'auto-cannibalisation (à valider Marc). |
 | 46 | P2 — Nouveau | 🛡️ Assurance | /assurance-airbnb-proprietaire | airbnb assurance | 1 210 | 390 (ou `assurance airbnb` 720) | 32-35 | à rédiger |
 | 47 | P1 — Nouveau | 🏛️ Bail / Meublé | /difference-location-saisonniere-meuble-tourisme | différence entre location saisonnière et meublé de tourisme | 1 100 | **1 000** | **15** | **en-ligne** ⭐⭐ — vrai vol confirmé, KW exact à respecter |
 | 48 | P2 — Nouveau | 🏢 Copropriété | /airbnb-copropriete | airbnb copropriété | 940 | 210 | 17-22 | à rédiger |
@@ -149,7 +149,7 @@ Score = Vol × (60 − KD) / 60. Top 10 :
 | 6 | boite-a-cles-airbnb | boite à clé connecté | 390 | 15 | 293 | à rédiger |
 | 7 | livret-accueil-airbnb | livret d'accueil airbnb | 390 | 16 | 286 | à rédiger |
 | 8 | commission-booking-proprietaire | commission booking | 390 | 22 | 247 | brouillon backlog |
-| 9 | channel-manager-gratuit | channel manager gratuit | 320 | 12 | 256 | brouillon backlog |
+| 9 | channel-manager-gratuit | channel manager gratuit | 320 | 12 | 256 | brouillon — réécrit méthode courante + déplacé `blog/` 2026-06-02 |
 | 10 | formation-conciergerie-airbnb | formation conciergerie airbnb | 320 | 12 | 256 | brouillon backlog |
 
 ## Articles archivés (vol = 0 ou redondants)
@@ -218,3 +218,4 @@ Score = Vol × (60 − KD) / 60. Top 10 :
   - Possible saisonnalité LCD ou update SEMrush
 - **Extraction Numbers en CSV** via `numbers-parser` Python — 57 articles trouvés (vs 47 via preview image) + 6 articles bonus identifiés.
 - **Convention KW ajoutée** : ne JAMAIS tronquer les petits mots des KW SEMrush dans le tracking.
+- **2026-06-02** : Intention « déclaration airbnb impôt » (demande Marc) — **CORRECTION** : c'est une intention DISTINCTE à **1,1K vol** (capture SEMrush Marc : 169 variantes ; déclaration airbnb impot 210 KD29, airbnb déclaration impots 170 KD31, airbnb déclaration impot 90 KD29, déclarer airbnb impots 90 KD24, comment déclarer airbnb aux impots 40). Mon analyse précédente (« 20-30 vol, négligeable, déjà capté par le pilier ») était **fausse** : mauvais ordre des mots testé (« déclaration impôt airbnb » ≈ 0 vs « déclaration airbnb impot » qui porte le volume → leçon KW à retenir). **Décision révisée** : satellite dédié `/declarer-revenus-airbnb-case-impot` qui consolide tout le cluster déclaration (impôt 1,1K + revenus 390 + calcul impôt 390), distinct du pilier `/fiscalite-airbnb` dont la section « Déclaration pas à pas » sera allégée en résumé + lien (hub→détail). 1 seule page how-to pour ne pas auto-cannibaliser « déclaration revenus » vs « déclaration impôt » — **à confirmer Marc s'il veut 2 articles séparés**.

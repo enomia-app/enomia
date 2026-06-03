@@ -403,9 +403,10 @@
     "oldSlug": "/conciergerie-airbnb-porto-vecchio",
     "kw": "conciergerie porto vecchio",
     "vol": 310,
-    "status": "À reprendre manuel",
+    "status": "À faire",
     "kd": 0,
-    "notes": "Skip auto 2026-05-21 : <3 conciergeries identifiables avec ratings Google vérifiables. Marché dominé par acteurs sans présence Google Maps tracée. Intervention humaine requise pour identifier conciergeries pertinentes."
+    "notes": "Débloqué 2026-06-03 : audit Places = 8 conciergeries notées domiciliées à Porto-Vecchio.",
+    "recheckedAt": "2026-06-03"
   },
   {
     "num": 38,
@@ -445,9 +446,10 @@
     "oldSlug": "/conciergerie-airbnb-boulogne-sur-mer",
     "kw": "conciergerie boulogne sur mer",
     "vol": 260,
-    "status": "À reprendre manuel",
+    "status": "À faire",
     "kd": 0,
-    "notes": "Skip auto 2026-05-22 : 1 seule conciergerie avec rating Google clairement vérifiable (Ma Conciergerie 4.9/5 100+ avis). Autres acteurs identifiés (Home Conciergerie 4.88, Conciergerie Leroy 150+ biens, Les Clés C&D 14% commission, La Villa, Oparadi, C&C Sérénité) sans rating Google vérifiable via web search. Intervention manuelle requise sur Google Maps direct."
+    "notes": "Débloqué 2026-06-03 : audit Places = 6 conciergeries notées domiciliées à Boulogne-sur-Mer.",
+    "recheckedAt": "2026-06-03"
   },
   {
     "num": 41,
@@ -529,9 +531,10 @@
     "oldSlug": "/conciergerie-airbnb-le-grau-du-roi",
     "kw": "conciergerie grau du roi",
     "vol": 250,
-    "status": "À reprendre manuel",
+    "status": "À faire",
     "kd": 0,
-    "notes": "Skip auto 2026-05-25 : 1 seule conciergerie avec note Google robuste (OUI Conciergerie 4,3/5 - 55 avis). Locamargue 5,0/5 sur 2 avis seulement (+ note divergente 3,4/5 ailleurs) = trop fragile. Autres acteurs locaux réels (Conciergerie Ludo, SeasonLoc, Aurore Multiservices) sans note Google vérifiable (ratings Facebook/PagesJaunes uniquement). Intervention manuelle requise (Google Maps direct via Mac mini) pour identifier 2+ conciergeries supplémentaires avec notes vérifiables. Vol live SEMrush 110 (vs 250 backlog)."
+    "notes": "Débloqué 2026-06-03 : audit Places = 4 conciergeries notées domiciliées au Grau-du-Roi.",
+    "recheckedAt": "2026-06-03"
   },
   {
     "num": 47,
@@ -572,9 +575,10 @@
     "oldSlug": "/conciergerie-airbnb-calais",
     "kw": "conciergerie calais",
     "vol": 230,
-    "status": "À reprendre manuel",
+    "status": "À faire",
     "kd": 0,
-    "notes": "Skip auto 2026-05-27 : aucune conciergerie avec note Google robuste vérifiable via web (seul Alex Hocine 3,7/5 - 3 avis, profil individuel). Bonappart, N&C/NC, Elfée, L&J, Homerez sans note Google traçable. Idem Boulogne-sur-Mer (Côte d Opale). Intervention manuelle Google Maps requise. Vol live SEMrush 140 (vs 230 backlog)."
+    "notes": "Débloqué 2026-06-03 : audit Places = 4 conciergeries notées domiciliées à Calais.",
+    "recheckedAt": "2026-06-03"
   },
   {
     "num": 50,
@@ -600,9 +604,10 @@
     "oldSlug": "/conciergerie-airbnb-ajaccio",
     "kw": "conciergerie ajaccio",
     "vol": 210,
-    "status": "À reprendre manuel",
+    "status": "À faire",
     "kd": 0,
-    "notes": "Skip auto 2026-05-27 : 1 seule note Google vérifiable et fragile (Welhome Conciergerie 5,0/5 - 3 avis). <2 conciergeries robustes. Marché corse dominé par acteurs sans présence Google Maps tracée (idem Porto-Vecchio). Région Corse NON ajoutée au tableau regions[]. Intervention manuelle requise."
+    "notes": "Débloqué 2026-06-03 : audit Places = 6 conciergeries notées domiciliées à Ajaccio.",
+    "recheckedAt": "2026-06-03"
   },
   {
     "num": 52,
@@ -642,9 +647,10 @@
     "oldSlug": "/conciergerie-airbnb-carcassonne",
     "kw": "conciergerie carcassonne",
     "vol": 210,
-    "status": "À reprendre manuel",
+    "status": "À faire",
     "kd": 0,
-    "notes": "Skip auto 2026-05-27 : 1 seule note Google propre vérifiable (CarcaHome 4,6/5 - 10 avis). Oc Keys note conflictuelle (5,0 GMB vs 4,5/347 Trustindex cross-plateforme, count non vérifiable), Dame Carcas 3,1/5 - 22 avis (médiocre), Conciergerie Carcassonnaise / Bel la / Escapade sans note Google traçable. Backfill par Pau. Intervention manuelle Google Maps requise. Vol live SEMrush 210."
+    "notes": "Débloqué 2026-06-03 : audit Places = 6 conciergeries notées domiciliées à Carcassonne.",
+    "recheckedAt": "2026-06-03"
   },
   {
     "num": 55,
@@ -673,7 +679,8 @@
     "vol": 210,
     "status": "À reprendre manuel",
     "kd": 0,
-    "notes": "Skip auto 2026-05-29 : seulement 2 conciergeries avec note Google et fragiles (Interhome Cabourg 3,8/5 avec divergence 155 vs 58 avis selon source, + c est une agence Interhome pas une conciergerie LCD pure ; Ma Conciergerie Cabourg 3,8/5 - 18 avis via snippets). Comparatif à 2 acteurs notés 3,8 = trop mince et peu flatteur. Kings d Home, CLS/CMFP, Cabourg Vacances sans note Google. Intervention manuelle Google Maps requise."
+    "notes": "Audit Places 2026-06-03 : 1 seule conciergerie domiciliée à Cabourg (Conciergerie Fleury est à Dives-sur-Mer). < 3 notées, pas de comparatif possible. Réessayer si le marché grandit ou élargir à la Côte Fleurie.",
+    "recheckedAt": "2026-06-03"
   },
   {
     "num": 57,
@@ -685,9 +692,10 @@
     "oldSlug": "/conciergerie-airbnb-honfleur",
     "kw": "conciergerie honfleur",
     "vol": 210,
-    "status": "À reprendre manuel",
+    "status": "À faire",
     "kd": 0,
-    "notes": "Skip auto 2026-05-29 : 1 seule conciergerie avec note Google vérifiable (Conciergerie Rémi Griffoul 5,0/5 - 57 avis). Seuil de 2 non atteint. Sam Loc en liquidation judiciaire (06/2025). Boostars (avis sur son propre site, pas Google), Conciergerie Honfleuraise sans note Google fiable. Marché ultra-encadré (zone tendue, compensation assouplie 12/2025). Intervention manuelle Google Maps requise."
+    "notes": "Débloqué 2026-06-03 : audit Places = 4 conciergeries notées domiciliées à Honfleur.",
+    "recheckedAt": "2026-06-03"
   },
   {
     "num": 58,
@@ -1246,9 +1254,10 @@
     "kw": "conciergerie Lausanne",
     "vol": 1900,
     "kd": "14",
-    "status": "À reprendre manuel",
+    "status": "Hors scope",
     "source": "semrush-expand-2026-05-15",
-    "notes": "Conciergeries identifiées (8+) mais ratings Google non vérifiables via web search. Validation manuelle requise sur Google Maps direct."
+    "notes": "Abandonnée 2026-06-03. Audit Places : 0 conciergerie Airbnb dédiée domiciliée à Lausanne (que des régies immobilières classiques). En Suisse \"conciergerie\" = gardiennage d'immeuble : le volume SEMrush (1900) est très probablement de l'intention janitorial, pas Airbnb. Marché suisse immature pour ce template.",
+    "recheckedAt": "2026-06-03"
   },
   {
     "num": 100,

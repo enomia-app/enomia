@@ -1,5 +1,5 @@
 #!/bin/bash
-# conciergerie-production — wrapper launchd lundi/mercredi/vendredi 8h30.
+# conciergerie-production : wrapper launchd lundi/mercredi/vendredi 8h37.
 # Génère 2 nouvelles villes conciergerie via Claude + SEMrush + WebFetch, push direct, email récap.
 
 set -euo pipefail

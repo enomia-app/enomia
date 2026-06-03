@@ -131,7 +131,7 @@ export const cities: City[] = [
         commission: '17,5 % saisonnier / 15 % moyenne durée',
         menage: 'refacturé voyageur',
         rating: 4.9,
-        reviews: 36,
+        reviews: 37,
         biensGeres: 250,
         specialty: 'Transparence & appli mobile',
         description:
@@ -179,7 +179,7 @@ export const cities: City[] = [
         commission: '20-22 %',
         menage: 'refacturé voyageur',
         rating: 4.6,
-        reviews: 47,
+        reviews: 48,
         biensGeres: 90,
         specialty: "Service à l'ancienne, relationnel fort",
         description:
@@ -298,7 +298,7 @@ export const cities: City[] = [
         a: "Avec 8 500 annonces actives en permanence et un taux d'occupation moyen de 72 %, le marché est compétitif mais pas saturé. Les biens bien positionnés (Chartrons, Saint-Pierre, Triangle d'Or) restent très demandés. Les biens hors centre peinent davantage hors saison. La différenciation passe par la qualité des photos, des équipements (clim, machine à laver, wifi fibre) et du pricing.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
 
   // ==========================================================================
@@ -351,8 +351,8 @@ export const cities: City[] = [
         url: 'https://www.luluconciergerie.com/',
         commission: 'sur devis',
         menage: 'variable',
-        rating: 4.8,
-        reviews: 53,
+        rating: 4.7,
+        reviews: 54,
         biensGeres: 0,
         specialty: 'Disponibilité 24/7 & gestion premium',
         description:
@@ -499,7 +499,7 @@ export const cities: City[] = [
         a: "Tapez le nom exact de la conciergerie + 'Lyon' sur Google et regardez le panel knowledge à droite. Surprise : la plupart des acteurs nationaux (Hostnfly, GuestReady) ont en fait une fiche Google Lyon spécifique avec leurs propres avis (61 avis pour Hostnfly Lyon, 359 pour GuestReady Lyon) — distinct de la note nationale. Welkeys Lyon a aussi une fiche locale mais avec très peu d'avis (3) — peu fiable. Pour les indépendants (Conciergerie Tête d'Or, Lulu Conciergerie, All in Lyon), la fiche Google Lyon reflète directement l'activité locale.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
 
   // ==========================================================================
@@ -558,7 +558,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'variable',
         rating: 4.6,
-        reviews: 249,
+        reviews: 252,
         biensGeres: 113,
         specialty: 'Design & agence immobilière',
         description:
@@ -582,7 +582,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'variable',
         rating: 4.4,
-        reviews: 82,
+        reviews: 84,
         biensGeres: 0,
         specialty: 'Expertise immobilière depuis 2014',
         description:
@@ -693,7 +693,7 @@ export const cities: City[] = [
         a: "Oui, c'est devenu quasi indispensable. En haute saison (juin-septembre), un appartement sans clim voit son taux d'occupation chuter de 25 à 40 % et ses avis plonger. Investissement : 1 500 à 3 000 € pour un T2. Rentabilisé en une saison.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
 
   // ==========================================================================
@@ -729,7 +729,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 4.3,
-        reviews: 2159,
+        reviews: 2169,
         biensGeres: 140,
         specialty: 'Plateforme nationale',
         description:
@@ -739,8 +739,8 @@ export const cities: City[] = [
         name: 'Marseille Conciergerie',
         commission: '18-22 %',
         menage: 'refacturé voyageur',
-        rating: 4.8,
-        reviews: 44,
+        rating: 4.6,
+        reviews: 46,
         biensGeres: 70,
         specialty: 'Indépendant local',
         description:
@@ -787,7 +787,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'variable',
         rating: 4.7,
-        reviews: 130,
+        reviews: 131,
         biensGeres: 130,
         specialty: "Réseau Provence–Côte d'Azur",
         description:
@@ -799,7 +799,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'variable',
         rating: 4.7,
-        reviews: 86,
+        reviews: 85,
         biensGeres: 0,
         specialty: 'Couverture Marseille–Toulon',
         description:
@@ -810,8 +810,8 @@ export const cities: City[] = [
         url: 'https://laconciergeriedusoleil.fr/',
         commission: 'sur devis',
         menage: 'variable',
-        rating: 4.8,
-        reviews: 44,
+        rating: 4.6,
+        reviews: 46,
         biensGeres: 0,
         specialty: 'Biens de standing & urbains',
         description:
@@ -886,7 +886,7 @@ export const cities: City[] = [
         a: "Rarement. Pour ces communes, il faut chercher des conciergeries locales spécialisées (Cassis Conciergerie, Aix Conciergerie…). Les acteurs nationaux (Hostnfly, BnbLord) couvrent parfois Aix-en-Provence depuis Marseille mais avec des délais d'intervention plus longs.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
 
   // ==========================================================================
@@ -933,7 +933,7 @@ export const cities: City[] = [
         commission: '20-22 %',
         menage: 'refacturé voyageur',
         rating: 4.3,
-        reviews: 2159,
+        reviews: 2169,
         biensGeres: 120,
         specialty: 'Technologie & reporting',
         description:
@@ -1079,7 +1079,7 @@ export const cities: City[] = [
         a: "Le centre-ville fonctionne mieux. Les déplacements professionnels vers Airbus se font en voiture ou Uber, et les voyageurs préfèrent généralement loger en centre-ville pour profiter des restaurants et de l'ambiance, quitte à avoir 20 min de trajet.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
 
   // ==========================================================================
@@ -1115,8 +1115,8 @@ export const cities: City[] = [
         url: 'https://www.laconciergeriedelest.fr/',
         commission: '20-22 %',
         menage: 'refacturé voyageur',
-        rating: 4.5,
-        reviews: 46,
+        rating: 5,
+        reviews: 29,
         biensGeres: 90,
         specialty: 'Partenaire Luckey by Airbnb',
         description:
@@ -1270,7 +1270,7 @@ export const cities: City[] = [
         a: "Toutes les conciergeries strasbourgeoises professionnelles répondent au minimum en français, anglais et allemand (Strasbourg est frontalière). Les meilleures ajoutent aussi l'espagnol et l'italien. C'est un critère à vérifier explicitement car un voyageur allemand qui reçoit une réponse en anglais approximatif laissera une note médiocre.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
 
   // ==========================================================================
@@ -1331,7 +1331,7 @@ export const cities: City[] = [
         commission: '20-22 %',
         menage: 'refacturé voyageur',
         rating: 4.3,
-        reviews: 2159,
+        reviews: 2169,
         biensGeres: 150,
         specialty: 'Stack technologique',
         description:
@@ -1354,8 +1354,8 @@ export const cities: City[] = [
         url: 'https://qelio.fr/',
         commission: '20-23 %',
         menage: 'refacturé voyageur',
-        rating: 4.6,
-        reviews: 21,
+        rating: 4.7,
+        reviews: 24,
         biensGeres: 65,
         specialty: 'Service clé en main',
         description:
@@ -1379,7 +1379,7 @@ export const cities: City[] = [
         commission: '18-22 %',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 14,
+        reviews: 9,
         biensGeres: 85,
         specialty: 'Gestion simplifiée',
         description:
@@ -1462,7 +1462,7 @@ export const cities: City[] = [
         a: "Oui, majeure. Bruxelles est à 35 min de Lille en TGV, Anvers à 1h, Gand à 50 min. Chaque week-end, des milliers de Belges viennent à Lille pour le shopping, la gastronomie et les événements culturels. Ils représentent environ 30 % des nuitées Airbnb lilloises. Conseil : optimiser l'annonce en néerlandais (la plupart des Flamands cherchent en néerlandais même s'ils parlent français).",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // PARIS
@@ -1517,7 +1517,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'inclus dans commission',
         rating: 4.5,
-        reviews: 1517,
+        reviews: 1519,
         biensGeres: 1200,
         specialty: 'Couverture internationale & portfolio large',
         description: "GuestReady est un acteur international présent à Paris, Londres, Dubaï et Porto, avec un portfolio de plus de 4 000 biens dans le monde. Commission de 20 %, ménage inclus dans la commission. Le modèle all-inclusive simplifie la gestion mais réduit la marge nette du propriétaire sur les séjours courts. Service fiable mais relation plus distante qu'avec les indépendants.",
@@ -1528,7 +1528,7 @@ export const cities: City[] = [
         commission: '22 %',
         menage: 'refacturé voyageur',
         rating: 4.3,
-        reviews: 2159,
+        reviews: 2169,
         biensGeres: 1200,
         specialty: 'Technologie & reporting propriétaire',
         description: "Welkeys gère environ 1 200 biens en France et se distingue par sa stack technologique : channel manager propriétaire, serrures connectées, dashboard temps réel pour les propriétaires. À Paris, la commission démarre à 22 %. Le ménage est refacturé au voyageur. Bon choix pour les propriétaires data-driven qui veulent suivre leurs performances de près.",
@@ -1538,8 +1538,8 @@ export const cities: City[] = [
         url: 'https://www.thekonciergerie.com/',
         commission: 'sur devis',
         menage: 'variable',
-        rating: 4.7,
-        reviews: 334,
+        rating: 4.8,
+        reviews: 329,
         biensGeres: 0,
         specialty: 'Gestion + design & rénovation',
         description: "Conciergerie parisienne (siège dans le Marais, 3e) couvrant notamment les 4e, 6e et 11e arrondissements. Au-delà de la gestion courte et moyenne durée (préparation pro, staging, photos, diffusion multi-canal Airbnb/Booking/SeLoger, check-in, ménage, maintenance), elle propose des services de design et de rénovation. Reporting mensuel détaillé et dashboard temps réel. Transparence affichée, sans frais cachés.",
@@ -1560,8 +1560,8 @@ export const cities: City[] = [
         url: 'https://www.auroraconciergerie.com/',
         commission: 'sur devis',
         menage: 'variable',
-        rating: 4.6,
-        reviews: 49,
+        rating: 4.7,
+        reviews: 70,
         biensGeres: 0,
         specialty: 'Conciergerie Airbnb de luxe',
         description: "Conciergerie positionnée sur le segment du luxe, active à Paris (1er, autour de la rue de la Ferronnerie) et sur la Côte d'Azur (Nice). Gestion locative haut de gamme pour appartements de standing. Commission communiquée sur devis.",
@@ -1571,8 +1571,8 @@ export const cities: City[] = [
         url: 'https://madeforyouconciergerie.fr/',
         commission: '15 %',
         menage: 'refacturé voyageur',
-        rating: 4.8,
-        reviews: 40,
+        rating: 4.7,
+        reviews: 41,
         biensGeres: 0,
         specialty: 'Commission basse, bail mobilité',
         description: "Conciergerie Airbnb et bail mobilité couvrant Paris (tous arrondissements), les Hauts-de-Seine et le secteur de Disneyland Paris. Commission de 15 % (calculée après déduction des frais de plateforme et de ménage), frais de ménage à la charge des voyageurs. Photos professionnelles, communication voyageurs 24/7, création et optimisation d'annonce, ménage et maintenance.",
@@ -1647,7 +1647,7 @@ export const cities: City[] = [
         a: "Le marché est extrêmement compétitif mais pas saturé. Avec 35 millions de touristes par an et un taux d'occupation médian de 78 %, la demande reste largement supérieure à l'offre. Les biens bien positionnés (emplacement central, photos professionnelles, note > 4,8) se louent sans difficulté. La vraie menace n'est pas la saturation mais le durcissement réglementaire : la réduction à 90 jours pousse les propriétaires les moins sérieux hors du marché.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // AGDE
@@ -1724,7 +1724,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'variable',
         rating: 4.9,
-        reviews: 201,
+        reviews: 202,
         biensGeres: 40,
         specialty: 'Consigne à clés 24h/24 sous vidéo-surveillance',
         description: "CnC Property se distingue par son système de consigne à clés disponible 24h/24 et 7j/7 sous vidéo-surveillance, avec deux points de retrait au Cap d'Agde. Elle propose un réseau de prestataires locaux (ménage, linge, maintenance) et un service immobilier avec visites virtuelles 360°. Bonne option pour les propriétaires non-résidents.",
@@ -1792,7 +1792,7 @@ export const cities: City[] = [
         a: "Au Cap d'Agde, le T2 (1 chambre, 25-35 m²) offre le meilleur compromis rentabilité/investissement. Les studios peinent à justifier un tarif supérieur à 50-60 €/nuit même en haute saison, tandis que le T2 permet de facturer 80-120 €/nuit et d'accueillir 4 personnes. Pour un premier investissement à moins de 120 000 €, le T2 Centre-Port ou Roquille est le meilleur choix.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // LES SABLES-D'OLONNE
@@ -1846,7 +1846,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 4.9,
-        reviews: 44,
+        reviews: 45,
         biensGeres: 40,
         specialty: 'Équipe locale structurée (~10 personnes)',
         description:
@@ -1993,7 +1993,7 @@ export const cities: City[] = [
         a: "Ces zones offrent des prix d'achat plus bas mais un taux d'occupation inférieur (40-45 % en annuel). La conciergerie y est pertinente si votre bien a un atout différenciant (piscine, grand jardin, proximité plage de Tanchet). Privilégiez une conciergerie locale qui connaît la demande de ces secteurs (La Clé Chaumoise, Simeo) plutôt qu'un acteur national. Le seuil de rentabilité est généralement atteint à partir de 15 000 € de revenu brut annuel.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // CANNES
@@ -2036,7 +2036,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 4.5,
-        reviews: 203,
+        reviews: 204,
         biensGeres: 120,
         specialty: 'Réseau fondé à Cannes en 2017',
         description:
@@ -2072,7 +2072,7 @@ export const cities: City[] = [
         commission: '20 % (gestion complète) / 10 % (optimisation seule)',
         menage: 'variable',
         rating: 4.8,
-        reviews: 98,
+        reviews: 99,
         biensGeres: 0,
         specialty: 'Conciergerie de luxe Cannes',
         description:
@@ -2084,7 +2084,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'inclus dans commission',
         rating: 4.7,
-        reviews: 97,
+        reviews: 96,
         biensGeres: 0,
         specialty: "Gestion locative Côte d'Azur",
         description:
@@ -2096,7 +2096,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'variable',
         rating: 4.9,
-        reviews: 39,
+        reviews: 40,
         biensGeres: 0,
         specialty: 'Gestion locative personnalisée',
         description:
@@ -2203,7 +2203,7 @@ export const cities: City[] = [
         a: "Clientèle à 70 % internationale (anglo-saxonne, moyen-orientale, asiatique) aux standards luxe : literie premium, wifi fibre, climatisation, smart TV, parking sécurisé, welcome pack. Pendant le Yachting Festival (septembre) et le Festival, attendez-vous à des demandes VIP : service de blanchisserie, chef privé, navette port. Une conciergerie bilingue anglais/français est quasi indispensable — sans elle, vous perdez la moitié du marché haut de gamme.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // RENNES
@@ -2246,7 +2246,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 3.8,
-        reviews: 172,
+        reviews: 173,
         biensGeres: 400,
         specialty: 'Leader local, siège social à Rennes',
         description:
@@ -2401,7 +2401,7 @@ export const cities: City[] = [
         a: "Rennes est avant tout une destination d'affaires et universitaire, pas une ville touristique classique. Plus de 60 % de la demande Airbnb est professionnelle (congrès, chantiers tech, La French Tech Rennes). Privilégiez des biens fonctionnels avec bureau, wifi pro et proximité gare TGV/métro. Les quartiers Sud-Gare et Saint-Hélier surperforment sur cette clientèle semaine, moins volatile que le tourisme pur. Le week-end et les vacances scolaires, c'est le Centre historique et Sainte-Anne qui prennent le relais.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // ROUEN
@@ -2480,7 +2480,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur + forfait',
         rating: 4.6,
-        reviews: 74,
+        reviews: 75,
         biensGeres: 170,
         specialty: 'Leader en volume à Rouen (170 biens)',
         description:
@@ -2504,7 +2504,7 @@ export const cities: City[] = [
         commission: '18-22 %',
         menage: 'refacturé voyageur',
         rating: 4.6,
-        reviews: 74,
+        reviews: 75,
         biensGeres: 50,
         specialty: 'Formules modulables (basic à premium)',
         description:
@@ -2599,7 +2599,7 @@ export const cities: City[] = [
         a: "C'est un atout majeur. Rouen bénéficie d'un flux régulier de touristes parisiens en week-end (notamment novembre-mars, hors saison des côtes normandes) et de voyageurs internationaux qui font l'aller-retour Paris-Rouen pour visiter la cathédrale, suivre Monet ou combiner Rouen avec Honfleur/Étretat. Cette proximité crée une demande récurrente toute l'année, contrairement aux destinations purement estivales. Les tarifs restent nettement inférieurs à Paris (78 € vs 135 € en moyenne), ce qui positionne Rouen comme une alternative abordable pour un city-break culturel.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // ANGERS
@@ -2653,8 +2653,8 @@ export const cities: City[] = [
         url: 'http://la-casa-immobilier.fr/',
         commission: 'sur devis',
         menage: 'variable',
-        rating: 5.0,
-        reviews: 162,
+        rating: 5,
+        reviews: 166,
         biensGeres: 0,
         specialty: 'Agence immobilière + conciergerie',
         description:
@@ -2678,7 +2678,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 4.5,
-        reviews: 203,
+        reviews: 204,
         biensGeres: 90,
         specialty: 'Réseau national, formule clé en main',
         description:
@@ -2702,7 +2702,7 @@ export const cities: City[] = [
         commission: '20-22 %',
         menage: 'refacturé voyageur',
         rating: 4.3,
-        reviews: 2159,
+        reviews: 2169,
         biensGeres: 65,
         specialty: 'Pricing dynamique et gestion événementielle',
         description:
@@ -2785,7 +2785,7 @@ export const cities: City[] = [
         a: "Oui, c'est un moteur clé de la demande week-end. Paris génère un flux régulier de touristes en short-break : week-ends Château + vignobles, sorties de festival, séjours romantiques sur les bords de Maine. Angers est également une bonne base pour rayonner dans la Loire (Saumur, Chinon, Amboise) ou vers le littoral vendéen (2h en voiture). Cette double clientèle (Parisiens le week-end + étudiants/professionnels en semaine) crée une demande bien répartie sur l'année, plus rassurante qu'un marché 100 % saisonnier.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // MONTPELLIER
@@ -2851,8 +2851,8 @@ export const cities: City[] = [
         url: 'https://haussmannconciergerie.fr/',
         commission: 'dès 20 %',
         menage: 'inclus dans commission',
-        rating: 5.0,
-        reviews: 120,
+        rating: 5,
+        reviews: 121,
         biensGeres: 0,
         specialty: 'Biens atypiques & historiques',
         description:
@@ -2876,7 +2876,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'variable',
         rating: 4.3,
-        reviews: 164,
+        reviews: 166,
         biensGeres: 0,
         specialty: 'Orientation rentabilité / cash-flow',
         description:
@@ -2888,7 +2888,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'variable',
         rating: 4.9,
-        reviews: 49,
+        reviews: 50,
         biensGeres: 0,
         specialty: 'Gestion premium sur-mesure',
         description:
@@ -2995,7 +2995,7 @@ export const cities: City[] = [
         a: "Absolument. Montpellier a une des plus fortes demandes de moyen séjour de France : 70 000 étudiants cherchant des logements pour leurs stages ou semestres d'échange, des internes en médecine (CHU de Montpellier, 3e CHU de France), des chercheurs et professionnels en mission. Une stratégie mixte (Airbnb juillet-août à tarif premium + moyen séjour octobre-juin) permet de maximiser les revenus tout en respectant la limite des 90 jours Airbnb. Welchome34 et Cynergy sont particulièrement bons sur ce schéma hybride.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // LA ROCHELLE
@@ -3073,8 +3073,8 @@ export const cities: City[] = [
         url: 'https://lestudioconciergerie.fr/',
         commission: 'sur devis',
         menage: 'variable',
-        rating: 4.7,
-        reviews: 38,
+        rating: 4.6,
+        reviews: 39,
         biensGeres: 0,
         specialty: 'Gestion premium',
         description:
@@ -3097,8 +3097,8 @@ export const cities: City[] = [
         url: 'https://www.bnb-conciergerie.fr/conciergerie-airbnb-la-rochelle.html',
         commission: '20 %',
         menage: 'refacturé voyageur',
-        rating: 4.6,
-        reviews: 33,
+        rating: 4.8,
+        reviews: 59,
         biensGeres: 55,
         specialty: "Sans frais d'entrée ni engagement",
         description:
@@ -3121,8 +3121,8 @@ export const cities: City[] = [
         url: 'https://www.nestify.fr/conciergerie-airbnb-la-rochelle/',
         commission: '22 %',
         menage: 'refacturé voyageur',
-        rating: 4.8,
-        reviews: 149,
+        rating: 4.7,
+        reviews: 99,
         biensGeres: 65,
         specialty: 'Réseau national, reporting mensuel',
         description:
@@ -3205,7 +3205,7 @@ export const cities: City[] = [
         a: "Oui, la plupart des conciergeries rochelaises couvrent l'Île de Ré (Saint-Martin-de-Ré, La Flotte, Ars-en-Ré) grâce au pont : 20-30 min en voiture. ZeRochelle, La Conciergerie de Lucas et BNB Conciergerie opèrent sur l'île. Les tarifs sur l'Île de Ré sont nettement plus élevés (120-280 €/nuit en été) mais la saisonnalité est encore plus marquée (creux hivernal quasi total de novembre à avril). Assurez-vous que la conciergerie dispose d'une équipe ménage et maintenance sur l'île même — c'est non-négociable pour la qualité opérationnelle.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // CAP D'AGDE
@@ -3247,8 +3247,8 @@ export const cities: City[] = [
         url: 'https://hostnfly.com/conciergerie-airbnb/cap-d-agde',
         commission: '20 %',
         menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
+        rating: 5,
+        reviews: 1,
         biensGeres: 120,
         specialty: 'Leader national, 10+ plateformes, 0 frais fixe',
         description:
@@ -3383,7 +3383,7 @@ export const cities: City[] = [
         a: "Le T2 (1 chambre, 28-35 m²) offre le meilleur compromis. Les studios peinent à justifier un tarif supérieur à 55-65 €/nuit même en haute saison, tandis que le T2 permet de facturer 80-130 €/nuit et d'accueillir 4 personnes. Pour un premier investissement sous 120 000 €, le T2 Centre-Port ou Roquille est le meilleur rapport prix/rentabilité.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // ARCACHON
@@ -3425,8 +3425,8 @@ export const cities: City[] = [
         url: 'https://yourhosthelper.com/en/agence-arcachon/',
         commission: '20 %',
         menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
+        rating: 5,
+        reviews: 3,
         biensGeres: 100,
         specialty: 'Réseau national, 4 agences sur le Bassin',
         description:
@@ -3449,8 +3449,8 @@ export const cities: City[] = [
         url: 'https://laconciergeriedubassin.com/',
         commission: '20 %',
         menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
+        rating: 5,
+        reviews: 3,
         biensGeres: 55,
         specialty: 'Conciergerie boutique — suivi ultra-personnalisé',
         description:
@@ -3461,8 +3461,8 @@ export const cities: City[] = [
         url: 'https://www.welkeys.com/conciergerie-airbnb/arcachon',
         commission: '22-25 %',
         menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
+        rating: 4.3,
+        reviews: 2169,
         biensGeres: 90,
         specialty: 'Premium, pricing saisonnier optimisé',
         description:
@@ -3561,7 +3561,7 @@ export const cities: City[] = [
         a: "Pour une résidence secondaire en zone tendue comme Arcachon, vous devez déposer une demande d'autorisation de changement d'usage en mairie avant de la louer en LCD. Dans les secteurs protégés du Bassin, une compensation (transformer un local commercial de surface équivalente en logement) peut être exigée. La procédure prend 3 à 6 mois. Les conciergeries locales (YourHostHelper, Sejourneur) connaissent bien les démarches par secteur.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // MARRAKECH
@@ -3727,7 +3727,7 @@ export const cities: City[] = [
         a: "Seul : non, c'est très difficile. La distance géographique, la barrière de langue partielle (darija), les contrôles des autorités et les spécificités locales (arrivées tardives, gestion des clés en Médina aux ruelles sinueuses) rendent la gestion à distance quasi-impossible sans partenaire local. Une conciergerie locale (YourHostHelper, Nippy House, Dar & Keys) est indispensable. Bonus : leur commission (15-20 %) est inférieure à la moyenne française, ce qui préserve la rentabilité.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // ANNECY
@@ -3770,7 +3770,7 @@ export const cities: City[] = [
         commission: '20-25 %',
         menage: 'refacturé voyageur',
         rating: 4.1,
-        reviews: 400,
+        reviews: 404,
         biensGeres: 100,
         specialty: 'Pionnier annécien depuis 2016, local d\'accueil physique',
         description:
@@ -3818,7 +3818,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 106,
+        reviews: 108,
         biensGeres: 35,
         specialty: 'Service clé en main 7j/7, ménage + blanchisserie',
         description:
@@ -3937,7 +3937,7 @@ export const cities: City[] = [
         a: "C'est un atout majeur, surtout en intersaison. Annecy capte une clientèle internationale (Suisses, Allemands, Britanniques, Américains) qui transite par l'aéroport de Genève (45 min) et préfère Annecy à Genève pour le rapport qualité/prix. Cette clientèle a un budget **20 à 30 % supérieur** à la moyenne française et privilégie les biens premium (vue lac, terrasse, parking sécurisé). En octobre-novembre et avril-mai (creux annécien), elle représente jusqu'à 50 % des réservations dans les quartiers Albigny, Veyrier et Annecy-le-Vieux. Optimisez vos annonces en anglais et en allemand pour la capter.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // AVIGNON
@@ -3992,7 +3992,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 20,
+        reviews: 21,
         biensGeres: 40,
         specialty: 'Avignon + Provence + Côte Bleue',
         description:
@@ -4135,7 +4135,7 @@ export const cities: City[] = [
         a: "Oui, c'est un atout structurel. Avignon est à **2h33 de Paris** par le TGV le plus rapide (26 trains/jour, opérateurs SNCF, Ouigo, Lyria, TER) et 1h de Marseille. Cette connectivité génère un flux continu de week-ends parisiens (vendredi-dimanche) toute l'année et de touristes internationaux (Espagnols, Allemands, Britanniques) qui combinent Avignon avec la Provence (Lubéron, Ventoux, Châteauneuf-du-Pape). Les quartiers Saint-Roch et Champfleury (proches gare TGV-Centre) bénéficient particulièrement de cette demande business + culturelle. Une navette gare TGV-Centre en 7 minutes facilite l'accès intra-muros.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // NANTES
@@ -4226,7 +4226,7 @@ export const cities: City[] = [
         commission: '25-30 %',
         menage: 'variable',
         rating: 4,
-        reviews: 622,
+        reviews: 637,
         biensGeres: 350,
         specialty: 'Maisons et villas, périmètre régional Pays de la Loire',
         description:
@@ -4321,7 +4321,7 @@ export const cities: City[] = [
         a: "Oui, c'est même un **atout structurel**. Nantes a le 3e plus gros écosystème French Tech de France après Paris et Lyon, et la Cité des Congrès attire 700+ événements/an (200 000 congressistes). La demande business (cadres en mission, conférences, séminaires) est très forte du lundi au jeudi avec des séjours de 2-4 nuits, et lisse la saisonnalité. Les quartiers Centre-ville, Île de Nantes (proximité CHU + Machines) et Graslin captent cette clientèle qui préfère un Airbnb à l'hôtel pour les longs séjours grâce aux cuisines équipées. Le **TGV Paris en 2h** permet aussi d'accueillir des cadres parisiens en télétravail Nantes-Paris sur 2-3 jours.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // AIX-EN-PROVENCE
@@ -4363,8 +4363,8 @@ export const cities: City[] = [
         url: 'https://laixcapade.fr/',
         commission: '20 %',
         menage: 'refacturé voyageur',
-        rating: 4.7,
-        reviews: 51,
+        rating: 0,
+        reviews: 0,
         biensGeres: 35,
         specialty: 'Conciergerie 100 % aixoise, ancrage local fort',
         description:
@@ -4495,7 +4495,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité + sécurité, le quartier Mazarin reste la valeur sûre : occupations records (>85 % en saison), tarifs élevés, clientèle premium, mais ticket d'entrée >350 000 € pour un T2. Pour un ticket plus accessible avec demande lissée, Sextius-Mirabeau ou Encagnane (proximité gare TGV et Sciences Po) offrent une demande mixte étudiants/business/tourisme avec des prix d'achat 30 % plus bas. À éviter si vous visez le LCD pur : les hauteurs résidentielles éloignées (Puyricard, Eguilles) où la demande Airbnb reste faible hors juillet-août.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // HYÈRES
@@ -4539,7 +4539,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 68,
+        reviews: 71,
         biensGeres: 0,
         specialty: 'Var (Hyères → Bandol), multi-plateformes',
         description:
@@ -4587,7 +4587,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 27,
+        reviews: 28,
         biensGeres: 65,
         specialty: 'Tech + algorithme yield, diffusion 10+ plateformes',
         description:
@@ -4706,7 +4706,7 @@ export const cities: City[] = [
         a: "Oui, mais sur 3 niches précises : (1) le kitesurf à l'Almanarre qui amène une clientèle internationale de mars à novembre (Allemands, Suisses, Britanniques) sur des séjours d'une semaine ; (2) les salons nautiques au printemps et automne (Tour Voile, salon du nautisme) ; (3) le tourisme culturel vers le centre médiéval, le parc Saint-Bernard et les départs vers Porquerolles (très fréquentés en septembre-octobre par une clientèle senior). Sur un bien centre médiéval bien placé, l'occupation peut atteindre 50 % en octobre-novembre avec des tarifs autour de 70-90 €/nuit.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // REIMS
@@ -4893,7 +4893,7 @@ export const cities: City[] = [
         a: "Pour un objectif **rentabilité + sécurité**, le quartier **Boulingrin** est le meilleur compromis : Halles Art Déco, restaurants, demande mixte tourisme/locaux, T2 à partir de 240 000 € et ROI brut 5-6 %. Le **Carré d'Or** autour de la Cathédrale offre les meilleurs tarifs nuitée (90-160 €) mais avec un ticket d'entrée plus élevé (>280 000 €). Pour un **profil cashflow agressif**, viser la **zone gare** (45 min Paris en TGV, NEOMA Business School) : demande lissée tourisme + business, tickets dès 180 000 €. À éviter pour le LCD pur : Croix-Rouge / Murigny (forte concentration HLM, demande Airbnb très faible).",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // CAEN
@@ -5009,7 +5009,7 @@ export const cities: City[] = [
         commission: '25 % TTC',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 6,
+        reviews: 7,
         biensGeres: 0,
         specialty: 'Caen → côte normande, pricing IA',
         description:
@@ -5092,7 +5092,7 @@ export const cities: City[] = [
         a: "Pour un objectif **rentabilité + sécurité**, le quartier **Saint-Pierre** est le meilleur compromis : centre piéton, demande lissée tourisme + culturel, T2 à partir de 200 000 € et ROI brut 5,5-6,5 %. Le **Vaugueux** (médiéval, château) offre les meilleurs tarifs nuitée (85-130 €) mais avec un ticket d'entrée plus élevé (>230 000 €). Pour un **profil cashflow agressif**, viser **Vaucelles** (proximité gare + tourisme d'affaires en semaine) : tickets dès 160 000 €, ROI brut 6,5-7,5 %. Pour un profil **balnéaire saisonnier**, regarder la Côte de Nacre (Ouistreham, Lion-sur-Mer) à 15 min de Caen.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // ANTIBES
@@ -5147,7 +5147,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 40,
+        reviews: 43,
         biensGeres: 35,
         specialty: 'Gestion complète + photos pro, équipe locale',
         description:
@@ -5203,8 +5203,8 @@ export const cities: City[] = [
         url: 'https://www.conciergebb.fr/',
         commission: '20-25 %',
         menage: 'inclus dans commission',
-        rating: 5,
-        reviews: 16,
+        rating: 0,
+        reviews: 0,
         biensGeres: 0,
         specialty: 'Gestion sur-mesure, Côte d\'Azur',
         description:
@@ -5287,7 +5287,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité + sécurité, le quartier La Fontonne / Antibes-les-Pins est le meilleur compromis : ticket d'achat accessible (T2 dès 250 000 €), demande mixte tourisme + Sophia Antipolis en semaine, ROI brut 5-6 %. Le Vieil Antibes et Juan-les-Pins offrent les meilleurs tarifs nuitée (110-230 €) mais avec un ticket d'entrée plus élevé (>360 000 €) et un ROI brut plus faible (4-5 %). Le Cap d'Antibes est réservé aux profils patrimoniaux haut de gamme. À éviter pour le LCD pur : Les Semboules / Saint-Maymes (résidentiel pur, demande Airbnb très faible).",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // TOULON
@@ -5352,7 +5352,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 4.9,
-        reviews: 44,
+        reviews: 48,
         biensGeres: 45,
         specialty: 'Home staging et coordination artisans',
         description:
@@ -5387,8 +5387,8 @@ export const cities: City[] = [
         url: 'https://hostplus.fr/',
         commission: '20 % HT',
         menage: 'variable',
-        rating: 5,
-        reviews: 27,
+        rating: 0,
+        reviews: 0,
         biensGeres: 0,
         specialty: 'Var & Côte d\'Azur, automatisation',
         description:
@@ -5495,7 +5495,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité + sécurité, le quartier Vieille Ville / Place Puget est le meilleur compromis : centre piéton, demande lissée tourisme + locaux, T2 à partir de 200 000 € et ROI brut 5,5-6,5 %. Le Mourillon offre les meilleurs tarifs nuitée (85-140 €) mais avec un ticket d'entrée plus élevé (>280 000 €). Pour un profil cashflow agressif, viser Saint-Roch / La Serinette (proximité gare + hôpitaux) : tickets dès 160 000 €, ROI brut 6,5-7,5 %. Pour un profil balnéaire saisonnier, regarder Le Pradet ou Carqueiranne à 15 min de Toulon.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // CHAMONIX
@@ -5550,7 +5550,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 8,
+        reviews: 9,
         biensGeres: 80,
         specialty: '26 ans d\'ancrage Chamonix, transaction + LCD',
         description:
@@ -5582,8 +5582,8 @@ export const cities: City[] = [
         name: 'Poulard & Co',
         commission: '20 %',
         menage: 'refacturé voyageur',
-        rating: 4.8,
-        reviews: 16,
+        rating: 4.7,
+        reviews: 15,
         biensGeres: 25,
         specialty: 'Gestion complète, assistance 24/7',
         description:
@@ -5606,7 +5606,7 @@ export const cities: City[] = [
         commission: '20 %',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 8,
+        reviews: 9,
         biensGeres: 15,
         specialty: 'Diffusion multi-plateformes (Airbnb, Booking, Expedia)',
         description:
@@ -5689,7 +5689,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité maximale, le quartier Argentière / Le Tour est le meilleur compromis : prix au m² plus accessibles (8 000-12 000 €), clientèle freeride et ski-touring, ROI brut 4,5-5,5 %. Chamonix Centre offre les meilleurs tarifs nuitée (120-280 €) mais avec un ticket d'entrée plus élevé (>450 000 € pour un T2). Les Praz et Le Lavancher sont réservés aux profils patrimoniaux haut de gamme (chalet > 1 M€, clientèle internationale premium). Pour échapper à la restriction d'1 autorisation par personne, regarder Servoz (2 autorisations), Vallorcine (sans limitation), ou Saint-Gervais à 20 min.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // TOURS
@@ -5732,8 +5732,8 @@ export const cities: City[] = [
         url: 'https://homeo-conciergerie.fr/',
         commission: 'sur devis',
         menage: 'variable',
-        rating: 5,
-        reviews: 13,
+        rating: 4.8,
+        reviews: 17,
         biensGeres: 0,
         specialty: 'Conciergerie de prestige, région tourangelle',
         description:
@@ -5744,7 +5744,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 129,
+        reviews: 131,
         biensGeres: 75,
         specialty: 'Haut de gamme spécialisé LCD',
         description:
@@ -5862,7 +5862,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité + sécurité, le quartier Cathédrale Saint-Gatien est le meilleur compromis : centre historique calme, demande lissée tourisme + culturel, T2 à partir de 180 000 € et ROI brut 5,5-6,5 %. Le Vieux-Tours / Plumereau offre les meilleurs tarifs nuitée (75-130 €) mais avec un ticket d'entrée plus élevé (>200 000 €). Pour un profil cashflow agressif, viser Rive gauche / Saint-Cyr (tickets dès 140 000 €, ROI brut 6,5-7,5 %). Pour un profil tourisme château, regarder Amboise à 25 min : gîtes ruraux et maisons de caractère, saisonnalité avril-octobre très marquée.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // METZ
@@ -6035,7 +6035,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité maximale, le Sablon-Amphithéâtre est le meilleur compromis : prix au m² 2 320-2 500 € (les plus accessibles du centre), proximité immédiate du Centre Pompidou-Metz et de la gare TGV, ROI brut 6,5-7,5 %. Metz Centre / Cathédrale offre les meilleurs tarifs nuitée (70-130 €) mais avec un ticket d'entrée plus élevé (>200 000 € pour un T2). Pour un profil cashflow agressif, viser Queuleu, Plantières ou Île du Saulcy (T2 dès 130-140 000 €, ROI brut 6,5-7,5 %). Pour échapper aux pics saisonniers (Marché de Noël surchargé), regarder Devant-les-Ponts ou Outre-Seille à 10 min du centre.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // NÎMES
@@ -6209,7 +6209,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité maximale, Gambetta est le meilleur compromis : prix au m² 1 847 € (le plus accessible du périmètre central), demande mixte tourisme + cadres, ROI brut 6,5-7,5 %. L'Écusson / Maison Carrée offre les meilleurs tarifs nuitée (85-150 €) mais avec un ticket d'entrée plus élevé (>220 000 € pour un T2). Pour un profil cashflow agressif, viser Mas de Mingue ou Capouchiné (T2 dès 110 000 €, ROI brut 7-8 %), à condition d'être bien desservi en transports. Pour un profil tourisme premium, regarder Uzès ou la couronne Pont du Gard : mas et demeures de caractère, saisonnalité avril-octobre très marquée, tarifs nuitée 95-180 €.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // SÈTE
@@ -6251,8 +6251,8 @@ export const cities: City[] = [
         url: 'https://7ounet.fr/',
         commission: 'sur devis',
         menage: 'refacturé voyageur',
-        rating: 4.9,
-        reviews: 23,
+        rating: 5,
+        reviews: 13,
         biensGeres: 75,
         specialty: 'Volume Sète, objectif Superhost Airbnb',
         description:
@@ -6404,7 +6404,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité maximale, le Quartier Haut / Île de Thau est le meilleur compromis : prix au m² 2 800-3 200 € (les plus accessibles intra-muros), gentrification en cours, ROI brut 6-7 %. Le Centre-ville / Canal Royal offre les meilleurs tarifs nuitée (95-180 €) avec un ticket d'entrée intermédiaire (>220 000 € pour un T2) et une demande lissée tourisme + culturel. Pour un profil prestige, viser le Mont-Saint-Clair (panoramas, T3 à partir de 350 000 €) ou la Corniche (plages, T2 dès 240 000 €). Pour un profil cashflow, regarder la couronne Frontignan / Mèze / Marseillan : tickets dès 160 000 €, demande balnéaire forte avril-octobre, accès à la clientèle thermale Balaruc toute l'année.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // DEAUVILLE
@@ -6446,7 +6446,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'refacturé voyageur',
         rating: 4.8,
-        reviews: 68,
+        reviews: 70,
         biensGeres: 45,
         specialty: 'Volume Deauville-Trouville, exécution premium',
         description:
@@ -6480,7 +6480,7 @@ export const cities: City[] = [
         commission: '20-25 %',
         menage: 'refacturé voyageur',
         rating: 4.2,
-        reviews: 85,
+        reviews: 86,
         biensGeres: 70,
         specialty: 'Réseau international (50+ pays), volume avis le plus élevé',
         description:
@@ -6574,7 +6574,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité, le centre-ville / marché est le meilleur compromis : prix au m² 6 200-7 200 € (les plus accessibles intra-muros), demande lissée tourisme + commerce, ROI brut 4-5,5 %. Les Planches / Casino offrent les meilleurs tarifs nuitée (170-380 €) mais avec un ticket d'entrée >380 000 € et un ROI brut limité (3,5-4,5 %). Pour un profil cashflow, regarder Trouville-sur-Mer (10-15 % moins cher que Deauville, ROI brut 5-6 %) ou la couronne Honfleur/Cabourg/Houlgate (T2 dès 180 000 €). Pour un profil patrimonial pur, viser le quartier des Villas Belle Époque (valeur refuge, valorisation long terme, ROI brut 3-4 % accepté en contrepartie).",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // PERPIGNAN
@@ -6652,8 +6652,8 @@ export const cities: City[] = [
         url: 'https://www.conciergerie66.fr/',
         commission: 'à partir de 60 € TTC ou sur devis',
         menage: 'refacturé voyageur',
-        rating: 0,
-        reviews: 0,
+        rating: 5,
+        reviews: 3,
         biensGeres: 8,
         specialty: 'Tarif à la prestation (vs % commission), souplesse',
         description:
@@ -6736,7 +6736,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité annuelle lissée, le centre de Perpignan est le meilleur compromis : prix au m² 1 900-2 600 € (T2 dès 110 000 €), occupation 68 % grâce à la demande mixte tourisme + Visa pour l'Image + clientèle pro, ROI brut 7-9,5 %. Canet-en-Roussillon offre des tarifs nuit estivaux supérieurs (90-180 € contre 70-130 € en centre) mais une occupation 58 % seulement à cause de la saisonnalité 100 % balnéaire (mai-octobre actif, novembre-avril 30-40 %). Ticket d'entrée plus élevé à Canet (T2 dès 165 000 €) → ROI brut 5,5-7 %. Pour un profil cashflow, Saint-Jacques / La Réal offre les tickets d'entrée les plus bas (T2 dès 60 000 €) MAIS conditionnés à l'obtention du permis de louer — audit obligatoire avant toute décision.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // ROYAN
@@ -6779,7 +6779,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'refacturé voyageur',
         rating: 4.9,
-        reviews: 222,
+        reviews: 224,
         biensGeres: 90,
         specialty: 'Volume avis le plus élevé Royan, rentabilisation résidences secondaires',
         description:
@@ -6791,7 +6791,7 @@ export const cities: City[] = [
         commission: 'sur devis (à la prestation)',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 143,
+        reviews: 144,
         biensGeres: 55,
         specialty: '2e volume avis, modèle à la prestation, partenaires artisans',
         description:
@@ -6886,7 +6886,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité, Foncillon est le meilleur compromis : prix au m² 3 800-4 800 € (les plus accessibles intra-muros), occupation 65 % grâce à la demande mixte Palais des Congrès + plage + marché central, ROI brut 5,5-7 %. Pontaillac offre les meilleurs tarifs nuitée (140-280 €) mais avec un ticket d'entrée >240 000 € et un ROI brut limité (4-5,5 %) — à privilégier pour un profil patrimonial pur (valeur Belle Époque). Saint-Palais-sur-Mer (3 km) propose des tickets d'entrée intermédiaires (T2 dès 180 000 €) et une ambiance plus familiale, ROI brut 5-6,5 %. Pour un profil cashflow, regarder Vaux-sur-Mer ou Saint-Georges-de-Didonne (T2 dès 140 000 €, ROI brut 5,5-7 %).",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // FRÉJUS
@@ -6927,8 +6927,8 @@ export const cities: City[] = [
         name: 'Agence La Clé d\'Hermès',
         commission: 'sur devis',
         menage: 'refacturé voyageur',
-        rating: 4.8,
-        reviews: 43,
+        rating: 4.9,
+        reviews: 83,
         biensGeres: 65,
         specialty: 'Volume avis le plus élevé Fréjus, services immobiliers complets',
         description:
@@ -6950,7 +6950,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'refacturé voyageur',
         rating: 4.8,
-        reviews: 43,
+        reviews: 44,
         biensGeres: 30,
         specialty: 'Locations vacances haut de gamme Côte d\'Azur',
         description:
@@ -6984,7 +6984,7 @@ export const cities: City[] = [
         commission: '20-25 %',
         menage: 'refacturé voyageur',
         rating: 4.1,
-        reviews: 65,
+        reviews: 66,
         biensGeres: 50,
         specialty: 'Réseau international 50+ pays, optimisation revenus, service 24/7',
         description:
@@ -7079,7 +7079,7 @@ export const cities: City[] = [
         a: "Fréjus suit le cadre national sans dispositif renforcé spécifique. La déclaration en mairie est obligatoire pour tout meublé de tourisme (résidence principale ou secondaire), avec génération d'un numéro d'enregistrement à porter sur chaque annonce. À partir du 20 mai 2026, le numéro Declaloc national à 13 chiffres remplacera les systèmes locaux. Pour la résidence principale, la limite nationale de 120 nuitées par an reste en vigueur (Fréjus n'a pas activé l'abaissement à 90 jours autorisé par la loi Le Meur 2024). Attention au règlement de copropriété : plusieurs immeubles à Valescure et Port-Fréjus ont voté des clauses d'usage exclusivement résidentiel — à vérifier avant tout achat dans ces secteurs.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // GRENOBLE
@@ -7240,7 +7240,7 @@ export const cities: City[] = [
         a: "Pour un objectif rentabilité lissée annuelle, l'intra-muros Grenoble est le meilleur compromis : prix au m² 2 800-5 200 €, occupation 65-75 % grâce à la demande lissée (touristes + pros + étudiants), ROI brut 6-9 %. L'hyper-centre piéton et la Vieille Ville sont les secteurs les plus liquides. Chorier-Berriat offre le ticket d'entrée le plus bas (T2 dès 115 000 €, ROI brut 7-9 %) avec potentiel de valorisation. Chamrousse / Uriage offre des tarifs nuit ski supérieurs (110-160 €) mais une occupation 62 % seulement à cause de la saisonnalité bimodale (5 mois ski + été modéré), avec des charges de copropriété plus élevées en station. À privilégier en investissement secondaire bi-actif (autoconsommation ski hiver + location aux ailes de saison) plutôt que pure rentabilité.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // BIARRITZ
@@ -7316,8 +7316,8 @@ export const cities: City[] = [
         name: "La Conciergerie d'Emy",
         commission: '20 % TTC',
         menage: 'refacturé voyageur',
-        rating: 4.3,
-        reviews: 35,
+        rating: 0,
+        reviews: 0,
         biensGeres: 12,
         specialty: 'Conciergerie locale humaine, gestion complète',
         description:
@@ -7328,7 +7328,7 @@ export const cities: City[] = [
         commission: '26 % TTC',
         menage: 'refacturé voyageur',
         rating: 4.6,
-        reviews: 22,
+        reviews: 23,
         biensGeres: 22,
         specialty: 'Gestion complète propriétaires absents, commission haut de fourchette',
         description:
@@ -7439,7 +7439,7 @@ export const cities: City[] = [
         a: "Pour un propriétaire non-résident (Paris, Bordeaux, Toulouse, international), 3 options selon le profil de bien. Bien standard T2 centre : HostnFly Biarritz (20 % commission, dashboard propriétaire, +30 % revenu annoncé, réseau éprouvé 130+ villes) ou Cocoonr Pays Basque (acteur local historique avec 127 avis Google, réseau national présent dans 6 villes pour les multi-investisseurs). Bien haut de gamme vue mer ou villa : Sweet Home Holidays (segment luxe, clientèle internationale, services premium voyageurs). Bien éloigné du centre ou propriétaire totalement absent : Les Clés Biarrotes (26 % TTC justifié par gestion complète zéro charge mentale et administration déclaration meublé). À éviter pour un non-résident : les conciergeries solo récentes (< 20 avis Google) qui peuvent ne pas tenir le pic de demande en juillet-août sans renforts staff.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // VANNES
@@ -7623,7 +7623,7 @@ export const cities: City[] = [
         a: "Vannes intra-muros offre la meilleure liquidité LCD : occupation 75 % sur 10 mois grâce au mix touristes (juillet-août), week-ends pro Rennes/Nantes, étudiants Université Bretagne Sud (séjours 1-6 mois via Airbnb), et clientèle CHU. Ticket d'entrée : T2 dès 175 000 €. ROI brut 6-8 %. La presqu'île de Rhuys (Arzon, Sarzeau, Port-Navalo) offre des tarifs nuitées 30-50 % plus élevés en été (150-250 €/nuit pour un T2 vue Golfe) mais une saison concentrée mai-septembre, avec un creux hivernal sévère (30-40 % d'occupation novembre-mars). Ticket d'entrée plus élevé (T2 dès 220 000 €). Pour pure rentabilité lissée annuelle, Vannes intra-muros ou Saint-Patern. Pour pur revenu estival + investissement plaisir + autoconsommation été, Rhuys. Pour ROI brut maximal, Beaupré-Lalande (proche Université + CHU) à 7-9 % grâce à la demande étudiante long séjour.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // AMIENS
@@ -7773,7 +7773,7 @@ export const cities: City[] = [
         a: "Saint-Acheul / Faubourg de Hem (sud, proche Université Picardie Jules Verne et CHU) offre le ROI brut maximal à Amiens (8-10 %). Combinaison : ticket d'entrée le plus bas (T2 dès 85 000 €), demande lissée toute l'année grâce au mix étudiant (30 000 étudiants à l'université, séjours Airbnb 1-6 mois pour échanges Erasmus + visiteurs familles + stagiaires CHU) + médical (CHU 1 850 lits, recrutement national, séjours 1-3 mois pour internat) + pro. Pour pure rentabilité, c'est le meilleur choix. Saint-Leu offre une meilleure liquidité touristique (ROI 6,5-8 %) mais ticket d'entrée plus élevé (T2 dès 135 000 €). Hyper-centre offre un excellent compromis (ROI 7-9 %, T2 dès 110 000 €) avec une demande lissée touristes + pro grâce à la proximité gare TGV (1h10 Paris-Nord).",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // DIJON
@@ -7851,7 +7851,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'refacturé voyageur',
         rating: 5,
-        reviews: 22,
+        reviews: 23,
         biensGeres: 20,
         specialty: 'Annonces multi-plateformes, support 24/7',
         description:
@@ -7957,7 +7957,7 @@ export const cities: City[] = [
         a: "Pour un bien haut de gamme ciblant la clientèle œnotouristique internationale, plusieurs options selon le profil. **La Conciergerie d'Émile** (le plus gros volume d'avis vérifiés à Dijon, plusieurs formules selon le niveau de délégation) pour un acteur ancré avec un historique solide. **Lux'Apart** (équipe Dijon centre, bureau réel 9 Bd Carnot, commission 25 % claire) pour les biens d'hyper-centre. **Zenica Conciergerie** pour un suivi de proximité personnalisé. À éviter pour le haut de gamme : les conciergeries généralistes nationales sans positionnement œnotourisme clair, qui peuvent ne pas tenir l'expérience d'une clientèle internationale exigeante.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // LA BAULE
@@ -8107,7 +8107,7 @@ export const cities: City[] = [
         a: "Pour la prime à la nuitée et l'occupation estivale maximale, le Remblai et le front de mer restent imbattables, mais avec le ticket d'entrée le plus élevé (rendement brut souvent sous 5 %). La Baule-les-Pins offre le standing familial haut de gamme. Pour un meilleur rendement brut, le centre et la plage Benoît sont de bons compromis prix/occupation, et Escoublac, en retrait du front de mer, offre les tickets d'achat les plus accessibles de la commune (rendement brut jusqu'à 6-7 %). Les communes voisines Pornichet et Le Pouliguen partagent la même baie avec des prix parfois plus doux.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // BREST
@@ -8149,8 +8149,8 @@ export const cities: City[] = [
         url: 'https://www.conciergerie-finistarmor.fr/',
         commission: '18 à 33 % TTC',
         menage: 'refacturé voyageur',
-        rating: 4.9,
-        reviews: 34,
+        rating: 0,
+        reviews: 0,
         biensGeres: 40,
         specialty: 'Couverture Finistère, carte professionnelle',
         description:
@@ -8173,8 +8173,8 @@ export const cities: City[] = [
         url: 'https://www.conciergebb.fr/',
         commission: '20 à 25 %',
         menage: 'refacturé voyageur',
-        rating: 4.3,
-        reviews: 114,
+        rating: 4.4,
+        reviews: 113,
         biensGeres: 30,
         specialty: 'Partenaire local multi-quartiers',
         description:
@@ -8292,7 +8292,7 @@ export const cities: City[] = [
         a: "Pour une occupation lissée toute l'année, le secteur Siam / Brest-centre est le plus sûr (commerces, transports, clientèle affaires et city-break). Recouvrance et le plateau des Capucins offrent identité patrimoniale et vues sur le port avec des prix d'achat plus accessibles. Saint-Marc, calme et proche d'Océanopolis et de la plage du Moulin Blanc, est idéal pour la clientèle familiale estivale. Pour viser le meilleur rendement brut, Lambézellec et l'ouest brestois (Saint-Pierre, Quatre-Moulins) affichent des tickets d'achat contenus, à condition de soigner l'accès au centre.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // NANCY
@@ -8465,7 +8465,7 @@ export const cities: City[] = [
         a: "Pour la clientèle loisirs et la prime à la nuitée, le secteur place Stanislas / Centre et la Ville-Vieille sont les plus demandés, avec les tickets d'entrée les plus élevés. Pour une occupation lissée par le tourisme d'affaires, Saint-Sébastien/Charles III (centre de congrès, marché central) et le quartier Gare (TGV Paris à environ 1h30) sont d'excellents compromis prix/occupation. Pour viser un meilleur rendement brut, les Rives de Meurthe offrent des tickets d'achat plus accessibles, à condition de soigner la liaison avec le cœur touristique. Saurupt séduit une clientèle sensible à l'Art nouveau pour des séjours plus longs.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // VICHY
@@ -8615,7 +8615,7 @@ export const cities: City[] = [
         a: "Pour cibler les curistes premium, le quartier thermal / Vieux Vichy, à quelques minutes du Hall des Sources, offre la meilleure prime à la nuitée et une occupation lissée par les cures. Le centre-ville autour de l'Opéra et des sources est idéal pour les séjours « tout à pied » et combine clientèle curiste, patrimoniale et courts séjours. Pour un meilleur rendement brut avec un budget plus contenu, Bellerive-sur-Allier (rive gauche) et Cusset, dans l'agglomération, offrent des tickets d'achat plus accessibles à quelques minutes du centre thermal.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // DINARD (production auto 2026-05-27)
@@ -8655,8 +8655,8 @@ export const cities: City[] = [
         name: 'Check-In Conciergerie',
         commission: 'sur devis',
         menage: 'variable',
-        rating: 4.7,
-        reviews: 30,
+        rating: 4.6,
+        reviews: 10,
         biensGeres: 50,
         specialty: "Gestion complète Côte d'Émeraude",
         description:
@@ -8666,8 +8666,8 @@ export const cities: City[] = [
         name: "La Clé d'Émeraude",
         commission: 'sur devis',
         menage: 'variable',
-        rating: 5.0,
-        reviews: 29,
+        rating: 0,
+        reviews: 0,
         biensGeres: 45,
         specialty: 'Saint-Malo & Dinard, note maximale',
         description:
@@ -8678,7 +8678,7 @@ export const cities: City[] = [
         commission: 'sur devis',
         menage: 'variable',
         rating: 4.9,
-        reviews: 17,
+        reviews: 18,
         biensGeres: 35,
         specialty: 'Service premium personnalisé',
         description:
@@ -8688,8 +8688,8 @@ export const cities: City[] = [
         name: 'La Bretonnerie',
         commission: '20 % HT (24 % TTC)',
         menage: 'variable',
-        rating: 5.0,
-        reviews: 17,
+        rating: 4.9,
+        reviews: 22,
         biensGeres: 30,
         specialty: 'Transparence tarifaire',
         description:
@@ -8699,8 +8699,8 @@ export const cities: City[] = [
         name: "L'Agence 1907",
         commission: '23-26 % TTC',
         menage: 'variable',
-        rating: 5.0,
-        reviews: 9,
+        rating: 5,
+        reviews: 10,
         biensGeres: 25,
         specialty: 'Gestion clé en main',
         description:
@@ -8710,8 +8710,8 @@ export const cities: City[] = [
         name: "L'Intendance du Bord de Mer",
         commission: 'sur devis',
         menage: 'variable',
-        rating: 4.8,
-        reviews: 6,
+        rating: 0,
+        reviews: 0,
         biensGeres: 20,
         specialty: 'Petite structure locale',
         description:
@@ -8790,7 +8790,7 @@ export const cities: City[] = [
         a: "C'est la principale spécificité du marché. La demande explose en juillet-août et reste forte aux ponts, à Pâques et pendant le Festival du Film Britannique, mais l'hiver est creux. Une bonne conciergerie compense en jouant sur les courts séjours, les week-ends et un pricing dynamique pour capter chaque pic. Sur un bien vue mer bien géré, la haute saison concentre une part importante du revenu annuel : la qualité de l'accueil et des photos y est déterminante pour tenir des tarifs élevés.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // CLERMONT-FERRAND (production auto 2026-05-27)
@@ -8831,7 +8831,7 @@ export const cities: City[] = [
         commission: '20 % TTC',
         menage: 'variable',
         rating: 4.2,
-        reviews: 418,
+        reviews: 473,
         biensGeres: 180,
         specialty: 'Gestion complète + activités locales',
         description:
@@ -8841,8 +8841,8 @@ export const cities: City[] = [
         name: 'Ecolavage Clermont',
         commission: '15 % HT',
         menage: 'variable',
-        rating: 5.0,
-        reviews: 193,
+        rating: 0,
+        reviews: 0,
         biensGeres: 120,
         specialty: 'Spécialiste ménage & blanchisserie',
         description:
@@ -8852,8 +8852,8 @@ export const cities: City[] = [
         name: 'Clermont Conciergerie',
         commission: '12 % HT',
         menage: 'variable',
-        rating: 4.7,
-        reviews: 40,
+        rating: 4.8,
+        reviews: 142,
         biensGeres: 70,
         specialty: 'Commission basse, tourisme responsable',
         description:
@@ -8874,8 +8874,8 @@ export const cities: City[] = [
         name: 'La Conciergerie Terre et Volcans',
         commission: 'sur devis',
         menage: 'variable',
-        rating: 5.0,
-        reviews: 24,
+        rating: 5,
+        reviews: 42,
         biensGeres: 45,
         specialty: 'Orientée familles, sélection voyageurs',
         description:
@@ -8885,8 +8885,8 @@ export const cities: City[] = [
         name: 'Dôme Conciergerie',
         commission: '15 % HT',
         menage: 'variable',
-        rating: 5.0,
-        reviews: 17,
+        rating: 5,
+        reviews: 15,
         biensGeres: 35,
         specialty: 'Expert local clermontois',
         description:
@@ -8969,7 +8969,7 @@ export const cities: City[] = [
         a: "Les écarts y sont importants : notre comparatif va de 12 % HT à 25 % HT selon les agences et le niveau de service. Une commission basse (12-15 %) peut faire gagner plus de mille euros par an sur un bien moyen, mais elle couvre parfois un périmètre plus restreint. La bonne méthode est de comparer à périmètre égal : demandez à chaque conciergerie une simulation de revenu net sur votre logement, ménage compris, plutôt que de regarder la seule commission affichée.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // LORIENT (production auto 2026-05-27)
@@ -9009,8 +9009,8 @@ export const cities: City[] = [
         name: 'Homelok',
         commission: '20 % TTC',
         menage: 'variable',
-        rating: 4.6,
-        reviews: 322,
+        rating: 4.7,
+        reviews: 469,
         biensGeres: 180,
         specialty: 'Plateforme tech, large couverture',
         description:
@@ -9021,7 +9021,7 @@ export const cities: City[] = [
         commission: '25 % TTC',
         menage: 'variable',
         rating: 4.3,
-        reviews: 59,
+        reviews: 62,
         biensGeres: 80,
         specialty: 'Spécialiste littoral & voile',
         description:
@@ -9031,8 +9031,8 @@ export const cities: City[] = [
         name: 'Happy Home 56',
         commission: 'sur devis',
         menage: 'variable',
-        rating: 5.0,
-        reviews: 58,
+        rating: 5,
+        reviews: 80,
         biensGeres: 75,
         specialty: 'Service haut de gamme Morbihan',
         description:
@@ -9042,8 +9042,8 @@ export const cities: City[] = [
         name: 'Alb Conciergerie',
         commission: '24 % TTC',
         menage: 'variable',
-        rating: 4.9,
-        reviews: 39,
+        rating: 4.8,
+        reviews: 38,
         biensGeres: 55,
         specialty: 'Relation propriétaire soignée',
         description:
@@ -9053,8 +9053,8 @@ export const cities: City[] = [
         name: 'Groom Conciergerie',
         commission: '25 % TTC',
         menage: 'variable',
-        rating: 4.9,
-        reviews: 39,
+        rating: 0,
+        reviews: 0,
         biensGeres: 55,
         specialty: 'Accueil voyageurs premium',
         description:
@@ -9064,8 +9064,8 @@ export const cities: City[] = [
         name: "Les Cocons d'Agathe",
         commission: '16-25 % TTC',
         menage: 'variable',
-        rating: 4.8,
-        reviews: 35,
+        rating: 0,
+        reviews: 0,
         biensGeres: 50,
         specialty: 'Formules modulables',
         description:
@@ -9140,7 +9140,7 @@ export const cities: City[] = [
         a: "Pour une occupation lissée toute l'année, le centre-ville et Merville captent à la fois les touristes et la clientèle d'affaires, à pied de la gare et des commerces. Le secteur de la Base et de Keroman monte en puissance grâce à la voile et à la course au large. Pour un meilleur rendement brut avec un budget plus contenu, Kerentrech, la Nouvelle Ville et surtout Lanester offrent des tickets d'achat plus accessibles. Larmor-Plage vise une clientèle vacances haut de gamme mais avec une saisonnalité plus marquée.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   // ==========================================================================
   // PAU (production auto 2026-05-27)
@@ -9181,7 +9181,7 @@ export const cities: City[] = [
         commission: '20 % TTC',
         menage: 'variable',
         rating: 4.5,
-        reviews: 51,
+        reviews: 60,
         biensGeres: 90,
         specialty: 'Gestion + accompagnement investissement',
         description:
@@ -9191,8 +9191,8 @@ export const cities: City[] = [
         name: 'Helpy Conciergerie',
         commission: '23 % TTC',
         menage: 'variable',
-        rating: 4.5,
-        reviews: 32,
+        rating: 4.6,
+        reviews: 40,
         biensGeres: 60,
         specialty: 'Gestion complète Béarn',
         description:
@@ -9213,8 +9213,8 @@ export const cities: City[] = [
         name: 'ONLOC',
         commission: '23-27 % TTC',
         menage: 'variable',
-        rating: 4.8,
-        reviews: 13,
+        rating: 0,
+        reviews: 0,
         biensGeres: 30,
         specialty: 'Service premium',
         description:
@@ -9225,7 +9225,7 @@ export const cities: City[] = [
         commission: '24 % TTC',
         menage: 'variable',
         rating: 4.6,
-        reviews: 11,
+        reviews: 10,
         biensGeres: 30,
         specialty: 'Accompagnement personnalisé',
         description:
@@ -9311,7 +9311,7 @@ export const cities: City[] = [
         a: "Elle est surtout régulière, plus que spectaculaire. Le tourisme d'affaires, l'université (UPPA) et la fonction de porte des Pyrénées soutiennent l'occupation en semaine et l'hiver, tandis que le château, le centre historique et des événements comme le Grand Prix de Pau en mai apportent des pics. L'été en ville est plus calme, mais compensé par les excursions vers la montagne. Une conciergerie qui sait cibler la clientèle d'affaires en semaine et les week-ends culturels tient une occupation correcte sur l'année.",
       },
     ],
-    updatedAt: '2026-05-27',
+    updatedAt: '2026-06-03',
   },
   {
     slug: 'saint-malo',
@@ -9477,7 +9477,7 @@ export const cities: City[] = [
         a: "Les commissions observées vont d'environ 15 % à 25 % du revenu locatif, hors frais de ménage. Les acteurs locaux de la Côte d'Émeraude comme Ma Conciergerie Bretonne affichent des taux plutôt bas (15-18 %), tandis que les offres haut de gamme et clé en main se situent vers 20-25 %. Demandez systématiquement ce que couvre la commission, comment le ménage est facturé, et une simulation de revenu net sur votre bien — l'écart de prix se justifie surtout par le niveau de service et l'optimisation des tarifs.",
       },
     ],
-    updatedAt: '2026-05-29',
+    updatedAt: '2026-06-03',
   },
   {
     slug: 'le-touquet',
@@ -9624,7 +9624,7 @@ export const cities: City[] = [
         a: "Sur une station balnéaire chic comme Le Touquet, les commissions se situent généralement entre 20 % et 25 % du revenu locatif, hors ménage, La Conciergerie du Touquet affichant par exemple 25 % TTC. Le niveau s'explique par une clientèle exigeante, une forte saisonnalité et des biens souvent haut de gamme. Demandez le détail des services inclus, le mode de facturation du ménage et une estimation de revenu net : sur un marché où l'occupation est concentrée sur les week-ends et l'été, l'optimisation des tarifs par la conciergerie pèse lourd.",
       },
     ],
-    updatedAt: '2026-05-29',
+    updatedAt: '2026-06-03',
   },
   {
     slug: 'limoges',
@@ -9779,7 +9779,7 @@ export const cities: City[] = [
         a: "Les commissions observées localement vont d'environ 8 % à 20 % du revenu locatif selon le niveau de service, certaines conciergeries indépendantes comme C&C affichant des taux d'entrée bas et La Chambre du Compagnon autour de 15 %. Le leader local, Alphino, propose aussi des formules de sous-location avec loyer garanti. Demandez toujours le détail de ce qui est inclus, le mode de facturation du ménage et une simulation de revenu net avant de choisir.",
       },
     ],
-    updatedAt: '2026-05-29',
+    updatedAt: '2026-06-03',
   },
   {
     slug: 'menton',
@@ -9945,7 +9945,7 @@ export const cities: City[] = [
         a: "Les commissions se situent généralement autour de 20 % du revenu locatif, hors ménage : Manasteos et We Care affichent par exemple environ 20 % TTC. Sur un marché premium proche de Monaco, le niveau de service (accueil hôtelier, optimisation des tarifs, gestion multilingue) justifie ces taux. Comparez ce que couvre exactement la commission, la façon dont le ménage est facturé et la couverture géographique réelle sur Menton, puis demandez une simulation de revenu net sur votre bien.",
       },
     ],
-    updatedAt: '2026-05-29',
+    updatedAt: '2026-06-03',
   },
   {
     slug: 'le-havre',
@@ -9984,7 +9984,7 @@ export const cities: City[] = [
         commission: 'n.c.',
         menage: 'variable',
         rating: 4.7,
-        reviews: 168,
+        reviews: 169,
         biensGeres: 0,
         specialty: 'Réseau régional Normandie, ancrage Havre',
         description:
@@ -9994,8 +9994,8 @@ export const cities: City[] = [
         name: 'B PAM Conciergerie',
         commission: 'n.c.',
         menage: 'variable',
-        rating: 5,
-        reviews: 4,
+        rating: 4.7,
+        reviews: 169,
         biensGeres: 0,
         specialty: 'Conciergerie locale havraise',
         description:
@@ -10111,7 +10111,7 @@ export const cities: City[] = [
         a: "Les commissions se situent généralement entre 20 et 25 % du revenu locatif, hors ménage. Westone affiche par exemple une fourchette claire à 20-25 %. Plusieurs conciergeries locales (Ma Conciergerie en Normandie, B PAM, Bienfaits pour Toits) restent en commission n.c. — un point à clarifier dès le premier échange. Demandez ce que couvre exactement la commission, la façon dont le ménage est refacturé au voyageur et le coût réel du ménage à la prestation, puis demandez une simulation de revenu net sur votre bien pour comparer objectivement.",
       },
     ],
-    updatedAt: '2026-06-01',
+    updatedAt: '2026-06-03',
   },
   {
     slug: 'beziers',
@@ -10277,7 +10277,7 @@ export const cities: City[] = [
         a: "Les commissions se situent généralement entre 15 et 25 % du revenu locatif, hors ménage. Sur Béziers, la majorité des conciergeries locales et régionales affichent leur tarif en n.c. — un point à clarifier dès le premier échange. Demandez ce que couvre exactement la commission (annonces, communication voyageurs, ménage, linge, photos, dynamic pricing), la façon dont le ménage est refacturé au voyageur, et le coût réel à la prestation. Sur un marché à tickets bas, chaque point de commission compte sur la rentabilité : exigez une simulation de revenu net comparable entre prestataires avant de signer.",
       },
     ],
-    updatedAt: '2026-06-01',
+    updatedAt: '2026-06-03',
   },
   {
     slug: 'quiberon',
@@ -10443,7 +10443,7 @@ export const cities: City[] = [
         a: "Les commissions se situent généralement entre 15 et 25 % du revenu locatif, hors ménage. Conciergerie Bienvenue affiche par exemple 20 % de commission, transparence appréciable. Plusieurs acteurs locaux restent en commission n.c. — un point à clarifier dès le premier échange. Sur un marché hyper saisonnier comme Quiberon, ce qui compte au-delà de la commission, c'est la stratégie de pricing : un point de commission supplémentaire peut être largement compensé par une optimisation tarifaire de +15 à 20 % sur l'été. Comparez systématiquement le revenu net simulé, pas juste le taux affiché.",
       },
     ],
-    updatedAt: '2026-06-01',
+    updatedAt: '2026-06-03',
   },
   {
     slug: 'la-ciotat',
@@ -10609,7 +10609,7 @@ export const cities: City[] = [
         a: "Les commissions se situent généralement entre 15 et 25 % du revenu locatif, hors ménage. AllForHost affiche par exemple une fourchette claire à 15-18 % selon la formule (revenu garanti vs commission au pourcentage), HostnFly démarre à 20 %. Plusieurs acteurs régionaux restent en commission n.c., un point à clarifier dès le premier échange. Sur un marché concurrentiel comme La Ciotat, ce qui compte au-delà du taux, c'est la stratégie tarifaire entre haute saison, arrière-saison et clientèle régionale week-end. Comparez systématiquement le revenu net simulé sur 12 mois entre prestataires, pas juste le pourcentage affiché.",
       },
     ],
-    updatedAt: '2026-06-01',
+    updatedAt: '2026-06-03',
   },
 ];
 

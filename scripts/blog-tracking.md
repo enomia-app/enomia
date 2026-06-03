@@ -12,12 +12,12 @@ Resync ligne par ligne sur les fichiers réels `src/content/blog/` + `src/conten
 | Statut | Nb | Détail |
 |---|---|---|
 | 🟢 en-ligne (public) | 19 | dans `blog/`, `status: en-ligne`, indexables |
-| 🟡 brouillon (Keystatic) | 2 | `channel-manager-gratuit`, `smoobu-avis` — dans `blog/`, visibles Keystatic, non publiés |
-| 🟠 brouillon backlog | 12 | dans `blog-backlog/`, refondus, en cours de promotion Keystatic (1 par 1) |
+| 🟡 brouillon (Keystatic) | 3 | `channel-manager-gratuit`, `smoobu-avis`, `lodgify-avis` — dans `blog/`, visibles Keystatic, non publiés |
+| 🟠 brouillon backlog | 11 | dans `blog-backlog/`, refondus, en cours de promotion Keystatic (1 par 1) |
 | ⚪ à rédiger | 18 | jamais créés (aucun fichier) |
 | ⚫ archivé / déjà couvert | 6 | vol 0 ou doublon d'un outil |
 
-**33 articles écrits** (19 + 2 + 12) · **~24 restant à écrire** (18 à rédiger + 6 "X avis" identifiés plus bas). Cible cocon vivante ≈ 55-57 articles.
+**33 articles écrits** (19 + 3 + 11) · **~24 restant à écrire** (18 à rédiger + 6 "X avis" identifiés plus bas). Cible cocon vivante ≈ 55-57 articles.
 
 ⚠️ Avant ce resync, la colonne "Statut" disait 13 en-ligne / 25 brouillons (dérive manuelle : 6 articles publiés non reportés + 3 lignes "brouillon backlog" sans fichier). Réalignée ce jour.
 
@@ -82,7 +82,7 @@ Recall SEMrush effectué le 2026-05-25 a montré des écarts (-9% à -86%) **mê
 | 29 | P2 — Satellite | ⭐ Avis Outils | /smoobu-avis | smoobu avis | 320 | 320 | 26 | brouillon (promu `blog/` 2026-06-03, dans Keystatic, attente publi Marc) |
 | 30 | P2 — Satellite | 🏠 Conciergerie | /formation-conciergerie-airbnb | formation conciergerie airbnb | 320 | 320 | 12 | brouillon backlog ⭐⭐ |
 | 31 | P2 — Satellite | 🏡 Statuts | /superhost-airbnb | superhost airbnb | 320 | 320 | 28 | brouillon backlog |
-| 32 | P2 — Satellite | ⭐ Avis Outils | /lodgify-avis | avis lodgify | 260 | 320 | 20-26 | brouillon backlog |
+| 32 | P2 — Satellite | ⭐ Avis Outils | /lodgify-avis | avis lodgify | 260 | 320 | 20-26 | brouillon (promu `blog/` 2026-06-03, dans Keystatic, attente publi Marc) |
 | 33 | P2 — Satellite | 🏠 Conciergerie | /conciergerie-digitale-lcd | conciergerie digitale | 260 | 260 | 11-17 | brouillon backlog |
 | 34 | P2 — Satellite | 🔧 Channel Manager | /pms-location-saisonniere | pms location saisonnière | 170 | 0 | 9 | **archivé** (vol 0 mai 2026) |
 | 35 | P2 — Satellite | ⭐ Avis Outils | /eviivo-avis | eviivo avis | 140 | 140 | 17-20 | brouillon backlog |
@@ -213,18 +213,18 @@ Score = Vol × (60 − KD) / 60. Top 10 :
 |---|---|---|---|---|
 | ✅ | channel-manager-gratuit | channel manager gratuit | 320 | promu `blog/` 2026-06-02, attente publi Marc |
 | ✅ | smoobu-avis | smoobu avis | 320 | promu `blog/` 2026-06-03, attente publi Marc |
-| 1 | lodgify-avis | avis lodgify | 320 | backlog — prochain à promouvoir |
-| 2 | eviivo-avis | eviivo avis | 140 | backlog |
-| 3 | superhote-avis | superhote avis | 320 | backlog (enrichi reality-check 100k + notes stores) |
-| 4 | pricelabs-vs-wheelhouse | pricelabs avis | 140 | backlog |
-| 5 | smoobu-vs-lodgify-amenitiz | smoobu vs lodgify | 140 | backlog |
-| 6 | channel-manager-conciergerie | channel manager conciergerie | 210 | backlog |
-| 7 | commission-booking-proprietaire | commission booking | 390 | backlog |
-| 8 | conciergerie-digitale-lcd | conciergerie digitale | 260 | backlog |
-| 9 | formation-conciergerie-airbnb | formation conciergerie airbnb | 320 | backlog |
-| 10 | google-hotel-ads-channel-manager | google hotel ads channel manager | 110 | backlog |
-| 11 | inventaire-location-meublee | inventaire location meublée | 40 | backlog (vol bas) |
-| 12 | superhost-airbnb | superhost airbnb | 320 | backlog |
+| ✅ | lodgify-avis | avis lodgify | 320 | promu `blog/` 2026-06-03, attente publi Marc |
+| 1 | eviivo-avis | eviivo avis | 140 | backlog — prochain à promouvoir |
+| 2 | superhote-avis | superhote avis | 320 | backlog (enrichi reality-check 100k + notes stores) |
+| 3 | pricelabs-vs-wheelhouse | pricelabs avis | 140 | backlog |
+| 4 | smoobu-vs-lodgify-amenitiz | smoobu vs lodgify | 140 | backlog |
+| 5 | channel-manager-conciergerie | channel manager conciergerie | 210 | backlog |
+| 6 | commission-booking-proprietaire | commission booking | 390 | backlog |
+| 7 | conciergerie-digitale-lcd | conciergerie digitale | 260 | backlog |
+| 8 | formation-conciergerie-airbnb | formation conciergerie airbnb | 320 | backlog |
+| 9 | google-hotel-ads-channel-manager | google hotel ads channel manager | 110 | backlog |
+| 10 | inventaire-location-meublee | inventaire location meublée | 40 | backlog (vol bas) |
+| 11 | superhost-airbnb | superhost airbnb | 320 | backlog |
 
 **Après chaque publication** : le skill `gsc-indexation-quotidienne` (cron déjà en place, max 5 URLs/jour) demande l'indexation Google. Pas besoin de chaîner.
 

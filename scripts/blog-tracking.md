@@ -5,6 +5,22 @@
 >
 > Origine : tableau Numbers `Enomia_Suivi_Blog.numbers` que Marc avait fait en avril 2026 (57 articles, 73 770 vol/mois cumulé). Extrait via `numbers-parser` Python + recopié en Markdown versionné Git le 2026-05-25 pour ne plus perdre cette mémoire entre sessions.
 
+## 📊 État réel synchronisé (2026-06-03)
+
+Resync ligne par ligne sur les fichiers réels `src/content/blog/` + `src/content/blog-backlog/`. **57 articles trackés** :
+
+| Statut | Nb | Détail |
+|---|---|---|
+| 🟢 en-ligne (public) | 19 | dans `blog/`, `status: en-ligne`, indexables |
+| 🟡 brouillon (Keystatic) | 2 | `channel-manager-gratuit`, `smoobu-avis` — dans `blog/`, visibles Keystatic, non publiés |
+| 🟠 brouillon backlog | 12 | dans `blog-backlog/`, refondus, en cours de promotion Keystatic (1 par 1) |
+| ⚪ à rédiger | 18 | jamais créés (aucun fichier) |
+| ⚫ archivé / déjà couvert | 6 | vol 0 ou doublon d'un outil |
+
+**33 articles écrits** (19 + 2 + 12) · **~24 restant à écrire** (18 à rédiger + 6 "X avis" identifiés plus bas). Cible cocon vivante ≈ 55-57 articles.
+
+⚠️ Avant ce resync, la colonne "Statut" disait 13 en-ligne / 25 brouillons (dérive manuelle : 6 articles publiés non reportés + 3 lignes "brouillon backlog" sans fichier). Réalignée ce jour.
+
 ## ⚠️ CONVENTION KW SEMrush — Ne JAMAIS tronquer les petits mots
 
 **Règle absolue** : conserver les KW exactement comme ils sont dans SEMrush, **avec tous les petits mots** (de, et, entre, au, pour, etc.).
@@ -44,26 +60,26 @@ Recall SEMrush effectué le 2026-05-25 a montré des écarts (-9% à -86%) **mê
 | 7 | P1 — Pilier | 📊 Taux Occupation | /taux-occupation-par-ville | taux occupation airbnb par ville | 320 | 70 | 16 | en-ligne |
 | 8 | P1 — Pilier | ⚙️ Automatisation | /automatiser-airbnb | automatiser airbnb | 110 | 40 | 0 | en-ligne |
 | 9 | P1 — Satellite | 🔑 Équipement | /serrure-connectee-airbnb | serrure connectée | 12 100 | 12 100 | 26 | en-ligne |
-| 10 | P1 — Pilier | 🏡 LCD | /location-courte-duree | location courte durée | — | 2 900 | 26 | **brouillon** (créé 2026-05-25, ex `/location-meublee-vs-location-courte-duree` 0 vol refactoré) |
+| 10 | P1 — Pilier | 🏡 LCD | /location-courte-duree | location courte durée | — | 2 900 | 26 | en-ligne (ex `/location-meublee-vs-location-courte-duree` 0 vol refactoré) |
 | 11 | P1 — Satellite | 💶 Fiscalité | /fiscalite-airbnb | fiscalité airbnb 2025 | 1 300 | 720 | 21-37 | en-ligne (KW exact à 720 ; "fiscalité airbnb" sans 2025 = 720 aussi) |
 | 12 | P1 — Satellite | 🔧 Channel Manager | /channel-manager-gratuit | channel manager gratuit | 320 | 320 | 8-12 | brouillon — réécrit méthode courante 2026-06-02 (tables `{% table %}` Markdoc, liens `/blog/`, €/à, cluster KW airbnb/location saisonnière/meilleur fr) + déplacé `backlog→blog/`, prêt Keystatic ⭐⭐ |
 | 13 | P1 — Satellite | ⭐ Avis Outils | /superhote-avis | superhote avis | 260 | 320 | 13-19 | brouillon backlog |
 | 14 | P1 — Satellite | 🔧 Channel Manager | /channel-manager-conciergerie | channel manager conciergerie | 170 | 210 | 6-10 | brouillon backlog ⭐⭐ |
 | 15 | P1 — Nouveau | 🏛️ Réglementation | /loi-le-meur-airbnb | loi le meur | 6 450 | 4 400 | 26-34 | en-ligne (refresh 2026-05-25 : +KW loi airbnb 2025/2026) |
-| 16 | P1 — Nouveau | 📊 Meublé de tourisme | /meuble-tourisme-classe | meublé de tourisme classé | 4 690 | 720 | 20-21 | à rédiger |
-| 17 | P1 — Nouveau | 🔄 Arbitrage / Sous-location | /sous-location-airbnb | sous location airbnb | 3 830 | 320 (mais cluster `sous location` 4400) | 14 | à rédiger ⭐ |
+| 16 | P1 — Nouveau | 📊 Meublé de tourisme | /meuble-tourisme-classe | meublé de tourisme classé | 4 690 | 720 | 20-21 | en-ligne |
+| 17 | P1 — Nouveau | 🔄 Arbitrage / Sous-location | /sous-location-airbnb | sous location airbnb | 3 830 | 320 (mais cluster `sous location` 4400) | 14 | en-ligne |
 | 18 | P1 — Nouveau | 🏢 Gestion | /tarif-gestion-locative-airbnb | tarif gestion locative | 1 540 | 480 | 26 | à rédiger |
 | 19 | P1 — Nouveau | 💰 Estimation | /estimation-airbnb | estimation airbnb | 1 370 | 1 000 | 33-35 | **déjà couvert par page outil `/estimation-airbnb`** → ne pas créer d'article blog redondant |
 | 20 | P1 — Nouveau | 🔗 Réservation directe | /reservation-directe-airbnb | comment passer en direct sur airbnb | 330 | 110 | 12 | à rédiger |
-| 21 | P2 — Satellite | 💶 Fiscalité | /amortissement-lmnp | amortissement lmnp | 3 600 | 3 600 | 32-35 | **brouillon** (créé 2026-05-25) |
-| 22 | P2 — Satellite | 💶 Fiscalité | /reforme-lmnp | lmnp 2026 | 2 900 | 2 900 | 21-22 | **brouillon** (créé 2026-05-25, ex `/lmnp-2026` renommé pour slug évergreen) |
+| 21 | P2 — Satellite | 💶 Fiscalité | /amortissement-lmnp | amortissement lmnp | 3 600 | 3 600 | 32-35 | en-ligne |
+| 22 | P2 — Satellite | 💶 Fiscalité | /reforme-lmnp | lmnp 2026 | 2 900 | 2 900 | 21-22 | en-ligne (ex `/lmnp-2026` renommé pour slug évergreen) |
 | 23 | P2 — Satellite | 💰 Rentabilité | /investissement-locatif-saisonnier | investissement location saisonnière | 800 | 800 (cluster) | 23 | à rédiger (slug renommé depuis `/petites-villes-rentabilite-airbnb` qui ciblait 0 vol) |
-| 24 | P2 — Satellite | ⭐ Avis Outils | /amenitiz-avis | amenitiz avis | 720 | 720 | 17-21 | brouillon backlog ⭐⭐ |
+| 24 | P2 — Satellite | ⭐ Avis Outils | /amenitiz-avis | amenitiz avis | 720 | 720 | 17-21 | en-ligne |
 | 25 | P2 — Satellite | 💶 Fiscalité | /taxe-sejour-airbnb | taxe de séjour airbnb | 590 | — | 27 | **déjà couvert par outil `/calcul-taxe-de-sejour`** → archivé |
 | 26 | P2 — Satellite | 💶 Fiscalité | /loi-airbnb-2025 | loi airbnb 2025 | 480 | 480 | 25-33 | **intégré dans refresh /loi-le-meur-airbnb** → archivé |
 | 27 | P2 — Satellite | ⚖️ Juridique | /inventaire-location-meublee | inventaire location meublée | 390 | 40 | 0-10 | brouillon backlog (vol bas en mai 2026) |
 | 28 | P2 — Satellite | 💸 Commissions | /commission-booking-proprietaire | commission booking | 390 | 390 | 22-28 | brouillon backlog |
-| 29 | P2 — Satellite | ⭐ Avis Outils | /smoobu-avis | smoobu avis | 320 | 320 | 26 | brouillon backlog |
+| 29 | P2 — Satellite | ⭐ Avis Outils | /smoobu-avis | smoobu avis | 320 | 320 | 26 | brouillon (promu `blog/` 2026-06-03, dans Keystatic, attente publi Marc) |
 | 30 | P2 — Satellite | 🏠 Conciergerie | /formation-conciergerie-airbnb | formation conciergerie airbnb | 320 | 320 | 12 | brouillon backlog ⭐⭐ |
 | 31 | P2 — Satellite | 🏡 Statuts | /superhost-airbnb | superhost airbnb | 320 | 320 | 28 | brouillon backlog |
 | 32 | P2 — Satellite | ⭐ Avis Outils | /lodgify-avis | avis lodgify | 260 | 320 | 20-26 | brouillon backlog |
@@ -71,12 +87,12 @@ Recall SEMrush effectué le 2026-05-25 a montré des écarts (-9% à -86%) **mê
 | 34 | P2 — Satellite | 🔧 Channel Manager | /pms-location-saisonniere | pms location saisonnière | 170 | 0 | 9 | **archivé** (vol 0 mai 2026) |
 | 35 | P2 — Satellite | ⭐ Avis Outils | /eviivo-avis | eviivo avis | 140 | 140 | 17-20 | brouillon backlog |
 | 36 | P2 — Satellite | 💰 Rentabilité | /simulateur-rentabilite-airbnb | simulateur rentabilité airbnb | 140 | 140 | 21-25 | **doublon page outil `/estimation-airbnb`** → archivé |
-| 37 | P2 — Satellite | 📱 Pricing | /booking-vs-airbnb | booking vs airbnb | 140 | 40 | 0-20 | brouillon backlog (vol bas) |
+| 37 | P2 — Satellite | 📱 Pricing | /booking-vs-airbnb | booking vs airbnb | 140 | 40 | 0-20 | à rédiger (vol bas ; aucun fichier) |
 | 38 | P2 — Satellite | 🔧 Channel Manager | /smoobu-vs-lodgify-amenitiz | smoobu vs lodgify | 110 | 140 | 18-19 | brouillon backlog |
 | 39 | P2 — Satellite | 🔧 Channel Manager | /google-hotel-ads-channel-manager | google hotel ads channel manager | 110 | 110 | 9 | brouillon backlog |
 | 40 | P2 — Satellite | ⭐ Avis Outils | /pricelabs-vs-wheelhouse | pricelabs avis | 110 | 140 | 10-14 | brouillon backlog |
 | 41 | P2 — Satellite | 🔧 Channel Manager | /site-reservation-location-saisonniere | créer un site internet pour location saisonnière | 70 | 0 | 17 | **archivé** (vol 0) |
-| 42 | P2 — Satellite | ⚙️ Automatisation | /gestion-linge-airbnb | gestion linge airbnb | 50 | 40 | 0-12 | brouillon backlog (vol bas) |
+| 42 | P2 — Satellite | ⚙️ Automatisation | /gestion-linge-airbnb | gestion linge airbnb | 50 | 40 | 0-12 | à rédiger (vol bas ; aucun fichier) |
 | 43 | P2 — Nouveau | 🧹 Ménage | /frais-menage-airbnb | frais de ménage airbnb | 2 570 | 590 (cluster `frais airbnb` 1000 + `airbnb menage` 880) | 20-27 | à rédiger |
 | 44 | P2 — Nouveau | 📖 Livret accueil | /livret-accueil-airbnb | livret d'accueil airbnb | 2 400 | 390 (cluster ~1500) | 16 | à rédiger |
 | 45 | P2 — Satellite | 📝 Fiscalité | /declarer-revenus-airbnb-case-impot | déclaration airbnb impot | 1 310 | 1 100 | 29 | à rédiger — ⭐ intention DISTINCTE « déclaration airbnb impôt » confirmée Marc 2026-06-02 (capture SEMrush : 169 variantes, **1,1K vol cumulé**). Top KW : déclaration airbnb impot 210 KD29 · airbnb déclaration impots 170 KD31 · airbnb déclaration impot 90 KD29 · déclarer airbnb impots 90 KD24 · comment déclarer airbnb aux impots 40. + adjacents : déclaration revenus airbnb 390, calcul impôt airbnb 390 KD26. ⚠️ Leçon KW ordre des mots : « déclaration airbnb impot » porte le volume, « déclaration impôt airbnb » ≈ 0. Satellite = how-to déclaratif profond (cases, 2042-C-PRO, micro-BIC vs réel, dates, calcul). Cannibalisation pilier /fiscalite-airbnb (section « Déclaration pas à pas » existante) → alléger en résumé + lien (hub→détail). Proposé : 1 seule page consolidant impôt+revenus+calcul pour éviter l'auto-cannibalisation (à valider Marc). |
@@ -91,7 +107,7 @@ Recall SEMrush effectué le 2026-05-25 a montré des écarts (-9% à -86%) **mê
 | 54 | P2 — Nouveau | 💰 Revenus | /combien-prend-airbnb-proprietaire | combien prend airbnb au propriétaire | 630 | 260 | 23 | à rédiger |
 | 55 | P2 — Nouveau | 🎨 Optimisation annonce | /remonter-annonce-airbnb-algorithme | comment faire remonter mon annonce sur airbnb | 630 | 90 | **10** | à rédiger (KD très bas) |
 | 56 | P2 — Nouveau | 🔄 Calendrier/Sync | /synchroniser-airbnb-booking | synchroniser calendrier airbnb et booking | 490 | 110 | 21 | à rédiger |
-| 57 | P3 — Satellite | 🎓 Formation | /formation-location-courte-duree | formation location courte durée | 70 | 70 | 2-16 | brouillon backlog (vol bas) |
+| 57 | P3 — Satellite | 🎓 Formation | /formation-location-courte-duree | formation location courte durée | 70 | 70 | 2-16 | à rédiger (vol bas ; aucun fichier) |
 
 ### Total annoncé Marc avril 2026 : 73 770 vol/mois cumulé
 
@@ -143,8 +159,8 @@ Score = Vol × (60 − KD) / 60. Top 10 :
 |---|---|---|---|---|---|---|
 | 1 | difference-loc-sais-meublé-tourisme | différence entre location saisonnière et meublé de tourisme | 1 000 | 15 | **750** | en-ligne (mais KW pillarKeyword cible 0 vol — refresh à faire) |
 | 2 | caution-airbnb | airbnb caution | 720 | 22 | 456 | à rédiger |
-| 3 | amenitiz-avis | amenitiz avis | 720 | 17 | 516 | brouillon backlog |
-| 4 | meuble-tourisme-classe | meublé de tourisme classé | 720 | 21 | 468 | à rédiger |
+| 3 | amenitiz-avis | amenitiz avis | 720 | 17 | 516 | en-ligne |
+| 4 | meuble-tourisme-classe | meublé de tourisme classé | 720 | 21 | 468 | en-ligne |
 | 5 | devenir-concierge-airbnb | devenir concierge airbnb | 480 | 16 | 352 | à rédiger |
 | 6 | boite-a-cles-airbnb | boite à clé connecté | 390 | 15 | 293 | à rédiger |
 | 7 | livret-accueil-airbnb | livret d'accueil airbnb | 390 | 16 | 286 | à rédiger |
@@ -189,16 +205,26 @@ Score = Vol × (60 − KD) / 60. Top 10 :
 
 **Règle** : NE PAS publier tous les articles d'un coup. Pour un site jeune, le content-dump risque le filtre "scaled content abuse" (Google spam update 2024) + dilue le crawl budget. Publier **1 article tous les 2-3 jours**, piliers d'abord.
 
-**Ordre de publication des 6 brouillons ready (piliers + volume)** :
+**Statut au 2026-06-03** : les 6 piliers/satellites « ready » de la première vague (sous-location-airbnb, location-courte-duree, amortissement-lmnp, reforme-lmnp, meuble-tourisme-classe, amenitiz-avis) sont tous **en-ligne**. La vague en cours = promotion des brouillons backlog vers Keystatic, **un par un** (`git mv blog-backlog/ → blog/`, status reste `brouillon`, `publishedAt` bumpé au jour de promotion). Marc relit chaque article dans Keystatic puis le passe `en-ligne` lui-même.
 
-| Ordre | Slug | KW | Vol | Type |
+**File d'attente promotion Keystatic** :
+
+| Ordre | Slug | KW | Vol | Statut |
 |---|---|---|---|---|
-| 1 | sous-location-airbnb | sous location airbnb | 3 830 | pilier |
-| 2 | location-courte-duree | location courte durée | 2 900 | pilier |
-| 3 | amortissement-lmnp | amortissement lmnp | 3 600 | satellite gros vol |
-| 4 | reforme-lmnp | lmnp 2026 | 2 900 | satellite |
-| 5 | meuble-tourisme-classe | meublé de tourisme classé | 720 | satellite |
-| 6 | amenitiz-avis | amenitiz avis | 720 | satellite |
+| ✅ | channel-manager-gratuit | channel manager gratuit | 320 | promu `blog/` 2026-06-02, attente publi Marc |
+| ✅ | smoobu-avis | smoobu avis | 320 | promu `blog/` 2026-06-03, attente publi Marc |
+| 1 | lodgify-avis | avis lodgify | 320 | backlog — prochain à promouvoir |
+| 2 | eviivo-avis | eviivo avis | 140 | backlog |
+| 3 | superhote-avis | superhote avis | 320 | backlog (enrichi reality-check 100k + notes stores) |
+| 4 | pricelabs-vs-wheelhouse | pricelabs avis | 140 | backlog |
+| 5 | smoobu-vs-lodgify-amenitiz | smoobu vs lodgify | 140 | backlog |
+| 6 | channel-manager-conciergerie | channel manager conciergerie | 210 | backlog |
+| 7 | commission-booking-proprietaire | commission booking | 390 | backlog |
+| 8 | conciergerie-digitale-lcd | conciergerie digitale | 260 | backlog |
+| 9 | formation-conciergerie-airbnb | formation conciergerie airbnb | 320 | backlog |
+| 10 | google-hotel-ads-channel-manager | google hotel ads channel manager | 110 | backlog |
+| 11 | inventaire-location-meublee | inventaire location meublée | 40 | backlog (vol bas) |
+| 12 | superhost-airbnb | superhost airbnb | 320 | backlog |
 
 **Après chaque publication** : le skill `gsc-indexation-quotidienne` (cron déjà en place, max 5 URLs/jour) demande l'indexation Google. Pas besoin de chaîner.
 

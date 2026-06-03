@@ -85,20 +85,6 @@ async function getGmailClient() {
   return google.gmail({ version: 'v1', auth: oauth2 });
 }
 
-async function searchReplies(gm, fromEmail, afterDate) {
-  // Gmail format date : YYYY/MM/DD
-  const after = afterDate.replace(/-/g, '/');
-  const q = `from:${fromEmail} after:${after}`;
-  const res = await gm.users.messages.list({ userId: 'me', q, maxResults: 5 });
-  const msgs = res.data.messages || [];
-  const full = [];
-  for (const m of msgs) {
-    const detail = await gm.users.messages.get({ userId: 'me', id: m.id, format: 'full' });
-    full.push(detail.data);
-  }
-  return full;
-}
-
 function extractBody(msg) {
   function walk(payload) {
     if (payload.body?.data) return Buffer.from(payload.body.data, 'base64').toString('utf-8');
@@ -156,6 +142,51 @@ async function findThreadReply(gm, threadId, afterIso) {
   const t = await gm.users.threads.get({ userId: 'me', id: threadId, format: 'full' });
   const afterMs = afterIso ? Date.parse(afterIso.slice(0, 10)) : 0;
   return pickLatestInbound(t.data?.messages || [], OUR_ADDRESS, afterMs);
+}
+
+const normSubject = s => (s || '').toLowerCase().replace(/^((re|tr|fw|fwd|aw)\s*:\s*)+/i, '').replace(/\s+/g, ' ').trim();
+
+// Pur (testable) : parmi les messages d'une recherche par domaine, choisit la
+// "vraie" réponse — priorité au message dont le sujet reprend notre pitch_subject
+// (vs auto-acks / sondages), puis au plus ancien (1ère réponse humaine).
+export function pickBestDomainReply(messages, ourAddress, afterMs = 0, pitchSubject = '') {
+  const np = normSubject(pitchSubject);
+  const cands = (messages || []).filter(m => {
+    const from = getHeader(m, 'From').toLowerCase();
+    if (!from || from.includes(ourAddress.toLowerCase())) return false; // nos propres messages
+    if (/mailer-daemon|postmaster/i.test(from)) return false;           // NDR
+    return Number(m.internalDate || 0) >= afterMs;
+  });
+  if (!cands.length) return null;
+  const score = m => {
+    const ns = normSubject(getHeader(m, 'Subject'));
+    return (np && ns && (ns.includes(np) || np.includes(ns))) ? 100 : 0;
+  };
+  cands.sort((a, b) => score(b) - score(a) || Number(a.internalDate || 0) - Number(b.internalDate || 0));
+  return cands[0];
+}
+
+function domainOf(c) {
+  const src = (c.email && c.email.includes('@')) ? c.email.split('@')[1] : (c.site || '');
+  return src.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '').trim().toLowerCase() || null;
+}
+
+// Cherche une réponse depuis le DOMAINE du prospect (toute mailbox, tout thread).
+// Couvre les helpdesks qui ré-emaillent depuis conseil.client@ / support@ dans un
+// thread séparé. Ne couvre PAS une réponse depuis un autre domaine (ex .fr→.com).
+async function findDomainReply(gm, c, afterIso) {
+  const domain = domainOf(c);
+  if (!domain) return null;
+  const after = (afterIso || '1970-01-01').slice(0, 10).replace(/-/g, '/');
+  const res = await gm.users.messages.list({ userId: 'me', q: `from:@${domain} after:${after}`, maxResults: 10 });
+  const ids = (res.data.messages || []).map(m => m.id);
+  if (!ids.length) return null;
+  const msgs = [];
+  for (const id of ids) {
+    const d = await gm.users.messages.get({ userId: 'me', id, format: 'full' });
+    msgs.push(d.data);
+  }
+  return pickBestDomainReply(msgs, OUR_ADDRESS, Date.parse((afterIso || '1970-01-01').slice(0, 10)), c.pitch_subject);
 }
 
 async function sendMail(gm, { to, subject, body, inReplyTo }) {
@@ -341,18 +372,14 @@ async function main() {
     const refDate = c.date_relance_2 || c.date_relance_1 || c.date_envoi;
     log(`\n→ ${c.site} (status=${c.status}, dernier envoi=${refDate})`);
 
-    // 1. Check replies — via le thread Gmail (capte une réponse depuis
-    //    N'IMPORTE QUELLE adresse, pas seulement celle qu'on a pitchée).
+    // 1. Check replies, deux niveaux :
+    //    a) thread Gmail (réponse in-thread, tout expéditeur)
+    //    b) sinon recherche par domaine (helpdesk / autre mailbox / thread séparé)
     let reply = null;
     try {
       const threadId = await resolveThreadId(gm, c);
-      if (threadId) {
-        reply = await findThreadReply(gm, threadId, c.date_envoi);
-      } else {
-        // Fallback legacy : threadId non résolvable → ancienne recherche from:
-        const replies = await searchReplies(gm, c.email, refDate);
-        reply = replies[0] || null;
-      }
+      if (threadId) reply = await findThreadReply(gm, threadId, c.date_envoi);
+      if (!reply) reply = await findDomainReply(gm, c, c.date_envoi);
     } catch (e) {
       log(`  ⚠️ erreur détection réponse: ${e.message}`);
     }

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { pickLatestInbound, getHeader } from './track-replies.mjs';
+import { pickLatestInbound, getHeader, pickBestDomainReply } from './track-replies.mjs';
 
 const OURS = 'marc@enomia.app';
 const msg = (from, dateIso, id) => ({
@@ -75,4 +75,37 @@ test('vraie réponse + NDR dans le même thread → garde la vraie réponse', ()
     msg('Pauline <pauline@hosting-academy.com>', '2026-06-01T14:36:00Z', 'real'),
   ];
   assert.equal(pickLatestInbound(msgs, OURS).id, 'real');
+});
+
+// ── Recherche par domaine (helpdesk, thread séparé) ──────────────────────
+const PITCH = 'Un simulateur pour les lecteurs de votre article';
+const msgS = (from, dateIso, id, subject) => ({
+  id,
+  internalDate: String(Date.parse(dateIso)),
+  payload: { headers: [{ name: 'From', value: from }, { name: 'Subject', value: subject }] },
+});
+
+test('domaine : choisit la vraie réponse (sujet = pitch) parmi les auto-acks (cas nopillo)', () => {
+  const msgs = [
+    msgS('Nopillo <conseil.client@nopillo.com>', '2026-06-02T08:17:56Z', 'ack', 'Votre demande est bien prise en compte!'),
+    msgS('Athalia <conseil.client@nopillo.com>', '2026-06-02T12:29:13Z', 'real', 'Re :Un simulateur pour les lecteurs de votre article'),
+    msgS('Nopillo <conseil.client@nopillo.com>', '2026-06-02T13:34:21Z', 'survey', "comment s'est déroulée votre expérience avec le support ?"),
+  ];
+  assert.equal(pickBestDomainReply(msgs, OURS, Date.parse('2026-06-02'), PITCH).id, 'real');
+});
+
+test('domaine : sans match de sujet → 1ère réponse (plus ancienne)', () => {
+  const msgs = [
+    msgS('x@nopillo.com', '2026-06-03T10:00:00Z', 'b', 'autre sujet'),
+    msgS('y@nopillo.com', '2026-06-02T10:00:00Z', 'a', 'encore autre'),
+  ];
+  assert.equal(pickBestDomainReply(msgs, OURS, Date.parse('2026-06-02'), PITCH).id, 'a');
+});
+
+test('domaine : exclut NDR et nos propres messages', () => {
+  const msgs = [
+    msgS('marc@enomia.app', '2026-06-02T09:00:00Z', 'us', 'Re: pitch'),
+    msgS('MAILER-DAEMON@x', '2026-06-02T09:01:00Z', 'ndr', 'Undeliverable'),
+  ];
+  assert.equal(pickBestDomainReply(msgs, OURS, Date.parse('2026-06-02'), PITCH), null);
 });

@@ -14,6 +14,6 @@ cd "$REPO"
 
 {
   echo "===== backlinks-send-daily start $(date -Iseconds) ====="
-  node "$SCRIPT_DIR/send-daily.mjs"
+  node "$SCRIPT_DIR/send-daily.mjs" --max=10  # throttle 10/j (delivrabilite) — retirer pour revenir au ramp auto
   echo "===== backlinks-send-daily end $(date -Iseconds) ====="
 } >> "$LOG" 2>&1

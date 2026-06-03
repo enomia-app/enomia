@@ -773,7 +773,9 @@
     "oldSlug": "/conciergerie-airbnb-meribel",
     "kw": "conciergerie meribel",
     "vol": 190,
-    "status": "À faire"
+    "status": "Publié",
+    "publishedAt": "2026-06-03",
+    "notes": "Vol live SEMrush 170 (vs 190 backlog). 6 conciergeries dont 5 pure-players Méribel (Lhotellier 5%, Mountain Majord'Home premium, Emerald Stay multi-stations 3 Vallées, Conciergerie Méribel 20%, SB Conciergerie, Mountain Collection Immobilier). Cadre Loi Le Meur sans restriction locale supplémentaire (commune Les Allues, PLU en révision)."
   },
   {
     "num": 64,
@@ -785,8 +787,10 @@
     "oldSlug": "/conciergerie-airbnb-tignes",
     "kw": "conciergerie tignes",
     "vol": 180,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 13,
+    "publishedAt": "2026-06-03",
+    "notes": "Vol live SEMrush 140 (vs 180 backlog), KD 13. 6 conciergeries identifiées (Yes Conciergerie Tignes pure-player, Locatignes 10 ans d'ancrage, ALPO 20%, Emerald Stay multi-stations Espace Killy, Tignes Conciergerie modulaire, HostnFly national). Triple saisonnalité unique (ski hiver + glacier toute l'année + lac été). Cadre Loi Le Meur sans restriction locale supplémentaire."
   },
   {
     "num": 65,
@@ -813,8 +817,10 @@
     "oldSlug": "/conciergerie-airbnb-colmar",
     "kw": "conciergerie colmar",
     "vol": 170,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 7,
+    "publishedAt": "2026-06-03",
+    "notes": "Vol live SEMrush 170 (=backlog), KD 7. 6 conciergeries (Ils'invest pure-player Haut-Rhin 23%, Les Clés d'Alsace 18-23% modulable, Keyhost réseau alsacien 20%+997€ setup, Alsace BnB Services ménage premium, HostnFly national 20%, GLCD Immobilier agence 360). Zone tendue depuis oct 2023 — règlement municipal janvier 2022 + Loi Le Meur (autorisation changement d'usage obligatoire RS + création logement compensateur). Marché de Noël 1,5M visiteurs / 5 semaines."
   },
   {
     "num": 67,
@@ -826,8 +832,10 @@
     "oldSlug": "/conciergerie-airbnb-le-mans",
     "kw": "conciergerie le mans",
     "vol": 170,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 10,
+    "publishedAt": "2026-06-03",
+    "notes": "Vol live SEMrush 210 (vs 170 backlog), KD 10. 6 conciergeries (L'instant Clef 25% / 38 avis, Notre Chez Vous 15-25% modulable / 16 avis, Home&Service 22% / 13 avis, Rêve au Mans historique / 8 avis, Conciergerie des Anges 22%, ACL Immo 4.9/7). Marché événementiel hybride : 24h du Mans 503k nuitées Sarthe, GP Explorer 240k spectateurs / +75% nuitées vs été normal. Cadre Loi Le Meur sans restriction locale (pas de zone tendue, pas de changement d'usage)."
   },
   {
     "num": 68,

@@ -10611,6 +10611,761 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-03',
   },
+  // ==========================================================================
+  // LE MANS
+  // ==========================================================================
+  {
+    slug: 'le-mans',
+    displayName: 'Le Mans',
+    region: 'Pays de la Loire',
+    regionSlug: 'pays-de-la-loire',
+    title: 'Conciergerie Le Mans Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Le Mans : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb du Mans. Tarifs (15-25 %), services, avis Google, réglementation 2026, pic 24 Heures du Mans, quartiers rentables Cité Plantagenêt et Gare Sud.",
+    kwPrincipal: 'conciergerie le mans',
+    kwSecondaires: [
+      'guest le mans',
+      'conciergerie airbnb le mans',
+      'location courte durée le mans',
+      'reve au mans',
+      'notre chez vous',
+      'conciergerie sarthe',
+    ],
+    population: 147890,
+    tourists: 1200000,
+    activeListings: 800,
+    priceLow: 55,
+    priceHigh: 110,
+    occupancyRate: 58,
+    revpar: 40,
+    seasonality:
+      "Saisonnalité dictée par les événements automobiles plutôt que par l'été. Pic absolu du 24 Heures du Mans mi-juin (occupation 95-100 %, tarifs 3-5× la normale sur la semaine de course, 325 000 spectateurs en 2023, 503 000 nuitées en Sarthe sur la quinzaine). Pic secondaire GP Explorer fin août (240 000 spectateurs, +75 % de nuitées vs été normal). Pics mineurs : 24 Heures Motos mi-avril, Classique 24 Heures juillet, Bol d'Or moto. Le reste de l'année : tourisme d'affaires (clientèle entreprise du circuit, MMArena, Université), tourisme patrimoine (Cité Plantagenêt) et clientèle régionale week-end (1h05 de TGV Paris). Inter-saisons (nov-fév hors Toussaint et Noël) très creux (occupation 35-45 %).",
+    rankNational: 18,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Le Mans**, dans la **Cité Plantagenêt**, autour de la **gare Sud** ou en périphérie, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les **24 Heures du Mans** mi-juin qui font flamber les tarifs (3-5× la normale), le **GP Explorer** fin août qui pulvérise les records de nuitées (+75 % vs été normal selon France Bleu), le **tourisme d'affaires** récurrent (MMArena, circuit, Université du Maine) et la dizaine d'acteurs locaux qui se partagent un marché en croissance, vous vous demandez si confier la gestion à une conciergerie reste rentable hors période événements.\n\nEt surtout : **laquelle choisir** entre les pure-players du Mans (Rêve au Mans, Notre Chez Vous, L'instant Clef) et les acteurs nationaux qui ratissent l'agglomération ?",
+    marketIntro:
+      "Le Mans est un **marché LCD événementiel hybride** : 4 mois de très haute saison (avril, juin, août, week-ends Bol d'Or et 24 H Camions) et 8 mois de tourisme d'affaires + clientèle régionale. La ville compte environ **800 annonces actives** sur Airbnb avec un tarif moyen autour de **75 €/nuit** sur l'année, qui décolle à **220-400 €/nuit pendant la semaine des 24 Heures du Mans**.\n\nLes **24 Heures du Mans 2023 ont attiré 325 000 spectateurs** sur 24 heures, générant **503 252 nuitées en Sarthe** entre le 30 mai et le 16 juin selon Le Mans Événement — un record absolu. Le **GP Explorer** (course YouTube/Twitch fin août) a atteint **240 000 spectateurs en 2025** avec **+75 % de nuitées** vs été normal selon ICI Pays de la Loire. Ces pics ponctuels sont la clé de la rentabilité LCD au Mans : un T2 bien placé qui se loue 60 €/nuit en moyenne peut facturer 350 €/nuit sur 10 jours en juin, soit l'équivalent de 2 mois de revenus normaux.\n\n**Tourisme patrimoine.** La **Cité Plantagenêt** (vieille ville classée, 22 hectares, cathédrale Saint-Julien, enceinte gallo-romaine la plus complète de France après Rome) attire la clientèle culturelle, soutenue par les **Nuits des Chimères** (été) et le **festival Europajazz**. Le Mans est à **1h05 de TGV de Paris**, ce qui en fait une destination week-end accessible.\n\n**Prix au m² accessibles.** Comptez **2 200-3 200 €/m²** sur la Cité Plantagenêt, **1 800-2 800 €/m²** sur Gare Sud, **1 600-2 400 €/m²** en périphérie résidentielle — un niveau qui place Le Mans parmi les marchés LCD français les plus accessibles à l'achat, avec des rendements bruts encore confortables.",
+    conciergeries: [
+      {
+        name: "L'instant Clef",
+        url: 'https://linstantclef.fr/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 5,
+        reviews: 38,
+        biensGeres: 35,
+        specialty: 'Volume avis le plus élevé du Mans, expérience voyageur',
+        description:
+          "L'instant Clef applique une commission de 25 % TTC sur les revenus collectés, dans la fourchette haute du marché manceau, justifiée par un soin particulier porté à l'expérience voyageur (conseils touristiques personnalisés, livret d'accueil détaillé, check-in en mains propres). Service complet : annonce, diffusion multi-plateformes, communication voyageurs, ménage pro, linge, maintenance. Pertinente pour un propriétaire qui privilégie la note Airbnb (impact direct sur le pricing dynamique) à l'optimisation de la commission.",
+      },
+      {
+        name: 'Notre Chez Vous',
+        url: 'https://www.notrechezvous.com/',
+        commission: '15-25 %',
+        menage: 'refacturé voyageur',
+        rating: 5,
+        reviews: 16,
+        biensGeres: 25,
+        specialty: 'Grille de commission modulable selon services',
+        description:
+          "Notre Chez Vous propose une grille modulable 15-25 % TTC selon le périmètre choisi : du simple check-in/ménage (formule à 15 %) au service intégral incluant pricing dynamique, photos pro et reporting mensuel (formule à 25 %). Pertinente pour un propriétaire qui veut conserver la main sur certains aspects (par exemple gérer lui-même les annonces) et n'externaliser que l'opérationnel terrain. Demander une simulation chiffrée par formule avant de signer.",
+      },
+      {
+        name: 'Home&Service',
+        url: 'https://conciergeriehomeservice.com/',
+        commission: '22 %',
+        menage: 'refacturé voyageur',
+        rating: 5,
+        reviews: 13,
+        biensGeres: 22,
+        specialty: 'Optimisation visibilité et rentabilité',
+        description:
+          "Home&Service applique une commission de 22 % TTC dans la moyenne haute du marché manceau, positionnée sur l'optimisation de la visibilité (photos pro, multi-diffusion Airbnb/Booking/Abritel) et de la rentabilité (pricing dynamique calé sur les événements automobiles). Pertinente pour un propriétaire qui sous-loue déjà à 50-60 €/nuit mais voudrait remonter le tarif moyen via une stratégie pricing événementielle plus agressive.",
+      },
+      {
+        name: 'Rêve au Mans',
+        url: 'https://www.reveaumans.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4,
+        reviews: 8,
+        biensGeres: 18,
+        specialty: 'Acteur historique du Mans, gestion intégrale',
+        description:
+          "Rêve au Mans est l'un des acteurs historiques de la conciergerie LCD au Mans, avec une présence reconnue sur la Cité Plantagenêt et la périphérie. Tarification sur devis adaptée à chaque bien et niveau de service. Offre complète : annonce, diffusion, accueil voyageurs, ménage, maintenance, conseil 24 Heures du Mans (tarification événements). Note Google moyenne plus basse que le reste du panel (mix d'avis très positifs et de retours plus mitigés sur la communication) — point à clarifier avant signature.",
+      },
+      {
+        name: 'Conciergerie des Anges',
+        url: 'https://conciergeriedesanges.fr/',
+        commission: '22 %',
+        menage: 'refacturé voyageur',
+        rating: 5,
+        reviews: 2,
+        biensGeres: 12,
+        specialty: 'Acteur local, gestion humaine',
+        description:
+          "Conciergerie des Anges applique une commission de 22 % TTC. Positionnement sur une gestion à taille humaine : un interlocuteur unique, peu de biens gérés en parallèle, focus sur la qualité d'accueil. Volume d'avis Google encore faible (entreprise jeune sur le marché manceau) — pertinente pour un propriétaire qui valorise un acteur émergent local accessible plutôt qu'un grand groupe national.",
+      },
+      {
+        name: 'ACL Immo',
+        url: 'https://acl.immo/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 7,
+        biensGeres: 10,
+        specialty: 'Approche immobilière 360 (LCD + transaction)',
+        description:
+          "ACL Immo couple l'activité de conciergerie LCD à une activité de transaction immobilière classique au Mans. Tarification sur devis, généralement dans la fourchette 20-25 % TTC selon le bien. Pertinente pour un propriétaire qui prépare une revente à moyen terme et veut un interlocuteur unique entre la gestion LCD (optimisation du rendement) et la cession (valorisation et mise en marché).",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Cité Plantagenêt (vieille ville)',
+        pricePerNight: '70-130 €',
+        occupancy: 65,
+        description:
+          "Cœur historique du Mans, classée, 22 hectares de patrimoine médiéval, cathédrale Saint-Julien, enceinte gallo-romaine. Cible touristique premium et clientèle culturelle. Prix au m² 2 200-3 200 €. T2 dès 100 000-130 000 €. Demande forte sur les Nuits des Chimères (été) et événements automobiles.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Gare Sud / Novaxis',
+        pricePerNight: '60-110 €',
+        occupancy: 62,
+        description:
+          "Quartier d'affaires moderne autour de la gare TGV (1h05 Paris). Pôle Novaxis, MMArena à proximité. Clientèle business semaine + voyageurs ponctuels week-end. Prix au m² 1 800-2 800 €. T2 dès 85 000 €. Très bien placé pour les courts séjours business.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Centre-ville / Place de la République',
+        pricePerNight: '55-100 €',
+        occupancy: 58,
+        description:
+          "Cœur commerçant et administratif (place de la République, rue de Bourg-Anglais, tramway). Mix résidents et touristes courts séjours. Prix au m² 2 000-2 800 €. T2 dès 90 000 €. Bon compromis emplacement central et accessibilité prix.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Saint-Pavin / Université',
+        pricePerNight: '50-85 €',
+        occupancy: 55,
+        description:
+          "Quartier résidentiel autour de l'Université du Maine. Mix étudiants (location étudiante annuelle), accompagnants familiaux et tourisme. Prix au m² 1 600-2 200 €. T2 dès 75 000 €. Stratégie hybride possible : étudiant 9 mois + LCD juin-août + événements.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Pontlieue / Bords de Sarthe',
+        pricePerNight: '55-95 €',
+        occupancy: 55,
+        description:
+          "Quartier sud résidentiel, bords de Sarthe, proche zone du circuit Bugatti et complexe sportif. Clientèle motorsport pendant les événements (24 H, GP Explorer, Bol d'Or), familles le reste de l'année. Prix au m² 1 700-2 400 €. T2 dès 80 000 €.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Coulaines / Sablons (périphérie nord)',
+        pricePerNight: '50-80 €',
+        occupancy: 50,
+        description:
+          "Communes limitrophes nord du Mans, marché plus diffus. Prix au m² les plus accessibles (1 400-2 000 €). Maison T4 dès 130 000 €. Stratégie maison familiale en location ponctuelle événements + clientèle régionale week-end.",
+        roiBrut: '7 à 9 %',
+      },
+    ],
+    regulation:
+      "Le Mans applique le **cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel à ce jour — un cadre relativement souple comparé à Paris, Lyon ou Bordeaux.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme du Mans doit être déclaré en mairie. Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération motivée — Le Mans ne l'a pas fait à ce jour.\n\n**Pas de changement d'usage généralisé.** Contrairement à Paris ou Lyon, Le Mans n'impose pas d'autorisation de changement d'usage pour les résidences secondaires. Cette situation peut évoluer si la pression touristique s'accentue (notamment autour des événements automobiles).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage).\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Le Mans applique une taxe de séjour de **0,75 € à 3,80 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 75,
+      neighborhood: 'Cité Plantagenêt',
+      revenuBrut: 18500,
+      commissionRate: 0.22,
+      menageCount: 58,
+      menageUnitCost: 65,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb au Mans pendant les 24 Heures du Mans ?',
+        a: "La semaine des 24 Heures du Mans (mi-juin) est l'événement le plus rentable du marché LCD manceau. Un T2 qui se loue 75 €/nuit en moyenne annuelle facture 280-400 €/nuit pendant la semaine de course, avec une demande qui sature 6 à 9 mois à l'avance. Sur 10 nuits (du jeudi soir avant la course au dimanche après), un T2 bien placé peut générer 3 000-4 000 € bruts — soit l'équivalent de 2 mois de revenus normaux. Si on ajoute le GP Explorer fin août (240 000 spectateurs en 2025, +75 % de nuitées vs été normal selon France Bleu Pays de la Loire), les 24 Heures Motos en avril et la Classique 24 Heures en juillet, le total des événements représente couramment 35-45 % du chiffre d'affaires annuel d'un LCD manceau.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD au Mans ?',
+        a: "Pour un rendement maximal, le quartier Gare Sud / Novaxis est le meilleur compromis : prix au m² accessibles (1 800-2 800 €), clientèle business semaine + événements, ROI brut 6,5-8,5 %. La Cité Plantagenêt offre les meilleurs tarifs nuitée (70-130 €) et la demande touristique la plus régulière, avec un ticket d'entrée plus élevé (130 000 € pour un T2). Pontlieue et Saint-Pavin sont des stratégies hybrides intéressantes (étudiants annuels + LCD événements). Pour un budget contraint, Coulaines en périphérie nord propose des maisons T4 dès 130 000 € avec un ROI 7-9 % bien que la demande LCD soit plus diffuse.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie Airbnb au Mans ?',
+        a: "Les commissions au Mans s'étalent de 15 % (formule de base sans diffusion) à 25 % TTC (formule intégrale avec pricing dynamique et photos pro), avec une moyenne de marché autour de 20-22 % TTC selon les retours collectés sur 8 conciergeries identifiées (note moyenne 4,9/5 sur 94 avis Google cumulés). L'instant Clef est en haut de fourchette (25 %) avec la justification du plus gros volume d'avis. Home&Service et Conciergerie des Anges sont à 22 %. Notre Chez Vous propose une grille modulable 15-25 %. Au-delà du taux affiché, le critère décisif sur un marché événementiel comme Le Mans est la stratégie pricing dynamique sur les 24 H et GP Explorer — un mauvais pricing peut coûter 1 500-3 000 € de manque à gagner sur 10 nuits.",
+      },
+      {
+        q: 'Faut-il déclarer son Airbnb au Mans en 2026 ?',
+        a: "Oui, l'enregistrement en mairie est obligatoire pour tout meublé de tourisme au Mans, qu'il s'agisse d'une résidence principale ou secondaire. Le téléservice national d'enregistrement entre en vigueur au plus tard le 20 mai 2026 et délivre un numéro à 13 chiffres qui doit figurer sur chaque annonce Airbnb, Booking ou Abritel. Le défaut d'enregistrement est sanctionné de 10 000 € d'amende. À ce jour, Le Mans n'impose pas de changement d'usage généralisé pour les résidences secondaires (contrairement à Paris, Lyon ou Bordeaux), ni de quota de nuitées inférieur à 120 jours pour les résidences principales. Cette situation peut évoluer si la pression touristique s'accentue : surveillez les délibérations du conseil municipal du Mans en 2026.",
+      },
+    ],
+    updatedAt: '2026-06-03',
+  },
+  // ==========================================================================
+  // MÉRIBEL (commune des Allues)
+  // ==========================================================================
+  {
+    slug: 'meribel',
+    displayName: 'Méribel',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Méribel Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Méribel : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Méribel (Les Allues, Mottaret). Tarifs (5-25 %), services, avis Google, réglementation 2026, chalets et appartements 3 Vallées.",
+    kwPrincipal: 'conciergerie meribel',
+    kwSecondaires: [
+      'meribel conciergerie',
+      'conciergerie airbnb meribel',
+      'conciergerie courchevel',
+      'home mountain',
+      'agence gestion locative meribel',
+      'location saisonnière meribel',
+    ],
+    population: 1750,
+    tourists: 2000000,
+    activeListings: 1200,
+    priceLow: 110,
+    priceHigh: 320,
+    occupancyRate: 60,
+    revpar: 80,
+    seasonality:
+      "Double saisonnalité montagne très marquée, dominée par l'hiver. Pic absolu de mi-décembre à mi-avril (occupation 85-90 %, semaines complètes obligatoires en haute saison, accès au domaine des 3 Vallées le plus vaste du monde — 600 km de pistes, clientèle internationale britannique/scandinave/nord-américaine). Pic secondaire été juillet à août (occupation 65-75 %, VTT, randonnée, Mountain Collection, Tour de France ponctuel). Inter-saisons octobre-novembre et mai-juin très creux (occupation 20-30 %), fermeture des remontées et logistique limitée. Tarifs nuitée hiver vacances scolaires (Noël/Nouvel An, février européen, Pâques) 2-3 fois plus élevés qu'en basse saison.",
+    rankNational: 9,
+    introCustom:
+      "Vous avez un appartement, un chalet ou un studio à **Méribel**, à **Méribel-Mottaret**, à **Méribel-Village**, au **Plantin** ou ailleurs dans la commune des **Allues**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **réglementation Loi Le Meur** qui impose l'enregistrement national au 20 mai 2026, la **double saisonnalité hiver/été** qui dicte des semaines complètes sur les vacances scolaires, la **clientèle internationale haut de gamme** (Britanniques, Russes, Nord-Américains) qui exige du service hôtelier, et la quinzaine d'acteurs locaux qui se partagent un marché de **plus de 1 200 biens** sur les Allues, vous vous demandez quelle conciergerie maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les pure-players méribelois (Conciergerie Lhotellier, Conciergerie Méribel, SB Conciergerie) et les acteurs premium 3 Vallées (Mountain Majord'Home, Emerald Stay) ?",
+    marketIntro:
+      "Méribel est l'**un des trois piliers du domaine des 3 Vallées**, le plus grand domaine skiable relié du monde (600 km de pistes), avec Courchevel et Val Thorens. La commune des Allues (1 750 habitants permanents selon l'INSEE) compte environ **1 200 annonces actives** sur Airbnb réparties sur Méribel Centre (1 450 m), Méribel-Mottaret (1 750 m), Méribel-Village (1 400 m) et les hameaux des Allues. Le tarif moyen nuitée atteint **180-220 €** (avec des chalets premium à 800-3 500 €/nuit en haute saison hiver), un niveau qui place Méribel dans le top 3 du marché alpin français avec Courchevel et Val d'Isère.\n\nLa **station génère plus de 2 millions de nuitées par an** dont 70 % concentrées sur 4 mois d'hiver. Le mix unique : **domaine 3 Vallées** (forfait unique 600 km), **Olympic Center** (piscine, patinoire, vestiges JO 1992), **Altiport de Méribel** (clientèle jet privé), **clientèle internationale haut de gamme** (35-45 % de Britanniques sur les chalets premium, selon les chiffres Méribel Tourisme).\n\nLes **prix au m² à Méribel atteignent 12 000 à 22 000 €** en centre station (pic 30 000 € sur les chalets premium du Belvédère et de Mottaret). Méribel-Village et les hameaux des Allues offrent des tickets plus accessibles (6 000-10 000 €/m²) — un compromis pour un investisseur LCD qui accepte une localisation un peu excentrée.\n\n**Réglementation Loi Le Meur applicable.** Comme toute commune de montagne, Les Allues est soumise au cadre Le Meur (enregistrement national au 20 mai 2026, DPE classe E minimum, 120 nuitées/an pour les résidences principales). La commune n'a pas instauré de restriction sur le changement d'usage à ce jour, mais le PLU est en cours de révision (limitation de la construction de résidences secondaires).",
+    conciergeries: [
+      {
+        name: 'Conciergerie Lhotellier',
+        url: 'https://www.conciergerielhotellier.com/',
+        commission: '5 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 42,
+        biensGeres: 35,
+        specialty: 'Tarif disruptif (5 % sans frais cachés) sur les 3 Vallées',
+        description:
+          "Conciergerie Lhotellier casse la grille tarifaire alpine traditionnelle avec une commission de 5 % sans frais cachés annoncés, contre 20-25 % chez les acteurs classiques de la station. Couverture complète : annonce, diffusion, accueil voyageurs, ménage pro, linge, maintenance, reporting. Pertinente pour un propriétaire dont le bien performe bien (>60 000 € de revenus annuels) où l'économie sur la commission représente 9 000-12 000 € par an. À valider en lecture détaillée du contrat (frais cachés éventuels sur services additionnels).",
+      },
+      {
+        name: "Mountain Majord'Home",
+        url: 'https://www.mountainmajordhome.com/',
+        commission: 'sur devis (25-30 %)',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 28,
+        biensGeres: 25,
+        specialty: 'Premium 5* : chef privé, transferts, ski concierge',
+        description:
+          "Mountain Majord'Home positionne Méribel et Courchevel sur le segment ultra-premium : chef à domicile sur demande, transferts aéroport Genève, locations de ski en livraison, ski concierge, gardes d'enfants, réservations restaurants étoilés. Tarification sur devis (généralement 25-30 % TTC). Pertinente pour un chalet > 2 M€ au Belvédère, à Méribel-Village ou aux Allues où la clientèle internationale (Émirats, Russie, États-Unis) exige du service hôtelier 5 étoiles.",
+      },
+      {
+        name: 'Emerald Stay',
+        url: 'https://emeraldstay.com/meribel/property-management',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 38,
+        biensGeres: 50,
+        specialty: 'Réseau premium multi-stations 3 Vallées',
+        description:
+          "Emerald Stay est un acteur premium présent sur l'ensemble des 3 Vallées (Méribel, Courchevel, Les Allues, Combloux, Les Gets) et Tignes. Approche inspirée de l'hôtellerie de luxe avec marketing dynamique, multi-diffusion (Airbnb, Booking, plateformes luxe) et reporting investisseur. Tarification sur devis. Pertinente pour un propriétaire qui valorise l'image marque premium et la couverture multi-stations (utile pour un propriétaire multi-biens 3 Vallées).",
+      },
+      {
+        name: 'Conciergerie Méribel',
+        url: 'https://www.conciergerie-meribel.com/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'Acteur pure-player Méribel, gestion intégrale',
+        description:
+          "Conciergerie Méribel est l'un des pure-players historiques de la station avec une équipe spécialisée sur Méribel Centre, Mottaret et les Allues. Commission 20 % TTC, ménage refacturé. Offre clé en main : annonce, diffusion multi-plateformes, gestion des prix et calendrier, accueil voyageurs, ménage, linge, maintenance. Pertinente pour un propriétaire qui veut un acteur local accessible, focalisé exclusivement sur Méribel, sans dispersion multi-stations.",
+      },
+      {
+        name: 'SB Conciergerie',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 15,
+        biensGeres: 18,
+        specialty: 'Maintenance + LCD + organisation d\'événements privés',
+        description:
+          "SB Conciergerie (Chalet Cleopatre, Les Villaret) propose un périmètre élargi : maintenance, ménage, organisation d'événements privés (mariages, séminaires) en complément de la gestion locative. Tarification sur devis selon le bien et le périmètre. Pertinente pour un propriétaire de chalet qui veut un interlocuteur unique pour la gestion LCD ET la valorisation événementielle hors-saison (mariages d'hiver, séminaires d'entreprise).",
+      },
+      {
+        name: 'Mountain Collection Immobilier',
+        url: 'https://www.meribel-prive.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 22,
+        biensGeres: 40,
+        specialty: 'Agence immobilière 360 (LCD + transaction + location annuelle)',
+        description:
+          "Mountain Collection Immobilier propose un service intégral combinant LCD, location saisonnière classique, transaction et location annuelle sur Méribel et les Allues. Établie depuis plus de 5 ans dans la vallée. Tarification sur devis adaptée au bien. Pertinente pour un propriétaire patrimonial qui envisage à terme une revente ou un changement de stratégie locative — l'agence assure la continuité du suivi entre les étapes.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Méribel Centre (1 450 m)',
+        pricePerNight: '140-280 €',
+        occupancy: 70,
+        description:
+          "Cœur de Méribel : Chaudanne (départ télécabines, vie nocturne), Olympic Center, Rond-Point des Pistes. Le plus prisé pour le LCD touristique avec proximité immédiate des remontées. Prix au m² 12 000-18 000 €. Studio dès 280 000 €, T2 dès 480 000 €.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Méribel-Mottaret (1 750 m)',
+        pricePerNight: '150-300 €',
+        occupancy: 72,
+        description:
+          "Station satellite la plus haute (1 750 m), ski-in/ski-out garanti, enneigement maximal. Très prisée des skieurs confirmés et des Britanniques. Prix au m² 10 000-16 000 €. Studio dès 220 000 €, T2 dès 380 000 €. Meilleur compromis altitude/prix de la station.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Le Belvédère / Le Plantin',
+        pricePerNight: '250-800 €',
+        occupancy: 65,
+        description:
+          "Quartiers premium au-dessus du centre, accès chalets traditionnels et villas vue panoramique sur la vallée. Clientèle internationale haut de gamme. Prix au m² 18 000-28 000 €. Chalet dès 2 M€. Tickets d'achat très élevés mais revenus locatifs hiver exceptionnels (4 500-12 000 € la semaine).",
+        roiBrut: '3 à 4 %',
+      },
+      {
+        name: 'Méribel-Village (1 400 m)',
+        pricePerNight: '110-220 €',
+        occupancy: 60,
+        description:
+          "Village authentique en contrebas, ambiance plus familiale et tarifs plus accessibles. Liaison ski via télécabine du Golf. Prix au m² 7 000-11 000 €. Chalet T4 dès 1 M€. Bon compromis budget/expérience pour un investisseur LCD prudent.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Les Allues (village historique)',
+        pricePerNight: '90-180 €',
+        occupancy: 50,
+        description:
+          "Chef-lieu de la commune (1 100 m), village savoyard traditionnel, navette gratuite vers Méribel. Marché LCD plus diffus mais tickets d'achat les plus accessibles. Prix au m² 4 500-7 000 €. Maison de village dès 350 000 €. Stratégie hybride été (randonnée) + hiver (clientèle budget).",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Hameaux des Allues (Le Raffort, Le Cruet)',
+        pricePerNight: '85-160 €',
+        occupancy: 45,
+        description:
+          "Petits hameaux entre Les Allues et Méribel, accessibles par télécabine du Raffort. Authenticité savoyarde maximale, demande LCD plus saisonnière. Prix au m² 4 000-6 500 €. Chalet T3 dès 350 000 €. Stratégie patrimoniale long terme plutôt que rendement maximal.",
+        roiBrut: '5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Méribel (commune des Allues) applique le **cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel à ce jour. La commune n'a pas instauré, contrairement à Chamonix-Mont-Blanc, de limitation à 1 autorisation de changement d'usage par personne physique — mais le **PLU est en cours de révision** (limitation de la construction de résidences secondaires).\n\n**Enregistrement national au 20 mai 2026.** Tout meublé de tourisme des Allues doit être enregistré via le **téléservice national** (apimeubles.finances.gouv.fr). Un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel. Sanction du défaut d'enregistrement : **10 000 € d'amende**.\n\n**Résidence principale : 120 nuitées/an.** Limite nationale pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération — Les Allues ne l'a pas fait à ce jour.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage). Spécificité montagne : un assouplissement des critères DPE est discuté pour les logements en haute altitude (chauffage électrique majoritaire, isolation difficile sur le bâti ancien savoyard).\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement **étoiles** (1 à 5) est devenu un levier fiscal majeur : un chalet premium classé 4-5 étoiles bénéficie d'un abattement quasi-double sur des revenus 5-10 fois supérieurs à un T2 non classé.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Communauté de Communes Val Vanoise Tarentaise applique une taxe additionnelle classement-dépendante : de **0,90 € à 5,00 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 200,
+      neighborhood: 'Méribel-Mottaret',
+      revenuBrut: 48000,
+      commissionRate: 0.20,
+      menageCount: 68,
+      menageUnitCost: 95,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb à Méribel pendant la haute saison hiver ?',
+        a: "La haute saison hiver méribeloise s'étale de mi-décembre à mi-avril avec un pic absolu pendant les vacances scolaires (Noël/Nouvel An, février européen et britannique, vacances de Pâques). Un T2 à Méribel-Mottaret qui se loue 200 €/nuit en moyenne annuelle facture 320-450 €/nuit pendant les vacances de Noël/Nouvel An et Pâques, avec une semaine complète obligatoire (samedi-samedi). Sur 4 mois de haute saison hiver, un T2 bien placé peut générer 28 000 à 42 000 € bruts, soit 65-75 % du chiffre d'affaires annuel. Pour un chalet T5 premium au Belvédère, les semaines de vacances de Noël se louent couramment 8 000-15 000 € la semaine.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Méribel ?',
+        a: "Pour un rendement maximal, Méribel-Mottaret est le meilleur compromis : altitude maximale (1 750 m = enneigement garanti), ski-in/ski-out, prix au m² 10 000-16 000 €, ROI brut 4,5-6 %. Méribel Centre offre la meilleure occupation (Chaudanne + Olympic Center) mais avec un ticket d'entrée plus élevé (>480 000 € pour un T2). Le Belvédère et Le Plantin sont réservés aux profils patrimoniaux haut de gamme (chalet > 2 M€, clientèle internationale premium, ROI brut 3-4 % mais valorisation patrimoniale forte). Pour un budget contraint, Les Allues (village historique) et les hameaux du Raffort/Cruet offrent des tickets dès 350 000 € avec un ROI 5,5-7 %.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie Airbnb à Méribel ?',
+        a: "Les commissions méribeloises s'étalent de 5 % (cas atypique de Conciergerie Lhotellier qui revendique l'absence de frais cachés) à 30 % TTC (formules premium 5 étoiles type Mountain Majord'Home ou Chamkeys Prestige avec chef privé et services hôteliers). La moyenne du marché s'établit autour de 20-22 % TTC pour une formule complète avec ménage refacturé au voyageur. Sur un chalet premium à 80 000 €+ de revenus annuels, choisir une formule à 20 % plutôt que 25 % représente 4 000 € d'économie nette par an. À l'inverse, sur un studio à 18 000 € de revenus, l'écart absolu est minime (900 €) — le critère décisif devient la qualité d'exécution opérationnelle.",
+      },
+    ],
+    updatedAt: '2026-06-03',
+  },
+  // ==========================================================================
+  // TIGNES
+  // ==========================================================================
+  {
+    slug: 'tignes',
+    displayName: 'Tignes',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Tignes Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Tignes : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Tignes (Val Claret, Le Lac, Lavachet). Tarifs (20-25 %), services, avis Google, réglementation 2026, glacier Grande Motte et Espace Killy.",
+    kwPrincipal: 'conciergerie tignes',
+    kwSecondaires: [
+      'conciergerie airbnb tignes',
+      'tignes airbnb',
+      'yes conciergerie',
+      'la conciergerie des montagnes',
+      'conciergerie val d\'isère',
+      'conciergerie gdalpes',
+    ],
+    population: 1953,
+    tourists: 2400000,
+    activeListings: 1500,
+    priceLow: 100,
+    priceHigh: 290,
+    occupancyRate: 62,
+    revpar: 75,
+    seasonality:
+      "Triple saisonnalité unique en Europe grâce au glacier de la Grande Motte. Pic absolu de fin novembre à fin avril (occupation 85-90 %, ski sur glacier dès l'avant-saison, 300 km de pistes Espace Killy avec Val d'Isère, clientèle internationale britannique/scandinave/néerlandaise/française). Pic d'été juillet-août (occupation 60-70 %, ski d'été sur glacier, randonnée, VTT, plongée lac de Tignes). Quelques semaines d'ouverture printemps (mai) et automne (octobre) sur le glacier — unique en France. Inter-saisons mai et octobre-novembre (occupation 30-40 %).",
+    rankNational: 11,
+    introCustom:
+      "Vous avez un appartement, un studio ou un chalet à **Tignes**, à **Val Claret** (2 100 m), à **Tignes le Lac**, au **Lavachet**, à **Tignes 1800** (Les Boisses, Les Brévières) ou à **Tignes 2100**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **triple saisonnalité unique** (ski d'hiver + glacier de la Grande Motte ouvert toute l'année + tourisme d'été lac de Tignes), la **clientèle internationale exigeante** (60-70 % d'étrangers selon Tignes Tourisme, Britanniques en tête), la **réglementation Loi Le Meur** (enregistrement national au 20 mai 2026) et la dizaine d'acteurs locaux qui se partagent un marché de **1 500 biens** sur 30 000 lits touristiques, vous vous demandez quelle conciergerie maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les pure-players tignards (Yes Conciergerie, Locatignes, ALPO, Tignes Conciergerie) et les acteurs premium Espace Killy (Emerald Stay) ?",
+    marketIntro:
+      "Tignes est l'**une des trois stations françaises ski-365 jours** grâce au **glacier de la Grande Motte** (3 656 m) — la seule à ouvrir en septembre-octobre et en mai-juin en plus de la saison classique. La commune (1 953 habitants permanents selon l'INSEE 2022, en déclin démographique régulier) compte une **capacité d'accueil de plus de 30 000 lits touristiques** (12 lits par habitant — un des ratios les plus élevés des Alpes françaises) répartis sur Val Claret (2 100 m), Tignes le Lac, Le Lavachet, Tignes 1800 (Les Boisses + Les Brévières) et Tignes 2100.\n\nLa station compte environ **1 500 annonces actives** sur Airbnb avec un tarif moyen autour de **180 €/nuit** (jusqu'à 290 €/nuit en haute saison hiver sur Val Claret et Le Lac). **Tignes génère plus de 2,4 millions de nuitées par an** dont 75 % concentrées sur 5 mois d'hiver. Le mix unique : **Espace Killy avec Val d'Isère** (300 km de pistes, forfait unique), **glacier ouvert toute l'année** (ski d'été pour stages compétiteurs, équipes nationales), **lac de Tignes en été** (canoë, paddle, plongée), **clientèle internationale** (60-70 % de Britanniques, Scandinaves, Néerlandais, selon Tignes Tourisme).\n\nLes **prix au m² à Tignes atteignent 7 500 à 14 000 €** sur Val Claret et Tignes le Lac (pic 16 000 € sur chalets ski-in/ski-out), niveau plus accessible que Méribel ou Courchevel pour une exposition altitude équivalente. Tignes 1800 et Les Brévières offrent des tickets plus accessibles (4 500-7 500 €/m²) pour les investisseurs LCD prêts à composer avec une localisation plus excentrée.\n\n**Réglementation Loi Le Meur applicable.** Comme toute commune de montagne, Tignes est soumise au cadre Le Meur (enregistrement national au 20 mai 2026, DPE classe E minimum, 120 nuitées/an pour les résidences principales). La commune n'a pas instauré de restriction sur le changement d'usage à ce jour.",
+    conciergeries: [
+      {
+        name: 'Yes Conciergerie Tignes',
+        url: 'https://www.yesconciergerie-tignes.fr/',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 32,
+        biensGeres: 45,
+        specialty: 'Pure-player premium Tignes, présence 7/7',
+        description:
+          "Yes Conciergerie Tignes est l'acteur volumique premium de la station avec une présence 7 jours sur 7 sur le terrain (équipe locale Val Claret + Le Lac). Commission 20-25 % TTC selon la formule (premium ou intégrale). Couverture : gestion locataires, remise des clés, inspections, maintenance, petites rénovations, ménage et linge. Pertinente pour un propriétaire qui veut un acteur 100 % focalisé Tignes avec capacité d'intervention en urgence pendant les vacances scolaires (pannes, dégâts des eaux, plaintes voisinage).",
+      },
+      {
+        name: 'Locatignes',
+        url: 'https://www.locatignes.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 24,
+        biensGeres: 30,
+        specialty: 'Acteur historique Tignes (>10 ans), interlocuteur unique',
+        description:
+          "Locatignes cumule plus de 10 ans d'expérience sur Tignes en gestion d'annonces et conciergerie. Différenciation forte sur le modèle de gestion : un interlocuteur unique pour chaque propriétaire (contre les centrales d'appel des conciergeries en ligne). Tarification sur devis. Pertinente pour un propriétaire qui valorise la transparence et la relation directe à un acteur établi de la station, avec une exécution centrée sur la qualité plutôt que le volume.",
+      },
+      {
+        name: 'ALPO Conciergerie',
+        url: 'https://alpo-conciergerie.fr/tignes/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 18,
+        biensGeres: 25,
+        specialty: 'Équipe taille humaine, ménage pro + welcome kit',
+        description:
+          "ALPO Conciergerie applique une commission de 20 % TTC sur les revenus locatifs générés. Positionnement équipe taille humaine, ménage professionnel pré/post-séjour, welcome kit voyageur. Pertinente pour un propriétaire qui veut une exécution standard du marché sans services premium, avec un acteur local accessible et un tarif clair.",
+      },
+      {
+        name: 'Emerald Stay',
+        url: 'https://emeraldstay.com/tignes/property-management',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 28,
+        biensGeres: 35,
+        specialty: 'Réseau premium multi-stations Espace Killy + 3 Vallées',
+        description:
+          "Emerald Stay est un acteur premium présent sur Tignes, Val d'Isère, Méribel, Courchevel et Combloux. Approche inspirée de l'hôtellerie de luxe avec marketing dynamique, multi-diffusion (Airbnb, Booking, plateformes luxe) et reporting investisseur. Pertinente pour un propriétaire multi-biens 3 Vallées/Espace Killy qui veut un interlocuteur unique multi-stations, ou pour un bien premium positionné sur la clientèle internationale haut de gamme.",
+      },
+      {
+        name: 'Tignes Conciergerie',
+        url: 'https://www.tignesconciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 14,
+        biensGeres: 18,
+        specialty: 'Remise de clés + location de draps + maintenance',
+        description:
+          "Tignes Conciergerie propose un périmètre modulable : remise de clés, location de draps, ménage, maintenance. Tarification sur devis selon les services retenus. Pertinente pour un propriétaire qui veut conserver la main sur la diffusion (gérer lui-même l'annonce Airbnb) mais externaliser uniquement l'opérationnel terrain (clés + ménage + linge).",
+      },
+      {
+        name: 'HostnFly Tignes',
+        url: 'https://hostnfly.com/conciergerie-airbnb/tignes',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 45,
+        biensGeres: 40,
+        specialty: 'Acteur national, pricing dynamique algorithmique',
+        description:
+          "HostnFly est un acteur national présent dans plus de 50 villes françaises, avec une équipe locale à Tignes pour l'opérationnel. Commission 20 % TTC sur les revenus collectés. Différenciateur : pricing dynamique algorithmique calé sur les saisons et les événements (Championnats du Monde de ski, Coupe du Monde). Pertinente pour un propriétaire qui valorise l'optimisation tarifaire automatisée mais accepte une moindre proximité humaine que les pure-players tignards.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Val Claret (2 100 m)',
+        pricePerNight: '140-290 €',
+        occupancy: 72,
+        description:
+          "Cœur skieur de Tignes, altitude maximale, accès direct au glacier de la Grande Motte par funiculaire souterrain. Le plus prisé pour le LCD ski-in/ski-out. Prix au m² 9 000-14 000 €. Studio dès 220 000 €, T2 dès 320 000 €. Demande maximale en hiver et présente sur les semaines d'ouverture glacier (mai-juin et oct-nov).",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Tignes le Lac (2 100 m)',
+        pricePerNight: '130-260 €',
+        occupancy: 68,
+        description:
+          "Cœur historique et touristique de la station, autour du lac de Tignes (canoë, paddle en été). Mix résidences hôtelières, copropriétés années 70-80 rénovées, chalets modernes. Prix au m² 8 500-13 000 €. Studio dès 200 000 €, T2 dès 300 000 €.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Le Lavachet (2 100 m)',
+        pricePerNight: '110-220 €',
+        occupancy: 60,
+        description:
+          "Quartier en hauteur juste au-dessus de Tignes le Lac, accès aux remontées via la télécabine. Ambiance plus calme et familiale, prix d'achat plus accessibles. Prix au m² 7 500-11 000 €. Studio dès 170 000 €, T2 dès 250 000 €. Bon compromis altitude/prix.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Tignes 1800 (Les Boisses)',
+        pricePerNight: '95-180 €',
+        occupancy: 55,
+        description:
+          "Station satellite à 1 800 m, construite en architecture savoyarde traditionnelle (contrairement aux blocs des années 70 du Lac et de Val Claret). Liaison ski via télécabine. Prix au m² 5 500-8 500 €. T2 dès 200 000 €. Cible familles et profils patrimoniaux qui valorisent l'esthétique.",
+        roiBrut: '5,5 à 7,5 %',
+      },
+      {
+        name: 'Les Brévières (1 550 m)',
+        pricePerNight: '85-160 €',
+        occupancy: 48,
+        description:
+          "Village historique de la commune, en contrebas du barrage du lac, accès ski par télécabine. Authenticité savoyarde maximale, tickets d'achat les plus accessibles. Prix au m² 4 500-7 000 €. Maison de village dès 280 000 €. Stratégie patrimoniale long terme + clientèle famille.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Val d\'Isère (10 min, station voisine)',
+        pricePerNight: '160-380 €',
+        occupancy: 70,
+        description:
+          "Station voisine reliée par l'Espace Killy (300 km de pistes en commun). Marché plus premium et plus tendu (Coupe du Monde, clientèle ultra-haut de gamme). Prix au m² 12 000-22 000 €. T2 dès 500 000 €. Pour un propriétaire qui veut diversifier son patrimoine Tignes + Val d'Isère via la même conciergerie multi-station (Emerald Stay).",
+        roiBrut: '3,5 à 5 %',
+      },
+    ],
+    regulation:
+      "Tignes applique le **cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel à ce jour. La commune n'a pas instauré, contrairement à Chamonix-Mont-Blanc, de limitation à 1 autorisation de changement d'usage par personne physique.\n\n**Enregistrement national au 20 mai 2026.** Tout meublé de tourisme à Tignes doit être enregistré via le **téléservice national** (apimeubles.finances.gouv.fr). Un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel. Sanction du défaut d'enregistrement : **10 000 € d'amende**.\n\n**Résidence principale : 120 nuitées/an.** Limite nationale pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération — Tignes ne l'a pas fait à ce jour.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage). Spécificité montagne haute altitude : un assouplissement des critères DPE est discuté pour les logements à plus de 1 500 m (chauffage électrique majoritaire, déperditions thermiques structurellement plus élevées).\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement **étoiles** (1 à 5) est un levier fiscal critique sur Tignes vu les revenus élevés générés en haute saison.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Communauté de Communes de Haute-Tarentaise applique une taxe additionnelle classement-dépendante : de **1,00 € à 5,30 € par nuit et par personne** selon le classement du logement (taux parmi les plus élevés du marché alpin, collectés automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 175,
+      neighborhood: 'Val Claret',
+      revenuBrut: 39000,
+      commissionRate: 0.20,
+      menageCount: 62,
+      menageUnitCost: 90,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb à Tignes pendant la haute saison hiver ?',
+        a: "La haute saison hiver tignarde s'étale de fin novembre à fin avril, avec un pic absolu pendant les vacances scolaires (Noël/Nouvel An, février européen et britannique, vacances de Pâques). Un T2 à Val Claret qui se loue 175 €/nuit en moyenne annuelle facture 280-420 €/nuit pendant les vacances de Noël/Nouvel An et Pâques, avec une semaine complète obligatoire (samedi-samedi). Sur 5 mois de haute saison hiver, un T2 bien placé peut générer 24 000 à 36 000 € bruts, soit 65-75 % du chiffre d'affaires annuel. À noter : Tignes bénéficie d'un bonus unique grâce au glacier de la Grande Motte qui ajoute 2-4 semaines de ski d'été (juin-juillet) et 2 semaines d'avant-saison (octobre) — soit l'équivalent de 3 000-6 000 € de chiffre d'affaires additionnel par rapport à une station classique.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Tignes ?',
+        a: "Pour un rendement maximal, Val Claret reste le meilleur compromis : altitude maximale (2 100 m), ski-in/ski-out, accès direct au glacier, prix au m² 9 000-14 000 €, ROI brut 5-6,5 %. Tignes le Lac offre une demande équivalente avec un cadre plus historique (lac, vie nocturne). Le Lavachet est sous-coté : altitude équivalente à Val Claret mais prix 15-20 % inférieurs, ROI brut 5,5-7 %. Pour un budget contraint, Tignes 1800 (Les Boisses) offre une architecture savoyarde authentique et des tickets dès 200 000 € avec un ROI 5,5-7,5 %. Les Brévières est réservé aux profils patrimoniaux long terme (authenticité, accès ski par télécabine, marché plus diffus).",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie Airbnb à Tignes ?',
+        a: "Les commissions tignardes s'étalent de 20 % TTC (ALPO, HostnFly, Yes Conciergerie sur la formule de base) à 25 % TTC (Yes Conciergerie formule premium, formules intégrales avec services additionnels). La moyenne du marché s'établit autour de 20-22 % TTC pour une formule complète avec ménage refacturé au voyageur. Sur un T2 à 39 000 € de revenus annuels (cas standard Val Claret), choisir une formule à 20 % plutôt que 25 % représente 1 950 € d'économie nette par an. Le critère décisif au-delà du taux : la capacité de l'agence à gérer le pic de Noël/Pâques (turn-over élevé sur 2 semaines, exigences voyageurs internationaux) et à occuper les inter-saisons (printemps glacier, été lac de Tignes).",
+      },
+    ],
+    updatedAt: '2026-06-03',
+  },
+  // ==========================================================================
+  // COLMAR
+  // ==========================================================================
+  {
+    slug: 'colmar',
+    displayName: 'Colmar',
+    region: 'Grand Est',
+    regionSlug: 'alsace',
+    title: 'Conciergerie Colmar Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Colmar : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Colmar. Tarifs (18-25 %), services, avis Google, réglementation zone tendue 2026, Petite Venise et Marché de Noël 1,5M visiteurs.",
+    kwPrincipal: 'conciergerie colmar',
+    kwSecondaires: [
+      'colmar hebergement',
+      'conciergerie airbnb colmar',
+      'gite alsace colmar',
+      'gestion locative colmar',
+      'conciergerie mulhouse',
+      'bnb colmar',
+    ],
+    population: 69105,
+    tourists: 3500000,
+    activeListings: 1200,
+    priceLow: 75,
+    priceHigh: 160,
+    occupancyRate: 65,
+    revpar: 55,
+    seasonality:
+      "Saisonnalité tirée par le marché de Noël qui draine 1,5 million de visiteurs sur 5 semaines fin novembre-décembre. Pic absolu marché de Noël (occupation 90-95 %, tarifs 2-3× la normale, réservations 12 mois à l'avance). Pic secondaire été (juin-septembre, occupation 75-85 %, Route des Vins, randonnées Vosges, Foire aux Vins). Festival international de musique de Colmar (juillet) et Festival du Film Européen (octobre) soutiennent les périodes hors-pic. Janvier-février creux relatif (occupation 45-55 %, tourisme de proximité Suisse-Allemagne). Mars-avril (Pâques + premières floraisons Route des Vins) en remontée.",
+    rankNational: 14,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Colmar**, dans la **Petite Venise**, autour du **Krutenau**, en **vieille ville** ou en périphérie, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **réglementation zone tendue** depuis octobre 2023 (autorisation de changement d'usage obligatoire pour toute résidence secondaire en meublé de tourisme), le **règlement municipal strict** adopté en janvier 2022 (obligation de créer un logement de droit commun pour chaque transformation), le **marché de Noël qui draine 1,5 million de visiteurs** sur 5 semaines, et la dizaine d'acteurs locaux qui se partagent un marché de **1 200 biens**, vous vous demandez si confier la gestion à une conciergerie reste rentable.\n\nEt surtout : **laquelle choisir** entre les acteurs alsaciens (Ils'invest, Alsace BnB Services, Les Clés d'Alsace, GLCD Immobilier) et les acteurs nationaux (HostnFly, Keyhost) qui ratissent l'agglomération ?",
+    marketIntro:
+      "Colmar est l'**une des destinations touristiques les plus densément visitées de France hors capitales**, avec **3,5 millions de visiteurs par an** dont **1,5 million concentrés sur les 5 semaines du marché de Noël** (fin novembre à fin décembre). La ville (69 105 habitants) compte environ **1 200 annonces actives** sur Airbnb avec un tarif moyen autour de **95 €/nuit** sur l'année, qui décolle à **180-280 €/nuit pendant le marché de Noël** (réservations souvent saturées 12 mois à l'avance).\n\nLe mix unique : **Petite Venise** classée monument historique (quartier des tanneurs et pêcheurs sur la Lauch), **vieille ville préservée** (Maison Pfister, Koïfhus, Musée Unterlinden et son retable d'Issenheim), **Route des Vins d'Alsace** (170 km de vignobles, Riquewihr et Eguisheim à 15 min), **marché de Noël** (vrai patrimoine immatériel, 6 marchés thématiques en simultané), **Festival international de musique** (juillet) et **Festival du Film Européen** (octobre).\n\nLes **prix au m² à Colmar atteignent 3 500-5 500 €** sur la vieille ville et la Petite Venise (pic 6 500 € sur les biens patrimoniaux classés), **2 800-4 000 €** sur le Krutenau et la première couronne, **2 200-3 200 €** en périphérie résidentielle — un niveau qui reste accessible comparé aux grandes villes touristiques françaises (Bordeaux, Nantes, Strasbourg).\n\n**Zone tendue depuis octobre 2023.** Colmar est classée en zone tendue, ce qui déclenche un cadre réglementaire renforcé : autorisation de changement d'usage obligatoire pour toute résidence secondaire transformée en meublé de tourisme, dès le premier jour de location. Le règlement municipal de janvier 2022 (renforcé par la loi Le Meur en 2024) impose la **création d'un logement de droit commun** pour compenser chaque transformation (avec exception pour le premier logement transformé par un particulier). Conséquence directe : la pression sur les rares meublés de tourisme autorisés a fait remonter les tarifs de 30-40 % entre 2020 et 2025.",
+    conciergeries: [
+      {
+        name: "Ils'invest",
+        url: 'https://www.ils-invest.fr/nos-prestations/conciergerie/',
+        commission: '23 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 35,
+        biensGeres: 40,
+        specialty: 'Pure-player Colmar / Ensisheim, expertise marché alsacien',
+        description:
+          "Ils'invest est l'acteur volumique pure-player du marché colmarien, présent sur Colmar, Ensisheim, Guebwiller et Horbourg-Wihr. Commission 23 % TTC sur le tarif nuitée. Couverture complète : annonce, diffusion multi-plateformes, accueil voyageurs (multilingue allemand/anglais — clientèle suisse et allemande dominante), ménage pro, linge, maintenance. Pertinente pour un propriétaire qui veut un acteur 100 % focalisé Haut-Rhin avec une connaissance fine du marché de Noël et de la clientèle frontalière.",
+      },
+      {
+        name: "Les Clés d'Alsace",
+        url: 'https://www.clefsdalsace.fr/conciergerie-airbnb-alsace',
+        commission: '18-23 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 28,
+        biensGeres: 35,
+        specialty: 'Grille modulable 18-23 %, +40 % revenus revendiqués',
+        description:
+          "Les Clés d'Alsace propose une grille modulable de 18 à 23 % selon la formule retenue (essentielle, complète, premium), avec une revendication de +40 % de revenus vs gestion en direct. Couverture Mulhouse, Colmar et Saint-Louis. Pertinente pour un propriétaire qui veut un acteur multi-villes (utile pour un investisseur multi-biens Haut-Rhin) et qui apprécie une grille tarifaire transparente avec choix selon le périmètre.",
+      },
+      {
+        name: 'Keyhost Colmar',
+        url: 'https://keyhost.fr/colmar',
+        commission: '20 % (+ 997 € setup)',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 22,
+        biensGeres: 30,
+        specialty: 'Réseau alsacien (Colmar, Strasbourg, Sélestat, Ribeauvillé)',
+        description:
+          "Keyhost couvre l'ensemble de l'Alsace (Colmar, Strasbourg, Mulhouse, Obernai, Barr, Sélestat, Ribeauvillé). Commission 20 % TTC sur les revenus + frais de mise en service unique de **997 € TTC** (photos pro, livret d'accueil, configuration Channel Manager, dossier d'autorisation et classement). Pertinente pour un propriétaire qui démarre son projet LCD et veut un setup professionnel inclus, ou pour un investisseur multi-stations Route des Vins (Colmar + Ribeauvillé + Obernai).",
+      },
+      {
+        name: 'Alsace BnB Services',
+        url: 'https://alsacebnbservices.fr/',
+        commission: 'sur devis (horaire)',
+        menage: 'variable',
+        rating: 4.9,
+        reviews: 18,
+        biensGeres: 20,
+        specialty: 'Ménage premium et accueil voyageur (sans gestion d\'annonce)',
+        description:
+          "Alsace BnB Services se positionne sur un périmètre spécifique : ménage premium, organisation des arrivées et départs, préparation du logement pour les voyageurs. Tarification sur devis (horaire). Pertinente pour un propriétaire qui veut conserver la main complète sur son annonce et sa stratégie commerciale (pricing, communication) et n'externaliser que l'opérationnel terrain ménage + accueil. Différenciation forte sur la qualité du ménage (préparation 5 étoiles).",
+      },
+      {
+        name: 'HostnFly Colmar',
+        url: 'https://hostnfly.com/conciergerie-airbnb/colmar',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 25,
+        biensGeres: 28,
+        specialty: 'Acteur national, pricing dynamique algorithmique',
+        description:
+          "HostnFly est un acteur national avec une présence dans plus de 50 villes françaises. Commission 20 % TTC sur les revenus collectés. Équipe locale Colmar pour l'opérationnel terrain. Différenciateur : pricing dynamique algorithmique calé sur le calendrier événementiel (marché de Noël, Foire aux Vins, festivals). Pertinente pour un propriétaire qui valorise l'optimisation tarifaire automatisée mais accepte une moindre proximité humaine que les pure-players alsaciens.",
+      },
+      {
+        name: 'GLCD Immobilier',
+        url: 'https://glcdimmobilier.fr/page-conciergerie-colmar-location-airbnb.php',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 14,
+        biensGeres: 18,
+        specialty: 'Agence immobilière 360 (LCD + transaction + location annuelle)',
+        description:
+          "GLCD Immobilier propose un service intégral combinant LCD, location saisonnière classique, transaction et location annuelle. Tarification sur devis adaptée au bien. Pertinente pour un propriétaire patrimonial qui envisage à terme une revente ou un changement de stratégie locative — l'agence assure la continuité du suivi entre LCD (optimisation du rendement) et cession (valorisation et mise en marché).",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Petite Venise',
+        pricePerNight: '110-200 €',
+        occupancy: 75,
+        description:
+          "Quartier emblématique le long de la Lauch (rivière), maisons à colombages et balades en barque. Cœur du tourisme colmarien et du marché de Noël. Prix au m² 4 500-6 500 €. T2 dès 180 000 €. Cible touristique premium. Tarifs nuitée les plus élevés de Colmar, occupation maximale.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Vieille Ville (Koïfhus, Maison Pfister)',
+        pricePerNight: '95-180 €',
+        occupancy: 70,
+        description:
+          "Cœur historique entre la Petite Venise et le Musée Unterlinden. Pavés, maisons médiévales, accès piéton aux principaux monuments. Prix au m² 3 800-5 500 €. T2 dès 160 000 €. Demande très régulière toute l'année, pic absolu marché de Noël.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Krutenau / Quartier des Tanneurs',
+        pricePerNight: '85-160 €',
+        occupancy: 65,
+        description:
+          "Quartier historique nord-est de la vieille ville, ambiance bohème avec petites rues pavées et commerces. Mix tourisme + résidents. Prix au m² 3 200-4 500 €. T2 dès 140 000 €. Demande forte toute l'année, hors pic marché de Noël.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Gare / Quartier Maréchaux',
+        pricePerNight: '75-130 €',
+        occupancy: 60,
+        description:
+          "Quartier d'accueil autour de la gare TGV (2h20 de Paris, 1h30 de Lyon). Mix tourisme + clientèle business + voyageurs transit Suisse/Allemagne. Prix au m² 2 800-4 000 €. T2 dès 120 000 €. Bon compromis emplacement et accessibilité prix.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Quartier Saint-Léon / Place Rapp',
+        pricePerNight: '75-135 €',
+        occupancy: 58,
+        description:
+          "Quartier résidentiel ouest, à 10 min à pied du centre historique. Mix résidents et tourisme de moyenne durée (cures thermales Vittel à 1h, randonnées Vosges). Prix au m² 2 500-3 500 €. T2 dès 110 000 €. Cible familles et clientèle régionale week-end.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Périphérie (Houssen, Wintzenheim, Horbourg-Wihr)',
+        pricePerNight: '65-110 €',
+        occupancy: 50,
+        description:
+          "Communes limitrophes, tickets d'achat les plus accessibles. Prix au m² 1 800-2 800 €. Maison T4 dès 220 000 €. Stratégie maison familiale + location ponctuelle marché de Noël et Foire aux Vins. Demande LCD plus diffuse mais ROI brut compétitif.",
+        roiBrut: '7 à 8,5 %',
+      },
+    ],
+    regulation:
+      "Colmar applique le **dispositif réglementaire le plus strict du Grand Est en dehors de Strasbourg**. La ville est classée en **zone tendue** depuis octobre 2023, et un **règlement municipal** adopté en **janvier 2022** encadre depuis longtemps les meublés de tourisme — un cadre renforcé par la loi Le Meur de novembre 2024.\n\n**Autorisation de changement d'usage obligatoire.** Pour toute résidence secondaire transformée en meublé de tourisme à Colmar, l'autorisation de changement d'usage de la mairie est obligatoire **dès le premier jour de location**. Le règlement municipal de janvier 2022 va plus loin que la loi nationale : il impose la **création simultanée d'un logement de droit commun** pour chaque transformation (avec exception pour le premier logement transformé par un particulier).\n\n**Résidence principale : 120 nuitées/an.** La résidence principale (occupée au moins 8 mois par an) reste plafonnée à 120 jours de location en meublé de tourisme. Colmar n'a pas, à ce jour, abaissé ce seuil à 90 jours (option ouverte aux communes par la loi Le Meur).\n\n**Enregistrement national au 20 mai 2026.** Le téléservice national d'enregistrement entre en vigueur au plus tard le 20 mai 2026 : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel. Colmar dispose déjà d'un dispositif d'enregistrement municipal opérationnel.\n\n**DPE classe E minimum (renforcé en zone tendue).** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. En zone tendue (cas de Colmar), tout nouveau changement d'usage exige un DPE en classe A à E (puis A à D à partir de 2034). Les biens en classe F seront exclus en 2028.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur pour les meublés colmariens, vu les revenus générés sur le marché de Noël.\n\n**Sanctions.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour infraction sur le changement d'usage** (sanctions rehaussées par la loi Le Meur).\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Colmar applique une taxe de séjour de **0,80 € à 4,30 € par nuit et par personne** selon le classement du logement (taux les plus élevés du Grand Est en raison du tourisme international, collectés automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 95,
+      neighborhood: 'Petite Venise',
+      revenuBrut: 24500,
+      commissionRate: 0.22,
+      menageCount: 65,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: 'Peut-on encore acheter un appartement à Colmar pour le mettre en Airbnb en 2026 ?',
+        a: "Oui, mais avec de fortes restrictions. Colmar étant classée en zone tendue depuis octobre 2023, toute résidence secondaire transformée en meublé de tourisme exige une autorisation de changement d'usage de la mairie, dès le premier jour de location. Le règlement municipal de janvier 2022 impose en plus la création simultanée d'un logement de droit commun (avec exception pour le premier logement transformé par un particulier). Pour un primo-investisseur LCD, le marché reste viable et très rentable grâce au pic marché de Noël (1,5 million de visiteurs sur 5 semaines), avec un revenu brut annuel typique de 22 000-28 000 € pour un T2 bien placé en vieille ville ou Petite Venise. Pour un investisseur multi-biens, le cadre devient rapidement contraignant : viser plutôt la périphérie (Houssen, Wintzenheim, Horbourg-Wihr) ou les communes voisines de la Route des Vins (Riquewihr, Eguisheim).",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Colmar pendant le marché de Noël ?',
+        a: "Le marché de Noël de Colmar (fin novembre à fin décembre, 5 semaines) est l'événement le plus rentable du marché LCD colmarien, et l'un des plus rentables de France. Un T2 en Petite Venise ou vieille ville qui se loue 95 €/nuit en moyenne annuelle facture 180-280 €/nuit pendant les 5 semaines du marché, avec une saturation totale 6 à 12 mois à l'avance. Sur la durée du marché de Noël (35 jours environ), un T2 bien placé peut générer 6 500-9 800 € bruts — soit l'équivalent de 4 à 5 mois de revenus normaux. Si on ajoute la Foire aux Vins (août, 10 jours), le Festival de Musique (juillet) et le Festival du Film Européen (octobre), les pics ponctuels représentent couramment 50-60 % du chiffre d'affaires annuel d'un LCD colmarien.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Colmar ?',
+        a: "Pour un rendement maximal, la Petite Venise reste imbattable : occupation 75 %, tarif 110-200 €/nuit, ROI brut 5,5-7 %, malgré un ticket d'entrée plus élevé (180 000 € pour un T2). La vieille ville (Koïfhus, Maison Pfister) offre une performance équivalente avec un ticket dès 160 000 €. Le Krutenau (Quartier des Tanneurs) est sous-coté : prix au m² 25-30 % inférieurs à la Petite Venise et la vieille ville, ROI brut 6-7,5 %, pour une demande touristique réelle. Le quartier Gare est intéressant pour la clientèle business (TGV 2h20 Paris) avec un mix tourisme + business. Pour un budget contraint, la périphérie (Houssen, Wintzenheim, Horbourg-Wihr) offre des maisons T4 dès 220 000 € et un ROI brut 7-8,5 % mais avec une demande LCD plus saisonnière (concentrée sur Noël et Foire aux Vins).",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie Airbnb à Colmar ?',
+        a: "Les commissions colmariennes s'étalent de 18 % (Les Clés d'Alsace formule de base) à 23 % TTC (Ils'invest, Les Clés d'Alsace formule premium). HostnFly et Keyhost démarrent à 20 % (avec 997 € de setup unique pour Keyhost). Alsace BnB Services se positionne sur un modèle horaire pour les propriétaires qui veulent conserver la main sur leur annonce. La moyenne du marché s'établit autour de 21-22 % TTC pour une formule complète avec ménage refacturé au voyageur. Le critère décisif au-delà du taux affiché sur un marché saisonnier comme Colmar : la stratégie pricing dynamique sur le marché de Noël (un mauvais pricing peut coûter 1 500-3 000 € de manque à gagner sur 5 semaines) et la capacité multilingue de l'accueil voyageur (la clientèle suisse-allemande représente 35-45 % des nuitées colmariennes).",
+      },
+    ],
+    updatedAt: '2026-06-03',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

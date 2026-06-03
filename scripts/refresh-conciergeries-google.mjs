@@ -22,6 +22,7 @@
  */
 
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -217,10 +218,16 @@ async function audit() {
   if (outputJson) {
     console.log(JSON.stringify(report, null, 2));
   } else {
-    // Save full JSON next to script for re-use
-    const outPath = path.join(ROOT, 'scripts', 'places-audit-output.json');
+    // ⚠️ Ne JAMAIS écraser le snapshot canonique complet (~350 items) avec un audit PARTIEL.
+    // Un audit filtré (--ville=…) sans --json va dans /tmp (jamais dans le repo) : sinon il
+    // tronque places-audit-output.json (24 items) ET pollue le working tree (fichier non
+    // commité ou untracked) → blocage de la sync launchd (cf. règle d'or tree-clean Mac mini).
+    // Seul un audit COMPLET (toutes villes) écrit le fichier canonique.
+    const outPath = filterVille
+      ? path.join(os.tmpdir(), `places-audit-${filterVille}.json`)
+      : path.join(ROOT, 'scripts', 'places-audit-output.json');
     fs.writeFileSync(outPath, JSON.stringify(report, null, 2));
-    console.log(`\n💾 Rapport JSON complet → ${path.relative(ROOT, outPath)}`);
+    console.log(`\n💾 Rapport JSON ${filterVille ? `(partiel — ville=${filterVille})` : 'complet'} → ${outPath}`);
     console.log(`📊 Total : ${report.length} conciergeries auditées sur ${targets.length} ville(s)`);
     const matched = report.filter((r) => r.google).length;
     console.log(`   Match Google : ${matched}/${report.length}`);

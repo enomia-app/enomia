@@ -15,6 +15,9 @@
  * Usage :
  *   node scripts/apply-places-corrections.mjs --dry-run    # voir ce qui changerait
  *   node scripts/apply-places-corrections.mjs              # appliquer (modifie cities.ts)
+ *   node scripts/apply-places-corrections.mjs --input=/tmp/x.json --changelog-out=/tmp/c.json
+ *       # applique un audit PARTIEL depuis un fichier temp SANS toucher au snapshot canonique
+ *       # (utilisé par le cron conciergerie-production ; cf. règle d'or tree-clean Mac mini)
  */
 
 import fs from 'node:fs';
@@ -26,13 +29,22 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const dryRun = process.argv.includes('--dry-run');
 
+// --input= / --changelog-out= : permettent au cron conciergerie-production d'appliquer un audit
+// PARTIEL (quelques villes) depuis un fichier temporaire SANS toucher au snapshot canonique complet
+// scripts/places-audit-output.json (~350 items, écrit uniquement par le refresh mensuel). Défaut =
+// fichiers canoniques. Écrire le partiel dans le canonique laissait le tree sale → blocage sync.
+const inputArg = process.argv.find((a) => a.startsWith('--input='))?.slice('--input='.length);
+const changelogArg = process.argv.find((a) => a.startsWith('--changelog-out='))?.slice('--changelog-out='.length);
+const INPUT_PATH = inputArg ? path.resolve(inputArg) : path.join(ROOT, 'scripts/places-audit-output.json');
+const CHANGELOG_PATH = changelogArg ? path.resolve(changelogArg) : path.join(ROOT, 'scripts/places-corrections-changelog.json');
+
 const TODAY = new Date().toISOString().slice(0, 10);
 const REVIEW_THRESHOLD = 1; // garde la vraie note dès 1 avis (n.c. seulement si 0 avis)
 
 const TARGET = path.join(ROOT, 'src/data/cities.ts');
 const BACKUP = TARGET + '.bak';
 
-const report = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/places-audit-output.json'), 'utf8'));
+const report = JSON.parse(fs.readFileSync(INPUT_PATH, 'utf8'));
 const originalContent = fs.readFileSync(TARGET, 'utf8');
 let content = originalContent;
 
@@ -297,5 +309,5 @@ if (dryRun) {
 }
 
 // Save full changelog
-fs.writeFileSync(path.join(ROOT, 'scripts/places-corrections-changelog.json'), JSON.stringify(changes, null, 2));
-console.log(`💾 Changelog complet → scripts/places-corrections-changelog.json`);
+fs.writeFileSync(CHANGELOG_PATH, JSON.stringify(changes, null, 2));
+console.log(`💾 Changelog complet → ${path.relative(ROOT, CHANGELOG_PATH)}`);

@@ -26,6 +26,12 @@ dist/
 .claude/gsc-tracking/*
 !.claude/gsc-tracking/urls.json
 !.claude/skills/
+# .claude/ imbriqués des sous-projets (worktrees transitoires) : jamais versionnés
+**/.claude/worktrees/
+Investissement/.claude/
+# logos stray a la racine (ranger dans public/ ou src/assets/ si besoin)
+/enomia-logo-300.png
+/enomia-logo-300.svg
 *.log
 
 # Playwright

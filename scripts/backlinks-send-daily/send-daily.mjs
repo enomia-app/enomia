@@ -28,7 +28,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { google } from 'googleapis';
 import { extractContact, detectAll, decodeEntities } from '../backlinks-source-monthly/filters.mjs';
 import { buildPitch, qaPitch, chooseOutilToPitch } from './pitch-templates.mjs';
@@ -108,7 +108,20 @@ function saveBacklog(merged) {
   }
 }
 
-function pickProspects(candidates, max) {
+// Statuts indiquant qu'un domaine a déjà été contacté (ou pris en charge en
+// manuel) → on ne le re-pitche pas, quel que soit le mois où il réapparaît.
+const CONTACTED_STATUSES = new Set([
+  'sent', 'relance_1', 'relance_2',
+  'repondu_positif', 'repondu_negatif', 'repondu_neutre', 'repondu_spam',
+  'bounced', 'manual_sent', 'manual_form', 'manual_form_batched',
+]);
+
+function normDomain(site) {
+  return (site || '').toLowerCase()
+    .replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '').trim();
+}
+
+export function pickProspects(candidates, max) {
   // Priorité de pick :
   //   1. is_blog + email connu (envoi auto le plus rentable)
   //   2. is_blog + form connu (Marc remplit à la main, rentable)
@@ -122,19 +135,36 @@ function pickProspects(candidates, max) {
     if (c.url_formulaire) return 1;
     return 2; // pending fetch (mining)
   }
-  return candidates
+  // Domaines déjà contactés sur N'IMPORTE quelle ligne (mois courant OU précédent).
+  // Le sourcing re-source souvent les mêmes sites d'un mois à l'autre, d'où un
+  // risque de double-pitch : on exclut tout domaine déjà contacté du pool.
+  const contactedDomains = new Set(
+    candidates.filter(c => CONTACTED_STATUSES.has(c.status)).map(c => normDomain(c.site))
+  );
+  const sorted = candidates
     .filter(c => c.status === 'pending')
     .map(c => ({ c, b: bucket(c) }))
     .filter(({ b }) => b < 99)
+    .filter(({ c }) => !contactedDomains.has(normDomain(c.site)))
     .sort((a, b) => {
       if (a.b !== b.b) return a.b - b.b;
       const ta = a.c.serp_traffic || 0;
       const tb = b.c.serp_traffic || 0;
       if (ta !== tb) return tb - ta;
       return (a.c.rank_serp || 99) - (b.c.rank_serp || 99);
-    })
-    .slice(0, max)
-    .map(({ c }) => c);
+    });
+  // Dédoublonnage par domaine : une seule ligne par domaine (la mieux classée),
+  // pour ne pas pitcher 2 fois un site présent dans les deux mois chargés.
+  const seen = new Set();
+  const picked = [];
+  for (const { c } of sorted) {
+    const d = normDomain(c.site);
+    if (seen.has(d)) continue;
+    seen.add(d);
+    picked.push(c);
+    if (picked.length >= max) break;
+  }
+  return picked;
 }
 
 /**
@@ -528,4 +558,6 @@ Prochain run demain 10h17 (jour ouvré).
   log(`📧 Récap envoyé (gmail ${res.data.id})`);
 }
 
-main().catch(e => { console.error('❌ Fatal:', e); process.exit(1); });
+// Ne lance main() que si exécuté directement (pas à l'import depuis les tests).
+const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isMain) main().catch(e => { console.error('❌ Fatal:', e); process.exit(1); });

@@ -45,6 +45,7 @@ export const regions: Region[] = [
   { slug: 'centre-val-de-loire', displayName: 'Centre-Val de Loire', description: 'Tours, Amboise, Chinon et la Vallée de la Loire (UNESCO) : châteaux royaux, vins de Loire et 1h05 de TGV depuis Paris. Un marché LCD porté par 5 millions de visiteurs annuels sur les châteaux.' },
   { slug: 'bourgogne-franche-comte', displayName: 'Bourgogne-Franche-Comté', description: 'Dijon, Beaune et la Côte d\'Or — Climats de Bourgogne classés UNESCO et Cité Internationale de la Gastronomie. Un marché LCD porté par l\'œnotourisme et la gastronomie, à 1h35 de TGV depuis Paris.' },
   { slug: 'maroc', displayName: 'Maroc', description: 'Marrakech, Essaouira et Agadir attirent les investisseurs francophones avec des rendements locatifs de 6 à 8 %. Un marché LCD en pleine reprise, porté par le tourisme international et une fiscalité compétitive.' },
+  { slug: 'corse', displayName: 'Corse', description: 'Porto-Vecchio, Bonifacio, Ajaccio, Calvi : l\'Île de Beauté concentre l\'une des plus fortes saisonnalités LCD de France avec des pics juillet-août exceptionnels. Marché premium porté par les plages mythiques (Palombaggia, Santa Giulia, Rondinara) et une réglementation locale en durcissement à Porto-Vecchio depuis octobre 2024.' },
 ];
 
 export type City = {
@@ -11365,6 +11366,388 @@ export const cities: City[] = [
       },
     ],
     updatedAt: '2026-06-03',
+  },
+  // ==========================================================================
+  // PORTO-VECCHIO (Corse-du-Sud)
+  // ==========================================================================
+  {
+    slug: 'porto-vecchio',
+    displayName: 'Porto-Vecchio',
+    region: 'Corse',
+    regionSlug: 'corse',
+    title: 'Conciergerie Porto-Vecchio Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Porto-Vecchio : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Porto-Vecchio (Cala Rossa, Saint-Cyprien, Palombaggia). Tarifs (18-30 %), services, avis Google, réglementation locale 2026, quartiers rentables.",
+    kwPrincipal: 'conciergerie porto vecchio',
+    kwSecondaires: [
+      'conciergerie airbnb porto vecchio',
+      'conciergerie corse',
+      'conciergerie corse du sud',
+      'gestion locative porto vecchio',
+      'conciergerie palombaggia',
+      'conciergerie cala rossa',
+    ],
+    population: 11400,
+    tourists: 2000000,
+    activeListings: 3000,
+    priceLow: 95,
+    priceHigh: 280,
+    occupancyRate: 55,
+    revpar: 95,
+    seasonality:
+      "Saisonnalité parmi les plus marquées de France métropolitaine, dictée par le pic juillet-août. Pic absolu mi-juin à fin août (occupation 90-100 %, tarifs 2-4× le tarif annuel moyen, clientèle internationale haut de gamme, semaines complètes obligatoires). Ailes de saison mai-juin et septembre-mi-octobre (occupation 50-65 %, tarifs intermédiaires, clientèle européenne et continentale française). Inter-saisons novembre à avril quasi-creux (occupation 10-20 %, beaucoup de biens fermés, météo plus douce qu'en Corse du Nord mais offre touristique réduite). Porto-Vecchio confirme une dynamique d'avant-saison en hausse (+19 % en avril 2025 selon les chiffres Porto-Vecchio Tourisme), tendance générale en Corse à l'étalement progressif du pic estival.",
+    rankNational: 14,
+    introCustom:
+      "Vous avez une **villa, un appartement ou une bergerie** à **Porto-Vecchio**, à **Cala Rossa**, à **Saint-Cyprien**, à **Palombaggia**, à **Pinarello** ou ailleurs en Corse-du-Sud, que vous louez sur Airbnb ou que vous envisagez de mettre en location saisonnière.\n\nEntre la **nouvelle réglementation municipale** du 14 octobre 2024 (enregistrement obligatoire des meublés de tourisme + autorisation temporaire de changement d'usage jusqu'au 31 décembre 2026), la **saisonnalité extrême** de l'Île de Beauté qui concentre 70-80 % du chiffre d'affaires sur juillet-août, la **clientèle internationale exigeante** (continentaux français, Suisses, Italiens, Belges, Britanniques sur les villas premium), et la quinzaine d'acteurs locaux qui se partagent un marché de **plus de 7 800 résidences secondaires** (60 % du parc selon l'INSEE), vous vous demandez quelle conciergerie maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les pure-players Porto-Vecchio (Nickel Home, Eole Home Standing, La Clef d'Or, Au Fil des Saisons) et les acteurs premium ou nationaux (BARNES Corse, Wowloc, My Conciergery) ?",
+    marketIntro:
+      "Porto-Vecchio est la **première destination touristique de Corse-du-Sud** et l'un des trois marchés LCD les plus rentables de l'Île de Beauté avec Bonifacio et Calvi. La commune (11 400 habitants permanents selon l'INSEE 2025) compte environ **3 000 annonces actives** sur Airbnb réparties entre la ville (Marina, vieille ville haute), les hameaux nord (Cala Rossa, Lecci, Saint-Cyprien, Pinarello), les hameaux sud (Palombaggia, Santa Giulia) et l'arrière-pays (Sotta, Sainte-Lucie-de-Porto-Vecchio). Le tarif moyen nuitée atteint **180-220 €** sur l'année (avec des villas premium à 800-3 500 €/nuit en haute saison hiver), un niveau qui place Porto-Vecchio dans le top 10 français.\n\nLa **Corse a enregistré 10 millions de nuitées entre avril et septembre 2025** selon l'INSEE, en hausse de 1,4 % vs 2024. Porto-Vecchio confirme une dynamique d'avant-saison particulièrement forte (+19 % en avril 2025 selon Porto-Vecchio Tourisme). Le mix unique : **plages mythiques** (Palombaggia classée parmi les plus belles de France par TripAdvisor, Santa Giulia, Rondinara, Cala Rossa), **Marina** (port de plaisance, 850 anneaux), **vieille ville haute** (citadelle gênoise), **Bonifacio à 28 km** et **Bavella à 45 min** en arrière-pays.\n\n**Prix au m² très élevés.** Comptez **5 000-6 500 €/m²** sur les appartements à Porto-Vecchio (5 072 €/m² en moyenne selon les données DVF avril 2026) et **6 500-9 000 €/m²** sur les maisons (6 567 €/m²). Les villas premium des secteurs de Cala Rossa, Marina di Fiori, Golfo di Sogno et Palombaggia dépassent régulièrement **10 000-15 000 €/m²**. Un T2 de 45 m² en ville démarre autour de **230 000 €**, une villa T4 avec piscine à Cala Rossa peut atteindre **1,5-3 M€**.\n\n**Réglementation locale en durcissement.** Le **14 octobre 2024**, le conseil municipal de Porto-Vecchio a voté deux mesures pour réguler les meublés de tourisme : une **procédure d'enregistrement des résidences secondaires** et un **régime d'autorisation temporaire de changement d'usage**. L'INSEE recense **7 860 résidences secondaires** à Porto-Vecchio (60 % du parc), dont environ **2 700 transformées en meublés de tourisme** selon la ville — un ratio parmi les plus élevés de France.",
+    conciergeries: [
+      {
+        name: 'Nickel Home',
+        url: 'https://www.conciergerie-nickelhome.fr/',
+        commission: '18 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 25,
+        biensGeres: 30,
+        specialty: 'Commission affichée la plus basse de l\'Extrême-Sud Corse',
+        description:
+          "Nickel Home est l'un des seuls acteurs de Porto-Vecchio à afficher publiquement sa commission (18 % TTC), un positionnement de transparence dans une zone où la majorité des conciergeries fonctionnent sur devis. Couverture étendue : Porto-Vecchio, Bonifacio et Figari (zone aéroport). Offre clé en main : publication et optimisation de l'annonce, accueil voyageurs, ménage professionnel, gestion linge, maintenance courante, communication 7j/7 en saison. Pertinente pour un propriétaire d'appartement en ville ou de villa milieu de gamme qui veut un coût visible plutôt qu'un devis personnalisé.",
+      },
+      {
+        name: 'Eole Home Standing',
+        url: 'https://eolehomestanding.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 50,
+        biensGeres: 35,
+        specialty: 'Villas premium Palombaggia / Cala Rossa / Saint-Cyprien',
+        description:
+          "Eole Home Standing est une agence familiale spécialisée sur le segment villas premium de l'Extrême-Sud Corse, opérant principalement sur Palombaggia, Cala Rossa, Saint-Cyprien et Pinarello. Tarification sur devis. Offre intégrale : publication, accueil personnalisé, ménage premium, linge, maintenance, mais aussi services concierge voyageurs (réservations restaurants, locations bateaux, chauffeurs, prestataires extérieurs). Pertinente pour une villa avec piscine louée 3 000-12 000 €/semaine en haute saison, où la qualité d'accueil et le réseau local font la différence sur les avis et la fidélisation.",
+      },
+      {
+        name: "La Clef d'Or",
+        url: 'https://conciergerieportovecchio.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 18,
+        biensGeres: 20,
+        specialty: 'Acteur historique (2012) — intendance villas + services voyageurs',
+        description:
+          "La Clef d'Or est l'un des acteurs historiques de la conciergerie privée à Porto-Vecchio, créé en 2012 par Florence Defrancq. Positionnement double : intendance des villas pour propriétaires (entrées/sorties, états des lieux, surveillance, gestion linge) et services voyageurs très étendus (chef à domicile, massage, yoga, coach sportif, babysitting, location voiture et bateau). Tarification sur devis adaptée au bien et au périmètre. Pertinente pour une villa premium où le propriétaire valorise un acteur établi avec un réseau de prestataires haut de gamme local.",
+      },
+      {
+        name: 'Au Fil des Saisons (Balesi)',
+        url: 'https://www.aufildessaisons-laconciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5,
+        reviews: 8,
+        biensGeres: 15,
+        specialty: 'Conciergerie locale à taille humaine (depuis 2021)',
+        description:
+          "Au Fil des Saisons est portée par Doriane et Pierre-Paul Balesi, couple installé à Porto-Vecchio depuis 2021. Doriane (événementiel/communication) accompagne la rédaction des annonces, l'accueil voyageurs et l'écoute client. Pierre-Paul (BTP/commerce) conseille sur le pricing, gère les problèmes du bien et participe à l'aménagement. Tarification sur devis. Positionnement à taille humaine, peu de biens gérés en parallèle, focus qualité d'accueil. Pertinente pour un propriétaire d'appartement ou de petite villa qui valorise un interlocuteur unique et accessible plutôt qu'une structure plus volumique.",
+      },
+      {
+        name: 'Wowloc',
+        url: 'https://wowloc.com/conciergerie/corse/corse-du-sud/porto-vecchio/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 30,
+        biensGeres: 40,
+        specialty: 'Réseau national avec ancrage Corse-du-Sud',
+        description:
+          "Wowloc est un réseau national de conciergerie LCD avec une couverture Corse-du-Sud incluant Porto-Vecchio. Offre standardisée : publication multi-plateformes (Airbnb, Booking, Abritel), pricing dynamique, accueil voyageurs, ménage et linge, maintenance courante, reporting mensuel. Tarification sur devis. Pertinente pour un propriétaire d'appartement ou de villa en standard, qui valorise l'outillage technologique d'un réseau national (back-office, suivi en ligne, photos pro) plutôt que l'ancrage local exclusif.",
+      },
+      {
+        name: 'My Conciergery',
+        url: 'https://my-conciergery.fr/conciergerie-airbnb/porto-vecchio/',
+        commission: 'au pourcentage des revenus (sur devis)',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 15,
+        biensGeres: 25,
+        specialty: 'Modèle au revenu, pas de frais fixes annoncés',
+        description:
+          "My Conciergery affiche un modèle économique au pourcentage des revenus générés, sans frais mensuel fixe et avec un discours de transparence (pas de frais cachés annoncés). Couverture Porto-Vecchio et alentours. Offre complète : optimisation de l'annonce, pricing dynamique, accueil voyageurs, ménage, linge, maintenance. Pertinente pour un propriétaire qui veut aligner les intérêts de sa conciergerie avec les siens (pas de coût si pas de location) — à valider en lecture détaillée du contrat avant signature (commission exacte, services inclus, frais de mise en relation).",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Marina / Vieille ville haute',
+        pricePerNight: '110-200 €',
+        occupancy: 65,
+        description:
+          "Cœur historique de Porto-Vecchio : citadelle gênoise sur le promontoire, ruelles pavées, places à terrasses, et port de plaisance (850 anneaux). Cible touristique premium et clientèle culturelle. Prix au m² 5 500-7 500 € sur la haute ville, 5 000-6 800 € autour de la marina. T2 dès 230 000 €. Demande très régulière de mai à octobre, pic absolu juillet-août.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Cala Rossa / Lecci',
+        pricePerNight: '180-400 €',
+        occupancy: 55,
+        description:
+          "Quartier nord premium, à 8 km de Porto-Vecchio. Pinèdes, plages de Cala Rossa et anse de Saint-Cyprien à proximité. Cible villas familiales et clientèle internationale haut de gamme (Britanniques, Suisses, continentaux). Prix au m² 8 000-15 000 €. Villa T4 avec piscine dès 950 000 € — 3 M€ et plus pour les biens front de mer. Saisonnalité juillet-août très marquée.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Saint-Cyprien',
+        pricePerNight: '150-320 €',
+        occupancy: 50,
+        description:
+          "Anse nord du Golfe de Porto-Vecchio, eau peu profonde et calme, particulièrement adaptée aux familles avec enfants. Mix appartements résidences et villas. Prix au m² 6 000-10 000 €. T2 dès 280 000 €, villa avec piscine à partir de 850 000 €. Demande forte juillet-août, intermédiaire en ailes de saison.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Palombaggia / Santa Giulia',
+        pricePerNight: '200-450 €',
+        occupancy: 50,
+        description:
+          "Plages mythiques de l'Extrême-Sud (Palombaggia classée régulièrement parmi les plus belles de France, Santa Giulia parmi les plus prisées). Cible villas premium et clientèle internationale. Prix au m² 8 000-15 000 €. Villa avec piscine dès 900 000 €. Saturation totale juillet-août, demande prolongée jusqu'à mi-octobre les bonnes années.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Pinarello / Côte nord',
+        pricePerNight: '130-280 €',
+        occupancy: 50,
+        description:
+          "Village marin à 15 km au nord de Porto-Vecchio, plage et tour génoise emblématiques. Mix maisons et résidences. Prix au m² 5 500-9 000 €. T3-T4 dès 350 000 €, villa avec piscine dès 750 000 €. Idéal pour une clientèle qui cherche un cadre moins fréquenté que Palombaggia ou Cala Rossa, avec une qualité d'eau et une luminosité comparable.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Arrière-pays (Sotta, Sainte-Lucie, Lecci village)',
+        pricePerNight: '85-160 €',
+        occupancy: 45,
+        description:
+          "Hameaux et villages de l'arrière-pays porto-vecchiais, prix au m² 3 000-5 000 €. Maison T4 avec terrain dès 350 000 €. Stratégie maison familiale ou bergerie restaurée pour une clientèle qui privilégie l'authenticité corse, le calme et l'accès rapide aux plages (10-15 min en voiture). Demande LCD plus diffuse mais ROI brut supérieur aux secteurs front de mer.",
+        roiBrut: '5 à 7 %',
+      },
+    ],
+    regulation:
+      "Porto-Vecchio a basculé en **régime restreint** depuis le **14 octobre 2024** : le conseil municipal a voté deux mesures fortes pour réguler la pression touristique sur le parc immobilier. Le constat : selon l'INSEE 2021, Porto-Vecchio compte **7 860 résidences secondaires** (60 % du parc de logements), dont environ **2 700 transformées en meublés de tourisme** d'après la ville — un ratio parmi les plus élevés de France.\n\n**Enregistrement obligatoire dès le 1ᵉʳ avril 2025.** Toute résidence secondaire transformée en meublé de tourisme à Porto-Vecchio doit faire l'objet d'une **déclaration d'enregistrement** auprès de la mairie. Cette procédure préfigure l'enregistrement national qui entrera en vigueur **au plus tard le 20 mai 2026** (Loi Le Meur) avec délivrance d'un **numéro à 13 chiffres** obligatoire sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Régime d'autorisation temporaire de changement d'usage.** Le conseil municipal a instauré un **régime d'autorisation pour transformer une résidence secondaire en meublé de tourisme**. Les autorisations sont **temporaires (2 ans), valables jusqu'au 31 décembre 2026**, accordées en tenant compte des objectifs de mixité sociale, d'équilibre entre habitat et emploi, et de la nécessité de ne pas aggraver l'insuffisance de logements. L'activité ne doit engendrer ni nuisance, ni danger pour le voisinage, ni désordre pour le bâti.\n\n**Résidence principale : 120 nuitées/an.** La résidence principale (occupée au moins 8 mois par an) reste plafonnée au cadre national de 120 jours de location par an. Porto-Vecchio n'a pas, à ce jour, abaissé ce seuil à 90 jours (option ouverte aux communes par la Loi Le Meur).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La Loi Le Meur va plus loin pour Porto-Vecchio : toute nouvelle demande d'autorisation de changement d'usage ne peut être délivrée que si le DPE est en classe **A à E** (puis A à D à partir de 2034). C'est un point d'attention majeur pour les biens des années 70-80 nombreux dans les résidences de Porto-Vecchio.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur, particulièrement en Corse où les revenus annuels d'un bien LCD performant dépassent vite les 30 000 €.\n\n**Sanctions Loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour infraction sur le changement d'usage**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Porto-Vecchio applique la taxe de séjour du barème national selon le classement du logement (de 0,75 € à 4,30 € par nuit et par personne pour les meublés classés, collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 165,
+      neighborhood: 'Marina / vieille ville haute',
+      revenuBrut: 28000,
+      commissionRate: 0.2,
+      menageCount: 55,
+      menageUnitCost: 80,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation pour louer son appartement en meublé de tourisme à Porto-Vecchio en 2026 ?',
+        a: "Oui, depuis octobre 2024 le conseil municipal de Porto-Vecchio a instauré deux dispositifs : une procédure d'enregistrement obligatoire des résidences secondaires en meublé de tourisme (déclaration en mairie depuis le 1er avril 2025) et un régime d'autorisation temporaire de changement d'usage (autorisations valables 2 ans, jusqu'au 31 décembre 2026). Concrètement, si vous achetez un appartement à Porto-Vecchio en 2026 pour le mettre en LCD, vous devez (1) faire une demande d'autorisation de changement d'usage en mairie, (2) attendre la décision en fonction des critères de mixité sociale et de pression sur le logement, (3) une fois autorisé, déclarer le meublé pour obtenir le numéro d'enregistrement à 13 chiffres (obligatoire au plus tard le 20 mai 2026). Le DPE doit être en classe A à E. Sans autorisation, les sanctions Loi Le Meur peuvent atteindre 50 000 €.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Porto-Vecchio sur l\'année 2026 ?',
+        a: "Un T2 de 42 m² bien placé en marina ou vieille ville haute (tarif moyen 165 €/nuit annuel) génère typiquement un chiffre d'affaires brut de 26 000-32 000 € sur une saison s'étalant de mai à mi-octobre, avec 70-80 % du CA concentré sur juillet-août. Les villas premium à Cala Rossa, Palombaggia ou Santa Giulia (semaine à 4 000-12 000 € en haute saison) atteignent couramment 80 000-180 000 € de CA brut sur 12-15 semaines de location effective. Net de la commission conciergerie (18-25 %), de la taxe foncière (souvent 2 000-4 000 € sur les biens premium), des charges de copropriété et du ménage, comptez un revenu disponible de 15 000-22 000 € pour un T2 marina et 50 000-110 000 € pour une villa premium. La rentabilité brute reste modérée à Porto-Vecchio (4-5,5 %) du fait des prix d'acquisition très élevés, mais la valorisation patrimoniale du bien sur 10-15 ans est exceptionnelle.",
+      },
+      {
+        q: 'Quels quartiers de Porto-Vecchio privilégier pour investir en LCD ?',
+        a: "Pour un rendement maximisé sur un budget moyen, la marina et la vieille ville haute restent les meilleurs compromis : tarif 110-200 €/nuit, occupation 65 % (la meilleure de la commune), ROI brut 4,5-6 %, ticket d'entrée à partir de 230 000 € pour un T2. Cala Rossa, Saint-Cyprien et Palombaggia/Santa Giulia sont des stratégies villa premium (ticket 850 000 € - 3 M€), avec une saisonnalité plus marquée (occupation 50 %) mais des tarifs nuitée 200-450 €. Pinarello est une option intermédiaire (ticket 750 000 € pour villa, ROI 4-5,5 %) avec un cadre moins saturé que Palombaggia. Pour un budget plus contraint et une stratégie maison familiale, l'arrière-pays (Sotta, Sainte-Lucie-de-Porto-Vecchio) offre des biens dès 350 000 € avec un ROI brut 5-7 %, à 10-15 min des plages.",
+      },
+      {
+        q: 'Quelle commission appliquent les conciergeries de Porto-Vecchio ?',
+        a: "Le marché porto-vecchiais est l'un des plus opaques de France sur la commission : la majorité des acteurs travaillent sur devis personnalisé (Eole Home Standing, La Clef d'Or, Au Fil des Saisons, Wowloc, My Conciergery), ce qui complique la comparaison. Nickel Home affiche publiquement 18 % TTC, ce qui le place dans le bas de fourchette pour la Corse-du-Sud. Sur la base des retours collectés, les commissions s'étalent de 18 % à 30 % TTC selon le périmètre des services (publication seule à 18-20 %, formule complète avec accueil premium et services voyageurs à 25-30 %). Le critère décisif sur un marché aussi saisonnier que Porto-Vecchio n'est pas le taux de commission mais la stratégie de pricing sur juillet-août (un mauvais pricing peut coûter 5 000-15 000 € de manque à gagner sur une villa premium) et la qualité de l'accueil sur une clientèle internationale exigeante.",
+      },
+    ],
+    updatedAt: '2026-06-05',
+  },
+  // ==========================================================================
+  // BOULOGNE-SUR-MER (Hauts-de-France)
+  // ==========================================================================
+  {
+    slug: 'boulogne-sur-mer',
+    displayName: 'Boulogne-sur-Mer',
+    region: 'Hauts-de-France',
+    regionSlug: 'hauts-de-france',
+    title: 'Conciergerie Boulogne-sur-Mer Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Boulogne-sur-Mer : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Boulogne-sur-Mer. Tarifs (10-25 %), services, avis Google, réglementation 2026, pic Nausicaá, quartiers rentables Vieille Ville et Centre.",
+    kwPrincipal: 'conciergerie boulogne sur mer',
+    kwSecondaires: [
+      'conciergerie airbnb boulogne sur mer',
+      'conciergerie boulonnaise',
+      'conciergerie cote d opale',
+      'ma conciergerie boulogne sur mer',
+      'gestion locative boulogne',
+      'conciergerie hardelot',
+    ],
+    population: 41039,
+    tourists: 1200000,
+    activeListings: 450,
+    priceLow: 55,
+    priceHigh: 105,
+    occupancyRate: 50,
+    revpar: 35,
+    seasonality:
+      "Saisonnalité côtière atlantique tempérée, dominée par l'été et les week-ends. Pic absolu juillet-août (occupation 75-85 %, tarifs 1,5-2× le tarif annuel moyen, mix clientèle française, belge, britannique et néerlandaise). Pic secondaire week-ends ensoleillés d'avril à octobre et grandes vacances (Toussaint, Noël, février, Pâques), portés par Nausicaá (916 000 visiteurs en 2024 selon ICI Pays-de-Calais), les plages de la Côte d'Opale et la proximité de Wimereux / Le Touquet / Hardelot. Tourisme d'affaires régulier en semaine (port de pêche premier de France pour la transformation des produits de la mer, Capécure). Inter-saisons novembre-février creuse (occupation 30-40 %) sauf vacances de Noël et événements ponctuels (Fêtes de la Mer, expositions Nausicaá).",
+    rankNational: 35,
+    introCustom:
+      "Vous avez un **appartement ou une maison** à **Boulogne-sur-Mer**, dans la **Vieille Ville fortifiée** (Haute Ville), autour du **port de plaisance**, à **Capécure** ou en **première couronne Côte d'Opale** (Wimereux, Le Portel, Saint-Martin-Boulogne), que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **fréquentation record de Nausicaá** (916 000 visiteurs en 2024 selon France Bleu, plus grand aquarium d'Europe et 2ᵉ site le plus visité au nord de Paris), les **712 905 nuitées déclarées sur la zone des 2 Caps en 2024**, le **tourisme transfrontalier** (Belges, Britanniques via Eurotunnel et ferries, Néerlandais), et la quinzaine d'acteurs locaux qui se partagent un marché en croissance, vous vous demandez quelle conciergerie maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les pure-players boulonnais (Ma Conciergerie, Conciergerie Leroy, Conciergerie de l'Étoile, C&C Sérénité) et les acteurs Côte d'Opale élargie (Conciergerie des Dunes d'Opale, Les Clés C&D) ?",
+    marketIntro:
+      "Boulogne-sur-Mer est le **premier port de pêche de France** pour la transformation des produits de la mer (Capécure concentre plus d'une centaine d'entreprises de la filière) et la **2ᵉ destination touristique au nord de Paris** grâce à Nausicaá — le plus grand aquarium d'Europe, qui a accueilli **916 000 visiteurs en 2024** selon ICI Pays-de-Calais, un record historique. La ville (41 039 habitants au 1ᵉʳ janvier 2025 selon l'INSEE) compte environ **450 annonces actives** sur Airbnb, un marché LCD encore en croissance qui n'a pas atteint la maturité de Lille ou du Touquet.\n\nLa **zone des 2 Caps (Cap Gris-Nez et Cap Blanc-Nez), entre Calais et Boulogne, a déclaré 712 905 nuitées en 2024** par les opérateurs numériques selon Delta FM, en hausse continue depuis 3 ans. Le mix unique : **Nausicaá toute l'année** (clientèle familiale française, belge, britannique), **Vieille Ville fortifiée** (cité médiévale ceinte de remparts, basilique Notre-Dame, beffroi UNESCO), **port de plaisance** (capacité 950 anneaux), **plages de la Côte d'Opale** à 5-15 km (Wimereux, Le Portel, Hardelot, Equihen).\n\n**Prix au m² très accessibles.** Comptez **1 700-2 100 €/m²** sur la ville, **2 200-2 800 €/m²** sur la Haute Ville bien rénovée, **1 500-2 000 €/m²** en première couronne (Saint-Martin-Boulogne, Outreau). Le prix moyen au m² a progressé de **15 % sur les 12 derniers mois** (de 1 864 € en janvier 2025 à environ 2 100 € en septembre 2025 selon les données DVF). Un T2 démarre autour de **75 000-95 000 €**, une maison de ville T4 dès **140 000-180 000 €** — un niveau qui place Boulogne-sur-Mer parmi les marchés LCD français les plus accessibles à l'achat, avec des rendements bruts encore très confortables (6-9 %).\n\n**Réglementation souple.** Boulogne-sur-Mer n'a pas instauré de dispositif local restrictif sur les meublés de tourisme (pas de classement zone tendue, pas de changement d'usage généralisé, pas d'abaissement du plafond 120 jours/an). Le cadre national Loi Le Meur s'applique avec déclaration obligatoire en mairie (service urbanisme).",
+    conciergeries: [
+      {
+        name: 'Ma Conciergerie',
+        url: 'https://maconciergerie.pro/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 50,
+        biensGeres: 40,
+        specialty: 'Volume avis le plus élevé du marché boulonnais',
+        description:
+          "Ma Conciergerie est portée par Mathilde et Maxime, couple d'investisseurs LCD qui revendiquent 12 ans d'expérience dans la gestion de locations saisonnières, gîtes, appart-hôtels et meublés de tourisme. Couverture Boulogne-sur-Mer et Côte d'Opale élargie. Offre intégrale : audit du bien, création et optimisation de l'annonce, photos, pricing dynamique, accueil voyageurs 7j/7, ménage professionnel, gestion linge, maintenance. Positionnement transparence (pas de frais cachés annoncés). Pertinente pour un propriétaire qui valorise un acteur établi avec un volume d'avis très fort et un discours d'investisseur à investisseur.",
+      },
+      {
+        name: 'Conciergerie Leroy',
+        url: 'https://www.conciergerieleroy.com/',
+        commission: '10 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 3.8,
+        reviews: 40,
+        biensGeres: 150,
+        specialty: 'Commission la plus basse, structure la plus volumique',
+        description:
+          "Conciergerie Leroy affiche une commission de 10 % TTC sur les revenus collectés, l'une des plus basses du marché LCD français, justifiée par un modèle volumique : la structure gère plus de 150 biens sur 3 agences (Boulogne, Hardelot, Le Touquet/Etaples) avec 10 salariés et revendique 15 000 réservations en moins de 4 ans. Créée en 2021 par Sandy et Lilian Leroy. Pertinente pour un propriétaire dont le bien performe bien et où la commission représente un poste de coût important. Point à vérifier en lecture détaillée du contrat : conditions de gestion des cautions et procédure en cas de litige avec un voyageur (point souvent évoqué dans les avis clients).",
+      },
+      {
+        name: 'Conciergerie de l\'Étoile',
+        url: 'https://conciergeriedeletoile.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 15,
+        biensGeres: 25,
+        specialty: 'Couverture Côte d\'Opale élargie (Berck → Boulogne)',
+        description:
+          "Conciergerie de l'Étoile couvre une large bande côtière de Berck-sur-Mer à Boulogne-sur-Mer, incluant Le Portel, Equihen, Merlimont et Wimereux. Tarification sur devis. Offre intégrale et personnalisée : annonce, accueil voyageurs, ménage, linge, maintenance, suivi propriétaire. Pertinente pour un propriétaire de résidence secondaire qui veut un acteur unique sur l'ensemble de la Côte d'Opale (utile si plusieurs biens dans des communes différentes), accessible et avec un suivi à taille humaine.",
+      },
+      {
+        name: 'C&C Sérénité',
+        url: 'https://www.ccserenite.fr/conciergerie-airbnb-boulogne-sur-mer.html',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 12,
+        biensGeres: 20,
+        specialty: 'Pricing dynamique calé sur Nausicaá et météo',
+        description:
+          "C&C Sérénité positionne son offre LCD sur l'optimisation des revenus via un pricing dynamique adapté à la Côte d'Opale : tarifs majorés sur les vacances scolaires, week-ends ensoleillés, et événements Nausicaá. Tarification sur devis personnalisé selon surface, emplacement et spécificités du logement. Offre complète : ménage professionnel, accueil voyageurs 7j/7, optimisation des réservations. Pertinente pour un propriétaire qui sous-loue actuellement à 55-65 €/nuit et voudrait remonter le tarif moyen via une stratégie pricing événementielle plus agressive.",
+      },
+      {
+        name: "Conciergerie des Dunes d'Opale",
+        url: 'https://conciergeriedesdunesdopale.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 10,
+        biensGeres: 18,
+        specialty: 'Ancrage Hardelot / Condette, extension Boulogne',
+        description:
+          "Conciergerie des Dunes d'Opale est ancrée à Neufchâtel-Hardelot et Condette, avec une extension de couverture sur Boulogne-sur-Mer pour les propriétaires qui ont plusieurs biens sur la Côte d'Opale. Offre intégrale : gestion arrivées/départs, ménage, entretien régulier. Tarification sur devis avec forfait kilométrique au-delà d'une zone de chalandise. Pertinente pour un propriétaire dont le bien est à mi-chemin entre Boulogne et Hardelot (Equihen, Saint-Étienne-au-Mont) ou qui veut un acteur unique pour des biens répartis sur les deux communes.",
+      },
+      {
+        name: 'Les Clés C&D',
+        url: 'https://www.lesclescnd.com/conciergerie-airbnb/hauts-de-france/boulogne-sur-mer',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'Réseau Hauts-de-France structuré',
+        description:
+          "Les Clés C&D est un réseau de conciergerie Hauts-de-France qui couvre Boulogne-sur-Mer et toute la Côte d'Opale (Wimereux, Le Portel, Outreau, Saint-Martin-Boulogne). Offre standardisée : création d'annonce, accueil voyageurs, ménage, entretien, gestion linge. Tarification sur devis. Pertinente pour un propriétaire qui valorise l'outillage d'un réseau structuré (back-office, suivi en ligne, processus standardisés) plutôt qu'un acteur micro-local — utile aussi si vous avez un bien parallèle ailleurs en Hauts-de-France.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieille Ville fortifiée (Haute Ville)',
+        pricePerNight: '70-130 €',
+        occupancy: 62,
+        description:
+          "Cité médiévale ceinte de remparts du XIIIᵉ siècle, accessible par 4 portes, ruelles pavées, basilique Notre-Dame avec dôme à 100 m de haut, beffroi UNESCO, château-musée. Cible touristique premium et clientèle culturelle. Prix au m² 2 200-2 800 €. T2 dès 110 000 €. Demande très régulière de Pâques à la Toussaint, soutenue par les vacances scolaires.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Centre-ville (Thiers, Faidherbe, Victor-Hugo)',
+        pricePerNight: '60-105 €',
+        occupancy: 55,
+        description:
+          "Cœur commerçant et administratif (rues Thiers, Faidherbe, Nationale, Grande Rue), proche gare SNCF et port. Mix tourisme et tourisme d'affaires (Capécure, port de pêche). Prix au m² 1 800-2 300 €. T2 dès 80 000 €. Bon compromis emplacement central et accessibilité prix.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Front de mer / Port de plaisance',
+        pricePerNight: '70-115 €',
+        occupancy: 58,
+        description:
+          "Bords de Liane et port de plaisance (950 anneaux), à 5 min à pied de Nausicaá. Cible touristique nautique et clientèle familiale. Prix au m² 2 000-2 500 €. T2 dès 95 000 €. Demande renforcée par Nausicaá toute l'année, pic juillet-août.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Beaurepaire / Cours Mirabeau',
+        pricePerNight: '55-95 €',
+        occupancy: 50,
+        description:
+          "Quartier résidentiel bourgeois sud, maisons de maître et appartements bourgeois fin XIXᵉ. Mix résidents et clientèle moyenne durée (étudiants ULCO, accompagnants familiaux). Prix au m² 1 600-2 000 €. T2 dès 75 000 €. Stratégie hybride possible : étudiant 9 mois + LCD juillet-août.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Capécure / Bord de port',
+        pricePerNight: '50-85 €',
+        occupancy: 45,
+        description:
+          "Quartier économique et industriel ouest, autour du port de pêche et de la filière transformation des produits de la mer (100+ entreprises). Clientèle business semaine et clientèle ponctuelle Nausicaá. Prix au m² 1 400-1 800 €. T2 dès 65 000 €. Tickets d'entrée les plus accessibles de Boulogne, demande LCD plus diffuse.",
+        roiBrut: '7,5 à 9,5 %',
+      },
+      {
+        name: 'Première couronne (Saint-Martin-Boulogne, Le Portel, Outreau, Wimereux)',
+        pricePerNight: '60-110 €',
+        occupancy: 52,
+        description:
+          "Communes limitrophes ou très proches (Wimereux à 4 km au nord, station balnéaire, plages familiales ; Le Portel à 3 km au sud-ouest ; Saint-Martin-Boulogne et Outreau résidentielles). Prix au m² très variables (1 800-3 500 € à Wimereux, 1 500-2 000 € à Saint-Martin et Outreau). Stratégie maison familiale en location week-ends et grandes vacances.",
+        roiBrut: '6 à 8,5 %',
+      },
+    ],
+    regulation:
+      "Boulogne-sur-Mer applique le **cadre national de la Loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) **sans dispositif restrictif local additionnel à ce jour** — un cadre relativement souple comparé à Paris, Lyon ou Colmar.\n\n**Déclaration obligatoire en mairie.** Tout meublé de tourisme de Boulogne-sur-Mer doit être déclaré préalablement à la mairie (service urbanisme, 03 21 87 80 62). La déclaration peut se faire en ligne via le formulaire Service-public.fr ou en version papier déposée à l'Hôtel de Ville. Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La Loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération motivée — Boulogne-sur-Mer ne l'a pas fait à ce jour.\n\n**Pas de changement d'usage généralisé.** Contrairement à Paris, Lyon ou Colmar (zone tendue), Boulogne-sur-Mer **n'impose pas d'autorisation de changement d'usage** pour les résidences secondaires transformées en meublés de tourisme. Cette situation peut évoluer si la pression touristique s'accentue (notamment autour de Nausicaá et de la dynamique 2 Caps).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage). Point d'attention sur le bâti ancien de la Vieille Ville fortifiée et de Capécure, souvent classé E ou F.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur, notamment pour les biens qui dépassent les 15 000 € de CA annuel.\n\n**Sanctions Loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Communauté d'Agglomération du Boulonnais (CAB) collecte la taxe de séjour selon le barème en vigueur (de 0,75 € à 4,30 € par nuit et par personne selon le classement du logement, collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 75,
+      neighborhood: 'Vieille Ville fortifiée',
+      revenuBrut: 14000,
+      commissionRate: 0.18,
+      menageCount: 45,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb à Boulogne-sur-Mer sur l\'année 2026 ?',
+        a: "Un T2 de 40 m² bien placé en Vieille Ville fortifiée ou autour du port de plaisance (tarif moyen 75 €/nuit annuel) génère typiquement un chiffre d'affaires brut de 13 000-16 000 € sur l'année, avec un pic juillet-août (CA de juin à septembre représente 50-60 % du total) et un appoint sur les vacances scolaires (Toussaint, Noël, février, Pâques). Net de la commission conciergerie (10-25 %), de la taxe foncière (~1 000-1 500 € sur un T2 boulonnais), des charges et du ménage, comptez un revenu disponible de 8 000-11 000 €. Une maison de ville T4 en première couronne (Saint-Martin-Boulogne, Outreau) ou à Wimereux peut atteindre 22 000-30 000 € de CA brut sur l'année. La rentabilité brute reste exceptionnelle à Boulogne (6-9 %) du fait des prix d'acquisition très accessibles (1 700-2 100 €/m² sur la ville).",
+      },
+      {
+        q: 'Boulogne-sur-Mer est-elle en zone tendue pour la location Airbnb en 2026 ?',
+        a: "Non, Boulogne-sur-Mer n'est pas classée en zone tendue à ce jour et n'a pas instauré de dispositif local restrictif sur les meublés de tourisme (contrairement à Paris, Lyon, Bordeaux, Colmar ou Porto-Vecchio). Concrètement, vous pouvez transformer une résidence secondaire en meublé de tourisme sans demande d'autorisation de changement d'usage, et louer votre résidence principale jusqu'à 120 jours par an (la commune n'a pas abaissé ce seuil à 90 jours). La seule obligation est la déclaration préalable en mairie (service urbanisme, 03 21 87 80 62) et l'obtention du numéro d'enregistrement national à 13 chiffres au plus tard le 20 mai 2026 (Loi Le Meur). Cette souplesse réglementaire peut évoluer dans les années qui viennent si la pression touristique de la zone des 2 Caps continue à s'accentuer.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Boulogne-sur-Mer ?',
+        a: "Pour un rendement maximisé, la Vieille Ville fortifiée reste le meilleur compromis : tarif 70-130 €/nuit, occupation 62 % (la meilleure de la commune), ROI brut 6,5-8,5 %, ticket d'entrée à partir de 110 000 € pour un T2. Le front de mer / port de plaisance offre une performance équivalente (ROI 6,5-8 %) avec une demande boostée par Nausicaá toute l'année. Le centre-ville (Thiers, Faidherbe) est un bon hybride business + tourisme avec un ticket dès 80 000 €. Capécure est intéressant pour un budget contraint (T2 dès 65 000 €, ROI 7,5-9,5 %) mais avec une demande LCD plus diffuse. La première couronne (Wimereux pour les plages familiales, Saint-Martin-Boulogne ou Outreau pour le résidentiel calme) est pertinente pour une maison familiale en location week-ends et grandes vacances, avec un ROI 6-8,5 % selon la commune.",
+      },
+      {
+        q: 'Quelle commission appliquent les conciergeries de Boulogne-sur-Mer ?',
+        a: "Le marché boulonnais est très étalé sur les commissions. Conciergerie Leroy affiche publiquement 10 % TTC, l'un des taux les plus bas de France, justifié par un modèle volumique (150 biens, 3 agences). Ma Conciergerie, Conciergerie de l'Étoile, C&C Sérénité, Conciergerie des Dunes d'Opale et Les Clés C&D travaillent sur devis personnalisé, généralement dans la fourchette 18-25 % TTC selon le périmètre (publication seule à 15-18 %, formule intégrale avec pricing dynamique et photos pro à 22-25 %). La moyenne de marché s'établit autour de 20-22 % TTC pour une formule complète avec ménage refacturé au voyageur. Le critère décisif au-delà du taux affiché sur un marché comme Boulogne est la stratégie de pricing événementielle sur Nausicaá, les week-ends ensoleillés et les vacances scolaires (un mauvais pricing peut coûter 1 000-2 500 € de manque à gagner sur l'année).",
+      },
+    ],
+    updatedAt: '2026-06-05',
   },
 ];
 

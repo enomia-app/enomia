@@ -403,9 +403,10 @@
     "oldSlug": "/conciergerie-airbnb-porto-vecchio",
     "kw": "conciergerie porto vecchio",
     "vol": 310,
-    "status": "À faire",
-    "kd": 0,
-    "notes": "Débloqué 2026-06-03 : audit Places = 8 conciergeries notées domiciliées à Porto-Vecchio.",
+    "status": "Publié",
+    "kd": 19,
+    "publishedAt": "2026-06-05",
+    "notes": "Vol live SEMrush 260 (vs 310 backlog), KD 19. 6 conciergeries : Nickel Home (18% TTC affiché, rare sur la zone), Eole Home Standing (villas premium Palombaggia/Cala Rossa/Saint-Cyprien), La Clef d'Or (acteur historique 2012, Florence Defrancq), Au Fil des Saisons Balesi (taille humaine depuis 2021), Wowloc (réseau national Corse-du-Sud), My Conciergery (modèle au % revenus). Réglementation RESTREINT depuis 14 oct 2024 (procédure enregistrement obligatoire + autorisation changement d'usage temporaire jusqu'au 31 déc 2026). 7 860 résidences secondaires (60% parc INSEE 2021), ~2 700 meublés tourisme estimés. Prix immo très élevés (5 072 €/m² apparts, 6 567 €/m² maisons avril 2026). Région Corse ajoutée à regions[] (n'existait pas).",
     "recheckedAt": "2026-06-03"
   },
   {
@@ -446,9 +447,10 @@
     "oldSlug": "/conciergerie-airbnb-boulogne-sur-mer",
     "kw": "conciergerie boulogne sur mer",
     "vol": 260,
-    "status": "À faire",
-    "kd": 0,
-    "notes": "Débloqué 2026-06-03 : audit Places = 6 conciergeries notées domiciliées à Boulogne-sur-Mer.",
+    "status": "Publié",
+    "kd": 10,
+    "publishedAt": "2026-06-05",
+    "notes": "Vol live SEMrush 210 (vs 260 backlog), KD 10. 6 conciergeries : Ma Conciergerie (Mathilde et Maxime, 4.9/72+ avis Trustindex, 12 ans exp), Conciergerie Leroy (10% TTC affiché, 150 biens / 3 agences / 10 salariés depuis 2021, avis mixtes), Conciergerie de l'Étoile (Berck→Boulogne→Wimereux), C&C Sérénité (pricing dynamique Nausicaá), Conciergerie des Dunes d'Opale (Hardelot/Condette), Les Clés C&D (réseau Hauts-de-France). Réglementation LIBRE (cadre national Loi Le Meur, pas de zone tendue, pas de changement d'usage local). 41 039 hab INSEE 2025. Nausicaá 916 000 visiteurs 2024 record. Zone 2 Caps 712 905 nuitées 2024. Prix immo accessibles (~2 100 €/m² sept 2025, +15% sur 12 mois).",
     "recheckedAt": "2026-06-03"
   },
   {

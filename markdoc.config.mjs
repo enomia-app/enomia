@@ -7,4 +7,15 @@ export default defineMarkdocConfig({
       render: component('./src/components/SmartLink.astro'),
     },
   },
+  tags: {
+    livret: {
+      render: component('./src/components/LivretModeles.astro'),
+    },
+    enomiaCta: {
+      render: component('./src/components/EnomiaCta.astro'),
+    },
+    methode97Popup: {
+      render: component('./src/components/Methode97Popup.astro'),
+    },
+  },
 });

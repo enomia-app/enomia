@@ -1,0 +1,139 @@
+---
+// Pop-up Méthode 97% — même offre que NewsletterBlock (Guide PDF + newsletter),
+// même backend /api/subscribe (Brevo). Déclenchée après le téléchargement du livret
+// via window.onLivretDownload, ou manuellement via window.openMethode97().
+interface Props { source?: string; }
+const { source = 'livret-download' } = Astro.props;
+---
+
+<div id="m97-overlay" class="m97-overlay" style="display:none" role="dialog" aria-modal="true" aria-label="Recevoir La Méthode 97%">
+  <div class="m97-card">
+    <button class="m97-close" type="button" aria-label="Fermer">&times;</button>
+
+    <div id="m97-step-form">
+      <div class="m97-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Guide PDF offert
+      </div>
+      <div class="m97-title">Votre livret est prêt. Et la rentabilité ?</div>
+      <p class="m97-desc">Recevez <strong>La Méthode 97%&nbsp;&copy;</strong> : le guide PDF en 10 étapes que j'ai utilisé pour atteindre <strong class="m97-hl">12&ndash;18% de rendement net</strong> sur 9 biens. Gratuit, sans jargon.</p>
+      <form id="m97-form" class="m97-form">
+        <input type="text" placeholder="Prénom" required class="m97-input" autocomplete="given-name" />
+        <input type="email" placeholder="votre@email.com" required class="m97-input" autocomplete="email" />
+        <div id="m97-error" class="m97-error" style="display:none"></div>
+        <button type="submit" class="m97-btn">Recevoir le guide &rarr;</button>
+      </form>
+      <p class="m97-note">1 email/semaine &middot; Désinscription en 1 clic &middot; Aucun spam</p>
+    </div>
+
+    <div id="m97-step-done" style="display:none">
+      <div class="m97-done-icon">✓</div>
+      <div class="m97-title">C'est envoyé&nbsp;!</div>
+      <p class="m97-desc">Vérifiez vos emails (et vos spams) pour récupérer le guide <strong>La Méthode 97%&nbsp;&copy;</strong>.</p>
+      <button class="m97-btn m97-btn-ghost" type="button" id="m97-done-close">Fermer</button>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ source }}>
+  (function () {
+    var overlay = document.getElementById('m97-overlay');
+    if (!overlay || overlay.dataset.init) return;
+    overlay.dataset.init = '1';
+    if (overlay.parentElement !== document.body) document.body.appendChild(overlay);
+
+    function done(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
+    function setKey(key) { try { localStorage.setItem(key, '1'); } catch (e) {} }
+
+    function openM97() {
+      if (done('m97_subscribed') || done('m97_dismissed')) return;
+      document.getElementById('m97-step-form').style.display = '';
+      document.getElementById('m97-step-done').style.display = 'none';
+      overlay.style.display = 'flex';
+    }
+    function closeM97() { overlay.style.display = 'none'; setKey('m97_dismissed'); }
+
+    window.openMethode97 = openM97;
+    // déclenché par le téléchargement du livret (léger délai pour laisser partir le download)
+    window.onLivretDownload = function () { setTimeout(openM97, 700); };
+
+    overlay.querySelector('.m97-close').addEventListener('click', closeM97);
+    var doneClose = document.getElementById('m97-done-close');
+    if (doneClose) doneClose.addEventListener('click', function () { overlay.style.display = 'none'; });
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) closeM97(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.style.display !== 'none') closeM97();
+    });
+
+    var form = document.getElementById('m97-form');
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var ins = form.querySelectorAll('input');
+      var fn = ins[0].value.trim(), em = ins[1].value.trim();
+      var err = document.getElementById('m97-error');
+      err.style.display = 'none';
+      if (!fn || !em || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) {
+        err.textContent = 'Prénom et email valides requis.'; err.style.display = ''; return;
+      }
+      var btn = form.querySelector('button'), orig = btn.innerHTML;
+      btn.disabled = true; btn.textContent = 'Envoi…';
+      try {
+        var r = await fetch('/api/subscribe', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: em, firstName: fn, source: source }),
+        });
+        if (r.ok) {
+          setKey('m97_subscribed');
+          document.getElementById('m97-step-form').style.display = 'none';
+          document.getElementById('m97-step-done').style.display = '';
+        } else {
+          err.textContent = 'Une erreur est survenue. Réessayez.'; err.style.display = '';
+          btn.disabled = false; btn.innerHTML = orig;
+        }
+      } catch (_) {
+        err.textContent = 'Une erreur est survenue. Réessayez.'; err.style.display = '';
+        btn.disabled = false; btn.innerHTML = orig;
+      }
+    });
+  })();
+</script>
+
+<style>
+  .m97-overlay { position: fixed; inset: 0; z-index: 9998; display: none;
+    align-items: center; justify-content: center; padding: 20px;
+    background: rgba(0,0,0,.55); backdrop-filter: blur(4px); }
+  .m97-card { position: relative; width: 100%; max-width: 400px; border-radius: 16px;
+    padding: 32px 30px 24px; color: #e8e4dc;
+    background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%);
+    box-shadow: 0 24px 60px rgba(0,0,0,.35); font-family: 'Inter', -apple-system, sans-serif; }
+  .m97-close { position: absolute; top: 12px; right: 14px; background: none; border: none;
+    font-size: 22px; line-height: 1; color: #8a8985; cursor: pointer; padding: 4px; }
+  .m97-close:hover { color: #fff; }
+  .m97-badge { display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(63,189,113,.15); color: #3fbd71; font-size: 9.5px; font-weight: 700;
+    letter-spacing: .08em; text-transform: uppercase; padding: 5px 11px; border-radius: 20px;
+    border: 1px solid rgba(63,189,113,.3); margin-bottom: 14px; }
+  .m97-title { font-family: 'Newsreader', Georgia, serif; font-size: 21px; font-weight: 700;
+    color: #fff; line-height: 1.25; margin-bottom: 8px; }
+  .m97-desc { font-size: 13px; color: #b8b6b1; line-height: 1.6; margin: 0 0 18px; }
+  .m97-hl { color: #fff; }
+  .m97-form { display: flex; flex-direction: column; gap: 9px; }
+  .m97-input { padding: 12px 14px; background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.15); border-radius: 8px; color: #fff;
+    font-family: inherit; font-size: 14px; outline: none; box-sizing: border-box; }
+  .m97-input:focus { border-color: #3fbd71; }
+  .m97-input::placeholder { color: #8a8985; }
+  .m97-error { font-size: 12px; color: #e05252; padding: 8px 12px;
+    background: rgba(224,82,82,.08); border-radius: 6px; }
+  .m97-btn { padding: 13px; background: #3fbd71; color: #fff; border: none; border-radius: 8px;
+    font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
+  .m97-btn:hover { background: #36a361; }
+  .m97-btn:disabled { opacity: .6; cursor: wait; }
+  .m97-btn-ghost { background: transparent; border: 1px solid #4a4c4a; margin-top: 6px; }
+  .m97-btn-ghost:hover { background: rgba(255,255,255,.06); }
+  .m97-note { font-size: 10.5px; color: #8a8985; text-align: center; margin: 12px 0 0; line-height: 1.5; }
+  .m97-done-icon { width: 46px; height: 46px; margin: 0 auto 14px; border-radius: 50%;
+    background: rgba(63,189,113,.15); color: #3fbd71; font-size: 24px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; }
+  #m97-step-done { text-align: center; }
+</style>

@@ -169,13 +169,21 @@
     "slug": "reims",
     "displayName": "Reims",
     "searchVolume": 1970,
-    "status": "todo"
+    "status": "done",
+    "region": "Grand Est",
+    "regionSlug": "alsace",
+    "radiusKm": 100,
+    "found": 31
   },
   {
     "slug": "clermont-ferrand",
     "displayName": "Clermont-Ferrand",
     "searchVolume": 1960,
-    "status": "todo"
+    "status": "done",
+    "region": "Auvergne-Rhône-Alpes",
+    "regionSlug": "auvergne-rhone-alpes",
+    "radiusKm": 150,
+    "found": 26
   },
   {
     "slug": "caen",

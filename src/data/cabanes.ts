@@ -123,6 +123,10 @@ function genZone(m: (typeof cabaneZonesMeta)[number]): CabaneZone {
       q: `Comment réserver une cabane ${inZone} moins cher ?`,
       a: `Visez la semaine plutôt que le samedi, évitez les vacances scolaires, et surtout réservez en direct auprès du propriétaire (lien vers son site quand il existe) pour éviter la commission des plateformes de réservation.`,
     },
+    {
+      q: `Une cabane ${inZone}, c'est plutôt en amoureux ou en famille ?`,
+      a: `Les deux. ${Z} compte des cabanes perchées romantiques pensées pour un week-end à deux, souvent avec spa ou bain nordique privatif, et des cabanes plus spacieuses ou familiales adaptées aux séjours avec enfants. Vérifiez la capacité et les équipements indiqués sur chaque adresse.`,
+    },
   ];
 
   return {

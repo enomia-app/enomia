@@ -217,5 +217,169 @@
     "radiusKm": 55,
     "status": "todo",
     "geocodeQuery": "Massif de la Chartreuse France"
+  },
+  {
+    "slug": "franche-comte",
+    "displayName": "Franche-Comté",
+    "type": "region",
+    "searchVolume": 1130,
+    "radiusKm": 90,
+    "status": "todo"
+  },
+  {
+    "slug": "lot",
+    "displayName": "Lot",
+    "type": "departement",
+    "searchVolume": 830,
+    "radiusKm": 70,
+    "status": "todo",
+    "geocodeQuery": "Lot France département"
+  },
+  {
+    "slug": "correze",
+    "displayName": "Corrèze",
+    "type": "departement",
+    "searchVolume": 770,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "charente-maritime",
+    "displayName": "Charente-Maritime",
+    "type": "departement",
+    "searchVolume": 730,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "savoie",
+    "displayName": "Savoie",
+    "type": "departement",
+    "searchVolume": 720,
+    "radiusKm": 70,
+    "status": "todo",
+    "geocodeQuery": "Savoie France département"
+  },
+  {
+    "slug": "finistere",
+    "displayName": "Finistère",
+    "type": "departement",
+    "searchVolume": 650,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "drome",
+    "displayName": "Drôme",
+    "type": "departement",
+    "searchVolume": 640,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "isere",
+    "displayName": "Isère",
+    "type": "departement",
+    "searchVolume": 600,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "gard",
+    "displayName": "Gard",
+    "type": "departement",
+    "searchVolume": 590,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "puy-de-dome",
+    "displayName": "Puy-de-Dôme",
+    "type": "departement",
+    "searchVolume": 550,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "aveyron",
+    "displayName": "Aveyron",
+    "type": "departement",
+    "searchVolume": 480,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "aude",
+    "displayName": "Aude",
+    "type": "departement",
+    "searchVolume": 470,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "cantal",
+    "displayName": "Cantal",
+    "type": "departement",
+    "searchVolume": 420,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "herault",
+    "displayName": "Hérault",
+    "type": "departement",
+    "searchVolume": 380,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "ain",
+    "displayName": "Ain",
+    "type": "departement",
+    "searchVolume": 370,
+    "radiusKm": 70,
+    "status": "todo",
+    "geocodeQuery": "Ain France département"
+  },
+  {
+    "slug": "tarn",
+    "displayName": "Tarn",
+    "type": "departement",
+    "searchVolume": 330,
+    "radiusKm": 70,
+    "status": "todo",
+    "geocodeQuery": "Tarn France département"
+  },
+  {
+    "slug": "vaucluse",
+    "displayName": "Vaucluse",
+    "type": "departement",
+    "searchVolume": 290,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "doubs",
+    "displayName": "Doubs",
+    "type": "departement",
+    "searchVolume": 280,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "calvados",
+    "displayName": "Calvados",
+    "type": "departement",
+    "searchVolume": 230,
+    "radiusKm": 70,
+    "status": "todo"
+  },
+  {
+    "slug": "sologne",
+    "displayName": "Sologne",
+    "type": "massif",
+    "searchVolume": 200,
+    "radiusKm": 65,
+    "status": "todo"
   }
 ]

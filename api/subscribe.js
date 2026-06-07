@@ -13,7 +13,8 @@ export default async function handler(req, res) {
   const listNL = parseInt(process.env.BREVO_LIST_ID, 10);
   const listOutils = parseInt(process.env.BREVO_LIST_OUTILS, 10) || listNL;
   const listChannel = parseInt(process.env.BREVO_LIST_CHANNEL, 10) || listNL;
-  const listWaitlist = parseInt(process.env.BREVO_LIST_WAITLIST, 10) || listNL;
+  const listWaitSite = parseInt(process.env.BREVO_LIST_WAITLIST_SITE, 10) || listNL;
+  const listWaitCM = parseInt(process.env.BREVO_LIST_WAITLIST_CM, 10) || listNL;
 
   if (!apiKey || !listNL) {
     return res.status(500).json({ error: 'Missing API credentials' });
@@ -25,8 +26,10 @@ export default async function handler(req, res) {
     listId = listChannel;
   } else if (['Contrat', 'Facturation', 'Simulateur_Auth'].includes(source)) {
     listId = listOutils;
-  } else if (source === 'WaitlistReservation') {
-    listId = listWaitlist;
+  } else if (source === 'WaitlistSite') {
+    listId = listWaitSite;
+  } else if (source === 'WaitlistCM') {
+    listId = listWaitCM;
   }
 
   try {

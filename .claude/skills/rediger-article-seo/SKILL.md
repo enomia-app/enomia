@@ -97,6 +97,8 @@ Structure :
 - Direct, assertif, pair-à-pair (pas de "n'hésitez pas à…", pas de fluff)
 - Données originales prioritaires : 9 biens, 12-18% net, 93%+ occupation, ~1h/bien/mois, méthode 97%©
 - Pas de tirets longs (—) → fait trop IA
+- **Pas de slash `/` dans le texte visible** (prose, listes, en-têtes de tableaux, noms de modèles) : « PNO / MRH », « Airbnb/Booking », « 5401D / 5440D », « 24h/24 », « location saisonnière / meublé de tourisme »… Marc trouve ça pas naturel en français. Remplacer par « ou », « et », « à » (24 h sur 24), une parenthèse ou une virgule. Les URLs gardent leurs slashes, évidemment.
+- **Densité de lecture aérée** (Marc y tient) : paragraphes courts, 2 à 4 phrases (~3 lignes max), une idée par paragraphe. Casser les gros blocs : un mur de texte fait fuir le lecteur et nuit au SEO. Aérer avec des listes à puces, des sous-titres H3 et du gras sur les points clés.
 - Pas de superlatifs creux ("incroyable", "fantastique")
 
 **SEO body** :

@@ -97,7 +97,7 @@ Structure :
 - Direct, assertif, pair-à-pair (pas de "n'hésitez pas à…", pas de fluff)
 - Données originales prioritaires : 9 biens, 12-18% net, 93%+ occupation, ~1h/bien/mois, méthode 97%©
 - Pas de tirets longs (—) → fait trop IA
-- **Pas de slash `/` dans le texte visible** (prose, listes, en-têtes de tableaux, noms de modèles) : « PNO / MRH », « Airbnb/Booking », « 5401D / 5440D », « 24h/24 », « location saisonnière / meublé de tourisme »… Marc trouve ça pas naturel en français. Remplacer par « ou », « et », « à » (24 h sur 24), une parenthèse ou une virgule. Les URLs gardent leurs slashes, évidemment.
+- **Purger les antislashs `\` parasites en fin de phrase/ligne** : le batch de nuit et Keystatic laissent parfois une ligne qui se termine par un antislash ` \` (artefact de saut de ligne). Ça affiche un « \ » parasite en bout de phrase. Les retirer. ⚠️ **À NE PAS confondre avec les slashs `/` légitimes**, qui sont NÉCESSAIRES et qu'on GARDE tels quels : « €/an », « €/mois », « €/séjour », « LMNP/LMP », « check-in/out », « PriceLabs/Wheelhouse », « 24h/24 », etc. (Clarifié par Marc 2026-06-06 : c'est l'antislash de fin de phrase le problème, pas le slash de notation.)
 - **Densité de lecture aérée** (Marc y tient) : paragraphes courts, 2 à 4 phrases (~3 lignes max), une idée par paragraphe. Casser les gros blocs : un mur de texte fait fuir le lecteur et nuit au SEO. Aérer avec des listes à puces, des sous-titres H3 et du gras sur les points clés.
 - Pas de superlatifs creux ("incroyable", "fantastique")
 

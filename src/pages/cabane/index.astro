@@ -1,0 +1,192 @@
+---
+export const prerender = true;
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import NewsletterBlock from '../../components/NewsletterBlock.astro';
+import { cabaneZones, getTopCabanes } from '../../data/cabanes';
+
+const topFrance = getTopCabanes({ limit: 10 });
+const zones = cabaneZones.slice().sort((a, b) => b.searchVolume - a.searchVolume);
+
+const canonical = 'https://www.enomia.app/cabane';
+const title = 'Cabane insolite en France : où dormir dans une cabane (2026)';
+const description =
+  "Cabane dans les arbres, cabane perchée, cabane dans les bois avec spa ou bain nordique. Sélection par région des meilleures cabanes insolites, et astuces pour réserver en direct.";
+
+const faq = [
+  { q: "Qu'est-ce qu'une cabane insolite ?", a: "Une cabane insolite est un hébergement nature loué à la nuit : cabane perchée dans les arbres, cabane au sol au bord d'un étang, lodge en forêt. Souvent équipée d'un spa, d'un bain nordique ou d'un poêle à bois, elle est pensée pour une déconnexion totale à deux ou en famille, loin de l'agitation." },
+  { q: "Quel est le prix d'une nuit en cabane ?", a: "Les tarifs démarrent autour de 100 à 130 € la nuit pour une cabane simple, et la majorité se situe entre 130 et 250 € avec spa ou bain nordique privatif. Les cabanes perchées haut de gamme dépassent 300 €. Le prix grimpe le week-end et pendant les vacances scolaires." },
+  { q: "Comment payer une cabane moins cher ?", a: "Réservez en semaine plutôt que le samedi (souvent 30 % de moins), évitez les vacances scolaires, et réservez en direct auprès du propriétaire quand c'est possible pour éviter les frais de service des plateformes (12 à 15 %)." },
+  { q: "Peut-on réserver une cabane en direct ?", a: "Oui, et c'est souvent avantageux : en passant par le site du propriétaire plutôt qu'une grosse plateforme, vous évitez les frais de service et le propriétaire vous fait fréquemment un geste. Notre sélection met en avant les adresses joignables en direct." },
+  { q: "Quelle région choisir pour une cabane dans les bois ?", a: "Les massifs et régions boisés concentrent l'offre : Vosges, Jura, Dordogne, Bretagne, Auvergne, Ardèche. Le choix dépend de l'ambiance recherchée (forêt, montagne, bord de mer) et de la distance que vous acceptez de faire : beaucoup de voyageurs roulent 2 à 3 heures pour la bonne cabane." },
+  { q: "Comment sont sélectionnées les cabanes sur Enomia ?", a: "Nous ne listons pas tout : pour chaque région, nous retenons les meilleures cabanes selon la note Google, le nombre d'avis, le caractère réellement insolite et privatif de l'hébergement, et la possibilité de réserver en direct. L'objectif est d'aider à choisir vite et bien." },
+];
+
+const articleLd = {
+  '@context': 'https://schema.org', '@type': 'Article', headline: title, description,
+  datePublished: '2026-06-07', dateModified: '2026-06-07',
+  author: { '@type': 'Person', name: 'Marc', url: 'https://www.enomia.app/' },
+  publisher: { '@type': 'Organization', name: 'Enomia', logo: { '@type': 'ImageObject', url: 'https://www.enomia.app/favicon.png' } },
+  mainEntityOfPage: canonical,
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.enomia.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Cabane', item: canonical },
+  ],
+};
+---
+
+<ToolLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 60px; }
+    .seo-h1 { font-family: 'Newsreader', serif; font-size: clamp(28px, 4vw, 44px); font-weight: 600; line-height: 1.15; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 780px; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; }
+
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 27px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+
+    .method { border: 1px solid #e5e3de; background: #fff; border-radius: 12px; padding: 22px 26px; margin: 22px 0; }
+    .method ul { list-style: none; padding: 0; margin: 0; }
+    .method li { font-size: 14px; color: #52524e; padding: 8px 0 8px 26px; position: relative; border-bottom: 1px solid #f0eee8; }
+    .method li:last-child { border-bottom: none; }
+    .method li::before { content: '✓'; position: absolute; left: 0; color: #3fbd71; font-weight: 700; }
+    .method li strong { color: #1a1a1a; }
+
+    .tip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 20px 0 28px; }
+    .tip { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 16px 18px; }
+    .tip b { display: block; color: #1a1a1a; font-size: 14px; margin-bottom: 4px; }
+    .tip span { font-size: 13px; color: #52524e; line-height: 1.6; }
+    @media (max-width: 700px) { .tip-grid { grid-template-columns: 1fr; } }
+
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 18px 22px; margin: 22px 0; border-radius: 0 10px 10px 0; font-size: 14px; color: #1a1a1a; line-height: 1.7; }
+    .callout strong { display: block; margin-bottom: 6px; font-size: 15px; }
+
+    .top-list { display: flex; flex-direction: column; gap: 8px; margin: 18px 0 8px; }
+    .top-item { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; color: inherit; text-decoration: none; transition: all .15s; }
+    .top-item:hover { border-color: #8a8985; transform: translateX(2px); }
+    .top-item .rk { font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700; color: #3fbd71; width: 22px; text-align: center; flex: none; }
+    .top-item .ti { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+    .top-item .ti strong { color: #1a1a1a; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .top-item .tm { font-size: 12px; color: #8a8985; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .top-item .ts { font-size: 12px; font-weight: 700; color: #b9791a; white-space: nowrap; }
+    .zone-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 20px 0; }
+    .zone-grid a { display: block; padding: 20px 22px; border: 1px solid #e5e3de; background: #fff; border-radius: 12px; color: inherit; text-decoration: none; transition: all 0.15s; }
+    .zone-grid a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .zone-grid .rt { font-family: 'Newsreader', serif; font-size: 19px; font-weight: 600; color: #1a1a1a; }
+    .zone-grid .rc { font-size: 13px; color: #8a8985; margin-top: 6px; }
+    @media (max-width: 700px) { .zone-grid { grid-template-columns: 1fr; } }
+
+    .faq { border: 1px solid #e5e3de; border-radius: 12px; overflow: hidden; margin: 16px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; } .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+
+    .owner { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #e8e4dc; padding: 30px 32px; border-radius: 14px; margin: 44px 0 24px; }
+    .owner h2 { color: #fff; font-family: 'Newsreader', serif; font-size: 24px; margin: 0 0 12px; }
+    .owner p { font-size: 14px; color: #f0ede6; line-height: 1.7; margin: 0 0 16px; }
+    .owner p strong { color: #fff; }
+    .owner a { display: inline-block; background: #fff; color: #2b2d2b; padding: 12px 24px; border-radius: 100px; font-weight: 700; text-decoration: none; }
+    @media (max-width: 700px) { .seo-wrap { padding: 24px 20px 40px; } }
+  </style>
+
+  <div class="seo-wrap">
+    <h1 class="seo-h1">Cabane insolite en France : où dormir dans une <em>cabane dans les arbres</em> (et payer moins cher)</h1>
+    <p class="seo-lede">
+      Une nuit perchée dans les arbres, une cabane en forêt avec bain nordique, un lodge au bord d'un étang : la cabane insolite, c'est la déconnexion garantie. Mais les annonces se ressemblent et les prix grimpent vite. Ce guide vous explique <strong>comment choisir, payer moins cher et réserver en direct</strong>, puis vous oriente vers notre sélection, région par région.
+    </p>
+    <div class="seo-badges">
+      <span class="seo-badge">Guide indépendant</span>
+      <span class="seo-badge">Sélection par région</span>
+      <span class="seo-badge">Astuces résa directe</span>
+    </div>
+
+    <div class="seo-body">
+      <h2>On ne liste pas toutes les cabanes, seulement les meilleures</h2>
+      <p>
+        La plupart des annuaires empilent les annonces. Nous faisons l'inverse : pour chaque région, nous <strong>retenons les meilleures cabanes</strong>, selon des critères que voici. L'objectif est simple : vous aider à choisir vite et bien.
+      </p>
+      <div class="method">
+        <ul>
+          <li><strong>Hébergement réellement insolite</strong> : cabane perchée, dans les bois, au bord de l'eau</li>
+          <li><strong>Intimité et nature</strong> : entrée indépendante, cadre préservé</li>
+          <li><strong>Propreté irréprochable</strong>, vérifiée via les avis voyageurs</li>
+          <li><strong>Équipement à la hauteur</strong> : spa, bain nordique, poêle à bois, terrasse</li>
+          <li><strong>Note Google solide</strong> : on privilégie les valeurs sûres, pas les coups de chance</li>
+          <li><strong>Réservation en direct possible</strong> quand elle existe, pour payer moins cher</li>
+        </ul>
+      </div>
+
+      <h2>Comment payer une cabane moins cher</h2>
+      <div class="tip-grid">
+        <div class="tip"><b>Réservez en semaine</b><span>Du lundi au jeudi : souvent 30 % de moins que le samedi soir, pour la même cabane.</span></div>
+        <div class="tip"><b>Évitez les vacances</b><span>Vacances scolaires et longs week-ends font flamber les prix. Décalez de quelques jours.</span></div>
+        <div class="tip"><b>Jouez les saisons</b><span>Printemps et automne offrent le meilleur rapport calme/prix, sans la foule de l'été.</span></div>
+        <div class="tip"><b>Réservez en direct</b><span>En direct auprès du propriétaire, vous évitez les frais de service des grandes plateformes (12 à 15 %).</span></div>
+      </div>
+
+      <div class="callout">
+        <strong>Réserver en direct, le vrai bon plan</strong>
+        Sur une nuit à 130-250 €, les frais de service d'une grosse plateforme représentent vite 20 à 40 €. En direct, le propriétaire récupère sa marge et vous fait souvent un geste (panier d'accueil, late check-out). C'est ce que nous mettons en avant : les adresses joignables sans intermédiaire.
+      </div>
+
+      <h2>Les meilleures cabanes insolites de France</h2>
+      <p>Notre top, classé par la combinaison note Google et nombre d'avis.</p>
+      <div class="top-list">
+        {topFrance.map((c, i) => (
+          <a class="top-item" href={`/cabane/${c.zoneSlug}`}>
+            <span class="rk">{i + 1}</span>
+            <span class="ti"><strong>{c.name}</strong><span class="tm">{c.area} · {c.zoneName}</span></span>
+            <span class="ts">★ {c.rating!.toFixed(1)} · {c.reviews} avis</span>
+          </a>
+        ))}
+      </div>
+
+      <h2>Trouver une cabane par région</h2>
+      <p>Choisissez votre région, votre massif ou votre département. Chaque page liste notre sélection de cabanes insolites, avec la commune, la note, les équipements et les astuces pour réserver en direct.</p>
+      <div class="zone-grid">
+        {zones.map((z) => (
+          <a href={`/cabane/${z.slug}`}>
+            <div class="rt">Cabane {z.displayName}</div>
+            <div class="rc">{z.found} cabanes recensées · {z.cabanes.length} sélectionnées</div>
+          </a>
+        ))}
+      </div>
+
+      <h2>Questions fréquentes</h2>
+      <div class="faq">
+        {faq.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <div class="faq-ans"><p>{f.a}</p></div>
+          </details>
+        ))}
+      </div>
+
+      <div class="owner" id="proprietaires">
+        <h2>Vous gérez une cabane insolite ?</h2>
+        <p>
+          Proposez votre cabane à notre sélection. Si elle remplit nos critères (hébergement réellement insolite, propreté, bons avis), elle rejoint la page de votre région et reçoit des réservations <strong>en direct, sans commission</strong> : vous gardez 100 % de votre marge, on vous amène les voyageurs.
+        </p>
+        <a href="mailto:marc@enomia.app?subject=Proposer ma cabane">→ Voir si je suis éligible</a>
+      </div>
+
+      <NewsletterBlock source="Cabane-hub" />
+    </div>
+  </div>
+</ToolLayout>

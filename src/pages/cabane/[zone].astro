@@ -1,0 +1,308 @@
+---
+export const prerender = true;
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import NewsletterBlock from '../../components/NewsletterBlock.astro';
+import { cabaneZones, getCabaneZoneBySlug, type CabaneZone } from '../../data/cabanes';
+
+export async function getStaticPaths() {
+  return cabaneZones.map((z) => ({ params: { zone: z.slug } }));
+}
+
+const { zone } = Astro.params;
+const found = getCabaneZoneBySlug(zone!);
+if (!found) throw new Error(`Cabane zone not found: ${zone}`);
+const z: CabaneZone = found;
+const canonical = `https://www.enomia.app/cabane/${z.slug}`;
+const inZone = z.type === 'massif' ? `dans le ${z.displayName}` : `en ${z.displayName}`;
+
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function renderRich(text: string): string {
+  return text
+    .split('\n\n')
+    .map((p) => `<p>${escapeHtml(p).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p>`)
+    .join('');
+}
+
+const cabanes = z.cabanes; // déjà triées par note (genZone)
+const verifDate = new Date(z.updatedAt).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+const nearbyZones = z.nearby.map((s) => getCabaneZoneBySlug(s)).filter(Boolean) as CabaneZone[];
+
+const articleLd = {
+  '@context': 'https://schema.org', '@type': 'Article', headline: z.title, description: z.metaDescription,
+  datePublished: '2026-06-07', dateModified: z.updatedAt,
+  author: { '@type': 'Person', name: 'Marc', url: 'https://www.enomia.app/' },
+  publisher: { '@type': 'Organization', name: 'Enomia', logo: { '@type': 'ImageObject', url: 'https://www.enomia.app/favicon.png' } },
+  mainEntityOfPage: canonical,
+};
+const itemListLd = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: `Les meilleures cabanes ${inZone}`,
+  numberOfItems: cabanes.length,
+  itemListElement: cabanes.map((c, i) => ({
+    '@type': 'ListItem', position: i + 1,
+    item: { '@type': 'LodgingBusiness', name: c.name, description: `${c.vibe} — ${c.features.join(', ')}`, areaServed: c.area, url: c.url ?? canonical },
+  })),
+};
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.enomia.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Cabane', item: 'https://www.enomia.app/cabane' },
+    { '@type': 'ListItem', position: 3, name: `Cabane ${z.displayName}`, item: canonical },
+  ],
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: z.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+
+<ToolLayout title={z.metaTitle} description={z.metaDescription} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 60px; }
+    .crumbs { font-size: 12px; color: #8a8985; margin-bottom: 16px; }
+    .crumbs a { color: #8a8985; text-decoration: none; } .crumbs a:hover { color: #3fbd71; }
+    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(28px, 4vw, 42px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; color: #2b2d2b; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
+    .rich :global(p) { margin: 0 0 16px; font-size: 15px; line-height: 1.75; color: #52524e; }
+    .rich :global(strong) { color: #1a1a1a; font-weight: 600; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; }
+    .city-summary { font-size: 14px; color: #1a1a1a; margin: 14px 0 4px; line-height: 1.5; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 16px 0 8px; }
+    .stat { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 12px 10px; text-align: center; }
+    .stat b { display: block; font-family: 'Newsreader', serif; font-size: 18px; color: #1a1a1a; }
+    .stat span { font-size: 11px; color: #8a8985; }
+    @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+
+    .method { border: 1px solid #e5e3de; background: #fff; border-radius: 12px; padding: 22px 26px; margin: 24px 0; }
+    .method h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3fbd71; margin-bottom: 12px; }
+    .method .count { font-size: 14px; color: #1a1a1a; margin-bottom: 14px; }
+    .method .count strong { font-weight: 700; }
+    .method ul { list-style: none; padding: 0; margin: 0; }
+    .method li { font-size: 14px; color: #52524e; padding: 7px 0 7px 26px; position: relative; border-bottom: 1px solid #f0eee8; }
+    .method li:last-child { border-bottom: none; }
+    .method li::before { content: '✓'; position: absolute; left: 0; color: #3fbd71; font-weight: 700; }
+
+    .room { border: 1px solid #e5e3de; border-radius: 12px; padding: 20px 22px; margin: 14px 0; background: #fff; }
+    .room-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .room h3 { font-family: 'Newsreader', serif; font-size: 20px; font-weight: 600; margin: 0; color: #1a1a1a; }
+    .room .loc { font-size: 12px; color: #8a8985; margin: 6px 0 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .room .rate { background: rgba(240,168,58,0.12); color: #b9791a; font-weight: 700; padding: 2px 9px; border-radius: 100px; }
+    .room p { font-size: 14px; color: #52524e; line-height: 1.65; margin: 0 0 10px; overflow-wrap: anywhere; }
+    .room .feats { display: flex; gap: 6px; flex-wrap: wrap; }
+    .room .feat { font-size: 11px; color: #52524e; background: #f7f6f3; border: 1px solid #e5e3de; padding: 3px 9px; border-radius: 6px; }
+    .room .book { display: inline-block; background: #2b2d2b; color: #fff; font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: 100px; text-decoration: none; white-space: nowrap; }
+    .room .book:hover { background: #3fbd71; }
+    .room .foot-right { display: flex; align-items: center; gap: 10px; }
+    .room .book-foot { display: none; }
+    @media (max-width: 700px) {
+      .room-head .book-head { display: none; }
+      .room .price.has-btn { display: none; }
+      .room .book-foot { display: inline-flex; }
+    }
+    .room .room-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px solid #f0eee8; }
+    .room .room-foot .price { font-size: 15px; font-weight: 700; color: #1a1a1a; white-space: nowrap; }
+    .room .reviews { display: flex; gap: 12px; overflow-x: auto; margin-top: 14px; padding-bottom: 4px; -webkit-overflow-scrolling: touch; min-width: 0; max-width: 100%; }
+    .room .rev { flex: 0 0 240px; background: #f7f6f3; border: 1px solid #e5e3de; border-radius: 10px; padding: 12px 14px; }
+    .room .rev-h { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .room .rev-stars { color: #f0a83a; font-size: 12px; white-space: nowrap; }
+    .room .rev-meta { font-size: 10px; color: #8a8985; text-align: right; }
+    .room .rev p { font-size: 12px; color: #52524e; line-height: 1.5; margin: 0; font-style: italic; }
+    .room .rev-attr { font-size: 10px; color: #8a8985; margin: 0; }
+
+    .tip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 20px 0 28px; }
+    .tip { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 16px 18px; }
+    .tip b { display: block; color: #1a1a1a; font-size: 14px; margin-bottom: 4px; }
+    .tip span { font-size: 13px; color: #52524e; line-height: 1.6; }
+    @media (max-width: 700px) { .tip-grid { grid-template-columns: 1fr; } }
+
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 18px 22px; margin: 22px 0; border-radius: 0 10px 10px 0; font-size: 14px; color: #1a1a1a; line-height: 1.7; }
+    .callout strong { display: block; margin-bottom: 6px; font-size: 15px; }
+
+    .faq { border: 1px solid #e5e3de; border-radius: 12px; overflow: hidden; margin: 16px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; } .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+
+    .cta { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #e8e4dc; padding: 28px 32px; border-radius: 14px; margin: 40px 0 24px; text-align: center; }
+    .cta h3 { font-family: 'Newsreader', serif; font-size: 22px; margin: 0 0 10px; color: #fff; }
+    .cta p { font-size: 14px; color: #fff; margin: 0 0 18px; }
+    .cta p strong { color: #fff; }
+    .cta a { display: inline-block; background: #fff; color: #2b2d2b; padding: 12px 24px; border-radius: 100px; font-weight: 700; text-decoration: none; }
+
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 40px; }
+    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; color: inherit; text-decoration: none; transition: all 0.15s; }
+    .related a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; }
+    .related .rd { font-size: 12px; color: #8a8985; }
+    @media (max-width: 700px) {
+      .seo-wrap { padding: 24px 16px 40px; }
+      .related { grid-template-columns: 1fr; }
+      .room { padding: 16px 16px; }
+      .room-head { align-items: flex-start; }
+      .room-head h3 { font-size: 18px; }
+      .room-foot { flex-wrap: wrap; }
+      .room .rev { flex: 0 0 80%; }
+      .seo-h1 { word-break: break-word; }
+    }
+  </style>
+
+  <div class="seo-wrap">
+    <div class="crumbs">
+      <a href="/cabane">Cabane</a> › {z.displayName}
+    </div>
+
+    <h1 class="seo-h1">Cabane <em>{z.displayName}</em> : les {cabanes.length} meilleures cabanes insolites</h1>
+    <div class="seo-lede rich" set:html={renderRich(z.intro)} />
+    <div class="seo-badges">
+      <span class="seo-badge">Sélection indépendante</span>
+      <span class="seo-badge">Notes Google vérifiées</span>
+      <span class="seo-badge">Astuces résa directe</span>
+    </div>
+
+    <p class="city-summary">{z.found} cabanes recensées {inZone}{z.communes.length > 0 ? ` dans ${z.communes.length} commune${z.communes.length > 1 ? 's' : ''}` : ''}{z.avgRating > 0 ? ` · note moyenne ${z.avgRating} ★` : ''}.</p>
+
+    <div class="stats">
+      <div class="stat"><b>{z.found}</b><span>cabanes recensées</span></div>
+      {z.avgRating > 0 && <div class="stat"><b>{z.avgRating} ★</b><span>note moyenne Google</span></div>}
+      {z.totalReviews > 0 && <div class="stat"><b>{z.totalReviews.toLocaleString('fr-FR')}</b><span>avis cumulés</span></div>}
+      <div class="stat"><b>{z.communes.length}</b><span>commune{z.communes.length > 1 ? 's' : ''} couverte{z.communes.length > 1 ? 's' : ''}</span></div>
+    </div>
+
+    <div class="seo-body">
+      <h2>La cabane insolite {inZone}</h2>
+      <div class="rich" set:html={renderRich(z.scene)} />
+
+      <div class="method">
+        <h3>Notre méthode de sélection</h3>
+        <p class="count">
+          Nous avons retenu <strong>{cabanes.length} cabanes</strong> parmi les <strong>{z.found}</strong> recensées {inZone}, classées par note Google et nombre d'avis.
+        </p>
+        {z.communes.length > 1 && (
+          <p class="count" style="margin-top:8px;">Communes couvertes : {z.communes.join(' · ')}.</p>
+        )}
+        <ul>
+          <li>Hébergement réellement insolite : cabane perchée, dans les bois, au bord de l'eau</li>
+          <li>Intimité et cadre nature préservé</li>
+          <li>Propreté irréprochable (avis voyageurs vérifiés)</li>
+          <li>Équipement à la hauteur : spa, bain nordique, poêle à bois, terrasse</li>
+          <li>Réservation en direct possible quand elle existe (pour payer moins cher)</li>
+        </ul>
+      </div>
+
+      <h2>Les {cabanes.length} cabanes sélectionnées {inZone}</h2>
+      <p>Classées par note Google et nombre d'avis. Réservez en direct auprès du propriétaire quand le lien est disponible pour éviter les frais de plateforme.</p>
+
+      {cabanes.map((c) => (
+        <div class="room">
+          <div class="room-head">
+            <h3>{c.name}</h3>
+            {c.url && (
+              <a class="book book-head" href={c.url} target="_blank" rel="noopener">Réserver en direct →</a>
+            )}
+          </div>
+          <div class="loc">
+            <span>📍 {c.area}{c.dept ? ` (${c.dept})` : ''}</span>
+            {c.rating && c.rating > 0 && (
+              <span class="rate">★ {c.rating.toFixed(1)}{c.reviews ? ` · ${c.reviews} avis` : ''}</span>
+            )}
+          </div>
+          <p>{c.description ?? `${c.vibe}.`}</p>
+          <div class="feats">{c.features.map((f) => <span class="feat">{f}</span>)}</div>
+          {c.recentReviews && c.recentReviews.length > 0 && (
+            <div class="reviews">
+              {c.recentReviews.map((rev) => (
+                <div class="rev">
+                  <div class="rev-h">
+                    <span class="rev-stars">{'★'.repeat(Math.round(rev.rating ?? 0))}</span>
+                    <span class="rev-meta">{rev.author}{rev.when ? ` · ${rev.when}` : ''}</span>
+                  </div>
+                  <p>{rev.text}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          <div class="room-foot">
+            {c.recentReviews && c.recentReviews.length > 0 ? <span class="rev-attr">Avis Google vérifiés en {verifDate}</span> : <span></span>}
+            <span class="foot-right">
+              <span class={`price ${c.url ? 'has-btn' : ''}`}>{c.priceFrom ? `dès ${c.priceFrom} €/nuit` : 'Tarifs sur le site'}</span>
+              {c.url && <a class="book book-foot" href={c.url} target="_blank" rel="noopener">Réserver en direct →</a>}
+            </span>
+          </div>
+        </div>
+      ))}
+
+      <p style="font-size:11px;color:#8a8985;margin-top:14px;font-style:italic;">
+        Adresses recensées via Google Places et sites officiels, à jour du {new Date(z.updatedAt).toLocaleDateString('fr-FR')}. Tarifs indicatifs, variables selon la date et la saison.
+      </p>
+
+      <h2>Comment payer moins cher votre cabane {inZone}</h2>
+      <div class="tip-grid">
+        <div class="tip"><b>Réservez en semaine</b><span>Du lundi au jeudi, une cabane coûte souvent 30 % de moins que le samedi soir.</span></div>
+        <div class="tip"><b>Jouez les saisons</b><span>Printemps et automne offrent le meilleur rapport calme/prix, sans la foule de l'été.</span></div>
+        <div class="tip"><b>Évitez les vacances</b><span>Vacances scolaires et longs week-ends font flamber les prix. Décalez de quelques jours.</span></div>
+        <div class="tip"><b>Réservez en direct</b><span>En passant par le site du propriétaire plutôt qu'une grosse plateforme, vous évitez les frais de service (12 à 15 %).</span></div>
+      </div>
+
+      <div class="callout">
+        <strong>Réserver en direct : tout le monde y gagne</strong>
+        Sur une cabane à 130-250 € la nuit, les frais de service d'une grosse plateforme représentent vite 20 à 40 €. En réservant en direct, le propriétaire récupère sa marge et vous fait souvent un geste (panier d'accueil, late check-out). C'est ce que nous mettons en avant : les adresses joignables en direct.
+      </div>
+
+      <h2>FAQ — Cabane {z.displayName}</h2>
+      <div class="faq">
+        {z.faq.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <div class="faq-ans"><p>{f.a}</p></div>
+          </details>
+        ))}
+      </div>
+
+      <div class="cta">
+        <h3>Vous gérez une cabane {inZone} ?</h3>
+        <p>Proposez votre cabane à notre sélection. Si elle remplit nos critères (hébergement réellement insolite, propreté, bons avis), nous l'ajoutons et vous recevez des réservations <strong>en direct, sans commission</strong>.</p>
+        <a href="/cabane#proprietaires">→ Voir si je suis éligible</a>
+      </div>
+
+      {nearbyZones.length > 0 && (
+        <>
+          <h2>Cabanes dans d'autres régions</h2>
+          <div class="related">
+            {nearbyZones.map((o) => (
+              <a href={`/cabane/${o.slug}`}>
+                <div class="rk">Autre région</div>
+                <div class="rt">Cabane {o.displayName}</div>
+                <div class="rd">{o.cabanes.length} cabanes sélectionnées</div>
+              </a>
+            ))}
+            <a href="/cabane">
+              <div class="rk">Guide</div>
+              <div class="rt">Cabane insolite en France : le guide</div>
+              <div class="rd">Comment choisir, payer moins cher et réserver en direct</div>
+            </a>
+          </div>
+        </>
+      )}
+
+      <NewsletterBlock source={`Cabane-${z.slug}`} />
+    </div>
+  </div>
+</ToolLayout>

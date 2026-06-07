@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import { cities, regions } from '../data/cities';
 import { getPublishedCitiesRentabilite } from '../data/cities-rentabilite';
 import { loveRoomCities, loveRoomRegions } from '../data/loveRooms';
+import { cabaneZones } from '../data/cabanes';
 
 const SITE = 'https://www.enomia.app';
 
@@ -78,6 +79,15 @@ export async function GET() {
     lastmod: c.updatedAt,
   }));
 
+  // Cabane (hub + zones) — actif d'acquisition région-led, généré automatiquement
+  const cabanePillar = { url: '/cabane', changefreq: 'weekly', priority: '0.85', lastmod: '2026-06-07' };
+  const cabaneZoneEntries = cabaneZones.map((z) => ({
+    url: `/cabane/${z.slug}`,
+    changefreq: 'monthly',
+    priority: '0.8',
+    lastmod: z.updatedAt,
+  }));
+
   const allEntries = [
     ...staticPages.map((p) => ({ ...p, lastmod: undefined })),
     pillarEntry,
@@ -87,6 +97,8 @@ export async function GET() {
     loveRoomPillar,
     ...loveRoomRegionEntries,
     ...loveRoomCityEntries,
+    cabanePillar,
+    ...cabaneZoneEntries,
     ...postEntries,
   ];
 

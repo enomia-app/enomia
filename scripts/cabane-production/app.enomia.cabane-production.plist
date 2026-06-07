@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>app.enomia.cabane-production</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/marc/projects/eunomia/scripts/cabane-production/run.sh</string>
+    </array>
+
+    <!-- Jeudi (4) + Dimanche (0) à 8h57 → 2 zones/run = 4/semaine. Décalé de conciergerie (8h37) et love-room (8h47) pour éviter les collisions de push main. -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Weekday</key><integer>4</integer>
+            <key>Hour</key><integer>8</integer>
+            <key>Minute</key><integer>57</integer>
+        </dict>
+        <dict>
+            <key>Weekday</key><integer>0</integer>
+            <key>Hour</key><integer>8</integer>
+            <key>Minute</key><integer>57</integer>
+        </dict>
+    </array>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/marc/projects/eunomia/scripts/cabane-production/logs/launchd-stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/marc/projects/eunomia/scripts/cabane-production/logs/launchd-stderr.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Users/marc/.claude/local</string>
+        <key>HOME</key>
+        <string>/Users/marc</string>
+    </dict>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/marc/projects/eunomia</string>
+</dict>
+</plist>

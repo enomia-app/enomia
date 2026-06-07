@@ -44,5 +44,28 @@ export const cabaneZonesMeta = [
     "lat": 47.99901,
     "lng": 6.98187,
     "found": 24
+  },
+  {
+    "slug": "dordogne",
+    "displayName": "Dordogne",
+    "type": "departement",
+    "searchVolume": 3890,
+    "radiusKm": 70,
+    "status": "todo",
+    "geocodeQuery": "Dordogne Périgord France",
+    "lat": 45.18545,
+    "lng": 0.72509,
+    "found": 41
+  },
+  {
+    "slug": "occitanie",
+    "displayName": "Occitanie",
+    "type": "region",
+    "searchVolume": 2480,
+    "radiusKm": 95,
+    "status": "todo",
+    "lat": 43.46369,
+    "lng": 2.14502,
+    "found": 33
   }
 ];

@@ -50,8 +50,11 @@
     "type": "departement",
     "searchVolume": 3890,
     "radiusKm": 70,
-    "status": "todo",
-    "geocodeQuery": "Dordogne Périgord France"
+    "status": "done",
+    "geocodeQuery": "Dordogne Périgord France",
+    "lat": 45.18545,
+    "lng": 0.72509,
+    "found": 41
   },
   {
     "slug": "occitanie",
@@ -59,7 +62,10 @@
     "type": "region",
     "searchVolume": 2480,
     "radiusKm": 95,
-    "status": "todo"
+    "status": "done",
+    "lat": 43.46369,
+    "lng": 2.14502,
+    "found": 33
   },
   {
     "slug": "jura",

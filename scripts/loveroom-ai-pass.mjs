@@ -26,6 +26,7 @@ const FORCE = process.argv.includes('--force');
 const only = arg('ville')?.split(',');
 const limit = arg('limit') ? parseInt(arg('limit')) : Infinity;
 const CONCURRENCY = 4;
+let runTotal = 0, runErr = 0; // pour détecter une panne d'auth (claude « Not logged in »)
 
 const CITIES = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/loveroom-cities.json'), 'utf8'));
 const score = (c) => (c.rating || 0) * Math.log10((c.reviews || 0) + 1);
@@ -88,6 +89,7 @@ async function processCity(cfg) {
       const c = queue.shift();
       const res = await callClaude(buildPrompt(c, cfg.displayName));
       aiCache[c.name] = res.error ? { error: res.error, raw: res.raw } : { love_room: !!res.love_room, description: (res.description || '').trim() };
+      runTotal++; if (res.error) runErr++;
       done++;
     }
   }
@@ -102,4 +104,10 @@ async function processCity(cfg) {
 const targets = only ? CITIES.filter((c) => only.includes(c.slug)) : CITIES;
 console.error(`🤖 Passe IA (Haiku, OAuth) sur ${targets.length} ville(s)…`);
 for (const cfg of targets) await processCity(cfg);
+// Si la majorité des appels échouent = panne d'auth (claude « Not logged in »/OAuth Max KO) → code 1
+// pour que le cron NE PUBLIE PAS de pages dégradées (sans desc IA ni filtre hôtel) et réessaie au run suivant.
+if (runTotal > 0 && runErr / runTotal > 0.5) {
+  console.error(`🚫 ai-pass: ${runErr}/${runTotal} appels en échec — auth claude probable (relancer \`claude\` connecté sur le Mac mini). Code 1.`);
+  process.exit(1);
+}
 console.log('✅ terminé');

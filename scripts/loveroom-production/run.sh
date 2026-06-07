@@ -42,7 +42,7 @@ restore() { git checkout -- src/data/loveRoomListings.ts src/data/loveRoomCities
 
 # --- Pipeline -----------------------------------------------------------------
 node scripts/loveroom-source.mjs --only="$SLUGS_CSV"   >>"$RUN_LOG" 2>&1 || { echo "❌ source KO"   | tee -a "$RUN_LOG"; restore; exit 1; }
-node scripts/loveroom-ai-pass.mjs --ville="$SLUGS_CSV" >>"$RUN_LOG" 2>&1 || echo "⚠️ ai-pass partiel (non bloquant)" | tee -a "$RUN_LOG"
+node scripts/loveroom-ai-pass.mjs --ville="$SLUGS_CSV" >>"$RUN_LOG" 2>&1 || { echo "🚫 ai-pass KO (auth claude/OAuth ?) → AUCUNE publication, villes restent todo (réessai au prochain run)" | tee -a "$RUN_LOG"; restore; exit 1; }
 node scripts/loveroom-build-data.mjs                    >>"$RUN_LOG" 2>&1 || { echo "❌ build KO"    | tee -a "$RUN_LOG"; restore; exit 1; }
 if ! node scripts/loveroom-validate.mjs >>"$RUN_LOG" 2>&1; then
   echo "🚫 VALIDATE KO → aucun commit (restore)" | tee -a "$RUN_LOG"; restore; exit 1

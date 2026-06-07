@@ -43,6 +43,32 @@ if [[ -z "$CLAUDE_BIN" ]]; then
 fi
 echo "Claude bin: $CLAUDE_BIN" | tee -a "$RUN_LOG"
 
+# Pre-check : AUTH claude (forfait Max / OAuth). Si "Not logged in", TOUS les crons claude du
+# jour échouent sans rien publier — conciergerie (8h37), love-room (8h47), gsc-indexation (9h18),
+# blog, fb. Aucune page dégradée n'est publiée (les crons avortent en exit 1), mais rien ne sort.
+# On alerte Marc par EMAIL (chemin Resend, INDÉPENDANT de claude) pour qu'il se re-logge à temps.
+# unset ANTHROPIC_API_KEY = forfait Max (cf incident api spike) ; prompt trivial haiku = coût ~nul.
+echo "Pre-check auth claude..." | tee -a "$RUN_LOG"
+AUTH_OUT="$(printf 'ping' | env -u ANTHROPIC_API_KEY "$CLAUDE_BIN" -p --model haiku --output-format text 2>&1 || true)"
+if printf '%s' "$AUTH_OUT" | grep -qiE 'not logged in|please run /login|invalid api key|authentication_error|oauth token'; then
+  echo "🚫 AUTH claude KO : $AUTH_OUT" | tee -a "$RUN_LOG"
+  osascript -e 'display notification "Claude Max déconnecté — re-login requis" with title "tech-watchdog" subtitle "🚫 Crons claude HS" sound name "Sosumi"' || true
+  SEND_REPORT="$SCRIPT_DIR/send-report.sh"
+  [[ -x "$SEND_REPORT" ]] && "$SEND_REPORT" "[watchdog] 🚫 Claude Max déconnecté sur le Mac mini — re-login requis" >> "$RUN_LOG" 2>&1 <<EOF || true
+Le forfait Claude Max n'est plus connecté sur le Mac mini.
+
+Conséquence : les crons claude du jour vont échouer sans rien publier —
+conciergerie (8h37), love-room (8h47), gsc-indexation (9h18), blog, fb.
+Aucune page dégradée n'est publiée (les crons avortent proprement, exit 1),
+mais rien ne sortira tant que la connexion n'est pas relancée.
+
+ACTION : sur le Mac mini, ouvrir une session et lancer 'claude' puis /login.
+
+--- sortie du check ---
+$AUTH_OUT
+EOF
+fi
+
 # Lancer Claude avec le prompt
 # --dangerously-skip-permissions: nécessaire en headless 8h sans humain pour approuver
 # (approvals via push notif peu fiables tôt le matin). Garde-fous via watchdog-prompt.md.

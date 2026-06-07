@@ -1,11 +1,11 @@
 ---
 name: gsc-indexation-quotidienne
-description: "Demander l'indexation Google des top 5 URLs prioritaires (par volume SEMrush) qui sont non-indexées. Lit l'API GSC (index-status.json) + volumes SEMrush, demande indexation via Chrome MCP. Max 5/jour. Triggers — indexation gsc, demander indexation, gsc quotidien"
+description: "Demander l'indexation Google des top 10 URLs prioritaires (par volume SEMrush) qui sont non-indexées. Lit l'API GSC (index-status.json) + volumes SEMrush, demande indexation via Chrome MCP. Max 10/jour. Triggers — indexation gsc, demander indexation, gsc quotidien"
 ---
 
 # GSC Indexation Quotidienne — enomia.app
 
-Identifie les top 5 URLs non-indexées **avec le plus gros volume SEMrush**, et demande l'indexation manuelle via Google Search Console (Chrome MCP).
+Identifie les top 10 URLs non-indexées **avec le plus gros volume SEMrush**, et demande l'indexation manuelle via Google Search Console (Chrome MCP).
 
 ## Fichiers utilisés
 
@@ -51,7 +51,7 @@ node scripts/gsc-fetch-index-status.mjs
 
 Sortie : `.claude/gsc-tracking/index-status.json` avec tous les coverage states.
 
-### 2. Calculer top 5 candidates par volume
+### 2. Calculer top 10 candidates par volume
 
 Pseudo-code :
 ```js
@@ -96,7 +96,7 @@ const candidates = Object.entries(indexStatus.byUrl)
   })
   .map(([url, d]) => ({ url, coverageState: d.coverageState, vol: getVol(url) }))
   .sort((a, b) => b.vol - a.vol)
-  .slice(0, 5);
+  .slice(0, config.daily_quota || 10);
 ```
 
 ### 3. Si `state.last_run` = aujourd'hui → stop
@@ -109,7 +109,7 @@ Le job a déjà tourné aujourd'hui. Afficher le résumé du dernier run et sort
 2. Naviguer vers : `https://search.google.com/search-console/index?resource_id=sc-domain%3Aenomia.app`
 3. Si pas connecté → demander à Marc de se connecter (ne PAS saisir de credentials)
 
-### 5. Demander l'indexation des top 5
+### 5. Demander l'indexation des top 10
 
 Pour chaque URL des candidates :
 

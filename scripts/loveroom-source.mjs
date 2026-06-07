@@ -103,6 +103,8 @@ function persistCity(slug, fields) {
 async function sourceCity(cfg) {
   const center = await geocode(cfg.displayName);
   if (!center) { console.error(`❌ ${cfg.displayName}: géocodage échoué, skip`); return; }
+  // Coordonnées du centre-ville → maillage interne par proximité géographique réelle (cross-région)
+  persistCity(cfg.slug, { lat: +center.lat.toFixed(5), lng: +center.lng.toFixed(5) });
   const R = cfg.radiusKm || 50;
   // Région auto pour les villes du backlog (todo sans région) → persistée dans cities.json
   if (!cfg.regionSlug && center.regionSlug) {

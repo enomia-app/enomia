@@ -3,6 +3,7 @@ export const prerender = true;
 import { getCollection } from 'astro:content';
 import { cities, regions } from '../data/cities';
 import { getPublishedCitiesRentabilite } from '../data/cities-rentabilite';
+import { loveRoomCities, loveRoomRegions } from '../data/loveRooms';
 
 const SITE = 'https://www.enomia.app';
 
@@ -65,12 +66,27 @@ export async function GET() {
     lastmod: '2026-04-13',
   };
 
+  // Love room (hub + régions + villes) — actif d'acquisition, généré automatiquement
+  const loveRoomPillar = { url: '/love-room', changefreq: 'weekly', priority: '0.85', lastmod: '2026-06-06' };
+  const loveRoomRegionEntries = loveRoomRegions
+    .filter((r) => loveRoomCities.some((c) => c.regionSlug === r.slug))
+    .map((r) => ({ url: `/love-room/${r.slug}`, changefreq: 'monthly', priority: '0.75', lastmod: '2026-06-06' }));
+  const loveRoomCityEntries = loveRoomCities.map((c) => ({
+    url: `/love-room/${c.regionSlug}/${c.slug}`,
+    changefreq: 'monthly',
+    priority: '0.8',
+    lastmod: c.updatedAt,
+  }));
+
   const allEntries = [
     ...staticPages.map((p) => ({ ...p, lastmod: undefined })),
     pillarEntry,
     ...regionEntries,
     ...cityEntries,
     ...rentabiliteCityEntries,
+    loveRoomPillar,
+    ...loveRoomRegionEntries,
+    ...loveRoomCityEntries,
     ...postEntries,
   ];
 

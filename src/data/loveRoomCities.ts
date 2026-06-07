@@ -8,7 +8,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 60,
     "searchVolume": 13470,
     "status": "done",
-    "found": 8
+    "lat": 48.85755,
+    "lng": 2.35138,
+    "found": 37
   },
   {
     "slug": "lyon",
@@ -18,7 +20,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 55,
     "searchVolume": 8530,
     "status": "done",
-    "found": 8
+    "lat": 45.76404,
+    "lng": 4.83566,
+    "found": 30
   },
   {
     "slug": "toulouse",
@@ -28,7 +32,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 50,
     "searchVolume": 5800,
     "status": "done",
-    "found": 8
+    "lat": 43.60485,
+    "lng": 1.44285,
+    "found": 29
   },
   {
     "slug": "marseille",
@@ -38,7 +44,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 55,
     "searchVolume": 5670,
     "status": "done",
-    "found": 8
+    "lat": 43.30257,
+    "lng": 5.36907,
+    "found": 32
   },
   {
     "slug": "bordeaux",
@@ -48,7 +56,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 55,
     "searchVolume": 5230,
     "status": "done",
-    "found": 8
+    "lat": 44.84161,
+    "lng": -0.58109,
+    "found": 24
   },
   {
     "slug": "angers",
@@ -58,7 +68,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 100,
     "searchVolume": 3570,
     "status": "done",
-    "found": 39
+    "found": 39,
+    "lat": 47.47116,
+    "lng": -0.55183
   },
   {
     "slug": "nantes",
@@ -68,7 +80,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 50,
     "searchVolume": 3300,
     "status": "done",
-    "found": 8
+    "lat": 47.21837,
+    "lng": -1.55362,
+    "found": 26
   },
   {
     "slug": "lille",
@@ -78,7 +92,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 40,
     "searchVolume": 2900,
     "status": "done",
-    "found": 8
+    "lat": 50.62438,
+    "lng": 3.06786,
+    "found": 20
   },
   {
     "slug": "montpellier",
@@ -88,7 +104,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 45,
     "searchVolume": 2830,
     "status": "done",
-    "found": 8
+    "lat": 43.61085,
+    "lng": 3.87613,
+    "found": 15
   },
   {
     "slug": "strasbourg",
@@ -98,7 +116,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 100,
     "searchVolume": 2400,
     "status": "done",
-    "found": 60
+    "found": 60,
+    "lat": 48.57341,
+    "lng": 7.75211
   },
   {
     "slug": "tours",
@@ -108,7 +128,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 100,
     "searchVolume": 2320,
     "status": "done",
-    "found": 36
+    "found": 36,
+    "lat": 47.38977,
+    "lng": 0.68917
   },
   {
     "slug": "rennes",
@@ -118,7 +140,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 45,
     "searchVolume": 2220,
     "status": "done",
-    "found": 8
+    "lat": 48.11727,
+    "lng": -1.67779,
+    "found": 22
   },
   {
     "slug": "annecy",
@@ -128,7 +152,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 50,
     "searchVolume": 2130,
     "status": "done",
-    "found": 8
+    "lat": 45.89925,
+    "lng": 6.12938,
+    "found": 31
   },
   {
     "slug": "rouen",
@@ -138,7 +164,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 100,
     "searchVolume": 2130,
     "status": "done",
-    "found": 42
+    "found": 42,
+    "lat": 49.44353,
+    "lng": 1.09843
   },
   {
     "slug": "nice",
@@ -148,7 +176,9 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 45,
     "searchVolume": 1970,
     "status": "done",
-    "found": 8
+    "lat": 43.71017,
+    "lng": 7.26195,
+    "found": 30
   },
   {
     "slug": "metz",
@@ -158,7 +188,9 @@ export const loveRoomCitiesMeta = [
     "region": "Grand Est",
     "regionSlug": "alsace",
     "radiusKm": 50,
-    "found": 8
+    "lat": 49.11786,
+    "lng": 6.17602,
+    "found": 25
   },
   {
     "slug": "dijon",
@@ -168,7 +200,9 @@ export const loveRoomCitiesMeta = [
     "region": "Bourgogne-Franche-Comté",
     "regionSlug": "bourgogne-franche-comte",
     "radiusKm": 50,
-    "found": 8
+    "lat": 47.33013,
+    "lng": 5.04805,
+    "found": 30
   },
   {
     "slug": "nancy",
@@ -178,26 +212,32 @@ export const loveRoomCitiesMeta = [
     "region": "Grand Est",
     "regionSlug": "alsace",
     "radiusKm": 50,
-    "found": 8
+    "lat": 48.69205,
+    "lng": 6.18442,
+    "found": 27
   },
   {
     "slug": "reims",
     "displayName": "Reims",
     "searchVolume": 1970,
-    "status": "todo",
+    "status": "done",
     "region": "Grand Est",
     "regionSlug": "alsace",
     "radiusKm": 100,
-    "found": 31
+    "found": 31,
+    "lat": 49.25833,
+    "lng": 4.0317
   },
   {
     "slug": "clermont-ferrand",
     "displayName": "Clermont-Ferrand",
     "searchVolume": 1960,
-    "status": "todo",
+    "status": "done",
     "region": "Auvergne-Rhône-Alpes",
     "regionSlug": "auvergne-rhone-alpes",
     "radiusKm": 150,
-    "found": 26
+    "found": 26,
+    "lat": 45.79352,
+    "lng": 3.0795
   }
 ];

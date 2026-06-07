@@ -6,7 +6,9 @@
     "regionSlug": "ile-de-france",
     "radiusKm": 60,
     "searchVolume": 13470,
-    "status": "done"
+    "status": "done",
+    "lat": 48.85755,
+    "lng": 2.35138
   },
   {
     "slug": "lyon",
@@ -15,7 +17,9 @@
     "regionSlug": "auvergne-rhone-alpes",
     "radiusKm": 55,
     "searchVolume": 8530,
-    "status": "done"
+    "status": "done",
+    "lat": 45.76404,
+    "lng": 4.83566
   },
   {
     "slug": "toulouse",
@@ -24,7 +28,9 @@
     "regionSlug": "occitanie",
     "radiusKm": 50,
     "searchVolume": 5800,
-    "status": "done"
+    "status": "done",
+    "lat": 43.60485,
+    "lng": 1.44285
   },
   {
     "slug": "marseille",
@@ -33,7 +39,9 @@
     "regionSlug": "provence-alpes-cote-dazur",
     "radiusKm": 55,
     "searchVolume": 5670,
-    "status": "done"
+    "status": "done",
+    "lat": 43.30257,
+    "lng": 5.36907
   },
   {
     "slug": "bordeaux",
@@ -42,7 +50,9 @@
     "regionSlug": "nouvelle-aquitaine",
     "radiusKm": 55,
     "searchVolume": 5230,
-    "status": "done"
+    "status": "done",
+    "lat": 44.84161,
+    "lng": -0.58109
   },
   {
     "slug": "angers",
@@ -52,7 +62,9 @@
     "radiusKm": 100,
     "searchVolume": 3570,
     "status": "done",
-    "found": 39
+    "found": 39,
+    "lat": 47.47116,
+    "lng": -0.55183
   },
   {
     "slug": "nantes",
@@ -61,7 +73,9 @@
     "regionSlug": "pays-de-la-loire",
     "radiusKm": 50,
     "searchVolume": 3300,
-    "status": "done"
+    "status": "done",
+    "lat": 47.21837,
+    "lng": -1.55362
   },
   {
     "slug": "lille",
@@ -70,7 +84,9 @@
     "regionSlug": "hauts-de-france",
     "radiusKm": 40,
     "searchVolume": 2900,
-    "status": "done"
+    "status": "done",
+    "lat": 50.62438,
+    "lng": 3.06786
   },
   {
     "slug": "montpellier",
@@ -79,7 +95,9 @@
     "regionSlug": "occitanie",
     "radiusKm": 45,
     "searchVolume": 2830,
-    "status": "done"
+    "status": "done",
+    "lat": 43.61085,
+    "lng": 3.87613
   },
   {
     "slug": "strasbourg",
@@ -89,7 +107,9 @@
     "radiusKm": 100,
     "searchVolume": 2400,
     "status": "done",
-    "found": 60
+    "found": 60,
+    "lat": 48.57341,
+    "lng": 7.75211
   },
   {
     "slug": "tours",
@@ -99,7 +119,9 @@
     "radiusKm": 100,
     "searchVolume": 2320,
     "status": "done",
-    "found": 36
+    "found": 36,
+    "lat": 47.38977,
+    "lng": 0.68917
   },
   {
     "slug": "rennes",
@@ -108,7 +130,9 @@
     "regionSlug": "bretagne",
     "radiusKm": 45,
     "searchVolume": 2220,
-    "status": "done"
+    "status": "done",
+    "lat": 48.11727,
+    "lng": -1.67779
   },
   {
     "slug": "annecy",
@@ -117,7 +141,9 @@
     "regionSlug": "auvergne-rhone-alpes",
     "radiusKm": 50,
     "searchVolume": 2130,
-    "status": "done"
+    "status": "done",
+    "lat": 45.89925,
+    "lng": 6.12938
   },
   {
     "slug": "rouen",
@@ -127,7 +153,9 @@
     "radiusKm": 100,
     "searchVolume": 2130,
     "status": "done",
-    "found": 42
+    "found": 42,
+    "lat": 49.44353,
+    "lng": 1.09843
   },
   {
     "slug": "nice",
@@ -136,7 +164,9 @@
     "regionSlug": "provence-alpes-cote-dazur",
     "radiusKm": 45,
     "searchVolume": 1970,
-    "status": "done"
+    "status": "done",
+    "lat": 43.71017,
+    "lng": 7.26195
   },
   {
     "slug": "metz",
@@ -145,7 +175,9 @@
     "status": "done",
     "region": "Grand Est",
     "regionSlug": "alsace",
-    "radiusKm": 50
+    "radiusKm": 50,
+    "lat": 49.11786,
+    "lng": 6.17602
   },
   {
     "slug": "dijon",
@@ -154,7 +186,9 @@
     "status": "done",
     "region": "Bourgogne-Franche-Comté",
     "regionSlug": "bourgogne-franche-comte",
-    "radiusKm": 50
+    "radiusKm": 50,
+    "lat": 47.33013,
+    "lng": 5.04805
   },
   {
     "slug": "nancy",
@@ -163,7 +197,9 @@
     "status": "done",
     "region": "Grand Est",
     "regionSlug": "alsace",
-    "radiusKm": 50
+    "radiusKm": 50,
+    "lat": 48.69205,
+    "lng": 6.18442
   },
   {
     "slug": "reims",
@@ -173,7 +209,9 @@
     "region": "Grand Est",
     "regionSlug": "alsace",
     "radiusKm": 100,
-    "found": 31
+    "found": 31,
+    "lat": 49.25833,
+    "lng": 4.0317
   },
   {
     "slug": "clermont-ferrand",
@@ -183,7 +221,9 @@
     "region": "Auvergne-Rhône-Alpes",
     "regionSlug": "auvergne-rhone-alpes",
     "radiusKm": 150,
-    "found": 26
+    "found": 26,
+    "lat": 45.79352,
+    "lng": 3.0795
   },
   {
     "slug": "caen",

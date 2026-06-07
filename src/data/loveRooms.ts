@@ -75,13 +75,32 @@ function pick<T>(arr: T[], slug: string): T {
   return arr[h % arr.length];
 }
 
-function nearbyFor(m: { slug: string; regionSlug: string }): string[] {
-  const others = loveRoomCitiesMeta.filter((c) => c.slug !== m.slug);
+function kmBetween(a: { lat: number; lng: number }, b: { lat: number; lng: number }): number {
+  const R = 6371, toRad = (d: number) => (d * Math.PI) / 180;
+  const dLat = toRad(b.lat - a.lat), dLng = toRad(b.lng - a.lng);
+  const x = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(x));
+}
+
+// Maillage interne par PROXIMITÉ GÉOGRAPHIQUE réelle (pas par région) : un couple roule volontiers 2-3 h,
+// et deux villes proches peuvent être dans des régions différentes (ex. Mâcon ↔ Lyon, Dijon ↔ Dole).
+// On relie donc les villes les plus proches à vol d'oiseau, toutes régions confondues.
+// Fallback région tant qu'une ville n'a pas encore de coordonnées (anciennes entrées).
+function nearbyFor(m: { slug: string; regionSlug: string; lat?: number; lng?: number }): string[] {
+  const others = loveRoomCitiesMeta.filter((c) => c.slug !== m.slug) as Array<{ slug: string; regionSlug: string; searchVolume: number; lat?: number; lng?: number }>;
+  if (typeof m.lat === 'number' && typeof m.lng === 'number') {
+    const withCoords = others.filter((c) => typeof c.lat === 'number' && typeof c.lng === 'number');
+    if (withCoords.length) {
+      return withCoords
+        .map((c) => ({ slug: c.slug, d: kmBetween({ lat: m.lat!, lng: m.lng! }, { lat: c.lat!, lng: c.lng! }) }))
+        .sort((a, b) => a.d - b.d)
+        .slice(0, 4)
+        .map((c) => c.slug);
+    }
+  }
   const sameRegion = others.filter((c) => c.regionSlug === m.regionSlug);
-  const rest = others
-    .filter((c) => c.regionSlug !== m.regionSlug)
-    .sort((a, b) => b.searchVolume - a.searchVolume);
-  return [...sameRegion, ...rest].slice(0, 3).map((c) => c.slug);
+  const rest = others.filter((c) => c.regionSlug !== m.regionSlug).sort((a, b) => b.searchVolume - a.searchVolume);
+  return [...sameRegion, ...rest].slice(0, 4).map((c) => c.slug);
 }
 
 function genCity(m: (typeof loveRoomCitiesMeta)[number]): LoveRoomCity {

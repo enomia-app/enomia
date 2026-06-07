@@ -1,6 +1,17 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { pickLatestInbound, getHeader, pickBestDomainReply } from './track-replies.mjs';
+import { pickLatestInbound, getHeader, pickBestDomainReply, rootDomain } from './track-replies.mjs';
+
+test('rootDomain : sous-domaine → domaine racine (cas zently)', () => {
+  assert.equal(rootDomain('blog.zently.fr'), 'zently.fr');
+  assert.equal(rootDomain('zently.fr'), 'zently.fr');
+  assert.equal(rootDomain('a.b.example.com'), 'example.com');
+});
+
+test('rootDomain : gère les suffixes publics à 2 niveaux (.co.uk)', () => {
+  assert.equal(rootDomain('blog.example.co.uk'), 'example.co.uk');
+  assert.equal(rootDomain('example.co.uk'), 'example.co.uk');
+});
 
 const OURS = 'marc@enomia.app';
 const msg = (from, dateIso, id) => ({

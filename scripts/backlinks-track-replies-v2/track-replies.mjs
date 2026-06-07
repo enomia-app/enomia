@@ -166,19 +166,34 @@ export function pickBestDomainReply(messages, ourAddress, afterMs = 0, pitchSubj
   return cands[0];
 }
 
-function domainOf(c) {
-  const src = (c.email && c.email.includes('@')) ? c.email.split('@')[1] : (c.site || '');
-  return src.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '').trim().toLowerCase() || null;
+// Réduit un host au domaine enregistrable (eTLD+1) : blog.zently.fr → zently.fr.
+// Sert à capter une réponse depuis le domaine RACINE quand on a pitché un
+// sous-domaine (ex : pitch blog.X.fr, réponse depuis hello@X.fr).
+export function rootDomain(host) {
+  const parts = (host || '').toLowerCase().split('.').filter(Boolean);
+  if (parts.length <= 2) return parts.join('.');
+  // Suffixes publics à 2 niveaux courants (sinon "co.uk" serait pris pour la racine).
+  const twoLevel = new Set(['co.uk', 'org.uk', 'gov.uk', 'com.au', 'co.nz', 'co.jp', 'com.br', 'co.za']);
+  const lastTwo = parts.slice(-2).join('.');
+  return twoLevel.has(lastTwo) ? parts.slice(-3).join('.') : lastTwo;
 }
 
-// Cherche une réponse depuis le DOMAINE du prospect (toute mailbox, tout thread).
-// Couvre les helpdesks qui ré-emaillent depuis conseil.client@ / support@ dans un
-// thread séparé. Ne couvre PAS une réponse depuis un autre domaine (ex .fr→.com).
+function domainOf(c) {
+  const src = (c.email && c.email.includes('@')) ? c.email.split('@')[1] : (c.site || '');
+  const host = src.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '').trim().toLowerCase();
+  return host ? rootDomain(host) : null;
+}
+
+// Cherche une réponse depuis le DOMAINE RACINE du prospect (toute mailbox, tout
+// thread, racine + sous-domaines). Couvre les helpdesks (conseil.client@/support@)
+// et les réponses depuis la racine quand on a pitché un sous-domaine.
+// Ne couvre PAS une réponse depuis un AUTRE domaine (ex .fr→.com).
 async function findDomainReply(gm, c, afterIso) {
   const domain = domainOf(c);
   if (!domain) return null;
   const after = (afterIso || '1970-01-01').slice(0, 10).replace(/-/g, '/');
-  const res = await gm.users.messages.list({ userId: 'me', q: `from:@${domain} after:${after}`, maxResults: 10 });
+  // `from:${domain}` (sans @) matche le domaine racine ET ses sous-domaines.
+  const res = await gm.users.messages.list({ userId: 'me', q: `from:${domain} after:${after}`, maxResults: 10 });
   const ids = (res.data.messages || []).map(m => m.id);
   if (!ids.length) return null;
   const msgs = [];

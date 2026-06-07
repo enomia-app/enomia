@@ -51,7 +51,7 @@ function callClaude(prompt) {
   return new Promise((resolve) => {
     const env = { ...process.env };
     delete env.ANTHROPIC_API_KEY; // → OAuth Max, pas de facturation au token
-    const child = spawn('claude', ['-p', '--model', 'haiku'], { env, stdio: ['pipe', 'pipe', 'pipe'] });
+    const child = spawn('claude', ['-p', '--model', 'haiku', '--dangerously-skip-permissions', '--output-format', 'text'], { env, stdio: ['pipe', 'pipe', 'pipe'] });
     let out = '', erro = '';
     const timer = setTimeout(() => { child.kill('SIGKILL'); resolve({ error: 'timeout' }); }, 60000);
     child.stdout.on('data', (d) => (out += d));
@@ -80,7 +80,7 @@ async function processCity(cfg) {
 
   const aiFile = path.join(CACHE, `ai-${cfg.slug}.json`);
   const aiCache = !FORCE && fs.existsSync(aiFile) ? JSON.parse(fs.readFileSync(aiFile, 'utf8')) : {};
-  const todo = pool.filter((c) => !aiCache[c.name]);
+  const todo = pool.filter((c) => !aiCache[c.name] || aiCache[c.name].error); // réessaie les entrées en erreur
   let done = 0;
   const queue = [...todo];
   async function worker() {

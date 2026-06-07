@@ -1,0 +1,202 @@
+---
+export const prerender = true;
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import NewsletterBlock from '../../components/NewsletterBlock.astro';
+import { loveRoomRegions, loveRoomCities, getLoveRoomCitiesByRegion, getTopLoveRooms } from '../../data/loveRooms';
+
+const topFrance = getTopLoveRooms({ limit: 10 });
+
+const PROTOTYPE = false; // go-live : pages indexables
+const canonical = 'https://www.enomia.app/love-room';
+const title = 'Love room en France : trouver une chambre avec jacuzzi privatif (2026)';
+const description =
+  "Love room : définition, comment choisir, payer moins cher et réserver en direct. Sélection par ville de chambres avec jacuzzi ou spa privatif partout en France.";
+
+const regionsWithCities = loveRoomRegions
+  .map((r) => ({ region: r, cities: getLoveRoomCitiesByRegion(r.slug) }))
+  .filter((g) => g.cities.length > 0)
+  .sort((a, b) => b.region.searchVolume - a.region.searchVolume);
+
+const faq = [
+  { q: "Qu'est-ce qu'une love room ?", a: "Une love room est une chambre ou une suite pensée pour une parenthèse romantique à deux : jacuzzi ou spa privatif, décoration soignée, intimité totale (entrée indépendante, pas de vis-à-vis). On la loue à la nuit, parfois à la journée (« day-use »), pour un anniversaire, une Saint-Valentin ou simplement une nuit hors du quotidien." },
+  { q: "Quel est le prix d'une love room ?", a: "Les tarifs démarrent autour de 80 à 120 € la nuit pour une adresse d'entrée de gamme, et la majorité se situe entre 120 et 250 € la nuit, équipements privatifs inclus. Les concepts haut de gamme (piscine privée, grande surface) dépassent 300 €. Le prix grimpe le week-end et autour de la Saint-Valentin." },
+  { q: "Comment payer une love room moins cher ?", a: "Quatre leviers : réserver en semaine (souvent 30 à 40 % moins cher que le samedi), éviter les pics (Saint-Valentin, vacances), opter pour une formule à la journée plutôt qu'une nuit, et réserver en direct auprès du propriétaire pour éviter les frais de service des grandes plateformes." },
+  { q: "Peut-on réserver une love room en direct ?", a: "Oui, et c'est souvent avantageux : en passant par le site ou le téléphone du propriétaire plutôt qu'une grosse plateforme, vous évitez des frais de service (12 à 15 %), et le propriétaire vous fait fréquemment un geste (surclassement, late check-out). Notre sélection met en avant les adresses joignables en direct." },
+  { q: "Faut-il habiter la ville pour profiter d'une love room ?", a: "Non. La love room est un achat « destination » : beaucoup de couples acceptent de rouler 30 minutes à 1h pour une nuit ou un week-end. Nos pages par ville couvrent un rayon autour de chaque ville et affichent la distance de chaque adresse." },
+  { q: "Comment sont sélectionnées les love rooms sur Enomia ?", a: "Nous ne listons pas tout : nous retenons les meilleures adresses dans un rayon autour de chaque ville selon des critères précis (confidentialité, jacuzzi ou spa réellement privatif, propreté, équipement, distance raisonnable, réservation en direct possible). L'objectif est d'aider les voyageurs à choisir vite et bien, pas d'empiler des annonces." },
+];
+
+const articleLd = {
+  '@context': 'https://schema.org', '@type': 'Article', headline: title, description,
+  datePublished: '2026-06-06', dateModified: '2026-06-06',
+  author: { '@type': 'Person', name: 'Marc', url: 'https://www.enomia.app/' },
+  publisher: { '@type': 'Organization', name: 'Enomia', logo: { '@type': 'ImageObject', url: 'https://www.enomia.app/favicon.png' } },
+  mainEntityOfPage: canonical,
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.enomia.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Love room', item: canonical },
+  ],
+};
+---
+
+<ToolLayout title={title} description={description} canonical={canonical} noindex={PROTOTYPE}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 60px; }
+    .proto-banner { background: #fff4d6; border: 1px solid #e8cf86; color: #6b5616; font-size: 13px; padding: 10px 16px; border-radius: 10px; margin-bottom: 20px; }
+    .seo-h1 { font-family: 'Newsreader', serif; font-size: clamp(28px, 4vw, 44px); font-weight: 600; line-height: 1.15; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 780px; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; }
+
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 27px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+
+    .method { border: 1px solid #e5e3de; background: #fff; border-radius: 12px; padding: 22px 26px; margin: 22px 0; }
+    .method ul { list-style: none; padding: 0; margin: 0; }
+    .method li { font-size: 14px; color: #52524e; padding: 8px 0 8px 26px; position: relative; border-bottom: 1px solid #f0eee8; }
+    .method li:last-child { border-bottom: none; }
+    .method li::before { content: '✓'; position: absolute; left: 0; color: #3fbd71; font-weight: 700; }
+    .method li strong { color: #1a1a1a; }
+
+    .tip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 20px 0 28px; }
+    .tip { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 16px 18px; }
+    .tip b { display: block; color: #1a1a1a; font-size: 14px; margin-bottom: 4px; }
+    .tip span { font-size: 13px; color: #52524e; line-height: 1.6; }
+    @media (max-width: 700px) { .tip-grid { grid-template-columns: 1fr; } }
+
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 18px 22px; margin: 22px 0; border-radius: 0 10px 10px 0; font-size: 14px; color: #1a1a1a; line-height: 1.7; }
+    .callout strong { display: block; margin-bottom: 6px; font-size: 15px; }
+
+    .top-list { display: flex; flex-direction: column; gap: 8px; margin: 18px 0 8px; }
+    .top-item { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; color: inherit; text-decoration: none; transition: all .15s; }
+    .top-item:hover { border-color: #8a8985; transform: translateX(2px); }
+    .top-item .rk { font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700; color: #3fbd71; width: 22px; text-align: center; flex: none; }
+    .top-item .ti { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+    .top-item .ti strong { color: #1a1a1a; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .top-item .tm { font-size: 12px; color: #8a8985; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .top-item .ts { font-size: 12px; font-weight: 700; color: #b9791a; white-space: nowrap; }
+    .region-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 20px 0; }
+    .region-grid a { display: block; padding: 20px 22px; border: 1px solid #e5e3de; background: #fff; border-radius: 12px; color: inherit; text-decoration: none; transition: all 0.15s; }
+    .region-grid a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .region-grid .rt { font-family: 'Newsreader', serif; font-size: 19px; font-weight: 600; color: #1a1a1a; }
+    .region-grid .rc { font-size: 13px; color: #8a8985; margin-top: 6px; }
+    @media (max-width: 700px) { .region-grid { grid-template-columns: 1fr; } }
+
+    .faq { border: 1px solid #e5e3de; border-radius: 12px; overflow: hidden; margin: 16px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; } .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+
+    .owner { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #e8e4dc; padding: 30px 32px; border-radius: 14px; margin: 44px 0 24px; }
+    .owner h2 { color: #fff; font-family: 'Newsreader', serif; font-size: 24px; margin: 0 0 12px; }
+    .owner p { font-size: 14px; color: #f0ede6; line-height: 1.7; margin: 0 0 16px; }
+    .owner p strong { color: #fff; }
+    .owner a { display: inline-block; background: #fff; color: #2b2d2b; padding: 12px 24px; border-radius: 100px; font-weight: 700; text-decoration: none; }
+    @media (max-width: 700px) { .seo-wrap { padding: 24px 20px 40px; } }
+  </style>
+
+  <div class="seo-wrap">
+    {PROTOTYPE && (
+      <div class="proto-banner">🚧 <strong>Prototype</strong> — page en <code>noindex</code>, données d'exemple en attente de vérification.</div>
+    )}
+
+    <h1 class="seo-h1">Love room en France : où trouver une <em>chambre avec jacuzzi privatif</em> (et payer moins cher)</h1>
+    <p class="seo-lede">
+      Une nuit ou un week-end à deux dans une chambre avec jacuzzi ou spa privatif, ça ne s'improvise pas : les annonces se ressemblent, les prix doublent le samedi soir, et on ne sait jamais ce qui se cache derrière les photos. Ce guide vous explique <strong>comment choisir, payer moins cher et réserver en direct</strong>. On vous oriente ensuite vers notre sélection, ville par ville.
+    </p>
+    <div class="seo-badges">
+      <span class="seo-badge">Guide indépendant</span>
+      <span class="seo-badge">Sélection par ville</span>
+      <span class="seo-badge">Astuces résa directe</span>
+    </div>
+
+    <div class="seo-body">
+      <h2>On ne liste pas toutes les love rooms, seulement les meilleures</h2>
+      <p>
+        La plupart des annuaires empilent les annonces. Nous faisons l'inverse : pour chaque ville, nous <strong>retenons les meilleures adresses dans un rayon donné</strong>, selon des critères que voici. L'objectif est simple : vous aider à choisir vite et bien.
+      </p>
+      <div class="method">
+        <ul>
+          <li><strong>Confidentialité totale</strong> : entrée indépendante, pas de vis-à-vis</li>
+          <li><strong>Jacuzzi ou spa réellement privatif</strong>, jamais partagé</li>
+          <li><strong>Propreté irréprochable</strong>, vérifiée via les avis voyageurs</li>
+          <li><strong>Équipement à la hauteur</strong> : sauna, hammam, balnéo, déco soignée</li>
+          <li><strong>Distance raisonnable</strong> depuis la ville, affichée pour chaque adresse</li>
+          <li><strong>Réservation en direct possible</strong> quand elle existe, pour payer moins cher</li>
+        </ul>
+      </div>
+
+      <h2>Comment payer une love room moins cher</h2>
+      <div class="tip-grid">
+        <div class="tip"><b>Réservez en semaine</b><span>Du lundi au jeudi : souvent 30 à 40 % de moins que le samedi soir, pour la même chambre.</span></div>
+        <div class="tip"><b>Évitez les pics</b><span>Saint-Valentin, vacances scolaires, longs week-ends font flamber les prix. Décalez de quelques jours.</span></div>
+        <div class="tip"><b>Pensez « day-use »</b><span>Une formule à la journée (ex. 11h-18h) coûte bien moins cher qu'une nuit complète.</span></div>
+        <div class="tip"><b>Réservez en direct</b><span>En direct auprès du propriétaire, vous évitez les frais de service des grandes plateformes (12 à 15 %).</span></div>
+      </div>
+
+      <div class="callout">
+        <strong>Réserver en direct, le vrai bon plan</strong>
+        Sur une nuit à 150-250 €, les frais de service d'une grosse plateforme représentent vite 20 à 50 €. En direct, le propriétaire récupère sa marge et vous fait souvent un geste (surclassement, late check-out, petit cadeau). C'est ce que nous mettons en avant : les adresses joignables sans intermédiaire.
+      </div>
+
+      <h2>Les meilleures love rooms de France</h2>
+      <p>Notre top, classé par la combinaison note Google et nombre d'avis (les valeurs sûres, pas les coups de chance).</p>
+      <div class="top-list">
+        {topFrance.map((r, i) => (
+          <a class="top-item" href={`/love-room/${r.regionSlug}/${r.citySlug}`}>
+            <span class="rk">{i + 1}</span>
+            <span class="ti"><strong>{r.name}</strong><span class="tm">{r.area} · {r.cityName}</span></span>
+            <span class="ts">★ {r.rating!.toFixed(1)} · {r.reviews} avis</span>
+          </a>
+        ))}
+      </div>
+
+      <h2>Trouver une love room par région</h2>
+      <p>Choisissez votre région, puis votre ville. Chaque page liste notre sélection d'adresses avec jacuzzi ou spa privatif, la distance, les prix et les astuces locales.</p>
+      <div class="region-grid">
+        {regionsWithCities.map((g) => (
+          <a href={`/love-room/${g.region.slug}`}>
+            <div class="rt">{g.region.displayName}</div>
+            <div class="rc">{g.cities.map((c) => c.displayName).join(' · ')}</div>
+          </a>
+        ))}
+      </div>
+
+      <h2>Questions fréquentes</h2>
+      <div class="faq">
+        {faq.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <div class="faq-ans"><p>{f.a}</p></div>
+          </details>
+        ))}
+      </div>
+
+      <div class="owner" id="proprietaires">
+        <h2>Vous gérez une love room ?</h2>
+        <p>
+          Proposez votre adresse à notre sélection. Si elle remplit nos critères (jacuzzi ou spa réellement privatif, confidentialité, propreté), elle rejoint la page de votre ville et reçoit des réservations <strong>en direct, sans commission</strong> : vous gardez 100 % de votre marge, on vous amène les voyageurs.
+        </p>
+        <a href="mailto:marc@enomia.app?subject=Proposer ma love room">→ Voir si je suis éligible</a>
+      </div>
+
+      <NewsletterBlock source="LoveRoom-hub" />
+    </div>
+  </div>
+</ToolLayout>

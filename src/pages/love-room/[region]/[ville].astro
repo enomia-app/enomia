@@ -1,0 +1,358 @@
+---
+export const prerender = true;
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import NewsletterBlock from '../../../components/NewsletterBlock.astro';
+import {
+  loveRoomCities,
+  getLoveRoomCityBySlug,
+  getLoveRoomRegionBySlug,
+  type LoveRoomCity,
+} from '../../../data/loveRooms';
+
+// PROTOTYPE : pages en noindex tant que les données ne sont pas vérifiées (notes, URL directes).
+const PROTOTYPE = false; // go-live : pages indexables
+
+export async function getStaticPaths() {
+  return loveRoomCities.map((c) => ({ params: { region: c.regionSlug, ville: c.slug } }));
+}
+
+const { ville } = Astro.params;
+const city = getLoveRoomCityBySlug(ville!);
+if (!city) throw new Error(`Love room city not found: ${ville}`);
+const c: LoveRoomCity = city;
+const regionData = getLoveRoomRegionBySlug(c.regionSlug);
+const canonical = `https://www.enomia.app/love-room/${c.regionSlug}/${c.slug}`;
+
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function renderRich(text: string): string {
+  return text
+    .split('\n\n')
+    .map((p) => `<p>${escapeHtml(p).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p>`)
+    .join('');
+}
+
+// Tri par distance (le rayon : on montre le plus proche d'abord)
+const sortedRooms = [...c.rooms].sort((a, b) => a.distanceKm - b.distanceKm || (a.priceFrom ?? 9999) - (b.priceFrom ?? 9999));
+const inCity = sortedRooms.filter((r) => r.distanceKm <= 5).length;
+const prices = c.rooms.map((r) => r.priceFrom).filter((p): p is number => typeof p === 'number');
+const minPrice = prices.length ? Math.min(...prices) : null;
+const verifDate = new Date(c.updatedAt).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+
+const nearbyCities = c.nearby.map((s) => getLoveRoomCityBySlug(s)).filter(Boolean) as LoveRoomCity[];
+
+// ─── JSON-LD ─────────────────────────────────────────────────────────
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: c.title,
+  description: c.metaDescription,
+  datePublished: '2026-06-06',
+  dateModified: c.updatedAt,
+  author: { '@type': 'Person', name: 'Marc', url: 'https://www.enomia.app/' },
+  publisher: { '@type': 'Organization', name: 'Enomia', logo: { '@type': 'ImageObject', url: 'https://www.enomia.app/favicon.png' } },
+  mainEntityOfPage: canonical,
+};
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `Les meilleures love rooms à ${c.displayName}`,
+  numberOfItems: sortedRooms.length,
+  itemListElement: sortedRooms.map((r, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'LodgingBusiness',
+      name: r.name,
+      description: `${r.vibe} — ${r.features.join(', ')}`,
+      areaServed: r.area,
+      url: r.url ?? canonical,
+    },
+  })),
+};
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.enomia.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Love room', item: 'https://www.enomia.app/love-room' },
+    { '@type': 'ListItem', position: 3, name: regionData?.displayName ?? c.region, item: `https://www.enomia.app/love-room/${c.regionSlug}` },
+    { '@type': 'ListItem', position: 4, name: `Love room ${c.displayName}`, item: canonical },
+  ],
+};
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.extraFaq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+
+<ToolLayout title={c.metaTitle} description={c.metaDescription} canonical={canonical} noindex={PROTOTYPE}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 60px; }
+    .proto-banner { background: #fff4d6; border: 1px solid #e8cf86; color: #6b5616; font-size: 13px; padding: 10px 16px; border-radius: 10px; margin-bottom: 20px; }
+    .crumbs { font-size: 12px; color: #8a8985; margin-bottom: 16px; }
+    .crumbs a { color: #8a8985; text-decoration: none; } .crumbs a:hover { color: #3fbd71; }
+    .seo-h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(28px, 4vw, 42px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; color: #2b2d2b; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
+    .seo-lede :global(strong) { color: #1a1a1a; font-weight: 600; }
+    .rich :global(p) { margin: 0 0 16px; font-size: 15px; line-height: 1.75; color: #52524e; }
+    .rich :global(strong) { color: #1a1a1a; font-weight: 600; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; }
+    .city-summary { font-size: 14px; color: #1a1a1a; margin: 14px 0 4px; line-height: 1.5; }
+    .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 16px 0 8px; }
+    .stat { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 12px 10px; text-align: center; }
+    .stat b { display: block; font-family: 'Newsreader', serif; font-size: 18px; color: #1a1a1a; }
+    .stat span { font-size: 11px; color: #8a8985; }
+    @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 48px 0 14px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+    .seo-body ul { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 18px; padding-left: 22px; }
+    .seo-body li { margin-bottom: 8px; }
+    .seo-body strong { color: #1a1a1a; font-weight: 600; }
+
+    .method { border: 1px solid #e5e3de; background: #fff; border-radius: 12px; padding: 22px 26px; margin: 24px 0; }
+    .method h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3fbd71; margin-bottom: 12px; }
+    .method .count { font-size: 14px; color: #1a1a1a; margin-bottom: 14px; }
+    .method .count strong { font-weight: 700; }
+    .method ul { list-style: none; padding: 0; margin: 0; }
+    .method li { font-size: 14px; color: #52524e; padding: 7px 0 7px 26px; position: relative; border-bottom: 1px solid #f0eee8; }
+    .method li:last-child { border-bottom: none; }
+    .method li::before { content: '✓'; position: absolute; left: 0; color: #3fbd71; font-weight: 700; }
+
+    /* Room cards */
+    .room { border: 1px solid #e5e3de; border-radius: 12px; padding: 20px 22px; margin: 14px 0; background: #fff; }
+    .room-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .room h3 { font-family: 'Newsreader', serif; font-size: 20px; font-weight: 600; margin: 0; color: #1a1a1a; }
+    .room .price { font-size: 14px; font-weight: 700; color: #1a1a1a; white-space: nowrap; }
+    .room .price span { font-size: 12px; font-weight: 400; color: #8a8985; }
+    .room .loc { font-size: 12px; color: #8a8985; margin: 6px 0 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .room .dist { background: rgba(63,189,113,0.08); color: #3fbd71; font-weight: 600; padding: 2px 9px; border-radius: 100px; }
+    .room .incity { background: #f0eee8; color: #52524e; font-weight: 600; padding: 2px 9px; border-radius: 100px; }
+    .room p { font-size: 14px; color: #52524e; line-height: 1.65; margin: 0 0 10px; overflow-wrap: anywhere; }
+    .room .feats { display: flex; gap: 6px; flex-wrap: wrap; }
+    .room .feat { font-size: 11px; color: #52524e; background: #f7f6f3; border: 1px solid #e5e3de; padding: 3px 9px; border-radius: 6px; }
+    .room .rate { background: rgba(240,168,58,0.12); color: #b9791a; font-weight: 700; padding: 2px 9px; border-radius: 100px; }
+    .room .book { display: inline-block; background: #2b2d2b; color: #fff; font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: 100px; text-decoration: none; white-space: nowrap; }
+    .room .book:hover { background: #3fbd71; }
+    .room .foot-right { display: flex; align-items: center; gap: 10px; }
+    .room .book-foot { display: none; }
+    @media (max-width: 700px) {
+      .room-head .book-head { display: none; }
+      .room .price.has-btn { display: none; }
+      .room .book-foot { display: inline-flex; }
+    }
+    .room .room-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px solid #f0eee8; }
+    .room .room-foot .rev-attr { margin: 0; }
+    .room .room-foot .price { font-size: 15px; font-weight: 700; color: #1a1a1a; white-space: nowrap; }
+    .room .reviews { display: flex; gap: 12px; overflow-x: auto; margin-top: 14px; padding-bottom: 4px; -webkit-overflow-scrolling: touch; min-width: 0; max-width: 100%; }
+    .room .rev { flex: 0 0 240px; background: #f7f6f3; border: 1px solid #e5e3de; border-radius: 10px; padding: 12px 14px; }
+    .room .rev-h { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .room .rev-stars { color: #f0a83a; font-size: 12px; white-space: nowrap; }
+    .room .rev-meta { font-size: 10px; color: #8a8985; text-align: right; }
+    .room .rev p { font-size: 12px; color: #52524e; line-height: 1.5; margin: 0; font-style: italic; }
+    .room .rev-attr { font-size: 10px; color: #8a8985; margin: 6px 0 0; }
+
+    .tip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 20px 0 28px; }
+    .tip { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 16px 18px; }
+    .tip b { display: block; color: #1a1a1a; font-size: 14px; margin-bottom: 4px; }
+    .tip span { font-size: 13px; color: #52524e; line-height: 1.6; }
+    @media (max-width: 700px) { .tip-grid { grid-template-columns: 1fr; } }
+
+    .callout { border-left: 3px solid #3fbd71; background: rgba(63,189,113,0.06); padding: 18px 22px; margin: 22px 0; border-radius: 0 10px 10px 0; font-size: 14px; color: #1a1a1a; line-height: 1.7; }
+    .callout strong { display: block; margin-bottom: 6px; font-size: 15px; }
+
+    .faq { border: 1px solid #e5e3de; border-radius: 12px; overflow: hidden; margin: 16px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; } .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+
+    .cta { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #e8e4dc; padding: 28px 32px; border-radius: 14px; margin: 40px 0 24px; text-align: center; }
+    .cta h3 { font-family: 'Newsreader', serif; font-size: 22px; margin: 0 0 10px; color: #fff; }
+    .cta p { font-size: 14px; color: #fff; margin: 0 0 18px; }
+    .cta p strong { color: #fff; }
+    .cta a { display: inline-block; background: #fff; color: #2b2d2b; padding: 12px 24px; border-radius: 100px; font-weight: 700; text-decoration: none; }
+
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0 40px; }
+    .related a { display: block; padding: 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; color: inherit; text-decoration: none; transition: all 0.15s; }
+    .related a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
+    .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; }
+    .related .rd { font-size: 12px; color: #8a8985; }
+    @media (max-width: 700px) {
+      .seo-wrap { padding: 24px 16px 40px; }
+      .related { grid-template-columns: 1fr; }
+      .room { padding: 16px 16px; }
+      .room-head { align-items: flex-start; }
+      .room-head h3 { font-size: 18px; }
+      .room-foot { flex-wrap: wrap; }
+      .room .rev { flex: 0 0 80%; }
+      .seo-h1 { word-break: break-word; }
+    }
+  </style>
+
+  <div class="seo-wrap">
+    {PROTOTYPE && (
+      <div class="proto-banner">
+        🚧 <strong>Prototype</strong> — page en <code>noindex</code>. Données sourcées d'annuaires publics, en attente de vérification (notes Google, URL directes, équipements exacts) avant publication.
+      </div>
+    )}
+
+    <div class="crumbs">
+      <a href="/love-room">Love room</a> › <a href={`/love-room/${c.regionSlug}`}>{regionData?.displayName ?? c.region}</a> › {c.displayName}
+    </div>
+
+    <h1 class="seo-h1">Love room <em>{c.displayName}</em> : les {sortedRooms.length} meilleures chambres avec jacuzzi privatif</h1>
+    <div class="seo-lede rich" set:html={renderRich(c.introCustom)} />
+    <div class="seo-badges">
+      <span class="seo-badge">Sélection indépendante</span>
+      <span class="seo-badge">Rayon {c.radiusKm} km</span>
+      {minPrice && <span class="seo-badge">Dès {minPrice} €/nuit</span>}
+      <span class="seo-badge">Astuces résa directe</span>
+    </div>
+
+    <p class="city-summary">{c.found} love rooms recensées dans {c.communes.length} commune{c.communes.length > 1 ? 's' : ''} à moins de {c.radiusKm} km de {c.displayName}{c.avgRating > 0 ? ` · note moyenne ${c.avgRating} ★` : ''}.</p>
+
+    <div class="stats">
+      <div class="stat"><b>{c.found}</b><span>love rooms recensées</span></div>
+      {c.avgRating > 0 && <div class="stat"><b>{c.avgRating} ★</b><span>note moyenne Google</span></div>}
+      {c.totalReviews > 0 && <div class="stat"><b>{c.totalReviews.toLocaleString('fr-FR')}</b><span>avis cumulés</span></div>}
+      <div class="stat"><b>{minPrice ? `dès ${minPrice} €` : `${c.priceTypicalLow}-${c.priceTypicalHigh} €`}</b><span>la nuit (indic.)</span></div>
+      <div class="stat"><b>{c.radiusKm} km</b><span>rayon couvert</span></div>
+    </div>
+
+    <div class="seo-body">
+      <h2>La scène love room à {c.displayName}</h2>
+      <div class="rich" set:html={renderRich(c.sceneIntro)} />
+
+      <div class="method">
+        <h3>Notre méthode de sélection</h3>
+        <p class="count">
+          Nous avons retenu <strong>{sortedRooms.length} adresses</strong> parmi les <strong>{c.found}</strong> love rooms recensées
+          dans un rayon de <strong>{c.radiusKm} km</strong> autour de {c.displayName} ({inCity} en ville, le reste accessible en voiture).
+        </p>
+        {c.communes.length > 1 && (
+          <p class="count" style="margin-top:8px;">Communes couvertes : {c.communes.join(' · ')}.</p>
+        )}
+        <ul>
+          <li>Confidentialité totale : entrée indépendante, pas de vis-à-vis</li>
+          <li>Jacuzzi ou spa <strong>réellement privatif</strong> (jamais partagé)</li>
+          <li>Propreté irréprochable (avis voyageurs vérifiés)</li>
+          <li>Équipement à la hauteur : sauna, hammam, balnéo, déco soignée</li>
+          <li>Distance raisonnable depuis {c.displayName}, affichée pour chaque adresse</li>
+          <li>Réservation en direct possible quand elle existe (pour payer moins cher)</li>
+        </ul>
+      </div>
+
+      <h2>Les {sortedRooms.length} love rooms sélectionnées à {c.displayName} et autour</h2>
+      <p>Classées de la plus proche à la plus éloignée du centre de {c.displayName}. Les prix indiqués sont les tarifs « à partir de » (souvent en semaine — comptez plus le week-end).</p>
+
+      {sortedRooms.map((r) => (
+        <div class="room">
+          <div class="room-head">
+            <h3>{r.name}</h3>
+            {r.url && (
+              <a class="book book-head" href={r.url} target="_blank" rel="noopener">Réserver en direct →</a>
+            )}
+          </div>
+          <div class="loc">
+            <span>📍 {r.area}</span>
+            {r.distanceKm > 5 && <span class="dist">à {r.distanceKm} km de {c.displayName}</span>}
+            {r.rating && r.rating > 0 && (
+              <span class="rate">★ {r.rating.toFixed(1)}{r.reviews ? ` · ${r.reviews} avis` : ''}</span>
+            )}
+          </div>
+          <p>{r.description ?? `${r.vibe}.`}</p>
+          <div class="feats">{r.features.map((f) => <span class="feat">{f}</span>)}</div>
+          {r.recentReviews && r.recentReviews.length > 0 && (
+            <div class="reviews">
+              {r.recentReviews.map((rev) => (
+                <div class="rev">
+                  <div class="rev-h">
+                    <span class="rev-stars">{'★'.repeat(Math.round(rev.rating ?? 0))}</span>
+                    <span class="rev-meta">{rev.author}{rev.when ? ` · ${rev.when}` : ''}</span>
+                  </div>
+                  <p>{rev.text}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          <div class="room-foot">
+            {r.recentReviews && r.recentReviews.length > 0 ? <span class="rev-attr">Avis Google vérifiés en {verifDate}</span> : <span></span>}
+            <span class="foot-right">
+              <span class={`price ${r.url ? 'has-btn' : ''}`}>{r.priceFrom ? `dès ${r.priceFrom} €/nuit` : 'Tarifs sur le site'}</span>
+              {r.url && <a class="book book-foot" href={r.url} target="_blank" rel="noopener">Réserver en direct →</a>}
+            </span>
+          </div>
+        </div>
+      ))}
+
+      <p style="font-size:11px;color:#8a8985;margin-top:14px;font-style:italic;">
+        Adresses recensées sur annuaires publics et sites officiels, à jour du {new Date(c.updatedAt).toLocaleDateString('fr-FR')}. Prix « à partir de » indicatifs, variables selon la date et le jour de la semaine.
+      </p>
+
+      <h2>Comment payer moins cher votre love room à {c.displayName}</h2>
+      <div class="tip-grid">
+        <div class="tip"><b>Réservez en semaine</b><span>Du lundi au jeudi, une love room coûte souvent 30 à 40 % de moins que le samedi soir. Même chambre, même jacuzzi.</span></div>
+        <div class="tip"><b>Évitez les pics</b><span>Saint-Valentin, vacances scolaires et longs week-ends font flamber les prix. Décalez de quelques jours.</span></div>
+        <div class="tip"><b>Pensez « day-use »</b><span>Plusieurs adresses proposent une formule à la journée (ex. 11h-18h), bien moins chère qu'une nuit complète.</span></div>
+        <div class="tip"><b>Réservez en direct</b><span>En passant par le site ou le téléphone du propriétaire plutôt qu'une grosse plateforme, vous évitez les frais de service (souvent 12 à 15 %).</span></div>
+      </div>
+
+      <div class="callout">
+        <strong>Réserver en direct : tout le monde y gagne</strong>
+        Sur une love room à {minPrice ?? c.priceTypicalLow}-{c.priceTypicalHigh} € la nuit, les frais de service d'une grosse plateforme représentent vite 20 à 50 €. En réservant en direct, le propriétaire récupère sa marge et vous fait souvent un geste (surclassement, late check-out, bouteille offerte). C'est ce que nous mettons en avant : les adresses joignables en direct, sans intermédiaire.
+      </div>
+
+      <h2>FAQ — Love room à {c.displayName}</h2>
+      <div class="faq">
+        {c.extraFaq.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <div class="faq-ans"><p>{f.a}</p></div>
+          </details>
+        ))}
+      </div>
+
+      <div class="cta">
+        <h3>Vous gérez une love room à {c.displayName} ?</h3>
+        <p>Proposez votre adresse à notre sélection. Si elle remplit nos critères (jacuzzi ou spa réellement privatif, confidentialité, propreté), nous l'ajoutons et vous recevez des réservations <strong>en direct, sans commission</strong>.</p>
+        <a href="/love-room#proprietaires">→ Voir si je suis éligible</a>
+      </div>
+
+      {nearbyCities.length > 0 && (
+        <>
+          <h2>Love rooms dans d'autres villes</h2>
+          <div class="related">
+            {nearbyCities.map((o) => (
+              <a href={`/love-room/${o.regionSlug}/${o.slug}`}>
+                <div class="rk">Autre ville</div>
+                <div class="rt">Love room {o.displayName}</div>
+                <div class="rd">{o.region} · {o.rooms.length} adresses</div>
+              </a>
+            ))}
+            <a href="/love-room">
+              <div class="rk">Guide</div>
+              <div class="rt">Love room en France : le guide</div>
+              <div class="rd">Comment choisir, payer moins cher et réserver en direct</div>
+            </a>
+          </div>
+        </>
+      )}
+
+      <NewsletterBlock source={`LoveRoom-${c.slug}`} />
+    </div>
+  </div>
+</ToolLayout>

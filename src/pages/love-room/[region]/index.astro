@@ -1,0 +1,123 @@
+---
+export const prerender = true;
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import { loveRoomRegions, getLoveRoomRegionBySlug, getLoveRoomCitiesByRegion, getTopLoveRooms, type LoveRoomCity } from '../../../data/loveRooms';
+
+const PROTOTYPE = false; // go-live : pages indexables
+
+export async function getStaticPaths() {
+  // On ne génère que les régions qui ont au moins une ville (prototype)
+  return loveRoomRegions
+    .filter((r) => getLoveRoomCitiesByRegion(r.slug).length > 0)
+    .map((r) => ({ params: { region: r.slug } }));
+}
+
+const { region } = Astro.params;
+const r = getLoveRoomRegionBySlug(region!);
+if (!r) throw new Error(`Love room region not found: ${region}`);
+const cities = getLoveRoomCitiesByRegion(r.slug).sort((a, b) => b.searchVolume - a.searchVolume);
+const topRegion = getTopLoveRooms({ regionSlug: r.slug, limit: 6 });
+const allRegionRooms = cities.flatMap((c) => c.rooms);
+const ratedRegion = allRegionRooms.filter((x) => typeof x.rating === 'number' && x.rating > 0);
+const regionAvg = ratedRegion.length ? Math.round((ratedRegion.reduce((s, x) => s + (x.rating || 0), 0) / ratedRegion.length) * 10) / 10 : 0;
+const regionFound = cities.reduce((s, c) => s + (c.found || 0), 0);
+const regionReviews = allRegionRooms.reduce((s, x) => s + (x.reviews || 0), 0);
+const regionPrices = allRegionRooms.map((x) => x.priceFrom).filter((p): p is number => typeof p === 'number');
+const regionMinP = regionPrices.length ? Math.min(...regionPrices) : null;
+const regionCommunes = [...new Set(allRegionRooms.map((x) => x.area).filter(Boolean))];
+const canonical = `https://www.enomia.app/love-room/${r.slug}`;
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.enomia.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Love room', item: 'https://www.enomia.app/love-room' },
+    { '@type': 'ListItem', position: 3, name: r.displayName, item: canonical },
+  ],
+};
+---
+
+<ToolLayout
+  title={`Love room ${r.displayName} : chambres avec jacuzzi privatif (2026)`}
+  description={`Où trouver une love room en ${r.displayName} : sélection de chambres avec jacuzzi ou spa privatif par ville, prix et astuces pour réserver en direct.`}
+  canonical={canonical}
+  noindex={PROTOTYPE}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 60px; }
+    .proto-banner { background: #fff4d6; border: 1px solid #e8cf86; color: #6b5616; font-size: 13px; padding: 10px 16px; border-radius: 10px; margin-bottom: 20px; }
+    .crumbs { font-size: 12px; color: #8a8985; margin-bottom: 16px; }
+    .crumbs a { color: #8a8985; text-decoration: none; } .crumbs a:hover { color: #3fbd71; }
+    .seo-h1 { font-family: 'Newsreader', serif; font-size: clamp(28px, 4vw, 40px); font-weight: 600; line-height: 1.2; color: #1a1a1a; margin-bottom: 16px; }
+    .seo-h1 em { font-style: italic; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; margin-bottom: 12px; }
+    .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 4px 0 24px; }
+    .stat { background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 12px 10px; text-align: center; }
+    .stat b { display: block; font-family: 'Newsreader', serif; font-size: 18px; color: #1a1a1a; }
+    .stat span { font-size: 11px; color: #8a8985; }
+    .reg-communes { font-size: 13px; color: #52524e; margin: 22px 0 0; line-height: 1.6; }
+    @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+    .city-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .city-grid a { display: block; padding: 22px 24px; border: 1px solid #e5e3de; background: #fff; border-radius: 12px; color: inherit; text-decoration: none; transition: all 0.15s; }
+    .city-grid a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .city-grid .ct { font-family: 'Newsreader', serif; font-size: 20px; font-weight: 600; color: #1a1a1a; }
+    .city-grid .cd { font-size: 13px; color: #8a8985; margin-top: 6px; }
+    .reg-h2 { font-family: 'Newsreader', serif; font-size: 24px; font-weight: 600; margin: 40px 0 8px; color: #1a1a1a; }
+    .top-list { display: flex; flex-direction: column; gap: 8px; margin: 14px 0; }
+    .top-item { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; color: inherit; text-decoration: none; transition: all .15s; }
+    .top-item:hover { border-color: #8a8985; transform: translateX(2px); }
+    .top-item .rk { font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700; color: #3fbd71; width: 22px; text-align: center; flex: none; }
+    .top-item .ti { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+    .top-item .ti strong { color: #1a1a1a; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .top-item .tm { font-size: 12px; color: #8a8985; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .top-item .ts { font-size: 12px; font-weight: 700; color: #b9791a; white-space: nowrap; }
+    .back { display: inline-block; margin-top: 32px; font-size: 14px; color: #3fbd71; text-decoration: none; }
+    @media (max-width: 700px) { .seo-wrap { padding: 24px 20px 40px; } .city-grid { grid-template-columns: 1fr; } }
+  </style>
+
+  <div class="seo-wrap">
+    {PROTOTYPE && <div class="proto-banner">🚧 <strong>Prototype</strong> — page en <code>noindex</code>.</div>}
+    <div class="crumbs"><a href="/love-room">Love room</a> › {r.displayName}</div>
+    <h1 class="seo-h1">Love room en <em>{r.displayName}</em></h1>
+    <p class="seo-lede">{r.description}</p>
+    <div class="stats">
+      <div class="stat"><b>{regionFound}</b><span>love rooms recensées</span></div>
+      <div class="stat"><b>{cities.length}</b><span>ville{cities.length > 1 ? 's' : ''} couverte{cities.length > 1 ? 's' : ''}</span></div>
+      {regionAvg > 0 && <div class="stat"><b>{regionAvg} ★</b><span>note moyenne</span></div>}
+      {regionReviews > 0 && <div class="stat"><b>{regionReviews.toLocaleString('fr-FR')}</b><span>avis cumulés</span></div>}
+      {regionMinP && <div class="stat"><b>dès {regionMinP} €</b><span>la nuit (indic.)</span></div>}
+    </div>
+
+    <div class="city-grid">
+      {cities.map((c: LoveRoomCity) => (
+        <a href={`/love-room/${c.regionSlug}/${c.slug}`}>
+          <div class="ct">Love room {c.displayName}</div>
+          <div class="cd">{c.rooms.length} adresses sélectionnées</div>
+        </a>
+      ))}
+    </div>
+
+    {regionCommunes.length > 1 && (
+      <p class="reg-communes">Communes couvertes : {regionCommunes.slice(0, 14).join(' · ')}.</p>
+    )}
+
+    {topRegion.length > 0 && (
+      <>
+        <h2 class="reg-h2">Les meilleures love rooms en {r.displayName}</h2>
+        <div class="top-list">
+          {topRegion.map((rm, i) => (
+            <a class="top-item" href={`/love-room/${rm.regionSlug}/${rm.citySlug}`}>
+              <span class="rk">{i + 1}</span>
+              <span class="ti"><strong>{rm.name}</strong><span class="tm">{rm.area} · {rm.cityName}</span></span>
+              <span class="ts">★ {rm.rating!.toFixed(1)} · {rm.reviews} avis</span>
+            </a>
+          ))}
+        </div>
+      </>
+    )}
+
+    <a class="back" href="/love-room">← Retour au guide love room</a>
+  </div>
+</ToolLayout>

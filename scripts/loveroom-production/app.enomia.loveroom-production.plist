@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>app.enomia.loveroom-production</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/marc/projects/eunomia/scripts/loveroom-production/run.sh</string>
+    </array>
+
+    <!-- Mardi (2) + Samedi (6) à 8h47 → 2 villes/run = 4/semaine (cadence de départ, pilotable par publication-cadence.json) -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Weekday</key><integer>2</integer>
+            <key>Hour</key><integer>8</integer>
+            <key>Minute</key><integer>47</integer>
+        </dict>
+        <dict>
+            <key>Weekday</key><integer>6</integer>
+            <key>Hour</key><integer>8</integer>
+            <key>Minute</key><integer>47</integer>
+        </dict>
+    </array>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/marc/projects/eunomia/scripts/loveroom-production/logs/launchd-stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/marc/projects/eunomia/scripts/loveroom-production/logs/launchd-stderr.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Users/marc/.claude/local</string>
+        <key>HOME</key>
+        <string>/Users/marc</string>
+    </dict>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/marc/projects/eunomia</string>
+</dict>
+</plist>

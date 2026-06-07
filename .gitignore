@@ -57,3 +57,4 @@ scripts/*/logs/
 data/backlinks-*.json
 data/backlinks-send-state.json
 cities.ts.bak
+.loveroom-cache/

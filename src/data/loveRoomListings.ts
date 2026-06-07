@@ -6563,7 +6563,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 5,
       "reviews": 73,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Montigny-sur-Vence",
+      "description": "Suite privée intimiste conçue pour les couples, aménagée avec goût et proposant une ambiance chaleureuse et romantiqu. Propreté irréprochable, petit-déjeuner copieux et accueil attentionné de la part des hôtes.",
       "url": "https://la-spa-privatif.fr/",
       "recentReviews": [
         {
@@ -6609,7 +6609,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 4.7,
       "reviews": 82,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Pontavert",
+      "description": "Cette suite privée offre un cadre intime et élégamment décorée, idéale pour un séjour romantique avec accès à un spa privatif pour la détente en couple. L'établissement propose un service attentionné incluant le petit déjeuner préparé à l'arrivée, un parking privé et un environnement calme propice à la relaxation.",
       "url": "http://www.suitespaprivatif.fr/",
       "recentReviews": [
         {
@@ -6644,7 +6644,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 4.7,
       "reviews": 70,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Reims",
+      "description": "Appartement privatif remarquablement situé à proximité immédiate de la cathédrale de Reims, avec une décoration soignée et des jeux de lumière apaisants créant une ambiance romantique. Équipé d'une balnéothérapie privatif à usage exclusif, bien que les avis notent un écart entre les photographies et la condition réelle du logement.",
       "url": "http://www.appartspaprivatif.fr/",
       "recentReviews": [
         {
@@ -6662,52 +6662,6 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       ]
     },
     {
-      "name": "Ô Rethel Jacuzzi",
-      "area": "Rethel",
-      "distanceKm": 37,
-      "features": [
-        "Spa ou jacuzzi privatif"
-      ],
-      "vibe": "Love room avec spa ou jacuzzi privatif à Rethel",
-      "rating": 4.8,
-      "reviews": 33,
-      "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Rethel",
-      "url": "https://www.oretheljacuzzi.fr/",
-      "recentReviews": [
-        {
-          "author": "sandy beretta",
-          "rating": 5,
-          "when": "il y a 5 ans",
-          "text": "Nous avons passés un super séjour dans cette jolie maison très bien équipée. Aussi bien des moments de détente que des moment en famille. La maison est parfaitement adaptée à des enfants en bas âge, tout est mis en œuvre pour leurs bien être. Le jacuzzi et l'espace détente extérieur sont exceptionnel. Notre hôte Vincen"
-        },
-        {
-          "author": "Fanny Vermersch",
-          "rating": 5,
-          "when": "il y a un an",
-          "text": "Gite confortable, cosy, aménagé avec goût et très bien équipé. Le propriétaire est aux petits soins et on a passé un très bon moment entre amis. Le jacuzzi après une journée a vélo c'est tout simplement divin."
-        },
-        {
-          "author": "Guillaume Duwelz-Rebert",
-          "rating": 5,
-          "when": "il y a 5 ans",
-          "text": "Nous avons passé trois jours dans le gîte et ce fut une belle parenthèse au milieu de cette crise sanitaire. Nous y sommes allés en famille et chacun y a trouvé son compte. Tout est pensé pour passer un séjour parfait: jacuzzi, billard, espaces chaleureux, équipement. Les propriétaires sont à l'écoute, disponibles et t"
-        },
-        {
-          "author": "Caroline Dablemont",
-          "rating": 5,
-          "when": "il y a 5 ans",
-          "text": "Amandine et Vincent sont des hôtes parfaits ! Ils ont pensé à tout dans cette maison et sont très prévenants pendant le séjour ! Tout est réuni pour passer de belles vacances : le coin est charmant, pas mal de suggestions d'activités, la maison est très très bien équipée (cuisine, hi-fi, spa,salon extérieur, billard, f"
-        },
-        {
-          "author": "Renaud Martin",
-          "rating": 5,
-          "when": "il y a 4 ans",
-          "text": "Le gîte est impeccable! Tous les équipements sont présents et d'excellente qualité. Tout est bien pensé pour les familles et il y a beaucoup d'espace. Lorsque nous sommes arrivés, Vincent et Amandine nous ont offerts des produits du terroir. Leur accueil fut très chaleureux et ils sont très disponibles pour répondre à "
-        }
-      ]
-    },
-    {
       "name": "La Suite 176",
       "area": "Reims",
       "distanceKm": 1,
@@ -6721,7 +6675,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 5,
       "reviews": 28,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Reims",
+      "description": "Cette suite de luxe en centre-ville de Reims propose des équipements privatifs tels qu'une piscine, un jacuzzi et un hammam pour une expérience spa complète. L'attention portée aux détails, l'accueil bienveillant de l'hôte et les aménités soignées créent une atmosphère d'exception pour un séjour mémorable.",
       "recentReviews": [
         {
           "author": "Aline Ferris",
@@ -6768,7 +6722,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 5,
       "reviews": 18,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Reims",
+      "description": "Duplex privatif à Reims équipé d'un jacuzzi et d'un sauna à usage exclusif, conçu pour les séjours en amoureux. Les espaces favorisent la détente et la relaxation, avec petites attentions et accueil attentionné pour une expérience apaisante.",
       "url": "https://www.glamappartspa.fr/glam-reims/",
       "recentReviews": [
         {
@@ -6814,7 +6768,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 4.7,
       "reviews": 17,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Reims",
+      "description": "Suite privée dotée d'un jacuzzi, décorée avec goût pour créer une ambiance intime et romantique, pensée pour le confort et la discrétion des couples. L'appartement bien entretenu, au calme et entièrement équipé, est situé à proximité du centre de Reims.",
       "url": "http://cksuiteetspa.netlify.app/",
       "recentReviews": [
         {
@@ -6860,7 +6814,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 5,
       "reviews": 12,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Bellicourt",
+      "description": "Espace intimiste dédié aux couples, avec literie premium et services spa à usage exclusif. L'atmosphère calme et les attentions personnalisées de l'hôte offrent une détente complète pour une nuit romantique.",
       "url": "https://abnb.me/tceBxnf4OHb",
       "recentReviews": [
         {
@@ -6894,6 +6848,47 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
           "text": "Logement haut de gamme agréable pour un weekend en amoureux 😍 je recommande"
         }
       ]
+    },
+    {
+      "name": "#Le Clovis",
+      "area": "Reims",
+      "distanceKm": 1,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Sauna"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Reims",
+      "rating": 4.8,
+      "reviews": 13,
+      "source": "Google Places",
+      "description": "Suite privée équipée d'un spa, d'un jacuzzi et d'un sauna à usage exclusif, avec vue panoramique sur la cathédrale de Reims. Le lieu combine décoration raffinée et prestations haut de gamme pour créer une atmosphère intime et ressourçante, idéale pour un weekend romantique en couple.",
+      "url": "https://www.lesappartementsdemaxetjulie.com/",
+      "recentReviews": [
+        {
+          "author": "Tony Di Lella",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Mon expérience à la Suite Clovis a été tout simplement exceptionnelle ! Dès notre arrivée, l'accueil a été chaleureux et convivial, ce qui nous a mis immédiatement à l'aise. L'appartement est tout simplement sublime : spacieux, lumineux et d'une propreté irréprochable. Chaque coin est décoré avec soin, créant une atmos"
+        },
+        {
+          "author": "M. Pop",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Havre de paix absolu ! Cet appartement privatif avec spa est tout simplement parfait pour un séjour romantique. Le spa privatif, avec sa vue imprenable sur la cathédrale, est un vrai plus. Le propriétaire est aux petits soins et de très bons conseils."
+        },
+        {
+          "author": "V. V.",
+          "rating": 5,
+          "when": "il y a 4 ans",
+          "text": "Un lieu exceptionnel. Julie et Max ont mis tout leur cœur afin de faire de cet appartement une bulle enchantée, avec des prestations de très grande qualité : literie, décoration, équipement, propreté. Tout est pensé pour que vous n'emmeniez rien d'autre que vos vêtements dans la valise. Il suffit simplement de se laiss"
+        },
+        {
+          "author": "Cécile N",
+          "rating": 5,
+          "when": "il y a 4 ans",
+          "text": "Nous avons passé un superbe week end en amoureux. L'appartement est merveilleusement décoré et parfaitement équipé. Le jacuzzi et le sauna nous ont ravis. Avec une vue sur la cathédrale, c'était paraît. Hôte adorable et aux petits soins (champagne à notre arrivée et livraison du petit déjeuner à l'heure souhaitée..). E"
+        }
+      ]
     }
   ],
   "clermont-ferrand": [
@@ -6908,7 +6903,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 5,
       "reviews": 503,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Champs-sur-Tarentaine-Marchal",
+      "description": "Cette lodge insolite offre un cadre magnifique avec vue panoramique dans un environnement calme et apaisant, idéal pour une déconnexion totale en couple. Le bain nordique privatif et la chambre confortablement décorée créent une atmosphère cosy, renforcée par l'absence de vis-à-vis et la proximité immédiate avec la nature.",
       "url": "https://www.ecrin-auvergne.com/",
       "recentReviews": [
         {
@@ -6955,7 +6950,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 4.8,
       "reviews": 385,
       "source": "Google Places",
-      "description": "Unique glass & aluminum rooms among nature in a creative hotel featuring breakfast.",
+      "description": "Hébergements privés et atypiques (bulle céleste, pavillon prairie) offrant une intimité totale pour les couples, avec accès exclusif à un spa et une piscine dans un cadre naturel calme. Petit-déjeuner et panier repas inclus, propriétaire très attentif et sympathique garantissant une expérience apaisante et mémorable.",
       "url": "https://www.nuitsdycimes.fr/",
       "recentReviews": [
         {
@@ -6985,53 +6980,6 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       ]
     },
     {
-      "name": "L'expérience Love Room",
-      "area": "L'Étrat",
-      "distanceKm": 107,
-      "features": [
-        "Spa ou jacuzzi privatif",
-        "Terrasse"
-      ],
-      "vibe": "Love room avec spa ou jacuzzi privatif à L'Étrat",
-      "rating": 4.7,
-      "reviews": 333,
-      "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à L'Étrat",
-      "url": "https://www.lexperienceloveroom.fr/fr",
-      "recentReviews": [
-        {
-          "author": "Albane prn",
-          "rating": 5,
-          "when": "il y a 3 mois",
-          "text": "J’ai passé une nuit dans la love room “Amazonie” et l’expérience était vraiment incroyable. La décoration est juste dingue : des fleurs suspendues au plafond au-dessus du lit, des petites guirlandes lumineuses partout, et même au-dessus du bain à remous. L’ambiance est hyper immersive et très romantique. Tout était par"
-        },
-        {
-          "author": "Sandrine Brabant",
-          "rating": 5,
-          "when": "il y a 3 mois",
-          "text": "Chambre Bali magnifique, propreté irréprochable. Très bien aménagé, la décoration nous a laissé bouche bée. Literie très confortable ainsi que l'odeur des draps très agréable. Lieu très calme. Sans oublier qu'il y a aussi une terrasse avec salon de jardin, table et chaises pour chacune des chambres. Nous reviendrons c'"
-        },
-        {
-          "author": "Anais Roux mollard",
-          "rating": 5,
-          "when": "il y a 3 mois",
-          "text": "Nous avons passé une bonne soirée en love room « jungle » cependant je pense que quelque modification pourrait être appréciable notamment au niveau du pack « l’expérience la vraie » à notre sens quand nous payons un pack deco à 69€ nous nous attendons à du Wahou à la place de quelques bougies qui sont en fin de vie la "
-        },
-        {
-          "author": "Axell P.",
-          "rating": 4,
-          "when": "il y a 3 mois",
-          "text": "Nous avions la chambre Amazonie. Très belle chambre, très bien décorée. Peut être un petit manque d’isolation (on entendait un peu ce qui se passait a côté) mais pas forcément très gênant. Ce qui gênait un peu c’est le remplissage du jacuzzi … le robinet est mal fixe donc l’eau avait tendance à couler sur le parquet. J"
-        },
-        {
-          "author": "Lea Archontaras",
-          "rating": 5,
-          "when": "il y a 4 mois",
-          "text": "Chambre Amazonie : Une expérience absolument magique ! La love room est magnifique, décorée avec goût et pensée dans les moindres détails pour créer une ambiance romantique et intime. Propreté irréprochable, équipements au top et confort parfait. Un vrai moment hors du temps qui permet de se retrouver et de se détendre"
-        }
-      ]
-    },
-    {
       "name": "Maison Piscine & Jacuzzi",
       "area": "Saint-Germain-des-Fossés",
       "distanceKm": 51,
@@ -7043,7 +6991,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 5,
       "reviews": 32,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Saint-Germain-des-Fossés",
+      "description": "Gîte spacieux aux chambres confortables et bien équipées, bénéficiant d'une piscine extérieure chauffée et d'un jacuzzi accessibles en toute intimité. Ambiance chaleureuse avec accueil personnalisé des propriétaires, calme et propice à un séjour romantique.",
       "url": "http://www.maisonpiscineetjacuzzi.fr/",
       "recentReviews": [
         {
@@ -7090,7 +7038,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 4.2,
       "reviews": 63,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Lyon",
+      "description": "Chambre privée décorée sur un thème bateaux offrant une ambiance intimiste avec literie excellente et équipements spa pour un séjour romantique. L'aménagement soigné et les détails thématiques font la force du lieu, bien que quelques points mineurs d'entretien aient été signalés par les clients.",
       "recentReviews": [
         {
           "author": "cécile lamoureux",
@@ -7117,7 +7065,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 4.3,
       "reviews": 18,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Riom",
+      "description": "La suite Marylin propose un cadre intimiste spécialement pensé pour les escapades romantiques en couple. L'établissement se distingue par la propreté des lieux et la qualité du confort offert.",
       "recentReviews": [
         {
           "author": "Vanessa M",
@@ -7152,7 +7100,7 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
       "rating": 5,
       "reviews": 10,
       "source": "Google Places",
-      "description": "Love room avec spa ou jacuzzi privatif à Chamalières",
+      "description": "Loft privatif aménagé avec un lit king size, un sauna et un jacuzzi balnéo, offrant un cadre intimiste pour un séjour en couple. L'espace est impeccablement tenu, spacieux et fonctionnel, avec des hôtes attentifs à la qualité de l'expérience.",
       "recentReviews": [
         {
           "author": "Damien Tissier",

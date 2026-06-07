@@ -60,7 +60,7 @@ const faqLd = {
     },
     {
       q: "Peut-on déduire la commission conciergerie de ses impôts en LMNP ?",
-      a: "Oui en régime réel LMNP, la commission est intégralement déductible comme charge d'exploitation. En micro-BIC, vous bénéficiez d'un abattement forfaitaire qui est censé couvrir toutes les charges — vous ne pouvez pas déduire en plus. Si votre conciergerie coûte plus de 30-40 % de vos revenus, le régime réel devient presque toujours plus avantageux.",
+      a: "Oui en régime réel LMNP, la commission est intégralement déductible comme charge d'exploitation. En micro-BIC, vous bénéficiez d'un abattement forfaitaire qui est censé couvrir toutes les charges. Vous ne pouvez pas déduire en plus. Si votre conciergerie coûte plus de 30-40 % de vos revenus, le régime réel devient presque toujours plus avantageux.",
     },
     {
       q: "Conciergerie nationale ou locale, que choisir ?",
@@ -78,7 +78,7 @@ const faqLd = {
 };
 
 // LocalBusiness schema with aggregateRating → enables star ratings in SERP
-// (Google requires a valid parent type: LocalBusiness, Product, etc. — not standalone Review)
+// (Google requires a valid parent type: LocalBusiness, Product, etc., not standalone Review)
 const reviewLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
@@ -266,28 +266,31 @@ const breadcrumbLd = {
         C'est souvent là que les propriétaires découvrent après signature que le service est moins complet qu'annoncé. Voici la liste exhaustive de ce qu'une conciergerie professionnelle doit pouvoir faire.
       </p>
       <div class="services-list">
-        <div class="svc"><span><strong>Création & optimisation des annonces</strong> — rédaction multi-plateformes, traduction, photos pro</span></div>
-        <div class="svc"><span><strong>Gestion multi-plateformes</strong> — channel manager (Smoobu, Lodgify, Hostaway)</span></div>
-        <div class="svc"><span><strong>Tarification dynamique</strong> — ajustement quotidien via PriceLabs, Wheelhouse, Beyond</span></div>
-        <div class="svc"><span><strong>Communication voyageurs 24/7</strong> — FR + EN minimum, délai &lt; 30 min</span></div>
-        <div class="svc"><span><strong>Check-in et check-out</strong> — en personne ou serrure connectée</span></div>
-        <div class="svc"><span><strong>Ménage & linge</strong> — protocole 30-50 points, linge blanchi en externe</span></div>
-        <div class="svc"><span><strong>Maintenance légère</strong> — ampoules, plomberie mineure, réseau d'artisans</span></div>
-        <div class="svc"><span><strong>Gestion des litiges</strong> — procédure AirCover, négociation Airbnb</span></div>
-        <div class="svc"><span><strong>Conformité légale</strong> — enregistrement mairie, 120 jours, taxe de séjour</span></div>
-        <div class="svc"><span><strong>Reporting mensuel</strong> — revenu brut, commission, net, occupation, avis</span></div>
+        <div class="svc"><span><strong>Création & optimisation des annonces</strong> : rédaction multi-plateformes, traduction, photos pro</span></div>
+        <div class="svc"><span><strong>Gestion multi-plateformes</strong> : channel manager (Smoobu, Lodgify, Hostaway)</span></div>
+        <div class="svc"><span><strong>Tarification dynamique</strong> : ajustement quotidien via PriceLabs, Wheelhouse, Beyond</span></div>
+        <div class="svc"><span><strong>Communication voyageurs 24/7</strong> : FR + EN minimum, délai &lt; 30 min</span></div>
+        <div class="svc"><span><strong>Check-in et check-out</strong> : en personne ou serrure connectée</span></div>
+        <div class="svc"><span><strong>Ménage & linge</strong> : protocole 30-50 points, linge blanchi en externe</span></div>
+        <div class="svc"><span><strong>Maintenance légère</strong> : ampoules, plomberie mineure, réseau d'artisans</span></div>
+        <div class="svc"><span><strong>Gestion des litiges</strong> : procédure AirCover, négociation Airbnb</span></div>
+        <div class="svc"><span><strong>Conformité légale</strong> : enregistrement mairie, 120 jours, taxe de séjour</span></div>
+        <div class="svc"><span><strong>Reporting mensuel</strong> : revenu brut, commission, net, occupation, avis</span></div>
       </div>
 
       <h2>Combien coûte une conciergerie Airbnb ? Tarifs, commissions et pièges</h2>
       <p>
         C'est la question numéro un. Et c'est celle qui cache le plus de pièges, parce que la commission affichée n'est souvent pas la commission réelle.
       </p>
+      <p>
+        Voici l'essentiel ci-dessous. Pour la grille tarifaire complète et le détail par ville, voyez notre page dédiée <a href="/tarif-conciergerie-airbnb">tarifs conciergerie Airbnb</a>.
+      </p>
 
       <h3>Les 3 modèles tarifaires</h3>
       <ul>
-        <li><strong>Commission sur revenu (majoritaire)</strong> — 15 à 30 % HT du revenu encaissé. Si votre bien génère 20 000 €/an, vous payez 3 000 à 6 000 €.</li>
-        <li><strong>Forfait mensuel</strong> — Somme fixe (500 à 2 000 €/mois), rare en France, adapté au haut de gamme. Avantage : prévisibilité. Risque : vous payez même bien vide.</li>
-        <li><strong>Hybride</strong> — Petit forfait + petite commission. Exemple : 100 €/mois + 10 % sur le revenu.</li>
+        <li><strong>Commission sur revenu (majoritaire)</strong> : 15 à 30 % HT du revenu encaissé. Si votre bien génère 20 000 €/an, vous payez 3 000 à 6 000 €.</li>
+        <li><strong>Forfait mensuel</strong> : Somme fixe (500 à 2 000 €/mois), rare en France, adapté au haut de gamme. Avantage : prévisibilité. Risque : vous payez même bien vide.</li>
+        <li><strong>Hybride</strong> : Petit forfait + petite commission. Exemple : 100 €/mois + 10 % sur le revenu.</li>
       </ul>
 
       <div class="callout warn">
@@ -333,18 +336,18 @@ const breadcrumbLd = {
       <div class="checklist">
         <h3>Checklist avant de signer</h3>
         <ol>
-          <li><strong>Transparence tarifaire</strong> — commission + TOUS les frais publiés ?</li>
-          <li><strong>Ancienneté locale</strong> — minimum 2 ans dans votre ville</li>
-          <li><strong>Nombre de biens gérés localement</strong> — minimum 20 pour un acteur sérieux</li>
-          <li><strong>Avis Google</strong> — note ≥ 4,5 ET nombre d'avis ≥ 50</li>
+          <li><strong>Transparence tarifaire</strong> : commission + TOUS les frais publiés ?</li>
+          <li><strong>Ancienneté locale</strong> : minimum 2 ans dans votre ville</li>
+          <li><strong>Nombre de biens gérés localement</strong> : minimum 20 pour un acteur sérieux</li>
+          <li><strong>Avis Google</strong> : note ≥ 4,5 ET nombre d'avis ≥ 50</li>
           <li><strong>Services inclus</strong> vs facturés en plus : liste exhaustive par écrit</li>
-          <li><strong>Stack technologique</strong> — channel manager, pricing dynamique, dashboard</li>
-          <li><strong>Délai de réponse voyageurs</strong> — &lt; 30 minutes annoncés</li>
-          <li><strong>Langues supportées</strong> — français + anglais minimum</li>
-          <li><strong>Propriété du compte Airbnb</strong> — reste à votre nom impérativement</li>
-          <li><strong>Gestion de la compliance locale</strong> — enregistrement mairie, 120 jours, taxe</li>
-          <li><strong>Reporting mensuel</strong> — demandez un exemple de rapport réel</li>
-          <li><strong>Clauses de sortie</strong> — durée engagement, préavis, propriété photos/avis</li>
+          <li><strong>Stack technologique</strong> : channel manager, pricing dynamique, dashboard</li>
+          <li><strong>Délai de réponse voyageurs</strong> : &lt; 30 minutes annoncés</li>
+          <li><strong>Langues supportées</strong> : français + anglais minimum</li>
+          <li><strong>Propriété du compte Airbnb</strong> : reste à votre nom impérativement</li>
+          <li><strong>Gestion de la compliance locale</strong> : enregistrement mairie, 120 jours, taxe</li>
+          <li><strong>Reporting mensuel</strong> : demandez un exemple de rapport réel</li>
+          <li><strong>Clauses de sortie</strong> : durée engagement, préavis, propriété photos/avis</li>
         </ol>
       </div>
 
@@ -403,7 +406,7 @@ const breadcrumbLd = {
         <li>Majoration non plafonnée sur les artisans</li>
       </ul>
 
-      <h2>FAQ — Les questions qu'on nous pose le plus</h2>
+      <h2>FAQ : Les questions qu'on nous pose le plus</h2>
       <div class="faq">
         <details>
           <summary>Une conciergerie Airbnb, c'est rentable ou pas ?</summary>
@@ -411,11 +414,11 @@ const breadcrumbLd = {
         </details>
         <details>
           <summary>Quelle est la commission moyenne d'une conciergerie Airbnb en France ?</summary>
-          <div class="faq-ans"><p>La commission médiane est de <strong>20 % HT</strong> du revenu locatif, hors ménage. Elle varie de 15 % à 30 %. Le ménage est souvent facturé en plus au voyageur, mais certaines conciergeries l'incluent dans leur commission — attention, c'est moins avantageux qu'il n'y paraît.</p></div>
+          <div class="faq-ans"><p>La commission médiane est de <strong>20 % HT</strong> du revenu locatif, hors ménage. Elle varie de 15 % à 30 %. Le ménage est souvent facturé en plus au voyageur, mais certaines conciergeries l'incluent dans leur commission. Attention, c'est moins avantageux qu'il n'y paraît.</p></div>
         </details>
         <details>
           <summary>Peut-on déduire les frais de conciergerie de ses impôts en LMNP ?</summary>
-          <div class="faq-ans"><p>Oui. En régime réel LMNP, la commission est intégralement déductible comme charge d'exploitation. En micro-BIC, vous bénéficiez d'un abattement forfaitaire (30 ou 50 % selon le classement) qui est censé couvrir l'ensemble de vos frais — vous ne pouvez pas déduire en plus. Si votre conciergerie coûte plus de 30-40 % de vos revenus, le régime réel devient presque toujours plus avantageux.</p></div>
+          <div class="faq-ans"><p>Oui. En régime réel LMNP, la commission est intégralement déductible comme charge d'exploitation. En micro-BIC, vous bénéficiez d'un abattement forfaitaire (30 ou 50 % selon le classement) qui est censé couvrir l'ensemble de vos frais. Vous ne pouvez pas déduire en plus. Si votre conciergerie coûte plus de 30-40 % de vos revenus, le régime réel devient presque toujours plus avantageux.</p></div>
         </details>
         <details>
           <summary>Faut-il signer avec une conciergerie nationale ou locale ?</summary>

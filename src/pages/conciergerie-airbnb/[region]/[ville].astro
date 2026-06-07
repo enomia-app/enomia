@@ -95,7 +95,7 @@ const articleLd = {
 };
 
 // JSON-LD: LocalBusiness with aggregateRating → enables star ratings in Google SERP
-// (Google requires a valid parent type: LocalBusiness, Product, etc. — not standalone Review)
+// (Google requires a valid parent type: LocalBusiness, Product, etc., not standalone Review)
 const reviewLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
@@ -117,7 +117,7 @@ const reviewLd = {
 };
 
 // JSON-LD: ItemList of the reviewed conciergeries
-// aggregateRating is only emitted when we have verified rating + reviews — Google rejects 0-review schemas.
+// aggregateRating is only emitted when we have verified rating + reviews. Google rejects 0-review schemas.
 const itemListLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -225,7 +225,7 @@ const faqLd = {
     .stat .v { font-size: 22px; font-weight: 700; color: #1a1a1a; font-family: 'Newsreader', serif; }
     .stat .d { font-size: 12px; color: #52524e; margin-top: 4px; }
 
-    /* Comparison table — horizontal scroll with fade hint on mobile */
+    /* Comparison table : horizontal scroll with fade hint on mobile */
     .comp-wrap { position: relative; margin: 24px 0 36px; }
     .comp { border: 1px solid #e5e3de; border-radius: 12px; background: #fff; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.18) transparent; }
     .comp::-webkit-scrollbar { height: 6px; }
@@ -237,7 +237,7 @@ const faqLd = {
     .comp tbody tr:hover { background: #fafaf7; }
     .comp td strong { color: #1a1a1a; }
     .comp .rating { color: #f0a83a; font-weight: 700; white-space: nowrap; }
-    /* Fade gradient on right edge — only visible on mobile to hint horizontal scroll */
+    /* Fade gradient on right edge, only visible on mobile to hint horizontal scroll */
     .comp-fade { display: none; }
     .comp-hint { display: none; }
     @media (max-width: 700px) {
@@ -415,7 +415,7 @@ const faqLd = {
 
       <h3>6. Les avis Google vérifiables</h3>
       <p>
-        Tapez le nom + "{c.displayName}" sur Google. Regardez la note et la distribution : 200 avis avec 4,8 est beaucoup plus fiable que 12 avis avec 5,0. Lisez les avis négatifs en priorité — ils vous diront ce qui coince vraiment.
+        Tapez le nom + "{c.displayName}" sur Google. Regardez la note et la distribution : 200 avis avec 4,8 est beaucoup plus fiable que 12 avis avec 5,0. Lisez les avis négatifs en priorité. Ils vous diront ce qui coince vraiment.
       </p>
 
       <h3>7. Le contrat : durée, préavis, clauses de sortie</h3>
@@ -470,7 +470,7 @@ const faqLd = {
 
       {sortedConc.map((conc, i) => (
         <div class="conc-card">
-          <h3>{i + 1}. {conc.name} <span style="font-size:13px;color:#3fbd71;font-weight:600;">— {conc.specialty}</span></h3>
+          <h3>{i + 1}. {conc.name} <span style="font-size:13px;color:#3fbd71;font-weight:600;">({conc.specialty})</span></h3>
           <div class="meta">
             <span>Commission : <strong>{conc.commission}</strong></span>
             <span>Ménage : <strong>{conc.menage}</strong></span>
@@ -530,7 +530,7 @@ const faqLd = {
         {' · '}
         <a href="https://insideairbnb.com/get-the-data/" target="_blank" rel="noopener">Inside Airbnb (open data)</a>
         {' · '}
-        observations Enomia 2025. Prix et taux d'occupation à comprendre comme des moyennes indicatives — variables selon saison, typologie et standing du bien.
+        observations Enomia 2025. Prix et taux d'occupation à comprendre comme des moyennes indicatives, variables selon saison, typologie et standing du bien.
       </p>
 
       <h2>Et si vous vouliez gérer vous-même votre Airbnb à {c.displayName} ?</h2>
@@ -541,7 +541,7 @@ const faqLd = {
         Règle simple : si vous habitez à moins de 30 minutes de votre bien et que vous avez de la flexibilité dans votre emploi du temps, la gestion autonome peut être rentable. Si vous habitez loin ou à l'étranger, la conciergerie devient presque indispensable. Notre calculateur intégré vous aide à trancher.
       </p>
 
-      <h2>FAQ — Les questions qu'on nous pose le plus sur les conciergeries à {c.displayName}</h2>
+      <h2>FAQ : Les questions qu'on nous pose le plus sur les conciergeries à {c.displayName}</h2>
       <div class="faq">
         {c.extraFaq.map((f) => (
           <details>

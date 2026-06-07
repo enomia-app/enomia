@@ -1,0 +1,160 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+import NewsletterBlock from './NewsletterBlock.astro';
+import { getCabanesByIntent, CABANE_INTENTS, type CabaneIntent } from '../data/cabanes';
+
+interface Props { intent: CabaneIntent }
+const { intent } = Astro.props;
+const cfg = CABANE_INTENTS[intent];
+const other = intent === 'amoureux' ? CABANE_INTENTS.famille : CABANE_INTENTS.amoureux;
+const groups = getCabanesByIntent(intent, 5);
+const totalCabanes = groups.reduce((s, g) => s + g.cabanes.length, 0);
+const canonical = `https://www.enomia.app/cabane/${cfg.slug}`;
+
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function renderRich(text: string): string {
+  return `<p>${escapeHtml(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p>`;
+}
+
+const articleLd = {
+  '@context': 'https://schema.org', '@type': 'Article', headline: cfg.h1, description: cfg.metaDescription,
+  datePublished: '2026-06-07', dateModified: '2026-06-07',
+  author: { '@type': 'Person', name: 'Marc', url: 'https://www.enomia.app/' },
+  publisher: { '@type': 'Organization', name: 'Enomia', logo: { '@type': 'ImageObject', url: 'https://www.enomia.app/favicon.png' } },
+  mainEntityOfPage: canonical,
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: cfg.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.enomia.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Cabane', item: 'https://www.enomia.app/cabane' },
+    { '@type': 'ListItem', position: 3, name: cfg.kw, item: canonical },
+  ],
+};
+---
+
+<ToolLayout title={cfg.metaTitle} description={cfg.metaDescription} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+
+  <style>
+    .seo-wrap { max-width: 920px; margin: 0 auto; padding: 32px 32px 60px; }
+    .crumbs { font-size: 12px; color: #8a8985; margin-bottom: 16px; }
+    .crumbs a { color: #8a8985; text-decoration: none; } .crumbs a:hover { color: #3fbd71; }
+    .seo-h1 { font-family: 'Newsreader', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 600; line-height: 1.18; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .seo-h1 em { font-style: italic; }
+    .seo-lede { font-size: 16px; color: #52524e; line-height: 1.7; max-width: 760px; }
+    .seo-lede :global(strong) { color: #1a1a1a; font-weight: 600; }
+    .seo-badges { display: flex; gap: 10px; margin: 20px 0 10px; flex-wrap: wrap; }
+    .seo-badge { font-size: 11px; font-weight: 600; color: #3fbd71; background: rgba(63,189,113,0.08); padding: 5px 11px; border-radius: 100px; }
+    .seo-body h2 { font-family: 'Newsreader', serif; font-size: 26px; font-weight: 600; margin: 44px 0 6px; letter-spacing: -0.01em; color: #1a1a1a; }
+    .seo-body p { font-size: 15px; line-height: 1.75; color: #52524e; margin-bottom: 16px; }
+
+    .region-block { margin: 26px 0; }
+    .region-h { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; border-bottom: 1px solid #e5e3de; padding-bottom: 6px; }
+    .region-h a { font-family: 'Newsreader', serif; font-size: 21px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
+    .region-h a:hover { color: #3fbd71; }
+    .region-h .more { font-size: 12px; color: #3fbd71; text-decoration: none; white-space: nowrap; }
+    .clist { display: flex; flex-direction: column; gap: 8px; }
+    .citem { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; }
+    .citem .ci { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+    .citem .ci strong { color: #1a1a1a; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .citem .ci .m { font-size: 12px; color: #8a8985; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .citem .rate { font-size: 12px; font-weight: 700; color: #b9791a; white-space: nowrap; }
+    .citem .book { background: #2b2d2b; color: #fff; font-size: 12px; font-weight: 600; padding: 7px 13px; border-radius: 100px; text-decoration: none; white-space: nowrap; }
+    .citem .book:hover { background: #3fbd71; }
+    @media (max-width: 600px) { .citem .rate { display: none; } }
+
+    .faq { border: 1px solid #e5e3de; border-radius: 12px; overflow: hidden; margin: 16px 0; background: #fff; }
+    .faq details { border-bottom: 1px solid #e5e3de; } .faq details:last-child { border-bottom: none; }
+    .faq summary { padding: 18px 22px; cursor: pointer; font-weight: 600; color: #1a1a1a; font-size: 15px; list-style: none; display: flex; justify-content: space-between; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 20px; color: #8a8985; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq-ans { padding: 0 22px 20px; font-size: 14px; color: #52524e; line-height: 1.7; }
+
+    .switch { display: flex; gap: 12px; flex-wrap: wrap; margin: 22px 0; }
+    .switch a { flex: 1; min-width: 200px; display: block; padding: 16px 20px; border: 1px solid #e5e3de; background: #fff; border-radius: 12px; color: inherit; text-decoration: none; transition: all .15s; }
+    .switch a:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .switch .st { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; color: #1a1a1a; }
+    .switch .sd { font-size: 12px; color: #8a8985; margin-top: 4px; }
+
+    .cta { background: linear-gradient(135deg, #2b2d2b 0%, #3a3c3a 100%); color: #e8e4dc; padding: 28px 32px; border-radius: 14px; margin: 40px 0 24px; text-align: center; }
+    .cta h3 { font-family: 'Newsreader', serif; font-size: 22px; margin: 0 0 10px; color: #fff; }
+    .cta p { font-size: 14px; color: #fff; margin: 0 0 18px; }
+    .cta a { display: inline-block; background: #fff; color: #2b2d2b; padding: 12px 24px; border-radius: 100px; font-weight: 700; text-decoration: none; }
+    @media (max-width: 700px) { .seo-wrap { padding: 24px 16px 40px; } }
+  </style>
+
+  <div class="seo-wrap">
+    <div class="crumbs"><a href="/cabane">Cabane</a> › {cfg.kw}</div>
+    <h1 class="seo-h1" set:html={cfg.h1.replace(intent === 'amoureux' ? 'amoureux' : 'famille', `<em>${intent === 'amoureux' ? 'amoureux' : 'famille'}</em>`)} />
+    <div class="seo-lede" set:html={renderRich(cfg.lede)} />
+    <div class="seo-badges">
+      <span class="seo-badge">Sélection indépendante</span>
+      <span class="seo-badge">{totalCabanes} cabanes dans {groups.length} région{groups.length > 1 ? 's' : ''}</span>
+      <span class="seo-badge">Réservation en direct</span>
+    </div>
+
+    <div class="seo-body">
+      {groups.map((g) => (
+        <div class="region-block">
+          <div class="region-h">
+            <a href={`/cabane/${g.zone.slug}`}>Cabane {g.zone.displayName}</a>
+            <a class="more" href={`/cabane/${g.zone.slug}`}>Voir toutes les cabanes →</a>
+          </div>
+          <div class="clist">
+            {g.cabanes.map((c) => (
+              <div class="citem">
+                <span class="ci">
+                  <strong>{c.name}</strong>
+                  <span class="m">📍 {c.area}{c.dept ? ` (${c.dept})` : ''}{c.features?.length ? ` · ${c.features.slice(0, 2).join(' · ')}` : ''}</span>
+                </span>
+                {c.rating ? <span class="rate">★ {c.rating.toFixed(1)}</span> : null}
+                {c.url
+                  ? <a class="book" href={c.url} target="_blank" rel="noopener">Réserver →</a>
+                  : <a class="book" href={`/cabane/${g.zone.slug}`}>Voir →</a>}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <div class="switch">
+        <a href={`/cabane/${other.slug}`}>
+          <div class="st">{other.kw} →</div>
+          <div class="sd">L'autre sélection : {intent === 'amoureux' ? 'les cabanes pour un séjour en famille' : 'les cabanes romantiques à deux'}</div>
+        </a>
+        <a href="/cabane">
+          <div class="st">Toutes les régions →</div>
+          <div class="sd">Le guide cabane complet, région par région</div>
+        </a>
+      </div>
+
+      <h2>Questions fréquentes</h2>
+      <div class="faq">
+        {cfg.faq.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <div class="faq-ans"><p>{f.a}</p></div>
+          </details>
+        ))}
+      </div>
+
+      <div class="cta">
+        <h3>Vous gérez une cabane {cfg.kw.replace('cabane ', '')} ?</h3>
+        <p>Proposez votre cabane à notre sélection et recevez des réservations en direct, sans commission.</p>
+        <a href="/cabane#proprietaires">→ Voir si je suis éligible</a>
+      </div>
+
+      <NewsletterBlock source={`Cabane-${cfg.slug}`} />
+    </div>
+  </div>
+</ToolLayout>

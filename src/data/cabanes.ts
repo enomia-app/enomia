@@ -161,6 +161,69 @@ export function getCabaneZoneBySlug(slug: string): CabaneZone | undefined {
   return cabaneZones.find((z) => z.slug === slug);
 }
 
+// ─── Pages par ENVIE (amoureux / famille) — cross-cut intent × région ───
+// Classement d'audience dérivé des vraies données (nom + desc + équipements + avis),
+// pas d'IA ni d'invention : on range chaque cabane selon les signaux présents.
+export type CabaneIntent = 'amoureux' | 'famille';
+
+const ROMANTIC_WORDS = ['amoureux', 'romantique', 'en couple', 'couple', 'jacuzzi', 'spa privatif', 'spa ', 'bain nordique', 'balneo', 'intim', 'escapade', 'saint valentin', 'en duo', 'cocon'];
+const FAMILY_WORDS = ['famille', 'familial', 'enfant', 'spacieu', 'tribu', 'aire de jeux', 'trampoline', 'plusieurs chambres', 'grande capacite', '4 personnes', '5 personnes', '6 personnes', '8 personnes', 'parc'];
+
+function audienceScore(c: Cabane): { romantic: number; family: number } {
+  const t = `${c.name} ${c.description || ''} ${c.features.join(' ')} ${(c.recentReviews || []).map((r) => r.text).join(' ')}`
+    .toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const hits = (words: string[]) => words.reduce((n, w) => n + (t.includes(w) ? 1 : 0), 0);
+  return { romantic: hits(ROMANTIC_WORDS), family: hits(FAMILY_WORDS) };
+}
+
+export type IntentZoneGroup = { zone: CabaneZone; cabanes: Cabane[] };
+
+// Cabanes pertinentes pour l'envie, groupées par zone (région), top N/zone.
+// amoureux = signal romantique dominant ; famille = présence d'un signal famille (sous-ensemble plus rare → pages distinctes).
+export function getCabanesByIntent(intent: CabaneIntent, perZone = 5): IntentZoneGroup[] {
+  const groups: IntentZoneGroup[] = [];
+  for (const z of cabaneZones.slice().sort((a, b) => b.searchVolume - a.searchVolume)) {
+    const scored = z.cabanes.map((c) => ({ c, s: audienceScore(c) }));
+    const picks = intent === 'amoureux'
+      ? scored.filter((x) => x.s.romantic > 0 && x.s.romantic >= x.s.family).sort((a, b) => b.s.romantic - a.s.romantic)
+      : scored.filter((x) => x.s.family > 0).sort((a, b) => b.s.family - a.s.family);
+    const cabanes = picks.slice(0, perZone).map((x) => x.c);
+    if (cabanes.length) groups.push({ zone: z, cabanes });
+  }
+  return groups;
+}
+
+export const CABANE_INTENTS: Record<CabaneIntent, {
+  slug: string; kw: string; h1: string; metaTitle: string; metaDescription: string; lede: string; faq: CabaneFaq[];
+}> = {
+  amoureux: {
+    slug: 'en-amoureux',
+    kw: 'cabane en amoureux',
+    h1: 'Cabane en amoureux : les plus belles cabanes romantiques par région',
+    metaTitle: 'Cabane en amoureux : cabanes romantiques avec spa (2026)',
+    metaDescription: 'Cabane en amoureux : sélection des cabanes perchées et insolites les plus romantiques, avec spa ou bain nordique privatif, région par région. Notes Google, réservation en direct.',
+    lede: "Une cabane perchée rien que pour vous deux, un bain nordique sous les étoiles, le silence de la forêt : la **cabane en amoureux** est l'escapade romantique par excellence. Voici notre sélection des adresses les plus intimistes (spa ou jacuzzi privatif, capacité deux personnes), région par région.",
+    faq: [
+      { q: "Quelle cabane choisir pour un week-end en amoureux ?", a: "Privilégiez une cabane perchée ou insolite avec spa, jacuzzi ou bain nordique privatif, prévue pour deux personnes, avec une vraie intimité (pas de vis-à-vis). Les adresses ci-dessous sont classées selon ces critères, par région." },
+      { q: "Combien coûte une cabane romantique avec jacuzzi ?", a: "Comptez de 130 à 280 € la nuit pour une cabane romantique avec spa ou bain nordique privatif, selon la région et la saison. Réserver en semaine et en direct revient nettement moins cher." },
+      { q: "Peut-on réserver une cabane en amoureux en direct ?", a: "Oui, et c'est conseillé : en passant par le site du propriétaire plutôt qu'une plateforme, vous évitez les frais de service et le propriétaire vous fait souvent un geste pour une occasion spéciale." },
+    ],
+  },
+  famille: {
+    slug: 'en-famille',
+    kw: 'cabane en famille',
+    h1: 'Cabane en famille : les meilleures cabanes pour les enfants par région',
+    metaTitle: 'Cabane en famille : cabanes insolites pour enfants (2026)',
+    metaDescription: 'Cabane en famille : sélection des cabanes insolites spacieuses et adaptées aux enfants, région par région. Notes Google, équipements et réservation en direct.',
+    lede: "Réveiller les enfants dans une cabane au milieu des arbres, partager une nuit insolite en tribu : la **cabane en famille** transforme un simple week-end en souvenir. Voici notre sélection des cabanes les plus spacieuses et adaptées aux familles, région par région.",
+    faq: [
+      { q: "Quelle cabane choisir avec des enfants ?", a: "Visez une cabane spacieuse (plusieurs couchages), de plain-pied ou avec un accès sécurisé, idéalement avec un terrain ou des activités sur place. Les adresses ci-dessous sont retenues pour leur capacité et leur cadre familial, par région." },
+      { q: "Les cabanes perchées conviennent-elles aux enfants ?", a: "Certaines oui, d'autres non : tout dépend de la hauteur, de l'accès (échelle ou passerelle) et de l'âge des enfants. Vérifiez la description et les avis de chaque adresse, qui précisent souvent si le lieu est adapté aux familles." },
+      { q: "Comment réserver une cabane en famille moins cher ?", a: "Réservez hors vacances scolaires et en semaine, et passez en direct auprès du propriétaire quand c'est possible pour éviter les frais de service des plateformes." },
+    ],
+  },
+};
+
 export type RankedCabane = Cabane & { zoneSlug: string; zoneName: string };
 
 export function getTopCabanes(opts?: { limit?: number }): RankedCabane[] {

@@ -81,6 +81,10 @@ export async function GET() {
 
   // Cabane (hub + zones) — actif d'acquisition région-led, généré automatiquement
   const cabanePillar = { url: '/cabane', changefreq: 'weekly', priority: '0.85', lastmod: '2026-06-07' };
+  const cabaneIntentEntries = [
+    { url: '/cabane/en-amoureux', changefreq: 'weekly', priority: '0.8', lastmod: '2026-06-07' },
+    { url: '/cabane/en-famille', changefreq: 'weekly', priority: '0.8', lastmod: '2026-06-07' },
+  ];
   const cabaneZoneEntries = cabaneZones.map((z) => ({
     url: `/cabane/${z.slug}`,
     changefreq: 'monthly',
@@ -98,6 +102,7 @@ export async function GET() {
     ...loveRoomRegionEntries,
     ...loveRoomCityEntries,
     cabanePillar,
+    ...cabaneIntentEntries,
     ...cabaneZoneEntries,
     ...postEntries,
   ];

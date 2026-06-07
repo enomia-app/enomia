@@ -31,6 +31,11 @@ claude -p "Tu es l'agent d'indexation GSC quotidien. Lance la skill « gsc-index
 EXIT=$?
 set -e
 
+# Bilan d'indexation ventilé par section (conciergerie/love-room/cabane/blog) → ajouté à l'email du
+# jour + enrichit .claude/gsc-tracking/state.json (clé `bilans`, lue chaque lundi par gsc-cadence-weekly).
+# La skill a déjà rafraîchi index-status.json + écrit state.json ; le bilan est du node pur (read-modify-write).
+{ echo ""; echo "────────── Bilan indexation GSC (par section) ──────────"; node scripts/gsc-bilan.mjs 2>&1 || echo "(bilan indisponible)"; } >> "$CLAUDE_OUT"
+
 cat "$CLAUDE_OUT" >> "$RUN_LOG"
 echo "===== gsc-indexation-claude end $(date -Iseconds) (exit=$EXIT) =====" | tee -a "$RUN_LOG"
 

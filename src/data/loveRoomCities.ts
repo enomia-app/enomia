@@ -8,7 +8,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 60,
     "searchVolume": 13470,
     "status": "done",
-    "found": 37
+    "found": 8
   },
   {
     "slug": "lyon",
@@ -18,7 +18,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 55,
     "searchVolume": 8530,
     "status": "done",
-    "found": 30
+    "found": 8
   },
   {
     "slug": "toulouse",
@@ -28,7 +28,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 50,
     "searchVolume": 5800,
     "status": "done",
-    "found": 29
+    "found": 8
   },
   {
     "slug": "marseille",
@@ -38,7 +38,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 55,
     "searchVolume": 5670,
     "status": "done",
-    "found": 32
+    "found": 8
   },
   {
     "slug": "bordeaux",
@@ -48,7 +48,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 55,
     "searchVolume": 5230,
     "status": "done",
-    "found": 24
+    "found": 8
   },
   {
     "slug": "angers",
@@ -68,7 +68,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 50,
     "searchVolume": 3300,
     "status": "done",
-    "found": 26
+    "found": 8
   },
   {
     "slug": "lille",
@@ -78,7 +78,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 40,
     "searchVolume": 2900,
     "status": "done",
-    "found": 20
+    "found": 8
   },
   {
     "slug": "montpellier",
@@ -88,7 +88,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 45,
     "searchVolume": 2830,
     "status": "done",
-    "found": 15
+    "found": 8
   },
   {
     "slug": "strasbourg",
@@ -118,7 +118,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 45,
     "searchVolume": 2220,
     "status": "done",
-    "found": 22
+    "found": 8
   },
   {
     "slug": "annecy",
@@ -128,7 +128,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 50,
     "searchVolume": 2130,
     "status": "done",
-    "found": 31
+    "found": 8
   },
   {
     "slug": "rouen",
@@ -148,7 +148,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 45,
     "searchVolume": 1970,
     "status": "done",
-    "found": 30
+    "found": 8
   },
   {
     "slug": "metz",
@@ -158,7 +158,7 @@ export const loveRoomCitiesMeta = [
     "region": "Grand Est",
     "regionSlug": "alsace",
     "radiusKm": 50,
-    "found": 25
+    "found": 8
   },
   {
     "slug": "dijon",
@@ -168,7 +168,7 @@ export const loveRoomCitiesMeta = [
     "region": "Bourgogne-Franche-Comté",
     "regionSlug": "bourgogne-franche-comte",
     "radiusKm": 50,
-    "found": 30
+    "found": 8
   },
   {
     "slug": "nancy",
@@ -178,6 +178,26 @@ export const loveRoomCitiesMeta = [
     "region": "Grand Est",
     "regionSlug": "alsace",
     "radiusKm": 50,
-    "found": 27
+    "found": 8
+  },
+  {
+    "slug": "reims",
+    "displayName": "Reims",
+    "searchVolume": 1970,
+    "status": "todo",
+    "region": "Grand Est",
+    "regionSlug": "alsace",
+    "radiusKm": 100,
+    "found": 31
+  },
+  {
+    "slug": "clermont-ferrand",
+    "displayName": "Clermont-Ferrand",
+    "searchVolume": 1960,
+    "status": "todo",
+    "region": "Auvergne-Rhône-Alpes",
+    "regionSlug": "auvergne-rhone-alpes",
+    "radiusKm": 150,
+    "found": 26
   }
 ];

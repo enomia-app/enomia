@@ -1,8 +1,11 @@
 {
-  "_note": "Cadence de publication par niche = nombre de villes/zones publiées par run de cron. Lu par les crons conciergerie / love-room / cabane. Piloté automatiquement par l'agent gsc-cadence-weekly (lundi) selon la santé GSC, qui envoie un mail à Marc avec sa décision + le pourquoi. Marc peut éditer ce fichier à la main pour rectifier (commit + push).",
+  "_note": "Cadence de publication par niche = villes/zones publiées PAR RUN de cron. Lu par les crons conciergerie / love-room / cabane. Piloté chaque lundi par gsc-cadence-weekly selon la santé GSC (mail à Marc avec décision + pourquoi). Marc peut éditer à la main (commit + push) pour rectifier.",
   "love-room": { "villesParRun": 2 },
   "cabane": { "villesParRun": 2 },
   "conciergerie": { "villesParRun": 2 },
-  "_bornes": { "min": 1, "max": 6, "raison": "garde-fou : l'agent hebdo ne peut jamais sortir de [1,6] par run par niche" },
-  "lastDecision": { "date": "2026-06-07", "by": "init", "reason": "Cadence de départ prudente (2/run/niche). Domaine 2 mois, nouvelles pages pas encore indexées." }
+  "runsPerWeek": { "conciergerie": 3, "love-room": 2, "cabane": 2 },
+  "maxPagesPerWeek": 20,
+  "bornesParRun": { "min": 1, "max": 6 },
+  "_calcul": "pages/semaine = Σ (runsPerWeek[niche] × villesParRun[niche]). Garde-fou DUR dans gsc-cadence-apply.mjs : chaque niche clampée à [1,6] ET total hebdo plafonné à maxPagesPerWeek (sinon on redescend la niche la plus grosse). Actuel : 3×2 + 2×2 + 2×2 = 14/sem.",
+  "lastDecision": { "date": "2026-06-07", "by": "init", "weeklyTotal": 14, "reason": "Cadence de départ prudente (2/run/niche). Domaine 2 mois, nouvelles pages pas encore indexées." }
 }

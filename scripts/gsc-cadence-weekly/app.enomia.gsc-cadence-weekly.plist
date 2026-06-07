@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>app.enomia.gsc-cadence-weekly</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/marc/projects/eunomia/scripts/gsc-cadence-weekly/run.sh</string>
+    </array>
+
+    <!-- Lundi (1) à 9h45 : après le bilan GSC quotidien (9h18) → données du lundi fraîches. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Weekday</key><integer>1</integer>
+        <key>Hour</key><integer>9</integer>
+        <key>Minute</key><integer>45</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/marc/projects/eunomia/scripts/gsc-cadence-weekly/logs/launchd-stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/marc/projects/eunomia/scripts/gsc-cadence-weekly/logs/launchd-stderr.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Users/marc/.claude/local</string>
+        <key>HOME</key>
+        <string>/Users/marc</string>
+    </dict>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/marc/projects/eunomia</string>
+</dict>
+</plist>

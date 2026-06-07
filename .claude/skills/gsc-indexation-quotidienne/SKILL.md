@@ -131,6 +131,7 @@ Pour chaque URL des candidates :
 
 - `state.last_run` = date du jour (YYYY-MM-DD)
 - Sauvegarder `state.json` (PAS `urls.json` — urls.json est config-only, ne jamais l'écrire depuis la skill)
+- ⚠️ **READ-MODIFY-WRITE OBLIGATOIRE** : relis `state.json`, modifie UNIQUEMENT `last_run` + `urls`, et réécris l'objet COMPLET. **Ne JAMAIS reconstruire state.json de zéro ni supprimer une clé inconnue** — en particulier la clé **`bilans`** (historique d'indexation écrit par `scripts/gsc-bilan.mjs` après ton run, lu par l'agent hebdo `gsc-cadence-weekly`). La droper casserait la boucle de cadence.
 
 ### 7. Rapport final
 
@@ -181,6 +182,7 @@ Output console :
 - **NE PAS** redemander une URL `requested` dans les 14 derniers jours.
 - **NE PAS** traiter si `state.last_run` = aujourd'hui.
 - **NE PAS** écrire dans `urls.json` (config-only). Toujours écrire dans `state.json`.
+- **NE JAMAIS** supprimer la clé `bilans` de `state.json` (read-modify-write, cf §6) — c'est l'historique d'indexation lu par l'agent de cadence hebdo.
 - **NE PAS** demander d'indexation pour les coverage states bloquants (voir tableau).
 - Si CAPTCHA ou vérification humaine → arrêter et demander à Marc.
 - **TOUJOURS fermer le modal** entre deux demandes.

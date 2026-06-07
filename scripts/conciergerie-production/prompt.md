@@ -2,7 +2,7 @@ Tu es l'agent de production des pages conciergerie ville Enomia, exécuté par l
 
 ## Mission
 
-Produire **2 nouvelles villes** par run, push direct en prod (Vercel auto-deploy), email récap à Marc.
+Produire **N nouvelles villes** par run (N = cadence du jour, voir Étape 1), push direct en prod (Vercel auto-deploy), email récap à Marc.
 
 ## Scope géographique
 
@@ -31,14 +31,16 @@ Si une ville du backlog est en dehors de cette zone (ex. ville anglophone, Asie,
 
 ## Workflow
 
-### Étape 1 — Identifier les 2 villes du jour
+### Étape 1 — Identifier les N villes du jour
+
+**Cadence** : lire `scripts/publication-cadence.json` → `conciergerie.villesParRun` (défaut **2** si le fichier est absent). C'est **N**, le nombre de villes à produire ce run (piloté automatiquement par l'agent `gsc-cadence-weekly` selon la santé GSC).
 
 Lire `scripts/city-backlog.json`. Filtrer :
 - `status == "À faire"`
 - Tri par `vol` DESC (volume SEMrush)
-- Prendre les **2 premiers**
+- Prendre les **N premières**
 
-Si moins de 2 villes restantes → traiter ce qu'il y a + email "pipeline bientôt vide".
+Si moins de N villes restantes → traiter ce qu'il y a + email "pipeline bientôt vide".
 
 ### Étape 2 — Pour chaque ville, recherche
 
@@ -119,7 +121,7 @@ Format exact d'une entry (cf villes existantes dans `src/data/cities.ts` pour le
 
 ### Étape 4 — Ajouter au fichier `src/data/cities.ts`
 
-Lire le fichier, identifier l'array `export const cities = [...]`, **ajouter les 2 nouvelles entries à la fin de l'array** (avant la dernière `]`). Préserver l'ordre / formatage existant.
+Lire le fichier, identifier l'array `export const cities = [...]`, **ajouter les N nouvelles entries à la fin de l'array** (avant la dernière `]`). Préserver l'ordre / formatage existant.
 
 #### ⚠️ Convention markdown — champs renderRich vs champs littéraux
 
@@ -150,21 +152,22 @@ Pour chaque ville traitée : `status` → `Publié`, ajouter `publishedAt` au fo
 
 ```bash
 git add src/data/cities.ts scripts/city-backlog.json
-git commit -m "feat(conciergerie): +2 villes (VILLE1, VILLE2) production auto"
+git commit -m "feat(conciergerie): +<N> villes (<liste>) production auto"
 git push origin main
 ```
+(remplace `<N>` par le nombre réel de villes créées et `<liste>` par leurs noms)
 
 ### Étape 7 — Email récap via Resend
 
 ```bash
-./scripts/tech-watchdog/send-report.sh "[conciergerie] +2 villes en ligne : VILLE1, VILLE2" <<EMAIL
+./scripts/tech-watchdog/send-report.sh "[conciergerie] +<N> villes en ligne : <liste>" <<EMAIL
 Production auto du DATE.
 
-Nouvelles villes publiées (vol SEMrush) :
+Nouvelles villes publiées (vol SEMrush) — une ligne par ville réellement créée (N lignes) :
 1. VILLE1 (vol: X) → https://www.enomia.app/conciergerie-airbnb/REGION1/SLUG1
-2. VILLE2 (vol: Y) → https://www.enomia.app/conciergerie-airbnb/REGION2/SLUG2
+...
 
-Conciergeries listées : N agences VILLE1, M agences VILLE2.
+Conciergeries listées : par ville créée.
 
 Vercel deploy en cours (auto sur push main, ~2 min).
 

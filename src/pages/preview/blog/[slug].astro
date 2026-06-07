@@ -1,5 +1,5 @@
 ---
-// SSR — no prerender so previews work immediately after Keystatic save
+// SSR : no prerender so previews work immediately after Keystatic save
 export const prerender = false;
 
 import { getCollection } from 'astro:content';
@@ -44,7 +44,7 @@ const readTime = readingTime(post.body);
 
   <!-- Preview banner -->
   <div style="background:#f59e0b;color:#000;text-align:center;padding:10px 16px;font-weight:600;font-size:13px;position:sticky;top:0;z-index:999;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
-    <span>APERÇU — {post.data.status === 'brouillon' ? '🔒 Brouillon' : '✅ En ligne'}</span>
+    <span>APERÇU : {post.data.status === 'brouillon' ? '🔒 Brouillon' : '✅ En ligne'}</span>
     <a href="/keystatic" style="color:#000;text-decoration:underline;">Modifier dans Keystatic →</a>
   </div>
 
@@ -117,11 +117,11 @@ const readTime = readingTime(post.body);
             Guide PDF offert + Newsletter
           </div>
           <div class="article-nl-title">Recevez ma méthode LCD complète, gratuitement</div>
-          <p class="article-nl-desc">Le guide PDF en 10 étapes pour atteindre <strong style="color:var(--text-light);">93–97% d'occupation</strong> — la méthode que j'applique sur mes 9 biens, expliquée de A à Z.</p>
+          <p class="article-nl-desc">Le guide PDF en 10 étapes pour atteindre <strong style="color:var(--text-light);">93–97% d'occupation</strong>. La méthode que j'applique sur mes 9 biens, expliquée de A à Z.</p>
           <div class="article-nl-bullets">
             <div class="article-nl-bullet">
               <span class="article-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span><strong>Guide PDF Méthode 97%</strong> — 40+ pages</span>
+              <span><strong>Guide PDF Méthode 97%</strong> : 40+ pages</span>
             </div>
             <div class="article-nl-bullet">
               <span class="article-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
@@ -129,7 +129,7 @@ const readTime = readingTime(post.body);
             </div>
             <div class="article-nl-bullet">
               <span class="article-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span><strong>1 email/semaine</strong> — chiffres réels, rien à vendre</span>
+              <span><strong>1 email/semaine</strong> : chiffres réels, rien à vendre</span>
             </div>
           </div>
           <form class="article-nl-form" onsubmit="return false;">

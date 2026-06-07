@@ -79,7 +79,7 @@ const jsonLd = {
   ...(post.data.featuredImage ? { image: post.data.featuredImage.src } : {}),
 };
 
-// JSON-LD FAQPage — auto-parsed from Markdoc ### headings inside ## FAQ section
+// JSON-LD FAQPage : auto-parsed from Markdoc ### headings inside ## FAQ section
 function parseFaqFromBody(body: string | undefined) {
   if (!body) return [];
   // Find the FAQ section (## **FAQ ...)
@@ -253,7 +253,7 @@ const faqLd = faqItems.length > 0 ? {
           <div class="sb-sim-title">Simulateur de rendement Airbnb</div>
         </div>
         <div class="sb-sim-badge">100% gratuit</div>
-        <p class="sb-sim-desc">Calculez en 2 minutes le rendement réel de votre bien Airbnb — cash flow, rentabilité nette, seuil de rentabilité.</p>
+        <p class="sb-sim-desc">Calculez en 2 minutes le rendement réel de votre bien Airbnb : cash flow, rentabilité nette, seuil de rentabilité.</p>
         <div class="sb-sim-stats">
           <div class="sb-sim-stat">
             <div class="sb-sim-stat-val">&infin;</div>
@@ -394,7 +394,7 @@ const faqLd = faqItems.length > 0 ? {
       <NewsletterBlock id="sb-nl-form" compact />
     </aside>
 
-    <!-- Related articles — horizontal scroll desktop, vertical mobile -->
+    <!-- Related articles : horizontal scroll desktop, vertical mobile -->
     {relatedPosts.length > 0 && (
       <section class="related">
         <div class="sec-head">

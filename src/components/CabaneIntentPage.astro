@@ -7,7 +7,8 @@ interface Props { intent: CabaneIntent }
 const { intent } = Astro.props;
 const cfg = CABANE_INTENTS[intent];
 const other = intent === 'amoureux' ? CABANE_INTENTS.famille : CABANE_INTENTS.amoureux;
-const groups = getCabanesByIntent(intent, 5);
+const groups = getCabanesByIntent(intent, 4);
+const verifDate = (d: string) => new Date(d).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
 const totalCabanes = groups.reduce((s, g) => s + g.cabanes.length, 0);
 const canonical = `https://www.enomia.app/cabane/${cfg.slug}`;
 
@@ -62,15 +63,33 @@ const breadcrumbLd = {
     .region-h a { font-family: 'Newsreader', serif; font-size: 21px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
     .region-h a:hover { color: #3fbd71; }
     .region-h .more { font-size: 12px; color: #3fbd71; text-decoration: none; white-space: nowrap; }
-    .clist { display: flex; flex-direction: column; gap: 8px; }
-    .citem { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border: 1px solid #e5e3de; background: #fff; border-radius: 10px; }
-    .citem .ci { display: flex; flex-direction: column; flex: 1; min-width: 0; }
-    .citem .ci strong { color: #1a1a1a; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .citem .ci .m { font-size: 12px; color: #8a8985; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .citem .rate { font-size: 12px; font-weight: 700; color: #b9791a; white-space: nowrap; }
-    .citem .book { background: #2b2d2b; color: #fff; font-size: 12px; font-weight: 600; padding: 7px 13px; border-radius: 100px; text-decoration: none; white-space: nowrap; }
-    .citem .book:hover { background: #3fbd71; }
-    @media (max-width: 600px) { .citem .rate { display: none; } }
+    .room { border: 1px solid #e5e3de; border-radius: 12px; padding: 20px 22px; margin: 12px 0; background: #fff; }
+    .room-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .room h3 { font-family: 'Newsreader', serif; font-size: 20px; font-weight: 600; margin: 0; color: #1a1a1a; }
+    .room .loc { font-size: 12px; color: #8a8985; margin: 6px 0 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .room .rate { background: rgba(240,168,58,0.12); color: #b9791a; font-weight: 700; padding: 2px 9px; border-radius: 100px; }
+    .room p { font-size: 14px; color: #52524e; line-height: 1.65; margin: 0 0 10px; overflow-wrap: anywhere; }
+    .room .feats { display: flex; gap: 6px; flex-wrap: wrap; }
+    .room .feat { font-size: 11px; color: #52524e; background: #f7f6f3; border: 1px solid #e5e3de; padding: 3px 9px; border-radius: 6px; }
+    .room .book { display: inline-block; background: #2b2d2b; color: #fff; font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: 100px; text-decoration: none; white-space: nowrap; }
+    .room .book:hover { background: #3fbd71; }
+    .room .foot-right { display: flex; align-items: center; gap: 10px; }
+    .room .book-foot { display: none; }
+    @media (max-width: 700px) {
+      .room-head .book-head { display: none; }
+      .room .price.has-btn { display: none; }
+      .room .book-foot { display: inline-flex; }
+      .room .rev { flex: 0 0 80%; }
+    }
+    .room .room-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px solid #f0eee8; }
+    .room .room-foot .price { font-size: 15px; font-weight: 700; color: #1a1a1a; white-space: nowrap; }
+    .room .reviews { display: flex; gap: 12px; overflow-x: auto; margin-top: 14px; padding-bottom: 4px; -webkit-overflow-scrolling: touch; min-width: 0; max-width: 100%; }
+    .room .rev { flex: 0 0 240px; background: #f7f6f3; border: 1px solid #e5e3de; border-radius: 10px; padding: 12px 14px; }
+    .room .rev-h { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .room .rev-stars { color: #f0a83a; font-size: 12px; white-space: nowrap; }
+    .room .rev-meta { font-size: 10px; color: #8a8985; text-align: right; }
+    .room .rev p { font-size: 12px; color: #52524e; line-height: 1.5; margin: 0; font-style: italic; }
+    .room .rev-attr { font-size: 10px; color: #8a8985; margin: 0; }
 
     .faq { border: 1px solid #e5e3de; border-radius: 12px; overflow: hidden; margin: 16px 0; background: #fff; }
     .faq details { border-bottom: 1px solid #e5e3de; } .faq details:last-child { border-bottom: none; }
@@ -110,20 +129,42 @@ const breadcrumbLd = {
             <a href={`/cabane/${g.zone.slug}`}>Cabane {g.zone.displayName}</a>
             <a class="more" href={`/cabane/${g.zone.slug}`}>Voir toutes les cabanes →</a>
           </div>
-          <div class="clist">
-            {g.cabanes.map((c) => (
-              <div class="citem">
-                <span class="ci">
-                  <strong>{c.name}</strong>
-                  <span class="m">📍 {c.area}{c.dept ? ` (${c.dept})` : ''}{c.features?.length ? ` · ${c.features.slice(0, 2).join(' · ')}` : ''}</span>
-                </span>
-                {c.rating ? <span class="rate">★ {c.rating.toFixed(1)}</span> : null}
-                {c.url
-                  ? <a class="book" href={c.url} target="_blank" rel="noopener">Réserver →</a>
-                  : <a class="book" href={`/cabane/${g.zone.slug}`}>Voir →</a>}
+          {g.cabanes.map((c) => (
+            <div class="room">
+              <div class="room-head">
+                <h3>{c.name}</h3>
+                {c.url && <a class="book book-head" href={c.url} target="_blank" rel="noopener">Réserver en direct →</a>}
               </div>
-            ))}
-          </div>
+              <div class="loc">
+                <span>📍 {c.area}{c.dept ? ` (${c.dept})` : ''}</span>
+                {c.rating && c.rating > 0 && (
+                  <span class="rate">★ {c.rating.toFixed(1)}{c.reviews ? ` · ${c.reviews} avis` : ''}</span>
+                )}
+              </div>
+              <p>{c.description ?? `${c.vibe}.`}</p>
+              <div class="feats">{c.features.map((f) => <span class="feat">{f}</span>)}</div>
+              {c.recentReviews && c.recentReviews.length > 0 && (
+                <div class="reviews">
+                  {c.recentReviews.map((rev) => (
+                    <div class="rev">
+                      <div class="rev-h">
+                        <span class="rev-stars">{'★'.repeat(Math.round(rev.rating ?? 0))}</span>
+                        <span class="rev-meta">{rev.author}{rev.when ? ` · ${rev.when}` : ''}</span>
+                      </div>
+                      <p>{rev.text}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <div class="room-foot">
+                {c.recentReviews && c.recentReviews.length > 0 ? <span class="rev-attr">Avis Google vérifiés en {verifDate(g.zone.updatedAt)}</span> : <span></span>}
+                <span class="foot-right">
+                  <span class={`price ${c.url ? 'has-btn' : ''}`}>{c.priceFrom ? `dès ${c.priceFrom} €/nuit` : 'Tarifs sur le site'}</span>
+                  {c.url && <a class="book book-foot" href={c.url} target="_blank" rel="noopener">Réserver en direct →</a>}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
       ))}
 

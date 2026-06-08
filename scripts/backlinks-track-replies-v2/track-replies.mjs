@@ -276,7 +276,15 @@ const OUTIL_LABELS = {
   simulateur: 'notre simulateur de rentabilité gratuit',
   contrat: 'notre modèle de contrat de location saisonnière gratuit',
   facture: 'notre générateur de factures gratuit',
+  taxe_sejour: 'notre calculateur de taxe de séjour gratuit',
 };
+
+// Libellé d'outil pour les relances. Fallback générique pour ne JAMAIS écrire
+// "undefined" (bug : les relances lisaient c.outil_cible — inexistant — au lieu
+// de c.outil_pitche, et taxe_sejour manquait dans OUTIL_LABELS).
+export function outilLabel(outil) {
+  return OUTIL_LABELS[outil] || 'notre outil gratuit';
+}
 
 // ─── Détection bounces (NDR Gmail) ──────────────────────────────────────
 
@@ -426,7 +434,7 @@ async function main() {
     if (c.status === 'sent' && daysSince >= 5) {
       // Relance 1
       if (!DRY) {
-        const body = RELANCE_T2({ prenom: c.prenom, outil_label: OUTIL_LABELS[c.outil_cible] });
+        const body = RELANCE_T2({ prenom: c.prenom, outil_label: outilLabel(c.outil_pitche) });
         const subject = 'Re: ' + (c.pitch_subject || 'notre échange');
         const msgId = await sendMail(gm, { to: c.email, subject, body });
         c.status = 'relance_1';
@@ -441,7 +449,7 @@ async function main() {
     } else if (c.status === 'relance_1' && daysBetween(c.date_relance_1) >= 5) {
       // Relance 2 (donc J+10 du send initial)
       if (!DRY) {
-        const body = RELANCE_T3({ prenom: c.prenom, outil_label: OUTIL_LABELS[c.outil_cible] });
+        const body = RELANCE_T3({ prenom: c.prenom, outil_label: outilLabel(c.outil_pitche) });
         const subject = 'Re: ' + (c.pitch_subject || 'notre échange');
         const msgId = await sendMail(gm, { to: c.email, subject, body });
         c.status = 'relance_2';

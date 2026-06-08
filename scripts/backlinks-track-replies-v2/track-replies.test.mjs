@@ -1,6 +1,13 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { pickLatestInbound, getHeader, pickBestDomainReply, rootDomain } from './track-replies.mjs';
+import { pickLatestInbound, getHeader, pickBestDomainReply, rootDomain, outilLabel } from './track-replies.mjs';
+
+test('outilLabel : libellé par outil, JAMAIS "undefined" (bug relance)', () => {
+  assert.equal(outilLabel('simulateur'), 'notre simulateur de rentabilité gratuit');
+  assert.equal(outilLabel('taxe_sejour'), 'notre calculateur de taxe de séjour gratuit');
+  assert.equal(outilLabel(undefined), 'notre outil gratuit'); // le bug d'origine (c.outil_cible inexistant)
+  assert.ok(!outilLabel('cle_inconnue').includes('undefined'));
+});
 
 test('rootDomain : sous-domaine → domaine racine (cas zently)', () => {
   assert.equal(rootDomain('blog.zently.fr'), 'zently.fr');

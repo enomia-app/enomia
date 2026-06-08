@@ -1,11 +1,30 @@
 {
   "_note": "Cadence de publication par niche = villes/zones publiées PAR RUN de cron. Lu par les crons conciergerie / love-room / cabane. Piloté chaque lundi par gsc-cadence-weekly selon la santé GSC (mail à Marc avec décision + pourquoi). Marc peut éditer à la main (commit + push) pour rectifier.",
-  "love-room": { "villesParRun": 2 },
-  "cabane": { "villesParRun": 2 },
-  "conciergerie": { "villesParRun": 2 },
-  "runsPerWeek": { "conciergerie": 3, "love-room": 2, "cabane": 2 },
+  "love-room": {
+    "villesParRun": 1
+  },
+  "cabane": {
+    "villesParRun": 1
+  },
+  "conciergerie": {
+    "villesParRun": 3
+  },
+  "runsPerWeek": {
+    "conciergerie": 3,
+    "love-room": 2,
+    "cabane": 2
+  },
   "maxPagesPerWeek": 20,
-  "bornesParRun": { "min": 1, "max": 6 },
+  "bornesParRun": {
+    "min": 1,
+    "max": 6
+  },
   "_calcul": "pages/semaine = Σ (runsPerWeek[niche] × villesParRun[niche]). Garde-fou DUR dans gsc-cadence-apply.mjs : chaque niche clampée à [1,6] ET total hebdo plafonné à maxPagesPerWeek (sinon on redescend la niche la plus grosse). Actuel : 3×2 + 2×2 + 2×2 = 14/sem.",
-  "lastDecision": { "date": "2026-06-07", "by": "init", "weeklyTotal": 14, "reason": "Cadence de départ prudente (2/run/niche). Domaine 2 mois, nouvelles pages pas encore indexées." }
+  "lastDecision": {
+    "date": "2026-06-08",
+    "by": "gsc-cadence-weekly",
+    "weeklyTotal": 13,
+    "guardHit": false,
+    "reason": "Conciergerie indexe bien (94.9%, +3 indexed hier) → augmenter à 3/run. Love-room et cabane : 0% indexation (32+8 pending non touchées par Google) → descendre à 1/run chacune pour ne pas surcharger Google et laisser les pages existantes s'indexer d'abord. Domaine jeune (2 mois), prudence justifiée."
+  }
 }

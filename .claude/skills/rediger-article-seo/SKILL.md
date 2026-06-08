@@ -28,8 +28,8 @@ Rédige un article de blog ou une landing éditoriale pour Enomia.app, en suivan
    Le texte est dans des appels `p(story, S, "...")`, `h3(...)`, `bullet(...)`, `QuoteBox`, `StatCard`. Extraire avec `grep -E '"[^"]{40,}"' methode97_content*.py` ou lire les fichiers complets si on a besoin d'anecdotes / chiffres précis (ex : les 4 opérations d'investissement, les vraies données de marché de Marc).
 3. **Identité Marc** : mémoire `user_marc_identite.md` (97% = nom de la méthode ET vrai taux d'occupation, à utiliser dans le body. Bio canonique reste à 93%+ pour ne pas promettre 97% comme garantie).
 4. **Sitemap interne** : `src/data/cities.ts` + lister `src/content/blog/*.mdoc` (status `en-ligne`) + `src/pages/*.astro` pour le maillage
-5. **Mémoire `reference_liens_internes.md`** : convention URLs `/blog/X`, `/X` (outils), `/conciergerie-airbnb/[r]/[v]`
-6. **Mémoire `reference_semrush.md`** : endpoints API + leçons KW déjà testés
+5. **Mémoire `reference_maillage_on_page.md`** : convention URLs `/blog/X`, `/X` (outils), `/conciergerie-airbnb/[r]/[v]`
+6. **Mémoire `reference_semrush_methodo.md`** : endpoints API + leçons KW déjà testés
 
 ## Workflow
 
@@ -71,7 +71,7 @@ Pour chaque URL du top 10 retourné par `phrase_organic` :
 ### 4. Plan d'article
 
 Structure :
-- **H1** = KW principal + nuance différenciante (année courante 2026, "vrais chiffres", "guide complet"…)
+- **H1** = KW principal + nuance différenciante (année courante 2026, "vrais chiffres", "guide complet"…). ⚠️ **Le H1 vit dans le champ `title` du frontmatter**, que le template `blog/[slug].astro` injecte en `<h1 class="article-h1">`. **Ne JAMAIS écrire de `# Titre` en tête du body `.mdoc`** : markdoc rend `#` en vrai `<h1>` → ça crée un **second `<h1>` dupliqué** (mauvais signal SEO + titre affiché 2 fois). Le body commence directement à l'intro (premier sous-titre = `## `).
 - **Intro 80-150 mots** : storytelling Neil Patel-style
   - Ligne 1 : hook (chiffre choc, contradiction, anecdote 1ère personne)
   - Ligne 2 : douleur/problème du lecteur
@@ -119,7 +119,7 @@ Structure :
 ### 6. Frontmatter `.mdoc` (mode article-blog)
 
 ```yaml
-title: "<H1 lisible>"
+title: "<H1 lisible>"                                  # = le H1 RENDU (injecté par le template). ⚠️ Le body NE commence PAS par `# ` sinon H1 dupliqué — 1er heading body = `## `
 metaTitle: "<KW principal + nuance> · <suffixe court>"          # ≤ 60 chars
 metaDescription: >-
   <accroche 145-155 chars contenant KW principal + KW secondaire>

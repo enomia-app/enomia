@@ -11749,6 +11749,382 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-05',
   },
+  {
+    slug: 'le-grau-du-roi',
+    displayName: 'Le Grau-du-Roi',
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title: 'Conciergerie Le Grau-du-Roi Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Le Grau-du-Roi : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb au Grau-du-Roi et Port Camargue. Tarifs (20-25 %), services, avis, réglementation 2026, quartiers rentables, pic saison.",
+    kwPrincipal: 'conciergerie grau du roi',
+    kwSecondaires: [
+      'conciergerie le grau du roi',
+      'conciergerie airbnb grau du roi',
+      'conciergerie port camargue',
+      'gestion locative grau du roi',
+      'agence airbnb grau du roi',
+      'conciergerie camargue',
+    ],
+    population: 8539,
+    tourists: 9600000,
+    activeListings: 1800,
+    priceLow: 60,
+    priceHigh: 140,
+    occupancyRate: 50,
+    revpar: 45,
+    seasonality:
+      "Saisonnalité méditerranéenne ultra-marquée, dominée par l'été. Selon l'Office de Tourisme du Grau-du-Roi, 42 % des nuitées annuelles sont concentrées sur juillet-août et 58 % sont réparties sur les 10 autres mois. Pic absolu juillet-août (occupation 90-95 %, tarifs 2-3× le tarif annuel moyen, mix clientèle française, néerlandaise, allemande, belge et suisse), portés par les 18 km de plages de sable (Plage Nord, Plage Sud, Espiguette), Port Camargue (premier port de plaisance d'Europe avec 5 000 anneaux) et l'attractivité du delta camarguais. Pic secondaire vacances scolaires de printemps (Pâques, mai-juin) et arrière-saison (septembre-Toussaint), portés par la clientèle senior et nautique. Inter-saisons novembre-février très creuses (occupation 15-25 %), avec un fond de marché business / déplacements ponctuels et clientèle Camargue toute saison.",
+    rankNational: 32,
+    introCustom:
+      "Vous avez un **appartement, une marina ou une maison** à **Port Camargue**, sur la **Rive Droite** (centre historique du village de pêcheurs, canal, port de pêche), sur la **Rive Gauche** (extension balnéaire 1970s, immeubles bord de mer), au **Boucanet** (limite La Grande-Motte) ou face à la **Plage de l'Espiguette**, que vous louez sur Airbnb ou que vous envisagez de mettre en location saisonnière.\n\nEntre les **9,6 millions de nuitées annuelles** déclarées sur la commune par l'Office de Tourisme, le **pic ultra-concentré juillet-août** (42 % des nuitées annuelles selon letsgrau.com), Port Camargue **premier port de plaisance d'Europe** (5 000 anneaux, dont 2 760 anneaux publics et 2 240 anneaux privés), et la quinzaine d'acteurs locaux qui se partagent ce marché, vous vous demandez quelle conciergerie maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les pure-players locaux du Grau-du-Roi et de Port Camargue (Conciergerie Locamargue, Aurore Multiservices), les acteurs Camargue / La Grande-Motte élargie (Sud Conciergerie, La Bonne Conciergerie, Halo Butler) et les réseaux nationaux structurés (YourHostHelper) ?",
+    marketIntro:
+      "Le Grau-du-Roi est la **seule commune du Gard à bénéficier d'un accès direct à la Méditerranée** et **l'une des stations balnéaires les plus fréquentées du Languedoc**, avec **9,6 millions de nuitées annuelles** sur la commune selon l'Office de Tourisme. La ville (8 539 habitants à l'année selon les estimations INSEE 2025, en croissance continue depuis les années 1960) voit sa population grimper au-delà de **90 000 personnes en juillet-août** — un ratio résidents permanents / pic saisonnier parmi les plus déséquilibrés de France.\n\n**Port Camargue est le premier port de plaisance d'Europe** (160 hectares, 10 km de pontons et quais, 5 000 anneaux dont 2 760 publics et 2 240 marinas privées), conçu en 1967 par l'architecte Jean Balladur dans le cadre de la Mission Racine d'aménagement du littoral languedocien. La ville reste également le **premier port de pêche au chalut de Méditerranée française**, un atout patrimonial fort sur la Rive Droite (canal, criée, restaurants de poisson). Le mix unique : **18 km de plages de sable** (Plage Nord familiale, Plage Sud, Espiguette nature et grande dune), **clientèle internationale très polarisée** (Néerlandais, Allemands, Belges, Suisses, en plus des Français), **nautisme de masse** (sortie de port, mouillage forain, école de voile).\n\n**Prix au m² accessibles malgré la pression touristique.** Comptez **3 200-4 500 €/m²** sur Port Camargue (marinas avec amarrage), **3 000-4 000 €/m²** sur la Rive Gauche / Plage Nord, **2 800-3 800 €/m²** sur la Rive Droite (centre historique), **2 600-3 400 €/m²** sur le Boucanet. Les marinas avec anneau attaché à l'appartement (et donc rentabilité nautique additionnelle) atteignent **4 500-6 000 €/m²**. Un T2 vue mer Port Camargue démarre autour de **160 000-220 000 €**, une marina T3 avec anneau dès **240 000-320 000 €**.\n\n**Réglementation : cadre national Loi Le Meur sans dispositif local restrictif additionnel identifié à ce jour.** Le Grau-du-Roi n'a pas instauré de zone d'autorisation de changement d'usage spécifique et n'a pas abaissé le plafond résidence principale à 90 jours/an. Le cadre national s'applique avec déclaration en mairie et numéro d'enregistrement obligatoire au plus tard le 20 mai 2026. Compte tenu de la pression touristique exceptionnelle de la commune, un durcissement local reste possible sur le mandat municipal en cours.",
+    conciergeries: [
+      {
+        name: 'Conciergerie Locamargue',
+        url: 'https://www.conciergerielocamargue.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 2,
+        biensGeres: 20,
+        specialty: 'Pure-player local domicilié au Grau-du-Roi',
+        description:
+          "Conciergerie Locamargue est ancrée au cœur du Grau-du-Roi (221 Route des Marines, 30240) avec un positionnement de pure-player local sur la commune et l'extension Port Camargue / La Grande-Motte / Palavas. Offre intégrale en gestion saisonnière clé en main : audit du bien, création et optimisation de l'annonce, photos professionnelles, pricing dynamique calé sur la saison méditerranéenne, accueil voyageurs 7j/7, ménage hôtelier, gestion linge, maintenance. Pertinente pour un propriétaire qui valorise un acteur enraciné dans la commune (pas un réseau franchise piloté à distance), avec une connaissance fine des micro-marchés Rive Droite, Rive Gauche, Port Camargue et Boucanet, et qui veut un interlocuteur unique disponible toute l'année y compris en pleine saison.",
+      },
+      {
+        name: 'Aurore Multiservices',
+        url: 'https://aurore-multiservices.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 31,
+        biensGeres: 18,
+        specialty: 'Acteur à taille humaine Grau-du-Roi / Port Camargue',
+        description:
+          "Aurore Multiservices est portée par une indépendante domiciliée au Grau-du-Roi, avec une couverture Grau-du-Roi village et Port Camargue. Offre conciergerie privée centrée sur l'accueil voyageurs en personne, le ménage hôtelier, la gestion du linge, la coordination check-in / check-out et le suivi propriétaire. Tarification sur devis personnalisé. Communication ouverte, suivi rapproché, taux de recommandation très élevé sur les avis voyageurs (94 % de recommandations sur Facebook selon la page officielle). Pertinente pour un propriétaire de résidence secondaire qui veut un interlocuteur unique à taille humaine, accessible et disponible, plutôt qu'un back-office franchisé — particulièrement adapté aux marinas Port Camargue où la relation humaine au check-in compte beaucoup.",
+      },
+      {
+        name: 'YourHostHelper',
+        url: 'https://yourhosthelper.com/en/agence-grau-du-roi/',
+        commission: '20 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 25,
+        biensGeres: 30,
+        specialty: 'Commission affichée 20 % TTC, réseau national franchise',
+        description:
+          "YourHostHelper est l'un des plus grands réseaux de franchise conciergerie en France, avec une agence dédiée au Grau-du-Roi. Commission affichée publiquement à **20 % TTC** sur le revenu de chaque réservation, sans frais cachés ni engagement de durée minimale — l'une des structures de prix les plus transparentes du marché. Formule unique appelée Gestion Complète, intégrant 15 services : optimisation d'annonce, photos pro, pricing dynamique, accueil voyageurs 7j/7, ménage hôtelier, gestion linge, suivi des réservations sur une application dédiée. Pertinente pour un propriétaire qui valorise un outillage de réseau (back-office structuré, app de suivi en temps réel), une commission affichée et bornée, et l'absence d'engagement de durée minimale.",
+      },
+      {
+        name: 'Halo Butler',
+        url: 'https://halobutler.fr/conciergerie-airbnb-grau-du-roi/',
+        commission: '25 % TTC ou offre sur-mesure',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'Couverture Port Camargue, Rive Droite, Rive Gauche, Boucanet',
+        description:
+          "Halo Butler couvre Le Grau-du-Roi en intégralité (Port Camargue, Rive Droite, Rive Gauche, centre village, Boucanet) depuis sa base Montpellier-Lunel, avec une équipe terrain dédiée au littoral camarguais. Commission affichée à **25 % TTC** en formule standard, ou offre sur-mesure ajustée selon la surface, le standing et la cible du bien (premium marina vs T2 station). Formule intégrale : accueil voyageurs 7j/7, ménage hôtelier, gestion linge, pricing dynamique, maintenance légère, reporting détaillé après chaque séjour. Pertinente pour un propriétaire de bien premium (villa, marina avec anneau, T3+ vue mer) qui accepte de payer un peu plus pour un suivi plus pointu et qui valorise la qualité du reporting photo après chaque check-out.",
+      },
+      {
+        name: 'Sud Conciergerie',
+        url: 'https://sudconciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 12,
+        biensGeres: 28,
+        specialty: 'Acteur historique La Grande-Motte / Grau-du-Roi / Port Camargue',
+        description:
+          "Sud Conciergerie est dirigée par Erica Torres et basée 101 Avenue Pierre Racine à La Grande-Motte, avec une zone d'intervention qui couvre toute la conurbation balnéaire La Grande-Motte / Grau-du-Roi / Port Camargue. Offre conciergerie complète : gestion saisonnière, location de vacances, et une déclinaison hébergement étudiant en hors-saison (utile pour les biens proches IUT Nîmes / Montpellier sud). Tarification sur devis. Pertinente pour un propriétaire qui a un bien dans la zone et veut un acteur unique pour les deux communes phares (utile si vous avez un bien à La Grande-Motte et un autre au Grau-du-Roi, ou si vous voulez tester une stratégie hybride étudiant 9 mois + LCD 3 mois sur les biens hors plage).",
+      },
+      {
+        name: 'La Bonne Conciergerie',
+        url: 'https://www.labonneconciergerie.fr/conciergerie-au-grau-du-roi',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 15,
+        biensGeres: 35,
+        specialty: 'Réseau littoral La Grande-Motte / Carnon / Palavas / Grau-du-Roi',
+        description:
+          "La Bonne Conciergerie est une structure littoral languedocien (La Grande-Motte, Carnon, Palavas-les-Flots, Montpellier sud, Le Grau-du-Roi) qui revendique sur son site un **taux d'occupation proche de 90 %** et un rendement brut **7-9 %** sur les biens accompagnés. Positionnement transparence (formulation « sans frais cachés ni mauvaises surprises »). Tarification sur devis. Offre intégrale : optimisation annonce, accueil voyageurs, ménage, linge, maintenance, suivi propriétaire. Pertinente pour un propriétaire qui valorise un acteur ancré sur tout le cordon littoral languedocien (utile si vous avez plusieurs biens entre Palavas et Grau-du-Roi) et qui veut un benchmark concret de performance attendue avant de signer.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Port Camargue',
+        pricePerNight: '90-200 €',
+        occupancy: 55,
+        description:
+          "Premier port de plaisance d'Europe, conçu en 1967 par Jean Balladur dans le cadre de la Mission Racine. 5 000 anneaux (2 760 publics + 2 240 marinas privées), 160 hectares, 10 km de pontons. Cible touristique nautique haut de gamme, clientèle française, néerlandaise et allemande. Prix au m² 3 200-4 500 € (marinas avec anneau attaché à l'appartement : 4 500-6 000 €/m²). T2 vue mer dès 160 000 €, marina T3 avec anneau dès 240 000 €. Pic de demande juillet-août très tendu sur les marinas et les T3+ vue port.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Rive Droite (centre historique village)',
+        pricePerNight: '70-145 €',
+        occupancy: 50,
+        description:
+          "Cœur historique du village de pêcheurs, autour du canal, du port de pêche au chalut (le premier de Méditerranée française) et du pont tournant. Maisons de pêcheurs, ruelles, criée, restaurants de poisson, marché provençal. Cible touristique culturelle / gastronomique et clientèle familiale française. Prix au m² 2 800-3 800 €. T2 dès 145 000 €. Charme authentique, idéal pour un produit Airbnb différenciant face aux résidences balnéaires anonymes.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Rive Gauche / Plage Nord',
+        pricePerNight: '75-160 €',
+        occupancy: 55,
+        description:
+          "Extension balnéaire des années 1970, immeubles bord de mer, accès direct à la Plage Nord (drapeau bleu, familiale, animée). Mix clientèle familiale française, belge, néerlandaise. Prix au m² 3 000-4 000 €. T2 vue mer dès 175 000 €. Très forte demande juillet-août, occupation poste de location à plus de 95 % sur les semaines pic.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Boucanet (extension nord, limite La Grande-Motte)',
+        pricePerNight: '65-130 €',
+        occupancy: 48,
+        description:
+          "Quartier d'extension au nord, contigu à La Grande-Motte (à 800 m), plus calme et résidentiel, accès direct à la Plage du Boucanet (familiale, peu construite, pinède). Mix résidents permanents et résidences secondaires. Prix au m² 2 600-3 400 €. T2 dès 130 000 €. Tickets d'entrée plus accessibles que Port Camargue et Plage Nord, bonne demande hors juillet-août grâce à la proximité immédiate des animations et restaurants de La Grande-Motte.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: "Plage de l'Espiguette / Sud sauvage",
+        pricePerNight: '80-180 €',
+        occupancy: 50,
+        description:
+          "Bord de la plus longue plage de sable sauvage du Languedoc (10 km, classée Natura 2000, dunes, naturisme partiel), accessible par la route de l'Espiguette. Camping haut de gamme, mobil-homes premium et quelques villas isolées en accès direct dune. Cible naturiste, nautique (kitesurf), nature. Demande très saisonnière mais avec des prix de pointe élevés (180-250 €/nuit en août sur les villas premium).",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Première couronne Camargue (Aigues-Mortes, Saint-Laurent-d\'Aigouze)',
+        pricePerNight: '55-120 €',
+        occupancy: 45,
+        description:
+          "Communes voisines de la Camargue gardoise (Aigues-Mortes à 7 km, cité médiévale fortifiée patrimoine UNESCO ; Saint-Laurent-d'Aigouze à 10 km, marais salants). Cible touristique culturelle (remparts d'Aigues-Mortes, salins du Midi) et nature. Prix au m² 2 200-3 200 €. T2 dès 110 000 €. Stratégie maison provençale ou appartement vue remparts avec demande étalée mai-octobre (moins concentrée que sur le littoral pur).",
+        roiBrut: '5,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Le Grau-du-Roi applique le **cadre national de la Loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) **sans dispositif restrictif local additionnel identifié à ce jour** — un cadre comparable à celui de Boulogne-sur-Mer ou Quiberon, plus souple que Paris, Marseille ou Colmar.\n\n**Déclaration obligatoire en mairie.** Tout meublé de tourisme du Grau-du-Roi doit être déclaré préalablement en mairie (service urbanisme). La déclaration peut se faire en ligne via le formulaire Service-public.fr ou en version papier. Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel à cette date.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La Loi Le Meur autorise désormais les communes à abaisser ce seuil à 90 jours par délibération motivée — Le Grau-du-Roi ne l'a pas fait à ce jour. Compte tenu de la pression touristique exceptionnelle (population × 10 en juillet-août), un durcissement local reste possible sur le mandat municipal en cours.\n\n**Pas de changement d'usage généralisé à ce jour.** Contrairement à Paris, Marseille, Bordeaux ou Porto-Vecchio, Le Grau-du-Roi **n'impose pas d'autorisation de changement d'usage** pour les résidences secondaires transformées en meublés de tourisme. Si vous achetez un bien pour le destiner exclusivement à la location courte durée, vous n'avez pas à demander une autorisation préfectorale ou municipale spécifique. C'est un avantage majeur sur ce marché tendu et un facteur de prix d'acquisition encore tenables.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage). Point d'attention sur la Rive Droite (centre historique village, bâti pierre du XIXᵉ siècle souvent classé E ou F sans isolation) et sur certains immeubles 1970s mal isolés de la Rive Gauche.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur, notamment pour les biens qui dépassent les 15 000 € de CA annuel — fréquent au Grau-du-Roi sur les T2+ Plage Nord ou Port Camargue.\n\n**Sanctions Loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Communauté de Communes Terre de Camargue collecte la taxe de séjour selon le barème en vigueur (de 0,75 € à 4,30 € par nuit et par personne selon le classement du logement, collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 95,
+      neighborhood: 'Plage Nord (Rive Gauche)',
+      revenuBrut: 17000,
+      commissionRate: 0.22,
+      menageCount: 55,
+      menageUnitCost: 65,
+    },
+    extraFaq: [
+      {
+        q: "Combien rapporte un Airbnb au Grau-du-Roi sur l'année 2026 ?",
+        a: "Un T2 vue mer de 38 m² sur la Plage Nord ou un T3 avec anneau à Port Camargue (tarif moyen 95-125 €/nuit annuel) génère typiquement un chiffre d'affaires brut de 16 000-22 000 € sur l'année, avec une saisonnalité ultra-marquée — 42 % des nuitées concentrées sur juillet-août et 58 % réparties sur les 10 autres mois selon l'Office de Tourisme. Net de la commission conciergerie (20-25 %), de la taxe foncière (~1 200-1 800 € sur un T2), des charges de copropriété (résidences balnéaires souvent 1 200-2 000 €/an) et du ménage, comptez un revenu disponible de 9 000-13 000 €. Une marina T3 avec anneau peut dépasser 28 000-35 000 € de CA brut grâce au plus de la valorisation nautique. La rentabilité brute reste correcte à très bonne (4,5-7 %) selon le quartier — moins haute qu'à Boulogne-sur-Mer ou Limoges du fait du ticket d'entrée plus élevé, mais avec une plus-value immobilière potentielle plus forte.",
+      },
+      {
+        q: 'Le Grau-du-Roi est-il en zone tendue pour la location Airbnb en 2026 ?',
+        a: "Non, Le Grau-du-Roi n'est pas classé en zone tendue pour les meublés de tourisme à ce jour et n'a pas instauré de dispositif local restrictif (contrairement à Paris, Marseille, Bordeaux, Colmar ou Porto-Vecchio). Concrètement, vous pouvez transformer une résidence secondaire en meublé de tourisme sans demande d'autorisation de changement d'usage, et louer votre résidence principale jusqu'à 120 jours par an (la commune n'a pas abaissé ce seuil à 90 jours). Cette souplesse est néanmoins une situation à surveiller : le ratio population permanente (8 539 habitants) / pic saisonnier (>90 000 personnes en juillet-août) est l'un des plus déséquilibrés de France, et la pression sur le logement permanent local pourrait conduire la commune à instaurer un changement d'usage sur le mandat en cours. À court terme (2026), le cadre reste la Loi Le Meur avec déclaration en mairie et numéro d'enregistrement obligatoire au plus tard le 20 mai 2026.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD au Grau-du-Roi ?',
+        a: "Pour un rendement maximisé, la Rive Droite (centre historique village) et le Boucanet offrent le meilleur compromis : prix au m² 2 600-3 800 €, T2 dès 130-145 000 €, ROI brut 5,5-7 %, charme authentique pour la Rive Droite et accessibilité prix pour le Boucanet. La Plage Nord (Rive Gauche) reste le marché phare en occupation absolue (55 %) avec une demande très forte juillet-août, mais le ticket d'entrée est plus élevé (T2 vue mer dès 175 000 €) et le ROI ressort plutôt à 5-6,5 %. Port Camargue est un produit premium nautique : T3 marina avec anneau attaché dès 240 000 €, ROI 4,5-6 % mais avec un potentiel plus-value et une clientèle internationale très captive. L'Espiguette / Sud sauvage est un pari niche (naturisme, nature, kitesurf) avec des prix de pointe très élevés mais une saisonnalité encore plus marquée.",
+      },
+      {
+        q: 'Quelle commission appliquent les conciergeries du Grau-du-Roi ?',
+        a: "Le marché graulen est étalé sur les commissions. YourHostHelper affiche publiquement **20 % TTC** sur le revenu de chaque réservation, sans frais cachés ni engagement de durée — l'une des structures les plus transparentes du marché. Halo Butler affiche **25 % TTC** en formule standard, avec possibilité d'une offre sur-mesure ajustée selon le standing. Conciergerie Locamargue, Aurore Multiservices, Sud Conciergerie et La Bonne Conciergerie travaillent sur devis personnalisé, généralement dans la fourchette 20-25 % TTC selon le périmètre (publication seule à 15-18 %, formule intégrale avec accueil 7j/7 et pricing dynamique à 22-25 %). La moyenne de marché s'établit autour de 22 % TTC pour une formule complète avec ménage refacturé au voyageur. Le critère décisif au-delà du taux affiché sur une station ultra-saisonnière comme Le Grau-du-Roi est la stratégie de pricing événementielle sur juillet-août, les week-ends de pont (Ascension, Pentecôte) et les vacances scolaires de printemps — un mauvais pricing peut coûter 2 500-5 000 € de manque à gagner sur la haute saison.",
+      },
+    ],
+    updatedAt: '2026-06-08',
+  },
+  {
+    slug: 'calais',
+    displayName: 'Calais',
+    region: 'Hauts-de-France',
+    regionSlug: 'hauts-de-france',
+    title: 'Conciergerie Calais Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Calais : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Calais. Tarifs (20-25 %), services, avis, réglementation 2026, marché transfrontalier Eurotunnel / Douvres, quartiers rentables.",
+    kwPrincipal: 'conciergerie calais',
+    kwSecondaires: [
+      'conciergerie airbnb calais',
+      'la conciergerie calais',
+      'conciergerie cote d opale',
+      'gestion locative calais',
+      'conciergerie nc calais',
+      'conciergerie pas de calais',
+    ],
+    population: 67585,
+    tourists: 3300000,
+    activeListings: 600,
+    priceLow: 45,
+    priceHigh: 95,
+    occupancyRate: 55,
+    revpar: 32,
+    seasonality:
+      "Saisonnalité atypique pour la Côte d'Opale, dominée par le trafic transfrontalier toute l'année (Eurotunnel + ferries Douvres + Dunkerque). Pic principal juillet-août (occupation 75-85 %, tarifs 1,5-2× le tarif annuel moyen, mix clientèle française vacancière, anglaise, belge et néerlandaise), porté par les plages de la Côte d'Opale (Calais Plage, Blériot-Plage, Sangatte), la zone des 2 Caps (Cap Blanc-Nez à 15 km, Cap Gris-Nez à 25 km) et l'effet ricochet du Touquet et de Wimereux à 30-35 km au sud. Pic secondaire week-ends d'avril à octobre et grandes vacances scolaires françaises et britanniques (différentes des nôtres, ce qui élargit la fenêtre commerciale). Tourisme d'affaires régulier toute l'année (port industriel, Eurotunnel, premières lignes ferries d'Europe) qui maintient un fond de marché en semaine y compris en inter-saison. Pics ponctuels Carnaval (mars), Festival des Génies de Calais, Tour de France (passages réguliers).",
+    rankNational: 50,
+    introCustom:
+      "Vous avez un **appartement ou une maison** à **Calais**, dans le **Vieux Calais (Calais-Nord, autour de la Place d'Armes et du beffroi)**, à **Saint-Pierre (quartier annexé en 1885, autour de la mairie et de l'hôtel de ville)**, au **Beau-Marais**, sur **Calais Plage / Blériot-Plage**, ou en **première couronne** (Coulogne, Sangatte, Marck), que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les **plus de 20 millions de voyageurs qui traversent la Manche chaque année** via Eurotunnel et les ferries Calais-Douvres, les **3,3 millions de nuitées du Pas-de-Calais sur l'été 2024** (record selon Pas de Calais Pro), les **839 résidences secondaires** déclarées par l'INSEE en 2022 et la quinzaine d'acteurs locaux qui se partagent ce marché transfrontalier, vous vous demandez quelle conciergerie maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les pure-players calaisiens (N&C Conciergerie, Bonappart Conciergerie, Conciergerie Côte d'Opale / Clean BNB Service), les acteurs Côte d'Opale élargie (Hey Conciergerie depuis Dunkerque, Les Demeures d'Adrien depuis Neufchâtel-Hardelot) et les réseaux nationaux (Homerez) ?",
+    marketIntro:
+      "Calais est **la porte d'entrée terrestre la plus fréquentée d'Europe entre le continent et la Grande-Bretagne** : **plus de 20 millions de voyageurs y traversent la Manche chaque année**, soit par Eurotunnel (navettes 35 minutes, en service depuis 1994), soit par ferries Calais-Douvres (3 compagnies, jusqu'à 50 traversées par jour, 1h30 de traversée). Cette particularité unique en France crée un marché LCD **dual** : tourisme balnéaire estival classique sur la côte, ET fond de marché transit / business toute l'année soutenu par les flux transmanche.\n\nLa ville (**67 585 habitants au recensement INSEE 2022**, en baisse continue depuis 74 978 en 2016) compte environ **600 annonces actives** sur Airbnb selon les estimations marché et **839 résidences secondaires et logements occasionnels** déclarés à l'INSEE en 2022 (2,3 % du parc total de 36 483 logements). Le marché LCD est encore en croissance et n'a pas atteint la maturité de Lille ou du Touquet, ce qui laisse de la marge sur les ticket d'entrée.\n\nLe Pas-de-Calais a enregistré **25,3 millions de nuitées en 2024** (selon le bilan de Pas de Calais Pro), avec un **été 2024 record à 3,3 millions de nuitées sur le département** (349 000 nuitées anglaises +6 %, 260 000 belges +4 %, 246 000 allemandes +17 %). Calais bénéficie de cette dynamique côtière grâce à ses **plages de sable (Calais Plage et Blériot-Plage)**, sa proximité de la **zone des 2 Caps** (Cap Blanc-Nez à 15 km, Cap Gris-Nez à 25 km, paysages classés Grand Site de France) et son patrimoine (Hôtel de Ville beffroi UNESCO, Bourgeois de Calais de Rodin, Cité de la Dentelle et de la Mode).\n\n**Prix au m² parmi les plus accessibles de France.** Comptez **1 500-1 900 €/m²** sur le centre-ville Saint-Pierre, **1 800-2 300 €/m²** sur Calais-Nord (Vieux Calais), **2 000-2 600 €/m²** sur Calais Plage / Blériot-Plage, **1 300-1 700 €/m²** au Beau-Marais. Un T2 démarre autour de **60 000-80 000 €** sur la majorité de la commune, une maison de ville T4 dès **115 000-160 000 €** — un niveau qui place Calais parmi les marchés LCD français les plus accessibles à l'achat, avec des rendements bruts encore très confortables (7-10 %).\n\n**Réglementation : cadre national Loi Le Meur sans dispositif restrictif local identifié à ce jour.** Calais n'a pas instauré de zone d'autorisation de changement d'usage spécifique et n'a pas abaissé le plafond résidence principale à 90 jours/an. Le cadre national s'applique avec déclaration en mairie et numéro d'enregistrement obligatoire au plus tard le 20 mai 2026.",
+    conciergeries: [
+      {
+        name: 'N&C Conciergerie',
+        url: 'https://nc-conciergerie.com/',
+        commission: '20-22 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 28,
+        biensGeres: 30,
+        specialty: 'Pure-player Côte d\'Opale (Calais → Boulogne-sur-Mer)',
+        description:
+          "N&C Conciergerie est portée par Nathalie et Cedric, couple d'investisseurs LCD qui couvrent toute la Côte d'Opale entre Calais, Gravelines, Dunkerque, Saint-Omer et Boulogne-sur-Mer. Commission affichée publiquement : **20 % TTC en check-in / check-out automatisé** et **22 % TTC en check-in / check-out physique**, ménage refacturé au voyageur — l'une des structures de prix les plus transparentes du marché Côte d'Opale. Offre intégrale : mise en ligne de l'annonce, pricing nuit par nuit, accueil voyageurs, ménage hôtelier, gestion linge. Modèle de sous-location professionnel disponible en parallèle (N&C reprend le loyer mensuel et exploite le bien) — utile pour un propriétaire qui veut un revenu fixe garanti sans s'occuper de la gestion. Pertinente pour un propriétaire qui veut un acteur ancré sur tout le littoral nord et un discours d'investisseur à investisseur.",
+      },
+      {
+        name: 'Bonappart Conciergerie',
+        url: 'https://bonappart-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'Pure-player Calais + extension Antibes',
+        description:
+          "Bonappart Conciergerie opère sur Calais avec une extension Antibes (deux marchés très différents, deux équipes terrain). Offre complète Airbnb : création et gestion de l'annonce, accueil voyageurs avec check-in physique, ménage hôtelier, gestion des réservations, suivi propriétaire. Tarification sur devis personnalisé selon surface, standing et fréquence de rotation. Bonappart revendique un fort taux de réservation sur les biens accompagnés et un positionnement qualité avec retours voyageurs systématiquement très positifs. Pertinente pour un propriétaire calaisien qui valorise une équipe disponible 7j/7 avec un check-in physique systématique (utile pour les premières expériences voyageurs Airbnb, là où l'auto check-in peut frustrer la clientèle anglaise ou senior).",
+      },
+      {
+        name: 'Hey Conciergerie',
+        url: 'https://www.hey-conciergerie.com/conciergerie/calais/Z7',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 22,
+        biensGeres: 30,
+        specialty: 'Réseau structuré Nord / Pas-de-Calais (siège Dunkerque)',
+        description:
+          "Hey Conciergerie est un réseau structuré du Nord et du Pas-de-Calais, basé à Dunkerque (siège social), qui couvre Calais en délégation locale. Offre clé en main avec discours qualité fort (« logement bien présenté et bien entretenu génère de meilleurs avis, augmente le taux d'occupation et maximise la rentabilité »). Tarification sur devis. Discrétion volontaire sur le terrain (interventions sans déranger les voyageurs ni les voisins). Pertinente pour un propriétaire qui valorise un outillage de réseau (back-office, processus standardisés) plutôt qu'un acteur micro-local, et qui apprécie un acteur qui couvre aussi Dunkerque (utile si vous avez plusieurs biens entre Calais et Dunkerque).",
+      },
+      {
+        name: "Conciergerie Côte d'Opale (Clean BNB Service)",
+        url: 'https://www.pagesjaunes.fr/pros/64135803',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 5.0,
+        reviews: 1,
+        biensGeres: 15,
+        specialty: 'Bord de mer Calais / Gravelines, gestion intégrale',
+        description:
+          "Conciergerie Côte d'Opale (anciennement Clean BNB Service) est basée à Gravelines (62100) avec une couverture Calais et littoral nord. Offre complète gestion saisonnière pour résidences de tourisme, appartements, maisons et villas en bord de mer : conciergerie privée dédiée aux locations vacances, gestion en ligne, courte durée Airbnb. Accueil personnalisé, ménage soigné et suivi rigoureux. Tarification sur devis. Pertinente pour un propriétaire de résidence secondaire bord de mer qui veut un acteur attentif à l'entretien et à l'expérience voyageur (cible familiale et clientèle anglaise sensible aux standards d'entretien), avec une zone d'intervention élargie au-delà de Calais (utile si vous avez un bien à Sangatte, Marck, ou Oye-Plage).",
+      },
+      {
+        name: "Les Demeures d'Adrien",
+        url: 'https://www.lesdemeuresdadrien.com/tags/3/gestion-immobiliere-a-calais.html',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 12,
+        biensGeres: 18,
+        specialty: 'Conciergerie haut de gamme Hauts-de-France',
+        description:
+          "Les Demeures d'Adrien est un acteur conciergerie haut de gamme du Hauts-de-France (siège Neufchâtel-Hardelot), avec une couverture Calais en plus de Berck, Merlimont, Le Touquet, Wimereux et Roubaix. Positionnement « gestion immobilière de qualité pensée pour sublimer chaque détail et maximiser les performances locatives ». Offre intégrale : photos professionnelles, création d'annonces impactantes, gestion complète des séjours, maintenance sur-mesure. Tarification sur devis adaptée au standing du bien. Pertinente pour un propriétaire de bien premium (maison de maître, T3+ vue mer, villa) qui accepte de payer un peu plus pour un suivi pointu et une mise en valeur photographique de qualité — utile pour faire monter le tarif moyen / nuit de 15-25 % vs un photo amateur.",
+      },
+      {
+        name: 'Homerez',
+        url: 'https://www.homerez.com/fr/conciergerie/calais',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 35,
+        biensGeres: 40,
+        specialty: 'Réseau national, conseiller dédié, multi-plateformes',
+        description:
+          "Homerez est un réseau national de conciergerie qui couvre Calais avec un service complet, depuis la mise en ligne de l'annonce sur 30+ plateformes (Airbnb, Booking, Abritel, Vrbo, et plateformes BtoB internationales) jusqu'au départ du voyageur. Modèle : un conseiller LCD dédié, un dashboard propriétaire en ligne et un outillage marketing structuré. Tarification sur devis. Couvre tout le Pas-de-Calais et la majeure partie des littoraux français. Pertinente pour un propriétaire qui valorise une distribution multi-plateforme structurée (utile sur un marché à forte clientèle internationale comme Calais avec les Anglais, Belges et Néerlandais) et un outillage CRM standardisé — moins pertinente si vous voulez un acteur micro-local très ancré dans la commune.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Calais-Nord (Vieux Calais, Place d\'Armes, beffroi)',
+        pricePerNight: '55-105 €',
+        occupancy: 60,
+        description:
+          "Cœur historique du Vieux Calais autour de la Place d'Armes (anciennement Place du Marché), du beffroi médiéval (XIIIᵉ-XVIᵉ), de la Tour du Guet et du parc Saint-Pierre. Quartier reconstruit après 1945 (bombardé à 73 % pendant la Seconde Guerre mondiale). Mix tourisme culturel (Bourgeois de Calais, Cité de la Dentelle et de la Mode à 10 min à pied) et passages transmanche. Prix au m² 1 800-2 300 €. T2 dès 70 000 €. Bon compromis emplacement central / accessibilité prix, demande renforcée par le tourisme britannique en weekend.",
+        roiBrut: '7,5 à 9,5 %',
+      },
+      {
+        name: 'Saint-Pierre (centre administratif, mairie, théâtre)',
+        pricePerNight: '50-95 €',
+        occupancy: 55,
+        description:
+          "Quartier annexé en 1885 (intégration de Saint-Pierre à Calais), aujourd'hui centre administratif et commerçant autour de l'Hôtel de Ville (avec son beffroi classé UNESCO depuis 2005), du théâtre, et de la gare SNCF Calais-Ville. Maisons bourgeoises fin XIXᵉ et appartements années 1960-1970. Mix résidents permanents, tourisme d'affaires (gare TER, accès Eurotunnel), et tourisme culturel. Prix au m² 1 500-1 900 €. T2 dès 60 000 €. Tickets d'entrée parmi les plus accessibles de la commune.",
+        roiBrut: '8 à 10 %',
+      },
+      {
+        name: 'Calais Plage / Front de mer',
+        pricePerNight: '70-130 €',
+        occupancy: 58,
+        description:
+          "Front de mer de Calais avec plage de sable, digue piétonne, casino Joa, jetée. Vue Manche et côtes anglaises par temps clair. Mix clientèle familiale française, anglaise, belge. Prix au m² 2 000-2 600 €. T2 vue mer dès 95 000 €. Demande boostée par la plage l'été et le passage transmanche toute l'année, tarifs de pointe juillet-août sur les T2 vue mer.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Blériot-Plage (commune de Sangatte limitrophe)',
+        pricePerNight: '65-120 €',
+        occupancy: 52,
+        description:
+          "Plage à 5 km à l'ouest du centre de Calais, sur la commune de Sangatte, point de décollage de la traversée de la Manche en avion par Louis Blériot en 1909. Quartier résidentiel pavillonnaire, plage sauvage et dunes, accès Cap Blanc-Nez (à 10 km). Mix résidences secondaires et clientèle familiale. Prix au m² 2 200-2 800 €. T2 dès 105 000 €. Stratégie maison familiale avec jardin ou T2 vue mer.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Beau-Marais',
+        pricePerNight: '45-80 €',
+        occupancy: 50,
+        description:
+          "Quartier résidentiel et populaire à l'est du centre, autour du Marais et de la rocade. Tickets d'entrée parmi les plus accessibles de la commune (T2 dès 50 000 €, maison T4 dès 95 000 €). Cible clientèle business semaine (Eurotunnel, port) et clientèle ponctuelle vacances scolaires anglaises. Prix au m² 1 300-1 700 €. Demande LCD plus diffuse mais ROI brut très intéressant pour qui accepte un emplacement moins central.",
+        roiBrut: '8,5 à 11 %',
+      },
+      {
+        name: 'Première couronne (Coulogne, Marck, Sangatte)',
+        pricePerNight: '55-105 €',
+        occupancy: 50,
+        description:
+          "Communes limitrophes (Coulogne au sud-est, Marck à l'est, Sangatte à l'ouest). Maisons avec jardin, accès direct à la zone des 2 Caps pour Sangatte (Cap Blanc-Nez à 10 km), accès Eurotunnel pour Coulogne. Prix au m² 1 500-2 200 €. T2 dès 80 000 €, maison T4 avec jardin dès 130 000 €. Stratégie maison familiale en location grandes vacances avec demande renforcée pour les groupes anglais qui veulent un point de chute proche de l'Eurotunnel et des plages.",
+        roiBrut: '7 à 9 %',
+      },
+    ],
+    regulation:
+      "Calais applique le **cadre national de la Loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) **sans dispositif restrictif local additionnel identifié à ce jour** — un cadre comparable à Boulogne-sur-Mer ou Le Grau-du-Roi, plus souple que Paris, Lyon ou Colmar.\n\n**Déclaration obligatoire en mairie.** Tout meublé de tourisme de Calais doit être déclaré préalablement à la mairie (service urbanisme, Hôtel de Ville). La déclaration peut se faire en ligne via le formulaire Service-public.fr ou en version papier déposée à l'Hôtel de Ville (Place du Soldat Inconnu). Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La Loi Le Meur autorise désormais les communes à abaisser ce seuil à 90 jours par délibération motivée — Calais ne l'a pas fait à ce jour.\n\n**Pas de changement d'usage généralisé.** Contrairement à Paris, Lyon, Bordeaux ou Colmar (zone tendue), Calais **n'impose pas d'autorisation de changement d'usage** pour les résidences secondaires transformées en meublés de tourisme. Le marché du logement permanent calaisien n'est pas en tension forte (population en baisse depuis 2016, taux de vacance des logements > 10 %), ce qui justifie ce cadre souple.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage). Point d'attention sur le bâti d'avant 1948 du Vieux Calais (Calais-Nord) et certains immeubles 1960-1970 de Saint-Pierre, souvent classés E ou F sans rénovation thermique.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur, notamment pour les biens qui dépassent les 15 000 € de CA annuel.\n\n**Sanctions Loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Communauté d'Agglomération Grand Calais Terres et Mers (GCTM) collecte la taxe de séjour selon le barème en vigueur (de 0,75 € à 4,30 € par nuit et par personne selon le classement du logement, collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 70,
+      neighborhood: 'Calais-Nord (Vieux Calais)',
+      revenuBrut: 13000,
+      commissionRate: 0.20,
+      menageCount: 50,
+      menageUnitCost: 50,
+    },
+    extraFaq: [
+      {
+        q: "Combien rapporte un Airbnb à Calais sur l'année 2026 ?",
+        a: "Un T2 de 42 m² bien placé à Calais-Nord ou sur Calais Plage (tarif moyen 65-85 €/nuit annuel) génère typiquement un chiffre d'affaires brut de 12 000-16 000 € sur l'année, avec un pic juillet-août (CA juin-septembre représente 45-55 % du total) et un fond de marché transit / business soutenu toute l'année grâce aux flux Eurotunnel et ferries. Net de la commission conciergerie (20-22 %), de la taxe foncière (~800-1 200 € sur un T2 calaisien), des charges de copropriété (souvent 700-1 100 €/an) et du ménage, comptez un revenu disponible de 7 500-10 500 €. Une maison de ville T4 en première couronne (Coulogne, Marck) ou à Blériot-Plage peut atteindre 18 000-26 000 € de CA brut sur l'année. La rentabilité brute reste très bonne à exceptionnelle à Calais (7-10 %, voire 11 % au Beau-Marais) du fait des prix d'acquisition très accessibles — parmi les plus bas des villes LCD significatives en France.",
+      },
+      {
+        q: 'Calais est-elle en zone tendue pour la location Airbnb en 2026 ?',
+        a: "Non, Calais n'est pas classée en zone tendue à ce jour et n'a pas instauré de dispositif local restrictif sur les meublés de tourisme (contrairement à Paris, Lyon, Bordeaux, Colmar ou Porto-Vecchio). Concrètement, vous pouvez transformer une résidence secondaire en meublé de tourisme sans demande d'autorisation de changement d'usage, et louer votre résidence principale jusqu'à 120 jours par an (la commune n'a pas abaissé ce seuil à 90 jours). Cette souplesse réglementaire est cohérente avec la situation du marché local : la population municipale est en baisse continue depuis 2016 (de 74 978 à 67 585 habitants en 2022) et le taux de vacance des logements dépasse 10 %, ce qui ne justifie pas un encadrement des locations courte durée. La seule obligation est la déclaration préalable en mairie (Hôtel de Ville, service urbanisme) et l'obtention du numéro d'enregistrement national à 13 chiffres au plus tard le 20 mai 2026.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Calais ?',
+        a: "Pour un rendement maximisé, le Beau-Marais offre les meilleurs ROI bruts (8,5-11 %) grâce à des tickets d'entrée très bas (T2 dès 50 000 €, maison T4 dès 95 000 €) — pertinent si vous acceptez un emplacement moins central et une demande LCD plus diffuse. Saint-Pierre (centre administratif) est un excellent compromis avec ROI 8-10 % et T2 dès 60 000 €, proche gare SNCF et hôtel de ville (clientèle business + tourisme). Calais-Nord (Vieux Calais) reste le quartier le plus demandé sur le LCD pur (occupation 60 %, ROI 7,5-9,5 %, T2 dès 70 000 €) avec un emplacement Place d'Armes / beffroi parfait pour la clientèle anglaise et belge en weekend. Calais Plage / Blériot-Plage est un produit balnéaire avec ROI 6,5-8,5 % et T2 vue mer dès 95-105 000 € — saisonnalité plus marquée mais tarifs de pointe juillet-août. La première couronne (Coulogne, Marck, Sangatte) est pertinente pour une maison familiale en location grandes vacances, avec un ROI 7-9 % selon la commune.",
+      },
+      {
+        q: 'Quelle commission appliquent les conciergeries de Calais ?',
+        a: "Le marché calaisien est plutôt resserré sur les commissions. N&C Conciergerie affiche publiquement **20 % TTC en check-in automatisé** et **22 % TTC en check-in physique** — l'une des structures de prix les plus transparentes du marché Côte d'Opale. Bonappart Conciergerie, Hey Conciergerie, Conciergerie Côte d'Opale, Les Demeures d'Adrien et Homerez travaillent sur devis personnalisé, généralement dans la fourchette 18-25 % TTC selon le périmètre (publication seule à 15-18 %, formule intégrale avec photos pro et accueil 7j/7 à 22-25 %). La moyenne de marché s'établit autour de 20-22 % TTC pour une formule complète avec ménage refacturé au voyageur. Le critère décisif au-delà du taux affiché sur un marché transmanche comme Calais est la maîtrise de la communication multilingue (anglais courant pour gérer la clientèle britannique majoritaire) et la stratégie de pricing sur les vacances scolaires britanniques (différentes des nôtres, ce qui élargit la fenêtre commerciale annuelle de 4-6 semaines).",
+      },
+    ],
+    updatedAt: '2026-06-08',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

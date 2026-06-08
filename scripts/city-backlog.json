@@ -533,9 +533,10 @@
     "oldSlug": "/conciergerie-airbnb-le-grau-du-roi",
     "kw": "conciergerie grau du roi",
     "vol": 250,
-    "status": "À faire",
+    "status": "Publié",
     "kd": 0,
-    "notes": "Débloqué 2026-06-03 : audit Places = 4 conciergeries notées domiciliées au Grau-du-Roi.",
+    "publishedAt": "2026-06-08",
+    "notes": "Débloqué 2026-06-03 : audit Places = 4 conciergeries notées domiciliées au Grau-du-Roi. Publié 2026-06-08. Vol live SEMrush 110 (vs 250 backlog), KD 10. 6 conciergeries (Locamargue pure-player 221 Rte des Marines, Aurore Multiservices avis FB 94%, YourHostHelper 20% TTC affiché, Halo Butler 25% TTC, Sud Conciergerie historique Grande-Motte, La Bonne Conciergerie multi-stations). Saisonnalité ultra-marquée (42% nuitées juillet-août selon OT). 9,6M nuitées annuelles commune. Port Camargue 1er port plaisance Europe 5000 anneaux. Cadre Loi Le Meur sans restriction locale identifiée.",
     "recheckedAt": "2026-06-03"
   },
   {
@@ -577,9 +578,10 @@
     "oldSlug": "/conciergerie-airbnb-calais",
     "kw": "conciergerie calais",
     "vol": 230,
-    "status": "À faire",
+    "status": "Publié",
     "kd": 0,
-    "notes": "Débloqué 2026-06-03 : audit Places = 4 conciergeries notées domiciliées à Calais.",
+    "publishedAt": "2026-06-08",
+    "notes": "Débloqué 2026-06-03 : audit Places = 4 conciergeries notées domiciliées à Calais. Publié 2026-06-08. Vol live SEMrush 140 (vs 230 backlog), KD 9. 6 conciergeries (N&C Conciergerie 20-22% TTC affiché Nathalie/Cedric, Bonappart pure-player Calais/Antibes, Hey Conciergerie réseau Dunkerque, Conciergerie Côte d'Opale/Clean BNB Service Gravelines, Les Demeures d'Adrien haut de gamme Neufchâtel-Hardelot, Homerez réseau national). Marché transmanche unique : >20M voyageurs Manche/an (Eurotunnel 35min + 3 compagnies ferries 50 traversées/jour). Pas-de-Calais 25,3M nuitées 2024 (été 2024 record 3,3M dont Anglais 349k, Belges 260k, Allemands 246k). 67 585 hab INSEE 2022 (en baisse depuis 74 978 en 2016). 839 résidences secondaires (2,3% du parc). Cadre Loi Le Meur sans restriction locale (population en baisse, vacance >10% justifie souplesse).",
     "recheckedAt": "2026-06-03"
   },
   {

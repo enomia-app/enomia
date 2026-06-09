@@ -10,7 +10,7 @@ export const loveRoomCitiesMeta = [
     "status": "done",
     "lat": 48.85755,
     "lng": 2.35138,
-    "found": 37
+    "found": 8
   },
   {
     "slug": "lyon",
@@ -22,7 +22,7 @@ export const loveRoomCitiesMeta = [
     "status": "done",
     "lat": 45.76404,
     "lng": 4.83566,
-    "found": 30
+    "found": 8
   },
   {
     "slug": "toulouse",
@@ -34,7 +34,7 @@ export const loveRoomCitiesMeta = [
     "status": "done",
     "lat": 43.60485,
     "lng": 1.44285,
-    "found": 29
+    "found": 8
   },
   {
     "slug": "marseille",
@@ -46,7 +46,7 @@ export const loveRoomCitiesMeta = [
     "status": "done",
     "lat": 43.30257,
     "lng": 5.36907,
-    "found": 32
+    "found": 8
   },
   {
     "slug": "bordeaux",
@@ -58,7 +58,7 @@ export const loveRoomCitiesMeta = [
     "status": "done",
     "lat": 44.84161,
     "lng": -0.58109,
-    "found": 24
+    "found": 8
   },
   {
     "slug": "angers",
@@ -82,7 +82,7 @@ export const loveRoomCitiesMeta = [
     "status": "done",
     "lat": 47.21837,
     "lng": -1.55362,
-    "found": 26
+    "found": 8
   },
   {
     "slug": "lille",
@@ -94,7 +94,7 @@ export const loveRoomCitiesMeta = [
     "status": "done",
     "lat": 50.62438,
     "lng": 3.06786,
-    "found": 20
+    "found": 8
   },
   {
     "slug": "montpellier",
@@ -106,7 +106,7 @@ export const loveRoomCitiesMeta = [
     "status": "done",
     "lat": 43.61085,
     "lng": 3.87613,
-    "found": 15
+    "found": 8
   },
   {
     "slug": "strasbourg",
@@ -142,7 +142,7 @@ export const loveRoomCitiesMeta = [
     "status": "done",
     "lat": 48.11727,
     "lng": -1.67779,
-    "found": 22
+    "found": 8
   },
   {
     "slug": "annecy",
@@ -154,7 +154,7 @@ export const loveRoomCitiesMeta = [
     "status": "done",
     "lat": 45.89925,
     "lng": 6.12938,
-    "found": 31
+    "found": 8
   },
   {
     "slug": "rouen",
@@ -178,7 +178,7 @@ export const loveRoomCitiesMeta = [
     "status": "done",
     "lat": 43.71017,
     "lng": 7.26195,
-    "found": 30
+    "found": 8
   },
   {
     "slug": "metz",
@@ -190,7 +190,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 50,
     "lat": 49.11786,
     "lng": 6.17602,
-    "found": 25
+    "found": 8
   },
   {
     "slug": "dijon",
@@ -202,7 +202,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 50,
     "lat": 47.33013,
     "lng": 5.04805,
-    "found": 30
+    "found": 8
   },
   {
     "slug": "nancy",
@@ -214,7 +214,7 @@ export const loveRoomCitiesMeta = [
     "radiusKm": 50,
     "lat": 48.69205,
     "lng": 6.18442,
-    "found": 27
+    "found": 8
   },
   {
     "slug": "reims",
@@ -239,5 +239,17 @@ export const loveRoomCitiesMeta = [
     "found": 26,
     "lat": 45.79352,
     "lng": 3.0795
+  },
+  {
+    "slug": "caen",
+    "displayName": "Caen",
+    "searchVolume": 1710,
+    "status": "todo",
+    "lat": 49.18207,
+    "lng": -0.37083,
+    "region": "Normandie",
+    "regionSlug": "normandie",
+    "radiusKm": 100,
+    "found": 39
   }
 ];

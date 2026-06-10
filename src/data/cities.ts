@@ -12125,6 +12125,576 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-08',
   },
+  // ==========================================================================
+  // AJACCIO (Corse-du-Sud)
+  // ==========================================================================
+  {
+    slug: 'ajaccio',
+    displayName: 'Ajaccio',
+    region: 'Corse',
+    regionSlug: 'corse',
+    title: 'Conciergerie Ajaccio Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Ajaccio : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb d'Ajaccio. Tarifs (20-23 %), services, avis Google, marché des Sanguinaires aux Salines, réglementation 2026.",
+    kwPrincipal: 'conciergerie ajaccio',
+    kwSecondaires: [
+      'conciergerie airbnb ajaccio',
+      'conciergerie en corse',
+      'conciergerie porticcio',
+      'ajaccio airbnb',
+      'meilleure conciergerie ajaccio',
+    ],
+    population: 76320,
+    tourists: 600000,
+    activeListings: 3200,
+    priceLow: 70,
+    priceHigh: 180,
+    occupancyRate: 55,
+    revpar: 65,
+    seasonality:
+      "Saisonnalité ultra-marquée typique du marché corse. Pic absolu juillet-août (occupation 90-100 %, tarifs 2-3× la normale, clientèle continentale + italienne + nord-européenne). Très haute saison étendue de mi-juin à mi-septembre. Fenêtres ailes de saison printemps (avril-juin, GR20, calanques de Piana) et automne (septembre-octobre, températures douces, mer encore chaude). Très creux nov-mars (occupation 25-40 %), partiellement compensé par la clientèle business et fonctionnaires (préfecture, Université de Corse). Durée moyenne de location courte durée des meublés ajacciens : 35 jours par an selon les chiffres municipaux 2024.",
+    rankNational: 21,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Ajaccio**, dans le **centre historique** autour de la cathédrale, sur le **cours Napoléon**, aux **Salines**, à **Lorette** ou face aux **îles Sanguinaires**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **saisonnalité ultra-marquée corse** (35 jours par an de location en moyenne selon les chiffres municipaux), la **clientèle continentale juillet-août** qui pousse les tarifs à 2-3× la normale, l'**incertitude réglementaire** (la mairie temporise sur un éventuel changement d'usage, contrairement à Porto-Vecchio qui a durci en octobre 2024), et la dizaine d'acteurs locaux qui se partagent un marché de **3 200 meublés de tourisme déclarés**, vous vous demandez si confier la gestion à une conciergerie reste rentable hors saison.\n\nEt surtout : **laquelle choisir** entre les pure-players ajacciens (Casamea, Kurnos, AJF), les réseaux nationaux qui couvrent la Corse-du-Sud (YourHostHelper, HostnFly) et l'acteur transparent à 23 % affiché (Agence Ciste) ?",
+    marketIntro:
+      "Ajaccio est un **marché LCD ultra-saisonnier** porté par 4 mois de très haute saison (juin à septembre) et 8 mois de fond de marché business + tourisme d'ailes de saison. La commune compte **environ 3 200 meublés de tourisme déclarés** sur un parc total de 12 000 logements selon les chiffres de la mairie début 2024 — soit **26 % des studios et T1** qui basculent en location saisonnière. Le tarif moyen Airbnb annuel se situe autour de **80-100 €/nuit**, qui décolle à **180-280 €/nuit pendant juillet-août** sur les biens face mer.\n\n**Tourisme corse à fort effet de levier.** La saison juillet-août concentre l'essentiel des nuitées Airbnb à Ajaccio : un T2 vue mer aux Salines qui se loue 100 €/nuit en moyenne annuelle facture 200-250 €/nuit pendant les 8 semaines d'été. Sur 2 mois pleins, ce bien peut générer 11 000-14 000 € bruts — soit l'équivalent de 4-5 mois de revenus normaux. Les îles **Sanguinaires** (coucher de soleil mythique), la **route des Calanques de Piana** à 1h30, la **réserve naturelle de Scandola** et les **plages de Capo di Feno et Marinella** alimentent une demande touristique premium.\n\n**Prix immo plus accessibles que Porto-Vecchio.** Le prix moyen au m² à Ajaccio s'établit autour de **3 740 €/m²** au printemps 2026 selon ParuVendu, avec des pointes à **3 850-4 450 €/m²** sur le **cours Napoléon** et le **centre historique**. C'est nettement plus accessible que Porto-Vecchio (5 072 €/m² apparts, 6 567 €/m² maisons en avril 2026), tout en captant une clientèle touristique francophone forte sur la Corse-du-Sud.\n\n**Réglementation en attente.** Le maire **Stéphane Sbraggia** a temporisé en février 2024 sur l'instauration d'un changement d'usage, invoquant une perte fiscale potentielle de 3 millions d'euros et préférant attendre les clarifications nationales (loi Le Meur du 19 novembre 2024). L'opposition municipale réclame un régime de compensation. **À surveiller en 2026**, d'autant que Porto-Vecchio a basculé en régime restrictif depuis le 14 octobre 2024.",
+    conciergeries: [
+      {
+        name: 'Conciergerie Casamea',
+        url: 'https://conciergerie-casamea.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 17,
+        biensGeres: 20,
+        specialty: 'Acteur local Avenue Kennedy, note Google maximale',
+        description:
+          "Conciergerie Casamea est domiciliée Avenue du Président Kennedy à Ajaccio, en plein quartier touristique. La SARL affiche une note Google parmi les plus solides du marché ajaccien sur les pure-players locaux. Service clé en main complet : gestion des entrées/sorties, partenariats ménage et linge, communication voyageurs, conseil en classement meublé de tourisme. Tarification sur devis adaptée à chaque bien (généralement dans la fourchette 20-23 % TTC du marché ajaccien). Pertinente pour un propriétaire qui veut un interlocuteur ajaccien identifié et stable sur l'année.",
+      },
+      {
+        name: 'Kurnos Conciergerie',
+        url: 'https://ajaccio-bnb.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 0,
+        biensGeres: 15,
+        specialty: 'Statut Superhost Airbnb, certification Booking',
+        description:
+          "Kurnos Conciergerie est reconnue Superhost Airbnb avec une note moyenne de 5/5 sur les biens gérés, et certifiée Booking.com — un double label qui sécurise la visibilité sur les deux principales plateformes. Couverture grand Ajaccio (studios, T2/T3, villas). Tarification sur devis. La présence se mesure essentiellement sur les plateformes de réservation plutôt que sur Google My Business — bon signal de qualité voyageur, à compléter par un test concret avant signature.",
+      },
+      {
+        name: 'AJF Conciergerie',
+        url: 'https://ajf-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 0,
+        biensGeres: 12,
+        specialty: 'Gestion court et moyen terme, welcome kits artisans corses',
+        description:
+          "AJF Conciergerie est dirigée par Aurore Masini depuis ses bureaux Chemin de Ranucchietto à Ajaccio. Positionnement sur la gestion de location courte ET moyenne durée (bail mobilité), ce qui sécurise les revenus d'inter-saison sur les clientèles business et étudiantes. Welcome kits avec produits d'artisans corses (vins, charcuterie, miel). Tarification sur devis. Pertinente pour un propriétaire qui veut mixer LCD été et MTD (moyen terme) hiver pour lisser ses revenus.",
+      },
+      {
+        name: 'Agence Ciste',
+        url: 'https://agence-ciste.fr/conciergerie-tarif/',
+        commission: '23 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 0,
+        biensGeres: 25,
+        specialty: 'Commission affichée transparente 23 % sur revenus nets',
+        description:
+          "Agence Ciste affiche publiquement une commission de 23 % sur les revenus nets — l'une des grilles tarifaires les plus transparentes du marché corse, rare dans une zone où la majorité des acteurs travaillent sur devis. Exemple chiffré officiel : sur 2 000 € nets de revenus hebdomadaires, la conciergerie prend 460 €. Service complet annonce + voyageurs + ménage refacturé + maintenance. Pertinente pour un propriétaire qui veut savoir exactement combien il va payer avant de signer, sans surprise sur le devis.",
+      },
+      {
+        name: 'YourHostHelper Ajaccio',
+        url: 'https://yourhosthelper.com/en/tarif-concierge-ajaccio/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 0,
+        biensGeres: 30,
+        specialty: 'Réseau national, pricing dynamique mutualisé',
+        description:
+          "YourHostHelper est un réseau national présent dans 20+ villes françaises avec une agence locale à Ajaccio. Commission de 20 % HT (24 % TTC) sur les revenus collectés. Avantage clé : pricing dynamique mutualisé sur les données de la plateforme (volume historique sur la Corse-du-Sud, comparaison avec Bastia, Calvi, Porto-Vecchio). Service complet annonce multi-diffusion (Airbnb, Booking, Abritel), accueil, ménage, linge. Pertinente pour un propriétaire qui privilégie le tarif et l'optimisation pricing à la relation locale en face à face.",
+      },
+      {
+        name: 'HostnFly Ajaccio',
+        url: 'https://www.hostnfly.com/conciergerie-airbnb/ajaccio',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 0,
+        biensGeres: 25,
+        specialty: "Tarif d'appel réseau national, gestion 100 % digitalisée",
+        description:
+          "HostnFly applique une commission de 20 % HT sur les revenus, identique à YourHostHelper. Filiale d'un réseau national avec gestion 100 % digitalisée (app mobile propriétaire, photos pro, optimisation annonce). Création annonce, sélection voyageurs, check-in, ménage et maintenance assurés via partenaires locaux. Pertinente pour un propriétaire qui veut un onboarding rapide et standardisé, sans contact en face à face — moins adapté à un bien atypique nécessitant un acteur ajaccien immergé dans le marché.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre historique (Cathédrale, Place Foch)',
+        pricePerNight: '90-150 €',
+        occupancy: 62,
+        description:
+          "Cœur historique d'Ajaccio autour de la cathédrale, de la maison Bonaparte (musée), de la place Foch et du marché. Immeubles XVIIIe-XIXe siècles, ruelles étroites typiques. Clientèle touristique premium juillet-août, voyageurs culturels et croisiéristes (escale à pied depuis le port). Prix au m² 3 600-4 500 €. T2 dès 150 000 €.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Cours Napoléon / Centre commerçant',
+        pricePerNight: '80-130 €',
+        occupancy: 60,
+        description:
+          "Axe commerçant principal d'Ajaccio, du port à la place de Gaulle. Mix résidents, business semaine, touristes courts séjours. Très bien desservi (port, gare, lignes de bus). Prix au m² 3 850-4 450 €. T2 dès 145 000 €. Bon compromis emplacement central et fréquentation touristique.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Les Salines',
+        pricePerNight: '90-160 €',
+        occupancy: 60,
+        description:
+          "Quartier balnéaire à l'ouest du centre, façade littorale sur le golfe. Plages à pied, restaurants face mer, port de plaisance Tino Rossi. Cible LCD premium juillet-août (vue mer = +20-30 % de tarif). Prix au m² 3 500-4 200 €. T2 dès 160 000 €. Le quartier le plus rentable pour la stratégie LCD pure été.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Lorette / Casone (hauteurs)',
+        pricePerNight: '75-130 €',
+        occupancy: 55,
+        description:
+          "Hauteurs résidentielles d'Ajaccio, vues panoramiques sur le golfe. Quartier prisé par les Ajacciens (calme, sécurité, verdure). Stationnement plus accessible qu'en centre-ville. Prix au m² 3 200-3 900 €. T2 dès 135 000 €. Mix LCD été + locations annuelles fonctionnaires/cadres possible.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Route des Sanguinaires',
+        pricePerNight: '110-220 €',
+        occupancy: 52,
+        description:
+          "Route littorale mythique du golfe d'Ajaccio jusqu'aux îles Sanguinaires. Coucher de soleil emblématique, plages successives (Marinella, Capo di Feno à proximité), villas et appartements premium vue mer. Saisonnalité plus marquée (juillet-août très chers, hors saison creux). Prix au m² 4 000-5 200 € pour les biens vue mer. T2 face mer dès 220 000 €.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Porticcio / Pietrosella (rive sud du golfe)',
+        pricePerNight: '85-180 €',
+        occupancy: 55,
+        description:
+          "Commune limitrophe sud d'Ajaccio (15 min en voiture), grande plage de sable, marché LCD très saisonnier. Volume SEMrush 170 sur 'conciergerie porticcio', signal d'un marché significatif. Clientèle familiale juillet-août. Prix au m² 3 200-4 000 €. T2 vue mer dès 150 000 €. Stratégie LCD pure été + propriétaire occupant hors saison.",
+        roiBrut: '5,5 à 7,5 %',
+      },
+    ],
+    regulation:
+      "Ajaccio applique **le cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel à ce jour — un statu quo voulu par la majorité municipale qui temporise pendant que d'autres communes corses durcissent.\n\n**Position du maire.** Après trois heures de débat au conseil municipal du 23 février 2024, le maire **Stéphane Sbraggia** a refusé d'instaurer un changement d'usage et un régime de compensation, invoquant une **perte fiscale potentielle de 3 millions d'euros** et la nécessité d'attendre les clarifications nationales sur la double fiscalité (taxe d'habitation et CFE). L'opposition (\"Aiacciu pà Tutti\", \"Pà Aiacciu\") réclamait un plan d'urgence avec compensation : un propriétaire de résidence secondaire ne pourrait louer en LCD que s'il propose un bien équivalent en location annuelle. **Le débat est reporté \"très prochainement\"** — à surveiller en 2026, d'autant que **Porto-Vecchio a basculé en régime restrictif depuis le 14 octobre 2024**.\n\n**Chiffres clés du marché.** Selon les données municipales : **3 200 meublés de tourisme** déclarés à Ajaccio, **12 000 logements** au total dans le parc immobilier, **26 % des studios et T1** en location saisonnière, et une **durée moyenne de 35 jours par an** par meublé loué.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Ajaccio doit être déclaré en mairie. Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération motivée — Ajaccio ne l'a pas fait à ce jour.\n\n**Pas de changement d'usage généralisé pour l'instant.** Contrairement à Porto-Vecchio ou Paris, Ajaccio n'impose pas d'autorisation de changement d'usage pour les résidences secondaires. Cette situation peut basculer si le maire change de position en 2026 ou si la pression nationale s'accentue sur les communes corses.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Ajaccio applique une taxe de séjour qui s'échelonne typiquement de **0,75 € à 4,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 95,
+      neighborhood: 'Les Salines',
+      revenuBrut: 14500,
+      commissionRate: 0.2,
+      menageCount: 55,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: "Combien rapporte un Airbnb à Ajaccio sur l'année 2026 ?",
+        a: "Un T2 de 38 m² bien placé aux Salines ou en centre historique (tarif moyen 90-110 €/nuit annuel) génère typiquement un chiffre d'affaires brut de 13 000-17 000 € sur l'année à Ajaccio, avec un pic juillet-août exceptionnel (le CA des 8 semaines d'été peut représenter 55-65 % du total annuel). Net de la commission conciergerie (20-23 %), de la taxe foncière (~900-1 400 € sur un T2 ajaccien), des charges de copropriété (800-1 200 €/an) et du ménage, comptez un revenu disponible de 7 500-10 500 €. Un T2 vue mer Route des Sanguinaires peut atteindre 18 000-24 000 € de CA brut grâce au tarif premium juillet-août (jusqu'à 280 €/nuit). La rentabilité brute reste correcte à très bonne à Ajaccio (5-7 %), tirée par les 8 semaines de pointe estivale, mais pénalisée par 5 mois de très basse saison (nov-mars).",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Ajaccio ?",
+        a: "Les commissions à Ajaccio s'étalent de 20 % HT (réseaux nationaux comme YourHostHelper et HostnFly, soit 24 % TTC) à 23 % (Agence Ciste affiché publiquement) en 2026. Les pure-players locaux (Casamea, Kurnos, AJF) travaillent sur devis personnalisé, généralement dans la fourchette 20-23 % TTC selon le périmètre et le profil du bien. La moyenne de marché s'établit autour de 21-23 % TTC pour une formule intégrale avec ménage refacturé au voyageur. Le critère décisif au-delà du taux affiché sur un marché ultra-saisonnier comme Ajaccio est la stratégie pricing dynamique sur juillet-août — un mauvais pricing peut coûter 2 000-4 000 € de manque à gagner sur les 8 semaines de pointe. Vérifiez aussi si la conciergerie propose un complément moyenne durée (bail mobilité) hors saison pour lisser les revenus inter-saison.",
+      },
+      {
+        q: 'Ajaccio est-elle en zone tendue pour la location Airbnb en 2026 ?',
+        a: "Non, Ajaccio n'a pas instauré de dispositif local restrictif à ce jour, contrairement à Porto-Vecchio qui a basculé en régime de changement d'usage et autorisation préalable depuis le 14 octobre 2024. Le maire Stéphane Sbraggia a temporisé au conseil municipal du 23 février 2024, invoquant 3 millions d'euros de pertes fiscales potentielles. L'opposition réclame un plan d'urgence avec compensation (proposer un logement équivalent en location annuelle pour pouvoir louer en LCD une résidence secondaire). Concrètement en 2026, vous pouvez transformer une résidence secondaire en meublé de tourisme sans demande d'autorisation, et louer votre résidence principale jusqu'à 120 jours par an. Mais cette situation peut évoluer : le débat municipal a été reporté \"très prochainement\" et la pression nationale s'accentue depuis Porto-Vecchio. Surveillez les délibérations du conseil municipal d'Ajaccio en 2026, et envisagez de classer votre meublé (50 % d'abattement micro-BIC vs 30 %) pour sécuriser votre fiscalité.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Ajaccio ?',
+        a: "Pour un rendement maximisé, les Salines offrent le meilleur ROI brut (5,5-7 %) sur un produit vue mer, avec un T2 dès 160 000 € et une fenêtre juillet-août exceptionnelle (180-280 €/nuit). La Route des Sanguinaires (ROI 4,5-6 %) cible une clientèle premium prête à payer 220 €/nuit pour le coucher de soleil mythique, mais le ticket d'entrée monte à 220 000 € pour un T2 vue mer. Le centre historique (autour de la cathédrale et de la maison Bonaparte) capte la clientèle culturelle et croisiériste à 90-150 €/nuit avec un T2 dès 150 000 €. Pour un budget contraint, Lorette et les hauteurs de Casone proposent des T2 dès 135 000 € avec un ROI 5-6,5 % et un mix possible LCD été + bail mobilité hiver. Porticcio (15 min sud) est une alternative balnéaire pure été avec un T2 face mer dès 150 000 € et un ROI 5,5-7,5 %, à condition d'accepter une saisonnalité très marquée.",
+      },
+    ],
+    updatedAt: '2026-06-10',
+  },
+  // ==========================================================================
+  // CARCASSONNE (Aude)
+  // ==========================================================================
+  {
+    slug: 'carcassonne',
+    displayName: 'Carcassonne',
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title: 'Conciergerie Carcassonne Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Carcassonne : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb de Carcassonne. Tarifs (20-25 %), services, avis Google, marché Cité UNESCO + Bastide Saint-Louis, réglementation 2026.",
+    kwPrincipal: 'conciergerie carcassonne',
+    kwSecondaires: [
+      'conciergerie airbnb carcassonne',
+      'conciergerie cité carcassonne',
+      'gestion location courte durée carcassonne',
+      'meilleure conciergerie carcassonne',
+      'manasteos carcassonne',
+    ],
+    population: 46429,
+    tourists: 2000000,
+    activeListings: 700,
+    priceLow: 60,
+    priceHigh: 130,
+    occupancyRate: 60,
+    revpar: 50,
+    seasonality:
+      "Saisonnalité touristique très marquée portée par la Cité médiévale UNESCO. Pic juillet-août (occupation 90-95 %, tarifs 1,5-2× la normale, clientèle internationale forte, Festival de Carcassonne en juillet, Embrasement de la Cité le 14 juillet). Très haute saison étendue de mai à septembre. Pic secondaire vacances de Pâques et Toussaint (familles, road-trips Canal du Midi à vélo). Fond de marché tourisme d'affaires faible (Carcassonne n'est pas un pôle tertiaire). Inter-saisons hiver (nov-mars hors Noël) creuses (occupation 35-45 %), partiellement compensées par les escales croisières fluviales sur le Canal du Midi et la clientèle régionale week-end (Toulouse à 50 min en TER).",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Carcassonne**, dans la **Bastide Saint-Louis** (ville basse), dans le quartier **Trivalle** au pied des remparts, à la **Cité médiévale** elle-même (rare, très contraint), ou en première couronne, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre **2 millions de visiteurs par an** à la Cité (5e monument national le plus visité de France selon le CMN), le **Festival de Carcassonne** mi-juillet qui sature les hébergements, l'**Embrasement** du 14 juillet qui attire des dizaines de milliers de spectateurs, et la dizaine d'acteurs LCD qui se partagent un marché à fort tarif moyen, vous vous demandez si confier la gestion à une conciergerie reste rentable sur les 5 mois d'ailes de saison.\n\nEt surtout : **laquelle choisir** entre les pure-players carcassonnais historiques (Conciergerie Carcassonnaise, Bel'la, Escapade), les nouveaux entrants régionaux (Manasteos depuis janvier 2025, CarcaHome) et les options sur devis personnalisé qui dominent un marché encore peu standardisé ?",
+    marketIntro:
+      "Carcassonne est un **marché LCD ultra-touristique** dominé par la fréquentation de la **Cité médiévale UNESCO** (classée en 1997) — **2 millions de visiteurs par an** selon les chiffres 2024 du CMN, dont **640 000 entrées payantes** sur le château comtal et les remparts. C'est le **5e monument national le plus visité de France** et le **1er site d'Occitanie devant le Pont du Gard**. La commune compte environ **700 annonces actives** sur Airbnb avec un tarif moyen autour de **75-85 €/nuit** sur l'année, qui monte à **130-180 €/nuit pendant juillet-août** sur les biens face Cité.\n\n**Double UNESCO.** Outre la Cité, le **Canal du Midi** (classé UNESCO en 1996) traverse Carcassonne d'est en ouest, alimentant un flux de croisières fluviales et de cyclotouristes (véloroute du Canal des Deux Mers). Les **Embrasements de la Cité du 14 juillet** rassemblent chaque année des dizaines de milliers de spectateurs (l'un des plus grands feux d'artifice de France), et le **Festival de Carcassonne** (théâtre antique, juillet, 6 semaines) attire une clientèle culturelle haut de gamme.\n\n**Toulouse à 50 minutes.** La proximité de Toulouse (50 min en TER, 1h en voiture) génère un flux régulier de week-ends régionaux et de courts séjours, particulièrement sur les ponts de mai et les vacances scolaires.\n\n**Prix immo parmi les plus accessibles de France.** Le prix moyen au m² à Carcassonne s'établit à **1 650 €/m²** en avril 2026 selon les sources locales (+2,3 % sur 12 mois). La **Bastide Saint-Louis** (ville basse, hypercentre commerçant) se négocie entre **1 500 et 2 000 €/m²**, le quartier **Trivalle** (entre Cité et bastide) entre **1 860 €/m² en moyenne (jusqu'à 2 900 €/m²)**, et les rares maisons de caractère intra-muros entre **2 300 et 2 700 €/m²**. Ce niveau de prix place Carcassonne parmi les **marchés LCD les plus rentables de France** sur le ratio tarif nuitée / ticket d'entrée — ROI brut couramment 7-9 % à la Bastide Saint-Louis sur un T2-T3.",
+    conciergeries: [
+      {
+        name: 'Manasteos Occitanie',
+        url: 'https://manasteos.com/conciergerie/carcassonne/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 600,
+        biensGeres: 16,
+        specialty: 'Réseau Côte d\'Azur + Occitanie, 600+ avis cumulés',
+        description:
+          "Manasteos est un acteur historique de la conciergerie LCD sur la Côte d'Azur (Beausoleil, Menton, Cannes) qui a ouvert son antenne Occitanie à Carcassonne en janvier 2025, dirigée par Hédi (12 Rue Jean Monnet). Commission de 20 % HT (24 % TTC) annoncée publiquement. Le réseau Manasteos cumule plus de 600 avis Google et Trustpilot pour une note moyenne de 4,9/5 — une réputation difficile à concurrencer pour un nouvel entrant carcassonnais. 16 biens gérés à Carcassonne en juin 2026, en croissance. Pertinente pour un propriétaire qui veut la robustesse process d'un réseau structuré tout en gardant un interlocuteur local.",
+      },
+      {
+        name: 'Conciergerie Carcassonnaise',
+        url: 'https://conciergerie-carcassonnaise.fr/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 0,
+        biensGeres: 18,
+        specialty: '5 ans d\'ancrage local, commission affichée 25 % TTC',
+        description:
+          "La Conciergerie Carcassonnaise est dirigée par Mélissa depuis ses bureaux 4 rue Victor Hugo dans la Bastide Saint-Louis. Environ 5 ans d'expérience sur le marché carcassonnais. Commission affichée publiquement à 25 % TTC sur les revenus nets générés — l'une des grilles tarifaires les plus transparentes du marché. Service complet : annonce, pricing dynamique saisonnier, communication voyageurs 24/7, check-in/check-out automatisé, ménage pro, linge. Pertinente pour un propriétaire qui valorise un acteur carcassonnais historique avec un tarif clair, et qui accepte une commission en haut de fourchette en échange d'une formule intégrale.",
+      },
+      {
+        name: "Bel'la Conciergerie",
+        url: 'https://www.bellaconciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 0,
+        biensGeres: 15,
+        specialty: 'Pricing dynamique saisonnalité + événements',
+        description:
+          "Bel'la Conciergerie est dirigée par Sandrine, basée à Carcassonne. Tarification sur devis, généralement dans la fourchette 20-25 % TTC selon le périmètre. Positionnement marqué sur le pricing dynamique calé sur la saisonnalité, la demande et les événements locaux (Festival, Embrasements, vacances scolaires européennes). Témoignages clients récurrents sur la proximité relationnelle (\"très à l'écoute, professionnelle, sérieuse\"). Pertinente pour un propriétaire qui veut un contact direct privilégié plutôt qu'une plateforme digitalisée.",
+      },
+      {
+        name: 'Escapade Conciergerie',
+        url: 'https://www.conciergerie-escapade.com/temoignages',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 0,
+        biensGeres: 10,
+        specialty: 'Acteur émergent (SIRET 2024), gestion sur-mesure',
+        description:
+          "Escapade Conciergerie est dirigée par Ludivine (SIRET 940748064, immatriculation 2024). Acteur émergent du marché carcassonnais positionné sur une gestion sur-mesure à taille humaine. Tarification sur devis. Témoignages clients soulignant la chaleur humaine, le professionnalisme et l'amélioration des revenus locatifs après prise en charge. Pertinente pour un propriétaire qui valorise un acteur jeune disponible et accessible, prêt à co-construire le périmètre exact de la prestation — moins adapté à un portefeuille de 5+ biens nécessitant un process industrialisé.",
+      },
+      {
+        name: 'CarcaHome (My Happy Conciergerie)',
+        url: 'https://my-happy-conciergerie.com/carcahome',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 10,
+        biensGeres: 12,
+        specialty: 'Réseau My Happy Conciergerie, présence multi-villes',
+        description:
+          "CarcaHome est l'antenne carcassonnaise du réseau My Happy Conciergerie, présent sur plusieurs villes françaises. Note Google 4,6 sur 10 avis, base de retours modeste mais cohérente. Tarification sur devis, généralement dans la moyenne du marché (20-22 % TTC selon retours collectés). Service standardisé avec process réseau (templates messages, scripts check-in). Pertinente pour un propriétaire qui a besoin d'un process éprouvé et d'une présence multi-villes (utile si patrimoine LCD réparti).",
+      },
+      {
+        name: 'Mi casa es su casa',
+        url: 'https://agence.contact/11-aude/carcassonne/agence-de-location-de-maisons-de-vacances/1147-mi-casa-es-su-casa-conciergerie.html',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 17,
+        biensGeres: 12,
+        specialty: 'Volume avis cumulé solide, gestion patrimoniale Carcassonne',
+        description:
+          "Mi casa es su casa est une conciergerie carcassonnaise référencée sur les annuaires locaux avec 17 avis cumulés et une équipe (Clara identifiée dans les témoignages) décrite comme \"attentive, réactive et de bon conseil\". Tarification sur devis. Service complet annonce, accueil, ménage, communication voyageurs. Pertinente pour un propriétaire d'un bien atypique ou de caractère (Trivalle, intra-muros Cité) nécessitant un acteur capable de scénariser l'accueil et la mise en valeur patrimoniale.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Bastide Saint-Louis (ville basse, hypercentre)',
+        pricePerNight: '70-110 €',
+        occupancy: 65,
+        description:
+          "Cœur commerçant et administratif de Carcassonne, plan en damier XIIIe siècle. Place Carnot, halles, rues piétonnes, restaurants. Excellente connexion à la Cité à pied (15 min via pont Vieux) et à la gare. Prix au m² 1 500-2 000 €. T2 dès 80 000 €. Le meilleur compromis rendement et qualité d'emplacement pour la clientèle internationale qui veut visiter la Cité tout en bénéficiant d'un quartier vivant. ROI brut 7-9 % couramment atteint sur un T2-T3.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Trivalle (au pied de la Cité)',
+        pricePerNight: '85-140 €',
+        occupancy: 68,
+        description:
+          "Quartier patrimonial entre la Cité médiévale et la Bastide, le long de l'Aude. Maisons anciennes, ruelles étroites, vue directe sur les remparts pour certaines adresses. Prix au m² moyen 1 860 € (rue Trivalle), pouvant grimper à 2 900 €/m² sur les biens vue Cité. Clientèle haut de gamme prête à payer un premium pour la vue. T2 dès 90 000 €, maison de caractère dès 180 000 €.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Cité de Carcassonne (intra-muros)',
+        pricePerNight: '120-220 €',
+        occupancy: 72,
+        description:
+          "Patrimoine UNESCO depuis 1997, 2 millions de visiteurs par an, 50 habitants permanents seulement intra-muros. Offre LCD très rare (autorisations difficiles, contraintes patrimoniales lourdes). Tarif premium absolu mais saisonnalité accentuée (juillet-août seuls vraiment chers). Prix au m² 2 300-2 700 € sur les rares maisons de caractère. Investissement très spécifique, à réserver à un propriétaire patrimonial avec dossier solide.",
+        roiBrut: '5 à 7 %',
+      },
+      {
+        name: 'Quartier de la Gare / Pont Vieux',
+        pricePerNight: '60-95 €',
+        occupancy: 58,
+        description:
+          "Quartier autour de la gare SNCF (Toulouse-Narbonne, TER 50 min Toulouse). Clientèle business voyageurs et touristes ferroviaires. Prix au m² 1 400-1 900 €. T2 dès 70 000 €. Bon ratio prix d'entrée / fréquentation, particulièrement pertinent pour un investisseur toulousain qui veut un second bien LCD à 50 min.",
+        roiBrut: '7 à 8,5 %',
+      },
+      {
+        name: 'Grazailles / Saint-Jacques (résidentiel péricentre)',
+        pricePerNight: '55-85 €',
+        occupancy: 50,
+        description:
+          "Quartiers résidentiels au nord et nord-est de la Bastide. Prix au m² les plus accessibles de Carcassonne (1 200-1 700 €). Maisons individuelles avec jardin. T3-T4 dès 130 000 €. Stratégie maison familiale en location ponctuelle vacances + clientèle régionale week-end. Saisonnalité plus marquée que la Bastide.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Canal du Midi / Saint-Vincent (rive sud)',
+        pricePerNight: '65-100 €',
+        occupancy: 55,
+        description:
+          "Quartier en bord de Canal du Midi (UNESCO 1996), cyclotouristes (véloroute du Canal des Deux Mers, 360 km Toulouse-Sète), escales fluviales. Prix au m² 1 500-1 900 €. T2 dès 75 000 €. Clientèle pédestre et fluviale spécifique, niche bien valorisée si annonce adaptée (mention vélo, location de vélos, parking sécurisé).",
+        roiBrut: '7 à 8,5 %',
+      },
+    ],
+    regulation:
+      "Carcassonne applique **le cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel à ce jour — un cadre relativement souple qui en fait l'un des marchés LCD les plus accessibles de France à la fois sur le prix d'achat et sur la réglementation.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Carcassonne doit être déclaré en mairie. Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération motivée — Carcassonne ne l'a pas fait.\n\n**Pas de changement d'usage généralisé.** Contrairement à Paris, Lyon, Bordeaux ou Porto-Vecchio, Carcassonne n'impose pas d'autorisation de changement d'usage pour les résidences secondaires. Cette souplesse réglementaire est cohérente avec la pression démographique modérée (46 429 habitants 2025, marché du logement non tendu) et la dynamique d'attractivité touristique que la commune souhaite préserver autour de la Cité UNESCO.\n\n**Contraintes patrimoniales spécifiques intra-muros.** Tout projet de meublé de tourisme **dans l'enceinte de la Cité médiévale** (50 habitants permanents) est soumis aux avis de l'Architecte des Bâtiments de France (ABF) et au règlement du Site Patrimonial Remarquable. Travaux intérieurs encadrés, signalétique extérieure interdite, modifications de façade prohibées. Pour les biens dans la **Bastide Saint-Louis** (plan en damier XIIIe), des contraintes patrimoniales plus légères s'appliquent sur les façades.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur — particulièrement pertinent à Carcassonne où la fréquentation Cité justifie un positionnement gamme moyenne à haute.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Carcassonne applique une taxe de séjour qui s'échelonne typiquement de **0,75 € à 4,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 80,
+      neighborhood: 'Bastide Saint-Louis',
+      revenuBrut: 17500,
+      commissionRate: 0.22,
+      menageCount: 65,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Combien rapporte un Airbnb à Carcassonne sur l'année 2026 ?",
+        a: "Un T2 de 45 m² bien placé à la Bastide Saint-Louis ou Trivalle (tarif moyen 75-90 €/nuit annuel) génère typiquement un chiffre d'affaires brut de 15 000-20 000 € sur l'année à Carcassonne, avec un pic juillet-août (le CA juin-septembre représente 45-55 % du total) soutenu par le Festival de Carcassonne et les Embrasements du 14 juillet. Net de la commission conciergerie (20-25 %), de la taxe foncière (~700-1 000 € sur un T2 carcassonnais), des charges de copropriété (600-900 €/an) et du ménage, comptez un revenu disponible de 9 000-12 500 €. Une maison de caractère T3-T4 à Trivalle avec vue Cité peut atteindre 22 000-30 000 € de CA brut grâce au premium vue (jusqu'à 220 €/nuit en pointe). La rentabilité brute reste excellente à Carcassonne (7-9 % couramment à la Bastide) du fait des prix d'acquisition très accessibles (1 650 €/m² moyen 2026, parmi les plus bas des villes LCD significatives en France).",
+      },
+      {
+        q: 'Carcassonne est-elle en zone tendue pour la location Airbnb en 2026 ?',
+        a: "Non, Carcassonne n'est pas classée en zone tendue et n'a pas instauré de dispositif local restrictif sur les meublés de tourisme (contrairement à Paris, Lyon, Bordeaux, Porto-Vecchio ou Colmar). Concrètement, vous pouvez transformer une résidence secondaire en meublé de tourisme sans demande d'autorisation de changement d'usage, et louer votre résidence principale jusqu'à 120 jours par an (la commune n'a pas abaissé ce seuil à 90 jours). Cette souplesse est cohérente avec la pression démographique modérée (46 429 habitants en 2025, marché du logement non tendu) et la stratégie touristique de la commune autour de la Cité UNESCO (5e monument national le plus visité de France, 2 millions de visiteurs par an). Seules contraintes spécifiques : les projets dans l'enceinte intra-muros de la Cité sont soumis à l'avis de l'Architecte des Bâtiments de France (Site Patrimonial Remarquable). La seule obligation universelle est la déclaration préalable en mairie et l'obtention du numéro d'enregistrement national à 13 chiffres au plus tard le 20 mai 2026.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Carcassonne ?',
+        a: "La Bastide Saint-Louis (ville basse, hypercentre) offre le meilleur compromis rendement / qualité d'emplacement avec un ROI brut 7-9 % sur un T2-T3 et un ticket d'entrée bas (T2 dès 80 000 €). Trivalle (entre Cité et bastide) capte une clientèle premium prête à payer 140-220 €/nuit pour une maison de caractère avec vue remparts, avec un ROI 6,5-8,5 % mais un ticket d'entrée plus élevé (180 000 € pour une maison de caractère, jusqu'à 2 900 €/m² sur les biens vue Cité). Le Canal du Midi / Saint-Vincent vise la niche cyclotouristes et croisières fluviales avec un ROI 7-8,5 %. Le quartier de la Gare est pertinent pour un investisseur toulousain (TER 50 min) avec un T2 dès 70 000 € et un ROI 7-8,5 %. Pour un budget contraint, Grazailles/Saint-Jacques propose des T3-T4 dès 130 000 € avec un ROI 6,5-8 % sur une stratégie maison familiale en location vacances + week-ends régionaux. L'intra-muros Cité reste un investissement de niche réservé aux dossiers patrimoniaux solides.",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Carcassonne ?",
+        a: "Les commissions à Carcassonne s'étalent de 20 % HT (Manasteos Occitanie affiché publiquement, soit 24 % TTC) à 25 % TTC (Conciergerie Carcassonnaise affiché sur les revenus nets) en 2026. La majorité des pure-players locaux (Bel'la Conciergerie, Escapade Conciergerie, CarcaHome, Mi casa es su casa) travaillent sur devis personnalisé, généralement dans la fourchette 20-25 % TTC selon le périmètre et le profil du bien. La moyenne de marché s'établit autour de 22-23 % TTC pour une formule intégrale avec ménage refacturé au voyageur. Le critère décisif au-delà du taux affiché sur un marché touristique comme Carcassonne est la stratégie pricing dynamique sur les pics annuels (Festival mi-juillet, Embrasements 14 juillet, vacances scolaires européennes) et la capacité à gérer la clientèle internationale (anglais, espagnol, italien) — Carcassonne attire une forte proportion de visiteurs étrangers via la Cité UNESCO.",
+      },
+    ],
+    updatedAt: '2026-06-10',
+  },
+  // ==========================================================================
+  // HONFLEUR (Calvados)
+  // ==========================================================================
+  {
+    slug: 'honfleur',
+    displayName: 'Honfleur',
+    region: 'Normandie',
+    regionSlug: 'normandie',
+    title: 'Conciergerie Honfleur Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Honfleur : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb de Honfleur. Tarifs (15-25 %), services, avis Google, marché Vieux Bassin + Côte Fleurie, nouvelle réglementation 2026.",
+    kwPrincipal: 'conciergerie honfleur',
+    kwSecondaires: [
+      'conciergerie airbnb honfleur',
+      'conciergerie côte fleurie',
+      'remi griffoul',
+      'conciergerie rémi griffoul',
+      'meilleure conciergerie honfleur',
+    ],
+    population: 6640,
+    tourists: 5000000,
+    activeListings: 500,
+    priceLow: 80,
+    priceHigh: 180,
+    occupancyRate: 70,
+    revpar: 75,
+    seasonality:
+      "Saisonnalité atypique pour un marché côtier français : Honfleur conserve un fond de marché soutenu hors été grâce à sa fréquentation touristique étalée sur l'année (Vieux Bassin, peintres impressionnistes, gastronomie). Pic juillet-août (occupation 85-95 %, tarifs 1,5-2× la normale, clientèle internationale forte + parisienne). Pic secondaire week-ends de printemps (avril-mai) et de septembre-octobre (couleurs d'automne). Pics de Noël et Nouvel An (clientèle parisienne, marchés gourmands). Inter-saison hiver creuse (jan-fév, occupation 40-55 %). 978 644 nuitées déclarées en 2023 selon l'office de tourisme (670 909 nuitées hébergeurs + 307 735 nuitées plateformes type Airbnb). 6,66 millions de nuitées sur le territoire Côte Fleurie en 2024 (+5,5 % vs 2023).",
+    rankNational: 17,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Honfleur**, sur le **Vieux Bassin** (Quai Sainte-Catherine, Quai Saint-Étienne), dans le **Faubourg Sainte-Catherine**, sur les hauteurs du **Plateau de Grâce** ou en première couronne (Equemauville, Vasouy), que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre le **bouleversement réglementaire majeur du 21 décembre 2025** (la mairie a acté un assouplissement après 3 ans de politique ultra-restrictive 2022-2025), les **5 millions de visiteurs annuels** estimés sur la commune et les **978 644 nuitées déclarées en 2023**, et la dizaine d'acteurs locaux qui se partagent un marché premium à tarif moyen 110 €/nuit, vous vous demandez s'il faut profiter de la fenêtre d'opportunité 2026 pour basculer en LCD ou attendre de voir la stabilité du nouveau régime de quotas dynamiques.\n\nEt surtout : **laquelle choisir** entre l'acteur historique premium (Conciergerie Rémi Griffoul, élu Airbnb meilleur hôte de France 2023 et 2024), les pure-players honfleurais 5,0 (KL Conciergerie, MD Conciergerie Normandie), les réseaux régionaux (Boostars, Cocoonr) et l'acteur historique controversé (Conciergerie Honfleuraise) ?",
+    marketIntro:
+      "Honfleur est un **marché LCD premium ultra-touristique** : 6 640 habitants permanents (INSEE 2023, en baisse depuis 2016) pour environ **5 millions de visiteurs annuels** estimés sur la commune (incluant excursionnistes journée), **978 644 nuitées touristiques déclarées en 2023** (670 909 directes hébergeurs + 307 735 plateformes type Airbnb selon l'office de tourisme). Le territoire élargi Côte Fleurie a totalisé **6,66 millions de nuitées en 2024** (+5,5 % vs 2023). La commune compte environ **500 annonces actives** sur Airbnb avec un tarif moyen autour de **110 €/nuit** et un taux d'occupation **75 %** — des niveaux exceptionnels pour une ville de cette taille.\n\n**Marché de poche premium.** Le **Vieux Bassin** (Quai Sainte-Catherine, Quai Saint-Étienne), le **Carré aux Sels** et la **Lieutenance** concentrent la quasi-totalité de la valeur LCD. Les maisons à pans de bois XVe-XVIIe et l'**église Sainte-Catherine** (plus grande église de France en bois) attirent une clientèle internationale (anglo-saxonne, allemande, néerlandaise, italienne) qui paye un premium pour le cadre unique. Tarifs jusqu'à **220-280 €/nuit** sur les biens vue Vieux Bassin en pointe.\n\n**Bouleversement réglementaire 21 décembre 2025.** La municipalité a acté un assouplissement majeur après une politique ultra-restrictive 2022-2025 qui n'a pas créé de nouveaux logements permanents mais a généralisé le phénomène des \"volets clos\" et privé les commerçants d'un flux hors saison. Le nouveau régime 2026 introduit des **quotas dynamiques** et une **dérogation possible à la compensation physique** moyennant le paiement d'une **redevance forfaitaire** ou l'adhésion à un régime de quotas limités. **Fenêtre d'opportunité 2026** pour les propriétaires qui avaient gelé leur projet LCD pendant la période restrictive.\n\n**Prix immo dans la fourchette haute Normandie côtière.** Comptez **4 500-6 500 €/m²** sur les rares biens disponibles autour du Vieux Bassin (offre extrêmement limitée), **3 500-5 000 €/m²** sur le Faubourg Sainte-Catherine, **3 000-4 500 €/m²** sur le Plateau de Grâce (hauteurs), et **2 800-4 000 €/m²** en première couronne (Equemauville, Vasouy). Le ticket d'entrée est élevé mais le rendement reste solide grâce au tarif nuitée et à l'occupation premium.",
+    conciergeries: [
+      {
+        name: 'Conciergerie Rémi Griffoul',
+        url: 'https://www.conciergerie-remigriffoul.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 5.0,
+        reviews: 50,
+        biensGeres: 9,
+        specialty: 'Élu Airbnb meilleur hôte de France 2023 + 2024',
+        description:
+          "Conciergerie Rémi Griffoul est l'acteur historique premium du marché honfleurais (7 ans d'expérience, 5 Rue des Lingots à Honfleur). Élue par Airbnb « Hôte professionnel ayant la meilleure note de qualité en France en 2023 et 2024 » — distinction nationale exceptionnelle. Portefeuille curated d'au moins 9 hébergements de caractère à Honfleur, Trouville-sur-Mer et Cricqueboeuf (L'Escale du Vieux Port, Maison Saint Léonard, Dolphin View, Le Cosmopolitain). Tarification sur devis adaptée au positionnement premium. Service personnalisé 7j/7. Pertinente pour un propriétaire d'un bien de caractère qui privilégie l'excellence de la note et le ticket moyen premium plutôt que le volume — moins adaptée à un T1-T2 standard sur le marché concurrentiel.",
+      },
+      {
+        name: 'KL Conciergerie Honfleur',
+        url: 'https://www.kl-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 13,
+        biensGeres: 14,
+        specialty: 'Note Google 5,0 sur 13 avis, gestion locative 7j/7',
+        description:
+          "KL Conciergerie est domiciliée 40 Rue Saint-Léonard à Honfleur, au cœur du tissu commerçant. Note Google de 5,0 sur 13 avis Google, l'une des plus solides du marché honfleurais. Gestion locative saisonnière à l'année avec check-in/check-out, ménage pro, fourniture des consommables d'accueil. Équipe décrite comme « dynamique et réactive, rapidité du service de ménage ». Tarification sur devis (généralement 20 % TTC pour 1-2 biens, dégressif à 15 % au-delà de 3 biens selon les retours collectés sur les comparateurs spécialisés). Pertinente pour un propriétaire qui veut un acteur honfleurais ancré sans la prime du positionnement ultra-premium.",
+      },
+      {
+        name: 'MD Conciergerie Normandie',
+        url: 'https://www.mdconciergerienormandie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 0,
+        biensGeres: 12,
+        specialty: 'Honfleur + Côte Fleurie + Beuzeville, gestion 6j/7',
+        description:
+          "MD Conciergerie Normandie est basée à Honfleur avec une couverture étendue Côte Fleurie (Trouville, Deauville, Cabourg) et Beuzeville. 4 prestations cœur : création/rédaction d'annonce, optimisation des réservations, ménage et entretien, communication voyageurs. Tarification sur devis. Pertinente pour un propriétaire avec plusieurs biens répartis sur le territoire Côte Fleurie qui veut un interlocuteur unique gérant l'ensemble du portefeuille — gain de cohérence et économies d'échelle sur les déplacements.",
+      },
+      {
+        name: 'Boostars Honfleur',
+        url: 'https://www.boostars.com/post/conciergerie-honfleur',
+        commission: '15-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 0,
+        biensGeres: 20,
+        specialty: 'Réseau Normandie (Rouen, Deauville, Cabourg, Honfleur)',
+        description:
+          "Boostars est un réseau régional Normandie (Rouen, Deauville, Cabourg, Lille, Amiens, Honfleur) avec un mix de prestations modulables (forfaits commission 15-25 % selon services, frais de ménage refacturés à partir de 30 €). Référencée par l'office de tourisme de Honfleur. Gestion opérationnelle accueil/check-out, ménage, linge. Volume SEMrush significatif sur la marque (260 vol). Pertinente pour un propriétaire qui veut comparer plusieurs forfaits avant de signer (le 15 % de base ne couvre que l'opérationnel terrain ; la formule complète à 25 % inclut publication, pricing et communication voyageurs).",
+      },
+      {
+        name: 'Conciergerie Honfleuraise',
+        url: 'https://gowork.fr/conciergerie-honfleuraise-deauville',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 3.5,
+        reviews: 0,
+        biensGeres: 25,
+        specialty: 'Acteur historique 5 ans + branche Deauville (Deauvillaise)',
+        description:
+          "Conciergerie Honfleuraise est un acteur historique du marché (5 ans d'existence, branche Deauville sous le nom \"Conciergerie Deauvillaise\") avec un portefeuille élargi sur la Côte Fleurie. Tarification sur devis. À noter : les retours clients sont contrastés sur les comparateurs (témoignages positifs sur l'efficacité opérationnelle, mais aussi retours plus mitigés sur la communication et le caractère impersonnel du service). Pertinente uniquement si le devis et un échange en face à face confirment un fit personnel — sinon privilégier les acteurs à note Google 5,0 (KL, MD, Rémi Griffoul).",
+      },
+      {
+        name: 'Ma Conciergerie en Normandie',
+        url: 'https://www.allovoyages.fr/mag/conciergeries-airbnb-normandie/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 0,
+        biensGeres: 18,
+        specialty: 'Commission affichée 25 %, sans engagement de durée',
+        description:
+          "Ma Conciergerie en Normandie affiche une commission de 25 % pour une gestion globale sans engagement de durée — une formule rare sur le marché honfleurais où la plupart des contrats sont annuels reconductibles. Couverture régionale Normandie élargie. Service complet annonce, communication voyageurs, ménage, optimisation tarifaire, assistance 24/7. Pertinente pour un propriétaire qui veut tester une conciergerie sur 3-6 mois avant engagement long terme, ou qui veut conserver la possibilité de reprendre la main rapidement si le bien performe différemment de ses attentes.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieux Bassin (Sainte-Catherine, Saint-Étienne, Lieutenance)',
+        pricePerNight: '140-250 €',
+        occupancy: 80,
+        description:
+          "Cœur emblématique de Honfleur, port de plaisance entouré de maisons à pans de bois XVe-XVIIe, peint par Boudin, Monet, Courbet. Offre LCD extrêmement limitée (parc protégé, contraintes patrimoniales). Tarifs premium toute l'année grâce à la clientèle internationale. Prix au m² 4 500-6 500 € quand un bien se libère. T2 dès 250 000 €, maison de caractère dès 600 000 €. Le segment le plus rentable en valeur absolue par nuit, mais ticket d'entrée le plus élevé.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Faubourg Sainte-Catherine (autour église en bois)',
+        pricePerNight: '100-160 €',
+        occupancy: 72,
+        description:
+          "Faubourg historique autour de l'église Sainte-Catherine (plus grande église de France en bois, XVe siècle). Rues piétonnes commerçantes, restaurants, galeries d'art. Prix au m² 3 500-5 000 €. T2 dès 180 000 €. Bon compromis localisation patrimoniale et accessibilité prix vs Vieux Bassin. Forte demande LCD toute l'année.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Plateau de Grâce / Côte de Grâce (hauteurs)',
+        pricePerNight: '95-150 €',
+        occupancy: 68,
+        description:
+          "Hauteurs de Honfleur, chapelle Notre-Dame-de-Grâce (1606), vues panoramiques sur l'estuaire de la Seine et le pont de Normandie. Quartier résidentiel apprécié des Honfleurais. Prix au m² 3 000-4 500 €. T2 dès 160 000 €, maison avec jardin et vue dès 350 000 €. Clientèle LCD couple/famille recherchant le cadre paisible et la vue.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Côté Mer / Plage du Butin',
+        pricePerNight: '110-180 €',
+        occupancy: 65,
+        description:
+          "Quartier littoral à l'est du Vieux Bassin, plage du Butin, accès direct à la mer. Mix résidences secondaires et locations saisonnières estivales. Prix au m² 3 500-5 000 €. T2 vue mer dès 220 000 €. Saisonnalité plus marquée que le Vieux Bassin (juillet-août premium fort, hors saison moins forte).",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Première couronne (Equemauville, Vasouy)',
+        pricePerNight: '80-130 €',
+        occupancy: 62,
+        description:
+          "Communes limitrophes de Honfleur, accès voiture 5-10 min du Vieux Bassin. Maisons individuelles avec jardin, prix nettement plus accessibles. Prix au m² 2 800-4 000 €. Maison T4 dès 280 000 €. Stratégie maison familiale en location saisonnière (printemps-automne) particulièrement pertinente pour groupes 6-8 personnes et événementiel familial.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Côté Seine / Port Pétrolier (mixte)',
+        pricePerNight: '75-120 €',
+        occupancy: 58,
+        description:
+          "Quartier ouest entre Honfleur et le pont de Normandie. Plus mixte (résidentiel + activité portuaire), prix les plus accessibles de la commune. Prix au m² 2 500-3 800 €. T2 dès 140 000 €. Stratégie LCD plus dépendante de la photo qualité et du pricing dynamique pour compenser la moindre image de marque, mais ROI brut intéressant pour un investisseur sensible au ticket d'entrée.",
+        roiBrut: '6 à 7,5 %',
+      },
+    ],
+    regulation:
+      "Honfleur applique en 2026 **un nouveau régime de quotas dynamiques** acté par la municipalité le **21 décembre 2025**, qui marque la fin d'une politique ultra-restrictive 2022-2025 et redonne une fenêtre d'opportunité aux propriétaires LCD — un retournement majeur unique sur le littoral normand.\n\n**Bouleversement réglementaire du 21 décembre 2025.** Pendant 3 ans (2022-2025), Honfleur avait verrouillé l'accès aux meublés de tourisme dans un objectif déclaré de protection du logement permanent. La municipalité a constaté l'échec de cette politique : pas de nouveaux logements créés pour les familles, mais multiplication des « volets clos » et perte de pouvoir d'achat quotidien pour les commerçants hors saison. **Le nouvel arrêté 2026 introduit un régime de quotas dynamiques avec dérogation possible à la compensation physique** moyennant le paiement d'une **redevance forfaitaire compensatrice** ou l'adhésion à un régime de quotas limités. La municipalité bascule d'une logique d'interdiction à une logique de régulation qualitative.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Honfleur doit être déclaré en mairie. Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération motivée — Honfleur ne l'a pas fait à ce jour.\n\n**Compensation et changement d'usage pour résidence secondaire.** Le nouvel arrêté 2026 a assoupli le régime sans le supprimer. Concrètement, un propriétaire de résidence secondaire qui veut louer en meublé de tourisme doit **soit** justifier d'une compensation physique (achat de m² locatifs équivalents), **soit** opter pour la **redevance forfaitaire compensatrice**, **soit** adhérer au régime de **quotas limités annuels** (nombre exact à préciser par arrêté complémentaire 2026). Demander un rendez-vous au service urbanisme avant tout achat à finalité LCD.\n\n**Contraintes patrimoniales Vieux Bassin.** Tout projet dans le périmètre du **Site Patrimonial Remarquable** (Vieux Bassin, Lieutenance, faubourg Sainte-Catherine) est soumis à l'avis de l'**Architecte des Bâtiments de France** (ABF). Travaux intérieurs encadrés, signalétique extérieure interdite, fenêtres et façades protégées.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. Dans les zones tendues comme Honfleur, les biens proposés pour la première fois à la location touristique soumis à un changement d'usage doivent afficher **un DPE d'au moins classe E**.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration**, **50 000 € pour location au-delà du quota autorisé** prévu par l'arrêté municipal 2026.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Honfleur applique une taxe de séjour qui s'échelonne typiquement de **0,75 € à 4,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 130,
+      neighborhood: 'Faubourg Sainte-Catherine',
+      revenuBrut: 28000,
+      commissionRate: 0.22,
+      menageCount: 78,
+      menageUnitCost: 75,
+    },
+    extraFaq: [
+      {
+        q: 'Que change le nouvel arrêté du 21 décembre 2025 à Honfleur pour les Airbnb ?',
+        a: "Le 21 décembre 2025, la municipalité de Honfleur a acté un assouplissement majeur de sa réglementation sur les meublés de tourisme, mettant fin à 3 années (2022-2025) de politique ultra-restrictive. Le constat de la mairie : la politique de verrouillage n'a pas créé de nouveaux logements permanents pour les familles, mais a multiplié les « volets clos » et privé les commerçants honfleurais d'un flux de consommation hors saison. Le nouveau régime 2026 introduit des quotas dynamiques avec dérogation possible à la compensation physique : un propriétaire de résidence secondaire qui veut louer en LCD peut soit acheter des m² locatifs équivalents (compensation physique, comme avant), soit payer une redevance forfaitaire compensatrice, soit adhérer au régime de quotas limités annuels. Concrètement, cela rouvre une fenêtre d'opportunité 2026 pour les propriétaires qui avaient gelé leur projet pendant la période restrictive. Demander un rendez-vous au service urbanisme avant tout achat ou changement d'affectation : les modalités précises (montant de la redevance, volume du quota) sont précisées par arrêtés complémentaires 2026.",
+      },
+      {
+        q: "Combien rapporte un Airbnb à Honfleur sur l'année 2026 ?",
+        a: "Un T2 de 40 m² bien placé sur le Faubourg Sainte-Catherine ou autour du Vieux Bassin (tarif moyen 110-140 €/nuit annuel, occupation 70-75 %) génère typiquement un chiffre d'affaires brut de 25 000-32 000 € sur l'année à Honfleur — l'un des niveaux de revenus LCD les plus élevés de France hors Paris-Côte d'Azur. Net de la commission conciergerie (20-25 %), de la taxe foncière (~1 200-1 800 € sur un T2 honfleurais), des charges de copropriété (700-1 100 €/an) et du ménage, comptez un revenu disponible de 14 500-19 000 €. Un bien vue Vieux Bassin (offre extrêmement rare) peut atteindre 35 000-50 000 € de CA brut grâce au tarif premium (jusqu'à 250 €/nuit en pointe et occupation 80 %+). La rentabilité brute reste solide à Honfleur (4,5-6 % au Vieux Bassin, 5-6,5 % au Faubourg, 5,5-7 % en première couronne) malgré les prix d'acquisition élevés grâce au tarif nuitée premium et à l'occupation exceptionnelle pour une ville de 6 640 habitants.",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Honfleur ?",
+        a: "Les commissions à Honfleur s'étalent de 15 % TTC (Boostars formule de base, sans diffusion ni pricing) à 25 % TTC (Ma Conciergerie en Normandie, Conciergerie Carcassonnaise pour comparaison régionale) en 2026, avec une moyenne de marché autour de 20-22 % TTC pour une formule intégrale. Les pure-players honfleurais (Conciergerie Rémi Griffoul, KL Conciergerie, MD Conciergerie Normandie) travaillent sur devis personnalisé. La Conciergerie Rémi Griffoul, élue par Airbnb « meilleur hôte de France » en 2023 et 2024, justifie un positionnement premium sur un portefeuille curated de biens de caractère. Le critère décisif au-delà du taux affiché sur un marché premium comme Honfleur est la capacité à gérer la clientèle internationale (anglais, allemand, néerlandais, italien) et la stratégie pricing dynamique sur les pics annuels (juillet-août, week-ends de printemps, Noël/Nouvel An) — un mauvais pricing premium peut coûter 3 000-6 000 € de manque à gagner sur l'année.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Honfleur ?',
+        a: "Le Vieux Bassin reste le segment le plus rentable en valeur absolue par nuit (140-250 €/nuit, occupation 80 %+) mais l'offre est extrêmement limitée et le ticket d'entrée très élevé (T2 dès 250 000 €, maison de caractère dès 600 000 €, ROI brut 4,5-6 %). Le Faubourg Sainte-Catherine (autour de l'église en bois) offre le meilleur compromis prix/rendement avec T2 dès 180 000 € et ROI 5-6,5 %. Le Plateau de Grâce et la Côte de Grâce (hauteurs) ciblent une clientèle couple/famille recherchant le cadre paisible et la vue estuaire-pont de Normandie (T2 dès 160 000 €, ROI 5-6,5 %). Pour un budget contraint, la première couronne (Equemauville, Vasouy) propose des maisons avec jardin dès 280 000 € avec un ROI 5,5-7 % et une stratégie pertinente pour groupes 6-8 personnes et événementiel familial. Le côté Seine/port pétrolier est l'option « budget » avec T2 dès 140 000 € et ROI 6-7,5 %, mais nécessite un effort de mise en scène photo et de pricing dynamique pour compenser l'image de marque plus faible que le Vieux Bassin.",
+      },
+    ],
+    updatedAt: '2026-06-10',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

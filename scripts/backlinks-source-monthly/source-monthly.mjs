@@ -291,17 +291,35 @@ async function main() {
     candidates: final,
   };
 
-  // Append si fichier existe déjà
+  // Append si fichier existe déjà — avec dédup contre le mois PRÉCÉDENT :
+  // le top 30 SERP bouge peu d'un mois à l'autre ; sans ce filtre ~75 % des
+  // domaines re-sourcés sont des doublons du mois N-1 (constat mai→juin 2026).
   let existingCount = 0;
+  const knownDomains = new Set();
+  const prevMonth = new Date(Date.now() - 31 * 86400000).toISOString().slice(0, 7);
+  const prevPath = path.join(ROOT, 'data', `backlinks-${prevMonth}.json`);
+  if (fs.existsSync(prevPath)) {
+    JSON.parse(fs.readFileSync(prevPath, 'utf-8')).candidates.forEach(c => knownDomains.add(c.site));
+  }
+  let existing = null;
   if (fs.existsSync(OUTPUT_PATH)) {
-    const existing = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf-8'));
-    const existingDomains = new Set(existing.candidates.map(c => c.site));
-    const newOnes = final.filter(c => !existingDomains.has(c.site));
+    existing = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf-8'));
+    existing.candidates.forEach(c => knownDomains.add(c.site));
     existingCount = existing.candidates.length;
-    log(`\n📝 Fichier existant : ${existingCount} candidats. Ajout : ${newOnes.length}.`);
+  }
+  const newOnes = final.filter(c => !knownDomains.has(c.site));
+  const droppedKnown = final.length - newOnes.length;
+  if (existing) {
+    log(`\n📝 Fichier existant : ${existingCount} candidats. Dédup (mois courant + précédent) : ${droppedKnown} retirés. Ajout : ${newOnes.length}.`);
     output.candidates = [...existing.candidates, ...newOnes];
     output.stats.total_candidates = output.candidates.length;
     output.stats.appended_this_run = newOnes.length;
+    output.stats.dedup_known_domains = droppedKnown;
+  } else {
+    if (droppedKnown) log(`\n📝 Dédup mois précédent : ${droppedKnown} domaines déjà connus retirés.`);
+    output.candidates = newOnes;
+    output.stats.total_candidates = newOnes.length;
+    output.stats.dedup_known_domains = droppedKnown;
   }
 
   if (!DRY) {

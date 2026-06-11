@@ -30,7 +30,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { google } from 'googleapis';
-import { extractContact, detectAll, decodeEntities } from '../backlinks-source-monthly/filters.mjs';
+import { extractContact, detectAll, decodeEntities, isPitchableEmail, hasValidMX, extractDomain } from '../backlinks-source-monthly/filters.mjs';
 import { buildPitch, qaPitch, chooseOutilToPitch } from './pitch-templates.mjs';
 import { shouldBccToday } from './bcc-state.mjs';
 import { generateObservation } from './observation.mjs';
@@ -395,6 +395,25 @@ async function main() {
       skipped.push({ ...c, reason: 'not_blog' });
       log(`  ⏭ not_blog (site service)`);
       continue;
+    }
+
+    // 2bis. Garde-fou email pré-envoi : les candidats sourcés AVANT le fix
+    // qualification (2026-05-27) portent des emails jamais validés (cas réels
+    // bouncés le 11/06 : info@example.com, email cross-domain holidaypirates).
+    // Re-validation systématique avant envoi ; invalide → strip + skip.
+    if (c.email) {
+      let emailOk = isPitchableEmail(c.email, extractDomain(c.site));
+      if (emailOk) emailOk = await hasValidMX(c.email.split('@')[1]);
+      if (!emailOk) {
+        log(`  🚫 email invalide: ${c.email} → retiré (garde-fou pré-envoi)`);
+        c.email_invalide = c.email;
+        c.email = null;
+        if (!c.url_formulaire) {
+          c.status = 'excluded_bad_email';
+          skipped.push({ ...c, reason: 'excluded_bad_email' });
+          continue;
+        }
+      }
     }
 
     // 3. Pas de contact → skip

@@ -15,7 +15,6 @@ export default async function handler(req, res) {
   const listChannel = parseInt(process.env.BREVO_LIST_CHANNEL, 10) || listNL;
   const listWaitSite = parseInt(process.env.BREVO_LIST_WAITLIST_SITE, 10) || listNL;
   const listWaitCM = parseInt(process.env.BREVO_LIST_WAITLIST_CM, 10) || listNL;
-  const listLivre = parseInt(process.env.BREVO_LIST_LIVRE, 10) || listNL;
 
   if (!apiKey || !listNL) {
     return res.status(500).json({ error: 'Missing API credentials' });
@@ -31,9 +30,10 @@ export default async function handler(req, res) {
     listId = listWaitSite;
   } else if (source === 'WaitlistCM') {
     listId = listWaitCM;
-  } else if (source === 'Livre') {
-    listId = listLivre;
   }
+  // source === 'Livre' (QR 4e de couverture → /livre) tombe volontairement dans la
+  // liste NL par défaut : même consentement que la NL du site (1 email/mois).
+  // La provenance se segmente dans Brevo via l'attribut SOURCE.
 
   try {
     const attributes = { SOURCE: source || 'direct' };

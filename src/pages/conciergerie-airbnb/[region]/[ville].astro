@@ -23,6 +23,12 @@ const canonical = `https://www.enomia.app/conciergerie-airbnb/${c.regionSlug}/${
 // Cross-link vers la page rentabilité si elle existe et est en ligne
 const rentabiliteLink = getRentabiliteLinkForVille(c.slug, c.name);
 
+// Toutes les villes sœurs de la région → slider de maillage interne.
+// Tous les liens sont dans le DOM (Google les voit), 3 cartes visibles à la fois.
+const sisterCities = cities.filter(
+  (other) => other.regionSlug === c.regionSlug && other.slug !== c.slug
+);
+
 // Lightweight Markdown renderer: splits on `\n\n` into paragraphs and turns `**x**` into <strong>x</strong>.
 // Used for introCustom / marketIntro / regulation so we can aerate long blocks with a few bold keywords.
 function escapeHtml(s: string): string {
@@ -304,6 +310,30 @@ const faqLd = {
     .related .rk { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; }
     .related .rt { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; margin: 4px 0 6px; }
     .related .rd { font-size: 12px; color: #8a8985; }
+
+    /* City slider : 3 cartes visibles, défilement horizontal sur toute la région */
+    .cs-wrap { position: relative; margin: 24px 0 8px; }
+    .cs-track { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.18) transparent; -webkit-overflow-scrolling: touch; }
+    .cs-track::-webkit-scrollbar { height: 6px; }
+    .cs-track::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 4px; }
+    .cs-track::-webkit-scrollbar-track { background: transparent; }
+    a.cs-card { flex: 0 0 calc((100% - 28px) / 3); scroll-snap-align: start; background: #fff; border: 1px solid #e5e3de; border-radius: 10px; padding: 18px 20px; text-decoration: none; color: inherit; transition: all 0.15s; }
+    a.cs-card:hover { border-color: #8a8985; transform: translateY(-2px); }
+    .cs-kicker { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #3fbd71; margin-bottom: 4px; }
+    .cs-city { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; color: #1a1a1a; margin-bottom: 10px; line-height: 1.3; }
+    .cs-stats { display: flex; gap: 6px; flex-wrap: wrap; }
+    .cs-pill { background: #f0eee8; color: #52524e; font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 100px; white-space: nowrap; }
+    .cs-pill.green { background: rgba(63,189,113,0.08); color: #3fbd71; }
+    .cs-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; border: 1px solid #e5e3de; background: #fff; color: #1a1a1a; font-size: 18px; line-height: 1; cursor: pointer; z-index: 2; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: opacity 0.15s, border-color 0.15s; }
+    .cs-arrow:hover { border-color: #8a8985; }
+    .cs-arrow[disabled] { opacity: 0; pointer-events: none; }
+    #cs-prev { left: -14px; }
+    #cs-next { right: -14px; }
+    @media (max-width: 700px) {
+      a.cs-card { flex-basis: 78%; }
+      .cs-arrow { display: none; }
+    }
+
     @media (max-width: 700px) { .seo-wrap { padding: 24px 20px 40px; } .related { grid-template-columns: 1fr; } }
   </style>
 
@@ -573,6 +603,32 @@ const faqLd = {
         <a href="/estimation-airbnb">→ Simuler ma rentabilité Airbnb</a>
       </div>
 
+      {sisterCities.length > 0 && (
+        <>
+          <h2>Conciergerie Airbnb dans les autres villes de la région</h2>
+          <p>
+            Vous avez un bien dans une autre ville, ou vous hésitez encore sur l'emplacement ? Nous avons
+            comparé les conciergeries de {sisterCities.length} autre{sisterCities.length > 1 ? 's' : ''} ville{sisterCities.length > 1 ? 's' : ''} de la région avec la même méthode.
+          </p>
+          <div class="cs-wrap">
+            <button type="button" class="cs-arrow" id="cs-prev" aria-label="Villes précédentes">‹</button>
+            <div class="cs-track" id="cs-track">
+              {sisterCities.map((other) => (
+                <a class="cs-card" href={`/conciergerie-airbnb/${other.regionSlug}/${other.slug}`}>
+                  <div class="cs-kicker">{other.conciergeries.length} conciergeries comparées</div>
+                  <div class="cs-city">Conciergerie Airbnb {other.displayName}</div>
+                  <div class="cs-stats">
+                    <span class="cs-pill green">{other.priceLow}-{other.priceHigh} €/nuit</span>
+                    <span class="cs-pill">{other.occupancyRate} % d'occupation</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+            <button type="button" class="cs-arrow" id="cs-next" aria-label="Villes suivantes">›</button>
+          </div>
+        </>
+      )}
+
       <h2>Pour aller plus loin</h2>
       <div class="related">
         {rentabiliteLink && (
@@ -592,16 +648,11 @@ const faqLd = {
           <div class="rt">Simulateur de rentabilité LCD</div>
           <div class="rd">Calculez le cash-flow avec ou sans conciergerie, fiscalité LMNP</div>
         </a>
-        {cities
-          .filter((other) => other.slug !== c.slug && other.regionSlug === c.regionSlug)
-          .slice(0, rentabiliteLink ? 1 : 2)
-          .map((other) => (
-            <a href={`/conciergerie-airbnb/${other.regionSlug}/${other.slug}`}>
-              <div class="rk">Même région</div>
-              <div class="rt">Conciergerie {other.displayName}</div>
-              <div class="rd">{other.region} · {other.activeListings.toLocaleString('fr-FR')} annonces actives</div>
-            </a>
-          ))}
+        <a href="/tarif-conciergerie-airbnb">
+          <div class="rk">Tarifs 2026</div>
+          <div class="rt">Tarif d'une conciergerie Airbnb</div>
+          <div class="rd">Commission, frais de ménage, forfaits : comprendre ce que vous payez vraiment</div>
+        </a>
       </div>
 
       <NewsletterBlock source={`Conciergerie-${c.slug}`} />
@@ -609,4 +660,36 @@ const faqLd = {
       <RelatedBlogArticles title="Articles à lire pour aller plus loin" />
     </div>
   </div>
+
+  <script>
+    // Flèches du slider villes : défile de 3 cartes, se masquent en bout de course
+    const track = document.getElementById('cs-track');
+    const prev = document.getElementById('cs-prev');
+    const next = document.getElementById('cs-next');
+    if (track && prev && next) {
+      // Cible = index de carte exact (multiple de carte+gap) : avec scroll-snap
+      // mandatory, une cible hors point de snap est annulée par le snap.
+      const step = () => {
+        const card = track.querySelector('a');
+        return card ? card.getBoundingClientRect().width + 14 : 290;
+      };
+      // Scroll instantané volontaire : un scrollTo smooth se fait annuler par le
+      // snap mandatory à mi-course sur certains navigateurs (cible pourtant exacte).
+      const goTo = (dir: number) => {
+        const w = step();
+        const idx = Math.round(track.scrollLeft / w);
+        track.scrollTo({ left: Math.max(0, (idx + dir * 3) * w), behavior: 'auto' });
+        update();
+      };
+      const update = () => {
+        prev.toggleAttribute('disabled', track.scrollLeft <= 4);
+        next.toggleAttribute('disabled', track.scrollLeft + track.clientWidth >= track.scrollWidth - 4);
+      };
+      prev.addEventListener('click', () => goTo(-1));
+      next.addEventListener('click', () => goTo(1));
+      track.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update, { passive: true });
+      update();
+    }
+  </script>
 </ToolLayout>

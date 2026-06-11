@@ -14,13 +14,12 @@ export default async function handler(req, res) {
   const listOutils = parseInt(process.env.BREVO_LIST_OUTILS, 10) || listNL;
   const listChannel = parseInt(process.env.BREVO_LIST_CHANNEL, 10) || listNL;
   const listWaitSite = parseInt(process.env.BREVO_LIST_WAITLIST_SITE, 10) || listNL;
-  const listWaitCM = parseInt(process.env.BREVO_LIST_WAITLIST_CM, 10) || listNL;
 
   if (!apiKey || !listNL) {
     return res.status(500).json({ error: 'Missing API credentials' });
   }
 
-  // Route to the right list based on source
+  // Routing source -> liste. Tout le reste (NL-Blog-*, Livre-QR, Estimation, livret-download...) -> NL par defaut.
   let listId = listNL;
   if (source === 'ChannelManager') {
     listId = listChannel;
@@ -28,14 +27,38 @@ export default async function handler(req, res) {
     listId = listOutils;
   } else if (source === 'WaitlistSite') {
     listId = listWaitSite;
-  } else if (source === 'WaitlistCM') {
-    listId = listWaitCM;
   }
 
+  const thisSource = source || 'direct';
+  // 2e tag pour les outils : quel outil
+  const outilType = { Simulateur_Auth: 'simulateur', Contrat: 'contrat', Facturation: 'facture' }[source];
+
   try {
-    const attributes = { SOURCE: source || 'direct' };
+    // Detecter une inscription multiple + historiser les points d'entree.
+    // Fail-safe : si le GET echoue (contact inexistant ou erreur), on continue sans bloquer l'inscription.
+    let priorSources = '';
+    try {
+      const existing = await fetch(`https://api.brevo.com/v3/contacts/${encodeURIComponent(email)}`, {
+        headers: { 'api-key': apiKey, accept: 'application/json' },
+      });
+      if (existing.ok) {
+        const c = await existing.json();
+        priorSources = (c.attributes && c.attributes.SOURCES) || '';
+      }
+    } catch (_) { /* on continue */ }
+
+    const sourceSet = new Set(String(priorSources).split(',').map((s) => s.trim()).filter(Boolean));
+    sourceSet.add(thisSource);
+
+    const attributes = {
+      SOURCE: thisSource,                       // dernier point d'entree
+      SOURCES: Array.from(sourceSet).join(','), // historique dedupliqué de tous les points d'entree
+    };
     if (firstName) attributes.PRENOM = firstName;
     if (nombreBiens) attributes.NB_APPARTEMENT = nombreBiens;
+    if (outilType) attributes.OUTIL_TYPE = outilType;
+    // Inscrit via 2+ points d'entree differents -> a dedoublonner dans les parcours Brevo
+    if (sourceSet.size > 1) attributes.MULTI_INSCRIPTION = true;
 
     const response = await fetch('https://api.brevo.com/v3/contacts', {
       method: 'POST',
@@ -52,11 +75,12 @@ export default async function handler(req, res) {
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      return res.status(response.status).json({ error: error.message });
+      const error = await response.json().catch(() => ({}));
+      return res.status(response.status).json({ error: error.message || 'Brevo error' });
     }
 
-    const data = await response.json();
+    // POST /contacts renvoie 201 (cree, avec body) ou 204 (mis a jour, sans body) -> ne pas planter sur le 204.
+    const data = await response.json().catch(() => ({ updated: true }));
     return res.status(200).json({ success: true, data });
   } catch (error) {
     console.error('Brevo API error:', error);

@@ -1,12 +1,21 @@
 {
-  "description": "Ordre de publication progressive des articles blog (1 tous les 2 jours via GitHub Actions publish-blog-article.yml). Piliers d'abord, puis volume. Le script publish-next-blog-article.mjs passe le 1er slug encore en status:brouillon à en-ligne + met à jour publishedAt/updatedAt. Pour ajouter un article : append son slug à la fin de la queue. Pour changer l'ordre : réordonner. Un slug déjà en-ligne est simplement sauté.",
+  "description": "Ordre de publication progressive des articles blog (1 tous les 2 jours, jours impairs, via l'agent launchd Mac mini app.enomia.blog-publish-daily → scripts/blog-publish-daily/run.sh + publish-next-blog-article.mjs). Le script passe le 1er slug encore en status:brouillon à en-ligne + met à jour publishedAt/updatedAt, commit/push main, email Resend. Un slug déjà en-ligne est sauté. Pour ajouter un article : append son slug. Pour changer l'ordre : réordonner. NB 2026-06-11 : devenir-concierge-airbnb + frais-menage-airbnb publiés manuellement ce jour (donc sautés par le cron) ; les 14 suivants ordonnés par ROI (avis tools) puis guides pratiques.",
   "queue": [
-    "sous-location-airbnb",
-    "location-courte-duree",
-    "amortissement-lmnp",
-    "reforme-lmnp",
-    "meuble-tourisme-classe",
-    "amenitiz-avis",
-    "channel-manager-gratuit"
+    "devenir-concierge-airbnb",
+    "frais-menage-airbnb",
+    "superhote-avis",
+    "smoobu-avis",
+    "lodgify-avis",
+    "eviivo-avis",
+    "smoobu-vs-lodgify-amenitiz",
+    "synchroniser-airbnb-booking",
+    "remonter-annonce-airbnb-algorithme",
+    "caution-airbnb",
+    "boite-a-cles-airbnb",
+    "livret-accueil-airbnb",
+    "assurance-airbnb-proprietaire",
+    "airbnb-copropriete",
+    "declarer-revenus-airbnb-case-impot",
+    "investissement-locatif-saisonnier"
   ]
 }

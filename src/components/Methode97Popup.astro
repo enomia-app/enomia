@@ -1,5 +1,5 @@
 ---
-// Pop-up Méthode 97% — même offre que NewsletterBlock (Guide PDF + newsletter),
+// Pop-up Méthode 97% — même offre que NewsletterBlock (livre complet en PDF + newsletter),
 // même backend /api/subscribe (Brevo). Déclenchée après le téléchargement du livret
 // via window.onLivretDownload, ou manuellement via window.openMethode97().
 interface Props { source?: string; }
@@ -13,23 +13,23 @@ const { source = 'livret-download' } = Astro.props;
     <div id="m97-step-form">
       <div class="m97-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        Guide PDF offert
+        Livre PDF offert + newsletter
       </div>
       <div class="m97-title">Votre livret est prêt. Et la rentabilité ?</div>
-      <p class="m97-desc">Recevez <strong>La Méthode 97%&nbsp;&copy;</strong> : le guide PDF en 10 étapes que j'ai utilisé pour atteindre <strong class="m97-hl">12&ndash;18% de rendement net</strong> sur 9 biens. Gratuit, sans jargon.</p>
+      <p class="m97-desc">Recevez le livre <strong>La Méthode 97&nbsp;%</strong> complet en PDF, où je détaille ma méthode&nbsp;: <strong class="m97-hl">autour de 15&nbsp;% de rendement net</strong>, applicable presque partout en France. Gratuit, sans jargon.</p>
       <form id="m97-form" class="m97-form">
         <input type="text" placeholder="Prénom" required class="m97-input" autocomplete="given-name" />
         <input type="email" placeholder="votre@email.com" required class="m97-input" autocomplete="email" />
         <div id="m97-error" class="m97-error" style="display:none"></div>
-        <button type="submit" class="m97-btn">Recevoir le guide &rarr;</button>
+        <button type="submit" class="m97-btn">Recevoir le livre &rarr;</button>
       </form>
-      <p class="m97-note">1 email/semaine &middot; Désinscription en 1 clic &middot; Aucun spam</p>
+      <p class="m97-note">1 email/mois &middot; Désinscription en 1 clic &middot; Aucun spam</p>
     </div>
 
     <div id="m97-step-done" style="display:none">
       <div class="m97-done-icon">✓</div>
       <div class="m97-title">C'est envoyé&nbsp;!</div>
-      <p class="m97-desc">Vérifiez vos emails (et vos spams) pour récupérer le guide <strong>La Méthode 97%&nbsp;&copy;</strong>.</p>
+      <p class="m97-desc">Vérifiez vos emails (et vos spams) pour récupérer le livre <strong>La Méthode 97&nbsp;%</strong>.</p>
       <button class="m97-btn m97-btn-ghost" type="button" id="m97-done-close">Fermer</button>
     </div>
   </div>

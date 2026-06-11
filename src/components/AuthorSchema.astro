@@ -1,9 +1,9 @@
 ---
-import { marcChenut } from '../data/author';
+import { marcChenut, livreMethode97 } from '../data/author';
 
 const ld = {
   '@context': 'https://schema.org',
-  ...marcChenut,
+  '@graph': [marcChenut, livreMethode97],
 };
 ---
 <script type="application/ld+json" set:html={JSON.stringify(ld)} />

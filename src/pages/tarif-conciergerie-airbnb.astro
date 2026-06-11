@@ -2,6 +2,7 @@
 import ToolLayout from '../layouts/ToolLayout.astro';
 import ContratLandingStyles from '../components/ContratLandingStyles.astro';
 import NewsletterBlock from '../components/NewsletterBlock.astro';
+import AuthorBubble from '../components/AuthorBubble.astro';
 
 const title = "Tarif Conciergerie Airbnb 2026 : commission, frais cachés et coût réel";
 const description = "Combien coûte vraiment une conciergerie Airbnb en 2026 ? Commission moyenne (15-30%), frais cachés, breakdown détaillé, calcul ROI vs gestion en direct. Guide complet.";
@@ -124,16 +125,10 @@ const canonical = "https://www.enomia.app/tarif-conciergerie-airbnb";
     </div>
 
     <!-- Crédibilité Marc -->
+    <AuthorBubble />
     <div class="callout">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-        <img src="https://res.cloudinary.com/dv2btcpc2/image/upload/q_auto,f_auto,w_80/v1775507331/Marc_1_a6ndja.png" alt="Marc Chenut, fondateur d'Enomia" width="48" height="48" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;" />
-        <div>
-          <div style="font-weight:700;line-height:1.2;">Marc Chenut, fondateur d'Enomia</div>
-          <div style="font-size:13px;opacity:0.7;">9 biens en location courte durée, gérés sans conciergerie</div>
-        </div>
-      </div>
       <p>J'ai testé deux conciergeries entre 2019 et 2021 sur mes T2 à Lyon. La vraie question n'est pas les frais cachés, c'est la commission. Le ménage et la blanchisserie, vous les payez de toute façon, avec ou sans conciergerie&nbsp;: ils ne changent rien au calcul. Ce qui change, c'est les ~20% de commission.</p>
-      <p>Sur un T2 qui tourne à ~2&nbsp;500&nbsp;€ de CA par mois, ces 20% font <strong>~500&nbsp;€ par mois de commission.</strong> En basculant en gestion directe (boîte à clés mécanique, automatisation Enomia), j'ai récupéré ces ~500&nbsp;€ par mois&nbsp;: ça a tout simplement <strong>doublé mon cash flow net</strong> sur ce bien. Sur 9 biens, ça fait plus de 50&nbsp;000&nbsp;€ par an. <a href="/blog/automatiser-airbnb">Comment j'automatise sans conciergerie</a>.</p>
+      <p>Sur un T2 qui tourne à ~2&nbsp;500&nbsp;€ de CA par mois, ces 20% font <strong>~500&nbsp;€ par mois de commission.</strong> En basculant en gestion directe (boîte à clés mécanique, automatisation Enomia), j'ai récupéré ces ~500&nbsp;€ par mois&nbsp;: ça a tout simplement <strong>doublé mon cash flow net</strong> sur ce bien. <a href="/blog/automatiser-airbnb">Comment j'automatise sans conciergerie</a>.</p>
     </div>
 
     <!-- Comparatif gestion direct vs conciergerie -->
@@ -159,7 +154,7 @@ const canonical = "https://www.enomia.app/tarif-conciergerie-airbnb";
         </ul>
       </div>
     </div>
-    <p>Différentiel sur un bien&nbsp;: <strong>~5&nbsp;000&nbsp;€/an</strong> en faveur de la gestion en direct, soit quasiment toute la commission. Sur 9 biens, ça représente de l'ordre de ~45&nbsp;000&nbsp;€/an d'économie.</p>
+    <p>Différentiel sur un bien&nbsp;: <strong>~5&nbsp;000&nbsp;€/an</strong> en faveur de la gestion en direct, soit quasiment toute la commission. Sur plusieurs biens, l'économie se compte vite en dizaines de milliers d'euros par an.</p>
     <p>La conciergerie reste pertinente si&nbsp;: vous habitez à plus de 30 minutes du bien, vous avez 4+ biens à temps plein, ou vous ne voulez absolument pas vous occuper de la gestion. Pour les autres cas, la gestion en direct est nettement plus rentable. <a href="/blog/automatiser-location-saisonniere">Notre guide pour automatiser sans conciergerie</a>.</p>
 
     <!-- CTA intermédiaire -->
@@ -247,7 +242,7 @@ const canonical = "https://www.enomia.app/tarif-conciergerie-airbnb";
       <a href="/blog/automatiser-airbnb">
         <div class="rk">Gestion sans conciergerie</div>
         <div class="rt">Automatiser un Airbnb</div>
-        <div class="rd">9 biens gérés en 5-6h/mois sans conciergerie. La méthode complète Marc Chenut.</div>
+        <div class="rd">Gérer en direct, sans conciergerie. La méthode complète Marc Chenut.</div>
       </a>
       <a href="/simulateur-rentabilite-airbnb">
         <div class="rk">Rentabilité projet</div>

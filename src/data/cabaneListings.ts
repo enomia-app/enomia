@@ -2247,5 +2247,398 @@ export const cabaneListings: Record<string, Cabane[]> = {
         }
       ]
     }
+  ],
+  "jura": [
+    {
+      "name": "Cabanes des Grands Reflets",
+      "area": "Joncherey",
+      "dept": "90",
+      "distanceKm": 62,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Vue dégagée",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Joncherey",
+      "rating": 4.8,
+      "reviews": 706,
+      "source": "Google Places",
+      "description": "Cabanes insolites perchées ou flottantes situées dans le Jura, avec bain nordique et vue sur lac et nature sauvage. Chaque séjour comprend petit déjeuner et repas, dans un cadre de calme et de déconnexion totale.",
+      "url": "https://www.cabanesdesgrandsreflets.com/",
+      "recentReviews": [
+        {
+          "author": "Youssra Jeanneret",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Nous avons passé un séjour merveilleux en amoureux dans la cabane Eden flottante à l’occasion de nos 10 ans de mariage. L’endroit est magique, paisible et dépaysant, avec un bain nordique qui rend l’expérience encore plus unique et relaxante, avec un côté tout drôle et original pour traverser avec la barque à chaque fo"
+        },
+        {
+          "author": "Sylvie Zurbach-Pons",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Une nuit hors du temps aux Cabanes des Reflets, dans la cabane Nirvana, perchée entre ciel et lac, un cadre confortable et cocooning. Ici, calme, douceur et déconnexion totale sont au rendez-vous : juste le chant de la nature et le temps qui s’étire. Le panier-repas copieux, le bain nordique sous les étoiles, la passer"
+        },
+        {
+          "author": "Dupond Orane",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Premier séjour avec mon conjoint et rien à redire. Tout était parfait, reposant, détente, sérénité… Le repas et le petit déjeuner était parfait. Mention spécial pour le magnifique coucher de soleil. Nous reviendrons très vite"
+        },
+        {
+          "author": "Thomas Laroumanie",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Une nuit magique au domaine Cabane des Grands Reflets, dans la Cabane Comète. Des couleurs d'automne exceptionnelles à regarder au réveil. Le personnel est au petit soin, ce qui a rendu le séjour d'autant plus mémorable."
+        },
+        {
+          "author": "Beatrice Delfils",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "J'ai découvert ce lieu dans le cadre du travail. Endroit très calme et très cooconing, ce qui a donné un autre aspect à la réunion. Le personnel est très attentionnée et professionnel. Je recommande"
+        }
+      ]
+    },
+    {
+      "name": "Cabanes des Grands Lacs",
+      "area": "Chassey-lès-Montbozon",
+      "dept": "70",
+      "distanceKm": 64,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Terrasse privative",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Chassey-lès-Montbozon",
+      "rating": 4.6,
+      "reviews": 787,
+      "source": "Google Places",
+      "description": "Les Cabanes des Grands Lacs proposent des hébergements insolites perchés dans les arbres, comme des bulles d'amour et la cabane Héronnière, idéales pour les couples et familles en quête d'une expérience nature authentique. Situées en bordure de lac dans le Jura, elles offrent un cadre naturel avec petit-déjeuner inclus, accueil attentif et activités comme le bain nordique.",
+      "url": "https://www.cabanesdesgrandslacs.com/",
+      "recentReviews": [
+        {
+          "author": "Madina Vurbier Vuillet",
+          "rating": 5,
+          "when": "il y a une semaine",
+          "text": "Venu pour 1 nuit (30 mai). Nous avons passer un agréable moment dans une bulle d'amour 9m de haut. La cabanes évasion était vraiment très propre, chaleureuse et confort pour 2. Bien lire le guide en arrivant qui son dans les cabanes, je trouves ça important pour avoir tout les infos. L'apéritif bière, la fondu au dîner"
+        },
+        {
+          "author": "Fabien Postif",
+          "rating": 5,
+          "when": "il y a moins d'une semaine",
+          "text": "Un séjour magique dans un environnement naturel et confortable. Chaque moment passé aux cabanes est intense. L'équipe d'accueil serviable, à l'écoute et très sympathique fait beaucoup pour la qualité du temps passé sur le domaine."
+        },
+        {
+          "author": "Un couple en vadrouille",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Quelle chouette expérience inoubliable ! Nous avions 2 nuits avec petit déjeuner et bain nordique sur le lac et c’était incroyable. C’est vraiment une expérience à vivre au moins une fois dans sa vie, hors du temps, à contempler la nature et son calme pendant plusieurs heures en amoureux sur la terrasse ou dans le bain"
+        },
+        {
+          "author": "Anil S.",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Passé un très agréable séjour durant les vacances d'octobre avec les enfants dans la cabane Héronnière, perchée dans les arbres. C'était une bonne excuse pour minimiser les temps d'écrans (pas de télé à disposition, il faut économiser la batterie du téléphone car pas d'électricité à volonté). Une belle occasion aussi d"
+        },
+        {
+          "author": "Pierre Denis Ménager",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Séjour en amoureux dans ce magnifique endroit, pensé pour la déconnexion et le plaisir de prendre du temps. Des cabanes uniques pensée en fonction de l'arbre dans lequel elles s'installent participent à la magie du lieu. Le réveil avec les murmures du cours d'eau, le son des oiseaux et les rayons du soleil à travers le"
+        }
+      ]
+    },
+    {
+      "name": "Les Cabanes du Val de Loue",
+      "area": "Charnay",
+      "dept": "25",
+      "distanceKm": 65,
+      "features": [
+        "Spa ou bain nordique",
+        "Vue dégagée",
+        "Cheminée ou poêle"
+      ],
+      "vibe": "Cabane insolite à Charnay",
+      "rating": 4.8,
+      "reviews": 455,
+      "source": "Google Places",
+      "description": "Ces cabanes dans le Jura offrent un cadre calme et ressourçant avec des vues remarquables, équipées d'un bain finlandais et d'aménagements confortables pour se détendre en pleine nature. Les propriétaires sont accueillants et réactifs, garantissant un séjour relaxant loin de l'agitation.",
+      "url": "https://cabanesvaldeloue.com/",
+      "recentReviews": [
+        {
+          "author": "Thunderclap 68",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Belle découverte au hasard des recherches de locations à proximité de Besançon, réservation faite à midi pour un séjour commençant le soir même. Hôtes très discrets mais très réactifs si nécessaire. Accès facile et bien indiqué. Cabane forsythia cosy, toute en bois, très bien décorée, confortable et bien isolée, le poê"
+        },
+        {
+          "author": "C G",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Super séjour de 5 jours. Nous aurions aimé y rester plus longtemps. Même si nous pensions être plus au coeur d'une forêt, la cabane perce neige a une vue incroyable. On ne s'en lasse pas. Les chaises longues, la table et le bian nordique permettent d'en profiter un maximum. Notre hôte a été vraiment aux petits soins, t"
+        },
+        {
+          "author": "Noemie Courtot",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Nous avons séjourné pour la deuxième fois en amoureux aux Cabanes du Val de Loue et c’était tout simplement génial. Les propriétaires sont adorables, très accueillants et disponibles. Tout était nickel : la cabane était propre, très bien entretenue et agréable. Nous avons eu un petit souci avec le bain nordique, mais l"
+        },
+        {
+          "author": "Caroline Beaudoi",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Un super moment dans un cadre calme et ressourçant ! Avec une météo clémente pour la saison nous avons pu profiter du bain finlandais que nos hôtes avaient mis en chauffe avant notre arrivée ! La cabane est bien équipée et optimisée :)"
+        },
+        {
+          "author": "Audrey Sarafian",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Nous avons séjourné dans la cabane Forsythia et nous sommes tout de suite tombés sous le charme de ce cocon! La cabane est magnifique mêlant bois et déco moderne, avec un bon confort en ce qui concerne literie/douche/WC. Nous avons testé et adoré le poêle à bois qui chauffe rapidement la pièce. Et bien sûr, nous valido"
+        }
+      ]
+    },
+    {
+      "name": "Domaine de l'Authentique Cabanes dans les arbres…",
+      "area": "Fournet-Blancheroche",
+      "dept": "25",
+      "distanceKm": 18,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Sauna",
+        "Terrasse privative",
+        "Vue dégagée"
+      ],
+      "vibe": "Cabane insolite à Fournet-Blancheroche",
+      "rating": 5,
+      "reviews": 166,
+      "source": "Google Places",
+      "description": "Cabanes perchées dans les arbres du Jura, offrant une immersion totale en pleine forêt avec jacuzzi privé sur terrasse. Chaque cabane est décorée avec soin, confortable et dotée d'un petit déjeuner complet, avec un accueil chaleureux de la propriétaire.",
+      "recentReviews": [
+        {
+          "author": "Roxane Glauser",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Céline nous a directement très bien accueilli jusqu’à notre cabane « Love» et nous avons été conquis dès les premières marches. Tout était parfait, du jacuzzi sur la terrasse a la décoration du mobilier, jusqu’à la douche très moderne. et petit + pour le petit déjeuner bien garni livrer directement à la porte. Je recom"
+        },
+        {
+          "author": "Laurine Maitrugue",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Soirée tres agréable dans un cadre idyllique, propriétaire tres agréable et bienveillante. Petit déjeuner complet et délicieux. Merci pour ce bon moment dans la cabane comtoise. 😃"
+        },
+        {
+          "author": "Marine Percherancier",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Nous avons passé un super séjour dans une des cabanes de Céline où nous avons très bien été accueilli. La cabane est parfaite ; matériaux de qualité, très propre et décorée avec goût. Depuis le spa abrité, nous entendions le son de la pluie dans les arbres et les cloches des vaches. Le petit déjeuner servi discrètement"
+        },
+        {
+          "author": "Famille Dietrichcinq",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Un véritable nid douillet 💚 Cabane charmante, romantique et très confortable, parfaitement agencée. Le jacuzzi, prêt à l’emploi avec vue sur la forêt, était un pur bonheur sous la pluie. Petit déjeuner délicieux, composé de produits locaux de qualité. Une escapade parfaite."
+        },
+        {
+          "author": "Christian",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Magnifique endroit de repos et de détente avec jacuzzi. L’accueil très agréable et professionnel de Céline. A recommander pour une expérience ressourçante."
+        }
+      ]
+    },
+    {
+      "name": "Domaine de Mieslot",
+      "area": "Corcelle-Mieslot",
+      "dept": "25",
+      "distanceKm": 61,
+      "features": [
+        "Spa ou bain nordique",
+        "Terrasse privative",
+        "Vue dégagée"
+      ],
+      "vibe": "Cabane insolite à Corcelle-Mieslot",
+      "rating": 4.7,
+      "reviews": 162,
+      "source": "Google Places",
+      "description": "Domaine insolite niché dans le Jura proposant des cabanes architecturales chauffées et lumineuses, chacune équipée d'un bain nordique privatif sur sa terrasse. Un cadre de verdure et de calme propice à la détente, avec accès à un bassin naturel et un site magnifiquement entretenu.",
+      "url": "http://www.domainedemieslot.com/",
+      "recentReviews": [
+        {
+          "author": "Au. D.",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Nous avons passé une nuit dans la cabane de Manon, nous avons adoré. On recommande vivement ce magnifique endroit. Le cabane est géniale, cosy et très confortable. le bain nordique sur la terrasse est juste parfait pour se détendre avec une temperature idéale. L'hote nous a super bien reçu et le petit dej était parfait"
+        },
+        {
+          "author": "F Ab",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Dépaysement total ! Verdure, calme, repos garantis ! Le bain nordique est tres agréable. La chambre est confortable, chauffée, l'architecture des cabanes est belle à contempler, c'est lumineux dans la cabane, de nombreuses fenêtres sont présentes. Il faut juste prévoir à boire et à manger."
+        },
+        {
+          "author": "Claire PIREDDA",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Très belle expérience ! Nous avons passé une nuit dans la cabane Manon. Nous avons été très bien accueillies par le propriétaire des lieux. Découverte accompagnée de l'endroit avec toutes les informations nécessaires. Nous avons pu profiter d'un moment de détente entre amies, tout d'abord autour du bassin naturel puis "
+        },
+        {
+          "author": "Gaëlle MOISSENET",
+          "rating": 5,
+          "when": "il y a 11 mois",
+          "text": "Week-end très reposant, dans un domaine magnifique et très bien entretenu. Propriétaire très accueillant. Cabane très jolie avec un bain nordique privatif sur la terrasse. Accès au bassin naturel très agréable par ces fortes chaleurs. Petit déjeuner excellent et copieux. Nous reviendrons avec grand plaisir."
+        },
+        {
+          "author": "Léonie Goypieron",
+          "rating": 4,
+          "when": "il y a un an",
+          "text": "Nous avons passé un moment merveilleux dans la cabane avec les daims ! La cabane était superbe, parfaitement équipée et pleine de charme, offrant une expérience unique en pleine nature. Rien à redire sur l'hébergement, c'était vraiment top. Cependant, nous avons été un peu déçus par le petit déjeuner : la qualité des p"
+        }
+      ]
+    },
+    {
+      "name": "Les Cabanes du Mont",
+      "area": "2932 Coeuve",
+      "dept": "",
+      "distanceKm": 54,
+      "features": [
+        "Cabane perchée",
+        "Terrasse privative"
+      ],
+      "vibe": "Cabane insolite à 2932 Coeuve",
+      "rating": 4.7,
+      "reviews": 161,
+      "source": "Google Places",
+      "description": "Les cabanes modernes offrent un confort remarquable avec salle de bain contemporaine, terrasse couverte et aménagements extérieurs (hamac, chaises longues) dans un cadre de nature préservée en région Jura. L'établissement propose un environnement calme et reposant, complété par une offre culinaire incluant petits-déjeuners et menus du soir.",
+      "url": "http://www.cabanes-du-mont.ch/",
+      "recentReviews": [
+        {
+          "author": "C Walnut",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Tip Top ! C'est agréable et c'est très confortable. Les lits sont de qualité.Tout est nickel. La forêt n'est pas gâchée par des balançoires. Ce n'est pas Disneyland. Tant mieux. Il n'y avait pas de chiens domestiques avec des sacs à caca qui jonchent la forêt et c'est tant mieux. Bruits d'animaux, chants d'oiseaux... l"
+        },
+        {
+          "author": "Alexandre",
+          "rating": 4,
+          "when": "il y a un an",
+          "text": "Très bel endroit dans la nature. Les cabanes sont magnifiques et étonnamment grandes, belle salle de bain, tout est moderne à l'intérieur. Terrasse couverte agréable pour profiter de la soirée. Chaises longues, hamac, couvertures... Le frigo n'est pas très grand mais déjà bien d'en avoir un. Possibilité de se faire liv"
+        },
+        {
+          "author": "Chistere",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Incroyablement confortable, silencieux et reposant. Rien de tel pour se déconnecter et se connecter à l’essentiel.La fondue est un vrai délice!"
+        },
+        {
+          "author": "Patrice Éric Weber",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Nous avons été très bien reçu. Endroit calme, Les petits déjeuner un régale et les menus du soir idem. Un grand MERCI pour tout"
+        },
+        {
+          "author": "Kim Crettenand",
+          "rating": 5,
+          "when": "il y a 2 ans",
+          "text": "Nous avons passé un agréable séjour dans un lieu calme et paisible. Le panier du petit déjeuner déposé en bas de la cabane était à déguster dès notre lever. Le fait de pouvoir le remonter à l’aide d’une corde pour pouvoir en profiter dans l’intimité et l’heure souhaitée était une bonne surprise. Les repas du soir servi"
+        }
+      ]
+    },
+    {
+      "name": "La Cabane et SPA Chez Jules Vellerot-lès-Vercel…",
+      "area": "Vellerot-lès-Vercel",
+      "dept": "25",
+      "distanceKm": 37,
+      "features": [
+        "Spa ou bain nordique",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Vellerot-lès-Vercel",
+      "rating": 5,
+      "reviews": 41,
+      "source": "Google Places",
+      "description": "Cabane insolite implantée dans le Jura, offrant un cadre naturel calme avec une décoration soignée et une ambiance cosy. Le lieu dispose d'un spa et d'un espace bien-être, complétés par l'accueil chaleureux des propriétaires Mylène et Thomas.",
+      "url": "http://www.la-boucotte.fr/",
+      "recentReviews": [
+        {
+          "author": "Céline M",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Le cadre est magnifique, très calme et idéal pour se détendre. La cabane est décorée avec goût : chaque détail est soigné, l’ambiance est chaleureuse et cosy, on s’y sent tout de suite bien. Le spa est un vrai plus, parfaitement entretenu, idéal pour un moment de relaxation en toute tranquillité. Le service est irrépro"
+        },
+        {
+          "author": "Karine CRE",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Un lieu très joli, chaleureux et bien décoré. Fonctionnel, il y a tout ce dont on a besoin. Le coin bien être avec le Spa est super agréable. Nous avons très bien été accueilli par Mylene, elle est adorable. La possibilité d’avoir un plateau repas le soir est bien appréciable. Les desserts étaient trop bon. Je recomman"
+        },
+        {
+          "author": "Marie-France Allemann",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Nous avons passé un séjour magnifique chez Mylène et Thomas. Nous avons séjourné dans la cabane ‘chez Jules’ dans laquelle tout est conçu et prévu pour que le temps y soit suspendu. Merci à eux deux pour leur bienveillance et encore bravo d’avoir fait de leur endroit un p’tit coin de paradis 🫶 !"
+        },
+        {
+          "author": "sandra Bio",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Tout est bien de l’accueil , aux services, en passant par la sympathie de Mylene et Thomas. Quand au lieu de: chaque chose à sa place mais pas au hasard. Chaque détail a été pensé avec goût et harmonie. La cabane est un vrai cocon pour passer un bon moment en couple. On a adoré et recommandons vivement ce lieu."
+        },
+        {
+          "author": "Sophie JAY",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Très bel accueil, dans la cabane chez Jules nous retrouvons cet esprit chaleureux par sa décoration qui est très bien pensée, le détail est présent. Nous avons passé une excellente nuitée, je recommande cet endroit."
+        }
+      ]
+    },
+    {
+      "name": "La cabane des combes",
+      "area": "Le Crouzet",
+      "dept": "25",
+      "distanceKm": 60,
+      "features": [
+        "Spa ou bain nordique"
+      ],
+      "vibe": "Cabane insolite à Le Crouzet",
+      "rating": 5,
+      "reviews": 15,
+      "source": "Google Places",
+      "description": "Cabane insolite à Le Crouzet",
+      "url": "http://la-cabane-des-combes.fr/",
+      "recentReviews": [
+        {
+          "author": "Sandrine Pagand",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Nous avons été très bien accueilli. Le gîte est décoré avec goût avec des matériaux de qualité. Les meubles fabriqués main sont magnifiques. Un petit cocon parfait pour un week-end détente. Un petit déjeuner gourmand et copieux Propreté irréprochable Au top !"
+        },
+        {
+          "author": "daniel grisvard",
+          "rating": 5,
+          "when": "il y a 2 ans",
+          "text": "Nous avons passé un excellent moment dans ce lieu magnifique ! Tout est encore mieux que sur les photos et le descriptif. Je n'ai jamais eu une location aussi propre, équipement parfait, rien ne manque. Notre hôte a été très intentionnée et d'une très grande gentillesse. Repas et petit déjeuner délicieux et très copieu"
+        },
+        {
+          "author": "Anne Laure Dinet",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Lieu idyllique au milieu de la nature.. super cabane tres bien équipé.. le jaccuzzi a labri de tous...propriétaire au top, souriante et au petit soin... petit déjeuner delicieux et copieux.. je recommande a 100%.. je remercie Céline pour son accueil...les dijonnais"
+        },
+        {
+          "author": "Dorian Gruet",
+          "rating": 5,
+          "when": "il y a 2 ans",
+          "text": "Nous avons passé un excellent moment dans la Cabane des Combes ! Tout est comme sur les photos et le descriptif. Et le petit déjeuner est délicieux. Merci pour votre sympathie. Nous n'hésiterons pas à recommander ce chalet et de revenir dans ce havre de paix au cœur de la montagne."
+        },
+        {
+          "author": "Thierry Gerard",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Bonjour, Grâce a mme Valérie, que je remercie d'ailleurs,j'ai pu faire une surprise pour le réveillon a mon épouse et mon fils🧑‍🎄 C'était génial, accueil magnifique de Céline la propriétaire, neige a gogo, repas, spa, p'tit dej....tout était top!!!! Un Noël original et gourmand Merci encore, on reviendra Nino, Valou "
+        }
+      ]
+    }
   ]
 };

@@ -51,7 +51,7 @@ export const cabaneZonesMeta = [
     "type": "departement",
     "searchVolume": 3890,
     "radiusKm": 70,
-    "status": "todo",
+    "status": "done",
     "geocodeQuery": "Dordogne Périgord France",
     "lat": 45.18545,
     "lng": 0.72509,
@@ -63,9 +63,21 @@ export const cabaneZonesMeta = [
     "type": "region",
     "searchVolume": 2480,
     "radiusKm": 95,
-    "status": "todo",
+    "status": "done",
     "lat": 43.46369,
     "lng": 2.14502,
+    "found": 33
+  },
+  {
+    "slug": "jura",
+    "displayName": "Jura",
+    "type": "massif",
+    "searchVolume": 1950,
+    "radiusKm": 75,
+    "status": "todo",
+    "geocodeQuery": "Massif du Jura France",
+    "lat": 47.00858,
+    "lng": 6.78559,
     "found": 33
   }
 ];

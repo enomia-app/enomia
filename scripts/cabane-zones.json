@@ -73,8 +73,11 @@
     "type": "massif",
     "searchVolume": 1950,
     "radiusKm": 75,
-    "status": "todo",
-    "geocodeQuery": "Massif du Jura France"
+    "status": "done",
+    "geocodeQuery": "Massif du Jura France",
+    "lat": 47.00858,
+    "lng": 6.78559,
+    "found": 33
   },
   {
     "slug": "ardeche",

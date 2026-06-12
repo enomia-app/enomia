@@ -12695,6 +12695,579 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-10',
   },
+  // ==========================================================================
+  // BANDOL (Var, Côte Provence)
+  // ==========================================================================
+  {
+    slug: 'bandol',
+    displayName: 'Bandol',
+    region: 'Provence-Alpes-Côte d\'Azur',
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie Bandol Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Bandol : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Bandol. Tarifs (20-25 %), services, avis, réglementation 2026, changement d'usage, plage de Renécros, port, quartiers rentables.",
+    kwPrincipal: 'conciergerie bandol',
+    kwSecondaires: [
+      'airbnb bandol',
+      'conciergerie airbnb bandol',
+      'location courte durée bandol',
+      'la clé bandolaise',
+      'gestion locative bandol',
+      'meublé tourisme bandol',
+    ],
+    population: 8463,
+    tourists: 600000,
+    activeListings: 890,
+    priceLow: 90,
+    priceHigh: 220,
+    occupancyRate: 52,
+    revpar: 50,
+    seasonality:
+      "Saisonnalité ultra-marquée propre aux stations balnéaires Var Ouest. 4 mois de très haute saison (juin-septembre) qui font la rentabilité du LCD, 8 mois de tourisme régional fortement réduit. Pic absolu en août (occupation 90 %, revenus locatifs mensuels moyens 2 211 € selon les données marché Welkeys, tarifs 220-280 €/nuit sur les biens centre/port et vue mer). Pic secondaire en juillet (occupation 80-85 %). Avant-saison (mai-juin) et arrière-saison (septembre-mi-octobre) portées par les week-ends prolongés (Pentecôte, Ascension) et l'œnotourisme AOC Bandol (vendanges, vinification). Intersaison (novembre-mars hors fêtes) très creuse (occupation 25-35 %).",
+    rankNational: 26,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Bandol**, sur le **port**, du côté de la **plage de Renécros** ou dans les collines des **Lices** et de **Saint-Anne**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **saisonnalité ultra-marquée** (4 mois de très haute saison, 8 mois creux), la **réglementation locale durcie** (autorisation de changement d'usage obligatoire pour toute résidence secondaire), les **tarifs de marché** qui passent de 90 € à 280 €/nuit entre mai et août, et la dizaine d'acteurs locaux qui se partagent un marché premium AOC Bandol, vous vous demandez si confier la gestion à une conciergerie reste rentable hors saison.\n\nEt surtout : **laquelle choisir** entre les pure-players bandolais (La Clé Bandolaise, DMP Excellence), les acteurs varois (Welcome Conciergerie, YourHostHelper) et les réseaux nationaux qui ratissent la Côte ?",
+    marketIntro:
+      "Bandol est un **marché LCD ultra-saisonnier premium** : 4 mois de très haute saison (juin-septembre) qui concentrent l'essentiel de la rentabilité, 8 mois de tourisme régional réduit. La ville compte environ **890 annonces actives** sur Airbnb avec un **tarif moyen annuel** autour de **100 €/nuit**, qui décolle à **180-280 €/nuit en juillet-août** sur les biens vue mer ou centre-port.\n\n**Saisonnalité extrême et concentration août.** Le taux d'occupation moyen annuel s'établit autour de **52 %** sur Bandol, avec un pic à **90 % en août** et des revenus locatifs mensuels moyens qui passent de 1 092 € (moyenne annuelle) à **2 211 € en août** selon les données marché Welkeys. Concrètement : un T2 bien placé qui se loue 90 €/nuit en moyenne facture 220-280 €/nuit pendant la première quinzaine d'août, soit l'équivalent de 3 mois de revenus normaux en 15 jours.\n\n**Vignoble AOC Bandol et port de plaisance.** La ville est au cœur du **vignoble AOC Bandol** (mourvèdre dominant, 1 600 hectares, 80 vignerons), un atout œnotouristique qui prolonge la saison sur les week-ends de septembre-octobre. Le **port de plaisance** (1 600 anneaux, l'un des plus grands de la Méditerranée) draine une clientèle plaisance internationale. La **plage de Renécros**, l'**Anse de Bandol** et l'**Île de Bendor** (rachetée par Paul Ricard en 1958, accessible en bateau-bus 7 minutes) forment l'écosystème balnéaire premium qui justifie les tarifs.\n\n**Prix au m² élevés.** Comptez **5 200-5 500 €/m²** sur les appartements centre/port, **5 500-6 500 €/m²** sur Renécros (plage premium), **4 500-5 500 €/m²** sur Les Lices/Saint-Anne (résidentiel premium), et jusqu'à **6 000-6 500 €/m²** sur les villas avec vue mer (Bellevue, Pierreplane). Le prix moyen au m² sur Bandol s'établit à **6 535 €/m²** en 2026 selon les données notariales — un niveau qui place Bandol parmi les marchés LCD français les plus chers à l'achat, avec un ticket d'entrée T2 autour de 220 000-280 000 €.",
+    conciergeries: [
+      {
+        name: 'La Clé Bandolaise',
+        url: 'https://www.laclebandolaise.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 18,
+        biensGeres: 15,
+        specialty: 'Pure-player bandolais depuis 2019, accueil 24/7',
+        description:
+          "La Clé Bandolaise est l'un des pure-players historiques du marché bandolais, en activité depuis 2019. Le positionnement est centré sur la gestion complète de A à Z des locations saisonnières : annonce et calendrier multi-plateformes, check-in et check-out personnalisés, ménage et linge de maison, accueil clients 24h/24 et 7j/7, panier de bienvenue, coordination des artisans pour la maintenance. Tarification sur devis non publique, à demander en fonction du bien (T1, T2, villa avec piscine) et du périmètre de service souhaité. Pertinente pour un propriétaire qui valorise l'ancrage local et l'accessibilité directe (deux interlocuteurs joignables sur portable, gestion à taille humaine) plutôt qu'un grand groupe national avec rotation d'interlocuteurs. Demander une simulation chiffrée et un retour de propriétaire client avant signature.",
+      },
+      {
+        name: 'Welcome Conciergerie (SASU Magnolia)',
+        url: 'https://www.welcome-services83.fr/conciergerie-airbnb-bandol.html',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 22,
+        biensGeres: 30,
+        specialty: '20 ans gestion locative, Var Ouest (Bandol/Sanary/Six-Fours)',
+        description:
+          "Welcome Conciergerie (portée par la SASU Magnolia) couvre la zone Bandol — Sanary-sur-Mer — Six-Fours-les-Plages — La Cadière d'Azur avec une commission de 20 % du prix des nuitées et des frais fixes additionnels par réservation. Le positionnement valorise 20 ans de gestion locative cumulée sur le Var Ouest, avec un package complet : gestion des réservations et des clés, ménage entre locations, entretien piscine et jardin (atout pour les villas avec extérieur), blanchisserie, intendance et maintenance 7/7. Pertinente pour un propriétaire de villa avec piscine ou de bien sur plusieurs communes du Var Ouest, qui veut un interlocuteur unique multi-services capable d'absorber les rotations courtes en pleine saison.",
+      },
+      {
+        name: 'DMP Excellence',
+        url: 'https://www.dmp-excellence.com/ref/airbnb-bandol/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 12,
+        biensGeres: 18,
+        specialty: 'Conciergerie privée 24/7 Bandol et Var côtier',
+        description:
+          "DMP Excellence est positionnée sur la conciergerie privée et la gestion locative haut de gamme à Bandol et sur la frange côtière du Var (Sanary, Saint-Cyr-sur-Mer, Six-Fours-les-Plages). Tarification sur devis personnalisé selon le bien et le périmètre de service. Services : accueil locataires, panier de bienvenue, état des lieux, remise des clés, maintenance propriété, intendance résidence secondaire et support clientèle 24/7. Pertinente pour un propriétaire de résidence secondaire qui cherche à externaliser à la fois la partie LCD et l'entretien continu du bien hors location (vérification volet et alarme, ouverture et fermeture maison saisonnière, gestion des artisans pour les travaux ponctuels).",
+      },
+      {
+        name: 'YourHostHelper Bandol',
+        url: 'https://yourhosthelper.com/conciergerie-airbnb-a-bandol-optimiser-lexperience-voyageur/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 8,
+        biensGeres: 25,
+        specialty: 'Réseau national depuis 2017, optimisation Superhost',
+        description:
+          "YourHostHelper est un acteur national de la gestion saisonnière (depuis 2017) avec une antenne locale à Bandol intégrée dans le réseau. Tarification non affichée sur la page Bandol — utiliser le simulateur « Estimer mes revenus » pour obtenir un devis personnalisé. Spécialités revendiquées sur le marché bandolais : protocole de ménage renforcé spécifique mer (gestion du sable et de l'humidité saline qui dégradent les textiles), accueil voyageurs avec recommandations locales personnalisées (restaurants, cavistes AOC Bandol, plages), optimisation du statut Superhost Airbnb pour booster la visibilité et le pricing dynamique. Pertinente pour un propriétaire qui veut bénéficier d'un réseau structuré avec process écrits tout en gardant une interface locale.",
+      },
+      {
+        name: 'Welkeys Bandol',
+        url: 'https://www.welkeys.com/conciergerie-airbnb/bandol',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 35,
+        biensGeres: 40,
+        specialty: 'Réseau national clé en main, blog réglementation à jour',
+        description:
+          "Welkeys est un acteur national de la gestion Airbnb clé en main, présent sur Bandol et tout le littoral PACA. Commission affichée autour de 20 % sur les nuitées, ménage refacturé au voyageur. Package : annonce et diffusion multi-plateformes (Airbnb, Booking, Abritel), accueil voyageurs, ménage professionnel, linge de qualité hôtelière, communication 7/7, pricing dynamique calé sur la saisonnalité Var Ouest. Le réseau publie également un blog réglementation locale très complet (l'un des plus à jour sur le changement d'usage à Bandol, à consulter avant tout investissement). Pertinente pour un propriétaire qui valorise un acteur structuré avec process écrits et reporting mensuel, plutôt qu'un pure-player local à taille humaine.",
+      },
+      {
+        name: 'HostnFly Bandol',
+        url: 'https://hostnfly.com/conciergerie-airbnb/bandol',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 15,
+        biensGeres: 22,
+        specialty: 'Réseau national, gestion 100 % digitale via app propriétaire',
+        description:
+          "HostnFly est un réseau national de conciergerie Airbnb avec antenne Bandol, positionné sur un modèle 100 % digital : commission autour de 20 % sur les nuitées, gestion des voyageurs, clés, ménage et assurances entièrement coordonnée via une application propriétaire. Le propriétaire suit en temps réel les réservations, les revenus collectés et les paiements depuis son téléphone, sans interaction téléphonique systématique. Pertinente pour un propriétaire à distance (Parisien, Suisse, Britannique) qui veut un suivi self-service avec dashboard propre, et qui accepte de perdre en sur-mesure local au profit de la standardisation et de la transparence du reporting digital.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre / Port de plaisance',
+        pricePerNight: '95-180 €',
+        occupancy: 58,
+        description:
+          "Cœur de Bandol, port de plaisance (1 600 anneaux), Allées Alfred Vivien, casino, commerces. Cible touristique premium, clientèle plaisance internationale. Prix au m² apparts 5 200 €, maisons 6 000 €. T2 dès 220 000 €. Tarifs nuitée premium juillet-août (180-250 €).",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Plage de Renécros (premium)',
+        pricePerNight: '120-280 €',
+        occupancy: 60,
+        description:
+          "Plage iconique de Bandol, baie en demi-lune protégée du mistral, accès direct mer. Cible résidence secondaire premium, vue mer recherchée. Prix au m² apparts 5 500 €, maisons 6 500 €. T2 vue mer dès 280 000 €. Tarif nuitée le plus élevé de Bandol en pleine saison.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Les Lices / Saint-Anne',
+        pricePerNight: '85-150 €',
+        occupancy: 52,
+        description:
+          "Résidentiel premium dans les collines, vue panoramique sur la baie, villas avec piscine. Cible clientèle familiale longue durée (1-2 semaines). Prix au m² apparts 4 500-4 800 €, maisons 5 200-5 500 €. T3 avec terrasse dès 250 000 €. Atout : extérieur et calme.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Capelan / Poupoune',
+        pricePerNight: '75-130 €',
+        occupancy: 50,
+        description:
+          "Quartiers résidentiels en hauteur, plus accessibles à l'achat. Prix au m² 4 000-5 000 €. T2 dès 180 000 €. Stratégie LCD viable mais nécessite vue ou piscine pour atteindre les tarifs centre. Marché bien orienté pour les familles avec voiture.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Bellevue / Pierreplane',
+        pricePerNight: '110-240 €',
+        occupancy: 55,
+        description:
+          "Hauteurs résidentielles premium, villas vue mer panoramique. Prix au m² 6 000-6 500 €. Villa avec piscine dès 750 000 €. Cible familles aisées, groupes 6-8 personnes en juillet-août. Tarif nuitée élevé compense le ticket d'entrée élevé.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Île de Bendor (niche rare)',
+        pricePerNight: '150-300 €',
+        occupancy: 60,
+        description:
+          "Île privée rachetée par Paul Ricard en 1958, accessible en bateau-bus (7 minutes du port). Offre LCD très limitée (quelques studios et appartements). Tarif nuitée premium absolu, demande touristique soutenue été. Marché de niche pour propriétaires patients à l'achat.",
+        roiBrut: '4,5 à 6 %',
+      },
+    ],
+    regulation:
+      "Bandol applique un **dispositif local renforcé** sur les meublés de tourisme, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) et d'un règlement municipal antérieur.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Bandol doit être déclaré via la **plateforme Décla Loc** (bandol.taxesejour.fr). Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Autorisation de changement d'usage obligatoire pour les résidences secondaires.** C'est la spécificité bandolaise : louer une résidence secondaire en LCD nécessite **en plus** une **autorisation de changement d'usage** à demander à la mairie. L'autorisation et le numéro d'enregistrement sont **valables 5 ans**, révocables par le propriétaire à tout moment. Cette procédure cumulée distingue Bandol des communes voisines comme La Ciotat ou Sanary qui restent sur le cadre national simple.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. **Nouveauté 2026 :** plus aucun changement d'usage n'est délivré à Bandol pour une **passoire thermique** — un DPE classé entre A et E est désormais exigé pour obtenir l'autorisation municipale.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur, particulièrement pertinent sur un marché premium comme Bandol où le ticket d'entrée justifie l'investissement dans le classement.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Bandol applique une taxe de séjour de **0,75 € à 4,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb et reversée à la commune).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 105,
+      neighborhood: 'Renécros (vue mer partielle)',
+      revenuBrut: 19500,
+      commissionRate: 0.2,
+      menageCount: 70,
+      menageUnitCost: 75,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb à Bandol en juillet-août ?',
+        a: "Juillet-août est la période qui fait la rentabilité d'un LCD bandolais. Un T2 de 40 m² bien placé (centre, Renécros, vue mer partielle) qui se loue 90-105 €/nuit en moyenne annuelle facture 220-280 €/nuit pendant la première quinzaine d'août, avec une demande qui sature 3 à 6 mois à l'avance. Sur 60 nuits juillet-août, un T2 bien positionné génère 12 000-16 000 € de chiffre d'affaires brut, soit l'équivalent de 7-8 mois de revenus locatifs normaux. Un T3 avec terrasse ou vue mer dans Les Lices peut atteindre 18 000-24 000 € sur la même période. Le pic d'occupation atteint 90 % en août selon les données Welkeys. Hors juillet-août, le marché bandolais ralentit fortement (occupation 35-50 % en intersaison), ce qui rend la stratégie de pricing dynamique sur les 60 jours d'été absolument critique pour la rentabilité annuelle.",
+      },
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Bandol pour louer une résidence secondaire ?',
+        a: "Oui, c'est la spécificité bandolaise par rapport au cadre national. Si vous louez une résidence secondaire (un bien que vous n'occupez pas au moins 8 mois par an), Bandol impose en plus du numéro d'enregistrement national une autorisation de changement d'usage à demander à la mairie via la plateforme Décla Loc. Cette autorisation est valable 5 ans et révocable par le propriétaire à tout moment. Nouveauté 2026 : plus aucun changement d'usage n'est délivré pour une passoire thermique (DPE F ou G) — un DPE classé entre A et E est exigé. Si vous achetez à Bandol dans l'objectif LCD, anticipez cette procédure dès le compromis : un refus d'autorisation peut survenir si le quota communal est atteint dans votre secteur ou si le DPE ne suffit pas. Demander un rendez-vous au service urbanisme avant de signer le compromis est une pratique de prudence sur ce marché.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Bandol ?',
+        a: "Les commissions à Bandol s'étalent de 20 % (Welcome Conciergerie, Welkeys, HostnFly) à 25 % TTC (formules intégrales premium) en 2026, avec une moyenne de marché autour de 20-22 % TTC pour une formule complète. Les pure-players bandolais (La Clé Bandolaise, DMP Excellence) travaillent souvent sur devis personnalisé selon le bien et la complexité de gestion (villa avec piscine, T1 centre, location à la semaine vs au week-end). Le critère décisif au-delà du taux affiché sur un marché ultra-saisonnier comme Bandol est la stratégie pricing dynamique sur juillet-août : un mauvais pricing premium peut coûter 2 000-5 000 € de manque à gagner sur la seule pleine saison. Demander au prestataire son protocole de pricing pour le pic d'août et un exemple chiffré de tarification sur les 60 jours haute saison avant signature.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Bandol ?',
+        a: "Pour un rendement maximal en valeur absolue, le centre / port et la plage de Renécros restent les segments les plus rentables par nuit (tarifs 95-280 €/nuit pleine saison), mais le ticket d'entrée est élevé (T2 dès 220 000-280 000 €, ROI brut 4,5-6,5 %). Les Lices et Saint-Anne (résidentiel premium en hauteur, villas avec piscine) offrent un meilleur compromis prix/rendement avec T3 dès 250 000 € et ROI 5-6,5 %, et ciblent une clientèle familiale longue durée. Capelan et Poupoune sont les segments les plus accessibles avec T2 dès 180 000 € et ROI 5,5-7 %, mais nécessitent un effort de mise en scène (terrasse, vue, piscine) pour atteindre les tarifs centre. L'Île de Bendor est un marché de niche très limité en offre, à privilégier pour les investisseurs patients qui acceptent un ROI moyen (4,5-6 %) en échange d'un actif unique.",
+      },
+    ],
+    updatedAt: '2026-06-12',
+  },
+  // ==========================================================================
+  // POITIERS (Vienne, Futuroscope)
+  // ==========================================================================
+  {
+    slug: 'poitiers',
+    displayName: 'Poitiers',
+    region: 'Nouvelle-Aquitaine',
+    regionSlug: 'nouvelle-aquitaine',
+    title: 'Conciergerie Poitiers Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Poitiers : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Poitiers. Tarifs (20-25 %), services, avis Google, Futuroscope, réglementation 2026, quartiers Notre-Dame, Trois-Cités, Couronneries.",
+    kwPrincipal: 'conciergerie poitiers',
+    kwSecondaires: [
+      'airbnb poitiers',
+      'conciergerie airbnb poitiers',
+      'conciergerie clemenceau',
+      'location courte durée poitiers',
+      'conciergerie futuroscope',
+      'meublé tourisme poitiers',
+    ],
+    population: 91204,
+    tourists: 1900000,
+    activeListings: 900,
+    priceLow: 55,
+    priceHigh: 110,
+    occupancyRate: 60,
+    revpar: 40,
+    seasonality:
+      "Saisonnalité tirée par le Futuroscope (1,9 million de visiteurs annuels) et le calendrier scolaire. Pics récurrents sur les vacances scolaires (toutes zones), les week-ends prolongés de printemps (Pâques, Ponts de mai, Ascension, Pentecôte) et les événements parc (lancement nouvelles attractions, La Clé des Songes). Pic secondaire à la rentrée universitaire (septembre, oraux et concours, accompagnants familiaux). Tourisme d'affaires régulier hors vacances (CHU Poitiers, sièges Maaf et MGen, université 25 000 étudiants). Intersaison (janvier-février, novembre hors Toussaint) plus creuse (occupation 45-55 %).",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Poitiers**, dans le **centre Notre-Dame**, aux **Trois-Cités** près de la gare TGV et du Futuroscope, ou dans le quartier étudiant des **Couronneries**, que vous louez sur Airbnb ou que vous envisagez de mettre en LCD.\n\nEntre le **Futuroscope** qui draine 1,9 million de visiteurs par an et pose une demande LCD régulière toute l'année, la **rentrée étudiante** (Université de Poitiers, 25 000 étudiants), un **marché immobilier accessible** (prix au m² moyen 2 207 € en 2026), une **réglementation favorable** (pas de changement d'usage pour les résidences secondaires) et la dizaine d'acteurs locaux qui se partagent un marché en croissance, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players pictaviens (Conciergerie Clemenceau, Les Pipelettes Pictaviennes, La Conciergerie de Poitiers), les réseaux régionaux et les acteurs nationaux ?",
+    marketIntro:
+      "Poitiers est un **marché LCD hybride à forte demande Futuroscope** : le parc d'attractions a accueilli environ **1,9 million de visiteurs** en 2024, qui tirent la demande LCD toute l'année avec deux pics annuels (vacances scolaires toutes zones + ponts de mai-juin). La ville compte environ **900 annonces actives** sur Airbnb avec un **tarif moyen** autour de **75 €/nuit** et un **taux d'occupation soutenu** porté par la clientèle famille (visite Futuroscope) et la clientèle business universitaire.\n\n**Marché immobilier accessible.** Comptez **2 207 €/m² en moyenne** à Poitiers en juin 2026, **2 290 €/m²** sur le centre Notre-Dame, **1 960-2 355 €/m²** sur les Trois-Cités (quartier nord, proche gare TGV et accès Futuroscope), **1 290-1 710 €/m²** sur les Couronneries (quartier étudiant) — un niveau qui place Poitiers parmi les **marchés LCD français les plus accessibles à l'achat**. Un T2 centre-ville se trouve dès **85 000-110 000 €**, un T3 famille dès 130 000 € — un ticket d'entrée 3 à 5 fois inférieur à Paris ou Bordeaux pour un rendement souvent supérieur.\n\n**Sous-marché Futuroscope.** Le parc est un sous-marché LCD à part entière : la demande pic sur les **vacances scolaires** (toutes zones cumulées), les **week-ends de printemps** (Pâques, ponts de mai, Ascension, Pentecôte) et les **événements parc**. La clientèle dominante est familiale (2 adultes + 2 enfants), avec une recherche orientée **T3-T4 avec parking** et **proximité ligne 1A** (bus Futuroscope direct depuis Poitiers gare) ou **gare Poitiers-Futuroscope** (5 minutes en TGV depuis la gare centrale).\n\n**Rentrée étudiante et tourisme d'affaires.** L'Université de Poitiers (25 000 étudiants, 7 campus dont Futuroscope et Notre-Dame) génère une demande LCD pour les **accompagnants familiaux** (rentrée septembre, oraux et concours, remises de diplômes). Le **tourisme d'affaires** (CHU Poitiers, Centre Hospitalier Henri-Laborit, sièges Maaf et MGen, ESCEM) pose une demande régulière hors période vacances.",
+    conciergeries: [
+      {
+        name: 'Conciergerie Clemenceau',
+        url: 'https://conciergerieclemenceau.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 32,
+        biensGeres: 35,
+        specialty: 'Acteur majeur pictavien, gestion court + long terme',
+        description:
+          "Conciergerie Clemenceau est l'un des acteurs majeurs du marché pictavien, avec plus de **3 900 nuits réservées en 2024** sur son portefeuille (chiffre revendiqué sur le site). Positionnement hybride : gestion courte durée (Airbnb, Booking, Abritel) et longue durée (location classique meublée ou non meublée), avec une équipe de ménage professionnelle interne et une assistance voyageurs 7j/7. Tarification non affichée publiquement, à demander sur devis selon le bien et le périmètre de service. Pertinente pour un propriétaire qui hésite encore entre LCD et location longue durée, et qui veut un interlocuteur unique capable d'accompagner la bascule entre les deux régimes selon la saison, la conjoncture ou les opportunités fiscales.",
+      },
+      {
+        name: 'Maneva Appart',
+        url: 'https://maneva-appart.com/accueil/conciergerie-airbnb/',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'Photo pro, pricing dynamique, sous-location',
+        description:
+          "Maneva Appart applique une grille modulable **20 % ou 25 % TTC** selon le périmètre de service choisi, plus un forfait ménage et linge facturé au voyageur. Le positionnement valorise la **photographie professionnelle** (souvent un point faible des annonces Poitiers où les photos amateur dominent), l'optimisation des tarifs en temps réel, la communication voyageurs et la maintenance avec petits travaux inclus. Activité complémentaire : gestion pour sous-locataires (propriétaires investisseurs LCD qui sous-louent à des opérateurs intermédiaires). Pertinente pour un propriétaire qui veut un service photographie et pricing dynamique sans engagement long terme. Demander une simulation chiffrée par formule (20 % vs 25 %) avant de signer.",
+      },
+      {
+        name: 'La Conciergerie de Poitiers',
+        url: 'https://laconciergerie-poitiers.fr/',
+        commission: '25 % + 499 € frais de dossier',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 24,
+        biensGeres: 18,
+        specialty: 'Investisseurs Futuroscope, home staging inclus',
+        description:
+          "La Conciergerie de Poitiers, fondée par **Corinne Ritoux (« Coco ») et son associé Vincent**, applique un modèle tarifaire singulier : **25 % de la location + 499 € de frais de dossier** unique à la signature. Spécificité forte : les fondateurs ont eux-mêmes développé plusieurs biens LCD à Poitiers et autour du Futuroscope, ce qui en fait un interlocuteur investisseur-friendly capable d'accompagner l'optimisation du bien dès l'achat. Services inclus : gestion complète, ménage professionnel, linge de qualité, pricing dynamique, classement officiel des meublés (1 à 5 étoiles), home staging, conseil investissement immobilier. Pertinente pour un investisseur LCD novice qui cherche un accompagnement de bout en bout, du choix du bien à l'optimisation fiscale via le classement étoiles.",
+      },
+      {
+        name: 'Les Pipelettes Pictaviennes',
+        url: 'https://www.lespipelettespictaviennes.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 14,
+        biensGeres: 12,
+        specialty: 'Acteur local taille humaine, partenariats produits locaux',
+        description:
+          "Les Pipelettes Pictaviennes est portée par **Laura**, professionnelle du secteur tourisme avec un ancrage poitevin profond. Tarification sur devis personnalisé par bien. Positionnement à taille humaine (une dizaine de biens en gestion), avec un focus sur l'accueil voyageurs personnalisé (panier de bienvenue avec produits locaux, recommandations Futuroscope et restaurants centre Notre-Dame, conseils ciblés famille vs business) et l'optimisation du storytelling de l'annonce. Multi-plateformes Airbnb, Booking et Abritel. Pertinente pour un propriétaire qui valorise l'attention au détail, une relation directe avec un interlocuteur unique, et l'image « locale et authentique » dans les avis voyageurs — plutôt qu'un grand groupe avec multiples interlocuteurs.",
+      },
+      {
+        name: 'Conciergerie Local Poitiers',
+        url: 'https://poitiers.conciergerie-local.fr/',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 28,
+        biensGeres: 50,
+        specialty: 'Réseau franchisé, +150 biens gérés Vienne',
+        description:
+          "Conciergerie Local est un réseau franchisé présent à Poitiers et sur la Vienne, qui revendique plus de **150 biens en gestion** sur la zone (chiffre affiché sur le site). Commission entre 20 % et 25 % des revenus générés, couvrant l'ensemble des services standards (annonce, accueil, ménage, communication, maintenance). Modèle structuré avec process écrits, dashboard propriétaire et formation continue des équipes terrain. Pertinente pour un propriétaire multi-biens (2-5 biens) qui veut un acteur capable d'absorber plusieurs propriétés sans saturation opérationnelle, ou un propriétaire investisseur qui prévoit d'acheter de nouveaux biens à court terme et veut un interlocuteur scalable.",
+      },
+      {
+        name: 'Homerez Poitiers',
+        url: 'https://www.homerez.com/fr/conciergerie/poitiers',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 9,
+        biensGeres: 15,
+        specialty: 'Réseau national, multi-diffusion Airbnb/Booking/Abritel',
+        description:
+          "Homerez est un acteur national de la gestion d'annonces multi-plateformes, présent à Poitiers via le réseau. Commission affichée autour de 20 %, avec une orientation forte sur l'optimisation de la visibilité : diffusion sur Airbnb, Booking, Abritel et plateformes de niche, optimisation des titres et des photos, mise en concurrence dynamique des canaux. Service complet : annonce, communication voyageurs, accueil, ménage. Pertinente pour un propriétaire qui veut maximiser le taux d'occupation (via la multi-diffusion) plus que la note premium sur une seule plateforme, ou un propriétaire avec un bien en hyper-périphérie de Poitiers (Chasseneuil-du-Poitou, Mignaloux-Beauvoir) où les pure-players pictaviens ne se déplacent pas systématiquement.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre Notre-Dame / Place du Marché',
+        pricePerNight: '65-100 €',
+        occupancy: 65,
+        description:
+          "Cœur historique de Poitiers, église Notre-Dame-la-Grande (façade romane unique), place du Marché, rue Carnot. Cible touristique culturelle et week-end couple. Prix au m² 2 290 €. T2 dès 95 000 €. Demande forte sur les week-ends et événements (Lumières de Poitiers, Voix Publique).",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Trois-Cités (gare TGV / accès Futuroscope)',
+        pricePerNight: '60-95 €',
+        occupancy: 62,
+        description:
+          "Quartier nord autour de la gare TGV de Poitiers (5 minutes en TGV du Futuroscope). Cible familles Futuroscope et clientèle business semaine. Prix au m² 1 960-2 355 €. T2 dès 80 000 €, T3 famille dès 110 000 €. Meilleur compromis pour cible famille Futuroscope avec voiture ou bus 1A.",
+        roiBrut: '7,5 à 9,5 %',
+      },
+      {
+        name: 'Couronneries (étudiant)',
+        pricePerNight: '50-80 €',
+        occupancy: 55,
+        description:
+          "Quartier nord-est, proche des campus universitaires. Cible étudiants annuels et accompagnants familiaux (rentrée, concours, remises de diplômes). Prix au m² 1 290-1 710 €. T2 dès 60 000 €. Stratégie hybride : étudiant 9 mois + LCD juin-août + événements universitaires.",
+        roiBrut: '8 à 11 %',
+      },
+      {
+        name: 'Gibauderie / Saint-Eloi',
+        pricePerNight: '55-85 €',
+        occupancy: 58,
+        description:
+          "Quartiers résidentiels, mix familles et tourisme. Prix au m² 1 500-2 000 €. T2 dès 75 000 €, T3 dès 105 000 €. Cible familles Futuroscope avec voiture, séjours week-end et semaine. ROI brut élevé compense les tarifs modérés.",
+        roiBrut: '7,5 à 9,5 %',
+      },
+      {
+        name: 'Chasseneuil-du-Poitou / Futuroscope intra-parc',
+        pricePerNight: '70-130 €',
+        occupancy: 68,
+        description:
+          "Commune limitrophe au nord, à l'entrée du parc Futuroscope. Marché LCD très spécialisé famille parc. Prix au m² 1 800-2 400 €. T3 dès 130 000 €. Tarif nuitée premium grâce à la proximité immédiate du parc (5 minutes à pied) et au parking inclus.",
+        roiBrut: '8 à 10,5 %',
+      },
+      {
+        name: 'Buxerolles / Mignaloux-Beauvoir',
+        pricePerNight: '55-90 €',
+        occupancy: 52,
+        description:
+          "Communes limitrophes sud, marché plus diffus. Prix au m² 1 600-2 100 €. Maison T4 avec jardin dès 160 000 €. Stratégie maison familiale en location ponctuelle Futuroscope + accueil groupes anniversaires et événementiel familial.",
+        roiBrut: '7,5 à 9 %',
+      },
+    ],
+    regulation:
+      "Poitiers applique le **cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel à ce jour — un cadre **favorable** comparé à Paris, Lyon, Bordeaux ou La Rochelle.\n\n**Enregistrement obligatoire depuis 2023.** Tout meublé de tourisme à Poitiers doit être déclaré en mairie via la **plateforme Décla Loc de Grand Poitiers** (grandpoitiers.taxesejour.fr). Un **numéro à 13 chiffres** est délivré et doit figurer sur chaque annonce Airbnb, Booking ou Abritel. Le **téléservice national** entre en vigueur au plus tard le **20 mai 2026** sur l'ensemble du territoire.\n\n**Pas de changement d'usage pour les résidences secondaires.** C'est le point fort de Poitiers : la commune **n'impose pas d'autorisation de changement d'usage** pour louer une résidence secondaire en LCD. Vous pouvez louer **365 nuits/an sans plafond**, à condition d'être déclaré et d'afficher le numéro d'enregistrement sur l'annonce. Cette particularité fait de Poitiers une **destination investisseur LCD attractive** comparée aux métropoles voisines de Nouvelle-Aquitaine (Bordeaux, La Rochelle) ou aux grandes villes étudiantes (Nantes, Rennes) où le changement d'usage est imposé.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage en zone réglementée).\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage (non concerné à Poitiers).\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Le Grand Poitiers applique une taxe de séjour de **0,75 € à 2,80 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb et reversée à l'intercommunalité).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 75,
+      neighborhood: 'Trois-Cités (proche gare TGV et accès Futuroscope)',
+      revenuBrut: 16500,
+      commissionRate: 0.22,
+      menageCount: 70,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb à Poitiers avec le Futuroscope ?',
+        a: "Le Futuroscope (1,9 million de visiteurs en 2024) est le principal moteur du LCD pictavien. Un T3 famille bien placé sur les Trois-Cités, Chasseneuil-du-Poitou ou Gibauderie qui se loue 95-130 €/nuit en moyenne pendant les vacances scolaires génère sur l'année un chiffre d'affaires brut de 18 000-25 000 € pour 60 % d'occupation moyenne (220 nuits) avec une stratégie pricing dynamique sur les vacances toutes zones et les ponts de printemps. Les pics les plus rentables : Pâques (+45 % de tarif vs moyenne), Pont de l'Ascension (+50 %), été (+30-40 %), vacances de la Toussaint (+25 %). Un T2 centre Notre-Dame (couple sans enfants, tourisme culturel et business) génère plutôt 13 000-18 000 € avec 65 % d'occupation et un tarif nuitée plus bas mais une demande très régulière toute l'année. La rentabilité brute reste solide à Poitiers (7-9 % en moyenne, jusqu'à 11 % sur les Couronneries) grâce aux prix d'acquisition très accessibles.",
+      },
+      {
+        q: 'Faut-il un changement d\'usage à Poitiers pour louer une résidence secondaire ?',
+        a: "Non, et c'est l'avantage majeur de Poitiers par rapport aux métropoles voisines (Bordeaux, La Rochelle, Nantes). La commune n'impose pas d'autorisation de changement d'usage : vous pouvez louer votre résidence secondaire en LCD jusqu'à 365 nuits par an sans plafond, à condition d'être déclaré en mairie via la plateforme Décla Loc de Grand Poitiers et d'afficher votre numéro à 13 chiffres sur chaque annonce. C'est ce cadre favorable qui fait de Poitiers une destination investisseur LCD attractive : le ticket d'entrée immobilier accessible (T2 dès 85 000 €) combiné à l'absence de quota local et à la demande Futuroscope toute l'année permet d'atteindre des ROI bruts de 7-11 % difficilement reproductibles dans les grandes villes. Cette situation peut évoluer à long terme si la pression touristique s'accentue : surveiller les délibérations du conseil métropolitain Grand Poitiers et de la mairie de Poitiers.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Poitiers ?',
+        a: "Pour un rendement maximal, les Trois-Cités sont le meilleur compromis sur Poitiers intra-muros : prix au m² accessibles (1 960-2 355 €), proximité gare TGV et bus Futuroscope 1A, clientèle famille Futuroscope, ROI brut 7,5-9,5 %. Le centre Notre-Dame offre la meilleure demande couple et culture avec T2 dès 95 000 € (ROI 7-9 %). Pour un ROI maximal absolu, les Couronneries permettent une stratégie hybride étudiant 9 mois + LCD événements universitaires + Futuroscope (T2 dès 60 000 €, ROI 8-11 %). Chasseneuil-du-Poitou (commune limitrophe au nord) est le sous-marché Futuroscope pur avec tarif nuitée premium grâce à la proximité immédiate du parc (T3 dès 130 000 €, ROI 8-10,5 %). Pour les maisons familiales et accueil de groupes, Buxerolles et Mignaloux-Beauvoir proposent des T4 avec jardin dès 160 000 € (ROI 7,5-9 %).",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Poitiers ?',
+        a: "Les commissions à Poitiers s'étalent de 20 % (formules de base, Homerez, Maneva formule légère) à 25 % TTC (formules intégrales premium, Conciergerie Local, La Conciergerie de Poitiers) en 2026, avec une moyenne de marché autour de 22-23 % TTC pour une formule complète. La Conciergerie de Poitiers (Coco Ritoux) applique un modèle singulier : 25 % + 499 € de frais de dossier unique à la signature, justifié par l'accompagnement investisseur (home staging, classement étoiles). Conciergerie Clemenceau et Les Pipelettes Pictaviennes travaillent sur devis personnalisé. Le critère décisif au-delà du taux affiché sur un marché Futuroscope comme Poitiers est la stratégie pricing dynamique sur les vacances scolaires (toutes zones) et les ponts de printemps : un bon pricing peut générer 2 000-4 000 € supplémentaires sur l'année par rapport à un tarif fixe. Demander un retour client investisseur Futuroscope avant signature.",
+      },
+    ],
+    updatedAt: '2026-06-12',
+  },
+  // ==========================================================================
+  // CHAMBÉRY (Savoie, porte des Alpes)
+  // ==========================================================================
+  {
+    slug: 'chambery',
+    displayName: 'Chambéry',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Chambéry Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Chambéry : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Chambéry. Tarifs (20-25 %), services, avis Google, réglementation 2026 changement d'usage, quartiers Carré Curial, Vieille Ville, Gare-Cassine.",
+    kwPrincipal: 'conciergerie chambery',
+    kwSecondaires: [
+      'airbnb chambery',
+      'conciergerie airbnb chambery',
+      'la conciergerie de savoie',
+      'location courte durée chambery',
+      'conciergerie chambery aix les bains',
+      'meublé tourisme chambéry',
+    ],
+    population: 59990,
+    tourists: 800000,
+    activeListings: 550,
+    priceLow: 60,
+    priceHigh: 110,
+    occupancyRate: 58,
+    revpar: 38,
+    seasonality:
+      "Triple saisonnalité unique au marché chambérien : ski-portail l'hiver (clientèle internationale qui transite par gare TGV ou aéroport CMF avant de monter aux 3 Vallées, Tarentaise, Maurienne, Massif des Bauges), lac du Bourget l'été (sports nautiques, plages d'Aix-les-Bains, randonnée Massif des Bauges), tourisme d'affaires régulier toute l'année (préfecture Savoie, Université Savoie Mont Blanc 16 500 étudiants, sièges régionaux, salons). Pic ski hiver de décembre à mi-avril (occupation 70-80 % les week-ends et vacances), pic été juin-août (occupation 70-75 %), intersaisons (novembre, mai, septembre) portées par le business et les week-ends culturels (château des Ducs de Savoie).",
+    rankNational: 24,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Chambéry**, dans la **Vieille Ville** autour du château des Ducs de Savoie, au **Carré Curial** ou près de la **gare TGV-Cassine**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **double saisonnalité** (ski l'hiver avec la proximité des 3 Vallées, Tarentaise et Maurienne, lac du Bourget l'été), le **tourisme d'affaires** régulier (préfecture, Université Savoie Mont Blanc, sièges régionaux), la **réglementation locale durcie** (autorisation de changement d'usage obligatoire pour toute résidence secondaire) et la poignée d'acteurs locaux qui se partagent un marché en croissance, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players chambériens (La Conciergerie de Savoie, Conciergerie Chambéry, M&B Conciergerie), les acteurs émergents et les réseaux nationaux ?",
+    marketIntro:
+      "Chambéry est un **marché LCD à triple saisonnalité** : ski-portail l'hiver (clientèle internationale qui transite par la gare TGV ou l'aéroport CMF avant de monter dans les 3 Vallées, Tarentaise ou Maurienne), lac du Bourget l'été (sports nautiques, plages, Aix-les-Bains), et tourisme d'affaires régulier toute l'année (Université Savoie Mont Blanc 16 500 étudiants, préfecture Savoie, sièges régionaux). La ville compte environ **550 annonces actives** sur Airbnb avec un **tarif moyen** autour de **75 €/nuit** sur l'année.\n\n**Porte des Alpes.** Chambéry est l'**aéroport low-cost régional (CMF)** et la **gare TGV** de l'arrière-pays alpin. Beaucoup de voyageurs internationaux (Britanniques, Néerlandais, Belges, Allemands) atterrissent ou descendent du train à Chambéry pour rejoindre les stations en navette — une **clientèle de transit** qui réserve souvent 1-2 nuits à Chambéry encadrant un séjour ski. Le **week-end ski-extension** (vendredi-samedi à Chambéry avant montée stations, dimanche après descente) est un produit LCD spécifique au marché chambérien.\n\n**Lac du Bourget et patrimoine.** Le **lac du Bourget** (plus grand lac naturel de France, 18 km², à 10 minutes au nord de Chambéry) pose une demande LCD estivale (juin-septembre) en complément des hôtels d'Aix-les-Bains. Le **château des Ducs de Savoie** (XIVe siècle, Sainte-Chapelle qui a abrité le Saint Suaire) et la **Cathédrale Saint-François-de-Sales** drainent un tourisme culturel toute l'année. La **Fontaine des Éléphants** (1838, place principale du Carré Curial) et la **vieille ville** font de Chambéry une destination week-end accessible à 3 heures de TGV de Paris.\n\n**Prix au m² intermédiaires.** Comptez **3 100 €/m² en moyenne** à Chambéry en 2026, **3 300-3 800 €/m²** sur le centre et le Carré Curial, **3 400-3 700 €/m²** sur la Vieille Ville (cœur historique réhabilité, forte attractivité jeunes cadres et étudiants), **2 600-3 100 €/m²** sur le secteur Gare-Cassine (bon compromis business), **2 800-3 200 €/m²** sur Bissy et Hauts de Chambéry, et **2 000-2 500 €/m²** sur Biollay/Chambéry-le-Haut (segment accessible). Un T2 centre se trouve dès 130 000-180 000 €, ce qui place Chambéry dans la moyenne haute des marchés LCD français à l'achat.",
+    conciergeries: [
+      {
+        name: 'La Conciergerie de Savoie',
+        url: 'https://laconciergeriedesavoie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 22,
+        biensGeres: 28,
+        specialty: 'Tresserve / lac du Bourget / Chambéry, multi-plateformes',
+        description:
+          "La Conciergerie de Savoie, basée à **Tresserve** (rive ouest du lac du Bourget, à 15 km de Chambéry), couvre la zone Aix-les-Bains — Chambéry — lac du Bourget — lac d'Aiguebelette avec un positionnement multi-plateformes (Airbnb, Booking, Abritel). Tarification sur devis selon le bien. Services : création et gestion d'annonces, photographie professionnelle, accueil voyageurs, entretien et maintenance, suivi administratif et reporting financier. Pertinente pour un propriétaire d'appartement Chambéry centre qui veut un acteur familier des deux marchés (lac et ville) et capable d'arbitrer entre eux selon les périodes (été lac vs ski-extension hiver), ou un investisseur sur la couronne Aix-Chambéry qui veut un interlocuteur unique.",
+      },
+      {
+        name: 'Conciergerie Chambéry',
+        url: 'https://conciergerie-chambery.com/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 16,
+        biensGeres: 20,
+        specialty: 'Pure-player Chambéry, expert Airbnb courte durée',
+        description:
+          "Conciergerie Chambéry applique une commission de **25 % du loyer** sur les locations courtes durées Airbnb. Positionnement pure-player urbain Chambéry, sans extension lac ou stations. Services : création et promotion d'annonces Airbnb, gestion des réservations et planning, accueil locataires, ménage avant chaque arrivée, remise de clés, communication continue avec les voyageurs, collecte des loyers et états des lieux. Pertinente pour un propriétaire d'appartement intra-muros Chambéry (Vieille Ville, Carré Curial, Gare-Cassine) qui ne veut pas se disperser sur le marché lac et préfère un interlocuteur 100 % focalisé sur le marché LCD chambérien et la clientèle ski-extension.",
+      },
+      {
+        name: 'M&B Conciergerie',
+        url: 'https://menage-blanchisserie.com/',
+        commission: 'variable',
+        menage: 'inclus dans commission',
+        rating: 4.5,
+        reviews: 14,
+        biensGeres: 18,
+        specialty: 'Ménage + blanchisserie internalisés, Chambéry + Aix-les-Bains',
+        description:
+          "M&B Conciergerie (Ménage et Blanchisserie) est un acteur local Chambéry / Aix-les-Bains positionné sur l'internalisation de la chaîne ménage-blanchisserie-conciergerie, avec une infrastructure propre (laverie professionnelle, équipe ménage interne). Activités complémentaires : transfert et livraison (linge, paniers de bienvenue, oublis voyageurs). Cette intégration permet une réactivité sur les rotations courtes (check-out 10h / check-in 15h) particulièrement utile en haute saison ski et lac. Pertinente pour un propriétaire de bien à forte rotation (T1-T2 centre, studios ski-extension) qui a souffert de défauts de ménage ou de retards de linge avec un précédent prestataire.",
+      },
+      {
+        name: 'Convinest',
+        url: 'https://convinest.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 8,
+        biensGeres: 10,
+        specialty: 'Pure-player Chambéry, services Airbnb dédiés',
+        description:
+          "Convinest est un acteur émergent sur le marché chambérien, positionné sur les services de conciergerie Airbnb dédiés. Communication essentiellement via WhatsApp et email (info@convinest.com), tarification sur devis personnalisé. Volume de portefeuille encore réduit (moins de biens gérés que les acteurs historiques), ce qui peut être un avantage pour un propriétaire qui veut un interlocuteur disponible et non surchargé. Pertinente pour un propriétaire qui valorise un acteur jeune et accessible, et qui accepte d'être l'un des premiers clients pour bénéficier d'un suivi personnalisé en échange d'un track record encore court.",
+      },
+      {
+        name: 'HostnFly Chambéry',
+        url: 'https://hostnfly.com/conciergerie-airbnb/chambery',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 11,
+        biensGeres: 18,
+        specialty: 'Réseau national, gestion 100 % digitale via app propriétaire',
+        description:
+          "HostnFly est présent à Chambéry via son réseau national. Commission affichée autour de **20 %** sur les nuitées, gestion 100 % digitale via une application propriétaire (suivi temps réel des réservations, des revenus collectés et des paiements). Package : gestion des voyageurs, clés, ménage, communication, maintenance, assurances. Pertinente pour un propriétaire investisseur à distance (Lyonnais, Parisien, étranger) qui possède un bien Chambéry comme produit LCD pur et préfère un suivi self-service via dashboard à un suivi téléphonique personnalisé. Bonne option pour un T2 centre destiné à la clientèle ski-extension internationale (interface dashboard multilingue).",
+      },
+      {
+        name: 'Homerez Chambéry',
+        url: 'https://www.homerez.com/fr/conciergerie/chambery',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 9,
+        biensGeres: 12,
+        specialty: 'Multi-diffusion Airbnb / Booking / Abritel',
+        description:
+          "Homerez est un réseau national de gestion d'annonces multi-plateformes (Airbnb, Booking, Abritel, plateformes de niche), présent à Chambéry. Commission autour de **20 %**, focus sur l'optimisation de la visibilité et la mise en concurrence des canaux de diffusion. Pertinente pour un propriétaire qui veut maximiser le taux d'occupation hors saison (avant-saison ski en novembre, intersaison printemps en mai) via la diversification des plateformes, plus que la note premium sur une seule plateforme Airbnb (où les pure-players locaux gardent un avantage qualitatif). Le réseau propose aussi des optimisations de titres et photos via son équipe centrale.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieille Ville / Château des Ducs',
+        pricePerNight: '75-110 €',
+        occupancy: 65,
+        description:
+          "Cœur historique de Chambéry, château des Ducs de Savoie (XIVe), Sainte-Chapelle, ruelles médiévales réhabilitées. Cible touristique culturelle et clientèle jeunes cadres week-end. Prix au m² 3 400-3 700 €. T2 dès 145 000 €. Demande forte sur les week-ends culturels et les ponts de printemps.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Carré Curial (centre)',
+        pricePerNight: '70-105 €',
+        occupancy: 62,
+        description:
+          "Centre commerçant et culturel, place du Carré Curial, Fontaine des Éléphants, théâtre Charles Dullin. Cible touristique et business. Prix au m² 3 300-3 800 €. T3 dès 230 000 €. Bon compromis emplacement central, accessibilité TGV et commerces, demande couple et famille.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Gare-Cassine (TGV / aéroport)',
+        pricePerNight: '65-95 €',
+        occupancy: 65,
+        description:
+          "Quartier de la gare TGV (3 h Paris) et axe vers l'aéroport CMF. Cible business semaine et clientèle ski-extension internationale (week-ends ski). Prix au m² 2 600-3 100 €. T2 dès 110 000 €. Meilleur compromis pour le sous-marché ski-extension à Chambéry.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Bissy / Hauts de Chambéry',
+        pricePerNight: '55-85 €',
+        occupancy: 55,
+        description:
+          "Quartiers résidentiels nord-ouest, accessibilité voiture, proche A41 (axe Lyon-Genève). Cible familles et tourisme d'affaires longue durée. Prix au m² 2 800-3 200 €. T2 dès 120 000 €. Marché bien orienté pour les séjours business de 3-5 nuits.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Biollay / Chambéry-le-Haut',
+        pricePerNight: '50-75 €',
+        occupancy: 50,
+        description:
+          "Quartiers nord en hauteur, segment plus accessible à l'achat. Prix au m² 2 000-2 500 €. T2 dès 85 000 €, T3 dès 105 000 €. Stratégie LCD nécessite un effort de mise en scène pour compenser la distance au centre, mais ROI brut élevé compense les tarifs plus modérés.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Périphérie Aix-les-Bains / Lac du Bourget',
+        pricePerNight: '80-130 €',
+        occupancy: 62,
+        description:
+          "Couronne nord de Chambéry vers Aix-les-Bains et le lac du Bourget. Cible touristique estivale lac + thermalisme + business Aix. Prix au m² 3 200-4 000 €. T2 vue lac dès 180 000 €. Marché estival fort (juin-septembre), prolongement automne thermalisme.",
+        roiBrut: '5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Chambéry applique un **dispositif local renforcé** sur les meublés de tourisme, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) et d'un règlement municipal de déclaration en mairie (chambery.fr/953).\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Chambéry doit être **déclaré en mairie** via la plateforme **Décla Loc du Grand Chambéry** (grandchambery.taxesejour.fr). La démarche peut être effectuée par courrier ou par dépôt direct à l'Hôtel de Ville selon les indications de la ville. Un **numéro à 13 chiffres** est délivré et doit figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le 20 mai 2026, le portail national unique **Décla Loc** devient obligatoire sur l'ensemble du territoire. Plus aucun loueur ne pourra publier d'annonce sans numéro d'enregistrement valide.\n\n**Changement d'usage pour les résidences secondaires.** Chambéry applique le régime de **changement d'usage** pour toute résidence secondaire mise en LCD : toute location touristique d'un meublé hors résidence principale est soumise à autorisation préalable selon la grille municipale. Cette autorisation s'ajoute au numéro d'enregistrement et conditionne la légalité de la location. Demander un rendez-vous au service urbanisme avant tout achat dans l'objectif LCD est une pratique de prudence.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. **Nouveauté 2026 :** plus aucun changement d'usage n'est délivré pour une **passoire thermique** — un DPE classé entre A et E est désormais exigé pour obtenir l'autorisation municipale.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur, particulièrement pertinent sur un marché chambérien où la clientèle internationale ski-extension valorise le classement.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage. À Chambéry, la ville précise une **amende administrative pouvant aller de 5 000 à 10 000 €** pour défaut de déclaration en mairie.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Le Grand Chambéry applique une taxe de séjour de **0,75 € à 3,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb et reversée à l'intercommunalité).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 75,
+      neighborhood: 'Carré Curial',
+      revenuBrut: 16500,
+      commissionRate: 0.22,
+      menageCount: 68,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Chambéry pour louer une résidence secondaire ?',
+        a: "Oui. Chambéry applique un régime de changement d'usage pour toute résidence secondaire mise en LCD (toute location touristique de meublé hors résidence principale est soumise à autorisation préalable selon la grille municipale chambery.fr/953). Cette autorisation s'ajoute au numéro d'enregistrement à 13 chiffres délivré via la plateforme Décla Loc du Grand Chambéry et conditionne la légalité de la location. Nouveauté 2026 : plus aucun changement d'usage n'est délivré pour une passoire thermique (DPE F ou G) — un DPE classé entre A et E est exigé. Si vous achetez à Chambéry dans l'objectif LCD, anticipez cette procédure dès le compromis : un refus d'autorisation peut survenir si le quota communal est atteint dans votre secteur. Demander un rendez-vous au service urbanisme avant de signer est une pratique de prudence. Le défaut de déclaration en mairie est sanctionné d'une amende administrative de 5 000 à 10 000 €.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Chambéry sur l\'année ?',
+        a: "Un T2 de 42 m² bien placé au Carré Curial, en Vieille Ville ou Gare-Cassine (tarif moyen 70-85 €/nuit, occupation 60-65 %) génère typiquement un chiffre d'affaires brut de 16 000-19 000 € sur l'année à Chambéry. La triple saisonnalité (ski hiver 20-25 % du CA sur les week-ends et vacances décembre-mars, lac du Bourget été 30-35 % du CA juin-septembre, business régulier 40-45 % du CA toute l'année) lisse les revenus mieux que sur les marchés purement balnéaires (Bandol, Honfleur). Un T3 famille en périphérie Aix-les-Bains (vue lac) peut atteindre 22 000-28 000 € grâce à la prime estivale. Net de la commission conciergerie (20-25 %), de la taxe foncière (~1 100 € sur un T2 chambérien), des charges et du ménage, comptez un revenu disponible de 9 500-12 500 € sur le T2 et 13 000-17 500 € sur le T3 famille avec vue lac.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Chambéry ?',
+        a: "Pour un rendement maximal, Gare-Cassine est le meilleur compromis sur Chambéry intra-muros : prix au m² accessibles (2 600-3 100 €), proximité gare TGV et aéroport CMF (clientèle ski-extension internationale), demande business toute l'année, ROI brut 6-7,5 %. Le Carré Curial et la Vieille Ville offrent la meilleure demande touristique culturelle avec T2 dès 145 000 € (ROI 5,5-7 %). Pour le sous-marché lac, la périphérie Aix-les-Bains avec T2 vue lac dès 180 000 € génère un ROI 5-6,5 % avec une prime estivale forte. Pour un budget contraint, Biollay et Chambéry-le-Haut proposent des T2 dès 85 000 € avec un ROI 6,5-8 % et une stratégie hybride business semaine + LCD ponctuel week-end. Bissy et Hauts de Chambéry conviennent au tourisme d'affaires longue durée (3-5 nuits) avec axe A41 Lyon-Genève.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Chambéry ?',
+        a: "Les commissions à Chambéry s'étalent de 20 % (formules de base, HostnFly, Homerez) à 25 % TTC (formules intégrales, Conciergerie Chambéry) en 2026, avec une moyenne de marché autour de 22-23 % TTC pour une formule complète. La Conciergerie de Savoie et Convinest travaillent sur devis personnalisé. M&B Conciergerie a un modèle variable où le ménage et la blanchisserie sont inclus (à arbitrer selon le profil de rotation du bien). Le critère décisif au-delà du taux affiché sur un marché à triple saisonnalité comme Chambéry est la stratégie pricing dynamique sur les trois pics : ski-extension hiver (décembre-mars), lac été (juin-septembre), salons et événementiel business toute l'année. Demander au prestataire son protocole de pricing sur les trois pics et un exemple chiffré de tarification mensuelle annuelle avant signature.",
+      },
+    ],
+    updatedAt: '2026-06-12',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

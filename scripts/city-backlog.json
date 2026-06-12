@@ -862,8 +862,10 @@
     "oldSlug": "/conciergerie-airbnb-poitiers",
     "kw": "conciergerie poitiers",
     "vol": 170,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 31,
+    "publishedAt": "2026-06-12",
+    "notes": "Vol live SEMrush 170 (=backlog), KD 31. 6 conciergeries (Conciergerie Clemenceau 3 900 nuits réservées 2024 chiffre revendiqué, Maneva Appart 20-25% modulable, La Conciergerie de Poitiers Corinne Coco Ritoux modèle 25%+499€ frais dossier, Les Pipelettes Pictaviennes Laura taille humaine, Conciergerie Local 150+ biens réseau Vienne, Homerez national 20%). Marché LCD hybride tiré par Futuroscope 1,9M visiteurs 2024. Réglementation LIBRE (pas de changement d'usage pour résidences secondaires, déclaration mairie + numéro 13 chiffres obligatoires depuis 2023). Prix immo accessibles : 2 207 €/m² moyen, 2 290 € centre Notre-Dame, 1 290-1 710 € Couronneries. ROI brut 7-11% sur les Couronneries (stratégie étudiant+LCD)."
   },
   {
     "num": 69,
@@ -875,8 +877,10 @@
     "oldSlug": "/conciergerie-airbnb-chambery",
     "kw": "conciergerie chambery",
     "vol": 170,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 8,
+    "publishedAt": "2026-06-12",
+    "notes": "Vol live SEMrush 170 (=backlog), KD 8 (très faible). 6 conciergeries (La Conciergerie de Savoie Tresserve couverture Aix-Chambéry-lac, Conciergerie Chambéry .com pure-player 25%, M&B Conciergerie ménage+blanchisserie internalisés Chambéry-Aix, Convinest émergent, HostnFly national 20%, Homerez national 20%). Triple saisonnalité unique : ski-portail hiver (clientèle internationale transit 3 Vallées/Tarentaise/Maurienne), lac du Bourget été, business toute année (Université Savoie Mont Blanc 16 500 étudiants, préfecture). Réglementation RESTREINT (autorisation changement d'usage obligatoire pour résidences secondaires selon grille municipale chambery.fr/953, défaut déclaration 5 000-10 000 € amende administrative). Prix immo intermédiaires : 3 100 €/m² moyen, Vieille Ville 3 400-3 700 €, Gare-Cassine 2 600-3 100 € (meilleur compromis ski-extension)."
   },
   {
     "num": 70,
@@ -1297,15 +1301,17 @@
   {
     "num": 102,
     "ville": "Bandol",
-    "region": "?",
-    "regionSlug": "?",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "regionSlug": "provence-alpes-cote-dazur",
     "citySlug": "bandol",
-    "newUrl": "/conciergerie-airbnb/?/bandol",
-    "kw": "conciergerie Bandol",
+    "newUrl": "/conciergerie-airbnb/provence-alpes-cote-dazur/bandol",
+    "kw": "conciergerie bandol",
     "vol": 210,
-    "kd": "19",
-    "status": "À faire",
-    "source": "semrush-expand-2026-05-15"
+    "kd": 19,
+    "status": "Publié",
+    "source": "semrush-expand-2026-05-15",
+    "publishedAt": "2026-06-12",
+    "notes": "Vol live SEMrush 210 (=backlog), KD 19. 6 conciergeries (La Clé Bandolaise pure-player depuis 2019, Welcome Conciergerie SASU Magnolia 20% + frais fixes Six-Fours/Bandol/Sanary, DMP Excellence conciergerie privée 24/7 Bandol+Var côtier, YourHostHelper réseau national depuis 2017 optimisation Superhost, Welkeys clé en main 20% + blog réglementation à jour, HostnFly 20% gestion 100% digitale). Marché LCD ultra-saisonnier premium : 890 annonces actives, occupation 52% annuelle, pic août 90% (revenus 2 211 €/mois vs 1 092 € moyenne selon Welkeys). Vignoble AOC Bandol 1 600 ha + port plaisance 1 600 anneaux + Île de Bendor (Paul Ricard 1958). Réglementation RESTREINT : déclaration Décla Loc + autorisation changement d'usage 5 ans obligatoire pour résidences secondaires (spécificité bandolaise vs Sanary/La Ciotat). Prix immo élevés : 6 535 €/m² moyen, Renécros 5 500-6 500 €, centre 5 200-6 000 €. Ticket entrée T2 220 000-280 000 €."
   },
   {
     "num": 103,
@@ -1317,8 +1323,10 @@
     "kw": "conciergerie Suzette",
     "vol": 210,
     "kd": "37",
-    "status": "À faire",
-    "source": "semrush-expand-2026-05-15"
+    "status": "Hors scope",
+    "source": "semrush-expand-2026-05-15",
+    "notes": "Hors scope 2026-06-12 : audit web search confirme que le KW \"conciergerie suzette\" cible la marque \"Conciergerie Suzette\" (basée Le Lavandou/Hyères/Bormes-les-Mimosas, prénom propriétaire/marque) et NON la commune de Suzette (Vaucluse, ~150 habitants). Village trop petit pour avoir un marché LCD comparatif identifiable (Airbnb local quasi inexistant). KW fantôme à valeur géographique nulle pour notre template. Retiré du pipeline.",
+    "recheckedAt": "2026-06-12"
   },
   {
     "num": 104,

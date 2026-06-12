@@ -367,7 +367,7 @@ async function fetchHtml(url) {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
         'Accept': 'text/html',
       },
-      // Note: fetch natif Node n'a pas de timeout option, on s'en remet à AbortController
+      signal: AbortSignal.timeout(12000), // 12s : un serveur lent/mort ne doit JAMAIS bloquer tout le sourcing
     });
     if (!r.ok) return null;
     return await r.text();

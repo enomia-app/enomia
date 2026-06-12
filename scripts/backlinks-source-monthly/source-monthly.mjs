@@ -72,7 +72,7 @@ async function queryDomainTraffic(domain) {
   if (DRY) return { organic_traffic: 0, organic_kw: 0, rank: 0, notFound: false };
   const url = `https://api.semrush.com/?type=domain_ranks&key=${SEMRUSH_KEY}&export_columns=Dn,Rk,Or,Ot&domain=${encodeURIComponent(domain)}&database=fr`;
   try {
-    const r = await fetch(url);
+    const r = await fetch(url, { signal: AbortSignal.timeout(15000) });
     const text = await r.text();
     if (text.includes('ERROR 50')) return { organic_traffic: 0, organic_kw: 0, rank: 0, notFound: true };
     if (text.includes('ERROR')) return { error: text.trim().slice(0, 60) };
@@ -95,7 +95,13 @@ async function querySerp(kw, displayLimit = 30) {
     return [];
   }
   const url = `https://api.semrush.com/?type=phrase_organic&key=${SEMRUSH_KEY}&phrase=${encodeURIComponent(kw)}&database=fr&display_limit=${displayLimit}&export_columns=Po,Ur,Tr`;
-  const r = await fetch(url);
+  let r;
+  try {
+    r = await fetch(url, { signal: AbortSignal.timeout(15000) });
+  } catch (e) {
+    log(`  ⚠️ fetch SEMrush KO pour "${kw}": ${e.message?.slice(0, 50)}`);
+    return [];
+  }
   if (!r.ok) { log(`  ❌ HTTP ${r.status} pour "${kw}"`); return []; }
   const text = await r.text();
   if (text.includes('ERROR')) { log(`  ⚠️ ${text.trim().slice(0, 60)} pour "${kw}"`); return []; }

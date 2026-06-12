@@ -347,4 +347,6 @@ async function main() {
   log(`  Outils présents (sur les candidats fetched) : ${JSON.stringify(distribOutils)}`);
 }
 
-main().catch(e => { console.error('❌ Fatal:', e); process.exit(1); });
+// process.exit explicite : sans ça le process reste en vie après écriture du
+// fichier (sockets undici/dns non fermés) → bloquerait le cron mensuel.
+main().then(() => process.exit(0)).catch(e => { console.error('❌ Fatal:', e); process.exit(1); });

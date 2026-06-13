@@ -244,12 +244,24 @@ export const loveRoomCitiesMeta = [
     "slug": "caen",
     "displayName": "Caen",
     "searchVolume": 1710,
-    "status": "todo",
+    "status": "done",
     "lat": 49.18207,
     "lng": -0.37083,
     "region": "Normandie",
     "regionSlug": "normandie",
     "radiusKm": 100,
     "found": 39
+  },
+  {
+    "slug": "la-rochelle",
+    "displayName": "La Rochelle",
+    "searchVolume": 1690,
+    "status": "todo",
+    "lat": 46.16033,
+    "lng": -1.15114,
+    "region": "Nouvelle-Aquitaine",
+    "regionSlug": "nouvelle-aquitaine",
+    "radiusKm": 100,
+    "found": 38
   }
 ];

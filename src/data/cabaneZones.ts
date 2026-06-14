@@ -74,10 +74,21 @@ export const cabaneZonesMeta = [
     "type": "massif",
     "searchVolume": 1950,
     "radiusKm": 75,
-    "status": "todo",
+    "status": "done",
     "geocodeQuery": "Massif du Jura France",
     "lat": 47.00858,
     "lng": 6.78559,
     "found": 33
+  },
+  {
+    "slug": "ardeche",
+    "displayName": "Ardèche",
+    "type": "departement",
+    "searchVolume": 1860,
+    "radiusKm": 70,
+    "status": "todo",
+    "lat": 44.75963,
+    "lng": 4.56244,
+    "found": 42
   }
 ];

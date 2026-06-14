@@ -2640,5 +2640,388 @@ export const cabaneListings: Record<string, Cabane[]> = {
         }
       ]
     }
+  ],
+  "ardeche": [
+    {
+      "name": "Roulottes et Cabanes de Saint Cerice",
+      "area": "Vogüé",
+      "dept": "07",
+      "distanceKm": 26,
+      "features": [
+        "Spa ou bain nordique",
+        "Sauna"
+      ],
+      "vibe": "Cabane insolite à Vogüé",
+      "rating": 4.6,
+      "reviews": 908,
+      "source": "Google Places",
+      "description": "Domaine de roulottes et cabanes insolites en Ardèche proposant un séjour privé en pleine nature, agrémenté d'une piscine, d'un spa privatif et d'un sauna. Lieu très calme et verdoyant, apprécié pour son atmosphère reposante, son cadre préservé et sa proximité avec les sites touristiques environnants.",
+      "url": "https://www.saintcerice.com/",
+      "recentReviews": [
+        {
+          "author": "Elisa Ratti",
+          "rating": 4,
+          "when": "il y a 2 semaines",
+          "text": "Nous avons passé un week-end Wonderbox de 3 jours dans ce domaine et l’expérience a été vraiment superbe. Si vous recherchez un endroit calme, reposant et agréable en pleine nature, ce domaine est idéal. Nous avons séjourné dans un pod simple avec l’option spa privatif pour un supplément de 110€ pour les 3 jours. Le po"
+        },
+        {
+          "author": "Emilie Pin",
+          "rating": 5,
+          "when": "il y a 3 semaines",
+          "text": "Nous avons passé un très bon séjour dans une roulotte dans ce domaine, un vrai havre de paix. L’endroit est vraiment au calme, parfait pour se reposer et profiter de la nature. Le domaine dispose d une piscine, nous avons bien aimé le snack, ainsi que le parc avec les ânes et l alpaga qui a beaucoup plu aux enfants com"
+        },
+        {
+          "author": "Jacqueline LEGON",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Cadeau séjour insolite en roulotte. Tout était parfait. La roulotte était très propre et le cadre très agréable pour un séjour dans la nature. Situation géographique bien adaptée pour visite les sites touristiques environnants (Grotte Chauvet, Pont d'Arc, Balazuc, Aigueze, ....). Hôte très à l'écoute, nous avons modifi"
+        },
+        {
+          "author": "Jackie M",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Très agréable séjour de 3 nuits dans une roulotte du domaine de Saint Cerice. L'endroit est très calme, beaucoup de verdure, pas de promiscuité et le personnel est très sympathique. Le seul et adorable bruit est le chant des oiseaux, que demander de plus ? Les roulottes sont super bien équipées, et le top, on vous livr"
+        },
+        {
+          "author": "christian lyonnet",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Séjour à l’occasion d’une sortie en famille. Nous avons apprécié le cadre sublime du domaine, le calme, les équipements et la qualité des hébergements et couchage. Repas délicieux au snack, petits déjeuner deposés devant nos hébergements, personnels et gérant super sympa, nous y reviendrons à coup sûr pour prolonger l'"
+        }
+      ]
+    },
+    {
+      "name": "Cabanes de Labrousse",
+      "area": "Belsentes",
+      "dept": "07",
+      "distanceKm": 18,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique"
+      ],
+      "vibe": "Cabane insolite à Belsentes",
+      "rating": 4.6,
+      "reviews": 519,
+      "source": "Google Places",
+      "description": "Situées en montagne ardéchoise, ces cabanes perchées dans les arbres offrent une expérience insolite dans un cadre idyllique propice à la détente et aux balades nature. Les hébergements spacieux et bien conçus disposent de petits-déjeuners copieux et de paniers repas, avec un accueil attentif des propriétaires.",
+      "url": "http://www.cabanesardeche.com/",
+      "recentReviews": [
+        {
+          "author": "mylene quiquemelle",
+          "rating": 5,
+          "when": "il y a 2 semaines",
+          "text": "un rêve d'enfant devenu réalité. Qui n'a pas rêver de dormir dans une cabane à 7m de hauteur. Grace à la gentillesse des hôtes, nous avons pu le faire. Accueil super, une réception plus que parfaite, un excellent repas et petit déjeuner. Si vous voulez vous déconnecter des tracas de la vie, c'est l'endroit parfait."
+        },
+        {
+          "author": "Syl B",
+          "rating": 4,
+          "when": "il y a 2 semaines",
+          "text": "SA FAIT LA DEUXIÈME FOIS QU ON VIENt la première c était les anciens propriétaires, on avait eu le pot de l amitié, un petit cadeau de bienvenue. La vous avez repris ,on avait pas tout sa comme la première fois. Le séjour était très bien ,la cabane aussi était bien. LE déjeuner bien"
+        },
+        {
+          "author": "nathalie terras",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Très bel accueil de Cécile et Stéphane. Les cabanes sont spacieuses, très propres. Les paniers repas et petit-déjeuners parfaits. Endroit idyllique pour un repos après de belles balades dans ces belles montagnes d'Ardèche. Et petit plus détente au Spa. Ne pas hésiter. A découvrir. Nous reviendrons c'est sûr."
+        },
+        {
+          "author": "Virginie “Virginie 12” Hascoet",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Que rêver de mieux que de réaliser un rêve de gosses avec ses enfants. Les cabanes sont magnifiques et bien conçues. Le calme et le silence vous offre une réelle déconnexion. Les petits déjeuners sont copieux et excellents. Nos enfants ont adoré les cabanes, la chasses au trésor et les jeux mis à disposition. Merci à S"
+        },
+        {
+          "author": "S2K Skayz",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Nous avons été très bien accueilli par les gérants. La petite cabane Pod est super mignonne et suffit largement pour 2 personnes. Nous avons eu un peu froid pendant la nuit mais par notre faute car nous avons complètement oublié de prendre des affaires bien chaude. Le repas était délicieux et largement suffisant ainsi "
+        }
+      ]
+    },
+    {
+      "name": "Nuits D'y Cîmes",
+      "area": "Jaunac",
+      "dept": "07",
+      "distanceKm": 22,
+      "features": [
+        "Spa ou bain nordique",
+        "Terrasse privative",
+        "Vue dégagée",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Jaunac",
+      "rating": 4.8,
+      "reviews": 387,
+      "source": "Google Places",
+      "description": "Hébergements insolites en bulle et dôme dans la nature ardéchoise, permettant de dormir sous le ciel avec vue sur les levers et couchers de soleil. Cadre isolé en pleine montagne avec équipements de confort comme lit chauffant et accueil chaleureux.",
+      "url": "https://www.nuitsdycimes.fr/",
+      "recentReviews": [
+        {
+          "author": "Françoise V",
+          "rating": 5,
+          "when": "il y a 2 semaines",
+          "text": "Nous avons passé une nuit dans le pavillon Prairie ; c'est une expérience sympathique avec coucher et lever du soleil et de la lune garantis ! La vue sur Le Cheylard est incroyable ; la route d'accès est ... ardéchoise . Nous avons apprécié le Spa en pleine nature, l'apéro champagne, et le repas panier très bon ainsi q"
+        },
+        {
+          "author": "Bélinda Duvillard",
+          "rating": 5,
+          "when": "il y a 2 semaines",
+          "text": "Une expérience inoubliable au cœur de la nature en Ardèche ! Nous avons adoré dormir en bulle, dans ce cocon douillé avec en + un lit chauffant et plaid en disposition couleur rose bonbon parfait avec le thème de la bulle la Romance ! Nous avons eu la chance de voir les étoiles et 1 étoile filante !!! L'accueil au top "
+        },
+        {
+          "author": "Romy TD",
+          "rating": 5,
+          "when": "il y a 2 semaines",
+          "text": "Expérience juste merveilleuse !!! Un grand merci pour l’accueil chaleureux , le cadre idyllique , loin de tout. Nous avons pris le dôme céleste avec un apéro / repas /vin . la vue le soir et le matin 🤩 , la déco , la literie exceptionnelle, le petit déjeuner exquis , les 30 min de jacuzzi, tout y est. Un grand merci \ud83d"
+        },
+        {
+          "author": "Seve Rine",
+          "rating": 4,
+          "when": "il y a 2 mois",
+          "text": "Chouette nuit insolite sous bulle ! Nous avons eu la chance d'avoir une météo exceptionnelle pour notre weekend, ce qui fait que nous avons pu profiter de tout les ciels : coucher et lever de soleil (orientation de la bulle lever de soleil) et d'une belle nuit . La lune ayant un peu volé la vedette aux étoiles - autre "
+        },
+        {
+          "author": "Cecile Buffat",
+          "rating": 5,
+          "when": "il y a une semaine",
+          "text": "Une nuit sous les étoiles !!Quelle merveilleuse aventure !!! Nous avons a.d.o.r.é !!💐🥰 L'accueil, le panier apéro, la bulle, le p'tit dej, que du bonheur ! Nous reviendrons !! Avec, si possible, une nuit d'orage !!☺️ 😋 N'hésitez à vivre cette belle expérience au top !!! Cécile et Thierry"
+        }
+      ]
+    },
+    {
+      "name": "Les Cabanes perchées du Safari de Peaugres",
+      "area": "Peaugres",
+      "dept": "07",
+      "distanceKm": 59,
+      "features": [
+        "Cabane perchée",
+        "Vue dégagée",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Peaugres",
+      "rating": 4.8,
+      "reviews": 376,
+      "source": "Google Places",
+      "description": "Cabanes perchées confortables et bien équipées situées dans le parc animalier du Safari de Peaugres en Ardèche. Hébergement insolite avec observation des loups et ours, animations nature et repas inclus, accueil et service apprécié.",
+      "url": "https://lesnuits.safari-peaugres.com/",
+      "recentReviews": [
+        {
+          "author": "Marco",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Cabane avec de la place, bien chauffée, repas raclette suffisant. Personnels à l'écoutent , Parc propre , les lumières la nuits c'est magnifique . Les soigneurs au top pour le nourrissage des loups et ours. Bien expliqué et on donne la nourriture aux animaux. Accés au parc le lendemain matin avant l'ouverture au public"
+        },
+        {
+          "author": "YM G!",
+          "rating": 5,
+          "when": "il y a 2 semaines",
+          "text": "Super accueil, et cadre genial. Notre cabane perchée était très bien équipée, propre, et confortable. Nous avons assisté a une animation sympa autour des ours noirs et des loups. La nuit bercée par le hurlement des loups en prime..."
+        },
+        {
+          "author": "Jérémy De Jésus",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Quelle expérience incroyable en famille !! Des souvenirs pleins les yeux pour nos petits loulous qui étaient aux anges. On recommande les cabanes perchées, appartement très propre, un service au top, un repas excellent vous attend dans le frigo à votre arrivée, et un petit déjeuner vous attends sur au bas de votre port"
+        },
+        {
+          "author": "Camille C.",
+          "rating": 4,
+          "when": "il y a 3 mois",
+          "text": "La cabane est très mignonne. Nous étions 5 et pour une nuit on ne s'est pas formalisées du manque de place. Vu le prix, je suis un peu étonnée d'avoir eu une chasse d'eau défaillante, une porte d'entrée avec la poignée qui tournait dans le vide et une machine à café avec laquelle il fallait batailler pour avoir un café"
+        }
+      ]
+    },
+    {
+      "name": "La Bergerie du Plateau, chambres d'hôtes, gite,…",
+      "area": "Cros-de-Géorand",
+      "dept": "07",
+      "distanceKm": 35,
+      "features": [
+        "Spa ou bain nordique",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Cros-de-Géorand",
+      "rating": 4.6,
+      "reviews": 330,
+      "source": "Google Places",
+      "description": "Situé en Ardèche, ce site propose des hébergements insolites en pleine nature avec des chambres spacieuses et bien décorées. L'établissement est apprécié pour l'accueil chaleureux des hôtes et les repas faits maison, dans un cadre idéal pour se ressourcer et explorer les balades environnantes.",
+      "url": "http://www.labergerieduplateau.com/",
+      "recentReviews": [
+        {
+          "author": "FORT 4X4 Equipement et suspensions 4X4",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Un grand merci à Perrine, Christophe et Antoine pour leur accueil si chaleureux. Un merveilleux lieu pour entamer cette nouvelle année 2026 et se ressourcer ! Dépaysement assuré dans la cabane de Merlin, au milieu de tous ces animaux de ferme. Perrine étant une excellente cuisinière, nous revenons avec quelques kilos d"
+        },
+        {
+          "author": "Fred Alonso",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "On aurait bien mis 6 étoiles mais c'est limité à 5.. accueil au top du top , chambre super confort, site riche de terroir et de valeurs, balades environnantes magnifiques, cuisine authentique et généreuse, le tout avec le sourire et sans prise de tête. Bravo à Perrine et Christophe de cultiver cet état d'esprit et ce s"
+        },
+        {
+          "author": "Valerie Cassecuelle",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Très belle étape 🤩! Emplacement exceptionnel. Perrine et son mari nous ont offert un super accueil. Belles chambres spacieuses, bien décorées et très propres. Dinner fait maison, copieux et délicieux. Idem pour le petit déjeuner. Nous reviendrons avec plaisir !"
+        },
+        {
+          "author": "Océane FAURIE",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Un séjour vraiment agréable ! Les hôtes sont très accueillants, chaleureux et aux petits soins pour leurs clients. Ils prennent le temps de discuter et donnent de précieux conseils sur les activités et lieux à découvrir aux alentours. On s’y sent comme à la maison ! Les repas sont excellents, l’ambiance est conviviale "
+        },
+        {
+          "author": "alexandra cobo-diez",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Superbe petit weekend en amoureux au calme dans ce magnifique dôme. Les hôtes sont super accueillant, gentils , dévoués . Nous avons pris le repas du soir et la formule picnic pour le lendemain midi et tout était parfait , bon et super frais Superbe endroit au calme Un grand merci et à très bientôt Alexandra et Sébasti"
+        }
+      ]
+    },
+    {
+      "name": "Le Mas du Pestrin, hébergements",
+      "area": "Meyras",
+      "dept": "07",
+      "distanceKm": 24,
+      "features": [
+        "Spa ou bain nordique"
+      ],
+      "vibe": "Cabane insolite à Meyras",
+      "rating": 4.9,
+      "reviews": 227,
+      "source": "Google Places",
+      "description": "Les hébergements insolites, notamment des yourtes, sont immergés dans un environnement forestier calme et magnifique. Le lieu propose également un spa, des massages bien-être et une piscine, avec un accueil réputé pour sa bienveillance.",
+      "url": "http://lemasdupestrin.com/",
+      "recentReviews": [
+        {
+          "author": "Louise B",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Un lieu cerclé de forêts et de nature d'une grande beauté, des hôtes d'une rare prévenance, pleins de bienveillance et d'attentions, une yourte confortable comme un cocon au coeur de l'hiver. Nous avons vécu trois jours magiques et hors du temps et nous reviendrons sans hésiter ! Anne et Jean-François un grand merci à "
+        },
+        {
+          "author": "Matthieu Weibel",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Nous sommes venus à 3 familles pour une semaine en août, nous avons passé un moment très agréable. Les logements insolites ont été plébiscités par nos enfants, nous avons dormi dans la yourte, au frais la nuit, malgré la période de canicule. La piscine a été très utile! Nos hôtes ont été très accueillants et chaleureux"
+        },
+        {
+          "author": "Hyacinthe Duclos",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Grand merci à Anne et Jean-François pour leur chaleureux accueil et leur mise en synergie humaine de tous les bénéficiaires de ce lieu magique ; un lieu qui offre une reconnexion à notre âme d'enfant 😊 avec des hébergements créatifs et une nature magnifique (dont un chêne majestueux). Merci pour pour ces très beaux mo"
+        },
+        {
+          "author": "Mireille Valantin",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Un lieu calme , agréable dans un cadre champêtre et original.Si on y rajoute un accueil chaleureux, la petite attention à notre arrivée, nous avions tous les ingrédients pour un séjour réussi . Adresse à recommander sans hésitation ❤️"
+        },
+        {
+          "author": "nadege giren",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Nous avons passé 2 formidables nuits en yourte jean François est un hôte exceptionnel avec de grandes valeurs humaines et les massages de Nanou sont exceptionnels et tres professionnels Nous recommandons fortement cet endroit hors du temps De plus un tarif très attractif pour les prestations proposées Merci à vous de n"
+        }
+      ]
+    },
+    {
+      "name": "Natura Lodge Yourtes Cabanes Roulotte Bulle Avion…",
+      "area": "Barjac",
+      "dept": "30",
+      "distanceKm": 52,
+      "features": [
+        "Cabane perchée",
+        "Terrasse privative"
+      ],
+      "vibe": "Cabane insolite à Barjac",
+      "rating": 4.8,
+      "reviews": 250,
+      "source": "Google Places",
+      "description": "Domaine nature proposant des hébergements insolites (yourtes, cabanes, roulottes) immergés en pleine verdure, à seulement dix minutes de marche du village de Barjac. La propriété offre piscine, petit déjeuner diversifié et un accueil personnalisé du couple de propriétaires.",
+      "url": "https://www.ardeche-detente.com/",
+      "recentReviews": [
+        {
+          "author": "Petit Sosio (Sosio)",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Accueil chaleureux par le couple qui gère très bien ce lieux près d’un village très sympathique Repos complet dans un cadre de verdure Piscine superbe avec grande terrasse Le temps clément nous a permis de faire plouf pourtant mi-septembre repas pris dehors Les paniers apéritifs champêtres copieux avec champagne pour n"
+        },
+        {
+          "author": "Jeanga Parraga",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Nous avons passé 2 nuits dans la yourte Ourlan Bator, un lit très confortable, déco magnifique !! Le lieu est très agréable, Marina et Yannick nos hôtes au top du top! Petit déjeuner diversifié, rien à dire c’est parfait, nous reviendrons c’est sûr!!"
+        },
+        {
+          "author": "oriane dojard",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Nous avons réservé le domaine pour 37 personnes et avons passé un weekend magique et hors du temps! La beauté des lieux, le calme, le confort des hébergements, la discrétion des propriétaires et les facilités pour un grand groupe nous ont donné à tous l'envie de revenir. Merci beaucoup!"
+        },
+        {
+          "author": "Rodrigo Pivoto",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Hébergement au cœur de la nature, mais à seulement dix minutes de marche agréable de Barjac. Yannick et sa femme adorable ont vraiment tout fait pour que notre séjour soit au top, du premier instant jusqu’au départ. Petit-déjeuner simple mais délicieux, avec d’excellents produits locaux. N’hésitez pas à leur demander c"
+        },
+        {
+          "author": "Sandrine Boegli",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Nous avons passé 2 nuits dans la tente bulle suspendue dans les arbres ! Très belle expérience que je recommande ! Service au top, salle de bain privative à qq mètres, petits déjeuners copieux, tout ça au contact de la nature et dans le calme. Esprit de partage très apprécié ! On s’y sens BIEN ! Je recommande"
+        }
+      ]
+    },
+    {
+      "name": "Bulles d'Olive",
+      "area": "Nyons",
+      "dept": "26",
+      "distanceKm": 64,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Vue dégagée"
+      ],
+      "vibe": "Cabane insolite à Nyons",
+      "rating": 4.9,
+      "reviews": 216,
+      "source": "Google Places",
+      "description": "Hébergement insolite composé de bulles transparentes et de cabanes tout confort, équipées de salle de bain privative et de petit-déjeuner inclus. Situé en pleine nature en Ardèche, ce lieu offre un cadre verdoyant et paisible avec accès à piscine et jacuzzi, géré par un couple accueillant et professionnel.",
+      "url": "http://www.bullesdolive.fr/",
+      "recentReviews": [
+        {
+          "author": "Serge Kottelat",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Très jolie expérience que ces 2 nuits passées chez Bulles d'Olive. La Bulle est bien organisée avec un lit confortable et une salle de bain privative juste à côté. Le lieu est joliment entretenu et les propriétaires sont très charmants et accueillants. Les petits-déjeuners maison sont copieux et délicieux, nous les avo"
+        },
+        {
+          "author": "chantal guinamand",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Nous venons de passer une nuit dans la bulle Provence, entouré d'arbres, de chants d'oiseaux et de silence absolu. Merci aux propriétaires de leur gentillesse, de leur accueil chaleureux. Nous avons passé un excellent séjour. Nous avons trouvé la qualité et la quantité extraordinaire. Dîner copieux et petit-déjeuner ex"
+        },
+        {
+          "author": "Le Paradisier Café",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Lieu idyllique, l’accueil de Vincent et Emilie est très pro et chaleureux. Nous étions dans la cabane Céleste, grand confort, très propre. Vue incroyable! Le petit déjeuner était délicieux et totalement végan pour répondre à nous besoin."
+        },
+        {
+          "author": "Cris Veirun",
+          "rating": 5,
+          "when": "il y a 11 mois",
+          "text": "Une véritable parenthèse enchantée au cœur de la nature 🌳✨ Nous avons passé une nuit et moment incroyable dans une bulle lover, un vrai cocon paisible, parfaitement intégré à un cadre verdoyant et apaisant. Chaque bulle est bien pensée avec son espace totalement privatisé, intime et reposante. L’accueil a été chaleure"
+        },
+        {
+          "author": "Ida Godineau",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Une petite bulle de douceur au sein de la Provence. Logement confortable et parfaitement propre, à l’écart des autres respectant l’intimité de chacun. Nous avons profité du panier apéritif rempli de délices locaux et du petit déjeuner très copieux. Accueil chaleureux des hotes humains et félins. Nous recommandons vivem"
+        }
+      ]
+    }
   ]
 };

@@ -2,6 +2,7 @@
 // Filtres + détection outils + détection conciergerie. Pipeline v2.1.
 
 import { resolveMx } from 'node:dns/promises';
+import net from 'node:net';
 
 // ─── BLACKLIST ──────────────────────────────────────────────────────────
 // Domaines à exclure : trop gros (DR>70 généralement), concurrents directs Enomia,
@@ -289,6 +290,107 @@ export async function hasValidMX(domain) {
     mxCache.set(clean, false);
     return false;
   }
+}
+
+// ─── VÉRIFICATION SMTP (RCPT TO) ────────────────────────────────────────
+// hasValidMX dit "le domaine a un serveur mail". verifyMailbox va plus loin :
+// se connecte au MX et demande "acceptes-tu CETTE boîte ?" (RCPT TO).
+// Attrape les 550 5.1.1 (boîte inexistante) que le seul check MX laisse passer
+// (cas réel : contact@gcb-immo.fr, contact@naps-immo.com — bouncés le 2026-06-15).
+//   status 'valid'   : RCPT accepté (250/251)                  → envoyer
+//   status 'invalid' : rejet dur "no such user" (550/551/553   → NE PAS envoyer
+//                      avec enh 5.1.x, jamais 5.7.x = policy)
+//   status 'unknown' : greylist/timeout/catch-all/policy/conn  → envoyer quand même
+//                      (on ne sacrifie pas un prospect sur un doute ; Gmail relivre)
+const rcptCache = new Map();
+
+export async function verifyMailbox(email, opts = {}) {
+  const timeout = opts.timeout ?? 8000;
+  const from = opts.from ?? 'marc@enomia.app';
+  const helo = opts.helo ?? 'enomia.app';
+  const key = (email || '').toLowerCase();
+  if (!key || !key.includes('@')) return { status: 'invalid', code: 'NO_AT', reason: 'pas une adresse' };
+  if (rcptCache.has(key)) return rcptCache.get(key);
+
+  const domain = key.split('@')[1];
+  let mx;
+  try {
+    mx = await Promise.race([
+      resolveMx(domain),
+      new Promise((_, rej) => setTimeout(() => rej(new Error('mx timeout')), 5000)),
+    ]);
+  } catch {
+    mx = [];
+  }
+  if (!Array.isArray(mx) || mx.length === 0) {
+    const r = { status: 'invalid', code: 'NO_MX', reason: 'aucun MX' };
+    rcptCache.set(key, r);
+    return r;
+  }
+  mx.sort((a, b) => a.priority - b.priority);
+  const host = mx[0].exchange;
+
+  const result = await new Promise((resolve) => {
+    const socket = net.connect({ host, port: 25 });
+    socket.setTimeout(timeout);
+    let buf = '';
+    let step = 'greet';
+    let settled = false;
+
+    const finish = (r) => {
+      if (settled) return;
+      settled = true;
+      try { socket.write('QUIT\r\n'); } catch { /* socket déjà fermé */ }
+      socket.destroy();
+      resolve(r);
+    };
+    const unknown = (code, reason) => finish({ status: 'unknown', code, reason });
+    const send = (cmd) => { try { socket.write(cmd + '\r\n'); } catch { /* idem */ } };
+
+    socket.on('timeout', () => unknown('TIMEOUT', 'probe timeout'));
+    socket.on('error', (e) => unknown('CONN_ERR', e.code || e.message));
+    socket.on('close', () => { if (!settled) unknown('CLOSED', 'connexion fermée'); });
+
+    socket.on('data', (data) => {
+      buf += data.toString('utf8');
+      let nl;
+      while ((nl = buf.indexOf('\n')) !== -1) {
+        const line = buf.slice(0, nl).replace(/\r$/, '');
+        buf = buf.slice(nl + 1);
+        const code = parseInt(line.slice(0, 3), 10);
+        const isFinal = line[3] === ' ' || line.length <= 3; // "250-" = suite, "250 " = fin de réponse
+        if (!isFinal) continue;
+        handle(code, line);
+        if (settled) return;
+      }
+    });
+
+    function handle(code, line) {
+      if (step === 'greet') {
+        if (code !== 220) return unknown('NO_220', line.slice(0, 50));
+        step = 'ehlo'; send('EHLO ' + helo);
+      } else if (step === 'ehlo') {
+        if (code !== 250) { step = 'helo'; send('HELO ' + helo); return; } // fallback HELO
+        step = 'mail'; send('MAIL FROM:<' + from + '>');
+      } else if (step === 'helo') {
+        if (code !== 250) return unknown('EHLO_FAIL', line.slice(0, 50));
+        step = 'mail'; send('MAIL FROM:<' + from + '>');
+      } else if (step === 'mail') {
+        if (code !== 250) return unknown('MAIL_FAIL', line.slice(0, 50));
+        step = 'rcpt'; send('RCPT TO:<' + key + '>');
+      } else if (step === 'rcpt') {
+        if (code === 250 || code === 251) return finish({ status: 'valid', code: String(code), reason: 'RCPT accepté' });
+        const enh = (line.match(/\b5\.\d\.\d+\b/) || [])[0] || '';
+        const hardInvalid = [550, 551, 553].includes(code);
+        const policyish = enh.startsWith('5.7'); // access denied / anti-spam → pas un verdict sur la boîte
+        if (hardInvalid && !policyish) return finish({ status: 'invalid', code: String(code) + (enh ? ' ' + enh : ''), reason: line.slice(0, 90) });
+        return unknown(String(code) + (enh ? ' ' + enh : ''), line.slice(0, 90)); // 450/451/452 greylist, 552, 5.7.x, etc.
+      }
+    }
+  });
+
+  rcptCache.set(key, result);
+  return result;
 }
 
 // ─── DECODE ENTITÉS HTML ────────────────────────────────────────────────

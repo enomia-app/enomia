@@ -128,7 +128,9 @@ log(`  → auto-pitchables (blog + email valide) : ${autoPitchable.length}`);
 log(`  → à contacter MANUELLEMENT (pas blog ou pas d email) : ${toAdd.length - autoPitchable.length}`);
 
 if (WRITE && toAdd.length) {
-  const bak = CRM + '.bak-' + new Date().toISOString().slice(0, 19).replace(/[:T]/g, '');
+  // Backup nommé pour matcher .gitignore `data/backlinks-*.json` → ne salit jamais
+  // le working tree du Mac mini (sinon la sync launchd git-pull se bloque).
+  const bak = path.join(ROOT, 'data', `backlinks-${MONTH}-bak-${new Date().toISOString().slice(0, 19).replace(/[:T-]/g, '')}.json`);
   fs.copyFileSync(CRM, bak);
   for (const r of toAdd) { const { _dup, _emailStatus, ...clean } = r; backlog.candidates.push(clean); }
   fs.writeFileSync(CRM, JSON.stringify(backlog, null, 2));

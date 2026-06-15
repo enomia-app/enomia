@@ -7,7 +7,7 @@
     "villesParRun": 1
   },
   "conciergerie": {
-    "villesParRun": 3
+    "villesParRun": 4
   },
   "runsPerWeek": {
     "conciergerie": 3,
@@ -21,10 +21,10 @@
   },
   "_calcul": "pages/semaine = Σ (runsPerWeek[niche] × villesParRun[niche]). Garde-fou DUR dans gsc-cadence-apply.mjs : chaque niche clampée à [1,6] ET total hebdo plafonné à maxPagesPerWeek (sinon on redescend la niche la plus grosse). Actuel : 3×2 + 2×2 + 2×2 = 14/sem.",
   "lastDecision": {
-    "date": "2026-06-08",
+    "date": "2026-06-15",
     "by": "gsc-cadence-weekly",
-    "weeklyTotal": 13,
+    "weeklyTotal": 16,
     "guardHit": false,
-    "reason": "Conciergerie indexe bien (94.9%, +3 indexed hier) → augmenter à 3/run. Love-room et cabane : 0% indexation (32+8 pending non touchées par Google) → descendre à 1/run chacune pour ne pas surcharger Google et laisser les pages existantes s'indexer d'abord. Domaine jeune (2 mois), prudence justifiée."
+    "reason": "Conciergerie indexe très bien (96%+ taux, pending en baisse stable) et les nouvelles pages publiées (06-11 +3) sont indexées immédiatement → augmenter à 4/run. Love-room commence enfin à indexer (0%→45% en 3j) mais 18 pending restent : laisser Google rattraper à 1/run. Cabane reste bloqué à 0% (8 pages stuck) → rester à 1/run pour ne pas surcharger le crawl."
   }
 }

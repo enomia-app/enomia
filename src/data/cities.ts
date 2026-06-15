@@ -13268,6 +13268,570 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-12',
   },
+  {
+    slug: 'bayeux',
+    displayName: 'Bayeux',
+    region: 'Normandie',
+    regionSlug: 'normandie',
+    title: 'Conciergerie Bayeux Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Bayeux : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Bayeux (Bessin). Tarifs (20-25 %), services, avis, réglementation changement d'usage 2021, quartiers cathédrale, Tapisserie, plages du Débarquement.",
+    kwPrincipal: 'conciergerie bayeux',
+    kwSecondaires: [
+      'conciergerie airbnb bayeux',
+      'bessin location bayeux',
+      'la conciergerie du bessin',
+      'conciergerie normandie',
+      'location courte durée bayeux',
+      'meublé tourisme bayeux',
+    ],
+    population: 12659,
+    tourists: 500000,
+    activeListings: 380,
+    priceLow: 70,
+    priceHigh: 130,
+    occupancyRate: 64,
+    revpar: 50,
+    seasonality:
+      "Double saisonnalité touristique culturelle et mémorielle : pic estival juin-août porté par les plages du Débarquement (Omaha Beach, Arromanches, Pointe du Hoc à 15-30 min) et la fréquentation internationale (deux tiers de la clientèle de la Tapisserie sont étrangers), épaule mai-juin et septembre-octobre soutenue par les groupes scolaires américains et britanniques. Pic anniversaire 6 juin (D-Day) avec saturation hôtelière 50 km à la ronde et tarifs LCD multipliés par 2 à 3 sur 5 nuits. Hiver creux (novembre-février) compensé partiellement par les week-ends culturels et les marchés de Noël. Effet majeur 2025-2027 : la Tapisserie de Bayeux est fermée pour rénovation et extension depuis août 2025 (réouverture programmée 2027) — le Mémorial de la Bataille de Normandie et le MAHB absorbent en partie le flux, mais le marché LCD subit une perte d'un tiers de la fréquentation muséale pendant la fermeture.",
+    rankNational: 28,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Bayeux**, au **cœur historique autour de la cathédrale Notre-Dame**, près du **musée de la Tapisserie**, sur les **quais de l'Aure** ou dans le **Bessin** côté plages du Débarquement, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **clientèle internationale** (deux tiers d'étrangers à la Tapisserie, anglophones et germanophones essentiellement), la **réglementation locale durcie** (changement d'usage obligatoire depuis septembre 2021, plafond de 2 meublés par propriétaire et 25 % d'un même immeuble), la **fermeture de la Tapisserie 2025-2027** qui rebat les cartes et la poignée d'acteurs locaux qui se partagent le marché, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players bayeusins (Bajobreak, La 21ème Planche, La Conciergerie du Bessin), les acteurs multi-zones Normandie (Rubis, Beauséjour) et les réseaux nationaux (Guest Adom) ?",
+    marketIntro:
+      "Bayeux est un **marché LCD touristique culturel et mémoriel à clientèle internationale**, totalement atypique pour une commune de **12 659 habitants** : la **Tapisserie de Bayeux** (UNESCO Mémoire du Monde, créée vers 1077) a accueilli **429 933 visiteurs en 2024**, un record absolu pour un musée municipal de cette taille en France. Le **Mémorial de la Bataille de Normandie** (97 000 visiteurs 2024) et le **MAHB - Musée d'Art et d'Histoire Baron Gérard** (37 000) complètent l'offre, soit **plus de 500 000 visiteurs cumulés** sur l'ensemble des musées municipaux. La ville compte environ **380 annonces actives** sur Airbnb avec un **tarif moyen** autour de **95 €/nuit** sur l'année — sensiblement plus élevé que la moyenne nationale des villes de cette strate.\n\n**Effet Tapisserie fermée 2025-2027.** La Tapisserie est **fermée depuis août 2025** pour un chantier de rénovation et d'extension du musée (réouverture programmée 2027). La fréquentation 2025 a déjà été tronquée — 365 000 visiteurs sur janvier-août avec un pic de 3 200 visiteurs/jour les dernières semaines — et le marché LCD bayeusin est en train de digérer cette perte temporaire d'attractivité. Le Mémorial de la Bataille de Normandie (qui ouvre 2025-2027 sur les **80 ans du Débarquement**) et le MAHB absorbent une partie du flux, mais les annonces strictement positionnées « à 2 minutes à pied de la Tapisserie » doivent revoir leur narratif (replonger sur les plages du Débarquement, le centre historique, le MAHB, les marchés normands).\n\n**Plages du Débarquement à 15-30 minutes.** **Omaha Beach** (15 min), **Arromanches et son port artificiel Mulberry** (20 min), la **Pointe du Hoc** (25 min), le **cimetière américain de Colleville-sur-Mer** (15 min) : Bayeux est le camp de base idéal pour le tourisme mémoriel D-Day, premier secteur générateur de nuitées dans le Bessin avec une clientèle américaine, britannique, canadienne, néerlandaise structurellement présente d'avril à octobre. Les anniversaires du 6 juin (D-Day) génèrent une saturation hôtelière 50 km à la ronde et des tarifs LCD multipliés par 2 à 3 sur 5 nuits.\n\n**Prix au m² intermédiaires accessibles.** Comptez **2 487-2 720 €/m² en moyenne** à Bayeux en 2026 — un niveau **très accessible pour un marché LCD à clientèle internationale**. Le **centre historique** autour de la cathédrale Notre-Dame et de la rue Saint-Martin oscille entre **3 200 € et 4 145 €/m²** (cible Tapisserie et tourisme culturel). Les **quartiers résidentiels** (Saint-Vigor, Saint-Loup, faubourg de la gare) sont **entre 1 800 € et 2 600 €/m²**. Un T2 centre historique se trouve dès **100 000-150 000 €**, ce qui place Bayeux parmi les marchés LCD à clientèle internationale les plus accessibles à l'achat en France.",
+    conciergeries: [
+      {
+        name: 'Bajobreak',
+        url: 'https://www.bajobreak.fr/',
+        commission: '20 % (80 % reversé)',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'Pure-player Bayeux et Bessin, multi-plateformes',
+        description:
+          "Bajobreak (de « Bajocasse », natif de Bayeux, et « Break ») est une agence pure-player **Bayeux et alentours** fondée par **Clément Postel-Cautru**. Le modèle économique affiché est lisible : **80 % des revenus locatifs reversés au propriétaire** (soit une commission équivalente à environ **20 %**), le ménage étant refacturé au voyageur. Services : check-in/check-out, ménage professionnel inter-réservations, guide pratique personnalisé, service client 24/7, maintenance et dépannages, référencement multi-plateformes (Airbnb, Booking, VRBO, Homeaway), services para-hôteliers à la carte. Pertinente pour un propriétaire d'appartement Bayeux centre historique ou de maison sur la couronne du Bessin qui veut un acteur 100 % focalisé sur la zone, et un modèle commission transparent à 20 %.",
+      },
+      {
+        name: 'La Conciergerie du Bessin',
+        url: 'https://laconciergeriedubessin.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 9,
+        biensGeres: 30,
+        specialty: 'Agence immobilière + conciergerie, 5 Rue de Tilly Bayeux',
+        description:
+          "La Conciergerie du Bessin est implantée **5 Rue de Tilly à Bayeux** (à 200 mètres de la cathédrale) et combine **agence immobilière classique et conciergerie LCD** — un positionnement hybride courant sur les marchés patrimoniaux où le propriétaire investisseur cherche un guichet unique de l'acquisition à la mise en location. Tarification sur devis. Membre du réseau CLF (réseau de conciergeries indépendantes franchisées). Services : gestion d'annonces, accueil voyageurs, ménage, maintenance, services aux propriétaires (états des lieux, déclarations meublé de tourisme, accompagnement changement d'usage). Pertinente pour un propriétaire qui prépare un achat dans le Bessin avec une stratégie LCD claire et veut un interlocuteur capable de couvrir l'acquisition, le passage en changement d'usage et la mise en gestion en un seul contact.",
+      },
+      {
+        name: 'Rubis Conciergerie',
+        url: 'https://www.conciergerierubis.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 11,
+        biensGeres: 15,
+        specialty: 'Premium Bessin / Cotentin, Saint-Vaast-la-Hougue à Bayeux',
+        description:
+          "Rubis Conciergerie est positionnée **premium personnalisé** sur l'axe **Saint-Vaast-la-Hougue — Port-en-Bessin — Isigny-sur-Mer — Bayeux**, couvrant la côte est du Cotentin et le Bessin avec une approche sélective (15-20 biens maximum, accompagnement investisseurs). Tarification sur devis selon le bien et le niveau de service. Services : gestion complète A-Z, accompagnement particuliers et investisseurs, service client personnalisé. Communication essentiellement directe (email conciergerierubis@gmail.com, téléphone 07.62.47.86.85). Pertinente pour un propriétaire d'une maison de standing dans le Bessin ou le Cotentin Est (vue mer, ancien presbytère, longère normande rénovée) qui veut un interlocuteur unique haut de gamme à l'écoute des spécificités de chaque bien, et accepte un volume de gestion réduit en échange d'une qualité de service supérieure.",
+      },
+      {
+        name: 'La 21ème Planche',
+        url: 'https://www.la21emeplanche.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 12,
+        biensGeres: 14,
+        specialty: 'Conciergerie privée Bayeux, depuis 2018, 10 000+ voyageurs',
+        description:
+          "La 21ème Planche est une **conciergerie privée Bayeux** implantée **4 rue William Kennedy Ferguson** (cœur du centre historique, à 5 minutes de la cathédrale). **Depuis 2018**, elle revendique plus de **10 000 voyageurs internationaux accueillis** sur ses biens en gestion. Le nom fait référence à la 21ème planche de la Tapisserie (la légende de Harold). Services : gestion d'annonces Airbnb et Booking, accueil personnalisé multilingue, entretien, maintenance, coordination de prestataires. Positionnement écoresponsable mis en avant sur le site. Pertinente pour un propriétaire de bien centre historique qui veut un acteur 100 % focalisé sur l'expérience voyageur (clientèle internationale culturelle), avec un track record solide sur la rotation Tapisserie / plages du Débarquement.",
+      },
+      {
+        name: 'Beauséjour Conciergerie',
+        url: 'https://www.beausejour-conciergerie.com/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 35,
+        biensGeres: 40,
+        specialty: 'Family business, Bayeux + Caen + Deauville + Côte de Nacre',
+        description:
+          "Beauséjour Conciergerie est une **entreprise familiale** qui couvre une zone large : **Bayeux, Caen, Deauville**, et la **Côte de Nacre** (Courseulles-sur-Mer, Bernières-sur-Mer, Luc-sur-Mer, Graye-sur-Mer). Commission affichée à **25 % du montant de chaque séjour**. Services : gestion complète d'annonces Airbnb, accueil et check-in/check-out, entretien et nettoyage, assistance voyageurs 7j/7, shooting photo professionnel, optimisation tarifaire selon saisonnalité, sélection et analyse des profils voyageurs. Contact : 02 31 99 20 01. Pertinente pour un propriétaire d'un bien sur la Côte de Nacre ou la Côte Fleurie qui veut un interlocuteur unique capable d'arbitrer entre les sous-marchés (Bayeux mémoriel, Caen culturel, Deauville premium) selon les périodes — ou un investisseur multi-biens normands à la recherche d'un acteur transversal.",
+      },
+      {
+        name: 'Guest Adom Bayeux',
+        url: 'https://www.guest-adom.com/conciergerie-airbnb-bayeux/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.2,
+        reviews: 15,
+        biensGeres: 18,
+        specialty: 'Réseau national franchisé, expertise services à la personne',
+        description:
+          "Guest Adom est un **réseau national franchisé** présent à Bayeux via une agence locale. Commission autour de **25 %**, gestion appuyée sur l'expertise services à la personne et hôtellerie. Package : prise en charge complète des biens, check-in/check-out, ménage, maintenance, assistance voyageurs. Avis clients mitigés sur certaines plateformes — qualité variable selon les franchises. Pertinente pour un propriétaire investisseur à distance (Parisien, étranger) qui privilégie un grand réseau lisible et un suivi standardisé à un acteur pure-player local. Bonne option pour une stratégie multi-biens dans plusieurs villes (Bayeux + autres villes du réseau Guest Adom), pour mutualiser le contact franchise et avoir un reporting cohérent.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre historique / Cathédrale Notre-Dame',
+        pricePerNight: '90-145 €',
+        occupancy: 68,
+        description:
+          "Cœur historique de Bayeux, cathédrale Notre-Dame XIe-XIIIe, rue Saint-Martin, place du Général-de-Gaulle. Cible touristique culturelle internationale (clientèle Tapisserie et D-Day). Prix au m² 3 200-4 145 €. T2 dès 110 000 €. Demande forte d'avril à octobre, pic anniversaire 6 juin. Effet fermeture Tapisserie 2025-2027 à arbitrer dans le positionnement.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Quartier Tapisserie / Saint-Loup',
+        pricePerNight: '85-125 €',
+        occupancy: 64,
+        description:
+          "Autour du musée de la Tapisserie (fermé 2025-2027) et du faubourg Saint-Loup, à 5 minutes à pied de la cathédrale. Cible Tapisserie historiquement et MAHB / Mémorial de substitution pendant la fermeture. Prix au m² 2 800-3 500 €. T2 dès 95 000 €. Repositionnement marketing vers centre historique + plages D-Day recommandé.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Quais de l\'Aure / Saint-Patrice',
+        pricePerNight: '80-115 €',
+        occupancy: 62,
+        description:
+          "Quais le long de l'Aure, anciennes maisons à pans de bois réhabilitées, marché Saint-Patrice (samedi matin). Cible touristique authentique « vieux Bayeux ». Prix au m² 2 500-3 200 €. T2 dès 85 000 €. Demande couples et petites familles, séjours courts 2-3 nuits.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Faubourg Saint-Vigor / Saint-Jean',
+        pricePerNight: '70-100 €',
+        occupancy: 58,
+        description:
+          "Quartiers résidentiels nord et est, à 10-15 minutes à pied du centre. Prix au m² 2 000-2 600 €. T2 dès 75 000 €, maison T4 dès 180 000 €. Cible familles avec voiture pour rayonner sur les plages du Débarquement (Omaha à 15 min, Pointe du Hoc à 25 min). Bon compromis budget / rendement.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Pôle gare / Saint-Sulpice',
+        pricePerNight: '65-95 €',
+        occupancy: 56,
+        description:
+          "Quartier de la gare SNCF (Paris Saint-Lazare en 2h15, Caen en 20 min). Cible business semaine et clientèle culturelle low-budget. Prix au m² 1 800-2 400 €. T2 dès 70 000 €. Segment accessible avec ROI brut supérieur, à condition d'un effort de décoration pour compenser la distance au centre.",
+        roiBrut: '7 à 8,5 %',
+      },
+      {
+        name: 'Couronne Bessin / Port-en-Bessin / Arromanches',
+        pricePerNight: '100-180 €',
+        occupancy: 60,
+        description:
+          "Communes du Bessin côté mer (Port-en-Bessin 12 km, Arromanches 10 km, Saint-Côme-de-Fresné). Cible D-Day premium et long week-end pluri-générationnel. Prix au m² 2 800-4 000 €. Maison T4 vue mer dès 280 000 €. Marché estival fort (avril-octobre), prime « vue mer » sensible.",
+        roiBrut: '5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Bayeux applique un **dispositif local renforcé** sur les meublés de tourisme, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) et d'un **règlement municipal en vigueur depuis septembre 2021** fixant les conditions de changement d'usage.\n\n**Changement d'usage obligatoire pour résidence secondaire.** Toute location de résidence secondaire en meublé de tourisme à Bayeux est soumise à **autorisation préalable de changement d'usage**. Le règlement municipal fixe deux plafonds : **maximum 2 meublés par propriétaire** et **maximum 25 % d'un même immeuble** dédiés à la location courte durée. L'**autorisation est temporaire, délivrée pour 4 ans renouvelables**, ce qui impose au propriétaire d'anticiper le renouvellement et d'avoir une stratégie LCD viable sur la durée.\n\n**Enregistrement obligatoire via Décla Loc.** Tout meublé de tourisme à Bayeux doit être **déclaré en mairie** via la plateforme **declaloc.fr**. Un **numéro à 13 chiffres** est délivré et doit figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le 20 mai 2026, le portail national unique **Décla Loc** devient obligatoire sur l'ensemble du territoire. Plus aucun loueur ne pourra publier d'annonce sans numéro d'enregistrement valide.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. **Nouveauté 2026 :** plus aucun changement d'usage n'est délivré pour une **passoire thermique** — un DPE classé entre A et E est désormais exigé pour obtenir l'autorisation municipale.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur, particulièrement pertinent sur un marché bayeusin où la clientèle culturelle internationale valorise le classement.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Bayeux Intercom applique une taxe de séjour de **0,75 € à 3,50 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb et reversée à l'intercommunalité).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 90,
+      neighborhood: 'Centre historique / Cathédrale',
+      revenuBrut: 18500,
+      commissionRate: 0.22,
+      menageCount: 68,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'La fermeture de la Tapisserie de Bayeux entre 2025 et 2027 va-t-elle impacter mon Airbnb ?',
+        a: "Oui, c'est l'enjeu n° 1 du marché bayeusin sur 2025-2027. Le musée de la Tapisserie représentait 429 933 visiteurs en 2024 (record absolu) et deux tiers de clientèle internationale. Sa fermeture en août 2025 pour rénovation jusqu'à 2027 retire mécaniquement un volume substantiel de demande sur les annonces strictement positionnées « à 2 minutes à pied de la Tapisserie ». Effet réel : -10 à -15 % de fréquentation LCD attendue sur 2026 sur le centre historique (les chiffres exacts dépendront du report sur le Mémorial de la Bataille de Normandie et le MAHB). Trois adaptations à faire dès aujourd'hui : 1) repositionner le narratif de l'annonce sur les **plages du Débarquement** (Omaha 15 min, Arromanches 20 min, Pointe du Hoc 25 min) plutôt que sur la seule Tapisserie ; 2) cibler les **anniversaires D-Day** (6 juin chaque année, 80 ans en 2025-2027 attendus avec affluence majeure) qui restent indépendants du musée ; 3) miser sur les groupes scolaires américains et britanniques qui visitent les plages indépendamment du musée fermé. Bonne nouvelle : la réouverture en 2027 avec un musée agrandi devrait générer un effet réouverture fort, à anticiper dans les arbitrages d'achat.",
+      },
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Bayeux pour louer une résidence secondaire ?',
+        a: "Oui. Bayeux applique un règlement municipal en vigueur depuis septembre 2021 qui impose une autorisation préalable de changement d'usage pour toute résidence secondaire mise en location courte durée. Deux plafonds : maximum 2 meublés par propriétaire et maximum 25 % d'un même immeuble peuvent être dédiés à la location courte durée. L'autorisation est temporaire, délivrée pour 4 ans renouvelables. La démarche se fait via declaloc.fr, qui délivre aussi le numéro d'enregistrement à 13 chiffres obligatoire sur les annonces. Nouveauté 2026 : plus aucun changement d'usage n'est délivré pour une passoire thermique (DPE F ou G) — un DPE classé entre A et E est exigé. Si vous achetez à Bayeux dans l'objectif LCD, anticipez cette procédure dès le compromis : un refus d'autorisation peut survenir si le plafond de 25 % est déjà atteint dans votre immeuble. Demander un rendez-vous au service urbanisme avant de signer est une pratique de prudence. Sanctions loi Le Meur : 10 000 € pour défaut d'enregistrement, 20 000 € pour fausse déclaration, jusqu'à 50 000 € pour location au-delà du quota autorisé.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Bayeux sur l\'année ?',
+        a: "Un T2 de 38 m² bien placé au centre historique (autour de la cathédrale ou de la rue Saint-Martin), avec tarif moyen 85-95 €/nuit et occupation 62-68 %, génère typiquement un chiffre d'affaires brut de 17 000-21 000 € sur l'année à Bayeux. La double saisonnalité culturelle (Tapisserie / MAHB / Mémorial) et mémorielle (plages du Débarquement) lisse les revenus mieux que sur les marchés purement balnéaires (Honfleur, Deauville). Anniversaire D-Day (6 juin) génère un pic prix x2-x3 sur 5 nuits. Une maison T4 avec extérieur dans la couronne Bessin (Port-en-Bessin, Arromanches) peut atteindre 22 000-30 000 € avec une saisonnalité plus marquée juin-août. Net de la commission conciergerie (20-25 %), de la taxe foncière (~1 000 € sur un T2 bayeusin), des charges et du ménage, comptez un revenu disponible de 10 000-13 500 € sur le T2 et 14 000-19 000 € sur la maison T4 Bessin. Effet fermeture Tapisserie 2025-2027 : prévoir -10 à -15 % sur les annonces strictement « Tapisserie » à repositionner sur D-Day.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Bayeux ?',
+        a: "Les commissions à Bayeux s'étalent de 20 % (Bajobreak, modèle 80 % reversé) à 25 % TTC (Beauséjour Conciergerie, Guest Adom) en 2026, avec une moyenne de marché autour de 22-23 % TTC pour une formule complète. Rubis Conciergerie, La Conciergerie du Bessin et La 21ème Planche travaillent sur devis personnalisé. Le critère décisif au-delà du taux affiché sur un marché à clientèle internationale comme Bayeux est la capacité multilingue de l'équipe (anglais a minima, idéalement allemand et néerlandais) — les Anglo-Saxons et Néerlandais représentent les deux tiers des voyageurs de la Tapisserie et la majorité du tourisme D-Day. Demander au prestataire un exemple chiffré de tarification mensuelle annuelle sur un bien comparable, et la liste des langues parlées par l'équipe d'accueil avant signature. Sur 2025-2027, intégrer aussi la stratégie de l'agence pour absorber la fermeture Tapisserie (repositionnement narratif D-Day, ciblage groupes scolaires).",
+      },
+    ],
+    updatedAt: '2026-06-15',
+  },
+  {
+    slug: 'troyes',
+    displayName: 'Troyes',
+    region: 'Grand Est',
+    regionSlug: 'alsace',
+    title: 'Conciergerie Troyes Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Troyes : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Troyes. Tarifs (20-25 %), services, avis, réglementation zone tendue B1, changement d'usage 2020, quartiers du Bouchon, magasins d'usine.",
+    kwPrincipal: 'conciergerie troyes',
+    kwSecondaires: [
+      'conciergerie airbnb troyes',
+      'joya troyes',
+      'joya immobilier troyes',
+      'capitaine bnb troyes',
+      'location courte durée troyes',
+      'conciergerie location courte durée',
+    ],
+    population: 62088,
+    tourists: 2000000,
+    activeListings: 620,
+    priceLow: 60,
+    priceHigh: 100,
+    occupancyRate: 58,
+    revpar: 35,
+    seasonality:
+      "Triple saisonnalité atypique : pic shopping toute l'année dopé par les **magasins d'usine** Marques Avenue (Saint-Julien-les-Villas) et **McArthur Glen Troyes** (Sainte-Savine) — 8 millions de visiteurs cumulés annuels selon les opérateurs (premier pôle de magasins d'usine de France), tourisme culturel et patrimoine sur le **Bouchon de Champagne** (centre historique en forme de bouchon, classé Site Patrimonial Remarquable) avec ses pans de bois XVIe et ses 10 églises, et tourisme d'affaires régulier (préfecture Aube, UTT - Université de Technologie 3 000 étudiants, salons agroalimentaire). Pic juin-août pour les longues escapades shopping pluri-générationnelles, épaule mai et septembre soutenue par les soldes flottantes. Pic anniversaire « Marques Avenue » fin août / septembre (rentrée scolaire et collections automne).",
+    rankNational: 29,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Troyes**, dans le **Bouchon de Champagne** (centre historique classé), autour de la **cathédrale Saint-Pierre-et-Saint-Paul**, près de la **gare SNCF** ou à proximité des **magasins d'usine** (Marques Avenue à Saint-Julien-les-Villas, McArthur Glen à Sainte-Savine), que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **triple saisonnalité** (shopping magasins d'usine toute l'année, culturel Bouchon, business UTT et préfecture), la **réglementation locale durcie** (zone tendue B1 depuis octobre 2023, changement d'usage obligatoire depuis le 1er janvier 2020 pour toute résidence secondaire), les **prix au m² très accessibles** (1 600-1 800 €/m² moyens, parmi les plus bas de France pour une ville LCD) et la poignée d'acteurs locaux qui se partagent un marché en croissance, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players troyens (Joya, Capitaine BNB, Mon Groom, Mille et Une Nuitées), les acteurs multi-zones (Bonjourbnb Troyes-Dijon) et les spécialistes ménage internalisé (Zen Services) ?",
+    marketIntro:
+      "Troyes est un **marché LCD hybride shopping + culturel + business** porté par un atout massif et unique en France : **le premier pôle de magasins d'usine du pays**, avec **Marques Avenue** (Saint-Julien-les-Villas, environ 100 boutiques, **4 millions de visiteurs/an** revendiqués par l'opérateur) et **McArthur Glen Troyes** (Sainte-Savine, environ 120 boutiques, **4 millions de visiteurs/an** revendiqués). Cumulés, ils placent l'agglomération troyenne au **rang de pôle de shopping outlet majeur en Europe**, attirant une clientèle qui réserve souvent 2-3 nuits à Troyes pour faire les deux centres + le centre historique. La ville compte environ **620 annonces actives** sur Airbnb avec un **tarif moyen** autour de **78 €/nuit** sur l'année.\n\n**Bouchon de Champagne, Site Patrimonial Remarquable.** Le centre historique troyen — surnommé « le Bouchon » pour sa forme en bouchon de champagne sur la carte — est l'un des plus grands ensembles de **pans de bois XVIe siècle** conservés en Europe. Les quartiers **Saint-Jean**, **Saint-Martin**, **Cathédrale Saint-Pierre-et-Saint-Paul** et **Tête du Bouchon** concentrent la demande LCD culturelle, avec la **ruelle des Chats**, la **Maison de l'Outil et de la Pensée Ouvrière** et la **Cité du Vitrail** (rouverte 2022 dans l'ancien Hôtel-Dieu). À 1h35 de TGV de Paris-Gare-de-l'Est, Troyes est devenue une destination week-end accessible pour les Parisiens.\n\n**Zone tendue B1 et changement d'usage obligatoire.** Troyes est **classée zone tendue B1 depuis octobre 2023** (reclassement décret), aux côtés de Sainte-Savine. **Depuis le 1er janvier 2020**, la Ville de Troyes impose une **autorisation préalable de changement d'usage** pour tout meublé de tourisme en résidence secondaire, sur le fondement de la lutte contre la dépopulation du centre-ville. Le dispositif est strictement appliqué dans le Bouchon — toute acquisition LCD doit être anticipée avec un rendez-vous urbanisme avant le compromis.\n\n**Prix au m² parmi les plus accessibles de France.** Comptez **1 610-1 786 €/m² en moyenne** à Troyes en 2026, **2 100-2 532 €/m²** sur le Bouchon (cathédrale, Saint-Jean, Tête du Bouchon), **1 600-2 000 €/m²** sur Saint-Martin et Saint-Nizier, **1 080-1 500 €/m²** sur les Chartreux et le secteur gare. Un **T2 dans le Bouchon se trouve dès 70 000-95 000 €**, ce qui fait de Troyes l'**un des marchés LCD français les plus rentables à l'achat** — un ROI brut de 8-10 % est atteignable sur les meilleurs placements centre historique.",
+    conciergeries: [
+      {
+        name: 'Joya',
+        url: 'https://laconciergeriejoya.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 26,
+        biensGeres: 35,
+        specialty: 'Leader Troyes, 6 rue Voltaire, deux modèles tarifaires',
+        description:
+          "Joya est implantée **6 rue Voltaire à Troyes** (proximité immédiate du Bouchon) et concentre l'essentiel des recherches Google sur le marché troyen — **720 recherches mensuelles** sur « joya troyes » et **260 sur « joya immobilier troyes »** selon SEMrush, ce qui en fait le leader d'autorité locale. Joya appartient au groupe **Joya Groupe Immobilier**, agence immobilière troyenne historique qui a ajouté une branche conciergerie LCD. **Deux modèles tarifaires** : loyer mensuel garanti (le propriétaire encaisse un loyer fixe quel que soit le taux d'occupation) ou commission variable selon revenus réels (pricing dynamique). Services : création d'annonces, pricing dynamique, communication voyageurs, ménage, linge, gestion des clés, consommables, gestion des incidents, maintenance. Couvre Troyes + Romilly-sur-Seine + Nogent-sur-Seine. Pertinente pour un propriétaire d'appartement Bouchon qui veut un acteur premium avec arrière-plan immobilier classique, ou un investisseur multi-biens qui veut sécuriser un loyer garanti sur certains biens et tester le pricing dynamique sur d'autres.",
+      },
+      {
+        name: 'Capitaine BNB',
+        url: 'https://www.capitainebb.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 47,
+        biensGeres: 95,
+        specialty: 'SAS, 90 Rue du Général de Gaulle, ~100 biens, multi-plateformes',
+        description:
+          "Capitaine BNB (SAS Capitaine BNB, SIREN 948599618) est implantée **90 Rue du Général de Gaulle à Troyes** et revendique **près de 100 biens en gestion sur Troyes et l'Aube** (Bar-sur-Aube, Bar-sur-Seine, Chablis, Chaumont, Les Riceys) — le **plus gros portefeuille local identifié**. Multi-plateformes : Airbnb, Booking, et site direct (resa10rect.fr). Services : décoration des hébergements, photos professionnelles, gestion des réservations, ménage et entretien, gestion des clés, linge et consommables, coordination assurance Airbnb Host Protection, option service petit-déjeuner. Pertinente pour un propriétaire qui privilégie un acteur volumétrique avec processus rodés (pricing automatique, équipe ménage interne, photographie standardisée) et accepte un suivi moins individualisé en échange d'une structure opérationnelle solide. Bonne option pour le sous-marché shopping (rotation rapide 2-3 nuits) où la cadence pèse plus que la personnalisation extrême.",
+      },
+      {
+        name: 'Mon Groom',
+        url: 'https://www.mongroom.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'Premium Troyes / Aube / Champagne, depuis 2019',
+        description:
+          "Mon Groom (SAS Mon Groom) est positionnée **conciergerie haut de gamme** sur **Troyes, l'Aube et la Champagne** depuis **2019**. Tarification sur devis, pas affichée publiquement. Services : création et optimisation d'annonces, photographie immobilière professionnelle, communication voyageurs, accueil et remise des clés, nettoyage et gestion du linge, maintenance, disponibilité 7j/7. Couvre les biens premium (appartements Bouchon décorés, maisons de caractère champenoises). Communication multilingue. Pertinente pour un propriétaire d'un bien de standing dans le Bouchon (pans de bois rénovés, immeuble historique) ou d'une maison de maître en Champagne qui veut un accompagnement personnalisé avec des photos premium pour justifier un tarif au-dessus de la moyenne troyenne — particulièrement utile sur le créneau couples haut de gamme et événementiel.",
+      },
+      {
+        name: 'Bonjourbnb',
+        url: 'https://www.bonjourbnb.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 22,
+        biensGeres: 40,
+        specialty: 'Troyes + Dijon, depuis 2016, investissement locatif',
+        description:
+          "Bonjourbnb couvre l'**axe Troyes — Dijon** depuis **2016**, avec un positionnement spécifique « **conciergerie + accompagnement investisseur** » — l'agence propose explicitement de l'**aide à l'investissement locatif**, de la **sous-location** et de la **gestion saisonnière à la carte**. Services : gestion locative à l'année, gestion saisonnière, gestion à la carte, services de conciergerie complète (réservations, check-in/out, ménage). Modèles flexibles selon le besoin propriétaire. Pertinente pour un propriétaire investisseur qui veut un interlocuteur unique sur ses biens troyens et dijonnais (deux marchés UNESCO complémentaires), ou un futur acquéreur qui veut un acteur capable de l'accompagner sur le choix du bien avant la mise en gestion. Bon track record de presque 10 ans sur la zone.",
+      },
+      {
+        name: 'Zen Services',
+        url: 'https://www.zen-services.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 4.4,
+        reviews: 15,
+        biensGeres: 28,
+        specialty: 'Ménage internalisé 24/7, rayon 10 km Troyes',
+        description:
+          "Zen Services intervient **24h/24 et 7j/7 dans un rayon de 10 km autour de Troyes** — un argument structurellement utile sur le sous-marché shopping (check-out 10h / check-in 15h sur des rotations de 2 nuits). Services intégrés : gestion Airbnb et Booking, **nettoyage internalisé**, location de linge de maison, conciergerie, bricolage et maintenance, check-in/check-out. Contact : 07 61 98 90 37. Modèle commission variable avec ménage inclus (à arbitrer contre les modèles refacture voyageur selon le profil de rotation du bien). Pertinente pour un propriétaire de T1-T2 hyper-centre qui subit des rotations rapides (séjours shopping 1-2 nuits, nombreuses arrivées et départs hebdomadaires) et a souffert de défauts de ménage ou de retards de linge avec un prestataire externalisé.",
+      },
+      {
+        name: 'Mille et Une Nuitées',
+        url: 'https://www.milleetunenuitees.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 9,
+        biensGeres: 12,
+        specialty: 'Tout l\'Aube, depuis juillet 2024, Camille et Laura',
+        description:
+          "Mille et Une Nuitées (SAS, SIREN 930837893) est une **conciergerie troyenne récente** fondée en **juillet 2024** par **Camille et Laura**. Couverture : tout le département de l'Aube avec un focus sur Troyes. Spécialité affichée : **locations courte durée jusqu'à 90 jours**. Services : gestion complète (création d'annonces, accueil voyageurs, assistance pendant le séjour, ménage, gestion du linge), avec une option **décoration intérieure** mise en avant. Track record encore court (moins d'un an d'activité), portefeuille réduit. Pertinente pour un propriétaire qui valorise la disponibilité et l'attention personnalisée d'une équipe taille humaine, et accepte d'être l'un des premiers clients pour bénéficier d'un suivi à l'écoute en échange d'une histoire plus courte. Option intéressante pour un bien neuf à décorer (le service décoration intérieure est un différenciateur rare sur le marché troyen).",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Tête du Bouchon / Saint-Jean / Cathédrale',
+        pricePerNight: '80-115 €',
+        occupancy: 65,
+        description:
+          "Cœur historique de Troyes, cathédrale Saint-Pierre-et-Saint-Paul, ruelle des Chats, place du Marché, Maison de l'Outil. Cible touristique culturelle et shopping. Prix au m² 2 100-2 532 €. T2 dès 80 000 €. Demande forte d'avril à octobre, weekend Parisiens majoritaires. Le segment LCD premium troyen.",
+        roiBrut: '7,5 à 9,5 %',
+      },
+      {
+        name: 'Saint-Martin / Vauluisant',
+        pricePerNight: '70-100 €',
+        occupancy: 62,
+        description:
+          "Quartier historique sud-Bouchon, autour de l'église Saint-Pantaléon et de l'hôtel de Vauluisant (musée des Bonneteries). Pans de bois moins prestigieux mais authentiques. Prix au m² 1 600-2 000 €. T2 dès 65 000 €. Bon compromis emplacement / budget, demande couple et famille.",
+        roiBrut: '8 à 10 %',
+      },
+      {
+        name: 'Saint-Nizier / Quai des Comtes',
+        pricePerNight: '70-95 €',
+        occupancy: 60,
+        description:
+          "Quartier nord-Bouchon, autour de l'église Saint-Nizier et des quais de la Seine. Demande touristique et business UTT. Prix au m² 1 600-1 900 €. T2 dès 60 000 €. Cible étudiants UTT en semaine + LCD weekend.",
+        roiBrut: '8 à 10 %',
+      },
+      {
+        name: 'Préfecture / Place Audiffred',
+        pricePerNight: '75-110 €',
+        occupancy: 58,
+        description:
+          "Quartier administratif et résidentiel haut de gamme, hôtels particuliers et immeubles XIXe rénovés. Cible business et touristique culturelle. Prix au m² 2 000-2 600 €. T2 dès 90 000 €. Demande mieux lissée toute l'année (préfecture, salons).",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Sainte-Savine / proximité McArthur Glen',
+        pricePerNight: '65-90 €',
+        occupancy: 56,
+        description:
+          "Couronne ouest, à 5-10 minutes en voiture du centre du Bouchon et adjacente au pôle McArthur Glen (4M visiteurs/an). Prix au m² 1 600-2 100 €. T2 dès 70 000 €, maison T4 dès 180 000 €. Cible spécifique shopping outlet (rotation 1-2 nuits weekend), demande structurellement portée par les magasins d'usine.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Chartreux / Gare SNCF',
+        pricePerNight: '55-80 €',
+        occupancy: 52,
+        description:
+          "Quartier gare SNCF (Paris-Est en 1h35) et quartier des Chartreux. Segment plus accessible à l'achat. Prix au m² 1 080-1 500 €. T2 dès 50 000 €. Cible business semaine et LCD low-budget. Stratégie hybride business + Airbnb ponctuel pertinente.",
+        roiBrut: '8,5 à 11 %',
+      },
+    ],
+    regulation:
+      "Troyes applique un **dispositif local strict** sur les meublés de tourisme, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) et d'un règlement municipal en vigueur depuis le **1er janvier 2020**.\n\n**Zone tendue B1 depuis octobre 2023.** Troyes (avec Sainte-Savine) a été **reclassée en zone tendue B1** par décret en octobre 2023. Ce classement renforce les outils municipaux de régulation des meublés de tourisme et permet l'application d'un changement d'usage strict.\n\n**Changement d'usage obligatoire depuis le 1er janvier 2020.** La Ville de Troyes impose une **autorisation préalable de changement d'usage** pour toute résidence secondaire mise en meublé de tourisme. Cette autorisation est délivrée par le service urbanisme et conditionne la légalité de la location. La motivation municipale : lutter contre la dépopulation du centre-ville (perte d'habitants permanents au profit de logements touristiques). Le dispositif est strictement appliqué dans le Bouchon.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Troyes doit être **déclaré en mairie** via la plateforme **declaloc.fr**. Un **numéro à 13 chiffres** est délivré et doit figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le 20 mai 2026, le portail national unique **Décla Loc** devient obligatoire sur l'ensemble du territoire.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale. La loi Le Meur permet désormais aux communes en zone tendue d'**abaisser ce plafond à 90 jours/an** — à surveiller à Troyes (statut B1) qui dispose désormais juridiquement de ce levier.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. **Nouveauté 2026 :** plus aucun changement d'usage n'est délivré pour une **passoire thermique** — un DPE classé entre A et E est désormais exigé pour obtenir l'autorisation municipale.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage. Troyes étant en B1 + changement d'usage, ces sanctions s'appliquent pleinement.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Troyes Champagne Métropole applique une taxe de séjour de **0,75 € à 3,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 78,
+      neighborhood: 'Tête du Bouchon / Saint-Jean',
+      revenuBrut: 16500,
+      commissionRate: 0.22,
+      menageCount: 72,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Troyes pour louer une résidence secondaire ?',
+        a: "Oui, et c'est strictement appliqué depuis le 1er janvier 2020. La Ville de Troyes impose une autorisation préalable de changement d'usage pour toute résidence secondaire mise en meublé de tourisme — motivation officielle : lutter contre la dépopulation du centre-ville. La procédure se fait au service urbanisme de la mairie. Troyes a été reclassée en zone tendue B1 en octobre 2023, ce qui renforce le pouvoir de régulation municipal. Cette autorisation s'ajoute au numéro d'enregistrement à 13 chiffres délivré via declaloc.fr. Nouveauté 2026 : plus aucun changement d'usage n'est délivré pour une passoire thermique (DPE F ou G) — un DPE classé entre A et E est exigé. Si vous achetez à Troyes (notamment dans le Bouchon) dans l'objectif LCD, anticipez cette procédure dès le compromis : un refus d'autorisation est possible sur les quartiers où le ratio meublé de tourisme / résidence principale est jugé déjà élevé. Demander un rendez-vous urbanisme avant signature est une pratique de prudence. Sanctions loi Le Meur : 10 000 € pour défaut d'enregistrement, 20 000 € pour fausse déclaration, jusqu'à 50 000 € pour location au-delà du quota autorisé.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Troyes sur l\'année ?',
+        a: "Un T2 de 40 m² bien placé dans le Bouchon (Tête du Bouchon, Saint-Jean, Cathédrale ou Saint-Martin), avec tarif moyen 75-90 €/nuit et occupation 58-65 %, génère typiquement un chiffre d'affaires brut de 15 000-19 000 € sur l'année à Troyes. La triple saisonnalité (shopping Marques Avenue / McArthur Glen toute l'année, culturel weekend Parisien, business UTT semaine) lisse les revenus mieux que sur les marchés purement balnéaires ou ski. Atout massif : avec des prix au m² parmi les plus accessibles de France (1 600-1 800 € moyen, 2 100-2 500 € sur le Bouchon), un T2 à 80 000 € en centre historique génère un ROI brut de 8-10 %, ce qui place Troyes parmi les meilleurs marchés LCD à l'achat en France. Un T3 famille dans Sainte-Savine (proximité McArthur Glen) peut atteindre 18 000-23 000 € avec une cible shopping pluri-générationnelle. Net de la commission conciergerie (20-25 %), de la taxe foncière (~900 € sur un T2 troyen), des charges et du ménage, comptez un revenu disponible de 9 000-12 000 € sur le T2 et 11 000-14 500 € sur le T3 famille.",
+      },
+      {
+        q: 'Quels quartiers du Bouchon privilégier pour investir en LCD à Troyes ?',
+        a: "Pour un mix prestige + rendement, la Tête du Bouchon / Saint-Jean / Cathédrale est le segment premium troyen : prix au m² 2 100-2 532 €, T2 dès 80 000 €, ROI brut 7,5-9,5 %, demande forte avril-octobre weekend Parisien. Saint-Martin et Vauluisant offrent un meilleur compromis budget : pans de bois moins prestigieux mais authentiques, prix 1 600-2 000 €/m², T2 dès 65 000 €, ROI brut 8-10 %. Saint-Nizier et Quai des Comtes proposent un sous-marché hybride LCD + étudiant UTT pertinent pour une stratégie mixte. Pour le shopping pur, Sainte-Savine près de McArthur Glen génère 7-9 % ROI brut avec une cible spécifique outlet 1-2 nuits weekend. Pour budget contraint, Chartreux et secteur gare proposent T2 dès 50 000 € avec ROI brut 8,5-11 % — la stratégie hybride business semaine + LCD weekend rend particulièrement bien sur cette frange. Préfecture / Place Audiffred convient pour la cible business + culturelle haut de gamme avec lissage annuel optimal.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Troyes ?',
+        a: "Les commissions à Troyes ne sont quasi-jamais affichées publiquement par les acteurs locaux — Joya, Capitaine BNB, Mon Groom, Bonjourbnb, Zen Services et Mille et Une Nuitées travaillent toutes sur devis personnalisé. La moyenne de marché observée sur les formules complètes s'établit autour de **20-25 % TTC** en 2026. Joya propose deux modèles distinctifs (loyer mensuel garanti vs commission variable selon revenus réels) qui méritent une comparaison chiffrée avant choix. Zen Services intègre le ménage dans la commission (à arbitrer selon le profil de rotation du bien). Sur le sous-marché shopping (rotation rapide 1-2 nuits, ménage hebdomadaire intense), la capacité opérationnelle ménage interne du prestataire est un critère décisif au-delà du taux affiché. Demander à 2-3 conciergeries un devis chiffré sur un même bien-type comparable, avec exemple de tarification mensuelle annuelle, est la pratique recommandée à Troyes — le marché est trop opaque pour se contenter d'une comparaison de taux.",
+      },
+    ],
+    updatedAt: '2026-06-15',
+  },
+  {
+    slug: 'quimper',
+    displayName: 'Quimper',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Quimper Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Quimper : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Quimper. Tarifs (20-25 %), services, avis, réglementation changement d'usage mars 2024, quartiers cathédrale Saint-Corentin, Locmaria.",
+    kwPrincipal: 'conciergerie quimper',
+    kwSecondaires: [
+      'conciergerie airbnb quimper',
+      'aora conciergerie',
+      'conciergerie bretagne',
+      'conciergerie finistère',
+      'location courte durée quimper',
+      'conciergerie centre ville quimper',
+    ],
+    population: 64385,
+    tourists: 1000000,
+    activeListings: 510,
+    priceLow: 65,
+    priceHigh: 110,
+    occupancyRate: 60,
+    revpar: 39,
+    seasonality:
+      "Double saisonnalité culturelle et balnéaire : pic estival juin-septembre porté par les **plages du Pays Bigouden** (La Torche, Bénodet, Beg-Meil à 25-40 min), le **patrimoine breton intra-muros** (cathédrale Saint-Corentin, vieux Quimper, faïenceries de Locmaria) et le **Festival de Cornouaille** (101e édition en 2024, environ **150 000 visiteurs sur 4 jours fin juillet**). Pic anniversaire « Festival de Cornouaille » avec saturation hôtelière 30 km à la ronde et tarifs LCD multipliés par 1,8 à 2,5 sur 5 nuits. Tourisme d'affaires régulier hors saison porté par la préfecture du Finistère, l'Université de Bretagne Occidentale (campus Quimper), et le pôle hospitalier. Pèlerinage Saint-Corentin (fête de la cathédrale fin avril) et Semaines Musicales de Quimper (août) lissent légèrement l'épaule.",
+    rankNational: 30,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Quimper**, dans le **vieux Quimper** autour de la **cathédrale Saint-Corentin**, dans le quartier **Locmaria** (faïenceries), sur le bord de l'**Odet** ou à proximité du centre, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **double saisonnalité** (Festival de Cornouaille pic absolu fin juillet, plages du Pays Bigouden à 30 min juin-septembre, patrimoine culturel toute l'année), la **réglementation locale durcie** (autorisation de changement d'usage obligatoire depuis le **1er mars 2024** pour toute résidence secondaire), les **prix au m² accessibles pour la Bretagne** (2 200 €/m² moyen, parmi les plus bas des préfectures bretonnes) et la poignée d'acteurs locaux qui se partagent un marché en croissance, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players quimpérois (Aora Conciergerie, Breizh Coast, Conciergerie Quimper), les acteurs multi-zones Finistère (Concierge B&B) et les réseaux nationaux (OIQIA, Guest Adom) ?",
+    marketIntro:
+      "Quimper est un **marché LCD culturel et balnéaire** porté par un patrimoine breton dense — **cathédrale Saint-Corentin** (gothique XIIIe-XVe), **vieux Quimper** en pans de bois, **faïenceries de Locmaria** (depuis 1690, plus ancienne manufacture de faïence française en activité), **Musée des Beaux-Arts** et **Musée Départemental Breton**. **Préfecture du Finistère** et **deuxième commune la plus peuplée du département** après Brest (**64 385 habitants INSEE 2023**, 64 530 en 2025 selon la ville). La ville compte environ **510 annonces actives** sur Airbnb avec un **tarif moyen** autour de **82 €/nuit** sur l'année.\n\n**Festival de Cornouaille, pic absolu fin juillet.** Le **Festival de Cornouaille** (créé en 1923, **101e édition en 2024 du 18 au 21 juillet**) draine **environ 150 000 visiteurs sur 4 jours** dans les rues du centre-ville, avec plus de **1 000 bénévoles** et des centaines d'artistes locaux et internationaux. C'est l'**un des plus gros événements culturels de Bretagne** et le pic absolu du marché LCD quimpérois : saturation hôtelière 30 km à la ronde et tarifs LCD multipliés par 1,8 à 2,5 sur 5 nuits. L'épaule de juillet et la première quinzaine d'août sont également boostées (groupes émergents, programmation off).\n\n**Pays Bigouden et plages à 25-40 minutes.** **La Torche** (spot de surf mondial, 25 min), **Bénodet** (station balnéaire et thalasso, 30 min), **Beg-Meil** et **Mousterlin** (35 min), **Concarneau** (la Ville Close, 25 min), **Locronan** (un des plus beaux villages de France, 25 min) : Quimper est un **camp de base balnéaire et patrimonial** idéal pour rayonner sur le sud-Finistère en évitant les tarifs hôteliers plus élevés des stations balnéaires. La clientèle française (Parisiens, Bretons en weekend) et britannique (ferries Plymouth-Roscoff et Cork-Roscoff) domine.\n\n**Prix au m² accessibles pour la Bretagne.** Comptez **2 202 €/m² en moyenne** à Quimper en 2026, **2 290-2 420 €/m²** sur le secteur Place de Locronan / Rue de Locronan (cœur historique), **1 953-2 993 €/m²** plage de marché global. Quimper figure parmi les **préfectures bretonnes les plus accessibles à l'achat**, devant Vannes (2 800 €/m²+), Rennes (3 800 €/m²+) et même Brest (1 800-2 000 €/m²) sur la fourchette haute centre. Un T2 centre historique se trouve dès **90 000-130 000 €**, ce qui place Quimper dans la **moyenne basse des marchés LCD français à l'achat** avec un ROI brut atteignable de **6,5-9 %** sur les meilleurs placements.",
+    conciergeries: [
+      {
+        name: 'Aora Conciergerie',
+        url: 'https://www.aoraconciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 24,
+        biensGeres: 25,
+        specialty: 'Pure-player Quimper et Finistère, gérée par Andrea',
+        description:
+          "Aora Conciergerie est une **conciergerie Airbnb pure-player Quimper et région** gérée par **Andrea** (interlocutrice mise en avant dans la communication client). Tarification sur devis personnalisé. Services : gestion d'annonces et optimisation, gestion des calendriers et sélection des voyageurs, photographie professionnelle, communication 24h/7, accueil voyageurs (check-in/check-out), kit de bienvenue et recommandations locales, nettoyage professionnel et gestion du linge, stratégie tarifaire flexible avec ajustements saisonniers. Positionnement combinant « technologie et service de proximité ». Pertinente pour un propriétaire d'appartement Quimper centre historique ou vieux Quimper qui veut un interlocuteur local privilégié, accessible et capable d'arbitrer entre le créneau Festival de Cornouaille et la cible balnéaire estivale.",
+      },
+      {
+        name: 'Breizh Coast Conciergerie',
+        url: 'https://breizhcoast-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 16,
+        biensGeres: 22,
+        specialty: '9 Allée Jean-Louis Naour, Leny Ollivier, 7 ans d\'expérience',
+        description:
+          "Breizh Coast Conciergerie est implantée **9 Allée Jean-Louis et Georges le Naour à Quimper** et gérée par **Leny Ollivier**, professionnel revendiquant **7 ans d'expérience** sur le marché des locations courte durée Airbnb et Booking. Services : création d'annonces optimisée, communication voyageurs, entretien des biens, gestion dynamique des prix, assistance 24/7, audits mensuels détaillés. Horaires : 8h-21h en semaine, 9h-13h dimanche. **Adhésion gratuite, sans frais d'abonnement**. Pertinente pour un propriétaire qui valorise un acteur expérimenté avec un format d'audits mensuels détaillés (rare sur la zone) lui permettant de suivre précisément la rentabilité de son bien, et une équipe joignable 7j/7 sur de larges plages horaires.",
+      },
+      {
+        name: 'Concierge B&B',
+        url: 'https://www.conciergebb.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 32,
+        biensGeres: 200,
+        specialty: 'Réseau Finistère, 200 biens locaux, 600 biens France',
+        description:
+          "Concierge B&B (Concierge BB) est un **acteur national avec ancrage fort sur le Finistère** : **200 propriétés gérées en Finistère** (l'une des plus grosses bases identifiées sur la zone) et **600 propriétés en France**, plus une activité internationale (Dubaï, Abu Dhabi, Ras Al Khaimah). Commission affichée à **20 %** sur les revenus locatifs pour la formule complète. Spécialités : Airbnb, contrats de mobilité, coliving, gestion locative immobilière classique. Services : création et optimisation d'annonces Airbnb, gestion des réservations et communication, nettoyage professionnel, tarification dynamique, maintenance et assistance technique. Pertinente pour un propriétaire investisseur multi-biens en Finistère (Quimper + Bénodet + Concarneau ou Pays Bigouden) qui veut mutualiser le contact agence et bénéficier de la massification du réseau, ou un investisseur à distance qui valorise un acteur volumétrique structuré.",
+      },
+      {
+        name: 'Conciergerie Quimper (NS Solutions)',
+        url: 'https://www.conciergeriequimper.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 14,
+        biensGeres: 18,
+        specialty: 'Carte pro CCI Finistère, Quimper + Sud-Finistère',
+        description:
+          "Conciergerie Quimper (opérée par **NS Solutions**) détient une **carte professionnelle de gestion et transaction immobilière délivrée par la Chambre de Commerce et d'Industrie du Finistère** — un statut juridique encadré rare sur le marché des conciergeries pures et qui sécurise la relation contractuelle propriétaire. Positionnement **gestion premium courte durée**. Couverture : Quimper et Sud-Finistère (Pont-l'Abbé, Bénodet, Pays Bigouden). Services : accompagnement propriétaires, gestion d'annonces, accueil voyageurs, ménage, maintenance, conformité réglementaire (changement d'usage, déclaration mairie, suivi micro-BIC). Pertinente pour un propriétaire qui valorise un cadre juridique encadré (carte pro CCI) plutôt qu'un simple mandat de conciergerie, ou un investisseur sensible aux enjeux fiscaux et réglementaires qui veut un interlocuteur capable de l'accompagner sur la conformité changement d'usage post-mars 2024.",
+      },
+      {
+        name: 'OIQIA Quimper',
+        url: 'https://www.oiqia.com/en/ville-gestion/quimper',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 11,
+        biensGeres: 15,
+        specialty: 'Réseau national, technologie de gestion',
+        description:
+          "OIQIA est un **réseau national de conciergerie Airbnb** présent à Quimper via son maillage local. Commission affichée autour de **20 %** sur les nuitées. Plateforme propriétaire (suivi en ligne des réservations, revenus, paiements). Package : gestion des voyageurs, des clés, du ménage, de la communication, de la maintenance, des assurances. Optimisation tarifaire algorithmique. Pertinente pour un propriétaire investisseur à distance (Parisien, étranger) qui possède un bien Quimper comme produit LCD pur et préfère un suivi self-service via dashboard à un suivi téléphonique personnalisé, ou un investisseur multi-villes qui veut un même outil de pilotage sur plusieurs marchés. Bonne option pour le sous-marché Festival de Cornouaille (pricing dynamique algorithmique adapté aux pics d'événements).",
+      },
+      {
+        name: 'Guest Adom Quimper',
+        url: 'https://www.guest-adom.com/conciergerie-airbnb-quimper/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.2,
+        reviews: 13,
+        biensGeres: 16,
+        specialty: 'Réseau national, expertise services à la personne',
+        description:
+          "Guest Adom est un **réseau national franchisé** présent à Quimper via une agence locale. Commission autour de **25 %**, gestion appuyée sur l'expertise services à la personne et hôtellerie. Package : prise en charge complète des biens, check-in/check-out, ménage, maintenance, assistance voyageurs. Avis clients mitigés sur certaines plateformes — qualité variable selon les franchises. Pertinente pour un propriétaire investisseur à distance qui privilégie un grand réseau lisible et un suivi standardisé. Bonne option pour une stratégie multi-biens dans plusieurs villes (Quimper + autres villes du réseau Guest Adom), pour mutualiser le contact franchise et avoir un reporting cohérent.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieux Quimper / Cathédrale Saint-Corentin',
+        pricePerNight: '85-120 €',
+        occupancy: 66,
+        description:
+          "Cœur historique de Quimper, cathédrale Saint-Corentin (gothique XIIIe-XVe), rue Kéréon, place au Beurre. Cible touristique culturelle et Festival de Cornouaille. Prix au m² 2 400-2 993 €. T2 dès 110 000 €. Demande forte d'avril à octobre, pic absolu fin juillet (Festival). Le segment LCD premium quimpérois.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Locmaria / Faïenceries',
+        pricePerNight: '75-105 €',
+        occupancy: 62,
+        description:
+          "Quartier historique des faïenceries (Henriot-Quimper, plus ancienne manufacture française en activité depuis 1690), à 15 minutes à pied du centre. **842 logements** dont 286 appartements et 556 maisons. Cible touristique culturelle et patrimoniale, demande couples et amateurs d'arts décoratifs. Prix au m² 2 100-2 600 €. T2 dès 95 000 €.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Place de Locronan / Rue de Locronan',
+        pricePerNight: '70-100 €',
+        occupancy: 60,
+        description:
+          "Axe commercial nord du centre, autour de la Place de Locronan (prix au m² moyen 2 290 € mars 2025, pouvant aller de 1 420 € à 3 900 € selon le bien) et de la Rue de Locronan (2 420 €/m² nov 2024). Bon compromis emplacement / budget. T2 dès 85 000 €. Demande mixte couples touristiques + cible familles.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Quais de l\'Odet / Préfecture',
+        pricePerNight: '70-100 €',
+        occupancy: 58,
+        description:
+          "Quais le long de l'Odet (qui traverse le centre), proximité préfecture du Finistère et Musée des Beaux-Arts. Cible business semaine + touristique culturelle. Prix au m² 2 200-2 700 €. T2 dès 95 000 €. Demande mieux lissée toute l'année grâce à la préfecture.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Kerfeunteun / Penhars (couronne)',
+        pricePerNight: '60-85 €',
+        occupancy: 54,
+        description:
+          "Quartiers résidentiels nord (Kerfeunteun) et ouest (Penhars), à 10-15 minutes en voiture du centre. Prix au m² 1 800-2 200 €. T2 dès 75 000 €, maison T4 dès 195 000 €. Cible familles avec voiture pour rayonner sur les plages du Pays Bigouden. Bon compromis budget / rendement.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Couronne balnéaire / Bénodet / Pays Bigouden',
+        pricePerNight: '95-160 €',
+        occupancy: 58,
+        description:
+          "Couronne sud (Bénodet 30 min, Pont-l'Abbé 25 min, La Torche 25 min, Beg-Meil 35 min). Cible balnéaire premium et spot de surf international (La Torche). Prix au m² 2 800-4 200 €. Maison T4 vue mer dès 320 000 €. Marché estival fort (juin-septembre), prime « vue mer » sensible et tarifs hôteliers plus élevés justifient le Airbnb.",
+        roiBrut: '5,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Quimper applique un **dispositif local renforcé** sur les meublés de tourisme, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) et d'un règlement municipal entré en vigueur le **1er mars 2024**.\n\n**Changement d'usage obligatoire depuis le 1er mars 2024.** Pour tout meublé de tourisme qui n'est **pas votre résidence principale**, une **autorisation de changement d'usage** doit être demandée à la mairie de Quimper. Cette procédure s'applique également aux meublés déjà déclarés en mairie avant cette date (effet rétroactif). La motivation municipale : encadrer le marché Airbnb dans un contexte de tension locative croissante dans le Finistère sud (clientèle touristique vs résidents permanents).\n\n**Enregistrement obligatoire via Décla Loc.** Tout meublé de tourisme à Quimper doit être **déclaré en mairie** via la plateforme **declaloc.fr**. Un **numéro à 13 chiffres** est délivré instantanément et doit figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le 20 mai 2026, le portail national unique **Décla Loc** devient obligatoire sur l'ensemble du territoire. Plus aucun loueur ne pourra publier d'annonce sans numéro d'enregistrement valide.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur permet désormais aux communes d'abaisser ce plafond à 90 jours/an — à surveiller à Quimper.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. **Nouveauté 2026 :** plus aucun changement d'usage n'est délivré pour une **passoire thermique** — un DPE classé entre A et E est désormais exigé pour obtenir l'autorisation municipale.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **15 000 € à 20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage. À Quimper, en cas d'absence de numéro, désactivation sous 48h par les plateformes Airbnb / Booking / Abritel.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Quimper Bretagne Occidentale applique une taxe de séjour de **0,75 € à 3,00 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb et reversée à l'agglomération).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 82,
+      neighborhood: 'Vieux Quimper / Cathédrale',
+      revenuBrut: 18000,
+      commissionRate: 0.22,
+      menageCount: 70,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Quimper pour louer une résidence secondaire ?',
+        a: "Oui, depuis le 1er mars 2024. La Ville de Quimper impose une autorisation préalable de changement d'usage pour tout meublé de tourisme qui n'est pas votre résidence principale. La procédure s'applique également aux meublés déjà déclarés en mairie avant cette date (effet rétroactif). Cette autorisation s'ajoute au numéro d'enregistrement à 13 chiffres délivré via declaloc.fr (instantané). Nouveauté 2026 : plus aucun changement d'usage n'est délivré pour une passoire thermique (DPE F ou G) — un DPE classé entre A et E est exigé. Si vous achetez à Quimper dans l'objectif LCD, anticipez cette procédure dès le compromis. Sanctions loi Le Meur : 10 000 € pour défaut d'enregistrement, 15 000-20 000 € pour fausse déclaration, jusqu'à 50 000 € pour location au-delà du quota autorisé. Désactivation sous 48h par les plateformes en cas d'absence de numéro. Pour les biens en résidence principale, la limite reste de 120 jours/an (que la loi Le Meur permet désormais aux communes d'abaisser à 90 jours/an — à surveiller).",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Quimper sur l\'année ?',
+        a: "Un T2 de 40 m² bien placé au vieux Quimper (autour de la cathédrale Saint-Corentin) ou Locmaria, avec tarif moyen 75-90 €/nuit et occupation 60-66 %, génère typiquement un chiffre d'affaires brut de 16 000-20 000 € sur l'année à Quimper. La double saisonnalité culturelle (Festival de Cornouaille pic absolu fin juillet, patrimoine breton toute l'année) et balnéaire (Pays Bigouden et plages à 25-40 min juin-septembre) lisse les revenus mieux que sur les marchés purement balnéaires (Carnac, Quiberon). Anniversaire Festival de Cornouaille (fin juillet, 150 000 visiteurs sur 4 jours) génère un pic tarifaire x1,8-x2,5 sur 5 nuits. Une maison T4 avec extérieur dans la couronne balnéaire (Bénodet, Pays Bigouden) peut atteindre 22 000-30 000 € avec une saisonnalité plus marquée juin-septembre. Net de la commission conciergerie (20-25 %), de la taxe foncière (~1 100 € sur un T2 quimpérois), des charges et du ménage, comptez un revenu disponible de 9 000-12 500 € sur le T2 et 13 000-18 000 € sur la maison T4 balnéaire.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Quimper ?',
+        a: "Pour un mix prestige + rendement, le Vieux Quimper / Cathédrale Saint-Corentin est le segment premium quimpérois : prix au m² 2 400-2 993 €, T2 dès 110 000 €, ROI brut 6-7,5 %, demande forte avril-octobre avec pic Festival de Cornouaille. Locmaria offre un compromis budget : quartier historique des faïenceries (Henriot-Quimper depuis 1690), prix 2 100-2 600 €/m², T2 dès 95 000 €, ROI brut 6,5-8 %. Place et Rue de Locronan proposent un sous-marché LCD + résidentiel pertinent pour une stratégie mixte (T2 dès 85 000 €, ROI 6,5-8,5 %). Pour budget contraint, Kerfeunteun et Penhars proposent T2 dès 75 000 € avec ROI brut 7-9 % et stratégie hybride business + LCD weekend. Quais de l'Odet / Préfecture conviennent pour la cible business + culturelle avec lissage annuel optimal (préfecture du Finistère). Pour le balnéaire premium, Bénodet et Pays Bigouden génèrent un ROI 5,5-7 % avec maison T4 vue mer dès 320 000 € — prime « vue mer » sensible et tarifs hôteliers plus élevés justifient le Airbnb.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Quimper ?',
+        a: "Les commissions à Quimper s'étalent de 20 % (Concierge B&B, OIQIA — réseaux nationaux) à 25 % TTC (Guest Adom) en 2026, avec une moyenne de marché autour de 22-23 % TTC pour une formule complète. Aora Conciergerie, Breizh Coast et Conciergerie Quimper (NS Solutions) travaillent sur devis personnalisé. Le critère décisif au-delà du taux affiché sur un marché à pic événementiel comme Quimper (Festival de Cornouaille fin juillet, 150 000 visiteurs sur 4 jours) est la stratégie pricing dynamique sur le pic et les épaules — un mauvais pricing pendant le Festival peut faire perdre 1 500-2 500 € de CA sur le bien. Demander au prestataire son protocole de pricing sur le Festival de Cornouaille, et la capacité multilingue de l'équipe (anglais pour la clientèle britannique des ferries Plymouth-Roscoff et Cork-Roscoff) avant signature. Conciergerie Quimper (NS Solutions) est la seule à détenir une carte professionnelle CCI Finistère — argument pertinent pour les propriétaires sensibles au cadre juridique encadré.",
+      },
+    ],
+    updatedAt: '2026-06-15',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

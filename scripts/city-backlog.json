@@ -892,8 +892,9 @@
     "oldSlug": "/conciergerie-airbnb-bayeux",
     "kw": "conciergerie bayeux",
     "vol": 170,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-06-15"
   },
   {
     "num": 71,
@@ -1331,28 +1332,30 @@
   {
     "num": 104,
     "ville": "Troyes",
-    "region": "?",
-    "regionSlug": "?",
+    "region": "Grand Est",
+    "regionSlug": "alsace",
     "citySlug": "troyes",
-    "newUrl": "/conciergerie-airbnb/?/troyes",
+    "newUrl": "/conciergerie-airbnb/alsace/troyes",
     "kw": "conciergerie Troyes",
     "vol": 170,
     "kd": "17",
-    "status": "À faire",
-    "source": "semrush-expand-2026-05-15"
+    "status": "Publié",
+    "source": "semrush-expand-2026-05-15",
+    "publishedAt": "2026-06-15"
   },
   {
     "num": 105,
     "ville": "Quimper",
-    "region": "?",
-    "regionSlug": "?",
+    "region": "Bretagne",
+    "regionSlug": "bretagne",
     "citySlug": "quimper",
-    "newUrl": "/conciergerie-airbnb/?/quimper",
+    "newUrl": "/conciergerie-airbnb/bretagne/quimper",
     "kw": "conciergerie Quimper",
     "vol": 170,
     "kd": "8",
-    "status": "À faire",
-    "source": "semrush-expand-2026-05-15"
+    "status": "Publié",
+    "source": "semrush-expand-2026-05-15",
+    "publishedAt": "2026-06-15"
   },
   {
     "num": 106,

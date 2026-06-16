@@ -30,7 +30,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { google } from 'googleapis';
-import { extractContact, detectAll, decodeEntities } from '../backlinks-source-monthly/filters.mjs';
+import { extractContact, detectAll, decodeEntities, isPitchableEmail, hasValidMX, verifyMailbox, extractDomain } from '../backlinks-source-monthly/filters.mjs';
 import { buildPitch, qaPitch, chooseOutilToPitch } from './pitch-templates.mjs';
 import { shouldBccToday } from './bcc-state.mjs';
 import { generateObservation } from './observation.mjs';
@@ -395,6 +395,36 @@ async function main() {
       skipped.push({ ...c, reason: 'not_blog' });
       log(`  ⏭ not_blog (site service)`);
       continue;
+    }
+
+    // 2bis. Garde-fou email pré-envoi, 3 niveaux :
+    //   1) isPitchableEmail : format/blacklist (placeholder, cross-domain…)
+    //   2) hasValidMX        : le domaine a-t-il un serveur mail ?
+    //   3) verifyMailbox     : la boîte EXISTE-t-elle (SMTP RCPT) ?
+    // Les niveaux 1-2 laissaient passer les boîtes mortes sur domaine vivant
+    // (550 5.1.1) — cas réels bouncés le 2026-06-15 : contact@gcb-immo.fr,
+    // contact@naps-immo.com. Le niveau 3 (ajouté ce jour) les attrape.
+    // invalide → strip email + skip (ou formulaire si dispo).
+    if (c.email) {
+      let emailOk = isPitchableEmail(c.email, extractDomain(c.site));
+      if (emailOk) emailOk = await hasValidMX(c.email.split('@')[1]);
+      if (emailOk) {
+        const v = await verifyMailbox(c.email);
+        if (v.status === 'invalid') {
+          emailOk = false;
+          log(`  🚫 boîte inexistante: ${c.email} (SMTP ${v.code}) → ${(v.reason || '').slice(0, 50)}`);
+        }
+      }
+      if (!emailOk) {
+        log(`  🚫 email invalide: ${c.email} → retiré (garde-fou pré-envoi)`);
+        c.email_invalide = c.email;
+        c.email = null;
+        if (!c.url_formulaire) {
+          c.status = 'excluded_bad_email';
+          skipped.push({ ...c, reason: 'excluded_bad_email' });
+          continue;
+        }
+      }
     }
 
     // 3. Pas de contact → skip

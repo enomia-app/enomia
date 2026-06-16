@@ -13,7 +13,7 @@ Plateforme d'outils pour la location courte duree (LCD) : simulateur de rentabil
 | Base de donnees | Supabase (PostgreSQL + Auth + Storage) |
 | CMS | Keystatic (stockage GitHub) |
 | Email | Resend |
-| Newsletter | Beehiiv |
+| Newsletter | Brevo |
 
 ## Installation
 
@@ -27,7 +27,7 @@ npm install
 
 # 3. Configurer les variables d'environnement
 cp .env.example .env
-# Remplir les valeurs dans .env (voir le dashboard Supabase, Resend, Beehiiv)
+# Remplir les valeurs dans .env (voir le dashboard Supabase, Resend, Brevo)
 
 # 4. Lancer en local
 npm run dev
@@ -46,7 +46,7 @@ src/
   data/               # Donnees statiques (villes)
 public/
   contrat-tool.js     # Outil contrat (vanilla JS, cote client)
-  simulateur-rentabilite-airbnb/  # Simulateur standalone
+  simulateur-tool.js  # Simulateur de rentabilite (vanilla JS, cote client)
 scripts/
   daily-freshness.mjs # Script CI : mise a jour quotidienne des articles
   fix-keystatic.mjs   # Patch Keystatic (corrige des bugs OAuth)

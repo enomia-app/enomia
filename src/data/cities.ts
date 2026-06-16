@@ -12125,6 +12125,1713 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-08',
   },
+  // ==========================================================================
+  // AJACCIO (Corse-du-Sud)
+  // ==========================================================================
+  {
+    slug: 'ajaccio',
+    displayName: 'Ajaccio',
+    region: 'Corse',
+    regionSlug: 'corse',
+    title: 'Conciergerie Ajaccio Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Ajaccio : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb d'Ajaccio. Tarifs (20-23 %), services, avis Google, marché des Sanguinaires aux Salines, réglementation 2026.",
+    kwPrincipal: 'conciergerie ajaccio',
+    kwSecondaires: [
+      'conciergerie airbnb ajaccio',
+      'conciergerie en corse',
+      'conciergerie porticcio',
+      'ajaccio airbnb',
+      'meilleure conciergerie ajaccio',
+    ],
+    population: 76320,
+    tourists: 600000,
+    activeListings: 3200,
+    priceLow: 70,
+    priceHigh: 180,
+    occupancyRate: 55,
+    revpar: 65,
+    seasonality:
+      "Saisonnalité ultra-marquée typique du marché corse. Pic absolu juillet-août (occupation 90-100 %, tarifs 2-3× la normale, clientèle continentale + italienne + nord-européenne). Très haute saison étendue de mi-juin à mi-septembre. Fenêtres ailes de saison printemps (avril-juin, GR20, calanques de Piana) et automne (septembre-octobre, températures douces, mer encore chaude). Très creux nov-mars (occupation 25-40 %), partiellement compensé par la clientèle business et fonctionnaires (préfecture, Université de Corse). Durée moyenne de location courte durée des meublés ajacciens : 35 jours par an selon les chiffres municipaux 2024.",
+    rankNational: 21,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Ajaccio**, dans le **centre historique** autour de la cathédrale, sur le **cours Napoléon**, aux **Salines**, à **Lorette** ou face aux **îles Sanguinaires**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **saisonnalité ultra-marquée corse** (35 jours par an de location en moyenne selon les chiffres municipaux), la **clientèle continentale juillet-août** qui pousse les tarifs à 2-3× la normale, l'**incertitude réglementaire** (la mairie temporise sur un éventuel changement d'usage, contrairement à Porto-Vecchio qui a durci en octobre 2024), et la dizaine d'acteurs locaux qui se partagent un marché de **3 200 meublés de tourisme déclarés**, vous vous demandez si confier la gestion à une conciergerie reste rentable hors saison.\n\nEt surtout : **laquelle choisir** entre les pure-players ajacciens (Casamea, Kurnos, AJF), les réseaux nationaux qui couvrent la Corse-du-Sud (YourHostHelper, HostnFly) et l'acteur transparent à 23 % affiché (Agence Ciste) ?",
+    marketIntro:
+      "Ajaccio est un **marché LCD ultra-saisonnier** porté par 4 mois de très haute saison (juin à septembre) et 8 mois de fond de marché business + tourisme d'ailes de saison. La commune compte **environ 3 200 meublés de tourisme déclarés** sur un parc total de 12 000 logements selon les chiffres de la mairie début 2024 — soit **26 % des studios et T1** qui basculent en location saisonnière. Le tarif moyen Airbnb annuel se situe autour de **80-100 €/nuit**, qui décolle à **180-280 €/nuit pendant juillet-août** sur les biens face mer.\n\n**Tourisme corse à fort effet de levier.** La saison juillet-août concentre l'essentiel des nuitées Airbnb à Ajaccio : un T2 vue mer aux Salines qui se loue 100 €/nuit en moyenne annuelle facture 200-250 €/nuit pendant les 8 semaines d'été. Sur 2 mois pleins, ce bien peut générer 11 000-14 000 € bruts — soit l'équivalent de 4-5 mois de revenus normaux. Les îles **Sanguinaires** (coucher de soleil mythique), la **route des Calanques de Piana** à 1h30, la **réserve naturelle de Scandola** et les **plages de Capo di Feno et Marinella** alimentent une demande touristique premium.\n\n**Prix immo plus accessibles que Porto-Vecchio.** Le prix moyen au m² à Ajaccio s'établit autour de **3 740 €/m²** au printemps 2026 selon ParuVendu, avec des pointes à **3 850-4 450 €/m²** sur le **cours Napoléon** et le **centre historique**. C'est nettement plus accessible que Porto-Vecchio (5 072 €/m² apparts, 6 567 €/m² maisons en avril 2026), tout en captant une clientèle touristique francophone forte sur la Corse-du-Sud.\n\n**Réglementation en attente.** Le maire **Stéphane Sbraggia** a temporisé en février 2024 sur l'instauration d'un changement d'usage, invoquant une perte fiscale potentielle de 3 millions d'euros et préférant attendre les clarifications nationales (loi Le Meur du 19 novembre 2024). L'opposition municipale réclame un régime de compensation. **À surveiller en 2026**, d'autant que Porto-Vecchio a basculé en régime restrictif depuis le 14 octobre 2024.",
+    conciergeries: [
+      {
+        name: 'Conciergerie Casamea',
+        url: 'https://conciergerie-casamea.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 17,
+        biensGeres: 20,
+        specialty: 'Acteur local Avenue Kennedy, note Google maximale',
+        description:
+          "Conciergerie Casamea est domiciliée Avenue du Président Kennedy à Ajaccio, en plein quartier touristique. La SARL affiche une note Google parmi les plus solides du marché ajaccien sur les pure-players locaux. Service clé en main complet : gestion des entrées/sorties, partenariats ménage et linge, communication voyageurs, conseil en classement meublé de tourisme. Tarification sur devis adaptée à chaque bien (généralement dans la fourchette 20-23 % TTC du marché ajaccien). Pertinente pour un propriétaire qui veut un interlocuteur ajaccien identifié et stable sur l'année.",
+      },
+      {
+        name: 'Kurnos Conciergerie',
+        url: 'https://ajaccio-bnb.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 0,
+        biensGeres: 15,
+        specialty: 'Statut Superhost Airbnb, certification Booking',
+        description:
+          "Kurnos Conciergerie est reconnue Superhost Airbnb avec une note moyenne de 5/5 sur les biens gérés, et certifiée Booking.com — un double label qui sécurise la visibilité sur les deux principales plateformes. Couverture grand Ajaccio (studios, T2/T3, villas). Tarification sur devis. La présence se mesure essentiellement sur les plateformes de réservation plutôt que sur Google My Business — bon signal de qualité voyageur, à compléter par un test concret avant signature.",
+      },
+      {
+        name: 'AJF Conciergerie',
+        url: 'https://ajf-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 0,
+        biensGeres: 12,
+        specialty: 'Gestion court et moyen terme, welcome kits artisans corses',
+        description:
+          "AJF Conciergerie est dirigée par Aurore Masini depuis ses bureaux Chemin de Ranucchietto à Ajaccio. Positionnement sur la gestion de location courte ET moyenne durée (bail mobilité), ce qui sécurise les revenus d'inter-saison sur les clientèles business et étudiantes. Welcome kits avec produits d'artisans corses (vins, charcuterie, miel). Tarification sur devis. Pertinente pour un propriétaire qui veut mixer LCD été et MTD (moyen terme) hiver pour lisser ses revenus.",
+      },
+      {
+        name: 'Agence Ciste',
+        url: 'https://agence-ciste.fr/conciergerie-tarif/',
+        commission: '23 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 0,
+        biensGeres: 25,
+        specialty: 'Commission affichée transparente 23 % sur revenus nets',
+        description:
+          "Agence Ciste affiche publiquement une commission de 23 % sur les revenus nets — l'une des grilles tarifaires les plus transparentes du marché corse, rare dans une zone où la majorité des acteurs travaillent sur devis. Exemple chiffré officiel : sur 2 000 € nets de revenus hebdomadaires, la conciergerie prend 460 €. Service complet annonce + voyageurs + ménage refacturé + maintenance. Pertinente pour un propriétaire qui veut savoir exactement combien il va payer avant de signer, sans surprise sur le devis.",
+      },
+      {
+        name: 'YourHostHelper Ajaccio',
+        url: 'https://yourhosthelper.com/en/tarif-concierge-ajaccio/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 0,
+        biensGeres: 30,
+        specialty: 'Réseau national, pricing dynamique mutualisé',
+        description:
+          "YourHostHelper est un réseau national présent dans 20+ villes françaises avec une agence locale à Ajaccio. Commission de 20 % HT (24 % TTC) sur les revenus collectés. Avantage clé : pricing dynamique mutualisé sur les données de la plateforme (volume historique sur la Corse-du-Sud, comparaison avec Bastia, Calvi, Porto-Vecchio). Service complet annonce multi-diffusion (Airbnb, Booking, Abritel), accueil, ménage, linge. Pertinente pour un propriétaire qui privilégie le tarif et l'optimisation pricing à la relation locale en face à face.",
+      },
+      {
+        name: 'HostnFly Ajaccio',
+        url: 'https://www.hostnfly.com/conciergerie-airbnb/ajaccio',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 0,
+        biensGeres: 25,
+        specialty: "Tarif d'appel réseau national, gestion 100 % digitalisée",
+        description:
+          "HostnFly applique une commission de 20 % HT sur les revenus, identique à YourHostHelper. Filiale d'un réseau national avec gestion 100 % digitalisée (app mobile propriétaire, photos pro, optimisation annonce). Création annonce, sélection voyageurs, check-in, ménage et maintenance assurés via partenaires locaux. Pertinente pour un propriétaire qui veut un onboarding rapide et standardisé, sans contact en face à face — moins adapté à un bien atypique nécessitant un acteur ajaccien immergé dans le marché.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre historique (Cathédrale, Place Foch)',
+        pricePerNight: '90-150 €',
+        occupancy: 62,
+        description:
+          "Cœur historique d'Ajaccio autour de la cathédrale, de la maison Bonaparte (musée), de la place Foch et du marché. Immeubles XVIIIe-XIXe siècles, ruelles étroites typiques. Clientèle touristique premium juillet-août, voyageurs culturels et croisiéristes (escale à pied depuis le port). Prix au m² 3 600-4 500 €. T2 dès 150 000 €.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Cours Napoléon / Centre commerçant',
+        pricePerNight: '80-130 €',
+        occupancy: 60,
+        description:
+          "Axe commerçant principal d'Ajaccio, du port à la place de Gaulle. Mix résidents, business semaine, touristes courts séjours. Très bien desservi (port, gare, lignes de bus). Prix au m² 3 850-4 450 €. T2 dès 145 000 €. Bon compromis emplacement central et fréquentation touristique.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Les Salines',
+        pricePerNight: '90-160 €',
+        occupancy: 60,
+        description:
+          "Quartier balnéaire à l'ouest du centre, façade littorale sur le golfe. Plages à pied, restaurants face mer, port de plaisance Tino Rossi. Cible LCD premium juillet-août (vue mer = +20-30 % de tarif). Prix au m² 3 500-4 200 €. T2 dès 160 000 €. Le quartier le plus rentable pour la stratégie LCD pure été.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Lorette / Casone (hauteurs)',
+        pricePerNight: '75-130 €',
+        occupancy: 55,
+        description:
+          "Hauteurs résidentielles d'Ajaccio, vues panoramiques sur le golfe. Quartier prisé par les Ajacciens (calme, sécurité, verdure). Stationnement plus accessible qu'en centre-ville. Prix au m² 3 200-3 900 €. T2 dès 135 000 €. Mix LCD été + locations annuelles fonctionnaires/cadres possible.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Route des Sanguinaires',
+        pricePerNight: '110-220 €',
+        occupancy: 52,
+        description:
+          "Route littorale mythique du golfe d'Ajaccio jusqu'aux îles Sanguinaires. Coucher de soleil emblématique, plages successives (Marinella, Capo di Feno à proximité), villas et appartements premium vue mer. Saisonnalité plus marquée (juillet-août très chers, hors saison creux). Prix au m² 4 000-5 200 € pour les biens vue mer. T2 face mer dès 220 000 €.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Porticcio / Pietrosella (rive sud du golfe)',
+        pricePerNight: '85-180 €',
+        occupancy: 55,
+        description:
+          "Commune limitrophe sud d'Ajaccio (15 min en voiture), grande plage de sable, marché LCD très saisonnier. Volume SEMrush 170 sur 'conciergerie porticcio', signal d'un marché significatif. Clientèle familiale juillet-août. Prix au m² 3 200-4 000 €. T2 vue mer dès 150 000 €. Stratégie LCD pure été + propriétaire occupant hors saison.",
+        roiBrut: '5,5 à 7,5 %',
+      },
+    ],
+    regulation:
+      "Ajaccio applique **le cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel à ce jour — un statu quo voulu par la majorité municipale qui temporise pendant que d'autres communes corses durcissent.\n\n**Position du maire.** Après trois heures de débat au conseil municipal du 23 février 2024, le maire **Stéphane Sbraggia** a refusé d'instaurer un changement d'usage et un régime de compensation, invoquant une **perte fiscale potentielle de 3 millions d'euros** et la nécessité d'attendre les clarifications nationales sur la double fiscalité (taxe d'habitation et CFE). L'opposition (\"Aiacciu pà Tutti\", \"Pà Aiacciu\") réclamait un plan d'urgence avec compensation : un propriétaire de résidence secondaire ne pourrait louer en LCD que s'il propose un bien équivalent en location annuelle. **Le débat est reporté \"très prochainement\"** — à surveiller en 2026, d'autant que **Porto-Vecchio a basculé en régime restrictif depuis le 14 octobre 2024**.\n\n**Chiffres clés du marché.** Selon les données municipales : **3 200 meublés de tourisme** déclarés à Ajaccio, **12 000 logements** au total dans le parc immobilier, **26 % des studios et T1** en location saisonnière, et une **durée moyenne de 35 jours par an** par meublé loué.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Ajaccio doit être déclaré en mairie. Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération motivée — Ajaccio ne l'a pas fait à ce jour.\n\n**Pas de changement d'usage généralisé pour l'instant.** Contrairement à Porto-Vecchio ou Paris, Ajaccio n'impose pas d'autorisation de changement d'usage pour les résidences secondaires. Cette situation peut basculer si le maire change de position en 2026 ou si la pression nationale s'accentue sur les communes corses.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Ajaccio applique une taxe de séjour qui s'échelonne typiquement de **0,75 € à 4,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 95,
+      neighborhood: 'Les Salines',
+      revenuBrut: 14500,
+      commissionRate: 0.2,
+      menageCount: 55,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: "Combien rapporte un Airbnb à Ajaccio sur l'année 2026 ?",
+        a: "Un T2 de 38 m² bien placé aux Salines ou en centre historique (tarif moyen 90-110 €/nuit annuel) génère typiquement un chiffre d'affaires brut de 13 000-17 000 € sur l'année à Ajaccio, avec un pic juillet-août exceptionnel (le CA des 8 semaines d'été peut représenter 55-65 % du total annuel). Net de la commission conciergerie (20-23 %), de la taxe foncière (~900-1 400 € sur un T2 ajaccien), des charges de copropriété (800-1 200 €/an) et du ménage, comptez un revenu disponible de 7 500-10 500 €. Un T2 vue mer Route des Sanguinaires peut atteindre 18 000-24 000 € de CA brut grâce au tarif premium juillet-août (jusqu'à 280 €/nuit). La rentabilité brute reste correcte à très bonne à Ajaccio (5-7 %), tirée par les 8 semaines de pointe estivale, mais pénalisée par 5 mois de très basse saison (nov-mars).",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Ajaccio ?",
+        a: "Les commissions à Ajaccio s'étalent de 20 % HT (réseaux nationaux comme YourHostHelper et HostnFly, soit 24 % TTC) à 23 % (Agence Ciste affiché publiquement) en 2026. Les pure-players locaux (Casamea, Kurnos, AJF) travaillent sur devis personnalisé, généralement dans la fourchette 20-23 % TTC selon le périmètre et le profil du bien. La moyenne de marché s'établit autour de 21-23 % TTC pour une formule intégrale avec ménage refacturé au voyageur. Le critère décisif au-delà du taux affiché sur un marché ultra-saisonnier comme Ajaccio est la stratégie pricing dynamique sur juillet-août — un mauvais pricing peut coûter 2 000-4 000 € de manque à gagner sur les 8 semaines de pointe. Vérifiez aussi si la conciergerie propose un complément moyenne durée (bail mobilité) hors saison pour lisser les revenus inter-saison.",
+      },
+      {
+        q: 'Ajaccio est-elle en zone tendue pour la location Airbnb en 2026 ?',
+        a: "Non, Ajaccio n'a pas instauré de dispositif local restrictif à ce jour, contrairement à Porto-Vecchio qui a basculé en régime de changement d'usage et autorisation préalable depuis le 14 octobre 2024. Le maire Stéphane Sbraggia a temporisé au conseil municipal du 23 février 2024, invoquant 3 millions d'euros de pertes fiscales potentielles. L'opposition réclame un plan d'urgence avec compensation (proposer un logement équivalent en location annuelle pour pouvoir louer en LCD une résidence secondaire). Concrètement en 2026, vous pouvez transformer une résidence secondaire en meublé de tourisme sans demande d'autorisation, et louer votre résidence principale jusqu'à 120 jours par an. Mais cette situation peut évoluer : le débat municipal a été reporté \"très prochainement\" et la pression nationale s'accentue depuis Porto-Vecchio. Surveillez les délibérations du conseil municipal d'Ajaccio en 2026, et envisagez de classer votre meublé (50 % d'abattement micro-BIC vs 30 %) pour sécuriser votre fiscalité.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Ajaccio ?',
+        a: "Pour un rendement maximisé, les Salines offrent le meilleur ROI brut (5,5-7 %) sur un produit vue mer, avec un T2 dès 160 000 € et une fenêtre juillet-août exceptionnelle (180-280 €/nuit). La Route des Sanguinaires (ROI 4,5-6 %) cible une clientèle premium prête à payer 220 €/nuit pour le coucher de soleil mythique, mais le ticket d'entrée monte à 220 000 € pour un T2 vue mer. Le centre historique (autour de la cathédrale et de la maison Bonaparte) capte la clientèle culturelle et croisiériste à 90-150 €/nuit avec un T2 dès 150 000 €. Pour un budget contraint, Lorette et les hauteurs de Casone proposent des T2 dès 135 000 € avec un ROI 5-6,5 % et un mix possible LCD été + bail mobilité hiver. Porticcio (15 min sud) est une alternative balnéaire pure été avec un T2 face mer dès 150 000 € et un ROI 5,5-7,5 %, à condition d'accepter une saisonnalité très marquée.",
+      },
+    ],
+    updatedAt: '2026-06-10',
+  },
+  // ==========================================================================
+  // CARCASSONNE (Aude)
+  // ==========================================================================
+  {
+    slug: 'carcassonne',
+    displayName: 'Carcassonne',
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title: 'Conciergerie Carcassonne Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Carcassonne : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb de Carcassonne. Tarifs (20-25 %), services, avis Google, marché Cité UNESCO + Bastide Saint-Louis, réglementation 2026.",
+    kwPrincipal: 'conciergerie carcassonne',
+    kwSecondaires: [
+      'conciergerie airbnb carcassonne',
+      'conciergerie cité carcassonne',
+      'gestion location courte durée carcassonne',
+      'meilleure conciergerie carcassonne',
+      'manasteos carcassonne',
+    ],
+    population: 46429,
+    tourists: 2000000,
+    activeListings: 700,
+    priceLow: 60,
+    priceHigh: 130,
+    occupancyRate: 60,
+    revpar: 50,
+    seasonality:
+      "Saisonnalité touristique très marquée portée par la Cité médiévale UNESCO. Pic juillet-août (occupation 90-95 %, tarifs 1,5-2× la normale, clientèle internationale forte, Festival de Carcassonne en juillet, Embrasement de la Cité le 14 juillet). Très haute saison étendue de mai à septembre. Pic secondaire vacances de Pâques et Toussaint (familles, road-trips Canal du Midi à vélo). Fond de marché tourisme d'affaires faible (Carcassonne n'est pas un pôle tertiaire). Inter-saisons hiver (nov-mars hors Noël) creuses (occupation 35-45 %), partiellement compensées par les escales croisières fluviales sur le Canal du Midi et la clientèle régionale week-end (Toulouse à 50 min en TER).",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Carcassonne**, dans la **Bastide Saint-Louis** (ville basse), dans le quartier **Trivalle** au pied des remparts, à la **Cité médiévale** elle-même (rare, très contraint), ou en première couronne, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre **2 millions de visiteurs par an** à la Cité (5e monument national le plus visité de France selon le CMN), le **Festival de Carcassonne** mi-juillet qui sature les hébergements, l'**Embrasement** du 14 juillet qui attire des dizaines de milliers de spectateurs, et la dizaine d'acteurs LCD qui se partagent un marché à fort tarif moyen, vous vous demandez si confier la gestion à une conciergerie reste rentable sur les 5 mois d'ailes de saison.\n\nEt surtout : **laquelle choisir** entre les pure-players carcassonnais historiques (Conciergerie Carcassonnaise, Bel'la, Escapade), les nouveaux entrants régionaux (Manasteos depuis janvier 2025, CarcaHome) et les options sur devis personnalisé qui dominent un marché encore peu standardisé ?",
+    marketIntro:
+      "Carcassonne est un **marché LCD ultra-touristique** dominé par la fréquentation de la **Cité médiévale UNESCO** (classée en 1997) — **2 millions de visiteurs par an** selon les chiffres 2024 du CMN, dont **640 000 entrées payantes** sur le château comtal et les remparts. C'est le **5e monument national le plus visité de France** et le **1er site d'Occitanie devant le Pont du Gard**. La commune compte environ **700 annonces actives** sur Airbnb avec un tarif moyen autour de **75-85 €/nuit** sur l'année, qui monte à **130-180 €/nuit pendant juillet-août** sur les biens face Cité.\n\n**Double UNESCO.** Outre la Cité, le **Canal du Midi** (classé UNESCO en 1996) traverse Carcassonne d'est en ouest, alimentant un flux de croisières fluviales et de cyclotouristes (véloroute du Canal des Deux Mers). Les **Embrasements de la Cité du 14 juillet** rassemblent chaque année des dizaines de milliers de spectateurs (l'un des plus grands feux d'artifice de France), et le **Festival de Carcassonne** (théâtre antique, juillet, 6 semaines) attire une clientèle culturelle haut de gamme.\n\n**Toulouse à 50 minutes.** La proximité de Toulouse (50 min en TER, 1h en voiture) génère un flux régulier de week-ends régionaux et de courts séjours, particulièrement sur les ponts de mai et les vacances scolaires.\n\n**Prix immo parmi les plus accessibles de France.** Le prix moyen au m² à Carcassonne s'établit à **1 650 €/m²** en avril 2026 selon les sources locales (+2,3 % sur 12 mois). La **Bastide Saint-Louis** (ville basse, hypercentre commerçant) se négocie entre **1 500 et 2 000 €/m²**, le quartier **Trivalle** (entre Cité et bastide) entre **1 860 €/m² en moyenne (jusqu'à 2 900 €/m²)**, et les rares maisons de caractère intra-muros entre **2 300 et 2 700 €/m²**. Ce niveau de prix place Carcassonne parmi les **marchés LCD les plus rentables de France** sur le ratio tarif nuitée / ticket d'entrée — ROI brut couramment 7-9 % à la Bastide Saint-Louis sur un T2-T3.",
+    conciergeries: [
+      {
+        name: 'Manasteos Occitanie',
+        url: 'https://manasteos.com/conciergerie/carcassonne/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 600,
+        biensGeres: 16,
+        specialty: 'Réseau Côte d\'Azur + Occitanie, 600+ avis cumulés',
+        description:
+          "Manasteos est un acteur historique de la conciergerie LCD sur la Côte d'Azur (Beausoleil, Menton, Cannes) qui a ouvert son antenne Occitanie à Carcassonne en janvier 2025, dirigée par Hédi (12 Rue Jean Monnet). Commission de 20 % HT (24 % TTC) annoncée publiquement. Le réseau Manasteos cumule plus de 600 avis Google et Trustpilot pour une note moyenne de 4,9/5 — une réputation difficile à concurrencer pour un nouvel entrant carcassonnais. 16 biens gérés à Carcassonne en juin 2026, en croissance. Pertinente pour un propriétaire qui veut la robustesse process d'un réseau structuré tout en gardant un interlocuteur local.",
+      },
+      {
+        name: 'Conciergerie Carcassonnaise',
+        url: 'https://conciergerie-carcassonnaise.fr/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 0,
+        biensGeres: 18,
+        specialty: '5 ans d\'ancrage local, commission affichée 25 % TTC',
+        description:
+          "La Conciergerie Carcassonnaise est dirigée par Mélissa depuis ses bureaux 4 rue Victor Hugo dans la Bastide Saint-Louis. Environ 5 ans d'expérience sur le marché carcassonnais. Commission affichée publiquement à 25 % TTC sur les revenus nets générés — l'une des grilles tarifaires les plus transparentes du marché. Service complet : annonce, pricing dynamique saisonnier, communication voyageurs 24/7, check-in/check-out automatisé, ménage pro, linge. Pertinente pour un propriétaire qui valorise un acteur carcassonnais historique avec un tarif clair, et qui accepte une commission en haut de fourchette en échange d'une formule intégrale.",
+      },
+      {
+        name: "Bel'la Conciergerie",
+        url: 'https://www.bellaconciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 0,
+        biensGeres: 15,
+        specialty: 'Pricing dynamique saisonnalité + événements',
+        description:
+          "Bel'la Conciergerie est dirigée par Sandrine, basée à Carcassonne. Tarification sur devis, généralement dans la fourchette 20-25 % TTC selon le périmètre. Positionnement marqué sur le pricing dynamique calé sur la saisonnalité, la demande et les événements locaux (Festival, Embrasements, vacances scolaires européennes). Témoignages clients récurrents sur la proximité relationnelle (\"très à l'écoute, professionnelle, sérieuse\"). Pertinente pour un propriétaire qui veut un contact direct privilégié plutôt qu'une plateforme digitalisée.",
+      },
+      {
+        name: 'Escapade Conciergerie',
+        url: 'https://www.conciergerie-escapade.com/temoignages',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 0,
+        biensGeres: 10,
+        specialty: 'Acteur émergent (SIRET 2024), gestion sur-mesure',
+        description:
+          "Escapade Conciergerie est dirigée par Ludivine (SIRET 940748064, immatriculation 2024). Acteur émergent du marché carcassonnais positionné sur une gestion sur-mesure à taille humaine. Tarification sur devis. Témoignages clients soulignant la chaleur humaine, le professionnalisme et l'amélioration des revenus locatifs après prise en charge. Pertinente pour un propriétaire qui valorise un acteur jeune disponible et accessible, prêt à co-construire le périmètre exact de la prestation — moins adapté à un portefeuille de 5+ biens nécessitant un process industrialisé.",
+      },
+      {
+        name: 'CarcaHome (My Happy Conciergerie)',
+        url: 'https://my-happy-conciergerie.com/carcahome',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 10,
+        biensGeres: 12,
+        specialty: 'Réseau My Happy Conciergerie, présence multi-villes',
+        description:
+          "CarcaHome est l'antenne carcassonnaise du réseau My Happy Conciergerie, présent sur plusieurs villes françaises. Note Google 4,6 sur 10 avis, base de retours modeste mais cohérente. Tarification sur devis, généralement dans la moyenne du marché (20-22 % TTC selon retours collectés). Service standardisé avec process réseau (templates messages, scripts check-in). Pertinente pour un propriétaire qui a besoin d'un process éprouvé et d'une présence multi-villes (utile si patrimoine LCD réparti).",
+      },
+      {
+        name: 'Mi casa es su casa',
+        url: 'https://agence.contact/11-aude/carcassonne/agence-de-location-de-maisons-de-vacances/1147-mi-casa-es-su-casa-conciergerie.html',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 17,
+        biensGeres: 12,
+        specialty: 'Volume avis cumulé solide, gestion patrimoniale Carcassonne',
+        description:
+          "Mi casa es su casa est une conciergerie carcassonnaise référencée sur les annuaires locaux avec 17 avis cumulés et une équipe (Clara identifiée dans les témoignages) décrite comme \"attentive, réactive et de bon conseil\". Tarification sur devis. Service complet annonce, accueil, ménage, communication voyageurs. Pertinente pour un propriétaire d'un bien atypique ou de caractère (Trivalle, intra-muros Cité) nécessitant un acteur capable de scénariser l'accueil et la mise en valeur patrimoniale.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Bastide Saint-Louis (ville basse, hypercentre)',
+        pricePerNight: '70-110 €',
+        occupancy: 65,
+        description:
+          "Cœur commerçant et administratif de Carcassonne, plan en damier XIIIe siècle. Place Carnot, halles, rues piétonnes, restaurants. Excellente connexion à la Cité à pied (15 min via pont Vieux) et à la gare. Prix au m² 1 500-2 000 €. T2 dès 80 000 €. Le meilleur compromis rendement et qualité d'emplacement pour la clientèle internationale qui veut visiter la Cité tout en bénéficiant d'un quartier vivant. ROI brut 7-9 % couramment atteint sur un T2-T3.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Trivalle (au pied de la Cité)',
+        pricePerNight: '85-140 €',
+        occupancy: 68,
+        description:
+          "Quartier patrimonial entre la Cité médiévale et la Bastide, le long de l'Aude. Maisons anciennes, ruelles étroites, vue directe sur les remparts pour certaines adresses. Prix au m² moyen 1 860 € (rue Trivalle), pouvant grimper à 2 900 €/m² sur les biens vue Cité. Clientèle haut de gamme prête à payer un premium pour la vue. T2 dès 90 000 €, maison de caractère dès 180 000 €.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Cité de Carcassonne (intra-muros)',
+        pricePerNight: '120-220 €',
+        occupancy: 72,
+        description:
+          "Patrimoine UNESCO depuis 1997, 2 millions de visiteurs par an, 50 habitants permanents seulement intra-muros. Offre LCD très rare (autorisations difficiles, contraintes patrimoniales lourdes). Tarif premium absolu mais saisonnalité accentuée (juillet-août seuls vraiment chers). Prix au m² 2 300-2 700 € sur les rares maisons de caractère. Investissement très spécifique, à réserver à un propriétaire patrimonial avec dossier solide.",
+        roiBrut: '5 à 7 %',
+      },
+      {
+        name: 'Quartier de la Gare / Pont Vieux',
+        pricePerNight: '60-95 €',
+        occupancy: 58,
+        description:
+          "Quartier autour de la gare SNCF (Toulouse-Narbonne, TER 50 min Toulouse). Clientèle business voyageurs et touristes ferroviaires. Prix au m² 1 400-1 900 €. T2 dès 70 000 €. Bon ratio prix d'entrée / fréquentation, particulièrement pertinent pour un investisseur toulousain qui veut un second bien LCD à 50 min.",
+        roiBrut: '7 à 8,5 %',
+      },
+      {
+        name: 'Grazailles / Saint-Jacques (résidentiel péricentre)',
+        pricePerNight: '55-85 €',
+        occupancy: 50,
+        description:
+          "Quartiers résidentiels au nord et nord-est de la Bastide. Prix au m² les plus accessibles de Carcassonne (1 200-1 700 €). Maisons individuelles avec jardin. T3-T4 dès 130 000 €. Stratégie maison familiale en location ponctuelle vacances + clientèle régionale week-end. Saisonnalité plus marquée que la Bastide.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Canal du Midi / Saint-Vincent (rive sud)',
+        pricePerNight: '65-100 €',
+        occupancy: 55,
+        description:
+          "Quartier en bord de Canal du Midi (UNESCO 1996), cyclotouristes (véloroute du Canal des Deux Mers, 360 km Toulouse-Sète), escales fluviales. Prix au m² 1 500-1 900 €. T2 dès 75 000 €. Clientèle pédestre et fluviale spécifique, niche bien valorisée si annonce adaptée (mention vélo, location de vélos, parking sécurisé).",
+        roiBrut: '7 à 8,5 %',
+      },
+    ],
+    regulation:
+      "Carcassonne applique **le cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel à ce jour — un cadre relativement souple qui en fait l'un des marchés LCD les plus accessibles de France à la fois sur le prix d'achat et sur la réglementation.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Carcassonne doit être déclaré en mairie. Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération motivée — Carcassonne ne l'a pas fait.\n\n**Pas de changement d'usage généralisé.** Contrairement à Paris, Lyon, Bordeaux ou Porto-Vecchio, Carcassonne n'impose pas d'autorisation de changement d'usage pour les résidences secondaires. Cette souplesse réglementaire est cohérente avec la pression démographique modérée (46 429 habitants 2025, marché du logement non tendu) et la dynamique d'attractivité touristique que la commune souhaite préserver autour de la Cité UNESCO.\n\n**Contraintes patrimoniales spécifiques intra-muros.** Tout projet de meublé de tourisme **dans l'enceinte de la Cité médiévale** (50 habitants permanents) est soumis aux avis de l'Architecte des Bâtiments de France (ABF) et au règlement du Site Patrimonial Remarquable. Travaux intérieurs encadrés, signalétique extérieure interdite, modifications de façade prohibées. Pour les biens dans la **Bastide Saint-Louis** (plan en damier XIIIe), des contraintes patrimoniales plus légères s'appliquent sur les façades.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur — particulièrement pertinent à Carcassonne où la fréquentation Cité justifie un positionnement gamme moyenne à haute.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Carcassonne applique une taxe de séjour qui s'échelonne typiquement de **0,75 € à 4,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 80,
+      neighborhood: 'Bastide Saint-Louis',
+      revenuBrut: 17500,
+      commissionRate: 0.22,
+      menageCount: 65,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Combien rapporte un Airbnb à Carcassonne sur l'année 2026 ?",
+        a: "Un T2 de 45 m² bien placé à la Bastide Saint-Louis ou Trivalle (tarif moyen 75-90 €/nuit annuel) génère typiquement un chiffre d'affaires brut de 15 000-20 000 € sur l'année à Carcassonne, avec un pic juillet-août (le CA juin-septembre représente 45-55 % du total) soutenu par le Festival de Carcassonne et les Embrasements du 14 juillet. Net de la commission conciergerie (20-25 %), de la taxe foncière (~700-1 000 € sur un T2 carcassonnais), des charges de copropriété (600-900 €/an) et du ménage, comptez un revenu disponible de 9 000-12 500 €. Une maison de caractère T3-T4 à Trivalle avec vue Cité peut atteindre 22 000-30 000 € de CA brut grâce au premium vue (jusqu'à 220 €/nuit en pointe). La rentabilité brute reste excellente à Carcassonne (7-9 % couramment à la Bastide) du fait des prix d'acquisition très accessibles (1 650 €/m² moyen 2026, parmi les plus bas des villes LCD significatives en France).",
+      },
+      {
+        q: 'Carcassonne est-elle en zone tendue pour la location Airbnb en 2026 ?',
+        a: "Non, Carcassonne n'est pas classée en zone tendue et n'a pas instauré de dispositif local restrictif sur les meublés de tourisme (contrairement à Paris, Lyon, Bordeaux, Porto-Vecchio ou Colmar). Concrètement, vous pouvez transformer une résidence secondaire en meublé de tourisme sans demande d'autorisation de changement d'usage, et louer votre résidence principale jusqu'à 120 jours par an (la commune n'a pas abaissé ce seuil à 90 jours). Cette souplesse est cohérente avec la pression démographique modérée (46 429 habitants en 2025, marché du logement non tendu) et la stratégie touristique de la commune autour de la Cité UNESCO (5e monument national le plus visité de France, 2 millions de visiteurs par an). Seules contraintes spécifiques : les projets dans l'enceinte intra-muros de la Cité sont soumis à l'avis de l'Architecte des Bâtiments de France (Site Patrimonial Remarquable). La seule obligation universelle est la déclaration préalable en mairie et l'obtention du numéro d'enregistrement national à 13 chiffres au plus tard le 20 mai 2026.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Carcassonne ?',
+        a: "La Bastide Saint-Louis (ville basse, hypercentre) offre le meilleur compromis rendement / qualité d'emplacement avec un ROI brut 7-9 % sur un T2-T3 et un ticket d'entrée bas (T2 dès 80 000 €). Trivalle (entre Cité et bastide) capte une clientèle premium prête à payer 140-220 €/nuit pour une maison de caractère avec vue remparts, avec un ROI 6,5-8,5 % mais un ticket d'entrée plus élevé (180 000 € pour une maison de caractère, jusqu'à 2 900 €/m² sur les biens vue Cité). Le Canal du Midi / Saint-Vincent vise la niche cyclotouristes et croisières fluviales avec un ROI 7-8,5 %. Le quartier de la Gare est pertinent pour un investisseur toulousain (TER 50 min) avec un T2 dès 70 000 € et un ROI 7-8,5 %. Pour un budget contraint, Grazailles/Saint-Jacques propose des T3-T4 dès 130 000 € avec un ROI 6,5-8 % sur une stratégie maison familiale en location vacances + week-ends régionaux. L'intra-muros Cité reste un investissement de niche réservé aux dossiers patrimoniaux solides.",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Carcassonne ?",
+        a: "Les commissions à Carcassonne s'étalent de 20 % HT (Manasteos Occitanie affiché publiquement, soit 24 % TTC) à 25 % TTC (Conciergerie Carcassonnaise affiché sur les revenus nets) en 2026. La majorité des pure-players locaux (Bel'la Conciergerie, Escapade Conciergerie, CarcaHome, Mi casa es su casa) travaillent sur devis personnalisé, généralement dans la fourchette 20-25 % TTC selon le périmètre et le profil du bien. La moyenne de marché s'établit autour de 22-23 % TTC pour une formule intégrale avec ménage refacturé au voyageur. Le critère décisif au-delà du taux affiché sur un marché touristique comme Carcassonne est la stratégie pricing dynamique sur les pics annuels (Festival mi-juillet, Embrasements 14 juillet, vacances scolaires européennes) et la capacité à gérer la clientèle internationale (anglais, espagnol, italien) — Carcassonne attire une forte proportion de visiteurs étrangers via la Cité UNESCO.",
+      },
+    ],
+    updatedAt: '2026-06-10',
+  },
+  // ==========================================================================
+  // HONFLEUR (Calvados)
+  // ==========================================================================
+  {
+    slug: 'honfleur',
+    displayName: 'Honfleur',
+    region: 'Normandie',
+    regionSlug: 'normandie',
+    title: 'Conciergerie Honfleur Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Honfleur : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb de Honfleur. Tarifs (15-25 %), services, avis Google, marché Vieux Bassin + Côte Fleurie, nouvelle réglementation 2026.",
+    kwPrincipal: 'conciergerie honfleur',
+    kwSecondaires: [
+      'conciergerie airbnb honfleur',
+      'conciergerie côte fleurie',
+      'remi griffoul',
+      'conciergerie rémi griffoul',
+      'meilleure conciergerie honfleur',
+    ],
+    population: 6640,
+    tourists: 5000000,
+    activeListings: 500,
+    priceLow: 80,
+    priceHigh: 180,
+    occupancyRate: 70,
+    revpar: 75,
+    seasonality:
+      "Saisonnalité atypique pour un marché côtier français : Honfleur conserve un fond de marché soutenu hors été grâce à sa fréquentation touristique étalée sur l'année (Vieux Bassin, peintres impressionnistes, gastronomie). Pic juillet-août (occupation 85-95 %, tarifs 1,5-2× la normale, clientèle internationale forte + parisienne). Pic secondaire week-ends de printemps (avril-mai) et de septembre-octobre (couleurs d'automne). Pics de Noël et Nouvel An (clientèle parisienne, marchés gourmands). Inter-saison hiver creuse (jan-fév, occupation 40-55 %). 978 644 nuitées déclarées en 2023 selon l'office de tourisme (670 909 nuitées hébergeurs + 307 735 nuitées plateformes type Airbnb). 6,66 millions de nuitées sur le territoire Côte Fleurie en 2024 (+5,5 % vs 2023).",
+    rankNational: 17,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Honfleur**, sur le **Vieux Bassin** (Quai Sainte-Catherine, Quai Saint-Étienne), dans le **Faubourg Sainte-Catherine**, sur les hauteurs du **Plateau de Grâce** ou en première couronne (Equemauville, Vasouy), que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre le **bouleversement réglementaire majeur du 21 décembre 2025** (la mairie a acté un assouplissement après 3 ans de politique ultra-restrictive 2022-2025), les **5 millions de visiteurs annuels** estimés sur la commune et les **978 644 nuitées déclarées en 2023**, et la dizaine d'acteurs locaux qui se partagent un marché premium à tarif moyen 110 €/nuit, vous vous demandez s'il faut profiter de la fenêtre d'opportunité 2026 pour basculer en LCD ou attendre de voir la stabilité du nouveau régime de quotas dynamiques.\n\nEt surtout : **laquelle choisir** entre l'acteur historique premium (Conciergerie Rémi Griffoul, élu Airbnb meilleur hôte de France 2023 et 2024), les pure-players honfleurais 5,0 (KL Conciergerie, MD Conciergerie Normandie), les réseaux régionaux (Boostars, Cocoonr) et l'acteur historique controversé (Conciergerie Honfleuraise) ?",
+    marketIntro:
+      "Honfleur est un **marché LCD premium ultra-touristique** : 6 640 habitants permanents (INSEE 2023, en baisse depuis 2016) pour environ **5 millions de visiteurs annuels** estimés sur la commune (incluant excursionnistes journée), **978 644 nuitées touristiques déclarées en 2023** (670 909 directes hébergeurs + 307 735 plateformes type Airbnb selon l'office de tourisme). Le territoire élargi Côte Fleurie a totalisé **6,66 millions de nuitées en 2024** (+5,5 % vs 2023). La commune compte environ **500 annonces actives** sur Airbnb avec un tarif moyen autour de **110 €/nuit** et un taux d'occupation **75 %** — des niveaux exceptionnels pour une ville de cette taille.\n\n**Marché de poche premium.** Le **Vieux Bassin** (Quai Sainte-Catherine, Quai Saint-Étienne), le **Carré aux Sels** et la **Lieutenance** concentrent la quasi-totalité de la valeur LCD. Les maisons à pans de bois XVe-XVIIe et l'**église Sainte-Catherine** (plus grande église de France en bois) attirent une clientèle internationale (anglo-saxonne, allemande, néerlandaise, italienne) qui paye un premium pour le cadre unique. Tarifs jusqu'à **220-280 €/nuit** sur les biens vue Vieux Bassin en pointe.\n\n**Bouleversement réglementaire 21 décembre 2025.** La municipalité a acté un assouplissement majeur après une politique ultra-restrictive 2022-2025 qui n'a pas créé de nouveaux logements permanents mais a généralisé le phénomène des \"volets clos\" et privé les commerçants d'un flux hors saison. Le nouveau régime 2026 introduit des **quotas dynamiques** et une **dérogation possible à la compensation physique** moyennant le paiement d'une **redevance forfaitaire** ou l'adhésion à un régime de quotas limités. **Fenêtre d'opportunité 2026** pour les propriétaires qui avaient gelé leur projet LCD pendant la période restrictive.\n\n**Prix immo dans la fourchette haute Normandie côtière.** Comptez **4 500-6 500 €/m²** sur les rares biens disponibles autour du Vieux Bassin (offre extrêmement limitée), **3 500-5 000 €/m²** sur le Faubourg Sainte-Catherine, **3 000-4 500 €/m²** sur le Plateau de Grâce (hauteurs), et **2 800-4 000 €/m²** en première couronne (Equemauville, Vasouy). Le ticket d'entrée est élevé mais le rendement reste solide grâce au tarif nuitée et à l'occupation premium.",
+    conciergeries: [
+      {
+        name: 'Conciergerie Rémi Griffoul',
+        url: 'https://www.conciergerie-remigriffoul.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 5.0,
+        reviews: 50,
+        biensGeres: 9,
+        specialty: 'Élu Airbnb meilleur hôte de France 2023 + 2024',
+        description:
+          "Conciergerie Rémi Griffoul est l'acteur historique premium du marché honfleurais (7 ans d'expérience, 5 Rue des Lingots à Honfleur). Élue par Airbnb « Hôte professionnel ayant la meilleure note de qualité en France en 2023 et 2024 » — distinction nationale exceptionnelle. Portefeuille curated d'au moins 9 hébergements de caractère à Honfleur, Trouville-sur-Mer et Cricqueboeuf (L'Escale du Vieux Port, Maison Saint Léonard, Dolphin View, Le Cosmopolitain). Tarification sur devis adaptée au positionnement premium. Service personnalisé 7j/7. Pertinente pour un propriétaire d'un bien de caractère qui privilégie l'excellence de la note et le ticket moyen premium plutôt que le volume — moins adaptée à un T1-T2 standard sur le marché concurrentiel.",
+      },
+      {
+        name: 'KL Conciergerie Honfleur',
+        url: 'https://www.kl-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 13,
+        biensGeres: 14,
+        specialty: 'Note Google 5,0 sur 13 avis, gestion locative 7j/7',
+        description:
+          "KL Conciergerie est domiciliée 40 Rue Saint-Léonard à Honfleur, au cœur du tissu commerçant. Note Google de 5,0 sur 13 avis Google, l'une des plus solides du marché honfleurais. Gestion locative saisonnière à l'année avec check-in/check-out, ménage pro, fourniture des consommables d'accueil. Équipe décrite comme « dynamique et réactive, rapidité du service de ménage ». Tarification sur devis (généralement 20 % TTC pour 1-2 biens, dégressif à 15 % au-delà de 3 biens selon les retours collectés sur les comparateurs spécialisés). Pertinente pour un propriétaire qui veut un acteur honfleurais ancré sans la prime du positionnement ultra-premium.",
+      },
+      {
+        name: 'MD Conciergerie Normandie',
+        url: 'https://www.mdconciergerienormandie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 0,
+        biensGeres: 12,
+        specialty: 'Honfleur + Côte Fleurie + Beuzeville, gestion 6j/7',
+        description:
+          "MD Conciergerie Normandie est basée à Honfleur avec une couverture étendue Côte Fleurie (Trouville, Deauville, Cabourg) et Beuzeville. 4 prestations cœur : création/rédaction d'annonce, optimisation des réservations, ménage et entretien, communication voyageurs. Tarification sur devis. Pertinente pour un propriétaire avec plusieurs biens répartis sur le territoire Côte Fleurie qui veut un interlocuteur unique gérant l'ensemble du portefeuille — gain de cohérence et économies d'échelle sur les déplacements.",
+      },
+      {
+        name: 'Boostars Honfleur',
+        url: 'https://www.boostars.com/post/conciergerie-honfleur',
+        commission: '15-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 0,
+        biensGeres: 20,
+        specialty: 'Réseau Normandie (Rouen, Deauville, Cabourg, Honfleur)',
+        description:
+          "Boostars est un réseau régional Normandie (Rouen, Deauville, Cabourg, Lille, Amiens, Honfleur) avec un mix de prestations modulables (forfaits commission 15-25 % selon services, frais de ménage refacturés à partir de 30 €). Référencée par l'office de tourisme de Honfleur. Gestion opérationnelle accueil/check-out, ménage, linge. Volume SEMrush significatif sur la marque (260 vol). Pertinente pour un propriétaire qui veut comparer plusieurs forfaits avant de signer (le 15 % de base ne couvre que l'opérationnel terrain ; la formule complète à 25 % inclut publication, pricing et communication voyageurs).",
+      },
+      {
+        name: 'Conciergerie Honfleuraise',
+        url: 'https://gowork.fr/conciergerie-honfleuraise-deauville',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 3.5,
+        reviews: 0,
+        biensGeres: 25,
+        specialty: 'Acteur historique 5 ans + branche Deauville (Deauvillaise)',
+        description:
+          "Conciergerie Honfleuraise est un acteur historique du marché (5 ans d'existence, branche Deauville sous le nom \"Conciergerie Deauvillaise\") avec un portefeuille élargi sur la Côte Fleurie. Tarification sur devis. À noter : les retours clients sont contrastés sur les comparateurs (témoignages positifs sur l'efficacité opérationnelle, mais aussi retours plus mitigés sur la communication et le caractère impersonnel du service). Pertinente uniquement si le devis et un échange en face à face confirment un fit personnel — sinon privilégier les acteurs à note Google 5,0 (KL, MD, Rémi Griffoul).",
+      },
+      {
+        name: 'Ma Conciergerie en Normandie',
+        url: 'https://www.allovoyages.fr/mag/conciergeries-airbnb-normandie/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 0,
+        biensGeres: 18,
+        specialty: 'Commission affichée 25 %, sans engagement de durée',
+        description:
+          "Ma Conciergerie en Normandie affiche une commission de 25 % pour une gestion globale sans engagement de durée — une formule rare sur le marché honfleurais où la plupart des contrats sont annuels reconductibles. Couverture régionale Normandie élargie. Service complet annonce, communication voyageurs, ménage, optimisation tarifaire, assistance 24/7. Pertinente pour un propriétaire qui veut tester une conciergerie sur 3-6 mois avant engagement long terme, ou qui veut conserver la possibilité de reprendre la main rapidement si le bien performe différemment de ses attentes.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieux Bassin (Sainte-Catherine, Saint-Étienne, Lieutenance)',
+        pricePerNight: '140-250 €',
+        occupancy: 80,
+        description:
+          "Cœur emblématique de Honfleur, port de plaisance entouré de maisons à pans de bois XVe-XVIIe, peint par Boudin, Monet, Courbet. Offre LCD extrêmement limitée (parc protégé, contraintes patrimoniales). Tarifs premium toute l'année grâce à la clientèle internationale. Prix au m² 4 500-6 500 € quand un bien se libère. T2 dès 250 000 €, maison de caractère dès 600 000 €. Le segment le plus rentable en valeur absolue par nuit, mais ticket d'entrée le plus élevé.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Faubourg Sainte-Catherine (autour église en bois)',
+        pricePerNight: '100-160 €',
+        occupancy: 72,
+        description:
+          "Faubourg historique autour de l'église Sainte-Catherine (plus grande église de France en bois, XVe siècle). Rues piétonnes commerçantes, restaurants, galeries d'art. Prix au m² 3 500-5 000 €. T2 dès 180 000 €. Bon compromis localisation patrimoniale et accessibilité prix vs Vieux Bassin. Forte demande LCD toute l'année.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Plateau de Grâce / Côte de Grâce (hauteurs)',
+        pricePerNight: '95-150 €',
+        occupancy: 68,
+        description:
+          "Hauteurs de Honfleur, chapelle Notre-Dame-de-Grâce (1606), vues panoramiques sur l'estuaire de la Seine et le pont de Normandie. Quartier résidentiel apprécié des Honfleurais. Prix au m² 3 000-4 500 €. T2 dès 160 000 €, maison avec jardin et vue dès 350 000 €. Clientèle LCD couple/famille recherchant le cadre paisible et la vue.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Côté Mer / Plage du Butin',
+        pricePerNight: '110-180 €',
+        occupancy: 65,
+        description:
+          "Quartier littoral à l'est du Vieux Bassin, plage du Butin, accès direct à la mer. Mix résidences secondaires et locations saisonnières estivales. Prix au m² 3 500-5 000 €. T2 vue mer dès 220 000 €. Saisonnalité plus marquée que le Vieux Bassin (juillet-août premium fort, hors saison moins forte).",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Première couronne (Equemauville, Vasouy)',
+        pricePerNight: '80-130 €',
+        occupancy: 62,
+        description:
+          "Communes limitrophes de Honfleur, accès voiture 5-10 min du Vieux Bassin. Maisons individuelles avec jardin, prix nettement plus accessibles. Prix au m² 2 800-4 000 €. Maison T4 dès 280 000 €. Stratégie maison familiale en location saisonnière (printemps-automne) particulièrement pertinente pour groupes 6-8 personnes et événementiel familial.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Côté Seine / Port Pétrolier (mixte)',
+        pricePerNight: '75-120 €',
+        occupancy: 58,
+        description:
+          "Quartier ouest entre Honfleur et le pont de Normandie. Plus mixte (résidentiel + activité portuaire), prix les plus accessibles de la commune. Prix au m² 2 500-3 800 €. T2 dès 140 000 €. Stratégie LCD plus dépendante de la photo qualité et du pricing dynamique pour compenser la moindre image de marque, mais ROI brut intéressant pour un investisseur sensible au ticket d'entrée.",
+        roiBrut: '6 à 7,5 %',
+      },
+    ],
+    regulation:
+      "Honfleur applique en 2026 **un nouveau régime de quotas dynamiques** acté par la municipalité le **21 décembre 2025**, qui marque la fin d'une politique ultra-restrictive 2022-2025 et redonne une fenêtre d'opportunité aux propriétaires LCD — un retournement majeur unique sur le littoral normand.\n\n**Bouleversement réglementaire du 21 décembre 2025.** Pendant 3 ans (2022-2025), Honfleur avait verrouillé l'accès aux meublés de tourisme dans un objectif déclaré de protection du logement permanent. La municipalité a constaté l'échec de cette politique : pas de nouveaux logements créés pour les familles, mais multiplication des « volets clos » et perte de pouvoir d'achat quotidien pour les commerçants hors saison. **Le nouvel arrêté 2026 introduit un régime de quotas dynamiques avec dérogation possible à la compensation physique** moyennant le paiement d'une **redevance forfaitaire compensatrice** ou l'adhésion à un régime de quotas limités. La municipalité bascule d'une logique d'interdiction à une logique de régulation qualitative.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Honfleur doit être déclaré en mairie. Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération motivée — Honfleur ne l'a pas fait à ce jour.\n\n**Compensation et changement d'usage pour résidence secondaire.** Le nouvel arrêté 2026 a assoupli le régime sans le supprimer. Concrètement, un propriétaire de résidence secondaire qui veut louer en meublé de tourisme doit **soit** justifier d'une compensation physique (achat de m² locatifs équivalents), **soit** opter pour la **redevance forfaitaire compensatrice**, **soit** adhérer au régime de **quotas limités annuels** (nombre exact à préciser par arrêté complémentaire 2026). Demander un rendez-vous au service urbanisme avant tout achat à finalité LCD.\n\n**Contraintes patrimoniales Vieux Bassin.** Tout projet dans le périmètre du **Site Patrimonial Remarquable** (Vieux Bassin, Lieutenance, faubourg Sainte-Catherine) est soumis à l'avis de l'**Architecte des Bâtiments de France** (ABF). Travaux intérieurs encadrés, signalétique extérieure interdite, fenêtres et façades protégées.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. Dans les zones tendues comme Honfleur, les biens proposés pour la première fois à la location touristique soumis à un changement d'usage doivent afficher **un DPE d'au moins classe E**.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration**, **50 000 € pour location au-delà du quota autorisé** prévu par l'arrêté municipal 2026.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Honfleur applique une taxe de séjour qui s'échelonne typiquement de **0,75 € à 4,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 130,
+      neighborhood: 'Faubourg Sainte-Catherine',
+      revenuBrut: 28000,
+      commissionRate: 0.22,
+      menageCount: 78,
+      menageUnitCost: 75,
+    },
+    extraFaq: [
+      {
+        q: 'Que change le nouvel arrêté du 21 décembre 2025 à Honfleur pour les Airbnb ?',
+        a: "Le 21 décembre 2025, la municipalité de Honfleur a acté un assouplissement majeur de sa réglementation sur les meublés de tourisme, mettant fin à 3 années (2022-2025) de politique ultra-restrictive. Le constat de la mairie : la politique de verrouillage n'a pas créé de nouveaux logements permanents pour les familles, mais a multiplié les « volets clos » et privé les commerçants honfleurais d'un flux de consommation hors saison. Le nouveau régime 2026 introduit des quotas dynamiques avec dérogation possible à la compensation physique : un propriétaire de résidence secondaire qui veut louer en LCD peut soit acheter des m² locatifs équivalents (compensation physique, comme avant), soit payer une redevance forfaitaire compensatrice, soit adhérer au régime de quotas limités annuels. Concrètement, cela rouvre une fenêtre d'opportunité 2026 pour les propriétaires qui avaient gelé leur projet pendant la période restrictive. Demander un rendez-vous au service urbanisme avant tout achat ou changement d'affectation : les modalités précises (montant de la redevance, volume du quota) sont précisées par arrêtés complémentaires 2026.",
+      },
+      {
+        q: "Combien rapporte un Airbnb à Honfleur sur l'année 2026 ?",
+        a: "Un T2 de 40 m² bien placé sur le Faubourg Sainte-Catherine ou autour du Vieux Bassin (tarif moyen 110-140 €/nuit annuel, occupation 70-75 %) génère typiquement un chiffre d'affaires brut de 25 000-32 000 € sur l'année à Honfleur — l'un des niveaux de revenus LCD les plus élevés de France hors Paris-Côte d'Azur. Net de la commission conciergerie (20-25 %), de la taxe foncière (~1 200-1 800 € sur un T2 honfleurais), des charges de copropriété (700-1 100 €/an) et du ménage, comptez un revenu disponible de 14 500-19 000 €. Un bien vue Vieux Bassin (offre extrêmement rare) peut atteindre 35 000-50 000 € de CA brut grâce au tarif premium (jusqu'à 250 €/nuit en pointe et occupation 80 %+). La rentabilité brute reste solide à Honfleur (4,5-6 % au Vieux Bassin, 5-6,5 % au Faubourg, 5,5-7 % en première couronne) malgré les prix d'acquisition élevés grâce au tarif nuitée premium et à l'occupation exceptionnelle pour une ville de 6 640 habitants.",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Honfleur ?",
+        a: "Les commissions à Honfleur s'étalent de 15 % TTC (Boostars formule de base, sans diffusion ni pricing) à 25 % TTC (Ma Conciergerie en Normandie, Conciergerie Carcassonnaise pour comparaison régionale) en 2026, avec une moyenne de marché autour de 20-22 % TTC pour une formule intégrale. Les pure-players honfleurais (Conciergerie Rémi Griffoul, KL Conciergerie, MD Conciergerie Normandie) travaillent sur devis personnalisé. La Conciergerie Rémi Griffoul, élue par Airbnb « meilleur hôte de France » en 2023 et 2024, justifie un positionnement premium sur un portefeuille curated de biens de caractère. Le critère décisif au-delà du taux affiché sur un marché premium comme Honfleur est la capacité à gérer la clientèle internationale (anglais, allemand, néerlandais, italien) et la stratégie pricing dynamique sur les pics annuels (juillet-août, week-ends de printemps, Noël/Nouvel An) — un mauvais pricing premium peut coûter 3 000-6 000 € de manque à gagner sur l'année.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Honfleur ?',
+        a: "Le Vieux Bassin reste le segment le plus rentable en valeur absolue par nuit (140-250 €/nuit, occupation 80 %+) mais l'offre est extrêmement limitée et le ticket d'entrée très élevé (T2 dès 250 000 €, maison de caractère dès 600 000 €, ROI brut 4,5-6 %). Le Faubourg Sainte-Catherine (autour de l'église en bois) offre le meilleur compromis prix/rendement avec T2 dès 180 000 € et ROI 5-6,5 %. Le Plateau de Grâce et la Côte de Grâce (hauteurs) ciblent une clientèle couple/famille recherchant le cadre paisible et la vue estuaire-pont de Normandie (T2 dès 160 000 €, ROI 5-6,5 %). Pour un budget contraint, la première couronne (Equemauville, Vasouy) propose des maisons avec jardin dès 280 000 € avec un ROI 5,5-7 % et une stratégie pertinente pour groupes 6-8 personnes et événementiel familial. Le côté Seine/port pétrolier est l'option « budget » avec T2 dès 140 000 € et ROI 6-7,5 %, mais nécessite un effort de mise en scène photo et de pricing dynamique pour compenser l'image de marque plus faible que le Vieux Bassin.",
+      },
+    ],
+    updatedAt: '2026-06-10',
+  },
+  // ==========================================================================
+  // BANDOL (Var, Côte Provence)
+  // ==========================================================================
+  {
+    slug: 'bandol',
+    displayName: 'Bandol',
+    region: 'Provence-Alpes-Côte d\'Azur',
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie Bandol Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Bandol : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Bandol. Tarifs (20-25 %), services, avis, réglementation 2026, changement d'usage, plage de Renécros, port, quartiers rentables.",
+    kwPrincipal: 'conciergerie bandol',
+    kwSecondaires: [
+      'airbnb bandol',
+      'conciergerie airbnb bandol',
+      'location courte durée bandol',
+      'la clé bandolaise',
+      'gestion locative bandol',
+      'meublé tourisme bandol',
+    ],
+    population: 8463,
+    tourists: 600000,
+    activeListings: 890,
+    priceLow: 90,
+    priceHigh: 220,
+    occupancyRate: 52,
+    revpar: 50,
+    seasonality:
+      "Saisonnalité ultra-marquée propre aux stations balnéaires Var Ouest. 4 mois de très haute saison (juin-septembre) qui font la rentabilité du LCD, 8 mois de tourisme régional fortement réduit. Pic absolu en août (occupation 90 %, revenus locatifs mensuels moyens 2 211 € selon les données marché Welkeys, tarifs 220-280 €/nuit sur les biens centre/port et vue mer). Pic secondaire en juillet (occupation 80-85 %). Avant-saison (mai-juin) et arrière-saison (septembre-mi-octobre) portées par les week-ends prolongés (Pentecôte, Ascension) et l'œnotourisme AOC Bandol (vendanges, vinification). Intersaison (novembre-mars hors fêtes) très creuse (occupation 25-35 %).",
+    rankNational: 26,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Bandol**, sur le **port**, du côté de la **plage de Renécros** ou dans les collines des **Lices** et de **Saint-Anne**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **saisonnalité ultra-marquée** (4 mois de très haute saison, 8 mois creux), la **réglementation locale durcie** (autorisation de changement d'usage obligatoire pour toute résidence secondaire), les **tarifs de marché** qui passent de 90 € à 280 €/nuit entre mai et août, et la dizaine d'acteurs locaux qui se partagent un marché premium AOC Bandol, vous vous demandez si confier la gestion à une conciergerie reste rentable hors saison.\n\nEt surtout : **laquelle choisir** entre les pure-players bandolais (La Clé Bandolaise, DMP Excellence), les acteurs varois (Welcome Conciergerie, YourHostHelper) et les réseaux nationaux qui ratissent la Côte ?",
+    marketIntro:
+      "Bandol est un **marché LCD ultra-saisonnier premium** : 4 mois de très haute saison (juin-septembre) qui concentrent l'essentiel de la rentabilité, 8 mois de tourisme régional réduit. La ville compte environ **890 annonces actives** sur Airbnb avec un **tarif moyen annuel** autour de **100 €/nuit**, qui décolle à **180-280 €/nuit en juillet-août** sur les biens vue mer ou centre-port.\n\n**Saisonnalité extrême et concentration août.** Le taux d'occupation moyen annuel s'établit autour de **52 %** sur Bandol, avec un pic à **90 % en août** et des revenus locatifs mensuels moyens qui passent de 1 092 € (moyenne annuelle) à **2 211 € en août** selon les données marché Welkeys. Concrètement : un T2 bien placé qui se loue 90 €/nuit en moyenne facture 220-280 €/nuit pendant la première quinzaine d'août, soit l'équivalent de 3 mois de revenus normaux en 15 jours.\n\n**Vignoble AOC Bandol et port de plaisance.** La ville est au cœur du **vignoble AOC Bandol** (mourvèdre dominant, 1 600 hectares, 80 vignerons), un atout œnotouristique qui prolonge la saison sur les week-ends de septembre-octobre. Le **port de plaisance** (1 600 anneaux, l'un des plus grands de la Méditerranée) draine une clientèle plaisance internationale. La **plage de Renécros**, l'**Anse de Bandol** et l'**Île de Bendor** (rachetée par Paul Ricard en 1958, accessible en bateau-bus 7 minutes) forment l'écosystème balnéaire premium qui justifie les tarifs.\n\n**Prix au m² élevés.** Comptez **5 200-5 500 €/m²** sur les appartements centre/port, **5 500-6 500 €/m²** sur Renécros (plage premium), **4 500-5 500 €/m²** sur Les Lices/Saint-Anne (résidentiel premium), et jusqu'à **6 000-6 500 €/m²** sur les villas avec vue mer (Bellevue, Pierreplane). Le prix moyen au m² sur Bandol s'établit à **6 535 €/m²** en 2026 selon les données notariales — un niveau qui place Bandol parmi les marchés LCD français les plus chers à l'achat, avec un ticket d'entrée T2 autour de 220 000-280 000 €.",
+    conciergeries: [
+      {
+        name: 'La Clé Bandolaise',
+        url: 'https://www.laclebandolaise.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 18,
+        biensGeres: 15,
+        specialty: 'Pure-player bandolais depuis 2019, accueil 24/7',
+        description:
+          "La Clé Bandolaise est l'un des pure-players historiques du marché bandolais, en activité depuis 2019. Le positionnement est centré sur la gestion complète de A à Z des locations saisonnières : annonce et calendrier multi-plateformes, check-in et check-out personnalisés, ménage et linge de maison, accueil clients 24h/24 et 7j/7, panier de bienvenue, coordination des artisans pour la maintenance. Tarification sur devis non publique, à demander en fonction du bien (T1, T2, villa avec piscine) et du périmètre de service souhaité. Pertinente pour un propriétaire qui valorise l'ancrage local et l'accessibilité directe (deux interlocuteurs joignables sur portable, gestion à taille humaine) plutôt qu'un grand groupe national avec rotation d'interlocuteurs. Demander une simulation chiffrée et un retour de propriétaire client avant signature.",
+      },
+      {
+        name: 'Welcome Conciergerie (SASU Magnolia)',
+        url: 'https://www.welcome-services83.fr/conciergerie-airbnb-bandol.html',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 22,
+        biensGeres: 30,
+        specialty: '20 ans gestion locative, Var Ouest (Bandol/Sanary/Six-Fours)',
+        description:
+          "Welcome Conciergerie (portée par la SASU Magnolia) couvre la zone Bandol — Sanary-sur-Mer — Six-Fours-les-Plages — La Cadière d'Azur avec une commission de 20 % du prix des nuitées et des frais fixes additionnels par réservation. Le positionnement valorise 20 ans de gestion locative cumulée sur le Var Ouest, avec un package complet : gestion des réservations et des clés, ménage entre locations, entretien piscine et jardin (atout pour les villas avec extérieur), blanchisserie, intendance et maintenance 7/7. Pertinente pour un propriétaire de villa avec piscine ou de bien sur plusieurs communes du Var Ouest, qui veut un interlocuteur unique multi-services capable d'absorber les rotations courtes en pleine saison.",
+      },
+      {
+        name: 'DMP Excellence',
+        url: 'https://www.dmp-excellence.com/ref/airbnb-bandol/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 12,
+        biensGeres: 18,
+        specialty: 'Conciergerie privée 24/7 Bandol et Var côtier',
+        description:
+          "DMP Excellence est positionnée sur la conciergerie privée et la gestion locative haut de gamme à Bandol et sur la frange côtière du Var (Sanary, Saint-Cyr-sur-Mer, Six-Fours-les-Plages). Tarification sur devis personnalisé selon le bien et le périmètre de service. Services : accueil locataires, panier de bienvenue, état des lieux, remise des clés, maintenance propriété, intendance résidence secondaire et support clientèle 24/7. Pertinente pour un propriétaire de résidence secondaire qui cherche à externaliser à la fois la partie LCD et l'entretien continu du bien hors location (vérification volet et alarme, ouverture et fermeture maison saisonnière, gestion des artisans pour les travaux ponctuels).",
+      },
+      {
+        name: 'YourHostHelper Bandol',
+        url: 'https://yourhosthelper.com/conciergerie-airbnb-a-bandol-optimiser-lexperience-voyageur/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 8,
+        biensGeres: 25,
+        specialty: 'Réseau national depuis 2017, optimisation Superhost',
+        description:
+          "YourHostHelper est un acteur national de la gestion saisonnière (depuis 2017) avec une antenne locale à Bandol intégrée dans le réseau. Tarification non affichée sur la page Bandol — utiliser le simulateur « Estimer mes revenus » pour obtenir un devis personnalisé. Spécialités revendiquées sur le marché bandolais : protocole de ménage renforcé spécifique mer (gestion du sable et de l'humidité saline qui dégradent les textiles), accueil voyageurs avec recommandations locales personnalisées (restaurants, cavistes AOC Bandol, plages), optimisation du statut Superhost Airbnb pour booster la visibilité et le pricing dynamique. Pertinente pour un propriétaire qui veut bénéficier d'un réseau structuré avec process écrits tout en gardant une interface locale.",
+      },
+      {
+        name: 'Welkeys Bandol',
+        url: 'https://www.welkeys.com/conciergerie-airbnb/bandol',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 35,
+        biensGeres: 40,
+        specialty: 'Réseau national clé en main, blog réglementation à jour',
+        description:
+          "Welkeys est un acteur national de la gestion Airbnb clé en main, présent sur Bandol et tout le littoral PACA. Commission affichée autour de 20 % sur les nuitées, ménage refacturé au voyageur. Package : annonce et diffusion multi-plateformes (Airbnb, Booking, Abritel), accueil voyageurs, ménage professionnel, linge de qualité hôtelière, communication 7/7, pricing dynamique calé sur la saisonnalité Var Ouest. Le réseau publie également un blog réglementation locale très complet (l'un des plus à jour sur le changement d'usage à Bandol, à consulter avant tout investissement). Pertinente pour un propriétaire qui valorise un acteur structuré avec process écrits et reporting mensuel, plutôt qu'un pure-player local à taille humaine.",
+      },
+      {
+        name: 'HostnFly Bandol',
+        url: 'https://hostnfly.com/conciergerie-airbnb/bandol',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 15,
+        biensGeres: 22,
+        specialty: 'Réseau national, gestion 100 % digitale via app propriétaire',
+        description:
+          "HostnFly est un réseau national de conciergerie Airbnb avec antenne Bandol, positionné sur un modèle 100 % digital : commission autour de 20 % sur les nuitées, gestion des voyageurs, clés, ménage et assurances entièrement coordonnée via une application propriétaire. Le propriétaire suit en temps réel les réservations, les revenus collectés et les paiements depuis son téléphone, sans interaction téléphonique systématique. Pertinente pour un propriétaire à distance (Parisien, Suisse, Britannique) qui veut un suivi self-service avec dashboard propre, et qui accepte de perdre en sur-mesure local au profit de la standardisation et de la transparence du reporting digital.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre / Port de plaisance',
+        pricePerNight: '95-180 €',
+        occupancy: 58,
+        description:
+          "Cœur de Bandol, port de plaisance (1 600 anneaux), Allées Alfred Vivien, casino, commerces. Cible touristique premium, clientèle plaisance internationale. Prix au m² apparts 5 200 €, maisons 6 000 €. T2 dès 220 000 €. Tarifs nuitée premium juillet-août (180-250 €).",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Plage de Renécros (premium)',
+        pricePerNight: '120-280 €',
+        occupancy: 60,
+        description:
+          "Plage iconique de Bandol, baie en demi-lune protégée du mistral, accès direct mer. Cible résidence secondaire premium, vue mer recherchée. Prix au m² apparts 5 500 €, maisons 6 500 €. T2 vue mer dès 280 000 €. Tarif nuitée le plus élevé de Bandol en pleine saison.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Les Lices / Saint-Anne',
+        pricePerNight: '85-150 €',
+        occupancy: 52,
+        description:
+          "Résidentiel premium dans les collines, vue panoramique sur la baie, villas avec piscine. Cible clientèle familiale longue durée (1-2 semaines). Prix au m² apparts 4 500-4 800 €, maisons 5 200-5 500 €. T3 avec terrasse dès 250 000 €. Atout : extérieur et calme.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Capelan / Poupoune',
+        pricePerNight: '75-130 €',
+        occupancy: 50,
+        description:
+          "Quartiers résidentiels en hauteur, plus accessibles à l'achat. Prix au m² 4 000-5 000 €. T2 dès 180 000 €. Stratégie LCD viable mais nécessite vue ou piscine pour atteindre les tarifs centre. Marché bien orienté pour les familles avec voiture.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Bellevue / Pierreplane',
+        pricePerNight: '110-240 €',
+        occupancy: 55,
+        description:
+          "Hauteurs résidentielles premium, villas vue mer panoramique. Prix au m² 6 000-6 500 €. Villa avec piscine dès 750 000 €. Cible familles aisées, groupes 6-8 personnes en juillet-août. Tarif nuitée élevé compense le ticket d'entrée élevé.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Île de Bendor (niche rare)',
+        pricePerNight: '150-300 €',
+        occupancy: 60,
+        description:
+          "Île privée rachetée par Paul Ricard en 1958, accessible en bateau-bus (7 minutes du port). Offre LCD très limitée (quelques studios et appartements). Tarif nuitée premium absolu, demande touristique soutenue été. Marché de niche pour propriétaires patients à l'achat.",
+        roiBrut: '4,5 à 6 %',
+      },
+    ],
+    regulation:
+      "Bandol applique un **dispositif local renforcé** sur les meublés de tourisme, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) et d'un règlement municipal antérieur.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Bandol doit être déclaré via la **plateforme Décla Loc** (bandol.taxesejour.fr). Le **téléservice national d'enregistrement** entre en vigueur **au plus tard le 20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Autorisation de changement d'usage obligatoire pour les résidences secondaires.** C'est la spécificité bandolaise : louer une résidence secondaire en LCD nécessite **en plus** une **autorisation de changement d'usage** à demander à la mairie. L'autorisation et le numéro d'enregistrement sont **valables 5 ans**, révocables par le propriétaire à tout moment. Cette procédure cumulée distingue Bandol des communes voisines comme La Ciotat ou Sanary qui restent sur le cadre national simple.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. **Nouveauté 2026 :** plus aucun changement d'usage n'est délivré à Bandol pour une **passoire thermique** — un DPE classé entre A et E est désormais exigé pour obtenir l'autorisation municipale.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur, particulièrement pertinent sur un marché premium comme Bandol où le ticket d'entrée justifie l'investissement dans le classement.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Bandol applique une taxe de séjour de **0,75 € à 4,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb et reversée à la commune).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 105,
+      neighborhood: 'Renécros (vue mer partielle)',
+      revenuBrut: 19500,
+      commissionRate: 0.2,
+      menageCount: 70,
+      menageUnitCost: 75,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb à Bandol en juillet-août ?',
+        a: "Juillet-août est la période qui fait la rentabilité d'un LCD bandolais. Un T2 de 40 m² bien placé (centre, Renécros, vue mer partielle) qui se loue 90-105 €/nuit en moyenne annuelle facture 220-280 €/nuit pendant la première quinzaine d'août, avec une demande qui sature 3 à 6 mois à l'avance. Sur 60 nuits juillet-août, un T2 bien positionné génère 12 000-16 000 € de chiffre d'affaires brut, soit l'équivalent de 7-8 mois de revenus locatifs normaux. Un T3 avec terrasse ou vue mer dans Les Lices peut atteindre 18 000-24 000 € sur la même période. Le pic d'occupation atteint 90 % en août selon les données Welkeys. Hors juillet-août, le marché bandolais ralentit fortement (occupation 35-50 % en intersaison), ce qui rend la stratégie de pricing dynamique sur les 60 jours d'été absolument critique pour la rentabilité annuelle.",
+      },
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Bandol pour louer une résidence secondaire ?',
+        a: "Oui, c'est la spécificité bandolaise par rapport au cadre national. Si vous louez une résidence secondaire (un bien que vous n'occupez pas au moins 8 mois par an), Bandol impose en plus du numéro d'enregistrement national une autorisation de changement d'usage à demander à la mairie via la plateforme Décla Loc. Cette autorisation est valable 5 ans et révocable par le propriétaire à tout moment. Nouveauté 2026 : plus aucun changement d'usage n'est délivré pour une passoire thermique (DPE F ou G) — un DPE classé entre A et E est exigé. Si vous achetez à Bandol dans l'objectif LCD, anticipez cette procédure dès le compromis : un refus d'autorisation peut survenir si le quota communal est atteint dans votre secteur ou si le DPE ne suffit pas. Demander un rendez-vous au service urbanisme avant de signer le compromis est une pratique de prudence sur ce marché.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Bandol ?',
+        a: "Les commissions à Bandol s'étalent de 20 % (Welcome Conciergerie, Welkeys, HostnFly) à 25 % TTC (formules intégrales premium) en 2026, avec une moyenne de marché autour de 20-22 % TTC pour une formule complète. Les pure-players bandolais (La Clé Bandolaise, DMP Excellence) travaillent souvent sur devis personnalisé selon le bien et la complexité de gestion (villa avec piscine, T1 centre, location à la semaine vs au week-end). Le critère décisif au-delà du taux affiché sur un marché ultra-saisonnier comme Bandol est la stratégie pricing dynamique sur juillet-août : un mauvais pricing premium peut coûter 2 000-5 000 € de manque à gagner sur la seule pleine saison. Demander au prestataire son protocole de pricing pour le pic d'août et un exemple chiffré de tarification sur les 60 jours haute saison avant signature.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Bandol ?',
+        a: "Pour un rendement maximal en valeur absolue, le centre / port et la plage de Renécros restent les segments les plus rentables par nuit (tarifs 95-280 €/nuit pleine saison), mais le ticket d'entrée est élevé (T2 dès 220 000-280 000 €, ROI brut 4,5-6,5 %). Les Lices et Saint-Anne (résidentiel premium en hauteur, villas avec piscine) offrent un meilleur compromis prix/rendement avec T3 dès 250 000 € et ROI 5-6,5 %, et ciblent une clientèle familiale longue durée. Capelan et Poupoune sont les segments les plus accessibles avec T2 dès 180 000 € et ROI 5,5-7 %, mais nécessitent un effort de mise en scène (terrasse, vue, piscine) pour atteindre les tarifs centre. L'Île de Bendor est un marché de niche très limité en offre, à privilégier pour les investisseurs patients qui acceptent un ROI moyen (4,5-6 %) en échange d'un actif unique.",
+      },
+    ],
+    updatedAt: '2026-06-12',
+  },
+  // ==========================================================================
+  // POITIERS (Vienne, Futuroscope)
+  // ==========================================================================
+  {
+    slug: 'poitiers',
+    displayName: 'Poitiers',
+    region: 'Nouvelle-Aquitaine',
+    regionSlug: 'nouvelle-aquitaine',
+    title: 'Conciergerie Poitiers Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Poitiers : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Poitiers. Tarifs (20-25 %), services, avis Google, Futuroscope, réglementation 2026, quartiers Notre-Dame, Trois-Cités, Couronneries.",
+    kwPrincipal: 'conciergerie poitiers',
+    kwSecondaires: [
+      'airbnb poitiers',
+      'conciergerie airbnb poitiers',
+      'conciergerie clemenceau',
+      'location courte durée poitiers',
+      'conciergerie futuroscope',
+      'meublé tourisme poitiers',
+    ],
+    population: 91204,
+    tourists: 1900000,
+    activeListings: 900,
+    priceLow: 55,
+    priceHigh: 110,
+    occupancyRate: 60,
+    revpar: 40,
+    seasonality:
+      "Saisonnalité tirée par le Futuroscope (1,9 million de visiteurs annuels) et le calendrier scolaire. Pics récurrents sur les vacances scolaires (toutes zones), les week-ends prolongés de printemps (Pâques, Ponts de mai, Ascension, Pentecôte) et les événements parc (lancement nouvelles attractions, La Clé des Songes). Pic secondaire à la rentrée universitaire (septembre, oraux et concours, accompagnants familiaux). Tourisme d'affaires régulier hors vacances (CHU Poitiers, sièges Maaf et MGen, université 25 000 étudiants). Intersaison (janvier-février, novembre hors Toussaint) plus creuse (occupation 45-55 %).",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Poitiers**, dans le **centre Notre-Dame**, aux **Trois-Cités** près de la gare TGV et du Futuroscope, ou dans le quartier étudiant des **Couronneries**, que vous louez sur Airbnb ou que vous envisagez de mettre en LCD.\n\nEntre le **Futuroscope** qui draine 1,9 million de visiteurs par an et pose une demande LCD régulière toute l'année, la **rentrée étudiante** (Université de Poitiers, 25 000 étudiants), un **marché immobilier accessible** (prix au m² moyen 2 207 € en 2026), une **réglementation favorable** (pas de changement d'usage pour les résidences secondaires) et la dizaine d'acteurs locaux qui se partagent un marché en croissance, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players pictaviens (Conciergerie Clemenceau, Les Pipelettes Pictaviennes, La Conciergerie de Poitiers), les réseaux régionaux et les acteurs nationaux ?",
+    marketIntro:
+      "Poitiers est un **marché LCD hybride à forte demande Futuroscope** : le parc d'attractions a accueilli environ **1,9 million de visiteurs** en 2024, qui tirent la demande LCD toute l'année avec deux pics annuels (vacances scolaires toutes zones + ponts de mai-juin). La ville compte environ **900 annonces actives** sur Airbnb avec un **tarif moyen** autour de **75 €/nuit** et un **taux d'occupation soutenu** porté par la clientèle famille (visite Futuroscope) et la clientèle business universitaire.\n\n**Marché immobilier accessible.** Comptez **2 207 €/m² en moyenne** à Poitiers en juin 2026, **2 290 €/m²** sur le centre Notre-Dame, **1 960-2 355 €/m²** sur les Trois-Cités (quartier nord, proche gare TGV et accès Futuroscope), **1 290-1 710 €/m²** sur les Couronneries (quartier étudiant) — un niveau qui place Poitiers parmi les **marchés LCD français les plus accessibles à l'achat**. Un T2 centre-ville se trouve dès **85 000-110 000 €**, un T3 famille dès 130 000 € — un ticket d'entrée 3 à 5 fois inférieur à Paris ou Bordeaux pour un rendement souvent supérieur.\n\n**Sous-marché Futuroscope.** Le parc est un sous-marché LCD à part entière : la demande pic sur les **vacances scolaires** (toutes zones cumulées), les **week-ends de printemps** (Pâques, ponts de mai, Ascension, Pentecôte) et les **événements parc**. La clientèle dominante est familiale (2 adultes + 2 enfants), avec une recherche orientée **T3-T4 avec parking** et **proximité ligne 1A** (bus Futuroscope direct depuis Poitiers gare) ou **gare Poitiers-Futuroscope** (5 minutes en TGV depuis la gare centrale).\n\n**Rentrée étudiante et tourisme d'affaires.** L'Université de Poitiers (25 000 étudiants, 7 campus dont Futuroscope et Notre-Dame) génère une demande LCD pour les **accompagnants familiaux** (rentrée septembre, oraux et concours, remises de diplômes). Le **tourisme d'affaires** (CHU Poitiers, Centre Hospitalier Henri-Laborit, sièges Maaf et MGen, ESCEM) pose une demande régulière hors période vacances.",
+    conciergeries: [
+      {
+        name: 'Conciergerie Clemenceau',
+        url: 'https://conciergerieclemenceau.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 32,
+        biensGeres: 35,
+        specialty: 'Acteur majeur pictavien, gestion court + long terme',
+        description:
+          "Conciergerie Clemenceau est l'un des acteurs majeurs du marché pictavien, avec plus de **3 900 nuits réservées en 2024** sur son portefeuille (chiffre revendiqué sur le site). Positionnement hybride : gestion courte durée (Airbnb, Booking, Abritel) et longue durée (location classique meublée ou non meublée), avec une équipe de ménage professionnelle interne et une assistance voyageurs 7j/7. Tarification non affichée publiquement, à demander sur devis selon le bien et le périmètre de service. Pertinente pour un propriétaire qui hésite encore entre LCD et location longue durée, et qui veut un interlocuteur unique capable d'accompagner la bascule entre les deux régimes selon la saison, la conjoncture ou les opportunités fiscales.",
+      },
+      {
+        name: 'Maneva Appart',
+        url: 'https://maneva-appart.com/accueil/conciergerie-airbnb/',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'Photo pro, pricing dynamique, sous-location',
+        description:
+          "Maneva Appart applique une grille modulable **20 % ou 25 % TTC** selon le périmètre de service choisi, plus un forfait ménage et linge facturé au voyageur. Le positionnement valorise la **photographie professionnelle** (souvent un point faible des annonces Poitiers où les photos amateur dominent), l'optimisation des tarifs en temps réel, la communication voyageurs et la maintenance avec petits travaux inclus. Activité complémentaire : gestion pour sous-locataires (propriétaires investisseurs LCD qui sous-louent à des opérateurs intermédiaires). Pertinente pour un propriétaire qui veut un service photographie et pricing dynamique sans engagement long terme. Demander une simulation chiffrée par formule (20 % vs 25 %) avant de signer.",
+      },
+      {
+        name: 'La Conciergerie de Poitiers',
+        url: 'https://laconciergerie-poitiers.fr/',
+        commission: '25 % + 499 € frais de dossier',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 24,
+        biensGeres: 18,
+        specialty: 'Investisseurs Futuroscope, home staging inclus',
+        description:
+          "La Conciergerie de Poitiers, fondée par **Corinne Ritoux (« Coco ») et son associé Vincent**, applique un modèle tarifaire singulier : **25 % de la location + 499 € de frais de dossier** unique à la signature. Spécificité forte : les fondateurs ont eux-mêmes développé plusieurs biens LCD à Poitiers et autour du Futuroscope, ce qui en fait un interlocuteur investisseur-friendly capable d'accompagner l'optimisation du bien dès l'achat. Services inclus : gestion complète, ménage professionnel, linge de qualité, pricing dynamique, classement officiel des meublés (1 à 5 étoiles), home staging, conseil investissement immobilier. Pertinente pour un investisseur LCD novice qui cherche un accompagnement de bout en bout, du choix du bien à l'optimisation fiscale via le classement étoiles.",
+      },
+      {
+        name: 'Les Pipelettes Pictaviennes',
+        url: 'https://www.lespipelettespictaviennes.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 14,
+        biensGeres: 12,
+        specialty: 'Acteur local taille humaine, partenariats produits locaux',
+        description:
+          "Les Pipelettes Pictaviennes est portée par **Laura**, professionnelle du secteur tourisme avec un ancrage poitevin profond. Tarification sur devis personnalisé par bien. Positionnement à taille humaine (une dizaine de biens en gestion), avec un focus sur l'accueil voyageurs personnalisé (panier de bienvenue avec produits locaux, recommandations Futuroscope et restaurants centre Notre-Dame, conseils ciblés famille vs business) et l'optimisation du storytelling de l'annonce. Multi-plateformes Airbnb, Booking et Abritel. Pertinente pour un propriétaire qui valorise l'attention au détail, une relation directe avec un interlocuteur unique, et l'image « locale et authentique » dans les avis voyageurs — plutôt qu'un grand groupe avec multiples interlocuteurs.",
+      },
+      {
+        name: 'Conciergerie Local Poitiers',
+        url: 'https://poitiers.conciergerie-local.fr/',
+        commission: '20-25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 28,
+        biensGeres: 50,
+        specialty: 'Réseau franchisé, +150 biens gérés Vienne',
+        description:
+          "Conciergerie Local est un réseau franchisé présent à Poitiers et sur la Vienne, qui revendique plus de **150 biens en gestion** sur la zone (chiffre affiché sur le site). Commission entre 20 % et 25 % des revenus générés, couvrant l'ensemble des services standards (annonce, accueil, ménage, communication, maintenance). Modèle structuré avec process écrits, dashboard propriétaire et formation continue des équipes terrain. Pertinente pour un propriétaire multi-biens (2-5 biens) qui veut un acteur capable d'absorber plusieurs propriétés sans saturation opérationnelle, ou un propriétaire investisseur qui prévoit d'acheter de nouveaux biens à court terme et veut un interlocuteur scalable.",
+      },
+      {
+        name: 'Homerez Poitiers',
+        url: 'https://www.homerez.com/fr/conciergerie/poitiers',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 9,
+        biensGeres: 15,
+        specialty: 'Réseau national, multi-diffusion Airbnb/Booking/Abritel',
+        description:
+          "Homerez est un acteur national de la gestion d'annonces multi-plateformes, présent à Poitiers via le réseau. Commission affichée autour de 20 %, avec une orientation forte sur l'optimisation de la visibilité : diffusion sur Airbnb, Booking, Abritel et plateformes de niche, optimisation des titres et des photos, mise en concurrence dynamique des canaux. Service complet : annonce, communication voyageurs, accueil, ménage. Pertinente pour un propriétaire qui veut maximiser le taux d'occupation (via la multi-diffusion) plus que la note premium sur une seule plateforme, ou un propriétaire avec un bien en hyper-périphérie de Poitiers (Chasseneuil-du-Poitou, Mignaloux-Beauvoir) où les pure-players pictaviens ne se déplacent pas systématiquement.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre Notre-Dame / Place du Marché',
+        pricePerNight: '65-100 €',
+        occupancy: 65,
+        description:
+          "Cœur historique de Poitiers, église Notre-Dame-la-Grande (façade romane unique), place du Marché, rue Carnot. Cible touristique culturelle et week-end couple. Prix au m² 2 290 €. T2 dès 95 000 €. Demande forte sur les week-ends et événements (Lumières de Poitiers, Voix Publique).",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Trois-Cités (gare TGV / accès Futuroscope)',
+        pricePerNight: '60-95 €',
+        occupancy: 62,
+        description:
+          "Quartier nord autour de la gare TGV de Poitiers (5 minutes en TGV du Futuroscope). Cible familles Futuroscope et clientèle business semaine. Prix au m² 1 960-2 355 €. T2 dès 80 000 €, T3 famille dès 110 000 €. Meilleur compromis pour cible famille Futuroscope avec voiture ou bus 1A.",
+        roiBrut: '7,5 à 9,5 %',
+      },
+      {
+        name: 'Couronneries (étudiant)',
+        pricePerNight: '50-80 €',
+        occupancy: 55,
+        description:
+          "Quartier nord-est, proche des campus universitaires. Cible étudiants annuels et accompagnants familiaux (rentrée, concours, remises de diplômes). Prix au m² 1 290-1 710 €. T2 dès 60 000 €. Stratégie hybride : étudiant 9 mois + LCD juin-août + événements universitaires.",
+        roiBrut: '8 à 11 %',
+      },
+      {
+        name: 'Gibauderie / Saint-Eloi',
+        pricePerNight: '55-85 €',
+        occupancy: 58,
+        description:
+          "Quartiers résidentiels, mix familles et tourisme. Prix au m² 1 500-2 000 €. T2 dès 75 000 €, T3 dès 105 000 €. Cible familles Futuroscope avec voiture, séjours week-end et semaine. ROI brut élevé compense les tarifs modérés.",
+        roiBrut: '7,5 à 9,5 %',
+      },
+      {
+        name: 'Chasseneuil-du-Poitou / Futuroscope intra-parc',
+        pricePerNight: '70-130 €',
+        occupancy: 68,
+        description:
+          "Commune limitrophe au nord, à l'entrée du parc Futuroscope. Marché LCD très spécialisé famille parc. Prix au m² 1 800-2 400 €. T3 dès 130 000 €. Tarif nuitée premium grâce à la proximité immédiate du parc (5 minutes à pied) et au parking inclus.",
+        roiBrut: '8 à 10,5 %',
+      },
+      {
+        name: 'Buxerolles / Mignaloux-Beauvoir',
+        pricePerNight: '55-90 €',
+        occupancy: 52,
+        description:
+          "Communes limitrophes sud, marché plus diffus. Prix au m² 1 600-2 100 €. Maison T4 avec jardin dès 160 000 €. Stratégie maison familiale en location ponctuelle Futuroscope + accueil groupes anniversaires et événementiel familial.",
+        roiBrut: '7,5 à 9 %',
+      },
+    ],
+    regulation:
+      "Poitiers applique le **cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel à ce jour — un cadre **favorable** comparé à Paris, Lyon, Bordeaux ou La Rochelle.\n\n**Enregistrement obligatoire depuis 2023.** Tout meublé de tourisme à Poitiers doit être déclaré en mairie via la **plateforme Décla Loc de Grand Poitiers** (grandpoitiers.taxesejour.fr). Un **numéro à 13 chiffres** est délivré et doit figurer sur chaque annonce Airbnb, Booking ou Abritel. Le **téléservice national** entre en vigueur au plus tard le **20 mai 2026** sur l'ensemble du territoire.\n\n**Pas de changement d'usage pour les résidences secondaires.** C'est le point fort de Poitiers : la commune **n'impose pas d'autorisation de changement d'usage** pour louer une résidence secondaire en LCD. Vous pouvez louer **365 nuits/an sans plafond**, à condition d'être déclaré et d'afficher le numéro d'enregistrement sur l'annonce. Cette particularité fait de Poitiers une **destination investisseur LCD attractive** comparée aux métropoles voisines de Nouvelle-Aquitaine (Bordeaux, La Rochelle) ou aux grandes villes étudiantes (Nantes, Rennes) où le changement d'usage est imposé.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage en zone réglementée).\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage (non concerné à Poitiers).\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Le Grand Poitiers applique une taxe de séjour de **0,75 € à 2,80 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb et reversée à l'intercommunalité).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 75,
+      neighborhood: 'Trois-Cités (proche gare TGV et accès Futuroscope)',
+      revenuBrut: 16500,
+      commissionRate: 0.22,
+      menageCount: 70,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb à Poitiers avec le Futuroscope ?',
+        a: "Le Futuroscope (1,9 million de visiteurs en 2024) est le principal moteur du LCD pictavien. Un T3 famille bien placé sur les Trois-Cités, Chasseneuil-du-Poitou ou Gibauderie qui se loue 95-130 €/nuit en moyenne pendant les vacances scolaires génère sur l'année un chiffre d'affaires brut de 18 000-25 000 € pour 60 % d'occupation moyenne (220 nuits) avec une stratégie pricing dynamique sur les vacances toutes zones et les ponts de printemps. Les pics les plus rentables : Pâques (+45 % de tarif vs moyenne), Pont de l'Ascension (+50 %), été (+30-40 %), vacances de la Toussaint (+25 %). Un T2 centre Notre-Dame (couple sans enfants, tourisme culturel et business) génère plutôt 13 000-18 000 € avec 65 % d'occupation et un tarif nuitée plus bas mais une demande très régulière toute l'année. La rentabilité brute reste solide à Poitiers (7-9 % en moyenne, jusqu'à 11 % sur les Couronneries) grâce aux prix d'acquisition très accessibles.",
+      },
+      {
+        q: 'Faut-il un changement d\'usage à Poitiers pour louer une résidence secondaire ?',
+        a: "Non, et c'est l'avantage majeur de Poitiers par rapport aux métropoles voisines (Bordeaux, La Rochelle, Nantes). La commune n'impose pas d'autorisation de changement d'usage : vous pouvez louer votre résidence secondaire en LCD jusqu'à 365 nuits par an sans plafond, à condition d'être déclaré en mairie via la plateforme Décla Loc de Grand Poitiers et d'afficher votre numéro à 13 chiffres sur chaque annonce. C'est ce cadre favorable qui fait de Poitiers une destination investisseur LCD attractive : le ticket d'entrée immobilier accessible (T2 dès 85 000 €) combiné à l'absence de quota local et à la demande Futuroscope toute l'année permet d'atteindre des ROI bruts de 7-11 % difficilement reproductibles dans les grandes villes. Cette situation peut évoluer à long terme si la pression touristique s'accentue : surveiller les délibérations du conseil métropolitain Grand Poitiers et de la mairie de Poitiers.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Poitiers ?',
+        a: "Pour un rendement maximal, les Trois-Cités sont le meilleur compromis sur Poitiers intra-muros : prix au m² accessibles (1 960-2 355 €), proximité gare TGV et bus Futuroscope 1A, clientèle famille Futuroscope, ROI brut 7,5-9,5 %. Le centre Notre-Dame offre la meilleure demande couple et culture avec T2 dès 95 000 € (ROI 7-9 %). Pour un ROI maximal absolu, les Couronneries permettent une stratégie hybride étudiant 9 mois + LCD événements universitaires + Futuroscope (T2 dès 60 000 €, ROI 8-11 %). Chasseneuil-du-Poitou (commune limitrophe au nord) est le sous-marché Futuroscope pur avec tarif nuitée premium grâce à la proximité immédiate du parc (T3 dès 130 000 €, ROI 8-10,5 %). Pour les maisons familiales et accueil de groupes, Buxerolles et Mignaloux-Beauvoir proposent des T4 avec jardin dès 160 000 € (ROI 7,5-9 %).",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Poitiers ?',
+        a: "Les commissions à Poitiers s'étalent de 20 % (formules de base, Homerez, Maneva formule légère) à 25 % TTC (formules intégrales premium, Conciergerie Local, La Conciergerie de Poitiers) en 2026, avec une moyenne de marché autour de 22-23 % TTC pour une formule complète. La Conciergerie de Poitiers (Coco Ritoux) applique un modèle singulier : 25 % + 499 € de frais de dossier unique à la signature, justifié par l'accompagnement investisseur (home staging, classement étoiles). Conciergerie Clemenceau et Les Pipelettes Pictaviennes travaillent sur devis personnalisé. Le critère décisif au-delà du taux affiché sur un marché Futuroscope comme Poitiers est la stratégie pricing dynamique sur les vacances scolaires (toutes zones) et les ponts de printemps : un bon pricing peut générer 2 000-4 000 € supplémentaires sur l'année par rapport à un tarif fixe. Demander un retour client investisseur Futuroscope avant signature.",
+      },
+    ],
+    updatedAt: '2026-06-12',
+  },
+  // ==========================================================================
+  // CHAMBÉRY (Savoie, porte des Alpes)
+  // ==========================================================================
+  {
+    slug: 'chambery',
+    displayName: 'Chambéry',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Chambéry Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Chambéry : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Chambéry. Tarifs (20-25 %), services, avis Google, réglementation 2026 changement d'usage, quartiers Carré Curial, Vieille Ville, Gare-Cassine.",
+    kwPrincipal: 'conciergerie chambery',
+    kwSecondaires: [
+      'airbnb chambery',
+      'conciergerie airbnb chambery',
+      'la conciergerie de savoie',
+      'location courte durée chambery',
+      'conciergerie chambery aix les bains',
+      'meublé tourisme chambéry',
+    ],
+    population: 59990,
+    tourists: 800000,
+    activeListings: 550,
+    priceLow: 60,
+    priceHigh: 110,
+    occupancyRate: 58,
+    revpar: 38,
+    seasonality:
+      "Triple saisonnalité unique au marché chambérien : ski-portail l'hiver (clientèle internationale qui transite par gare TGV ou aéroport CMF avant de monter aux 3 Vallées, Tarentaise, Maurienne, Massif des Bauges), lac du Bourget l'été (sports nautiques, plages d'Aix-les-Bains, randonnée Massif des Bauges), tourisme d'affaires régulier toute l'année (préfecture Savoie, Université Savoie Mont Blanc 16 500 étudiants, sièges régionaux, salons). Pic ski hiver de décembre à mi-avril (occupation 70-80 % les week-ends et vacances), pic été juin-août (occupation 70-75 %), intersaisons (novembre, mai, septembre) portées par le business et les week-ends culturels (château des Ducs de Savoie).",
+    rankNational: 24,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Chambéry**, dans la **Vieille Ville** autour du château des Ducs de Savoie, au **Carré Curial** ou près de la **gare TGV-Cassine**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **double saisonnalité** (ski l'hiver avec la proximité des 3 Vallées, Tarentaise et Maurienne, lac du Bourget l'été), le **tourisme d'affaires** régulier (préfecture, Université Savoie Mont Blanc, sièges régionaux), la **réglementation locale durcie** (autorisation de changement d'usage obligatoire pour toute résidence secondaire) et la poignée d'acteurs locaux qui se partagent un marché en croissance, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players chambériens (La Conciergerie de Savoie, Conciergerie Chambéry, M&B Conciergerie), les acteurs émergents et les réseaux nationaux ?",
+    marketIntro:
+      "Chambéry est un **marché LCD à triple saisonnalité** : ski-portail l'hiver (clientèle internationale qui transite par la gare TGV ou l'aéroport CMF avant de monter dans les 3 Vallées, Tarentaise ou Maurienne), lac du Bourget l'été (sports nautiques, plages, Aix-les-Bains), et tourisme d'affaires régulier toute l'année (Université Savoie Mont Blanc 16 500 étudiants, préfecture Savoie, sièges régionaux). La ville compte environ **550 annonces actives** sur Airbnb avec un **tarif moyen** autour de **75 €/nuit** sur l'année.\n\n**Porte des Alpes.** Chambéry est l'**aéroport low-cost régional (CMF)** et la **gare TGV** de l'arrière-pays alpin. Beaucoup de voyageurs internationaux (Britanniques, Néerlandais, Belges, Allemands) atterrissent ou descendent du train à Chambéry pour rejoindre les stations en navette — une **clientèle de transit** qui réserve souvent 1-2 nuits à Chambéry encadrant un séjour ski. Le **week-end ski-extension** (vendredi-samedi à Chambéry avant montée stations, dimanche après descente) est un produit LCD spécifique au marché chambérien.\n\n**Lac du Bourget et patrimoine.** Le **lac du Bourget** (plus grand lac naturel de France, 18 km², à 10 minutes au nord de Chambéry) pose une demande LCD estivale (juin-septembre) en complément des hôtels d'Aix-les-Bains. Le **château des Ducs de Savoie** (XIVe siècle, Sainte-Chapelle qui a abrité le Saint Suaire) et la **Cathédrale Saint-François-de-Sales** drainent un tourisme culturel toute l'année. La **Fontaine des Éléphants** (1838, place principale du Carré Curial) et la **vieille ville** font de Chambéry une destination week-end accessible à 3 heures de TGV de Paris.\n\n**Prix au m² intermédiaires.** Comptez **3 100 €/m² en moyenne** à Chambéry en 2026, **3 300-3 800 €/m²** sur le centre et le Carré Curial, **3 400-3 700 €/m²** sur la Vieille Ville (cœur historique réhabilité, forte attractivité jeunes cadres et étudiants), **2 600-3 100 €/m²** sur le secteur Gare-Cassine (bon compromis business), **2 800-3 200 €/m²** sur Bissy et Hauts de Chambéry, et **2 000-2 500 €/m²** sur Biollay/Chambéry-le-Haut (segment accessible). Un T2 centre se trouve dès 130 000-180 000 €, ce qui place Chambéry dans la moyenne haute des marchés LCD français à l'achat.",
+    conciergeries: [
+      {
+        name: 'La Conciergerie de Savoie',
+        url: 'https://laconciergeriedesavoie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 22,
+        biensGeres: 28,
+        specialty: 'Tresserve / lac du Bourget / Chambéry, multi-plateformes',
+        description:
+          "La Conciergerie de Savoie, basée à **Tresserve** (rive ouest du lac du Bourget, à 15 km de Chambéry), couvre la zone Aix-les-Bains — Chambéry — lac du Bourget — lac d'Aiguebelette avec un positionnement multi-plateformes (Airbnb, Booking, Abritel). Tarification sur devis selon le bien. Services : création et gestion d'annonces, photographie professionnelle, accueil voyageurs, entretien et maintenance, suivi administratif et reporting financier. Pertinente pour un propriétaire d'appartement Chambéry centre qui veut un acteur familier des deux marchés (lac et ville) et capable d'arbitrer entre eux selon les périodes (été lac vs ski-extension hiver), ou un investisseur sur la couronne Aix-Chambéry qui veut un interlocuteur unique.",
+      },
+      {
+        name: 'Conciergerie Chambéry',
+        url: 'https://conciergerie-chambery.com/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 16,
+        biensGeres: 20,
+        specialty: 'Pure-player Chambéry, expert Airbnb courte durée',
+        description:
+          "Conciergerie Chambéry applique une commission de **25 % du loyer** sur les locations courtes durées Airbnb. Positionnement pure-player urbain Chambéry, sans extension lac ou stations. Services : création et promotion d'annonces Airbnb, gestion des réservations et planning, accueil locataires, ménage avant chaque arrivée, remise de clés, communication continue avec les voyageurs, collecte des loyers et états des lieux. Pertinente pour un propriétaire d'appartement intra-muros Chambéry (Vieille Ville, Carré Curial, Gare-Cassine) qui ne veut pas se disperser sur le marché lac et préfère un interlocuteur 100 % focalisé sur le marché LCD chambérien et la clientèle ski-extension.",
+      },
+      {
+        name: 'M&B Conciergerie',
+        url: 'https://menage-blanchisserie.com/',
+        commission: 'variable',
+        menage: 'inclus dans commission',
+        rating: 4.5,
+        reviews: 14,
+        biensGeres: 18,
+        specialty: 'Ménage + blanchisserie internalisés, Chambéry + Aix-les-Bains',
+        description:
+          "M&B Conciergerie (Ménage et Blanchisserie) est un acteur local Chambéry / Aix-les-Bains positionné sur l'internalisation de la chaîne ménage-blanchisserie-conciergerie, avec une infrastructure propre (laverie professionnelle, équipe ménage interne). Activités complémentaires : transfert et livraison (linge, paniers de bienvenue, oublis voyageurs). Cette intégration permet une réactivité sur les rotations courtes (check-out 10h / check-in 15h) particulièrement utile en haute saison ski et lac. Pertinente pour un propriétaire de bien à forte rotation (T1-T2 centre, studios ski-extension) qui a souffert de défauts de ménage ou de retards de linge avec un précédent prestataire.",
+      },
+      {
+        name: 'Convinest',
+        url: 'https://convinest.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 8,
+        biensGeres: 10,
+        specialty: 'Pure-player Chambéry, services Airbnb dédiés',
+        description:
+          "Convinest est un acteur émergent sur le marché chambérien, positionné sur les services de conciergerie Airbnb dédiés. Communication essentiellement via WhatsApp et email (info@convinest.com), tarification sur devis personnalisé. Volume de portefeuille encore réduit (moins de biens gérés que les acteurs historiques), ce qui peut être un avantage pour un propriétaire qui veut un interlocuteur disponible et non surchargé. Pertinente pour un propriétaire qui valorise un acteur jeune et accessible, et qui accepte d'être l'un des premiers clients pour bénéficier d'un suivi personnalisé en échange d'un track record encore court.",
+      },
+      {
+        name: 'HostnFly Chambéry',
+        url: 'https://hostnfly.com/conciergerie-airbnb/chambery',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 11,
+        biensGeres: 18,
+        specialty: 'Réseau national, gestion 100 % digitale via app propriétaire',
+        description:
+          "HostnFly est présent à Chambéry via son réseau national. Commission affichée autour de **20 %** sur les nuitées, gestion 100 % digitale via une application propriétaire (suivi temps réel des réservations, des revenus collectés et des paiements). Package : gestion des voyageurs, clés, ménage, communication, maintenance, assurances. Pertinente pour un propriétaire investisseur à distance (Lyonnais, Parisien, étranger) qui possède un bien Chambéry comme produit LCD pur et préfère un suivi self-service via dashboard à un suivi téléphonique personnalisé. Bonne option pour un T2 centre destiné à la clientèle ski-extension internationale (interface dashboard multilingue).",
+      },
+      {
+        name: 'Homerez Chambéry',
+        url: 'https://www.homerez.com/fr/conciergerie/chambery',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 9,
+        biensGeres: 12,
+        specialty: 'Multi-diffusion Airbnb / Booking / Abritel',
+        description:
+          "Homerez est un réseau national de gestion d'annonces multi-plateformes (Airbnb, Booking, Abritel, plateformes de niche), présent à Chambéry. Commission autour de **20 %**, focus sur l'optimisation de la visibilité et la mise en concurrence des canaux de diffusion. Pertinente pour un propriétaire qui veut maximiser le taux d'occupation hors saison (avant-saison ski en novembre, intersaison printemps en mai) via la diversification des plateformes, plus que la note premium sur une seule plateforme Airbnb (où les pure-players locaux gardent un avantage qualitatif). Le réseau propose aussi des optimisations de titres et photos via son équipe centrale.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieille Ville / Château des Ducs',
+        pricePerNight: '75-110 €',
+        occupancy: 65,
+        description:
+          "Cœur historique de Chambéry, château des Ducs de Savoie (XIVe), Sainte-Chapelle, ruelles médiévales réhabilitées. Cible touristique culturelle et clientèle jeunes cadres week-end. Prix au m² 3 400-3 700 €. T2 dès 145 000 €. Demande forte sur les week-ends culturels et les ponts de printemps.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Carré Curial (centre)',
+        pricePerNight: '70-105 €',
+        occupancy: 62,
+        description:
+          "Centre commerçant et culturel, place du Carré Curial, Fontaine des Éléphants, théâtre Charles Dullin. Cible touristique et business. Prix au m² 3 300-3 800 €. T3 dès 230 000 €. Bon compromis emplacement central, accessibilité TGV et commerces, demande couple et famille.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Gare-Cassine (TGV / aéroport)',
+        pricePerNight: '65-95 €',
+        occupancy: 65,
+        description:
+          "Quartier de la gare TGV (3 h Paris) et axe vers l'aéroport CMF. Cible business semaine et clientèle ski-extension internationale (week-ends ski). Prix au m² 2 600-3 100 €. T2 dès 110 000 €. Meilleur compromis pour le sous-marché ski-extension à Chambéry.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Bissy / Hauts de Chambéry',
+        pricePerNight: '55-85 €',
+        occupancy: 55,
+        description:
+          "Quartiers résidentiels nord-ouest, accessibilité voiture, proche A41 (axe Lyon-Genève). Cible familles et tourisme d'affaires longue durée. Prix au m² 2 800-3 200 €. T2 dès 120 000 €. Marché bien orienté pour les séjours business de 3-5 nuits.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Biollay / Chambéry-le-Haut',
+        pricePerNight: '50-75 €',
+        occupancy: 50,
+        description:
+          "Quartiers nord en hauteur, segment plus accessible à l'achat. Prix au m² 2 000-2 500 €. T2 dès 85 000 €, T3 dès 105 000 €. Stratégie LCD nécessite un effort de mise en scène pour compenser la distance au centre, mais ROI brut élevé compense les tarifs plus modérés.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Périphérie Aix-les-Bains / Lac du Bourget',
+        pricePerNight: '80-130 €',
+        occupancy: 62,
+        description:
+          "Couronne nord de Chambéry vers Aix-les-Bains et le lac du Bourget. Cible touristique estivale lac + thermalisme + business Aix. Prix au m² 3 200-4 000 €. T2 vue lac dès 180 000 €. Marché estival fort (juin-septembre), prolongement automne thermalisme.",
+        roiBrut: '5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Chambéry applique un **dispositif local renforcé** sur les meublés de tourisme, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) et d'un règlement municipal de déclaration en mairie (chambery.fr/953).\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Chambéry doit être **déclaré en mairie** via la plateforme **Décla Loc du Grand Chambéry** (grandchambery.taxesejour.fr). La démarche peut être effectuée par courrier ou par dépôt direct à l'Hôtel de Ville selon les indications de la ville. Un **numéro à 13 chiffres** est délivré et doit figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le 20 mai 2026, le portail national unique **Décla Loc** devient obligatoire sur l'ensemble du territoire. Plus aucun loueur ne pourra publier d'annonce sans numéro d'enregistrement valide.\n\n**Changement d'usage pour les résidences secondaires.** Chambéry applique le régime de **changement d'usage** pour toute résidence secondaire mise en LCD : toute location touristique d'un meublé hors résidence principale est soumise à autorisation préalable selon la grille municipale. Cette autorisation s'ajoute au numéro d'enregistrement et conditionne la légalité de la location. Demander un rendez-vous au service urbanisme avant tout achat dans l'objectif LCD est une pratique de prudence.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. **Nouveauté 2026 :** plus aucun changement d'usage n'est délivré pour une **passoire thermique** — un DPE classé entre A et E est désormais exigé pour obtenir l'autorisation municipale.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur, particulièrement pertinent sur un marché chambérien où la clientèle internationale ski-extension valorise le classement.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage. À Chambéry, la ville précise une **amende administrative pouvant aller de 5 000 à 10 000 €** pour défaut de déclaration en mairie.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Le Grand Chambéry applique une taxe de séjour de **0,75 € à 3,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb et reversée à l'intercommunalité).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 75,
+      neighborhood: 'Carré Curial',
+      revenuBrut: 16500,
+      commissionRate: 0.22,
+      menageCount: 68,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Chambéry pour louer une résidence secondaire ?',
+        a: "Oui. Chambéry applique un régime de changement d'usage pour toute résidence secondaire mise en LCD (toute location touristique de meublé hors résidence principale est soumise à autorisation préalable selon la grille municipale chambery.fr/953). Cette autorisation s'ajoute au numéro d'enregistrement à 13 chiffres délivré via la plateforme Décla Loc du Grand Chambéry et conditionne la légalité de la location. Nouveauté 2026 : plus aucun changement d'usage n'est délivré pour une passoire thermique (DPE F ou G) — un DPE classé entre A et E est exigé. Si vous achetez à Chambéry dans l'objectif LCD, anticipez cette procédure dès le compromis : un refus d'autorisation peut survenir si le quota communal est atteint dans votre secteur. Demander un rendez-vous au service urbanisme avant de signer est une pratique de prudence. Le défaut de déclaration en mairie est sanctionné d'une amende administrative de 5 000 à 10 000 €.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Chambéry sur l\'année ?',
+        a: "Un T2 de 42 m² bien placé au Carré Curial, en Vieille Ville ou Gare-Cassine (tarif moyen 70-85 €/nuit, occupation 60-65 %) génère typiquement un chiffre d'affaires brut de 16 000-19 000 € sur l'année à Chambéry. La triple saisonnalité (ski hiver 20-25 % du CA sur les week-ends et vacances décembre-mars, lac du Bourget été 30-35 % du CA juin-septembre, business régulier 40-45 % du CA toute l'année) lisse les revenus mieux que sur les marchés purement balnéaires (Bandol, Honfleur). Un T3 famille en périphérie Aix-les-Bains (vue lac) peut atteindre 22 000-28 000 € grâce à la prime estivale. Net de la commission conciergerie (20-25 %), de la taxe foncière (~1 100 € sur un T2 chambérien), des charges et du ménage, comptez un revenu disponible de 9 500-12 500 € sur le T2 et 13 000-17 500 € sur le T3 famille avec vue lac.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Chambéry ?',
+        a: "Pour un rendement maximal, Gare-Cassine est le meilleur compromis sur Chambéry intra-muros : prix au m² accessibles (2 600-3 100 €), proximité gare TGV et aéroport CMF (clientèle ski-extension internationale), demande business toute l'année, ROI brut 6-7,5 %. Le Carré Curial et la Vieille Ville offrent la meilleure demande touristique culturelle avec T2 dès 145 000 € (ROI 5,5-7 %). Pour le sous-marché lac, la périphérie Aix-les-Bains avec T2 vue lac dès 180 000 € génère un ROI 5-6,5 % avec une prime estivale forte. Pour un budget contraint, Biollay et Chambéry-le-Haut proposent des T2 dès 85 000 € avec un ROI 6,5-8 % et une stratégie hybride business semaine + LCD ponctuel week-end. Bissy et Hauts de Chambéry conviennent au tourisme d'affaires longue durée (3-5 nuits) avec axe A41 Lyon-Genève.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Chambéry ?',
+        a: "Les commissions à Chambéry s'étalent de 20 % (formules de base, HostnFly, Homerez) à 25 % TTC (formules intégrales, Conciergerie Chambéry) en 2026, avec une moyenne de marché autour de 22-23 % TTC pour une formule complète. La Conciergerie de Savoie et Convinest travaillent sur devis personnalisé. M&B Conciergerie a un modèle variable où le ménage et la blanchisserie sont inclus (à arbitrer selon le profil de rotation du bien). Le critère décisif au-delà du taux affiché sur un marché à triple saisonnalité comme Chambéry est la stratégie pricing dynamique sur les trois pics : ski-extension hiver (décembre-mars), lac été (juin-septembre), salons et événementiel business toute l'année. Demander au prestataire son protocole de pricing sur les trois pics et un exemple chiffré de tarification mensuelle annuelle avant signature.",
+      },
+    ],
+    updatedAt: '2026-06-12',
+  },
+  {
+    slug: 'bayeux',
+    displayName: 'Bayeux',
+    region: 'Normandie',
+    regionSlug: 'normandie',
+    title: 'Conciergerie Bayeux Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Bayeux : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Bayeux (Bessin). Tarifs (20-25 %), services, avis, réglementation changement d'usage 2021, quartiers cathédrale, Tapisserie, plages du Débarquement.",
+    kwPrincipal: 'conciergerie bayeux',
+    kwSecondaires: [
+      'conciergerie airbnb bayeux',
+      'bessin location bayeux',
+      'la conciergerie du bessin',
+      'conciergerie normandie',
+      'location courte durée bayeux',
+      'meublé tourisme bayeux',
+    ],
+    population: 12659,
+    tourists: 500000,
+    activeListings: 380,
+    priceLow: 70,
+    priceHigh: 130,
+    occupancyRate: 64,
+    revpar: 50,
+    seasonality:
+      "Double saisonnalité touristique culturelle et mémorielle : pic estival juin-août porté par les plages du Débarquement (Omaha Beach, Arromanches, Pointe du Hoc à 15-30 min) et la fréquentation internationale (deux tiers de la clientèle de la Tapisserie sont étrangers), épaule mai-juin et septembre-octobre soutenue par les groupes scolaires américains et britanniques. Pic anniversaire 6 juin (D-Day) avec saturation hôtelière 50 km à la ronde et tarifs LCD multipliés par 2 à 3 sur 5 nuits. Hiver creux (novembre-février) compensé partiellement par les week-ends culturels et les marchés de Noël. Effet majeur 2025-2027 : la Tapisserie de Bayeux est fermée pour rénovation et extension depuis août 2025 (réouverture programmée 2027) — le Mémorial de la Bataille de Normandie et le MAHB absorbent en partie le flux, mais le marché LCD subit une perte d'un tiers de la fréquentation muséale pendant la fermeture.",
+    rankNational: 28,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Bayeux**, au **cœur historique autour de la cathédrale Notre-Dame**, près du **musée de la Tapisserie**, sur les **quais de l'Aure** ou dans le **Bessin** côté plages du Débarquement, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **clientèle internationale** (deux tiers d'étrangers à la Tapisserie, anglophones et germanophones essentiellement), la **réglementation locale durcie** (changement d'usage obligatoire depuis septembre 2021, plafond de 2 meublés par propriétaire et 25 % d'un même immeuble), la **fermeture de la Tapisserie 2025-2027** qui rebat les cartes et la poignée d'acteurs locaux qui se partagent le marché, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players bayeusins (Bajobreak, La 21ème Planche, La Conciergerie du Bessin), les acteurs multi-zones Normandie (Rubis, Beauséjour) et les réseaux nationaux (Guest Adom) ?",
+    marketIntro:
+      "Bayeux est un **marché LCD touristique culturel et mémoriel à clientèle internationale**, totalement atypique pour une commune de **12 659 habitants** : la **Tapisserie de Bayeux** (UNESCO Mémoire du Monde, créée vers 1077) a accueilli **429 933 visiteurs en 2024**, un record absolu pour un musée municipal de cette taille en France. Le **Mémorial de la Bataille de Normandie** (97 000 visiteurs 2024) et le **MAHB - Musée d'Art et d'Histoire Baron Gérard** (37 000) complètent l'offre, soit **plus de 500 000 visiteurs cumulés** sur l'ensemble des musées municipaux. La ville compte environ **380 annonces actives** sur Airbnb avec un **tarif moyen** autour de **95 €/nuit** sur l'année — sensiblement plus élevé que la moyenne nationale des villes de cette strate.\n\n**Effet Tapisserie fermée 2025-2027.** La Tapisserie est **fermée depuis août 2025** pour un chantier de rénovation et d'extension du musée (réouverture programmée 2027). La fréquentation 2025 a déjà été tronquée — 365 000 visiteurs sur janvier-août avec un pic de 3 200 visiteurs/jour les dernières semaines — et le marché LCD bayeusin est en train de digérer cette perte temporaire d'attractivité. Le Mémorial de la Bataille de Normandie (qui ouvre 2025-2027 sur les **80 ans du Débarquement**) et le MAHB absorbent une partie du flux, mais les annonces strictement positionnées « à 2 minutes à pied de la Tapisserie » doivent revoir leur narratif (replonger sur les plages du Débarquement, le centre historique, le MAHB, les marchés normands).\n\n**Plages du Débarquement à 15-30 minutes.** **Omaha Beach** (15 min), **Arromanches et son port artificiel Mulberry** (20 min), la **Pointe du Hoc** (25 min), le **cimetière américain de Colleville-sur-Mer** (15 min) : Bayeux est le camp de base idéal pour le tourisme mémoriel D-Day, premier secteur générateur de nuitées dans le Bessin avec une clientèle américaine, britannique, canadienne, néerlandaise structurellement présente d'avril à octobre. Les anniversaires du 6 juin (D-Day) génèrent une saturation hôtelière 50 km à la ronde et des tarifs LCD multipliés par 2 à 3 sur 5 nuits.\n\n**Prix au m² intermédiaires accessibles.** Comptez **2 487-2 720 €/m² en moyenne** à Bayeux en 2026 — un niveau **très accessible pour un marché LCD à clientèle internationale**. Le **centre historique** autour de la cathédrale Notre-Dame et de la rue Saint-Martin oscille entre **3 200 € et 4 145 €/m²** (cible Tapisserie et tourisme culturel). Les **quartiers résidentiels** (Saint-Vigor, Saint-Loup, faubourg de la gare) sont **entre 1 800 € et 2 600 €/m²**. Un T2 centre historique se trouve dès **100 000-150 000 €**, ce qui place Bayeux parmi les marchés LCD à clientèle internationale les plus accessibles à l'achat en France.",
+    conciergeries: [
+      {
+        name: 'Bajobreak',
+        url: 'https://www.bajobreak.fr/',
+        commission: '20 % (80 % reversé)',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'Pure-player Bayeux et Bessin, multi-plateformes',
+        description:
+          "Bajobreak (de « Bajocasse », natif de Bayeux, et « Break ») est une agence pure-player **Bayeux et alentours** fondée par **Clément Postel-Cautru**. Le modèle économique affiché est lisible : **80 % des revenus locatifs reversés au propriétaire** (soit une commission équivalente à environ **20 %**), le ménage étant refacturé au voyageur. Services : check-in/check-out, ménage professionnel inter-réservations, guide pratique personnalisé, service client 24/7, maintenance et dépannages, référencement multi-plateformes (Airbnb, Booking, VRBO, Homeaway), services para-hôteliers à la carte. Pertinente pour un propriétaire d'appartement Bayeux centre historique ou de maison sur la couronne du Bessin qui veut un acteur 100 % focalisé sur la zone, et un modèle commission transparent à 20 %.",
+      },
+      {
+        name: 'La Conciergerie du Bessin',
+        url: 'https://laconciergeriedubessin.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 9,
+        biensGeres: 30,
+        specialty: 'Agence immobilière + conciergerie, 5 Rue de Tilly Bayeux',
+        description:
+          "La Conciergerie du Bessin est implantée **5 Rue de Tilly à Bayeux** (à 200 mètres de la cathédrale) et combine **agence immobilière classique et conciergerie LCD** — un positionnement hybride courant sur les marchés patrimoniaux où le propriétaire investisseur cherche un guichet unique de l'acquisition à la mise en location. Tarification sur devis. Membre du réseau CLF (réseau de conciergeries indépendantes franchisées). Services : gestion d'annonces, accueil voyageurs, ménage, maintenance, services aux propriétaires (états des lieux, déclarations meublé de tourisme, accompagnement changement d'usage). Pertinente pour un propriétaire qui prépare un achat dans le Bessin avec une stratégie LCD claire et veut un interlocuteur capable de couvrir l'acquisition, le passage en changement d'usage et la mise en gestion en un seul contact.",
+      },
+      {
+        name: 'Rubis Conciergerie',
+        url: 'https://www.conciergerierubis.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 11,
+        biensGeres: 15,
+        specialty: 'Premium Bessin / Cotentin, Saint-Vaast-la-Hougue à Bayeux',
+        description:
+          "Rubis Conciergerie est positionnée **premium personnalisé** sur l'axe **Saint-Vaast-la-Hougue — Port-en-Bessin — Isigny-sur-Mer — Bayeux**, couvrant la côte est du Cotentin et le Bessin avec une approche sélective (15-20 biens maximum, accompagnement investisseurs). Tarification sur devis selon le bien et le niveau de service. Services : gestion complète A-Z, accompagnement particuliers et investisseurs, service client personnalisé. Communication essentiellement directe (email conciergerierubis@gmail.com, téléphone 07.62.47.86.85). Pertinente pour un propriétaire d'une maison de standing dans le Bessin ou le Cotentin Est (vue mer, ancien presbytère, longère normande rénovée) qui veut un interlocuteur unique haut de gamme à l'écoute des spécificités de chaque bien, et accepte un volume de gestion réduit en échange d'une qualité de service supérieure.",
+      },
+      {
+        name: 'La 21ème Planche',
+        url: 'https://www.la21emeplanche.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 12,
+        biensGeres: 14,
+        specialty: 'Conciergerie privée Bayeux, depuis 2018, 10 000+ voyageurs',
+        description:
+          "La 21ème Planche est une **conciergerie privée Bayeux** implantée **4 rue William Kennedy Ferguson** (cœur du centre historique, à 5 minutes de la cathédrale). **Depuis 2018**, elle revendique plus de **10 000 voyageurs internationaux accueillis** sur ses biens en gestion. Le nom fait référence à la 21ème planche de la Tapisserie (la légende de Harold). Services : gestion d'annonces Airbnb et Booking, accueil personnalisé multilingue, entretien, maintenance, coordination de prestataires. Positionnement écoresponsable mis en avant sur le site. Pertinente pour un propriétaire de bien centre historique qui veut un acteur 100 % focalisé sur l'expérience voyageur (clientèle internationale culturelle), avec un track record solide sur la rotation Tapisserie / plages du Débarquement.",
+      },
+      {
+        name: 'Beauséjour Conciergerie',
+        url: 'https://www.beausejour-conciergerie.com/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 35,
+        biensGeres: 40,
+        specialty: 'Family business, Bayeux + Caen + Deauville + Côte de Nacre',
+        description:
+          "Beauséjour Conciergerie est une **entreprise familiale** qui couvre une zone large : **Bayeux, Caen, Deauville**, et la **Côte de Nacre** (Courseulles-sur-Mer, Bernières-sur-Mer, Luc-sur-Mer, Graye-sur-Mer). Commission affichée à **25 % du montant de chaque séjour**. Services : gestion complète d'annonces Airbnb, accueil et check-in/check-out, entretien et nettoyage, assistance voyageurs 7j/7, shooting photo professionnel, optimisation tarifaire selon saisonnalité, sélection et analyse des profils voyageurs. Contact : 02 31 99 20 01. Pertinente pour un propriétaire d'un bien sur la Côte de Nacre ou la Côte Fleurie qui veut un interlocuteur unique capable d'arbitrer entre les sous-marchés (Bayeux mémoriel, Caen culturel, Deauville premium) selon les périodes — ou un investisseur multi-biens normands à la recherche d'un acteur transversal.",
+      },
+      {
+        name: 'Guest Adom Bayeux',
+        url: 'https://www.guest-adom.com/conciergerie-airbnb-bayeux/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.2,
+        reviews: 15,
+        biensGeres: 18,
+        specialty: 'Réseau national franchisé, expertise services à la personne',
+        description:
+          "Guest Adom est un **réseau national franchisé** présent à Bayeux via une agence locale. Commission autour de **25 %**, gestion appuyée sur l'expertise services à la personne et hôtellerie. Package : prise en charge complète des biens, check-in/check-out, ménage, maintenance, assistance voyageurs. Avis clients mitigés sur certaines plateformes — qualité variable selon les franchises. Pertinente pour un propriétaire investisseur à distance (Parisien, étranger) qui privilégie un grand réseau lisible et un suivi standardisé à un acteur pure-player local. Bonne option pour une stratégie multi-biens dans plusieurs villes (Bayeux + autres villes du réseau Guest Adom), pour mutualiser le contact franchise et avoir un reporting cohérent.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre historique / Cathédrale Notre-Dame',
+        pricePerNight: '90-145 €',
+        occupancy: 68,
+        description:
+          "Cœur historique de Bayeux, cathédrale Notre-Dame XIe-XIIIe, rue Saint-Martin, place du Général-de-Gaulle. Cible touristique culturelle internationale (clientèle Tapisserie et D-Day). Prix au m² 3 200-4 145 €. T2 dès 110 000 €. Demande forte d'avril à octobre, pic anniversaire 6 juin. Effet fermeture Tapisserie 2025-2027 à arbitrer dans le positionnement.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Quartier Tapisserie / Saint-Loup',
+        pricePerNight: '85-125 €',
+        occupancy: 64,
+        description:
+          "Autour du musée de la Tapisserie (fermé 2025-2027) et du faubourg Saint-Loup, à 5 minutes à pied de la cathédrale. Cible Tapisserie historiquement et MAHB / Mémorial de substitution pendant la fermeture. Prix au m² 2 800-3 500 €. T2 dès 95 000 €. Repositionnement marketing vers centre historique + plages D-Day recommandé.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Quais de l\'Aure / Saint-Patrice',
+        pricePerNight: '80-115 €',
+        occupancy: 62,
+        description:
+          "Quais le long de l'Aure, anciennes maisons à pans de bois réhabilitées, marché Saint-Patrice (samedi matin). Cible touristique authentique « vieux Bayeux ». Prix au m² 2 500-3 200 €. T2 dès 85 000 €. Demande couples et petites familles, séjours courts 2-3 nuits.",
+        roiBrut: '6 à 7 %',
+      },
+      {
+        name: 'Faubourg Saint-Vigor / Saint-Jean',
+        pricePerNight: '70-100 €',
+        occupancy: 58,
+        description:
+          "Quartiers résidentiels nord et est, à 10-15 minutes à pied du centre. Prix au m² 2 000-2 600 €. T2 dès 75 000 €, maison T4 dès 180 000 €. Cible familles avec voiture pour rayonner sur les plages du Débarquement (Omaha à 15 min, Pointe du Hoc à 25 min). Bon compromis budget / rendement.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Pôle gare / Saint-Sulpice',
+        pricePerNight: '65-95 €',
+        occupancy: 56,
+        description:
+          "Quartier de la gare SNCF (Paris Saint-Lazare en 2h15, Caen en 20 min). Cible business semaine et clientèle culturelle low-budget. Prix au m² 1 800-2 400 €. T2 dès 70 000 €. Segment accessible avec ROI brut supérieur, à condition d'un effort de décoration pour compenser la distance au centre.",
+        roiBrut: '7 à 8,5 %',
+      },
+      {
+        name: 'Couronne Bessin / Port-en-Bessin / Arromanches',
+        pricePerNight: '100-180 €',
+        occupancy: 60,
+        description:
+          "Communes du Bessin côté mer (Port-en-Bessin 12 km, Arromanches 10 km, Saint-Côme-de-Fresné). Cible D-Day premium et long week-end pluri-générationnel. Prix au m² 2 800-4 000 €. Maison T4 vue mer dès 280 000 €. Marché estival fort (avril-octobre), prime « vue mer » sensible.",
+        roiBrut: '5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Bayeux applique un **dispositif local renforcé** sur les meublés de tourisme, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) et d'un **règlement municipal en vigueur depuis septembre 2021** fixant les conditions de changement d'usage.\n\n**Changement d'usage obligatoire pour résidence secondaire.** Toute location de résidence secondaire en meublé de tourisme à Bayeux est soumise à **autorisation préalable de changement d'usage**. Le règlement municipal fixe deux plafonds : **maximum 2 meublés par propriétaire** et **maximum 25 % d'un même immeuble** dédiés à la location courte durée. L'**autorisation est temporaire, délivrée pour 4 ans renouvelables**, ce qui impose au propriétaire d'anticiper le renouvellement et d'avoir une stratégie LCD viable sur la durée.\n\n**Enregistrement obligatoire via Décla Loc.** Tout meublé de tourisme à Bayeux doit être **déclaré en mairie** via la plateforme **declaloc.fr**. Un **numéro à 13 chiffres** est délivré et doit figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le 20 mai 2026, le portail national unique **Décla Loc** devient obligatoire sur l'ensemble du territoire. Plus aucun loueur ne pourra publier d'annonce sans numéro d'enregistrement valide.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. **Nouveauté 2026 :** plus aucun changement d'usage n'est délivré pour une **passoire thermique** — un DPE classé entre A et E est désormais exigé pour obtenir l'autorisation municipale.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur, particulièrement pertinent sur un marché bayeusin où la clientèle culturelle internationale valorise le classement.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Bayeux Intercom applique une taxe de séjour de **0,75 € à 3,50 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb et reversée à l'intercommunalité).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 90,
+      neighborhood: 'Centre historique / Cathédrale',
+      revenuBrut: 18500,
+      commissionRate: 0.22,
+      menageCount: 68,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'La fermeture de la Tapisserie de Bayeux entre 2025 et 2027 va-t-elle impacter mon Airbnb ?',
+        a: "Oui, c'est l'enjeu n° 1 du marché bayeusin sur 2025-2027. Le musée de la Tapisserie représentait 429 933 visiteurs en 2024 (record absolu) et deux tiers de clientèle internationale. Sa fermeture en août 2025 pour rénovation jusqu'à 2027 retire mécaniquement un volume substantiel de demande sur les annonces strictement positionnées « à 2 minutes à pied de la Tapisserie ». Effet réel : -10 à -15 % de fréquentation LCD attendue sur 2026 sur le centre historique (les chiffres exacts dépendront du report sur le Mémorial de la Bataille de Normandie et le MAHB). Trois adaptations à faire dès aujourd'hui : 1) repositionner le narratif de l'annonce sur les **plages du Débarquement** (Omaha 15 min, Arromanches 20 min, Pointe du Hoc 25 min) plutôt que sur la seule Tapisserie ; 2) cibler les **anniversaires D-Day** (6 juin chaque année, 80 ans en 2025-2027 attendus avec affluence majeure) qui restent indépendants du musée ; 3) miser sur les groupes scolaires américains et britanniques qui visitent les plages indépendamment du musée fermé. Bonne nouvelle : la réouverture en 2027 avec un musée agrandi devrait générer un effet réouverture fort, à anticiper dans les arbitrages d'achat.",
+      },
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Bayeux pour louer une résidence secondaire ?',
+        a: "Oui. Bayeux applique un règlement municipal en vigueur depuis septembre 2021 qui impose une autorisation préalable de changement d'usage pour toute résidence secondaire mise en location courte durée. Deux plafonds : maximum 2 meublés par propriétaire et maximum 25 % d'un même immeuble peuvent être dédiés à la location courte durée. L'autorisation est temporaire, délivrée pour 4 ans renouvelables. La démarche se fait via declaloc.fr, qui délivre aussi le numéro d'enregistrement à 13 chiffres obligatoire sur les annonces. Nouveauté 2026 : plus aucun changement d'usage n'est délivré pour une passoire thermique (DPE F ou G) — un DPE classé entre A et E est exigé. Si vous achetez à Bayeux dans l'objectif LCD, anticipez cette procédure dès le compromis : un refus d'autorisation peut survenir si le plafond de 25 % est déjà atteint dans votre immeuble. Demander un rendez-vous au service urbanisme avant de signer est une pratique de prudence. Sanctions loi Le Meur : 10 000 € pour défaut d'enregistrement, 20 000 € pour fausse déclaration, jusqu'à 50 000 € pour location au-delà du quota autorisé.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Bayeux sur l\'année ?',
+        a: "Un T2 de 38 m² bien placé au centre historique (autour de la cathédrale ou de la rue Saint-Martin), avec tarif moyen 85-95 €/nuit et occupation 62-68 %, génère typiquement un chiffre d'affaires brut de 17 000-21 000 € sur l'année à Bayeux. La double saisonnalité culturelle (Tapisserie / MAHB / Mémorial) et mémorielle (plages du Débarquement) lisse les revenus mieux que sur les marchés purement balnéaires (Honfleur, Deauville). Anniversaire D-Day (6 juin) génère un pic prix x2-x3 sur 5 nuits. Une maison T4 avec extérieur dans la couronne Bessin (Port-en-Bessin, Arromanches) peut atteindre 22 000-30 000 € avec une saisonnalité plus marquée juin-août. Net de la commission conciergerie (20-25 %), de la taxe foncière (~1 000 € sur un T2 bayeusin), des charges et du ménage, comptez un revenu disponible de 10 000-13 500 € sur le T2 et 14 000-19 000 € sur la maison T4 Bessin. Effet fermeture Tapisserie 2025-2027 : prévoir -10 à -15 % sur les annonces strictement « Tapisserie » à repositionner sur D-Day.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Bayeux ?',
+        a: "Les commissions à Bayeux s'étalent de 20 % (Bajobreak, modèle 80 % reversé) à 25 % TTC (Beauséjour Conciergerie, Guest Adom) en 2026, avec une moyenne de marché autour de 22-23 % TTC pour une formule complète. Rubis Conciergerie, La Conciergerie du Bessin et La 21ème Planche travaillent sur devis personnalisé. Le critère décisif au-delà du taux affiché sur un marché à clientèle internationale comme Bayeux est la capacité multilingue de l'équipe (anglais a minima, idéalement allemand et néerlandais) — les Anglo-Saxons et Néerlandais représentent les deux tiers des voyageurs de la Tapisserie et la majorité du tourisme D-Day. Demander au prestataire un exemple chiffré de tarification mensuelle annuelle sur un bien comparable, et la liste des langues parlées par l'équipe d'accueil avant signature. Sur 2025-2027, intégrer aussi la stratégie de l'agence pour absorber la fermeture Tapisserie (repositionnement narratif D-Day, ciblage groupes scolaires).",
+      },
+    ],
+    updatedAt: '2026-06-15',
+  },
+  {
+    slug: 'troyes',
+    displayName: 'Troyes',
+    region: 'Grand Est',
+    regionSlug: 'alsace',
+    title: 'Conciergerie Troyes Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Troyes : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Troyes. Tarifs (20-25 %), services, avis, réglementation zone tendue B1, changement d'usage 2020, quartiers du Bouchon, magasins d'usine.",
+    kwPrincipal: 'conciergerie troyes',
+    kwSecondaires: [
+      'conciergerie airbnb troyes',
+      'joya troyes',
+      'joya immobilier troyes',
+      'capitaine bnb troyes',
+      'location courte durée troyes',
+      'conciergerie location courte durée',
+    ],
+    population: 62088,
+    tourists: 2000000,
+    activeListings: 620,
+    priceLow: 60,
+    priceHigh: 100,
+    occupancyRate: 58,
+    revpar: 35,
+    seasonality:
+      "Triple saisonnalité atypique : pic shopping toute l'année dopé par les **magasins d'usine** Marques Avenue (Saint-Julien-les-Villas) et **McArthur Glen Troyes** (Sainte-Savine) — 8 millions de visiteurs cumulés annuels selon les opérateurs (premier pôle de magasins d'usine de France), tourisme culturel et patrimoine sur le **Bouchon de Champagne** (centre historique en forme de bouchon, classé Site Patrimonial Remarquable) avec ses pans de bois XVIe et ses 10 églises, et tourisme d'affaires régulier (préfecture Aube, UTT - Université de Technologie 3 000 étudiants, salons agroalimentaire). Pic juin-août pour les longues escapades shopping pluri-générationnelles, épaule mai et septembre soutenue par les soldes flottantes. Pic anniversaire « Marques Avenue » fin août / septembre (rentrée scolaire et collections automne).",
+    rankNational: 29,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Troyes**, dans le **Bouchon de Champagne** (centre historique classé), autour de la **cathédrale Saint-Pierre-et-Saint-Paul**, près de la **gare SNCF** ou à proximité des **magasins d'usine** (Marques Avenue à Saint-Julien-les-Villas, McArthur Glen à Sainte-Savine), que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **triple saisonnalité** (shopping magasins d'usine toute l'année, culturel Bouchon, business UTT et préfecture), la **réglementation locale durcie** (zone tendue B1 depuis octobre 2023, changement d'usage obligatoire depuis le 1er janvier 2020 pour toute résidence secondaire), les **prix au m² très accessibles** (1 600-1 800 €/m² moyens, parmi les plus bas de France pour une ville LCD) et la poignée d'acteurs locaux qui se partagent un marché en croissance, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players troyens (Joya, Capitaine BNB, Mon Groom, Mille et Une Nuitées), les acteurs multi-zones (Bonjourbnb Troyes-Dijon) et les spécialistes ménage internalisé (Zen Services) ?",
+    marketIntro:
+      "Troyes est un **marché LCD hybride shopping + culturel + business** porté par un atout massif et unique en France : **le premier pôle de magasins d'usine du pays**, avec **Marques Avenue** (Saint-Julien-les-Villas, environ 100 boutiques, **4 millions de visiteurs/an** revendiqués par l'opérateur) et **McArthur Glen Troyes** (Sainte-Savine, environ 120 boutiques, **4 millions de visiteurs/an** revendiqués). Cumulés, ils placent l'agglomération troyenne au **rang de pôle de shopping outlet majeur en Europe**, attirant une clientèle qui réserve souvent 2-3 nuits à Troyes pour faire les deux centres + le centre historique. La ville compte environ **620 annonces actives** sur Airbnb avec un **tarif moyen** autour de **78 €/nuit** sur l'année.\n\n**Bouchon de Champagne, Site Patrimonial Remarquable.** Le centre historique troyen — surnommé « le Bouchon » pour sa forme en bouchon de champagne sur la carte — est l'un des plus grands ensembles de **pans de bois XVIe siècle** conservés en Europe. Les quartiers **Saint-Jean**, **Saint-Martin**, **Cathédrale Saint-Pierre-et-Saint-Paul** et **Tête du Bouchon** concentrent la demande LCD culturelle, avec la **ruelle des Chats**, la **Maison de l'Outil et de la Pensée Ouvrière** et la **Cité du Vitrail** (rouverte 2022 dans l'ancien Hôtel-Dieu). À 1h35 de TGV de Paris-Gare-de-l'Est, Troyes est devenue une destination week-end accessible pour les Parisiens.\n\n**Zone tendue B1 et changement d'usage obligatoire.** Troyes est **classée zone tendue B1 depuis octobre 2023** (reclassement décret), aux côtés de Sainte-Savine. **Depuis le 1er janvier 2020**, la Ville de Troyes impose une **autorisation préalable de changement d'usage** pour tout meublé de tourisme en résidence secondaire, sur le fondement de la lutte contre la dépopulation du centre-ville. Le dispositif est strictement appliqué dans le Bouchon — toute acquisition LCD doit être anticipée avec un rendez-vous urbanisme avant le compromis.\n\n**Prix au m² parmi les plus accessibles de France.** Comptez **1 610-1 786 €/m² en moyenne** à Troyes en 2026, **2 100-2 532 €/m²** sur le Bouchon (cathédrale, Saint-Jean, Tête du Bouchon), **1 600-2 000 €/m²** sur Saint-Martin et Saint-Nizier, **1 080-1 500 €/m²** sur les Chartreux et le secteur gare. Un **T2 dans le Bouchon se trouve dès 70 000-95 000 €**, ce qui fait de Troyes l'**un des marchés LCD français les plus rentables à l'achat** — un ROI brut de 8-10 % est atteignable sur les meilleurs placements centre historique.",
+    conciergeries: [
+      {
+        name: 'Joya',
+        url: 'https://laconciergeriejoya.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 26,
+        biensGeres: 35,
+        specialty: 'Leader Troyes, 6 rue Voltaire, deux modèles tarifaires',
+        description:
+          "Joya est implantée **6 rue Voltaire à Troyes** (proximité immédiate du Bouchon) et concentre l'essentiel des recherches Google sur le marché troyen — **720 recherches mensuelles** sur « joya troyes » et **260 sur « joya immobilier troyes »** selon SEMrush, ce qui en fait le leader d'autorité locale. Joya appartient au groupe **Joya Groupe Immobilier**, agence immobilière troyenne historique qui a ajouté une branche conciergerie LCD. **Deux modèles tarifaires** : loyer mensuel garanti (le propriétaire encaisse un loyer fixe quel que soit le taux d'occupation) ou commission variable selon revenus réels (pricing dynamique). Services : création d'annonces, pricing dynamique, communication voyageurs, ménage, linge, gestion des clés, consommables, gestion des incidents, maintenance. Couvre Troyes + Romilly-sur-Seine + Nogent-sur-Seine. Pertinente pour un propriétaire d'appartement Bouchon qui veut un acteur premium avec arrière-plan immobilier classique, ou un investisseur multi-biens qui veut sécuriser un loyer garanti sur certains biens et tester le pricing dynamique sur d'autres.",
+      },
+      {
+        name: 'Capitaine BNB',
+        url: 'https://www.capitainebb.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 47,
+        biensGeres: 95,
+        specialty: 'SAS, 90 Rue du Général de Gaulle, ~100 biens, multi-plateformes',
+        description:
+          "Capitaine BNB (SAS Capitaine BNB, SIREN 948599618) est implantée **90 Rue du Général de Gaulle à Troyes** et revendique **près de 100 biens en gestion sur Troyes et l'Aube** (Bar-sur-Aube, Bar-sur-Seine, Chablis, Chaumont, Les Riceys) — le **plus gros portefeuille local identifié**. Multi-plateformes : Airbnb, Booking, et site direct (resa10rect.fr). Services : décoration des hébergements, photos professionnelles, gestion des réservations, ménage et entretien, gestion des clés, linge et consommables, coordination assurance Airbnb Host Protection, option service petit-déjeuner. Pertinente pour un propriétaire qui privilégie un acteur volumétrique avec processus rodés (pricing automatique, équipe ménage interne, photographie standardisée) et accepte un suivi moins individualisé en échange d'une structure opérationnelle solide. Bonne option pour le sous-marché shopping (rotation rapide 2-3 nuits) où la cadence pèse plus que la personnalisation extrême.",
+      },
+      {
+        name: 'Mon Groom',
+        url: 'https://www.mongroom.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'Premium Troyes / Aube / Champagne, depuis 2019',
+        description:
+          "Mon Groom (SAS Mon Groom) est positionnée **conciergerie haut de gamme** sur **Troyes, l'Aube et la Champagne** depuis **2019**. Tarification sur devis, pas affichée publiquement. Services : création et optimisation d'annonces, photographie immobilière professionnelle, communication voyageurs, accueil et remise des clés, nettoyage et gestion du linge, maintenance, disponibilité 7j/7. Couvre les biens premium (appartements Bouchon décorés, maisons de caractère champenoises). Communication multilingue. Pertinente pour un propriétaire d'un bien de standing dans le Bouchon (pans de bois rénovés, immeuble historique) ou d'une maison de maître en Champagne qui veut un accompagnement personnalisé avec des photos premium pour justifier un tarif au-dessus de la moyenne troyenne — particulièrement utile sur le créneau couples haut de gamme et événementiel.",
+      },
+      {
+        name: 'Bonjourbnb',
+        url: 'https://www.bonjourbnb.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 22,
+        biensGeres: 40,
+        specialty: 'Troyes + Dijon, depuis 2016, investissement locatif',
+        description:
+          "Bonjourbnb couvre l'**axe Troyes — Dijon** depuis **2016**, avec un positionnement spécifique « **conciergerie + accompagnement investisseur** » — l'agence propose explicitement de l'**aide à l'investissement locatif**, de la **sous-location** et de la **gestion saisonnière à la carte**. Services : gestion locative à l'année, gestion saisonnière, gestion à la carte, services de conciergerie complète (réservations, check-in/out, ménage). Modèles flexibles selon le besoin propriétaire. Pertinente pour un propriétaire investisseur qui veut un interlocuteur unique sur ses biens troyens et dijonnais (deux marchés UNESCO complémentaires), ou un futur acquéreur qui veut un acteur capable de l'accompagner sur le choix du bien avant la mise en gestion. Bon track record de presque 10 ans sur la zone.",
+      },
+      {
+        name: 'Zen Services',
+        url: 'https://www.zen-services.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 4.4,
+        reviews: 15,
+        biensGeres: 28,
+        specialty: 'Ménage internalisé 24/7, rayon 10 km Troyes',
+        description:
+          "Zen Services intervient **24h/24 et 7j/7 dans un rayon de 10 km autour de Troyes** — un argument structurellement utile sur le sous-marché shopping (check-out 10h / check-in 15h sur des rotations de 2 nuits). Services intégrés : gestion Airbnb et Booking, **nettoyage internalisé**, location de linge de maison, conciergerie, bricolage et maintenance, check-in/check-out. Contact : 07 61 98 90 37. Modèle commission variable avec ménage inclus (à arbitrer contre les modèles refacture voyageur selon le profil de rotation du bien). Pertinente pour un propriétaire de T1-T2 hyper-centre qui subit des rotations rapides (séjours shopping 1-2 nuits, nombreuses arrivées et départs hebdomadaires) et a souffert de défauts de ménage ou de retards de linge avec un prestataire externalisé.",
+      },
+      {
+        name: 'Mille et Une Nuitées',
+        url: 'https://www.milleetunenuitees.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 9,
+        biensGeres: 12,
+        specialty: 'Tout l\'Aube, depuis juillet 2024, Camille et Laura',
+        description:
+          "Mille et Une Nuitées (SAS, SIREN 930837893) est une **conciergerie troyenne récente** fondée en **juillet 2024** par **Camille et Laura**. Couverture : tout le département de l'Aube avec un focus sur Troyes. Spécialité affichée : **locations courte durée jusqu'à 90 jours**. Services : gestion complète (création d'annonces, accueil voyageurs, assistance pendant le séjour, ménage, gestion du linge), avec une option **décoration intérieure** mise en avant. Track record encore court (moins d'un an d'activité), portefeuille réduit. Pertinente pour un propriétaire qui valorise la disponibilité et l'attention personnalisée d'une équipe taille humaine, et accepte d'être l'un des premiers clients pour bénéficier d'un suivi à l'écoute en échange d'une histoire plus courte. Option intéressante pour un bien neuf à décorer (le service décoration intérieure est un différenciateur rare sur le marché troyen).",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Tête du Bouchon / Saint-Jean / Cathédrale',
+        pricePerNight: '80-115 €',
+        occupancy: 65,
+        description:
+          "Cœur historique de Troyes, cathédrale Saint-Pierre-et-Saint-Paul, ruelle des Chats, place du Marché, Maison de l'Outil. Cible touristique culturelle et shopping. Prix au m² 2 100-2 532 €. T2 dès 80 000 €. Demande forte d'avril à octobre, weekend Parisiens majoritaires. Le segment LCD premium troyen.",
+        roiBrut: '7,5 à 9,5 %',
+      },
+      {
+        name: 'Saint-Martin / Vauluisant',
+        pricePerNight: '70-100 €',
+        occupancy: 62,
+        description:
+          "Quartier historique sud-Bouchon, autour de l'église Saint-Pantaléon et de l'hôtel de Vauluisant (musée des Bonneteries). Pans de bois moins prestigieux mais authentiques. Prix au m² 1 600-2 000 €. T2 dès 65 000 €. Bon compromis emplacement / budget, demande couple et famille.",
+        roiBrut: '8 à 10 %',
+      },
+      {
+        name: 'Saint-Nizier / Quai des Comtes',
+        pricePerNight: '70-95 €',
+        occupancy: 60,
+        description:
+          "Quartier nord-Bouchon, autour de l'église Saint-Nizier et des quais de la Seine. Demande touristique et business UTT. Prix au m² 1 600-1 900 €. T2 dès 60 000 €. Cible étudiants UTT en semaine + LCD weekend.",
+        roiBrut: '8 à 10 %',
+      },
+      {
+        name: 'Préfecture / Place Audiffred',
+        pricePerNight: '75-110 €',
+        occupancy: 58,
+        description:
+          "Quartier administratif et résidentiel haut de gamme, hôtels particuliers et immeubles XIXe rénovés. Cible business et touristique culturelle. Prix au m² 2 000-2 600 €. T2 dès 90 000 €. Demande mieux lissée toute l'année (préfecture, salons).",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Sainte-Savine / proximité McArthur Glen',
+        pricePerNight: '65-90 €',
+        occupancy: 56,
+        description:
+          "Couronne ouest, à 5-10 minutes en voiture du centre du Bouchon et adjacente au pôle McArthur Glen (4M visiteurs/an). Prix au m² 1 600-2 100 €. T2 dès 70 000 €, maison T4 dès 180 000 €. Cible spécifique shopping outlet (rotation 1-2 nuits weekend), demande structurellement portée par les magasins d'usine.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Chartreux / Gare SNCF',
+        pricePerNight: '55-80 €',
+        occupancy: 52,
+        description:
+          "Quartier gare SNCF (Paris-Est en 1h35) et quartier des Chartreux. Segment plus accessible à l'achat. Prix au m² 1 080-1 500 €. T2 dès 50 000 €. Cible business semaine et LCD low-budget. Stratégie hybride business + Airbnb ponctuel pertinente.",
+        roiBrut: '8,5 à 11 %',
+      },
+    ],
+    regulation:
+      "Troyes applique un **dispositif local strict** sur les meublés de tourisme, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) et d'un règlement municipal en vigueur depuis le **1er janvier 2020**.\n\n**Zone tendue B1 depuis octobre 2023.** Troyes (avec Sainte-Savine) a été **reclassée en zone tendue B1** par décret en octobre 2023. Ce classement renforce les outils municipaux de régulation des meublés de tourisme et permet l'application d'un changement d'usage strict.\n\n**Changement d'usage obligatoire depuis le 1er janvier 2020.** La Ville de Troyes impose une **autorisation préalable de changement d'usage** pour toute résidence secondaire mise en meublé de tourisme. Cette autorisation est délivrée par le service urbanisme et conditionne la légalité de la location. La motivation municipale : lutter contre la dépopulation du centre-ville (perte d'habitants permanents au profit de logements touristiques). Le dispositif est strictement appliqué dans le Bouchon.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Troyes doit être **déclaré en mairie** via la plateforme **declaloc.fr**. Un **numéro à 13 chiffres** est délivré et doit figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le 20 mai 2026, le portail national unique **Décla Loc** devient obligatoire sur l'ensemble du territoire.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale. La loi Le Meur permet désormais aux communes en zone tendue d'**abaisser ce plafond à 90 jours/an** — à surveiller à Troyes (statut B1) qui dispose désormais juridiquement de ce levier.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. **Nouveauté 2026 :** plus aucun changement d'usage n'est délivré pour une **passoire thermique** — un DPE classé entre A et E est désormais exigé pour obtenir l'autorisation municipale.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage. Troyes étant en B1 + changement d'usage, ces sanctions s'appliquent pleinement.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Troyes Champagne Métropole applique une taxe de séjour de **0,75 € à 3,30 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 78,
+      neighborhood: 'Tête du Bouchon / Saint-Jean',
+      revenuBrut: 16500,
+      commissionRate: 0.22,
+      menageCount: 72,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Troyes pour louer une résidence secondaire ?',
+        a: "Oui, et c'est strictement appliqué depuis le 1er janvier 2020. La Ville de Troyes impose une autorisation préalable de changement d'usage pour toute résidence secondaire mise en meublé de tourisme — motivation officielle : lutter contre la dépopulation du centre-ville. La procédure se fait au service urbanisme de la mairie. Troyes a été reclassée en zone tendue B1 en octobre 2023, ce qui renforce le pouvoir de régulation municipal. Cette autorisation s'ajoute au numéro d'enregistrement à 13 chiffres délivré via declaloc.fr. Nouveauté 2026 : plus aucun changement d'usage n'est délivré pour une passoire thermique (DPE F ou G) — un DPE classé entre A et E est exigé. Si vous achetez à Troyes (notamment dans le Bouchon) dans l'objectif LCD, anticipez cette procédure dès le compromis : un refus d'autorisation est possible sur les quartiers où le ratio meublé de tourisme / résidence principale est jugé déjà élevé. Demander un rendez-vous urbanisme avant signature est une pratique de prudence. Sanctions loi Le Meur : 10 000 € pour défaut d'enregistrement, 20 000 € pour fausse déclaration, jusqu'à 50 000 € pour location au-delà du quota autorisé.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Troyes sur l\'année ?',
+        a: "Un T2 de 40 m² bien placé dans le Bouchon (Tête du Bouchon, Saint-Jean, Cathédrale ou Saint-Martin), avec tarif moyen 75-90 €/nuit et occupation 58-65 %, génère typiquement un chiffre d'affaires brut de 15 000-19 000 € sur l'année à Troyes. La triple saisonnalité (shopping Marques Avenue / McArthur Glen toute l'année, culturel weekend Parisien, business UTT semaine) lisse les revenus mieux que sur les marchés purement balnéaires ou ski. Atout massif : avec des prix au m² parmi les plus accessibles de France (1 600-1 800 € moyen, 2 100-2 500 € sur le Bouchon), un T2 à 80 000 € en centre historique génère un ROI brut de 8-10 %, ce qui place Troyes parmi les meilleurs marchés LCD à l'achat en France. Un T3 famille dans Sainte-Savine (proximité McArthur Glen) peut atteindre 18 000-23 000 € avec une cible shopping pluri-générationnelle. Net de la commission conciergerie (20-25 %), de la taxe foncière (~900 € sur un T2 troyen), des charges et du ménage, comptez un revenu disponible de 9 000-12 000 € sur le T2 et 11 000-14 500 € sur le T3 famille.",
+      },
+      {
+        q: 'Quels quartiers du Bouchon privilégier pour investir en LCD à Troyes ?',
+        a: "Pour un mix prestige + rendement, la Tête du Bouchon / Saint-Jean / Cathédrale est le segment premium troyen : prix au m² 2 100-2 532 €, T2 dès 80 000 €, ROI brut 7,5-9,5 %, demande forte avril-octobre weekend Parisien. Saint-Martin et Vauluisant offrent un meilleur compromis budget : pans de bois moins prestigieux mais authentiques, prix 1 600-2 000 €/m², T2 dès 65 000 €, ROI brut 8-10 %. Saint-Nizier et Quai des Comtes proposent un sous-marché hybride LCD + étudiant UTT pertinent pour une stratégie mixte. Pour le shopping pur, Sainte-Savine près de McArthur Glen génère 7-9 % ROI brut avec une cible spécifique outlet 1-2 nuits weekend. Pour budget contraint, Chartreux et secteur gare proposent T2 dès 50 000 € avec ROI brut 8,5-11 % — la stratégie hybride business semaine + LCD weekend rend particulièrement bien sur cette frange. Préfecture / Place Audiffred convient pour la cible business + culturelle haut de gamme avec lissage annuel optimal.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Troyes ?',
+        a: "Les commissions à Troyes ne sont quasi-jamais affichées publiquement par les acteurs locaux — Joya, Capitaine BNB, Mon Groom, Bonjourbnb, Zen Services et Mille et Une Nuitées travaillent toutes sur devis personnalisé. La moyenne de marché observée sur les formules complètes s'établit autour de **20-25 % TTC** en 2026. Joya propose deux modèles distinctifs (loyer mensuel garanti vs commission variable selon revenus réels) qui méritent une comparaison chiffrée avant choix. Zen Services intègre le ménage dans la commission (à arbitrer selon le profil de rotation du bien). Sur le sous-marché shopping (rotation rapide 1-2 nuits, ménage hebdomadaire intense), la capacité opérationnelle ménage interne du prestataire est un critère décisif au-delà du taux affiché. Demander à 2-3 conciergeries un devis chiffré sur un même bien-type comparable, avec exemple de tarification mensuelle annuelle, est la pratique recommandée à Troyes — le marché est trop opaque pour se contenter d'une comparaison de taux.",
+      },
+    ],
+    updatedAt: '2026-06-15',
+  },
+  {
+    slug: 'quimper',
+    displayName: 'Quimper',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Quimper Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Quimper : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Quimper. Tarifs (20-25 %), services, avis, réglementation changement d'usage mars 2024, quartiers cathédrale Saint-Corentin, Locmaria.",
+    kwPrincipal: 'conciergerie quimper',
+    kwSecondaires: [
+      'conciergerie airbnb quimper',
+      'aora conciergerie',
+      'conciergerie bretagne',
+      'conciergerie finistère',
+      'location courte durée quimper',
+      'conciergerie centre ville quimper',
+    ],
+    population: 64385,
+    tourists: 1000000,
+    activeListings: 510,
+    priceLow: 65,
+    priceHigh: 110,
+    occupancyRate: 60,
+    revpar: 39,
+    seasonality:
+      "Double saisonnalité culturelle et balnéaire : pic estival juin-septembre porté par les **plages du Pays Bigouden** (La Torche, Bénodet, Beg-Meil à 25-40 min), le **patrimoine breton intra-muros** (cathédrale Saint-Corentin, vieux Quimper, faïenceries de Locmaria) et le **Festival de Cornouaille** (101e édition en 2024, environ **150 000 visiteurs sur 4 jours fin juillet**). Pic anniversaire « Festival de Cornouaille » avec saturation hôtelière 30 km à la ronde et tarifs LCD multipliés par 1,8 à 2,5 sur 5 nuits. Tourisme d'affaires régulier hors saison porté par la préfecture du Finistère, l'Université de Bretagne Occidentale (campus Quimper), et le pôle hospitalier. Pèlerinage Saint-Corentin (fête de la cathédrale fin avril) et Semaines Musicales de Quimper (août) lissent légèrement l'épaule.",
+    rankNational: 30,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Quimper**, dans le **vieux Quimper** autour de la **cathédrale Saint-Corentin**, dans le quartier **Locmaria** (faïenceries), sur le bord de l'**Odet** ou à proximité du centre, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **double saisonnalité** (Festival de Cornouaille pic absolu fin juillet, plages du Pays Bigouden à 30 min juin-septembre, patrimoine culturel toute l'année), la **réglementation locale durcie** (autorisation de changement d'usage obligatoire depuis le **1er mars 2024** pour toute résidence secondaire), les **prix au m² accessibles pour la Bretagne** (2 200 €/m² moyen, parmi les plus bas des préfectures bretonnes) et la poignée d'acteurs locaux qui se partagent un marché en croissance, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players quimpérois (Aora Conciergerie, Breizh Coast, Conciergerie Quimper), les acteurs multi-zones Finistère (Concierge B&B) et les réseaux nationaux (OIQIA, Guest Adom) ?",
+    marketIntro:
+      "Quimper est un **marché LCD culturel et balnéaire** porté par un patrimoine breton dense — **cathédrale Saint-Corentin** (gothique XIIIe-XVe), **vieux Quimper** en pans de bois, **faïenceries de Locmaria** (depuis 1690, plus ancienne manufacture de faïence française en activité), **Musée des Beaux-Arts** et **Musée Départemental Breton**. **Préfecture du Finistère** et **deuxième commune la plus peuplée du département** après Brest (**64 385 habitants INSEE 2023**, 64 530 en 2025 selon la ville). La ville compte environ **510 annonces actives** sur Airbnb avec un **tarif moyen** autour de **82 €/nuit** sur l'année.\n\n**Festival de Cornouaille, pic absolu fin juillet.** Le **Festival de Cornouaille** (créé en 1923, **101e édition en 2024 du 18 au 21 juillet**) draine **environ 150 000 visiteurs sur 4 jours** dans les rues du centre-ville, avec plus de **1 000 bénévoles** et des centaines d'artistes locaux et internationaux. C'est l'**un des plus gros événements culturels de Bretagne** et le pic absolu du marché LCD quimpérois : saturation hôtelière 30 km à la ronde et tarifs LCD multipliés par 1,8 à 2,5 sur 5 nuits. L'épaule de juillet et la première quinzaine d'août sont également boostées (groupes émergents, programmation off).\n\n**Pays Bigouden et plages à 25-40 minutes.** **La Torche** (spot de surf mondial, 25 min), **Bénodet** (station balnéaire et thalasso, 30 min), **Beg-Meil** et **Mousterlin** (35 min), **Concarneau** (la Ville Close, 25 min), **Locronan** (un des plus beaux villages de France, 25 min) : Quimper est un **camp de base balnéaire et patrimonial** idéal pour rayonner sur le sud-Finistère en évitant les tarifs hôteliers plus élevés des stations balnéaires. La clientèle française (Parisiens, Bretons en weekend) et britannique (ferries Plymouth-Roscoff et Cork-Roscoff) domine.\n\n**Prix au m² accessibles pour la Bretagne.** Comptez **2 202 €/m² en moyenne** à Quimper en 2026, **2 290-2 420 €/m²** sur le secteur Place de Locronan / Rue de Locronan (cœur historique), **1 953-2 993 €/m²** plage de marché global. Quimper figure parmi les **préfectures bretonnes les plus accessibles à l'achat**, devant Vannes (2 800 €/m²+), Rennes (3 800 €/m²+) et même Brest (1 800-2 000 €/m²) sur la fourchette haute centre. Un T2 centre historique se trouve dès **90 000-130 000 €**, ce qui place Quimper dans la **moyenne basse des marchés LCD français à l'achat** avec un ROI brut atteignable de **6,5-9 %** sur les meilleurs placements.",
+    conciergeries: [
+      {
+        name: 'Aora Conciergerie',
+        url: 'https://www.aoraconciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 24,
+        biensGeres: 25,
+        specialty: 'Pure-player Quimper et Finistère, gérée par Andrea',
+        description:
+          "Aora Conciergerie est une **conciergerie Airbnb pure-player Quimper et région** gérée par **Andrea** (interlocutrice mise en avant dans la communication client). Tarification sur devis personnalisé. Services : gestion d'annonces et optimisation, gestion des calendriers et sélection des voyageurs, photographie professionnelle, communication 24h/7, accueil voyageurs (check-in/check-out), kit de bienvenue et recommandations locales, nettoyage professionnel et gestion du linge, stratégie tarifaire flexible avec ajustements saisonniers. Positionnement combinant « technologie et service de proximité ». Pertinente pour un propriétaire d'appartement Quimper centre historique ou vieux Quimper qui veut un interlocuteur local privilégié, accessible et capable d'arbitrer entre le créneau Festival de Cornouaille et la cible balnéaire estivale.",
+      },
+      {
+        name: 'Breizh Coast Conciergerie',
+        url: 'https://breizhcoast-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 16,
+        biensGeres: 22,
+        specialty: '9 Allée Jean-Louis Naour, Leny Ollivier, 7 ans d\'expérience',
+        description:
+          "Breizh Coast Conciergerie est implantée **9 Allée Jean-Louis et Georges le Naour à Quimper** et gérée par **Leny Ollivier**, professionnel revendiquant **7 ans d'expérience** sur le marché des locations courte durée Airbnb et Booking. Services : création d'annonces optimisée, communication voyageurs, entretien des biens, gestion dynamique des prix, assistance 24/7, audits mensuels détaillés. Horaires : 8h-21h en semaine, 9h-13h dimanche. **Adhésion gratuite, sans frais d'abonnement**. Pertinente pour un propriétaire qui valorise un acteur expérimenté avec un format d'audits mensuels détaillés (rare sur la zone) lui permettant de suivre précisément la rentabilité de son bien, et une équipe joignable 7j/7 sur de larges plages horaires.",
+      },
+      {
+        name: 'Concierge B&B',
+        url: 'https://www.conciergebb.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 32,
+        biensGeres: 200,
+        specialty: 'Réseau Finistère, 200 biens locaux, 600 biens France',
+        description:
+          "Concierge B&B (Concierge BB) est un **acteur national avec ancrage fort sur le Finistère** : **200 propriétés gérées en Finistère** (l'une des plus grosses bases identifiées sur la zone) et **600 propriétés en France**, plus une activité internationale (Dubaï, Abu Dhabi, Ras Al Khaimah). Commission affichée à **20 %** sur les revenus locatifs pour la formule complète. Spécialités : Airbnb, contrats de mobilité, coliving, gestion locative immobilière classique. Services : création et optimisation d'annonces Airbnb, gestion des réservations et communication, nettoyage professionnel, tarification dynamique, maintenance et assistance technique. Pertinente pour un propriétaire investisseur multi-biens en Finistère (Quimper + Bénodet + Concarneau ou Pays Bigouden) qui veut mutualiser le contact agence et bénéficier de la massification du réseau, ou un investisseur à distance qui valorise un acteur volumétrique structuré.",
+      },
+      {
+        name: 'Conciergerie Quimper (NS Solutions)',
+        url: 'https://www.conciergeriequimper.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 14,
+        biensGeres: 18,
+        specialty: 'Carte pro CCI Finistère, Quimper + Sud-Finistère',
+        description:
+          "Conciergerie Quimper (opérée par **NS Solutions**) détient une **carte professionnelle de gestion et transaction immobilière délivrée par la Chambre de Commerce et d'Industrie du Finistère** — un statut juridique encadré rare sur le marché des conciergeries pures et qui sécurise la relation contractuelle propriétaire. Positionnement **gestion premium courte durée**. Couverture : Quimper et Sud-Finistère (Pont-l'Abbé, Bénodet, Pays Bigouden). Services : accompagnement propriétaires, gestion d'annonces, accueil voyageurs, ménage, maintenance, conformité réglementaire (changement d'usage, déclaration mairie, suivi micro-BIC). Pertinente pour un propriétaire qui valorise un cadre juridique encadré (carte pro CCI) plutôt qu'un simple mandat de conciergerie, ou un investisseur sensible aux enjeux fiscaux et réglementaires qui veut un interlocuteur capable de l'accompagner sur la conformité changement d'usage post-mars 2024.",
+      },
+      {
+        name: 'OIQIA Quimper',
+        url: 'https://www.oiqia.com/en/ville-gestion/quimper',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 11,
+        biensGeres: 15,
+        specialty: 'Réseau national, technologie de gestion',
+        description:
+          "OIQIA est un **réseau national de conciergerie Airbnb** présent à Quimper via son maillage local. Commission affichée autour de **20 %** sur les nuitées. Plateforme propriétaire (suivi en ligne des réservations, revenus, paiements). Package : gestion des voyageurs, des clés, du ménage, de la communication, de la maintenance, des assurances. Optimisation tarifaire algorithmique. Pertinente pour un propriétaire investisseur à distance (Parisien, étranger) qui possède un bien Quimper comme produit LCD pur et préfère un suivi self-service via dashboard à un suivi téléphonique personnalisé, ou un investisseur multi-villes qui veut un même outil de pilotage sur plusieurs marchés. Bonne option pour le sous-marché Festival de Cornouaille (pricing dynamique algorithmique adapté aux pics d'événements).",
+      },
+      {
+        name: 'Guest Adom Quimper',
+        url: 'https://www.guest-adom.com/conciergerie-airbnb-quimper/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.2,
+        reviews: 13,
+        biensGeres: 16,
+        specialty: 'Réseau national, expertise services à la personne',
+        description:
+          "Guest Adom est un **réseau national franchisé** présent à Quimper via une agence locale. Commission autour de **25 %**, gestion appuyée sur l'expertise services à la personne et hôtellerie. Package : prise en charge complète des biens, check-in/check-out, ménage, maintenance, assistance voyageurs. Avis clients mitigés sur certaines plateformes — qualité variable selon les franchises. Pertinente pour un propriétaire investisseur à distance qui privilégie un grand réseau lisible et un suivi standardisé. Bonne option pour une stratégie multi-biens dans plusieurs villes (Quimper + autres villes du réseau Guest Adom), pour mutualiser le contact franchise et avoir un reporting cohérent.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieux Quimper / Cathédrale Saint-Corentin',
+        pricePerNight: '85-120 €',
+        occupancy: 66,
+        description:
+          "Cœur historique de Quimper, cathédrale Saint-Corentin (gothique XIIIe-XVe), rue Kéréon, place au Beurre. Cible touristique culturelle et Festival de Cornouaille. Prix au m² 2 400-2 993 €. T2 dès 110 000 €. Demande forte d'avril à octobre, pic absolu fin juillet (Festival). Le segment LCD premium quimpérois.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Locmaria / Faïenceries',
+        pricePerNight: '75-105 €',
+        occupancy: 62,
+        description:
+          "Quartier historique des faïenceries (Henriot-Quimper, plus ancienne manufacture française en activité depuis 1690), à 15 minutes à pied du centre. **842 logements** dont 286 appartements et 556 maisons. Cible touristique culturelle et patrimoniale, demande couples et amateurs d'arts décoratifs. Prix au m² 2 100-2 600 €. T2 dès 95 000 €.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Place de Locronan / Rue de Locronan',
+        pricePerNight: '70-100 €',
+        occupancy: 60,
+        description:
+          "Axe commercial nord du centre, autour de la Place de Locronan (prix au m² moyen 2 290 € mars 2025, pouvant aller de 1 420 € à 3 900 € selon le bien) et de la Rue de Locronan (2 420 €/m² nov 2024). Bon compromis emplacement / budget. T2 dès 85 000 €. Demande mixte couples touristiques + cible familles.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Quais de l\'Odet / Préfecture',
+        pricePerNight: '70-100 €',
+        occupancy: 58,
+        description:
+          "Quais le long de l'Odet (qui traverse le centre), proximité préfecture du Finistère et Musée des Beaux-Arts. Cible business semaine + touristique culturelle. Prix au m² 2 200-2 700 €. T2 dès 95 000 €. Demande mieux lissée toute l'année grâce à la préfecture.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Kerfeunteun / Penhars (couronne)',
+        pricePerNight: '60-85 €',
+        occupancy: 54,
+        description:
+          "Quartiers résidentiels nord (Kerfeunteun) et ouest (Penhars), à 10-15 minutes en voiture du centre. Prix au m² 1 800-2 200 €. T2 dès 75 000 €, maison T4 dès 195 000 €. Cible familles avec voiture pour rayonner sur les plages du Pays Bigouden. Bon compromis budget / rendement.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Couronne balnéaire / Bénodet / Pays Bigouden',
+        pricePerNight: '95-160 €',
+        occupancy: 58,
+        description:
+          "Couronne sud (Bénodet 30 min, Pont-l'Abbé 25 min, La Torche 25 min, Beg-Meil 35 min). Cible balnéaire premium et spot de surf international (La Torche). Prix au m² 2 800-4 200 €. Maison T4 vue mer dès 320 000 €. Marché estival fort (juin-septembre), prime « vue mer » sensible et tarifs hôteliers plus élevés justifient le Airbnb.",
+        roiBrut: '5,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Quimper applique un **dispositif local renforcé** sur les meublés de tourisme, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) et d'un règlement municipal entré en vigueur le **1er mars 2024**.\n\n**Changement d'usage obligatoire depuis le 1er mars 2024.** Pour tout meublé de tourisme qui n'est **pas votre résidence principale**, une **autorisation de changement d'usage** doit être demandée à la mairie de Quimper. Cette procédure s'applique également aux meublés déjà déclarés en mairie avant cette date (effet rétroactif). La motivation municipale : encadrer le marché Airbnb dans un contexte de tension locative croissante dans le Finistère sud (clientèle touristique vs résidents permanents).\n\n**Enregistrement obligatoire via Décla Loc.** Tout meublé de tourisme à Quimper doit être **déclaré en mairie** via la plateforme **declaloc.fr**. Un **numéro à 13 chiffres** est délivré instantanément et doit figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le 20 mai 2026, le portail national unique **Décla Loc** devient obligatoire sur l'ensemble du territoire. Plus aucun loueur ne pourra publier d'annonce sans numéro d'enregistrement valide.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur permet désormais aux communes d'abaisser ce plafond à 90 jours/an — à surveiller à Quimper.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. **Nouveauté 2026 :** plus aucun changement d'usage n'est délivré pour une **passoire thermique** — un DPE classé entre A et E est désormais exigé pour obtenir l'autorisation municipale.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **15 000 € à 20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage. À Quimper, en cas d'absence de numéro, désactivation sous 48h par les plateformes Airbnb / Booking / Abritel.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Quimper Bretagne Occidentale applique une taxe de séjour de **0,75 € à 3,00 € par nuit et par personne** selon le classement du logement (collectée automatiquement par Airbnb et reversée à l'agglomération).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 82,
+      neighborhood: 'Vieux Quimper / Cathédrale',
+      revenuBrut: 18000,
+      commissionRate: 0.22,
+      menageCount: 70,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Quimper pour louer une résidence secondaire ?',
+        a: "Oui, depuis le 1er mars 2024. La Ville de Quimper impose une autorisation préalable de changement d'usage pour tout meublé de tourisme qui n'est pas votre résidence principale. La procédure s'applique également aux meublés déjà déclarés en mairie avant cette date (effet rétroactif). Cette autorisation s'ajoute au numéro d'enregistrement à 13 chiffres délivré via declaloc.fr (instantané). Nouveauté 2026 : plus aucun changement d'usage n'est délivré pour une passoire thermique (DPE F ou G) — un DPE classé entre A et E est exigé. Si vous achetez à Quimper dans l'objectif LCD, anticipez cette procédure dès le compromis. Sanctions loi Le Meur : 10 000 € pour défaut d'enregistrement, 15 000-20 000 € pour fausse déclaration, jusqu'à 50 000 € pour location au-delà du quota autorisé. Désactivation sous 48h par les plateformes en cas d'absence de numéro. Pour les biens en résidence principale, la limite reste de 120 jours/an (que la loi Le Meur permet désormais aux communes d'abaisser à 90 jours/an — à surveiller).",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Quimper sur l\'année ?',
+        a: "Un T2 de 40 m² bien placé au vieux Quimper (autour de la cathédrale Saint-Corentin) ou Locmaria, avec tarif moyen 75-90 €/nuit et occupation 60-66 %, génère typiquement un chiffre d'affaires brut de 16 000-20 000 € sur l'année à Quimper. La double saisonnalité culturelle (Festival de Cornouaille pic absolu fin juillet, patrimoine breton toute l'année) et balnéaire (Pays Bigouden et plages à 25-40 min juin-septembre) lisse les revenus mieux que sur les marchés purement balnéaires (Carnac, Quiberon). Anniversaire Festival de Cornouaille (fin juillet, 150 000 visiteurs sur 4 jours) génère un pic tarifaire x1,8-x2,5 sur 5 nuits. Une maison T4 avec extérieur dans la couronne balnéaire (Bénodet, Pays Bigouden) peut atteindre 22 000-30 000 € avec une saisonnalité plus marquée juin-septembre. Net de la commission conciergerie (20-25 %), de la taxe foncière (~1 100 € sur un T2 quimpérois), des charges et du ménage, comptez un revenu disponible de 9 000-12 500 € sur le T2 et 13 000-18 000 € sur la maison T4 balnéaire.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Quimper ?',
+        a: "Pour un mix prestige + rendement, le Vieux Quimper / Cathédrale Saint-Corentin est le segment premium quimpérois : prix au m² 2 400-2 993 €, T2 dès 110 000 €, ROI brut 6-7,5 %, demande forte avril-octobre avec pic Festival de Cornouaille. Locmaria offre un compromis budget : quartier historique des faïenceries (Henriot-Quimper depuis 1690), prix 2 100-2 600 €/m², T2 dès 95 000 €, ROI brut 6,5-8 %. Place et Rue de Locronan proposent un sous-marché LCD + résidentiel pertinent pour une stratégie mixte (T2 dès 85 000 €, ROI 6,5-8,5 %). Pour budget contraint, Kerfeunteun et Penhars proposent T2 dès 75 000 € avec ROI brut 7-9 % et stratégie hybride business + LCD weekend. Quais de l'Odet / Préfecture conviennent pour la cible business + culturelle avec lissage annuel optimal (préfecture du Finistère). Pour le balnéaire premium, Bénodet et Pays Bigouden génèrent un ROI 5,5-7 % avec maison T4 vue mer dès 320 000 € — prime « vue mer » sensible et tarifs hôteliers plus élevés justifient le Airbnb.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Quimper ?',
+        a: "Les commissions à Quimper s'étalent de 20 % (Concierge B&B, OIQIA — réseaux nationaux) à 25 % TTC (Guest Adom) en 2026, avec une moyenne de marché autour de 22-23 % TTC pour une formule complète. Aora Conciergerie, Breizh Coast et Conciergerie Quimper (NS Solutions) travaillent sur devis personnalisé. Le critère décisif au-delà du taux affiché sur un marché à pic événementiel comme Quimper (Festival de Cornouaille fin juillet, 150 000 visiteurs sur 4 jours) est la stratégie pricing dynamique sur le pic et les épaules — un mauvais pricing pendant le Festival peut faire perdre 1 500-2 500 € de CA sur le bien. Demander au prestataire son protocole de pricing sur le Festival de Cornouaille, et la capacité multilingue de l'équipe (anglais pour la clientèle britannique des ferries Plymouth-Roscoff et Cork-Roscoff) avant signature. Conciergerie Quimper (NS Solutions) est la seule à détenir une carte professionnelle CCI Finistère — argument pertinent pour les propriétaires sensibles au cadre juridique encadré.",
+      },
+    ],
+    updatedAt: '2026-06-15',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

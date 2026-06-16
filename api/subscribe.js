@@ -60,6 +60,25 @@ export default async function handler(req, res) {
     }
 
     const data = await response.json();
+
+    // Email de bienvenue (template Brevo) pour les inscrits de la liste NL :
+    // envoi transactionnel -> géré en code, mais tracké dans Brevo (ouvertures/clics).
+    // N'est PAS bloquant : un échec d'email ne fait pas rater l'inscription.
+    if (listId === listNL) {
+      try {
+        await fetch('https://api.brevo.com/v3/smtp/email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'api-key': apiKey },
+          body: JSON.stringify({
+            to: [{ email, name: firstName || undefined }],
+            templateId: parseInt(process.env.BREVO_WELCOME_TEMPLATE_ID, 10) || 1,
+          }),
+        });
+      } catch (mailErr) {
+        console.error('Brevo welcome email error:', mailErr);
+      }
+    }
+
     return res.status(200).json({ success: true, data });
   } catch (error) {
     console.error('Brevo API error:', error);

@@ -256,12 +256,24 @@ export const loveRoomCitiesMeta = [
     "slug": "la-rochelle",
     "displayName": "La Rochelle",
     "searchVolume": 1690,
-    "status": "todo",
+    "status": "done",
     "lat": 46.16033,
     "lng": -1.15114,
     "region": "Nouvelle-Aquitaine",
     "regionSlug": "nouvelle-aquitaine",
     "radiusKm": 100,
     "found": 38
+  },
+  {
+    "slug": "perpignan",
+    "displayName": "Perpignan",
+    "searchVolume": 1670,
+    "status": "todo",
+    "lat": 42.68749,
+    "lng": 2.90065,
+    "region": "Occitanie",
+    "regionSlug": "occitanie",
+    "radiusKm": 50,
+    "found": 42
   }
 ];

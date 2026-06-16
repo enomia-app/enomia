@@ -28,6 +28,9 @@ export default async function handler(req, res) {
   } else if (source === 'WaitlistSite') {
     listId = listWaitSite;
   }
+  // source === 'Livre' (QR 4e de couverture → /livre) tombe volontairement dans la
+  // liste NL par défaut : même consentement que la NL du site (1 email/mois).
+  // La provenance se segmente dans Brevo via l'attribut SOURCE.
 
   const thisSource = source || 'direct';
   // 2e tag pour les outils : quel outil
@@ -81,6 +84,25 @@ export default async function handler(req, res) {
 
     // POST /contacts renvoie 201 (cree, avec body) ou 204 (mis a jour, sans body) -> ne pas planter sur le 204.
     const data = await response.json().catch(() => ({ updated: true }));
+
+    // Email de bienvenue (template Brevo) pour les inscrits de la liste NL :
+    // envoi transactionnel -> géré en code, mais tracké dans Brevo (ouvertures/clics).
+    // N'est PAS bloquant : un échec d'email ne fait pas rater l'inscription.
+    if (listId === listNL) {
+      try {
+        await fetch('https://api.brevo.com/v3/smtp/email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'api-key': apiKey },
+          body: JSON.stringify({
+            to: [{ email, name: firstName || undefined }],
+            templateId: parseInt(process.env.BREVO_WELCOME_TEMPLATE_ID, 10) || 1,
+          }),
+        });
+      } catch (mailErr) {
+        console.error('Brevo welcome email error:', mailErr);
+      }
+    }
+
     return res.status(200).json({ success: true, data });
   } catch (error) {
     console.error('Brevo API error:', error);

@@ -1,0 +1,172 @@
+---
+// Landing du QR code en 4e de couverture de « La Méthode 97 % ».
+// noindex : page de destination print uniquement, pas une page SEO.
+// Source Brevo : 'Livre' → BREVO_LIST_LIVRE (api/subscribe.js).
+import ToolLayout from '../layouts/ToolLayout.astro';
+import AuthorSchema from '../components/AuthorSchema.astro';
+---
+
+<ToolLayout
+  title="La suite du livre — La Méthode 97 % · Enomia"
+  description="Les coulisses de mes opérations en cours : mes chiffres, mes galères, ce qui marche vraiment. 1 email par mois."
+  noindex={true}
+>
+  <AuthorSchema />
+
+  <section class="livre-hero">
+    <div class="inner">
+      <span class="badge">La suite du livre</span>
+      <h1>Vous avez lu le livre.<br />Voici la suite.</h1>
+      <p class="lead">
+        Chaque mois, les coulisses d'une opération en cours : mes chiffres, mes galères,
+        ce qui marche vraiment.
+      </p>
+
+      <ul class="promesse">
+        <li>Mes opérations en direct : le chantier, la banque, les premiers voyageurs</li>
+        <li>L'actu réglementaire et fiscale qui change vos chiffres</li>
+        <li>En bonus : le livre en PDF, avec les 37 sources et le simulateur en 1 clic</li>
+      </ul>
+
+      <form id="livre-form" class="livre-form">
+        <input type="text" name="firstName" placeholder="Prénom" autocomplete="given-name" />
+        <input type="email" name="email" placeholder="votre@email.com" autocomplete="email" required />
+        <button type="submit">Recevoir les coulisses</button>
+        <p class="note">1 email par mois. Désinscription en 1 clic, email jamais partagé.</p>
+      </form>
+
+      <p id="livre-success" class="success" hidden>
+        C'est noté, bienvenue ! Le premier email arrive bientôt, avec le PDF du livre.
+      </p>
+    </div>
+  </section>
+</ToolLayout>
+
+<script>
+  const form = document.getElementById('livre-form') as HTMLFormElement | null;
+  const success = document.getElementById('livre-success');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const btn = form.querySelector('button');
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = 'Inscription…';
+    }
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: data.get('email'),
+          firstName: data.get('firstName'),
+          source: 'Livre',
+        }),
+      });
+      if (!res.ok) throw new Error('subscribe failed');
+      form.hidden = true;
+      if (success) success.hidden = false;
+    } catch {
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = 'Réessayer';
+      }
+    }
+  });
+</script>
+
+<style>
+  .livre-hero {
+    padding: 56px 20px 80px;
+  }
+  .inner {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 999px;
+    padding: 5px 14px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(30px, 6vw, 42px);
+    line-height: 1.15;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .lead {
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+  }
+  .promesse {
+    list-style: none;
+    margin-bottom: 28px;
+    display: grid;
+    gap: 10px;
+  }
+  .promesse li {
+    padding-left: 26px;
+    position: relative;
+    font-size: 15px;
+  }
+  .promesse li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+  }
+  .livre-form {
+    display: grid;
+    gap: 10px;
+  }
+  .livre-form input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font: inherit;
+    font-size: 15px;
+    background: var(--bg-card);
+  }
+  .livre-form input:focus {
+    outline: 2px solid var(--green);
+    outline-offset: -1px;
+  }
+  .livre-form button {
+    padding: 14px 16px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--green);
+    color: #fff;
+    font: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .livre-form button:hover {
+    filter: brightness(0.95);
+  }
+  .note {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    text-align: center;
+  }
+  .success {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--green);
+    background: var(--green-soft);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+</style>

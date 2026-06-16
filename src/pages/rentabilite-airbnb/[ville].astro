@@ -4,6 +4,7 @@ export const prerender = true;
 import ToolLayout from '../../layouts/ToolLayout.astro';
 import ContratLandingStyles from '../../components/ContratLandingStyles.astro';
 import NewsletterBlock from '../../components/NewsletterBlock.astro';
+import AuthorBubble from '../../components/AuthorBubble.astro';
 import {
   citiesRentabilite,
   getNeighborsRentabilite,
@@ -129,7 +130,7 @@ const ldFaq = {
       name: `Quel taux d'occupation viser pour un Airbnb à ${city.name} ?`,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `Le taux d'occupation moyen visé à ${city.name} se situe entre ${city.t2.occupancyMin}% et ${city.t2.occupancyMax}% selon la qualité du produit. La Méthode 97%© atteint 97% sur les 9 biens de Marc Chenut grâce au minimum 1 nuit (au lieu de 2), à la double plateforme Airbnb + Booking et au pricing dynamique.`,
+        text: `Le taux d'occupation moyen visé à ${city.name} se situe entre ${city.t2.occupancyMin}% et ${city.t2.occupancyMax}% selon la qualité du produit. La Méthode 97%© atteint 97% d'occupation sur les logements de Marc Chenut grâce au minimum 1 nuit (au lieu de 2), à la double plateforme Airbnb + Booking et au pricing dynamique.`,
       },
     },
     {
@@ -261,7 +262,7 @@ const ldFaq = {
         <li><strong>Hacker les algorithmes.</strong> Ne jamais donner l'exclusivité à Airbnb&nbsp;: présent simultanément sur Airbnb et Booking, les deux plateformes se concurrencent pour pousser votre annonce. Lancement à prix cassé (40-50&nbsp;€) pour faire monter votre annonce dans les recherches en quelques semaines, puis montée progressive vers le prix cible. Pricing dynamique pour capturer les pics&nbsp;: +24% de CA en moyenne. Vous pouvez finir à +40% au-dessus des autres biens du quartier.</li>
         <li><strong>Diviser un grand bien en 2 ou 3 lots.</strong> Une maison de 90&nbsp;m&sup2; s'achète à 2&nbsp;000&nbsp;€/m&sup2; quand un studio neuf est à 5&nbsp;000&nbsp;€/m&sup2;. Vous divisez en 2 T2 qui se louent cher au m&sup2;. Rendement multiplié par 2 sur le même bien. Bonus gestion&nbsp;: une femme de ménage qui fait 2-3 logements groupés à la suite vous coûte 20&nbsp;€/heure. La même, qui doit faire 40 minutes de trajet aller-retour pour un seul bien, va demander 40&nbsp;€/heure ou refuser le contrat.</li>
       </ol>
-      <p style="font-size:15px; line-height:1.55; opacity:0.92; margin:8px 0 18px;">Marc Chenut applique La Méthode 97%© sur 9 biens depuis 2019. Résultat&nbsp;: 97% d'occupation moyen, 12 à 18% de rendement net, 5-6 heures de gestion par mois.</p>
+      <p style="font-size:15px; line-height:1.55; opacity:0.92; margin:8px 0 18px;">Marc Chenut applique La Méthode 97%© sur ses 4 logements depuis 2019. Résultat&nbsp;: 97% d'occupation, autour de 15&nbsp;% de rendement net, près de 7&nbsp;000&nbsp;€ nets par mois, sans conciergerie.</p>
       <a href="/blog/louer-airbnb-rentable" style="display:inline-block; background:#3fbd71; color:#fff; padding:12px 24px; border-radius:8px; font-weight:600; text-decoration:none; font-size:15px;">→ Découvrir La Méthode 97%© en détail</a>
     </div>
 
@@ -371,9 +372,9 @@ const ldFaq = {
       </div>
     </div>
 
+    <AuthorBubble />
     <div class="callout">
-      <strong>Marc Chenut, fondateur d'Enomia, exploite 9 biens en LCD</strong>
-      <p>Mes 9 biens sont en première couronne lyonnaise (Irigny, Pierre-Bénite, Montagny). Profil très différent de {city.name}&nbsp;: pas de tourisme, taux d'occupation 97% (La Méthode 97%©), rendement net 12-18%. La rentabilité ne dépend pas seulement de la ville, mais surtout de la qualité du produit, de la stratégie de pricing et du coût de gestion. Avec une gestion en direct + automatisation, j'économise environ 30&nbsp;000&nbsp;€/an vs une conciergerie classique sur l'ensemble du panel. <a href="/blog/automatiser-airbnb">Comment je gère 9 biens en 5-6h/mois</a>.</p>
+      <p>Mes logements sont en périphérie, sans tourisme&nbsp;: un profil très différent de {city.name}, et pourtant un taux d'occupation de 97% (La Méthode 97%©). La rentabilité ne dépend pas seulement de la ville, mais surtout de la qualité du produit, de la stratégie de pricing et du coût de gestion. Avec une gestion en direct + automatisation, j'économise de l'ordre de 5&nbsp;000&nbsp;€/an par logement vs une conciergerie classique. <a href="/blog/automatiser-airbnb">Comment je gère en direct, sans conciergerie</a>.</p>
     </div>
 
     <div class="hero-cta-block">
@@ -420,12 +421,12 @@ const ldFaq = {
       <a href="/blog/louer-airbnb-rentable">
         <div class="rk">Méthode</div>
         <div class="rt">La Méthode 97%© en détail</div>
-        <div class="rd">9 biens, 4 opérations détaillées, 12-18% de rendement. La méthode complète Marc.</div>
+        <div class="rd">4 opérations détaillées, autour de 15 % de rendement net. La méthode complète Marc.</div>
       </a>
       <a href="/blog/automatiser-airbnb">
         <div class="rk">Automatisation</div>
         <div class="rt">Gérer un Airbnb sans conciergerie</div>
-        <div class="rd">9 biens en 5-6h/mois. Boîte à code, channel manager, messages automatiques.</div>
+        <div class="rd">Gérer en direct, sans conciergerie. Boîte à code, channel manager, messages automatiques.</div>
       </a>
       <a href={conciergerieLink.href}>
         <div class="rk">Coût gestion</div>

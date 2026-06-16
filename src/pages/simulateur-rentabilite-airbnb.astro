@@ -2,14 +2,13 @@
 import ToolLayout from '../layouts/ToolLayout.astro';
 import ContratLandingStyles from '../components/ContratLandingStyles.astro';
 import NewsletterBlock from '../components/NewsletterBlock.astro';
-import AuthorSchema from '../components/AuthorSchema.astro';
+import AuthorBubble from '../components/AuthorBubble.astro';
 
 const title = "Simulateur rentabilité Airbnb 2026 : calculateur gratuit (rendement net réel)";
 const description = "Simulez la rentabilité nette réelle de votre investissement Airbnb. Toutes charges incluses, cash flow mensuel, comparatif placements. 100% gratuit.";
 const canonical = "https://www.enomia.app/simulateur-rentabilite-airbnb";
 ---
 <ToolLayout title={title} description={description} canonical={canonical} currentTool="simulateur" ctaLabel="Mes simulations" ctaHref="/simulateur-lcd">
-  <AuthorSchema />
   <ContratLandingStyles />
 
   <!-- Redirect existing shared links to new dashboard URL -->
@@ -95,10 +94,7 @@ const canonical = "https://www.enomia.app/simulateur-rentabilite-airbnb";
     <p>Un rendement brut supérieur à 10% est considéré comme bon en LCD. Mais le rendement brut ne raconte qu'une partie de l'histoire. Ce qui compte, c'est le <strong>rendement net après charges et financement</strong>. En dessous de 8% net, il est difficile de générer un cash flow positif. Au-dessus de 12% net, l'investissement est excellent.</p>
 
     <!-- Credibility block Marc -->
-    <div class="callout">
-      <strong>Marc, fondateur d'Enomia</strong>
-      <p>J'exploite 9 biens en location courte durée avec un rendement net de 12 à 18% sur chacun des investissements. La clé : un taux d'occupation supérieur à 90% et une gestion de moins d'une heure par bien et par mois, sans conciergerie. Je partage ma méthode en détail, gratuitement, sur <a href="/blog">le blog</a> et sur <a href="https://youtube.com/@enomia" target="_blank">YouTube</a>.</p>
-    </div>
+    <AuthorBubble />
 
     <p>L'erreur la plus fréquente en location saisonnière est de se concentrer uniquement sur les revenus en haute saison tout en sous-estimant les charges fixes (taxe foncière, copropriété, assurance) et les périodes de vacance locative en basse saison. Un simulateur de rentabilité Airbnb fiable doit prendre en compte la saisonnalité et l'ensemble des charges pour donner un résultat réaliste.</p>
     <p>Notre simulateur vous permet de tester différents scénarios (optimiste, réaliste, conservateur) pour chaque paramètre. Vous visualisez immédiatement l'impact sur votre rendement net et votre cash flow mensuel.</p>

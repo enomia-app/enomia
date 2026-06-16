@@ -3,13 +3,12 @@ export const prerender = true;
 import ToolLayout from '../../layouts/ToolLayout.astro';
 import NewsletterBlock from '../../components/NewsletterBlock.astro';
 import AuthorSchema from '../../components/AuthorSchema.astro';
+import { AUTHOR_BIO_ARTICLE, AUTHOR_BIO_MICRO, authorPhoto } from '../../data/author';
 
 const title = "Marc Chenut, Investisseur Location Courte Durée et fondateur d'Enomia";
-const description =
-  "Marc Chenut, investisseur Airbnb avec 9 biens en location courte durée et 12 à 18% de rendement net. Méthode 97%© et chiffres détaillés gratuitement sur le blog Enomia.";
+const description = AUTHOR_BIO_MICRO;
 const canonical = 'https://www.enomia.app/auteur/marc-chenut';
-const photo =
-  'https://res.cloudinary.com/dv2btcpc2/image/upload/q_auto,f_auto,w_400/v1775507331/Marc_1_a6ndja.png';
+const photo = authorPhoto(400);
 ---
 <ToolLayout title={title} description={description} canonical={canonical} currentTool="none">
   <AuthorSchema />
@@ -28,24 +27,22 @@ const photo =
       <div class="author-meta">
         <h1>Marc Chenut</h1>
         <p class="author-role">Investisseur Location Courte Durée · Fondateur Enomia</p>
-        <p class="author-lead">
-          J'exploite 9 biens en location courte durée avec un rendement net de 12 à 18% sur chacun des investissements. La clé : un taux d'occupation supérieur à 93% et une gestion de moins d'une heure par bien et par mois, sans conciergerie.
-        </p>
+        <p class="author-lead">{AUTHOR_BIO_ARTICLE}</p>
       </div>
     </header>
 
     <section class="author-creds">
-      <div class="cred"><div class="cred-val">9</div><div class="cred-lbl">biens en portefeuille</div></div>
-      <div class="cred"><div class="cred-val">12–18%</div><div class="cred-lbl">rendement net</div></div>
-      <div class="cred"><div class="cred-val">93%+</div><div class="cred-lbl">taux d'occupation</div></div>
-      <div class="cred"><div class="cred-val">~1h</div><div class="cred-lbl">par bien par mois</div></div>
-      <div class="cred"><div class="cred-val">6 ans</div><div class="cred-lbl">d'expérience LCD</div></div>
+      <div class="cred"><div class="cred-val">4</div><div class="cred-lbl">logements</div></div>
+      <div class="cred"><div class="cred-val">≈ 7 000 €</div><div class="cred-lbl">nets/mois</div></div>
+      <div class="cred"><div class="cred-val">≈ 15%</div><div class="cred-lbl">de rendement net</div></div>
+      <div class="cred"><div class="cred-val">97%</div><div class="cred-lbl">d'occupation</div></div>
+      <div class="cred"><div class="cred-val">2019</div><div class="cred-lbl">investisseur depuis</div></div>
     </section>
 
     <section class="author-section">
       <h2>La Méthode 97%©</h2>
       <p>
-        La Méthode 97%© est le système que j'applique sur l'ensemble de mes biens pour atteindre un taux d'occupation supérieur à 93% tout en passant moins d'une heure de gestion par bien et par mois. Pas de conciergerie, pas d'intermédiaire qui prend 20 à 25% du chiffre d'affaires : tout est automatisé en direct, du pricing dynamique aux serrures connectées en passant par le ménage et la communication voyageurs.
+        La Méthode 97%© est le système que j'applique sur l'ensemble de mes logements pour atteindre un taux d'occupation de 97% avec une gestion réduite, sans conciergerie. Pas d'intermédiaire qui prend 20 à 25% du chiffre d'affaires : tout est automatisé en direct, du pricing dynamique aux serrures connectées en passant par le ménage et la communication voyageurs. Je la détaille de A à Z dans mon livre, <em>La Méthode 97&nbsp;%</em>, applicable presque partout en France et actionnable dès la lecture.
       </p>
       <p>
         Ma règle simple pour qualifier un bien avant achat : <strong>les revenus nets après charges doivent représenter 3 à 4 fois la mensualité du crédit</strong>. Sans cette marge, le moindre creux de saison fait basculer l'opération dans le rouge. C'est la règle qui m'a permis d'éviter plusieurs investissements présentés comme rentables et qui ne l'étaient pas.
@@ -55,7 +52,7 @@ const photo =
     <section class="author-section">
       <h2>Articles à lire en priorité</h2>
       <ul class="author-links">
-        <li><a href="/blog/louer-airbnb-rentable">Louer en Airbnb est-ce rentable&nbsp;? Mes vrais chiffres sur 9 biens</a></li>
+        <li><a href="/blog/louer-airbnb-rentable">Louer en Airbnb est-ce rentable&nbsp;? Mes vrais chiffres détaillés</a></li>
         <li><a href="/blog/commissions-airbnb">Commissions Airbnb&nbsp;: ce que la plateforme prend vraiment</a></li>
         <li><a href="/blog/pricing-airbnb-tarif-dynamique">Pricing Airbnb et tarif dynamique&nbsp;: ce qui marche</a></li>
         <li><a href="/blog/taux-occupation-par-ville">Taux d'occupation Airbnb par ville</a></li>

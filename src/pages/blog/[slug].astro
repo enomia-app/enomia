@@ -4,7 +4,7 @@ export const prerender = true;
 import { getCollection, getEntry } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import NewsletterBlock from '../../components/NewsletterBlock.astro';
-import { marcChenut } from '../../data/author';
+import { marcChenut, authorPhoto, AUTHOR_BIO_ARTICLE } from '../../data/author';
 import blogVolumes from '../../../scripts/blog-volumes-en-ligne.json';
 
 export async function getStaticPaths() {
@@ -153,7 +153,7 @@ const faqLd = faqItems.length > 0 ? {
       <!-- Author block -->
       <div class="author-block">
         <div class="author-avatar">
-          <img src="https://res.cloudinary.com/dv2btcpc2/image/upload/q_auto,f_auto,w_80/v1775507331/Marc_1_a6ndja.png" alt={post.data.authorName} />
+          <img src={authorPhoto(80)} alt={post.data.authorName} />
         </div>
         <div class="author-info">
           <div class="author-name">{post.data.authorName}</div>
@@ -167,27 +167,25 @@ const faqLd = faqItems.length > 0 ? {
         </div>
       </div>
 
-      {post.data.authorBio && (
-        <p class="author-bio-line">{post.data.authorBio}</p>
-      )}
+      <p class="author-bio-line">{AUTHOR_BIO_ARTICLE}</p>
 
       <!-- Credibility bar -->
       <div class="cred-bar">
         <div class="cred-item">
-          <div class="cred-value">9</div>
-          <div class="cred-label">biens en portefeuille</div>
+          <div class="cred-value">4</div>
+          <div class="cred-label">logements en courte durée</div>
         </div>
         <div class="cred-item">
-          <div class="cred-value">12–18%</div>
-          <div class="cred-label">rendement net moyen</div>
+          <div class="cred-value">≈ 7 000 €</div>
+          <div class="cred-label">nets par mois</div>
         </div>
         <div class="cred-item">
-          <div class="cred-value">~1h</div>
-          <div class="cred-label">par bien par mois</div>
+          <div class="cred-value">≈ 15%</div>
+          <div class="cred-label">de rendement net</div>
         </div>
         <div class="cred-item">
-          <div class="cred-value">6 ans</div>
-          <div class="cred-label">d'expérience LCD</div>
+          <div class="cred-value">97%</div>
+          <div class="cred-label">d'occupation</div>
         </div>
       </div>
 

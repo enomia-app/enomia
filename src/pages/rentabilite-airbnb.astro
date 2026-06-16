@@ -3,6 +3,7 @@ import ToolLayout from '../layouts/ToolLayout.astro';
 import ContratLandingStyles from '../components/ContratLandingStyles.astro';
 import NewsletterBlock from '../components/NewsletterBlock.astro';
 import RelatedBlogArticles from '../components/RelatedBlogArticles.astro';
+import AuthorBubble from '../components/AuthorBubble.astro';
 import { citiesRentabilite, getPublishedCitiesRentabilite } from '../data/cities-rentabilite';
 
 const title = "Rentabilité Airbnb par ville 2026 : classement et analyse des 30 meilleures villes";
@@ -122,9 +123,9 @@ const upcomingCount = citiesRentabilite.length - publishedCities.length;
     </div>
 
     <!-- Crédibilité Marc -->
+    <AuthorBubble />
     <div class="callout">
-      <strong>Marc : fondateur d'Enomia, exploite 9 biens en LCD</strong>
-      <p>Mes 9 biens sont en première couronne lyonnaise (Irigny, Pierre-Bénite, Montagny). Ce ne sont pas les villes en tête de ce classement&nbsp;: il y a peu de tourisme, donc des CA moyens. Mais les <strong>prix d'achat sont accessibles</strong> et le taux d'occupation atteint 97% (La Méthode 97%©) grâce à une demande lissée toute l'année (artisans, familles entre deux logements, voyageurs d'affaires). Résultat&nbsp;: <strong>rendement net 12-18%</strong> sur tous mes biens. La rentabilité ne se trouve pas forcément dans les villes les plus médiatisées. <a href="/blog/louer-airbnb-rentable">Détail des 4 opérations</a>.</p>
+      <p>Mes logements ne sont pas dans les villes en tête de ce classement&nbsp;: ils sont en périphérie, avec peu de tourisme, donc des CA moyens. Mais les <strong>prix d'achat sont accessibles</strong> et le taux d'occupation atteint 97% (La Méthode 97%©) grâce à une demande lissée toute l'année (artisans, familles entre deux logements, voyageurs d'affaires). La rentabilité ne se trouve pas forcément dans les villes les plus médiatisées. <a href="/blog/louer-airbnb-rentable">Détail des 4 opérations</a>.</p>
     </div>
 
     <!-- Rentabilité par catégorie -->
@@ -224,7 +225,7 @@ const upcomingCount = citiesRentabilite.length - publishedCities.length;
       <details>
         <summary>Faut-il investir en Airbnb dans une grande ville ou en périphérie&nbsp;?</summary>
         <div class="faq-ans">
-          <p>Périphérie SI vous habitez à proximité (gestion en direct possible) et acceptez un CA absolu plus modeste (15-25k€/an au lieu de 30-50k€). Les rendements nets en périphérie atteignent fréquemment <strong>15-18%</strong> grâce aux prix d'achat accessibles, là où une grande ville plafonne à 8-12%. C'est le pari de Marc Chenut sur 9 biens en première couronne lyonnaise. Grande ville SI vous visez la valorisation patrimoniale en complément du rendement, ou si vous habitez loin et passez par une conciergerie.</p>
+          <p>Périphérie SI vous habitez à proximité (gestion en direct possible) et acceptez un CA absolu plus modeste (15-25k€/an au lieu de 30-50k€). Les rendements nets en périphérie atteignent fréquemment <strong>15-18%</strong> grâce aux prix d'achat accessibles, là où une grande ville plafonne à 8-12%. C'est le pari de Marc Chenut, détaillé dans La Méthode 97&nbsp;%. Grande ville SI vous visez la valorisation patrimoniale en complément du rendement, ou si vous habitez loin et passez par une conciergerie.</p>
         </div>
       </details>
     </div>
@@ -245,7 +246,7 @@ const upcomingCount = citiesRentabilite.length - publishedCities.length;
       <a href="/blog/louer-airbnb-rentable">
         <div class="rk">Méthode</div>
         <div class="rt">Louer en Airbnb : est-ce rentable ?</div>
-        <div class="rd">9 biens, 4 opérations détaillées, La Méthode 97%© pour atteindre 12-18% de rendement.</div>
+        <div class="rd">4 opérations détaillées, La Méthode 97%© pour viser autour de 15 % de rendement net.</div>
       </a>
       <a href="/tarif-conciergerie-airbnb">
         <div class="rk">Coût gestion</div>

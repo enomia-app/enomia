@@ -26,7 +26,7 @@ const TOOLS = {
   },
   contrat: {
     path: '/contrat-lcd-dashboard',
-    subject: 'Vos contrats de location saisonnière au même endroit',
+    subject: 'Vos contrats de location saisonnière',
     intro: 'Cliquez sur le bouton ci-dessous pour accéder à vos contrats.',
     cta: 'Accéder à mes contrats →',
     accessLine: 'Vous serez automatiquement connecté et pourrez gérer vos contrats quand vous le souhaitez.',

@@ -1,9 +1,19 @@
 ---
-// Pop-up Méthode 97% — même offre que NewsletterBlock (livre complet en PDF + newsletter),
-// même backend /api/subscribe (Brevo). Déclenchée après le téléchargement du livret
-// via window.onLivretDownload, ou manuellement via window.openMethode97().
-interface Props { source?: string; }
-const { source = 'livret-download' } = Astro.props;
+// Pop-up Méthode 97% — offre le livre complet en PDF (+ newsletter), backend
+// /api/subscribe (Brevo). Deux modes, même composant :
+//   • Manuel : window.onLivretDownload (après DL livret) / window.openMethode97().
+//   • Auto (auto=true) : déclenchement site-wide via timer + exit-intent desktop,
+//     avec cadence (relance 3 min puis stop pour la session) et never-if-captured.
+interface Props {
+  source?: string;
+  /** Active l'auto-déclenchement site-wide (injecté par les layouts). */
+  auto?: boolean;
+  /** Délai avant l'affichage auto (ms). */
+  delay?: number;
+  /** N'afficher en auto que si l'utilisateur est connecté (pages outils). */
+  requireAuth?: boolean;
+}
+const { source = 'livret-download', auto = false, delay = 45000, requireAuth = false } = Astro.props;
 ---
 
 <div id="m97-overlay" class="m97-overlay" style="display:none" role="dialog" aria-modal="true" aria-label="Recevoir La Méthode 97%">
@@ -35,35 +45,91 @@ const { source = 'livret-download' } = Astro.props;
   </div>
 </div>
 
-<script is:inline define:vars={{ source }}>
+<script is:inline define:vars={{ source, auto, delay, requireAuth }}>
   (function () {
     var overlay = document.getElementById('m97-overlay');
     if (!overlay || overlay.dataset.init) return;
     overlay.dataset.init = '1';
     if (overlay.parentElement !== document.body) document.body.appendChild(overlay);
 
+    var COOLDOWN = 180000; // 3 min entre la fermeture et la relance
     function done(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
     function setKey(key) { try { localStorage.setItem(key, '1'); } catch (e) {} }
+    function sget(key) { try { return sessionStorage.getItem(key); } catch (e) { return null; } }
+    function sset(key, val) { try { sessionStorage.setItem(key, val); } catch (e) {} }
+    function isAuthed() {
+      try {
+        for (var i = 0; i < localStorage.length; i++) {
+          var k = localStorage.key(i);
+          if (k && k.indexOf('sb-') === 0 && k.indexOf('-auth-token') !== -1 && localStorage.getItem(k)) return true;
+        }
+      } catch (_) {}
+      return false;
+    }
 
-    function openM97() {
-      if (done('m97_subscribed') || done('m97_dismissed')) return;
+    function render() {
       document.getElementById('m97-step-form').style.display = '';
       document.getElementById('m97-step-done').style.display = 'none';
       overlay.style.display = 'flex';
     }
-    function closeM97() { overlay.style.display = 'none'; setKey('m97_dismissed'); }
+
+    // ── Flow manuel (livret / openMethode97) — comportement historique ──
+    function openM97() {
+      if (done('m97_subscribed') || done('m97_dismissed')) return;
+      shownAuto = false; render();
+    }
+    function closeManual() { overlay.style.display = 'none'; setKey('m97_dismissed'); }
 
     window.openMethode97 = openM97;
     // déclenché par le téléchargement du livret (léger délai pour laisser partir le download)
     window.onLivretDownload = function () { setTimeout(openM97, 700); };
 
-    overlay.querySelector('.m97-close').addEventListener('click', closeM97);
+    // ── Flow auto (site-wide) — timer + exit-intent + cadence ──
+    var shownAuto = false, visible = false;
+    function autoCount() { return parseInt(sget('m97_auto_count') || '0', 10); }
+    function autoAt() { return parseInt(sget('m97_auto_at') || '0', 10); }
+    function autoEligible() {
+      if (done('m97_subscribed')) return false;        // capturé → jamais
+      if (sget('m97_auto_done') === '1') return false; // 2 fermetures → stop pour la session
+      if (requireAuth && !isAuthed()) return false;
+      return true;
+    }
+    function openAuto() {
+      if (visible || !autoEligible()) return;
+      shownAuto = true; visible = true; render();
+    }
+    function closeAuto() {
+      overlay.style.display = 'none'; visible = false; shownAuto = false;
+      var count = autoCount() + 1;
+      sset('m97_auto_count', String(count));
+      sset('m97_auto_at', String(Date.now()));
+      if (count >= 2) sset('m97_auto_done', '1');
+      else setTimeout(openAuto, COOLDOWN);
+    }
+
+    // Fermeture : route selon le flow ayant ouvert la pop-up.
+    function onClose() { if (shownAuto) closeAuto(); else closeManual(); }
+
+    overlay.querySelector('.m97-close').addEventListener('click', onClose);
     var doneClose = document.getElementById('m97-done-close');
     if (doneClose) doneClose.addEventListener('click', function () { overlay.style.display = 'none'; });
-    overlay.addEventListener('click', function (e) { if (e.target === overlay) closeM97(); });
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) onClose(); });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && overlay.style.display !== 'none') closeM97();
+      if (e.key === 'Escape' && overlay.style.display !== 'none') onClose();
     });
+
+    if (auto) {
+      if (autoEligible()) {
+        if (autoCount() === 0) setTimeout(openAuto, delay);
+        else { var rem = autoAt() + COOLDOWN - Date.now(); setTimeout(openAuto, rem > 0 ? rem : 1500); }
+      }
+      document.addEventListener('mouseout', function (e) {
+        if (visible || e.clientY > 0 || e.relatedTarget) return;
+        if (!autoEligible()) return;
+        if (autoCount() > 0 && Date.now() < autoAt() + COOLDOWN) return;
+        openAuto();
+      });
+    }
 
     var form = document.getElementById('m97-form');
     form.addEventListener('submit', async function (e) {

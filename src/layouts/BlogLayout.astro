@@ -2,7 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieBanner from '../components/CookieBanner.astro';
-import NewsletterPopup from '../components/NewsletterPopup.astro';
+import Methode97Popup from '../components/Methode97Popup.astro';
 
 interface Props {
   title: string;
@@ -597,7 +597,7 @@ const { title, description, ogImage, canonical } = Astro.props;
 
   <Footer />
   <CookieBanner />
-  <NewsletterPopup />
+  <Methode97Popup auto={true} source="Popup-Livre" />
   <script>
     import { inject } from '@vercel/analytics';
     inject();

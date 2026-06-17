@@ -2,7 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieBanner from '../components/CookieBanner.astro';
-import NewsletterPopup from '../components/NewsletterPopup.astro';
+import Methode97Popup from '../components/Methode97Popup.astro';
 
 interface Props {
   title: string;
@@ -110,9 +110,11 @@ const headerTool = currentTool === 'none' ? undefined : currentTool;
   <Footer />
   <CookieBanner />
   {newsletterPopup !== 'off' && (
-    <NewsletterPopup
+    <Methode97Popup
+      auto={true}
       delay={newsletterPopup === 'authed' ? 90000 : 45000}
       requireAuth={newsletterPopup === 'authed'}
+      source="Popup-Livre"
     />
   )}
   <script>

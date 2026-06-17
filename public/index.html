@@ -23,9 +23,29 @@
 <title>Enomia — La gestion locative courte durée, repensée par l'IA.</title>
 <meta name="description" content="Enomia est le logiciel de gestion locative courte durée pensé pour les propriétaires solo. IA conversationnelle, zéro double booking, +24% de revenus en moyenne.">
 <meta name="google-site-verification" content="c98WPmDK_YX9uDWNpTHKAxTDhN9yY4qYjpffnHFkQt8" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('/fonts/inter-latin-wght-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url('/fonts/newsreader-latin-wght-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url('/fonts/newsreader-latin-wght-italic.woff2') format('woff2');
+}
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -529,7 +549,7 @@ main {
             required
           >
         </div>
-        <select class="waitlist-select" id="waitlistBiens">
+        <select class="waitlist-select" id="waitlistBiens" aria-label="Nombre de biens en location courte durée">
           <option value="" disabled selected>Nombre de biens en LCD</option>
           <option value="0">Je n'ai pas encore de bien</option>
           <option value="1">1 bien</option>
@@ -715,7 +735,7 @@ document.getElementById('waitlistBiens').addEventListener('keydown', function(e)
     .cookie-btn { padding: 10px 14px; }
   }
 </style>
-<div id="cookie-banner" class="cookie-banner" role="dialog" aria-describedby="cookie-text" hidden>
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Consentement aux cookies" aria-describedby="cookie-text" hidden>
   <div class="cookie-banner-content">
     <div class="cookie-banner-text-wrap">
       <p id="cookie-text" class="cookie-banner-text">On utilise Google Analytics pour comprendre comment le site est utilisé. Aucune publicité, aucune revente de données. <a href="/confidentialite" class="cookie-banner-link">En savoir plus</a></p>

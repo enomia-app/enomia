@@ -11,8 +11,8 @@ export default defineMarkdocConfig({
     livret: {
       render: component('./src/components/LivretModeles.astro'),
     },
-    enomiaCta: {
-      render: component('./src/components/EnomiaCta.astro'),
+    ctaSiteResa: {
+      render: component('./src/components/CtaSiteResa.astro'),
     },
     methode97Popup: {
       render: component('./src/components/Methode97Popup.astro'),

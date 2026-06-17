@@ -3,5 +3,6 @@ Allow: /
 Disallow: /preview/
 Disallow: /api/
 Disallow: /keystatic/
+Disallow: /la-methode-97.pdf
 
 Sitemap: https://www.enomia.app/sitemap.xml

@@ -1,14 +1,15 @@
 ---
 // Landing du QR code en 4e de couverture de « La Méthode 97 % ».
 // noindex : page de destination print uniquement, pas une page SEO.
-// Source Brevo : 'Livre' → BREVO_LIST_LIVRE (api/subscribe.js).
+// Source Brevo : 'Livre' tombe volontairement dans la liste NL (#3, défaut de api/subscribe.js).
+// Le welcome "lecteur" se différencie via l'attribut SOURCE='Livre' dans l'automation Brevo.
 import ToolLayout from '../layouts/ToolLayout.astro';
 import AuthorSchema from '../components/AuthorSchema.astro';
 ---
 
 <ToolLayout
   title="La suite du livre — La Méthode 97 % · Enomia"
-  description="Les coulisses de mes opérations en cours : mes chiffres, mes galères, ce qui marche vraiment. 1 email par mois."
+  description="La méthode décortiquée : mes chiffres, mes galères, ce qui marche vraiment, plus une alerte quand la fiscalité bouge. Environ 1 email par mois."
   noindex={true}
 >
   <AuthorSchema />
@@ -18,25 +19,25 @@ import AuthorSchema from '../components/AuthorSchema.astro';
       <span class="badge">La suite du livre</span>
       <h1>Vous avez lu le livre.<br />Voici la suite.</h1>
       <p class="lead">
-        Chaque mois, les coulisses d'une opération en cours : mes chiffres, mes galères,
-        ce qui marche vraiment.
+        Une série de fond où je décortique la méthode : mes chiffres, mes galères,
+        ce qui marche vraiment. Plus une alerte quand la loi ou la fiscalité change vos calculs.
       </p>
 
       <ul class="promesse">
-        <li>Mes opérations en direct : le chantier, la banque, les premiers voyageurs</li>
-        <li>L'actu réglementaire et fiscale qui change vos chiffres</li>
-        <li>En bonus : le livre en PDF, avec les 37 sources et le simulateur en 1 clic</li>
+        <li>La série de fond : mes opérations au crible, le chantier, la banque, les premiers voyageurs</li>
+        <li>Les alertes ponctuelles : ce qui change vraiment vos chiffres quand la loi ou la fiscalité bouge</li>
+        <li>Le bonus : mes outils gratuits pour votre LCD (simulateur, facturation, contrats, et plus à venir)</li>
       </ul>
 
       <form id="livre-form" class="livre-form">
         <input type="text" name="firstName" placeholder="Prénom" autocomplete="given-name" />
         <input type="email" name="email" placeholder="votre@email.com" autocomplete="email" required />
-        <button type="submit">Recevoir les coulisses</button>
-        <p class="note">1 email par mois, désinscription en 1 clic. En vous inscrivant, vous acceptez de recevoir la newsletter d'Enomia (<a href="/confidentialite" style="text-decoration:underline">politique de confidentialité</a>).</p>
+        <button type="submit">Recevoir la suite</button>
+        <p class="note">Environ 1 email par mois, plus une alerte quand l'actu l'exige. Désinscription en 1 clic. En vous inscrivant, vous acceptez de recevoir la newsletter d'Enomia (<a href="/confidentialite" style="text-decoration:underline">politique de confidentialité</a>).</p>
       </form>
 
       <p id="livre-success" class="success" hidden>
-        C'est noté, bienvenue ! Le premier email arrive bientôt, avec le PDF du livre.
+        C'est noté, bienvenue ! Le premier email arrive bientôt, avec mes outils gratuits pour votre LCD.
       </p>
     </div>
   </section>

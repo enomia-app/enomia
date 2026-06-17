@@ -1,0 +1,64 @@
+---
+// Page 404 maison. Clin d'œil à « La Méthode 97 % » : on vise 97 % d'occupation,
+// cette page fait partie des 3 % ratés. Astro génère 404.html (servi par Vercel).
+import ToolLayout from '../layouts/ToolLayout.astro';
+---
+
+<ToolLayout
+  title="Page introuvable (404) · Enomia"
+  description="Cette page n'existe pas, ou plus."
+  noindex={true}
+>
+  <section class="nf">
+    <div class="nf-inner">
+      <span class="nf-tag">Erreur 404</span>
+      <h1>Cette page fait partie des 3&nbsp;%.</h1>
+      <p class="nf-lead">On vise 97&nbsp;% d'occupation. Celle-là, on l'a clairement ratée.</p>
+
+      <div class="nf-bar" role="img" aria-label="Taux d'occupation 97 %. Cette page se trouve dans les 3 % restants.">
+        <span class="nf-here">vous êtes ici&nbsp;↓</span>
+        <div class="nf-track">
+          <div class="nf-fill"></div>
+        </div>
+        <div class="nf-legend"><span>97&nbsp;% d'occupation</span><span>les 3&nbsp;%</span></div>
+      </div>
+
+      <a class="nf-cta" href="/">Retour à l'accueil</a>
+    </div>
+  </section>
+</ToolLayout>
+
+<style>
+  .nf { padding: 64px 20px 92px; }
+  .nf-inner { max-width: 520px; margin: 0 auto; text-align: center; }
+  .nf-tag {
+    display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 16px;
+  }
+  .nf h1 {
+    font-family: var(--serif); font-size: clamp(28px, 6vw, 40px); line-height: 1.15;
+    font-weight: 600; margin: 0 0 14px;
+  }
+  .nf-lead { font-size: 17px; color: var(--text-secondary); margin: 0 0 40px; }
+
+  .nf-bar { position: relative; max-width: 400px; margin: 0 auto 42px; }
+  .nf-here {
+    position: absolute; top: -22px; right: 0; font-size: 12px; font-weight: 600;
+    color: var(--green); white-space: nowrap;
+  }
+  .nf-track {
+    display: flex; height: 14px; border-radius: 999px; overflow: hidden;
+    background: var(--bg-card); border: 1px solid var(--border);
+  }
+  .nf-fill { width: 97%; background: var(--green); }
+  .nf-legend {
+    display: flex; justify-content: space-between; margin-top: 9px;
+    font-size: 12px; color: var(--text-tertiary);
+  }
+
+  .nf-cta {
+    display: inline-block; padding: 13px 26px; border-radius: var(--radius);
+    background: var(--green); color: #fff; font-size: 15px; font-weight: 600; text-decoration: none;
+  }
+  .nf-cta:hover { filter: brightness(0.95); }
+</style>

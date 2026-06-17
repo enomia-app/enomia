@@ -88,13 +88,13 @@ contre la prod (`https://www.enomia.app`) :
    isolation. Écrivent dans la base Supabase de prod puis nettoient (comptes e2e).
    Nécessitent `SUPABASE_SERVICE_ROLE_KEY` dans `.env` (sinon : smoke seul).
 
-Email Resend + notif macOS si rouge. **Sort toujours en 0** → ne bloque jamais le
-watchdog quotidien. Modif de `run.sh` seul (pas du plist) → **live au prochain
+Email Resend **chaque lundi** (vert ✅ si tout OK, rouge 🔴 si échec) + notif
+macOS. **Sort toujours en 0** → ne bloque jamais le watchdog quotidien. Modif de `run.sh` seul (pas du plist) → **live au prochain
 `git pull` Mac mini, sans `launchctl reload`**.
 
 ```bash
-# Pré-requis Mac mini (1 fois) : navigateur Playwright
-npx playwright install chromium
+# Navigateur Playwright : déjà présent sur le Mac mini (chromium-1217, vérifié
+# 2026-06-17). Si un jour absent : npx playwright install chromium
 
 # Lancer à la main (ex. avant un déploiement)
 bash scripts/tech-watchdog/run-weekly-tests.sh

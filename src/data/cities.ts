@@ -13832,6 +13832,770 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-15',
   },
+  // ==========================================================================
+  // AVORIAZ
+  // ==========================================================================
+  {
+    slug: 'avoriaz',
+    displayName: 'Avoriaz',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Avoriaz Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Avoriaz : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Avoriaz (commune de Morzine, Portes du Soleil). Tarifs (10-25 %), services, avis, réglementation 2026, station piétonne 1 800 m.",
+    kwPrincipal: 'conciergerie avoriaz',
+    kwSecondaires: [
+      'conciergerie airbnb avoriaz',
+      'avoriaz holidays propriétaire',
+      'service conciergerie avoriaz',
+      'agence avoriaz location',
+      'centrale locative avoriaz',
+      'conciergerie morzine',
+    ],
+    population: 2661,
+    tourists: 1200000,
+    activeListings: 1500,
+    priceLow: 180,
+    priceHigh: 450,
+    occupancyRate: 58,
+    revpar: 105,
+    seasonality:
+      "Saisonnalité hiver ultra-dominante, parmi les plus marquées de France. Pic absolu mi-décembre à mi-avril (saison 2025-2026 : 12 décembre au 19 avril, occupation 80-90 %, semaines complètes obligatoires en haute saison, clientèle internationale britannique, néerlandaise et scandinave structurellement présente). Pic surcompressé sur les vacances scolaires (Noël et Nouvel An, février européen multizones, vacances de Pâques) avec tarifs nuitée 2 à 3 fois supérieurs à la basse saison hiver et obligation de séjours samedi-samedi. Pic secondaire été juin à mi-septembre (occupation 40-55 %), porté par le domaine VTT Portes du Soleil parmi les plus vastes au monde, la randonnée et l'événement Pass'Portes du Soleil fin juin (immense rassemblement VTT franco-suisse). Inter-saisons avril-juin et septembre-novembre quasi-mortes (remontées arrêtées, accès logistique limité). Spécificité piétonne unique : pas de voiture en station, check-in via parking Prodains + navettes à ski ou calèches (20 cochers, 100 chevaux), qui impose des protocoles d'accueil et de livraison de linge particuliers.",
+    rankNational: 12,
+    introCustom:
+      "Vous avez un studio, un appartement ou un chalet à **Avoriaz**, sur le plateau de la **Falaise**, dans les quartiers **Festival**, **Snow**, **Crozats** ou **Ruches**, autour de l'emblématique **Hôtel des Dromonts** (premier monument historique d'Avoriaz, signé Jacques Labro), ou dans la résidence premium **Amara**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **réglementation Loi Le Meur** qui impose l'enregistrement national au 20 mai 2026, la **saisonnalité hiver ultra-dominante** (~70 % des revenus annuels concentrés sur 18 semaines), la **clientèle internationale haut de gamme** (Britanniques, Néerlandais, Scandinaves) qui exige du service hôtelier, et la **logistique piétonne unique** (pas de voiture en station, calèches, navettes à ski, parking d'entrée Prodains) qui impose des protocoles d'accueil spécifiques à la conciergerie, vous vous demandez quelle agence maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les pure-players historiques d'Avoriaz (Avoriaz Holidays, Selectis, Avoriaz Location), les acteurs institutionnels (Nexity Avoriaz) et les réseaux régionaux ou nationaux (Ma Conciergerie BNB, Guestadom) ?",
+    marketIntro:
+      "Avoriaz est une **station de ski piétonne créée en décembre 1966** à 1 800 m d'altitude, sur le **plateau de la Falaise** au-dessus de Morzine (Haute-Savoie). Elle n'est **pas une commune autonome** — Avoriaz est entièrement sur le territoire de **Morzine** (74110, 2 661 habitants permanents INSEE 2022), commune où s'effectuent toutes les démarches administratives (déclaration meublé de tourisme, taxe de séjour). À l'échelle de la station, on compte environ **17 446 lits touristiques répartis sur 1 916 établissements** (Inventaire du Patrimoine 2015) et un **tarif moyen nuitée appartement de 247 €** sur l'année selon Holidu, avec une fourchette saisonnière 165-555 € (été 180-200 €, hiver 280-350 €, vacances scolaires jusqu'à 450 € et au-delà sur les chalets premium).\n\n**Le plus grand domaine skiable international franco-suisse.** Avoriaz est l'**un des 12 villages du domaine Portes du Soleil** (8 stations françaises + 4 suisses), totalisant **650 km de pistes**, 195 remontées mécaniques, 330 pistes et 11 snowparks. Le domaine Avoriaz seul propose 130 km, 51 pistes, 34 remontées et 8 m de neige naturelle moyenne par an. Cette dimension internationale explique la composition de la clientèle : **Britanniques et Néerlandais en tête sur les chalets premium**, complétés par une demande française forte sur les vacances scolaires et les week-ends.\n\n**Architecture organique signée Labro, atout patrimonial différenciant.** L'**Hôtel des Dromonts** (1966, lauréat de l'Équerre d'Argent 1968, **premier monument historique d'Avoriaz**) consacre l'œuvre de **Jacques Labro** (1935-2024) et de l'Atelier d'Architecture d'Avoriaz (AAA, fondé avec Jean-Marc Orzoni et Jean-Jacques Roques). Façades en bardeaux de cèdre, formes organiques inspirées des pommes de pin, influences Frank Lloyd Wright et Alvar Aalto : un argument marketing puissant pour positionner un bien Airbnb sur le créneau du « patrimoine de montagne contemporain » plutôt que du résidentiel de station standard.\n\n**Prix au m² parmi les plus élevés de Haute-Savoie après Chamonix et Megève.** Comptez **7 103 €/m² en moyenne** pour les appartements à Avoriaz en 2025 (fourchette 5 327-10 654 €) selon SeLoger. Tickets d'entrée concrets : **studio dès 250 000 €**, **2 pièces autour de 270 000-330 000 €**, **3 pièces familial proche pistes ~350 000 €**, **4 pièces vue panoramique premium jusqu'à 1 M€**. Toutes les résidences d'Avoriaz sont skis aux pieds par construction (station 100 % piétonne) — la prime « ski-in/ski-out » est intégrée dans le prix moyen.\n\n**Réglementation Loi Le Meur applicable.** Comme toute commune française, Morzine-Avoriaz est soumise au cadre Le Meur (enregistrement national au 20 mai 2026, DPE classe E minimum, 120 nuitées/an pour les résidences principales). À ce jour, la mairie de Morzine n'a pas instauré de changement d'usage local supplémentaire ni abaissé le plafond résidence principale à 90 jours — à vérifier au cas par cas auprès du service urbanisme.",
+    conciergeries: [
+      {
+        name: 'Avoriaz Holidays',
+        url: 'https://www.avoriaz-holidays.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 38,
+        biensGeres: 300,
+        specialty: 'Pure-player historique Avoriaz depuis 1976, 300+ biens',
+        description:
+          "Avoriaz Holidays est le **plus ancien acteur de la station** (depuis 1976, 50 ans en 2026), implanté **92 rue du Douchka, Résidence Elinka**. Plus gros portefeuille local identifié avec **300+ biens en gestion** (studios à chalets 16 personnes) et **65 collaborateurs**. Cinq gammes de classement interne : Standard, Confort, Charme, Prestige, Premium. Services : mandat de gestion complet, conciergerie, location saisonnière, services à la carte (traiteur, transferts, parking d'entrée Prodains). Commission sur devis (non publiée). Mêmes coordonnées téléphoniques que L'Immobilière des Hauts Forts et Avoriaz Premium — il s'agit en réalité du **groupe historique d'Avoriaz**. Pertinente pour un propriétaire qui valorise la massification d'un acteur structuré (multiples antennes en station, accès traiteur et services à la carte) et l'ancrage local 50 ans, plutôt qu'un suivi commercial individualisé.",
+      },
+      {
+        name: 'Selectis Immobilier Avoriaz',
+        url: 'https://www.selectis-avoriaz.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.3,
+        reviews: 35,
+        biensGeres: 80,
+        specialty: 'Pure-player Avoriaz depuis 1998, deux packs conciergerie',
+        description:
+          "Selectis Immobilier est implanté **17 place Centrale (agence immobilière) + 81 rue du Douchka, Village de la Falaise (agence vacances)** et exerce sur la station **depuis 1998** (28 ans). Deux formules de conciergerie clairement structurées : **Fast Pack** (accueil, remise des clés, présentation du logement) et **Zen Pack** (accueil, linge, entretien, assistance, ménage), avec services à la carte en complément. Commission sur devis. Activité combinée transaction-location-conciergerie. Pertinente pour un propriétaire qui veut un acteur Avoriaz indépendant du groupe historique (Avoriaz Holidays), avec un format de packs lisible permettant d'arbitrer entre conciergerie minimale et gestion complète selon le profil du bien et la fréquence d'occupation propriétaire.",
+      },
+      {
+        name: 'Nexity Avoriaz',
+        url: 'https://www.nexity.fr/agence-immobiliere/morzine/lamy-avoriaz/COM30',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 22,
+        biensGeres: 60,
+        specialty: 'Réseau national FNAIM, syndic + gestion + transaction',
+        description:
+          "Nexity Avoriaz (anciennement Lamy Avoriaz) est implanté **75-80 Place des Dromonts** au cœur de la station et appartient au réseau national **Nexity FNAIM**. Acteur institutionnel multi-services combinant **transactions immobilières, syndic de copropriété et gestion locative LCD** sur Avoriaz et la couronne Morzine. Le seul acteur de la station avec un rating Google chiffré et vérifié à 4,6/5. Commission sur devis. Pertinente pour un propriétaire qui valorise la lisibilité d'une marque nationale (Nexity, premier groupe immobilier français), la mutualisation syndic-gestion (intéressant si le bien est dans une copropriété gérée par Nexity), ou un investisseur multi-villes qui veut un même interlocuteur via le réseau Nexity sur d'autres stations alpines.",
+      },
+      {
+        name: 'Avoriaz Location',
+        url: 'https://www.avoriaz-location.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 18,
+        biensGeres: 22,
+        specialty: 'SARL indépendante Place des Dromonts, Key Minute Service',
+        description:
+          "Avoriaz Location est une SARL indépendante implantée **Place des Dromonts**, distincte du groupe Avoriaz Holidays. Particularité opérationnelle : **« Key Minute Service »** (intervention urgente clés perdues) et welcome gift à l'arrivée, services all-inclusive incluant linge et forfaits de ski sur option. Portefeuille visible d'une vingtaine de biens à la location plus une petite activité de vente (annonces 155 000-590 000 €). Horaires hiver 7j/7, hors-saison lundi-vendredi 9h30-15h. Commission sur devis. Pertinente pour un propriétaire qui privilégie un acteur taille humaine accessible directement (vs. un groupe à 300+ biens), avec une réactivité opérationnelle structurée et une présence physique permanente Place des Dromonts.",
+      },
+      {
+        name: 'Ma Conciergerie BNB',
+        url: 'https://www.ma-conciergerie-bnb.com/conciergerie-airbnb/haute-savoie/avoriaz',
+        commission: '18 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 28,
+        biensGeres: 15,
+        specialty: 'Annecy + Alpes, commission 18 % affichée, multilingue',
+        description:
+          "Ma Conciergerie BNB est une **conciergerie régionale basée à Annecy** qui couvre les Alpes (Haute-Savoie + Savoie). Commission **affichée publiquement à 18 %** — l'un des rares acteurs intervenant à Avoriaz à publier sa grille. Services : optimisation d'annonce trilingue (FR/EN/DE), communication 24/7, check-in/check-out, ménage professionnel, pricing dynamique, maintenance, vérification voyageurs, dépôt et assurance. Délai mise en ligne sous 2 semaines. Pertinente pour un propriétaire qui privilégie un acteur transparent sur sa commission, multilingue (utile sur Avoriaz où Britanniques et Néerlandais dominent la clientèle premium), et qui veut éviter les modèles « sur devis » opaques qui dominent le marché de la station. Acteur basé hors Avoriaz : intervention via équipe terrain mutualisée avec d'autres biens Haute-Savoie.",
+      },
+      {
+        name: 'Guestadom Avoriaz',
+        url: 'https://www.guest-adom.com/conciergerie-airbnb-avoriaz-1800/',
+        commission: '10 / 15 / 25 %',
+        menage: 'variable',
+        rating: 4.5,
+        reviews: 32,
+        biensGeres: 20,
+        specialty: 'Réseau national, 3 packs modulaires, assurance 50 000 €',
+        description:
+          "Guestadom est un **réseau national franchisé** (siège à Changé en Mayenne, 5 000+ avis revendiqués réseau global) qui propose trois packs publiquement chiffrés : **Essentielle 10 %** (multi-distribution, sync calendrier, communication voyageurs, assurance Guest'assur), **Confort 15 %** (+ photos pro, listing, revenue management, account manager dédié), **Premium 25 %** (+ ménage, linge, check-in/out, petite maintenance). Assurance dommages jusqu'à **50 000 €**. Pertinente pour un propriétaire qui veut piloter finement le niveau de service délégué (ex. self-management opérationnel local + délégation seulement de la distribution et du pricing au pack Essentielle 10 %, ou délégation complète sur le Premium 25 % pour un investisseur à distance). Un des rares acteurs Avoriaz avec une grille tarifaire publique et modulaire.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Falaise',
+        pricePerNight: '230-380 €',
+        occupancy: 62,
+        description:
+          "Cœur historique d'Avoriaz, vue panoramique sur le plateau, résidences Chalets de la Falaise, Chapka, Douchka, Elinka, Kouria, Malinka, Néva, Saskia, Tilia, Hôtel Mil8. Proche parking d'entrée Prodains, boulangerie, supermarché, école de ski. Ski-in/ski-out ou très proche. Cible familles et couples expérimentés cherchant l'authenticité Labro avec l'efficacité opérationnelle.",
+        roiBrut: '3 à 4,5 %',
+      },
+      {
+        name: 'Dromonts',
+        pricePerNight: '250-420 €',
+        occupancy: 60,
+        description:
+          "Quartier historique premium, Place des Dromonts, Hôtel des Dromonts (premier monument historique d'Avoriaz, Équerre d'Argent 1968, architecture organique Jacques Labro avec bardeaux de cèdre). Charme rétro 60s authentique. Restaurants emblématiques de la station. Cible clientèle internationale haut de gamme et amateurs d'architecture contemporaine.",
+        roiBrut: '3 à 4 %',
+      },
+      {
+        name: 'Festival',
+        pricePerNight: '210-340 €',
+        occupancy: 65,
+        description:
+          "Centre névralgique de la station : commerces, restaurants, bars, cinéma, **Aquariaz** (parc aquatique tropical couvert, atout différenciant unique en Portes du Soleil). Quartier le plus animé, cible jeunes adultes, groupes d'amis, familles avec adolescents. Bonne occupation grâce à l'attractivité hors-ski.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Snow',
+        pricePerNight: '220-360 €',
+        occupancy: 63,
+        description:
+          "Proximité immédiate des night-clubs et bars, ski-in/ski-out direct face nord (enneigement maximal préservé en fin de saison), ambiance festive. Cible groupes jeunes, après-ski actif, week-ends entre amis. Demande forte sur les vacances de février européennes.",
+        roiBrut: '3,5 à 4,5 %',
+      },
+      {
+        name: 'Ruches / Crozats',
+        pricePerNight: '200-320 €',
+        occupancy: 60,
+        description:
+          "Quartiers familiaux centraux : Ruches proche du Village des Enfants (la Stade Snowpark des kids, école de ski ESF), Crozats sur les hauteurs avec accès direct aux pistes par ascenseurs intégrés. Résidences Pierre & Vacances Atria, Altaïr, Alhena, Ariétis. Cible familles avec jeunes enfants prioritairement.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Amara (premium contemporain)',
+        pricePerNight: '300-550 €',
+        occupancy: 58,
+        description:
+          "Quartier d'entrée de station créé en 2012 (20 000 m²), parking couvert, architecture contemporaine, appartements haut de gamme. Résidence Pierre & Vacances Premium L'Amara classée **5 étoiles** (label Clef Verte). Cible premium / familles aisées internationales. Tickets d'achat les plus élevés de la station (jusqu'à 1 M€ pour 4 pièces vue panoramique).",
+        roiBrut: '2,5 à 3,5 %',
+      },
+    ],
+    regulation:
+      "Avoriaz dépend administrativement de la **commune de Morzine** (74110, INSEE 74191, intercommunalité Haut-Chablais) — toutes les démarches relatives aux meublés de tourisme se font auprès de la **mairie de Morzine-Avoriaz**.\n\n**Cadre national Loi Le Meur applicable.** Morzine applique le cadre national de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel identifié à ce jour. À vérifier en mairie au cas par cas : la commune n'a publié aucune délibération instaurant un changement d'usage ou un quota meublés de tourisme, contrairement à Chamonix-Mont-Blanc (limitation 1 autorisation par personne physique). 85 % des logements de Morzine sont déjà des résidences secondaires (INSEE 2018) — le contexte politique pourrait évoluer.\n\n**Enregistrement national au 20 mai 2026.** Tout meublé de tourisme à Avoriaz doit être enregistré via le **téléservice national** (apimeubles.finances.gouv.fr) et porter un **numéro à 13 chiffres** sur chaque annonce Airbnb, Booking ou Abritel. Sanction du défaut d'enregistrement : **10 000 € d'amende**.\n\n**Résidence principale : 120 nuitées/an.** Limite nationale pour la location en résidence principale (logement occupé au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération — Morzine ne l'a pas fait à ce jour.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage). Spécificité montagne : un assouplissement des critères DPE est discuté pour les logements en haute altitude (chauffage électrique majoritaire, isolation difficile sur le bâti années 1960-1980 d'Avoriaz). À surveiller.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement **étoiles** (1 à 5) est devenu un levier fiscal majeur : un appartement Avoriaz classé 4-5 étoiles bénéficie d'un abattement quasi-double sur des revenus 2 à 4 fois supérieurs à un studio non classé.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La commune de Morzine-Avoriaz applique une taxe de séjour revalorisée au 1er janvier 2025 selon le classement de l'hébergement (ordre de grandeur 0,75 € à 4,30 € par nuit et par personne, à confirmer avec la grille mairie). Collectée automatiquement par Airbnb et reversée à la commune.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 36,
+      pricePerNight: 250,
+      neighborhood: 'Falaise',
+      revenuBrut: 52000,
+      commissionRate: 0.22,
+      menageCount: 60,
+      menageUnitCost: 95,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb à Avoriaz sur l\'année ?',
+        a: "Un T2 36 m² bien placé sur la Falaise ou aux Dromonts, avec tarif moyen 250 €/nuit (220 € en intersaison, 350-450 € sur les vacances de Noël/février/Pâques) et occupation hiver 80-90 % sur 4 mois + occupation été 35-45 % sur 3 mois, génère typiquement un chiffre d'affaires brut de 45 000 à 58 000 € sur l'année à Avoriaz. La saisonnalité ultra-marquée (70 % des revenus sur 18 semaines d'hiver) impose une stratégie tarifaire serrée pendant les vacances scolaires européennes (Noël/Nouvel An, février multizones FR+UK+NL+SCAN, Pâques) où les semaines complètes obligatoires peuvent se louer 2 500-4 000 € en pic. Sur un chalet T4-T5 premium à l'Amara ou aux Dromonts, le pic Noël/Nouvel An peut atteindre 6 000-12 000 € la semaine. Net de la commission conciergerie (20-25 %), de la taxe foncière, des charges et du ménage haute fréquence, comptez un revenu disponible de 25 000-35 000 € sur le T2 et 60 000-110 000 € sur le chalet premium.",
+      },
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Avoriaz ?',
+        a: "Non, à ce jour. La commune de Morzine (dont dépend Avoriaz) n'a pas instauré de procédure de changement d'usage pour les meublés de tourisme, contrairement à Chamonix-Mont-Blanc ou Colmar. Le cadre applicable est exclusivement national : enregistrement obligatoire via le téléservice national (apimeubles.finances.gouv.fr) au 20 mai 2026, numéro à 13 chiffres à apposer sur chaque annonce, plafond 120 nuitées/an pour les résidences principales, DPE classe E minimum. Attention cependant : avec 85 % de résidences secondaires recensées par l'INSEE en 2018 et une population permanente Morzine en baisse, le contexte politique peut évoluer. Le recensement INSEE 2022 (à confirmer pour 2026) et la prochaine révision du PLU sont à surveiller. Si vous achetez à Avoriaz dans une perspective LCD, une vérification au service urbanisme de la mairie de Morzine avant le compromis est une pratique de prudence — ce qui est vrai aujourd'hui ne le sera peut-être plus dans 3 ans.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Avoriaz ?',
+        a: "Pour un rendement maximal, Festival et Snow offrent le meilleur compromis grâce à leur occupation tirée par l'attractivité hors-ski (Aquariaz, night-clubs, bars) qui lisse la basse saison hiver et soutient les week-ends été. ROI brut 3,5-5 %. Falaise et Dromonts sont positionnés sur la clientèle internationale haut de gamme avec un argument architectural différenciant (résidences Labro, Hôtel des Dromonts monument historique) mais des tickets d'entrée plus élevés (ROI brut 3-4,5 %). Ruches et Crozats sont à privilégier pour la cible familles avec jeunes enfants (proximité Village des Enfants, accès direct pistes par ascenseurs). Amara est réservé aux profils patrimoniaux premium (résidence Pierre & Vacances 5 étoiles, tickets d'achat les plus élevés de la station jusqu'à 1 M€ pour un 4 pièces, ROI brut 2,5-3,5 % mais valorisation patrimoniale forte). Pour budget plus contraint, regarder Morzine vallée à 15 min en navette (prix au m² 30-40 % inférieurs) avec stratégie hybride été (VTT, randonnée, lac de Montriond) + hiver Avoriaz par navette.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Avoriaz ?',
+        a: "Les commissions à Avoriaz oscillent de 10 % (pack Essentielle Guestadom, distribution seule sans opérationnel terrain) à 25 % TTC (pack Premium Guestadom, formule intégrale) en 2026. La moyenne de marché sur une formule complète s'établit autour de 20-22 % TTC, avec Ma Conciergerie BNB qui affiche explicitement 18 % — l'un des rares acteurs à publier sa grille (la majorité travaille sur devis : Avoriaz Holidays, Selectis, Nexity, Avoriaz Location). Le critère décisif au-delà du taux affiché sur un marché à clientèle internationale comme Avoriaz est la capacité multilingue de l'équipe (anglais a minima, idéalement néerlandais et scandinave pour les chalets premium), et la maîtrise de la logistique piétonne unique de la station (navette parking d'entrée Prodains, transport de bagages, livraison de linge sans véhicule en station). Demander au prestataire un exemple chiffré sur un bien comparable + le protocole d'accueil hivernal sur la rotation samedi-samedi des vacances scolaires, et la composition linguistique de l'équipe, est la pratique recommandée avant signature.",
+      },
+    ],
+    updatedAt: '2026-06-17',
+  },
+  // ==========================================================================
+  // LES ARCS
+  // ==========================================================================
+  {
+    slug: 'les-arcs',
+    displayName: 'Les Arcs',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Les Arcs Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Les Arcs : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb aux Arcs (Arc 1600, 1800, 1950, 2000, Paradiski). Tarifs (10-25 %), services, avis, réglementation 2026, funiculaire TGV Bourg-Saint-Maurice.",
+    kwPrincipal: 'conciergerie les arcs 1800',
+    kwSecondaires: [
+      'conciergerie airbnb les arcs',
+      'les arcs 1800 conciergerie',
+      'gestion locative les arcs',
+      'conciergerie arc 2000',
+      'conciergerie arc 1950',
+      'conciergerie paradiski',
+    ],
+    population: 7270,
+    tourists: 2600000,
+    activeListings: 2200,
+    priceLow: 130,
+    priceHigh: 350,
+    occupancyRate: 60,
+    revpar: 90,
+    seasonality:
+      "Saisonnalité hiver ultra-dominante propre aux stations Paradiski. Pic absolu mi-décembre à fin avril (5 mois), pic compressé sur les vacances scolaires Noël/Nouvel An + février multizones FR/UK/NL/BE + Pâques avec tarifs nuitée 2-3 fois supérieurs à la basse saison hiver et obligation de séjours samedi-samedi. Domaine Paradiski (Les Arcs + La Plagne + Peisey-Vallandry, 425 km de pistes) ouvert tout l'hiver via le téléphérique Vanoise Express (2 cabines double-pont de 200 places, 4 minutes de trajet entre les deux versants). Fréquentation 2024-2025 : 2,6 millions de journées-ski sur Les Arcs (2e station française derrière La Plagne). Pic secondaire été 5 juillet — 30 août (Multipass HERO Paradiski : bike park 150 km de pistes VTT, randonnée 200+ km de sentiers, piscine, golf), occupation 40-55 %. Inter-saisons mai, juin partiel, septembre-novembre quasi-mortes (station fermée). Clientèle internationale 30 %+ des journées-ski.",
+    rankNational: 13,
+    introCustom:
+      "Vous avez un appartement ou un chalet à **Arc 1600** (la Charmettoger, l'unique village au label « Architecture Contemporaine Remarquable » de la Tarentaise), à **Arc 1800** (le cœur dynamique, 70 % des lits de la station), à **Arc 1950** (le village contemporain piéton style Vail), à **Arc 2000** (l'altitude maximale ski-in/ski-out), ou dans le secteur **Peisey-Vallandry** (porte d'accès est du domaine Paradiski), que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **réglementation Loi Le Meur** qui impose l'enregistrement national au 20 mai 2026, le **dispositif « Bourg-Saint-Maurice se régule »** en vigueur depuis le 1er novembre 2025 (dont les stations Les Arcs sont explicitement exclues — un signal politique fort), la **saisonnalité hiver ultra-dominante** (70 % des revenus annuels concentrés sur 5 mois), la **clientèle internationale haut de gamme** (Britanniques, Néerlandais, Belges, Scandinaves dominent dans les Alpes) et la diversité d'acteurs locaux (pure-players village par village + réseaux nationaux), vous vous demandez quelle conciergerie maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les pure-players Arc 1800 (La Conciergerie des Montagnes, Yes Conciergerie), les pure-players premium Arc 2000 / Arc 1950 (La Conciergerie du Varet, Emerald Stay), les réseaux institutionnels (GSI by Foncia, Mountain Collection du groupe Compagnie des Alpes) et les réseaux nationaux (HostnFly, Guestadom) ?",
+    marketIntro:
+      "Les Arcs est l'**une des deux stations majeures du domaine Paradiski** (425 km de pistes, partagé avec La Plagne via le téléphérique **Vanoise Express** mis en service en décembre 2003 — 2 cabines double-pont de 200 places, record mondial jusqu'en 2016). Située sur la commune de **Bourg-Saint-Maurice** (7 270 habitants permanents INSEE 2023) en Tarentaise, la station regroupe **4 villages à 4 altitudes** (Arc 1600, Arc 1800, Arc 1950, Arc 2000) totalisant **~34 800 lits touristiques**, avec une concentration massive sur Arc 1800 (19 400 lits, soit ~70 % de la capacité).\n\n**2,6 millions de journées-ski en 2024-2025, 2e station française.** Selon le classement Alti-Mag des stations françaises par fréquentation, Les Arcs se classe **2e derrière La Plagne** (2,7 millions). La saison 2024-2025 nationale a totalisé 54,8 millions de journées-ski (+5,5 % vs 2023-2024 selon Domaines Skiables de France). La clientèle internationale représente environ 30 % des journées-ski en France et la part des Britanniques, Néerlandais, Belges et Scandinaves est traditionnellement plus élevée dans les grandes stations Paradiski / 3 Vallées que dans le reste des Alpes.\n\n**Funiculaire Arc en Ciel, atout unique en Tarentaise.** Le **funiculaire « Arc en Ciel »** relie la gare SNCF de Bourg-Saint-Maurice à Arc 1600 en **7 minutes** (gratuit avec billet train, sinon 5 € aller-retour), opéré du 7h30 à 21h tous les jours (jusqu'à 23h les vendredi et samedi), pendant la saison hiver (décembre-avril) et l'été (juillet-août). Atout différenciant en Tarentaise : pas besoin de voiture pour rejoindre la station depuis le TGV Paris-Lyon-Bourg-Saint-Maurice (4h25 directement) ou l'Eurostar Londres-Bourg-Saint-Maurice (« Eurostar Ski » en hiver). Argument marketing puissant pour cibler la clientèle britannique sur les vacances scolaires UK qui décalent de février français.\n\n**Architecture Charlotte Perriand à Arc 1600 et Arc 1800.** L'architecte-designer **Charlotte Perriand** a dirigé l'urbanisme et le design intérieur des Arcs **de 1967 à 1989** (22 ans, 4 500 appartements). Arc 1600 (la Charmettoger) est labellisé **« Architecture Contemporaine Remarquable »** par le Ministère de la Culture depuis 2003 et inscrit au **Patrimoine du XXe siècle**. Innovation Arc 1600 : façades inclinées obliques pour exposition solaire des balcons sans ombre portée par les étages supérieurs. Atout marketing puissant pour positionner un bien sur le créneau « patrimoine + montagne » plutôt que résidentiel de station standard.\n\n**Prix au m² intermédiaires pour les Alpes.** Comptez **5 920 €/m² en moyenne** pour les appartements aux Arcs en juin 2026 selon Efficity (fourchette 3 450-8 680 €), **7 880 €/m² pour les T2** (le plus cher au m²), **6 710 €/m² pour les T3**. Tickets d'entrée concrets via Cimalpes (transactions station) : **1 chambre 270 000-325 000 €**, **2 chambres 435 000-980 000 €**, **chalet 7 chambres premium 3,3-3,5 M€**. Marché tendu sur les appartements de 2+ chambres (raréfaction).",
+    conciergeries: [
+      {
+        name: 'La Conciergerie des Montagnes',
+        url: 'http://en.conciergerie-montagnes.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 22,
+        biensGeres: 35,
+        specialty: 'Pure-player Arc 1800, listée office tourisme officiel',
+        description:
+          "La Conciergerie des Montagnes est implantée **Place Base des Villards** au cœur d'Arc 1800 et figure dans la sélection officielle des conciergeries listées par l'office de tourisme Les Arcs (en.lesarcs.com). Acteur historique pure-player avec présence physique villageoise (rare sur la zone). Services : remise des clés 24/7, états des lieux d'entrée et sortie, ménage fin de séjour, location de linge et équipement bébé, gestion complète de location LCD, dépannage technique, rénovation et travaux, transactions immobilières. Tarification sur devis. Pertinente pour un propriétaire qui valorise un acteur 100 % Arc 1800 avec local commercial accessible aux voyageurs sur place, et un périmètre étendu incluant maintenance et travaux (utile pour suivre la rénovation d'un bien sur la durée).",
+      },
+      {
+        name: 'Yes Conciergerie Les Arcs',
+        url: 'https://www.yesconciergerie-lesarcs.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 18,
+        biensGeres: 28,
+        specialty: 'Pure-player Johan Van Hengel, 25 ans d\'expérience montagne, multi-villages',
+        description:
+          "Yes Conciergerie Les Arcs est gérée par **Johan Van Hengel** (25 ans d'expérience en montagne revendiqués) et couvre l'ensemble des 4 villages (Arc 1600, 1800, 1950, 2000) + Bourg-Saint-Maurice, Landry, Peisey-Nancroix, Villaroger, Vallandry. **Commission ~20 % HT sans frais fixes ni abonnement** (modèle pay-as-you-go). Services : ménage premium, linge hôtelier, check-in/out, multi-diffusion Airbnb-Booking-Expedia-VRBO, tarification dynamique quotidienne, garanties plateformes, livret d'accueil digital, équipe FR/EN. Pertinente pour un propriétaire qui veut un acteur transparent sur sa commission (20 % affichés), couvrant tous les villages des Arcs et l'écosystème Bourg-Saint-Maurice, avec une expérience opérationnelle longue durée — différenciant fort sur un marché majoritairement opaque sur devis.",
+      },
+      {
+        name: 'La Conciergerie du Varet',
+        url: 'https://laconciergerieduvaret.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 14,
+        biensGeres: 18,
+        specialty: 'Pure-player Arc 2000 + Arc 1950, premium ski-in/ski-out altitude',
+        description:
+          "La Conciergerie du Varet est implantée **165 Impasse du Varet à Arc 2000** et intervient sur les deux villages d'altitude maximale (Arc 2000 et Arc 1950), positionnée sur les biens ski-in/ski-out premium. Modèle technologique avec **check-in autonome 24/7 contactless**, ménage, services personnalisés, facturation professionnelle. Horaires saisonniers (fermé mercredi et dimanche toute l'année). Commission sur devis. Pertinente pour un propriétaire d'un appartement ou chalet en altitude maximale (Arc 1950, Arc 2000) qui valorise un acteur pure-player local micro-spécialisé, avec un modèle check-in autonome bien adapté à la clientèle internationale qui arrive en transferts directs depuis l'aéroport Genève / Lyon sans passer par Bourg-Saint-Maurice.",
+      },
+      {
+        name: 'GSI by Foncia Arc 1800',
+        url: 'https://www.gsi-immobilier.com/blog/gsi-vous/gestion-locative-aux-arcs/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 32,
+        biensGeres: 110,
+        specialty: 'Réseau 18 stations Alpes depuis 1985, 2 000+ biens, 3 formules',
+        description:
+          "GSI by Foncia est implanté **144 Allée des Commerces des Villards, Les Tournavelles, Arc 1800** et appartient au groupe Foncia (acteur immobilier national). GSI revendique **plus de 2 000 biens gérés dans 18 stations alpines françaises depuis plus de 40 ans** (indépendant depuis 1985). **3 formules** : gestion totale, co-réservation, conciergerie seule (le propriétaire conserve la gestion Airbnb). Services : photo pro + visite virtuelle, multi-diffusion 9 plateformes, conformité Loi Le Meur, support administratif. Estimations revenus communiquées par GSI sur T2-T3 4-6 personnes Arc 1800 : **16 000-35 000 € par saison hiver**, semaine haute période 1 400-4 000 €. Pertinente pour un propriétaire qui veut s'appuyer sur l'échelle d'un réseau institutionnel (18 stations), une garantie de continuité de service longue durée et la possibilité de moduler entre 3 formules selon son implication personnelle.",
+      },
+      {
+        name: 'Mountain Collection',
+        url: 'https://www.mountaincollection.com/fr/gestion-locative-les-arcs',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 25,
+        biensGeres: 85,
+        specialty: 'Réseau Compagnie des Alpes, 31 agences 14 stations, 3 points de vente Les Arcs',
+        description:
+          "Mountain Collection appartient au groupe **Compagnie des Alpes** (premier opérateur de domaines skiables au monde, propriétaire des remontées Les Arcs, La Plagne, 3 Vallées, Tignes-Val d'Isère, etc.) et exploite **31 agences dans 14 stations alpines** françaises avec **2 800+ biens gérés**. Trois agences aux Arcs : **Galerie Belles Challes Arc 1800, Bellecôte Arc 1800, Place Olympique Arc 2000** + bureau Bourg-Saint-Maurice. Services : transactions immobilières, gestion locative LCD, conciergerie (remise des clés, états des lieux, linge à la demande), syndic de copropriété. Commission sur devis. Pertinente pour un propriétaire qui valorise l'adossement au groupe propriétaire du domaine skiable (Compagnie des Alpes), la mutualisation syndic-gestion-transaction et la couverture multi-stations (utile si investisseur multi-biens 3 Vallées / Tignes / Les Arcs).",
+      },
+      {
+        name: 'Emerald Stay Les Arcs',
+        url: 'https://emeraldstay.com/les-arcs/property-management',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 20,
+        biensGeres: 15,
+        specialty: 'Premium luxe chalets Paradiski, siège Genève, multi-stations Alpes',
+        description:
+          "Emerald Stay est un opérateur premium suisse (siège Genève) couvrant les grandes stations alpines (Les Arcs, La Plagne, Tignes, Méribel, Courchevel, Les Allues, Combloux, Les Gets). Aux Arcs, portefeuille concentré sur les chalets et appartements premium (estimé ~15 biens). Approche inspirée de l'hôtellerie de luxe avec marketing dynamique, multi-diffusion (Airbnb, Booking, plateformes luxe), reporting investisseur, gestion clientèle internationale haut de gamme. Tarification sur devis. Pertinente pour un propriétaire d'un chalet ou appartement premium (> 1 M€) qui valorise l'image de marque internationale, la couverture multi-stations sur les destinations 5 étoiles (utile pour un investisseur multi-biens haut de gamme Alpes), et un positionnement éditorial soigné (catalogue type magazine).",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Arc 1600 — La Charmettoger',
+        pricePerNight: '130-220 €',
+        occupancy: 58,
+        description:
+          "Premier village de la station ouvert en 1968, conçu par Charlotte Perriand. Architecture inclinée oblique labellisée Patrimoine XXe et Architecture Contemporaine Remarquable depuis 2003. Calme, forêt de pins, accès direct funiculaire Arc en Ciel depuis Bourg-Saint-Maurice (7 min, gratuit avec billet train). Cible amateurs d'architecture contemporaine et clientèle française familiale.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Arc 1800 — cœur dynamique',
+        pricePerNight: '160-280 €',
+        occupancy: 65,
+        description:
+          "Cœur dynamique de la station, ouvert en 1970 par Charlotte Perriand (bâtiments en cascade sur la pente, vues Mont Blanc). 70 % des lits de la station (~19 400 lits). Concentration des commerces, restaurants, vie nocturne, écoles de ski. Cible majoritaire familles + jeunes, accès rapide remontées. Marché LCD le plus actif et le plus liquide des 4 villages.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Arc 1950 — village contemporain piéton',
+        pricePerNight: '200-360 €',
+        occupancy: 62,
+        description:
+          "Village ouvert en 2003 (le plus récent des 4), construit ex nihilo dans un style « savoyard piétonnier façon Vail / Val d'Isère ». 8 résidences classées 5 étoiles, vue sur le massif du Mont Blanc, intégralement piéton (parking enterré). Cible premium familiale et clientèle internationale haut de gamme. Tickets d'achat élevés mais positionnement reconnu sur le segment premium Paradiski.",
+        roiBrut: '3,5 à 4,5 %',
+      },
+      {
+        name: 'Arc 2000 — altitude maximale',
+        pricePerNight: '180-340 €',
+        occupancy: 64,
+        description:
+          "Village ouvert en 1979 à 2 100-2 150 m, altitude maximale de la station, ski-in/ski-out total, enneigement garanti, départ téléphérique de l'Aiguille Rouge (glacier). Architecture années 1980 distinctive (vs Arc 1950 plus récent). Cible skieurs confirmés et clientèle internationale prêtant attention au niveau d'enneigement de fin de saison.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Peisey-Vallandry (porte est Paradiski)',
+        pricePerNight: '130-230 €',
+        occupancy: 55,
+        description:
+          "Porte d'accès est du domaine Paradiski (12 415 lits touristiques), plus authentique que les villages d'altitude des Arcs, accès au Vanoise Express vers La Plagne. Architecture savoyarde traditionnelle. Cible familles + couples cherchant le compromis budget / authenticité. Marché LCD moins dense et plus saisonnier que les villages Arcs.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Bourg-Saint-Maurice (vallée TGV)',
+        pricePerNight: '90-160 €',
+        occupancy: 50,
+        description:
+          "Chef-lieu de la commune (7 270 hab INSEE 2023) en fond de vallée Tarentaise, gare TGV directe Paris-Lyon (4h25) et terminus Eurostar Ski l'hiver. Accès Arc 1600 par funiculaire 7 min. Prix au m² très inférieurs aux villages d'altitude (~3 000-3 500 €/m²). Cible stratégie hybride business + LCD weekend, ou clientèle ski-budget acceptant 7 min de trajet.",
+        roiBrut: '6 à 8 %',
+      },
+    ],
+    regulation:
+      "Bourg-Saint-Maurice applique le **dispositif « Bourg-Saint-Maurice se régule »** entré en vigueur le **1er novembre 2025** dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024).\n\n**Exclusion explicite des stations Les Arcs.** Point juridique majeur : **les 4 villages Les Arcs (Arc 1600, Arc 1800, Arc 1950, Arc 2000) sont explicitement exclus** du périmètre du changement d'usage municipal — la motivation officielle est que ces villages ont été conçus dès l'origine pour une activité touristique sur base de copropriétés dédiées. En pratique, **un investisseur LCD aux Arcs n'a pas à obtenir d'autorisation de changement d'usage** pour mettre son bien en location courte durée, ce qui constitue un atout réglementaire significatif vs Chamonix-Mont-Blanc ou Colmar.\n\n**Cadre national applicable.** Le cadre Loi Le Meur reste pleinement applicable aux Arcs : **enregistrement obligatoire au téléservice national** (apimeubles.finances.gouv.fr) au 20 mai 2026 avec numéro à 13 chiffres à apposer sur chaque annonce. Sanction du défaut d'enregistrement : **10 000 € d'amende**.\n\n**Dispositif restreint aux autres logements de Bourg-Saint-Maurice.** Pour les logements situés à Bourg-Saint-Maurice vallée (hors stations Les Arcs), le dispositif local impose : numéro d'enregistrement obligatoire + autorisation temporaire de changement d'usage (3 ans renouvelable) + maximum 1 autorisation par personne physique ou foyer fiscal + deadline 1er avril 2026 (sinon LCD interdite à compter de cette date). Exclusions : chambres d'hôtes et résidences gérées centralement. Contexte politique : la mairie compte 500+ logements en LCD et mène une politique « habitat permanent » (Quartier des Alpins SEMILAB 370 logements, +120 logements permanents à 2031).\n\n**Résidence principale : 120 nuitées/an.** Limite nationale pour la location en résidence principale (logement occupé au moins 8 mois par an), applicable aux Arcs comme partout.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage).\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement **étoiles** (1 à 5) est devenu un levier fiscal majeur sur un marché à forte intensité d'usage comme Les Arcs.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La commune de Bourg-Saint-Maurice — Les Arcs applique une taxe de séjour selon le classement de l'hébergement, déclaration trimestrielle par périodes (hiver 1er décembre — 30 avril, paiement au 15 mai). Collectée automatiquement par Airbnb. Contact : taxedesejour@lesarcs.com — 04 79 07 45 86.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 180,
+      neighborhood: 'Arc 1800',
+      revenuBrut: 36000,
+      commissionRate: 0.20,
+      menageCount: 65,
+      menageUnitCost: 85,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation de changement d\'usage pour louer en LCD aux Arcs ?',
+        a: "Non, sur la station Les Arcs (Arc 1600, Arc 1800, Arc 1950, Arc 2000) il n'y a pas d'autorisation de changement d'usage à obtenir. Le dispositif « Bourg-Saint-Maurice se régule » entré en vigueur le 1er novembre 2025 exclut explicitement les 4 villages des Arcs de son périmètre, au motif qu'ils ont été conçus dès l'origine pour une activité touristique sur base de copropriétés. C'est un atout réglementaire majeur vs Chamonix-Mont-Blanc, Colmar, Strasbourg ou Paris. Le cadre applicable reste exclusivement le cadre national Loi Le Meur : enregistrement obligatoire au téléservice national avec numéro à 13 chiffres sur chaque annonce, plafond 120 nuitées/an pour résidence principale, DPE classe E minimum. À noter : si vous investissez à Bourg-Saint-Maurice vallée (hors stations), le changement d'usage municipal s'applique avec deadline 1er avril 2026 et plafond 1 autorisation par personne physique — anticiper la procédure avant le compromis. Cette exclusion des villages Les Arcs peut évoluer dans le futur : à vérifier en mairie au cas par cas si vous achetez sur 2026-2027.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Arc 1800 sur la saison hiver ?',
+        a: "GSI by Foncia communique sur une fourchette de 16 000 à 35 000 € de revenus bruts par saison hiver pour un T2-T3 4-6 personnes à Arc 1800, avec une semaine haute période (Noël/Nouvel An, février multizones, Pâques) qui se loue 1 400 à 4 000 €. Sur une année complète (hiver dominant + été modeste juillet-août Multipass HERO Paradiski), un T2 40 m² Arc 1800 avec tarif moyen annualisé 180 €/nuit et occupation 60 % génère typiquement 35 000-42 000 € de revenus bruts. Net de la commission conciergerie (20 %), de la taxe foncière, des charges et du ménage haute fréquence (rotation samedi-samedi en haute saison), comptez un revenu disponible de 22 000-28 000 € sur le T2. Sur un T3 famille bien placé Arc 1800 ou Arc 1950, les revenus bruts peuvent atteindre 45 000-55 000 €. Sur un chalet 7 chambres premium (acheté 3,3-3,5 M€ via Cimalpes), les semaines de Noël/Nouvel An se louent couramment 8 000-15 000 €.",
+      },
+      {
+        q: 'Quel village des Arcs privilégier pour investir en LCD ?',
+        a: "Pour un rendement maximal, Arc 1800 reste le meilleur compromis grâce à la concentration de 70 % des lits de la station, l'attractivité des commerces et restaurants, et la liquidité maximale du marché LCD (rotation rapide possible). ROI brut 4,5-6 %. Arc 1600 offre un argument architectural différenciant unique en Tarentaise (label Architecture Contemporaine Remarquable Charlotte Perriand) et un accès direct au funiculaire Arc en Ciel depuis la gare TGV/Eurostar Bourg-Saint-Maurice — particulièrement pertinent pour cibler la clientèle britannique sur les vacances UK. Arc 1950 est positionné sur la clientèle internationale haut de gamme (8 résidences 5 étoiles, vue Mont Blanc) avec un ticket d'entrée plus élevé et un ROI brut moindre (3,5-4,5 %). Arc 2000 est pour les profils skieurs qui valorisent l'altitude maximale et l'enneigement garanti de fin de saison (cible Britanniques pour les vacances de Pâques notamment). Peisey-Vallandry offre un compromis budget/authenticité (5-6,5 % ROI brut) avec accès au Vanoise Express. Pour budget contraint, Bourg-Saint-Maurice vallée propose 6-8 % ROI brut avec stratégie hybride business + LCD weekend, à condition d'accepter la procédure changement d'usage et le plafond 1 autorisation par personne.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie aux Arcs ?',
+        a: "Les commissions aux Arcs oscillent de 20 % (Yes Conciergerie en pay-as-you-go, HostnFly réseau national, pack Confort Guestadom à 15 %) à 25 % TTC (pack Premium Guestadom intégral). La moyenne de marché sur une formule complète s'établit autour de 20-22 % TTC. Yes Conciergerie est l'un des rares pure-players à afficher publiquement sa commission (20 % HT sans frais fixes ni abonnement). La majorité des acteurs (La Conciergerie des Montagnes, La Conciergerie du Varet, GSI by Foncia, Mountain Collection, Emerald Stay) travaille sur devis personnalisé selon le bien et le périmètre. Le critère décisif au-delà du taux affiché sur un marché à clientèle internationale comme Les Arcs est la capacité multilingue de l'équipe (anglais a minima, idéalement néerlandais et flamand pour les vacances scolaires belges), et le protocole d'accueil samedi-samedi sur les vacances scolaires (la rotation hebdomadaire en haute saison impose un ménage 6h-10h, transfert + linge + briefing entre 14h-17h, sur 7-9 semaines consécutives). Demander un exemple chiffré sur un bien comparable et le protocole d'accueil détaillé est la pratique recommandée avant signature.",
+      },
+    ],
+    updatedAt: '2026-06-17',
+  },
+  // ==========================================================================
+  // TROUVILLE-SUR-MER
+  // ==========================================================================
+  {
+    slug: 'trouville',
+    displayName: 'Trouville-sur-Mer',
+    region: 'Normandie',
+    regionSlug: 'normandie',
+    title: 'Conciergerie Trouville Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Trouville : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Trouville-sur-Mer (Côte Fleurie). Tarifs (15-25 %), services, avis, réglementation changement d'usage 2025, quartiers Planches, Bonsecours, Marché aux Poissons.",
+    kwPrincipal: 'conciergerie trouville',
+    kwSecondaires: [
+      'conciergerie airbnb trouville',
+      'conciergerie trouville sur mer',
+      'conciergerie côte fleurie',
+      'gestion location trouville',
+      'conciergerie deauville trouville',
+      'airbnb trouville',
+    ],
+    population: 4603,
+    tourists: 1500000,
+    activeListings: 1289,
+    priceLow: 110,
+    priceHigh: 220,
+    occupancyRate: 60,
+    revpar: 78,
+    seasonality:
+      "Triple saisonnalité balnéaire + événementielle + week-end parisien. Pic absolu juillet-août (occupation 80-85 % en août selon Welkeys, tarifs nuitée 150-280 € sur le front de mer), population locale doublée minimum, plage 1 200 m saturée. Pic événementiel septembre avec deux événements simultanés : Festival du Cinéma Américain de Deauville (4-13 septembre 2026) qui sature toute la Côte Fleurie hôtels Deauville, et Festival Off-Courts Trouville (5-11 septembre 2026, 27e édition court-métrage franco-québécois) — double effet sur 10 jours avec tarifs LCD multipliés par 1,3-1,5. Pic anniversaire D-Day 6 juin (à 50 km, mais retombées via tourisme mémoriel). Pic Noël/Nouvel An avec marchés gourmands et escapades parisiennes. Week-ends parisiens toute l'année (~50 % des nuitées annuelles), 2h TGV Paris-Saint-Lazare et 2h15 en voiture par A13. Inter-saison janvier-février creuse (occupation 40-55 %).",
+    rankNational: 16,
+    introCustom:
+      "Vous avez un appartement, une villa ou une maison à **Trouville-sur-Mer**, sur les **Planches du front de mer**, dans le quartier **Bonsecours** (les hauteurs dites « San Francisco normand »), autour du **Marché aux Poissons** ou des quais du port de pêche, dans le **centre piéton** (rue des Bains), au quartier **Aguesseau** ou à **Hennequeville** (campagne rattachée), que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **réglementation municipale stricte** (Trouville fait partie des 6 communes pionnières du Calvados sous enregistrement Airbnb obligatoire depuis 2022, et la délibération du 30 juin 2025 a instauré un changement d'usage avec autorisation préalable du maire, jusqu'à 50 000 € d'amende), la **triple saisonnalité** (balnéaire estivale + double Festival Cinéma Américain/Off-Courts en septembre + week-ends parisiens toute l'année), la **densité d'annonces Airbnb** (1 289 annonces actives pour 4 603 habitants — un des ratios LCD/population les plus élevés du Calvados avec Honfleur) et le mix d'acteurs locaux et de réseaux nationaux, vous vous demandez quelle conciergerie maximise votre rentabilité nette.\n\nEt surtout : **laquelle privilégier** entre les pure-players Trouville et Côte Fleurie (Ma Maison en Normandie, Concierge B&B Trouville), les acteurs multi-zones Normandie (MYPacôme, Boostars) et les réseaux nationaux (Welkeys, YourHostHelper) ?",
+    marketIntro:
+      "Trouville-sur-Mer est une **station balnéaire historique de la Côte Fleurie** (Calvados, Normandie), berceau du tourisme balnéaire normand depuis 1825 (popularisée par Alexandre Dumas et les peintres impressionnistes — Boudin, Monet, Mozin y séjournaient). **4 603 habitants permanents** INSEE 2023 et une population doublée minimum en juillet-août. Avec **1 289 annonces actives sur Airbnb** (AirDNA, +8 % sur 12 mois), Trouville affiche **l'un des ratios LCD/population les plus élevés du Calvados** avec Honfleur, et un **tarif moyen 170-186 €/nuit** sur AirDNA (RevPAR 75 $, +6 % YoY).\n\n**La jumelle authentique de Deauville.** Trouville et Deauville sont séparées par le pont des Belges sur la Touques (5 minutes à pied), partagent la **même gare SNCF** (Gare de Deauville-Trouville, ligne directe Paris-Saint-Lazare en 2h) et figurent souvent comme « les jumelles » dans la presse. Mais leur identité commerciale est très distincte : **Deauville = chic Belle Époque** (hippodromes, polo, Yearling Sale, Casino Barrière le plus prestigieux d'Europe), **Trouville = authentique pêcheurs** (port de pêche actif, marché aux poissons sur les halles néo-normandes, ambiance villageoise). Trouville a la **côte locale et la photogénie**, des **prix au m² 10-15 % inférieurs** à Deauville, et un **ROI brut typiquement +0,5 à +1 point** plus rentable — un compromis très intéressant pour un investisseur LCD qui veut profiter de l'écosystème Côte Fleurie sans payer la prime Deauville.\n\n**Casino Barrière 1912 et Planches 1867.** Le **Casino Barrière de Trouville** (1912, architecte Alexandre Durville, plus grand casino de France à son ouverture) est implanté entre le port de pêche et la plage. Les **Planches** (promenade bordée de villas éclectiques depuis 1867 — antérieures à celles de Deauville) longent une plage de **1 200 m de sable fin**. Le **Marché aux Poissons** dans les halles néo-normandes anime fortement les week-ends et alimente l'argument « tourisme authentique » différenciant.\n\n**Double Festival septembre.** En 2026, deux événements simultanés saturent la Côte Fleurie sur 10 jours : le **Festival du Cinéma Américain de Deauville** (4-13 septembre, hôtels Deauville saturés → Trouville devient annexe) et le **Festival Off-Courts Trouville** (5-11 septembre, 27e édition, court-métrage franco-québécois, gratuit). Effet tarifaire +30-50 % sur les nuitées Trouville pendant cette période, à arbitrer dans la stratégie pricing.\n\n**Prix au m² intermédiaires avec prime vue mer.** Comptez **5 839 €/m² en moyenne** à Trouville en mars 2026 (fourchette 2 686-9 286 € selon biens), **6 560 €/m² rue Bon-Secours** (Bonsecours, +14 % vs moyenne ville), **5 200 €/m² rue d'Aguesseau** (décembre 2025), jusqu'à **7 000-9 000 €/m² sur le front de mer**. Tickets concrets : T2 40 m² centre/Aguesseau dès 200 000 €, T2 vue mer Planches 280 000-380 000 €, maison de caractère centre/hauteurs à partir de 500 000-700 000 €.",
+    conciergeries: [
+      {
+        name: 'Ma Maison en Normandie',
+        url: 'https://mamaisonennormandie.fr/conciergerie-trouville/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 22,
+        biensGeres: 16,
+        specialty: 'Pure-player Marion Perrone, 15 ans hôtellerie, portefeuille volontairement limité',
+        description:
+          "Ma Maison en Normandie est une **conciergerie pure-player Trouville-Deauville** fondée par **Marion Perrone**, ex-directrice d'hôtel avec **15+ ans d'expérience hôtellerie**. Couverture : Trouville-sur-Mer (cœur de marché), Deauville, Touques, Saint-Arnoult, Tourgéville. Positionnement assumé « small-batch » : la fondatrice refuse les portefeuilles trop larges pour garantir un suivi sérieux. Services : gestion réservations, communication voyageurs, ménage coordonné, gestion linge, check-in/check-out, monitoring du bien et interventions mineures, stratégie pricing et calendrier. Tarification sur devis (non affichée publiquement). Pertinente pour un propriétaire d'un bien de caractère (villa Belle Époque sur les Planches, maison à pans de bois centre, appartement front de mer) qui valorise un interlocuteur unique avec arrière-plan hôtelier et une approche service standardisée à la directrice d'hôtel, plutôt qu'une approche industrielle.",
+      },
+      {
+        name: 'Concierge B&B Trouville',
+        url: 'https://www.conciergebb.fr/pages/conciergerie-airbnb-trouville-sur-mer-maximisez-vos-revenus-locatifs',
+        commission: '17 / 20 / 25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 28,
+        biensGeres: 30,
+        specialty: '11 Rue de Verdun Trouville, 3 packs publics, réseau Concierge B&B France',
+        description:
+          "Concierge B&B Trouville est **implanté 11 Rue de Verdun à Trouville-sur-Mer** (l'un des rares pure-players locaux domiciliés intra-muros) et appartient au réseau national Concierge B&B France (40+ destinations FR + international Dubaï/Abu Dhabi/Ras Al Khaimah). **3 packs publiquement chiffrés** : Essentiel **25 %**, Premium **20 %**, Investisseur **à partir de 17 %**. Services : création annonce + photos pro, pricing dynamique, gestion réservations, communication voyageurs, accueil personnalisé, ménage pro + linge, maintenance via réseau d'artisans, guide d'accueil digital, reporting performance transparent. Pertinente pour un propriétaire qui valorise la transparence d'une grille tarifaire publique et la possibilité d'arbitrer entre 3 niveaux de service selon son implication personnelle (et sa préférence entre forfait et investissement long terme avec négociation à 17 %).",
+      },
+      {
+        name: 'YourHostHelper Trouville',
+        url: 'https://yourhosthelper.com/en/agence-trouville/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 24,
+        biensGeres: 22,
+        specialty: 'Réseau national 20+ villes, manager local Severine Perot basée Deauville',
+        description:
+          "YourHostHelper Trouville est la filiale Trouville du **réseau national YourHostHelper** (20+ villes françaises). Manager local **Severine Perot** basée Deauville. Commission **20 %** sur la formule complète. Services : création + diffusion annonce multi-plateformes, photos pro incluses au lancement, pricing dynamique quotidien, communication 24/7, check-in/out, ménage pro entre séjours, linge, consommables, sync calendrier, support voyageurs, suivi satisfaction et avis, maintenance préventive. Dashboard propriétaire avec prévisions de revenus. Pertinente pour un propriétaire qui valorise un réseau national avec un dashboard de pilotage en ligne (utile pour un investisseur multi-villes), et l'ancrage Côte Fleurie via la manager Deauville (proximité géographique avec le bien Trouville, déplacement à pied via le pont des Belges).",
+      },
+      {
+        name: 'Welkeys Trouville',
+        url: 'https://www.welkeys.com/conciergerie-airbnb/trouville',
+        commission: 'à partir de 20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 35,
+        biensGeres: 18,
+        specialty: 'Réseau national 30+ destinations, carte Hoguet, presse Le Figaro/Marie Claire',
+        description:
+          "Welkeys est un **réseau national** (30+ destinations FR, finaliste Trophée LCD 2025, presse Le Figaro / Marie Claire / Challenges, carte Hoguet) avec 1 200+ propriétaires actifs et 2 000+ biens gérés depuis création. Commission **à partir de 20 %**. Services : photos pro, création et optimisation d'annonce sur 4 plateformes, screening voyageurs, ménage hôtelier, maintenance, support voyageurs 7j/7, check-in/out, linge et produits salle de bains premium, expériences locales, revenue management. Données marché Trouville fournies par Welkeys : 960+ annonces actives, 110 €/nuit moyen sur l'année, 85 % occupation pic d'août. Pertinente pour un propriétaire qui valorise un réseau national reconnu (presse), un standard hôtelier élevé sur les produits inclus (linge premium, produits salle de bains) et la cohérence d'un même contrat sur plusieurs villes pour un investisseur multi-biens.",
+      },
+      {
+        name: 'Boostars Trouville',
+        url: 'https://www.boostars.com/nos-logements-courte-duree/services-de-conciergerie-trouville-sur-mer/',
+        commission: '15 / 25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 30,
+        biensGeres: 25,
+        specialty: 'Réseau régional Normandie 9 ans, 45+ zones, 20+ biens Trouville',
+        description:
+          "Boostars est un **réseau régional Normandie** (siège 54 Rue Damiette Rouen, SAS Conciergerie Boostars, 9 ans d'existence) couvrant Rouen, Deauville, Cabourg, Honfleur, Étretat, Fécamp, Dieppe, Amiens, Lille — 45+ zones de service. Affichage de **20+ logements à Trouville** sur la page dédiée. **Forfaits modulables 15-25 %** : 15 % opérationnel terrain seul (le propriétaire conserve la publication et la gestion Airbnb), 25 % formule intégrale (publication + pricing + communication voyageurs + opérationnel terrain). Ménage refacturé au voyageur à partir de 30 €. Pertinente pour un propriétaire qui veut piloter finement le niveau de délégation (intéressant si propriétaire qui veut conserver le contrôle de la communication voyageurs en français à son écriture personnelle, et déléguer uniquement le terrain), ou un investisseur multi-biens Normandie qui valorise la cohérence Boostars sur Rouen + Côte Fleurie + Côte d'Albâtre.",
+      },
+      {
+        name: 'MYPacôme Conciergerie',
+        url: 'https://mypacome.fr/',
+        commission: '15-30 %',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 70,
+        biensGeres: 45,
+        specialty: 'Pure-player Côte Fleurie depuis Pont-l\'Évêque, contact local Nicolas Trouville',
+        description:
+          "MYPacôme Conciergerie est implanté à **Pont-l'Évêque** (Calvados, entre Honfleur, Deauville et Pays d'Auge) et couvre la Côte Fleurie + Pays d'Auge en pure-player. Contact local Trouville : **Nicolas** — 06 15 61 65 67. **Commission modulable 15-30 %** selon forfait service, ménage refacturé à partir de 30 €. Le plus gros portefeuille local identifié sur Trouville-Deauville avec 45 biens gérés et 70+ avis Google (4,8/5). Services : annonces multi-plateformes, accueil voyageurs (clientèle parisienne + internationale), ménage hôtelier, linge premium, maintenance. Pertinente pour un propriétaire d'un T2-T4 Trouville centre ou front de mer qui veut s'appuyer sur un acteur structuré avec preuve de marché (70+ avis), une présence physique Pays d'Auge facilitant l'opérationnel terrain, et un track record sur la dualité Deauville-Trouville.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Planches / Front de mer',
+        pricePerNight: '150-280 €',
+        occupancy: 78,
+        description:
+          "Plage 1 200 m de sable fin et promenade en planches bordée de villas éclectiques depuis 1867 (antérieures à celles de Deauville). Sports nautiques, parasols, sièges plage. Le segment premium trouvillais, vue mer. Prix au m² 7 000-9 000 €+. T2 vue mer 280 000-380 000 €. Tickets d'entrée les plus élevés de la ville mais occupation 78 % annuelle (pic 85 % en août).",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Marché aux Poissons / Quais',
+        pricePerNight: '120-200 €',
+        occupancy: 72,
+        description:
+          "Berceau de Trouville : port de pêche actif, halles néo-normandes, marché aux poissons (animation forte en week-end), restaurants de poisson. Cible touristique « authentique » différenciante vs Deauville. Prix au m² 5 500-7 500 €. T2 dès 220 000 €. Demande couples et familles, séjours 2-3 nuits.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Rue des Bains / Centre piéton',
+        pricePerNight: '120-200 €',
+        occupancy: 70,
+        description:
+          "Cœur commerçant piéton, cafés-restos-boutiques, galeries d'art. Proche immédiat Casino Barrière (1912). Prix au m² 5 500-7 500 €. T2 dès 220 000 €. Demande mixte couples touristiques + amateurs d'art, séjours 2-4 nuits.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Bonsecours / Hauteurs « San Francisco normand »',
+        pricePerNight: '110-180 €',
+        occupancy: 65,
+        description:
+          "Quartier résidentiel paisible, ruelles, chapelles, vues panoramiques mer + côte (Escalier des Serpents 107 marches). Surnommé « San Francisco normand » pour son relief. Rue Bon-Secours 6 560 €/m² (le plus cher de Trouville, +14 % vs moyenne). Maison de caractère 500 000-700 000 €. Demande couples cherchant le calme et la photogénie.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Aguesseau / Pont des Belges',
+        pricePerNight: '110-200 €',
+        occupancy: 68,
+        description:
+          "Quartier historique Aguesseau-Ville Sud (1 506 hab), axe Pont des Belges (5 min à pied de Deauville), commerces, restos, Parc de la Roseraie. Rue d'Aguesseau 5 200 €/m². T2 40 m² dès 200 000-260 000 €. Cible week-end parisien (proximité immédiate gare Deauville-Trouville) et profil hybride entre Trouville authentique et Deauville chic.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Hennequeville (campagne)',
+        pricePerNight: '90-150 €',
+        occupancy: 58,
+        description:
+          "Hameau rural rattaché à Trouville en 1847, parcs, ruisseaux, falaises Roches Noires, ambiance campagne. Prix au m² 3 500-4 500 € (bas de fourchette ville). Maison avec jardin dès 320 000 €. Cible familles élargies cherchant le calme et l'authenticité campagne-mer combinée, séjours 4-7 nuits.",
+        roiBrut: '5,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Trouville-sur-Mer applique un **dispositif local strict** sur les meublés de tourisme, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) et d'un **règlement municipal en vigueur depuis la délibération du 30 juin 2025** sur le changement d'usage.\n\n**Trouville fait partie des 6 communes pionnières du Calvados** sous enregistrement Airbnb obligatoire depuis octobre 2022. Après Deauville (avril 2022) et Honfleur (juillet 2022), Trouville a rejoint la vague d'extension Calvados avec Arromanches-les-Bains, Bayeux et Port-en-Bessin-Huppain. L'expérience opérationnelle de Trouville sur l'enregistrement est donc plus mature que celle de nombreuses communes françaises qui découvrent Decla Loc en 2026.\n\n**Changement d'usage obligatoire pour résidence secondaire.** La **délibération municipale du 30 juin 2025** impose une **autorisation préalable du maire** pour transformer un logement en meublé de tourisme. Formulaire de demande + pièces justificatives à déposer en mairie (meublesdetourisme@trouvillesurmer.fr). Décision sous **2 mois** (arrêté municipal d'approbation ou refus). Vérifier impérativement le règlement de copropriété avant achat — un règlement copro peut interdire le LCD indépendamment de la mairie.\n\n**Enregistrement obligatoire via Decla Loc.** Tout meublé de tourisme à Trouville doit être inscrit sur **declaloc.fr** avec un **numéro à 13 chiffres** obligatoire sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le 20 mai 2026, le portail national unique Decla Loc devient obligatoire sur l'ensemble du territoire.\n\n**Résidence principale : 120 nuitées/an.** Limite nationale pour la location en résidence principale (logement occupé au moins 8 mois par an), non abaissée localement à Trouville à ce jour (la commune dispose désormais du levier juridique 90 jours, à surveiller).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. Classe **A à D** à partir du 1er janvier 2034. Exception pour résidence principale.\n\n**Sanctions Trouville renforcées.** Meublé non enregistré : **jusqu'à 5 000 €**. Conversion résidence secondaire sans autorisation : **jusqu'à 50 000 €** + **astreinte de 1 000 € par jour et par mètre carré** pour remise en état. Ces montants placent Trouville parmi les sanctions municipales les plus dissuasives de la Côte Fleurie.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est un levier fiscal majeur sur un marché à clientèle parisienne premium comme Trouville.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Communauté de Communes Cœur Côte Fleurie (qui regroupe Trouville et Deauville) applique une taxe de séjour de **1,10 € à 5,30 € par nuit et par adulte** selon le classement de l'hébergement (collectée automatiquement par Airbnb et reversée à l'intercommunalité). Déclaration via trouvillesurmer.taxesejour.fr.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 145,
+      neighborhood: 'Aguesseau / Centre',
+      revenuBrut: 26000,
+      commissionRate: 0.22,
+      menageCount: 78,
+      menageUnitCost: 65,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Trouville pour louer une résidence secondaire ?',
+        a: "Oui, depuis la délibération municipale du 30 juin 2025. La Ville de Trouville-sur-Mer impose une autorisation préalable du maire pour transformer un logement en meublé de tourisme. La procédure se fait à la mairie (meublesdetourisme@trouvillesurmer.fr), avec décision sous 2 mois (arrêté municipal d'approbation ou refus). À cette autorisation s'ajoute l'inscription sur declaloc.fr qui délivre le numéro à 13 chiffres obligatoire sur chaque annonce Airbnb, Booking ou Abritel — Trouville est sous enregistrement obligatoire depuis octobre 2022 (6 communes pionnières du Calvados). Les sanctions Trouville sont particulièrement dissuasives : meublé non enregistré jusqu'à 5 000 €, conversion résidence secondaire sans autorisation jusqu'à 50 000 € + astreinte 1 000 € par jour et par m² pour remise en état. Vérifier IMPÉRATIVEMENT le règlement de copropriété avant achat — un règlement copro peut interdire le LCD indépendamment de la mairie, ce qui rendrait l'autorisation municipale inutilisable. Si vous achetez à Trouville dans l'objectif LCD, anticipez la procédure dès le compromis et faites une vérification copro + un rendez-vous urbanisme avant signature.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Trouville sur l\'année ?',
+        a: "Un T2 38 m² bien placé à Aguesseau, au centre piéton ou autour du Marché aux Poissons, avec tarif moyen 140-160 €/nuit et occupation 65-72 %, génère typiquement un chiffre d'affaires brut de 24 000-30 000 € sur l'année à Trouville. La triple saisonnalité (estivale + double Festival septembre + week-ends parisiens toute l'année) lisse les revenus mieux que sur les marchés purement balnéaires comme La Baule ou Quiberon. Pic Festival Cinéma Américain Deauville + Off-Courts Trouville (10 jours en septembre) : +30-50 % sur le tarif nuitée avec demande captive (hôtels Deauville saturés). Sur un appartement T3 ou T2 vue mer sur les Planches, les revenus bruts peuvent atteindre 38 000-55 000 € avec occupation 78-85 % en pic d'août. Sur une maison de caractère Bonsecours ou Hennequeville (jardin), 30 000-45 000 €. Net de la commission conciergerie (20-25 %), de la taxe foncière (~1 100 € sur un T2 trouvillais), des charges et du ménage haute fréquence (rotation 2-3 nuits week-end + rotation hebdomadaire en pic d'août), comptez un revenu disponible de 13 000-17 000 € sur le T2 et 22 000-32 000 € sur la maison de caractère.",
+      },
+      {
+        q: 'Vaut-il mieux investir à Trouville ou à Deauville pour faire de la LCD ?',
+        a: "Sur les chiffres bruts, Trouville offre un meilleur compromis prix d'achat / rendement que Deauville. Prix au m² 10-15 % inférieurs à Deauville (5 839 €/m² moyen Trouville vs 6 200-7 000 € Deauville, jusqu'à 12 000 € sur le quartier des Villas Belle Époque Deauville). ROI brut typiquement +0,5 à +1 point plus élevé à Trouville pour un bien comparable. Sur la demande, la clientèle est largement partagée (même gare SNCF, 5 minutes à pied via le pont des Belges) mais avec des positionnements distincts : Deauville cible le « chic Belle Époque » (hippodromes, polo, Yearling Sale, Casino Barrière prestigieux, Festival du Cinéma Américain hôte officiel), Trouville le « authentique pêcheurs » (port de pêche actif, marché aux poissons sur halles néo-normandes, Festival Off-Courts court-métrage). Pour un investisseur LCD avec budget T2 200 000-300 000 €, Trouville est généralement le meilleur arbitrage rendement/risque. Pour un investisseur premium avec budget villa 700 000 €+, Deauville garde une prime patrimoniale forte (Villas Belle Époque rares, signature internationale Festival). Pour les deux, vérifier le règlement de copropriété et anticiper la procédure changement d'usage (stricte dans les deux communes).",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Trouville ?',
+        a: "Les commissions à Trouville s'étalent de 15 % (pack opérationnel terrain seul Boostars, ou pack Investisseur Concierge B&B Trouville à partir de 17 % en négociation longue durée) à 25-30 % TTC (formules intégrales MYPacôme et Concierge B&B), avec une moyenne de marché autour de 20-22 % TTC pour une formule complète. Concierge B&B Trouville affiche publiquement 3 packs (17 / 20 / 25 %) et Boostars 2 niveaux (15 / 25 %) — les acteurs les plus transparents. YourHostHelper Trouville et Welkeys facturent 20 %. Ma Maison en Normandie et MYPacôme travaillent sur devis. Le critère décisif au-delà du taux affiché sur un marché à clientèle parisienne haut de gamme comme Trouville est la stratégie pricing sur le pic Festival septembre (un mauvais pricing sur Cinéma Américain Deauville + Off-Courts Trouville peut faire perdre 800-1 500 € de CA sur les 10 jours), la capacité de rotation rapide sur les week-ends parisiens (check-out vendredi 11h / check-in vendredi 16h, rotation 2-3 nuits sur 50 % des nuitées annuelles), et la qualité du parc d'artisans pour la maintenance des biens de caractère (huisseries anciennes Bonsecours, charpentes traditionnelles Hennequeville). Demander à 2-3 conciergeries un devis chiffré + un protocole de pricing Festival septembre est la pratique recommandée à Trouville.",
+      },
+    ],
+    updatedAt: '2026-06-17',
+  },
+  // ==========================================================================
+  // PERROS-GUIREC
+  // ==========================================================================
+  {
+    slug: 'perros-guirec',
+    displayName: 'Perros-Guirec',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Perros-Guirec Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Perros-Guirec : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Perros-Guirec (Côte de Granit Rose). Tarifs (20-25 %), services, avis, réglementation 2026, quartiers Trestraou, Trestrignel, Ploumanac'h.",
+    kwPrincipal: 'conciergerie perros guirec',
+    kwSecondaires: [
+      'conciergerie airbnb perros guirec',
+      'conciergerie côte de granit rose',
+      'airbnb côte de granit rose',
+      'conciergerie ploumanac\'h',
+      'conciergerie lannion',
+      'conciergerie trebeurden',
+    ],
+    population: 7260,
+    tourists: 280000,
+    activeListings: 540,
+    priceLow: 95,
+    priceHigh: 195,
+    occupancyRate: 55,
+    revpar: 60,
+    seasonality:
+      "Saisonnalité balnéaire bretonne marquée avec étalement printemps-automne grâce au GR34. Pic absolu juillet-août (occupation 80-85 %, ADR 191 €/nuit selon Likibu, semaines complètes à 1 337 € sur les locations de vacances), population estivale forte, plage de Trestraou et boucle Ploumanac'h saturées. Épaule mai-juin (landes fleuries, climat océanique doux 18-23 °C) et septembre-octobre (lumière rasante sur le granit rose, week-ends randonnée) soutenue avec occupation 50-60 %. Boucle Ploumanac'h du Sentier des Douaniers (GR34) = ~1 million de visiteurs/an, la section la plus fréquentée du GR34. Climat océanique doux toute l'année (-3 °C rares en hiver) qui maintient une demande week-end basse saison hôtel + LCD. Inter-saison hiver creuse (occupation 30-40 %) mais avec festivals locaux et fête des Mômes (été). 15 % des nuitées hôtelières du département Côtes-d'Armor concentrées sur Perros-Guirec selon l'OT.",
+    rankNational: 32,
+    introCustom:
+      "Vous avez un appartement, une maison ou une longère bretonne à **Perros-Guirec**, sur la **plage de Trestraou** (la grande plage urbaine, casino), à **Trestrignel** (plage chic résidentielle, 49 % de résidences secondaires), à **Ploumanac'h** (élu « Village préféré des Français » en 2015, port naturel et oratoire Saint-Guirec), dans le **centre-ville et le port** de plaisance, à **La Clarté** (hameau intérieur, chapelle) ou à **Kerabram / Kervelegan**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **réglementation Loi Le Meur** qui impose l'enregistrement national au 20 mai 2026, la **saisonnalité balnéaire étalée** grâce au climat océanique doux et au Sentier des Douaniers (GR34, ~1 M visiteurs/an sur la boucle Ploumanac'h), la **forte demande de tourisme nature** sur la Côte de Granit Rose et la **densité d'acteurs** sur l'axe Perros — Lannion — Trégastel — Trébeurden — Pleumeur-Bodou, vous vous demandez quelle conciergerie maximise votre rentabilité nette.\n\nEt surtout : **laquelle privilégier** entre la pure-player leader Perros-Guirec (La Conciergerie du Trégor, 49 biens gérés), les acteurs multi-zones Côte de Granit Rose (Conciergerie des Embruns Pleumeur-Bodou, All In Lannion, ROZNTI Trégastel) et les pure-players Perros (Aura Conciergeries, Les Maestros) ?",
+    marketIntro:
+      "Perros-Guirec est la **principale station balnéaire des Côtes-d'Armor** et le cœur de la **Côte de Granit Rose** — 30 km de littoral entre Perros-Guirec et Trébeurden, formations de granit rose uniques au monde (avec la Chine et la Corse). **7 260 habitants permanents** INSEE 2025, dont une part importante d'actifs liés au tourisme et à la résidence secondaire. La ville accueille **277 000+ visiteurs en 2024** selon l'office de tourisme et concentre **15 % des nuitées hôtelières du département Côtes-d'Armor** selon le Grand Hôtel de Perros (chiffres clés OT).\n\n**Ploumanac'h, atout marketing puissant.** Le hameau de **Ploumanac'h** (commune de Perros-Guirec) a été élu **« Village préféré des Français » en 2015** dans l'émission France 2 animée par Stéphane Bern — un titre qui continue d'alimenter la notoriété SEO et le trafic touristique de la zone 10 ans plus tard. Le hameau abrite un **port naturel de 400 places**, le phare emblématique **Mean Ruz** (en granit rose), l'**oratoire Saint-Guirec** sur la plage, 6 hôtels, 2 campings et 13 restaurants. La **boucle du Sentier des Douaniers (GR34)** au départ de Ploumanac'h totalise **~1 million de visiteurs/an** — la section la plus fréquentée du GR34 sur l'ensemble du littoral breton.\n\n**Tarif moyen nuitée intermédiaire avec forte amplitude saisonnière.** **122 €/nuit en moyenne annuelle** sur les locations de vacances Perros-Guirec selon Likibu, **191 €/nuit en été** (+57 %), semaine complète juillet-août ~1 337 €. Au niveau départemental, le marché Côtes-d'Armor affiche une occupation moyenne de **52 %** (~191 nuits/an), un ADR de **101 €** et un revenu médian annuel de **18 029 €** par bien selon Guestfavorites (10 476 annonces actives Côtes-d'Armor). Perros se situe au-dessus de la moyenne départementale grâce à la prime « Ploumanac'h » et au statut de principale station balnéaire des Côtes-d'Armor.\n\n**Sept-Îles, Casino Barrière de Trestraou, Île Renote.** L'**archipel des Sept-Îles** au large de Perros est l'une des principales réserves ornithologiques de France (colonie de fous de Bassan, macareux moines), accessible en bateau depuis le port. Le **Casino de Trestraou** (groupe Casinos de France) est implanté sur la plage urbaine de Trestraou. L'**Île Renote** (presqu'île granit rose à Trégastel, 10 min en voiture) complète l'écosystème touristique élargi.\n\n**Prix au m² accessibles avec prime Ploumanac'h.** Comptez **3 939 €/m² en moyenne** à Perros-Guirec en janvier 2026 (Ville-data) ou **3 350 €/m²** selon Efficity juin 2026 (fourchette 1 748-7 376 €). **Appartements : moyenne 4 236 €/m²** (fourchette 2 164-6 858 €). **Maisons : moyenne 3 825 €/m²** (fourchette 1 573-7 633 €). La prime « Ploumanac'h / vue mer » se traduit par un haut de fourchette à 7 000+ €/m² (exemple : maison 150 m² DPE A près du port à Ploumanac'h = résidence d'exception). Tickets accessibles côté maison : à partir de 159 990 € selon Logic-immo pour un bien hors prime mer.",
+    conciergeries: [
+      {
+        name: 'La Conciergerie du Trégor',
+        url: 'https://www.laconciergeriedutregor.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 14,
+        biensGeres: 49,
+        specialty: 'Pure-player Perros, 49 biens, ADR 101 € / occ 66 % (Airbtics)',
+        description:
+          "La Conciergerie du Trégor est implantée **69 rue Anatole le Braz à Perros-Guirec** (centre-ville) et est le **leader local pure-player** identifié sur la zone, avec **49 biens en gestion** selon les données Airbtics (croissance +44 % sur l'année). Co-gérée par **Camille et Yoann**, créée vers 2023. Performances revendiquées sur le portefeuille : ADR **101 €**, occupation **66 %**, revenu moyen **19 239 €/bien/an**. Rating Airbnb interne **5,0/5**. Services : gestion complète d'annonces multi-plateformes, accueil voyageurs, ménage, linge, maintenance. Tarification sur devis. Pertinente pour un propriétaire qui valorise le leader local d'autorité Perros (le seul acteur avec un portefeuille >40 biens identifié sur la commune), une équipe taille humaine accessible et des performances opérationnelles documentées (ADR et occupation revendiqués).",
+      },
+      {
+        name: 'Conciergerie des Embruns',
+        url: 'https://conciergerie-des-embruns.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 12,
+        biensGeres: 18,
+        specialty: 'Pleumeur-Bodou, couverture rayon 15 km Perros-Trégastel-Trébeurden',
+        description:
+          "Conciergerie des Embruns est implantée à **Pleumeur-Bodou** (10 minutes de Perros-Guirec) et couvre un **rayon de 15 km** : Perros-Guirec, Ploumanac'h, Trégastel, Trébeurden, Pleumeur-Bodou (Île Grande, Landrellec), Lannion. Services : gestion résidences secondaires + saisonnier, intervention 7j/7, urgences sous 2h. Tarification sur devis. Pertinente pour un propriétaire d'un bien à Ploumanac'h, sur la plage de Trestraou ou Trestrignel qui valorise un acteur en seconde couronne avec engagement opérationnel élevé (urgences <2h), et la capacité d'arbitrer entre LCD et gestion résidence secondaire (utile pour un propriétaire avec usage personnel partagé du bien hors saison).",
+      },
+      {
+        name: 'All In Conciergerie',
+        url: 'https://www.allinconciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 10,
+        biensGeres: 15,
+        specialty: 'Lannion, créée 2023, couverture Lannion-Perros-Trégastel-Trébeurden',
+        description:
+          "All In Conciergerie est une **conciergerie récente** créée en juin 2023 (SIREN 953 303 716) basée à Lannion. Couverture : Lannion, Perros-Guirec, Trébeurden, Trégastel, Pleumeur-Bodou, Saint-Quay-Perros, Louannec. Plateformes : Airbnb, Abritel, HomeAway. Services : conciergerie complète LCD + surveillance hors saison. Tarification sur devis. Track record encore court (moins de 3 ans d'activité). Pertinente pour un propriétaire qui valorise la disponibilité d'une équipe jeune et flexible (intéressant si premier client à intégrer le portefeuille, négociation possible), et qui veut un acteur avec une vraie présence Lannion (utile pour la coordination avec les artisans Trégor pour maintenance).",
+      },
+      {
+        name: 'Aura Conciergeries',
+        url: 'https://auraconciergeries.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 11,
+        biensGeres: 12,
+        specialty: 'Pure-player Perros, Ornella Rémond, positionnement luxe sur-mesure',
+        description:
+          "Aura Conciergeries est implantée **91 rue Ernest Renan à Perros-Guirec** et gérée par **Ornella Rémond**, également consultante immobilière chez megAgence (double casquette transactions + LCD). Positionnement explicite **« luxe » / sur-mesure 24/7**. Tarification sur devis. Services : gestion complète d'annonces, accueil voyageurs personnalisé, ménage premium, conciergerie haut de gamme. Portefeuille volontairement limité. Pertinente pour un propriétaire d'un bien de caractère Perros (longère bretonne rénovée, villa front de mer Trestrignel, maison de ville Ploumanac'h près du port) qui valorise un suivi commercial personnalisé et un positionnement haut de gamme, ainsi que la double casquette transactions + LCD (utile pour préparer une éventuelle revente patrimoniale tout en optimisant la LCD entre temps).",
+      },
+      {
+        name: 'Les Maestros Conciergerie',
+        url: 'https://en.bretagne-cotedegranitrose.com/offers/les-maestros-conciergerie-lannion-en-3402332/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 8,
+        biensGeres: 14,
+        specialty: 'Lannion + Perros, haut de gamme avec chef à domicile + piscine/jardin',
+        description:
+          "Les Maestros Conciergerie est implantée à **Lannion** (13 rue Nivern Bihan + 6b rue Fulgence Bienvenue) et couvre **Lannion + Perros-Guirec**. Positionnement explicite **haut de gamme** : conciergerie + chef à domicile + entretien piscine / jardin + saisonnier. Adossée à l'**agence immobilière Les Maestros Immo** (acteur transactions local), un avantage pour la continuité de service entre acquisition, mise en LCD et revente. Tarification sur devis. Listée sur l'office de tourisme officiel Côte de Granit Rose. Pertinente pour un propriétaire d'une villa avec extérieur ou piscine sur la Côte de Granit Rose (rare sur Perros centre mais courant sur la couronne Louannec, Pleumeur-Bodou) qui veut un acteur capable de gérer le LCD ET l'entretien des annexes paysagères, ou un propriétaire qui valorise les services premium type chef à domicile pour la clientèle internationale.",
+      },
+      {
+        name: 'ROZNTI (Le Guillouzer Immobilier)',
+        url: 'https://livretaccueil.com/en/conciergerie-airbnb/tregastel/roznti-services-de-conciergerie-locations-de-vacances-a-tregastel-perros-guirec-cote-de-granit-rose',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 6,
+        biensGeres: 16,
+        specialty: 'Trégastel + Perros, marque conciergerie d\'une agence immo locale',
+        description:
+          "ROZNTI est la **marque conciergerie de l'agence immobilière Le Guillouzer Immobilier**, implantée **25 rue du Général de Gaulle à Trégastel** (commune voisine, 10 min de Perros). Couverture : Trégastel, Perros-Guirec, Côte de Granit Rose. Services : ouverture et préparation des logements, accueil voyageurs, ménage, gestion du linge. Adossée à une agence immobilière locale (transactions + gestion locative classique), ce qui sécurise la continuité de service longue durée. Track record qualitatif positif sur Nicelocal mais base d'avis Google encore limitée. Pertinente pour un propriétaire d'un bien sur la couronne ouest (Trégastel, Île Renote, Pleumeur-Bodou) qui veut un acteur de confiance adossé à une agence immobilière établie, plutôt qu'un pure-player LCD récent.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Plage de Trestraou / Casino',
+        pricePerNight: '130-220 €',
+        occupancy: 70,
+        description:
+          "Grande plage urbaine nord de Perros (sable fin 1 km), Casino de Trestraou sur la plage (groupe Casinos de France), restaurants, résidences directement front de mer (Résidence du Casino, Résidence de la Plage), départ du Sentier des Douaniers (GR34) vers Ploumanac'h. La plage la plus fréquentée. Cible familles + couples, séjours 4-7 nuits. Prix au m² 5 500-7 000 € sur le front, retombées prime vue mer.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Plage de Trestrignel',
+        pricePerNight: '120-200 €',
+        occupancy: 64,
+        description:
+          "Plage sud, plus chic et résidentielle, ambiance villa Belle Époque. 628 logements dont 277 résidences secondaires sur 564 logements occupés (49 % de résidences secondaires, ratio très élevé). 463 habitants permanents. Cible couples haut de gamme, retraités, séjours patrimoniaux longue durée. Prix au m² 5 000-7 500 € sur le front.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Ploumanac\'h / Saint-Guirec',
+        pricePerNight: '150-280 €',
+        occupancy: 72,
+        description:
+          "Hameau emblématique de la Côte de Granit Rose, élu « Village préféré des Français » 2015. Port naturel 400 places, phare Mean Ruz en granit rose, oratoire Saint-Guirec, 6 hôtels, 2 campings, 13 restaurants. Section GR34 la plus visitée = ~1 million de visiteurs/an sur la boucle Ploumanac'h. Prime massive « Ploumanac'h » sur l'immobilier (>7 000 €/m² sur les biens vue port). Cible couples touristiques internationaux, séjours 3-5 nuits, fort yield.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Centre-ville / Port de plaisance',
+        pricePerNight: '100-170 €',
+        occupancy: 60,
+        description:
+          "Port de plaisance de Perros-Guirec (distinct du port naturel de Ploumanac'h), commerces, mairie, restaurants. Profil mixte résidentiel permanent + saisonnier. Prix au m² 3 800-4 500 €. T2 dès 160 000-200 000 €. Bon compromis emplacement central / prix d'entrée, cible week-end pluvieux (commerces et restaurants à pied).",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'La Clarté',
+        pricePerNight: '90-150 €',
+        occupancy: 55,
+        description:
+          "Hameau intérieur, chapelle Notre-Dame-de-la-Clarté (sanctuaire), moins balnéaire. Prix plus accessibles, hors front de mer. T2 dès 130 000 €, maison T4 dès 220 000 €. Cible familles élargies cherchant le calme campagne + accès rapide aux plages (5-10 min en voiture vers Trestraou et Ploumanac'h). Demande étalée printemps-automne grâce au GR34 et au pèlerinage Notre-Dame.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Kerabram / Kervelegan',
+        pricePerNight: '85-140 €',
+        occupancy: 50,
+        description:
+          "Quartiers résidentiels périphériques nord-est de Perros. Cible plutôt résidentielle permanente que saisonnier pur. Prix au m² 2 800-3 500 €. Maison T4 avec jardin dès 250 000 €. Demande LCD plus saisonnière (juillet-août principalement), avec stratégie hybride résidence secondaire usage personnel hors saison.",
+        roiBrut: '5,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Perros-Guirec applique le **cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel identifié à ce jour. La commune n'a pas instauré de changement d'usage municipal et n'est pas classée en zone tendue. Le cadre intercommunal **Lannion-Trégor Communauté** est en cours d'évolution.\n\n**PLUi-H Lannion-Trégor Communauté en enquête publique 2026.** Un **Plan Local d'Urbanisme Intercommunal valant Plan de l'Habitat** (PLUi-H) est en enquête publique **du 7 avril au 26 mai 2026** sur le périmètre Lannion-Trégor Communauté (dont Perros-Guirec fait partie). À surveiller : ce PLUi-H peut introduire à terme des restrictions sur les meublés de tourisme via l'urbanisme (zonage spécifique, encadrement des résidences secondaires sur Trestrignel et Ploumanac'h où le ratio résidences secondaires est très élevé).\n\n**Enregistrement national au 20 mai 2026.** Tout meublé de tourisme à Perros-Guirec doit être enregistré via le **téléservice national** (apimeubles.finances.gouv.fr) et porter un **numéro à 13 chiffres** sur chaque annonce Airbnb, Booking ou Abritel. Sanction du défaut d'enregistrement : **10 000 € d'amende**.\n\n**Déclaration obligatoire en mairie.** En complément du téléservice national, la commune de Perros-Guirec impose une **déclaration en mairie** pour tout meublé de tourisme via un formulaire Cerfa pré-rempli proposé par la commune.\n\n**Résidence principale : 120 nuitées/an.** Limite nationale, non abaissée localement à Perros (la commune dispose désormais du levier juridique 90 jours mais ne l'a pas activé).\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. Classe **A à D** à partir du 1er janvier 2034. Exception pour résidence principale. Spécificité Bretagne : nombre de longères et maisons de pêcheurs anciennes ont une isolation faible — vérifier le DPE avant achat est critique.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est un levier fiscal majeur sur un marché touristique nature comme Perros (clientèle randonneurs GR34 sensible au confort).\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La commune de Perros-Guirec applique une taxe de séjour collectée du 1er janvier au 31 décembre, déclaration trimestrielle (avant 20 avril / 20 juillet / 20 octobre / 20 janvier). Tarif **0,80 € à 3,10 € par nuit et par personne** selon le classement de l'hébergement + **10 % de surtaxe départementale**. Collectée et reversée automatiquement par Airbnb et Booking. Contact : taxedesejour@perros-guirec.com — 02 96 49 10 23.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 115,
+      neighborhood: 'Plage de Trestraou',
+      revenuBrut: 19500,
+      commissionRate: 0.22,
+      menageCount: 65,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'Combien rapporte un Airbnb à Perros-Guirec sur l\'année ?',
+        a: "Un T2 38 m² bien placé sur la plage de Trestraou, au centre-ville / port, ou à proximité Ploumanac'h, avec tarif moyen 110-130 €/nuit annuel (190 €+ en juillet-août) et occupation 55-65 %, génère typiquement un chiffre d'affaires brut de 18 000-22 000 € sur l'année à Perros-Guirec. La saisonnalité balnéaire étalée grâce au climat océanique doux et au Sentier des Douaniers (GR34) lisse mieux les revenus que sur des marchés purement estivaux comme Quiberon ou Les Sables. Un bien Ploumanac'h vue port ou GR34 peut atteindre 24 000-30 000 € grâce à la prime « Village préféré des Français » et la fréquentation du sentier (1 M visiteurs/an). Sur une maison T4 avec jardin La Clarté ou Trestrignel, 22 000-32 000 €. Net de la commission conciergerie (20-25 %), de la taxe foncière, des charges et du ménage, comptez un revenu disponible de 10 000-13 500 € sur le T2 et 14 000-21 000 € sur la maison T4. Performance de référence La Conciergerie du Trégor sur son portefeuille : ADR 101 €, occupation 66 %, revenu moyen 19 239 €/bien/an.",
+      },
+      {
+        q: 'Faut-il une autorisation de changement d\'usage à Perros-Guirec pour louer une résidence secondaire ?',
+        a: "Non, à ce jour. La commune de Perros-Guirec n'a pas instauré de procédure de changement d'usage pour les meublés de tourisme et n'est pas classée en zone tendue. Le cadre applicable est exclusivement national : enregistrement obligatoire via le téléservice national (apimeubles.finances.gouv.fr) au 20 mai 2026, numéro à 13 chiffres à apposer sur chaque annonce, déclaration complémentaire en mairie de Perros via Cerfa pré-rempli, plafond 120 nuitées/an pour résidence principale, DPE classe E minimum. Attention cependant : un PLUi-H (Plan Local d'Urbanisme Intercommunal) est en enquête publique sur Lannion-Trégor Communauté du 7 avril au 26 mai 2026. À surveiller car ce PLUi-H peut introduire à terme des restrictions sur les meublés de tourisme via l'urbanisme (zonage spécifique notamment sur Trestrignel et Ploumanac'h où le ratio résidences secondaires est très élevé — 49 % à Trestrignel). Si vous achetez à Perros-Guirec dans une perspective LCD, suivre l'avancement du PLUi-H et anticiper d'éventuelles restrictions futures est une pratique de prudence.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Perros-Guirec ?',
+        a: "Pour un mix prestige + rendement, Ploumanac'h reste le segment premium grâce à la prime « Village préféré des Français » 2015 et la fréquentation GR34 (1 M visiteurs/an sur la boucle), avec un yield supérieur en pic d'été (150-280 €/nuit) mais une raréfaction de l'offre (port naturel limité à 400 places, peu de mises en vente). ROI brut 4-5,5 %. Plage de Trestraou offre la meilleure occupation grâce au Casino de Trestraou et à la grande plage urbaine, avec un ticket d'entrée intermédiaire et une cible familles + couples. Plage de Trestrignel est positionnée sur la cible haut de gamme (49 % de résidences secondaires, villas Belle Époque) avec un ROI brut moindre mais une valorisation patrimoniale forte. Pour un meilleur rendement à budget contraint, La Clarté et Kerabram-Kervelegan offrent des tickets dès 130 000 € (T2) ou 220 000 € (maison T4 avec jardin) avec un ROI brut 5,5-7,5 % et une stratégie hybride résidence secondaire personnelle + LCD principal juillet-août. Centre-ville / Port convient aux week-ends pluvieux (commerces et restaurants à pied) avec un bon compromis ROI 5,5-7 % et liquidité.",
+      },
+      {
+        q: 'Quelle est la commission moyenne d\'une conciergerie à Perros-Guirec ?',
+        a: "Les commissions à Perros-Guirec ne sont quasi-jamais affichées publiquement — La Conciergerie du Trégor, Conciergerie des Embruns, All In, Aura Conciergeries, Les Maestros et ROZNTI travaillent toutes sur devis personnalisé. La moyenne de marché observée sur le département Côtes-d'Armor s'établit autour de 20-25 % TTC en 2026 pour une formule complète, avec ménage refacturé au voyageur. Le critère décisif au-delà du taux affiché sur un marché à forte saisonnalité estivale comme Perros est la stratégie pricing sur le pic juillet-août (un bien Trestraou ou Ploumanac'h mal pricé peut perdre 1 000-2 000 € de CA sur les 8 semaines de pic), la capacité de gestion en intersaison week-end (mai-juin GR34 randonneurs, septembre-octobre lumière rasante sur granit rose) et la maîtrise opérationnelle des biens de caractère bretons (longères, maisons de pêcheurs avec ardoise et granit, isolation parfois faible). Sur Ploumanac'h particulièrement, demander à la conciergerie sa stratégie de cible « Village préféré des Français » (clientèle nationale touristique 2-3 nuits vs internationaux longue durée) est un test pertinent. Demander à 2-3 conciergeries un devis chiffré sur un bien comparable + un protocole de pricing pic juillet-août est la pratique recommandée à Perros.",
+      },
+    ],
+    updatedAt: '2026-06-17',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

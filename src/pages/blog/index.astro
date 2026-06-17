@@ -180,7 +180,7 @@ CAT_ORDER.forEach(c => { catCounts[c] = otherPosts.filter(p => p.data.category =
       @media (max-width: 640px) { .formation-grid { grid-template-columns: repeat(2, 1fr); } .formation-title { font-size: 26px; } }
     </style>
 
-    <NewsletterBlock id="blog-index-nl-form" />
+    <NewsletterBlock id="blog-index-nl-form" source="NL-BlogIndex" />
 
     <!-- Articles grid with cluster filters -->
     {otherPosts.length > 0 && (

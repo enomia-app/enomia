@@ -803,7 +803,7 @@ async function subscribeNL(){
   const orig=btn.textContent;
   btn.disabled=true;btn.textContent='Envoi\u2026';
   try{
-    const r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,firstName:prenom||'Visiteur',source:'Simulateur_NL'})});
+    const r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,firstName:prenom||'Visiteur',source:'NL-Simulateur-Outil'})});
     if(r.ok){btn.textContent='\u2713 Inscrit !';btn.style.background='var(--green)';document.getElementById('nl-email').value='';if(document.getElementById('nl-prenom'))document.getElementById('nl-prenom').value='';}
     else{btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.textContent=orig;},2000);}
   }catch(_){btn.textContent='Erreur';btn.disabled=false;setTimeout(function(){btn.textContent=orig;},2000);}

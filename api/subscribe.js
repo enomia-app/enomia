@@ -25,7 +25,8 @@ export default async function handler(req, res) {
     listId = listChannel;
   } else if (['Contrat', 'Facturation', 'Simulateur_Auth'].includes(source)) {
     listId = listOutils;
-  } else if (source === 'WaitlistSite') {
+  } else if (source && source.startsWith('WaitlistSite')) {
+    // 'WaitlistSite' + variantes par provenance ('WaitlistSite-Livret'...) -> liste #6
     listId = listWaitSite;
   }
   // source === 'Livre' (QR 4e de couverture → /livre) tombe volontairement dans la

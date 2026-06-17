@@ -1,7 +1,10 @@
 ---
 // CTA réutilisable : réservation directe Enomia (liste d'attente) + popup d'inscription Brevo.
 // À réutiliser inline dans les articles pertinents quand le produit sera shippé.
-const waitlistSource = 'WaitlistSite';
+// `source` paramétrable par article ({% ctaSiteResa source="WaitlistSite-Livret" %}).
+// Garder le préfixe "WaitlistSite" pour rester routé vers la liste #6 (cf. api/subscribe.js).
+const { source = 'WaitlistSite' } = Astro.props;
+const waitlistSource = source;
 ---
 
 <aside class="ecta">

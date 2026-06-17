@@ -206,14 +206,14 @@
   window.toolSendMagicLink = async function ({ email, prenom }) {
     localStorage.setItem('ct_expecting_signin', '1');
     localStorage.setItem('enomia_oauth_target', '/contrat-lcd-dashboard');
-    const { error } = await _ctSb.auth.signInWithOtp({
-      email: email,
-      options: {
-        emailRedirectTo: window.location.origin + '/contrat-lcd-dashboard',
-        data: { prenom: prenom || '' }
-      }
-    });
-    if (error) throw new Error(error.message || 'Erreur magic link');
+    // Magic link via /api/auth → email brandé Contrat (Resend), pas le
+    // template Supabase générique en anglais.
+    const res = await fetch('/api/auth', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'magic-link', email: email, prenom: prenom, tool: 'contrat' })
+    }).then(function (r) { return r.json(); });
+    if (res && res.error) throw new Error(res.error);
     fetch('/api/subscribe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

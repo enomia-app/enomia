@@ -7,6 +7,32 @@ const supabase = createClient(
 
 const APP_URL = process.env.APP_URL || 'https://www.enomia.app'
 
+// Config par outil : chaque magic link renvoie sur le bon outil avec son propre
+// email brandé (objet + intro + bouton). Défaut = simulateur (rétro-compat).
+const TOOLS = {
+  simulateur: {
+    path: '/simulateur-lcd',
+    subject: 'Votre simulation de rendement Airbnb',
+    intro: 'Cliquez sur le bouton ci-dessous pour accéder à vos simulations de rendement.',
+    cta: 'Accéder à mes simulations →',
+    accessLine: 'Vous serez automatiquement connecté et pourrez consulter vos simulations quand vous le souhaitez.',
+  },
+  facturation: {
+    path: '/facturation-lcd',
+    subject: 'Vos factures de location courte durée',
+    intro: 'Cliquez sur le bouton ci-dessous pour accéder à votre espace facturation.',
+    cta: 'Accéder à mes factures →',
+    accessLine: 'Vous serez automatiquement connecté et pourrez gérer vos factures quand vous le souhaitez.',
+  },
+  contrat: {
+    path: '/contrat-lcd-dashboard',
+    subject: 'Vos contrats de location saisonnière au même endroit',
+    intro: 'Cliquez sur le bouton ci-dessous pour accéder à vos contrats.',
+    cta: 'Accéder à mes contrats →',
+    accessLine: 'Vous serez automatiquement connecté et pourrez gérer vos contrats quand vous le souhaitez.',
+  },
+}
+
 // ─── Rate limiting simple (en memoire, par IP) ───
 const rateMap = new Map()
 const RATE_WINDOW = 15 * 60 * 1000  // 15 minutes
@@ -24,7 +50,7 @@ function isRateLimited(ip) {
   return false
 }
 
-async function sendMagicLinkEmail({ to, prenom, magicLink }) {
+async function sendMagicLinkEmail({ to, prenom, magicLink, cfg }) {
   const firstName = prenom ? prenom.trim() : null
   const greeting = firstName ? `Bonjour ${firstName},` : 'Bonjour,'
 
@@ -37,8 +63,16 @@ async function sendMagicLinkEmail({ to, prenom, magicLink }) {
       <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
         <!-- Header -->
         <tr>
-          <td style="background:#1a1c1a;padding:28px 40px">
-            <span style="font-size:20px;font-weight:700;color:#ffffff;letter-spacing:-0.01em">Enomia</span>
+          <td style="background:#1a1c1a;padding:24px 40px">
+            <table cellpadding="0" cellspacing="0" border="0"><tr>
+              <td style="padding-right:12px;vertical-align:middle">
+                <img src="${APP_URL}/favicon.png" width="36" height="36" alt="Enomia" style="display:block;border:0;border-radius:8px">
+              </td>
+              <td style="vertical-align:middle">
+                <div style="font-size:20px;font-weight:700;color:#ffffff;letter-spacing:-0.01em;line-height:1.15">Enomia</div>
+                <div style="font-size:12px;color:#9a9690;line-height:1.3;margin-top:2px">La gestion locative courte durée, repensée par l'IA.</div>
+              </td>
+            </tr></table>
           </td>
         </tr>
         <!-- Body -->
@@ -46,20 +80,20 @@ async function sendMagicLinkEmail({ to, prenom, magicLink }) {
           <td style="padding:40px 40px 32px">
             <p style="margin:0 0 8px;font-size:16px;color:#1a1a1a;font-weight:500">${greeting}</p>
             <p style="margin:0 0 28px;font-size:15px;color:#52524e;line-height:1.7">
-              Cliquez sur le bouton ci-dessous pour accéder à vos simulations de rendement.<br>
+              ${cfg.intro}<br>
               Ce lien est valable <strong>24 heures</strong>.
             </p>
             <table cellpadding="0" cellspacing="0" style="margin-bottom:28px">
               <tr>
                 <td style="background:#3fbd71;border-radius:8px">
                   <a href="${magicLink}" style="display:inline-block;padding:14px 32px;color:#ffffff;text-decoration:none;font-size:15px;font-weight:600">
-                    Accéder à mes simulations →
+                    ${cfg.cta}
                   </a>
                 </td>
               </tr>
             </table>
             <p style="margin:0 0 0;font-size:14px;color:#52524e;line-height:1.7">
-              Vous serez automatiquement connecté et pourrez consulter vos simulations quand vous le souhaitez.
+              ${cfg.accessLine}
             </p>
           </td>
         </tr>
@@ -86,7 +120,7 @@ async function sendMagicLinkEmail({ to, prenom, magicLink }) {
     body: JSON.stringify({
       from: 'Marc <marc@enomia.app>',
       to: [to],
-      subject: 'Votre simulation de rendement Airbnb',
+      subject: cfg.subject,
       html,
     }),
   })
@@ -99,7 +133,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const { action, email, prenom, simPayload } = req.body
+  const { action, email, prenom, simPayload, tool } = req.body
 
   if (action === 'magic-link') {
     // Rate limiting : max 5 magic links par IP toutes les 15 min
@@ -113,42 +147,35 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Email invalide' })
     }
 
+    // Outil d'origine → email + redirect dédiés. Défaut = simulateur (rétro-compat).
+    const cfg = TOOLS[tool] || TOOLS.simulateur
+    // Le payload de simulation (restore après login) ne concerne que le simulateur.
+    const redirectTo = `${APP_URL}${cfg.path}${cfg === TOOLS.simulateur && simPayload ? '?ps=' + simPayload : ''}`
+
     // Générer le lien via Supabase (sans envoi d'email par Supabase)
     const { data, error } = await supabase.auth.admin.generateLink({
       type: 'magiclink',
       email,
       options: {
-        redirectTo: `${APP_URL}/simulateur-lcd${simPayload ? '?ps=' + simPayload : ''}`,
+        redirectTo,
         data: { prenom: prenom || '' },
       },
     })
 
     if (error) return res.status(400).json({ error: error.message })
 
-    // Envoyer l'email via Resend
+    // Envoyer l'email brandé (par outil) via Resend
     const sent = await sendMagicLinkEmail({
       to: email,
       prenom,
       magicLink: data.properties.action_link,
+      cfg,
     })
 
     if (!sent) return res.status(500).json({ error: "Erreur d'envoi email" })
 
-    // Add to Brevo (best-effort, don't block response)
-    const brevoKey = process.env.BREVO_API_KEY
-    const brevoList = parseInt(process.env.BREVO_LIST_OUTILS, 10)
-    if (brevoKey && brevoList) {
-      fetch('https://api.brevo.com/v3/contacts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'api-key': brevoKey },
-        body: JSON.stringify({
-          email,
-          attributes: { PRENOM: prenom || '', SOURCE: 'Simulateur_Auth' },
-          listIds: [brevoList],
-          updateEnabled: true,
-        }),
-      }).catch(() => {})
-    }
+    // NB : l'inscription Brevo est gérée côté client via /api/subscribe (attributs
+    // riches : SOURCE/SOURCES, OUTIL_TYPE, MULTI_INSCRIPTION), pour les 3 outils.
 
     return res.status(200).json({ message: 'Lien envoyé' })
   }

@@ -215,8 +215,14 @@ window.toolSignInGoogle = function () { return signInWithGoogle(); };
 window.toolSendMagicLink = async function ({ email, prenom }) {
   localStorage.setItem('enomia_expecting_signin', '1');
   const simPayload = _pendingSimData ? encodeURIComponent(JSON.stringify(_pendingSimData)) : null;
-  const res = await _apiPost('/api/auth', { action: 'magic-link', email: email, prenom: prenom, simPayload: simPayload }, false);
+  const res = await _apiPost('/api/auth', { action: 'magic-link', email: email, prenom: prenom, simPayload: simPayload, tool: 'simulateur' }, false);
   if (res && res.error) throw new Error(res.error);
+  // Inscription Brevo (comme facturation/contrat) — /api/auth ne gère plus le Brevo.
+  fetch('/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, firstName: prenom || '', source: 'Simulateur_Auth' })
+  }).catch(function () {});
   return true;
 };
 

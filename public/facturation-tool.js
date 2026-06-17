@@ -245,14 +245,14 @@ if (!window.__factInit) {
   window.toolSendMagicLink = async function ({ email, prenom }) {
     localStorage.setItem('fact_expecting_signin', '1');
     localStorage.setItem('enomia_oauth_target', '/facturation-lcd');
-    const res = await _fsb.auth.signInWithOtp({
-      email: email,
-      options: {
-        emailRedirectTo: window.location.origin + '/facturation-lcd',
-        data: { prenom: prenom || '' }
-      }
-    });
-    if (res && res.error) throw new Error(res.error.message || 'Erreur magic link');
+    // Magic link via /api/auth → email brandé Facturation (Resend), pas le
+    // template Supabase générique en anglais.
+    const res = await fetch('/api/auth', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'magic-link', email: email, prenom: prenom, tool: 'facturation' })
+    }).then(function (r) { return r.json(); });
+    if (res && res.error) throw new Error(res.error);
     fetch('/api/subscribe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

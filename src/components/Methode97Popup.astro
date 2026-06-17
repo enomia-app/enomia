@@ -94,8 +94,12 @@ const { source = 'livret-download', auto = false, delay = 45000, requireAuth = f
       if (requireAuth && !isAuthed()) return false;
       return true;
     }
-    function openAuto() {
+    // force=true → relance planifiée pile à la fin du cooldown (ignore la garde).
+    // Sinon, tout déclenchement parasite (timer initial, exit-intent) est bloqué
+    // pendant les 3 min suivant une fermeture.
+    function openAuto(force) {
       if (visible || !autoEligible()) return;
+      if (!force && autoCount() > 0 && Date.now() < autoAt() + COOLDOWN) return;
       shownAuto = true; visible = true; render();
     }
     function closeAuto() {
@@ -104,7 +108,7 @@ const { source = 'livret-download', auto = false, delay = 45000, requireAuth = f
       sset('m97_auto_count', String(count));
       sset('m97_auto_at', String(Date.now()));
       if (count >= 2) sset('m97_auto_done', '1');
-      else setTimeout(openAuto, COOLDOWN);
+      else setTimeout(function () { openAuto(true); }, COOLDOWN);
     }
 
     // Fermeture : route selon le flow ayant ouvert la pop-up.
@@ -121,7 +125,7 @@ const { source = 'livret-download', auto = false, delay = 45000, requireAuth = f
     if (auto) {
       if (autoEligible()) {
         if (autoCount() === 0) setTimeout(openAuto, delay);
-        else { var rem = autoAt() + COOLDOWN - Date.now(); setTimeout(openAuto, rem > 0 ? rem : 1500); }
+        else { var rem = autoAt() + COOLDOWN - Date.now(); setTimeout(function () { openAuto(true); }, rem > 0 ? rem : 1500); }
       }
       document.addEventListener('mouseout', function (e) {
         if (visible || e.clientY > 0 || e.relatedTarget) return;

@@ -104,6 +104,14 @@ Garde la copie locale du repo synchronisée avec GitHub. Évite que le Mac mini 
 **Script** : `scripts/tech-watchdog/run.sh`
 Surveillance technique du site (probable : check 200/500 sur URLs critiques, certif SSL, etc.). Envoie un email si problème via Resend.
 
+**Tests hebdo du site (lundi)** : `run.sh` appelle `run-weekly-tests.sh` quand `date +%u == 1`. Lance, contre la prod :
+- `tests/e2e/smoke-all-pages.spec.ts` — smoke « toutes les pages » (lit le sitemap → suit toutes les pages auto). Échoue si statut ≥ 400, crash JS (`pageerror`), ou asset same-origin 404. Ignore les annulations lazy-load (`ERR_ABORTED`).
+- `tests/e2e/tools.spec.ts` — parcours ciblés (simulateur/contrat/facture/isolation), écrit dans la base Supabase de prod + cleanup. Nécessite `SUPABASE_SERVICE_ROLE_KEY` dans `.env` (sinon fallback smoke seul).
+- Email Resend **chaque lundi** (vert ✅ si tout OK, rouge 🔴 si échec) + notif macOS. Sort toujours en 0 (ne bloque pas le watchdog quotidien).
+- Pré-requis Mac mini : navigateur Playwright — **déjà présent** (chromium-1217, vérifié 2026-06-17). Sinon `npx playwright install chromium` ; le script prévient par email si absent.
+- Lançable à la main avant un déploiement : `bash scripts/tech-watchdog/run-weekly-tests.sh` (cible surchargeable via `E2E_BASE_URL`).
+- ⚠️ Modif de `run.sh` seule (pas du plist) → live au prochain `git pull` Mac mini, **pas besoin de `launchctl reload`**.
+
 ## Pipeline backlinks v2 (2026-05-23)
 
 Pipeline refactoré : envoi auto sans validation Marc, 3 outils prioritaires (simulateur, contrat, facture), data dans `data/backlinks-YYYY-MM.json` (gitignored). Templates dans la memory `domains/prospection-backlinks/reference_pitches_templates.md`.

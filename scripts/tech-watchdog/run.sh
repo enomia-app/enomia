@@ -69,6 +69,14 @@ $AUTH_OUT
 EOF
 fi
 
+# Tests hebdo du site (lundi uniquement) — smoke « toutes les pages » + tests
+# ciblés tools.spec.ts, contre la prod. Le script gère ses propres erreurs/alertes
+# et sort toujours en 0 : il ne bloque jamais le watchdog quotidien.
+if [[ "$(date +%u)" == "1" ]]; then
+  echo "Lundi → tests hebdo du site..." | tee -a "$RUN_LOG"
+  "$SCRIPT_DIR/run-weekly-tests.sh" >> "$RUN_LOG" 2>&1 || true
+fi
+
 # Lancer Claude avec le prompt
 # --dangerously-skip-permissions: nécessaire en headless 8h sans humain pour approuver
 # (approvals via push notif peu fiables tôt le matin). Garde-fous via watchdog-prompt.md.

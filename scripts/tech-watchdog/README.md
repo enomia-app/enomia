@@ -7,7 +7,8 @@ Agent autonome de surveillance technique d'Enomia. Tourne chaque matin 8h sur le
 | Fichier              | Rôle |
 |----------------------|------|
 | `watchdog-prompt.md` | Le prompt principal exécuté par Claude (logique métier) |
-| `run.sh`             | Wrapper bash lancé par launchd → invoque `claude -p` avec le prompt |
+| `run.sh`             | Wrapper bash lancé par launchd → `claude -p` + tests hebdo le lundi |
+| `run-weekly-tests.sh`| Tests du site (lundi) : smoke « toutes les pages » + `tools.spec.ts`, contre la prod |
 | `plist.template`     | Template launchd (placeholders remplis par `install.sh`) |
 | `install.sh`         | Installeur Mac mini (génère le plist, le charge) |
 | `uninstall.sh`       | Désinstalleur (décharge + supprime le plist) |
@@ -75,11 +76,37 @@ tail -f scripts/tech-watchdog/logs/launchd-stderr.log
 bash scripts/tech-watchdog/uninstall.sh
 ```
 
+## Tests hebdo du site (lundi)
+
+Le lundi, `run.sh` appelle `run-weekly-tests.sh` (gate `date +%u == 1`). Lance,
+contre la prod (`https://www.enomia.app`) :
+
+1. **Smoke « toutes les pages »** (`tests/e2e/smoke-all-pages.spec.ts`) — lit le
+   sitemap (suit donc toutes les pages, même les futures). Échoue si statut ≥ 400,
+   crash JS, ou asset same-origin 404. Lecture seule.
+2. **Tests ciblés** (`tests/e2e/tools.spec.ts`) — simulateur/contrat/facture/
+   isolation. Écrivent dans la base Supabase de prod puis nettoient (comptes e2e).
+   Nécessitent `SUPABASE_SERVICE_ROLE_KEY` dans `.env` (sinon : smoke seul).
+
+Email Resend + notif macOS si rouge. **Sort toujours en 0** → ne bloque jamais le
+watchdog quotidien. Modif de `run.sh` seul (pas du plist) → **live au prochain
+`git pull` Mac mini, sans `launchctl reload`**.
+
+```bash
+# Pré-requis Mac mini (1 fois) : navigateur Playwright
+npx playwright install chromium
+
+# Lancer à la main (ex. avant un déploiement)
+bash scripts/tech-watchdog/run-weekly-tests.sh
+# Cibler le local au lieu de la prod
+E2E_BASE_URL=http://localhost:4321 bash scripts/tech-watchdog/run-weekly-tests.sh
+```
+
 ## Roadmap V2
 
 - Sources additionnelles : Vercel (`notifications@vercel.com`), Supabase, GitHub
 - Slack / Telegram en plus de la notif macOS
-- Rapport hebdo agrégé (envoyé par mail le lundi)
+- ~~Rapport hebdo agrégé (envoyé par mail le lundi)~~ → tests hebdo faits (2026-06-17)
 - Métriques : MTTR, fix success rate
 
 ## Dépendances

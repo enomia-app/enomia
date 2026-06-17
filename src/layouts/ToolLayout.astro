@@ -23,6 +23,31 @@ const headerTool = currentTool === 'none' ? undefined : currentTool;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script is:inline>
+    // Fallback OAuth/magic-link callback : si Supabase redirige sur le mauvais
+    // outil (cas où la redirect URL n'est pas whitelistée → Supabase retombe sur
+    // la Site URL, typiquement /simulateur-lcd), on renvoie l'utilisateur vers
+    // l'outil d'origine en préservant le hash, pour que le SDK Supabase de la
+    // bonne page puisse parser la session. S'exécute avant tout autre script.
+    (function () {
+      try {
+        var h = window.location.hash || '';
+        if (h.indexOf('access_token=') === -1 && h.indexOf('error=') === -1) return;
+        var target = localStorage.getItem('enomia_oauth_target');
+        if (!target) return;
+        // Sécurité : uniquement des chemins internes (pas d'URL absolue///).
+        if (target.charAt(0) !== '/' || target.indexOf('//') === 0) return;
+        // On a atterri sur la bonne page : laisser le SDK parser le hash.
+        if (target === window.location.pathname) {
+          localStorage.removeItem('enomia_oauth_target');
+          return;
+        }
+        // Mauvais outil : on bounce vers l'outil d'origine avec le hash.
+        localStorage.removeItem('enomia_oauth_target');
+        window.location.replace(target + h);
+      } catch (_) {}
+    })();
+  </script>
   <title>{title}</title>
   <meta name="description" content={description} />
   {canonical && <link rel="canonical" href={canonical} />}

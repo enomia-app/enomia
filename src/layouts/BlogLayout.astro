@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieBanner from '../components/CookieBanner.astro';
+import NewsletterPopup from '../components/NewsletterPopup.astro';
 
 interface Props {
   title: string;
@@ -596,6 +597,7 @@ const { title, description, ogImage, canonical } = Astro.props;
 
   <Footer />
   <CookieBanner />
+  <NewsletterPopup />
   <script>
     import { inject } from '@vercel/analytics';
     inject();

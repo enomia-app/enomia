@@ -1,0 +1,205 @@
+---
+// Pop-up de capture newsletter, injectée par les layouts sur tout le site sauf
+// la home. Déclencheurs : timer (delay) + exit-intent desktop. Cadence : si
+// fermée sans capture, UNE relance 3 min après, puis stop pour la session.
+// Si capturée → jamais re-montrée (localStorage persistant).
+//
+// Props :
+//   delay        : ms avant l'affichage auto (45000 général, 90000 outils).
+//   requireAuth  : n'afficher que si l'utilisateur est connecté (pages outils,
+//                  où les non-connectés voient déjà la pop-up « Se connecter »).
+//   source       : tag Brevo (→ liste NL via /api/subscribe).
+interface Props {
+  delay?: number;
+  requireAuth?: boolean;
+  source?: string;
+}
+const { delay = 45000, requireAuth = false, source = 'Popup-NL' } = Astro.props;
+---
+<div id="nl-popup" class="nlp-overlay" role="dialog" aria-modal="true" aria-labelledby="nlp-title">
+  <div class="nlp-card">
+    <button type="button" class="nlp-close" data-nl-close aria-label="Fermer">&times;</button>
+    <div class="nlp-head">
+      <span class="nlp-brand">Enomia</span>
+    </div>
+    <h2 id="nlp-title" class="nlp-title">Le courrier de la location courte durée</h2>
+    <p class="nlp-sub">1 email par mois : fiscalité, rentabilité, retours terrain. Pas de spam, désinscription en 1 clic.</p>
+    <form id="nl-popup-form" class="nlp-form">
+      <input type="text" placeholder="Prénom" required class="nlp-input" autocomplete="given-name" />
+      <input type="email" placeholder="votre@email.com" required class="nlp-input" autocomplete="email" />
+      <button type="submit" class="nlp-btn">Je m'inscris</button>
+    </form>
+    <p class="nlp-note">Désinscription en 1 clic · email jamais partagé. En vous inscrivant, vous acceptez la <a href="/confidentialite">politique de confidentialité</a>.</p>
+  </div>
+</div>
+
+<style>
+  .nlp-overlay {
+    display: none;
+    position: fixed; inset: 0; z-index: 9990;
+    background: rgba(26, 28, 26, 0.55);
+    align-items: center; justify-content: center;
+    padding: 16px;
+    opacity: 0; transition: opacity .2s ease;
+  }
+  .nlp-overlay.open { opacity: 1; }
+  .nlp-card {
+    position: relative;
+    width: 100%; max-width: 420px;
+    background: #ffffff; border-radius: 16px;
+    padding: 32px 28px 24px;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.25);
+    transform: translateY(8px); transition: transform .2s ease;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  .nlp-overlay.open .nlp-card { transform: translateY(0); }
+  .nlp-close {
+    position: absolute; top: 12px; right: 14px;
+    background: none; border: none; cursor: pointer;
+    font-size: 26px; line-height: 1; color: #9a9690; padding: 4px;
+  }
+  .nlp-close:hover { color: #1a1a1a; }
+  .nlp-head { margin-bottom: 16px; }
+  .nlp-brand { font-size: 18px; font-weight: 700; color: #1a1c1a; letter-spacing: -0.01em; }
+  .nlp-title { font-size: 21px; font-weight: 700; color: #1a1a1a; line-height: 1.25; margin: 0 0 8px; }
+  .nlp-sub { font-size: 14px; color: #52524e; line-height: 1.6; margin: 0 0 20px; }
+  .nlp-form { display: flex; flex-direction: column; gap: 10px; }
+  .nlp-input {
+    width: 100%; padding: 12px 14px; font-size: 15px;
+    border: 1px solid #e5e3de; border-radius: 8px; font-family: inherit;
+    background: #fff; color: #1a1a1a;
+  }
+  .nlp-input:focus { outline: none; border-color: #3fbd71; box-shadow: 0 0 0 3px rgba(63,189,113,0.12); }
+  .nlp-btn {
+    width: 100%; padding: 13px 16px; font-size: 15px; font-weight: 600;
+    color: #fff; background: #3fbd71; border: none; border-radius: 8px;
+    cursor: pointer; font-family: inherit;
+  }
+  .nlp-btn:hover { background: #36a863; }
+  .nlp-btn:disabled { opacity: .7; cursor: default; }
+  .nlp-note { font-size: 12px; color: #9a9690; line-height: 1.5; margin: 14px 0 0; }
+  .nlp-note a { color: #9a9690; text-decoration: underline; }
+  @media (max-width: 400px) {
+    .nlp-card { padding: 28px 20px 20px; border-radius: 14px; }
+    .nlp-title { font-size: 19px; }
+  }
+</style>
+
+<script define:vars={{ delay, requireAuth, source }}>
+  (function () {
+    var el = document.getElementById('nl-popup');
+    if (!el) return;
+
+    var COOLDOWN = 180000; // 3 min
+    var LS_CAPTURED = 'nl_popup_captured';
+    var SS_DONE = 'nl_popup_session_done';
+    var SS_COUNT = 'nl_popup_dismiss_count';
+    var SS_AT = 'nl_popup_dismissed_at';
+
+    function ls(get, key, val) { try { return get ? localStorage.getItem(key) : localStorage.setItem(key, val); } catch (_) { return null; } }
+    function ss(get, key, val) { try { return get ? sessionStorage.getItem(key) : sessionStorage.setItem(key, val); } catch (_) { return null; } }
+
+    function isAuthed() {
+      try {
+        for (var i = 0; i < localStorage.length; i++) {
+          var k = localStorage.key(i);
+          if (k && k.indexOf('sb-') === 0 && k.indexOf('-auth-token') !== -1 && localStorage.getItem(k)) return true;
+        }
+      } catch (_) {}
+      return false;
+    }
+    function captured() { return ls(true, LS_CAPTURED) === '1'; }
+    function sessionDone() { return ss(true, SS_DONE) === '1'; }
+    function dismissCount() { return parseInt(ss(true, SS_COUNT) || '0', 10); }
+    function dismissedAt() { return parseInt(ss(true, SS_AT) || '0', 10); }
+
+    function eligible() {
+      if (captured() || sessionDone()) return false;
+      if (requireAuth && !isAuthed()) return false;
+      return true;
+    }
+
+    var shown = false, closed = false;
+
+    function show() {
+      if (shown || !eligible()) return;
+      shown = true; closed = false;
+      el.style.display = 'flex';
+      requestAnimationFrame(function () { el.classList.add('open'); });
+    }
+    function hide() {
+      el.classList.remove('open');
+      setTimeout(function () { el.style.display = 'none'; }, 200);
+    }
+    function onDismiss() {
+      if (closed) return;
+      closed = true;
+      hide();
+      var count = dismissCount() + 1;
+      ss(false, SS_COUNT, String(count));
+      ss(false, SS_AT, String(Date.now()));
+      if (count >= 2) {
+        ss(false, SS_DONE, '1');
+      } else {
+        setTimeout(function () { shown = false; show(); }, COOLDOWN);
+      }
+    }
+
+    // Programme l'affichage initial (ou la relance si on revient pendant le cooldown).
+    function schedule() {
+      if (!eligible()) return;
+      if (dismissCount() === 0) {
+        setTimeout(show, delay);
+      } else {
+        var remaining = dismissedAt() + COOLDOWN - Date.now();
+        setTimeout(show, remaining > 0 ? remaining : 1500);
+      }
+    }
+
+    // Fermeture
+    var closeBtn = el.querySelector('[data-nl-close]');
+    if (closeBtn) closeBtn.addEventListener('click', onDismiss);
+    el.addEventListener('click', function (e) { if (e.target === el) onDismiss(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && shown && !closed) onDismiss(); });
+
+    // Exit-intent (desktop) : la souris quitte le viewport par le haut.
+    document.addEventListener('mouseout', function (e) {
+      if (shown || e.clientY > 0 || e.relatedTarget) return;
+      if (!eligible()) return;
+      if (dismissCount() > 0 && Date.now() < dismissedAt() + COOLDOWN) return;
+      show();
+    });
+
+    // Soumission → /api/subscribe (liste NL)
+    var form = document.getElementById('nl-popup-form');
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var inputs = form.querySelectorAll('input');
+      var prenom = inputs[0].value.trim(), email = inputs[1].value.trim();
+      if (!prenom || !email) return;
+      var btn = form.querySelector('button'), orig = btn.textContent;
+      btn.disabled = true; btn.textContent = 'Envoi…';
+      try {
+        var r = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, firstName: prenom, source: source })
+        });
+        if (r.ok) {
+          ls(false, LS_CAPTURED, '1');
+          btn.textContent = '✓ Inscrit !'; btn.style.background = '#2b2d2b';
+          inputs.forEach(function (i) { i.disabled = true; i.style.opacity = '0.5'; });
+          setTimeout(hide, 1600);
+        } else {
+          btn.textContent = 'Erreur'; btn.disabled = false;
+          setTimeout(function () { btn.textContent = orig; }, 2000);
+        }
+      } catch (_) {
+        btn.textContent = 'Erreur'; btn.disabled = false;
+        setTimeout(function () { btn.textContent = orig; }, 2000);
+      }
+    });
+
+    schedule();
+  })();
+</script>

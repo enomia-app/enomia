@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieBanner from '../components/CookieBanner.astro';
+import NewsletterPopup from '../components/NewsletterPopup.astro';
 
 interface Props {
   title: string;
@@ -13,9 +14,16 @@ interface Props {
   ctaHref?: string;
   /** Empêche l'indexation Google (utilisé par les pages /preview/*) */
   noindex?: boolean;
+  /**
+   * Pop-up newsletter :
+   *  'on'     (défaut) → 45s + exit-intent, tous visiteurs
+   *  'authed'          → 90s, uniquement si connecté (pages outils avec login)
+   *  'off'             → désactivée (home, /livre, /la-methode-97 : capture déjà présente)
+   */
+  newsletterPopup?: 'on' | 'authed' | 'off';
 }
 
-const { title, description, canonical, ogImage, currentTool = 'none', ctaLabel, ctaHref, noindex = false } = Astro.props;
+const { title, description, canonical, ogImage, currentTool = 'none', ctaLabel, ctaHref, noindex = false, newsletterPopup = 'on' } = Astro.props;
 const headerTool = currentTool === 'none' ? undefined : currentTool;
 ---
 <!DOCTYPE html>
@@ -101,6 +109,12 @@ const headerTool = currentTool === 'none' ? undefined : currentTool;
 
   <Footer />
   <CookieBanner />
+  {newsletterPopup !== 'off' && (
+    <NewsletterPopup
+      delay={newsletterPopup === 'authed' ? 90000 : 45000}
+      requireAuth={newsletterPopup === 'authed'}
+    />
+  )}
   <script>
     import { inject } from '@vercel/analytics';
     inject();

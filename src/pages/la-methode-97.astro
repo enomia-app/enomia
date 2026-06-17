@@ -1,0 +1,111 @@
+---
+// Landing PROSPECT "Recevez le livre gratuitement" — réutilisable (partage ami, RS, pub, bio).
+// À distinguer de /livre (lecteurs, QR du livre). Ici : la personne n'a PAS le livre.
+// Capture -> liste NL (#3) avec source 'Methode-Gratuit'. L'email envoyé = welcome "prospect".
+import ToolLayout from '../layouts/ToolLayout.astro';
+import AuthorSchema from '../components/AuthorSchema.astro';
+---
+
+<ToolLayout
+  title="La Méthode 97 % — le livre offert (PDF gratuit) · Enomia"
+  description="Recevez gratuitement le livre La Méthode 97 % en PDF : comment 4 logements loués à la nuit rapportent près de 7 000 € nets par mois, sans conciergerie ni quitter son emploi."
+>
+  <AuthorSchema />
+
+  <section class="livre-hero">
+    <div class="inner">
+      <span class="badge">Le livre offert · PDF gratuit</span>
+      <h1>Recevez <em>La Méthode 97&nbsp;%</em>, gratuitement.</h1>
+      <p class="lead">
+        En 2019, j'ai transformé un garage en logement. Aujourd'hui, 4 logements loués à la nuit
+        me rapportent près de 7 000 € nets par mois, sans conciergerie et sans avoir quitté mon emploi.
+        Ce livre raconte comment, étape par étape.
+      </p>
+
+      <ul class="promesse">
+        <li>La méthode complète : mes opérations détaillées, mes chiffres réels</li>
+        <li>Choisir un bien en 30 minutes, viser 97 % d'occupation</li>
+        <li>La fiscalité (LMNP) et la réglementation expliquées simplement</li>
+        <li>Mes erreurs comprises, dont une qui m'a coûté 21 000 €</li>
+      </ul>
+
+      <form id="lm97-form" class="livre-form">
+        <input type="text" name="firstName" placeholder="Prénom" autocomplete="given-name" />
+        <input type="email" name="email" placeholder="votre@email.com" autocomplete="email" required />
+        <button type="submit">Recevoir le livre gratuitement</button>
+        <p class="note">Le livre arrive par email. ~1 email par mois ensuite, désinscription en 1 clic. En vous inscrivant, vous acceptez de recevoir la newsletter d'Enomia (<a href="/confidentialite" style="text-decoration:underline">politique de confidentialité</a>).</p>
+      </form>
+
+      <p id="lm97-success" class="success" hidden>
+        C'est noté, merci ! Le livre arrive dans votre boîte mail (pensez à vérifier les spams).
+      </p>
+    </div>
+  </section>
+</ToolLayout>
+
+<script>
+  const form = document.getElementById('lm97-form') as HTMLFormElement | null;
+  const success = document.getElementById('lm97-success');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const btn = form.querySelector('button');
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = 'Envoi…';
+    }
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: data.get('email'),
+          firstName: data.get('firstName'),
+          source: 'Methode-Gratuit',
+        }),
+      });
+      if (!res.ok) throw new Error('subscribe failed');
+      form.hidden = true;
+      if (success) success.hidden = false;
+    } catch {
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = 'Réessayer';
+      }
+    }
+  });
+</script>
+
+<style>
+  .livre-hero { padding: 56px 20px 80px; }
+  .inner { max-width: 560px; margin: 0 auto; }
+  .badge {
+    display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--green); border: 1px solid var(--green);
+    border-radius: 999px; padding: 5px 14px; margin-bottom: 20px;
+  }
+  h1 {
+    font-family: var(--serif); font-size: clamp(30px, 6vw, 42px); line-height: 1.15;
+    font-weight: 600; margin-bottom: 14px;
+  }
+  .lead { font-size: 17px; color: var(--text-secondary); margin-bottom: 24px; }
+  .promesse { list-style: none; margin-bottom: 28px; display: grid; gap: 10px; }
+  .promesse li { padding-left: 26px; position: relative; font-size: 15px; }
+  .promesse li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+  .livre-form { display: grid; gap: 10px; }
+  .livre-form input {
+    width: 100%; padding: 13px 16px; border: 1px solid var(--border);
+    border-radius: var(--radius); font: inherit; font-size: 15px; background: var(--bg-card);
+  }
+  .livre-form input:focus { outline: 2px solid var(--green); outline-offset: -1px; }
+  .livre-form button {
+    padding: 14px 16px; border: none; border-radius: var(--radius); background: var(--green);
+    color: #fff; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer;
+  }
+  .livre-form button:hover { filter: brightness(0.95); }
+  .note { font-size: 13px; color: var(--text-tertiary); text-align: center; }
+  .success {
+    font-size: 16px; font-weight: 500; color: var(--green); background: var(--green-soft);
+    border-radius: var(--radius); padding: 18px 20px;
+  }
+</style>

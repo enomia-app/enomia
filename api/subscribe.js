@@ -85,28 +85,10 @@ export default async function handler(req, res) {
     // POST /contacts renvoie 201 (cree, avec body) ou 204 (mis a jour, sans body) -> ne pas planter sur le 204.
     const data = await response.json().catch(() => ({ updated: true }));
 
-    // Email de bienvenue : envoi transactionnel EN CODE, différencié PAR SOURCE.
-    // source 'Livre' = lecteur (a déjà le livre -> coulisses + PDF bonus + partage, template #2) ;
-    // tout le reste = prospect (n'a pas le livre -> on lui envoie le PDF, template #1).
-    // Tracké dans Brevo (ouvertures/clics). NON bloquant : un échec d'email ne fait pas rater l'inscription.
-    // ⚠️ NE PAS créer d'automation de bienvenue dans Brevo : l'envoi est géré ICI (sinon double email).
-    if (listId === listNL) {
-      const prospectTpl = parseInt(process.env.BREVO_WELCOME_TEMPLATE_ID, 10) || 1;
-      const readerTpl = parseInt(process.env.BREVO_WELCOME_READER_TEMPLATE_ID, 10) || 2;
-      const welcomeTpl = source === 'Livre' ? readerTpl : prospectTpl;
-      try {
-        await fetch('https://api.brevo.com/v3/smtp/email', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'api-key': apiKey },
-          body: JSON.stringify({
-            to: [{ email, name: firstName || undefined }],
-            templateId: welcomeTpl,
-          }),
-        });
-      } catch (mailErr) {
-        console.error('Brevo welcome email error:', mailErr);
-      }
-    }
+    // Emails : TOUT part de Brevo (automations + campagnes). Le code se contente de créer
+    // le contact et de poser l'attribut SOURCE ci-dessus, qui permet aux automations Brevo
+    // de différencier lecteur (SOURCE='Livre' -> template #2) et prospect (-> template #1).
+    // ⚠️ Aucun envoi transactionnel ici : c'est Brevo qui envoie.
 
     return res.status(200).json({ success: true, data });
   } catch (error) {

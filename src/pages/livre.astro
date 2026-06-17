@@ -2,8 +2,8 @@
 // Landing du QR code en 4e de couverture de « La Méthode 97 % ».
 // noindex : page de destination print uniquement, pas une page SEO.
 // Source Brevo : 'Livre' tombe volontairement dans la liste NL (#3, défaut de api/subscribe.js).
-// Le welcome "lecteur" est envoyé en transactionnel par api/subscribe.js (template Brevo #2),
-// différencié via source='Livre'. PAS d'automation Brevo de bienvenue (sinon double email).
+// Le welcome "lecteur" est géré par une AUTOMATION BREVO (entrée en liste), différenciée via
+// l'attribut SOURCE='Livre' (template #2). Aucun envoi transactionnel côté code.
 import ToolLayout from '../layouts/ToolLayout.astro';
 import AuthorSchema from '../components/AuthorSchema.astro';
 ---

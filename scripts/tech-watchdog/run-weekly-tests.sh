@@ -62,13 +62,17 @@ echo "Specs : $SPECS — cible : ${E2E_BASE_URL:-https://www.enomia.app}" | tee 
 npx playwright test $SPECS --reporter=line >> "$TEST_LOG" 2>&1
 RESULT=$?
 
-# 4) Notifier selon le résultat.
+# 4) Notifier — un email CHAQUE lundi, vert comme rouge (Marc veut la confirmation
+#    « tout va bien » autant que l'alerte).
 SUMMARY=$(grep -E "passed|failed|✗|\[smoke\]" "$TEST_LOG" | tail -25)
+TARGET="${E2E_BASE_URL:-https://www.enomia.app}"
 if [[ $RESULT -ne 0 ]]; then
   notify "Tests hebdo en échec — voir email" "Régression possible"
-  [[ -x "$SEND_REPORT" ]] && printf 'Les tests hebdo du site ont échoué (%s).\n\nRésumé :\n%s\n\nLog complet sur le Mac mini : %s\n' "$DATE_TAG" "$SUMMARY" "$TEST_LOG" | "$SEND_REPORT" "[watchdog] Tests hebdo du site en échec" >> "$TEST_LOG" 2>&1 || true
+  [[ -x "$SEND_REPORT" ]] && printf 'Les tests hebdo du site ont ÉCHOUÉ (%s, cible %s).\n\nRésumé :\n%s\n\nLog complet sur le Mac mini : %s\n' "$DATE_TAG" "$TARGET" "$SUMMARY" "$TEST_LOG" | "$SEND_REPORT" "[watchdog] 🔴 Tests hebdo du site en échec" >> "$TEST_LOG" 2>&1 || true
 else
   echo "Tests hebdo OK" | tee -a "$TEST_LOG"
+  notify "Tests hebdo OK" "Tout fonctionne"
+  [[ -x "$SEND_REPORT" ]] && printf 'Tout fonctionne (%s, cible %s).\n\nRésumé :\n%s\n\nProchaine vérif : lundi prochain.\n' "$DATE_TAG" "$TARGET" "$SUMMARY" | "$SEND_REPORT" "[watchdog] ✅ Tests hebdo du site OK" >> "$TEST_LOG" 2>&1 || true
 fi
 
 echo "===== weekly-tests end $(date -Iseconds) =====" | tee -a "$TEST_LOG"

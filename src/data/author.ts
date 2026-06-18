@@ -53,7 +53,7 @@ export const livreMethode97 = {
   '@id': 'https://www.enomia.app/livre#book',
   name: 'La Méthode 97 %',
   description:
-    '4 logements loués à la nuit. 7 000 € nets par mois. 9 heures de gestion. Sans conciergerie, sans quitter mon emploi.',
+    '4 logements loués à la nuit. 7 000 € nets par mois. 4 heures de gestion. Sans conciergerie, sans quitter mon emploi.',
   inLanguage: 'fr',
   author: { '@id': PERSON_ID },
   publisher: { '@type': 'Organization', name: 'Enomia Éditions' },

@@ -4,6 +4,7 @@ export const prerender = false;
 
 import { getCollection } from 'astro:content';
 import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { AUTHOR_BIO_ARTICLE } from '../../../data/author';
 
 const { slug } = Astro.params;
 const allPosts = await getCollection('blog');
@@ -76,13 +77,13 @@ const readTime = readingTime(post.body);
         </div>
       </div>
 
-      {post.data.authorBio && <p class="author-bio-line">{post.data.authorBio}</p>}
+      <p class="author-bio-line">{AUTHOR_BIO_ARTICLE}</p>
 
       <div class="cred-bar">
-        <div class="cred-item"><div class="cred-value">9</div><div class="cred-label">biens en portefeuille</div></div>
-        <div class="cred-item"><div class="cred-value">12–18%</div><div class="cred-label">rendement net moyen</div></div>
-        <div class="cred-item"><div class="cred-value">~1h</div><div class="cred-label">par bien par mois</div></div>
-        <div class="cred-item"><div class="cred-value">6 ans</div><div class="cred-label">d'expérience LCD</div></div>
+        <div class="cred-item"><div class="cred-value">4</div><div class="cred-label">logements en courte durée</div></div>
+        <div class="cred-item"><div class="cred-value">≈ 7 000 €</div><div class="cred-label">nets par mois</div></div>
+        <div class="cred-item"><div class="cred-value">≈ 15%</div><div class="cred-label">de rendement net</div></div>
+        <div class="cred-item"><div class="cred-value">97%</div><div class="cred-label">d'occupation</div></div>
       </div>
 
       <div class="article-cover">
@@ -117,7 +118,7 @@ const readTime = readingTime(post.body);
             Guide PDF offert + Newsletter
           </div>
           <div class="article-nl-title">Recevez ma méthode LCD complète, gratuitement</div>
-          <p class="article-nl-desc">Le guide PDF en 10 étapes pour atteindre <strong style="color:var(--text-light);">93–97% d'occupation</strong>. La méthode que j'applique sur mes 9 biens, expliquée de A à Z.</p>
+          <p class="article-nl-desc">Le guide PDF en 10 étapes pour atteindre <strong style="color:var(--text-light);">93–97% d'occupation</strong>. La méthode que j'applique au quotidien, expliquée de A à Z.</p>
           <div class="article-nl-bullets">
             <div class="article-nl-bullet">
               <span class="article-nl-bullet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>

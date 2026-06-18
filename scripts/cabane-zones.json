@@ -96,8 +96,11 @@
     "type": "region",
     "searchVolume": 1840,
     "radiusKm": 90,
-    "status": "todo",
-    "geocodeQuery": "Provence France"
+    "status": "done",
+    "geocodeQuery": "Provence France",
+    "lat": 44.01449,
+    "lng": 6.21164,
+    "found": 35
   },
   {
     "slug": "alsace",

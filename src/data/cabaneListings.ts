@@ -3023,5 +3023,398 @@ export const cabaneListings: Record<string, Cabane[]> = {
         }
       ]
     }
+  ],
+  "provence": [
+    {
+      "name": "Domaine de la Tuilière",
+      "area": "Carnoules",
+      "dept": "83",
+      "distanceKm": 80,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Vue dégagée",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Carnoules",
+      "rating": 4.6,
+      "reviews": 1687,
+      "source": "Google Places",
+      "description": "Le Domaine de la Tuilière propose des hébergements insolites en pleine nature comme des wigwams perchés, pool homes et pool domes, offrant un dépaysement total avec accès à un spa, jacuzzi privatif et bain balnéo. L'établissement se distingue par son accueil bienveillant, ses petit-déjeuners copieux et ses équipements confortables permettant de profiter pleinement de la nature environnante.",
+      "url": "https://www.aubergedelatuiliere.com/",
+      "recentReviews": [
+        {
+          "author": "Laurence",
+          "rating": 5,
+          "when": "il y a une semaine",
+          "text": "Extraordinaire et dépaysant! Une nuit en pleine nature et l’accès au spa pour se détendre! Expérience géniale avec un accueil sympathique et bienveillant. Le lieu est bien placé, près des accès mais en même temps dans la forêt. La bulle Liberty est tout confort avec une vraie douche et un vrai wc à l’intérieur, c’est l"
+        },
+        {
+          "author": "Xavier Teboul",
+          "rating": 5,
+          "when": "il y a 2 semaines",
+          "text": "Très bel accueil, le Wigwam perché était top, super confortable et bien équipé. Jacuzzi privatif tout à côté. Les repas proposés étaient très très correct. Les petits déjeuners très copieux. Salle de jeux incroyable avec des centaines de jeux. Les patrons adorables. Nous recommanderons et nous y reviendrons..."
+        },
+        {
+          "author": "Jonathan Troin",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Dépaysement total lieu magique où l on a pu se reposer et ressourcer même pour une nuit . Le pool home incroyable lieu chaleureux qui fait rêver. Accueil du personnel au top à l écoute et bienveillant et petit déjeuner copieux ! Nous reviendrons avec plaisir merci pour cette parenthèse Elodie et Jonathan."
+        },
+        {
+          "author": "charlotte paumelle",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Expérience magique au Domaine de la Tuilière ! Nous avons dormi dans le pool dome : vue à couper le souffle, sunset incroyable, bain balnéo superbe, et malgré l’hiver, nuit bien chaude grâce aux matelas chauffants ! Le panier repas du soir et le petit-déjeuner pris dans la cabane étaient délicieux. Très bon rapport qua"
+        },
+        {
+          "author": "Emelyne Legrand",
+          "rating": 4,
+          "when": "il y a 2 mois",
+          "text": "Le domaine de la tuilière est un endroit très agréable et très beau. Nous avons passé un très bon moment dans le Bali dôme. La chambre est très belle, bien décorée mais petit bémol le ménage de sous le lit n’a pas été fait, de même pour la vaisselle présente dans la chambre. Le petit déjeuner est complet, avec différen"
+        }
+      ]
+    },
+    {
+      "name": "Les Cab'ânes du Varon",
+      "area": "Flayosc",
+      "dept": "83",
+      "distanceKm": 54,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique"
+      ],
+      "vibe": "Cabane insolite à Flayosc",
+      "rating": 4.8,
+      "reviews": 568,
+      "source": "Google Places",
+      "description": "Cabanes insolites à thème Hobbit immergées dans une ferme pédagogique provençale, offrant parc animalier, escape game et jacuzzi pour les familles. Lieu entretenu avec attention par ses propriétaires, reconnu pour son accueil chaleureux et son atmosphère sereine en pleine nature.",
+      "url": "http://www.cabanesduvaron.com/",
+      "recentReviews": [
+        {
+          "author": "Pauline Grd-Vgnd",
+          "rating": 4,
+          "when": "il y a 2 semaines",
+          "text": "Nous avons dormi à la Tanière de Sam avec mon mari et ma fille de 1 an, elle a adoré le parc avec les ânes et les animaux. La maison de Hobbit est magnifique, le jacuzzi super, l'escape game très sympa, le petit déjeuner servi dans un panier le matin est copieux et bon. C'était une agréable expérience ! La Tanière est "
+        },
+        {
+          "author": "marion CRUCIANI",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Nous avons passé un super week-end en famille dans la tanière de Merry. L'accueil a été très chaleureux. Les enfants se sont régalés avec l'escape game (et nous aussi). Nous l'avons trouvé très bien conçu. Nous avons pu profiter des différents enclos des animaux. Nous avons évidemment été enchantés par l'équipement des"
+        },
+        {
+          "author": "thomas bayard",
+          "rating": 5,
+          "when": "il y a 3 semaines",
+          "text": "Quelle surprise ! Un lieu exceptionnel, entretenu par une famille aux petits soins aussi bien pour leur ferme que pour leurs locataires. Tout est bien pensé. Le calme ambiant et la sérénité qui se dégagent de l’endroit nous plongent directement dans cette ambiance style Comté et petit village corse. Je recommande vivem"
+        },
+        {
+          "author": "jeremy bonnet",
+          "rating": 4,
+          "when": "il y a 3 semaines",
+          "text": "Super endroit pour se déconnecter avec des mini jeux liée (escape game pour ouvrir les pièces ) au monde du hobbit, la cabane de pipin est super jolie. On a vécu comme des hobbits le temps d’une nuit. Le petit déjeuner et très copieux, le parc animalier et super sympa les animaux sont tous gentils et câlins. Je recomma"
+        },
+        {
+          "author": "Claire Crosta",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Nous avons passé une nuit dans la tanière de Merry, c'était incroyable ! Tout est bien pensé dans le moindre détail. Elle cache bien des secrets et les enfants ne se sont pas ennuyés. L'escape game est top et a amusé tout la famille. Nous avons apprécié l'air de jeux, et la proximité avec les animaux. Le petit déjeuner"
+        }
+      ]
+    },
+    {
+      "name": "ALPINEST",
+      "area": "Serres",
+      "dept": "05",
+      "distanceKm": 59,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Terrasse privative",
+        "Vue dégagée"
+      ],
+      "vibe": "Cabane insolite à Serres",
+      "rating": 4.9,
+      "reviews": 416,
+      "source": "Google Places",
+      "description": "Cabanes perchées dans les arbres offrant un cadre intimiste en pleine nature, caractérisé par un calme et un silence remarquables. Elles proposent des équipements comme des jacuzzis et des lits mobiles sur terrasse permettant d'observer les étoiles.",
+      "url": "http://alpinest.fr/",
+      "recentReviews": [
+        {
+          "author": "Fabienne COLLU",
+          "rating": 5,
+          "when": "il y a 2 semaines",
+          "text": "Nous avons passé un séjour absolument parfait aux Cabanes du Pas de la Louve. L’accueil de Brieuc et Brice a été particulièrement chaleureux et attentionné dès notre arrivée. La cabane était magnifique et parfaitement intégrée dans un cadre naturel exceptionnel. Le jacuzzi a été un vrai moment de détente, avec une vue "
+        },
+        {
+          "author": "Adèle Rondoux",
+          "rating": 5,
+          "when": "il y a 3 semaines",
+          "text": "Un week-end absolument magique aux Cabanes du Pas de la Louve ✨ La cabane l'Aristoloche est extraordinaire : perchée dans les arbres, dans un calme et un silence incroyables, on a eu l’impression de vivre quelques jours suspendus hors du temps. Mention toute particulière à Brieuc et Brice, des hôtes exceptionnels, d’un"
+        },
+        {
+          "author": "elodie zen",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Mon chéri m’a réservé pour mon anniversaire un endroit tout simplement magique : une cabane dans les arbres avec jacuzzi. Le lit sur roulettes que l’on peut sortir sur la terrasse pour admirer les étoiles est une expérience incroyable ✨ Le repas du soir était excellent et le petit-déjeuner copieux, très très bon, entiè"
+        },
+        {
+          "author": "Coline Bellon",
+          "rating": 5,
+          "when": "il y a 2 semaines",
+          "text": "Nous avons passé une très belle soirée/nuit pour notre lune se miel dans la cabane Aristoloche! Le cadre intimiste est exceptionnel dans un magnifique écrin de nature. La discrétion et le soucis du détail de nos hôtes nous ont comblé. Le repas réalisé par Brieuc était très bon. Nous reviendrons l'année prochaine pour n"
+        },
+        {
+          "author": "Ludivine Escallier",
+          "rating": 5,
+          "when": "il y a 2 semaines",
+          "text": "Nous avons passé une nuit dans la cabane l'Epine Vinette et ce fut un moment de détente totale. Un lieu magnifique au milieu de la forêt avec les écureuils. Nous avons eu un accueil vraiment très chaleureux. Le menu établi par le chef Brieuc a été une belle découverte gustative. Sans oublier le jacuzzi privé accessible"
+        }
+      ]
+    },
+    {
+      "name": "Cabane des amoureux perchée et cabane dans jardin…",
+      "area": "Barjols",
+      "dept": "83",
+      "distanceKm": 53,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique"
+      ],
+      "vibe": "Cabane insolite à Barjols",
+      "rating": 4.7,
+      "reviews": 318,
+      "source": "Google Places",
+      "description": "Ensemble de cabanes romantiques en pleine nature (perchées dans les arbres et au cœur d'un jardin secret), offrant une déconnexion totale malgré une localisation accessible depuis le village. Les hébergements sont propres et bien équipés, situés dans un cadre agréable propice au repos et aux séjours en couple.",
+      "url": "http://www.cabanedesamoureux.jimdo.com/",
+      "recentReviews": [
+        {
+          "author": "Sandra Mrrc",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Notre séjour dans la Cabane des Amoureux a été une expérience inoubliable. C'est l'endroit parfait pour une déconnexion totale en pleine nature. ​Côté gastronomie, nous avons été plus que comblées : ​Le plateau charcuterie et fromage est extrêmement copieux et composé de produits de très bonne qualité. ​Accompagné de c"
+        },
+        {
+          "author": "Fabrice Bozzano",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "On ne savait pas à quoi s'attendre et on a pas été déçu. Avec une entrée en plein boulevard central du village, on ne pensait pas être si rapidement dans ce petit coin de verdure. La cabane romantique du jardin est juste top et tout confort. Une petite balade en bas du village pour voir la cascade, un long bain balnéo,"
+        },
+        {
+          "author": "victoria vancells",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Un endroit sorti d’un conte de fée… La magie opère dès que l’on franchit le petit portail blanc. Relaxe serein zen et en paix ! Un endroit où l’amour est roi. C’est très émouvant de vivre un doux moment dans cette cabane romantique….. on est comme suspendu dans le temps. Tendrement décorée de mille coeurs et fleurs col"
+        },
+        {
+          "author": "valentin paolino",
+          "rating": 4,
+          "when": "il y a 6 mois",
+          "text": "La cabane dans l’arbre est vraiment belle : propre, bien équipée et située dans un cadre très agréable. L’expérience en elle-même aurait pu être parfaite… malheureusement, l’attitude de la responsable a clairement terni le séjour. J’ai trouvé son ton condescendant et peu accueillant, et il a été très difficile d’échang"
+        },
+        {
+          "author": "Corinne Salmon",
+          "rating": 4,
+          "when": "il y a 7 mois",
+          "text": "Nous avons passé un très agréable moment dans cette cabane des amoureux tout confort très bien décorée. Tout était très bon et très copieux (plateau de charcuterie, petit déjeuner). La terrrasse est très agréable pour manger ou pour farnienter sur les transats. Les propriétaires sont aux petits soins. Ils sont à l'écou"
+        }
+      ]
+    },
+    {
+      "name": "Cabane des Pins Sylvestres",
+      "area": "Saint-Martin-Vésubie",
+      "dept": "06",
+      "distanceKm": 84,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Vue dégagée",
+        "Cheminée ou poêle"
+      ],
+      "vibe": "Cabane insolite à Saint-Martin-Vésubie",
+      "rating": 4.8,
+      "reviews": 277,
+      "source": "Google Places",
+      "description": "Cabane perchée nichée en pleine nature dans la Provence, offrant un cadre paisible au milieu de la verdure avec une vue exceptionnelle. L'hébergement propose un jacuzzi, un petit déjeuner de qualité et un accueil particulièrement chaleureux des propriétaires.",
+      "url": "http://www.cabanedespinssylvestres.com/",
+      "recentReviews": [
+        {
+          "author": "justine leandro",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Avec mon mari nous rêvions d'un moment \"suspendu\" et relaxant . Notre séjour initialement compromis, les propriétaires et le monsieur qui gère le logement ont été très arrangeants ! De notre arrivée à notre départ tout a été facile (chemin d'accès, attentions à l'arrivée). La cabane Gelas était magnifique confortable b"
+        },
+        {
+          "author": "MANU FPV",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Un séjour magique dans une cabane perchée, parfait pour une escapade en amoureux ! L’accueil a été chaleureux dès notre arrivée, personne très sympatique. Le logement est niché dans un cadre paisible, très bien équipé et très propre. Tout est pensé pour le confort, la relaxation et la tranquillité. Nous sommes repartis"
+        },
+        {
+          "author": "Paul Villez",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Un lieu vraiment agréable. Il y fait bon, tout y est, le jacuzzi est parfait, le petit déjeuner et la raclette très bons, et l'accueil, juste somptueux. Du coup on y retourne, le bon cadeau est déjà pris 😁"
+        },
+        {
+          "author": "JEREMIE DEWEZ",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Un séjour idyllique en amoureux cet endroit est magique. Rando la journée et repos le soir dans cette magnifique cabane au milieu de la verdure et avec une vue exceptionnelle. Super accueil par le propriétaire. Il sont au top. On reviendra avec plaisir"
+        },
+        {
+          "author": "Celine Prodhomme",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Moment mémorable de l'arrivée au départ. L'accueil de Cécilia a été très chaleureux et dès l'entrée dans la cabane Boréon, nous avons été sous le charme. Tout y est magnifiquement aménagé, avec beaucoup de goût et d'originalité. La cabane est d'une propreté impeccable. Nous avons apprécié le petit feu dans le poêle à b"
+        }
+      ]
+    },
+    {
+      "name": "Cabane en Provence",
+      "area": "Entrechaux",
+      "dept": "84",
+      "distanceKm": 89,
+      "features": [
+        "Spa ou bain nordique",
+        "Terrasse privative",
+        "Vue dégagée"
+      ],
+      "vibe": "Cabane insolite à Entrechaux",
+      "rating": 4.8,
+      "reviews": 226,
+      "source": "Google Places",
+      "description": "Hébergement insolite aménagé avec goût et matériaux de qualité, situé dans un cadre naturel paisible et exceptionnel. La terrasse avec jacuzzi, le petit-déjeuner copieux, et l'accueil chaleureux constituent les points forts régulièrement appréciés des visiteurs.",
+      "url": "http://cabaneenprovence.com/",
+      "recentReviews": [
+        {
+          "author": "Karine Karine",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "✨ Dans un cadre idyllique… ✨ C’est dans un environnement paisible et exceptionnel que nous avons passé une nuit tout simplement magique. Un véritable retour en enfance dans cette cabane spacieuse, cocooning et chaleureuse, avec une vue imprenable sur la plaine et le château d’Entrechaux. La gentillesse de notre hôte, l"
+        },
+        {
+          "author": "Patricia Palenc",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Cabane arrangée avec beaucoup de goût et avec des matériaux de qualité. Ce n'est pas la première fois que nous venons et nous comptons revenir encore. Très bon accueil, petit-déjeuner copieux, tout était parfait"
+        },
+        {
+          "author": "Aurelie P",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "4 ème séjour pour nous dans ce lieu très relaxant. Nous avons testé toutes les cabanes. Elles ont toutes du charme, avec une préférence pour Églantine. Très propre, accueil chaleureux et professionnel. Bon rapport qualité/ prix avec petit déjeuner."
+        },
+        {
+          "author": "Fanchon Grenadou",
+          "rating": 5,
+          "when": "il y a 10 mois",
+          "text": "Nous avions réservé la cabane Ninon et tout a été parfait. Le cadre, la gentillesse de la personne nous accueillant, le petit déjeuner déposé discrètement. Une soirée romantique sur la terrasse avec jacuzzi.... tellement pas envie de partir que nous nous sommes fait livrer des sushis pour profiter un maximum du cadre."
+        },
+        {
+          "author": "Carine Dnl",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Un excellent séjour dans la cabane Églantine au milieu des chênes et très bien équipée : climatisation, mini réfrigérateur, bouilloire, un lit confortable une belle petite terrasse et un jacuzzi privatif en toute intimité en pleine nature. Merci pour cette prestation"
+        }
+      ]
+    },
+    {
+      "name": "Ecolodges en Provence",
+      "area": "Saint-Maximin-la-Sainte-Baume",
+      "dept": "83",
+      "distanceKm": 65,
+      "features": [
+        "Spa ou bain nordique"
+      ],
+      "vibe": "Cabane insolite à Saint-Maximin-la-Sainte-Baume",
+      "rating": 4.6,
+      "reviews": 233,
+      "source": "Google Places",
+      "description": "Cet écolodge propose des hébergements insolites (yourtes, cabanes, maisons troglodytes) immergés dans la nature provençale, offrant un cadre calme et ressourçant idéal pour un séjour en amoureux. Les chambres sont dotées de jacuzzi, petit-déjeuner inclus et toilettes sèches pour une expérience écologique authentique.",
+      "url": "http://www.mayourte.com/",
+      "recentReviews": [
+        {
+          "author": "axel gregoire",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Une nuit parfaite nous avons pris la chambre des 5 elements avec le jacuzzi directement dans la chambre , c'etait le top ! le lit etait tres agreable superbe soirée/nuit dans un coin au calme sans derangement"
+        },
+        {
+          "author": "Lauren C",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Nous avons passé une nuit magique en amoureux dans cet hébergement insolite. L’endroit est incroyablement ressourçant : calme, nature environnante et ambiance cosy, tout y est pour décrocher totalement. Les hôtes sont adorables et vraiment aux petits soins, très disponibles sans être intrusifs. Le petit déjeuner était "
+        },
+        {
+          "author": "Gae Tael",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Nous avons été accueillis par Pierre, un homme ésotérique et chaleureux, Un séjour surprise de la part de ma chérie, Nous avons été ravis, le nom ecolodge était d’autant plus vrai avec des toilettes sèches et un petit déjeuner bio, cela nous a bien fait rire de changer nos manières de vivre pour une nuit, Pour ce qui e"
+        },
+        {
+          "author": "Anais Mattei",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Un ̂endroit magnifique, super pour se resourcer profité d un moment à deux, un merveilleux petit dejeuner. Un accueil super on reviendra ça c'est sur."
+        },
+        {
+          "author": "Cedric Bourgeois",
+          "rating": 4,
+          "when": "il y a 2 mois",
+          "text": "Nous avons passé une agréable nuit dans un cadre atypique très dépaysant et au calme. Bien accueilli et renseigné."
+        }
+      ]
+    },
+    {
+      "name": "Les cabanes du Dauphiné",
+      "area": "Gap",
+      "dept": "05",
+      "distanceKm": 59,
+      "features": [
+        "Spa ou bain nordique",
+        "Vue dégagée",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Gap",
+      "rating": 4.6,
+      "reviews": 202,
+      "source": "Google Places",
+      "description": "Situées en montagne du Dauphiné, ces cabanes offrent un positionnement idéal pour les activités outdoor et la proximité des stations de ski. Elles se caractérisent par un confort notable, une décoration soignée et une bonne literie, avec les équipements nécessaires pour un séjour en autonomie.",
+      "url": "https://www.cabanesdudauphine.fr/",
+      "recentReviews": [
+        {
+          "author": "Christelle Forestal",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Nous avons séjourné le temps d’un week-end dans la cabane Awilda et nous avons passé un excellent séjour. La cabane est vraiment très confortable, tout y est pour passer un moment pour se déconnecter au cœur de la montagne où règne le calme revigorant. Nous avons pu utiliser le bain nordique en soirée après avoir démar"
+        },
+        {
+          "author": "Catherine BOURACHOT",
+          "rating": 4,
+          "when": "il y a 5 mois",
+          "text": "Gites vraiment jolis, bien décorés, canapé pas très confortable mais dans le style du reste, bonne literie mais ferme. Ustensiles au minimum pour cuisiner un peu maison mais on se débrouille pour court séjour car petit frigo aussi. L'ensemble a du charme. Nous avons passé un bon séjour avec le soleil et un balcon sympa"
+        },
+        {
+          "author": "Chantal B.",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Une véritable découverte. L’emplacement est idéal pour profiter de toutes les activités outdoor, hiver comme été, avec la proximité de petites stations de ski. Je souligne la facilité d’accès aux cabanes avec notamment la boîte à clé, ce qui n’a pas empêché notre hôtesse très sympathique de venir nous rencontrer. La ca"
+        },
+        {
+          "author": "Alexya Giner",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Quelle merveilleuse découverte pour nos vacances ! Nous sommes absolument ravis de ce logement, chaleureux, confortable, bien situé endroit calme et décoré avec beaucoup de goût. Les hôtes sont d’une grande disponibilité et d’une gentillesse exceptionnelle. Merci infiniment pour ce séjour parfait, nous repartons avec d"
+        },
+        {
+          "author": "Sam Wyren",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Matelas très dur, très mal dormi. Que quatre serviettes à disposition pour une semaine. Pas assez d’eau chaude pour quatre personnes. Pas une très bonne hygiène, beaucoup de poussière sur la chambre du haut, nous avons dû faire le ménage en arrivant. Malgré tout ça, l’emplacement était magnifique avec une superbe vue s"
+        }
+      ]
+    }
   ]
 };

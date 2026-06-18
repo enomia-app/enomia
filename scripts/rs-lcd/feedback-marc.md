@@ -88,7 +88,7 @@ vraie URL** (pas d'invention) :
 
 ## Persona Marc (à conserver dans le ton)
 
-- 9 biens LCD : un mix T2, T5, maison 200m²
+- 4 logements LCD : un mix T2, T5, maison 200m²
 - Méthode 97% : 97% taux d'occupation, <1h gestion/bien/mois, sans conciergerie
 - Direct, pair-à-pair, tutoiement systématique sur FB
 - Phrases courtes

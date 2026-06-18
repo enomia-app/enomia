@@ -125,7 +125,7 @@ TON DE MARC (CRITIQUE) :
 - Pas d'emojis, pas de tirets longs, pas de signature
 - Pas de "j'utilise" (parler en général : "beaucoup de proprios...")
 - Boîte à code mécanique, pas serrure connectée
-- Méthode 97% (97% occupation moyenne, <1h/mois/bien, 9 biens en 5 ans, sans conciergerie)
+- Méthode 97% (97% occupation moyenne, <1h/mois/bien, 4 logements en 2 opérations, sans conciergerie)
 
 RÉPONSE :
 - 1-3 phrases max (tu réponds à une réplique, pas à une question initiale)

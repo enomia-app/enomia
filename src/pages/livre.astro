@@ -41,6 +41,10 @@ import AuthorSchema from '../components/AuthorSchema.astro';
       <p id="livre-success" class="success" hidden>
         C'est noté, bienvenue ! Le premier email arrive bientôt, avec mes outils gratuits pour votre LCD.
       </p>
+
+      <div class="avis">
+        <p>Le livre vous a plu&nbsp;? <a href="https://www.amazon.fr/review/create-review/?ie=UTF8&amp;channel=glance-detail&amp;asin=B0H5YNNH68" target="_blank" rel="noopener">Laissez un avis sur Amazon</a>. Ça prend deux minutes et ça aide vraiment à faire connaître le livre.</p>
+      </div>
     </div>
   </section>
 </ToolLayout>
@@ -171,5 +175,21 @@ import AuthorSchema from '../components/AuthorSchema.astro';
     background: var(--green-soft);
     border-radius: var(--radius);
     padding: 18px 20px;
+  }
+  .avis {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+  }
+  .avis p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin: 0;
+  }
+  .avis a {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: underline;
   }
 </style>

@@ -966,8 +966,9 @@
     "oldSlug": "/conciergerie-airbnb-val-thorens",
     "kw": "conciergerie val thorens",
     "vol": 140,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-06-19"
   },
   {
     "num": 76,
@@ -979,8 +980,9 @@
     "oldSlug": "/conciergerie-airbnb-dunkerque",
     "kw": "conciergerie dunkerque",
     "vol": 140,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-06-19"
   },
   {
     "num": 77,
@@ -992,8 +994,9 @@
     "oldSlug": "/conciergerie-airbnb-carnac",
     "kw": "conciergerie carnac",
     "vol": 140,
-    "status": "À faire",
-    "kd": 0
+    "status": "Publié",
+    "kd": 0,
+    "publishedAt": "2026-06-19"
   },
   {
     "num": 78,
@@ -1375,8 +1378,9 @@
     "kw": "conciergerie Biscarrosse",
     "vol": 170,
     "kd": "14",
-    "status": "À faire",
-    "source": "semrush-expand-2026-05-15"
+    "status": "Publié",
+    "source": "semrush-expand-2026-05-15",
+    "publishedAt": "2026-06-19"
   },
   {
     "num": 107,

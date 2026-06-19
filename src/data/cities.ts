@@ -14596,6 +14596,770 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-17',
   },
+  // ==========================================================================
+  // BISCARROSSE
+  // ==========================================================================
+  {
+    slug: 'biscarrosse',
+    displayName: 'Biscarrosse',
+    region: 'Nouvelle-Aquitaine',
+    regionSlug: 'nouvelle-aquitaine',
+    title: 'Conciergerie Biscarrosse Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Biscarrosse : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Biscarrosse (Plage, Bourg, Lac). Tarifs, services, avis, réglementation 2026, 39 % de résidences secondaires.",
+    kwPrincipal: 'conciergerie biscarrosse',
+    kwSecondaires: [
+      'conciergerie airbnb biscarrosse',
+      'conciergerie biscarrosse plage',
+      'conciergerie biscarrosse bourg',
+      'conciergerie biscarrosse lac',
+      'gestion location courte durée biscarrosse',
+      'conciergerie landes 40',
+    ],
+    population: 15836,
+    tourists: 1200000,
+    activeListings: 1248,
+    priceLow: 80,
+    priceHigh: 220,
+    occupancyRate: 50,
+    revpar: 60,
+    seasonality:
+      "Saisonnalité littorale et lacustre ultra-marquée : pic absolu juillet-août (occupation 85-95 %, tarif nuitée appartement ~214 € en août selon Likibu vs 107 € en mars, soit ×2), porté par le tourisme balnéaire (Biscarrosse-Plage, surf sur la côte sud-aquitaine), les lacs (Biscarrosse-Lac, Cazaux-Sanguinet, baignade et activités nautiques) et la proximité du Bassin d'Arcachon et de la Dune du Pilat (1 h en voiture). Pic secondaire avril-juin et septembre (40-55 %, ailes de saison fortes grâce au climat océanique tempéré). Basse saison novembre-mars (15-30 %), portée par le tourisme local week-end + une demande résiduelle clients pros (zone industrielle Belin-Béliet, base aérienne). Avec 39 % de résidences secondaires sur la commune (l'un des taux les plus élevés des Landes), le marché LCD est très tendu structurellement de juin à septembre — les semaines complètes obligatoires en haute saison restent la norme sur la Plage et le Lac.",
+    rankNational: 38,
+    introCustom:
+      "Vous avez un studio à **Biscarrosse-Plage**, un appartement au **Bourg**, ou une maison à **Navarrosse**, **Maguide**, **Ispe** ou **Saint-Eulalie-en-Born** au bord du lac, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **réglementation Loi Le Meur** qui impose l'enregistrement national au 20 mai 2026, la **saisonnalité estivale ultra-marquée** (tarif août à 214 €/nuit vs 107 € en mars, ×2 selon Likibu), le **mix de clientèles très différent selon le quartier** (familles plage, surfeurs côte sud, familles lac, cyclotouristes Vélodyssée), et le **levier des 39 % de résidences secondaires** qui structure le marché, vous vous demandez quelle agence maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les pure-players locaux (Les Clés de Bisca, Logis Conciergerie, Conciergerie Grands Lacs, Label Clé) et les acteurs régionaux haut de gamme (Cap Horizon Bordeaux-Arcachon-Biscarrosse, Conciergerie du Golf) ?",
+    marketIntro:
+      "Biscarrosse est la **3ᵉ commune des Landes** avec **15 836 habitants** (INSEE 2023), en croissance démographique soutenue (+2,8 % entre les deux derniers recensements). Le territoire de 193 km² couvre trois pôles touristiques bien distincts : **Biscarrosse-Plage** (front de mer atlantique, spots de surf, digue de 1,5 km), **Biscarrosse-Bourg** (centre administratif et commerçant, à 10 km de la plage), et **Biscarrosse-Lac** (rive sud du lac de Cazaux-Sanguinet, 2ᵉ plus grand lac d'eau douce de France après Hourtin). L'Office de Tourisme **Bisca Grands Lacs** regroupe 7 communes (Biscarrosse, Sanguinet, Parentis-en-Born, Sainte-Eulalie-en-Born, Gastes, Ychoux, Lüe).\n\n**Marché LCD très dense.** L'agrégateur Likibu liste **environ 1 248 annonces toutes plateformes** sur Biscarrosse (Airbnb + Booking + Abritel + sites privés), avec un **tarif moyen annuel de 119 €/nuit** et une fourchette saisonnière 107-214 € (×2 sur l'été). Capacité moyenne : 6 personnes / 60 m². La commune compte **4 670 logements en résidence secondaire (≈ 39 % du parc total)**, en hausse de +9 % en 5 ans selon les données INSEE — l'un des taux les plus élevés des Landes, supérieur à Mimizan et à Hossegor.\n\n**Prix au m² hétérogènes selon les pôles.** Sur l'ensemble de la commune, le prix moyen s'établit à **3 736 €/m²** en juin 2026 selon Efficity (appartements 2 512 €/m², maisons 4 015 €/m²). Détail par quartier : **Bourg 3 190 €/m²** (2 330 € appartements, 3 440 € maisons), **Plage 3 414 €/m²** (janvier 2026), **Navarrosse/Ispe/Maguide 4 084-4 513 €/m²** (médian 4 298 €/m², zone lac premium 71 % maisons). Le ticket d'entrée concret : **studio Plage dès 75 000 €**, **T2 bourg 130 000-170 000 €**, **maison T3 lac 250 000-320 000 €**, **villa front de mer Plage 600 000-1 200 000 €**.\n\n**Hors zone tendue, cadre Le Meur pur.** Biscarrosse n'est pas listée dans le décret zones tendues nationales et n'a publié aucune délibération municipale instaurant une procédure de changement d'usage ou un quota meublés de tourisme à ce jour. Le cadre réglementaire applicable est donc **exclusivement national** (Loi Le Meur du 19 novembre 2024), avec déclaration en mairie via Cerfa téléchargeable sur ville-biscarrosse.fr — une souplesse rare à conserver, mais dont la pérennité est à surveiller compte tenu du niveau de tension du marché estival.",
+    conciergeries: [
+      {
+        name: 'Les Clés de Bisca',
+        url: 'https://www.lesclesdebisca.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 7,
+        biensGeres: 20,
+        specialty: 'Pure-player Biscarrosse, couverture Bourg + Plage + Lac',
+        description:
+          "Les Clés de Bisca est une conciergerie **pure-player Biscarrosse** créée en 2022 (SIRET 913 545 836 00011, ~4 ans d'activité). Dirigée par **Alexia**, la structure annonce un portefeuille de **plus de 20 biens en gestion** (studios à villas 10 personnes), répartis sur les trois pôles touristiques de la commune : **Bourg**, **Plage**, **Lac**. Commission sur devis. Contact direct via formulaire web ou téléphone. Pertinente pour un propriétaire qui privilégie un acteur local taille humaine, accessible directement par sa fondatrice, capable de couvrir indifféremment les trois quartiers de la commune avec un seul interlocuteur — un avantage opérationnel rare sur Biscarrosse où la majorité des conciergeries se positionne plage OU bourg OU lac, rarement les trois.",
+      },
+      {
+        name: 'Logis Conciergerie',
+        url: 'https://logis-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 9,
+        biensGeres: 15,
+        specialty: 'Biscarrosse + Parentis + Sanguinet, fondatrice Mégane Landry',
+        description:
+          "Logis Conciergerie est une conciergerie locale **basée à Biscarrosse** (40600), dirigée par **Mégane Landry**. Couverture intercommunale : Biscarrosse (bourg, plage, lac), Parentis-en-Born et Sanguinet — toute la zone Office de Tourisme **Bisca Grands Lacs**. Commission sur devis, contact direct par téléphone ou email. Pertinente pour un propriétaire qui détient plusieurs biens sur la zone Bisca Grands Lacs (par exemple un Biscarrosse-Plage + une maison Parentis-en-Born ou Sanguinet) et qui souhaite mutualiser la gestion sous un même interlocuteur local, plutôt que de jongler entre un acteur Plage et un acteur Lac.",
+      },
+      {
+        name: 'Label Clé Conciergerie de Biscarrosse',
+        url: 'https://labelcleconciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 11,
+        biensGeres: 9,
+        specialty: 'SARL Parentis-en-Born, 9 biens 5-11 pers., zones Bourg + Lac',
+        description:
+          "Label Clé Conciergerie de Biscarrosse est une **SARL au capital de 1 000 €** créée en septembre 2022 (SIRET 904 276 029 00017), dirigée par **Sylviane Lahnech**. Siège légal : 506 Route de Lucats, 40160 Parentis-en-Born, à 10 minutes de Biscarrosse. Portefeuille visible de **9 biens** affichés sur le site, tous positionnés sur des capacités d'accueil familiales 5 à 11 personnes (maisons, villas, plain-pied). Zones d'intervention : **Bourg + Lac de Biscarrosse**. Commission sur devis. Pertinente pour un propriétaire qui détient une maison familiale grande capacité (T4-T5, villa avec piscine sur le secteur Bourg ou Navarrosse-Lac) et qui veut un acteur spécialisé sur ce segment plutôt qu'une conciergerie multi-format gérant aussi des studios.",
+      },
+      {
+        name: 'Conciergerie Grands Lacs',
+        url: 'https://conciergeriegrandslacs.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 8,
+        biensGeres: 12,
+        specialty: '226 rue des Tamaris Biscarrosse-Plage, profil hôtellerie',
+        description:
+          "Conciergerie Grands Lacs (CGL) est une conciergerie locale **implantée à Biscarrosse-Plage**, 226 rue des Tamaris (SIRET 909 610 024 00012, créée début 2023). Dirigée par **Lydie Chevalier**, qui revendique 9 ans d'expérience en hôtellerie. Positionnement double : services aux propriétaires (gestion LCD) + services à la personne (conciergerie classique pour résidents). Zones : Plage, Bourg, Lac de Biscarrosse. Commission sur devis. Pertinente pour un propriétaire qui valorise un background hôtelier sur la qualité d'accueil voyageur (protocole arrivée, livret d'accueil, gestion plaintes), ou qui détient un bien sur lequel il souhaite cumuler gestion LCD saisonnière + petits services entre deux locations (entretien jardin, surveillance, accueil prestataires).",
+      },
+      {
+        name: 'Cap Horizon Conciergerie',
+        url: 'https://caphorizon-conciergerie.fr/conciergerie-airbnb-biscarrosse',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 18,
+        biensGeres: 25,
+        specialty: 'Bordeaux + Arcachon + Biscarrosse, 2 formules Prestige / Confort',
+        description:
+          "Cap Horizon Conciergerie est un acteur régional **multi-implantations** sur Bordeaux, Bassin d'Arcachon (Cap Ferret, Arcachon, La Teste) et Biscarrosse, dirigé par **Laurie**. Positionnement haut de gamme avec **deux formules clairement structurées** : **Prestige** (complète, gestion totale annonces + voyageurs + check-in/out + ménage + maintenance) et **Confort** (à la carte, services modulables). Zones d'intervention Sud-Landes : Biscarrosse, Parentis-en-Born, Sanguinet, Cazaux, Mimizan. Commission sur devis. Pertinente pour un investisseur multi-villes (par exemple un bien Bordeaux + une résidence secondaire Biscarrosse-Plage) qui souhaite un même interlocuteur sur les deux marchés, ou un propriétaire haut de gamme qui privilégie la lisibilité d'un acteur structuré et la clarté Prestige vs Confort.",
+      },
+      {
+        name: 'Conciergerie du Golf',
+        url: 'https://livretaccueil.com/conciergerie-airbnb/biscarrosse/conciergerie-du-golf-biscarrosse-pisciniste',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 5,
+        biensGeres: 8,
+        specialty: '372 Allée des Bécassines, conciergerie + pisciniste',
+        description:
+          "Conciergerie du Golf est une conciergerie locale **implantée à Biscarrosse**, 372 Allée des Bécassines (proximité du Golf de Biscarrosse, 27 trous). Particularité du positionnement : la structure combine **conciergerie LCD + activité pisciniste** (entretien, hivernage, mise en route), un double métier rare sur la zone. Zone d'intervention Bourg + Lac + Plage. Commission sur devis. Pertinente pour un propriétaire de villa avec piscine sur le secteur Bourg ou Navarrosse-Lac qui veut mutualiser sous un même prestataire la gestion locative saisonnière et l'entretien technique du bassin — un argument pratique fort sur Biscarrosse où la piscine est un levier majeur de premium sur le tarif nuitée (jusqu'à +30-50 € en haute saison sur une villa avec bassin chauffé).",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Biscarrosse-Plage',
+        pricePerNight: '110-280 €',
+        occupancy: 60,
+        description:
+          "Front de mer atlantique, digue de 1,5 km, plage centrale surveillée, restaurants et bars saisonniers, spots de surf (École de Surf de la Plage Centrale, Plage des Cavaliers). Prix m² 2 512-3 414 € selon SeLoger/Efficity. Cible familles, surfeurs, jeunes adultes en groupes. ROI brut le plus accessible de la commune sur les studios face mer.",
+        roiBrut: '5,5 à 8 %',
+      },
+      {
+        name: 'Bourg (centre-ville)',
+        pricePerNight: '85-180 €',
+        occupancy: 50,
+        description:
+          "Centre administratif et commerçant de Biscarrosse (mairie, écoles, marché, commerces), à 10 km de la plage et 5 km du lac. Prix m² Efficity 3 190 €/m² (2 330 € apparts, 3 440 € maisons). Cible clientèle pro semaine, familles week-end, retraités. Ticket d'entrée le plus accessible de la commune sur les T2-T3 anciens.",
+        roiBrut: '5 à 7 %',
+      },
+      {
+        name: 'Navarrosse / Ispe',
+        pricePerNight: '120-260 €',
+        occupancy: 55,
+        description:
+          "Quartier lac premium rive sud du lac de Cazaux-Sanguinet, 680 habitants, 71 % de maisons. Prix m² Netvendeur médian 4 298 €/m² (fourchette 4 084-4 513 €/m²). Cible familles avec jeunes enfants (baignade lac sécurisée, activités nautiques douces : paddle, voile, pédalo). Premium structurel sur les villas avec accès lac direct.",
+        roiBrut: '4 à 6 %',
+      },
+      {
+        name: 'Maguide',
+        pricePerNight: '100-220 €',
+        occupancy: 55,
+        description:
+          "Pôle nautique du lac de Biscarrosse : Aqualand (parc aquatique), base nautique, écoles de voile et ski nautique. Quartier le plus animé du lac en juillet-août, demande tirée par les familles et les groupes adolescents. Prix m² aligné sur la moyenne Lac (~4 000-4 200 €/m²). Bonne occupation grâce à l'attractivité hors-plage (atout différenciant).",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Biscarrosse-Lac (Sainte-Eulalie / Lac sud)',
+        pricePerNight: '95-200 €',
+        occupancy: 50,
+        description:
+          "Rive sud du lac sur Sainte-Eulalie-en-Born, plus calme et résidentiel. Cible familles cherchant la nature et l'authenticité, cyclotouristes Vélodyssée (la véloroute longue Atlantique passe par Biscarrosse). Tickets d'achat plus modérés que Navarrosse/Ispe, ROI brut souvent meilleur sur le segment T3-T4 avec jardin.",
+        roiBrut: '5 à 7 %',
+      },
+      {
+        name: 'Biscarrosse Bourg-Sud (proche golf)',
+        pricePerNight: '105-220 €',
+        occupancy: 50,
+        description:
+          "Secteur résidentiel sud du bourg, proximité Golf de Biscarrosse (27 trous, parcours International), résidences pavillonnaires années 1990-2010. Cible clientèle golf (saison étalée mars-novembre), familles aisées, retraités. Prix m² aligné Bourg + prime golfeur. Bon compromis ROI/qualité de bien sur villas piscine.",
+        roiBrut: '5 à 7 %',
+      },
+    ],
+    regulation:
+      "**Cadre national Loi Le Meur applicable, pas de restriction municipale supplémentaire.** Biscarrosse n'est pas listée dans le décret zones tendues nationales et n'a publié à ce jour **aucune délibération municipale** instaurant une procédure de changement d'usage, un quota meublés de tourisme ou une réduction du plafond résidence principale à 90 nuitées. Le cadre réglementaire applicable est donc **exclusivement national** : loi n° 2024-1039 du 19 novembre 2024 (loi Le Meur), avec déclaration en mairie via **Cerfa téléchargeable sur ville-biscarrosse.fr** (formulaire CERFA-meuble-tourisme.pdf publié mai 2024).\n\n**Enregistrement national au 20 mai 2026.** Tout meublé de tourisme à Biscarrosse doit être enregistré via le **téléservice national** (apimeubles.finances.gouv.fr) et porter un **numéro à 13 chiffres** sur chaque annonce Airbnb, Booking ou Abritel. Sanction du défaut d'enregistrement : **10 000 € d'amende administrative**, **20 000 €** pour fausse déclaration ou numéro falsifié.\n\n**Résidence principale : 120 nuitées/an.** Limite nationale pour la location en résidence principale (logement occupé au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération — Biscarrosse ne l'a pas fait à ce jour.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage). Spécificité littoral landais : les villas anciennes avec construction années 1970-1980 (Plage et Maguide notamment) peuvent être impactées — vérifier le diagnostic avant achat patrimonial.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement **étoiles** (1 à 5) est devenu un levier fiscal majeur — un appartement Biscarrosse-Plage classé 4-5 étoiles bénéficie d'un abattement quasi-double sur des revenus 2 à 4 fois supérieurs à un studio non classé. Demander à la conciergerie son taux de réussite sur les dossiers de classement est un test pertinent.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Biscarrosse est passée au **régime au réel depuis le 1ᵉʳ janvier 2025** (€/nuit/personne, hors campings au forfait). Plateforme de déclaration : taxedesejour.ofeaweb.fr/ts/biscarrosse, déclaration mensuelle avant le 10. Les plateformes (Airbnb, Booking) collectent et reversent automatiquement à la commune — le bailleur n'a rien à avancer dans ce cas. Contact mairie : 05 58 83 40 63 / sejour@ville-biscarrosse.fr.\n\n**Souplesse à surveiller.** Avec 39 % de résidences secondaires (l'un des taux les plus élevés des Landes), un éventuel durcissement municipal n'est pas exclu à moyen terme — Hossegor (zone tendue, taxe résidences secondaires majorée) sert de précédent local. Surveiller les délibérations du conseil municipal de Biscarrosse 2026-2027.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 119,
+      neighborhood: 'Biscarrosse-Plage',
+      revenuBrut: 22000,
+      commissionRate: 0.22,
+      menageCount: 70,
+      menageUnitCost: 80,
+    },
+    extraFaq: [
+      {
+        q: "Combien rapporte un Airbnb à Biscarrosse sur l'année ?",
+        a: "Un T2 40 m² bien placé à Biscarrosse-Plage, avec tarif moyen 119 €/nuit (107 € en mars, jusqu'à 214 € en août selon Likibu) et occupation 55-65 % sur l'année (pic 85-95 % en juillet-août, 30-40 % en intersaison), génère typiquement un chiffre d'affaires brut de 20 000-24 000 € sur l'année. La saisonnalité ultra-marquée (×2 sur août vs mars) impose une stratégie tarifaire serrée sur les 8 semaines de pic juillet-août où les semaines complètes obligatoires peuvent se louer 1 500-2 500 €. Sur une maison T4 avec jardin à Navarrosse-Lac ou Ispe, le pic juillet-août peut atteindre 3 000-4 500 € la semaine sur les biens premium avec piscine, et 5 000-7 000 € sur les villas front de mer Plage. Net de la commission conciergerie (20-25 %), de la taxe foncière, des charges et du ménage haute fréquence, comptez un revenu disponible de 11 000-13 500 € sur le T2 Plage et 25 000-40 000 € sur la villa premium Lac ou Plage.",
+      },
+      {
+        q: "Faut-il une autorisation de changement d'usage à Biscarrosse pour louer une résidence secondaire ?",
+        a: "Non, à ce jour. Biscarrosse n'est pas classée en zone tendue (pas listée dans le décret national) et la commune n'a pas instauré de procédure de changement d'usage pour les meublés de tourisme. Le cadre applicable est exclusivement national : enregistrement obligatoire via le téléservice national (apimeubles.finances.gouv.fr) au 20 mai 2026, numéro à 13 chiffres à apposer sur chaque annonce, déclaration complémentaire en mairie de Biscarrosse via Cerfa téléchargeable sur ville-biscarrosse.fr, plafond 120 nuitées/an pour les résidences principales, DPE classe E minimum. Attention cependant : avec 39 % de résidences secondaires (4 670 logements, +9 % en 5 ans) et une croissance démographique soutenue (+2,8 %), le contexte politique peut évoluer. Hossegor, à 1 h 20 plus au sud, est déjà passée en zone tendue avec majoration THRS. Surveiller les délibérations du conseil municipal de Biscarrosse 2026-2027 — la souplesse réglementaire actuelle est un avantage à valoriser maintenant mais à ne pas considérer comme acquise sur le long terme.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Biscarrosse ?',
+        a: "Pour un rendement maximal accessible, Biscarrosse-Plage offre le meilleur ROI brut grâce à des tickets d'entrée encore raisonnables sur les studios (75 000-110 000 € pour 25-35 m² seconde ligne) et une occupation tirée par l'attractivité surf + plage. ROI brut 5,5-8 %. Le Bourg est le plus accessible en ticket d'achat sur T2-T3 anciens (130 000-170 000 €) avec une cible plus mixte pro/famille/retraités et une occupation plus stable mais plus basse (50 %). ROI brut 5-7 %. Navarrosse-Ispe est positionné sur les villas familiales premium au bord du lac (300 000-600 000 € pour T3-T4 avec accès lac), avec un ROI brut moindre (4-6 %) mais une valorisation patrimoniale forte et une cible familles aisées à fort pouvoir d'achat. Pour budget contraint et stratégie hybride résidence secondaire personnelle + LCD pic d'été, Biscarrosse-Lac (Sainte-Eulalie-en-Born côté sud) offre des tickets dès 200 000 € sur T3 maison jardin et un ROI brut 5-7 %. Maguide est à privilégier si le bien est proche d'Aqualand ou de la base nautique (cible familles avec adolescents, demande tirée par l'attractivité hors-plage).",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Biscarrosse ?",
+        a: "Les commissions à Biscarrosse ne sont quasi-jamais affichées publiquement — Les Clés de Bisca, Logis Conciergerie, Label Clé, Conciergerie Grands Lacs, Cap Horizon et Conciergerie du Golf travaillent toutes sur devis personnalisé selon le bien et la saisonnalité. La moyenne de marché observée sur le département Landes s'établit autour de 20-25 % TTC en 2026 pour une formule complète (ménage refacturé au voyageur). Le critère décisif au-delà du taux affiché sur un marché à saisonnalité ultra-marquée comme Biscarrosse (×2 sur août vs mars) est la stratégie pricing sur les 8 semaines de pic juillet-août — un bien Plage ou Lac mal pricé peut perdre 1 500-3 000 € de CA sur l'été. Demander à la conciergerie son taux de réussite sur la haute saison (occupation et tarif moyen pic sur un bien comparable au vôtre) + sa capacité à gérer les ailes de saison cyclotouristes Vélodyssée et surf (avril-juin, septembre-octobre) est plus pertinent que la seule comparaison du % de commission. Sur un bien avec piscine au Bourg ou à Navarrosse, demander aussi le protocole d'entretien bassin + qui prend en charge l'hivernage est une question pratique structurante.",
+      },
+    ],
+    updatedAt: '2026-06-19',
+  },
+  // ==========================================================================
+  // VAL THORENS
+  // ==========================================================================
+  {
+    slug: 'val-thorens',
+    displayName: 'Val Thorens',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title: 'Conciergerie Val Thorens Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Val Thorens : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Val Thorens (station la plus haute d'Europe, 3 Vallées). Tarifs (20-25 %), services, avis, réglementation 2026, 25 000 lits.",
+    kwPrincipal: 'conciergerie val thorens',
+    kwSecondaires: [
+      'conciergerie airbnb val thorens',
+      'yes conciergerie val thorens',
+      'gestion location val thorens',
+      'conciergerie 3 vallées',
+      'conciergerie les belleville',
+      'agence location val thorens',
+    ],
+    population: 3576,
+    tourists: 2000000,
+    activeListings: 1800,
+    priceLow: 100,
+    priceHigh: 600,
+    occupancyRate: 60,
+    revpar: 130,
+    seasonality:
+      "Saisonnalité hiver ultra-dominante, parmi les plus marquées de France. Pic absolu mi-décembre à mi-avril (saison 2025-2026 : ouverture samedi 22 novembre, fermeture dimanche 3 mai, ~24 semaines), occupation Noël 93 % et Nouvel An 97,6 % (2024-2025), semaines complètes samedi-samedi obligatoires en haute saison, clientèle internationale 60 % (Britanniques, Néerlandais, Belges, scandinaves) sur les chalets premium. Pic surcompressé sur les vacances scolaires européennes (Noël/Nouvel An, février multizones FR+UK+NL+BE+SCAN, Pâques) avec tarifs 2 à 3 fois supérieurs à la basse saison hiver. Pic secondaire été insignifiant — Val Thorens est une **station fermée l'été** (pas d'activités estivales structurées comme Tignes ou Chamonix), accessibilité limitée hors saison (col à 2 300 m). Inter-saisons mai-novembre **mortes** : la station ferme. Spécificité altitude unique en Europe : station la plus haute (2 300 m), enneigement quasi-garanti octobre-mai grâce au glacier de Péclet et au Cime Caron (3 230 m).",
+    rankNational: 25,
+    introCustom:
+      "Vous avez un studio, un appartement ou un chalet à **Val Thorens**, dans les quartiers **Plein Sud**, **Caron**, **Péclet**, **Balcons**, **Slalom** ou **Lombarde**, dans le **résidentiel Les 3 Vallées** ou dans la couronne **Saint-Martin-de-Belleville**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **réglementation Loi Le Meur** qui impose l'enregistrement national au 20 mai 2026, le **classement zone tendue** de la commune Les Belleville (décret n° 2023-822 du 25 août 2023, majoration THRS à 30 %), la **saisonnalité hiver ultra-dominante** (24 semaines de saison, 97,6 % d'occupation au Nouvel An), la **clientèle internationale 60 %** qui exige du service hôtelier multilingue, et la **rotation samedi-samedi obligatoire** sur les vacances scolaires européennes (FR, UK, NL, BE, SCAN), vous vous demandez quelle agence maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les pure-players Val Thorens (Yes Conciergerie, Agence La Cime, Interhome), les acteurs premium 3 Vallées (Emerald Stay) et les réseaux nationaux (HostnFly, Bnbsitter) ?",
+    marketIntro:
+      "Val Thorens est la **station de ski la plus haute d'Europe** (2 300 m), au cœur du domaine **Les 3 Vallées** — **plus grand domaine skiable du monde** avec **600 km de pistes reliées**, **160+ remontées mécaniques**, **342 pistes** et 7 stations connectées (Brides-les-Bains, Courchevel, Méribel, Les Menuires, Saint-Martin-de-Belleville, Val Thorens, Orelle). 85 % du domaine se situe au-dessus de 1 900 m, gage d'enneigement quasi-garanti d'octobre à mai grâce au glacier de Péclet et au Cime Caron culminant à 3 230 m.\n\n**Pas une commune autonome.** Val Thorens dépend administrativement de la **commune des Belleville** (73440, INSEE 73257, **3 576 habitants** au 1er janvier 2026 selon INSEE) — fusion 2016 des trois anciennes communes Saint-Martin-de-Belleville, Villarlurin et Les Belleville. Toutes les démarches relatives aux meublés de tourisme (déclaration, taxe de séjour, autorisations) s'effectuent auprès de la **mairie des Belleville**.\n\n**Marché LCD massif et structurellement saturé.** La station compte **environ 25 000 lits touristiques** (résidences de tourisme + chalets + appartements particuliers), majoritairement en gestion intermédiée. Pour la saison 2024-2025, l'**occupation à Noël a atteint 93 %** et **97,6 % au Nouvel An** (source OT Val Thorens), avec une clientèle **60 % internationale** (Britanniques en tête sur les chalets premium, complétés par Néerlandais, Belges et scandinaves). Tarif nuitée : fourchette publiée 57-78 €/nuit en basse saison sur studio 4 personnes, plusieurs centaines d'euros par nuit en haute saison sur les chalets premium ; semaine complète 550-850 € en basse, 2 500-5 500 € en pic Noël/février sur 4-6 personnes.\n\n**Prix au m² parmi les plus élevés des Alpes françaises.** Comptez **7 061 €/m² en moyenne** pour l'ensemble Val Thorens en 2026 (fourchette 5 296-10 592 €/m²), selon SeLoger et Meilleurs Agents. Détail par segment : **appartements 6 833 €/m²** (5 125-10 250 €), **chalets 8 945 €/m²** (6 709-13 418 €). Les listings premium **ski-in/ski-out Caron ou Péclet** atteignent 10 963-14 638 €/m². Ticket d'achat concret : **studio dès 280 000 €**, **2 pièces 350 000-450 000 €**, **3 pièces familial proche pistes 500 000-700 000 €**, **chalet premium Caron 1-2 M€**.\n\n**Réglementation zone tendue.** La commune Les Belleville est **classée zone tendue** depuis le décret n° 2023-822 du 25 août 2023 (extension aux communes de montagne, 3 697 communes au total). Conséquences directes : la **taxe d'habitation sur les résidences secondaires (THRS)** est **majorée de 30 %** par délibération du conseil municipal, et la commune peut **instaurer une procédure de changement d'usage par simple délibération** (loi Le Meur) — à ce jour aucune délibération municipale spécifique n'a été identifiée mais le contexte politique est sensible.",
+    conciergeries: [
+      {
+        name: 'Yes Conciergerie Val Thorens',
+        url: 'https://yesconciergerie-3vallees.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 24,
+        biensGeres: 35,
+        specialty: 'Pure-player 3 Vallées, multi-stations Val Tho/Menuires/Méribel/Courchevel',
+        description:
+          "Yes Conciergerie est une **conciergerie pure-player 3 Vallées** historique, positionnée explicitement \"L'excellence de la conciergerie au cœur des 3 Vallées\". Couverture multi-stations : **Val Thorens, Les Menuires, Méribel, Saint-Martin-de-Belleville, Courchevel** — l'un des rares acteurs à offrir un même interlocuteur sur l'ensemble du domaine relié. Contact direct via le dirigeant **Jonathan** (témoignages clients récurrents). Commission sur devis. Pertinente pour un propriétaire qui détient plusieurs biens dans les 3 Vallées (par exemple un studio Val Thorens + un T3 Les Menuires + une maison Saint-Martin) et qui souhaite mutualiser sous un même prestataire, ou pour un propriétaire premium qui valorise un acteur 100 % spécialisé domaine skiable plutôt qu'un national multi-régions.",
+      },
+      {
+        name: 'HostnFly Val Thorens',
+        url: 'https://www.hostnfly.com/conciergerie-airbnb/val-thorens',
+        commission: 'à partir de 20 % HT',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 32,
+        biensGeres: 100,
+        specialty: 'Réseau national, +100 logements Val Thorens, assurance 2 500 €',
+        description:
+          "HostnFly est un **réseau national** créé en 2016 qui revendique **100+ logements en gestion à Val Thorens**, l'un des portefeuilles les plus importants de la station. Commission **publiquement affichée à partir de 20 % HT** des revenus locatifs — l'un des rares acteurs Val Thorens à publier sa grille, et l'un des plus compétitifs pour un service complet. Services : optimisation annonce, communication 24/7, check-in/check-out, ménage professionnel, pricing dynamique, assurance dommages jusqu'à 2 500 €. Promesse marketing : +30 % de taux d'occupation vs propriétaire seul. Pertinente pour un investisseur qui valorise la lisibilité d'une marque nationale, la transparence du tarif affiché et la mutualisation d'équipe terrain à grande échelle — avec le compromis d'un service moins individualisé qu'un pure-player local.",
+      },
+      {
+        name: 'Interhome Val Thorens',
+        url: 'https://www.interhome.group/fr-fr/myhome/destinations/val-thorens-conciergerie',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 27,
+        biensGeres: 80,
+        specialty: 'Résidence l\'Arcelle, groupe européen 60 ans d\'activité',
+        description:
+          "Interhome Val Thorens est l'antenne locale du **groupe européen Interhome** (siège Suisse, 60+ ans d'activité, présent dans 28 pays), implantée **Résidence L'Arcelle**, 73440 Val Thorens (téléphone +33 4 79 00 01 05, valthorens@interhome.group). Portefeuille local revendiqué : **80+ appartements de vacances** proches des pistes. Services pro complets : photo, dynamic pricing, assurance, retrait de clés en agence physique sur place. Commission sur devis. Pertinente pour un investisseur **multi-pays Europe** (par exemple un Val Thorens + un Zermatt ou un Saalbach) qui souhaite un même interlocuteur sur ses biens montagne en France-Suisse-Autriche-Italie, ou pour un propriétaire qui valorise la sécurité d'un opérateur structuré 60 ans d'historique.",
+      },
+      {
+        name: 'Agence La Cime',
+        url: 'https://www.agencelacime.com/',
+        commission: '21 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 18,
+        biensGeres: 40,
+        specialty: 'Chalet Les Trolles, agence immo + conciergerie depuis 2011',
+        description:
+          "Agence La Cime est une **agence immobilière historique** implantée **Chalet Les Trolles, Val Thorens** (carte professionnelle Préfecture Savoie n°7301 2018 000 027 251, délivrée le 29 juin 2011). Téléphone : 04 79 00 08 59. Modèle économique : **transaction + gestion locative LCD intégrée**, avec **commission gestion affichée à 21 % TTC**. Services premium ski : linge, ski pass remisé, baby-sitting, livraison course. Pertinente pour un propriétaire qui envisage **un projet immobilier complet à Val Thorens** (achat + revente + gestion locative entre les deux), ou qui valorise la mutualisation transaction-gestion sous un seul prestataire (intéressant si bien acheté via l'agence ou si revente envisagée à moyen terme). Acteur ancré localement plus de 14 ans, présence physique en station permanente.",
+      },
+      {
+        name: 'Emerald Stay 3 Vallées',
+        url: 'https://emeraldstay.com/3-vallees/property-management',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 21,
+        biensGeres: 37,
+        specialty: 'Luxe hôtellerie multi-stations 3V, siège Courchevel',
+        description:
+          "Emerald Stay est un acteur **luxe inspiré hôtellerie**, siège 3 Vallées à 213 rue de la Croisette, 73120 Courchevel 1850. Portefeuille agrégé **37 logements premium sur l'ensemble des 3 Vallées** (Val Thorens inclus). Positionnement : revenus +30 % via pricing algorithmique propriétaire, services hôteliers à la carte (concierge dédié, restauration en chalet, transfert privé aéroport Genève/Lyon/Chambéry, ski en chalet). Commission sur devis (segment luxe non-affiché). Pertinente pour un propriétaire d'un **chalet premium 4-6 chambres ou d'un appartement haut de gamme face Cime Caron** (segment 12 000-15 000 €/m² à l'achat), qui cible explicitement la clientèle internationale UK/NL/BE/SCAN ultra-premium et veut un positionnement type hôtel 5 étoiles plutôt qu'une conciergerie LCD classique.",
+      },
+      {
+        name: 'Bnbsitter Val Thorens',
+        url: 'https://fr.bnbsitter.com/conciergerie-airbnb-val-thorens',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 15,
+        biensGeres: 25,
+        specialty: 'National Airbnb 24/7, gestion A à Z, commission 20 % affichée',
+        description:
+          "Bnbsitter est un **acteur national** spécialisé Airbnb 24/7, avec ouverture annoncée Val Thorens et **commission publiquement affichée à 20 %** des revenus Airbnb générés — l'un des rares acteurs Val Thorens à publier sa grille (avec HostnFly à 20 % HT). Services : gestion A à Z (annonce, voyageurs, check-in/out, ménage, maintenance, assistance 7j/7), pricing dynamique, optimisation Airbnb-only. Pertinente pour un propriétaire qui veut un acteur 100 % focalisé Airbnb (vs multi-plateformes Booking/Abritel/Airbnb), avec un positionnement digital natif et un coût de commission lisible et compétitif. Acteur national : pas de bureau physique en station, gestion via équipe terrain mutualisée.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Plein Sud',
+        pricePerNight: '180-380 €',
+        occupancy: 65,
+        description:
+          "Quartier blanc (couleur de balisage Val Thorens), exposition plein sud, lumière maximale toute la journée — argument marketing premium fort sur la clientèle internationale britannique et néerlandaise. Résidences Plein Sud, Le Pollux. Proximité immédiate centre station, commerces, télécabine Cime Caron. Cible familles + couples haut de gamme. Ticket d'entrée intermédiaire-premium.",
+        roiBrut: '3,5 à 4,5 %',
+      },
+      {
+        name: 'Caron',
+        pricePerNight: '220-500 €',
+        occupancy: 62,
+        description:
+          "Quartier premium ski-in/ski-out direct au pied du téléphérique de la Cime Caron (3 230 m, point culminant des 3 Vallées). Résidences Le Caron, Le Tourotel, Cimes de Caron. Prix m² 10 963-14 638 €/m² sur les listings premium. Cible clientèle internationale UK/NL/BE haut de gamme cherchant le ski-in/ski-out vrai (pas approximatif). Premium absolu, ROI brut plus modéré mais valorisation patrimoniale maximale.",
+        roiBrut: '2,5 à 3,5 %',
+      },
+      {
+        name: 'Péclet',
+        pricePerNight: '210-450 €',
+        occupancy: 63,
+        description:
+          "Quartier ski-in/ski-out face glacier de Péclet, accès direct au funitel de Péclet et aux pistes du glacier (skiables jusqu'en avril). Résidences Péclet, Plein Soleil, Le Britania. Cible familles aisées internationales, skieurs expérimentés, semaine type Pâques sur le glacier. Premium aligné Caron sur les biens haut de gamme. Excellent compromis pour un investisseur cherchant le ski-in/ski-out à ticket d'achat légèrement plus accessible.",
+        roiBrut: '3 à 4 %',
+      },
+      {
+        name: 'Balcons',
+        pricePerNight: '170-340 €',
+        occupancy: 58,
+        description:
+          "Quartier bleu (couleur de balisage), positionné haut de station, calme et résidentiel. Résidences Les Balcons de Val Thorens, Les Temples du Soleil. Vue panoramique sur le domaine. Cible familles + couples cherchant le calme vs l'animation centre station. Ticket d'achat plus accessible que Caron/Péclet/Plein Sud mais accès pistes par navette ou marche 5-10 min. ROI brut meilleur sur le segment T3-T4 familial.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Slalom / Lombarde',
+        pricePerNight: '180-360 €',
+        occupancy: 60,
+        description:
+          "Quartiers vert (Slalom) et violet (Lombarde), proximité immédiate centre station + télécabines majeures (Funitel des 3 Vallées, télécabine Plein Sud). Résidences Le Schuss, La Lombarde, Le Slalom. Animation maximale, restaurants, bars, après-ski. Cible jeunes adultes, groupes d'amis, semaines vacances scolaires UK/NL. Bonne occupation grâce à l'attractivité après-ski et la centralité.",
+        roiBrut: '3,5 à 4,5 %',
+      },
+      {
+        name: 'Couronne Saint-Martin-de-Belleville (vallée)',
+        pricePerNight: '120-260 €',
+        occupancy: 55,
+        description:
+          "Village authentique en vallée (1 450 m), à 20 minutes en navette de Val Thorens, accès Les 3 Vallées par télécabine Saint-Martin-Méribel + remontées. Cible familles cherchant authenticité savoyarde + budget contraint vs Val Thorens (prix m² 30-40 % inférieurs : 4 500-6 000 €/m²). Stratégie hybride été (randonnée, lac de Lou) + hiver Les 3 Vallées par navette. ROI brut significativement meilleur.",
+        roiBrut: '4,5 à 6 %',
+      },
+    ],
+    regulation:
+      "Val Thorens dépend administrativement de la **commune des Belleville** (73440, INSEE 73257, intercommunalité Cœur de Tarentaise) — toutes les démarches relatives aux meublés de tourisme se font auprès de la **mairie des Belleville**.\n\n**Commune classée zone tendue.** Les Belleville est **classée zone tendue** depuis le **décret n° 2023-822 du 25 août 2023** (extension aux communes de montagne, 3 697 communes au total). Conséquences directes : la **taxe d'habitation sur les résidences secondaires (THRS) est majorée de 30 %** par délibération du conseil municipal, et la commune peut **instaurer une procédure de changement d'usage par simple délibération** (loi Le Meur du 19 novembre 2024). À ce jour, aucune délibération municipale spécifique instaurant un changement d'usage ou un quota meublés de tourisme n'a été identifiée — à vérifier au cas par cas auprès du service urbanisme de la mairie.\n\n**Enregistrement national au 20 mai 2026.** Tout meublé de tourisme à Val Thorens doit être enregistré via le **téléservice national** (apimeubles.finances.gouv.fr) et porter un **numéro à 13 chiffres** sur chaque annonce Airbnb, Booking ou Abritel. Sanction du défaut d'enregistrement : **10 000 € d'amende**, **20 000 €** pour fausse déclaration ou numéro falsifié.\n\n**Résidence principale : 120 nuitées/an.** Limite nationale pour la location en résidence principale (logement occupé au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération — Les Belleville ne l'a pas fait à ce jour. À noter : avec 24 semaines de saison hiver seulement (22 nov-3 mai en 2025-2026), un logement loué en résidence secondaire saturée en pic dépasse facilement 100 nuitées sur la seule période hiver — la vérification du statut résidence principale vs secondaire est structurante.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage). Spécificité montagne : un **assouplissement des critères DPE est discuté** pour les logements en haute altitude (chauffage électrique majoritaire, isolation difficile sur le bâti années 1970-1990 de la station). À surveiller.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement **étoiles** (1 à 5) est devenu un levier fiscal majeur — sur Val Thorens où le CA annuel peut facilement atteindre 40 000-80 000 € sur les biens 4-6 personnes premium, le classement 4-5 étoiles est quasi-obligatoire pour rester en micro-BIC et bénéficier de l'abattement 50 % sur les 77 700 € de plafond.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La commune Les Belleville applique une **taxe de séjour plafond à 4,90 € HT** par nuit/personne au 1ᵉʳ janvier 2026 (hors taxe additionnelle Conseil Départemental + 10 %). Pour les hébergements **non classés**, taxe **proportionnelle de 5 %** du prix de la nuitée par personne (délibération du 24 septembre 2018), plafonnée au tarif palace. Application toute l'année. Plateforme de déclaration : taxedesejour.ofeaweb.fr/ts/lesbelleville. Collectée automatiquement par Airbnb et reversée à la commune. Contact mairie : Laurence Baud / Lison Ginot, 04 79 00 10 08 / 04 79 08 99 73, recettes@lesbelleville.fr.\n\n**Régime dérogatoire préfectoral montagne.** La loi Le Meur prévoit un régime dérogatoire pour les communes à forte saisonnalité montagne (sortie possible du plafond 120 nuitées sur arrêté préfectoral). Applicabilité Les Belleville à confirmer auprès de la Préfecture de Savoie.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 32,
+      pricePerNight: 230,
+      neighborhood: 'Plein Sud',
+      revenuBrut: 36000,
+      commissionRate: 0.22,
+      menageCount: 50,
+      menageUnitCost: 100,
+    },
+    extraFaq: [
+      {
+        q: "Combien rapporte un Airbnb à Val Thorens sur l'année ?",
+        a: "Un T2 32 m² bien placé à Plein Sud, Slalom ou Lombarde, avec tarif moyen 230 €/nuit hiver (180-200 € en basse saison hiver, 380-500 € sur les vacances scolaires UK/NL/FR), occupation pic Noël 93 % + Nouvel An 97,6 %, occupation février 90 %+, génère typiquement un chiffre d'affaires brut de 30 000-42 000 € sur la **seule saison hiver** (~24 semaines, 22 novembre-3 mai). Val Thorens étant fermée l'été, le CA annuel = CA hiver. La rotation samedi-samedi obligatoire sur les vacances scolaires européennes peut se louer 2 800-5 500 € la semaine sur un T2 4-personnes en pic Noël/février. Sur un chalet T4-T5 premium Caron ou Péclet, le pic peut atteindre 8 000-15 000 € la semaine. Net de la commission conciergerie (20-25 %), de la taxe foncière (zone tendue, THRS majorée 30 %), des charges de copropriété et du ménage haute fréquence, comptez un revenu disponible de 18 000-25 000 € sur le T2 et 80 000-150 000 € sur le chalet premium.",
+      },
+      {
+        q: "Faut-il une autorisation de changement d'usage à Val Thorens ?",
+        a: "Non, à ce jour. La commune Les Belleville (dont dépend Val Thorens) est bien **classée zone tendue** depuis le décret du 25 août 2023, ce qui lui donne le **pouvoir** d'instaurer une procédure de changement d'usage par simple délibération municipale (loi Le Meur 2024), mais aucune délibération en ce sens n'a été publiée à date. Le cadre applicable est donc le cadre national : enregistrement obligatoire via le téléservice national (apimeubles.finances.gouv.fr) au 20 mai 2026, numéro à 13 chiffres à apposer sur chaque annonce, plafond 120 nuitées/an pour les résidences principales, DPE classe E minimum. Attention cependant : la commune a déjà voté la **majoration THRS à 30 %** sur les résidences secondaires (impact direct sur l'attractivité fiscale de l'investissement LCD secondaire), et le contexte politique 3 Vallées est sensible — Saint-Martin-de-Belleville et Méribel ont vu monter des collectifs anti-LCD en 2024-2025. Si vous achetez à Val Thorens dans une perspective LCD, une vérification au service urbanisme de la mairie des Belleville avant le compromis est une pratique de prudence — ce qui est vrai aujourd'hui ne le sera peut-être plus dans 2-3 ans.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Val Thorens ?',
+        a: "Pour un rendement maximal, Plein Sud et les quartiers Slalom/Lombarde offrent le meilleur compromis : occupation 60-65 % tirée par la centralité (commerces, restaurants, télécabines, après-ski), tickets d'entrée intermédiaires (350 000-500 000 € pour T2-T3 ski-in à proximité), ROI brut 3,5-4,5 %. Caron et Péclet sont positionnés sur le segment premium ski-in/ski-out vrai (10 963-14 638 €/m²), avec une clientèle UK/NL/BE haut de gamme et une valorisation patrimoniale maximale, mais ROI brut plus modéré (2,5-3,5 %) — privilégier si l'objectif est patrimonial autant que locatif. Balcons est un excellent compromis pour les familles avec T3-T4 plus accessibles, ROI brut 3,5-5 %. Pour budget contraint et stratégie hybride, **Saint-Martin-de-Belleville en vallée** (à 20 min en navette) offre des tickets d'achat 30-40 % inférieurs (4 500-6 000 €/m²), un ROI brut 4,5-6 % et l'accès Les 3 Vallées via télécabine — option pertinente pour un premier investissement en station de ski premium.",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Val Thorens ?",
+        a: "Les commissions à Val Thorens oscillent de 20 % (HostnFly et Bnbsitter, publiquement affichées) à 25 % TTC (formule premium full-service) en 2026. La moyenne de marché sur une formule complète s'établit autour de 21-23 % TTC, avec **Agence La Cime à 21 % TTC affichée**, HostnFly et Bnbsitter à 20 %, et la majorité (Yes Conciergerie, Interhome, Emerald Stay) sur devis. Le critère décisif au-delà du taux affiché sur un marché à clientèle 60 % internationale comme Val Thorens est la **capacité multilingue de l'équipe** (anglais a minima, idéalement néerlandais et scandinave pour les chalets premium), la **maîtrise de la rotation samedi-samedi obligatoire** sur les vacances scolaires européennes (FR/UK/NL/BE/SCAN multizones — un samedi de check-out peut concerner 5-8 nationalités différentes sur 8 résidences voisines), et l'**accès à un volume de ménage qualifié** sur le pic de saison (problème structurel Val Thorens : pénurie de saisonniers logés). Demander au prestataire un exemple chiffré sur un bien comparable + le protocole d'accueil hivernal sur la rotation samedi-samedi des vacances scolaires + la composition linguistique de l'équipe est la pratique recommandée avant signature.",
+      },
+    ],
+    updatedAt: '2026-06-19',
+  },
+  // ==========================================================================
+  // DUNKERQUE
+  // ==========================================================================
+  {
+    slug: 'dunkerque',
+    displayName: 'Dunkerque',
+    region: 'Hauts-de-France',
+    regionSlug: 'hauts-de-france',
+    title: 'Conciergerie Dunkerque Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Dunkerque : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Dunkerque (Malo-les-Bains, Centre, Rosendaël). Tarifs, services, avis, réglementation 2026, Carnaval + 86 263 hab.",
+    kwPrincipal: 'conciergerie dunkerque',
+    kwSecondaires: [
+      'conciergerie airbnb dunkerque',
+      'conciergerie dunkerque malo-les-bains',
+      'escales des dunes conciergerie',
+      'gestion location dunkerque',
+      'conciergerie côte d\'opale dunkerque',
+      'conciergerie hauts-de-france',
+    ],
+    population: 86263,
+    tourists: 1500000,
+    activeListings: 553,
+    priceLow: 65,
+    priceHigh: 160,
+    occupancyRate: 55,
+    revpar: 50,
+    seasonality:
+      "Saisonnalité hybride littorale + événementielle à Dunkerque. Pic absolu été juin-août (tarif moyen 144 €/nuit selon Likibu vs 86 € en décembre, soit +68 %) porté par le tourisme balnéaire Malo-les-Bains (digue de 2 km, station balnéaire historique XIXe), la proximité avec les Allemands, Belges et Néerlandais (frontière belge à 30 min, Calais à 45 min, accessibilité Eurotunnel). Pic secondaire **Carnaval de Dunkerque** janvier-mars (~50 jours, 3 mois étalés selon dates Mardi-Gras), **240 000 spectateurs** cumulés (édition 2025), avec saturation totale week-end Trois Joyeuses (Bande de Dunkerque, Bande de la Citadelle, Bande de Rosendaël). Pic mémorial Opération Dynamo mai-juin (anniversaire évacuation Dunkerque 1940, 350 000 soldats évacués). Inter-saisons portées par la clientèle pro (3ᵉ port français industriel, zone Grand Port Maritime, sidérurgie ArcelorMittal Dunkerque). Marché plus stable annuellement que les stations balnéaires pures grâce au mix tourisme + pro + événementiel.",
+    rankNational: 18,
+    introCustom:
+      "Vous avez un studio à **Malo-les-Bains** (digue, plage centrale), un appartement au **Centre-ville/Citadelle**, ou une maison à **Rosendaël**, **Petite-Synthe** ou **Saint-Pol-sur-Mer**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **réglementation Loi Le Meur** qui impose l'enregistrement national au 20 mai 2026, la **saisonnalité hybride** (été littoral +68 % vs hiver, pic Carnaval janvier-mars 240 000 spectateurs, mémorial Dynamo mai-juin), la **clientèle mixte tourisme + pro + événementiel** (3ᵉ port français), et le **levier transfrontalier** (Belges, Néerlandais, Allemands à moins d'1 h en voiture), vous vous demandez quelle agence maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les pure-players Dunkerque (Escales des Dunes, Ange Conciergerie Qualité, NORDKA), les réseaux Côte d'Opale (Hey Conciergerie, COSY, RENT to DEY) et les acteurs nationaux ?",
+    marketIntro:
+      "Dunkerque est une commune de **86 263 habitants** (INSEE 2023), au cœur de la **Communauté urbaine de Dunkerque** (CUD, 17 communes, **191 478 habitants**), 3ᵉ port français en tonnage et l'un des principaux pôles industriels du Nord (ArcelorMittal, raffineries, terminal méthanier). La commune actuelle résulte de la **fusion en 1972** avec Malo-les-Bains, Mardyck, Petite-Synthe et Rosendaël, complétée par l'intégration de Fort-Mardyck et Saint-Pol-sur-Mer en 2010-2011. Cette histoire de fusion explique la diversité des quartiers : station balnéaire historique (Malo-les-Bains, digue de 2 km construite fin XIXe), centre patrimonial fortifié (Citadelle de Vauban, beffroi UNESCO), couronne ouvrière industrielle (Petite-Synthe, Saint-Pol-sur-Mer).\n\n**Marché LCD moins dense que les stations balnéaires touristiques pures.** Likibu liste **environ 553 annonces toutes plateformes** sur Dunkerque (286 spécifiquement à Malo-les-Bains), avec un **tarif moyen 144 €/nuit en été et 86 €/nuit en décembre** (+68 % de saisonnalité, soit moitié moins marquée qu'à Biscarrosse ou Quiberon). À Malo-les-Bains, 60,99 % des biens sont dans la fourchette 50-100 €/nuit selon Likibu. Le mix tourisme + clientèle pro + Carnaval lisse mieux les revenus annuels que les littoraux purement saisonniers.\n\n**Marché immobilier en momentum haussier 2026.** PAP a identifié Dunkerque comme **\"ville où les prix vont vraiment grimper en 2026\"**. Prix moyen ville **2 072-2 247 €/m²** appartement selon PAP (juin 2026). Par quartier : **Malo-les-Bains 2 762 €/m²** (Sud 2 710 €, Bagatelle 2 830 €, Terminus 2 610 €), **Petite-Synthe 1 709 €/m²**, **Centre-ville/Citadelle** données précises non publiées par quartier. Ticket d'entrée concret : **studio Malo 70 000-110 000 €**, **T2 centre 90 000-130 000 €**, **maison T4 Petite-Synthe 130 000-200 000 €**, **villa front de mer Malo 350 000-700 000 €**. Comparé aux autres préfectures du Nord, le ticket d'achat reste **largement accessible** — un argument structurant pour la rentabilité LCD nette.\n\n**Carnaval de Dunkerque : événement structurant.** L'édition 2025 a rassemblé **240 000 spectateurs** sur les bals et bandes, étalés sur ~3 mois (janvier-mars selon dates Mardi-Gras). Les **Trois Joyeuses** (Bande de Dunkerque, Bande de la Citadelle, Bande de Rosendaël) saturent totalement le marché LCD sur 3 week-ends consécutifs avec des tarifs 2 à 3 fois supérieurs à la moyenne hiver — un levier structurel sur le CA annuel d'un bien Dunkerque centre ou Rosendaël.",
+    conciergeries: [
+      {
+        name: 'Escales des Dunes',
+        url: 'https://www.escalesdesdunes.com/',
+        commission: '20 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 22,
+        biensGeres: 20,
+        specialty: 'Pure-player Dunkerque, fondatrice Caroline 20 ans hospitality',
+        description:
+          "Escales des Dunes est une conciergerie **pure-player Dunkerque** dirigée par **Caroline** (20 ans d'expérience hôtellerie revendiqués). Commission **affichée publiquement à 20 % TTC** des revenus locatifs (hors frais de ménage), avec promesse marketing de **+30 % de revenus moyens** vs gestion propriétaire seule. Modèle double : conciergerie clé en main + sous-location professionnelle avec loyer garanti pour les propriétaires qui veulent zéro gestion. Pertinente pour un propriétaire qui valorise le background hôtelier sur la qualité d'accueil voyageur (protocole arrivée, livret d'accueil multilingue, gestion plaintes), et qui veut un acteur transparent sur sa commission. Marque très visible en SEO local (KW \"l'escale des dunes\" génère 480 vol/mois sur Dunkerque, ce qui valorise indirectement le portefeuille).",
+      },
+      {
+        name: 'Hey Conciergerie',
+        url: 'https://www.hey-conciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 18,
+        biensGeres: 30,
+        specialty: 'SARL siège Dunkerque + point Malo, réseau Côte d\'Opale',
+        description:
+          "Hey Conciergerie est une **SARL** (SIREN 983 540 303, capital 10 000 €, immatriculation 20 mars 2025) avec **siège social 11 Avenue des Bains, 59140 Dunkerque** + point d'accueil affiché **95 Digue de Mer, 59240 Malo-les-Bains**. Couverture multi-villes Côte d'Opale : **Dunkerque, Calais, Bray-Dunes, Gravelines, Sangatte, Malo-les-Bains** — l'un des seuls acteurs à offrir un même interlocuteur sur l'axe transfrontalier complet. Commission sur devis. Pertinente pour un investisseur multi-villes Côte d'Opale (par exemple un Malo + un Calais ou un Gravelines) qui souhaite mutualiser sous un seul prestataire et capter la clientèle transfrontalière Belges/Néerlandais/Anglais Eurotunnel.",
+      },
+      {
+        name: 'Ange Conciergerie Qualité',
+        url: 'https://angeconciergeriequalite.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 14,
+        biensGeres: 18,
+        specialty: 'Fondatrice Yasmine investisseuse depuis 2017, focus Le Meur',
+        description:
+          "Ange Conciergerie Qualité est dirigée par **Yasmine**, elle-même **investisseuse LCD depuis 2017** (et conciergerie depuis 2019). Positionnement : \"designed by a property owner, for property owners\". Focus structurant : **conformité Loi Le Meur** (enregistrement, DPE, taxe de séjour, classement étoiles), rentabilité optimisée. Référencée officiellement par **Dunkerque Tourisme**. Commission sur devis. Pertinente pour un investisseur qui valorise l'expertise terrain d'une fondatrice elle-même propriétaire LCD (vs une conciergerie pure gestion), et qui souhaite un accompagnement structuré sur la mise en conformité réglementaire au 20 mai 2026 — un point particulièrement aigu sur Dunkerque où le mix résidences principales + secondaires en zone urbaine impose des arbitrages fiscaux complexes.",
+      },
+      {
+        name: 'NORDKA Conciergerie',
+        url: 'https://www.dunkirk-tourism.com/touristic_sheet/nordka-conciergerie-dunkerque-en-5985777/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 11,
+        biensGeres: 15,
+        specialty: 'Conciergerie privée taille humaine, Dunkerque Tourisme partenaire',
+        description:
+          "NORDKA Conciergerie est dirigée par **Robine Abrantes**, positionnée conciergerie privée avec expérience traveler \"locale et sur-mesure\". Référencée officiellement par **Dunkerque Tourisme** (partenaire conciergerie). Taille humaine, accompagnement individualisé. Commission sur devis. Pertinente pour un propriétaire qui privilégie un acteur 100 % focalisé Dunkerque (pas de couverture Côte d'Opale élargie), accessible directement par sa dirigeante, sur un portefeuille volontairement limité — un positionnement qualité vs volume, pertinent sur les biens premium centre-ville ou Malo-les-Bains digue.",
+      },
+      {
+        name: 'COSY Conciergerie',
+        url: 'https://cosy-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 13,
+        biensGeres: 22,
+        specialty: 'Siège Gravelines, couverture Calais/Gravelines/Dunkerque/Bray-Dunes',
+        description:
+          "COSY Conciergerie est rattachée à **Gravelines** avec couverture **Calais, Gravelines, Dunkerque, Bray-Dunes** — axe complet Côte d'Opale. Services structurés : rédaction d'annonce optimisée, photos professionnelles, multi-diffusion (Airbnb + Booking + Abritel), **arrivée autonome par code** (positionnement digital first, réduction des contraintes opérationnelles). Référencée par Dunkerque Tourisme. Commission sur devis. Pertinente pour un investisseur qui valorise un modèle d'arrivée digital (clientèle Eurotunnel arrivant tard, Belges/Néerlandais week-end), et qui veut un acteur Côte d'Opale mutualisable sur plusieurs villes du littoral.",
+      },
+      {
+        name: 'RENT to DEY Services',
+        url: 'https://www.rent-to-dey-services.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 16,
+        biensGeres: 25,
+        specialty: 'Welcome guides FR/EN/NL, couverture Dunkerque + Métropole Lilloise',
+        description:
+          "RENT to DEY Services couvre un territoire élargi **Dunkerque + Bergues + Bray-Dunes + Gravelines + Bailleul + Cassel + Armentières + Lille + métropole lilloise** — l'un des seuls acteurs à offrir un même interlocuteur sur l'axe Dunkerque-Lille (90 km). Spécificité opérationnelle : **welcome guides en français, anglais et néerlandais** (la clientèle frontalière néerlandaise est structurellement présente sur la Côte d'Opale, Carnaval inclus). Commission sur devis. Pertinente pour un investisseur multi-villes Hauts-de-France (par exemple un Dunkerque + un Lille ou un Bergues), qui valorise la capacité multilingue NL spécifiquement adaptée à la clientèle frontalière, et qui veut un acteur capable de gérer indifféremment biens urbains lillois et biens littoraux dunkerquois.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Malo-les-Bains (digue, plage centrale)',
+        pricePerNight: '90-180 €',
+        occupancy: 60,
+        description:
+          "Station balnéaire historique XIXe, digue de 2 km, plage centrale surveillée, casino, restaurants front de mer. Prix m² 2 710-2 830 €/m² selon Efficity (Bagatelle 2 830 €, Sud 2 710 €, Terminus 2 610 €). Cible familles été, clientèle transfrontalière Belges/Néerlandais week-end, Carnaval pic janvier-mars. Le meilleur ROI brut de Dunkerque sur les studios face mer et T2 deuxième ligne.",
+        roiBrut: '6,5 à 9 %',
+      },
+      {
+        name: 'Centre-ville / Citadelle',
+        pricePerNight: '75-160 €',
+        occupancy: 55,
+        description:
+          "Quartier patrimonial fortifié (Citadelle de Vauban XVIIe), beffroi Saint-Éloi UNESCO, place Jean-Bart, musée portuaire. Tickets d'achat plus accessibles que Malo. Cible clientèle pro semaine (3ᵉ port français, ArcelorMittal), Carnaval pic Trois Joyeuses (Bande de la Citadelle), tourisme mémorial Opération Dynamo. ROI brut soutenu par la stabilité semaine pro + week-end touristique.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Rosendaël',
+        pricePerNight: '70-140 €',
+        occupancy: 55,
+        description:
+          "Quartier résidentiel ouest de Malo-les-Bains, accès direct digue de Malo en 10 minutes, parc du Vent. Carnaval pic Bande de Rosendaël (l'une des Trois Joyeuses). Tickets d'achat ~30 % inférieurs à Malo-les-Bains centre, cible familles week-end + Carnaval pic + clientèle pro étalée. Bon compromis ROI/qualité de bien sur T3-T4 avec jardin.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Petite-Synthe',
+        pricePerNight: '65-120 €',
+        occupancy: 50,
+        description:
+          "Couronne ouvrière industrielle ouest, proximité immédiate ArcelorMittal et zone Grand Port. Prix m² PAP 1 709 €/m² (le plus accessible de la commune). Cible essentiellement clientèle pro semaine (sidérurgie, port industriel, intérim BTP), peu de tourisme. ROI brut le plus élevé de Dunkerque sur ce profil mais occupation moins saisonnée — stratégie LCD pro plutôt que touristique.",
+        roiBrut: '7 à 10 %',
+      },
+      {
+        name: 'Saint-Pol-sur-Mer',
+        pricePerNight: '65-125 €',
+        occupancy: 50,
+        description:
+          "Ancienne commune indépendante intégrée 2011, proximité port industriel. Prix m² alignés Petite-Synthe (~1 700-2 000 €/m²). Cible majoritairement clientèle pro (intérimaires, missions ponctuelles industrie portuaire). Peu de tourisme. Stratégie LCD pro/intérim avec rotation moyenne durée 7-30 nuits — modèle différent du tourisme weekend.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Bagatelle / Malo Sud',
+        pricePerNight: '80-150 €',
+        occupancy: 55,
+        description:
+          "Sous-quartiers de Malo-les-Bains plus résidentiels (Bagatelle 2 830 €/m², Sud 2 710 €/m²). Accès digue Malo en 5-10 minutes à pied. Cible mixte familles + couples + pros. Bon compromis ticket d'achat + occupation, avec ROI brut intéressant sur les T2-T3 anciens rénovés. Capte la demande débordement Malo centre quand digue saturée en pic Carnaval ou août.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+    ],
+    regulation:
+      "**Cadre national Loi Le Meur applicable.** Dunkerque n'est **pas listée explicitement** dans le décret zones tendues national mais relève d'une zone urbaine dense Hauts-de-France où le ratio résidences secondaires reste modéré (vs littoraux ultra-touristiques type Honfleur ou Cap d'Agde). À ce jour, **aucune délibération municipale identifiée** n'instaure de procédure de changement d'usage ou de quota meublés de tourisme.\n\n**Déclaration obligatoire en mairie de Dunkerque.** Tout meublé de tourisme à Dunkerque doit être déclaré à la **Ville de Dunkerque** via **CERFA n° 14004** + obtention d'un numéro d'enregistrement 13 caractères. Téléservice : jedeclaremonmeuble.com (plateforme nationale). Détails sur ville-dunkerque.fr (espace démarches quotidiennes meublés de tourisme).\n\n**Enregistrement national au 20 mai 2026.** Tout meublé de tourisme à Dunkerque doit être enregistré via le **téléservice national** (apimeubles.finances.gouv.fr) et porter un **numéro à 13 chiffres** sur chaque annonce Airbnb, Booking ou Abritel. Sanction du défaut d'enregistrement : **5 000 € d'amende civile + 450 € de contravention** (cadre Loi Le Meur). Pour les fausses déclarations ou numéros falsifiés : jusqu'à **20 000 €**.\n\n**Résidence principale : 120 nuitées/an.** Limite nationale pour la location en résidence principale (logement occupé au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération — Dunkerque ne l'a pas fait à ce jour.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage). Spécificité littoral Nord : les biens patrimoniaux Malo-les-Bains XIXe (villas Belle Époque digue) et Citadelle XVIIe-XIXe peuvent être impactés — vérifier le diagnostic avant achat patrimonial.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement **étoiles** (1 à 5) est devenu un levier fiscal majeur — un appartement Malo-les-Bains digue classé 3-4 étoiles bénéficie d'un abattement quasi-double sur des revenus 1,5 à 2 fois supérieurs à un studio non classé.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Dunkerque applique une taxe de séjour avec **plafond meublé non classé à 3 % du coût par personne par nuit**, plafonné au tarif meublé 4 étoiles soit **1,35 € HT** (hors taxe additionnelle départementale +10 %, soit ~1,49 € TTC max par nuit/personne). Gravelines (CUD) a sa propre plateforme distincte. Périodicité de collecte trimestrielle. Plateforme : taxe.3douest.com/dunkerque. Contact : Caroline Lemaître, 03 28 26 26 70, taxedesejour@dunkerque-tourisme.fr. Collectée automatiquement par Airbnb et reversée à la commune.\n\n**Carnaval de Dunkerque — pic LCD structurant.** Les **240 000 spectateurs** annuels du Carnaval (édition 2025) impactent directement la grille tarifaire LCD : un T2 centre-ville ou Rosendaël peut louer 200-400 €/nuit sur le week-end des Trois Joyeuses (Bande de Dunkerque, Bande de la Citadelle, Bande de Rosendaël), vs 75-90 € en moyenne hiver. Le respect des plafonds 120 nuitées sur les résidences principales devient un point d'attention pour les propriétaires qui cumulent saison été + Carnaval + clientèle pro.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 115,
+      neighborhood: 'Malo-les-Bains',
+      revenuBrut: 20000,
+      commissionRate: 0.22,
+      menageCount: 65,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: "Combien rapporte un Airbnb à Dunkerque sur l'année ?",
+        a: "Un T2 45 m² bien placé à Malo-les-Bains digue ou centre-ville Citadelle, avec tarif moyen 115 €/nuit (86 € en décembre, 144 € en été selon Likibu, 200-400 €/nuit pic Trois Joyeuses Carnaval), occupation 55-65 % sur l'année (pic 80-90 % juillet-août, 90 % week-end Carnaval), génère typiquement un chiffre d'affaires brut de 18 000-22 000 € sur l'année à Dunkerque. La saisonnalité hybride (+68 % été vs hiver, pic Carnaval +200-300 % sur 3 week-ends) reste plus modérée que les littoraux purement touristiques — un atout sur la stabilité annuelle. Les 3 week-ends de Carnaval (Bande de Dunkerque, Bande de la Citadelle, Bande de Rosendaël) peuvent générer 1 500-2 500 € de CA cumulé sur un bien centre Citadelle ou Rosendaël. Sur une maison T4 avec jardin Rosendaël ou Malo Sud, attendez-vous à 22 000-32 000 €/an. Net de la commission conciergerie (20-25 %), de la taxe foncière, des charges et du ménage, comptez un revenu disponible de 10 000-13 000 € sur le T2 et 14 000-21 000 € sur la maison.",
+      },
+      {
+        q: "Faut-il une autorisation de changement d'usage à Dunkerque ?",
+        a: "Non, à ce jour. Dunkerque n'est pas listée dans le décret zones tendues national, et la commune n'a pas instauré de procédure de changement d'usage par délibération municipale. Le cadre applicable est exclusivement national : enregistrement obligatoire via le téléservice national (apimeubles.finances.gouv.fr) au 20 mai 2026, numéro à 13 chiffres à apposer sur chaque annonce, déclaration complémentaire en mairie de Dunkerque via CERFA n° 14004 (téléservice jedeclaremonmeuble.com), plafond 120 nuitées/an pour les résidences principales, DPE classe E minimum. Attention cependant : le contexte politique du logement à Dunkerque est sous tension (zone industrielle portuaire en pleine relocalisation Verkor, ArcelorMittal restructuration), et le marché immobilier est identifié par PAP comme \"ville où les prix vont vraiment grimper en 2026\". Si l'attractivité tourisme + pro continue de croître, un durcissement municipal n'est pas exclu sur les zones les plus tendues (Malo-les-Bains digue, Citadelle). Surveiller les délibérations du conseil municipal 2026-2027.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Dunkerque ?',
+        a: "Pour un rendement maximal, Malo-les-Bains digue offre le meilleur compromis : occupation tirée par le tourisme balnéaire été (juin-août), la clientèle transfrontalière Belges/Néerlandais week-end et le Carnaval pic janvier-mars, avec un prix m² accessible (2 710-2 830 €/m²) et un ROI brut 6,5-9 % sur les studios face mer et T2 deuxième ligne. Centre-ville/Citadelle est positionné sur la cible mixte tourisme patrimonial (Vauban, beffroi UNESCO) + clientèle pro semaine + Carnaval pic Trois Joyeuses, avec un ROI brut 6-8 %. Rosendaël capte la demande Carnaval (Bande de Rosendaël) + débordement Malo + clientèle pro, avec tickets d'achat 30 % inférieurs à Malo centre. Pour stratégie LCD pro pure (clientèle ouvrière sidérurgie/port, intérim, missions), Petite-Synthe et Saint-Pol-sur-Mer offrent le meilleur ROI brut absolu (7-10 %) sur ticket d'achat le plus accessible de la CUD (1 709 €/m² Petite-Synthe selon PAP), avec une rotation moyenne durée 7-30 nuits plutôt que week-end touristique.",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Dunkerque ?",
+        a: "Les commissions à Dunkerque tournent autour de 20-25 % TTC en 2026 pour une formule complète. Escales des Dunes est le seul acteur à afficher publiquement son tarif (20 % TTC, ménage refacturé voyageur). Hey Conciergerie, Ange Conciergerie Qualité, NORDKA, COSY, RENT to DEY travaillent sur devis personnalisé. Le critère décisif au-delà du taux affiché sur un marché à clientèle transfrontalière comme Dunkerque (Belges, Néerlandais, Anglais Eurotunnel) est la **capacité multilingue de l'équipe** (anglais a minima, néerlandais idéalement pour Malo-les-Bains où la clientèle NL est structurelle, allemand utile sur la cible mémorial Dynamo), la **maîtrise du pic Carnaval** (le bien doit être en mode \"tarif premium\" sur les 3 week-ends Trois Joyeuses, soit ~9 nuitées par an qui peuvent représenter 8-15 % du CA annuel), et la capacité à gérer en parallèle clientèle pro semaine + tourisme weekend (rotation rapide). Demander à la conciergerie son taux d'occupation moyen sur un bien comparable + sa stratégie pricing Carnaval + Eurotunnel + Mémorial Dynamo est plus pertinent que la seule comparaison du % de commission.",
+      },
+    ],
+    updatedAt: '2026-06-19',
+  },
+  // ==========================================================================
+  // CARNAC
+  // ==========================================================================
+  {
+    slug: 'carnac',
+    displayName: 'Carnac',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Carnac Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Carnac : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Carnac (UNESCO 2025, alignements mégalithiques). Tarifs (20 %), services, avis, réglementation 2026 (zone tendue, changement d'usage).",
+    kwPrincipal: 'conciergerie carnac',
+    kwSecondaires: [
+      'conciergerie airbnb carnac',
+      'interhome carnac',
+      'agence atlantique carnac',
+      'conciergerie morbihan carnac',
+      'gestion location carnac plage',
+      'conciergerie bretagne sud',
+    ],
+    population: 4327,
+    tourists: 700000,
+    activeListings: 1377,
+    priceLow: 95,
+    priceHigh: 280,
+    occupancyRate: 55,
+    revpar: 80,
+    seasonality:
+      "Saisonnalité littorale et patrimoniale ultra-marquée à Carnac. Pic absolu juillet-août (tarif moyen 152 €/nuit, 1 064 €/semaine en pic, 286 € le week-end vendredi-samedi selon données 2025), occupation 90-95 %, semaines complètes obligatoires sur les biens Carnac-Plage front de mer. Pic patrimonial avril-septembre lié aux **visites guidées obligatoires des alignements** (de Ménec, de Kermario, de Kerlescan) — saison touristique structurellement étalée +6 mois grâce au statut UNESCO obtenu le 12 juillet 2025 (\"Mégalithes de Carnac et des rives du Morbihan\", premier site breton inscrit). Inscription UNESCO a généré une **hausse fréquentation attendue de +20-30 %** post-2025 selon France Bleu — un effet structurel sur le LCD. Pic secondaire Pâques + Toussaint (vacances scolaires, randonnée côtière), basse saison novembre-mars portée par la cyclotourisme Vélocéan et l'arrière-saison golfe du Morbihan. Avec **~3 millions de visiteurs/an** sur la côte sud Morbihan et **600 000-700 000 visiteurs Maison des Mégalithes** (avant UNESCO ~500 000), Carnac est l'une des destinations les plus denses de Bretagne sud par habitant.",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un studio à **Carnac-Plage** (boulevard de la Plage, boulevard de Légenèse), un appartement à **Carnac-Ville** (bourg historique), ou une maison à **Saint-Colomban**, **Beaumer** ou **Ménec/Kermario** (proximité alignements UNESCO), que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **réglementation Carnac-spécifique** (instauration au 1ᵉʳ juin 2025 du **numéro d'enregistrement obligatoire ET de l'autorisation de changement d'usage** pour tous les meublés de tourisme, résidence principale comme secondaire), la **Loi Le Meur** qui impose l'enregistrement national au 20 mai 2026, l'**effet UNESCO** (inscription juillet 2025, hausse attendue +20-30 % fréquentation), la **saisonnalité littorale ultra-marquée** (152 €/nuit moyen, 286 € week-end pic), et le **profil de clientèle structurellement étalé** (été plage, ailes de saison patrimoine UNESCO + GR34), vous vous demandez quelle agence maximise votre rentabilité nette.\n\nEt surtout : **laquelle choisir** entre les acteurs historiques Carnac (Interhome, Agence Atlantique), les pure-players Morbihan (Conciergerie Bienvenue, Cocoonr) et les réseaux nationaux (HostnFly, YourHostHelper) ?",
+    marketIntro:
+      "Carnac est une **commune de 4 327 habitants** (INSEE 2024, projection 4 205 en 2026) du **Morbihan**, sur la côte sud de la Bretagne entre la presqu'île de Quiberon et le golfe du Morbihan. Site mondialement reconnu pour ses **alignements mégalithiques** (3 000 menhirs datés ~5 000 av. J.-C., répartis sur les sites de Ménec, Kermario et Kerlescan), **inscrits au patrimoine mondial de l'UNESCO le 12 juillet 2025** sous l'intitulé \"Mégalithes de Carnac et des rives du Morbihan\" (47ᵉ Comité du Patrimoine mondial à Paris). C'est le **premier site breton inscrit** à l'UNESCO. Plus de 550 sites mégalithiques sont concernés sur 30 communes du périmètre, faisant de Carnac le cœur d'un ensemble territorial valorisé internationalement.\n\n**Marché LCD très dense.** Likibu liste **environ 1 377 annonces toutes plateformes** sur Carnac (toutes catégories confondues), avec un **tarif moyen 152 €/nuit en été** et **1 064 €/semaine sur le pic juillet-août**, capacité moyenne 4 personnes/48 m². Le **week-end vendredi-samedi** se loue 286 € sur les biens balnéaires premium. Fréquentation des alignements estimée à **600 000-700 000 visiteurs/an** avant UNESCO (Maison des Mégalithes), avec une **hausse attendue de +20-30 % post-inscription** selon France Bleu et l'OT de Carnac. Spécificité critique : les alignements sont en **visite libre d'octobre à mars** mais en **visite guidée obligatoire d'avril à septembre** — cette contrainte concentre la demande touristique sur 6 mois et structure le marché LCD en haute saison étendue (vs 2-3 mois sur d'autres littoraux).\n\n**Prix au m² premium pour la Bretagne.** Sur l'ensemble de la commune, le prix moyen s'établit à **5 538-6 089 €/m²** en mai 2026 selon Meilleurs Agents et Efficity (évolution -2,4 % YoY, légère consolidation). Détail par axe premium : **Boulevard de la Plage 9 680 €/m²** (Efficity, front de mer absolu), **Boulevard de Légenèse 7 760 €/m²** (balnéaire haut de gamme), **Avenue de Saint-Colomban 5 380 €/m²** (pointe ouest). Ticket d'entrée concret : **studio Carnac-Ville bourg 130 000-180 000 €**, **T2 Carnac-Plage seconde ligne 250 000-340 000 €**, **maison T3 Saint-Colomban à 400 m de plage 700 000-900 000 €**, **villa Boulevard de Légenèse front de mer 1-2 M€**.\n\n**Réglementation Carnac-spécifique au 1ᵉʳ juin 2025.** Carnac a **instauré au 1ᵉʳ juin 2025** une procédure d'**autorisation de changement d'usage obligatoire** pour tous les meublés de tourisme (résidence principale ET secondaire), couplée à un **numéro d'enregistrement obligatoire** à mentionner sur toutes annonces et contrats. C'est un durcissement significatif par rapport aux communes bretonnes voisines (Quiberon, La Trinité-sur-Mer, Auray) où seul l'enregistrement national est applicable à ce jour. Sources : carnac.fr (page Réglementation paiement en ligne taxe de séjour) + ot-carnac.fr.",
+    conciergeries: [
+      {
+        name: 'Interhome Carnac',
+        url: 'https://www.interhome.fr/services-sur-place/interhome-carnac-fr080/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 27,
+        biensGeres: 160,
+        specialty: 'Pure-player historique Carnac, 117 av. des Druides, agence physique',
+        description:
+          "Interhome Carnac est l'antenne locale du **groupe européen Interhome** (siège Suisse, spécialiste locations saisonnières **depuis 1965**, 60 ans d'activité), implantée **117 Avenue des Druides, 56340 Carnac** — agence physique avec retrait de clés sur place. Téléphone : +33 2 97 52 03 56. Portefeuille local revendiqué : **~160 logements à Carnac** (l'un des plus gros portefeuilles de la commune). Services pro complets : photo, multi-diffusion, gestion 24/7, retrait de clés en agence physique. Commission sur devis. Pertinente pour un investisseur multi-pays Europe (par exemple un Carnac + un Hossegor ou un Mallorca) qui souhaite un même interlocuteur sur ses biens locations saisonnières en France-Europe, et qui valorise la sécurité d'un opérateur structuré 60 ans d'historique sur le segment vacances familiales européennes.",
+      },
+      {
+        name: 'Agence Atlantique Carnac',
+        url: 'https://www.agence-atlantique.fr/conciergerie-airbnb-a-carnac-baie-de-quiberon/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.4,
+        reviews: 19,
+        biensGeres: 70,
+        specialty: '67 av. des Druides Carnac-Plage + bureau Rennes, golfe du Morbihan',
+        description:
+          "Agence Atlantique est une **agence historique Carnac-Plage** implantée **67 Avenue des Druides, 56340 Carnac-Plage** (téléphone 02 97 52 11 90), avec un bureau complémentaire à Rennes. Couverture multi-communes : **Carnac, La Trinité-sur-Mer, Saint-Philibert, Locmariaquer, Plouharnel, Erdeven, Golfe du Morbihan, Finistère sud** — l'un des seuls acteurs à offrir un même interlocuteur sur l'arc Quiberon-Carnac-Golfe complet. Commission sur devis (\"sur devis\" affiché publiquement). Pertinente pour un investisseur qui détient plusieurs biens sur l'arc côtier Morbihan (par exemple un Carnac-Plage + un La Trinité-sur-Mer ou un Plouharnel), ou un propriétaire qui valorise un acteur multi-stations capable de gérer aussi la presqu'île de Quiberon et le golfe — utile pour optimiser la rotation voyageurs sur un portefeuille élargi.",
+      },
+      {
+        name: 'Conciergerie Bienvenue',
+        url: 'https://www.conciergeriebienvenue.com/nos-villes/carnac',
+        commission: '20 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 5,
+        reviews: 52,
+        biensGeres: 30,
+        specialty: 'Local Morbihan 13 communes, Damien & Nolwenn, partenaire Airbnb',
+        description:
+          "Conciergerie Bienvenue est un **acteur local Morbihan** (siège 28 rue Saint-Nicolas, 56690 Landévant), dirigé par **Damien et Nolwenn** (SIREN 904 169 570, créé fin 2021, ~3 ans). Commission **affichée publiquement à 20 % TTC**. Couverture **13 communes Morbihan** : Carnac, Vannes, Auray, Quiberon, La Trinité-sur-Mer, Plouharnel, Erdeven, Saint-Philibert, Locmariaquer, Belz, Sainte-Anne-d'Auray, Pluneret, Crac'h. Statut **partenaire \"Co-Hôtes Expérimentés Airbnb\"**. Pertinente pour un propriétaire qui valorise la transparence (commission publique 20 % TTC, l'une des rares affichées sur la zone) et l'ancrage local Morbihan profond — 13 communes du département sous un même prestataire, l'un des plus large maillage sur la zone.",
+      },
+      {
+        name: 'Cocoonr Carnac – La Trinité-sur-Mer',
+        url: 'https://cocoonr.fr/magazine/mieux-louer/conciergerie-airbnb-a-carnac-cocoonr-se-charge-de-tout/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 16,
+        biensGeres: 25,
+        specialty: 'Réseau breton automatisé, secteur Carnac–La Trinité',
+        description:
+          "Cocoonr est un **réseau breton** spécialisé Airbnb avec antenne dédiée **Carnac–La Trinité-sur-Mer**. Positionnement : tarifs modérés via **automatisation poussée** (annonce optimisée, pricing dynamique algorithmique, communication voyageurs automatisée). Couverture régionale Bretagne (Rennes, Saint-Malo, Vannes, golfe du Morbihan). Commission sur devis (modèle commission sur revenus, positionné compétitif). Pertinente pour un propriétaire qui privilégie un acteur breton structuré et digital first (vs un pure-player local taille humaine), et qui veut combiner la lisibilité d'une marque régionale avec un coût de commission compétitif via l'automatisation — utile particulièrement sur un studio ou T2 standard où l'opérationnel terrain peut être largement automatisé.",
+      },
+      {
+        name: 'HostnFly Carnac',
+        url: 'https://hostnfly.com/conciergerie-airbnb/carnac',
+        commission: 'à partir de 20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 23,
+        biensGeres: 20,
+        specialty: 'Réseau national 2016, +30 % revenus, assurance dommages',
+        description:
+          "HostnFly est un **réseau national** créé en 2016 avec antenne dédiée Carnac. Commission **publiquement affichée à partir de 20 %** (variable selon bien, emplacement, difficulté). Promesse marketing : **+30 % de revenus** vs propriétaire seul, via pricing dynamique propriétaire + optimisation annonce. Services : communication 24/7, check-in/check-out, ménage professionnel, assurance dommages. Pertinente pour un investisseur qui valorise la lisibilité d'une marque nationale, la transparence du tarif affiché et la mutualisation d'équipe terrain à grande échelle — avec le compromis d'un service moins individualisé qu'un pure-player local Morbihan.",
+      },
+      {
+        name: 'YourHostHelper Carnac',
+        url: 'https://yourhosthelper.com/conciergerie/carnac/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.5,
+        reviews: 18,
+        biensGeres: 18,
+        specialty: 'Réseau national, accueil 24/7, sans frais fixes',
+        description:
+          "YourHostHelper est un **réseau national** avec antenne dédiée Carnac. Commission **publiquement affichée à 20 %** des revenus locatifs, **sans frais fixes** (pas de setup, pas d'abonnement). Services : annonce optimisée, accueil voyageurs 24/7, tarification dynamique, gestion ménage, assistance maintenance. Pertinente pour un propriétaire qui veut un modèle économique pure variable (zéro coût si zéro CA), qui valorise la lisibilité \"sans frais cachés\" et qui détient un bien standard (studio à T3 sans spécificité haut de gamme). Acteur national : pas de bureau physique à Carnac, gestion via équipe terrain mutualisée.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Boulevard de la Plage (Carnac-Plage front mer)',
+        pricePerNight: '160-320 €',
+        occupancy: 65,
+        description:
+          "Front de mer absolu de Carnac-Plage, premium absolu de la commune. Prix m² 9 680 €/m² selon Efficity (le plus élevé de Carnac). Villas Belle Époque, immeubles années 1960-1980 vue mer, accès direct Grande Plage. Cible familles aisées, couples haut de gamme, clientèle internationale. Tickets d'achat 800 000-2 M€ sur villa, 350 000-550 000 € sur T2 vue mer. ROI brut modéré mais valorisation patrimoniale maximale.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Boulevard de Légenèse',
+        pricePerNight: '140-280 €',
+        occupancy: 60,
+        description:
+          "Quartier balnéaire haut de gamme, 7 760 €/m² selon Efficity. Plage de Légenèse (plus calme que Grande Plage), résidences premium, villas avec jardin. Cible familles aisées + retraités + couples cherchant un balnéaire moins fréquenté que la Grande Plage. Bon compromis premium-rendement sur les T3-T4 avec jardin.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Saint-Colomban',
+        pricePerNight: '120-240 €',
+        occupancy: 58,
+        description:
+          "Pointe ouest de Carnac, Avenue de Saint-Colomban (5 380 €/m² selon Efficity), plage de Saint-Colomban. Quartier plus résidentiel, accès direct plage + GR34 (Sentier des Douaniers). Cible familles, randonneurs côtiers, mois étalés mai-octobre. Tickets d'entrée plus accessibles que Boulevard de la Plage / Légenèse, ROI brut meilleur sur T3-T4 avec jardin à 400-600 m de plage.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Carnac-Ville (bourg historique)',
+        pricePerNight: '95-200 €',
+        occupancy: 55,
+        description:
+          "Bourg historique de Carnac (~5 500-5 800 €/m² estimé), commerces, restaurants, marché, église Saint-Cornély, Musée de Préhistoire. Tickets d'achat les plus accessibles de la commune sur T2 anciens (130 000-180 000 €). Cible mixte famille week-end + couples patrimoine UNESCO + cyclotouristes Vélocéan. ROI brut soutenu par tickets d'achat accessibles et saison étalée patrimoniale.",
+        roiBrut: '5 à 7 %',
+      },
+      {
+        name: 'Beaumer',
+        pricePerNight: '120-220 €',
+        occupancy: 55,
+        description:
+          "Quartier est de Carnac, secteur résidentiel proche plage de Beaumer (plus confidentielle). Cible familles cherchant le calme vs Carnac-Plage centre. Tickets d'achat intermédiaires (alignés moyenne ville ~5 500 €/m²). Bon compromis premium-rendement sur les maisons avec jardin à 300-500 m de plage, ROI brut 4,5-6 %.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Ménec / Kermario / Kerlescan (alignements UNESCO)',
+        pricePerNight: '100-200 €',
+        occupancy: 55,
+        description:
+          "Zone classée UNESCO depuis juillet 2025 (\"Mégalithes de Carnac et des rives du Morbihan\"), proximité immédiate des 3 sites principaux d'alignements mégalithiques. Contraintes patrimoniales fortes (Site Patrimonial Remarquable, ABF), construction réglementée. Cible touristes patrimoine UNESCO (avril-septembre visites guidées obligatoires), saison étalée +6 mois grâce au statut UNESCO. ROI brut soutenu par l'effet patrimoine UNESCO sur l'occupation hors-saison estivale.",
+        roiBrut: '4,5 à 6 %',
+      },
+    ],
+    regulation:
+      "**⚠️ Réglementation Carnac-spécifique au 1ᵉʳ juin 2025 — l'une des plus strictes du Morbihan littoral.** Carnac a **instauré au 1ᵉʳ juin 2025** :\n\n- Un **numéro d'enregistrement obligatoire** pour tous les meublés de tourisme (résidence principale ET secondaire), à mentionner sur toutes les annonces et tous les contrats\n- Une procédure d'**autorisation de changement d'usage** pour tous les meublés de tourisme — y compris les biens existants avant le 1ᵉʳ juin 2025 selon la jurisprudence Loi Le Meur\n\nSources : carnac.fr (page Réglementation paiement en ligne de la taxe de séjour), ot-carnac.fr. Ce durcissement intervient en lien direct avec la zone tendue Morbihan littoral et précède l'inscription UNESCO de juillet 2025.\n\n**Enregistrement national au 20 mai 2026.** En complément du numéro communal Carnac, tout meublé de tourisme doit être enregistré via le **téléservice national** (apimeubles.finances.gouv.fr) et porter un **numéro à 13 chiffres** sur chaque annonce Airbnb, Booking ou Abritel. Sanction du défaut d'enregistrement : **10 000 € d'amende administrative**, **20 000 €** pour fausse déclaration ou numéro falsifié.\n\n**Résidence principale : 120 nuitées/an.** Limite nationale pour la location en résidence principale (logement occupé au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération — Carnac n'a pas publié de délibération en ce sens à ce jour, mais le contexte de durcissement de juin 2025 invite à surveiller.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034 (classe D requise à partir de cette date pour les nouveaux changements d'usage). Pour les autorisations de changement d'usage instaurées par Carnac depuis le 1ᵉʳ juin 2025, le DPE **classe F** est exigé en seuil minimum à la demande, **classe E en 2028**, **classe D en 2034** (source : Guide pratique 2025 du Ministère de l'Écologie). Spécificité Bretagne sud : les biens patrimoniaux Carnac-Ville XVIIIe-XIXe et les maisons de pêcheurs sont à vérifier en priorité.\n\n**Abattement micro-BIC réduit en 2026.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €, vs 71 % et 188 700 € en 2024), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement **étoiles** (1 à 5) est devenu un levier fiscal majeur — sur Carnac où le CA annuel d'un T2 Carnac-Plage peut atteindre 28 000-35 000 €, le classement 4-5 étoiles est quasi-obligatoire pour rester en micro-BIC avantageux.\n\n**Information syndic de copropriété obligatoire dès 2025.** Le bailleur doit informer le syndic de copropriété de son activité LCD — un point d'attention sur les biens Carnac-Plage en copropriété (résidences front de mer Boulevard de la Plage / Légenèse).\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Spécificité Carnac : la commune a conservé une **gestion municipale** mais la **collecte est déléguée à l'Office de Tourisme** (exception locale dans le Morbihan où la plupart des collectivités la délèguent intégralement à l'OT). Taxe instaurée le 12 février 1983. Plateforme de déclaration : taxe.3douest.com/carnac.php. Contact : taxedesejour@ot-carnac.fr / 02 97 52 55 75. La grille tarifaire 2025-2026 par catégorie de meublé (1 à 5 étoiles + non classé) est publiée en PDF sur ot-carnac.fr — à consulter avant signature avec une conciergerie.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 48,
+      pricePerNight: 152,
+      neighborhood: 'Carnac-Plage seconde ligne',
+      revenuBrut: 26000,
+      commissionRate: 0.22,
+      menageCount: 65,
+      menageUnitCost: 85,
+    },
+    extraFaq: [
+      {
+        q: "Combien rapporte un Airbnb à Carnac sur l'année ?",
+        a: "Un T2 48 m² bien placé à Carnac-Plage seconde ligne (Boulevard de la Plage ou Légenèse à 200-400 m de la mer), avec tarif moyen 152 €/nuit (115-130 € basse saison, 280-380 € pic juillet-août, 286 € week-end vendredi-samedi en pic), occupation 55-65 % sur l'année (pic 85-95 % juillet-août, 60-70 % ailes de saison avril-juin/septembre-octobre grâce au patrimoine UNESCO), génère typiquement un chiffre d'affaires brut de 24 000-30 000 € sur l'année à Carnac. La saisonnalité étalée grâce à l'effet UNESCO (visites guidées obligatoires avril-septembre) lisse mieux les revenus que sur des marchés purement estivaux comme Quiberon ou Les Sables-d'Olonne. Sur une maison T4 avec jardin à Saint-Colomban ou Beaumer, attendez-vous à 32 000-45 000 €/an. Sur une villa Boulevard de la Plage front de mer, 50 000-90 000 €/an. Net de la commission conciergerie (20-25 %), de la taxe foncière, des charges et du ménage haute fréquence, comptez un revenu disponible de 13 000-17 000 € sur le T2 Plage seconde ligne et 30 000-55 000 € sur la villa front de mer.",
+      },
+      {
+        q: "Faut-il une autorisation de changement d'usage à Carnac pour louer une résidence secondaire ?",
+        a: "Oui, depuis le 1ᵉʳ juin 2025. Carnac a instauré au 1ᵉʳ juin 2025 une procédure d'autorisation de changement d'usage obligatoire pour tous les meublés de tourisme (résidence principale ET secondaire), couplée à un numéro d'enregistrement communal obligatoire à mentionner sur toutes annonces et contrats. C'est un durcissement significatif par rapport aux communes bretonnes voisines (Quiberon, La Trinité-sur-Mer, Auray) où seul l'enregistrement national reste applicable. Sources : carnac.fr et ot-carnac.fr. À cette procédure Carnac-spécifique s'ajoute le cadre national Loi Le Meur : enregistrement obligatoire via le téléservice national (apimeubles.finances.gouv.fr) au 20 mai 2026, numéro à 13 chiffres, plafond 120 nuitées/an pour les résidences principales, DPE classe F minimum à la demande de changement d'usage (E en 2028, D en 2034). Si vous achetez à Carnac dans une perspective LCD, une vérification au service urbanisme de la mairie de Carnac AVANT le compromis est désormais obligatoire — le refus d'autorisation de changement d'usage peut bloquer durablement votre projet.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Carnac ?',
+        a: "Pour un mix premium + saisonnalité étalée, Boulevard de la Plage et Boulevard de Légenèse restent les segments premium grâce à la prime front de mer (9 680 et 7 760 €/m² respectivement selon Efficity), avec un ROI brut 3,5-5,5 % mais une valorisation patrimoniale maximale. Saint-Colomban offre le meilleur compromis premium-rendement : pointe ouest, accès direct plage + GR34, prix m² 5 380 €/m², ROI brut 4,5-6 %, cible familles + randonneurs côtiers. Carnac-Ville (bourg historique) propose les tickets d'achat les plus accessibles (130 000-180 000 € sur T2 anciens) avec une saison étalée portée par le patrimoine UNESCO et les commerces de bourg — ROI brut 5-7 %, le meilleur rendement absolu de la commune. Ménec/Kermario/Kerlescan (alignements UNESCO) bénéficie de l'effet patrimoine direct mais avec des contraintes ABF (Site Patrimonial Remarquable) sur les travaux. Beaumer est positionné secteur résidentiel calme, cible familles cherchant moins de fréquentation que Carnac-Plage centre. Important : avant d'acheter, vérifier impérativement la possibilité d'obtenir l'autorisation de changement d'usage instaurée le 1ᵉʳ juin 2025 — le refus mairie peut être structurant sur certains quartiers.",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Carnac ?",
+        a: "Les commissions à Carnac tournent autour de 20 % en 2026 sur les acteurs qui affichent publiquement leurs tarifs : Conciergerie Bienvenue 20 % TTC, HostnFly à partir de 20 %, YourHostHelper 20 % sans frais fixes. Les acteurs historiques Carnac (Interhome, Agence Atlantique) et Cocoonr travaillent sur devis personnalisé selon le bien et la saisonnalité — la fourchette observée sur le département Morbihan littoral s'établit autour de 22-25 % TTC pour une formule complète. Le critère décisif au-delà du taux affiché sur un marché Carnac post-UNESCO est la **stratégie pricing sur les ailes de saison patrimoine** (avril-juin et septembre-octobre, où l'effet UNESCO peut faire passer un T2 de 30 % à 60 % d'occupation si le pricing est calibré), la **maîtrise de la rotation patrimoine UNESCO + plage** (les voyageurs patrimoine veulent du calme, les voyageurs plage veulent l'animation — un même bien peut cibler les deux selon la saison), et la **capacité à monter un dossier de classement étoiles** (Carnac post-UNESCO devrait voir une montée en qualité moyenne du parc LCD, le classement 4-5 étoiles deviendra un avantage compétitif). Demander à la conciergerie son taux de réussite sur le classement étoiles et sa stratégie post-UNESCO est plus pertinent que la seule comparaison du % de commission.",
+      },
+    ],
+    updatedAt: '2026-06-19',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

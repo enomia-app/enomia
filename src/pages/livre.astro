@@ -20,6 +20,11 @@ import AuthorSchema from '../components/AuthorSchema.astro';
     <div class="inner">
       <span class="badge">La suite du livre</span>
       <h1>Vous avez lu le livre.<br />Voici la suite.</h1>
+
+      <div class="avis">
+        <p>Le livre vous a plu&nbsp;? <a href="https://www.amazon.fr/review/create-review/?ie=UTF8&amp;channel=glance-detail&amp;asin=B0H5YNNH68" target="_blank" rel="noopener">Laissez un avis sur Amazon</a>, ça prend deux minutes et ça aide énormément à le faire connaître.</p>
+      </div>
+
       <p class="lead">
         Une série de fond où je décortique la méthode : mes chiffres, mes galères,
         ce qui marche vraiment. Plus une alerte quand la loi ou la fiscalité change vos calculs.
@@ -41,10 +46,6 @@ import AuthorSchema from '../components/AuthorSchema.astro';
       <p id="livre-success" class="success" hidden>
         C'est noté, bienvenue ! Le premier email arrive bientôt, avec mes outils gratuits pour votre LCD.
       </p>
-
-      <div class="avis">
-        <p>Le livre vous a plu&nbsp;? <a href="https://www.amazon.fr/review/create-review/?ie=UTF8&amp;channel=glance-detail&amp;asin=B0H5YNNH68" target="_blank" rel="noopener">Laissez un avis sur Amazon</a>. Ça prend deux minutes et ça aide vraiment à faire connaître le livre.</p>
-      </div>
     </div>
   </section>
 </ToolLayout>
@@ -177,19 +178,21 @@ import AuthorSchema from '../components/AuthorSchema.astro';
     padding: 18px 20px;
   }
   .avis {
-    margin-top: 28px;
-    padding-top: 22px;
-    border-top: 1px solid var(--border);
+    margin: 2px 0 26px;
+    padding: 14px 16px;
+    background: var(--green-soft);
+    border-left: 3px solid var(--green);
+    border-radius: 8px;
   }
   .avis p {
-    font-size: 14px;
+    font-size: 14.5px;
     color: var(--text-secondary);
-    line-height: 1.55;
+    line-height: 1.5;
     margin: 0;
   }
   .avis a {
     color: var(--green);
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: underline;
   }
 </style>

@@ -3,7 +3,7 @@ export const prerender = true;
 import ToolLayout from '../../layouts/ToolLayout.astro';
 import NewsletterBlock from '../../components/NewsletterBlock.astro';
 import AuthorSchema from '../../components/AuthorSchema.astro';
-import { AUTHOR_BIO_ARTICLE, AUTHOR_BIO_MICRO, authorPhoto } from '../../data/author';
+import { AUTHOR_BIO_ARTICLE_HTML, AUTHOR_BIO_MICRO, authorPhoto } from '../../data/author';
 
 const title = "Marc Chenut, Investisseur Location Courte Durée et fondateur d'Enomia";
 const description = AUTHOR_BIO_MICRO;
@@ -27,7 +27,7 @@ const photo = authorPhoto(400);
       <div class="author-meta">
         <h1>Marc Chenut</h1>
         <p class="author-role">Investisseur Location Courte Durée · Fondateur Enomia</p>
-        <p class="author-lead">{AUTHOR_BIO_ARTICLE}</p>
+        <p class="author-lead" set:html={AUTHOR_BIO_ARTICLE_HTML}></p>
       </div>
     </header>
 
@@ -88,6 +88,7 @@ const photo = authorPhoto(400);
     .author-meta h1 { font-family: 'Newsreader', Georgia, serif; font-size: clamp(28px, 4vw, 40px); font-weight: 600; color: #1a1a1a; margin: 0 0 6px; letter-spacing: -0.01em; }
     .author-role { font-size: 14px; color: #3fbd71; font-weight: 600; margin: 0 0 14px; }
     .author-lead { font-size: 16px; line-height: 1.7; color: #52524e; margin: 0; }
+    .author-lead a { color: #3fbd71; text-decoration: underline; text-underline-offset: 2px; }
 
     .author-creds { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin: 24px 0 36px; padding: 20px; background: #f7f7f5; border-radius: 12px; }
     .cred { text-align: center; }

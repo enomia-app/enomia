@@ -4,7 +4,7 @@ export const prerender = true;
 import { getCollection, getEntry } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import NewsletterBlock from '../../components/NewsletterBlock.astro';
-import { marcChenut, authorPhoto, AUTHOR_BIO_ARTICLE } from '../../data/author';
+import { marcChenut, authorPhoto, AUTHOR_BIO_ARTICLE_HTML } from '../../data/author';
 import blogVolumes from '../../../scripts/blog-volumes-en-ligne.json';
 
 export async function getStaticPaths() {
@@ -167,7 +167,7 @@ const faqLd = faqItems.length > 0 ? {
         </div>
       </div>
 
-      <p class="author-bio-line">{AUTHOR_BIO_ARTICLE}</p>
+      <p class="author-bio-line" set:html={AUTHOR_BIO_ARTICLE_HTML}></p>
 
       <!-- Credibility bar -->
       <div class="cred-bar">

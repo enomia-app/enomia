@@ -27,6 +27,14 @@ export const AUTHOR_BIO_MICRO =
 export const AUTHOR_BIO_ARTICLE =
   "Marc Chenut est investisseur en location courte durée depuis 2019. Son expertise pointue de la location saisonnière lui permet d'atteindre autour de 15 % de rendement net : 4 logements, près de 7 000 € nets par mois, sans conciergerie et sans avoir quitté son emploi. Il détaille sa méthode, applicable presque partout en France et actionnable dès la lecture, dans La Méthode 97 %.";
 
+/** Bio longue avec « La Méthode 97 % » liée vers la page du livre (/livre) — pour l'affichage (set:html).
+ *  Cible = page de capture (PDF offert, pour qui n'a pas lu le livre), pas /livre (post-lecture).
+ *  La version texte pur (AUTHOR_BIO_ARTICLE) reste utilisée pour le Schema Person + les métas. */
+export const AUTHOR_BIO_ARTICLE_HTML = AUTHOR_BIO_ARTICLE.replace(
+  'La Méthode 97 %',
+  '<a href="/la-methode-97">La Méthode 97 %</a>',
+);
+
 export const marcChenut = {
   '@type': 'Person',
   '@id': PERSON_ID,

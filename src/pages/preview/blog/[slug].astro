@@ -4,7 +4,7 @@ export const prerender = false;
 
 import { getCollection } from 'astro:content';
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-import { AUTHOR_BIO_ARTICLE } from '../../../data/author';
+import { AUTHOR_BIO_ARTICLE_HTML } from '../../../data/author';
 
 const { slug } = Astro.params;
 const allPosts = await getCollection('blog');
@@ -77,7 +77,7 @@ const readTime = readingTime(post.body);
         </div>
       </div>
 
-      <p class="author-bio-line">{AUTHOR_BIO_ARTICLE}</p>
+      <p class="author-bio-line" set:html={AUTHOR_BIO_ARTICLE_HTML}></p>
 
       <div class="cred-bar">
         <div class="cred-item"><div class="cred-value">4</div><div class="cred-label">logements en courte durée</div></div>

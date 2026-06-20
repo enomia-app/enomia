@@ -38,7 +38,7 @@
   "louer-airbnb-rentable": {
     "phrase": "Rebtabilité airbnb",
     "error": "ERROR 50 :: NOTHING FOUND",
-    "title": "Louer en Airbnb est-ce rentable ? Mes vrais chiffres sur 9 biens (2026)",
+    "title": "Louer en Airbnb est-ce rentable ? Mes vrais chiffres sur mes biens (2026)",
     "pillarKeyword": "Rebtabilité airbnb",
     "fallback": false
   },

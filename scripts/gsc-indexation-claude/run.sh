@@ -1,5 +1,5 @@
 #!/bin/bash
-# gsc-indexation-claude — wrapper launchd Mac mini, 9h18 quotidien.
+# gsc-indexation-claude — wrapper launchd Mac mini, 6h12 quotidien.
 # Lance la skill « gsc-indexation-quotidienne » via claude -p,
 # puis envoie un récap email via Resend (scripts/tech-watchdog/send-report.sh).
 # (Ancien pipeline Playwright supprimé 2026-05-24 ; historique dans la branche wip/macmini-rescue-2026-05-24)
@@ -19,16 +19,46 @@ cd "$REPO_ROOT"
 
 echo "===== gsc-indexation-claude start $(date -Iseconds) =====" | tee -a "$RUN_LOG"
 
-# Lancer claude -p, capturer la sortie complète dans CLAUDE_OUT (pour l'email)
-# et aussi répliquer dans RUN_LOG (pour le debug local).
+# Garde-fou anti-zombie : tue un éventuel claude -p GSC resté figé d'un run précédent.
+# (Incident 2026-06-12 → 06-20 : un claude -p --chrome pendu 8 jours a bloqué launchd
+#  qui refuse de lancer une 2e instance du même label tant que la 1re vit → zéro run, zéro mail.)
+if pkill -f "claude -p .*indexation GSC quotidien" 2>/dev/null; then
+  echo "WARN: process claude -p GSC zombie détecté et tué avant démarrage" | tee -a "$RUN_LOG"
+  sleep 2
+fi
+
+# Lancer claude -p en arrière-plan + watchdog (pas de `timeout`/`gtimeout` sur le Mac mini).
+# Capture la sortie dans CLAUDE_OUT (pour l'email) et réplique dans RUN_LOG (debug local).
+# Si claude pend > TIMEOUT_SECS, le watchdog le tue (lui + ses enfants) → run.sh sort,
+# l'email part en ❌, et le lendemain n'est plus bloqué.
+TIMEOUT_SECS=2700  # 45 min
 set +e
 claude -p "Tu es l'agent d'indexation GSC quotidien. Lance la skill « gsc-indexation-quotidienne » depuis le projet ~/projects/eunomia. Elle soumettra les URLs prioritaires non-indexées via Google Search Console." \
   --model claude-sonnet-4-6 \
   --chrome \
   --allowedTools "Bash Read Write Edit Glob Grep Skill mcp__Claude_in_Chrome" \
   --dangerously-skip-permissions \
-  > "$CLAUDE_OUT" 2>&1
+  > "$CLAUDE_OUT" 2>&1 &
+CLAUDE_PID=$!
+
+( # watchdog
+  sleep "$TIMEOUT_SECS"
+  if kill -0 "$CLAUDE_PID" 2>/dev/null; then
+    { echo ""; echo "TIMEOUT: claude -p a dépassé ${TIMEOUT_SECS}s — kill $CLAUDE_PID"; } >> "$CLAUDE_OUT"
+    pkill -P "$CLAUDE_PID" 2>/dev/null
+    kill -TERM "$CLAUDE_PID" 2>/dev/null
+    sleep 10
+    pkill -9 -P "$CLAUDE_PID" 2>/dev/null
+    kill -9 "$CLAUDE_PID" 2>/dev/null
+  fi
+) &
+WATCHDOG_PID=$!
+
+wait "$CLAUDE_PID"
 EXIT=$?
+# claude a rendu la main (fini ou tué) → on coupe le watchdog s'il dort encore
+kill "$WATCHDOG_PID" 2>/dev/null
+wait "$WATCHDOG_PID" 2>/dev/null
 set -e
 
 # Bilan d'indexation ventilé par section (conciergerie/love-room/cabane/blog) → ajouté à l'email du

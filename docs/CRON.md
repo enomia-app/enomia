@@ -16,7 +16,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 |-------|-----------|------|--------|
 | `app.enomia.git-pull` | toutes les 5 min | Garde le repo Mac mini à jour avec GitHub | actif |
 | `com.enomia.fb-daily-scan` | 7h17 quotidien | Scan FB matinal + drafte commentaires + email | actif |
-| `app.enomia.gsc-indexation` | 9h18 quotidien | Wrapper `claude -p` qui lance la skill `gsc-indexation-quotidienne` (refresh GSC API + soumissions Chrome MCP top 10 URLs prioritaires par volume SEMrush) | actif |
+| `app.enomia.gsc-indexation` | 6h12 quotidien | Wrapper `claude -p` qui lance la skill `gsc-indexation-quotidienne` (refresh GSC API + soumissions Chrome MCP top 10 URLs prioritaires par volume SEMrush). Watchdog timeout 45 min + garde-fou anti-zombie (cf incident 06-12→06-20). | actif |
 | `app.enomia.tech-watchdog` | 8h11 quotidien | Watchdog santé technique du site | actif |
 | `app.enomia.blog-publish-daily` | 8h17 quotidien (publie jours impairs, ~1/2j) | Publie 1 article blog brouillon → en-ligne dans l'ordre `scripts/blog-publish-queue.json`, commit/push + email récap Resend. Pas de claude -p (git+node pur). | **actif** (installé Mac mini 2026-05-29) |
 | `app.enomia.conciergerie-production` | Lun/Mer/Ven 8h37 | Cycle de production landing conciergerie | actif |
@@ -89,7 +89,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 **Script** : `scripts/git-pull-eunomia.sh`
 Garde la copie locale du repo synchronisée avec GitHub. Évite que le Mac mini parte en désync.
 
-### `app.enomia.gsc-indexation` — 9h18 quotidien (réactivé 2026-05-24)
+### `app.enomia.gsc-indexation` — 6h12 quotidien (réactivé 2026-05-24)
 **Script** : `scripts/gsc-indexation-claude/run.sh`
 **Fait** : Wrapper bash qui lance `claude -p` avec la skill `gsc-indexation-quotidienne`. La skill : refresh `index-status.json` via URL Inspection API si > 24h, compute top 10 candidates par volume SEMrush (avec anti-doublon 14j via `urls.json`), soumissions via Chrome MCP. Envoie un email récap à `marc@enomia.app` via Resend (`scripts/tech-watchdog/send-report.sh`).
 **Historique** :
@@ -97,8 +97,9 @@ Garde la copie locale du repo synchronisée avec GitHub. Évite que le Mac mini 
 - 2026-05-23 : `launchctl unload` manuel, délégué à la cloud routine Anthropic `gsc-indexation-quotidienne` (À distance, 9h18). `be22df9` documentait ce switch dans CRON.md (le `unload` lui-même était hors commit).
 - 2026-05-24 matin : cloud routine `trig_018a5hNKznSvgCQLo4zVFFpU` auto-désactivée (`auto_disabled_env_not_found` — env bridge périmé après reboot session `--remote-control`).
 - 2026-05-24 après-midi : launchd rechargé avec un nouveau wrapper `gsc-indexation-claude/run.sh` qui appelle la skill via `claude -p` (au lieu du pipeline Playwright). État stable. Cloud routine reste désactivée (non supprimable via API, à supprimer manuellement sur https://claude.ai/code/routines).
+- ⚠️ 2026-06-12 → 06-20 : **panne silencieuse 8 jours**. Le `claude -p --chrome` du 12/06 06h12 s'est figé (pas de réponse Chrome MCP) sans timeout → process pendu indéfiniment. launchd refusant de lancer une 2e instance du même label tant que la 1re vit, **tous les runs suivants ont été sautés** → zéro soumission, zéro email (l'email part en fin de `run.sh`, jamais atteint). Détecté le 20/06 (PID figé depuis `08-01h`). Fix : process tué à la main + `run.sh` durci → **watchdog bash 45 min** (pas de `timeout`/`gtimeout` sur le Mac mini) qui tue claude + enfants s'il dépasse, fait sortir `run.sh` et partir l'email en ❌ ; + **garde-fou anti-zombie** (`pkill` d'un éventuel claude GSC resté pendu) en tête de script.
 **Logs** : `scripts/gsc-indexation-claude/logs/run-YYYY-MM-DD.log` + email Resend journalier.
-**Quota** : 10 URLs/jour configuré dans `.claude/gsc-tracking/urls.json` (`daily_quota`). Chrome doit être ouvert avec l'extension Claude in Chrome active à 9h18.
+**Quota** : 10 URLs/jour configuré dans `.claude/gsc-tracking/urls.json` (`daily_quota`). Chrome doit être ouvert avec l'extension Claude in Chrome active à 6h12.
 
 ### `app.enomia.tech-watchdog` — 8h11 quotidien
 **Script** : `scripts/tech-watchdog/run.sh`

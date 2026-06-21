@@ -17,13 +17,6 @@ SEND_REPORT="$REPO_ROOT/scripts/tech-watchdog/send-report.sh"
 mkdir -p "$LOGS_DIR"
 cd "$REPO_ROOT"
 
-# Auth claude -p : sur le Mac mini en contexte launchd, le keychain n'est pas fiable
-# (token OAuth périmé non rafraîchi, et SSH/launchctl setenv ne propagent pas) → on
-# source un token OAuth depuis un fichier hors-Git (chmod 600). Cf incident 2026-06-21.
-if [[ -f "$HOME/.config/claude-cron-secrets.env" ]]; then
-  set -a; . "$HOME/.config/claude-cron-secrets.env"; set +a
-fi
-
 echo "===== gsc-indexation-claude start $(date -Iseconds) =====" | tee -a "$RUN_LOG"
 
 # Garde-fou anti-zombie : tue un éventuel claude -p GSC resté figé d'un run précédent.

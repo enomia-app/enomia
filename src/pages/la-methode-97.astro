@@ -50,6 +50,10 @@ import AuthorSchema from '../components/AuthorSchema.astro';
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = new FormData(form);
+    // Provenance via ?ref= (partage ami, RS, pub, bio) -> taggee dans la source Brevo.
+    const refRaw = new URLSearchParams(location.search).get('ref') || '';
+    const ref = refRaw.replace(/[^a-zA-Z0-9-]/g, '').slice(0, 30);
+    const source = ref ? 'Methode-Gratuit-' + ref.charAt(0).toUpperCase() + ref.slice(1) : 'Methode-Gratuit';
     const btn = form.querySelector('button');
     if (btn) {
       btn.disabled = true;
@@ -62,7 +66,7 @@ import AuthorSchema from '../components/AuthorSchema.astro';
         body: JSON.stringify({
           email: data.get('email'),
           firstName: data.get('firstName'),
-          source: 'Methode-Gratuit',
+          source,
         }),
       });
       if (!res.ok) throw new Error('subscribe failed');

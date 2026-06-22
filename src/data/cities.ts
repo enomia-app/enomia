@@ -15360,6 +15360,776 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-19',
   },
+  {
+    slug: 'noirmoutier',
+    displayName: 'Noirmoutier',
+    region: 'Pays de la Loire',
+    regionSlug: 'pays-de-la-loire',
+    title:
+      'Conciergerie Noirmoutier Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Noirmoutier : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb sur l'île de Noirmoutier. Tarifs (15-25 %), services, avis, réglementation 2026 changement d'usage, secteurs Bois de la Chaise, L'Herbaudière, Gois.",
+    kwPrincipal: 'conciergerie noirmoutier',
+    kwSecondaires: [
+      'airbnb noirmoutier',
+      'location saisonnière noirmoutier',
+      'conciergerie airbnb noirmoutier',
+      'location vacances ile de noirmoutier',
+      'gestion locative noirmoutier',
+      'meublé tourisme noirmoutier',
+    ],
+    population: 4485,
+    tourists: 50000,
+    activeListings: 420,
+    priceLow: 95,
+    priceHigh: 180,
+    occupancyRate: 50,
+    revpar: 58,
+    seasonality:
+      "Saisonnalité estivale marquée typique d'une île balnéaire à très forte densité de résidences secondaires (plus de 50 % du parc de logements sur l'île de Noirmoutier). Pic juillet-août avec une population qui passe d'environ 9 200 habitants permanents à près de 50 000 personnes au plus fort de l'été, occupation 80-90 % sur juillet-août et tarifs multipliés par 1,5 à 2 sur les biens vue mer ou proches plages. Épaules fortes en juin et septembre (météo douce, passage du Gois, sentiers côtiers, marais salants), ponts de printemps (Pâques, mai) bien remplis grâce à la clientèle famille et retraités. Hiver très creux (novembre-février) où une grande partie de l'offre ferme : l'île vit alors au rythme de sa population permanente, de l'ostréiculture et de la récolte du sel. Une stratégie LCD rentable à Noirmoutier se joue sur 5 à 7 mois d'avril à octobre, avec un cœur de chiffre d'affaires concentré sur 10 semaines estivales.",
+    rankNational: 26,
+    introCustom:
+      "Vous avez un appartement ou une maison sur l'**île de Noirmoutier**, à **Noirmoutier-en-l'Île** autour du château et du port, au **Bois de la Chaise** dans les villas sous les pins, près du **port de L'Herbaudière**, à **La Guérinière**, **L'Épine** ou **Barbâtre** côté Gois, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **saisonnalité estivale très marquée** (l'essentiel du chiffre d'affaires se fait sur 10 semaines), la **part écrasante de résidences secondaires** (plus de 50 % du parc), la **réglementation locale durcie** (changement d'usage obligatoire pour toute résidence secondaire depuis septembre 2025, numéro d'enregistrement généralisé au 1er janvier 2026) et la dizaine d'acteurs locaux qui se partagent un marché insulaire, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players de l'île (La Conciergerie de Noirmoutier, Zenkeys, Madame la Concierge), les spécialistes nationaux de la résidence secondaire (Hoomy) et les réseaux de gestion multi-plateformes (Guest Adom, Homerez) ?",
+    marketIntro:
+      "Noirmoutier est un **marché LCD insulaire et balnéaire à très forte saisonnalité**, porté par une île de **48,83 km²** et **quatre communes** (Noirmoutier-en-l'Île, Barbâtre, L'Épine, La Guérinière) qui regroupent environ **9 200 habitants permanents** mais accueillent jusqu'à **50 000 personnes au plus fort de l'été**. La part de **résidences secondaires dépasse 50 %** du parc de logements, ce qui fait de l'île un terrain de jeu LCD dense mais concentré sur la belle saison. La ville compte de l'ordre de **420 annonces actives** sur Airbnb avec un **tarif moyen** qui démarre autour de **95 €/nuit** hors saison et grimpe bien au-delà de **150-180 €/nuit** sur les biens vue mer en plein été.\n\n**Passage du Gois et insularité.** Noirmoutier se relie au continent par le **passage du Gois**, route submersible de 4,15 km recouverte deux fois par jour à marée haute, et par un pont depuis 1971. Cette double identité — île au bout du Gois, accessible mais à part — est un argument LCD fort : les voyageurs viennent chercher une parenthèse insulaire, les marées, les couchers de soleil sur les marais. La course du Gois, le passage à pied à marée basse et les bouchots d'huîtres font partie du décor que recherche la clientèle.\n\n**Sel, ostréiculture et plages.** L'île vit du **sel** (marais salants, fleur de sel de Noirmoutier), de l'**ostréiculture** et de la **culture de la pomme de terre primeur** (la fameuse Bonnotte). Côté tourisme, les **plages** (plage des Dames au Bois de la Chaise, l'Anse Rouge, les plages de Barbâtre et La Guérinière), le **bois de la Chaise** avec ses villas Belle Époque sous les pins et les mimosas, le **château de Noirmoutier** et le **port de L'Herbaudière** drainent une clientèle famille, retraités et amateurs de nautisme d'avril à octobre.\n\n**Prix au m² élevés, marché tendu à l'achat.** Comptez **5 000 à 5 700 €/m² en moyenne** à Noirmoutier-en-l'Île en 2025-2026 (autour de **5 700 €/m² pour les maisons** et **4 800 €/m² pour les appartements**), parmi les niveaux les plus élevés de la façade atlantique. Le **Bois de la Chaise** et les emplacements vue mer dépassent largement la moyenne (villas à plusieurs milliers d'euros le m² au-dessus du marché), tandis que **Barbâtre**, **La Guérinière** et **L'Épine** offrent des points d'entrée un peu plus accessibles. Ce niveau de prix, combiné à une saison courte, impose une gestion LCD rigoureuse pour sortir une rentabilité correcte : à Noirmoutier, le rendement se construit sur le tarif élevé en pleine saison plus que sur le taux d'occupation annuel.",
+    conciergeries: [
+      {
+        name: 'La Conciergerie de Noirmoutier',
+        url: 'https://www.conciergeriedenoirmoutier.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 25,
+        specialty:
+          'Pure-player Noirmoutier, résidences secondaires et location saisonnière',
+        description:
+          "La Conciergerie de Noirmoutier est un acteur privé local, basé sur l'île, issu du milieu des services à la personne et de l'hôtellerie. Positionnement pure-player insulaire couvrant les quatre communes (Noirmoutier-en-l'Île, Barbâtre, L'Épine, La Guérinière). Tarification sur devis selon le bien et le niveau de service. Services : gestion des entrées et sorties locataires, accueil et remise des clés, ménage et blanchisserie, entretien courant, surveillance des résidences secondaires hors saison, ouverture et fermeture des volets, suivi de petits travaux, jardinage. Le positionnement mêle conciergerie de résidence secondaire (propriétaires qui ne louent pas ou peu) et gestion locative saisonnière, ce qui en fait un interlocuteur adapté aux propriétaires résidant hors de l'île. Pertinente pour un propriétaire d'une maison familiale au Bois de la Chaise ou à La Guérinière qui veut un acteur 100 % local, capable de surveiller le bien l'hiver et de gérer les locations l'été avec un interlocuteur unique sur place.",
+      },
+      {
+        name: 'Zenkeys',
+        url: 'https://zenkeys.fr/services-de-conciergerie-noirmoutier/',
+        commission: '15-25 %',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 18,
+        specialty:
+          'La conciergerie du littoral, multi-plateformes Airbnb / Booking / Abritel',
+        description:
+          "Zenkeys (La conciergerie du littoral) couvre l'ensemble de l'île de Noirmoutier — Noirmoutier-en-l'Île, L'Épine, La Guérinière, Barbâtre — ainsi que le littoral vendéen jusqu'à La Tranche-sur-Mer. Commission de gestion complète annoncée entre 15 et 25 % des revenus locatifs, avec aussi des prestations à la carte (ménage de 20 à 35 € par intervention, abonnement maintenance à partir de 30 € par mois). Services : création et optimisation des annonces sur Airbnb, Booking et Abritel, photographie, stratégie tarifaire, ménage et blanchisserie, accueil et remise des clés, livraison de courses, réservation d'activités, home staging, surveillance annuelle des résidences secondaires. Pertinente pour un propriétaire qui veut une diffusion multi-plateformes pour maximiser l'occupation sur une saison courte, et qui accepte une fourchette de commission variable selon le périmètre de service retenu.",
+      },
+      {
+        name: 'Hoomy',
+        url: 'https://www.hoomy.fr/conciergeries/votre-conciergerie-sur-lile-de-noirmoutier/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 30,
+        specialty:
+          'Spécialiste national de la résidence secondaire, concierge locale dédiée',
+        description:
+          "Hoomy est un acteur national positionné sur la gestion de la résidence secondaire, présent sur l'île de Noirmoutier via une concierge locale dédiée et un périmètre élargi (Noirmoutier-en-l'Île, La Guérinière, Barbâtre, L'Épine, La Barre-de-Monts, Notre-Dame-de-Monts). Le modèle est une gestion complète qui va de la création de l'annonce à l'assistance fiscale, avec diffusion multi-canaux (Airbnb, Booking, Abritel) pour optimiser les revenus locatifs. Services sur place : accueil et remise des clés en main propre, états des lieux, ménage, home staging, petites réparations, accompagnement au départ. Hoomy ajoute des prestations de valorisation du bien et de conseil travaux. Pertinente pour un propriétaire investisseur à distance qui veut déléguer l'intégralité de la chaîne, y compris l'optimisation fiscale et la valorisation du bien, et qui privilégie un acteur structuré à un artisan local.",
+      },
+      {
+        name: 'Guest Adom Noirmoutier',
+        url: 'https://www.guest-adom.com/conciergerie-airbnb-noirmoutier/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 15,
+        specialty:
+          "Réseau national issu des services à la personne et de l'hôtellerie",
+        description:
+          "Guest Adom est un réseau national de conciergerie Airbnb adossé au groupe Adhap (services à la personne), présent sur Noirmoutier. Le positionnement met en avant un savoir-faire issu du milieu des services à la personne et de l'hôtellerie, gage de standardisation des process d'accueil et de ménage. Services : création et gestion des annonces, tarification dynamique, accueil et remise des clés, ménage et blanchisserie de qualité hôtelière, maintenance, gestion de la relation voyageurs et reporting. Tarification sur devis selon le bien et la formule. L'appartenance à un réseau apporte des outils et des assurances cadrés, au prix d'une personnalisation moindre qu'un pure-player insulaire. Pertinente pour un propriétaire qui veut la sécurité d'un réseau national avec des standards homogènes de ménage et d'accueil, plutôt qu'un acteur artisanal, tout en gardant un correspondant local.",
+      },
+      {
+        name: 'Homerez',
+        url: 'https://www.homerez.com/fr/conciergerie/noirmoutier',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 12,
+        specialty:
+          'Multi-diffusion Airbnb / Booking / Abritel, optimisation occupation',
+        description:
+          "Homerez est un réseau national de gestion d'annonces multi-plateformes (Airbnb, Booking, Abritel et plateformes de niche), présent sur Noirmoutier. Commission autour de 20 %, avec un focus sur l'optimisation de la visibilité et la mise en concurrence des canaux de diffusion. Services : création et optimisation des annonces, photos et titres, stratégie tarifaire, gestion des réservations et de la relation voyageurs, coordination du ménage et de l'accueil via partenaires locaux. Pertinente pour un propriétaire qui veut maximiser l'occupation sur les épaules de saison (juin, septembre, ponts de printemps) en multipliant les plateformes plutôt qu'en misant sur la note premium d'un seul canal, et qui accepte un suivi davantage centralisé que de proximité. Bon complément pour un bien dont l'enjeu est de remplir au-delà du seul cœur estival.",
+      },
+      {
+        name: 'Madame la Concierge',
+        url: 'https://www.facebook.com/madamelaconcierge/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 10,
+        specialty: 'Conciergerie de résidence secondaire basée à Barbâtre',
+        description:
+          "Madame la Concierge est une conciergerie indépendante basée à Barbâtre, au sud de l'île côté passage du Gois, positionnée sur l'accompagnement des propriétaires de résidences secondaires sur l'ensemble de l'île de Noirmoutier. Services : gestion des entrées et sorties locataires, ménage et blanchisserie, surveillance des biens hors saison, ouverture et fermeture des volets, suivi de petits travaux, jardinage, livraison à domicile. Tarification sur devis selon les prestations. Volume de portefeuille réduit, ce qui peut être un avantage pour un propriétaire qui veut un interlocuteur disponible et une vraie connaissance fine du secteur Barbâtre / Gois. Pertinente pour un propriétaire d'une résidence secondaire au sud de l'île qui privilégie une relation de proximité avec une concierge locale identifiée, et qui mêle surveillance hivernale et locations estivales ponctuelles.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: "Noirmoutier-en-l'Île (centre, château, port)",
+        pricePerNight: '110-170 €',
+        occupancy: 55,
+        description:
+          "Cœur de l'île, château de Noirmoutier, port de plaisance, commerces, marché. Cible famille et couple qui veulent tout à pied. Prix au m² élevés, autour de 5 000-5 700 €. Demande forte en pleine saison et sur les ponts de printemps, soutenue hors été par la vie de bourg permanente. Meilleur compromis pour louer aussi sur les épaules de saison.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Bois de la Chaise',
+        pricePerNight: '140-220 €',
+        occupancy: 50,
+        description:
+          "Quartier résidentiel haut de gamme à l'est de Noirmoutier-en-l'Île, villas Belle Époque sous les pins et les mimosas, plage des Dames. Segment le plus cher de l'île, tarifs LCD premium en été. Cible clientèle aisée et familles recherchant le calme et la vue mer. Prix au m² nettement au-dessus de la moyenne. Saison concentrée mais tarifs élevés.",
+        roiBrut: '3 à 4,5 %',
+      },
+      {
+        name: "L'Herbaudière (port de pêche)",
+        pricePerNight: '100-160 €',
+        occupancy: 52,
+        description:
+          "Port de pêche et de plaisance au nord de l'île, restaurants de poisson, criée. Ambiance maritime authentique, cible amateurs de nautisme et de produits de la mer. Prix au m² élevés mais légèrement sous le Bois de la Chaise. Demande estivale soutenue, intérêt sur les week-ends gastronomiques hors saison.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'La Guérinière',
+        pricePerNight: '95-150 €',
+        occupancy: 50,
+        description:
+          "Commune centrale de l'île, plages au sud, accès direct aux grandes plages familiales. Point d'entrée un peu plus accessible que Noirmoutier-en-l'Île à l'achat. Cible famille avec enfants. Saison estivale forte (plages), creux marqué l'hiver. Bon rapport tarif/prix d'achat pour une stratégie LCD estivale.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: "L'Épine",
+        pricePerNight: '95-145 €',
+        occupancy: 48,
+        description:
+          "Commune ostréicole au nord-ouest de l'île, port du Morin, ambiance village et parcs à huîtres. Marché plus calme et plus accessible que le centre. Cible clientèle recherchant l'authenticité insulaire. Saison concentrée sur l'été. Prix d'achat plus mesurés permettant un rendement un peu meilleur sur une exploitation estivale bien gérée.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Barbâtre / Gois',
+        pricePerNight: '90-145 €',
+        occupancy: 50,
+        description:
+          "Commune sud de l'île, entrée par le passage du Gois, longues plages et dunes, cordon dunaire. Secteur le plus accessible à l'achat sur l'île, cible famille et amateurs de grandes plages et de glisse. Saison estivale forte portée par les plages et le Gois. Meilleur point d'entrée pour un investisseur cherchant un prix au m² plus contenu.",
+        roiBrut: '4 à 6 %',
+      },
+    ],
+    regulation:
+      "Noirmoutier-en-l'Île applique un **dispositif local renforcé** sur les meublés de tourisme depuis le 15 septembre 2025, dans le cadre de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024). L'île étant un marché très tendu (plus de 50 % de résidences secondaires), la commune a anticipé l'encadrement.\n\n**Enregistrement obligatoire et généralisé.** Tout meublé de tourisme à Noirmoutier-en-l'Île — résidence principale comme secondaire — doit obtenir un **numéro d'enregistrement** via le téléservice de la commune (taxe.3douest.com/noirmoutier, menu Hébergement). Ce numéro est unique à chaque logement et doit figurer sur toutes les annonces, quelle que soit la plateforme. Au **1er janvier 2026**, l'obligation s'applique à tous les meublés, y compris ceux déjà déclarés avant cette date.\n\n**Changement d'usage pour les résidences secondaires.** Tout propriétaire d'une **résidence secondaire** qui souhaite démarrer une activité de location meublée touristique doit déposer une **demande de changement d'usage** auprès du service urbanisme (changement.usage@ville-noirmoutier.fr). Cette autorisation s'ajoute au numéro d'enregistrement et conditionne la légalité de la location. Compte tenu de la rareté du foncier et de la part de résidences secondaires sur l'île, demander conseil au service urbanisme avant tout achat dans l'objectif LCD est une pratique de prudence.\n\n**Résidence principale : 120 nuitées/an (90 possible).** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). Depuis le 1er janvier 2025, les communes en zone tendue peuvent abaisser ce plafond jusqu'à 90 jours par délibération motivée du conseil municipal.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont progressivement interdits à la location, et la loi Le Meur exige un DPE classé au minimum **E** pour toute nouvelle autorisation de changement d'usage. Un DPE classé entre A et E est désormais requis pour obtenir l'autorisation municipale.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Sur un marché à tarif élevé et saison courte comme Noirmoutier, le classement officiel 1 à 5 étoiles est un levier fiscal et tarifaire d'autant plus pertinent.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, **50 000 € pour location au-delà du quota autorisé** dans les communes ayant institué un changement d'usage. Le numéro d'enregistrement obligatoire au 1er janvier 2026 rend ces contrôles plus simples pour la commune.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Noirmoutier-en-l'Île applique une taxe de séjour au réel dont les tarifs varient selon la catégorie et le classement de l'hébergement (délibérations annuelles consultables sur taxe.3douest.com/noirmoutier), collectée automatiquement par Airbnb et reversée à la commune.",
+    concreteExample: {
+      bienType: 'T3',
+      surface: 55,
+      pricePerNight: 130,
+      neighborhood: "Noirmoutier-en-l'Île centre",
+      revenuBrut: 19500,
+      commissionRate: 0.2,
+      menageCount: 48,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: "Combien rapporte un Airbnb sur l'île de Noirmoutier ?",
+        a: "Un T3 de 55 m² bien placé à Noirmoutier-en-l'Île, au Bois de la Chaise ou à La Guérinière (tarif moyen 110-150 €/nuit en saison, occupation 50-55 % sur l'année) génère typiquement un chiffre d'affaires brut de 18 000-22 000 € à Noirmoutier, mais avec une structure très particulière : l'essentiel du chiffre d'affaires (60-70 %) se fait sur les 10 semaines de juillet-août et les épaules juin-septembre. Une maison familiale vue mer ou proche plage peut dépasser 28 000-35 000 € grâce aux tarifs estivaux élevés. Net de la commission conciergerie (15-25 %), de la taxe foncière (souvent lourde sur l'île), des charges et du ménage, comptez un revenu disponible de l'ordre de 11 000-15 000 € sur le T3 et au-delà de 20 000 € sur une maison premium bien exploitée. La rentabilité à Noirmoutier se joue sur le tarif élevé en pleine saison, pas sur le taux d'occupation annuel.",
+      },
+      {
+        q: 'Quels secteurs privilégier pour investir en LCD à Noirmoutier ?',
+        a: "Pour un budget contenu, Barbâtre (entrée par le Gois), L'Épine et La Guérinière offrent les points d'entrée les plus accessibles à l'achat sur l'île, avec un ROI brut de 4 à 6 % grâce à des prix au m² plus mesurés que le centre. Noirmoutier-en-l'Île (centre, château, port) reste le meilleur compromis pour louer aussi sur les épaules de saison grâce à la vie de bourg permanente, avec un ROI 3,5-5 %. Le Bois de la Chaise et les villas vue mer sont le segment premium : tarifs LCD les plus élevés en été mais prix d'achat très élevés (ROI 3-4,5 %), pertinents pour qui vise la valorisation patrimoniale autant que le rendement. L'Herbaudière séduit la clientèle nautique et gastronomique. Dans tous les cas, à Noirmoutier le rendement se construit sur le tarif de pleine saison et la qualité de l'exploitation estivale, pas sur l'occupation hivernale qui reste structurellement faible.",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Noirmoutier ?",
+        a: "Les commissions à Noirmoutier s'étalent de 15 % (formules de base, gestion partielle) à 25 % TTC (formules intégrales avec ménage et diffusion multi-plateformes), avec une moyenne de marché autour de 20 % TTC pour une formule complète. Zenkeys affiche une fourchette 15-25 % selon le périmètre, Homerez se situe autour de 20 %, tandis que La Conciergerie de Noirmoutier, Hoomy, Guest Adom et Madame la Concierge travaillent sur devis personnalisé. Beaucoup d'acteurs locaux mêlent conciergerie de résidence secondaire (surveillance hivernale, ouverture/fermeture des volets, jardinage) et gestion locative estivale, ce qui peut justifier une grille différente d'une conciergerie urbaine. Le critère décisif au-delà du taux affiché sur un marché à saison courte comme Noirmoutier est la stratégie de pricing sur le cœur estival : demander au prestataire un exemple chiffré de tarification semaine par semaine sur juillet-août avant de signer.",
+      },
+      {
+        q: "Faut-il une autorisation de changement d'usage à Noirmoutier pour louer une résidence secondaire ?",
+        a: "Oui. Depuis le 15 septembre 2025, Noirmoutier-en-l'Île impose une demande de changement d'usage pour tout propriétaire d'une résidence secondaire qui souhaite démarrer une activité de location meublée touristique. Cette autorisation s'ajoute au numéro d'enregistrement obligatoire (à demander via taxe.3douest.com/noirmoutier) qui devient exigé pour tous les meublés au 1er janvier 2026, y compris ceux déjà déclarés. La demande de changement d'usage se fait auprès du service urbanisme (changement.usage@ville-noirmoutier.fr), en ligne ou en format papier, avec les pièces justificatives. Compte tenu de la part de résidences secondaires sur l'île (plus de 50 % du parc), la commune a anticipé l'encadrement prévu par la loi Le Meur : si vous achetez à Noirmoutier dans l'objectif LCD, anticipez cette procédure dès le compromis et prenez conseil auprès du service urbanisme. Le défaut d'enregistrement est sanctionné jusqu'à 10 000 €, et la location au-delà du quota autorisé jusqu'à 50 000 €.",
+      },
+    ],
+    updatedAt: '2026-06-22',
+  },
+  {
+    slug: 'narbonne',
+    displayName: 'Narbonne',
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title:
+      'Conciergerie Narbonne Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Narbonne : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 6 meilleures conciergeries Airbnb à Narbonne et Narbonne-Plage. Tarifs (20-25 %), services, avis, réglementation 2026 loi Le Meur, quartiers centre historique, Narbonne-Plage, Razimbaud.',
+    kwPrincipal: 'conciergerie narbonne',
+    kwSecondaires: [
+      'airbnb narbonne',
+      'conciergerie airbnb narbonne',
+      'location saisonnière narbonne',
+      'conciergerie narbonne plage',
+      'location vacances narbonne plage',
+      'gestion locative narbonne',
+    ],
+    population: 58524,
+    tourists: 1500000,
+    activeListings: 700,
+    priceLow: 70,
+    priceHigh: 140,
+    occupancyRate: 55,
+    revpar: 42,
+    seasonality:
+      "Marché à forte saisonnalité estivale balnéaire, adoucie par l'œnotourisme et le patrimoine romain sur les ailes de saison. Pic estival de juin à septembre porté par le littoral (Narbonne-Plage, Saint-Pierre-la-Mer, Gruissan voisine, massif de la Clape, étangs et plages du parc naturel régional de la Narbonnaise) : occupation 75-85 % en juillet-août sur le littoral et 65-70 % en ville. Ailes de saison (avril-juin et septembre-octobre) soutenues par l'œnotourisme (vignobles AOP La Clape, Corbières, Minervois), le tourisme culturel (cité romaine, Narbo Via, cathédrale Saint-Just, Canal de la Robine inscrit à l'UNESCO, Halles) et les nombreux ponts de printemps. Creux hivernal de novembre à février (occupation 30-40 %) partiellement compensé en ville par le tourisme d'affaires et la position de carrefour autoroutier A9-A61.",
+    rankNational: 19,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Narbonne**, dans le **centre historique** autour de la cathédrale Saint-Just et des Halles, le long du **Canal de la Robine**, sur le secteur résidentiel de **Razimbaud** ou en bord de mer à **Narbonne-Plage** et **Saint-Pierre-la-Mer**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **forte saisonnalité estivale** du littoral (juillet-août à pleine occupation, hiver creux), l'**œnotourisme** et le patrimoine romain qui portent les ailes de saison, la **réglementation nationale qui se durcit** (loi Le Meur, numéro d'enregistrement obligatoire au 20 mai 2026) et le mélange d'acteurs locaux et de réseaux nationaux présents sur le Narbonnais, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players narbonnais (Le Concierge Narbonne, Conciergerie du Cers, L'Agence Conciergerie, Conciergerie de l'Aude) et les réseaux nationaux (YourHostHelper, Homerez) ?",
+    marketIntro:
+      "Narbonne est un **marché LCD à dominante balnéaire saisonnière**, structuré autour d'un littoral très demandé l'été et d'un arrière-pays patrimonial et viticole qui étale la saison. La ville et son agglomération comptent environ **700 annonces actives** sur Airbnb (centre-ville, Narbonne-Plage, Saint-Pierre-la-Mer, communes voisines) avec un **tarif moyen** autour de **85-95 €/nuit** sur l'année, et bien plus haut sur le littoral en juillet-août.\n\n**Cité romaine.** Narbonne est la **première colonie romaine de Gaule** (Narbo Martius, 118 av. J.-C.), traversée par la **Via Domitia** dont un segment est visible place de l'Hôtel-de-Ville. La **cathédrale Saint-Just-et-Saint-Pasteur** (l'une des plus hautes de France, inachevée), le musée **Narbo Via**, le **Palais des Archevêques**, les **Halles** classées et le **Canal de la Robine** (inscrit au patrimoine mondial de l'UNESCO au titre du Canal du Midi) drainent un tourisme culturel sur toute l'année, qui adoucit la saisonnalité balnéaire.\n\n**Narbonne-Plage et littoral.** À 15 km à l'est du centre, **Narbonne-Plage** et **Saint-Pierre-la-Mer** offrent 5 km de plages au pied du **massif de la Clape**, en bordure du **parc naturel régional de la Narbonnaise en Méditerranée** (étangs, lagunes, Gruissan voisine). C'est le moteur du marché LCD estival : occupation 75-85 % et tarifs doublés en juillet-août, mais saison courte (mai à septembre) et creux hivernal marqué. Un bien littoral est un produit estival pur ; un bien centre-ville lisse mieux ses revenus sur l'année.\n\n**Œnotourisme et prix au m².** Les vignobles **AOP La Clape, Corbières et Minervois** alimentent une demande de séjours œnotouristiques au printemps et à l'automne, recherchée par une clientèle de couples. Côté achat, Narbonne reste l'un des **marchés littoraux les plus accessibles** d'Occitanie : comptez environ **2 400 €/m² en moyenne** en 2026, **2 800 €/m²** sur le centre historique, **2 100 €/m²** sur Saint-Jean-Saint-Pierre et Razimbaud (meilleur rapport surface/prix), et davantage en première ligne à Narbonne-Plage. Un T2 centre se trouve dès 110 000-140 000 €, ce qui place Narbonne parmi les marchés LCD littoraux au meilleur rendement brut à l'achat.",
+    conciergeries: [
+      {
+        name: 'Le Concierge Narbonne',
+        url: 'https://leconciergenarbonne.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 50,
+        specialty: 'Pure-player Narbonne haut de gamme, revenue management',
+        description:
+          "Le Concierge Narbonne est un pure-player local positionné sur la gestion locative courte durée haut de gamme, qui gère plus de 50 biens sur Narbonne, Gruissan, Saint-Pierre-la-Mer et le Grand Narbonne. Tarification sur devis selon le bien. Services : revenue management et tarification dynamique, channel manager multi-plateformes (Airbnb, Booking), création professionnelle d'annonces, photographie et home staging, communication voyageurs 24/7, ménage professionnel, maintenance et petites réparations, assistance à la déclaration fiscale. Pertinente pour un propriétaire d'appartement centre-ville ou de villa littorale qui cherche un acteur local structuré, capable d'optimiser le pricing sur le pic estival comme sur les ailes de saison œnotouristiques, et qui valorise un suivi de proximité plutôt qu'une plateforme nationale standardisée.",
+      },
+      {
+        name: 'Conciergerie du Cers',
+        url: 'https://conciergerieducers.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 20,
+        specialty: 'Local Narbonnais, formules Standard et Premium',
+        description:
+          "La Conciergerie du Cers est un acteur local implanté à proximité immédiate de Narbonne et Gruissan, couvrant Narbonne, Narbonne-Plage, Saint-Pierre-la-Mer, Fleury-d'Aude et les communes voisines. Elle propose deux formules, Standard et Premium, sur devis. Services : gestion complète de la location saisonnière, accueil et départ des voyageurs, ménage avec contrôle qualité, entretien et renouvellement du linge, assistance voyageurs 24/7, optimisation des annonces Airbnb et Booking, stratégie de pricing dynamique. Son ancrage entre mer et arrière-pays lui donne une réactivité utile sur les rotations estivales rapides du littoral. Pertinente pour un propriétaire de bien à Narbonne-Plage ou Fleury-d'Aude qui veut un interlocuteur réactif sur place en haute saison, avec ménage et blanchisserie intégrés à la formule plutôt que sous-traités.",
+      },
+      {
+        name: "L'Agence Conciergerie",
+        url: 'https://www.lagenceconciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 15,
+        specialty:
+          "Gruissan / Narbonne / littoral, gestion structurée à l'année",
+        description:
+          "L'Agence Conciergerie est basée à Gruissan et couvre Gruissan, Narbonne, Narbonne-Plage et Saint-Pierre-la-Mer. Elle met en avant une organisation optimisée et une gestion structurée de la location courte durée à l'année, avec des process opérationnels prévisibles pour le propriétaire. Services : gestion des réservations et du calendrier, communication voyageurs, accueil et états des lieux, ménage entre les séjours, suivi du linge et maintenance. Son positionnement à cheval sur Gruissan et Narbonne-Plage en fait un acteur familier des deux sous-marchés balnéaires voisins. Pertinente pour un propriétaire de bien sur l'axe littoral Gruissan — Narbonne-Plage qui veut un acteur capable d'arbitrer entre les deux stations selon la demande, et qui privilégie une organisation cadrée à un service sur-mesure premium.",
+      },
+      {
+        name: "Conciergerie de l'Aude",
+        url: 'https://conciergeriedelaude.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 18,
+        specialty: 'Aude + Toulouse + Montpellier, états des lieux numériques',
+        description:
+          "La Conciergerie de l'Aude couvre Narbonne, Gruissan, Sigean, Ginestas et au-delà jusqu'à Toulouse et Montpellier. Issue de l'inspection immobilière pour professionnels depuis 2007, elle a ouvert ses services aux particuliers en 2024 et met en avant une expertise des états des lieux numériques pour garantir la conformité des annonces aux plateformes. Services : accueil voyageurs et remise de clés, états des lieux entrants et sortants, ménage et blanchisserie. Positionnement de partenariat plutôt que de simple sous-traitance. Pertinente pour un propriétaire qui possède des biens sur plusieurs villes d'Occitanie (Narbonne + Toulouse ou Montpellier) et veut un interlocuteur unique multi-sites, ou pour un propriétaire sensible à la rigueur documentaire des états des lieux pour limiter les litiges voyageurs.",
+      },
+      {
+        name: 'YourHostHelper Narbonne',
+        url: 'https://yourhosthelper.com/en/agence-narbonne/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 20,
+        specialty: 'Réseau national, agence locale Narbonne et Gruissan',
+        description:
+          "YourHostHelper est un réseau national de conciergerie présent à Narbonne et à Gruissan via des agences locales. Commission affichée autour de 20 % des nuitées. Services : création et diffusion des annonces, gestion du calendrier, accueil et départ des voyageurs, ménage professionnel entre les séjours, optimisation quotidienne du prix selon la demande. Le réseau combine des process nationaux éprouvés avec un correspondant local sur le Narbonnais. Pertinente pour un propriétaire investisseur à distance (Toulousain, Montpelliérain, Parisien) qui veut la robustesse d'un réseau national sur les outils de pricing et de diffusion, tout en gardant un référent terrain capable de gérer les rotations estivales du littoral et l'accueil physique des voyageurs en haute saison.",
+      },
+      {
+        name: 'Homerez Narbonne',
+        url: 'https://www.homerez.com/fr/conciergerie/narbonne',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 12,
+        specialty: 'Multi-diffusion Airbnb / Booking / Abritel',
+        description:
+          "Homerez est un réseau national de gestion d'annonces multi-plateformes (Airbnb, Booking, Abritel et plateformes de niche), présent à Narbonne. Commission autour de 20 %, focus sur l'optimisation de la visibilité et la mise en concurrence des canaux de diffusion. Sur un marché littoral très saisonnier comme Narbonne, la multi-diffusion vise à remplir les ailes de saison (avril-juin, septembre-octobre) en captant la demande œnotouristique et culturelle au-delà de la seule audience Airbnb estivale. Pertinente pour un propriétaire qui veut maximiser le taux d'occupation hors juillet-août via la diversification des plateformes, plus que la note premium sur une seule plateforme (où les pure-players narbonnais gardent un avantage qualitatif et une présence physique). Le réseau propose aussi des optimisations de titres et de photos via son équipe centrale.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre historique (Cathédrale / Halles / Canal de la Robine)',
+        pricePerNight: '80-120 €',
+        occupancy: 60,
+        description:
+          "Cœur de la cité romaine, cathédrale Saint-Just, Palais des Archevêques, Halles classées, Canal de la Robine inscrit à l'UNESCO. Cible touristique culturelle et œnotouristique sur toute l'année, ce qui lisse la saisonnalité. Prix au m² environ 2 800 €. T2 dès 120 000 €. Demande soutenue sur les ponts de printemps, l'été et l'arrière-saison vins.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'Narbonne-Plage',
+        pricePerNight: '100-180 €',
+        occupancy: 50,
+        description:
+          "Station balnéaire à 15 km du centre, 5 km de plages au pied du massif de la Clape. Produit LCD estival pur : occupation 75-85 % et tarifs doublés en juillet-août, mais saison courte et creux hivernal marqué. Cible familles et groupes l'été. Première ligne plus chère, rétro-littoral plus accessible. Forte prime estivale, ROI sensible à la durée de saison.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Saint-Pierre-la-Mer',
+        pricePerNight: '95-170 €',
+        occupancy: 50,
+        description:
+          "Prolongement nord de Narbonne-Plage vers Fleury-d'Aude, plus familial et résidentiel. Même logique estivale balnéaire (juin-septembre), avec proximité du parc naturel régional et des étangs. Cible familles et clientèle nature. Saison courte, forte concentration des revenus sur l'été. Bon compromis prix/cadre pour un bien estival hors première ligne.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Razimbaud / Beauséjour',
+        pricePerNight: '70-95 €',
+        occupancy: 52,
+        description:
+          "Secteurs résidentiels au meilleur rapport surface/prix de Narbonne. Prix au m² environ 2 100 €. T2 dès 90 000 €, maisons accessibles. Cible business semaine, séjours longs et tourisme culturel à budget maîtrisé. Distance au centre à compenser par la mise en scène, mais ROI brut élevé grâce aux tarifs d'achat modérés.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Saint-Jean-Saint-Pierre',
+        pricePerNight: '70-100 €',
+        occupancy: 52,
+        description:
+          "Quartier résidentiel accessible (environ 2 100 €/m²), proche du centre et des axes. Cible mixte business et tourisme culturel. T2 dès 90 000 €. Bon point d'entrée pour un premier investissement LCD à Narbonne avec un effort de décoration pour se démarquer. ROI brut soutenu par le prix d'achat bas.",
+        roiBrut: '6,5 à 8 %',
+      },
+      {
+        name: 'Périphérie La Clape / Gruissan',
+        pricePerNight: '110-200 €',
+        occupancy: 50,
+        description:
+          "Couronne littorale est vers le massif de la Clape et Gruissan (étangs, chalets sur pilotis, vignobles AOP La Clape). Cible touristique estivale balnéaire + œnotouristique. Villas et biens avec extérieur recherchés l'été. Prix d'achat plus élevés en bord de mer, prime estivale forte mais saison concentrée. Marché complémentaire au littoral narbonnais.",
+        roiBrut: '5 à 6,5 %',
+      },
+    ],
+    regulation:
+      "Narbonne applique le **cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sur les meublés de tourisme, sans dispositif local de changement d'usage restrictif identifié à ce jour. Avant tout projet, vérifiez auprès de la mairie de Narbonne si un règlement local a été instauré, la loi permettant à chaque commune d'en adopter un depuis le 21 novembre 2024.\n\n**Numéro d'enregistrement.** Tout meublé de tourisme doit être déclaré et obtenir un **numéro d'enregistrement** qui figure obligatoirement sur chaque annonce Airbnb, Booking ou Abritel. La déclaration s'effectue auprès de la commune (en mairie ou via son téléservice).\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le **20 mai 2026**, un **portail national unique** de déclaration devient obligatoire sur l'ensemble du territoire, quelle que soit la taille de la commune ou le type de résidence. Plus aucun loueur ne pourra publier d'annonce sans **numéro à 13 chiffres** valide.\n\n**Changement d'usage : à surveiller sur le littoral.** La loi Le Meur permet à toute commune, y compris Narbonne, d'instaurer une autorisation de changement d'usage pour les résidences secondaires mises en location courte durée. Les communes littorales sous tension touristique (Narbonne-Plage, Gruissan voisine) sont les plus susceptibles d'activer ce dispositif. Demandez un point au service urbanisme avant d'acheter un bien littoral dans l'objectif LCD.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de **120 jours par an** pour la location en résidence principale (celle que vous occupez au moins 8 mois par an).\n\n**DPE classe E minimum.** Depuis 2025, les logements classés **F ou G au DPE** sont interdits à la location longue durée, et le calendrier de la loi Le Meur durcit progressivement l'exigence pour les meublés de tourisme. Un bien littoral ancien (résidence des années 1970-80 à Narbonne-Plage) mérite un diagnostic DPE avant achat.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les meublés classés tourisme (plafond 77 700 €). Le **classement officiel 1 à 5 étoiles** est devenu un levier fiscal majeur, particulièrement rentable sur un bien littoral à fort chiffre d'affaires estival.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**, et jusqu'à **100 000 € par logement** pour une location au-delà du quota ou sans autorisation dans une commune ayant institué le changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Le Grand Narbonne applique une taxe de séjour au réel, dont le montant varie selon le classement du logement (collectée automatiquement par Airbnb et reversée à l'intercommunalité). Vérifiez le barème en vigueur auprès du Grand Narbonne avant de fixer vos tarifs.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 90,
+      neighborhood: 'Centre historique',
+      revenuBrut: 17000,
+      commissionRate: 0.22,
+      menageCount: 70,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: "Faut-il un numéro d'enregistrement pour louer en Airbnb à Narbonne ?",
+        a: "Oui. Tout meublé de tourisme à Narbonne doit obtenir un numéro d'enregistrement et le faire figurer sur chaque annonce Airbnb, Booking ou Abritel. La déclaration s'effectue auprès de la commune. Au plus tard le 20 mai 2026, un téléservice national unique devient obligatoire partout en France : plus aucune annonce ne pourra être publiée sans numéro à 13 chiffres valide, quelle que soit la taille de la commune ou le type de résidence. Narbonne applique aujourd'hui le cadre national de la loi Le Meur (loi n° 2024-1039 du 19 novembre 2024) sans dispositif local de changement d'usage restrictif identifié, mais la loi autorise chaque commune à en instaurer un depuis le 21 novembre 2024. Les communes littorales sous tension (Narbonne-Plage, Gruissan voisine) sont les plus susceptibles d'activer ce levier : vérifiez auprès du service urbanisme avant d'acheter un bien côtier dans l'objectif LCD. Le défaut d'enregistrement est sanctionné de 10 000 € et la fausse déclaration de 20 000 €.",
+      },
+      {
+        q: "Combien rapporte un Airbnb à Narbonne sur l'année ?",
+        a: "Cela dépend fortement de l'emplacement, car le marché narbonnais est très saisonnier. Un T2 de 40 m² bien placé dans le centre historique (tarif moyen 80-100 €/nuit, occupation 55-60 % grâce au lissage culturel et œnotouristique) génère typiquement 16 000-19 000 € de chiffre d'affaires brut sur l'année. Un bien équivalent à Narbonne-Plage ou Saint-Pierre-la-Mer concentre l'essentiel de ses revenus sur juin-septembre : tarifs doublés et occupation 75-85 % en juillet-août, mais creux hivernal marqué, pour un CA annuel comparable malgré une saison plus courte et plus intense. Une villa littorale avec extérieur peut dépasser 25 000-30 000 € grâce à la prime estivale et aux groupes. Net de la commission conciergerie (20-25 %), de la taxe foncière, des charges et du ménage, comptez un revenu disponible de 9 500-12 500 € sur un T2 centre, davantage sur une villa littorale bien optimisée l'été.",
+      },
+      {
+        q: 'Vaut-il mieux investir en LCD dans le centre de Narbonne ou à Narbonne-Plage ?',
+        a: "Les deux logiques sont différentes. Le centre historique (cathédrale, Halles, Canal de la Robine) offre une demande plus régulière sur l'année grâce au tourisme culturel et œnotouristique, qui lisse la saisonnalité : prix au m² environ 2 800 €, T2 dès 120 000 €, ROI brut 6-7,5 %. C'est le profil le plus adapté si vous voulez des revenus étalés et un risque saison maîtrisé. Narbonne-Plage et Saint-Pierre-la-Mer sont des produits estivaux purs : occupation 75-85 % et tarifs doublés en juillet-août, mais saison courte (mai-septembre) et creux hivernal, ROI brut 5,5-7 % avec une prime estivale forte. Pour un budget contraint et un rendement maximal, Razimbaud, Beauséjour et Saint-Jean-Saint-Pierre offrent des T2 dès 90 000 € (environ 2 100 €/m²) avec un ROI brut de 6,5-8 %, à condition de compenser la distance au centre par une décoration soignée.",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Narbonne ?",
+        a: "Les commissions à Narbonne s'étalent généralement de 20 % (réseaux nationaux comme YourHostHelper et Homerez) à 25 % TTC pour une formule intégrale chez un pure-player local, avec une moyenne de marché autour de 22-23 % TTC pour une formule complète. La plupart des acteurs locaux (Le Concierge Narbonne, Conciergerie du Cers, L'Agence Conciergerie, Conciergerie de l'Aude) travaillent sur devis personnalisé selon le bien et la formule. Sur un marché aussi saisonnier, le critère décisif au-delà du taux affiché est la stratégie de pricing dynamique : capacité à pousser les tarifs au maximum en juillet-août sur le littoral, et à remplir les ailes de saison (avril-juin, septembre-octobre) avec la clientèle œnotouristique et culturelle. Demandez au prestataire son protocole de pricing sur le pic estival et les ailes de saison, ainsi qu'un exemple chiffré de tarification mensuelle annuelle, avant de signer.",
+      },
+    ],
+    updatedAt: '2026-06-22',
+  },
+  {
+    slug: 'concarneau',
+    displayName: 'Concarneau',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title:
+      'Conciergerie Concarneau Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Concarneau : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 6 meilleures conciergeries Airbnb à Concarneau (Finistère sud). Tarifs (20-25 %), services, avis, réglementation 2026, quartiers Ville Close, Sables Blancs, Cabellou.',
+    kwPrincipal: 'conciergerie concarneau',
+    kwSecondaires: [
+      'airbnb concarneau',
+      'conciergerie airbnb concarneau',
+      'location saisonnière concarneau',
+      'conciergerie finistère',
+      'location vacances concarneau',
+      'meublé tourisme concarneau',
+    ],
+    population: 20845,
+    tourists: 600000,
+    activeListings: 420,
+    priceLow: 75,
+    priceHigh: 140,
+    occupancyRate: 55,
+    revpar: 40,
+    seasonality:
+      "Forte saisonnalité estivale balnéaire typique du littoral sud-Finistère : pic juillet-août porté par les plages (Les Sables Blancs, Le Cabellou), la Ville Close, l'archipel des Glénan et le GR34, avec une occupation qui grimpe à 80-90 % et des tarifs multipliés par 1,5 à 2 sur juillet-août. Épaules de mai-juin et septembre soutenues par le Festival des Filets Bleus (fin août, l'un des plus anciens festivals de Bretagne), les ponts de printemps, le tourisme nautique (École de voile des Glénan, port de plaisance) et la clientèle des courts séjours. Creux marqué de novembre à février, partiellement compensé par les week-ends gastronomiques (3e port de pêche de France, criée), les vacances de la Toussaint et le tourisme de proximité breton. La très forte concentration estivale impose une stratégie de pricing dynamique agressive sur la haute saison pour amortir l'année.",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Concarneau**, dans la **Ville Close** ou le centre, près des plages des **Sables Blancs**, sur la presqu'île du **Cabellou**, à **Lanriec** ou à **Beuzec-Conq**, que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre la **forte saisonnalité estivale** (pic juillet-août sur le littoral, archipel des Glénan, GR34), la **clientèle balnéaire et nautique**, la part importante de **résidences secondaires** (environ 14 % du parc à Concarneau, davantage sur Le Cabellou et le bord de mer), la **réglementation 2026** (numéro d'enregistrement obligatoire, loi Le Meur) et la poignée d'acteurs locaux qui se partagent un marché dynamique, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les pure-players concarnois (Carla B. Conciergerie), les acteurs multi-zones Finistère sud (GB Conciergerie, Concierge BB, Conciergerie de l'Archipel, La Conciergerie de Cornouaille) et les réseaux nationaux (Hoomy) ?",
+    marketIntro:
+      "Concarneau est un **marché LCD balnéaire à très forte saisonnalité estivale**, porté par une notoriété touristique nationale rare pour une commune d'environ **20 800 habitants** : la **Ville Close**, cité fortifiée du XIVe siècle posée sur un îlot au milieu du port, est l'un des sites les plus visités de Bretagne. La ville compte environ **420 annonces actives** sur Airbnb avec un **tarif moyen** autour de **95 €/nuit** sur l'année, qui grimpe nettement en juillet-août.\n\n**Ville Close.** Le cœur historique et touristique de Concarneau est la **Ville Close**, enceinte fortifiée accessible par un pont, avec ses remparts, ses ruelles et le Musée de la Pêche. C'est l'aimant touristique de la commune et le secteur où la demande LCD est la plus forte et la plus régulière, du printemps à l'automne. Les biens du centre et des abords immédiats bénéficient de cette attractivité patrimoniale toute l'année.\n\n**Port de pêche.** Concarneau est le **3e port de pêche de France** (criée, pêche hauturière au thon, conserveries) et un port de plaisance actif. Cette identité maritime nourrit un tourisme gastronomique et nautique, et le **Festival des Filets Bleus** (fin août, créé en 1905) reste un temps fort qui sature l'hébergement sur la dernière semaine d'août. La filière nautique (École de voile des Glénan, régates) prolonge la demande sur les épaules de saison.\n\n**Littoral et Glénan.** Les plages des **Sables Blancs** et du **Cabellou**, le sentier côtier **GR34** et la proximité de l'**archipel des Glénan** (eaux turquoise, départ en vedette depuis le port) et de **Pont-Aven** (cité des peintres à 15 minutes) font de Concarneau un camp de base balnéaire et excursionniste pour le sud-Finistère. La demande est très concentrée sur juillet-août (occupation 80-90 %).\n\n**Prix au m².** Comptez **3 000-3 250 €/m² en moyenne** à Concarneau en 2026 (apparts), avec une fourchette communale large (1 800-5 750 €/m²) et un premium net sur le bord de mer. Le **Cabellou** (presqu'île résidentielle balnéaire) se situe autour de **3 300-3 400 €/m²** et grimpe au-delà de **5 000 €/m²** sur les biens pleine vue mer. Les **maisons** se négocient plus cher que les appartements (environ **3 750 €/m²** en moyenne). Le centre et la périphérie (Lanriec, Beuzec-Conq, Le Passage) restent plus accessibles, ce qui laisse de la marge à l'achat pour un projet LCD raisonné.",
+    conciergeries: [
+      {
+        name: 'Carla B. Conciergerie',
+        url: 'https://carla-b-conciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 12,
+        specialty: 'Pure-player Concarneau, positionnement haut de gamme',
+        description:
+          "Carla B. Conciergerie est un pure-player concarnois, domicilié 15 rue de Guiriden à Concarneau (29900), positionné sur la gestion haut de gamme de locations saisonnières : appartements pleine vue mer, longères bretonnes, maisons de pêcheurs de charme et villas. La société diffuse les biens sur Airbnb, Booking, Abritel et son propre site, et se présente comme interlocuteur unique des propriétaires en cas de problème. Services : préparation du bien, organisation des arrivées et départs entre voyageurs, équipe de ménage, prestations premium (linge de lit et de toilette de qualité hôtelière, paniers de bienvenue). Tarification sur devis selon le bien. Pertinente pour un propriétaire d'un bien de standing à Concarneau (vue mer Sables Blancs, Cabellou, ou bien de caractère en centre) qui cherche un acteur 100 % local, présent physiquement, et un positionnement premium plutôt qu'un réseau industrialisé.",
+      },
+      {
+        name: 'GB Conciergerie',
+        url: 'https://gbconciergerie.fr/conciergerie/concarneau/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 600,
+        biensGeres: 30,
+        specialty:
+          'Réseau Finistère sud (Concarneau, Fouesnant, Bénodet), Airbnb',
+        description:
+          "GB Conciergerie couvre Concarneau et la Riviera bretonne (Fouesnant, Bénodet, La Forêt-Fouesnant) avec un positionnement spécialiste Airbnb et location saisonnière. La commission affichée est de 25 % des nuitées générées, sans frais fixes, sans abonnement et sans frais cachés (la commission n'est calculée que sur les nuits réellement réservées). Services : accueil personnalisé des voyageurs, remise des clés en personne, états des lieux et assistance au départ, suivi de la réservation jusqu'à la collecte des avis, concierges présents sur place à Concarneau. Le réseau affiche une note Google élevée cumulée sur l'ensemble de ses zones. Pertinente pour un propriétaire qui veut un acteur structuré, transparent sur la tarification (commission au succès sans frais d'entrée), et bien implanté sur l'ensemble du sud-Finistère balnéaire — utile si vous possédez plusieurs biens entre Concarneau, Fouesnant et Bénodet.",
+      },
+      {
+        name: 'Concierge BB',
+        url: 'https://www.conciergebb.fr/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 18,
+        specialty: 'Multi-villes Cornouaille (Concarneau, Quimper, Lorient)',
+        description:
+          "Concierge BB accompagne les propriétaires de Concarneau avec une offre tout-en-un de gestion de location courte durée, étendue à la Cornouaille et au sud-Bretagne (Quimper, Lorient). La commission moyenne annoncée est de l'ordre de 20 % des revenus locatifs. Équipe locale disponible 7j/7, gestion des petites réparations, entretien du jardin, conseils fiscaux et organisation d'activités pour les voyageurs. La mise en valeur du bien passe par des photos HD professionnelles et des descriptions optimisées, avec diffusion sur Airbnb et Booking pour maximiser la visibilité. Pertinente pour un propriétaire qui valorise un taux de commission contenu (autour de 20 %) et une offre packagée incluant la mise en scène du bien, ou qui détient plusieurs biens entre Concarneau, Quimper et Lorient et cherche un interlocuteur unique sur tout le sud-Bretagne.",
+      },
+      {
+        name: "Conciergerie de l'Archipel",
+        url: 'https://www.conciergeriedelarchipel.fr/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 14,
+        specialty: 'Finistère sud (Fouesnant, Bénodet, Combrit, Concarneau)',
+        description:
+          "Conciergerie de l'Archipel intervient sur le sud-Finistère : Fouesnant, Bénodet, Combrit, La Forêt-Fouesnant et Concarneau, sur la gestion de location saisonnière et l'entretien de résidences secondaires. L'agence propose la mise en ligne et la diffusion de l'annonce, l'ajustement dynamique des tarifs selon la saisonnalité (Airbnb, Booking, Abritel), le linge, le ménage et la remise des clés dans le cadre d'une gestion complète. Devis gratuit et sans engagement. Pertinente pour un propriétaire de résidence secondaire sur la frange littorale Fouesnant-Concarneau qui veut combiner gestion locative estivale et entretien du bien hors saison (ouverture/fermeture, surveillance), avec un acteur centré sur la baie et l'arrière-pays balnéaire plutôt que sur le seul cœur de Concarneau.",
+      },
+      {
+        name: 'La Conciergerie de Cornouaille',
+        url: 'https://www.laconciergeriedecornouaille.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 16,
+        specialty:
+          'La Forêt-Fouesnant, Quimper / Bénodet / Concarneau / Pont-Aven',
+        description:
+          "La Conciergerie de Cornouaille, basée à La Forêt-Fouesnant, couvre Quimper, Bénodet, Fouesnant, Concarneau et Pont-Aven. Fondée par Christine Jolimoy il y a une quinzaine d'années, elle propose un accompagnement personnalisé pour simplifier la gestion des résidences secondaires et des locations saisonnières : ouverture et fermeture des maisons, ménage, courses à la demande, petites réparations, jardinage, avec un positionnement service de conciergerie de qualité hôtelière pour particuliers. Pertinente pour un propriétaire qui cherche une conciergerie expérimentée et ancrée dans la durée sur le sud-Finistère, capable d'assurer à la fois la gestion locative et un éventail de services à la personne (entretien, intendance) pour une résidence secondaire à Concarneau ou ses environs immédiats.",
+      },
+      {
+        name: 'Hoomy Concarneau',
+        url: 'https://www.hoomy.fr/conciergeries/votre-conciergerie-a-concarneau/',
+        commission: 'variable',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 15,
+        specialty: 'Réseau national, commission + forfait check-in/out',
+        description:
+          "Hoomy est un réseau national de conciergerie et gestion locative présent à Concarneau avec une équipe locale (concierges vivant à proximité des biens). Le modèle tarifaire combine une commission sur les loyers pour la gestion locative et un forfait check-in/check-out dont le montant dépend du type de bien (T1, T2, T3...) et du nombre de nuits réservées (jusqu'à 4 nuits ou plus de 5 nuits). Offre clé en main : création et diffusion des annonces, gestion locative, conciergerie, accompagnement fiscal et amélioration de l'habitat. Pertinente pour un propriétaire qui veut la solidité d'un réseau national (outils, process, reporting) tout en gardant un référent local connaissant le marché concarnois, et qui préfère un modèle hybride commission + forfait à un pourcentage unique — à arbitrer selon la durée moyenne des séjours de votre bien.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Ville Close / Centre',
+        pricePerNight: '90-150 €',
+        occupancy: 62,
+        description:
+          "Cœur touristique et patrimonial : cité fortifiée du XIVe siècle, remparts, Musée de la Pêche, port. Demande LCD la plus régulière de Concarneau, du printemps à l'automne, clientèle culturelle et balnéaire. Prix au m² 3 200-3 800 € sur le centre. T2 de caractère dès 150 000 €. Forte valeur d'emplacement et calendrier rempli sur les épaules de saison.",
+        roiBrut: '5 à 6 %',
+      },
+      {
+        name: 'Les Sables Blancs',
+        pricePerNight: '110-170 €',
+        occupancy: 60,
+        description:
+          'Secteur de la plage la plus prisée de Concarneau, front de mer et hôtellerie. Cible balnéaire estivale haut de gamme, tarifs élevés en juillet-août. Prix au m² 3 500-4 500 € selon vue mer. T2 vue mer dès 220 000 €. Premium emplacement, occupation très concentrée sur la haute saison.',
+        roiBrut: '4,5 à 5,5 %',
+      },
+      {
+        name: 'Le Cabellou',
+        pricePerNight: '120-190 €',
+        occupancy: 58,
+        description:
+          "Presqu'île résidentielle balnéaire au sud, villas et maisons de bord de mer, plages confidentielles. Cible familles et clientèle haut de gamme l'été. Prix au m² 3 300-3 400 € en moyenne, au-delà de 5 000 € pleine vue mer. Maison/villa dès 400 000 €. Très saisonnier, tickets élevés mais occupation hors saison faible.",
+        roiBrut: '4 à 5 %',
+      },
+      {
+        name: 'Lanriec',
+        pricePerNight: '80-120 €',
+        occupancy: 54,
+        description:
+          "Quartier de la rive est (rive gauche du port), résidentiel et plus accessible, proche des plages et du GR34. Cible familles et couples en séjour balnéaire. Prix au m² 2 600-3 200 €. Maison dès 280 000 €, T3 dès 200 000 €. Bon compromis rendement pour un bien de famille à louer l'été.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Beuzec-Conq',
+        pricePerNight: '80-120 €',
+        occupancy: 52,
+        description:
+          "Quartier nord-ouest résidentiel, ancien bourg rattaché à Concarneau, plus calme et abordable. Cible familles et séjours longue durée estivaux. Prix au m² 2 500-3 100 €. Maison dès 270 000 €. Marché orienté résidence secondaire familiale avec mise en location saisonnière l'été.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Le Passage',
+        pricePerNight: '85-130 €',
+        occupancy: 56,
+        description:
+          "Quartier face à la Ville Close, de l'autre côté du port (liaison par bac le Passage), vue sur les remparts. Cible touristique avec emplacement de caractère et vue sur la cité fortifiée. Prix au m² 2 800-3 400 €. T2 dès 180 000 €. Bon emplacement scénique à valoriser dans le narratif de l'annonce.",
+        roiBrut: '5 à 6 %',
+      },
+    ],
+    regulation:
+      "Concarneau applique le cadre national de la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) assorti d'une **obligation de déclaration en mairie** des meublés de tourisme, via la plateforme de l'agglomération Concarneau Cornouaille Agglomération (cca.taxesejour.fr).\n\n**Enregistrement obligatoire.** Tout meublé de tourisme à Concarneau doit être **déclaré en mairie**. Dès réception de la déclaration, la mairie délivre un **accusé de réception comportant un numéro de déclaration** qui doit figurer sur chacune de vos annonces (Airbnb, Booking, Abritel). À Concarneau, l'obligation porte sur la déclaration : à ce stade, la commune n'impose pas d'autorisation de changement d'usage généralisée pour les résidences secondaires (contrairement à des villes comme Saint-Malo). Vérifiez toutefois le règlement municipal en vigueur avant d'acheter, car ce cadre peut évoluer sur les communes littorales bretonnes sous tension.\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le 20 mai 2026, le portail national unique **Décla Loc** devient obligatoire sur l'ensemble du territoire, y compris les petites communes. Plus aucun loueur ne pourra publier d'annonce sans numéro d'enregistrement valide.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location en résidence principale (celle que vous occupez au moins 8 mois par an). Au-delà, le bien est considéré comme résidence secondaire et relève d'un régime distinct.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont progressivement interdits à la location ; la loi Le Meur impose un DPE décent pour les meublés de tourisme. Un bien classé entre A et E sécurise la mise en location et la revente — un point de vigilance sur les longères et maisons de pêcheurs anciennes du centre concarnois.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les meublés classés tourisme (plafond 77 700 €). Le classement officiel **1 à 5 étoiles** est devenu un levier fiscal majeur, d'autant plus pertinent sur un marché balnéaire saisonnier comme Concarneau où il permet aussi de réduire la taxe de séjour due par les voyageurs.\n\n**Sanctions loi Le Meur.** **10 000 € pour défaut d'enregistrement**, **20 000 € pour fausse déclaration ou numéro falsifié**. Le défaut de déclaration en mairie est par ailleurs passible d'une **amende civile pouvant aller jusqu'à 5 000 €**. Dans les communes ayant institué un changement d'usage, le dépassement de quota peut être sanctionné jusqu'à **50 000 €** — un régime à surveiller si Concarneau venait à durcir son cadre.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Concarneau Cornouaille Agglomération applique une taxe de séjour **au réel** : un tarif par nuitée et par personne adulte, variable selon le classement de l'hébergement (les meublés non classés sont taxés à hauteur d'un pourcentage du prix de la nuit, plafonné, et une taxe additionnelle départementale de 10 % s'ajoute au montant communal). La taxe est collectée automatiquement par Airbnb et reversée à l'agglomération. Vérifiez le barème en vigueur sur cca.taxesejour.fr, car les montants sont révisés chaque année (indexation INSEE).",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 95,
+      neighborhood: 'Ville Close / Centre',
+      revenuBrut: 17000,
+      commissionRate: 0.22,
+      menageCount: 55,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: "Faut-il une autorisation de changement d'usage à Concarneau pour louer en Airbnb ?",
+        a: "À ce stade, Concarneau impose une déclaration en mairie de tout meublé de tourisme (avec délivrance d'un numéro de déclaration à reporter sur les annonces), mais n'a pas généralisé d'autorisation de changement d'usage pour les résidences secondaires comme l'ont fait certaines villes littorales très tendues (Saint-Malo notamment). Concrètement, vous devez déclarer votre logement via la plateforme de Concarneau Cornouaille Agglomération (cca.taxesejour.fr) et faire figurer le numéro obtenu sur chaque annonce Airbnb, Booking ou Abritel. Attention toutefois : ce cadre peut évoluer, car les communes littorales bretonnes sous forte pression touristique sont nombreuses à étudier ou instaurer le changement d'usage. Avant d'acheter à Concarneau dans un objectif LCD, vérifiez le règlement municipal en vigueur et, en cas de doute, prenez rendez-vous au service urbanisme. Le défaut de déclaration en mairie est passible d'une amende civile pouvant aller jusqu'à 5 000 €, à laquelle s'ajoutent les sanctions loi Le Meur (10 000 € pour défaut d'enregistrement).",
+      },
+      {
+        q: "Combien rapporte un Airbnb à Concarneau sur l'année ?",
+        a: "Un T2 de 40 m² bien placé (Ville Close / centre, abords des Sables Blancs, Le Passage, tarif moyen 90-110 €/nuit) génère typiquement un chiffre d'affaires brut de 15 000-19 000 € sur l'année à Concarneau, avec une concentration très forte sur juillet-août (souvent 45-55 % du CA annuel) et un creux marqué de novembre à février. Un bien vue mer aux Sables Blancs ou une maison/villa au Cabellou peut atteindre 22 000-30 000 € grâce aux tarifs estivaux élevés (120-190 €/nuit), mais avec une occupation hors saison faible qui pèse sur l'année. Net de la commission conciergerie (20-25 %), de la taxe foncière, des charges et du ménage, comptez un revenu disponible de l'ordre de 9 000-12 000 € sur le T2 et 14 000-20 000 € sur un bien balnéaire premium. La clé sur ce marché très saisonnier est la stratégie de pricing dynamique sur juillet-août, qui fait l'essentiel de la rentabilité.",
+      },
+      {
+        q: 'Quels quartiers privilégier pour investir en LCD à Concarneau ?',
+        a: "Pour un calendrier rempli au-delà du seul été, la Ville Close et le centre offrent la demande la plus régulière (clientèle culturelle et balnéaire, du printemps à l'automne), avec des T2 de caractère dès 150 000 € et un ROI brut 5-6 %. Pour des tickets de nuitée élevés, Les Sables Blancs (front de mer, T2 vue mer dès 220 000 €) et Le Cabellou (presqu'île, villas dès 400 000 €) maximisent les tarifs estivaux mais avec une occupation hors saison faible (ROI 4-5,5 %). Pour le meilleur compromis rendement, visez Lanriec (rive est, maison dès 280 000 €, ROI 5-6,5 %), Beuzec-Conq (ancien bourg résidentiel, plus abordable) ou Le Passage (vue sur les remparts depuis l'autre rive du port, T2 dès 180 000 €). La règle à Concarneau : plus on s'approche de la vue mer, plus le ticket monte et plus le revenu se concentre sur juillet-août ; les secteurs résidentiels accessibles offrent un ROI plus lissé.",
+      },
+      {
+        q: "Quelle est la commission moyenne d'une conciergerie à Concarneau ?",
+        a: "Les commissions à Concarneau s'étalent d'environ 20 % (Concierge BB, formules de base des réseaux) à 25 % des nuitées (GB Conciergerie) en 2026, avec une moyenne de marché autour de 22 % HT des loyers pour une formule complète. Carla B. Conciergerie, la Conciergerie de l'Archipel et La Conciergerie de Cornouaille travaillent sur devis personnalisé selon le bien et le niveau de service. Hoomy applique un modèle hybride (commission sur les loyers + forfait check-in/check-out selon le type de bien et la durée des séjours). Sur un marché aussi saisonnier que Concarneau, le critère décisif au-delà du taux affiché est la stratégie de pricing sur le pic juillet-août (qui fait l'essentiel de la rentabilité) et la capacité à remplir mai-juin, septembre et les épaules de saison. Demandez au prestataire un exemple chiffré de tarification mensuelle sur l'année et son protocole de pricing en haute saison avant de signer.",
+      },
+    ],
+    updatedAt: '2026-06-22',
+  },
+  {
+    slug: 'courchevel',
+    displayName: 'Courchevel',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title:
+      'Conciergerie Courchevel Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Courchevel : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 6 meilleures conciergeries Airbnb à Courchevel (3 Vallées). Tarifs luxe, services chalet, avis, réglementation 2026, secteurs 1850, Moriond, Le Praz, La Tania.',
+    kwPrincipal: 'conciergerie courchevel',
+    kwSecondaires: [
+      'airbnb courchevel',
+      'location chalet courchevel',
+      'conciergerie de luxe courchevel',
+      'conciergerie airbnb courchevel',
+      'location appartement courchevel',
+      'gestion chalet courchevel',
+    ],
+    population: 2295,
+    tourists: 1500000,
+    activeListings: 320,
+    priceLow: 250,
+    priceHigh: 2500,
+    occupancyRate: 60,
+    revpar: 280,
+    seasonality:
+      "Saisonnalité hivernale ultra-dominante propre à une station de luxe internationale : la saison ski s'étend de mi-décembre à mi-avril et concentre l'essentiel du chiffre d'affaires LCD, avec un pic de tarification sur les semaines de Noël et du Nouvel An (les plus beaux chalets de Courchevel 1850 se louent 100 000 à 300 000 € la semaine sur cette période) puis sur les vacances de février. La clientèle est très internationale (Royaume-Uni, Moyen-Orient, ex-clientèle russe, Europe du Nord, France haut de gamme), souvent transportée par hélicoptère, jet privé ou voiture avec chauffeur jusqu'à l'altiport de Courchevel. L'été montagne est une saison émergente mais secondaire (randonnée, VTT, golf, événements 3 Vallées) qui ne représente qu'une fraction des revenus hiver. Les intersaisons (mai-juin, octobre-novembre) sont quasi mortes, la station fonctionnant en quasi-fermeture hors saison ski.",
+    rankNational: 26,
+    introCustom:
+      'Vous avez un chalet ou un appartement à **Courchevel** — à **Courchevel 1850** (le sommet absolu du luxe alpin), à **Courchevel Moriond 1650**, **Courchevel Village 1550**, **Courchevel Le Praz 1300** ou à **La Tania** — que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre une **clientèle ultra-haut de gamme internationale** (Royaume-Uni, Moyen-Orient, Europe du Nord), une **saisonnalité hivernale écrasante** (le gros du chiffre se joue de Noël à février), des **tarifs nuitée parmi les plus élevés de France** et des conciergeries qui vont du réseau national multi-stations à la maison de gestion de chalets de prestige avec chef privé et majordome, vous vous demandez quelle conciergerie choisir.\n\nEt surtout : **laquelle privilégier** entre les réseaux de gestion locative (Emerald Stay, GuestAdom, HostnFly), les acteurs locaux du luxe (White Management, Excellence Courchevel) et les conciergeries ultra-premium historiques de Courchevel 1850 ?',
+    marketIntro:
+      "Courchevel est un **marché LCD de luxe ultra-premium**, le plus haut de gamme des Alpes françaises, totalement atypique pour une commune de **2 295 habitants permanents** (commune nouvelle de Courchevel depuis 2017, ex-Saint-Bon-Tarentaise). On y compte environ **320 annonces actives** sur Airbnb, mais le marché est dominé par la location de chalets et d'appartements de prestige hors plateformes grand public, avec des **tarifs nuitée** qui vont de quelques centaines d'euros sur les villages bas à plusieurs milliers d'euros à 1850.\n\n**Les 3 Vallées.** Courchevel est la porte d'entrée du **plus grand domaine skiable du monde** (Les 3 Vallées, environ 600 km de pistes reliant Courchevel, Méribel, Val Thorens et Les Menuires). Ce domaine ski-aux-pieds intégral est le premier moteur de la demande LCD hivernale : un bien **ski-in/ski-out** se loue avec une prime considérable sur le reste du parc.\n\n**Station de luxe internationale.** Courchevel 1850 concentre **palaces (plusieurs hôtels 5 étoiles et Palace), boutiques de luxe et restaurants étoilés**, et attire une clientèle internationale fortunée (britannique, moyen-orientale, ex-russe, nord-européenne). Les conciergeries y proposent des services para-hôteliers complets — chef privé, majordome, gouvernante, chauffeur, transferts hélicoptère — bien au-delà de la gestion Airbnb classique.\n\n**Altiport et prix au m².** La station dispose d'un **altiport** (un des rares aéroports d'altitude permettant l'arrivée en avion privé) et accueille des arrivées en hélicoptère et jet privé. Côté immobilier, Courchevel est **parmi les marchés les plus chers du monde en montagne** : comptez **12 000 à 13 000 €/m² en moyenne** sur la commune, mais **25 000 à 31 000 €/m²** sur les beaux biens de Courchevel 1850, et **40 000 à 55 000 €/m²** voire plus pour les chalets et programmes neufs d'exception (des chalets se vendent 25 à 40 M€). Les villages plus bas (Le Praz 1300, Village 1550) restent nettement plus accessibles.",
+    conciergeries: [
+      {
+        name: 'White Management',
+        url: 'https://www.whitemanagement.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 25,
+        specialty:
+          'Gestion de chalets et appartements de luxe, conciergerie premium Courchevel',
+        description:
+          "White Management est un acteur local de Courchevel (basé à Courchevel Moriond, rue de l'Ariondaz) spécialisé dans la gestion de biens de prestige et la conciergerie de luxe. La société prend en charge l'ensemble de la gestion pour les propriétaires : entretien et maintenance du bien toute l'année, supervision des travaux, et gestion locative des chalets et appartements ski-in/ski-out à Courchevel 1550, 1650 et 1850. Le volet conciergerie couvre les services para-hôteliers haut de gamme : transferts (chauffeur, arrivée en hélicoptère, jet privé ou train), chef privé et majordome, ménage et valet discrets, organisation d'activités (coach, massages, ski-joëring). Tarification sur devis selon le bien et le niveau de service. Pertinente pour un propriétaire d'un chalet ou appartement haut de gamme à Courchevel qui veut un interlocuteur local unique pour la gestion technique annuelle ET les prestations de conciergerie de luxe pendant les locations.",
+      },
+      {
+        name: 'Excellence Courchevel',
+        url: 'https://excellencecourchevel.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 20,
+        specialty:
+          'Location de chalets et villas de prestige Courchevel 1850, conciergerie exclusive',
+        description:
+          "Excellence Courchevel, fondée en 2017, est une agence dédiée à l'organisation de séjours de luxe à Courchevel et sur la Côte d'Azur, spécialisée dans la location saisonnière de chalets et villas de prestige (et l'affrètement de yachts). Les biens sélectionnés sont majoritairement situés à Courchevel 1850 et combinent emplacements premium, décoration luxueuse et services exceptionnels. Chaque réservation est accompagnée d'un service de conciergerie exclusif disponible 7j/7 : réservations de restaurants étoilés, chef privé, masseurs, chauffeurs, et création d'expériences sur mesure via un réseau de partenaires privilégiés. Tarification sur devis. Pertinente pour un propriétaire d'un chalet ou d'une villa d'exception à Courchevel 1850 qui veut être référencé dans un portefeuille très haut de gamme et confier la commercialisation à un acteur positionné sur la clientèle ultra-fortunée internationale.",
+      },
+      {
+        name: 'Emerald Stay',
+        url: 'https://emeraldstay.com/courchevel/property-management',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 30,
+        specialty:
+          'Réseau multi-stations Alpes, pricing dynamique et optimisation fiscale',
+        description:
+          "Emerald Stay est un réseau de gestion locative de biens de standing présent dans plusieurs stations des Alpes françaises et suisses (Courchevel, Méribel, Chamonix, Megève, Les Gets, Verbier) ainsi que sur d'autres destinations premium. Le positionnement repose sur un algorithme de pricing dynamique (revenus optimisés selon la demande de chaque station), un accompagnement fiscal (aide à l'optimisation et à la récupération de TVA pour les biens éligibles), la vérification d'identité des voyageurs et la collecte de caution, et une assurance dommages couvrant des montants élevés. Calendrier de réservation flexible laissant au propriétaire des créneaux d'occupation personnelle. Tarification sur devis. Pertinente pour un propriétaire investisseur, souvent non résident, qui veut un acteur professionnel multi-stations avec une approche data sur le pricing et un accompagnement fiscal, plutôt qu'une conciergerie de quartier.",
+      },
+      {
+        name: 'GuestAdom Courchevel',
+        url: 'https://www.guest-adom.com/conciergerie-airbnb-courchevel-1850/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 18,
+        specialty:
+          'Gestion locative Airbnb 3 niveaux (multidiffusion, hybride, complète)',
+        description:
+          "GuestAdom est un réseau national de conciergerie présent à Courchevel 1850, Moriond et Le Praz, positionné sur trois niveaux de service : simple multidiffusion, formule hybride et gestion locative complète. Sur la formule complète, GuestAdom reverse 75 % des revenus générés (soit une commission de 25 %), avec reversement des loyers deux fois par mois. Services : création et optimisation des annonces, multidiffusion (Airbnb, Booking, Abritel), gestion des réservations et du planning, accueil et départ des voyageurs, ménage entre séjours, communication et maintenance. À la montagne, les tarifs de conciergerie sont généralement plus élevés en haute saison hiver (25 à 40 %) qu'en basse saison (20 à 25 %). Pertinente pour un propriétaire d'appartement Airbnb à Courchevel (1850 ou villages bas) qui veut une gestion locative structurée multi-plateformes plus qu'une conciergerie ultra-luxe avec chef et majordome.",
+      },
+      {
+        name: 'HostnFly Courchevel',
+        url: 'https://hostnfly.com/conciergerie-airbnb/courchevel',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 15,
+        specialty:
+          'Réseau national, gestion 100 % digitale via app propriétaire',
+        description:
+          "HostnFly est présent à Courchevel via son réseau national de gestion locative courte durée. La société gère la création et la promotion des annonces, la gestion des réservations, l'accueil voyageurs, la remise des clés, le ménage et la maintenance, avec un suivi 100 % digital via une application propriétaire (réservations, revenus collectés et paiements en temps réel). En station de montagne, la tarification est ajustée selon la saison et le bien (sur devis). Pertinente pour un propriétaire investisseur à distance qui possède un appartement à Courchevel comme produit LCD et préfère un suivi self-service via dashboard à une conciergerie de luxe physiquement présente en station, en gardant à l'esprit que ce type de réseau est mieux adapté aux appartements qu'aux grands chalets de prestige.",
+      },
+      {
+        name: 'Courchevel Concierge',
+        url: 'https://en.courchevel-concierge.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 12,
+        specialty:
+          'Conciergerie ultra-premium historique Courchevel 1850, services para-hôteliers',
+        description:
+          "Courchevel Concierge est une conciergerie ultra-premium historique de Courchevel 1850, présente dans la station depuis la fin des années 1980. Le positionnement est celui du service de luxe complet : gestion locative et ménage de chalets et appartements de prestige, mais aussi conciergerie pure (réservations restaurants étoilés, chef privé, majordome, transferts, accès villas, palaces, hélicoptères, expériences sur mesure). L'offre s'adresse à une clientèle internationale ultra-fortunée recherchant discrétion et personnalisation. Tarification sur devis selon le niveau de service et la durée. Pertinente pour un propriétaire d'un chalet d'exception à Courchevel 1850 qui veut confier son bien à un acteur historique de la station, capable d'assurer à la fois la gestion locative et un niveau de conciergerie digne d'un palace pour les locataires.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Courchevel 1850',
+        pricePerNight: '800-2 500 €',
+        occupancy: 62,
+        description:
+          "Le sommet absolu du luxe alpin : palaces, boutiques de luxe, restaurants étoilés, altiport, ski-in/ski-out intégral. Cible clientèle ultra-fortunée internationale. Prix au m² 25 000-31 000 € sur les beaux biens, 40 000-55 000 € et plus pour les chalets et programmes neufs d'exception (chalets vendus 25 à 40 M€). Les semaines de Noël et Nouvel An des plus beaux chalets se louent 100 000 à 300 000 €.",
+        roiBrut: '2 à 4 %',
+      },
+      {
+        name: 'Courchevel Moriond 1650',
+        pricePerNight: '350-900 €',
+        occupancy: 60,
+        description:
+          'Village ensoleillé sous 1850, accès direct au domaine 3 Vallées, ambiance plus familiale et résidentielle que 1850. Bon compromis entre prestige et accessibilité. Cible familles haut de gamme et clientèle qui veut le domaine sans les tarifs de 1850. Prix au m² nettement inférieurs à 1850, demande LCD soutenue en haute saison.',
+        roiBrut: '3 à 5 %',
+      },
+      {
+        name: 'Courchevel Village 1550',
+        pricePerNight: '250-600 €',
+        occupancy: 58,
+        description:
+          "Village authentique relié au domaine par télécabine, plus accessible à l'achat. Cible familles et groupes d'amis cherchant Courchevel à budget maîtrisé. Marché LCD hivernal dominant, tarifs nuitée plus modérés que les altitudes supérieures, meilleur compromis rendement pour un investisseur.",
+        roiBrut: '4 à 6 %',
+      },
+      {
+        name: 'Courchevel Le Praz 1300',
+        pricePerNight: '220-550 €',
+        occupancy: 56,
+        description:
+          "Village-station le plus bas et le plus authentique (chalets traditionnels, tremplin de saut à ski olympique, lac), relié au domaine par télécabine. Cible clientèle recherchant l'authenticité savoyarde et un budget plus contenu. Prix au m² les plus accessibles de Courchevel, demande LCD hivernale réelle mais tarifs modérés.",
+        roiBrut: '4 à 6 %',
+      },
+      {
+        name: 'La Tania',
+        pricePerNight: '200-500 €',
+        occupancy: 55,
+        description:
+          'Station-village familiale créée pour les JO de 1992, nichée en forêt entre Courchevel et Méribel, accès direct au domaine 3 Vallées. Cible familles et clientèle britannique fidèle. Tarifs nuitée parmi les plus accessibles du secteur Courchevel, bon rendement relatif pour un appartement bien placé près des pistes.',
+        roiBrut: '4 à 6 %',
+      },
+      {
+        name: 'Saint-Bon (chef-lieu)',
+        pricePerNight: '180-450 €',
+        occupancy: 50,
+        description:
+          "Chef-lieu historique de l'ancienne commune de Saint-Bon-Tarentaise, en contrebas des stations, plus résidentiel et village permanent. Cible saisonniers, familles et clientèle cherchant un pied-à-terre hors des prix de station. Marché LCD plus diffus, tarifs les plus bas du territoire, à arbitrer selon la distance aux remontées.",
+        roiBrut: '4 à 6 %',
+      },
+    ],
+    regulation:
+      "Courchevel applique le cadre national des meublés de tourisme, renforcé par la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024), dans un contexte de station classée à très forte proportion de résidences secondaires.\n\n**Déclaration en mairie obligatoire.** Tout meublé de tourisme à Courchevel doit être **déclaré en mairie** (mairie-courchevel.com). La déclaration via formulaire Cerfa permet d'obtenir un **numéro d'enregistrement à 13 chiffres** qui doit figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Téléservice national obligatoire au 20 mai 2026.** Au plus tard le 20 mai 2026, l'enregistrement des meublés de tourisme passe par un **téléservice national unique**, quelle que soit la taille de la commune ou le type de résidence. Plus aucune annonce ne pourra être publiée sans numéro d'enregistrement valide.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale de 120 jours par an de location s'applique aux résidences principales (logement occupé au moins 8 mois par an). En station, l'immense majorité des biens loués sont des résidences secondaires, non concernées par ce plafond mais soumises à la déclaration et, le cas échéant, à un éventuel dispositif local de changement d'usage que la commune peut instituer compte tenu de la pression sur le logement permanent.\n\n**DPE classe E minimum.** Depuis 2025, les logements classés **F ou G au DPE** sont progressivement interdits à la location. Un point de vigilance réel en montagne, où le bâti ancien des villages bas (Le Praz, Saint-Bon) peut être énergivore : faire réaliser le DPE avant tout projet LCD.\n\n**Abattement micro-BIC.** Pour les revenus 2025 déclarés en 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les meublés classés tourisme (plafond 77 700 €). Le classement officiel 1 à 5 étoiles est un levier fiscal majeur, particulièrement pertinent sur un marché de standing comme Courchevel où la clientèle valorise le classement.\n\n**Sanctions loi Le Meur.** **10 000 €** pour défaut d'enregistrement, **20 000 €** pour fausse déclaration ou numéro falsifié, et jusqu'à **50 000 €** pour location au-delà du quota autorisé dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Courchevel, station classée, applique une taxe de séjour au réel collectée par la mairie (et automatiquement par Airbnb pour les réservations passées via la plateforme), à reverser mensuellement avant le 15 du mois suivant. Le tarif varie selon la catégorie et le classement de l'hébergement ; sur les hébergements haut de gamme de la station, il se situe dans la fourchette haute du barème national. Vérifier le tarif exact en vigueur auprès du service taxe de séjour de la mairie (taxedesejour@mairie-courchevel.com).",
+    concreteExample: {
+      bienType: 'Appartement',
+      surface: 55,
+      pricePerNight: 450,
+      neighborhood: 'Courchevel Moriond 1650',
+      revenuBrut: 38000,
+      commissionRate: 0.25,
+      menageCount: 22,
+      menageUnitCost: 120,
+    },
+    extraFaq: [
+      {
+        q: 'Combien coûte une conciergerie à Courchevel et pourquoi les modèles diffèrent-ils des villes classiques ?',
+        a: "À Courchevel, on distingue deux grandes familles d'acteurs. D'un côté les réseaux de gestion locative Airbnb (GuestAdom à 25 % sur la formule complète, HostnFly, Emerald Stay) qui appliquent des commissions proches des standards nationaux, souvent majorées en haute saison hiver (les tarifs montagne montent fréquemment à 25-40 % en pleine saison contre 20-25 % en basse saison). De l'autre, les conciergeries de luxe et maisons de gestion de chalets (White Management, Excellence Courchevel, Courchevel Concierge) qui travaillent quasi systématiquement sur devis, avec des prestations para-hôtelières (chef privé, majordome, gouvernante, chauffeur, transferts hélicoptère) et parfois des forfaits fixes de gardiennage et maintenance annuelle en plus de la commission. Le bon repère : pour un appartement, comparez la commission ; pour un chalet de prestige, le critère décisif est la capacité à délivrer un service digne d'un palace à une clientèle internationale exigeante, pas seulement le taux affiché.",
+      },
+      {
+        q: "Combien peut rapporter la location d'un bien à Courchevel sur une saison ?",
+        a: "Tout dépend de l'altitude et du standing. Un appartement bien placé à Moriond 1650 ou Village 1550 (450 €/nuit en moyenne haute saison) peut générer 30 000 à 50 000 € de chiffre d'affaires brut sur la seule saison ski (mi-décembre à mi-avril), l'été montagne n'ajoutant qu'une fraction. À Courchevel 1850, les ordres de grandeur changent radicalement : les plus beaux chalets se louent 100 000 à 300 000 € pour les seules semaines de Noël et du Nouvel An, et 15 000 à 30 000 € la semaine en haute saison classique. Attention toutefois au rendement sur capital : à 1850, les prix d'achat (25 000 à 55 000 €/m², chalets vendus 25 à 40 M€) écrasent le ROI brut (souvent 2-4 %), tandis que les villages bas (Le Praz, Village, La Tania) offrent un meilleur rapport rendement/prix d'achat (4-6 %).",
+      },
+      {
+        q: "Faut-il un numéro d'enregistrement pour louer son chalet ou son appartement à Courchevel ?",
+        a: "Oui. Tout meublé de tourisme à Courchevel doit être déclaré en mairie et obtenir un numéro d'enregistrement à 13 chiffres, qui doit figurer sur chaque annonce Airbnb, Booking ou Abritel. Au plus tard le 20 mai 2026, cet enregistrement passe par un téléservice national unique, sans lequel aucune annonce ne pourra être publiée. En station, l'immense majorité des biens loués sont des résidences secondaires : elles ne sont pas soumises au plafond de 120 nuitées (réservé aux résidences principales) mais restent soumises à la déclaration, à la collecte de la taxe de séjour et à un éventuel dispositif de changement d'usage que la commune peut instituer compte tenu de la pression sur le logement permanent. Sanctions loi Le Meur : jusqu'à 10 000 € pour défaut d'enregistrement et 20 000 € pour fausse déclaration.",
+      },
+      {
+        q: 'Quel secteur de Courchevel privilégier pour investir en location courte durée ?',
+        a: "Pour le prestige pur et la clientèle ultra-fortunée internationale, Courchevel 1850 reste imbattable (ski-in/ski-out, palaces, altiport), mais avec des prix d'achat qui plombent le rendement brut (2-4 %). Pour un meilleur compromis rendement/prix, visez les villages plus bas : Moriond 1650 (ensoleillé, familial, accès direct au domaine, 3-5 % de ROI brut), Village 1550 et Le Praz 1300 (plus accessibles à l'achat, demande LCD hivernale réelle, 4-6 %), ou La Tania (station familiale en forêt, clientèle britannique fidèle). Le critère commun déterminant à Courchevel est la proximité immédiate des remontées (ski-in/ski-out ou télécabine à pied) : c'est le premier facteur de tarif et d'occupation, bien plus que la surface. Saint-Bon (chef-lieu) offre les prix les plus bas mais une demande plus diffuse selon la distance aux pistes.",
+      },
+    ],
+    updatedAt: '2026-06-22',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

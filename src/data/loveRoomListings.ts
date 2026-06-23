@@ -8192,5 +8192,714 @@ export const loveRoomListings: Record<string, LoveRoom[]> = {
         }
       ]
     }
+  ],
+  "grenoble": [
+    {
+      "name": "La Parenthèse",
+      "area": "Niévroz",
+      "distanceKm": 88,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Sauna"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Niévroz",
+      "rating": 4.9,
+      "reviews": 282,
+      "source": "Google Places",
+      "description": "Un hébergement privatif accueillant par Maxime et son équipe avec une attention bienveillante et familiale, conçu pour les séjours romantiques. Équipé d'un jacuzzi et d'un sauna à usage exclusif, la chambre est décorée avec soin et offre une literie parfaite dans une atmosphère magique et apaisante.",
+      "url": "http://www.laparenthese01.com/",
+      "recentReviews": [
+        {
+          "author": "Aurélie PICARD",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Une très belle parenthèse enchantée. Nous avons été accueillis par Maxime, une personne extrêmement gentille, bienveillante et très empathique, avec qui nous avons beaucoup échangé. Dès notre arrivée, on sent l’attention portée aux détails, et c’est précisément ce qui a rendu notre soirée si agréable. Nous sommes venus"
+        },
+        {
+          "author": "Fabrice Blanc",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Une parenthèse magique. Un accueil familial. La chambre est à la hauteur des promesses. Literie parfaite. Séance de massage impressionnante. J'ai l'impression d'avoir rencontré des amis. Merci Maxime, Gérald et Philippe"
+        },
+        {
+          "author": "Audrey_Q01",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Une parenthèse enchantée ! Nous avons passé un séjour absolument merveilleux à La Parenthèse. Le logement décoré avec soin et parfait pour un moment romantique. Le jacuzzi et le sauna sont juste incroyables : un vrai bonheur pour se détendre en tête-à-tête, dans une ambiance cosy et apaisante. Le petit déjeuner était d"
+        },
+        {
+          "author": "sihem belkebir",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Une super soirée romantique dans un lieu exceptionnel.nouq savions même plus quel heure il était.les équipements sont très bien.Nous avons été accueillis comme des amis ,avec le sourire et la gentillesse de maxime.Je pense que c'est le lieu idéale pour se retrouver et où on est sûr de ne pas être déçu.encore un grand g"
+        },
+        {
+          "author": "yohan petit",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Belle découverte, Maxime le propriétaire est d’une gentillesse et son accueil parfait. La chambre ZEN est tip-top 👍👍👍 Merci . Nous reviendrons et je vous recommande les chambres pour une douce soirée en amoureux."
+        }
+      ]
+    },
+    {
+      "name": "Maloveroom",
+      "area": "Beaucroissant",
+      "distanceKm": 25,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Piscine"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Beaucroissant",
+      "rating": 5,
+      "reviews": 96,
+      "source": "Google Places",
+      "description": "Cette love room propose piscine et jacuzzi privatifs, aménagée dans les moindres détails pour créer un espace d'évasion et de détente exclusive. L'accueil personnalisé et l'extrême propreté des lieux en font une destination apprécié pour les séjours romantiques.",
+      "url": "https://www.maloveroom.fr/",
+      "recentReviews": [
+        {
+          "author": "Lila Tyfna",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Une expérience absolument incroyable ! Nous avons passé une nuit magique dans cette love room à l’occasion de la Saint-Valentin, et tout était parfait du début à la fin. La piscine et le jacuzzi sont un vrai plus, propres, relaxants et idéals pour un moment à deux. La décoration est magnifique, très soignée, avec une a"
+        },
+        {
+          "author": "Gciol",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Que dire d un endroit pareil ❤️ le voyage est là 😎 on n a plus envie de partir,ou alors de repartir Direct en voyage☺️ Cette établissement est juste a coupé le souffle avec tous les extras que l on peut demander,rever. Un super moment amoureux détente et de pleines relaxations 🥹🥹🎊 Nous reviendrons c est sur 🤩 Merc"
+        },
+        {
+          "author": "Magalie Dufour",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Lieu absolument magnifique... Tout est pensé dans les moindres details pour que ce moment soit détente et insouciance. Ce qui permet de faire une vrai pause. Merci ainsi que pour l'accueil"
+        },
+        {
+          "author": "Sonia Soufi",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "C’est très simple, je n’ai absolument rien à redire. Les hotes sont adorables, L’endroit est très agréable pour se détendre et surtout extrêmement propre. Je conseille +++"
+        },
+        {
+          "author": "Melouh anniversaire melouh",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Superbe Loveroom! Mon homme m'a fait la surprise pour mon anniversaire et franchement j'en suis ravie ! Endroit agréable, confortable, magnifique et surtout ne manque de rien ! Tout est à disposition, petit déjeuner, Sirop à volonté, enceinte Bluetooth, machine à glaçon, cafetière avec plusieurs dosettes de toute sorte"
+        }
+      ]
+    },
+    {
+      "name": "Le Cellier & Spa",
+      "area": "Saint-Maximin",
+      "distanceKm": 38,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Hammam"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Saint-Maximin",
+      "rating": 4.9,
+      "reviews": 60,
+      "source": "Google Places",
+      "description": "Cette ancienne bâtisse entièrement rénovée propose une suite privée avec spa et hammam à usage exclusif, idéale pour un séjour en couple. Les hôtes offrent un accueil attentionné et créent une atmosphère de détente et de douceur propice à la détente.",
+      "url": "https://lecellierspa.fr/",
+      "recentReviews": [
+        {
+          "author": "Marine Poulet",
+          "rating": 5,
+          "when": "il y a 2 semaines",
+          "text": "Nous avons passé un très bon moment. Ce cellier a été réhabilité à avec goût! Tout est très bien pensé, chaque détails compte ! Tiffany est aux petits soins. Je recommande pour une petite coupure en amoureux(ses) ou même seul(e) pour se ressourcer ! Merci pour ce doux moment"
+        },
+        {
+          "author": "Carole Girodet",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Nous avons passé un moment unique dans un lieu magnifique. Les prestations sont de qualité. La SPA est très agréable. Nous avons choisi cet endroit pour passer du temps en duo mere-fille... une jolie parenthèse de douceur. Merci beaucoup."
+        },
+        {
+          "author": "Adrien Ribera",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Nous avons séjourné durant ce mois de janvier au cellier et spa. Une magnifique bâtisse entièrement rénovée qui possède tous les équipements nécessaires. Un moment reposant grâce au spa et au hammam. Mention spéciale également à Suzanna pour le massage."
+        },
+        {
+          "author": "N. Ibryamova",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Nous avons passé un superbe weekend dans cet établissement magnifique. Les hôtes ont été aux petits soins pour nous ! Petit bémol pour la place de stationnement qui est étroite même si on fini toujours par s'en sortir. Au plaisir de revenir !"
+        },
+        {
+          "author": "Cassandra Lallemand",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Une expérience absolument parfaite ! La communication avec l'hôte est excellente, le lieu est magnifique et très propre. Les extras nourritures fondue et petit déjeuner sont délicieux. J'y retournerai avec grand plaisir !"
+        }
+      ]
+    },
+    {
+      "name": "Enjoy your life BOURGOIN-JALLIEU",
+      "area": "Bourgoin-Jallieu",
+      "distanceKm": 57,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Cinéma privé"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Bourgoin-Jallieu",
+      "rating": 4.7,
+      "reviews": 67,
+      "source": "Google Places",
+      "description": "Suite privée dotée d'une chambre, salle de bain et cuisine équipée, complétée par un jacuzzi privatif avec cascade et écran de cinéma. Accueil attentionné avec petits cadeaux de bienvenue et petit déjeuner inclus, créant une atmosphère intime et romantique.",
+      "url": "https://www.enjoyyourlifes.fr/",
+      "recentReviews": [
+        {
+          "author": "Doriane Chusit",
+          "rating": 4,
+          "when": "il y a 3 semaines",
+          "text": "Logement top à côté de tout restauration, bar , magasin alimentaire..ect logement confortable avec petite attention a notre arrivé petite bouteille de champagne avec dosette café pour le matin. Seul bémol pas beaucoup de luminosité car que deux fenêtre une a la salle de bain et une a la chambre . Jaccuzi Niquel et déco"
+        },
+        {
+          "author": "Florian 7even",
+          "rating": 5,
+          "when": "il y a 4 semaines",
+          "text": "On a passé un super moment dans la suite « Chalet Romantique », que je recommande pour un séjour en amoureux. Que ce soit la salle de bain, la cuisine, la chambre ou encore le jacuzzi avec l’écran de cinéma, tout était parfait. Un vrai moment hors du temps : on se croirait vraiment dans un chalet en montagne. On revien"
+        },
+        {
+          "author": "Audrey Veleret",
+          "rating": 4,
+          "when": "il y a 7 mois",
+          "text": "Lieu très jolie on a passer un très bon moment Point négatif pas de fenêtre juste une petite dans la salle de bain ce qui donne une impression d’enfermement pour une soirée Parcontre sa passe Le petit déjeuner au vu du prix nous avons eu deux pain au chocolat et deux croissant de la veille !!complètement écraser avec d"
+        },
+        {
+          "author": "Sandrine Franchini",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "On a passé un agréable week-end sensuel et romantique. A notre arrivée nous attendait une petite bouteille de pinot noir pour une soirée bien arrosé. Jacuzzi asser grande pour 2 avec une petite cascade sympa. Au dessus du lit un rétroprojecteur avec grand ecran et une petite cuisine à côté. A l'étage un autre lit plus "
+        }
+      ]
+    },
+    {
+      "name": "Bulle de Rêves",
+      "area": "Frontonas",
+      "distanceKm": 66,
+      "features": [
+        "Spa ou jacuzzi privatif"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Frontonas",
+      "rating": 4.9,
+      "reviews": 52,
+      "source": "Google Places",
+      "description": "Cet hébergement privatif offre un jacuzzi exclusif et des services de massage pour un moment de détente en amoureux. Les hôtes attentionnés, la propreté impeccable et les repas préparés avec soin à partir de produits locaux de qualité garantissent une expérience relaxante complète.",
+      "url": "https://bulledereves38.jimdofree.com/",
+      "recentReviews": [
+        {
+          "author": "Cyrille Jardinet",
+          "rating": 5,
+          "when": "il y a 4 semaines",
+          "text": "Petit retour de notre séjour chez bulles de Rêves à frontonas. Un vrai bonheur, un très bon accueil, les hôtes sont aux petits soins, très respectueux. Propreté impeccable, le repas avec la planche apéritif était très bon, et le petit déjeuner à largement confirmé que tous ces plats ont été préparé avec beaucoup de soi"
+        },
+        {
+          "author": "Béatrice VAUBY",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Encore une agréable soirée, rien à reprocher de l accueil au départ. Nous sommes venu plusieurs fois et nous reviendront! Moment de détente, apéro repas et petit déjeuner parfait. Lieu propre et bien entretenu Anthony et Sandrine font tout pour notre bien-être, on recommande!!!"
+        },
+        {
+          "author": "Christel Giraud",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Un endroit magnifique !! avec un acceuil très chaleureux, une super expérience pour un moment en amoureux. Les plats sont copieux avec des produits locaux de qualités. La propreté des lieux est parfaite, le jaccuzi très appreciable dans une ambiance cocooning, nous avons pris l'option massage en duo un moment de détent"
+        },
+        {
+          "author": "Estelle Excoffier",
+          "rating": 5,
+          "when": "il y a 4 ans",
+          "text": "Apres une journée au village des marques qui se situe à 10 minutes en voiture, nous voilà dans un havre de paix pour une soirée de détente absolue. Après un agréable massage, une planche apéritive et un repas très bons, hygiène irréprochable, spa privatif de 4 places parfait, décoration de très bon goût. Le petit déjeu"
+        },
+        {
+          "author": "Cathy LAIDEVANT",
+          "rating": 5,
+          "when": "il y a 4 ans",
+          "text": "Si vous voulez passer un week-end en amoureux, c'est l'endroit parfait. Les propriétaires sont très accueillants et très arrangeants. Tout est au calme absolu. Nous avons pris le dîner et le petit déjeuner dans notre chambre, tout fait maison, c'était parfait. Nous recommandons les yeux fermés :)"
+        }
+      ]
+    },
+    {
+      "name": "Love Room",
+      "area": "Lyon",
+      "distanceKm": 95,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Balnéo"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Lyon",
+      "rating": 4.2,
+      "reviews": 64,
+      "source": "Google Places",
+      "description": "Établissement spécialisé dans les séjours romantiques proposant des chambres intimistes et bien aménagées avec accès à des équipements spa. Les lieux sont propres et bien organisés, offrant une atmosphère dédiée aux couples en quête d'intimité.",
+      "recentReviews": [
+        {
+          "author": "cécile lamoureux",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Chambre très bien aménagée. On a passé un bon séjour, parcontre le bruit de la ventilation est vraiment très important et constant tte la nuit. C est le seul bémol que j apporterai. Sinon tt parfait"
+        },
+        {
+          "author": "Steph Scoobby",
+          "rating": 4,
+          "when": "il y a un an",
+          "text": "Un lieu incroyable sur le thème du bateau. Très beau décor, avec beaucoup de détails....literie excellente. Équipement complet pour passer une excellente nuit. Seul bémol, on a retrouvé quelques miettes dans le micro-onde, et la balnéo pourrait être mieux nettoyée sur les parois.... Mais expérience incroyable."
+        }
+      ]
+    },
+    {
+      "name": "La suite Grenoble",
+      "area": "Saint-Martin-d'Hères",
+      "distanceKm": 2,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Sauna"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Saint-Martin-d'Hères",
+      "rating": 5,
+      "reviews": 24,
+      "source": "Google Places",
+      "description": "Suite privée élégante et intimiste, équipée d'un jacuzzi et d'un sauna à usage exclusif, conçue pour les couples en quête de détente. L'accueil chaleureux, la propreté impeccable et l'atmosphère soignée créent une ambiance propice à l'évasion du quotidien.",
+      "url": "http://lasuitegrenoble.com/",
+      "recentReviews": [
+        {
+          "author": "Coralie Mallica",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Nous avons passer un merveilleux moment en amoureux grâce a \" La Suite \" de l'accueil jusqu'au départ tout étais au top, le petit déjeuner et copieux et servis dans un jolie panier devant la porte , le jacuzzi et sauna sont top nous avons vraiment apprécier cet endroit très chaleureux. Je recommande vivement ce lieux o"
+        },
+        {
+          "author": "Adra Nasri",
+          "rating": 5,
+          "when": "il y a 3 ans",
+          "text": "Super endroit pour les couples afin de sortir de la routine du quotidien. Endroit très propre bien équipé et moderne . Je recommande cet établissement si vous voulez un moment intime avec votre moitié tout en détente . Propriétaire très a l écoute et arrangeant. Accueil agréable et chaleureux l'arrivé par sa maman qui "
+        },
+        {
+          "author": "Deborah Baup",
+          "rating": 5,
+          "when": "il y a 3 ans",
+          "text": "Magnifique cadeau de mon ami, un lieu magnifique pour des moments magiques. Propreté nickel, le jacuzzi un plaisir vivement la prochaine escapade chez vous. La dame qui nous a reçus très souriante et sympathique ça fait plaisir."
+        },
+        {
+          "author": "Léa",
+          "rating": 5,
+          "when": "il y a 2 ans",
+          "text": "Un accueil hyper chaleureux, un lieu incroyable, magnifiquement décoré, on avait l’impression d’être hors du temps, un retour à la vie normale assez compliqué 😅 il faudra revenir pour re profiter de cet endroit inédit Tout était top, très propre et aux petits soins, on voit bien que les hôtes sont dans le souci du dét"
+        },
+        {
+          "author": "Sabrina Praddaude",
+          "rating": 5,
+          "when": "il y a 3 ans",
+          "text": "Une suite magnifique, tout est bien agencé, un goût incroyable pour la décoration, une propreté irréprochable. Tout était parfait ! Nous recommandons cet établissement les yeux fermés. Merci pour tout Vincent. Ne changez rien, nous reviendrons ! Sabrina et Léo"
+        }
+      ]
+    },
+    {
+      "name": "Love room L'Instant Précieux",
+      "area": "La Mure",
+      "distanceKm": 32,
+      "features": [
+        "Spa ou jacuzzi privatif"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à La Mure",
+      "rating": 4.9,
+      "reviews": 18,
+      "source": "Google Places",
+      "description": "Gîte privatif entièrement conçu pour les couples avec jacuzzi intégré et décoration soignée de bon goût. L'ambiance intimiste, la propreté exemplaire et les équipements de confort (literie premium, cheminée, espaces secrets) créent une atmosphère propice à la détente et la reconnection.",
+      "url": "https://www.loveroom-grenoble.fr/",
+      "recentReviews": [
+        {
+          "author": "Mélissa JOVET",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Parfait moment d'intimité en couple. Le jaccuzi est un élément central pour la détente et la relaxation. La décoration est très appropriée, de bon goût sans en faire trop. La literie est très confortable !! Nous n'avons séjourné qu'une nuit mais la cuisine est entièrement équipée. La secret room invite à l'intimité et "
+        },
+        {
+          "author": "Alban BALLESTER",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Nous avons passé un excellent séjour dans ce bel appartement où tout est réfléchi et décoré pour nous faire passer un merveilleux moment en couple. Décoration, propreté, discrétion... Rien à redire. Nous reviendrons nous ressourcer..."
+        },
+        {
+          "author": "Maxime Lopes",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Nous avons passé un excellent moment dans cette love room parfaitement équipée, l'accueil est parfait, cheminée allumée, rose sur le lit, serviettes prêtes ... Et le jacuzzi, que du bonheur Si vous êtes intéressé, n'hésitez pas à y aller"
+        },
+        {
+          "author": "marie cecile veron",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Un weekend de reconnection pour les couples. Super hôte très réactif 👍 Un endroit atypique et magnifique ,sans oublier la p'tite pièce secrète où on se sens seul au monde 😍😜 je recommande Merci à vous"
+        },
+        {
+          "author": "Jess Mc-JNt",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Nous avons passé un moment absolument magique dans cette love room. Tout était pensé dans les moindres détails pour créer une ambiance romantique et chaleureuse : éclairage tamisé, décoration soignée, lit ultra confortable, et surtout le jacuzzi privatif qui était un vrai bonheur ! L’endroit est parfaitement propre, ca"
+        }
+      ]
+    }
+  ],
+  "saint-etienne": [
+    {
+      "name": "Écrin d'Auvergne insolite",
+      "area": "Champs-sur-Tarentaine-Marchal",
+      "distanceKm": 136,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Terrasse"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Champs-sur-Tarentaine-Marchal",
+      "rating": 5,
+      "reviews": 505,
+      "source": "Google Places",
+      "description": "Ce lodge insolite d'Auvergne propose une immersion totale dans la nature avec spa privatif, isolé au milieu des bois et offrant une vue apaisante sur un ruisseau. Le logement se distingue par sa décoration soignée, son confort et son cadre paisible, idéal pour un séjour ressourçant en couple.",
+      "url": "https://www.ecrin-auvergne.com/",
+      "recentReviews": [
+        {
+          "author": "Metmet A",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Une expérience magnifique ✨ dans ce lodge et ce lieu incroyable ! 💚 Au milieu de nulle part , tellement paisible et ressourçant. Le cadre nous offre une vue sur un ruisseau, dont le ruissellement est si apaisant, un étang , et le coup de coeur pour ce moment magique où nous avons pu apercevoir des biches 🦌 se promene"
+        },
+        {
+          "author": "E Lab",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Nous avons adoré notre séjour. L’accueil a été très chaleureux, avec un patron disponible, accueillant et de très bon conseil pour découvrir la région. L’emplacement est idéal, la décoration est soignée et le logement très bien équipé, il ne manque rien. Tout était impeccable, d’une grande propreté. Mention spéciale po"
+        },
+        {
+          "author": "Philippe & Christine C.",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Nous sommes arrivés dans un superbe endroit, calme, agréable avec des propriétaires super sympathiques. Logement magnifique, bien agencé et bien pensé. Quel bonheur d'avoir été dans ce lieu pour mon anniversaire 🎂 Douceur de vie retrouvée un instant avant de reprendre le tumulte de nos vies. Aujourd'hui où nous cherch"
+        },
+        {
+          "author": "Katja Van de Meerssche",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "J’attribue la note maximum et 3M au Lodge Ecrin d’Auvergne. MAGIQUE MAGNIFIQUE MERVEILLEUX Un de mes meilleurs séjours de repos et de ressourcement que j’ai passé. Une immersion totale dans la nature, le Lodge très propre, très fonctionnel, décoré avec beaucoup de goût et Pierre-Eric au petit soin pour ses hôtes. Je ne"
+        },
+        {
+          "author": "Noel Vergeaud",
+          "rating": 5,
+          "when": "il y a 3 semaines",
+          "text": "Tout est parfait pour un weekend à deux pour se retrouver et se reposer. Acceuil,logement,nourriture,calme,rien à redire. Juste une remarque ,il manque, à mon goût,une petite table pour diner sur la terrasse. Mais ca n'enlève rien à la qualité du lodge. À retenir et revenir👍"
+        }
+      ]
+    },
+    {
+      "name": "Nuits D'y Cîmes",
+      "area": "Jaunac",
+      "distanceKm": 58,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Piscine",
+        "Terrasse"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Jaunac",
+      "rating": 4.8,
+      "reviews": 393,
+      "source": "Google Places",
+      "description": "Hébergement privatif insolite en bulle ou dôme transparent offrant une expérience intimiste au cœur de la nature ardéchoise, avec lit chauffant, plaid et décoration soignée. Accès à un SPA et une piscine privatifs, vue panoramique sur la région, idéal pour un séjour en couple loin du quotidien.",
+      "url": "https://www.nuitsdycimes.fr/",
+      "recentReviews": [
+        {
+          "author": "Françoise V",
+          "rating": 5,
+          "when": "il y a 3 semaines",
+          "text": "Nous avons passé une nuit dans le pavillon Prairie ; c'est une expérience sympathique avec coucher et lever du soleil et de la lune garantis ! La vue sur Le Cheylard est incroyable ; la route d'accès est ... ardéchoise . Nous avons apprécié le Spa en pleine nature, l'apéro champagne, et le repas panier très bon ainsi q"
+        },
+        {
+          "author": "Bélinda Duvillard",
+          "rating": 5,
+          "when": "il y a 4 semaines",
+          "text": "Une expérience inoubliable au cœur de la nature en Ardèche ! Nous avons adoré dormir en bulle, dans ce cocon douillé avec en + un lit chauffant et plaid en disposition couleur rose bonbon parfait avec le thème de la bulle la Romance ! Nous avons eu la chance de voir les étoiles et 1 étoile filante !!! L'accueil au top "
+        },
+        {
+          "author": "Romy TD",
+          "rating": 5,
+          "when": "il y a 3 semaines",
+          "text": "Expérience juste merveilleuse !!! Un grand merci pour l’accueil chaleureux , le cadre idyllique , loin de tout. Nous avons pris le dôme céleste avec un apéro / repas /vin . la vue le soir et le matin 🤩 , la déco , la literie exceptionnelle, le petit déjeuner exquis , les 30 min de jacuzzi, tout y est. Un grand merci \ud83d"
+        },
+        {
+          "author": "Seve Rine",
+          "rating": 4,
+          "when": "il y a 2 mois",
+          "text": "Chouette nuit insolite sous bulle ! Nous avons eu la chance d'avoir une météo exceptionnelle pour notre weekend, ce qui fait que nous avons pu profiter de tout les ciels : coucher et lever de soleil (orientation de la bulle lever de soleil) et d'une belle nuit . La lune ayant un peu volé la vedette aux étoiles - autre "
+        },
+        {
+          "author": "Cecile Buffat",
+          "rating": 5,
+          "when": "il y a 3 semaines",
+          "text": "Une nuit sous les étoiles !!Quelle merveilleuse aventure !!! Nous avons a.d.o.r.é !!💐🥰 L'accueil, le panier apéro, la bulle, le p'tit dej, que du bonheur ! Nous reviendrons !! Avec, si possible, une nuit d'orage !!☺️ 😋 N'hésitez à vivre cette belle expérience au top !!! Cécile et Thierry"
+        }
+      ]
+    },
+    {
+      "name": "La Parenthèse",
+      "area": "Niévroz",
+      "distanceKm": 68,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Sauna"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Niévroz",
+      "rating": 4.9,
+      "reviews": 282,
+      "source": "Google Places",
+      "description": "Ce gîte romantique dispose d'une chambre décorée avec soin et dotée d'équipements privatifs exceptionnels : jacuzzi et sauna. L'accueil est chaleureux et bienveillant, créant une atmosphère intime et confortable idéale pour un séjour en couple.",
+      "url": "http://www.laparenthese01.com/",
+      "recentReviews": [
+        {
+          "author": "Aurélie PICARD",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Une très belle parenthèse enchantée. Nous avons été accueillis par Maxime, une personne extrêmement gentille, bienveillante et très empathique, avec qui nous avons beaucoup échangé. Dès notre arrivée, on sent l’attention portée aux détails, et c’est précisément ce qui a rendu notre soirée si agréable. Nous sommes venus"
+        },
+        {
+          "author": "Fabrice Blanc",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Une parenthèse magique. Un accueil familial. La chambre est à la hauteur des promesses. Literie parfaite. Séance de massage impressionnante. J'ai l'impression d'avoir rencontré des amis. Merci Maxime, Gérald et Philippe"
+        },
+        {
+          "author": "Audrey_Q01",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Une parenthèse enchantée ! Nous avons passé un séjour absolument merveilleux à La Parenthèse. Le logement décoré avec soin et parfait pour un moment romantique. Le jacuzzi et le sauna sont juste incroyables : un vrai bonheur pour se détendre en tête-à-tête, dans une ambiance cosy et apaisante. Le petit déjeuner était d"
+        },
+        {
+          "author": "sihem belkebir",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Une super soirée romantique dans un lieu exceptionnel.nouq savions même plus quel heure il était.les équipements sont très bien.Nous avons été accueillis comme des amis ,avec le sourire et la gentillesse de maxime.Je pense que c'est le lieu idéale pour se retrouver et où on est sûr de ne pas être déçu.encore un grand g"
+        },
+        {
+          "author": "yohan petit",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Belle découverte, Maxime le propriétaire est d’une gentillesse et son accueil parfait. La chambre ZEN est tip-top 👍👍👍 Merci . Nous reviendrons et je vous recommande les chambres pour une douce soirée en amoureux."
+        }
+      ]
+    },
+    {
+      "name": "L'expérience Love Room",
+      "area": "L'Étrat",
+      "distanceKm": 5,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Balnéo",
+        "Terrasse"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à L'Étrat",
+      "rating": 4.7,
+      "reviews": 334,
+      "source": "Google Places",
+      "description": "L'établissement propose des chambres privées thématisées richement décorées, dotées d'équipements de bien-être comme la balnéothérapie et lits confortables, créant une ambiance romantique et intime. La propreté irréprochable, les draps agréables et l'atmosphère calme en font un lieu privilégié pour séjours en couple.",
+      "url": "https://www.lexperienceloveroom.fr/fr",
+      "recentReviews": [
+        {
+          "author": "Lea Archontaras",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Chambre Amazonie : Une expérience absolument magique ! La love room est magnifique, décorée avec goût et pensée dans les moindres détails pour créer une ambiance romantique et intime. Propreté irréprochable, équipements au top et confort parfait. Un vrai moment hors du temps qui permet de se retrouver et de se détendre"
+        },
+        {
+          "author": "jessica do",
+          "rating": 4,
+          "when": "il y a 3 mois",
+          "text": "Nous avons passé une tres belle nuit dans la chambre Jungle. La déco est superbe et dans le thème. Il y a une immense télévision que l'ont peut regarder depuis le lit et de la balnéo. Le lit est tres confortable avec un linge de lit impeccable. La balnéo est parfaite et bien grande pour un moment de détente. Le déshumi"
+        },
+        {
+          "author": "Sandrine Brabant",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Chambre Bali magnifique, propreté irréprochable. Très bien aménagé, la décoration nous a laissé bouche bée. Literie très confortable ainsi que l'odeur des draps très agréable. Lieu très calme. Sans oublier qu'il y a aussi une terrasse avec salon de jardin, table et chaises pour chacune des chambres. Nous reviendrons c'"
+        },
+        {
+          "author": "Anais Roux mollard",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Nous avons passé une bonne soirée en love room « jungle » cependant je pense que quelque modification pourrait être appréciable notamment au niveau du pack « l’expérience la vraie » à notre sens quand nous payons un pack deco à 69€ nous nous attendons à du Wahou à la place de quelques bougies qui sont en fin de vie la "
+        },
+        {
+          "author": "C. Nors",
+          "rating": 4,
+          "when": "il y a 3 mois",
+          "text": "Pour notre anniversaire de mariage, nous avions réservé la chambre Jungle. Elle bénéficie d'un emplacement calme et d'un parking voiture appréciable et apprécié. C'est une belle chambre niveau décoration et espace. La grande TV visible depuis le lit ou la baignoire balnéo est un plus. Les hôtes sont disponibles et réac"
+        }
+      ]
+    },
+    {
+      "name": "Suite Bali",
+      "area": "Planfoy",
+      "distanceKm": 8,
+      "features": [
+        "Spa ou jacuzzi privatif"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Planfoy",
+      "rating": 5,
+      "reviews": 51,
+      "source": "Google Places",
+      "description": "Cette suite balinaise privatise un jacuzzi et un lit king size, décorée avec soin pour créer une atmosphère détente et hors du temps. Accueil raffiné avec panier apéritif et petit déjeuner de qualité, idéal pour les couples en quête de ressourcement à proximité des randonnées du Pilat.",
+      "url": "https://www.suitebali.fr/",
+      "recentReviews": [
+        {
+          "author": "emilie picasso",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Un véritable coup de cœur ! ❤️ Le logement est magnifique, décoré avec goût, d’une propreté irréprochable et d’un confort absolu. Tout est pensé pour offrir une vraie parenthèse, un moment hors du temps pour se ressourcer et déconnecter. Le jacuzzi est un vrai plus — un pur bonheur ! J’y suis allée avec ma fille, qui a"
+        },
+        {
+          "author": "Gladys 3012",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Une superbe expérience partagée à l'occasion de la Saint-Valentin. Super panier repas (planche charcuterie/fromage + vin) et petit déjeuner (2 viennoiseries + yaourts + jus). Les produits sont de qualité et frais. La suite est propre, déco agréable. La tranche horaire pour arriver (16h) et repartir (12h) est appréciabl"
+        },
+        {
+          "author": "ACOM DIGITAL",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "J’ai adore la suite Bali ! Gros coup de cœur pour la planche apéritive et le petit déjeuner c’est un réel plus ! Vous avez dés randonnées incroyable à proximité ! Un vrai séjour relaxant"
+        },
+        {
+          "author": "camille solimeo",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Superbe expérience dans la suite balinaise décorée avec soins. Nous avons beaucoup apprécié le jacuzzi et le lit king size. Les hôtes ont répondus très vite à mes questions Je recommande"
+        },
+        {
+          "author": "Nathalie Blanc",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Escale à Bali une expérience que nous recommandons à 100%. Appartement super bien équipé et décoré qui nous met dès l’entrée à l’aise. Jacuzzi très agréable et très sympa. Merci beaucoup !"
+        }
+      ]
+    },
+    {
+      "name": "Bulle de Rêves",
+      "area": "Frontonas",
+      "distanceKm": 68,
+      "features": [
+        "Spa ou jacuzzi privatif"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Frontonas",
+      "rating": 4.9,
+      "reviews": 52,
+      "source": "Google Places",
+      "description": "Cette love room privatise un jacuzzi et propose des services de spa et massage pour une soirée détente exclusive. L'établissement offre un accueil personnalisé avec repas maison et petit-déjeuner dans une ambiance épurée et soignée.",
+      "url": "https://bulledereves38.jimdofree.com/",
+      "recentReviews": [
+        {
+          "author": "Cyrille Jardinet",
+          "rating": 5,
+          "when": "il y a 4 semaines",
+          "text": "Petit retour de notre séjour chez bulles de Rêves à frontonas. Un vrai bonheur, un très bon accueil, les hôtes sont aux petits soins, très respectueux. Propreté impeccable, le repas avec la planche apéritif était très bon, et le petit déjeuner à largement confirmé que tous ces plats ont été préparé avec beaucoup de soi"
+        },
+        {
+          "author": "Béatrice VAUBY",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Encore une agréable soirée, rien à reprocher de l accueil au départ. Nous sommes venu plusieurs fois et nous reviendront! Moment de détente, apéro repas et petit déjeuner parfait. Lieu propre et bien entretenu Anthony et Sandrine font tout pour notre bien-être, on recommande!!!"
+        },
+        {
+          "author": "Christel Giraud",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Un endroit magnifique !! avec un acceuil très chaleureux, une super expérience pour un moment en amoureux. Les plats sont copieux avec des produits locaux de qualités. La propreté des lieux est parfaite, le jaccuzi très appreciable dans une ambiance cocooning, nous avons pris l'option massage en duo un moment de détent"
+        },
+        {
+          "author": "Estelle Excoffier",
+          "rating": 5,
+          "when": "il y a 4 ans",
+          "text": "Apres une journée au village des marques qui se situe à 10 minutes en voiture, nous voilà dans un havre de paix pour une soirée de détente absolue. Après un agréable massage, une planche apéritive et un repas très bons, hygiène irréprochable, spa privatif de 4 places parfait, décoration de très bon goût. Le petit déjeu"
+        },
+        {
+          "author": "Cathy LAIDEVANT",
+          "rating": 5,
+          "when": "il y a 4 ans",
+          "text": "Si vous voulez passer un week-end en amoureux, c'est l'endroit parfait. Les propriétaires sont très accueillants et très arrangeants. Tout est au calme absolu. Nous avons pris le dîner et le petit déjeuner dans notre chambre, tout fait maison, c'était parfait. Nous recommandons les yeux fermés :)"
+        }
+      ]
+    },
+    {
+      "name": "Love Room",
+      "area": "Lyon",
+      "distanceKm": 52,
+      "features": [
+        "Spa ou jacuzzi privatif",
+        "Balnéo"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Lyon",
+      "rating": 4.2,
+      "reviews": 64,
+      "source": "Google Places",
+      "description": "Cette chambre bien aménagée offre une ambiance intimiste et soigneusement décorée pour un cadre romantique. L'espace est propre et bien organisé, avec accès à des équipements spa privatifs pour une expérience détente exclusive.",
+      "recentReviews": [
+        {
+          "author": "cécile lamoureux",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Chambre très bien aménagée. On a passé un bon séjour, parcontre le bruit de la ventilation est vraiment très important et constant tte la nuit. C est le seul bémol que j apporterai. Sinon tt parfait"
+        },
+        {
+          "author": "Steph Scoobby",
+          "rating": 4,
+          "when": "il y a un an",
+          "text": "Un lieu incroyable sur le thème du bateau. Très beau décor, avec beaucoup de détails....literie excellente. Équipement complet pour passer une excellente nuit. Seul bémol, on a retrouvé quelques miettes dans le micro-onde, et la balnéo pourrait être mieux nettoyée sur les parois.... Mais expérience incroyable."
+        }
+      ]
+    },
+    {
+      "name": "Le Splendid avec Jacuzzi privatif",
+      "area": "Saint-Étienne-des-Sorts",
+      "distanceKm": 142,
+      "features": [
+        "Spa ou jacuzzi privatif"
+      ],
+      "vibe": "Love room avec spa ou jacuzzi privatif à Saint-Étienne-des-Sorts",
+      "rating": 5,
+      "reviews": 23,
+      "source": "Google Places",
+      "description": "Cet appartement privé offre une décoration soignée et crée une ambiance de détente idéale pour les couples, avec un jacuzzi privatif impeccablement entretenu. L'accueil des hôtes est chaleureux et le logement dispose de tous les équipements nécessaires pour un séjour romantique dans un cadre magnifique.",
+      "url": "https://www.le-splendid-spa.fr/",
+      "recentReviews": [
+        {
+          "author": "Lili Minacori",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Appartement au top très propre très belle décoration Appartement harmonieux très belle soiree en amoureux je vous le conseil les yeux fermés il ne manquait rien ainsi que les hôtes tres accueillant et le jacuzzi au top"
+        },
+        {
+          "author": "Roxanne Senges",
+          "rating": 5,
+          "when": "il y a 11 mois",
+          "text": "Le lieu parfait pour couper du quotidien et se retrouver à deux. La décoration et l’agencement sont tout simplement sublime et l’ambiance dégagée est propice à la détente. L’accueil est très chaleureux et l’hygiène est irréprochable ! L’équipement est pensée jusque dans les moindres détails ce qui donne l’impression d’"
+        },
+        {
+          "author": "Pauline Loupias",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Un parenthèse dans ce lieu magnifique... Que dire, à part que c'était parfait. Tout est pensé pour que la détente soit au rendez-vous. Logement très bien équipé, d'une beauté exceptionnelle. Le jacuzzi et tout le reste était très propre, la literie très confortable. L'accueil a été très chaleureux par les hôtes. Je rec"
+        },
+        {
+          "author": "Marlène chastnt",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Un lieu I N C R O Y A B L E ! Décoré avec énormément de goût, d'une grande propreté (et je suis très pénible avec ça, j'avais dailleurs très peur par rapport au jaccuzzi et non, il était impeccable !! ) Une bulle où le couple peut se retrouver, s'aimer loin du quotidien (ou peu importe dans quel contexte vous y allez) "
+        },
+        {
+          "author": "Marine Migheli",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Un lieu à découvrir, à la hauteur de nos attentes, endroit propice à la détente. Décoration soignée, propreté irréprochable et prestations de qualité. La planche de charcuterie copieuse et excellente. Les propriétaires sont très gentils, accueillants et disponibles. Nous reviendrons sans aucun doutes et recommanderons "
+        }
+      ]
+    }
   ]
 };

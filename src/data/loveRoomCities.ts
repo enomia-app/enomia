@@ -268,12 +268,36 @@ export const loveRoomCitiesMeta = [
     "slug": "perpignan",
     "displayName": "Perpignan",
     "searchVolume": 1670,
-    "status": "todo",
+    "status": "done",
     "lat": 42.68749,
     "lng": 2.90065,
     "region": "Occitanie",
     "regionSlug": "occitanie",
     "radiusKm": 50,
     "found": 42
+  },
+  {
+    "slug": "grenoble",
+    "displayName": "Grenoble",
+    "searchVolume": 1460,
+    "status": "todo",
+    "lat": 45.18853,
+    "lng": 5.72452,
+    "region": "Auvergne-Rhône-Alpes",
+    "regionSlug": "auvergne-rhone-alpes",
+    "radiusKm": 100,
+    "found": 40
+  },
+  {
+    "slug": "saint-etienne",
+    "displayName": "Saint-Étienne",
+    "searchVolume": 1400,
+    "status": "todo",
+    "lat": 45.4397,
+    "lng": 4.38718,
+    "region": "Auvergne-Rhône-Alpes",
+    "regionSlug": "auvergne-rhone-alpes",
+    "radiusKm": 150,
+    "found": 38
   }
 ];

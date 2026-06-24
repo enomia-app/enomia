@@ -16130,6 +16130,522 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-22',
   },
+  {
+    slug: 'bourg-en-bresse',
+    displayName: 'Bourg-en-Bresse',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title:
+      'Conciergerie Bourg-en-Bresse Airbnb : comparatif 2026 des 4 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Bourg-en-Bresse : Comparatif 2026',
+    metaDescription:
+      'Comparatif des meilleures conciergeries Airbnb à Bourg-en-Bresse (Ain). Tarifs, services, avis, réglementation 2026, quartiers rentables : centre, gare, Brou. Guide complet.',
+    kwPrincipal: 'conciergerie bourg-en-bresse',
+    kwSecondaires: [
+      'conciergerie airbnb bourg-en-bresse',
+      'conciergerie bourg-en-bresse airbnb',
+      'gestion locative bourg-en-bresse',
+      'conciergerie airbnb ain',
+    ],
+    population: 42372,
+    tourists: 300000,
+    activeListings: 200,
+    priceLow: 65,
+    priceHigh: 110,
+    occupancyRate: 55,
+    revpar: 45,
+    seasonality:
+      "Marché à double moteur, peu saisonnier comparé au littoral ou à la montagne : une clientèle d'affaires régulière en semaine toute l'année (préfecture de l'Ain, administrations, entreprises, salons, axe Lyon–Mâcon) et des pics touristiques l'été autour du Monastère royal de Brou et du spectacle son et lumière « Couleurs d'Amour » (juillet à septembre). La mi-décembre concentre un pic court mais marqué avec les Glorieuses de Bresse (concours de volailles). Les ailes de saison restent soutenues par la demande professionnelle, ce qui lisse l'occupation sur l'année par rapport aux destinations purement balnéaires.",
+    rankNational: 58,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Bourg-en-Bresse** — en plein centre près du marché couvert, du côté de la **gare**, ou à deux pas du **Monastère royal de Brou** — que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les arrivées tardives, le ménage entre deux séjours, le linge et les messages des voyageurs, vous vous demandez si déléguer à une conciergerie est rentable sur un marché de préfecture comme Bourg. Et surtout : **laquelle choisir** ?\n\nLa bonne nouvelle, c'est qu'à Bourg-en-Bresse le tissu est très local : plusieurs conciergeries indépendantes domiciliées en ville se partagent l'essentiel du marché, complétées par des réseaux nationaux qui couvrent l'Ain. Voici le comparatif.",
+    marketIntro:
+      "Bourg-en-Bresse est un **marché LCD de préfecture**, porté par un mélange de tourisme patrimonial et de clientèle d'affaires, pour une commune d'environ **42 000 habitants** (population légale INSEE 2023). On y compte de l'ordre de **quelques centaines de meublés touristiques actifs** (estimation), avec un prix moyen constaté autour de **85-90 € la nuit**.\n\n**Le Monastère royal de Brou.** Joyau gothique flamboyant construit de 1505 à 1532 par Marguerite d'Autriche, classé parmi les plus belles églises de France, c'est le premier aimant touristique de la ville. Il tire une demande loisir régulière, renforcée l'été par le spectacle son et lumière « Couleurs d'Amour » projeté sur le monastère, le théâtre et l'hôtel de ville.\n\n**Une ville d'affaires et de passage.** Préfecture de l'Ain, à environ 50 minutes de Lyon en train, Bourg accueille une clientèle professionnelle en semaine (administrations, entreprises, salons) et de passage sur l'axe Lyon–Mâcon. Les **Glorieuses de Bresse**, concours de volailles de la mi-décembre, et la **volaille de Bresse AOP** (seule volaille française en AOP) ancrent une notoriété gastronomique qui draine des courts séjours.\n\n**Un ticket d'entrée accessible.** Côté immobilier, comptez environ **2 000 à 2 150 €/m²** en moyenne (MeilleursAgents, 2026) — l'un des marchés les plus abordables de la région — ce qui laisse de la marge de rendement à condition de bien viser l'emplacement (centre, gare, Brou).",
+    conciergeries: [
+      {
+        name: 'Conciergerie Bressane',
+        url: 'https://conciergerie-bressane.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty:
+          'Conciergerie locale Bourg-en-Bresse, gestion complète courte et moyenne durée',
+        description:
+          "Conciergerie Bressane est une SAS créée en avril 2023, domiciliée 4 cours de Verdun en plein cœur de Bourg-en-Bresse (gérant Eddy Badoux). Elle propose une gestion locative complète des meublés de tourisme sur Bourg et le pays bressan, en courte comme en moyenne durée : estimation des revenus, création et optimisation de l'annonce, photos professionnelles, communication avec les voyageurs en continu, gestion des arrivées et des départs, ménage, blanchisserie et produits d'accueil, plus la maintenance courante du logement. Le positionnement est celui d'un acteur local de proximité, capable d'intervenir rapidement sur place, ce qui rassure les propriétaires qui ne résident pas dans l'Ain. La commission n'est pas affichée publiquement et se négocie sur devis selon le bien et le niveau de service. Pertinente pour un propriétaire de Bourg ou des environs qui veut un interlocuteur unique, physiquement présent en ville, pour déléguer l'intégralité de la gestion Airbnb sans coordonner plusieurs prestataires.",
+      },
+      {
+        name: "La Conciergerie d'Anaïs",
+        url: 'https://conciergerie-anais.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty:
+          'Conciergerie indépendante certifiée Luckey by Airbnb, service SOS dépannage',
+        description:
+          "La Conciergerie d'Anaïs (exploitée sous l'entité Ma Petite Concierge) est une conciergerie indépendante fondée par Anaïs, installée 11 rue d'Espagne à Bourg-en-Bresse depuis son déménagement en 2025 dans un local plus grand. Certifiée Luckey by Airbnb, elle gère un portefeuille de meublés sur Bourg, Châtillon-sur-Chalaronne, Villars-les-Dombes et plus largement l'Ain : mise en ligne et optimisation des annonces, accueil des voyageurs, ménage professionnel entre séjours, gestion du linge et petits travaux. En 2025, elle a lancé un service « SOS Conciergerie » de dépannage de dernière minute (ménage express, intervention rapide) qui peut sauver un propriétaire en gestion autonome un jour de rotation tendue. Tarification sur devis. Pertinente pour un propriétaire qui cherche une conciergerie à taille humaine, labellisée par Airbnb, avec une fondatrice identifiée comme interlocutrice directe — et la possibilité de ne déléguer que ponctuellement via l'offre SOS plutôt qu'une gestion complète.",
+      },
+      {
+        name: 'Prestiloge',
+        url: 'https://www.prestiloge.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty:
+          'Conciergerie de prestige esprit maison d\'hôtes, large rayon autour de Bourg',
+        description:
+          "Prestiloge se positionne sur le créneau de la conciergerie de prestige, dans un esprit maison d'hôtes : box d'arrivée soignés, attentions de bienvenue, ménage professionnel et blanchisserie premium. Elle couvre Bourg-en-Bresse et un large rayon autour (Meximieux, Mâcon, Lons-le-Saunier et l'Ain), ce qui en fait une option pour les propriétaires d'un bien un peu plus haut de gamme cherchant à soigner l'expérience voyageur et à viser des avis cinq étoiles. Les prestations couvrent la gestion locative courte durée classique (annonce, réservations, accueil, entretien) avec un soin particulier porté à la présentation du logement et aux finitions. La commission n'est pas publiée et s'établit sur devis selon le standing du bien et les services retenus. Pertinente pour un propriétaire d'un appartement ou d'une maison soignée à Bourg qui veut différencier son annonce par la qualité d'accueil plutôt que par le prix, et accepte un positionnement premium en échange d'un meilleur taux d'avis et d'une montée en gamme tarifaire.",
+      },
+      {
+        name: 'Cledici Bourg-en-Bresse',
+        url: 'https://cledici.fr/conciergerie-bourg-en-bresse/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty:
+          'Réseau national haut de gamme couvrant l\'Ain, gestion clé en main',
+        description:
+          "Cledici est un réseau national de conciergeries haut de gamme qui couvre Bourg-en-Bresse via une agence dédiée. Le modèle s'adresse aux propriétaires de biens de standing recherchant une gestion clé en main : création de l'annonce, multidiffusion sur les plateformes, gestion des réservations et des voyageurs, ménage assuré par des prestataires qualifiés et maintenance. La commission est calculée en fonction des encaissements (pourcentage non affiché publiquement, à demander sur devis). Contrairement aux acteurs précédents, Cledici n'est pas une structure historiquement implantée à Bourg : c'est un réseau national qui couvre la ville, avec les avantages que cela suppose (process rodés, outils de gestion, standardisation) et les limites d'un interlocuteur moins ancré localement. Pertinente pour un propriétaire qui privilégie la robustesse d'un réseau structuré et un positionnement haut de gamme à l'ancrage purement local, et qui veut confronter une offre nationale aux conciergeries indépendantes bressanes.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre-ville / Marché couvert',
+        pricePerNight: '70-120 €',
+        occupancy: 58,
+        description:
+          "Cœur commerçant et animé de Bourg : marché couvert, restaurants, rues piétonnes. C'est le secteur qui capte la demande la plus forte, à la fois loisir (proximité des sites) et affaires (centre, administrations). Cible city-break, courts séjours pro et couples. Atout : tout est accessible à pied, ce qui simplifie l'annonce et les avis.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Quartier Gare / Brou',
+        pricePerNight: '75-130 €',
+        occupancy: 60,
+        description:
+          "Secteur stratégique pour la LCD : double atout entre la gare TER (clientèle professionnelle et week-end vers Lyon et Mâcon) et la proximité du Monastère royal de Brou, premier site touristique de la ville. Cible mixte affaires + tourisme patrimonial, avec l'occupation la plus régulière de Bourg sur l'année.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Brou (autour du monastère)',
+        pricePerNight: '80-130 €',
+        occupancy: 55,
+        description:
+          "Quartier organisé autour du Monastère royal de Brou, aimant touristique numéro un de la ville et moteur de la demande loisir, renforcée l'été par le spectacle son et lumière. Cible touristes culturels et familles. Demande plus saisonnière que le centre mais tarifs nuitée parmi les plus élevés grâce à l'attractivité du site.",
+        roiBrut: '5 à 7 %',
+      },
+      {
+        name: 'Vennes',
+        pricePerNight: '60-90 €',
+        occupancy: 50,
+        description:
+          "Quartier résidentiel aux prix d'achat plus bas que l'hyper-centre, ce qui en fait l'un des meilleurs compromis rendement de Bourg pour un investisseur. Demande LCD plus modérée (clientèle pro, séjours moyens, débord du centre) mais ticket d'entrée attractif. À privilégier pour qui vise le rendement sur le capital investi plus que le volume de réservations.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Bel Air / Les Oyards',
+        pricePerNight: '55-85 €',
+        occupancy: 45,
+        description:
+          "Secteurs résidentiels périphériques, plus calmes et à l'écart des sites touristiques. Demande LCD plus faible, davantage tirée par les déplacements professionnels et les séjours plus longs. Pertinents pour un bien acquis à bon prix et exploité en moyenne durée ou en complément longue durée, moins pour viser le pic touristique estival.",
+        roiBrut: '6 à 8 %',
+      },
+    ],
+    regulation:
+      "Bourg-en-Bresse applique le **cadre national** des meublés de tourisme, sans dispositif local restrictif identifié à ce jour (ni changement d'usage municipal, ni zonage tendu spécifique). Le cadre est encadré par la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024).\n\n**Déclaration en mairie obligatoire.** Tout meublé de tourisme doit être **déclaré en mairie** via le formulaire Cerfa, ce qui permet d'obtenir un **numéro d'enregistrement** à faire figurer sur chaque annonce Airbnb, Booking ou Abritel.\n\n**Téléservice national en 2026.** Au cours de l'année 2026, l'enregistrement des meublés de tourisme bascule vers un **téléservice national unique**, quelle que soit la commune. Plus aucune annonce ne pourra être publiée sans numéro d'enregistrement valide.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale de 120 jours par an de location s'applique aux résidences principales (logement occupé au moins 8 mois par an). Les résidences secondaires ne sont pas concernées par ce plafond mais restent soumises à la déclaration.\n\n**DPE et passoires thermiques.** Depuis 2025, les logements classés F ou G au DPE sont progressivement interdits à la location, et un DPE classé A à E est exigé pour toute nouvelle autorisation de changement d'usage. Sur le bâti ancien du centre de Bourg, faire réaliser le DPE avant tout projet LCD.\n\n**Abattement micro-BIC.** Pour les revenus 2025 déclarés en 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les meublés classés tourisme (plafond 77 700 €). Le classement officiel est un levier fiscal à étudier.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Bourg-en-Bresse perçoit une taxe de séjour, collectée automatiquement par Airbnb pour les réservations passées via la plateforme. Le tarif dépend de la catégorie et du classement de l'hébergement. Vérifiez le barème exact en vigueur auprès du service taxe de séjour de la mairie, l'absence de dispositif local restrictif ne dispensant pas de la déclaration et de la collecte.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 80,
+      neighborhood: 'Quartier Gare / Brou',
+      revenuBrut: 16000,
+      commissionRate: 0.2,
+      menageCount: 50,
+      menageUnitCost: 50,
+    },
+    extraFaq: [
+      {
+        q: 'Combien coûte une conciergerie Airbnb à Bourg-en-Bresse ?',
+        a: "À Bourg-en-Bresse, les conciergeries locales (Conciergerie Bressane, La Conciergerie d'Anaïs, Prestiloge) ne publient pas leurs tarifs et travaillent sur devis : le taux se négocie selon le bien, le volume de réservations et le niveau de service. Sur le marché français, une conciergerie en gestion complète facture généralement entre 18 % et 25 % du chiffre d'affaires, ménage souvent refacturé au voyageur en sus. Demandez toujours ce qui est inclus (ménage, linge, accueil, photos, mise en ligne) et si la commission s'entend hors taxe de séjour et hors frais de ménage, car un taux affiché bas peut grimper une fois tous les frais annexes ajoutés. À Bourg, l'avantage des indépendants locaux est la proximité physique : un interlocuteur en ville, capable d'intervenir vite, ce qui a une vraie valeur sur un marché de préfecture.",
+      },
+      {
+        q: "Combien peut rapporter un Airbnb à Bourg-en-Bresse ?",
+        a: "Bourg n'est pas une destination touristique majeure, mais sa double demande (affaires en semaine, tourisme l'été autour de Brou) lisse l'occupation sur l'année, ce qui est un atout. Pour un T2 bien placé près de la gare ou du centre, loué autour de 80 € la nuit avec une occupation réaliste de l'ordre de 55 %, on atteint un chiffre d'affaires brut d'environ 16 000 € par an, dont il faut déduire la commission de conciergerie, le ménage, la taxe de séjour et les charges. L'intérêt de Bourg tient surtout au ticket d'entrée : avec un prix au m² autour de 2 000 à 2 150 € (parmi les plus accessibles de la région), le rendement brut sur le capital investi reste intéressant, en particulier dans les quartiers résidentiels comme Vennes où l'achat coûte moins cher.",
+      },
+      {
+        q: "Faut-il un numéro d'enregistrement pour louer en courte durée à Bourg-en-Bresse ?",
+        a: "Oui. Tout meublé de tourisme à Bourg-en-Bresse doit être déclaré en mairie et obtenir un numéro d'enregistrement, qui doit apparaître sur chaque annonce Airbnb, Booking ou Abritel. Au cours de l'année 2026, cette démarche bascule vers un téléservice national unique, sans lequel aucune annonce ne pourra rester en ligne. À ce jour, aucune restriction locale particulière (changement d'usage, quota) n'a été identifiée à Bourg : le plafond de 120 nuitées par an concerne uniquement les résidences principales, les résidences secondaires n'y étant pas soumises. Comme toujours, l'absence de dispositif local connu n'est pas une garantie définitive : vérifiez votre situation auprès de la mairie avant de vous lancer.",
+      },
+      {
+        q: 'Quel quartier de Bourg-en-Bresse privilégier pour investir en LCD ?',
+        a: "Pour l'occupation la plus régulière, visez le quartier Gare / Brou : la gare apporte une clientèle professionnelle en semaine et le Monastère royal de Brou, un flux touristique l'été — c'est le meilleur compromis demande sur l'année. Le centre-ville (marché couvert) capte aussi une forte demande loisir et affaires, avec l'avantage du tout-à-pied. Pour maximiser le rendement sur le capital investi, le quartier résidentiel de Vennes offre des prix d'achat plus bas et reste exploitable en moyenne durée. Brou pur joue la carte touristique avec des tarifs nuitée élevés mais une demande plus saisonnière. Dans tous les cas à Bourg, la régularité de la demande d'affaires est votre meilleure assurance contre les creux de basse saison.",
+      },
+    ],
+    updatedAt: '2026-06-24',
+  },
+  {
+    slug: 'gruissan',
+    displayName: 'Gruissan',
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title:
+      'Conciergerie Gruissan Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Gruissan : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 6 meilleures conciergeries Airbnb à Gruissan (Aude). Tarifs, services, avis, réglementation 2026, secteurs rentables : Gruissan-Plage, le Village, les Ayguades. Guide complet.',
+    kwPrincipal: 'conciergerie gruissan',
+    kwSecondaires: [
+      'conciergerie airbnb gruissan',
+      'conciergerie gruissan airbnb',
+      'gestion locative gruissan',
+      'menage location gruissan',
+    ],
+    population: 5068,
+    tourists: 600000,
+    activeListings: 900,
+    priceLow: 75,
+    priceHigh: 200,
+    occupancyRate: 48,
+    revpar: 55,
+    seasonality:
+      "Saisonnalité balnéaire méditerranéenne très marquée, concentrée sur juillet-août, avec un parc de logements composé à près de 79 % de résidences secondaires (INSEE 2022). Le pic estival (plages, port de plaisance, chalets sur pilotis de Gruissan-Plage, massif de la Clape) tire l'essentiel du chiffre d'affaires LCD, avec des tarifs nuitée qui grimpent fortement en août. Les ailes de saison (mai-juin, septembre) restent correctes grâce au climat audois et au tourisme nature/vélo, mais l'hiver est très calme. La taxe de séjour communale est d'ailleurs perçue de manière concentrée sur la haute saison estivale.",
+    rankNational: 45,
+    introCustom:
+      "Vous avez un appartement, une maison ou l'un des emblématiques **chalets sur pilotis** de Gruissan-Plage que vous louez sur Airbnb, ou que vous envisagez de mettre en location courte durée sur cette station balnéaire de l'**Aude**.\n\nEntre une saison ultra-concentrée sur juillet-août, des rotations de voyageurs serrées le samedi, le ménage, le linge et la gestion à distance quand on n'habite pas sur place, la question se pose vite : faut-il déléguer à une conciergerie ? Et surtout **laquelle**, entre les indépendants 100 % Gruissan et les acteurs narbonnais qui couvrent toute la côte ?\n\nGruissan est un marché de **résidences secondaires** (près de 79 % du parc) : la plupart des propriétaires n'y vivent pas à l'année, ce qui rend la conciergerie particulièrement utile. Voici le comparatif des agences qui interviennent sur la commune.",
+    marketIntro:
+      "Gruissan est un **marché LCD balnéaire** typique du littoral méditerranéen : une petite commune de **5 068 habitants** (INSEE 2022) qui se transforme en station très fréquentée l'été. Surtout, c'est un marché de **résidence secondaire à l'état pur** : sur environ **13 380 logements**, près de **10 560 sont des résidences secondaires, soit 79 %** (INSEE 2022). La majorité des propriétaires n'habitent pas Gruissan à l'année.\n\n**Une station à trois visages.** Gruissan, c'est le **Village** historique en circulade autour de la tour Barberousse, les **chalets sur pilotis** de Gruissan-Plage (rendus célèbres par le cinéma), le **port de plaisance** et les secteurs balnéaires familiaux (les Ayguades, le Grazel). Le tout adossé au massif de la **Clape** et aux salins, qui ajoutent une offre nature et vélo aux plages.\n\n**Une demande concentrée mais premium.** Le prix moyen constaté tourne autour de **80-85 € la nuit**, avec des pointes au-delà de **130 € en août** et bien plus pour un chalet pieds dans l'eau. La saison se joue surtout sur juillet-août, ce qui impose une gestion serrée des rotations et une optimisation tarifaire fine pour capter la valeur du pic.\n\n**Côté immobilier**, comptez environ **3 300 €/m² pour les appartements** et **4 750 €/m² pour les maisons et chalets** (SeLoger / MeilleursAgents, 2026), les chalets sur pilotis de la plage se situant dans le haut de la fourchette. Un ticket d'entrée plus élevé que l'arrière-pays audois, justifié par la rareté du foncier littoral.",
+    conciergeries: [
+      {
+        name: 'Gruissan Conciergerie',
+        url: 'https://gruissanconciergerie.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 6,
+        specialty:
+          'Conciergerie 100 % locale Gruissan, accueil personnalisé et services gastronomiques',
+        description:
+          "Gruissan Conciergerie est une conciergerie 100 % locale, fondée fin 2023 par Eloïse et domiciliée à Gruissan même (résidence les Amirantes, rue du Drakkar). Elle gère un petit portefeuille de biens sur la commune avec une logique de proximité et de personnalisation : création et gestion des annonces Airbnb, ménage entre locations, gestion du linge, accueil personnalisé des voyageurs et services complémentaires comme des petits-déjeuners ou plateaux gastronomiques. Le ménage est explicitement refacturé au voyageur s'il ne souhaite pas s'en charger, ce qui préserve la marge du propriétaire. Le positionnement « petite structure 100 % Gruissan » est un atout sur une station où la réactivité du jour de rotation compte, et où une partie des propriétaires n'habitent pas sur place. Pertinente pour un propriétaire d'un bien à Gruissan qui veut une interlocutrice unique, présente physiquement sur la commune, et un accueil soigné plutôt qu'une gestion industrielle multi-villes.",
+      },
+      {
+        name: 'La Loge Gruissanaise',
+        url: 'https://lalogegruissanaise.fr/',
+        commission: 'sur devis',
+        menage: 'sur devis',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty:
+          'Conciergerie locale Gruissan, gestion saisonnière et location de matériel famille',
+        description:
+          "La Loge Gruissanaise est une conciergerie locale domiciliée à Gruissan, fondée par Nathalie et Florent. Elle propose la gestion locative saisonnière des meublés de tourisme sur la commune (mise en location, gestion des séjours, entretien) avec une particularité qui la distingue : un service de location de matériel de puériculture, qui en fait une option pertinente pour les propriétaires ciblant la clientèle familiale très présente l'été sur une station balnéaire comme Gruissan. Le positionnement reste celui d'une structure de proximité, ancrée sur la commune, avec un suivi personnalisé. Ni la commission ni les modalités précises de ménage ne sont affichées publiquement : elles s'établissent sur devis selon le bien et la formule. Pertinente pour un propriétaire d'un logement familial à Gruissan-Plage ou aux Ayguades qui veut un acteur local capable de soigner l'accueil des familles et de différencier son annonce par des services pratiques adaptés aux séjours avec enfants.",
+      },
+      {
+        name: 'Le Concierge Narbonne',
+        url: 'https://leconciergenarbonne.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 50,
+        specialty:
+          'Conciergerie haut de gamme Narbonne / Gruissan, revenue et channel management',
+        description:
+          "Le Concierge Narbonne est une conciergerie haut de gamme basée à Narbonne qui couvre explicitement Gruissan, ainsi que Saint-Pierre-la-Mer et l'ensemble du Grand Narbonne. Elle revendique plus de 50 propriétés gérées et un positionnement nettement orienté performance : revenue manager et channel manager pour optimiser le prix et la diffusion multi-plateformes, home staging et photographie professionnelle, accompagnement fiscal et disponibilité 7j/7. C'est l'un des acteurs les plus structurés de la zone, capable de prendre en charge un bien gruissanais avec des outils de yield management que les petites structures locales n'ont pas toujours. La commission n'est pas affichée et s'établit sur devis. Pertinente pour un propriétaire d'un bien à fort potentiel (chalet de plage, appartement vue mer) qui veut maximiser le revenu sur la saison via une gestion tarifaire active et une diffusion large, en acceptant un interlocuteur basé à Narbonne plutôt qu'à Gruissan même.",
+      },
+      {
+        name: 'Conciergerie du Cers',
+        url: 'https://conciergerieducers.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty:
+          'Conciergerie du Narbonnais couvrant Gruissan, formules Standard et Premium',
+        description:
+          "La Conciergerie du Cers est une conciergerie du Narbonnais qui couvre Gruissan, Narbonne-Plage, Saint-Pierre-la-Mer et Fleury-d'Aude. Elle structure son offre autour de deux formules, Standard et Premium, permettant au propriétaire de choisir son niveau de délégation : gestion des annonces et des réservations sur Airbnb et Booking, accueil des voyageurs, nettoyage complet avec contrôle qualité après chaque réservation, gestion du linge et du calendrier, assistance 7j/7. Le positionnement met l'accent sur une expérience voyageur soignée (esprit « cinq étoiles ») et la réactivité, deux critères clés sur un littoral où les avis font la différence en pleine saison. Les tarifs des formules ne sont pas publiés et se précisent sur devis. Pertinente pour un propriétaire qui veut pouvoir doser son niveau de service entre une gestion essentielle et une prise en charge complète, sur un acteur couvrant toute la côte du Grand Narbonne et habitué aux rotations estivales intensives.",
+      },
+      {
+        name: 'YourHostHelper Gruissan',
+        url: 'https://yourhosthelper.com/services-conciergerie-gruissan/',
+        commission: '20 %',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty:
+          'Réseau national avec agence dédiée Gruissan, pricing dynamique quotidien',
+        description:
+          "YourHostHelper est un réseau national de conciergeries, actif depuis 2017, qui dispose d'une agence dédiée à Gruissan. La commission affichée est de l'ordre de 20 % des revenus locatifs pour la gestion complète, avec une quinzaine de services couverts : création et optimisation de l'annonce, photographie professionnelle, pricing dynamique ajusté quotidiennement, check-in et check-out professionnels, ménage et gestion du linge. L'agence gère déjà plusieurs biens identifiés sur la commune. L'intérêt d'un réseau comme YourHostHelper sur un marché ultra-saisonnier est précisément l'optimisation tarifaire automatisée, qui aide à capter au mieux la valeur du pic de juillet-août sans micro-gérer son calendrier. Le revers : un fonctionnement plus standardisé que les indépendants gruissanais. Pertinente pour un propriétaire qui veut un taux affiché clair (autour de 20 %), une gestion outillée et un pricing dynamique, tout en bénéficiant d'une agence rattachée localement à Gruissan plutôt qu'à une plateforme purement à distance.",
+      },
+      {
+        name: 'HostnFly Gruissan',
+        url: 'https://hostnfly.com/conciergerie-airbnb/gruissan',
+        commission: 'à partir de 20 %',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty:
+          'Réseau national, gestion 100 % digitale via application propriétaire',
+        description:
+          "HostnFly est un réseau national de gestion locative courte durée qui couvre Gruissan dans son rayon d'intervention autour de Narbonne. La commission démarre autour de 20 % des revenus et varie selon le bien, sa localisation et la complexité de gestion. Le service couvre la création et la promotion de l'annonce, la gestion des réservations et des voyageurs, l'accueil et la remise des clés, le ménage et la maintenance, avec un suivi 100 % digital via une application propriétaire (réservations, revenus et paiements en temps réel). C'est l'option la plus « à distance » du comparatif : adaptée à un propriétaire investisseur qui veut piloter son bien gruissanais comme un produit, depuis un tableau de bord, sans interlocuteur physique attitré sur la commune. Pertinente pour un propriétaire à distance, à l'aise avec le digital, qui privilégie un réseau national outillé et un suivi self-service à la relation de proximité d'une conciergerie 100 % locale — en gardant à l'esprit que le service de terrain dépend du maillage local du réseau.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Gruissan-Plage (chalets sur pilotis)',
+        pricePerNight: '90-250 €',
+        occupancy: 52,
+        description:
+          "Le quartier iconique de Gruissan : les chalets sur pilotis face à la Méditerranée, rendus célèbres par le cinéma. Demande estivale très forte et prime émotionnelle nette pour un bien pieds dans l'eau, avec des tarifs qui s'envolent en août. Cible familles et groupes en quête de l'expérience « chalet de plage ». Saisonnalité marquée mais segment le plus premium de la station, idéal pour qui veut maximiser le revenu sur juillet-août.",
+        roiBrut: '4 à 6 %',
+      },
+      {
+        name: 'Le Village (circulade médiévale)',
+        pricePerNight: '70-150 €',
+        occupancy: 50,
+        description:
+          "Cœur historique de Gruissan, organisé en circulade autour de la tour Barberousse : ruelles, charme, restaurants et animation. Cible les couples et les familles cherchant l'authenticité plutôt que le pied dans l'eau, avec une demande mieux étalée sur les ailes de saison grâce à l'attrait patrimonial et à la vie de village. Bon compromis charme / occupation pour un appartement de caractère.",
+        roiBrut: '5 à 7 %',
+      },
+      {
+        name: 'Les Ayguades',
+        pricePerNight: '70-140 €',
+        occupancy: 48,
+        description:
+          "Secteur balnéaire familial, proche des plages, apprécié pour ses séjours à la semaine en été. Cible les familles et les séjours plus longs, avec des biens souvent plus accessibles à l'achat que les chalets de la plage. Demande nettement estivale mais volume régulier sur la haute saison, adapté à une exploitation à la semaine plutôt qu'à la nuitée.",
+        roiBrut: '5 à 7 %',
+      },
+      {
+        name: 'Le Grazel',
+        pricePerNight: '80-160 €',
+        occupancy: 50,
+        description:
+          "Autour de la plage urbaine du Grazel, accès direct à la mer et résidences en front ou proche mer. La proximité immédiate de la plage est un argument fort dans l'annonce et soutient des tarifs élevés en saison. Cible familles et couples privilégiant l'accès plage à pied. Demande estivale soutenue, l'un des secteurs où la valeur « accès mer » se monétise le mieux.",
+        roiBrut: '4 à 6 %',
+      },
+      {
+        name: 'Mateille / Port',
+        pricePerNight: '70-150 €',
+        occupancy: 48,
+        description:
+          "Appartements et résidences proches du port de plaisance, des commerces et de l'animation. Cible plaisanciers et clientèle city-break balnéaire qui veut commerces, restaurants et bateaux à proximité. Demande estivale forte portée par la vie du port, avec une exploitation possible sur des séjours courts grâce à l'animation permanente du secteur en saison.",
+        roiBrut: '4 à 6 %',
+      },
+    ],
+    regulation:
+      "Gruissan applique le **cadre national** des meublés de tourisme, renforcé par la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024), dans un contexte de commune littorale composée à près de **79 % de résidences secondaires**.\n\n**Déclaration en mairie obligatoire.** La Ville de Gruissan impose la **déclaration en mairie** de tout meublé de tourisme, « quelle que soit votre intention pour la saison », via le formulaire Cerfa ou l'espace hébergeur en ligne. Cette déclaration permet d'obtenir un **numéro d'enregistrement** à faire figurer sur chaque annonce.\n\n**Enregistrement national en 2026.** La mairie indique que l'enregistrement des meublés de tourisme devient **obligatoire sur tout le territoire national via un portail numérique unique en 2026**, dans le cadre de la loi Le Meur. Aucune annonce ne pourra être publiée sans numéro valide.\n\n**Changement d'usage.** Aucun dispositif local de changement d'usage ni quota spécifique à Gruissan n'a été identifié à ce jour : la commune s'inscrit dans le cadre national. Le plafond de 120 nuitées par an concerne uniquement les résidences principales — or à Gruissan, l'immense majorité des biens loués sont des résidences secondaires, non soumises à ce plafond mais soumises à la déclaration. La situation reste à surveiller, les communes littorales à très forte proportion de résidences secondaires pouvant durcir leur réglementation.\n\n**Abattement micro-BIC.** Pour les revenus 2025 déclarés en 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les meublés classés tourisme (plafond 77 700 €). Le classement est un levier fiscal pertinent sur une station balnéaire où la clientèle valorise le standing.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Gruissan perçoit une taxe de séjour, concentrée sur la haute saison estivale, collectée automatiquement par Airbnb pour les réservations passées via la plateforme, avec les surtaxes départementale (10 %) et régionale en sus. Le tarif dépend de la catégorie et du classement de l'hébergement ; vérifiez le barème exact auprès du service taxe de séjour de la mairie, le non-respect exposant à des sanctions.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 120,
+      neighborhood: 'Gruissan-Plage',
+      revenuBrut: 18000,
+      commissionRate: 0.2,
+      menageCount: 30,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: 'Combien coûte une conciergerie Airbnb à Gruissan ?',
+        a: "À Gruissan, les modèles cohabitent. Les réseaux affichent un taux clair — autour de 20 % du chiffre d'affaires pour YourHostHelper, à partir de 20 % pour HostnFly — tandis que les indépendants locaux (Gruissan Conciergerie, La Loge Gruissanaise) et les acteurs narbonnais (Le Concierge Narbonne, Conciergerie du Cers) travaillent sur devis. Sur un marché ultra-saisonnier comme Gruissan, deux points méritent une attention particulière : la façon dont le ménage est facturé (refacturé au voyageur, comme le fait explicitement Gruissan Conciergerie, ou pris sur votre marge), et la qualité du pricing dynamique, car capter la valeur du pic d'août fait toute la différence sur le revenu annuel. Demandez systématiquement ce que couvre la commission et si elle s'entend hors ménage et hors taxe de séjour avant de comparer les offres.",
+      },
+      {
+        q: "Combien peut rapporter un Airbnb à Gruissan sur une saison ?",
+        a: "Tout dépend de l'emplacement et de la saison. Gruissan est un marché très concentré sur juillet-août : un T2 bien placé loué autour de 120 € la nuit en haute saison peut générer de l'ordre de 18 000 € de chiffre d'affaires brut sur l'année, l'essentiel se jouant sur l'été, avant déduction de la commission, du ménage, de la taxe de séjour et des charges. Un chalet sur pilotis pieds dans l'eau à Gruissan-Plage atteint des tarifs nettement plus élevés en août, mais avec une saison courte. Côté capital, comptez environ 3 300 €/m² pour un appartement et jusqu'à 4 750 €/m² et plus pour une maison ou un chalet : le foncier littoral est cher, ce qui plafonne le rendement brut (souvent 4 à 7 % selon le secteur) malgré des nuitées élevées. La clé à Gruissan est d'optimiser le pic estival et de bien viser la proximité de la plage.",
+      },
+      {
+        q: "Faut-il déclarer son meublé de tourisme à Gruissan ?",
+        a: "Oui. La Ville de Gruissan impose la déclaration en mairie de tout meublé de tourisme, quelle que soit l'intention pour la saison, ce qui permet d'obtenir un numéro d'enregistrement à faire figurer sur chaque annonce Airbnb, Booking ou Abritel. En 2026, cette démarche bascule vers un portail national unique dans le cadre de la loi Le Meur. À ce jour, aucun dispositif local de changement d'usage ni quota n'a été identifié à Gruissan : le plafond de 120 nuitées par an ne concerne que les résidences principales, or la quasi-totalité des biens loués sur la commune sont des résidences secondaires. La station étant composée à près de 79 % de résidences secondaires, la réglementation reste à surveiller : vérifiez votre situation auprès de la mairie avant de vous lancer.",
+      },
+      {
+        q: 'Quel secteur de Gruissan privilégier pour la location courte durée ?',
+        a: "Pour le revenu maximal sur le pic estival, les chalets sur pilotis de Gruissan-Plage et le secteur du Grazel (accès mer direct) commandent les tarifs les plus élevés, au prix d'une saison courte et d'un foncier cher. Le Village historique en circulade offre le meilleur compromis charme et occupation, avec une demande mieux étalée sur les ailes de saison grâce à l'attrait patrimonial. Les Ayguades, secteur familial, conviennent à une exploitation à la semaine avec des biens plus accessibles à l'achat. Le secteur du port (Mateille) capte la clientèle city-break balnéaire attirée par l'animation. Dans tous les cas à Gruissan, la proximité immédiate de la plage est le premier facteur de tarif et d'avis : c'est elle qu'il faut viser, plus que la surface.",
+      },
+    ],
+    updatedAt: '2026-06-24',
+  },
+  {
+    slug: 'valence',
+    displayName: 'Valence',
+    region: 'Auvergne-Rhône-Alpes',
+    regionSlug: 'auvergne-rhone-alpes',
+    title:
+      'Conciergerie Valence Airbnb : comparatif 2026 des 5 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Valence (Drôme) : Comparatif 2026',
+    metaDescription:
+      'Comparatif des 5 meilleures conciergeries Airbnb à Valence (Drôme). Tarifs, services, avis, réglementation 2026, quartiers rentables : Vieux Valence, gare TGV, Parc Jouvet. Guide complet.',
+    kwPrincipal: 'conciergerie valence',
+    kwSecondaires: [
+      'conciergerie airbnb valence',
+      'conciergerie valence drome',
+      'gestion locative valence',
+      'conciergerie airbnb drome',
+    ],
+    population: 64458,
+    tourists: 400000,
+    activeListings: 300,
+    priceLow: 60,
+    priceHigh: 110,
+    occupancyRate: 58,
+    revpar: 48,
+    seasonality:
+      "Marché à dominante urbaine et de passage, moins saisonnier que le littoral ou la montagne : Valence, « porte de la Provence », vit toute l'année d'une clientèle d'affaires et de transit (gare TGV, axe Lyon–Marseille, vallée du Rhône), complétée par un tourisme estival qui culmine de juin à septembre (patrimoine, ViaRhôna le long du Rhône, vignobles de la vallée du Rhône, gastronomie). Le pic juillet-août reste réel mais l'occupation est lissée par les déplacements professionnels et le flux ferroviaire, ce qui rend le marché plus régulier qu'une destination purement balnéaire.",
+    rankNational: 42,
+    introCustom:
+      "Vous avez un appartement à **Valence** — dans le **Vieux Valence** près du Champ de Mars, du côté de la **gare TGV** ou vers le **Parc Jouvet** et les quais du Rhône — que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre les arrivées de voyageurs en transit, les rotations, le ménage, le linge et la gestion à distance, vous vous demandez si confier votre bien à une conciergerie est rentable, et **laquelle choisir** sur un marché drômois encore peu structuré.\n\nLa scène valentinoise est dominée par des conciergeries locales indépendantes, dont certaines très bien notées, qui couvrent Valence et toute la vallée Drôme-Ardèche. Voici le comparatif des principales agences qui interviennent sur la ville.",
+    marketIntro:
+      "Valence est un **marché LCD urbain de taille moyenne**, porté par sa position de carrefour entre Lyon et Marseille, pour une commune d'environ **64 500 habitants** (population légale INSEE 2023). On y compte de l'ordre de **quelques centaines d'annonces actives** (estimation), avec un prix moyen constaté autour de **90 € la nuit**.\n\n**La porte de la Provence.** Valence se présente comme la « porte de la Provence » : c'est un point de passage majeur de la vallée du Rhône, desservi par la gare TGV (Paris en environ 2 heures) et l'axe autoroutier Lyon–Marseille. Cette position alimente une demande continue de clientèle d'affaires et de transit, qui lisse l'occupation sur l'année.\n\n**Patrimoine et art de vivre.** La ville offre un centre historique avec sa cathédrale, le Champ de Mars et son célèbre kiosque Peynet, le Parc Jouvet, et une scène gastronomique de renom emmenée par la Maison Pic. La **ViaRhôna**, véloroute longeant le Rhône, attire une clientèle de cyclotouristes l'été, et la proximité des vignobles de la vallée du Rhône complète l'offre œnotouristique.\n\n**Un ticket d'entrée accessible.** Côté immobilier, comptez environ **2 000 à 2 230 €/m²** pour un appartement selon les sources (SeLoger, Efficity, MeilleursAgents, 2026), soit un marché abordable qui laisse de la marge de rendement, en particulier dans le centre historique et autour de la gare où la demande LCD est la plus régulière.",
+    conciergeries: [
+      {
+        name: 'Derenon Conciergerie',
+        url: 'https://derenon-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans la prestation',
+        rating: 5,
+        reviews: 42,
+        biensGeres: 0,
+        specialty:
+          'Conciergerie Valence centrée ménage et états des lieux conformes loi ALUR',
+        description:
+          "Derenon Conciergerie est une conciergerie domiciliée 29 rue Farnerie à Valence, l'une des mieux notées de la ville. Son cœur de métier est le nettoyage professionnel et les états des lieux d'entrée et de sortie conformes à la loi ALUR (photos systématiques), une expertise précieuse pour les meublés de tourisme à rotation rapide. Elle intervient sur Valence et un large secteur Drôme-Ardèche-Isère-Savoie-Haute-Savoie-Rhône (Montélimar, Romans-sur-Isère, Le Cheylard), et est adossée à l'activité Derenon de rénovation du bâtiment, ce qui lui permet de gérer aussi la maintenance et les petits travaux. La commission n'est pas affichée publiquement et s'établit sur devis. Pertinente pour un propriétaire qui veut sécuriser la partie la plus chronophage et la plus litigieuse de la LCD — la propreté irréprochable et les états des lieux opposables en cas de dégradation — avec un acteur valentinois bien noté et capable d'intervenir techniquement sur le bien.",
+      },
+      {
+        name: 'Style Home Conciergerie',
+        url: 'https://www.stylehomeconciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty:
+          'Conciergerie clé en main haut de gamme Valence Drôme-Ardèche',
+        description:
+          "Style Home Conciergerie est une conciergerie clé en main domiciliée 155 chemin Bayot à Gournier, à Valence, fondée par Stéphane Mura. Elle propose une gestion complète et plutôt haut de gamme des meublés de tourisme sur Valence, la Drôme et l'Ardèche : photographies professionnelles, création et diffusion des annonces sur Airbnb et Booking, accueil des voyageurs, ménage soigné et paniers de bienvenue. Le positionnement valorise l'attachement aux paysages drômois et ardéchois et une expérience voyageur travaillée, dans l'optique de viser des avis cinq étoiles. La commission n'est pas publiée et se précise sur devis selon le bien et la formule. Pertinente pour un propriétaire d'un appartement ou d'une maison soignée à Valence ou dans la vallée qui veut déléguer l'intégralité de la gestion à une structure locale, avec un fondateur identifié comme interlocuteur, et soigner la présentation de son bien pour se différencier sur un marché urbain encore peu structuré.",
+      },
+      {
+        name: 'Clédor Vallée',
+        url: 'https://www.cledor-vallee.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty:
+          'Conciergerie sur-mesure type hôtelier, tarification dynamique et livret digital',
+        description:
+          "Clédor Vallée est une conciergerie basée à Valence qui intervient sur tout le secteur Drôme-Ardèche, avec un positionnement « expérience hôtelière » sur-mesure. L'offre couvre la gestion locative courte durée de bout en bout : tarification dynamique pour optimiser le revenu, livret d'accueil digital, ménage professionnel et linge de qualité hôtelière avec contrôle qualité systématique après chaque prestation, et services additionnels pour les voyageurs (paniers d'accueil, massage à domicile, location de vélos). Le soin porté au contrôle qualité et à l'expérience client en fait une option pour les propriétaires qui veulent monter en gamme et fidéliser une clientèle exigeante. La commission n'est pas affichée et s'établit sur devis selon le bien et le niveau de service. Pertinente pour un propriétaire qui cherche une gestion proche du standard hôtelier — pricing actif, finitions soignées, services à la carte — plutôt qu'une simple remise en location, sur Valence et sa vallée.",
+      },
+      {
+        name: 'Conciergerie KLS',
+        url: 'https://www.conciergerie-kls.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty:
+          'Gestion patrimoniale Airbnb sur l\'agglo de Valence, dashboard propriétaire',
+        description:
+          "Conciergerie KLS (Keep Living Smart) propose une approche de gestion patrimoniale des meublés de tourisme sur l'agglomération valentinoise, avec une couverture précise : Valence, Bourg-lès-Valence, Portes-lès-Valence, Guilherand-Granges, Saint-Marcel-lès-Valence, Beaumont-lès-Valence, et le reste de la Drôme sur demande. L'offre combine gestion locative complète (ménage, rotation du linge, contrôle qualité assurés par des prestataires professionnels), tableau de bord propriétaire pour suivre l'activité, assistance réglementaire et assurance, ainsi que la gestion du bail mobilité pour les propriétaires qui veulent panacher courte et moyenne durée. La commission n'est pas affichée publiquement et se précise sur devis. Pertinente pour un propriétaire qui possède un ou plusieurs biens sur l'agglomération de Valence et veut un acteur couvrant finement les communes périphériques, avec un suivi outillé et un accompagnement sur les aspects réglementaires et assurantiels souvent négligés.",
+      },
+      {
+        name: 'Rentee Conciergerie',
+        url: 'https://rentee-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans la prestation',
+        rating: 4.8,
+        reviews: 17,
+        biensGeres: 0,
+        specialty:
+          'Gestion locative courte durée Airbnb, Valence et axe Rhône-Alpes',
+        description:
+          "Rentee Conciergerie est une conciergerie de gestion locative courte durée bien notée, qui couvre Valence, Tournon-sur-Rhône et jusqu'à l'Alpe d'Huez en Rhône-Alpes. Elle prend en charge la gestion des meublés de tourisme sur Airbnb et les autres plateformes : mise en ligne et optimisation de l'annonce, gestion des réservations et des voyageurs, accueil, ménage et entretien entre les séjours. Le fait d'opérer à la fois sur Valence (marché urbain régulier) et sur une station de montagne comme l'Alpe d'Huez témoigne d'une capacité à gérer des biens aux saisonnalités très différentes. La commission n'est pas affichée et s'établit sur devis. Pertinente pour un propriétaire valentinois qui veut une conciergerie réactive et bien évaluée pour une gestion courte durée classique, sans surcouche premium, avec un acteur habitué à des profils de biens variés sur l'axe Rhône-Alpes.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieux Valence / Centre historique',
+        pricePerNight: '70-120 €',
+        occupancy: 60,
+        description:
+          "Cœur touristique et commerçant de la ville : cathédrale Saint-Apollinaire, Champ de Mars, kiosque Peynet, restaurants et rues piétonnes. C'est le secteur qui capte la demande la plus forte, à la fois loisir et courts séjours professionnels, avec l'avantage du tout-à-pied. Cible city-break, couples et clientèle d'affaires. Le cœur de cible LCD à Valence, avec la meilleure régularité d'occupation.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Quartier Gare Valence-Ville',
+        pricePerNight: '60-95 €',
+        occupancy: 62,
+        description:
+          "Autour de la gare Valence-Ville, le secteur capte le flux de voyageurs TGV et de clientèle d'affaires en semaine. Idéal pour des studios et T1 loués en courts séjours, avec une occupation très régulière tirée par les déplacements professionnels. Cible voyageurs en transit et professionnels. Atout : la proximité immédiate de la gare est un argument fort dans l'annonce.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Parc Jouvet / quais du Rhône',
+        pricePerNight: '70-120 €',
+        occupancy: 56,
+        description:
+          "Secteur résidentiel et verdoyant le long du Parc Jouvet et des quais du Rhône. Ambiance plus calme, appartements familiaux et maisons, avec l'atout de la ViaRhôna qui attire une clientèle de cyclotouristes l'été. Cible familles et voyageurs nature/vélo. Demande plus saisonnière que le centre mais cadre apprécié et tarifs corrects sur les beaux biens.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Le Polygone',
+        pricePerNight: '55-90 €',
+        occupancy: 52,
+        description:
+          "Quartier résidentiel et commercial, plus excentré, à la demande LCD plus moyenne gamme et davantage tournée vers la moyenne durée et la clientèle professionnelle. Prix d'achat plus accessibles, adaptés à une exploitation mixte courte et moyenne durée. Pertinent pour qui vise le rendement sur le capital plus que le pic touristique.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Bourg-lès-Valence',
+        pricePerNight: '55-90 €',
+        occupancy: 52,
+        description:
+          "Commune limitrophe au nord de Valence, qui absorbe une partie de la demande de l'agglomération avec des biens souvent plus accessibles à l'achat. Couverte par les conciergeries locales (KLS, Style Home). Cible clientèle professionnelle et séjours plus longs. Bon compromis pour un investisseur cherchant un ticket d'entrée plus bas tout en restant connecté au bassin valentinois.",
+        roiBrut: '7 à 9 %',
+      },
+    ],
+    regulation:
+      "Valence applique le **cadre national** des meublés de tourisme, renforcé par la **loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024), avec une gestion déclarative pilotée à l'échelle de Valence Romans Agglo.\n\n**Déclaration en mairie obligatoire.** Tout meublé de tourisme doit être **déclaré en mairie**, avec délivrance d'un **numéro de déclaration** à indiquer dans chaque annonce. La télédéclaration est gratuite et accessible en ligne (Cerfa n° 13566). Le défaut de déclaration expose à une amende civile pouvant atteindre **5 000 €**.\n\n**Changement d'usage selon votre situation.** La plateforme de Valence Romans Agglo mentionne qu'une demande de **changement d'usage** peut être requise « le cas échéant » pour un meublé de tourisme qui n'est pas la résidence principale. Le caractère systématiquement imposé par une délibération propre à Valence n'est pas établi : vérifiez votre situation précise auprès de la mairie avant de mettre un bien en location.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale de 120 jours par an de location s'applique aux résidences principales (logement occupé au moins 8 mois par an). Les résidences secondaires n'y sont pas soumises mais restent concernées par la déclaration et, le cas échéant, le changement d'usage.\n\n**Numéro d'enregistrement national en 2026.** Le numéro d'enregistrement national (NER) via téléservice unique est généralisé : selon la page de Valence Romans Agglo, l'échéance a été décalée au **dernier trimestre 2026**. Aucune annonce ne pourra alors être publiée sans numéro valide.\n\n**Abattement micro-BIC.** Pour les revenus 2025 déclarés en 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les meublés classés tourisme (plafond 77 700 €). Le classement est un levier fiscal à étudier.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Valence Romans Agglo perçoit une taxe de séjour, collectée automatiquement par Airbnb pour les réservations passées via la plateforme. Le tarif dépend de la catégorie et du classement de l'hébergement ; vérifiez le barème exact en vigueur auprès du service taxe de séjour de l'agglomération.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 80,
+      neighborhood: 'Vieux Valence / Centre historique',
+      revenuBrut: 17000,
+      commissionRate: 0.2,
+      menageCount: 45,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: 'Combien coûte une conciergerie Airbnb à Valence ?',
+        a: "À Valence, les conciergeries locales (Derenon, Style Home, Clédor Vallée, KLS, Rentee) ne publient pas leurs tarifs et travaillent sur devis : le taux se négocie selon le bien, le volume de réservations et le niveau de service. Sur le marché français, une conciergerie en gestion complète facture généralement entre 18 % et 25 % du chiffre d'affaires, le ménage étant tantôt inclus dans la prestation, tantôt refacturé au voyageur. Demandez toujours ce que couvre la commission (ménage, linge, accueil, photos, mise en ligne, états des lieux) et si elle s'entend hors taxe de séjour, car un taux affiché bas peut grimper une fois les frais annexes ajoutés. À Valence, l'atout des indépendants bien notés comme Derenon (états des lieux conformes loi ALUR) ou Clédor Vallée (standard hôtelier) est la qualité de service de proximité sur un marché encore peu industrialisé.",
+      },
+      {
+        q: "Combien peut rapporter un Airbnb à Valence ?",
+        a: "Valence n'est pas une destination touristique de premier plan, mais sa position de carrefour (gare TGV, axe Lyon–Marseille) lui assure une demande d'affaires et de transit régulière qui lisse l'occupation sur l'année. Pour un T2 bien placé dans le centre historique ou près de la gare, loué autour de 80 € la nuit avec une occupation réaliste de l'ordre de 58 %, on atteint un chiffre d'affaires brut d'environ 17 000 € par an, avant déduction de la commission, du ménage, de la taxe de séjour et des charges. L'intérêt de Valence tient au ticket d'entrée : avec un prix au m² autour de 2 000 à 2 230 € pour un appartement, le rendement brut sur le capital reste intéressant, en particulier au Polygone ou à Bourg-lès-Valence où l'achat coûte moins cher tout en restant connecté au bassin valentinois.",
+      },
+      {
+        q: "Faut-il un numéro de déclaration pour louer en courte durée à Valence ?",
+        a: "Oui. Tout meublé de tourisme à Valence doit être déclaré en mairie, avec délivrance d'un numéro de déclaration à indiquer dans chaque annonce Airbnb, Booking ou Abritel. La télédéclaration est gratuite et le défaut de déclaration expose à une amende civile pouvant atteindre 5 000 €. Le numéro d'enregistrement national via téléservice unique est généralisé, avec une échéance décalée au dernier trimestre 2026 selon Valence Romans Agglo. Pour un bien qui n'est pas votre résidence principale, une demande de changement d'usage peut être requise « le cas échéant » : ce point n'étant pas tranché de façon systématique par une délibération propre à Valence, vérifiez votre situation auprès de la mairie avant de vous lancer. Le plafond de 120 nuitées par an, lui, ne concerne que les résidences principales.",
+      },
+      {
+        q: 'Quel quartier de Valence privilégier pour investir en LCD ?',
+        a: "Pour la demande la plus forte et la plus régulière, visez le Vieux Valence (centre historique) : tourisme, courts séjours pro et tout-à-pied autour du Champ de Mars et de la cathédrale. Le quartier de la gare Valence-Ville offre l'occupation la plus stable grâce au flux TGV et à la clientèle d'affaires, idéal pour des studios et T1. Le secteur du Parc Jouvet et des quais du Rhône séduit familles et cyclotouristes de la ViaRhôna l'été. Pour maximiser le rendement sur le capital investi, le Polygone et la commune limitrophe de Bourg-lès-Valence offrent des prix d'achat plus bas, exploitables en courte comme en moyenne durée. À Valence, la régularité de la demande d'affaires et de transit est votre meilleure protection contre les creux de basse saison.",
+      },
+    ],
+    updatedAt: '2026-06-24',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

@@ -64,7 +64,459 @@ Les 10 vidéos sont numérotées dans l'ordre **narratif** (type livre, cliffhan
 
 ---
 
-# Les 10 vidéos
+
+---
+
+# ⭐ STRUCTURE RÉVISÉE — 2026-06-20 (VERSION COURANTE)
+
+> Issue de la relecture intégrale du blog (44 articles) + du livre, croisée avec ta restructuration du 20/06. **Remplace l'ordre proposé dans « Les 10 vidéos » plus bas** (conservé comme matière première). Ordre ci-dessous = ordre NARRATIF (playlist + cliffhangers). L'ordre de PUBLICATION est une décision séparée (voir questions).
+
+## Verdict sur ta structure
+
+La proposition de Marc tient à 80%, et l'ossature narrative (rentabilité → gestion → algo → rendement → fiscalité → loi → incident → sourcing → SMIC → résa directe) est solide : c'est un vrai arc de livre avec une montée en compétence cohérente. Mais elle a deux failles que je tranche. (1) COLD START : déplacer la preuve chiffrée 2 184→4 589 « après les vidéos 3 et 5 » la condamne à froid, car c'est ta meilleure accroche autonome ; je résous ça en distinguant ordre NARRATIF (celui des 10 ci-dessous, pour playlist + cliffhangers) et ordre de PUBLICATION (on mène avec la preuve, pas l'intro). Concrètement : V1 rentabilité PORTE déjà la transformation de la maison comme preuve d'ouverture, et V4 est l'étude de cas profonde du 64 m² — deux preuves distinctes, deux mots-clés distincts, zéro cannibalisation. (2) V10 « mon app » en épisode produit est ton maillon faible (peu de volume de recherche, ça sonne pub, rétention faible à froid) ; je la reframe entièrement en vidéo VALEUR « reprendre le contrôle / résa directe 0% vs 15% », avec le signal fort « j'en ai plein, je les prends pas faute d'outil » — Enomia arrive en solution soft sur les 90 dernières secondes, jamais en sujet. On vend le problème, pas le produit. Sur le challenge 3 (cannibalisation rentabilité/rendement) : je verrouille V1 sur le mot-clé pilier « rentabilité airbnb » (marché, vue d'ensemble, est-ce rentable) et V4 sur « investissement locatif saisonnier » + « 15% rendement » (étude de cas, chiffres profonds) — registres et intentions de recherche différents. Sur le challenge 4 (chaîne de cliffhangers de la 2e moitié) : la chaîne loi → incident → sourcing → SMIC → résa directe TIENT, mais j'ajuste un maillon — le pont loi→incident est faible si on le joue « réglementation puis dégâts », donc je le bridge par la peur (« même légal et plein, un voyageur peut tout casser ») ; et le pont sourcing→SMIC devient naturel (« maintenant que tu sais trouver le bien, voilà que même au SMIC tu peux le faire »). Sur le challenge 5 (V9 SMIC) : je lui donne son angle searchable concret, l'opération 64 m² ÷ 2 T2 accessible à 2 SMIC et la maison 2 184→4 589, en mode « doubler son revenu » — c'est le closer aspirationnel mais ancré dans du chiffre vérifiable. Réserves honnêtes : V7 incident est ton thème le plus faible en preuve propriétaire (peu de vrais incidents racontés, c'est plutôt l'absence d'incident qui est ta preuve), donc je l'oriente angle SEO peur/assurance mais en démontant la peur, pas en la nourrissant. Et V10 doit absolument rester sous-promesse côté app : ne jamais promettre de CRÉER de la demande, on RECYCLE l'existante (0% vs 15% mesurable), sinon tu casses ta crédibilité d'opérateur.
+
+## Les 10 vidéos (ordre narratif)
+
+### V1 — mot-clé : rentabilité airbnb
+**Louer en Airbnb, est-ce vraiment rentable ? Mes vrais chiffres sur 9 biens (et la preuve : 2 184 → 4 589 € sur un seul bien)**
+
+- **Rôle** : Pilier d'entrée + autorité. Pose le marché (partout où il y a des hôtels), casse le mythe 'rentable seulement l'été', et PORTE la transformation chiffrée de la maison comme preuve d'ouverture autonome. Ouvre la 1re boucle.
+- **Cliffhanger →** V2 gestion : 'Tu te dis que pour faire ces chiffres, je dois y passer mes journées. Faux. Je gère tout ça en 9 à 10h par MOIS. Et le piège, c'est la conciergerie qui te prend la moitié de ta marge.'
+- **Change vs ta proposition** : CHANGE : la preuve chiffrée 2 184→4 589 reste DANS V1 (pas déplacée 'après V3 et V5' comme Marc le proposait), car c'est l'accroche cold-start autonome. Distinction narratif/publication assumée : V1 reste #1 narratif mais ce n'est PAS la 1re publiée.
+
+### V2 — mot-clé : automatiser airbnb
+**Comment je gère 9 Airbnb en 9h par mois (et pourquoi une conciergerie te prend la moitié de ta marge, pas 20%)**
+
+- **Rôle** : Lever l'objection #1 ('louer à la nuit = plus de boulot') AVANT de donner les techniques. Punchline conciergerie en hook + re-hook milieu + impact final. Automatisation : messages auto, livret, femme de ménage (PAS conciergerie), channel manager.
+- **Cliffhanger →** V3 algo : 'Tout ça tient parce que mon calendrier est plein à 97%. Et ce remplissage vient d'un hack de l'algorithme + un objet à 30 € que presque personne n'utilise.'
+- **Change vs ta proposition** : Inchangé sur le fond (c'est la V2 de Marc). Précision : on absorbe ici l'insight terrain femme de ménage/linge (17,50 €, Élis, fee 30-40 €) plutôt que d'en faire un épisode séparé — gain de densité, évite de diluer la série sur 10 thèmes.
+
+### V3 — mot-clé : comment faire remonter son annonce airbnb
+**Le hack de l'algorithme Airbnb que personne n'utilise (et le détail à 30 € qui fait passer de 70 à 97 % de remplissage)**
+
+- **Rôle** : Mécanique concrète du remplissage. Double plateforme Airbnb+Booking, prix cassé au lancement, nuit unique débloquée par la boîte à clés, pricing dynamique, Superhost comme conséquence. Casse le consensus des '8 conseils recopiés'.
+- **Cliffhanger →** V4 rendement : 'Une fois ton calendrier plein à 97%, tu ne loues plus un appart, tu concurrences les hôtels. Et là les rendements n'ont plus rien d'immobilier classique : 15, parfois 18% net. Je te montre une opération en détail.'
+- **Change vs ta proposition** : Inchangé (V3 de Marc). Mot-clé verrouillé sur 'comment faire remonter son annonce airbnb' (pilier réel de l'article algo) pour ne pas empiéter sur 'pricing' qui reste un sous-chapitre interne.
+
+### V4 — mot-clé : investissement locatif saisonnier
+**15 % de rendement net en Airbnb : l'opération complète chiffrée (64 m² acheté 156 000 €, 2 400 €/mois net)**
+
+- **Rôle** : Étude de cas chiffrée PROFONDE (≠ V1 qui est la vue d'ensemble). Les 3 mondes (nu ~3-4%, meublé, LCD 13-18%), la règle des 3-4× le crédit, diviser pour multiplier, et la nuance honnête : la difficulté c'est le montage (~240h), pas la gestion.
+- **Cliffhanger →** V5 fiscalité : 'Tu sais maintenant faire 15% net. Sauf qu'on est en France. Et la première question qu'on me pose c'est : et les impôts ? Tu vas voir comment j'ai encaissé 512 000 € de loyers en payant presque zéro impôt dessus, légalement.'
+- **Change vs ta proposition** : CHANGE vs cannibalisation (challenge 3) : V4 est explicitement l'ÉTUDE DE CAS (mot-clé 'investissement locatif saisonnier'), distincte de V1 'rentabilité airbnb' (vue d'ensemble). Marc voulait déplacer l'exemple chiffré ici : fait, mais le 64 m² (pas la maison, qui reste la preuve de V1).
+
+### V5 — mot-clé : fiscalité airbnb lmnp
+**Fiscalité Airbnb : micro-BIC ou régime réel LMNP ? Comment j'ai encaissé 512 000 € de loyers en payant presque 0 impôt (l'amortissement)**
+
+- **Rôle** : Énorme intention de recherche (pic avril-mai, evergreen). Démonte le clickbait 'fin du LMNP' dès l'intro. Réel dès le 1er euro, amortissement, micro-BIC = complément ponctuel. Honnêteté : CFE/taxe foncière/prélèvements sociaux restaient payés.
+- **Cliffhanger →** V6 loi : 'Tu peux avoir la meilleure fiscalité du monde : si ta mairie t'interdit de louer, tout s'arrête. On te bassine avec la loi Le Meur depuis des mois. Je te dis ce qui change vraiment pour toi.'
+- **Change vs ta proposition** : Inchangé (V5 de Marc). ⚠️ Chiffres fiscaux (seuils micro-BIC, plus-value) à revalider le jour du tournage sur la référence réglementaire, ne pas asséner. Numérotation : ce qui était V6 narratif dans l'ancien fichier devient V5 ici pour coller aux 10 thèmes.
+
+### V6 — mot-clé : loi le meur airbnb
+**Loi Le Meur : ce que tu as VRAIMENT le droit de faire en Airbnb en 2026 (et pourquoi 95 % du bruit médiatique ne te concerne pas)**
+
+- **Rôle** : Sujet anxiogène = fort taux de clic. Tu rassures et tu cadres : numéro d'enregistrement, changement d'usage, 90-120j résidence principale, et l'angle 'périphérie + à côté des hôtels' bien moins exposé que les centres hyper-touristiques.
+- **Cliffhanger →** V7 incident (pont 'peur') : 'Légal, plein, rentable. Il reste la trouille de tout le monde : et si un voyageur te casse tout, te squatte, te ruine en une nuit ? Je te dis ce qui arrive vraiment quand tu loues à la nuit.'
+- **Change vs ta proposition** : Inchangé sur le thème (V6 de Marc). Challenge 4 : je BRIDGE explicitement loi→incident par la peur (et non 'réglementation puis dégâts' qui serait un saut à froid), ce qui rend le cliffhanger naturel.
+
+### V7 — mot-clé : assurance location courte durée airbnb
+**Un voyageur peut-il te ruiner ? Dégâts, squat, impayés en Airbnb : la vérité après des milliers de séjours (assurance, caution, AirCover)**
+
+- **Rôle** : Angle SEO peur/sécurité comme PORTE D'ENTRÉE, mais on démonte la peur : séjours courts = pas de squat ni d'impayé (payé d'avance), les vrais risques sont ailleurs (mauvais bien sans hôtels, pas d'entrée autonome → 8% plafond, conciergerie). Règlement intérieur + caution.
+- **Cliffhanger →** V8 sourcing : 'Le vrai risque, ce n'est pas le voyageur. C'est d'acheter le mauvais bien. Je te donne mon critère en 30 minutes sur Google Maps pour ne jamais te tromper, et comment négocier en restant sécurisé.'
+- **Change vs ta proposition** : Inchangé (V7 de Marc). RÉSERVE honnête : ta preuve propriétaire ici est l'ABSENCE d'incident (1-2 commentaires sur des milliers de séjours), pas une histoire de dégât spectaculaire. On joue 'la peur est mal placée', pas le sensationnalisme.
+
+### V8 — mot-clé : où investir en location saisonnière
+**Où acheter pour la location courte durée : mon critère des 100 chambres d'hôtel, l'entrée autonome, et négocier sans apport (financement 110 %)**
+
+- **Rôle** : Le 'comment trouver' opérationnel. Critère 100+ chambres d'hôtel rayon 2-5 km (vérifiable en 30 min sur Maps), accès autonome non négociable (vigik éliminatoire), descendre au niveau quartier, petites villes invisibles, financement 100-110% sans apport.
+- **Cliffhanger →** V9 SMIC : 'Tu crois qu'il faut être riche pour faire ça. Mon opération la plus rentable, je l'ai financée à 110% avec 7 000 € d'apport, accessible à un couple à 2 SMIC. Je te montre comment doubler ton revenu même sans capital.'
+- **Change vs ta proposition** : Inchangé (V8 de Marc). Challenge 4 : pont sourcing→SMIC rendu naturel ('maintenant que tu sais trouver le bien, voilà que même au SMIC tu peux le faire').
+
+### V9 — mot-clé : doubler son revenu airbnb sans apport
+**Au SMIC, tu peux doubler ton revenu avec l'Airbnb : l'opération à 7 000 € d'apport (diviser pour multiplier, 64 m² ÷ 2 T2)**
+
+- **Rôle** : Closer aspirationnel MAIS searchable. 'Diviser pour multiplier' (64 m² acheté en 1 lot → 2 T2 de 32 m²), 7 000 € d'apport, crédit 610 €, 2 400 €/mois net, accessible à 2 SMIC. 'La méthode s'est financée elle-même'. C'est duplicable, pas une ville magique.
+- **Cliffhanger →** V10 résa directe : 'Tu sais tout faire. Mais tant que tu donnes 15% à chaque résa, tu travailles à moitié pour les plateformes. Le dernier étage, celui que presque personne ne construit, c'est reprendre le contrôle.'
+- **Change vs ta proposition** : CHANGE (challenge 5) : Marc voulait 'même au SMIC on peut doubler' comme idée ; je lui donne l'angle SEO concret (mot-clé 'doubler son revenu sans apport' + l'opération 64 m²÷2 chiffrée), sinon le thème reste trop vague pour ranker.
+
+### V10 — mot-clé : réservation directe airbnb sans commission
+**Reprendre le contrôle de tes réservations : 0 % de commission en direct vs 15 % sur Airbnb (et pourquoi je refuse déjà des résas directes faute d'outil)**
+
+- **Rôle** : Vidéo VALEUR, pas pub. Le wedge = recycler la demande OTA en direct répété (~14% de repeat), 0% vs 15% mesurable en €, stack conformité FR, channel manager anti double-résa. Le signal 'j'en ai plein, je les prends pas'. Enomia en solution soft sur les 90 dernières secondes seulement.
+- **Cliffhanger →** Boucle de clôture → renvoi vers V1 (playlist 'La Méthode 97%') + CTA livre gratuit. Cliffhanger doux : 'l'outil que je construis pour ça' (Enomia soft), sans en faire le sujet.
+- **Change vs ta proposition** : CHANGE EN PROFONDEUR (challenge 2) : Marc voulait 'V10 = mon app/outil'. Je la reframe entièrement en vidéo VALEUR sur la résa directe (problème), app en soft. On vend le problème (0% vs 15%, contrôle, 'j'en ai plein je les prends pas'), JAMAIS le produit. On ne promet jamais de CRÉER de la demande, on recycle l'existante.
+
+## ⚠️ Questions à trancher ensemble
+
+1. Ordre de PUBLICATION : je recommande de NE PAS publier V1 en premier (intro = mauvaise perf à froid). Tu valides l'ordre de découverte V4 (étude de cas 64 m²/15%) ou V2 (gestion 9h, listicle anti-conciergerie) en 1re vidéo publiée, avec V1 transformée en bande-annonce épinglée 'qui je suis' ? Ou tu préfères tester V1 en premier malgré le risque ?
+2. Femme de ménage / linge (17,50 €, Élis, fee 30-40 €) : je l'ai fusionnée DANS V2 gestion pour rester sur 10 thèmes propres. Tu confirmes, ou tu veux un 11e épisode dédié 'le vrai secret = la femme de ménage' (c'est ton insight le plus différenciant et personne ne le raconte) ?
+3. V1 porte la preuve maison (2 184→4 589) et V4 porte le 64 m² (156k → 2 400€/mois). Tu confirmes cette répartition des deux opérations, ou tu veux inverser/regrouper ?
+4. V7 incident : ta vraie preuve est l'ABSENCE d'incident sur des milliers de séjours, pas une histoire de dégât. OK pour jouer 'la peur est mal placée' plutôt que de raconter un sinistre que tu n'as pas vécu ? As-tu UN incident réel mineur à raconter pour crédibiliser (caution activée, dégât réglé) ?
+5. V10 résa directe : confirme le chiffre repeat (~14%) et la commission OTA à citer (15% Airbnb host-light vs ~18% host-only) — lequel tu assumes à l'écran ? Et tu valides Enomia uniquement en soft sur les 90 dernières secondes, sans démo produit ?
+6. Chiffres fiscaux V5 (seuils micro-BIC, plus-value LMNP) et loi Le Meur V6 (90-120j) : à revalider le jour du tournage. Tu veux que je te prépare une fiche 'chiffres réglementaires à jour' juste avant le tournage groupé ?
+7. Mots-clés anti-cannibalisation V1='rentabilité airbnb' vs V4='investissement locatif saisonnier' : tu valides cette séparation, ou tu vois un autre découpage SEO qui colle mieux à ce que les gens tapent dans ta niche ?
+
+---
+
+# FICHES — titre SEO + miniature + 3 hooks
+
+> Une fiche par vidéo. Les hooks sont à dire mot pour mot (début + milieu + fin). Le hook de fin enchaîne sur la vidéo suivante.
+
+## V1 — Louer en Airbnb, est-ce vraiment rentable ? Mes vrais chiffres sur 9 biens (2 184 → 4 589 € sur un seul bien)
+
+**Mot-clé SEO** : rentabilité airbnb
+
+**Titre YouTube A** : Rentabilité Airbnb : mes vrais chiffres sur 9 biens (2026)
+
+**Titre YouTube B** : Rentabilité Airbnb 2026 : 2 184 € à 4 589 € sur 1 seul bien
+
+**Miniature — texte** : 2 184 € → 4 589 € / MÊME BIEN
+
+**Miniature — visuel** : Marc de face, sourcils levés et petit demi-sourire incrédule (l'air de "je cherchais l'erreur, je l'ai pas trouvée"), une main paume ouverte vers le haut. À droite, en gros, le chiffre choc empilé en deux temps : "2 184 €" barré en rouge au-dessus de "4 589 €" en vert vif. En bas, petit bandeau "MÊME maison, 0 conciergerie".
+
+**🎬 Hook DÉBUT (0-15s, mot pour mot)** :
+> Ce bien, c'est ma maison. Pendant des mois, elle m'a rapporté 2 184 € par mois. Le même bien, sans rien changer aux murs, m'en rapporte aujourd'hui 4 589 €. Plus du double. Et la partie folle, c'est que la rentabilité Airbnb, ça n'a presque rien à voir avec la déco, ni avec la ville. J'ai 9 biens, 97% d'occupation, et je vais vous montrer mes vrais chiffres, ligne par ligne. Mais d'abord, ce qui a fait passer cette maison de 2 184 à 4 589, c'est trois leviers que personne ne vous montre. Le premier coûte 30 €.
+
+**🔄 Hook MILIEU (re-hook ~50%)** :
+> Alors là vous vous dites : "OK Marc, mais toi t'es bien tombé, t'es dans une grande ville touristique." Faux. Je suis à Irigny. 8 000 habitants, coincée entre l'autoroute A7 et le Rhône, zéro monument, zéro plage. Et c'est précisément pour ça que ça marche. Ouvrez Google Maps, tapez "hôtel" autour de chez vous. Dans 5 km autour de cette maison, plus de 400 chambres d'hôtel tournent toute l'année. Cette demande-là, elle n'est pas chez les touristes, elle est juste à côté de chez vous. Et je vais vous montrer comment la capter.
+
+**⏭ Hook FIN (cliffhanger)** :
+> V2 gestion : 'Tu te dis que pour faire ces chiffres, je dois y passer mes journées. Faux. Je gère tout ça en 9 à 10h par MOIS. Et le piège, c'est la conciergerie qui te prend la moitié de ta marge.'
+
+**Matière réelle utilisée (vérifiée)** :
+- Maison Irigny : 2 184 € (Airbnb seul) → 3 689 € (+Booking) → 4 589 € (+tarif dynamique & nuit unique)
+- 9 biens, 97% d'occupation, gestion 9-10h par MOIS sans conciergerie
+- Boîte à clés ~30 € : passe le remplissage de 70% à 97%, débloque 8-10 nuits/mois
+- Irigny 8 000 habitants, entre A7 et Rhône, +400 chambres d'hôtel dans 5 km
+- Méthode Google Maps : taper 'hôtel' autour de la zone, la demande = clientèle des hôtels, pas les touristes
+- Conciergerie : fourchette 'souvent la moitié, parfois bien plus' selon le levier crédit, jusqu'à ~800 € sur ~1 000 € net sur certains biens (≈80%)
+- Track record : LCD depuis 10 ans, première couronne lyonnaise (Irigny, Montagny). Pierre-Bénite = projection en cours, NON réalisée, jamais citée comme opération aboutie
+
+---
+
+## V2 — Comment je gère 9 Airbnb en 9h par mois (et pourquoi une conciergerie te prend la moitié de ta marge, pas 20%)
+
+**Mot-clé SEO** : automatiser airbnb
+
+**Titre YouTube A** : Automatiser Airbnb : 9 biens en 9h par mois sans conciergerie
+
+**Titre YouTube B** : Automatiser Airbnb : la conciergerie prend la moitié de votre cash-flow, pas 20%
+
+**Miniature — texte** : 9 BIENS, 9H PAR MOIS
+
+**Miniature — visuel** : Marc de face, sourcil levé, mi-incrédule mi-amusé, une main qui montre l'écran. Gros chiffre jaune "9h/MOIS" qui barre la miniature. En plus petit, une flèche reliant "20%" (barré en rouge) à "MOITIÉ DE TON NET" pour rester honnête hors visionnage, jamais "50%" isolé. Fond : un calendrier de réservations rempli en arrière-plan flou.
+
+**🎬 Hook DÉBUT (0-15s, mot pour mot)** :
+> Je gère 9 appartements en location courte durée. Devinez combien de temps ça me prend par mois. Pas par semaine. Par mois. La réponse, c'est 9 heures. Moins d'une heure par bien. Et quand je pars 3 semaines en vacances, la question de la gestion ne me traverse même pas l'esprit, pas une seule fois, parce que le système tourne sans moi. Alors avant de vous donner les techniques, je dois tuer l'objection numéro 1 que j'entends tout le temps : "louer à la nuit, c'est trop de boulot". Faux. Un voyageur d'une nuit me coûte exactement le même temps qu'un voyageur de trois nuits : zéro. Et le truc qu'on vous vend pour "gagner du temps", la conciergerie, je vais vous montrer dans 4 minutes pourquoi c'est le mensonge le mieux vendu du secteur.
+
+**🔄 Hook MILIEU (re-hook ~50%)** :
+> Le calcul que la conciergerie ne met jamais sur la table. Une conciergerie vous parle de 20% de commission. Sauf que ces 20%, c'est sur le chiffre d'affaires brut, pas sur votre marge. Je vous prends une de mes opérations bien réelles : un appartement de 64 m² que j'ai divisé en 2 T2, crédit de 610 € par mois. Quand il tourne à 6 000 € de CA, après charges et crédit il me reste 2 400 € net, soit environ 18% de rendement. Si je passe par une conciergerie à 20% du CA, elle prend 1 200 €. Il me reste 1 200 €. Mon rendement vient de tomber à 9%. La conciergerie ne prend pas 20%. Elle prend la moitié de mon cash flow net, et selon le levier du crédit, souvent bien plus. Pour faire quoi, exactement ? Trois choses. Et je vais vous prouver que vous pouvez faire les trois vous-même.
+
+**⏭ Hook FIN (cliffhanger)** :
+> Donc voilà mes 4 piliers : entrée autonome, messages automatiques, une femme de ménage de confiance et un channel manager. 9 heures par mois, sur 9 biens, pendant que je suis aux abonnés absents 3 semaines de suite. Mais tout ce système ne tient que pour une seule raison : mon calendrier est rempli à 97%. 97%. La plupart des propriétaires plafonnent à 70. Et ce remplissage, il ne vient pas de la chance. Il vient d'un hack de l'algorithme Airbnb, plus un objet à 30 € que presque personne n'utilise et qui m'a débloqué 8 à 10 nuits par mois. C'est exactement ce que je vous montre dans la prochaine vidéo.
+
+**Matière réelle utilisée (vérifiée)** :
+- 9 biens gérés en 9h/mois, moins d'1h par bien (FACTS : gestion 9-10h/MOIS)
+- Conciergerie 20% sur CA brut = la moitié du cash flow net, souvent bien plus selon le levier crédit (FACTS : ~80% cas Marc, présenter en fourchette)
+- Démo opération réelle : appart 64 m² divisé en 2 T2, crédit 610 €, CA 6 000 € → 2 400 € net (~18%) sans conciergerie → 1 200 € net (~9%) avec conciergerie 20%
+- Un voyageur d'1 nuit coûte le même temps qu'un de 3 nuits : zéro
+- 4 piliers : entrée autonome, communication automatisée, femme de ménage de confiance (pas conciergerie), channel manager
+- Remplissage 97% (FACTS) vs ~70% pour la plupart des propriétaires, via hack algo + boîte à clés ~30 € → 8-10 nuits/mois débloquées (teaser V3)
+- Quand je pars 3 semaines, la question de la gestion ne me traverse pas l'esprit
+- RETIRÉ : note '9,1 sur 10' (non présente dans les FACTS confirmés, à faire valider par Marc avant réintégration)
+- RETIRÉ : mention 'après 6 ans' (incohérence avec 10 ans LCD des FACTS ; ancienneté non assénée pour lever l'ambiguïté)
+
+---
+
+## V3 — Le hack de l'algorithme Airbnb (et le détail à 30 € qui débloque 8 à 10 nuits par mois)
+
+**Mot-clé SEO** : comment faire remonter son annonce airbnb
+
+**Titre YouTube A** : Comment faire remonter son annonce Airbnb : le hack à 30 €
+
+**Titre YouTube B** : Comment faire remonter son annonce Airbnb (70 % à 97 %)
+
+**Miniature — texte** : LE HACK À 30 €
+
+**Miniature — visuel** : Visage de Marc en gros plan, sourcil levé et clin d'œil complice (air de « je vous file le truc que personne ne dit »). Dans une main, il tient une petite boîte à clés. Gros chiffre choc à droite : « 70 % → 97 % ». 3 mots en bas : LE HACK À 30 €. Fond = un de ses intérieurs Airbnb légèrement flouté.
+
+**🎬 Hook DÉBUT (0-15s, mot pour mot)** :
+> Tapez « comment faire remonter son annonce Airbnb » et vous tombez sur les 8 mêmes conseils recopiés partout : répondez vite, complétez la fiche, baissez vos prix. Tout est vrai, et tout est inutile, parce que vos concurrents lisent exactement les mêmes articles. Le vrai levier, je l'ai découvert par accident, et il tient dans un objet à 30 €. Cette boîte à clés ne fait pas de magie toute seule : elle rend possible le check-in autonome, et c'est ça qui débloque la nuit unique. Restez, je vous montre pourquoi vos voisins plafonnent à 70 % de remplissage pendant que je suis à 97 %.
+
+**🔄 Hook MILIEU (re-hook ~50%)** :
+> Et la boîte à clés, ce n'est que la moitié de l'histoire. La deuxième moitié, je l'ai trouvée sans la chercher. J'étais seulement sur Airbnb. Le jour où j'ai listé le même bien sur Booking, sans une seule résa Booking au départ, mon occupation Airbnb a bondi. Pourquoi ? Restez, une fois que vous l'avez compris, vous ne classez plus jamais une annonce comme avant.
+
+**⏭ Hook FIN (cliffhanger)** :
+> Une fois à 97 %, vous ne louez plus un appartement, vous faites un autre métier. Et l'opération derrière, ce n'est plus de l'immobilier classique : 64 m² coupés en deux, 156 000 € tout compris, je tourne entre 15 et 18 % net. Pas sur une projection, sur une opération réelle. Je vous démonte le calcul, chiffre par chiffre, dans la prochaine vidéo.
+
+**Matière réelle utilisée (vérifiée)** :
+- 70 % à 97 % de remplissage (FACTS confirmés)
+- boîte à clés ~30 €
+- 8-10 nuits/mois débloquées par la nuit unique
+- la boîte à clés opérationnalise le check-in autonome qui rend la nuit unique tenable (pas magique en soi)
+- séjours courts qui laissent des trous d'une nuit invendables (qualitatif, sans chiffre de durée non sourcé)
+- être sur Airbnb ET Booking pour que chaque plateforme priorise l'annonce
+- occupation Airbnb qui bondit le jour de l'ouverture sur Booking, sans réservation Booking
+- 9 biens, 97 % occupation, gestion 9-10h/mois
+- opération réelle 64 m² ÷ 2 T2, 156 000 € tout compris, 15-18 % net
+- rendement 15-18 % vient du montage de l'opération (achat + division), pas du seul taux de remplissage
+- Pierre-Bénite jamais évoqué (V4 = opération réelle, pas projection)
+
+---
+
+## V4 — Investissement locatif saisonnier : l'opération complète chiffrée (64 m² acheté 156 000 €, 2 400 €/mois net)
+
+**Mot-clé SEO** : investissement locatif saisonnier
+
+**Titre YouTube A** : Investissement locatif saisonnier : 64 m² acheté 156 000 €, 2 400 €/mois net
+
+**Titre YouTube B** : Investissement locatif saisonnier : l'opération complète chiffrée (accessible à 2 SMIC)
+
+**Miniature — texte** : 2 400 €/MOIS NET
+
+**Miniature — visuel** : Marc buste, regard direct caméra, sourire en coin sûr de lui (pas de bouche ouverte). À gauche, gros chiffre jaune « 2 400 €/mois » + dessous petit « NET ». À droite, mini-barre de comparaison sobre « nu 3-4% / saisonnier ~18% ». Fond intérieur meublé flou. Le chiffre choc affiché : 2 400 €/mois net sur un bien à 156 000 €.
+
+**🎬 Hook DÉBUT (0-15s, mot pour mot)** :
+> En location nue, vous faites 3 à 4% net si vous gérez bien. Cet appartement, je l'ai payé 156 000 euros tout compris, et il me sort 2 400 euros par mois net. Accessible avec 2 SMIC. Le saisonnier bien fait, ce n'est plus de l'immobilier locatif, c'est un mini-hôtel. Je vous donne l'opération complète, chiffre par chiffre, du prix d'achat au cash-flow. Et à la fin, je vous dis la seule chose vraiment difficile là-dedans, celle que tout le monde sous-estime.
+
+**🔄 Hook MILIEU (re-hook ~50%)** :
+> Et là vous vous dites : 2 400 euros sur un seul appartement, il y a un piège. Le piège, le voilà, et c'est ma règle avant chaque achat. Je ne signe que si le revenu net après charges fait 3 à 4 fois la mensualité du crédit. Crédit 610 euros, je vise 2 400. Et le truc le plus contre-intuitif de toute l'opération, c'est que pour y arriver je n'ai pas acheté un grand logement. J'ai pris un 64 m² et je l'ai coupé en deux. Diviser pour multiplier. Je vous montre pourquoi un T2 rapporte plus que le 64 m² entier.
+
+**⏭ Hook FIN (cliffhanger)** :
+> Sauf qu'on est en France. Et la première question qu'on me pose, à chaque fois, c'est : et les impôts ? Parce qu'un saisonnier mal déclaré, c'est une grosse part de votre bénéfice qui part en fumée. Sur 10 ans, j'ai encaissé à peu près 512 000 euros de loyers, et sur le revenu de ces loyers, j'ai payé un impôt proche de zéro, légalement. Je vous montre quand même ce que je continue de payer à côté. Comment je fais, c'est toute la prochaine vidéo.
+
+**Matière réelle utilisée (vérifiée)** :
+- 64 m² divisé en 2 T2 de 32 m²
+- 156 000 € total tout compris (104k achat + 30k travaux + 15k meubles + 7k notaire)
+- crédit 610 €/mois
+- 2 400 €/mois net
+- ~18% net
+- accessible à 2 SMIC
+- règle des 3-4× la mensualité de crédit (crédit 610 € → objectif 2 400 € net)
+- location nue ~3-4% net
+- diviser pour multiplier (T2 plus rentable que le bien entier)
+- 512 000 € de loyers encaissés cumulés sur 10 ans, impôt sur le revenu proche de zéro via amortissement réel LMNP, CFE + taxe foncière + prélèvements sociaux restant payés (cliffhanger V5)
+- la vraie difficulté = le montage de l'opération (~240h), pas la gestion
+
+---
+
+## V5 — Fiscalité Airbnb LMNP : 512 000 € de loyers encaissés, presque 0 impôt sur le revenu grâce à l'amortissement au réel
+
+**Mot-clé SEO** : fiscalité airbnb lmnp
+
+**Titre YouTube A** : Fiscalité Airbnb LMNP : 512 000 € encaissés, presque 0 impôt
+
+**Titre YouTube B** : Fiscalité Airbnb LMNP : micro-BIC ou réel ? Mon vrai choix
+
+**Miniature — texte** : 512 000 € ENCAISSÉS / PRESQUE 0 IMPÔT
+
+**Miniature — visuel** : Marc de face, sourcil levé, demi-sourire complice (l'air de "je vous montre un truc que personne ne dit"), une main ouverte paume vers le haut. À droite, en gros chiffres jaunes : "512 000 €" barré au-dessus de "PRESQUE 0 IMPÔT". Petit tampon rouge "RÉEL LMNP" en coin. Sous le chiffre, en petit, "sur le revenu" pour ne pas asséner un absolu.
+
+**🎬 Hook DÉBUT (0-15s, mot pour mot)** :
+> En 10 ans, j'ai encaissé environ 512 000 € de loyers sur mes 9 biens. Et sur ces loyers, mon impôt sur le revenu, il est resté proche de zéro. Légalement. Pas une niche planquée, pas un montage exotique : juste un mot que tout le monde prononce mal, l'amortissement au réel. Je vous le dis tout de suite pour être honnête : la CFE, la taxe foncière et les prélèvements sociaux, ça, je les ai bien payés. C'est l'impôt sur le revenu de ces loyers qui est resté quasi nul. Et avant que vous me sortiez le titre "fin de la location Airbnb" qui tourne partout : ce titre fait cliquer les jaloux et ceux qui paniquent. Dans cette vidéo je vous montre ce qui a vraiment changé, et pourquoi, fiscalement, l'impact pour vous est quasi inexistant.
+
+**🔄 Hook MILIEU (re-hook ~50%)** :
+> Maintenant le piège dans lequel tombe la plupart des loueurs. On vous présente le micro-BIC et son abattement de 30 % comme si vous gardiez 70 % net. Sauf que vous déclarez le brut, commission Airbnb comprise, et Airbnb a déjà pris environ 18 % au passage. Cet abattement de 30 %, il part d'abord éponger la commission que vous n'avez jamais touchée, plus le ménage, le linge, les assurances, bref vos vraies charges. Au bout du compte, il vous reste beaucoup moins que les 30 % affichés. Au réel, vous déduisez ces charges pour de vrai, ET vous amortissez le bien. Je vais vous montrer pourquoi, dès que vous avez un peu de charges et de crédit, le réel écrase le micro-BIC, même pour un petit loueur.
+
+**⏭ Hook FIN (cliffhanger)** :
+> Mais soyons honnêtes deux secondes : vous pouvez avoir la meilleure fiscalité du monde, si votre mairie vous interdit de louer, tout s'arrête. Et ça, c'est exactement le sujet de la prochaine vidéo. Depuis des mois on vous répète "loi Le Meur, loi Le Meur" sans jamais vous dire ce qui change vraiment, pour vous, concrètement. Je vous le dis sans filtre dans la prochaine. Abonnez-vous pour pas la rater.
+
+**Matière réelle utilisée (vérifiée)** :
+- 512 000 € de loyers encaissés cumulés sur 10 ans (chiffre confirmé)
+- 9 biens, 10 ans LCD, 97% occupation
+- impôt sur le revenu des loyers proche de zéro via amortissement au réel LMNP
+- CFE / taxe foncière / prélèvements sociaux restaient payés (honnêteté, posé dès le hook début)
+- commission Airbnb ~18 % déjà prélevée sur le brut déclaré en micro-BIC
+- abattement micro-BIC de 30 % éponge d'abord la commission + ménage + linge + assurances, formulation qualitative sans chiffre fabriqué
+- micro-BIC non classé : plafond 15 000 € / abattement 30 % (loi de finances 2025 + loi Le Meur, à reconfirmer avant tournage)
+- le régime réel est ouvert à tous, dès le premier euro de recettes, sans condition d'exploitation sérieuse
+- loi Le Meur résidence principale ~90-120j (cliffhanger V6, à revérifier)
+
+---
+
+## V6 — Loi Le Meur : ce que vous avez vraiment le droit de faire en Airbnb en 2026
+
+**Mot-clé SEO** : loi le meur airbnb
+
+**Titre YouTube A** : Loi Le Meur Airbnb : ce que vous avez VRAIMENT le droit de faire en 2026
+
+**Titre YouTube B** : Loi Le Meur Airbnb : ce qui vous concerne vraiment (et tout ce qui ne vous concerne pas)
+
+**Miniature — texte** : TOUT CE BRUIT / NE VOUS CONCERNE PAS
+
+**Miniature — visuel** : Marc face caméra, regard direct, sourire en coin posé et rassurant (le mec qui sait, pas le mec qui panique). Buste, fond intérieur meublé flou. À gauche, gros chiffre jaune « 90 JOURS » avec dessous, petit, « et encore, pas pour vous ». À droite, un tampon vert légèrement de travers « LÉGAL » qui casse le réflexe panique. Pas de bouche ouverte, pas de flèche rouge, pas de visage paniqué : la promesse c'est le calme face au sujet le plus anxiogène du secteur. Sobre, lisible en tout petit sur mobile.
+
+**🎬 Hook DÉBUT (0-15s, mot pour mot)** :
+> On me dit toutes les semaines : Marc, c'est mort le Airbnb, la loi Le Meur a tout cassé. Alors je vais être direct avec vous. Je fais de la location courte durée depuis 10 ans, sur 9 biens, et cette loi dont tout le monde a peur, elle n'a quasiment rien changé pour moi. La quasi-totalité du bruit médiatique que vous entendez ne vous concerne même pas. Mais il y a un point précis qui compte vraiment, et si vous le ratez, là vous pouvez tout perdre. Le numéro d'enregistrement, la règle des 90 jours, le changement d'usage : je vous fais le point en clair, et je vous montre la seule case où la plupart des proprios se font vraiment avoir. Restez, parce que ce que vous croyez interdit ne l'est probablement pas, et ce que vous croyez tranquille peut vous coûter 5 000 € d'amende.
+
+**🔄 Hook MILIEU (re-hook ~50%)** :
+> Et là, attention, parce que c'est le piège que personne ne vous explique. La règle des 90 jours, celle qui terrorise tout le monde, elle ne s'applique QUE sur votre résidence principale, celle où vous habitez. Un bien d'investissement dédié à la location, comme mes 9 biens, il n'a aucune limite de jours. Zéro. Donc si vous avez confondu les deux, vous vous êtes inquiété pour rien. Le vrai sujet, lui, il est ailleurs : en centre-ville de zone tendue il faut une autorisation de changement d'usage, et c'est ça qui peut bloquer un achat avant même que vous signiez.
+
+**⏭ Hook FIN (cliffhanger)** :
+> Légal, ouvert, et toujours rentable au réel. Vous avez la loi pour vous, la fiscalité pour vous, le rendement pour vous. Il reste la trouille de tout le monde, celle qu'on n'ose pas dire à voix haute : et si un voyageur vous casse tout, vous squatte, vous ruine en une seule nuit ? Moi aussi je l'ai eue, cette peur, avant de louer à la nuit. Je vais vous dire ce qui arrive vraiment quand vous ouvrez votre porte à des inconnus, dans la prochaine vidéo.
+
+**Matière réelle utilisée (vérifiée)** :
+- Loi Le Meur = loi n° 2024-1039 du 19 novembre 2024
+- Résidence principale : plafond abaissable de 120 à 90 jours/an par délibération municipale, en zones tendues
+- La règle des 90 jours ne concerne QUE la résidence principale, pas un bien d'investissement dédié à la LCD (aucune limite de jours)
+- Numéro d'enregistrement à 13 chiffres obligatoire sur toutes les annonces, amende jusqu'à 5 000 € par logement non déclaré
+- Système national Declaloc en cours de déploiement (obligation pour tous au 20 mai 2026), Airbnb et Booking bloquent les annonces non enregistrées
+- Changement d'usage : Paris, Lyon, Bordeaux, Lille, Nice, Strasbourg, Marseille en partie, autorisation parfois avec compensation
+- Marc : 9 biens, 10 ans de LCD, première couronne lyonnaise
+- Déclaration via Cerfa 14004 : 5 minutes par bien, 45 minutes pour 9 biens, gratuit, récépissé de 24h à quelques jours selon la mairie
+- Seul vrai changement fiscal : abattement micro-BIC meublé non classé passé à 30% sur 15 000 €
+- Angle périphérie + à côté des hôtels : zones moins exposées au risque réglementaire que les centres hyper-touristiques
+- DPE classe E exigée dès 2025, aligné avec le bon sens (personne ne loue durablement un classé G)
+
+---
+
+## V7 — Un voyageur peut-il vous ruiner ? Dégâts, squat, impayés en Airbnb : la vérité après des centaines de séjours
+
+**Mot-clé SEO** : assurance location courte durée airbnb
+
+**Titre YouTube A** : Assurance location courte durée Airbnb : pourquoi AirCover ne suffit pas
+
+**Titre YouTube B** : Assurance location courte durée Airbnb : 8 000 € de dégâts, la vraie leçon
+
+**Miniature — texte** : 8 000 € DE DÉGÂTS
+
+**Miniature — visuel** : Marc visage inquiet/grave, sourcils froncés, main sur la tête, regard caméra. À côté : photo d'un appartement avec de l'eau au sol. Chiffre choc en gros rouge : "8 000 €". Petit tampon vert "TOUT REMBOURSÉ" dans un coin.
+
+**🎬 Hook DÉBUT (0-15s, mot pour mot)** :
+> 20 cm d'eau dans l'appartement. 8 000 € de dégâts. 5 mois sans pouvoir louer une seule nuit. Et vous savez quoi ? Au final, j'ai été gagnant sur la période. En 10 ans de location courte durée, sur 9 biens, j'ai eu de la moquette brûlée à la chicha, un canapé cramé à la cigarette, une colonne de douche arrachée. Tout a été remboursé. Mais attention : pas par AirCover. Si vous comptez sur la protection gratuite affichée par Airbnb pour dormir tranquille, je vais vous montrer dans cette vidéo pourquoi c'est l'erreur qui peut vous coûter le plus cher, et quelle assurance vous protège vraiment.
+
+**🔄 Hook MILIEU (re-hook ~50%)** :
+> Le squatteur en Airbnb ? Il n'existe pas. La peur qu'on vous vend, le voyageur qui ne paie jamais, ce n'est même pas le vrai sujet. Vos voyageurs restent quelques nuits, ils paient d'avance : le risque d'impayé est quasi nul, et le squat n'existe pas sur des séjours courts. Le vrai danger, il est ailleurs, et personne ne vous en parle. Sur des centaines de séjours en 10 ans, le problème du gars qui revient avec l'ancien code est arrivé exactement 1 fois. Une nuit perdue, un ménage à 17,50 €. Je vais vous dire à quelle fréquence je change vraiment mes codes, et pourquoi changer à chaque réservation est une perte de temps.
+
+**⏭ Hook FIN (cliffhanger)** :
+> Donc non, le voyageur ne va pas vous ruiner. Le vrai risque, ce n'est pas le voyageur. C'est d'acheter le mauvais bien. Un appartement sans hôtels autour, sans entrée autonome, et votre rendement est plafonné avant même d'avoir commencé. Prenez une conciergerie par-dessus, et il est carrément divisé par deux. Dans la prochaine vidéo, je vous donne mon critère en 30 minutes sur Google Maps pour ne jamais vous tromper d'achat, et comment négocier le prix en restant sécurisé. Abonnez-vous, parce que c'est là que tout se joue.
+
+**Matière réelle utilisée (vérifiée)** :
+- 20 cm d'eau dans l'appartement, ~8 000 € de dégâts, 5 mois sans pouvoir louer (assurance-airbnb-proprietaire.mdoc)
+- Tout remboursé par la PNO Pacifica du Crédit Agricole
+- Perte d'exploitation payée 5 mois, gagnant car ménage/linge en moins
+- 10 ans de LCD, 9 biens (FACTS confirmés)
+- Moquette brûlée à la chicha (T5 salle cinéma), canapé brûlé à la cigarette, colonne de douche arrachée par voyageurs Booking
+- AirCover = filet de sécurité commercial, pas une assurance au sens juridique (perte de loyers exclue, réservations Airbnb uniquement)
+- Problème du voyageur qui revient avec l'ancien code arrivé 1 fois sur des centaines de séjours
+- Une nuit perdue + un ménage à 17,50 € (FACT confirmé)
+- Changement de code tous les 6 mois à 1 an, pas à chaque réservation
+- Voyageurs restent quelques nuits + paient d'avance → impayé quasi nul, pas de squat
+- Vrai risque = mauvais bien sans hôtels, pas d'entrée autonome → rendement plafonné ; conciergerie → rendement divisé par deux (FACT conciergerie ~moitié, souvent plus)
+- Déclaration de dégât refusée si check-in suivant déjà autorisé → déclarer avec photos horodatées avant le check-in suivant
+- PNO obligatoire en copropriété + clause location saisonnière indispensable + garantie perte d'exploitation
+
+---
+
+## V8 — Où investir en location saisonnière : repérer une bonne zone en 30 minutes, l'entrée autonome et le financement à 110%
+
+**Mot-clé SEO** : où investir en location saisonnière
+
+**Titre YouTube A** : Où investir en location saisonnière : ma méthode en 30 minutes
+
+**Titre YouTube B** : Où investir en location saisonnière : le financement à 110% expliqué
+
+**Miniature — texte** : JE GARDE 1 BIEN SUR 40
+
+**Miniature — visuel** : Gros plan visage Marc, regard caméra, sourcil levé l'air de dire "c'est aussi simple que ça". Il tient un téléphone montrant une carte Google Maps avec des pinpoints rouges. Chiffre choc affiché en gros : "40". Petit sous-texte en coin : "j'en garde 1".
+
+**🎬 Hook DÉBUT (0-15s, mot pour mot)** :
+> Je peux vous dire en 30 minutes, sans bouger de votre canapé, si un bien peut viser 15% de rendement ou s'il va vous coincer pendant des années. Et je le fais sur Google Maps, en tapant un seul mot. La plupart des gens achètent au feeling, sur un coup de cœur, et le regrettent. Moi, sur une quarantaine de biens que je visite, j'en garde un seul. Voilà les critères qui éliminent tout le reste, et le dernier vous évite de bloquer un capital énorme au démarrage.
+
+**🔄 Hook MILIEU (re-hook ~50%)** :
+> Et là vous vous dites : ok, j'ai trouvé le bon bien, mais je n'ai pas l'argent. C'est exactement là que les gens abandonnent, et c'est là qu'ils se trompent. En 2019, j'achetais à 0% d'apport. Aujourd'hui les banques demandent souvent 10 à 20%, soit 15 000 à 30 000 € pour un bien à 150 000 €. Sauf qu'il existe une marge de souplesse : la banque garde une part de ses crédits en dérogation à la règle des 35% d'endettement. Je vais vous montrer comment construire un dossier qui rentre dans cette part, et pourquoi certaines banques mutualistes laissent le conseiller décider localement.
+
+**⏭ Hook FIN (cliffhanger)** :
+> Vous pensez encore qu'il faut être riche pour faire ça. Mon opération la plus rentable, je l'ai financée à 110%, avec 7 000 € d'apport, et elle est accessible à un couple à 2 SMIC. Pas 2 cadres. 2 SMIC. Dans la prochaine vidéo, je vous montre l'opération exacte, chiffre par chiffre, celle qui sort 2 400 € net par mois même sans capital de départ.
+
+**Matière réelle utilisée (vérifiée)** :
+- Tri d'une zone en 30 minutes sur Google Maps (formulation qualitative : beaucoup d'hôtels autour = bonne zone, à valider par Marc avant d'asséner un seuil chiffré 100/30)
+- Entrée autonome (type Vigik / boîte à clés) = levier de rendement ; sans elle le rendement est bridé (formulation qualitative, le plafond chiffré à 8% n'est pas un fait confirmé)
+- Boîte à clés ~30 € + nuit unique : passage de 70% à 97% de remplissage, 8-10 nuits/mois débloquées (fait confirmé)
+- Marc visite une quarantaine de biens avant de garder le bon (j'en garde un sur ~40)
+- Une opération réclame ~240 heures sur 6-12 mois, faisable en gardant son emploi (fait confirmé)
+- 0% d'apport en 2019, aujourd'hui 10-20% demandés (15 000-30 000 € pour un bien à 150 000 €)
+- Règle des 35% d'endettement : marge de souplesse via la part de crédits que la banque garde en dérogation (HCSF, ~20% de la production trimestrielle, PAS 20% des clients)
+- Certaines banques mutualistes laissent le conseiller décider localement (sans nommer d'enseigne, politiques d'octroi variables par caisse régionale)
+- Plan A LCD ~15% net (cliffhanger rendement)
+- Cliffhanger V9 : appart 64 m² ÷ 2 T2, 156 000 € total, 7 000 € d'apport notaire, financement ~110%, ~2 400 €/mois net, ~18% net, accessible à un couple à 2 SMIC
+- Acheter près de chez soi, 30 à 45 minutes maximum au démarrage
+- Conciergerie / résa directe : on recycle la demande existante, on ne la crée pas
+
+---
+
+## V9 — Au SMIC, doubler son revenu avec l'Airbnb : l'opération à 7 000 € de notaire (diviser pour multiplier, 64 m² ÷ 2 T2)
+
+**Mot-clé SEO** : doubler son revenu airbnb
+
+**Titre YouTube A** : Doubler son revenu Airbnb avec 7 000 € : l'opération 64 m² ÷ 2
+
+**Titre YouTube B** : Doubler son revenu Airbnb : 64 m² coupés en 2, +2 400 €/mois
+
+**Miniature — texte** : 7 000 € → +2 400 €/mois
+
+**Miniature — visuel** : Marc de face, sourcils levés et petit sourire en coin (l'air de "oui, c'est vraiment ce chiffre"), une main qui montre un plan de 64 m² coupé en deux par un trait rouge. Gros chiffre choc en jaune : +2 400 €/MOIS. En plus petit dessous : "7 000 € pour démarrer".
+
+**🎬 Hook DÉBUT (0-15s, mot pour mot)** :
+> 7 000 €. C'est tout ce que ma femme et moi avons sorti de notre poche sur cette opération en 2019. Juste les frais de notaire. Le reste, l'achat, les travaux, les meubles, la banque l'a financé. Et aujourd'hui ce seul appartement nous rapporte 2 400 € net par mois. Le truc, c'est que mon salaire sur le papier, celui que la banque regardait, était à 1 750 €. Pas si loin du SMIC. Alors avant que vous me disiez "facile pour toi", restez, parce que je vais vous montrer le calcul exact, ligne par ligne, et pourquoi deux personnes au SMIC auraient pu le porter.
+
+**🔄 Hook MILIEU (re-hook ~50%)** :
+> Vous allez me dire : d'accord, mais toi tu savais faire. Justement non. Le vrai truc, c'est qu'il n'y a aucun talent particulier là-dedans : un appartement de 64 m², vous le coupez en deux T2 de 32 m², et chaque T2 travaille pour vous séparément. Diviser pour multiplier. Je vais vous reprendre le coût total, 156 000 €, ligne par ligne : 104 000 € d'achat, 30 000 € de travaux, 15 000 € de meubles, 7 000 € de notaire. Et vous allez voir pourquoi, à deux SMIC, la mensualité de 610 € passe largement sous le seuil d'endettement des banques.
+
+**⏭ Hook FIN (cliffhanger)** :
+> Vous savez maintenant tout faire. Acheter, diviser, automatiser, remplir le calendrier toute l'année. Mais il reste un étage que presque personne ne construit. Parce que tant que jusqu'à 15 % de chaque réservation part à la plateforme, une partie de votre travail file ailleurs. Moi, des demandes en direct, j'en ai plein, et je les prends même pas, faute d'outil. Reprendre ce contrôle, transformer le 15 % en 0 %, c'est le dernier étage. On le construit dans la prochaine vidéo.
+
+**Matière réelle utilisée (vérifiée)** :
+- 7 000 € d'apport = juste les frais de notaire
+- la banque a financé achat + travaux + meubles, pas les frais de notaire
+- crédit 610 €/mois
+- 2 400 €/mois net (chiffre confirmé)
+- appartement 64 m² ÷ 2 T2 de 32 m²
+- diviser pour multiplier
+- 156 000 € total (104k achat + 30k travaux + 15k meubles + 7k notaire)
+- salaire 1 750 € de fixe, pas si loin d'un SMIC
+- accessible à 2 SMIC, mensualité 610 € sous le seuil d'endettement
+- rendement net ~18 % sur 156 000 investis
+- résa directe : OTA jusqu'à 15 %, 0 % en direct, demandes refusées faute d'outil
+
+---
+
+## V10 — Réservation directe : reprendre le contrôle de ses réservations (0% vs 15%)
+
+**Mot-clé SEO** : réservation directe airbnb sans commission
+
+**Titre YouTube A** : Réservation directe Airbnb sans commission : 0% vs 15% (méthode réelle)
+
+**Titre YouTube B** : Réservation directe Airbnb sans commission : récupérer ses clients fidèles
+
+**Miniature — texte** : 0% AU LIEU DE 15%
+
+**Miniature — visuel** : Gros plan visage Marc, regard caméra, sourcil levé en mode "vous laissez de l'argent sur la table". À droite en énorme : 0%, et juste dessous en plus petit barré : 15%. Fond léger = un de ses intérieurs. Une seule couleur d'accent sur le 0%.
+
+**🎬 Hook DÉBUT (0-15s, mot pour mot)** :
+> Sur chaque réservation, Airbnb et Booking vous prennent jusqu'à 15%. La première fois, c'est normal, c'est le prix de la visibilité, ils vous amènent le client. Mais quand le même voyageur revient une deuxième fois, pourquoi vous continuez à payer ? Environ 1 voyageur sur 7 revient. Ces clients-là, je les récupère en direct, à 0% de commission. Et le pire, c'est que je refuse déjà des réservations directes parce que je n'ai pas le bon outil pour les prendre. Je vous montre exactement comment je récupère mes clients.
+
+**🔄 Hook MILIEU (re-hook ~50%)** :
+> Et là, vous vous dites : d'accord, mais si j'ouvre Airbnb, Booking et mon site direct en même temps, je vais finir avec deux voyageurs sur la même nuit. La double réservation. C'est exactement la peur qui empêche 9 propriétaires sur 10 de se lancer en direct. Je gère 9 biens depuis plus de 10 ans, tous sur plusieurs plateformes. Le secret pour éviter ça, ce n'est pas la chance, c'est une seule pièce d'infrastructure : le channel manager. Il synchronise tous les calendriers en temps réel, et c'est précisément ce qui évite les doubles réservations. Je vous explique comment ça marche maintenant.
+
+**⏭ Hook FIN (cliffhanger)** :
+> Vous avez maintenant la méthode complète des 10 vidéos : 97% de remplissage, le revenu doublé, le hack à 30 €, les 15% nets, la femme de ménage, et la réservation directe à 0%. La seule chose qui me bloquait encore, c'était de prendre ces résas directes proprement : le contrat, la caution, le paiement, sans y passer mes soirées. C'est précisément ce que je suis en train de construire. En attendant, téléchargez le livre, La Méthode 97%, il est gratuit en description. Et si vous débutez, le lien vers la première vidéo de la série est juste là.
+
+**Matière réelle utilisée (vérifiée)** :
+- ~14% des voyageurs reviennent (repeat), soit environ 1 sur 7 : on recycle la demande, on ne la crée pas
+- 0% de commission en direct vs jusqu'à 15% sur OTA
+- Signal réel Marc : 'j'en ai plein, je les prends pas' faute d'outil pour prendre les résas directes
+- 9 biens gérés depuis plus de 10 ans, sur plusieurs plateformes
+- Channel manager = synchro temps réel Airbnb + Booking + site direct, c'est ce qui évite les doubles réservations (sans promesse 'zéro')
+- Le numéro d'enregistrement doit figurer aussi sur le site direct (pied de page / mentions légales)
+- En direct + paiement type Stripe = empreinte bancaire (pré-autorisation) libérée au départ
+- Enomia = outil en construction pour automatiser la résa directe (contrat, caution, paiement), mentionné en soft sur la fin
+
+---
+
+
+# (ARCHIVE) Les 10 vidéos — proposition initiale
 
 ---
 

@@ -107,8 +107,11 @@
     "displayName": "Alsace",
     "type": "region",
     "searchVolume": 1530,
-    "radiusKm": 70,
-    "status": "todo"
+    "radiusKm": 100,
+    "status": "done",
+    "lat": 48.31818,
+    "lng": 7.44162,
+    "found": 31
   },
   {
     "slug": "landes",
@@ -116,8 +119,11 @@
     "type": "departement",
     "searchVolume": 1500,
     "radiusKm": 75,
-    "status": "todo",
-    "geocodeQuery": "Landes France département"
+    "status": "done",
+    "geocodeQuery": "Landes France département",
+    "lat": 43.9412,
+    "lng": -0.75328,
+    "found": 32
   },
   {
     "slug": "ile-de-france",

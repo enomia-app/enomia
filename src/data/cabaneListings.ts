@@ -3416,5 +3416,765 @@ export const cabaneListings: Record<string, Cabane[]> = {
         }
       ]
     }
+  ],
+  "alsace": [
+    {
+      "name": "Cabanes des Grands Reflets",
+      "area": "Joncherey",
+      "dept": "90",
+      "distanceKm": 92,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Joncherey",
+      "rating": 4.8,
+      "reviews": 713,
+      "source": "Google Places",
+      "description": "Les Cabanes des Grands Reflets proposent des hébergements insolites offrant un cadre dépaysant intégré à la nature, notamment des cabanes sur l'eau dans un environnement paisible et apaisant. L'établissement se distingue par un accueil irréprochable et des services incluant un service repas.",
+      "url": "https://www.cabanesdesgrandsreflets.com/",
+      "recentReviews": [
+        {
+          "author": "grisouille85",
+          "rating": 5,
+          "when": "il y a 4 semaines",
+          "text": "Nous avons passé un excellent séjour. Nous avions réservé la cabane spa oasis en famille. Cabane très jolie , cadre dépaysant et calme . Acceuil au top 👌 Dans la cabane , il faudrait juste une petite lumière supplémentaire car lumière tamisée qui est très bien mais quand on joue au Uno plus compliqué à voir les couleu"
+        },
+        {
+          "author": "Marie Lacroix",
+          "rating": 5,
+          "when": "il y a 3 semaines",
+          "text": "⭐️⭐️⭐️⭐️⭐️ Un endroit que j’adore ! Je n’ai pas encore eu l’occasion d’y passer la nuit, mais j’y vais très souvent pour profiter du cadre exceptionnel. Les cabanes sur l’eau offrent un environnement paisible et dépaysant, idéal pour se détendre. J’aime particulièrement venir manger ou simplement boire un verre sur pla"
+        },
+        {
+          "author": "Thierry Chatelain",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Voilà une belle surprise! A la cabane Harmonie nous avons passé un moment hors du temps, que cela fait du bien. L'accueil, l'endroit, la cabane , le service repas... tout était parfait et avec un temps magnifique. Bravo pour l'équipe du domaine. Top. A refaire, sans aucun doute. Thanks."
+        },
+        {
+          "author": "VETTER Sabrina",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "✨ Un véritable havre de paix ✨ Un week-end hors du temps aux Cabanes des Grands Reflets à Joncherey… Le cadre est tout simplement magnifique, apaisant et parfaitement intégré à la nature. L’accueil est irréprochable : chaleureux, attentionné et sincère, ce qui rend l’expérience encore plus précieuse. Un séjour magique,"
+        },
+        {
+          "author": "Cindy Dangel",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Nous avons passer un agréable séjour dans la cabane Oasis. Le service repas raclette est très bien ainsi que le petit déjeuné. Le matelas un peu dure. Nous avions apprécier l'attention pour le chien."
+        }
+      ]
+    },
+    {
+      "name": "La cabane au bain perché",
+      "area": "Aspach",
+      "dept": "68",
+      "distanceKm": 77,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Vue dégagée"
+      ],
+      "vibe": "Cabane insolite à Aspach",
+      "rating": 5,
+      "reviews": 254,
+      "source": "Google Places",
+      "description": "Perchée en pleine nature alsacienne, cette cabane insolite propose un bain nordique avec vue sur la forêt. Le lieu séduit par sa décoration soignée, sa propreté et l'accueil chaleureux de ses propriétaires.",
+      "url": "https://www.lacabaneaubainperche.com/",
+      "recentReviews": [
+        {
+          "author": "Laura Foernbacher",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Nous avons passé une excellente nuit dans ce logement insolite. La cabane est très jolie, parfaitement propre et décorée avec goût. L’endroit est paisible, en pleine nature, idéal pour se ressourcer et profiter du calme. Mention spéciale pour le repas, qui était délicieux et apporte une vraie touche supplémentaire à l’"
+        },
+        {
+          "author": "Delphine Rifat",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Nous avons passé un week-end magnifique perchés dans cette cabane 🤩 le lieu est calme, très bien pensé et décoré avec goût. L’accueil est d’une gentillesse rare, simple et chaleureux, et on sent qu’ici tout a été imaginé avec amour. On a adoré l’atmosphère paisible, la chaleur du lieu, et ce côté “petit cocon” où on d"
+        },
+        {
+          "author": "Virginie Bringard",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Mais quel belle découverte qui plus est a 30 min de chez nous. Un moment de calme et de détente. Un petit nid chaleureux, un bain nordique très appréciable vue sur la forêt. Et surtout un accueil au top. C'est sûr nous y reviendrons."
+        },
+        {
+          "author": "Mégane “Még”",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Moment reposant et agréable. Le logement est insolite, propre et bien pensé. L'accueil est chaleureux et les repas généreux. À seulement 35 min de Courgenay. Nous sommes allés à vélo électrique (40 km). On recommande 😊"
+        },
+        {
+          "author": "BOUM",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Super expérience, au calme face à la forêt. Le bain nordique apporte une touche de relaxation supplémentaire. La cabane est très bien équipée et joliment agencée. Nous recommandons fortement pour une escapade détente."
+        }
+      ]
+    },
+    {
+      "name": "Les Cabanes de Belfahy",
+      "area": "Belfahy",
+      "dept": "70",
+      "distanceKm": 79,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Terrasse privative",
+        "Cheminée ou poêle"
+      ],
+      "vibe": "Cabane insolite à Belfahy",
+      "rating": 4.8,
+      "reviews": 312,
+      "source": "Google Places",
+      "description": "Cet ensemble de cabanes insolites perchées offre un cadre intimiste en pleine nature, chaque hébergement étant bien isolé des autres. Les cabanes disposent d'équipements premium incluant jacuzzi privé et spa intérieur, pour un séjour romantique ou en famille.",
+      "url": "http://www.cabanesdebelfahy.com/",
+      "recentReviews": [
+        {
+          "author": "Christelle Gilbart",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Une belle pause dans la cabane du Lynx. Le coin Jacuzzi sous le toit est comme un coocon. Nous avons profité du calme et d'une bonne raclette. Il faut juste un peu d'agilité pour grimpé dans la chambre. On a bien rigoler 😅😅"
+        },
+        {
+          "author": "Nicolas ROLLAND",
+          "rating": 4,
+          "when": "il y a 9 mois",
+          "text": "Ma conjointe, sa sœur et sa maman ont séjourné à la cabane du Bolet, et l’expérience a globalement été très agréable. Le cadre en pleine nature est magnifique, la cabane est superbe autant à l’intérieur qu’à l’extérieur, avec un espace bien pensé et des équipements de qualité. La nourriture proposée est délicieuse et c"
+        },
+        {
+          "author": "Patrice Vigezzi",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Très bon séjour aux cabanes de belfahy. La cabane du bolet en famille était parfaite pour nous accueillir. Et que penser du spa en intérieur...au TOP.... l'accueil vraiment Super et sans compter de l'accompagnement avant et pendant notre séjour avec une très bonne réactivité. Pour profiter pleinement de notre séjour, n"
+        },
+        {
+          "author": "Sandra Simic",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Magnifique expérience ! Très bon accueil. Repas très copieux. Nous avons beaucoup apprécié le jacuzzi sur la terrasse. Chaque cabane est bien isolée des autres. A refaire avec bonheur !"
+        },
+        {
+          "author": "Caro Irli",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Une très belle expérience aux cabanes de Belfahy! L'accueil a été très chaleureux ! Nous avons séjourné une nuit dans la jolie cabane aux myrtilles. Dégustation d'une très bonne raclette le soir, quelques aller-retours entre le jacuzzi sur la terrasse et le poêle à l'intérieur et un petit déjeuner très copieux 😊 Sans "
+        }
+      ]
+    },
+    {
+      "name": "La Clairière aux Cabanes",
+      "area": "La Bresse",
+      "dept": "88",
+      "distanceKm": 53,
+      "features": [
+        "Sauna",
+        "Cheminée ou poêle"
+      ],
+      "vibe": "Cabane insolite à La Bresse",
+      "rating": 4.7,
+      "reviews": 347,
+      "source": "Google Places",
+      "description": "La Clairière aux Cabanes propose des cabanes confortables immergées dans un cadre naturel magnifique en pleine montagne alsacienne. L'accueil est irréprochable avec un personnel souriant et attentionné, créant une atmosphère féerique pour des séjours en famille ou entre amis.",
+      "url": "https://www.bol-d-air.fr/hebergement-insolite-cabanes-sudio-la-bresse-vosges",
+      "recentReviews": [
+        {
+          "author": "Laura Humbert",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "C est la 2eme fois que nous nous y rendons dans une cabane différente et c est juste parfait ! Un cadre magnifique. L accueil est irréprochable. La personne nous a même servi après 18h malgré que nous avions prévenu de notre venue tardive. C est très gentil à lui 😊. Merci pour ce séjour hors du temps. Nous reviendrons"
+        },
+        {
+          "author": "C AR",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Un séjour absolument merveilleux au Bol d’Air à La Bresse, dans la cabane de l’Explorateur. Nous avons eu la chance d’être accueillis par une neige abondante, qui a rendu l’endroit encore plus féerique. La cabane est remarquable : décorée avec beaucoup d’originalité, chaleureuse, confortable, et pensée dans les moindre"
+        },
+        {
+          "author": "Océane Lhuillier",
+          "rating": 4,
+          "when": "il y a 3 mois",
+          "text": "Lieu incroyable, personnel très agréable et souriant. Les cabanes sont très agréable et le cadre également."
+        },
+        {
+          "author": "La Coccinelle",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Nous avons séjourné à 9, dans 2 cabanes côte à côte. Nous avons passé un excellent week-end ! Merci beaucoup à tout le personnel aux petits soins. On reviendra, c'est certain !"
+        },
+        {
+          "author": "Lucie Ledroit",
+          "rating": 4,
+          "when": "il y a 8 mois",
+          "text": "Nous avons séjourné une nuit dans un véritable petit cocon. Le chalet est plein de charme, parfait pour une parenthèse romantique. Nous avons beaucoup aimé le poêle à bois, le sauna et le confort de la literie. En revanche, au vu du tarif, quelques détails nous ont un peu surpris : la douche était bouchée et le petit d"
+        }
+      ]
+    },
+    {
+      "name": "Les Cabanes perchées du Goutty",
+      "area": "Grandfontaine",
+      "dept": "67",
+      "distanceKm": 28,
+      "features": [
+        "Cabane perchée",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Grandfontaine",
+      "rating": 4.6,
+      "reviews": 265,
+      "source": "Google Places",
+      "description": "Petites cabanes confortables implantées en pleine nature alsacienne, avec le son apaisant d'un ruisseau et l'ambiance du chant d'oiseaux. Les hôtes réactifs et sympathiques proposent petits déjeuners soignés et paniers repas pour une expérience ressourçante.",
+      "url": "https://www.cabanesdugoutty.fr/",
+      "recentReviews": [
+        {
+          "author": "Manon Beghin",
+          "rating": 5,
+          "when": "il y a 3 semaines",
+          "text": "Une magnifique première expérience ! J’ai été merveilleusement bien accueilli et la propreté des lieux était irréprochable. J’ai passé une nuit paisible et ressourçante, accompagnée par le chant des oiseaux et le doux murmure de l’eau. Le petit-déjeuner était excellent et servi avec attention. J’ai déjà hâte de revenir"
+        },
+        {
+          "author": "Joanie Frund",
+          "rating": 5,
+          "when": "il y a 4 semaines",
+          "text": "Nous avons passé 2 excellentes nuits dans la cabane \"Au Fil de l'Eau\". Rustique maus confortable, bel emplacement au cœur de la nature agréablement ressourçant avec le son du ruisseau 😊 Hôtes réactifs et sympathiques. Le repas du soir et les petits déjeuners déposés dans un panier étaient très chouettes, nous l'avons "
+        },
+        {
+          "author": "Jeremy Clolus",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Nous avons séjourné une nuit dans \"le petit toit du monde\" la nuit du 31 juillet. Première expérience en cabane pour nous 2. Et malgré mes craintes de départ, je dois dire que ce fût une très belle découverte. Il faut dire que tout est mis en œuvre par les propriétaires pour que le séjour se déroule de la meilleure des"
+        },
+        {
+          "author": "Vande Weyer Frédéric",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Nous avons passé deux nuits en ce mois d'octobre (3 générations sous un même toit). Nous étions dans la cabane \"Appel de la forêt\". L’accueil était impeccable. Les petits déjeuners étaient très bons ainsi que le panier repas du soir réalisé avec des produits locaux. Une des deux nuits a été chahutée par le vent. La cab"
+        }
+      ]
+    },
+    {
+      "name": "Les Cabanes du Lac de Pierre Percée",
+      "area": "Badonviller",
+      "dept": "54",
+      "distanceKm": 43,
+      "features": [
+        "Cheminée ou poêle",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Badonviller",
+      "rating": 4.8,
+      "reviews": 205,
+      "source": "Google Places",
+      "description": "Situé au bord du Lac de Pierre Percée, ce lieu propose des hébergements insolites en pleine nature (cabanes et tentes) offrant une déconnexion totale dans un cadre exceptionnel. Les installations sont bien chauffées et très propres, avec un accueil chaleureux et attentif des propriétaires, complété par un petit déjeuner de qualité.",
+      "url": "https://www.les-cabanes-du-lac-de-pierre-percee.fr/",
+      "recentReviews": [
+        {
+          "author": "Cédric Casanova",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Super accueil fait par une personne très sympathique, qui dégage douceur et une passion pour son lieu et la nature. La cabane Darwin est superbe avec la possibilité de prendre le très bon petit déjeuner à l extérieur au lever de soleil. Le repas du soir chauffé sur le poêle à bois est top. Le bain finlandais est très a"
+        },
+        {
+          "author": "Cindy Baumgart",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Avec un grand regret que nous quittons la tente du trappeur. Angela se petit bout de femme qui est juste génial au grand soin pour ses clients vous accueil avec le sourire et la joie de vivre.un tres bon petit déjeuner.tres belle expérience pour se ressourcer avec la nature le bruit des oiseau le matin."
+        },
+        {
+          "author": "sandrine gelb",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Nous avons passé une nuit dans la cabane Jules Verne, nous avons passé un super séjour, beaucoup trop court. L'accueil vraiment adorable, la cabane magnifique, bien chauffée, très propre, un petit déjeuner ultra bien chauffé et gourmand, tout est plus que parfait, un vrai coup de coeur, nous y retournerons sans hésiter"
+        },
+        {
+          "author": "johnny gourion",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Une envie de déconnexion ?! Voici le lieu idéal 🙃 un cadre exceptionnel, en pleine nature avec le Lac de Pierre Percée. Un week-end parfait avec un acceuil chaleureux, des hôtes qui sont la pour vous faire passer un moment innoubliable 🥰 Un Grand merci à vous et à bientôt avec un grand plaisir."
+        },
+        {
+          "author": "aline busnel",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Havre de paix idyllique aux abords du lac ! Nous avons adoré l'accueil d'Angela qui a été aux petits soins pour nous du début à la fin, avec un feu allumé à notre arrivée qui nous a permis de dormir au chaud dans la tente. Le cadre est magnifique et invite au calme et à la détente."
+        }
+      ]
+    },
+    {
+      "name": "Les Cabanes perchées du Grand Ballon",
+      "area": "Goldbach-Altenbach",
+      "dept": "68",
+      "distanceKm": 55,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Sauna",
+        "Vue dégagée"
+      ],
+      "vibe": "Cabane insolite à Goldbach-Altenbach",
+      "rating": 4.9,
+      "reviews": 159,
+      "source": "Google Places",
+      "description": "Situées en Alsace dans un cadre naturel calme et paisible, ces cabanes perchées offrent une vue imprenable sur les massifs montagneux environnants. Chaque cabane dispose de tout le confort moderne avec équipements comme sauna privatif et bain froid, accueil remarquable et repas copieux proposés sur place.",
+      "url": "http://www.grand-ballon.fr/",
+      "recentReviews": [
+        {
+          "author": "Marie Jaskulski",
+          "rating": 5,
+          "when": "il y a 3 semaines",
+          "text": "Excellente escapade en famille avec nos 2 enfants. Nous avons dormi dans la cabane spa arctique : la décoration est incroyable, le concept très original et une vue imprenable avec un sentier pour une petite rando très chouette ! Tout le confort est là et petit déjeuner très copieux, je recommande vivement Les cabanes p"
+        },
+        {
+          "author": "Alex LB",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Des cabanes avec tout le confort, et un super accueil de Loic ! Nous étions à deux dans la scandinave avec sauna privatif et bain froid. Nous avons grandement apprécié les repas copieux servis (planche de charcuterie-fromages le soir et le petit-déjeuner). Idéalement situé, nous avons pu partir directement à pieds pour"
+        },
+        {
+          "author": "Lala Lala",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Deux nuits sympathique dans un endroit calme et paisible , notre séjour dans la cabane Islandaise est une belle expérience, le storvatt super agréable et sympa avec les températures de notre weekend, balade au grand ballon sous la neige et randonnées vivifiante . Acceuil très agréable et petit déjeuner copieux . A refa"
+        },
+        {
+          "author": "Océane Carpentier",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Nous avons passé un excellent séjour dans la cabane islandaise ! 2 nuits, idéal pour profiter des lieux et du décor ! Tout était parfait : accueil et service de la part de l’hôte remarquable, cabane très confortable sans vis à vis avec les autres cabanes, lieu superbe et dépaysant avec départ de randonnée au pied des c"
+        },
+        {
+          "author": "Violette Epinette",
+          "rating": 5,
+          "when": "il y a 6 mois",
+          "text": "Nous avons passez une nuit dans la cabane arctique et nous avons adoré ! Le cadre et le concept sont incroyables, c’est chaleureux et l’accueil était plus qu’agréable. Le petit déjeuner était top avec plein de produit locaux !! Je recommande à 100%"
+        }
+      ]
+    },
+    {
+      "name": "Escale Cab'âne Hébergements insolites avec SPA…",
+      "area": "Mittlach",
+      "dept": "68",
+      "distanceKm": 46,
+      "features": [
+        "Spa ou bain nordique",
+        "Vue dégagée"
+      ],
+      "vibe": "Cabane insolite à Mittlach",
+      "rating": 4.9,
+      "reviews": 124,
+      "source": "Google Places",
+      "description": "Cabanes insolites nichées en Alsace dans un environnement calme et serein, idéal pour se ressourcer en pleine nature. Chaque cabane est bien décorée et équipée, avec accès à des bains nordiques offrant une vue sur le cadre environnant.",
+      "url": "https://www.escale-cabane.com/",
+      "recentReviews": [
+        {
+          "author": "Lucie Mazelin",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Nous avions la cabane du Vigneron, très belle cabane, petite mais suffisante. Il y avait ce qu'il fallait. Les bains nordiques sont agréables et donnent sur une belle vue. Cadre calme et très reposant. Avec accès au moutons, et au petit chien adorable et très câlin. La cuisine est tout équipée vous n'aurez pas de souci"
+        },
+        {
+          "author": "Paméla DA FREITAS",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Quel trésor cache cette usine! Des cabanes magnifiques, un environnement calme et serein où tout est réuni pour couper de son quotidien. Un accueil convivial, qui permet d'en apprendre plus sur l'histoire de ces lodges nature. A l'intérieur des cabanes, rien ne manque, les hôtes ont pensé à tout, peignoir pour le bain "
+        },
+        {
+          "author": "Mathilde Touron",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Nous avons passé une nuit à 3, en couple et un enfant de 4 ans. On a beaucoup apprécié le calme, l'environnement. Nous étions dans la cabane du vigneron qui est spacieuse. Le bain nordique était très agréable, notre fille a beaucoup aimé l'aire de jeux. Nous avons passé un super moment."
+        },
+        {
+          "author": "David KINDER",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Très beau séjour passé dans la cabane du fermier. Très beau cadre, chambre bien décorée et très originale. Nous avons pu profiter du bain nordique. C'était très agréable. Idéal pour se ressourcer et profiter de la nature."
+        },
+        {
+          "author": "D L.",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Très belle expérience dans une cabane remplie de charme. La cabane du fermier est à la fois jolie, chaleureuse et parfaitement équipée : tout est pensé pour offrir un confort optimal. Le bain nordique sous la neige a été particulièrement apprécié (des peignoirs sont mis à disposition). Merci à Vanessa et Guillaume pour"
+        }
+      ]
+    }
+  ],
+  "landes": [
+    {
+      "name": "K-hutes",
+      "area": "Castaignos-Souslens",
+      "dept": "40",
+      "distanceKm": 40,
+      "features": [
+        "Spa ou bain nordique",
+        "Terrasse privative",
+        "Vue dégagée"
+      ],
+      "vibe": "Cabane insolite à Castaignos-Souslens",
+      "rating": 5,
+      "reviews": 346,
+      "source": "Google Places",
+      "description": "K-hutes propose des cabanes de standing en pleine nature landaise, avec vue sur la forêt et les Pyrénées, offrant un cadre calme idéal pour se déconnecter. Les hébergements disposent d'un bain nordique en extérieur et de petites attentions, créant une expérience reposante et accueillante.",
+      "url": "http://www.k-hutes.fr/",
+      "recentReviews": [
+        {
+          "author": "OA Lmr",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Nous avons passé une nuit dans la k-hute n°4 entre copines, c'était juste parfait ! Le cadre est calme, avec une vue magnifique qui invite vraiment à se déconnecter. Le bain nordique est un vrai plus : un moment hyper ressourçant. La soirée raclette était parfaite, conviviale et délicieuse. On a aussi adoré les petites"
+        },
+        {
+          "author": "Noëllie Moizard",
+          "rating": 5,
+          "when": "il y a 2 semaines",
+          "text": "Nous avons passé un magnifique moment hors du temps dans une cabane offrant une vue sur la nature, la forêt et les Pyrénées. Justine et Hugo sont des hôtes charmants et accueillants, passionnés par la nature et qui ont à cœur de vous faire passer un superbe moment. Si vous hésitiez à tenter l’expérience, n’hésitez plus"
+        },
+        {
+          "author": "magali valay",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Notre famille nous a offert à mon mari et moi une nuit à K Hutes. Nous avons profité de nos vacances pour y séjourner . Tout commence par notre arrivée et l accueil de Justine qui nous fait découvrir les lieux. Cette K hute est parfaite, la décoration chinée et pensée avec beaucoup de goût et d application. Puis vient "
+        },
+        {
+          "author": "Pauline Hien",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Nous avons passé une nuit dans un des logements et ce fut très reposant. Nous avons adoré le bain nordique en extérieur pour profiter de la vue sur la plaine. Les petites attentions sont très appréciables, comme les masques pour dormir et le parapluie (même si nous ne l’avions pas utilisé heureusement). Le petit-déjeun"
+        },
+        {
+          "author": "Lizel San",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "On a passé une soirée magique dans ces petite K-Hutes avec ma compagne. Ces petits logements sur pilotis sont magnifiques, on a vraiment l’impression d’être dans un endroit d’antan, hyper qualitatif et plein de charme. Tout est cosy et bien pensé, entre le lit confortable, la petite cuisine, la terrasse et le bain nord"
+        }
+      ]
+    },
+    {
+      "name": "Landifornia lodge",
+      "area": "Saint-Martin-de-Hinx",
+      "dept": "40",
+      "distanceKm": 57,
+      "features": [
+        "Spa ou bain nordique",
+        "Sauna",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Saint-Martin-de-Hinx",
+      "rating": 4.9,
+      "reviews": 302,
+      "source": "Google Places",
+      "description": "Landifornia lodge propose une cabane en bois rustique au cœur d'un écrin de nature, offrant un cadre reposant et magique pour les couples. Les équipements incluent un sauna, un bain nordique, des jeux de société et un petit-déjeuner livré, le tout dans une décoration soignée.",
+      "url": "https://landifornia-lodge.com/",
+      "recentReviews": [
+        {
+          "author": "Joanna Tre",
+          "rating": 5,
+          "when": "il y a 5 mois",
+          "text": "Nous avons passé une nuit avec mon copain dans cette endroit reposant et magique. La cabane en bois est vraiment magnifique ! Nous avons dormi confortablement et avons pu jouer aussi à des jeux mis à disposition. Laure est un personne accueillante et reste disponible en cas de besoin. Le bain nordique était un vrai rég"
+        },
+        {
+          "author": "Elsa Caroline Cunhac",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Superbe moment avec mon conjoint dans la cabane de l’étang. Une petite parenthèse parfaite. C’est décoré avec énormément de goût. Nous avons profité du sauna, du bain nordique et nous avons réalisé une petite aquarelle face à l’étang. Le brunch est un délice. Tout était parfait. Merci encore 🤍"
+        },
+        {
+          "author": "Celine Olaizola",
+          "rating": 5,
+          "when": "il y a 4 mois",
+          "text": "Nous avons eu la chance de découvrir ce havre de paix dans un écrin de nature au mois d'octobre. Nous avions une carte cadeau et nous avons opté pour un séjour à 2 dans la cabane de l'étang. Magnifique cabane rustique où nous nous sentons bien dés que nous rentrons. Ce séjour nous offre une vraie parenthèse, coupés de "
+        },
+        {
+          "author": "Chloe Charlet",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Nous avons passé un moment hors du temps dans la très jolie cabane de l'étang. Un véritable havre de paix en plein coeur de la nature. Nous nous sommes régalés avec l'axoa de canard et le petit-déjeuner directement livrés à la cabane. Mentions spéciales pour la jolie carte à garder en souvenir et le matériel mis à disp"
+        },
+        {
+          "author": "Jenny Labat",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Nous avons passé une nuit à Landifornia Lodge dans la cabane des bois… et franchement, c’était exactement ce qu’on recherchait : calme, nature et déconnexion totale. Le bain nordique est un vrai plus, surtout le soir dans cette ambiance chaleureuse. Tout est pensé pour se poser, ralentir et profiter. Entre les jeux, le"
+        }
+      ]
+    },
+    {
+      "name": "Lo Rey du Lac",
+      "area": "Soorts-Hossegor",
+      "dept": "40",
+      "distanceKm": 61,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Soorts-Hossegor",
+      "rating": 4.9,
+      "reviews": 277,
+      "source": "Google Places",
+      "description": "Cet hébergement insolite situé en forêt landaise propose des géodes et roulottes tout confort, accompagnées d'un jacuzzi et d'un spa pour une expérience nature privilégiée. Le lieu séduit par son atmosphère calme et dépaysante, complétée par un petit déjeuner maison préparé avec attention et un service impeccable.",
+      "url": "http://www.loreydulac.com/",
+      "recentReviews": [
+        {
+          "author": "Maïva Rosa",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Un séjour inoubliable ! Nous avons passé un moment exceptionnel au cœur de la nature, complètement dépaysés du quotidien. Entre le calme, le spa et la beauté du lieu. Nous avons passé un excellent moment dans cette belle géode, tout était parfait pour se ressourcer ! On a eu la chance de croiser un écureuil faire sa pe"
+        },
+        {
+          "author": "July D'ost",
+          "rating": 5,
+          "when": "il y a une semaine",
+          "text": "Un moment absolument fabuleux. Endroit magique et calme Service impeccable Lit trop comfortable Petit déjeuner délicieux Un grand merci. A faire"
+        },
+        {
+          "author": "Laure Richard",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Un moment parfait accompagnés par les écureuils et les oiseaux. Nous avons séjourné dans la géode, tout confort, au calme, un petit déjeuner parfait. Merci, tout était super."
+        },
+        {
+          "author": "Lounistou Zerosix",
+          "rating": 5,
+          "when": "il y a 10 mois",
+          "text": "Tout est parfait Amoureux de nature comblés, dans la forêt landaise avec un petit déjeuner maison préparé avec attention. Jacuzzi vérifié chaque jour, roulotte tout confort, équipements en linge plus que parfait, petit frigo avec boissons (en supplément) comme à l'hôtel. Les animaux de la forêt peuvent vous rendre visi"
+        }
+      ]
+    },
+    {
+      "name": "AIRIAL FABIAN",
+      "area": "Rion-des-Landes",
+      "dept": "40",
+      "distanceKm": 19,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique",
+        "Terrasse privative",
+        "Vue dégagée"
+      ],
+      "vibe": "Cabane insolite à Rion-des-Landes",
+      "rating": 4.9,
+      "reviews": 223,
+      "source": "Google Places",
+      "description": "Cette cabane perchée dans les arbres offre un cadre totalement isolé en pleine nature des Landes, propice à la détente et à l'apaisement. L'hébergement bénéficie d'un confort spa, d'une décoration soignée et d'un petit-déjeuner fait maison complétant l'accueil chaleureux des propriétaires.",
+      "url": "https://www.cabaneslandes.com/",
+      "recentReviews": [
+        {
+          "author": "Nadège GRANIER",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "Un moment parfait dans cet endroit apaisant et totalement isolé ! Un accueil chaleureux par l'hôte évidemment, mais aussi par Shadow leur Golden et leur petit chat adorable. La cabane est magnifique, le repas fait maison était délicieux, la literie très confortable, le spa avec la vue sur la forêt, parfait. Vraiment me"
+        },
+        {
+          "author": "Axelle Basmaison",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Nous avons passé un moment calme , dans un cadre apaisant. Nous avions choisi la cabane, confort spa : la cabane est aussi belle de l’intérieur que de l’extérieur, avec beaucoup de goût pour la décoration, mais aussi pratique . Nous avons manqué de rien . Le jacuzzi sur la terrasse qui surplomb l’Arial est parfait pour"
+        },
+        {
+          "author": "Thierry Alloy",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Merci pour cet accueil dans ce avre de paix au calme en pleine nature dans un lieu atypique charmant perché a plus de 5m de haut. Petit déj très apprécié par son authenticité et du fait maison. Merci encore et a bientôt."
+        },
+        {
+          "author": "Loïs Henaff-Cañadas",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Un week-end absolument magique dans cette cabane dans les arbres 🌿✨ Tout était parfait : un lieu d’une propreté irréprochable, un accueil chaleureux qui nous a tout de suite mis à l’aise, et une ambiance tellement apaisante. La vue sur le champ est juste magnifique, on se sent complètement déconnecté du quotidien. Le "
+        },
+        {
+          "author": "K P",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Super expérience dans une cabane magnifique, au calme, entouré de verdure et très bien aménagé. Un petit havre de paix parfait pour se ressourcer. Une délicieuse cuite et un sublime brunch pour couronner le tout. Merci 🙏"
+        }
+      ]
+    },
+    {
+      "name": "LES LANDINES, cabanes et spa",
+      "area": "Origne",
+      "dept": "33",
+      "distanceKm": 66,
+      "features": [
+        "Spa ou bain nordique",
+        "Terrasse privative"
+      ],
+      "vibe": "Cabane insolite à Origne",
+      "rating": 4.8,
+      "reviews": 212,
+      "source": "Google Places",
+      "description": "Les Landines propose des cabanes intimistes nichées en pleine nature pour les couples, au cœur des Landes. Le site offre un environnement calme et ressourçant avec des équipements soignés et un cadre préservé.",
+      "url": "https://www.leslandines.com/",
+      "recentReviews": [
+        {
+          "author": "Manon VICIER",
+          "rating": 5,
+          "when": "il y a 8 mois",
+          "text": "Nous avons eu en cadeau de la part de nos copains une nuit dans la cabane l'O2. Quelle parenthèse extra, on en avait besoin. Tout était au rdv, nous avons pris la décision de manger des pizzas ce soir là, nous avons trouvé une pizzeria camion, c'était excellent on recommande (Droo'Pizz). L'accueil été parfait, la liter"
+        },
+        {
+          "author": "Mélissa Leculier",
+          "rating": 5,
+          "when": "il y a 9 mois",
+          "text": "Amoureux de nature et de tranquillité vous êtes au bon endroit ! Le cadre est incroyable ainsi que leurs hôtes. Nous avons passons un très bon séjour ressourçant. Mention spéciale pour le linge de lit qui sent divinement bon. Merci à vous ❤️"
+        },
+        {
+          "author": "alexis Alliaud",
+          "rating": 5,
+          "when": "il y a 10 mois",
+          "text": "Nous avons séjourné aux Landines ma compagne et moi-même, dans la cabane Le Lodge, et l’expérience a été absolument exceptionnelle. Le lieu est un véritable havre de paix, où le temps semble suspendu. On profite d’un calme total, idéal pour se déconnecter du quotidien, le tout dans un cadre naturel magnifique. La caban"
+        },
+        {
+          "author": "Lily Jauneau",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Super nuit en amoureux dans la cabane l’O2 ! Nous avons passé un magnifique moment, très relaxant et ressourçant grâce à tout l’environnement naturel. Le concept de se retrouver dans la nature est génial et très reposant (surtout dans le spa, c’était incroyable). Petit-déjeuner très copieux ! À refaire ! Encore merci"
+        }
+      ]
+    },
+    {
+      "name": "Les nids du Béarn",
+      "area": "Loubieng",
+      "dept": "64",
+      "distanceKm": 59,
+      "features": [
+        "Cabane perchée",
+        "Terrasse privative",
+        "Au bord de l'eau"
+      ],
+      "vibe": "Cabane insolite à Loubieng",
+      "rating": 4.6,
+      "reviews": 191,
+      "source": "Google Places",
+      "description": "Les nids du Béarn propose des hébergements insolites perchés dans les arbres, offrant une expérience unique en pleine forêt avec grand confort et équipements modernes. Le lieu combine une belle hospitalité, un service attentif avec apéro et petit déjeuner, ainsi que des activités nature comme le tir à l'arc et la pétanque.",
+      "url": "http://www.lesnidsdubearn.com/",
+      "recentReviews": [
+        {
+          "author": "Hervé D.",
+          "rating": 5,
+          "when": "il y a 10 mois",
+          "text": "Très original, un très grand lit dans une nid suspendu, un rêve d'enfant qui se réalise. Et un repas sans les arbres inoubliable. Proprietaire très sympathique plein de bons conseils."
+        },
+        {
+          "author": "Lprs Elliot",
+          "rating": 5,
+          "when": "il y a 10 mois",
+          "text": "Les nids du bearn est un lieu exeptionnel. Perché en haut des arbres au milieu de la fôret, les nids offre grand confort et sont très très prope. L'acceuil et la gentillesse du patron c'est un 10/10. Le lieu offre du calme dans la nature au mileu des oiseaux. Je recommande a 100% cette expérience !"
+        },
+        {
+          "author": "Caroline CLAVERIE",
+          "rating": 5,
+          "when": "il y a 10 mois",
+          "text": "Nous avons passé une nuit dans un nid, une super expérience ! Le service était top, l’accueil génial. On a eu droit à un apéro plus que gourmand et un petit déjeuner délicieux. Le tout très bien servi et copieux. Le petit village de navarrenx a 15min en voiture est très joli et de belles randonnées sont à faire aux ale"
+        },
+        {
+          "author": "Mathieu Jaguelin",
+          "rating": 5,
+          "when": "il y a 11 mois",
+          "text": "Séjour en famille formidable dans une cabane magnifique perchée dans les arbres. L'expérience est à faire. Les enfants ont adoré. Stand de tir à l'arc, terrain de pétanque... Le spectacle sonore nocturne avec cerfs, chevreuils et chouette vraiment sympa. Mention spéciale au petit dej monté par une poulie... Merci pour "
+        },
+        {
+          "author": "Laura Dias",
+          "rating": 5,
+          "when": "il y a un an",
+          "text": "Nous avons passé une super nuit au nid du béarn , cadre exceptionnel en pleine forêt. Pas mal d’activités à faire sur place sympathique ( pétanque, badminton, labyrinthe, entre autres..) Cabane d’un super confort, grand lit et grande terrasse ! Le top pour les repas! Nous avons adoré écouter le bruit des chouettes pend"
+        }
+      ]
+    },
+    {
+      "name": "Cabanes Insolites/ Landes/ Spa privatif",
+      "area": "Taller",
+      "dept": "40",
+      "distanceKm": 26,
+      "features": [
+        "Spa ou bain nordique",
+        "Vue dégagée"
+      ],
+      "vibe": "Cabane insolite à Taller",
+      "rating": 4.9,
+      "reviews": 134,
+      "source": "Google Places",
+      "description": "Cette cabane insolite offre un cadre reposant en pleine nature, équipée d'un spa privatif et de la climatisation pour un confort optimal. L'hébergement se distingue par sa décoration chaleureuse, son excellent confort et l'accueil bienveillant des propriétaires qui proposent des repas du soir avec produits locaux.",
+      "url": "http://cabanespa40.com/",
+      "recentReviews": [
+        {
+          "author": "Yohan Potel",
+          "rating": 5,
+          "when": "il y a 4 semaines",
+          "text": "Très bel endroit , superbe accueil, repas du soir très généreux et bon produits locaux, tout était propre à notre arrivée. Lit confortable. La clim est un grand plus pour ce genre de logement insolite. Et le Spa un régal! Peut être penser à proposer des bouteilles d'eau fraiche et autres boissons, à dispo dans le frigo"
+        },
+        {
+          "author": "johanna Macé-Boisard",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Nous avons passé une excellente soirée détente dans la cabane « Hansel » avec spa privé. Le cadre est vraiment reposant, parfait pour se déconnecter du quotidien. La cabane est propre, confortable et très bien aménagée. Le spa privé est un vrai plus pour profiter d’un moment de relaxation en toute tranquillité. Nous av"
+        },
+        {
+          "author": "Noémie ROBACHE",
+          "rating": 5,
+          "when": "il y a un mois",
+          "text": "​Nous avons passé un moment absolument parfait. Le logement insolite est une vraie pépite, alliant charme et confort, et il est vraiment très bien équipé (le spa est un pur bonheur !). ​Un immense merci aux propriétaires qui sont vraiment très gentils, accueillants et particulièrement compréhensifs. On se sent tout de "
+        },
+        {
+          "author": "Ludovic marrocq",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Séjour très agréable, même si la température extérieure était un peu fraîche. La décoration de la cabane est trés jolie chaleureuse et parfaitement dans le thème. La température du spa était idéale, avec une vue sur la forêt calme et apaisante. Le repas du soir et l’apéritif étaient délicieux. Petit-déjeuner excellent "
+        }
+      ]
+    },
+    {
+      "name": "Cabanes Fuscia Pays Basque",
+      "area": "Tarnos",
+      "dept": "40",
+      "distanceKm": 72,
+      "features": [
+        "Cabane perchée",
+        "Spa ou bain nordique"
+      ],
+      "vibe": "Cabane insolite à Tarnos",
+      "rating": 4.9,
+      "reviews": 133,
+      "source": "Google Places",
+      "description": "Cette cabane insolite en pleine nature offre un cadre apaisant idéal pour la détente, agrémenté d'équipements comme un jacuzzi et de petites attentions telles que le petit-déjeuner fait maison. L'accueil personnalisé des propriétaires et l'atmosphère cocooning du lieu créent un environnement romantique propice à la déconnexion loin des tracas quotidiens.",
+      "url": "https://www.cabane-pays-basque.com/",
+      "recentReviews": [
+        {
+          "author": "Virginie GARRONE",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Super accueil, super endroit, le dépaysement total. Tout a été pensé pour une parenthèse détente. De multiples petites attentions un délicieux yaourt et un non moins délicieux pain perdu. Merci à Sandrine et Philippe de prendre si bien soin de nous. Je recommande à tous ceux qui veulent une bulle de relaxation et de bi"
+        },
+        {
+          "author": "Yann Caytan",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Un véritable enchantement ! La cabane fuchsia est tout simplement incroyable et hyper cocooning, le tout dans un cadre romantique qui invite à la déconnexion totale. ​Nous avons été transportés loin des tracas quotidiens : le champagne était excellent et le massage d'une douceur absolue. Un moment hors du temps dans un"
+        },
+        {
+          "author": "Célia D",
+          "rating": 5,
+          "when": "il y a 7 mois",
+          "text": "Magnifique découverte. Nous avons été parfaitement accueillis par Philippe et Sandrine qui se sont montrés très sympathiques . La cabane est juste magnifique et le cadre si apaisant, idéale pour une réelle déconnexion . Tout est fait et décoré avec beaucoup de goût. Le jacuzzi est un gros plus du lieu , la température "
+        },
+        {
+          "author": "Alex Belougne",
+          "rating": 5,
+          "when": "il y a 3 mois",
+          "text": "Nous avons passés une soirée exceptionnelle dans la cabane fuscia. Une arrivée sous la pluie parfaite pour passer un moment encore plus agréable dans le jacuzzi. Un réveil superbe par le levé du soleil et le chant des oiseaux. Merci encore aux propriétaires pour leurs gentillesse et bienveillance. Nous vous recommander"
+        },
+        {
+          "author": "Nathalie Da Costa",
+          "rating": 5,
+          "when": "il y a 2 mois",
+          "text": "Trop bien!!nous venons de quitter notre cabane fuschia qui n’ est pourtant qu’à 25 km de notre propre domicile ,mais quel dépaysement !!accueil topissime valorisé par un panier apéritif !!! Super petit séjour qui se termine par un petit dej personnalisé au goût de chacun !!vraiment du 4 ⭐️⭐️⭐️⭐️…merci à Sandrine et à P"
+        }
+      ]
+    }
   ]
 };

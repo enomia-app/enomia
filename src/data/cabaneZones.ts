@@ -97,10 +97,33 @@ export const cabaneZonesMeta = [
     "type": "region",
     "searchVolume": 1840,
     "radiusKm": 90,
-    "status": "todo",
+    "status": "done",
     "geocodeQuery": "Provence France",
     "lat": 44.01449,
     "lng": 6.21164,
     "found": 35
+  },
+  {
+    "slug": "alsace",
+    "displayName": "Alsace",
+    "type": "region",
+    "searchVolume": 1530,
+    "radiusKm": 100,
+    "status": "todo",
+    "lat": 48.31818,
+    "lng": 7.44162,
+    "found": 31
+  },
+  {
+    "slug": "landes",
+    "displayName": "Landes",
+    "type": "departement",
+    "searchVolume": 1500,
+    "radiusKm": 75,
+    "status": "todo",
+    "geocodeQuery": "Landes France département",
+    "lat": 43.9412,
+    "lng": -0.75328,
+    "found": 32
   }
 ];

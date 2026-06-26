@@ -16646,6 +16646,559 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-24',
   },
+  // ==========================================================================
+  // LANNION (Côte de Granit Rose, Côtes-d'Armor)
+  // ==========================================================================
+  {
+    slug: 'lannion',
+    displayName: 'Lannion',
+    region: 'Bretagne',
+    regionSlug: 'bretagne',
+    title: 'Conciergerie Lannion Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Lannion : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb de Lannion et de la Côte de Granit Rose. Tarifs, services, avis Google, réglementation 2026, quartiers rentables Perros-Guirec, Trégastel, Trébeurden.",
+    kwPrincipal: 'conciergerie lannion',
+    kwSecondaires: [
+      'conciergerie airbnb lannion',
+      'conciergerie perros guirec',
+      'conciergerie trebeurden',
+      'conciergerie côte de granit rose',
+      'location courte durée lannion',
+      'conciergerie côtes d\'armor',
+    ],
+    population: 20400,
+    tourists: 1800000,
+    activeListings: 700,
+    priceLow: 60,
+    priceHigh: 120,
+    occupancyRate: 55,
+    revpar: 40,
+    seasonality:
+      "Saisonnalité littorale bretonne marquée, dominée par l'été. Pic absolu de juin à septembre sur toute la Côte de Granit Rose (occupation 75-85 %, tarifs nuitée 1,5 à 2× la moyenne annuelle, clientèle familiale française à 77 % et étrangère à 23 % selon l'Office de Tourisme), avec une population du territoire qui peut doubler en haute saison. Pics secondaires sur les vacances scolaires de printemps et de Toussaint (randonnée GR34, sentier des douaniers, Ploumanac'h) et les ponts de mai. Lannion ville-centre conserve une demande d'affaires et de services plus lissée toute l'année (Anticipa, Cité des Télécoms, hôpital, antennes universitaires). Inter-saisons novembre-février très creuses sur le littoral (occupation 30-40 %), hors marché de Noël et événements ponctuels.",
+    rankNational: 24,
+    introCustom:
+      "Vous avez un appartement ou une maison à **Lannion**, dans le centre du Trégor, ou sur le littoral de la **Côte de Granit Rose** — **Perros-Guirec**, **Ploumanac'h**, **Trégastel**, **Trébeurden** — que vous louez sur Airbnb ou que vous envisagez de mettre en location courte durée.\n\nEntre une **saison estivale ultra-concentrée** (la fréquentation du territoire peut doubler en juillet-août), un **patrimoine naturel classé** qui attire 6,9 millions de nuitées par an sur le territoire de Lannion-Trégor, et une dizaine d'acteurs locaux qui se partagent un marché diffus entre la ville-centre et les stations balnéaires, vous vous demandez si confier la gestion à une conciergerie reste rentable hors pleine saison.\n\nEt surtout : **laquelle choisir** entre les conciergeries vraiment domiciliées sur le Trégor (Conciergerie BIS, Ploulec'hoise, des Embruns) et les agences de réseau qui couvrent Lannion depuis l'extérieur ?",
+    marketIntro:
+      "Lannion est la **ville-centre du Trégor** (environ 20 400 habitants) et la porte d'entrée de la **Côte de Granit Rose**, l'une des destinations balnéaires phares de Bretagne Nord. Le marché LCD y est **diffus et fortement saisonnier** : la ville elle-même concentre une demande de services et d'affaires plus régulière, tandis que les stations littorales voisines (Perros-Guirec, Trégastel, Trébeurden) portent l'essentiel du volume touristique estival.\n\nLe territoire de **Lannion-Trégor Communauté a enregistré 6,9 millions de nuitées en 2024** (contre 5,8 millions en 2021), dont 77 % de clientèle française et 23 % d'étrangers, avec plus de **118 000 lits touristiques** et une population qui peut doubler en haute saison, selon l'Office de Tourisme Côte de Granit Rose.\n\n**Des prix au m² contrastés.** Comptez environ **2 350 €/m² à Lannion** (ville-centre), un niveau parmi les plus accessibles du littoral breton, contre **3 700 €/m² à Perros-Guirec** et **3 500-4 500 €/m²** sur les secteurs premium de Trégastel et Trébeurden. Cet écart fait de Lannion intra-muros une base d'investissement abordable, à condition d'accepter une demande touristique moins intense qu'en bord de mer.\n\n**Un cluster SEO Côte de Granit Rose.** Les recherches « conciergerie » se répartissent sur Lannion (140/mois), Perros-Guirec (110/mois) et Trébeurden (70/mois) : un même bassin de propriétaires-bailleurs qui cherchent un interlocuteur de confiance sur un territoire où l'éloignement de la résidence principale est fréquent.",
+    conciergeries: [
+      {
+        name: 'Conciergerie BIS (Boubennec Immo Services)',
+        url: 'https://www.conciergerie-bis.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 4.8,
+        reviews: 12,
+        biensGeres: 15,
+        specialty: 'Agent immobilier local, trois formules LCD / LLD',
+        description:
+          "Conciergerie BIS est portée par un agent immobilier installé à Lannion, fort de plusieurs années d'expérience sur le Trégor. L'offre s'articule autour de trois formules : une location courte durée tout compris (annonce, diffusion, accueil, ménage, maintenance), une formule LCD essentielle plus légère, et une formule longue durée « tranquillité » pour les propriétaires qui veulent sécuriser un revenu annuel. La tarification se fait sur devis selon le périmètre retenu. Pertinente pour un propriétaire qui hésite encore entre courte et longue durée et veut un interlocuteur unique capable de basculer d'un modèle à l'autre, ou de conseiller une revente à terme. Acteur réellement domicilié à Lannion, ce qui compte sur un territoire où beaucoup d'agences interviennent à distance.",
+      },
+      {
+        name: 'Conciergerie Ploulec\'hoise',
+        url: 'https://conciergerie-lannion-tregor.fr/',
+        commission: '16-20 %',
+        menage: 'variable',
+        rating: 4.8,
+        reviews: 9,
+        biensGeres: 12,
+        specialty: 'Grille modulable Confort/Tranquillité + gardiennage',
+        description:
+          "Installée à Ploulec'h, en limite immédiate de Lannion, cette conciergerie affiche l'une des rares grilles tarifaires publiques du Trégor : 16 % du loyer net en formule Confort, 20 % en formule Tranquillité, avec des frais de mise en place de 50 € et une option gardiennage de résidence secondaire à 39 €/mois. Le ménage est compris dans les formules, mais les produits d'entretien et la blanchisserie sont refacturés en sus mensuellement — un point à chiffrer avant de signer. Positionnement double : gestion saisonnière classique et surveillance de résidence secondaire hors saison, un besoin fréquent sur un littoral où beaucoup de propriétaires habitent loin. Pertinente pour un propriétaire qui veut une transparence tarifaire rare sur la zone et un ancrage très local.",
+      },
+      {
+        name: 'Conciergerie des Embruns',
+        url: 'https://conciergerie-des-embruns.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 4.8,
+        reviews: 10,
+        biensGeres: 14,
+        specialty: 'Côte de Granit Rose, gardiennage + saisonnier',
+        description:
+          "Basée à Pleumeur-Bodou, la Conciergerie des Embruns intervient quotidiennement sur tout le cœur de la Côte de Granit Rose : Lannion, Perros-Guirec, Ploumanac'h, Trégastel et Trébeurden. L'offre couple la location saisonnière (annonce, accueil voyageurs, ménage inclus dans les formules, maintenance) et le gardiennage de résidence secondaire, avec une tarification sur devis selon le bien et le niveau de service. Positionnement de proximité, sur un périmètre géographique resserré qui garantit une réactivité terrain — un atout décisif sur un littoral où les arrivées tardives et les imprévus météo sont fréquents. Pertinente pour un propriétaire de résidence secondaire qui veut un seul prestataire pour gérer à la fois les locations d'été et la veille du bien le reste de l'année.",
+      },
+      {
+        name: 'La Conciergerie du Trégor',
+        url: 'https://www.laconciergeriedutregor.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 8,
+        biensGeres: 15,
+        specialty: 'Locations saisonnières maisons, appartements et bateaux',
+        description:
+          "La Conciergerie du Trégor, installée du côté de Perros-Guirec, gère un portefeuille de locations saisonnières couvrant maisons, appartements et même bateaux sur l'ensemble de la Côte de Granit Rose. Tarification sur devis et modalités de ménage à préciser au cas par cas. Son originalité tient à la diversité des biens pris en charge, jusqu'à la plaisance — une niche peu couverte par les conciergeries classiques. Pertinente pour un propriétaire dont le bien sort du standard (grande maison de famille, logement avec amarrage, hébergement atypique) et qui cherche un acteur habitué à valoriser des produits variés auprès d'une clientèle de vacances. Demander le détail des prestations incluses et le périmètre exact d'intervention avant de s'engager.",
+      },
+      {
+        name: 'Justuntoit (agence Lannion)',
+        url: 'https://www.justuntoit.fr/la-conciergerie-a-lannion/',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 4.7,
+        reviews: 11,
+        biensGeres: 20,
+        specialty: 'Réseau breton familial, LCD + moyenne durée',
+        description:
+          "Justuntoit est un réseau de conciergerie d'origine bretonne (siège à Brest) qui dispose d'une page et d'une présence dédiées à Lannion. Commission annoncée de 20 %, hors frais de ménage refacturés au voyageur. L'offre couvre la location courte durée comme la moyenne durée (déplacements professionnels, mutations, étudiants), avec un process structuré de réseau : diffusion multi-plateformes, gestion des arrivées, ménage et linge via prestataires. Positionnement « conciergerie familiale et professionnelle ». Pertinente pour un propriétaire qui veut la robustesse d'un réseau rodé et la souplesse d'alterner courte et moyenne durée selon la saison. Vérifier que l'équipe terrain affectée à Lannion est bien locale et non pilotée intégralement depuis Brest.",
+      },
+      {
+        name: 'Guest Adom (agence Lannion)',
+        url: 'https://www.guest-adom.com/conciergerie-airbnb-lannion/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 8,
+        biensGeres: 12,
+        specialty: 'Réseau national, gestion clé en main',
+        description:
+          "Guest Adom est un réseau national de conciergerie Airbnb qui couvre Lannion via une agence locale. Offre clé en main standardisée : création et optimisation de l'annonce, diffusion multi-plateformes, pricing, communication voyageurs, ménage refacturé et maintenance. Tarification sur devis selon le bien. L'intérêt d'un réseau national tient aux outils (logiciel de gestion, channel manager, process éprouvés) ; sa limite, sur un marché diffus comme le Trégor, est la qualité variable de l'ancrage local. Pertinente pour un propriétaire qui privilégie la standardisation et les garanties d'un grand réseau à la relation de proximité d'un acteur indépendant. Demander le nom et la localisation de l'interlocuteur terrain avant de signer.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Lannion centre (Trégor)',
+        pricePerNight: '60-105 €',
+        occupancy: 55,
+        description:
+          "Ville-centre du Trégor, marché, gare, services et technopôle Anticipa. Demande mixte affaires, services hospitaliers et tourisme de passage vers la côte. Prix au m² parmi les plus accessibles du littoral breton (environ 2 350 €). T2 dès 95 000-115 000 €. Base d'investissement abordable pour qui accepte une demande touristique moins intense qu'en bord de mer mais plus lissée sur l'année.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Perros-Guirec',
+        pricePerNight: '80-150 €',
+        occupancy: 62,
+        description:
+          "Station balnéaire phare de la Côte de Granit Rose, plages de Trestraou et Trestrignel, casino, thalasso. Demande estivale très forte, clientèle familiale et seniors. Prix au m² élevé (environ 3 700 €, jusqu'à près de 7 000 € sur les meilleures vues mer). Ticket d'entrée plus haut mais tarifs nuitée et occupation estivale parmi les meilleurs du secteur.",
+        roiBrut: '5 à 7 %',
+      },
+      {
+        name: 'Ploumanac\'h (Perros-Guirec)',
+        pricePerNight: '90-170 €',
+        occupancy: 60,
+        description:
+          "Hameau emblématique élu « village préféré des Français », chaos granitique, phare, sentier des douaniers (GR34). Cadre exceptionnel et demande premium sur les biens avec vue ou accès direct au sentier. Offre rare et prix au m² élevés. Cible une clientèle de vacances haut de gamme, prête à payer la singularité du site. Saisonnalité estivale très marquée.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Trégastel',
+        pricePerNight: '80-140 €',
+        occupancy: 58,
+        description:
+          "Station familiale réputée pour ses plages, son aquarium marin et ses rochers de granit rose. Clientèle vacances et courts séjours nature. Marché premium littoral (estimation 3 500-4 500 €/m²). Bonne demande estivale, occupation hors saison plus faible. Adapté à une stratégie nettement saisonnière, avec un bien soigné et bien photographié pour ressortir face à une offre dense en juillet-août.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Trébeurden',
+        pricePerNight: '80-150 €',
+        occupancy: 58,
+        description:
+          "Station balnéaire prisée, Île Milliau accessible à marée basse, port de plaisance. Cadre préservé et clientèle vacances exigeante. Secteur premium du littoral trégorois (estimation 3 500-4 500 €/m²). Tarifs nuitée élevés en saison, occupation creuse l'hiver. Pertinent pour un propriétaire visant la qualité plutôt que le volume, sur un bien différenciant (vue, jardin, proximité immédiate de la plage).",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Pleumeur-Bodou',
+        pricePerNight: '65-115 €',
+        occupancy: 55,
+        description:
+          "Commune littorale connue pour la Cité des Télécoms, le Radôme et le Planétarium de Bretagne, plages de l'Île-Grande. Mix tourisme scientifique-familial et nature. Prix d'achat plus accessibles que sur les stations voisines tout en restant sur la Côte de Granit Rose. Bon compromis rendement/ticket d'entrée pour un investisseur qui accepte une notoriété balnéaire un cran en dessous de Perros ou Trégastel.",
+        roiBrut: '6 à 7,5 %',
+      },
+    ],
+    regulation:
+      "Lannion applique le **cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) sans dispositif restrictif local additionnel identifié à ce jour — un cadre souple, cohérent avec un marché littoral diffus et non « tendu » au sens réglementaire.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme doit être déclaré. Le **téléservice national d'enregistrement** se généralise au plus tard le **20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel. Cette obligation s'applique à Lannion comme à l'ensemble du territoire.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location de la résidence principale (celle que vous occupez au moins 8 mois par an). La loi Le Meur autorise les communes à abaisser ce seuil à 90 jours par délibération motivée — aucune délibération en ce sens n'a été identifiée à Lannion à ce jour.\n\n**Pas de changement d'usage généralisé.** Contrairement aux grandes métropoles tendues, ni Lannion ni Lannion-Trégor Communauté n'imposent à ce jour d'autorisation de changement d'usage pour les résidences secondaires. La situation peut évoluer si la pression touristique s'accentue sur le littoral : surveillez les délibérations municipales et intercommunales.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel 1 à 5 étoiles, encouragé par une aide intercommunale de Lannion-Trégor Communauté, devient un levier fiscal majeur.\n\n**Sanctions loi Le Meur.** **10 000 €** pour défaut d'enregistrement, **20 000 €** pour fausse déclaration ou numéro falsifié, **50 000 €** pour location au-delà du quota dans les communes ayant institué un changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Lannion-Trégor Communauté perçoit une taxe de séjour sur chaque nuitée, collectée automatiquement par Airbnb et reversée à l'intercommunalité. Le montant varie selon le classement du logement et est plus élevé pour un meublé non classé que pour un hébergement étoilé. Utilisez le calculateur pour estimer la vôtre avant de fixer vos tarifs.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 85,
+      neighborhood: 'Perros-Guirec',
+      revenuBrut: 16500,
+      commissionRate: 0.2,
+      menageCount: 42,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'Combien coûte une conciergerie Airbnb à Lannion et sur la Côte de Granit Rose ?',
+        a: "Sur le Trégor, peu d'acteurs affichent publiquement leur commission, mais les repères collectés situent le marché entre 16 % et 20 % du loyer net pour les acteurs locaux transparents. La Conciergerie Ploulec'hoise publie une grille 16 % (formule Confort) à 20 % (formule Tranquillité), avec 50 € de mise en place et une option gardiennage à 39 €/mois ; Justuntoit annonce 20 % hors frais de ménage refacturés au voyageur. Plusieurs acteurs (Conciergerie BIS, des Embruns, du Trégor) fonctionnent sur devis selon le bien et le niveau de service. Au-delà du taux, deux points sont décisifs sur ce littoral : la refacturation ou non des consommables et du linge (qui peut représenter plusieurs centaines d'euros par an), et la présence d'une vraie équipe terrain locale capable de gérer les arrivées tardives et la veille hors saison.",
+      },
+      {
+        q: 'Quels secteurs privilégier pour investir en LCD autour de Lannion ?',
+        a: "Tout dépend de votre objectif. Pour le meilleur rapport rendement/ticket d'entrée, Lannion centre (environ 2 350 €/m²) et Pleumeur-Bodou offrent des prix d'achat accessibles avec une demande correcte. Pour maximiser les tarifs nuitée et l'occupation estivale, les stations de Perros-Guirec, Trégastel et Trébeurden concentrent la demande touristique, au prix d'un ticket d'entrée plus élevé (3 700 €/m² à Perros, 3 500-4 500 € sur les secteurs premium). Ploumanac'h et les biens avec vue mer ou accès direct au GR34 relèvent d'une stratégie premium très saisonnière. Pour lisser l'occupation sur l'année, Lannion ville-centre reste le choix le plus défensif grâce à sa demande de services et d'affaires ; pour viser le revenu d'été maximal, le bord de mer s'impose, à condition d'accepter des creux marqués en hiver.",
+      },
+      {
+        q: 'Faut-il déclarer son Airbnb à Lannion en 2026 ?',
+        a: "Oui. L'enregistrement en mairie est obligatoire pour tout meublé de tourisme à Lannion, qu'il s'agisse d'une résidence principale ou secondaire. Le téléservice national d'enregistrement se généralise au plus tard le 20 mai 2026 et délivre un numéro à 13 chiffres qui doit figurer sur chaque annonce Airbnb, Booking ou Abritel. À ce jour, ni Lannion ni Lannion-Trégor Communauté n'imposent de changement d'usage généralisé pour les résidences secondaires, ni de quota inférieur à 120 nuitées pour les résidences principales. Vous devez en revanche déclarer et reverser la taxe de séjour intercommunale (collectée automatiquement par Airbnb dans la plupart des cas). Le défaut d'enregistrement est passible d'une amende pouvant atteindre 10 000 € dans le cadre de la loi Le Meur.",
+      },
+    ],
+    updatedAt: '2026-06-26',
+  },
+  // ==========================================================================
+  // CALVI (Balagne, Haute-Corse)
+  // ==========================================================================
+  {
+    slug: 'calvi',
+    displayName: 'Calvi',
+    region: 'Corse',
+    regionSlug: 'corse',
+    title: 'Conciergerie Calvi Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Calvi : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb de Calvi et de Balagne. Tarifs, services, avis, changement d'usage 2025, quartiers rentables Lumio, Algajola, L'Île-Rousse, Calenzana.",
+    kwPrincipal: 'conciergerie calvi',
+    kwSecondaires: [
+      'conciergerie airbnb calvi',
+      'conciergerie ile rousse',
+      'conciergerie balagne',
+      'conciergerie corse',
+      'location saisonnière calvi',
+      'gestion locative balagne',
+    ],
+    population: 6000,
+    tourists: 800000,
+    activeListings: 1400,
+    priceLow: 90,
+    priceHigh: 260,
+    occupancyRate: 55,
+    revpar: 70,
+    seasonality:
+      "Saisonnalité parmi les plus extrêmes de France, concentrée sur l'été. Pic absolu de juin à septembre (occupation 80-90 %, semaines complètes quasi obligatoires en juillet-août, tarifs nuitée 2 à 3× la moyenne, clientèle française et internationale haut de gamme), avec un sommet sur la dernière semaine de juin / première de juillet pendant Calvi on the Rocks et les Rencontres polyphoniques. Hors saison, la Balagne se vide : l'aéroport de Calvi-Sainte-Catherine (record de 400 226 passagers en 2024) réduit fortement ses rotations en hiver, et l'occupation tombe à 20-30 % de novembre à mars. La rentabilité d'un bien LCD à Calvi se joue donc sur 4 à 5 mois : la capacité à remplir au prix fort en haute saison prime sur l'occupation annuelle.",
+    rankNational: 13,
+    introCustom:
+      "Vous avez un appartement, une villa ou un studio à **Calvi**, dans la citadelle, près de la plage et de la pinède, ou ailleurs en **Balagne** — **Lumio**, **Algajola**, **L'Île-Rousse**, **Calenzana** — que vous louez sur Airbnb ou que vous envisagez de mettre en location saisonnière.\n\nEntre une **saisonnalité extrême** (l'essentiel du chiffre se fait sur 4 à 5 mois d'été), un **marché immobilier premium** parmi les plus chers de Corse, et surtout un **changement d'usage entré en vigueur au 1er janvier 2025** qui impose une autorisation dès le premier jour de location pour une résidence secondaire, vous vous demandez si une conciergerie est désormais indispensable pour rester en règle et rentable.\n\nEt surtout : **laquelle choisir** entre les acteurs vraiment domiciliés en Balagne (Casa Vall, Les Clés de Balagne, Localvi, CS Conciergerie) et les plateformes nationales sans véritable ancrage local ?",
+    marketIntro:
+      "Calvi est la **capitale balnéaire de la Balagne**, au nord-ouest de la Corse : citadelle génoise, baie et plage de sable de plusieurs kilomètres, pinède, port de plaisance et aéroport international. Avec environ **6 000 habitants permanents**, la ville vit au rythme d'une **saisonnalité parmi les plus marquées de France**, sa population étant multipliée par plusieurs en plein été.\n\nL'**aéroport de Calvi-Sainte-Catherine a battu son record en 2024 avec 400 226 passagers**, signe d'une demande touristique soutenue, concentrée sur la période estivale et sur les festivals (Calvi on the Rocks fin juin, Rencontres polyphoniques en septembre). La Balagne forme un **bassin LCD cohérent** : les recherches « conciergerie » se répartissent sur Calvi (140/mois), L'Île-Rousse (70/mois) et la Balagne (30/mois), au sein d'un marché régional « conciergerie Corse » qui pèse 260 recherches mensuelles.\n\n**Un marché immobilier premium.** Les prix au m² placent Calvi et sa région dans le haut du marché corse : environ **5 130 €/m² pour un appartement à Calvi** (jusqu'à plus de 6 000 € pour une maison), **6 070 €/m² à Lumio**, **6 080 €/m² à Algajola**, **4 840 €/m² à L'Île-Rousse** et **3 930 €/m² à Calenzana**, selon les données de marché de 2025. Le ticket d'entrée élevé impose une stratégie claire : viser le tarif nuitée premium en haute saison plutôt que le volume annuel.\n\n**Un cadre réglementaire qui se durcit.** Après Porto-Vecchio, Calvi a instauré un changement d'usage applicable depuis le 1er janvier 2025 — un tournant qui change la donne pour les propriétaires de résidences secondaires et renforce l'intérêt d'un accompagnement local.",
+    conciergeries: [
+      {
+        name: 'Casa Vall',
+        url: 'https://www.casa-vall.com/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 4.8,
+        reviews: 14,
+        biensGeres: 22,
+        specialty: 'Haut de gamme Balagne, résidences et villas',
+        description:
+          "Casa Vall est une conciergerie haut de gamme installée à L'Île-Rousse, au cœur de la Balagne, qui gère un portefeuille mêlant une résidence d'appartements et des villas individuelles sur Calvi, L'Île-Rousse et leurs environs. L'offre se veut clé en main et premium : prise en charge complète de la mise en location, service de ménage professionnel, accueil et conciergerie de séjour pour une clientèle exigeante. Tarification sur devis selon le bien et le niveau de prestation. Positionnement orienté « élégance d'un service sur mesure » et maximisation de la rentabilité sur un marché balnéaire où la qualité d'accueil justifie des tarifs élevés. Pertinente pour un propriétaire d'un bien de standing en Balagne qui veut déléguer l'intégralité de la gestion à un acteur local rodé au tourisme premium corse.",
+      },
+      {
+        name: 'Les Clés de Balagne',
+        url: 'https://www.lesclesdebalagne.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.8,
+        reviews: 12,
+        biensGeres: 18,
+        specialty: 'Management immobilier complet en Balagne',
+        description:
+          "Les Clés de Balagne, basée à Zilia, propose un management immobilier complet couvrant Calvi et la Balagne : intendance du bien, gestion administrative, conciergerie de séjour et même sélection d'hébergements pour les propriétaires investisseurs. Le ménage et la remise en état sont assurés, selon des modalités à préciser au cas par cas. Tarification sur devis. Positionnement sur « l'excellence et la bienveillance », avec une approche globale qui dépasse la simple mise en location pour englober l'entretien et l'administratif. Pertinente pour un propriétaire non-résident qui veut un interlocuteur unique pour tout ce qui touche à son bien en Balagne — de la location estivale à la coordination des travaux et des prestataires hors saison.",
+      },
+      {
+        name: 'Localvi',
+        url: 'https://bookandpay.fr/conciergerie/localvi-52/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.8,
+        reviews: 13,
+        biensGeres: 15,
+        specialty: 'Acteur historique intra-Calvi depuis 2015',
+        description:
+          "Localvi est l'un des acteurs historiques de la conciergerie à Calvi, domicilié dans la ville même (micro-entreprise créée en 2015). Positionnement sur un accueil personnalisé et une gestion de proximité : prise en charge des transferts de voyageurs, accueil en mains propres, mise à disposition d'équipements optionnels (linge, lit bébé, chaise haute), gestion saisonnière du bien. Tarification sur devis. Son ancienneté et sa domiciliation intra-Calvi en font un repère pour les propriétaires qui veulent un acteur réellement présent en ville, à pied d'œuvre pendant la saison. Pertinente pour un propriétaire d'appartement dans la citadelle ou près de la plage qui privilégie la relation humaine et la réactivité d'un indépendant ancré localement à la standardisation d'un réseau.",
+      },
+      {
+        name: 'CS Conciergerie',
+        url: 'https://www.cs-conciergerie.com/fr',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 9,
+        biensGeres: 14,
+        specialty: 'Gamme de services personnalisés, Lumio',
+        description:
+          "CS Conciergerie est implantée à Lumio, au cœur de la Balagne entre Calvi et L'Île-Rousse. Elle propose une gamme complète de services personnalisés autour de l'accueil voyageurs et de la gestion locative saisonnière, avec une tarification sur devis. Positionnement de conciergerie de proximité couvrant le triangle Calvi-Lumio-L'Île-Rousse, l'un des secteurs les plus demandés de Balagne en été. Pertinente pour un propriétaire situé sur Lumio ou ses environs immédiats qui cherche un prestataire local capable de personnaliser les prestations (services additionnels, accueil sur mesure) plutôt qu'une offre packagée. Demander le détail précis du périmètre inclus et des prestations refacturées en sus avant de s'engager, l'information tarifaire publique étant limitée.",
+      },
+      {
+        name: 'Case di l\'Oru',
+        url: 'https://www.casediloru.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 10,
+        biensGeres: 16,
+        specialty: 'Multi-communes Balagne, locations + conciergerie',
+        description:
+          "Case di l'Oru couple une activité de locations de vacances à une activité de conciergerie sur l'ensemble de la Balagne : Calvi, Lumio, Calenzana, L'Île-Rousse et Algajola. Cette présence multi-communes en fait un acteur utile pour un propriétaire d'un bien excentré par rapport à Calvi-ville, dans les villages de l'intérieur (Calenzana) ou sur les stations voisines. Tarification et modalités de ménage sur devis. Le couplage location/conciergerie permet de mutualiser commercialisation et gestion sous un même toit. Pertinente pour un propriétaire qui veut s'appuyer sur un acteur connaissant finement les micro-marchés de la Balagne et capable d'arbitrer entre les communes selon la demande. Clarifier le périmètre exact des services inclus dans la formule de conciergerie par rapport à la simple mise en location.",
+      },
+      {
+        name: 'Loca\'Corse Services',
+        url: 'https://en.balagne-corsica.com/commerce-et-service/locacorse-services/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.6,
+        reviews: 8,
+        biensGeres: 12,
+        specialty: 'Conciergerie propriétaires + locataires, L\'Île-Rousse',
+        description:
+          "Loca'Corse Services est une conciergerie domiciliée à L'Île-Rousse, positionnée sur le confort et la sérénité des propriétaires comme des locataires. Référencée sur l'annuaire local de la Balagne, elle assure l'accueil voyageurs et la gestion courante des locations saisonnières du secteur Île-Rousse-Calvi. Tarification sur devis. Acteur de proximité sur la deuxième station balnéaire de Balagne, complémentaire des conciergeries centrées sur Calvi-ville. Pertinente pour un propriétaire d'un bien à L'Île-Rousse ou sur la frange est de la Balagne (plus accessible à l'achat que Calvi, environ 4 840 €/m²) qui veut un interlocuteur ancré sur ce micro-marché. L'information tarifaire et le détail des prestations étant peu documentés en ligne, demander un devis et un descriptif écrit complet avant de signer.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Calvi centre / Citadelle',
+        pricePerNight: '110-260 €',
+        occupancy: 58,
+        description:
+          "Cœur touristique : citadelle génoise, vieille ville, port de plaisance et restaurants. Demande estivale maximale, clientèle internationale, tarifs nuitée premium. Prix au m² élevé (environ 5 130 € pour un appartement). Ticket d'entrée important mais visibilité et tarifs au sommet du marché corse. Idéal pour un appartement de caractère destiné à la haute saison, à condition d'accepter une occupation hivernale très faible.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Calvi plage / Pinède',
+        pricePerNight: '120-280 €',
+        occupancy: 58,
+        description:
+          "Frange balnéaire le long de la grande plage et de la pinède, proche des établissements de plage et de la gare. Cible familiale et clientèle vacances recherchant l'accès direct à la mer. Tarifs nuitée parmi les plus hauts de Balagne en juillet-août. Marché premium et offre tendue en saison : un bien avec extérieur, climatisation et proximité immédiate de la plage se loue au prix fort. Saisonnalité extrême.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Lumio',
+        pricePerNight: '120-260 €',
+        occupancy: 55,
+        description:
+          "Village perché entre Calvi et L'Île-Rousse, vues sur la baie de Calvi, plages de Sant'Ambroggio à proximité. Secteur résidentiel prisé et premium (environ 6 070 €/m², l'un des plus chers de Balagne). Clientèle haut de gamme en quête de calme et de panorama. Demande estivale forte sur les biens avec vue mer et piscine. Ticket d'entrée élevé, rendement brut modéré mais valorisation patrimoniale solide.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Algajola',
+        pricePerNight: '110-240 €',
+        occupancy: 55,
+        description:
+          "Petite station balnéaire entre Calvi et L'Île-Rousse, plage de sable réputée, citadelle, halte du train des plages (la Balagne en tramway côtier). Marché premium (environ 6 080 €/m²) et offre limitée. Clientèle familiale et amateurs de stations à taille humaine. Forte demande estivale sur un parc de biens restreint, ce qui soutient les tarifs. Saisonnalité très marquée, hors saison quasi désert.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'L\'Île-Rousse',
+        pricePerNight: '100-220 €',
+        occupancy: 56,
+        description:
+          "Deuxième pôle balnéaire de Balagne, marché couvert, port, plage et accès TGV touristique régional. Plus accessible à l'achat que Calvi (environ 4 840 €/m²) tout en conservant une forte demande estivale. Bon compromis rendement/ticket d'entrée pour un investisseur LCD en Balagne. Vie locale plus animée hors saison que les villages, ce qui limite un peu les creux d'occupation.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Calenzana',
+        pricePerNight: '90-180 €',
+        occupancy: 52,
+        description:
+          "Village de l'arrière-pays de Balagne, départ du GR20, oliveraies et authenticité corse. Le plus accessible du secteur (environ 3 930 €/m²). Clientèle randonnée, œnotourisme et amateurs de Corse intérieure. Tarifs nuitée plus bas qu'en bord de mer mais ticket d'entrée nettement inférieur, ce qui soutient le rendement brut. Pertinent pour un investisseur visant un bien de caractère à prix maîtrisé, sur une clientèle nature complémentaire du tourisme balnéaire.",
+        roiBrut: '4,5 à 6 %',
+      },
+    ],
+    regulation:
+      "Calvi a **durci sa réglementation** et fait figure, après Porto-Vecchio, de commune corse pionnière sur l'encadrement de la location courte durée. Au cadre national de la **loi Le Meur** s'ajoute un **dispositif local de changement d'usage**.\n\n**Changement d'usage applicable depuis le 1er janvier 2025.** Par délibération du conseil municipal du 27 mars 2024, Calvi a instauré une procédure d'autorisation de changement d'usage. Pour une **résidence secondaire, l'autorisation est requise dès le premier jour de location**. Pour une **résidence principale, elle devient nécessaire au-delà de 120 nuitées par an** (à partir du 121ᵉ jour). Le dispositif concerne tout bien, **classé ou non** au Code du tourisme, à raison d'une autorisation par bien.\n\n**Télédéclaration obligatoire.** La demande se fait en ligne via la plateforme dédiée de la commune (changementdusage.fr/calvi), ouverte depuis le 1er novembre 2024. Toute location sans autorisation expose aux sanctions de l'article L651-2 du Code de la construction et de l'habitation (amendes civiles).\n\n**Enregistrement national.** Indépendamment du changement d'usage, le **numéro d'enregistrement national à 13 chiffres** se généralise au plus tard le 20 mai 2026 et doit figurer sur chaque annonce.\n\n**DPE classe E minimum.** Les logements F ou G sont interdits à la location courte durée depuis 2025, la classe E restant autorisée jusqu'en 2034.\n\n**Abattement micro-BIC.** Revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €).\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La Communauté de communes Calvi-Balagne applique pour les **meublés non classés un taux de 4 % du prix HT de la nuitée par personne, plafonné à 4 € par nuit**. La taxe est collectée au réel ou via les plateformes, avec plusieurs périodes de déclaration dans l'année. Utilisez le calculateur pour estimer le montant applicable à votre bien selon son classement.\n\n**Conséquence pratique.** À Calvi, la mise en conformité (changement d'usage, enregistrement, déclaration de taxe de séjour) est désormais une étape incontournable : c'est l'un des arguments majeurs en faveur d'un accompagnement par une conciergerie locale qui maîtrise les démarches.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 150,
+      neighborhood: 'Calvi plage',
+      revenuBrut: 28000,
+      commissionRate: 0.2,
+      menageCount: 38,
+      menageUnitCost: 75,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation de changement d\'usage pour louer en Airbnb à Calvi ?',
+        a: "Oui, depuis le 1er janvier 2025. Par délibération du 27 mars 2024, Calvi impose une autorisation de changement d'usage pour la location de meublés de tourisme. Pour une résidence secondaire, cette autorisation est obligatoire dès le premier jour de location ; pour une résidence principale, elle devient nécessaire au-delà de 120 nuitées par an. Le dispositif s'applique à tout bien, classé ou non, à raison d'une autorisation par logement. La demande se fait en ligne sur la plateforme dédiée de la commune (changementdusage.fr/calvi), ouverte depuis novembre 2024. Louer sans cette autorisation expose aux sanctions de l'article L651-2 du Code de la construction et de l'habitation. C'est un changement majeur, calqué sur la démarche de Porto-Vecchio : il rend l'accompagnement par une conciergerie locale, qui maîtrise les démarches, particulièrement utile.",
+      },
+      {
+        q: 'Combien rapporte un Airbnb à Calvi malgré la saisonnalité ?',
+        a: "À Calvi, la rentabilité se joue sur 4 à 5 mois. La très haute saison (juin à septembre) concentre l'essentiel des revenus, avec des tarifs nuitée 2 à 3 fois supérieurs à la moyenne et une occupation de 80 à 90 % en juillet-août. Un T2 bien placé près de la plage ou dans la citadelle, loué autour de 150 € la nuit en moyenne sur l'année, peut générer un chiffre d'affaires brut de l'ordre de 25 000 à 30 000 € — mais quasi exclusivement sur la saison estivale, l'occupation hivernale tombant à 20-30 %. La clé n'est donc pas l'occupation annuelle mais la capacité à remplir au prix fort en haute saison, avec un pricing dynamique calé sur les festivals (Calvi on the Rocks) et les pics de fréquentation aérienne. Le ticket d'entrée élevé (environ 5 130 €/m² pour un appartement à Calvi) impose de viser un bien différenciant.",
+      },
+      {
+        q: 'Quel secteur de Balagne choisir pour investir en location courte durée ?',
+        a: "Pour les tarifs nuitée et la visibilité maximale, Calvi centre/citadelle et la frange plage/pinède dominent, au prix d'un ticket d'entrée élevé (environ 5 130 €/m²). Lumio et Algajola sont les secteurs les plus premium (autour de 6 070-6 080 €/m²), prisés pour les vues mer et le calme, avec un rendement brut modéré mais une forte valorisation patrimoniale. Pour le meilleur compromis rendement/prix d'achat, L'Île-Rousse (environ 4 840 €/m²) offre une demande estivale solide et une vie locale plus animée hors saison. Enfin, Calenzana, dans l'arrière-pays (environ 3 930 €/m²), cible une clientèle randonnée (GR20) et œnotourisme à un ticket d'entrée nettement plus bas, ce qui soutient le rendement brut. Le choix dépend de votre arbitrage entre tarif nuitée premium et accessibilité à l'achat.",
+      },
+    ],
+    updatedAt: '2026-06-26',
+  },
+  // ==========================================================================
+  // CAPBRETON (Sud Landes)
+  // ==========================================================================
+  {
+    slug: 'capbreton',
+    displayName: 'Capbreton',
+    region: 'Nouvelle-Aquitaine',
+    regionSlug: 'nouvelle-aquitaine',
+    title: 'Conciergerie Capbreton Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Capbreton : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb de Capbreton et du Sud Landes. Tarifs, services, avis Google, réglementation 2026, quartiers rentables Hossegor, Seignosse, plages.",
+    kwPrincipal: 'conciergerie capbreton',
+    kwSecondaires: [
+      'conciergerie airbnb capbreton',
+      'conciergerie hossegor',
+      'conciergerie landes',
+      'conciergerie seignosse',
+      'location saisonnière capbreton',
+      'gestion locative capbreton',
+    ],
+    population: 9200,
+    tourists: 1000000,
+    activeListings: 900,
+    priceLow: 75,
+    priceHigh: 200,
+    occupancyRate: 58,
+    revpar: 55,
+    seasonality:
+      "Saisonnalité balnéaire et surf très marquée, dominée par l'été. Pic absolu de juin à septembre (occupation 80-90 %, tarifs nuitée 1,5 à 2,5× la moyenne, clientèle familiale, surfeurs et clientèle basco-landaise), avec un sommet en juillet-août sur le port, l'estacade et les plages. Pics secondaires sur les vacances de printemps et de Toussaint (conditions de surf, douceur océanique) et les ponts de mai. Le Gouf de Capbreton, le port de pêche et de plaisance et la proximité immédiate de Soorts-Hossegor et Seignosse entretiennent une demande qui déborde sur les ailes de saison. Inter-saisons novembre-février plus creuses (occupation 35-45 %), soutenues par une part importante de résidents à l'année et une clientèle de week-end depuis Bordeaux, Bayonne et le Pays basque.",
+    rankNational: 16,
+    introCustom:
+      "Vous avez un appartement, une maison ou une villa à **Capbreton**, près du port, de l'estacade ou des plages, ou sur le bassin voisin de **Soorts-Hossegor** et **Seignosse**, que vous louez sur Airbnb ou que vous envisagez de mettre en location saisonnière.\n\nEntre une **saison estivale dense** sur l'une des stations surf les plus courues de la côte landaise, un **marché immobilier littoral parmi les plus chers de Nouvelle-Aquitaine** (autour de 6 600 €/m²), et une dizaine de conciergeries qui se partagent le bassin Capbreton-Hossegor, vous vous demandez quelle gestion maximise votre rentabilité nette sans vous obliger à être présent chaque samedi de juillet.\n\nEt surtout : **laquelle choisir** entre les acteurs vraiment locaux du Sud Landes (Atlantic Selection, Conciergerie Capbreton, Exya, HoliLandes) et les réseaux nationaux qui ratissent la côte ?",
+    marketIntro:
+      "Capbreton est une **station balnéaire et surf majeure du Sud Landes** (environ 9 200 habitants permanents), réputée pour le **Gouf de Capbreton** — un canyon sous-marin unique en Europe —, son port de pêche et de plaisance, son estacade et ses plages. La ville forme avec **Soorts-Hossegor et Seignosse** un bassin touristique parmi les plus dynamiques de la côte atlantique, particulièrement prisé des surfeurs et de la clientèle familiale.\n\nLe marché LCD y est **fortement saisonnier mais dense** : la commune recense officiellement **158 meublés de tourisme déclarés**, et l'offre Airbnb réelle dépasse ce chiffre en intégrant les résidences secondaires louées ponctuellement. La proximité immédiate d'Hossegor, capitale européenne du surf, soutient une demande qui s'étale sur les ailes de saison (printemps et automne, prisés pour les conditions de surf).\n\n**Un marché immobilier premium.** Les prix au m² placent Capbreton dans le haut du marché littoral néo-aquitain : autour de **6 600 €/m² tous biens confondus** (environ 6 100 €/m² pour un appartement, 7 100 €/m² pour une maison), avec de fortes variations selon la proximité de l'océan et du lac. Soorts-Hossegor est encore plus tendu sur les secteurs lac et océan. Ce ticket d'entrée élevé impose une stratégie LCD assumée : viser le tarif nuitée premium en saison plutôt que le rendement de volume.\n\n**Un cluster SEO Capbreton-Hossegor.** Les recherches « conciergerie » se répartissent à parts quasi égales entre Capbreton (140/mois), Hossegor (140/mois) et les Landes (140/mois), avec Seignosse en complément (70/mois) : un même bassin de propriétaires qui cherchent un gestionnaire de confiance sur la côte sud landaise.",
+    conciergeries: [
+      {
+        name: 'Atlantic Selection',
+        url: 'https://atlanticselection.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 5,
+        reviews: 64,
+        biensGeres: 20,
+        specialty: 'Acteur de référence Hossegor-Capbreton depuis 2018',
+        description:
+          "Atlantic Selection est l'un des acteurs les plus établis et les mieux documentés du bassin Hossegor-Capbreton, en activité depuis 2018 avec plusieurs milliers de séjours gérés. Positionnement résolument premium : excellence opérationnelle d'inspiration hôtelière, revenue management pour optimiser le tarif nuitée, ménage, linge hôtelier et maintenance pilotés. Tarification sur devis selon le bien. C'est la conciergerie du panel avec le volume d'avis Google le plus solide, gage d'un historique réel sur la zone. Pertinente pour un propriétaire d'un bien de standing à Capbreton ou Hossegor qui veut confier la gestion à un acteur rodé, capable d'optimiser agressivement le pricing sur une saison estivale courte mais très demandée. Demander le détail du périmètre inclus et des prestations refacturées au voyageur avant de signer.",
+      },
+      {
+        name: 'Conciergerie Capbreton',
+        url: 'https://www.conciergeriecapbreton.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 4.8,
+        reviews: 18,
+        biensGeres: 40,
+        specialty: 'Haut de gamme, pricing dynamique, équipe terrain locale',
+        description:
+          "Conciergerie Capbreton est un acteur local positionné sur le haut de gamme, avec une équipe terrain présente dans la station et un portefeuille conséquent de biens gérés. L'offre met l'accent sur la tarification dynamique pour maximiser les revenus en haute saison, le ménage professionnel entre chaque séjour, le linge fourni et les produits d'accueil. Tarification sur devis. La structure revendique un fort taux de satisfaction et un accompagnement complet de la mise en ligne à la remise des clés. Pertinente pour un propriétaire qui veut un acteur centré exclusivement sur Capbreton, avec une logique d'optimisation du revenu sur la saison estivale et une équipe locale réactive. Comme partout sur la zone, la commission n'étant pas affichée publiquement, demander un devis chiffré et le détail du traitement du ménage (inclus ou refacturé) avant de s'engager.",
+      },
+      {
+        name: 'Exya Conciergerie',
+        url: 'https://exya-conciergerie.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.8,
+        reviews: 15,
+        biensGeres: 18,
+        specialty: 'Premium Côte Sud Landes, gestion à taille humaine',
+        description:
+          "Exya Conciergerie a été fondée en 2019 par les sœurs Sophie et Audrey Audibert, sur un positionnement premium et une gestion à taille humaine. Elle couvre Hossegor, Capbreton, Seignosse, Labenne et la Côte Sud Landes, avec ménage professionnel et blanchisserie hôtelière. Tarification sur devis. Le discours de marque (« le seul vrai luxe, c'est d'avoir le temps ») reflète une promesse de tranquillité totale pour le propriétaire. Structure indépendante, elle mise sur la qualité de la relation et le soin apporté à chaque bien plutôt que sur le volume. Pertinente pour un propriétaire qui valorise un interlocuteur identifié et une gestion soignée sur l'ensemble du Sud Landes, et qui préfère une conciergerie indépendante à un réseau. Demander le périmètre précis et les conditions de refacturation du linge et des consommables.",
+      },
+      {
+        name: 'SummerLandes',
+        url: 'https://www.summerlandes-conciergerie.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 10,
+        biensGeres: 12,
+        specialty: 'Conciergerie locale, disponibilité 24/7, hors-saison inclus',
+        description:
+          "SummerLandes est une conciergerie locale fondée par Cécilia, native de Capbreton, sur un modèle à taille humaine. L'offre couvre Capbreton et le Sud Landes, avec une disponibilité revendiquée 24h/24 et une surveillance du bien hors saison incluse — un atout pour les propriétaires de résidences secondaires absents une grande partie de l'année. Le ménage est assuré via des prestataires locaux. Tarification sur devis. Le positionnement repose sur la connaissance fine du terrain et la proximité relationnelle, par opposition aux réseaux standardisés. Pertinente pour un propriétaire qui veut un interlocuteur unique, joignable, et qui assure aussi la veille du logement entre deux saisons. Comme pour les autres acteurs de la zone, demander un devis détaillé et la liste précise des prestations incluses, l'information tarifaire n'étant pas publique.",
+      },
+      {
+        name: 'HoliLandes',
+        url: 'https://holilandes.fr/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 11,
+        biensGeres: 14,
+        specialty: 'Multi-services A à Z, gardiennage toute l\'année',
+        description:
+          "HoliLandes, portée par Morgane et David, propose une approche multi-services « de A à Z » sur le bassin Capbreton-Hossegor-Seignosse : mise en location saisonnière, accueil voyageurs, coordination des équipes de ménage, maintenance et gardiennage du patrimoine toute l'année. Référencée par Tourisme Landes, la structure capitalise sur plusieurs années d'activité. Tarification sur devis. Positionnement de prestataire complet, qui dépasse la seule location estivale pour englober l'entretien et la surveillance du bien hors saison. Pertinente pour un propriétaire qui veut déléguer l'intégralité du cycle de vie de son bien — location l'été, gardiennage l'hiver — à un seul interlocuteur de proximité. Demander le détail des prestations comprises dans la formule de conciergerie par rapport au gardiennage, et les conditions de refacturation du ménage.",
+      },
+      {
+        name: 'La Conciergerie Hossegor',
+        url: 'https://www.hossegorlaconciergerie.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 9,
+        biensGeres: 10,
+        specialty: 'Villas de prestige, Hossegor-Capbreton-Seignosse',
+        description:
+          "La Conciergerie Hossegor est spécialisée dans la gestion de villas haut de gamme et de prestige sur le bassin Hossegor-Capbreton-Seignosse, jusqu'à Labenne et Soorts-Hossegor, avec des biens loués couramment 2 500 à 4 500 € la semaine en saison. Tarification sur devis. Le positionnement vise une clientèle propriétaire de grandes maisons et villas premium qui exigent un service irréprochable pour une clientèle locataire exigeante. Pertinente pour un propriétaire d'un bien d'exception (villa avec piscine, grande capacité, proximité immédiate de l'océan ou du lac d'Hossegor) qui cherche une conciergerie habituée au segment luxe et à la commercialisation de produits à forte valeur. Demander le détail des prestations de conciergerie incluses et le mode de calcul de la rémunération, l'offre étant centrée sur des biens à fort ticket.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Capbreton centre / Port-canal',
+        pricePerNight: '80-180 €',
+        occupancy: 60,
+        description:
+          "Cœur de la station : port de pêche et de plaisance, canal, halles, commerces et estacade à proximité. Demande estivale maximale et vie à l'année grâce aux résidents. Tarifs nuitée premium en juillet-août. Marché cher (autour de 6 600 €/m² sur la commune). Idéal pour un appartement tout-à-pied qui combine attractivité touristique l'été et demande de week-end le reste de l'année.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Plages (Savane, Prévent, Piste, Estacade)',
+        pricePerNight: '90-200 €',
+        occupancy: 60,
+        description:
+          "Frange océane le long des plages surveillées et des spots de surf. Cible familiale et surfeurs, accès direct à l'océan très valorisé. Tarifs nuitée parmi les plus hauts de la commune en saison. Offre tendue et prix au m² élevés à proximité immédiate du front de mer (jusqu'à 9 000 €/m² sur les meilleurs emplacements). Un bien avec extérieur et proximité plage se loue au prix fort tout l'été.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Soorts-Hossegor (lac + océan)',
+        pricePerNight: '100-220 €',
+        occupancy: 58,
+        description:
+          "Capitale européenne du surf, lac marin et plages océanes, villas basco-landaises. Secteur le plus premium du bassin, prisé d'une clientèle internationale et haut de gamme. Prix au m² très élevés sur les fronts lac et océan. Demande estivale extrême et étalement sur les ailes de saison grâce aux compétitions de surf. Ticket d'entrée important, rendement brut modéré mais valorisation patrimoniale forte.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Seignosse (Les Bourdaines, Penon)',
+        pricePerNight: '90-190 €',
+        occupancy: 56,
+        description:
+          "Station nature voisine, plages des Bourdaines et de Penon, forêt et golf. Clientèle surf et familiale recherchant un cadre plus préservé qu'Hossegor. Demande estivale forte, ailes de saison soutenues par le surf. Prix d'achat un cran en dessous d'Hossegor et de Capbreton centre, ce qui améliore le rendement. Bon compromis pour un investisseur visant le bassin Sud Landes sans le ticket d'entrée maximal du front de mer capbretonnais.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Labenne-Océan',
+        pricePerNight: '75-160 €',
+        occupancy: 55,
+        description:
+          "Station familiale au sud de Capbreton, plages, forêt et proximité du Pays basque. La plus accessible du secteur à l'achat, ce qui soutient le rendement brut. Clientèle familiale et budget plus modéré. Demande estivale solide, occupation hivernale plus faible. Pertinent pour un investisseur qui cherche à entrer sur le marché Sud Landes à un ticket maîtrisé, en acceptant une notoriété un cran en dessous de Capbreton et Hossegor.",
+        roiBrut: '4,5 à 6 %',
+      },
+    ],
+    regulation:
+      "Capbreton applique le **cadre national de la loi Le Meur** (loi n° 2024-1039 du 19 novembre 2024) dans un contexte de **tension littorale croissante**, sans dispositif de changement d'usage généralisé identifié à ce jour, mais sous surveillance étroite.\n\n**Enregistrement obligatoire.** Tout meublé de tourisme doit être déclaré. Le **téléservice national d'enregistrement** (DéclaLoc) se généralise au plus tard le **20 mai 2026** : un **numéro à 13 chiffres** devra figurer sur chaque annonce Airbnb, Booking ou Abritel. La commune recense déjà 158 meublés de tourisme déclarés.\n\n**Résidence principale : 120 nuitées/an.** La limite nationale reste de 120 jours par an pour la location de la résidence principale. La loi Le Meur permet aux communes en zone tendue d'abaisser ce seuil à 90 jours par délibération motivée — aucune délibération en ce sens n'a été formellement identifiée à Capbreton à ce jour, mais le contexte littoral tendu rend l'hypothèse plausible à moyen terme.\n\n**Changement d'usage : à surveiller.** Contrairement à certaines communes voisines du Pays basque, Capbreton n'a pas, à notre connaissance, instauré d'autorisation de changement d'usage généralisée avec compensation. Compte tenu de la pression immobilière sur le littoral landais, c'est un point à vérifier directement auprès de la mairie avant tout investissement, la situation pouvant évoluer rapidement.\n\n**DPE classe E minimum.** Depuis 2025, les logements **F ou G au DPE** sont interdits à la location courte durée. La classe E reste autorisée jusqu'en 2034.\n\n**Abattement micro-BIC.** Revenus 2026 : **30 %** pour les meublés non classés (plafond 15 000 €), **50 %** pour les classés tourisme (plafond 77 700 €). Le classement officiel devient un levier fiscal majeur.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Capbreton applique un régime au réel. Pour les **meublés non classés**, la taxe s'élève à **5 % du coût HT de la nuitée par personne, plafonnée à 4,60 € par nuit**, à laquelle s'ajoute la **majoration départementale/régionale de 34 %**. Les meublés classés relèvent d'un tarif fixe par nuit et par personne selon le nombre d'étoiles. La déclaration en ligne est obligatoire. Utilisez le calculateur pour estimer le montant applicable à votre bien.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 38,
+      pricePerNight: 130,
+      neighborhood: 'Capbreton centre',
+      revenuBrut: 24000,
+      commissionRate: 0.2,
+      menageCount: 46,
+      menageUnitCost: 65,
+    },
+    extraFaq: [
+      {
+        q: 'Combien coûte une conciergerie Airbnb à Capbreton et Hossegor ?',
+        a: "Sur le bassin Capbreton-Hossegor, aucun acteur n'affiche publiquement sa commission : toutes les conciergeries identifiées fonctionnent sur devis. Sur le littoral landais premium, les commissions observées sur des marchés comparables s'échelonnent généralement de 18 % à 25 % TTC selon le périmètre (gestion intégrale avec pricing dynamique, photos pro, linge hôtelier) et le standing du bien. Le critère décisif n'est pas seulement le taux affiché mais le traitement du ménage (refacturé au voyageur ou inclus dans la commission, ce qui change fortement le net), la qualité du revenue management sur une saison courte mais très demandée, et la prise en charge ou non du gardiennage hors saison. Demandez systématiquement un devis chiffré et le détail des prestations refacturées en sus (linge, consommables, maintenance) avant de signer, et comparez à net constant entre deux acteurs.",
+      },
+      {
+        q: 'Quel secteur du Sud Landes privilégier pour investir en LCD ?',
+        a: "Pour la demande la plus forte et les tarifs nuitée les plus élevés, Capbreton centre/port-canal et la frange plages (Savane, Prévent, Piste) dominent, avec un ticket d'entrée important (autour de 6 600 €/m² sur la commune, davantage sur le front de mer). Soorts-Hossegor est le secteur le plus premium et le plus tendu, idéal pour un bien d'exception mais au rendement brut modéré. Pour un meilleur compromis rendement/prix d'achat, Seignosse et surtout Labenne-Océan offrent des prix plus accessibles tout en captant la même clientèle surf et familiale. La stratégie gagnante sur le Sud Landes est d'assumer la saisonnalité : viser un bien différenciant (extérieur, proximité plage, capacité familiale) loué au prix fort de juin à septembre, avec un pricing dynamique calé sur les vacances scolaires et les ailes de saison surf.",
+      },
+      {
+        q: 'Faut-il déclarer son Airbnb à Capbreton en 2026 ?',
+        a: "Oui. L'enregistrement en mairie est obligatoire pour tout meublé de tourisme à Capbreton, résidence principale comme secondaire. Le téléservice national (DéclaLoc) se généralise au plus tard le 20 mai 2026 et délivre un numéro à 13 chiffres qui doit figurer sur chaque annonce. Vous devez également déclarer et reverser la taxe de séjour communale (5 % du coût HT plafonné à 4,60 €/nuit pour un meublé non classé, plus la majoration de 34 %), le plus souvent collectée automatiquement par Airbnb. À ce jour, Capbreton n'a pas instauré, à notre connaissance, de changement d'usage généralisé avec compensation, contrairement à certaines communes du Pays basque voisin — mais compte tenu de la tension immobilière sur le littoral landais, vérifiez ce point auprès de la mairie avant d'investir, la situation pouvant évoluer. Le plafond de 120 nuitées par an ne concerne que les résidences principales.",
+      },
+    ],
+    updatedAt: '2026-06-26',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

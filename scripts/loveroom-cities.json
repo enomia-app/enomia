@@ -287,15 +287,27 @@
   },
   {
     "slug": "orleans",
-    "displayName": "Orleans",
+    "displayName": "Orléans",
     "searchVolume": 1320,
-    "status": "todo"
+    "status": "done",
+    "lat": 47.90323,
+    "lng": 1.90852,
+    "region": "Centre-Val de Loire",
+    "regionSlug": "centre-val-de-loire",
+    "radiusKm": 100,
+    "found": 38
   },
   {
     "slug": "toulon",
     "displayName": "Toulon",
     "searchVolume": 1300,
-    "status": "todo"
+    "status": "done",
+    "lat": 43.12568,
+    "lng": 5.92849,
+    "region": "Provence-Alpes-Côte d'Azur",
+    "regionSlug": "provence-alpes-cote-dazur",
+    "radiusKm": 50,
+    "found": 46
   },
   {
     "slug": "le-mans",

@@ -280,7 +280,7 @@ export const loveRoomCitiesMeta = [
     "slug": "grenoble",
     "displayName": "Grenoble",
     "searchVolume": 1460,
-    "status": "todo",
+    "status": "done",
     "lat": 45.18853,
     "lng": 5.72452,
     "region": "Auvergne-Rhône-Alpes",
@@ -292,12 +292,36 @@ export const loveRoomCitiesMeta = [
     "slug": "saint-etienne",
     "displayName": "Saint-Étienne",
     "searchVolume": 1400,
-    "status": "todo",
+    "status": "done",
     "lat": 45.4397,
     "lng": 4.38718,
     "region": "Auvergne-Rhône-Alpes",
     "regionSlug": "auvergne-rhone-alpes",
     "radiusKm": 150,
     "found": 38
+  },
+  {
+    "slug": "orleans",
+    "displayName": "Orléans",
+    "searchVolume": 1320,
+    "status": "todo",
+    "lat": 47.90323,
+    "lng": 1.90852,
+    "region": "Centre-Val de Loire",
+    "regionSlug": "centre-val-de-loire",
+    "radiusKm": 100,
+    "found": 38
+  },
+  {
+    "slug": "toulon",
+    "displayName": "Toulon",
+    "searchVolume": 1300,
+    "status": "todo",
+    "lat": 43.12568,
+    "lng": 5.92849,
+    "region": "Provence-Alpes-Côte d'Azur",
+    "regionSlug": "provence-alpes-cote-dazur",
+    "radiusKm": 50,
+    "found": 46
   }
 ];

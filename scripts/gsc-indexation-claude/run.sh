@@ -61,6 +61,10 @@ kill "$WATCHDOG_PID" 2>/dev/null
 wait "$WATCHDOG_PID" 2>/dev/null
 set -e
 
+# Liste déterministe des URLs effectivement soumises aujourd'hui (lue depuis state.json, indépendante
+# du rapport libre de l'agent) → garantit que l'email contient toujours les URLs poussées du jour.
+{ echo ""; echo "────────── URLs soumises aujourd'hui ──────────"; node scripts/gsc-soumissions-jour.mjs "$DATE_TAG" 2>&1 || echo "(liste indisponible)"; } >> "$CLAUDE_OUT"
+
 # Bilan d'indexation ventilé par section (conciergerie/love-room/cabane/blog) → ajouté à l'email du
 # jour + enrichit .claude/gsc-tracking/state.json (clé `bilans`, lue chaque lundi par gsc-cadence-weekly).
 # La skill a déjà rafraîchi index-status.json + écrit state.json ; le bilan est du node pur (read-modify-write).

@@ -109,23 +109,36 @@ Le job a déjà tourné aujourd'hui. Afficher le résumé du dernier run et sort
 2. Naviguer vers : `https://search.google.com/search-console/index?resource_id=sc-domain%3Aenomia.app`
 3. Si pas connecté → demander à Marc de se connecter (ne PAS saisir de credentials)
 
-### 5. Demander l'indexation des top 10
+### 5. Demander l'indexation des candidates
+
+⚠️ **RÈGLE ABSOLUE — un seul clic « Demander » par URL, jamais deux.** Chaque clic sur
+« Demander une indexation » consomme le quota GSC (~10-12/jour). Un double-clic = un appel
+brûlé pour rien (incident 2026-06-21 : 2 clics gâchés en double sur honfleur/bandol → troyes
+n'est pas passée). Tiens une liste mentale `déjà_soumises` et alimente-la au fur et à mesure.
 
 Pour chaque URL des candidates :
 
-1. Cliquer dans la barre **"Inspecter n'importe quelle URL"** en haut de GSC
-2. Saisir l'URL complète et appuyer sur Entrée
-3. Attendre 8-10s que GSC charge l'inspection
-4. Si "URL disponible pour Google" → marquer `indexed` dans state.json
-5. Sinon, cliquer sur **"DEMANDER UNE INDEXATION"**
-6. Attendre ~30s (Google teste l'URL live)
-7. Confirmation : message vert "Indexation demandée"
-8. Si succès → status `requested`, `last_requested` = aujourd'hui, `request_count++`
+1. Cliquer dans la barre **"Inspecter n'importe quelle URL"**, saisir l'URL complète, Entrée.
+2. Attendre 8-10s que l'inspection charge complètement.
+3. ⛔ **GARDE-FOU AVANT TOUT CLIC** : lire l'URL affichée en haut du panneau d'inspection et
+   vérifier qu'elle correspond **exactement** à l'URL visée. Si le panneau montre encore l'URL
+   **précédente** (page pas rafraîchie) ou une autre URL → **NE PAS CLIQUER** : attendre ou
+   ré-saisir l'URL. Ne jamais cliquer « Demander » tant que l'URL affichée ≠ la cible.
+4. Si "URL disponible pour Google" → marquer `indexed` dans state.json, **passer à la suivante
+   sans cliquer** (rien à soumettre).
+5. Sinon, cliquer **UNE SEULE FOIS** sur **"DEMANDER UNE INDEXATION"**, puis ajouter
+   immédiatement l'URL à `déjà_soumises`.
+6. Attendre ~30s (Google teste l'URL live), confirmation : message vert "Indexation demandée".
+7. 🚫 **Ne JAMAIS recliquer « Demander » pour cette URL**, même si la confirmation tarde ou en
+   cas de doute — re-cliquer brûle un appel de quota. Un clic = fait, point.
+8. Mettre à jour state.json : status `requested`, `last_requested` = aujourd'hui,
+   `request_count++`, `vol_at_request`.
 9. Si erreur :
    - Quota dépassé → arrêter immédiatement
    - Autre → status `failed`
 10. **Fermer le modal** (Escape ou bouton "Masquer") avant la suivante
-11. Vérifier que l'URL affichée en haut est bien la nouvelle (pas celle d'avant)
+11. Avant de soumettre l'URL suivante : vérifier qu'elle n'est **pas déjà** dans `déjà_soumises`
+    (sinon la sauter) **et** refaire le garde-fou de l'étape 3.
 
 ### 6. Mettre à jour le tracking
 

@@ -42,16 +42,15 @@ L'URL Inspection API retourne un `verdict` + `coverageState`. Filtrer :
 
 ## Process
 
-### 1. Refresh des data si nécessaire
+> ⚠️ **TU TOURNES EN ONE-SHOT NON-INTERACTIF (`claude -p`).** Fais TOUT en synchrone, MAINTENANT.
+> - **JAMAIS** de tâche en arrière-plan ni de « je serai notifié quand… » : tu sortiras et le travail ne se fera pas (incident 23→27/06 : 0 soumission 5 jours d'affilée).
+> - **JAMAIS** différer (« relancer plus tard », « après le reset du quota ») : le cron ne re-tourne pas. Tente les soumissions tout de suite ; si le quota GSC est réellement épuisé, GSC te le dira pendant la soumission et tu t'arrêteras à ce moment-là.
 
-```bash
-# Si index-status.json > 24h ou manquant :
-node scripts/gsc-fetch-index-status.mjs
-```
+### 1. Données déjà fraîches — NE PAS rafraîchir
 
-Sortie : `.claude/gsc-tracking/index-status.json` avec tous les coverage states.
+`run.sh` a **déjà rafraîchi `index-status.json` en synchrone juste avant de te lancer**. Utilise-le tel quel. **NE LANCE PAS** `gsc-fetch-index-status.mjs` toi-même (surtout pas en arrière-plan).
 
-### 2. Calculer top 10 candidates par volume
+### 2. Calculer les candidates par volume (avec marge)
 
 Pseudo-code :
 ```js
@@ -96,7 +95,9 @@ const candidates = Object.entries(indexStatus.byUrl)
   })
   .map(([url, d]) => ({ url, coverageState: d.coverageState, vol: getVol(url) }))
   .sort((a, b) => b.vol - a.vol)
-  .slice(0, config.daily_quota || 10);
+  .slice(0, (config.daily_quota || 10) * 2);  // BUFFER ×2 : objectif = daily_quota (10) soumissions RÉELLES.
+  // On garde une marge : si une candidate s'avère déjà indexée à l'inspection live, on passe à la suivante
+  // du buffer sans « gâcher » un des 10. Cf §5 : soumettre jusqu'à atteindre daily_quota demandes réelles.
 ```
 
 ### 3. Si `state.last_run` = aujourd'hui → stop
@@ -116,7 +117,12 @@ Le job a déjà tourné aujourd'hui. Afficher le résumé du dernier run et sort
 brûlé pour rien (incident 2026-06-21 : 2 clics gâchés en double sur honfleur/bandol → troyes
 n'est pas passée). Tiens une liste mentale `déjà_soumises` et alimente-la au fur et à mesure.
 
-Pour chaque URL des candidates :
+🎯 **OBJECTIF = `daily_quota` (10) soumissions RÉELLES.** Parcours le buffer de candidates dans
+l'ordre. Une candidate déjà indexée à l'inspection live ne compte **PAS** dans les 10 → tu passes
+simplement à la suivante du buffer. **Continue jusqu'à avoir fait 10 demandes réelles**, OU quota
+GSC dépassé (GSC refuse), OU buffer épuisé. Ne t'arrête pas à 6 si le buffer a de quoi atteindre 10.
+
+Pour chaque URL des candidates (jusqu'à 10 demandes réelles) :
 
 1. Cliquer dans la barre **"Inspecter n'importe quelle URL"**, saisir l'URL complète, Entrée.
 2. Attendre 8-10s que l'inspection charge complètement.

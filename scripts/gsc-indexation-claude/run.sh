@@ -27,6 +27,28 @@ if pkill -f "claude -p .*indexation GSC quotidien" 2>/dev/null; then
   sleep 2
 fi
 
+# Refresh SYNCHRONE de index-status.json AVANT claude -p (timeout maison, pas de `timeout` sur le Mac mini).
+# ⚠️ L'agent claude -p est non-interactif one-shot : s'il lançait le refresh lui-même il le mettait en
+#    arrière-plan puis sortait sans rien soumettre (incident 22→27/06 : 0 soumission 6 jours d'affilée).
+#    On le fait donc ici, en bash, et l'agent reçoit des données fraîches → il n'a plus qu'à soumettre.
+echo "── Refresh index-status (sync, avant claude) ──" | tee -a "$RUN_LOG"
+REFRESH_TIMEOUT=1800  # 30 min
+set +e
+node scripts/gsc-fetch-index-status.mjs >> "$RUN_LOG" 2>&1 &
+FETCH_PID=$!
+(
+  sleep "$REFRESH_TIMEOUT"
+  if kill -0 "$FETCH_PID" 2>/dev/null; then
+    echo "WARN: refresh index-status > ${REFRESH_TIMEOUT}s — kill (on continue avec le snapshot existant)" >> "$RUN_LOG"
+    pkill -P "$FETCH_PID" 2>/dev/null; kill -9 "$FETCH_PID" 2>/dev/null
+  fi
+) &
+FETCH_WD=$!
+wait "$FETCH_PID"; FETCH_EXIT=$?
+kill "$FETCH_WD" 2>/dev/null; wait "$FETCH_WD" 2>/dev/null
+set -e
+echo "refresh index-status terminé (exit=$FETCH_EXIT)" | tee -a "$RUN_LOG"
+
 # Lancer claude -p en arrière-plan + watchdog (pas de `timeout`/`gtimeout` sur le Mac mini).
 # Capture la sortie dans CLAUDE_OUT (pour l'email) et réplique dans RUN_LOG (debug local).
 # Si claude pend > TIMEOUT_SECS, le watchdog le tue (lui + ses enfants) → run.sh sort,
@@ -67,7 +89,7 @@ set -e
 
 # Bilan d'indexation ventilé par section (conciergerie/love-room/cabane/blog) → ajouté à l'email du
 # jour + enrichit .claude/gsc-tracking/state.json (clé `bilans`, lue chaque lundi par gsc-cadence-weekly).
-# La skill a déjà rafraîchi index-status.json + écrit state.json ; le bilan est du node pur (read-modify-write).
+# index-status.json a été rafraîchi en amont (ci-dessus) ; la skill a écrit state.json ; bilan = node pur.
 { echo ""; echo "────────── Bilan indexation GSC (par section) ──────────"; node scripts/gsc-bilan.mjs 2>&1 || echo "(bilan indisponible)"; } >> "$CLAUDE_OUT"
 
 cat "$CLAUDE_OUT" >> "$RUN_LOG"

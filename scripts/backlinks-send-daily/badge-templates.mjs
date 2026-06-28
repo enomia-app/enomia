@@ -1,15 +1,19 @@
 // scripts/backlinks-send-daily/badge-templates.mjs
-// Templates "badge" camp 3/4/5 (conciergerie, love room, cabane) — wording VALIDÉ
-// le 27/06. On contacte des ENTREPRISES repérées via Google Places parmi les
-// mieux notées de leur ville, pour les faire figurer dans la sélection Enomia
-// (page ville/niche) en échange d'un lien/badge (backlink).
+// Templates "badge" camp 3/4/5 (conciergerie, love room, cabane).
+//
+// On contacte des ENTREPRISES repérées via Google Places parmi les mieux notées
+// de leur ville, pour les faire figurer dans la sélection Enomia (page ville/niche)
+// en échange d'un lien/badge (backlink).
+//
+// DEUX variantes par prospect (décidé avec Marc) :
+//   - "retenu" (wording validé 27/06) → SI le prospect figure RÉELLEMENT sur la
+//     page (détecté par domaine dans le sender). Promesse vraie.
+//   - "offre" → s'il n'y figure pas encore : on propose de l'ajouter (honnête,
+//     on l'ajoute s'il dit oui). Évite une promesse falsifiable au clic.
 //
 // Règles (conventions Enomia) : vouvoiement, chiffres en chiffres, zéro tiret
-// cadratin/long/flèche, pas d'emoji, 1 lien max.
-//   - L'observation (1re phrase) est générée par LLM (Sonnet/Claude Max) dans
-//     badge-observation.mjs, jamais ici.
-//   - L'opt-out + le header List-Unsubscribe sont ajoutés par mailer.mjs.
-//   - N'envoyer que si page_en_ligne = oui (filtré par le sender).
+// cadratin/long/flèche, pas d'emoji, 1 lien max. Observation (1re phrase) = LLM
+// Sonnet (badge-observation.mjs). Opt-out + List-Unsubscribe = mailer.mjs.
 
 export const BADGE_SEGMENTS = ['conciergerie', 'loveroom', 'cabane'];
 export const SEGMENT_LABEL = { conciergerie: 'conciergerie', loveroom: 'love room', cabane: 'cabane' };
@@ -40,9 +44,7 @@ export function zonePour(slug, name) {
 /**
  * Ligne d'accroche selon la confiance sur l'identité (haute confiance only :
  * un nom faux est pire que pas de nom).
- *   - prénom connu (a-propos ou local-part prenom.nom@) → "Bonjour Prénom,"
- *   - sinon nom du gérant (mentions-légales)            → "Bonjour M. Nom,"
- *   - sinon                                             → "Bonjour,"
+ *   - prénom connu → "Bonjour Prénom,"  ·  sinon nom gérant → "Bonjour M. Nom,"  ·  sinon "Bonjour,"
  */
 export function buildGreeting({ prenom, nom_gerant } = {}) {
   if (prenom && String(prenom).trim()) return `Bonjour ${String(prenom).trim()},`;
@@ -50,7 +52,8 @@ export function buildGreeting({ prenom, nom_gerant } = {}) {
   return 'Bonjour,';
 }
 
-// Sujets — NON fournis dans la spec du 27/06, proposés ici (à valider par Marc).
+// ─── Sujets ───────────────────────────────────────────────────────────────
+// Sujets NON fournis dans la spec, proposés (validés par Marc).
 const SUBJECTS = {
   conciergerie: ({ ville }) => [
     `Votre conciergerie dans la sélection de ${ville}`,
@@ -66,15 +69,30 @@ const SUBJECTS = {
     'Les plus belles cabanes insolites',
   ],
 };
+const OFFER_SUBJECTS = {
+  loveroom: ({ ville }) => [
+    `Votre love room dans l'annuaire de ${ville} ?`,
+    `Ajouter votre love room à la sélection de ${ville}`,
+  ],
+  cabane: () => [
+    'Votre cabane dans notre annuaire insolite ?',
+    'Ajouter votre cabane à la sélection',
+  ],
+};
 
-// Texte qui suit immédiatement l'observation (sert aussi à détecter en QA une
-// observation manquante : si le 2e paragraphe démarre par ce lead-in, l'obs est vide).
+// Lead-in = texte juste après l'observation (sert aussi à détecter en QA une
+// observation manquante : si le 2e paragraphe démarre par là, l'obs est vide).
 const LEADIN = {
   conciergerie: 'Chez Enomia, nous avons comparé',
   loveroom: 'Nous référençons les plus belles love rooms',
   cabane: 'Nous référençons les meilleures cabanes',
 };
+const OFFER_LEADIN = {
+  loveroom: 'Je tiens sur Enomia un annuaire des plus belles love rooms',
+  cabane: 'Je tiens sur Enomia un annuaire des plus belles cabanes',
+};
 
+// ─── Corps "retenu" (validé) — prospect réellement listé sur la page ────────
 const BODIES = {
   conciergerie: ({ greeting, observation, ville, page_url }) => `${greeting}
 
@@ -116,16 +134,48 @@ Marc Chenut
 marc@enomia.app`,
 };
 
+// ─── Corps "offre" — prospect PAS encore listé : on propose de l'ajouter ────
+const OFFER_BODIES = {
+  loveroom: ({ greeting, observation, ville, page_url }) => `${greeting}
+
+${observation} ${OFFER_LEADIN.loveroom} par ville, pour aider les voyageurs à trouver une adresse de qualité. J'aimerais y ajouter la vôtre dans la sélection de ${ville} :
+
+${page_url}
+
+Y figurer vous donne de la visibilité auprès des voyageurs, qui comparent toujours plusieurs adresses avant de réserver. Si ça vous intéresse, dites-le moi et je l'ajoute ; un lien depuis votre site renforce votre présence et nous aide à faire connaître la sélection.
+
+Qu'en pensez-vous ?
+
+Marc Chenut
+marc@enomia.app`,
+
+  cabane: ({ greeting, observation, villePhrase, page_url }) => `${greeting}
+
+${observation} ${OFFER_LEADIN.cabane} et hébergements insolites par région. J'aimerais y ajouter la vôtre dans la sélection ${villePhrase} :
+
+${page_url}
+
+Les voyageurs en quête d'insolite comparent plusieurs adresses avant de réserver, donc y figurer vous apporte de la visibilité. Si ça vous intéresse, dites-le moi et je l'ajoute ; un lien ou une mention depuis votre site renforce votre présence et nous aide à faire connaître la sélection.
+
+Qu'en pensez-vous ?
+
+Marc Chenut
+marc@enomia.app`,
+};
+
 /**
- * Assemble le pitch badge (subject + texte brut). L'observation est passée en
- * paramètre (déjà générée par badge-observation.mjs). Le HTML + opt-out sont
- * ajoutés ensuite par mailer.sendHtmlEmail.
- * @returns {{subject: string, text: string, segment: string}}
+ * Assemble le pitch badge (subject + texte brut).
+ * @param {{segment, listed, greeting, observation, ville, page_url, subjectIndex}} p
+ *   listed=true  → variante "retenu" (le prospect figure sur la page).
+ *   listed=false → variante "offre" pour les niches (conciergerie retombe sur "retenu", segment en pause).
+ * @returns {{subject, text, segment, variant}}
  */
-export function buildBadgePitch({ segment, greeting, observation, ville, page_url, subjectIndex }) {
-  const body = BODIES[segment];
+export function buildBadgePitch({ segment, listed = false, greeting, observation, ville, page_url, subjectIndex }) {
+  const useOffer = !listed && !!OFFER_BODIES[segment];
+  const body = useOffer ? OFFER_BODIES[segment] : BODIES[segment];
   if (!body) throw new Error(`Segment badge inconnu: ${segment}`);
-  const subjects = SUBJECTS[segment]({ ville });
+  const subjFn = useOffer ? OFFER_SUBJECTS[segment] : SUBJECTS[segment];
+  const subjects = subjFn({ ville });
   const idx = Number.isInteger(subjectIndex)
     ? ((subjectIndex % subjects.length) + subjects.length) % subjects.length
     : Math.floor(Math.random() * subjects.length);
@@ -136,6 +186,7 @@ export function buildBadgePitch({ segment, greeting, observation, ville, page_ur
     subject: subjects[idx],
     text: body({ greeting: greeting || 'Bonjour,', observation: String(observation || '').trim(), ville, villePhrase, page_url }),
     segment,
+    variant: useOffer ? 'offre' : 'retenu',
   };
 }
 
@@ -156,10 +207,10 @@ export function qaBadgePitch({ subject, text, segment }, { page_url } = {}) {
   if (text.includes('—') || text.includes('–') || text.includes('→')) reasons.push('tiret/flèche');
   if (!subject || subject.length < 10) reasons.push('subject court');
 
-  // Observation manquante : le 2e paragraphe démarre directement par le lead-in.
+  // Observation manquante : le 2e paragraphe démarre directement par un lead-in.
   const paras = text.split(/\n\s*\n/);
-  const lead = segment && LEADIN[segment];
-  if (lead && paras[1] && paras[1].trimStart().startsWith(lead)) reasons.push('observation vide');
+  const leads = [LEADIN[segment], OFFER_LEADIN[segment]].filter(Boolean);
+  if (paras[1] && leads.some(l => paras[1].trimStart().startsWith(l))) reasons.push('observation vide');
 
   return { ok: reasons.length === 0, reasons };
 }

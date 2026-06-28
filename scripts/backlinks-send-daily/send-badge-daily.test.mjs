@@ -104,8 +104,24 @@ test('qa : page_url absente détectée', () => {
 });
 
 test('cabane : article de zone dans le corps', () => {
-  const p = buildBadgePitch({ segment: 'cabane', greeting: 'Bonjour,', observation: 'Cabane perchée remarquable.', ville: 'Bretagne', page_url: 'https://www.enomia.app/cabane/bretagne' });
+  const p = buildBadgePitch({ segment: 'cabane', listed: true, greeting: 'Bonjour,', observation: 'Cabane perchée remarquable.', ville: 'Bretagne', page_url: 'https://www.enomia.app/cabane/bretagne' });
   assert.match(p.text, /sélection pour la Bretagne/);
+});
+
+test('hybride retenu vs offre (loveroom)', () => {
+  const args = { segment: 'loveroom', greeting: 'Bonjour Julie,', observation: 'Belle adresse à Lyon.', ville: 'Lyon', page_url: 'https://www.enomia.app/love-room/ara/lyon' };
+  const retenu = buildBadgePitch({ ...args, listed: true });
+  assert.equal(retenu.variant, 'retenu');
+  assert.match(retenu.text, /Nous avons retenu la vôtre/);
+  const offre = buildBadgePitch({ ...args, listed: false });
+  assert.equal(offre.variant, 'offre');
+  assert.match(offre.text, /J'aimerais y ajouter la vôtre/);
+});
+
+test('cabane offre : article de zone conservé', () => {
+  const p = buildBadgePitch({ segment: 'cabane', listed: false, greeting: 'Bonjour,', observation: 'Cabane remarquable.', ville: 'Bretagne', page_url: 'https://www.enomia.app/cabane/bretagne' });
+  assert.equal(p.variant, 'offre');
+  assert.match(p.text, /la sélection pour la Bretagne/);
 });
 
 test('fallbackObservation', () => {

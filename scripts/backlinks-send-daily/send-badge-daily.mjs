@@ -60,6 +60,33 @@ function dom(site) {
   try { return extractDomain(/^https?:/.test(site) ? site : 'https://' + site) || ''; } catch { return ''; }
 }
 
+// Détection "le prospect figure-t-il RÉELLEMENT sur sa page ?" → choisit la
+// variante du pitch (retenu vs offre). On fetch la page une fois (cache par
+// page_url) et on regarde si son domaine est lié. Fetch en échec → false (offre,
+// le choix sûr : on ne revendique pas une sélection qu'on ne peut pas prouver).
+const SOCIAL_RE = /(enomia\.app|google\.|gstatic|facebook\.|instagram\.|twitter\.|x\.com|linkedin\.|youtube\.|tiktok|pinterest)/;
+const _listedCache = new Map();
+async function listedDomainsFor(pageUrl) {
+  if (_listedCache.has(pageUrl)) return _listedCache.get(pageUrl);
+  const set = new Set();
+  try {
+    const r = await fetch(pageUrl, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(15000) });
+    if (r.ok) {
+      const html = await r.text();
+      for (const m of html.matchAll(/href="(https?:\/\/[^"]+)"/g)) {
+        const d = dom(m[1]);
+        if (d && !SOCIAL_RE.test(d)) set.add(d);
+      }
+    }
+  } catch { /* offre par défaut */ }
+  _listedCache.set(pageUrl, set);
+  return set;
+}
+async function isListedOnPage(siteDomain, pageUrl) {
+  if (!siteDomain || !pageUrl) return false;
+  return (await listedDomainsFor(pageUrl)).has(siteDomain);
+}
+
 function loadBase() {
   if (!fs.existsSync(BASE_PATH)) return [];
   try { return JSON.parse(fs.readFileSync(BASE_PATH, 'utf-8')); } catch { return []; }
@@ -182,12 +209,17 @@ async function main() {
     }
     if (!emailOk) { skipped.push({ r, reason: 'email_invalide' }); log('  ⏭ email invalide'); continue; }
 
+    // Variante : "retenu" si le prospect figure réellement sur sa page, sinon
+    // "offre" (honnête : on propose de l'ajouter). Évite la promesse falsifiable.
+    const listed = await isListedOnPage(dom(r.site), r.page_url);
+
     // Observation (LLM Sonnet/Claude Max), ancrée note/avis Google.
     const observation = await generateBadgeObservation(
       { segment: r.segment, nom_boite: r.nom_boite, ville: r.ville, rating: r.rating, reviews: r.reviews }, log,
     );
     const greeting = buildGreeting({ prenom: r.prenom, nom_gerant: r.nom_gerant });
-    const pitch = buildBadgePitch({ segment: r.segment, greeting, observation, ville: r.ville, page_url: r.page_url });
+    const pitch = buildBadgePitch({ segment: r.segment, listed, greeting, observation, ville: r.ville, page_url: r.page_url });
+    log(`  ${listed ? '✓ listé → mail "retenu"' : '○ non listé → mail "offre"'}`);
 
     const qa = qaBadgePitch({ ...pitch }, { page_url: r.page_url });
     if (!qa.ok) { skipped.push({ r, reason: 'qa_fail: ' + qa.reasons.join(', ') }); log(`  ⏭ qa_fail: ${qa.reasons.join(', ')}`); continue; }
@@ -203,7 +235,7 @@ async function main() {
       state.sent[d] = {
         status: 'sent', date: TODAY, email: r.email, segment: r.segment, ville: r.ville,
         page_url: r.page_url, gmail_id: res.id, gmail_thread_id: res.threadId,
-        subject: pitch.subject, rating: r.rating ?? '', reviews: r.reviews ?? '',
+        subject: pitch.subject, variant: pitch.variant, rating: r.rating ?? '', reviews: r.reviews ?? '',
       };
       sent.push({ r, pitch, observation });
       log(`  ✅ sent (gmail ${res.id}, thread ${res.threadId})`);

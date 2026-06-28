@@ -11,8 +11,8 @@
         <string>__RUN_SH_PATH__</string>
     </array>
 
-    <!-- Lancé tous les jours à 09h23. run.sh ne publie QUE mardi + samedi
-         (2 fois/semaine, 3 villes par run) — logique des jours dans le script. -->
+    <!-- Lancé tous les jours à 09h23. run.sh ne publie QUE mardi, jeudi, samedi
+         (3 fois/semaine, 3 villes par run) — logique des jours dans le script. -->
     <key>StartCalendarInterval</key>
     <dict>
         <key>Hour</key>

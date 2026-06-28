@@ -60,7 +60,7 @@ if launchctl list | grep -q "app.enomia.rentabilite-publish"; then
   echo ""
   echo "✅ rentabilite-publish installé et chargé."
   echo ""
-  echo "📅 Lancé tous les jours 09h23, publie 3 villes le mardi + samedi (par région, meilleur ratio d'abord)."
+  echo "📅 Lancé tous les jours 09h23, publie 3 villes le mardi/jeudi/samedi (par région, meilleur ratio d'abord)."
   echo ""
   echo "Commandes utiles :"
   echo "   - Test à blanc (sans rien changer) : node $REPO_ROOT/scripts/publish-next-rentabilite-villes.mjs --dry-run"

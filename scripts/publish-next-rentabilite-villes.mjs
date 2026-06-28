@@ -61,7 +61,7 @@ ${lines.join('\n')}
 Reste à publier : ${remAfter} villes.
 Déploiement Vercel déclenché (en ligne dans quelques minutes).
 
-— cron rentabilite-publish (3 villes, mardi + samedi)`;
+— cron rentabilite-publish (3 villes, mardi / jeudi / samedi)`;
 
 if (process.env.GITHUB_OUTPUT) {
   appendFileSync(process.env.GITHUB_OUTPUT, `published_count=${next.length}\n`);

@@ -1,6 +1,6 @@
 #!/bin/bash
 # rentabilite-publish — wrapper launchd Mac mini.
-# Publie 3 villes rentabilité (published false→true, par région) les MARDI et SAMEDI,
+# Publie 3 villes rentabilité (published false→true, par région) les MARDI, JEUDI et SAMEDI,
 # commit + push sur main (→ rebuild Vercel), puis email récap via Resend (send-report.sh).
 #
 # PAS de claude -p : opération git + node pure, AUCUN coût API (cf. incident spike mai 2026).
@@ -20,10 +20,10 @@ cd "$REPO_ROOT"
 
 echo "===== rentabilite-publish start $(date -Iseconds) =====" | tee -a "$RUN_LOG"
 
-# Jours de publication : mardi (2) et samedi (6). Sinon rien (le plist se lance tous les jours).
+# Jours de publication : mardi (2), jeudi (4), samedi (6). Sinon rien (le plist se lance tous les jours).
 DOW=$(date +%u)
-if [[ "$DOW" != "2" && "$DOW" != "6" ]]; then
-  echo "Jour $DOW (ni mardi ni samedi) — pas de publication." | tee -a "$RUN_LOG"
+if [[ "$DOW" != "2" && "$DOW" != "4" && "$DOW" != "6" ]]; then
+  echo "Jour $DOW (ni mardi/jeudi/samedi) — pas de publication." | tee -a "$RUN_LOG"
   exit 0
 fi
 

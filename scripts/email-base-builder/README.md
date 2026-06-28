@@ -15,7 +15,10 @@ backlinks (`../backlinks-source-monthly/filters.mjs` : `extractContact`,
 | 4 | `loveroom` | Places (`_discovered/loveroom.json`) | scrapé |
 | 5 | `cabane` | Places (`_discovered/cabane.json`) | scrapé |
 
-`page_en_ligne` (conciergeries) = la page ville `/conciergerie-airbnb/...` existe dans le sitemap live → on contacte d'abord celles-là (le badge a une destination).
+`page_en_ligne` (3 niches) = la page de destination existe dans le sitemap live
+(`/conciergerie-airbnb/[region]/[ville]`, `/love-room/[region]/[ville]`,
+`/cabane/[zone]`). `discover-niche` tague `page_en_ligne` + remplit `page_url`
+(+ `rating`/`reviews` Google). Le sender badge n'envoie QUE si `page_en_ligne = oui`.
 
 ## Statuts
 
@@ -47,6 +50,10 @@ node scripts/email-base-builder/merge-base.mjs
 # 4. vérification finale (MillionVerifier, clé MILLIONVERIFIER_API_KEY dans .env)
 #    --priority = blogs + conciergeries page en ligne (pour un budget crédits limité)
 node scripts/email-base-builder/verify-millionverifier.mjs [--priority]
+
+# 5. (optionnel) enrichir prénom / nom du gérant depuis les mentions-légales
+#    (Haiku/Claude Max) → accroche "Bonjour Prénom," / "Bonjour M. Nom," des emails badge
+node scripts/email-base-builder/enrich-names.mjs [--segment=conciergerie] [--limit=N]
 ```
 
 Après MV : statut `verifie` = `ok` MillionVerifier = **envoyable sans bounce**. `catch_all`/`incertain`/`faux_email` = on n'envoie pas.

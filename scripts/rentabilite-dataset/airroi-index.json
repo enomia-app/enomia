@@ -1,0 +1,6372 @@
+[
+ {
+  "country": "France",
+  "region": "Ile-de-France",
+  "locality": "Paris",
+  "full_name": "Paris, Ile-de-France, France",
+  "active_listings_count": 59435
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Marseille",
+  "full_name": "Marseille, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 12732
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Nice",
+  "full_name": "Nice, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 12624
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cannes",
+  "full_name": "Cannes, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 10255
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Lyon",
+  "full_name": "Lyon, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 6688
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Antibes",
+  "full_name": "Antibes, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 5231
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bordeaux",
+  "full_name": "Bordeaux, Nouvelle-Aquitaine, France",
+  "active_listings_count": 5052
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Annecy",
+  "full_name": "Annecy, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 4391
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "La Rochelle",
+  "full_name": "La Rochelle, Nouvelle-Aquitaine, France",
+  "active_listings_count": 4095
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Avignon",
+  "full_name": "Avignon, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 3842
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Strasbourg",
+  "full_name": "Strasbourg, Grand Est, France",
+  "active_listings_count": 3361
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Nantes",
+  "full_name": "Nantes, Pays de la Loire, France",
+  "active_listings_count": 3255
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Hyères",
+  "full_name": "Hyères, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 2792
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Le Mans",
+  "full_name": "Le Mans, Pays de la Loire, France",
+  "active_listings_count": 2768
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Les Sables-d'Olonne",
+  "full_name": "Les Sables-d'Olonne, Pays de la Loire, France",
+  "active_listings_count": 2734
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Lille",
+  "full_name": "Lille, Hauts-de-France, France",
+  "active_listings_count": 2630
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Toulon",
+  "full_name": "Toulon, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 2463
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Biarritz",
+  "full_name": "Biarritz, Nouvelle-Aquitaine, France",
+  "active_listings_count": 2434
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Fréjus",
+  "full_name": "Fréjus, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 2431
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Reims",
+  "full_name": "Reims, Grand Est, France",
+  "active_listings_count": 2136
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Morzine",
+  "full_name": "Morzine, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 2136
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Dijon",
+  "full_name": "Dijon, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 2114
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Arcachon",
+  "full_name": "Arcachon, Nouvelle-Aquitaine, France",
+  "active_listings_count": 2104
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "La Ciotat",
+  "full_name": "La Ciotat, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 2020
+ },
+ {
+  "country": "France",
+  "region": "Occitania",
+  "locality": "La Grande-Motte",
+  "full_name": "La Grande-Motte, Occitania, France",
+  "active_listings_count": 1953
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Lacanau",
+  "full_name": "Lacanau, Nouvelle-Aquitaine, France",
+  "active_listings_count": 1922
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Arles",
+  "full_name": "Arles, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 1914
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Grenoble",
+  "full_name": "Grenoble, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1891
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Les Belleville",
+  "full_name": "Les Belleville, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1859
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "La Baule-Escoublac",
+  "full_name": "La Baule-Escoublac, Pays de la Loire, France",
+  "active_listings_count": 1727
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Lège-Cap-Ferret",
+  "full_name": "Lège-Cap-Ferret, Nouvelle-Aquitaine, France",
+  "active_listings_count": 1723
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Menton",
+  "full_name": "Menton, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 1708
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Anglet",
+  "full_name": "Anglet, Nouvelle-Aquitaine, France",
+  "active_listings_count": 1701
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Tours",
+  "full_name": "Tours, Centre-Val de Loire, France",
+  "active_listings_count": 1648
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Saint-François",
+  "full_name": "Saint-François, Guadeloupe, France",
+  "active_listings_count": 1635
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Capbreton",
+  "full_name": "Capbreton, Nouvelle-Aquitaine, France",
+  "active_listings_count": 1607
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Villeurbanne",
+  "full_name": "Villeurbanne, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1573
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Angers",
+  "full_name": "Angers, Pays de la Loire, France",
+  "active_listings_count": 1563
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "La Plagne-Tarentaise",
+  "full_name": "La Plagne-Tarentaise, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1523
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Colmar",
+  "full_name": "Colmar, Grand Est, France",
+  "active_listings_count": 1492
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Huez",
+  "full_name": "Huez, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1454
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Biscarrosse",
+  "full_name": "Biscarrosse, Nouvelle-Aquitaine, France",
+  "active_listings_count": 1432
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "La Teste-de-Buch",
+  "full_name": "La Teste-de-Buch, Nouvelle-Aquitaine, France",
+  "active_listings_count": 1425
+ },
+ {
+  "country": "France",
+  "region": "Ile-de-France",
+  "locality": "Saint-Denis",
+  "full_name": "Saint-Denis, Ile-de-France, France",
+  "active_listings_count": 1416
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Clermont-Ferrand",
+  "full_name": "Clermont-Ferrand, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1391
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Tignes",
+  "full_name": "Tignes, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1360
+ },
+ {
+  "country": "France",
+  "region": "Ile-de-France",
+  "locality": "Boulogne-Billancourt",
+  "full_name": "Boulogne-Billancourt, Ile-de-France, France",
+  "active_listings_count": 1357
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Nancy",
+  "full_name": "Nancy, Grand Est, France",
+  "active_listings_count": 1333
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Royan",
+  "full_name": "Royan, Nouvelle-Aquitaine, France",
+  "active_listings_count": 1320
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Gérardmer",
+  "full_name": "Gérardmer, Grand Est, France",
+  "active_listings_count": 1302
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bayonne",
+  "full_name": "Bayonne, Nouvelle-Aquitaine, France",
+  "active_listings_count": 1299
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Les Allues",
+  "full_name": "Les Allues, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1241
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Saint-Étienne",
+  "full_name": "Saint-Étienne, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1228
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Sainte-Anne",
+  "full_name": "Sainte-Anne, Guadeloupe, France",
+  "active_listings_count": 1226
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Bandol",
+  "full_name": "Bandol, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 1199
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Orléans",
+  "full_name": "Orléans, Centre-Val de Loire, France",
+  "active_listings_count": 1178
+ },
+ {
+  "country": "France",
+  "region": "Ile-de-France",
+  "locality": "Montreuil",
+  "full_name": "Montreuil, Ile-de-France, France",
+  "active_listings_count": 1153
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Mimizan",
+  "full_name": "Mimizan, Nouvelle-Aquitaine, France",
+  "active_listings_count": 1139
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vallauris",
+  "full_name": "Vallauris, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 1133
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Mulhouse",
+  "full_name": "Mulhouse, Grand Est, France",
+  "active_listings_count": 1125
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Seignosse",
+  "full_name": "Seignosse, Nouvelle-Aquitaine, France",
+  "active_listings_count": 1109
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Megève",
+  "full_name": "Megève, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1109
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Vichy",
+  "full_name": "Vichy, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1085
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Gujan-Mestras",
+  "full_name": "Gujan-Mestras, Nouvelle-Aquitaine, France",
+  "active_listings_count": 1083
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Amiens",
+  "full_name": "Amiens, Hauts-de-France, France",
+  "active_listings_count": 1029
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cassis",
+  "full_name": "Cassis, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 1022
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Les Trois-Îlets",
+  "full_name": "Les Trois-Îlets, Martinique, France",
+  "active_listings_count": 1009
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Dunkirk",
+  "full_name": "Dunkirk, Hauts-de-France, France",
+  "active_listings_count": 1001
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Courchevel",
+  "full_name": "Courchevel, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 1001
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Grimaud",
+  "full_name": "Grimaud, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 996
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Le Gosier",
+  "full_name": "Le Gosier, Guadeloupe, France",
+  "active_listings_count": 993
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Sarlat-la-Canéda",
+  "full_name": "Sarlat-la-Canéda, Nouvelle-Aquitaine, France",
+  "active_listings_count": 986
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Poitiers",
+  "full_name": "Poitiers, Nouvelle-Aquitaine, France",
+  "active_listings_count": 945
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Troyes",
+  "full_name": "Troyes, Grand Est, France",
+  "active_listings_count": 939
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Pornic",
+  "full_name": "Pornic, Pays de la Loire, France",
+  "active_listings_count": 927
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Pornichet",
+  "full_name": "Pornichet, Pays de la Loire, France",
+  "active_listings_count": 913
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Pau",
+  "full_name": "Pau, Nouvelle-Aquitaine, France",
+  "active_listings_count": 912
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Soorts-Hossegor",
+  "full_name": "Soorts-Hossegor, Nouvelle-Aquitaine, France",
+  "active_listings_count": 892
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Metz",
+  "full_name": "Metz, Grand Est, France",
+  "active_listings_count": 890
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Berck",
+  "full_name": "Berck, Hauts-de-France, France",
+  "active_listings_count": 887
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Beausoleil",
+  "full_name": "Beausoleil, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 884
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Mont-Dore",
+  "full_name": "Mont-Dore, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 875
+ },
+ {
+  "country": "France",
+  "region": "Ile-de-France",
+  "locality": "Clichy",
+  "full_name": "Clichy, Ile-de-France, France",
+  "active_listings_count": 867
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Limoges",
+  "full_name": "Limoges, Nouvelle-Aquitaine, France",
+  "active_listings_count": 852
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Allos",
+  "full_name": "Allos, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 852
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Besançon",
+  "full_name": "Besançon, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 845
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Angoulême",
+  "full_name": "Angoulême, Nouvelle-Aquitaine, France",
+  "active_listings_count": 842
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "La Clusaz",
+  "full_name": "La Clusaz, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 812
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le Diamant",
+  "full_name": "Le Diamant, Martinique, France",
+  "active_listings_count": 803
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Blois",
+  "full_name": "Blois, Centre-Val de Loire, France",
+  "active_listings_count": 802
+ },
+ {
+  "country": "France",
+  "region": "Ile-de-France",
+  "locality": "Versailles",
+  "full_name": "Versailles, Ile-de-France, France",
+  "active_listings_count": 783
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Les Houches",
+  "full_name": "Les Houches, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 769
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Les Gets",
+  "full_name": "Les Gets, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 761
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Andernos-les-Bains",
+  "full_name": "Andernos-les-Bains, Nouvelle-Aquitaine, France",
+  "active_listings_count": 759
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Bourges",
+  "full_name": "Bourges, Centre-Val de Loire, France",
+  "active_listings_count": 755
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Briançon",
+  "full_name": "Briançon, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 754
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Saint-Pierre-d'Oléron",
+  "full_name": "Saint-Pierre-d'Oléron, Nouvelle-Aquitaine, France",
+  "active_listings_count": 751
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Hendaye",
+  "full_name": "Hendaye, Nouvelle-Aquitaine, France",
+  "active_listings_count": 750
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Grasse",
+  "full_name": "Grasse, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 743
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Samoëns",
+  "full_name": "Samoëns, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 741
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Châtel",
+  "full_name": "Châtel, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 739
+ },
+ {
+  "country": "France",
+  "region": "Ile-de-France",
+  "locality": "Courbevoie",
+  "full_name": "Courbevoie, Ile-de-France, France",
+  "active_listings_count": 731
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vars",
+  "full_name": "Vars, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 720
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Moliets-et-Maâ",
+  "full_name": "Moliets-et-Maâ, Nouvelle-Aquitaine, France",
+  "active_listings_count": 694
+ },
+ {
+  "country": "France",
+  "region": "Ile-de-France",
+  "locality": "Pantin",
+  "full_name": "Pantin, Ile-de-France, France",
+  "active_listings_count": 691
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "La Bresse",
+  "full_name": "La Bresse, Grand Est, France",
+  "active_listings_count": 691
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Saint-Georges-d'Oléron",
+  "full_name": "Saint-Georges-d'Oléron, Nouvelle-Aquitaine, France",
+  "active_listings_count": 689
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Rochefort",
+  "full_name": "Rochefort, Nouvelle-Aquitaine, France",
+  "active_listings_count": 688
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Annemasse",
+  "full_name": "Annemasse, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 674
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Orcières",
+  "full_name": "Orcières, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 672
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "La Tranche-sur-Mer",
+  "full_name": "La Tranche-sur-Mer, Pays de la Loire, France",
+  "active_listings_count": 663
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Calais",
+  "full_name": "Calais, Hauts-de-France, France",
+  "active_listings_count": 652
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Martigues",
+  "full_name": "Martigues, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 645
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Sainte-Luce",
+  "full_name": "Sainte-Luce, Martinique, France",
+  "active_listings_count": 643
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Sainte-Anne",
+  "full_name": "Sainte-Anne, Martinique, France",
+  "active_listings_count": 638
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Les Mathes",
+  "full_name": "Les Mathes, Nouvelle-Aquitaine, France",
+  "active_listings_count": 629
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Soulac-sur-Mer",
+  "full_name": "Soulac-sur-Mer, Nouvelle-Aquitaine, France",
+  "active_listings_count": 625
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bidart",
+  "full_name": "Bidart, Nouvelle-Aquitaine, France",
+  "active_listings_count": 619
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Soustons",
+  "full_name": "Soustons, Nouvelle-Aquitaine, France",
+  "active_listings_count": 600
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Deshaies",
+  "full_name": "Deshaies, Guadeloupe, France",
+  "active_listings_count": 594
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Chambéry",
+  "full_name": "Chambéry, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 590
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Cholet",
+  "full_name": "Cholet, Pays de la Loire, France",
+  "active_listings_count": 580
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Valence",
+  "full_name": "Valence, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 577
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Saumur",
+  "full_name": "Saumur, Pays de la Loire, France",
+  "active_listings_count": 567
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Mérignac",
+  "full_name": "Mérignac, Nouvelle-Aquitaine, France",
+  "active_listings_count": 562
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Chamrousse",
+  "full_name": "Chamrousse, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 542
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Carqueiranne",
+  "full_name": "Carqueiranne, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 542
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Périgueux",
+  "full_name": "Périgueux, Nouvelle-Aquitaine, France",
+  "active_listings_count": 526
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Niort",
+  "full_name": "Niort, Nouvelle-Aquitaine, France",
+  "active_listings_count": 517
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Wimereux",
+  "full_name": "Wimereux, Hauts-de-France, France",
+  "active_listings_count": 514
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "La Flotte",
+  "full_name": "La Flotte, Nouvelle-Aquitaine, France",
+  "active_listings_count": 500
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Carcans",
+  "full_name": "Carcans, Nouvelle-Aquitaine, France",
+  "active_listings_count": 498
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Pessac",
+  "full_name": "Pessac, Nouvelle-Aquitaine, France",
+  "active_listings_count": 497
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Bouillante",
+  "full_name": "Bouillante, Guadeloupe, France",
+  "active_listings_count": 494
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Châteauroux",
+  "full_name": "Châteauroux, Centre-Val de Loire, France",
+  "active_listings_count": 491
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Risoul",
+  "full_name": "Risoul, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 484
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Gassin",
+  "full_name": "Gassin, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 480
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Chartres",
+  "full_name": "Chartres, Centre-Val de Loire, France",
+  "active_listings_count": 478
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Arras",
+  "full_name": "Arras, Hauts-de-France, France",
+  "active_listings_count": 477
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Villarembert",
+  "full_name": "Villarembert, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 476
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Fort-de-France",
+  "full_name": "Fort-de-France, Martinique, France",
+  "active_listings_count": 476
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vence",
+  "full_name": "Vence, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 475
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bergerac",
+  "full_name": "Bergerac, Nouvelle-Aquitaine, France",
+  "active_listings_count": 474
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Amboise",
+  "full_name": "Amboise, Centre-Val de Loire, France",
+  "active_listings_count": 470
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Châtelaillon-Plage",
+  "full_name": "Châtelaillon-Plage, Nouvelle-Aquitaine, France",
+  "active_listings_count": 469
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Gap",
+  "full_name": "Gap, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 468
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Talence",
+  "full_name": "Talence, Nouvelle-Aquitaine, France",
+  "active_listings_count": 464
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Combloux",
+  "full_name": "Combloux, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 462
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Labenne",
+  "full_name": "Labenne, Nouvelle-Aquitaine, France",
+  "active_listings_count": 451
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cogolin",
+  "full_name": "Cogolin, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 445
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Mougins",
+  "full_name": "Mougins, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 442
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Sainte-Rose",
+  "full_name": "Sainte-Rose, Guadeloupe, France",
+  "active_listings_count": 441
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Hourtin",
+  "full_name": "Hourtin, Nouvelle-Aquitaine, France",
+  "active_listings_count": 440
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Agen",
+  "full_name": "Agen, Nouvelle-Aquitaine, France",
+  "active_listings_count": 439
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Valmeinier",
+  "full_name": "Valmeinier, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 438
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Roubaix",
+  "full_name": "Roubaix, Hauts-de-France, France",
+  "active_listings_count": 437
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Neufchâtel-Hardelot",
+  "full_name": "Neufchâtel-Hardelot, Hauts-de-France, France",
+  "active_listings_count": 434
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Le Moule",
+  "full_name": "Le Moule, Guadeloupe, France",
+  "active_listings_count": 434
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Laval",
+  "full_name": "Laval, Pays de la Loire, France",
+  "active_listings_count": 431
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Valloire",
+  "full_name": "Valloire, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 431
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Épernay",
+  "full_name": "Épernay, Grand Est, France",
+  "active_listings_count": 428
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Montélimar",
+  "full_name": "Montélimar, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 421
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "La Roche-sur-Yon",
+  "full_name": "La Roche-sur-Yon, Pays de la Loire, France",
+  "active_listings_count": 421
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Ciboure",
+  "full_name": "Ciboure, Nouvelle-Aquitaine, France",
+  "active_listings_count": 419
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Schiltigheim",
+  "full_name": "Schiltigheim, Grand Est, France",
+  "active_listings_count": 418
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Saint-Louis",
+  "full_name": "Saint-Louis, Grand Est, France",
+  "active_listings_count": 412
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Guérande",
+  "full_name": "Guérande, Pays de la Loire, France",
+  "active_listings_count": 410
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Beaune",
+  "full_name": "Beaune, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 409
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Arès",
+  "full_name": "Arès, Nouvelle-Aquitaine, France",
+  "active_listings_count": 407
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Auxerre",
+  "full_name": "Auxerre, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 402
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Belfort",
+  "full_name": "Belfort, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 397
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bègles",
+  "full_name": "Bègles, Nouvelle-Aquitaine, France",
+  "active_listings_count": 395
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "La Tremblade",
+  "full_name": "La Tremblade, Nouvelle-Aquitaine, France",
+  "active_listings_count": 385
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Embrun",
+  "full_name": "Embrun, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 385
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Charleville-Mézières",
+  "full_name": "Charleville-Mézières, Grand Est, France",
+  "active_listings_count": 384
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Vendays-Montalivet",
+  "full_name": "Vendays-Montalivet, Nouvelle-Aquitaine, France",
+  "active_listings_count": 384
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "La Trinité",
+  "full_name": "La Trinité, Martinique, France",
+  "active_listings_count": 384
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Eaux-Bonnes",
+  "full_name": "Eaux-Bonnes, Nouvelle-Aquitaine, France",
+  "active_listings_count": 382
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Dax",
+  "full_name": "Dax, Nouvelle-Aquitaine, France",
+  "active_listings_count": 381
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Dolus-d'Oléron",
+  "full_name": "Dolus-d'Oléron, Nouvelle-Aquitaine, France",
+  "active_listings_count": 381
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Le Crotoy",
+  "full_name": "Le Crotoy, Hauts-de-France, France",
+  "active_listings_count": 380
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Châlons-en-Champagne",
+  "full_name": "Châlons-en-Champagne, Grand Est, France",
+  "active_listings_count": 374
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Orange",
+  "full_name": "Orange, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 374
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Valenciennes",
+  "full_name": "Valenciennes, Hauts-de-France, France",
+  "active_listings_count": 369
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Tarnos",
+  "full_name": "Tarnos, Nouvelle-Aquitaine, France",
+  "active_listings_count": 368
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Isola",
+  "full_name": "Isola, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 365
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Carpentras",
+  "full_name": "Carpentras, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 365
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Lorgues",
+  "full_name": "Lorgues, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 361
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Saint-Quentin",
+  "full_name": "Saint-Quentin, Hauts-de-France, France",
+  "active_listings_count": 360
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Nevers",
+  "full_name": "Nevers, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 359
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Montgenèvre",
+  "full_name": "Montgenèvre, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 354
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Nîmes",
+  "full_name": "Nîmes, Occitanie, France",
+  "active_listings_count": 352
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Urrugne",
+  "full_name": "Urrugne, Nouvelle-Aquitaine, France",
+  "active_listings_count": 344
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Les Anses-d'Arlet",
+  "full_name": "Les Anses-d'Arlet, Martinique, France",
+  "active_listings_count": 344
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Cucq",
+  "full_name": "Cucq, Hauts-de-France, France",
+  "active_listings_count": 341
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Aurillac",
+  "full_name": "Aurillac, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 341
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Beaufort",
+  "full_name": "Beaufort, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 339
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Sevrier",
+  "full_name": "Sevrier, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 333
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Tourcoing",
+  "full_name": "Tourcoing, Hauts-de-France, France",
+  "active_listings_count": 331
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Morillon",
+  "full_name": "Morillon, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 331
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Draguignan",
+  "full_name": "Draguignan, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 331
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Hauteluce",
+  "full_name": "Hauteluce, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 330
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Douai",
+  "full_name": "Douai, Hauts-de-France, France",
+  "active_listings_count": 329
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Lanton",
+  "full_name": "Lanton, Nouvelle-Aquitaine, France",
+  "active_listings_count": 329
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Mâcon",
+  "full_name": "Mâcon, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 327
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Aytré",
+  "full_name": "Aytré, Nouvelle-Aquitaine, France",
+  "active_listings_count": 325
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Passy",
+  "full_name": "Passy, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 325
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Aubagne",
+  "full_name": "Aubagne, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 325
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Vienne",
+  "full_name": "Vienne, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 324
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Rezé",
+  "full_name": "Rezé, Pays de la Loire, France",
+  "active_listings_count": 322
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Montluçon",
+  "full_name": "Montluçon, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 316
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Apt",
+  "full_name": "Apt, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 314
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Roanne",
+  "full_name": "Roanne, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 313
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Le Teich",
+  "full_name": "Le Teich, Nouvelle-Aquitaine, France",
+  "active_listings_count": 308
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Xonrupt-Longemer",
+  "full_name": "Xonrupt-Longemer, Grand Est, France",
+  "active_listings_count": 305
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Petit-Bourg",
+  "full_name": "Petit-Bourg, Guadeloupe, France",
+  "active_listings_count": 305
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Gordes",
+  "full_name": "Gordes, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 301
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "L'Aiguillon-la-Presqu'île",
+  "full_name": "L'Aiguillon-la-Presqu'île, Pays de la Loire, France",
+  "active_listings_count": 301
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Villeneuve-d'Ascq",
+  "full_name": "Villeneuve-d'Ascq, Hauts-de-France, France",
+  "active_listings_count": 300
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Épinal",
+  "full_name": "Épinal, Grand Est, France",
+  "active_listings_count": 300
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Ondres",
+  "full_name": "Ondres, Nouvelle-Aquitaine, France",
+  "active_listings_count": 300
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Sallanches",
+  "full_name": "Sallanches, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 299
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Beauvais",
+  "full_name": "Beauvais, Hauts-de-France, France",
+  "active_listings_count": 298
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "La Turballe",
+  "full_name": "La Turballe, Pays de la Loire, France",
+  "active_listings_count": 293
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Ramatuelle",
+  "full_name": "Ramatuelle, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 292
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Fouras",
+  "full_name": "Fouras, Nouvelle-Aquitaine, France",
+  "active_listings_count": 290
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Manosque",
+  "full_name": "Manosque, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 285
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le Vauclin",
+  "full_name": "Le Vauclin, Martinique, France",
+  "active_listings_count": 283
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Le Portel",
+  "full_name": "Le Portel, Hauts-de-France, France",
+  "active_listings_count": 279
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Montvalezan",
+  "full_name": "Montvalezan, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 277
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Péone",
+  "full_name": "Péone, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 275
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Libourne",
+  "full_name": "Libourne, Nouvelle-Aquitaine, France",
+  "active_listings_count": 274
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Valbonne",
+  "full_name": "Valbonne, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 273
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Ault",
+  "full_name": "Ault, Hauts-de-France, France",
+  "active_listings_count": 272
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Sélestat",
+  "full_name": "Sélestat, Grand Est, France",
+  "active_listings_count": 268
+ },
+ {
+  "country": "France",
+  "region": "Normandy",
+  "locality": "La Hague",
+  "full_name": "La Hague, Normandy, France",
+  "active_listings_count": 267
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Arnage",
+  "full_name": "Arnage, Pays de la Loire, France",
+  "active_listings_count": 266
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le Robert",
+  "full_name": "Le Robert, Martinique, France",
+  "active_listings_count": 266
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Pointe-Noire",
+  "full_name": "Pointe-Noire, Guadeloupe, France",
+  "active_listings_count": 265
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Modane",
+  "full_name": "Modane, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 264
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Saintes",
+  "full_name": "Saintes, Nouvelle-Aquitaine, France",
+  "active_listings_count": 263
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Manigod",
+  "full_name": "Manigod, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 263
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le Marin",
+  "full_name": "Le Marin, Martinique, France",
+  "active_listings_count": 263
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Vénissieux",
+  "full_name": "Vénissieux, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 261
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Barcelonnette",
+  "full_name": "Barcelonnette, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 261
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Cognac",
+  "full_name": "Cognac, Nouvelle-Aquitaine, France",
+  "active_listings_count": 259
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Baie-Mahault",
+  "full_name": "Baie-Mahault, Guadeloupe, France",
+  "active_listings_count": 259
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cotignac",
+  "full_name": "Cotignac, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 258
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Compiègne",
+  "full_name": "Compiègne, Hauts-de-France, France",
+  "active_listings_count": 256
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Wissant",
+  "full_name": "Wissant, Hauts-de-France, France",
+  "active_listings_count": 254
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Schœlcher",
+  "full_name": "Schœlcher, Martinique, France",
+  "active_listings_count": 249
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Les Abymes",
+  "full_name": "Les Abymes, Guadeloupe, France",
+  "active_listings_count": 245
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Audenge",
+  "full_name": "Audenge, Nouvelle-Aquitaine, France",
+  "active_listings_count": 244
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Laveissière",
+  "full_name": "Laveissière, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 244
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Dole",
+  "full_name": "Dole, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 243
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Istres",
+  "full_name": "Istres, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 241
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cavaillon",
+  "full_name": "Cavaillon, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 241
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Barbâtre",
+  "full_name": "Barbâtre, Pays de la Loire, France",
+  "active_listings_count": 240
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Bédoin",
+  "full_name": "Bédoin, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 239
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Lens",
+  "full_name": "Lens, Hauts-de-France, France",
+  "active_listings_count": 237
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Montriond",
+  "full_name": "Montriond, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 235
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Merlimont",
+  "full_name": "Merlimont, Hauts-de-France, France",
+  "active_listings_count": 234
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Camiers",
+  "full_name": "Camiers, Hauts-de-France, France",
+  "active_listings_count": 234
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Èze",
+  "full_name": "Èze, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 233
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Albertville",
+  "full_name": "Albertville, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 231
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "La Bernerie-en-Retz",
+  "full_name": "La Bernerie-en-Retz, Pays de la Loire, France",
+  "active_listings_count": 231
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Biot",
+  "full_name": "Biot, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 230
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Quend",
+  "full_name": "Quend, Hauts-de-France, France",
+  "active_listings_count": 229
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montbéliard",
+  "full_name": "Montbéliard, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 228
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Mesquer",
+  "full_name": "Mesquer, Pays de la Loire, France",
+  "active_listings_count": 227
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Léon",
+  "full_name": "Léon, Nouvelle-Aquitaine, France",
+  "active_listings_count": 227
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Cenon",
+  "full_name": "Cenon, Nouvelle-Aquitaine, France",
+  "active_listings_count": 227
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Doussard",
+  "full_name": "Doussard, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 227
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Allevard",
+  "full_name": "Allevard, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 224
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Châteaurenard",
+  "full_name": "Châteaurenard, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 223
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "L'Épine",
+  "full_name": "L'Épine, Pays de la Loire, France",
+  "active_listings_count": 221
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Châtellerault",
+  "full_name": "Châtellerault, Nouvelle-Aquitaine, France",
+  "active_listings_count": 221
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "La Guérinière",
+  "full_name": "La Guérinière, Pays de la Loire, France",
+  "active_listings_count": 219
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Taninges",
+  "full_name": "Taninges, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 219
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Éguilles",
+  "full_name": "Éguilles, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 218
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Mallemort",
+  "full_name": "Mallemort, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 216
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Bollène",
+  "full_name": "Bollène, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 216
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Mios",
+  "full_name": "Mios, Nouvelle-Aquitaine, France",
+  "active_listings_count": 215
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Cambrai",
+  "full_name": "Cambrai, Hauts-de-France, France",
+  "active_listings_count": 214
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le François",
+  "full_name": "Le François, Martinique, France",
+  "active_listings_count": 214
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Malaucène",
+  "full_name": "Malaucène, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 213
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vidauban",
+  "full_name": "Vidauban, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 211
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Aubenas",
+  "full_name": "Aubenas, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 210
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Chamonix",
+  "full_name": "Chamonix, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 210
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Sens",
+  "full_name": "Sens, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 209
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Grand-Bourg",
+  "full_name": "Grand-Bourg, Guadeloupe, France",
+  "active_listings_count": 209
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Nyons",
+  "full_name": "Nyons, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 208
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Montauroux",
+  "full_name": "Montauroux, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 208
+ },
+ {
+  "country": "France",
+  "region": "Réunion",
+  "locality": "La Possession",
+  "full_name": "La Possession, Réunion, France",
+  "active_listings_count": 206
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Kaysersberg-Vignoble",
+  "full_name": "Kaysersberg-Vignoble, Grand Est, France",
+  "active_listings_count": 205
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Bron",
+  "full_name": "Bron, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 203
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le Lamentin",
+  "full_name": "Le Lamentin, Martinique, France",
+  "active_listings_count": 203
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Changé",
+  "full_name": "Changé, Pays de la Loire, France",
+  "active_listings_count": 200
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Royat",
+  "full_name": "Royat, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 200
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Chamalières",
+  "full_name": "Chamalières, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 199
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Moulins",
+  "full_name": "Moulins, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 198
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Salles",
+  "full_name": "Salles, Nouvelle-Aquitaine, France",
+  "active_listings_count": 197
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Jonzac",
+  "full_name": "Jonzac, Nouvelle-Aquitaine, France",
+  "active_listings_count": 196
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Terre-de-Haut",
+  "full_name": "Terre-de-Haut, Guadeloupe, France",
+  "active_listings_count": 196
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Angoulins",
+  "full_name": "Angoulins, Nouvelle-Aquitaine, France",
+  "active_listings_count": 194
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Sanguinet",
+  "full_name": "Sanguinet, Nouvelle-Aquitaine, France",
+  "active_listings_count": 193
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Chinon",
+  "full_name": "Chinon, Centre-Val de Loire, France",
+  "active_listings_count": 189
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Messanges",
+  "full_name": "Messanges, Nouvelle-Aquitaine, France",
+  "active_listings_count": 188
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Castellane",
+  "full_name": "Castellane, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 188
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Métabief",
+  "full_name": "Métabief, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 186
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Sèvremont",
+  "full_name": "Sèvremont, Pays de la Loire, France",
+  "active_listings_count": 185
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Rivière-Salée",
+  "full_name": "Rivière-Salée, Martinique, France",
+  "active_listings_count": 182
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Roussillon",
+  "full_name": "Roussillon, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 181
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Biganos",
+  "full_name": "Biganos, Nouvelle-Aquitaine, France",
+  "active_listings_count": 180
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Oz",
+  "full_name": "Oz, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 178
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Boucau",
+  "full_name": "Boucau, Nouvelle-Aquitaine, France",
+  "active_listings_count": 177
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Vaujany",
+  "full_name": "Vaujany, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 177
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Monteux",
+  "full_name": "Monteux, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 176
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Grospierres",
+  "full_name": "Grospierres, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 175
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cabriès",
+  "full_name": "Cabriès, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 175
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Aureilhan",
+  "full_name": "Aureilhan, Nouvelle-Aquitaine, France",
+  "active_listings_count": 174
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Robion",
+  "full_name": "Robion, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 174
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "La Plaine-sur-Mer",
+  "full_name": "La Plaine-sur-Mer, Pays de la Loire, France",
+  "active_listings_count": 174
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Illkirch-Graffenstaden",
+  "full_name": "Illkirch-Graffenstaden, Grand Est, France",
+  "active_listings_count": 173
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Fayence",
+  "full_name": "Fayence, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 172
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Guéthary",
+  "full_name": "Guéthary, Nouvelle-Aquitaine, France",
+  "active_listings_count": 171
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Gastes",
+  "full_name": "Gastes, Nouvelle-Aquitaine, France",
+  "active_listings_count": 171
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Floirac",
+  "full_name": "Floirac, Nouvelle-Aquitaine, France",
+  "active_listings_count": 171
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Étaples",
+  "full_name": "Étaples, Hauts-de-France, France",
+  "active_listings_count": 170
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Forcalquier",
+  "full_name": "Forcalquier, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 169
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Sorgues",
+  "full_name": "Sorgues, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 169
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Lambesc",
+  "full_name": "Lambesc, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 169
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Gravelines",
+  "full_name": "Gravelines, Hauts-de-France, France",
+  "active_listings_count": 168
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Bonnieux",
+  "full_name": "Bonnieux, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 168
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Pertuis",
+  "full_name": "Pertuis, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 167
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Croix",
+  "full_name": "Croix, Hauts-de-France, France",
+  "active_listings_count": 166
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Thionville",
+  "full_name": "Thionville, Grand Est, France",
+  "active_listings_count": 166
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Obernai",
+  "full_name": "Obernai, Grand Est, France",
+  "active_listings_count": 166
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Laruns",
+  "full_name": "Laruns, Nouvelle-Aquitaine, France",
+  "active_listings_count": 165
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Meyzieu",
+  "full_name": "Meyzieu, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 165
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Arcangues",
+  "full_name": "Arcangues, Nouvelle-Aquitaine, France",
+  "active_listings_count": 164
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Lagord",
+  "full_name": "Lagord, Nouvelle-Aquitaine, France",
+  "active_listings_count": 164
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Vierzon",
+  "full_name": "Vierzon, Centre-Val de Loire, France",
+  "active_listings_count": 163
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Abbeville",
+  "full_name": "Abbeville, Hauts-de-France, France",
+  "active_listings_count": 163
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Cornimont",
+  "full_name": "Cornimont, Grand Est, France",
+  "active_listings_count": 163
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Auris",
+  "full_name": "Auris, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 163
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Salernes",
+  "full_name": "Salernes, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 163
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Rognes",
+  "full_name": "Rognes, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 163
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Gien",
+  "full_name": "Gien, Centre-Val de Loire, France",
+  "active_listings_count": 162
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Prémanon",
+  "full_name": "Prémanon, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 161
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Écully",
+  "full_name": "Écully, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 161
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Aups",
+  "full_name": "Aups, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 161
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Rivière-Pilote",
+  "full_name": "Rivière-Pilote, Martinique, France",
+  "active_listings_count": 161
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Ollioules",
+  "full_name": "Ollioules, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 160
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Die",
+  "full_name": "Die, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 159
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Mazan",
+  "full_name": "Mazan, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 159
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Ventabren",
+  "full_name": "Ventabren, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 159
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le Carbet",
+  "full_name": "Le Carbet, Martinique, France",
+  "active_listings_count": 158
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Crest",
+  "full_name": "Crest, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 157
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Thônes",
+  "full_name": "Thônes, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 157
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Bouguenais",
+  "full_name": "Bouguenais, Pays de la Loire, France",
+  "active_listings_count": 156
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Eysines",
+  "full_name": "Eysines, Nouvelle-Aquitaine, France",
+  "active_listings_count": 156
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Pointe-à-Pitre",
+  "full_name": "Pointe-à-Pitre, Guadeloupe, France",
+  "active_listings_count": 155
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Marmande",
+  "full_name": "Marmande, Nouvelle-Aquitaine, France",
+  "active_listings_count": 154
+ },
+ {
+  "country": "France",
+  "region": "Réunion",
+  "locality": "Petite-Île",
+  "full_name": "Petite-Île, Réunion, France",
+  "active_listings_count": 153
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Vittel",
+  "full_name": "Vittel, Grand Est, France",
+  "active_listings_count": 153
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Vertou",
+  "full_name": "Vertou, Pays de la Loire, France",
+  "active_listings_count": 153
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Enchastrayes",
+  "full_name": "Enchastrayes, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 153
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Chorges",
+  "full_name": "Chorges, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 153
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Hasparren",
+  "full_name": "Hasparren, Nouvelle-Aquitaine, France",
+  "active_listings_count": 152
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Arette",
+  "full_name": "Arette, Nouvelle-Aquitaine, France",
+  "active_listings_count": 152
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Trois-Rivières",
+  "full_name": "Trois-Rivières, Guadeloupe, France",
+  "active_listings_count": 152
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bruges",
+  "full_name": "Bruges, Nouvelle-Aquitaine, France",
+  "active_listings_count": 151
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Ceyreste",
+  "full_name": "Ceyreste, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 151
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Verdun",
+  "full_name": "Verdun, Grand Est, France",
+  "active_listings_count": 150
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Ruoms",
+  "full_name": "Ruoms, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 149
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Callian",
+  "full_name": "Callian, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 149
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Tarascon",
+  "full_name": "Tarascon, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 148
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Riquewihr",
+  "full_name": "Riquewihr, Grand Est, France",
+  "active_listings_count": 147
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Saint-Dizier",
+  "full_name": "Saint-Dizier, Grand Est, France",
+  "active_listings_count": 147
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Lormont",
+  "full_name": "Lormont, Nouvelle-Aquitaine, France",
+  "active_listings_count": 147
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Flayosc",
+  "full_name": "Flayosc, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 147
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Valensole",
+  "full_name": "Valensole, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 147
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Tosse",
+  "full_name": "Tosse, Nouvelle-Aquitaine, France",
+  "active_listings_count": 146
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Sangatte",
+  "full_name": "Sangatte, Hauts-de-France, France",
+  "active_listings_count": 145
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Landry",
+  "full_name": "Landry, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 145
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Montrichard Val de Cher",
+  "full_name": "Montrichard Val de Cher, Centre-Val de Loire, France",
+  "active_listings_count": 143
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Ambleteuse",
+  "full_name": "Ambleteuse, Hauts-de-France, France",
+  "active_listings_count": 143
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Lambersart",
+  "full_name": "Lambersart, Hauts-de-France, France",
+  "active_listings_count": 143
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Senlis",
+  "full_name": "Senlis, Hauts-de-France, France",
+  "active_listings_count": 141
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Ascain",
+  "full_name": "Ascain, Nouvelle-Aquitaine, France",
+  "active_listings_count": 141
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Allauch",
+  "full_name": "Allauch, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 141
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Lauris",
+  "full_name": "Lauris, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 141
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Béthune",
+  "full_name": "Béthune, Hauts-de-France, France",
+  "active_listings_count": 140
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Mulsanne",
+  "full_name": "Mulsanne, Pays de la Loire, France",
+  "active_listings_count": 140
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Fuveau",
+  "full_name": "Fuveau, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 140
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Périgny",
+  "full_name": "Périgny, Nouvelle-Aquitaine, France",
+  "active_listings_count": 139
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "La Flèche",
+  "full_name": "La Flèche, Pays de la Loire, France",
+  "active_listings_count": 138
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Brignoles",
+  "full_name": "Brignoles, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 138
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Boofzheim",
+  "full_name": "Boofzheim, Grand Est, France",
+  "active_listings_count": 136
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Orvault",
+  "full_name": "Orvault, Pays de la Loire, France",
+  "active_listings_count": 136
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Saujon",
+  "full_name": "Saujon, Nouvelle-Aquitaine, France",
+  "active_listings_count": 136
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Marignane",
+  "full_name": "Marignane, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 136
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Autun",
+  "full_name": "Autun, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 135
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Préfailles",
+  "full_name": "Préfailles, Pays de la Loire, France",
+  "active_listings_count": 135
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Gaillard",
+  "full_name": "Gaillard, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 135
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Flumet",
+  "full_name": "Flumet, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 135
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vitrolles",
+  "full_name": "Vitrolles, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 135
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vedène",
+  "full_name": "Vedène, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 135
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Eyguières",
+  "full_name": "Eyguières, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 135
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Haguenau",
+  "full_name": "Haguenau, Grand Est, France",
+  "active_listings_count": 134
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Ancelle",
+  "full_name": "Ancelle, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 134
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Vieux-Habitants",
+  "full_name": "Vieux-Habitants, Guadeloupe, France",
+  "active_listings_count": 134
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Les Angles",
+  "full_name": "Les Angles, Occitanie, France",
+  "active_listings_count": 133
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Capesterre-Belle-Eau",
+  "full_name": "Capesterre-Belle-Eau, Guadeloupe, France",
+  "active_listings_count": 133
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Gardanne",
+  "full_name": "Gardanne, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 132
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Lourmarin",
+  "full_name": "Lourmarin, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 132
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Île-Tudy",
+  "full_name": "Île-Tudy, Brittany, France",
+  "active_listings_count": 131
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Île-aux-Moines",
+  "full_name": "Île-aux-Moines, Brittany, France",
+  "active_listings_count": 131
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Lagorce",
+  "full_name": "Lagorce, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 126
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Duingt",
+  "full_name": "Duingt, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 126
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Annonay",
+  "full_name": "Annonay, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 126
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Paradou",
+  "full_name": "Paradou, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 126
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Montargis",
+  "full_name": "Montargis, Centre-Val de Loire, France",
+  "active_listings_count": 125
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Pontarlier",
+  "full_name": "Pontarlier, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 125
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Barr",
+  "full_name": "Barr, Grand Est, France",
+  "active_listings_count": 125
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Orelle",
+  "full_name": "Orelle, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 125
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Roquevaire",
+  "full_name": "Roquevaire, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 125
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Lamentin",
+  "full_name": "Lamentin, Guadeloupe, France",
+  "active_listings_count": 125
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Voiron",
+  "full_name": "Voiron, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 124
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Guillestre",
+  "full_name": "Guillestre, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 124
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Bischheim",
+  "full_name": "Bischheim, Grand Est, France",
+  "active_listings_count": 123
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Bernex",
+  "full_name": "Bernex, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 122
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Riez",
+  "full_name": "Riez, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 122
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Murol",
+  "full_name": "Murol, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 121
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Laon",
+  "full_name": "Laon, Hauts-de-France, France",
+  "active_listings_count": 120
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Turckheim",
+  "full_name": "Turckheim, Grand Est, France",
+  "active_listings_count": 120
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Sèvremoine",
+  "full_name": "Sèvremoine, Pays de la Loire, France",
+  "active_listings_count": 120
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Abondance",
+  "full_name": "Abondance, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 120
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Auriol",
+  "full_name": "Auriol, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 120
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Valréas",
+  "full_name": "Valréas, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 120
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Pélissanne",
+  "full_name": "Pélissanne, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 120
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Saint-Claude",
+  "full_name": "Saint-Claude, Guadeloupe, France",
+  "active_listings_count": 120
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Port-Louis",
+  "full_name": "Port-Louis, Guadeloupe, France",
+  "active_listings_count": 120
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Wintzenheim",
+  "full_name": "Wintzenheim, Grand Est, France",
+  "active_listings_count": 119
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Lingolsheim",
+  "full_name": "Lingolsheim, Grand Est, France",
+  "active_listings_count": 119
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Bozel",
+  "full_name": "Bozel, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 119
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Ribeauvillé",
+  "full_name": "Ribeauvillé, Grand Est, France",
+  "active_listings_count": 118
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Issoire",
+  "full_name": "Issoire, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 118
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Riom",
+  "full_name": "Riom, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 118
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Huningue",
+  "full_name": "Huningue, Grand Est, France",
+  "active_listings_count": 117
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Le Tholy",
+  "full_name": "Le Tholy, Grand Est, France",
+  "active_listings_count": 117
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Chanverrie",
+  "full_name": "Chanverrie, Pays de la Loire, France",
+  "active_listings_count": 117
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Fontvieille",
+  "full_name": "Fontvieille, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 117
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Munster",
+  "full_name": "Munster, Grand Est, France",
+  "active_listings_count": 116
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Clisson",
+  "full_name": "Clisson, Pays de la Loire, France",
+  "active_listings_count": 116
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Bellevaux",
+  "full_name": "Bellevaux, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 116
+ },
+ {
+  "country": "France",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Eygalières",
+  "full_name": "Eygalières, Provence-Alpes-Côte d'Azur, France",
+  "active_listings_count": 116
+ },
+ {
+  "country": "France",
+  "region": "Bretagne",
+  "locality": "Brest",
+  "full_name": "Brest, Bretagne, France",
+  "active_listings_count": 115
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Capesterre-de-Marie-Galante",
+  "full_name": "Capesterre-de-Marie-Galante, Guadeloupe, France",
+  "active_listings_count": 115
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Dikos",
+  "full_name": "Dikos, Martinique, France",
+  "active_listings_count": 115
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Publier",
+  "full_name": "Publier, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 114
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Eguisheim",
+  "full_name": "Eguisheim, Grand Est, France",
+  "active_listings_count": 113
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Challans",
+  "full_name": "Challans, Pays de la Loire, France",
+  "active_listings_count": 113
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Pierrelatte",
+  "full_name": "Pierrelatte, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 113
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Saverne",
+  "full_name": "Saverne, Grand Est, France",
+  "active_listings_count": 112
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Dieulefit",
+  "full_name": "Dieulefit, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 112
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Vendôme",
+  "full_name": "Vendôme, Centre-Val de Loire, France",
+  "active_listings_count": 110
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Carquefou",
+  "full_name": "Carquefou, Pays de la Loire, France",
+  "active_listings_count": 110
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Salavas",
+  "full_name": "Salavas, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 108
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Allemond",
+  "full_name": "Allemond, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 108
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Tournus",
+  "full_name": "Tournus, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 107
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Chaumont",
+  "full_name": "Chaumont, Grand Est, France",
+  "active_listings_count": 107
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Orbey",
+  "full_name": "Orbey, Grand Est, France",
+  "active_listings_count": 107
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Bussang",
+  "full_name": "Bussang, Grand Est, France",
+  "active_listings_count": 107
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Thiers",
+  "full_name": "Thiers, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 106
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Sedan",
+  "full_name": "Sedan, Grand Est, France",
+  "active_listings_count": 105
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Ventron",
+  "full_name": "Ventron, Grand Est, France",
+  "active_listings_count": 105
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Spay",
+  "full_name": "Spay, Pays de la Loire, France",
+  "active_listings_count": 104
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Olivet",
+  "full_name": "Olivet, Centre-Val de Loire, France",
+  "active_listings_count": 103
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Chantilly",
+  "full_name": "Chantilly, Hauts-de-France, France",
+  "active_listings_count": 103
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Valserhône",
+  "full_name": "Valserhône, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 103
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Fillière",
+  "full_name": "Fillière, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 103
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Anould",
+  "full_name": "Anould, Grand Est, France",
+  "active_listings_count": 102
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Sciez",
+  "full_name": "Sciez, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 102
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Cluses",
+  "full_name": "Cluses, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 101
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Fontaine",
+  "full_name": "Fontaine, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 101
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Loches",
+  "full_name": "Loches, Centre-Val de Loire, France",
+  "active_listings_count": 100
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Dol-de-Bretagne",
+  "full_name": "Dol-de-Bretagne, Brittany, France",
+  "active_listings_count": 100
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Aussois",
+  "full_name": "Aussois, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 99
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Case-Pilote",
+  "full_name": "Case-Pilote, Martinique, France",
+  "active_listings_count": 99
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Lablachère",
+  "full_name": "Lablachère, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 98
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Givet",
+  "full_name": "Givet, Grand Est, France",
+  "active_listings_count": 97
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Vesoul",
+  "full_name": "Vesoul, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 96
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Ronchin",
+  "full_name": "Ronchin, Hauts-de-France, France",
+  "active_listings_count": 96
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Bergheim",
+  "full_name": "Bergheim, Grand Est, France",
+  "active_listings_count": 96
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Avrillé",
+  "full_name": "Avrillé, Pays de la Loire, France",
+  "active_listings_count": 96
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Ruaudin",
+  "full_name": "Ruaudin, Pays de la Loire, France",
+  "active_listings_count": 96
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Saint-Louis",
+  "full_name": "Saint-Louis, Guadeloupe, France",
+  "active_listings_count": 96
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Arbois",
+  "full_name": "Arbois, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 94
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Beaumont",
+  "full_name": "Beaumont, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 94
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Tresserve",
+  "full_name": "Tresserve, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 94
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Lagnieu",
+  "full_name": "Lagnieu, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 94
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Beaugency",
+  "full_name": "Beaugency, Centre-Val de Loire, France",
+  "active_listings_count": 93
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Cluny",
+  "full_name": "Cluny, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 93
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Gex",
+  "full_name": "Gex, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 93
+ },
+ {
+  "country": "France",
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Lélex",
+  "full_name": "Lélex, Auvergne-Rhône-Alpes, France",
+  "active_listings_count": 93
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Avallon",
+  "full_name": "Avallon, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 91
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Wimille",
+  "full_name": "Wimille, Hauts-de-France, France",
+  "active_listings_count": 91
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Ostwald",
+  "full_name": "Ostwald, Grand Est, France",
+  "active_listings_count": 91
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Allonnes",
+  "full_name": "Allonnes, Pays de la Loire, France",
+  "active_listings_count": 91
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Gourbeyre",
+  "full_name": "Gourbeyre, Guadeloupe, France",
+  "active_listings_count": 91
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Saint-Pierre",
+  "full_name": "Saint-Pierre, Martinique, France",
+  "active_listings_count": 90
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Sainte-Marie",
+  "full_name": "Sainte-Marie, Martinique, France",
+  "active_listings_count": 89
+ },
+ {
+  "country": "France",
+  "region": "Normandy",
+  "locality": "Bagnoles-de-l'Orne-Normandie",
+  "full_name": "Bagnoles-de-l'Orne-Normandie, Normandy, France",
+  "active_listings_count": 88
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Guebwiller",
+  "full_name": "Guebwiller, Grand Est, France",
+  "active_listings_count": 88
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Ammerschwihr",
+  "full_name": "Ammerschwihr, Grand Est, France",
+  "active_listings_count": 87
+ },
+ {
+  "country": "France",
+  "region": "Mayotte",
+  "locality": "Mamoudzou",
+  "full_name": "Mamoudzou, Mayotte, France",
+  "active_listings_count": 87
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Vouvray",
+  "full_name": "Vouvray, Centre-Val de Loire, France",
+  "active_listings_count": 85
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Seigy",
+  "full_name": "Seigy, Centre-Val de Loire, France",
+  "active_listings_count": 85
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Loos",
+  "full_name": "Loos, Hauts-de-France, France",
+  "active_listings_count": 84
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Anzin",
+  "full_name": "Anzin, Hauts-de-France, France",
+  "active_listings_count": 84
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Rochesson",
+  "full_name": "Rochesson, Grand Est, France",
+  "active_listings_count": 84
+ },
+ {
+  "country": "France",
+  "region": "Normandy",
+  "locality": "Vire Normandie",
+  "full_name": "Vire Normandie, Normandy, France",
+  "active_listings_count": 83
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Fondettes",
+  "full_name": "Fondettes, Centre-Val de Loire, France",
+  "active_listings_count": 82
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Soissons",
+  "full_name": "Soissons, Hauts-de-France, France",
+  "active_listings_count": 82
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Anse-Bertrand",
+  "full_name": "Anse-Bertrand, Guadeloupe, France",
+  "active_listings_count": 81
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Langres",
+  "full_name": "Langres, Grand Est, France",
+  "active_listings_count": 79
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Sallertaine",
+  "full_name": "Sallertaine, Pays de la Loire, France",
+  "active_listings_count": 79
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Teloché",
+  "full_name": "Teloché, Pays de la Loire, France",
+  "active_listings_count": 79
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Rouffach",
+  "full_name": "Rouffach, Grand Est, France",
+  "active_listings_count": 78
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Morne-à-l'Eau",
+  "full_name": "Morne-à-l'Eau, Guadeloupe, France",
+  "active_listings_count": 78
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Vineuil",
+  "full_name": "Vineuil, Centre-Val de Loire, France",
+  "active_listings_count": 76
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Sancerre",
+  "full_name": "Sancerre, Centre-Val de Loire, France",
+  "active_listings_count": 75
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Bourgueil",
+  "full_name": "Bourgueil, Centre-Val de Loire, France",
+  "active_listings_count": 75
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Assérac",
+  "full_name": "Assérac, Pays de la Loire, France",
+  "active_listings_count": 75
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Mer",
+  "full_name": "Mer, Centre-Val de Loire, France",
+  "active_listings_count": 74
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Angles",
+  "full_name": "Angles, Pays de la Loire, France",
+  "active_listings_count": 74
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Sarreguemines",
+  "full_name": "Sarreguemines, Grand Est, France",
+  "active_listings_count": 73
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Plainfaing",
+  "full_name": "Plainfaing, Grand Est, France",
+  "active_listings_count": 73
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Châtenois",
+  "full_name": "Châtenois, Grand Est, France",
+  "active_listings_count": 72
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Châteaubriant",
+  "full_name": "Châteaubriant, Pays de la Loire, France",
+  "active_listings_count": 72
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Remiremont",
+  "full_name": "Remiremont, Grand Est, France",
+  "active_listings_count": 71
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Hoenheim",
+  "full_name": "Hoenheim, Grand Est, France",
+  "active_listings_count": 70
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Mayenne",
+  "full_name": "Mayenne, Pays de la Loire, France",
+  "active_listings_count": 70
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Pouzauges",
+  "full_name": "Pouzauges, Pays de la Loire, France",
+  "active_listings_count": 70
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Dreux",
+  "full_name": "Dreux, Centre-Val de Loire, France",
+  "active_listings_count": 69
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Issoudun",
+  "full_name": "Issoudun, Centre-Val de Loire, France",
+  "active_listings_count": 69
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Chablis",
+  "full_name": "Chablis, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 69
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Lamoura",
+  "full_name": "Lamoura, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 69
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Yutz",
+  "full_name": "Yutz, Grand Est, France",
+  "active_listings_count": 69
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Herbignac",
+  "full_name": "Herbignac, Pays de la Loire, France",
+  "active_listings_count": 69
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Coulaines",
+  "full_name": "Coulaines, Pays de la Loire, France",
+  "active_listings_count": 69
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Salbris",
+  "full_name": "Salbris, Centre-Val de Loire, France",
+  "active_listings_count": 68
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Audinghen",
+  "full_name": "Audinghen, Hauts-de-France, France",
+  "active_listings_count": 68
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Vallet",
+  "full_name": "Vallet, Pays de la Loire, France",
+  "active_listings_count": 68
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Langeais",
+  "full_name": "Langeais, Centre-Val de Loire, France",
+  "active_listings_count": 67
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Liévin",
+  "full_name": "Liévin, Hauts-de-France, France",
+  "active_listings_count": 67
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Amnéville",
+  "full_name": "Amnéville, Grand Est, France",
+  "active_listings_count": 67
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Wissembourg",
+  "full_name": "Wissembourg, Grand Est, France",
+  "active_listings_count": 67
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Bouchemaine",
+  "full_name": "Bouchemaine, Pays de la Loire, France",
+  "active_listings_count": 66
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Morbier",
+  "full_name": "Morbier, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 65
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Creil",
+  "full_name": "Creil, Hauts-de-France, France",
+  "active_listings_count": 65
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Goyave",
+  "full_name": "Goyave, Guadeloupe, France",
+  "active_listings_count": 65
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Rochecorbon",
+  "full_name": "Rochecorbon, Centre-Val de Loire, France",
+  "active_listings_count": 64
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Écommoy",
+  "full_name": "Écommoy, Pays de la Loire, France",
+  "active_listings_count": 64
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Saint-Joseph",
+  "full_name": "Saint-Joseph, Martinique, France",
+  "active_listings_count": 64
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Digoin",
+  "full_name": "Digoin, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 63
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Audresselles",
+  "full_name": "Audresselles, Hauts-de-France, France",
+  "active_listings_count": 63
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Couëron",
+  "full_name": "Couëron, Pays de la Loire, France",
+  "active_listings_count": 63
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Maubeuge",
+  "full_name": "Maubeuge, Hauts-de-France, France",
+  "active_listings_count": 62
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Hayange",
+  "full_name": "Hayange, Grand Est, France",
+  "active_listings_count": 62
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Trélazé",
+  "full_name": "Trélazé, Pays de la Loire, France",
+  "active_listings_count": 62
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Guécélard",
+  "full_name": "Guécélard, Pays de la Loire, France",
+  "active_listings_count": 62
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Ornans",
+  "full_name": "Ornans, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 60
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Poligny",
+  "full_name": "Poligny, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 60
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Rue",
+  "full_name": "Rue, Hauts-de-France, France",
+  "active_listings_count": 60
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Châteauvieux",
+  "full_name": "Châteauvieux, Centre-Val de Loire, France",
+  "active_listings_count": 59
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Thann",
+  "full_name": "Thann, Grand Est, France",
+  "active_listings_count": 59
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Ardres",
+  "full_name": "Ardres, Hauts-de-France, France",
+  "active_listings_count": 58
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Gouvieux",
+  "full_name": "Gouvieux, Hauts-de-France, France",
+  "active_listings_count": 58
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Pontchâteau",
+  "full_name": "Pontchâteau, Pays de la Loire, France",
+  "active_listings_count": 58
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Petit-Canal",
+  "full_name": "Petit-Canal, Guadeloupe, France",
+  "active_listings_count": 58
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Saran",
+  "full_name": "Saran, Centre-Val de Loire, France",
+  "active_listings_count": 57
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Bouaye",
+  "full_name": "Bouaye, Pays de la Loire, France",
+  "active_listings_count": 57
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Île-de-Bréhat",
+  "full_name": "Île-de-Bréhat, Brittany, France",
+  "active_listings_count": 56
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Cellettes",
+  "full_name": "Cellettes, Centre-Val de Loire, France",
+  "active_listings_count": 56
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Joigny",
+  "full_name": "Joigny, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 56
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Armentières",
+  "full_name": "Armentières, Hauts-de-France, France",
+  "active_listings_count": 56
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Labaroche",
+  "full_name": "Labaroche, Grand Est, France",
+  "active_listings_count": 56
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Île-d'Arz",
+  "full_name": "Île-d'Arz, Brittany, France",
+  "active_listings_count": 55
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Briare",
+  "full_name": "Briare, Centre-Val de Loire, France",
+  "active_listings_count": 55
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Bléré",
+  "full_name": "Bléré, Centre-Val de Loire, France",
+  "active_listings_count": 55
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Favières",
+  "full_name": "Favières, Hauts-de-France, France",
+  "active_listings_count": 55
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Ingersheim",
+  "full_name": "Ingersheim, Grand Est, France",
+  "active_listings_count": 55
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Beblenheim",
+  "full_name": "Beblenheim, Grand Est, France",
+  "active_listings_count": 55
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Île-de-Batz",
+  "full_name": "Île-de-Batz, Brittany, France",
+  "active_listings_count": 54
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Savonnières",
+  "full_name": "Savonnières, Centre-Val de Loire, France",
+  "active_listings_count": 53
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Châteaudun",
+  "full_name": "Châteaudun, Centre-Val de Loire, France",
+  "active_listings_count": 53
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Meursault",
+  "full_name": "Meursault, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 53
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Scherwiller",
+  "full_name": "Scherwiller, Grand Est, France",
+  "active_listings_count": 53
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Gerbépal",
+  "full_name": "Gerbépal, Grand Est, France",
+  "active_listings_count": 53
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Corcieux",
+  "full_name": "Corcieux, Grand Est, France",
+  "active_listings_count": 53
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Bourbourg",
+  "full_name": "Bourbourg, Hauts-de-France, France",
+  "active_listings_count": 52
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Forbach",
+  "full_name": "Forbach, Grand Est, France",
+  "active_listings_count": 52
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Luçon",
+  "full_name": "Luçon, Pays de la Loire, France",
+  "active_listings_count": 52
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Gros-Morne",
+  "full_name": "Gros-Morne, Martinique, France",
+  "active_listings_count": 52
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Talant",
+  "full_name": "Talant, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 51
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Champagnole",
+  "full_name": "Champagnole, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 51
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Wasquehal",
+  "full_name": "Wasquehal, Hauts-de-France, France",
+  "active_listings_count": 51
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Soultzeren",
+  "full_name": "Soultzeren, Grand Est, France",
+  "active_listings_count": 51
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Vagney",
+  "full_name": "Vagney, Grand Est, France",
+  "active_listings_count": 51
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Toul",
+  "full_name": "Toul, Grand Est, France",
+  "active_listings_count": 51
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Gorges",
+  "full_name": "Gorges, Pays de la Loire, France",
+  "active_listings_count": 51
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Chenôve",
+  "full_name": "Chenôve, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 50
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Condette",
+  "full_name": "Condette, Hauts-de-France, France",
+  "active_listings_count": 50
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Eckbolsheim",
+  "full_name": "Eckbolsheim, Grand Est, France",
+  "active_listings_count": 49
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Rosheim",
+  "full_name": "Rosheim, Grand Est, France",
+  "active_listings_count": 49
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Bouin",
+  "full_name": "Bouin, Pays de la Loire, France",
+  "active_listings_count": 49
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Mouvaux",
+  "full_name": "Mouvaux, Hauts-de-France, France",
+  "active_listings_count": 48
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Lamorlaye",
+  "full_name": "Lamorlaye, Hauts-de-France, France",
+  "active_listings_count": 48
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Fillé",
+  "full_name": "Fillé, Pays de la Loire, France",
+  "active_listings_count": 48
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Missillac",
+  "full_name": "Missillac, Pays de la Loire, France",
+  "active_listings_count": 48
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Basse-Terre",
+  "full_name": "Basse-Terre, Guadeloupe, France",
+  "active_listings_count": 48
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Île-d'Aix",
+  "full_name": "Île-d'Aix, Nouvelle-Aquitaine, France",
+  "active_listings_count": 47
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Déols",
+  "full_name": "Déols, Centre-Val de Loire, France",
+  "active_listings_count": 47
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Audincourt",
+  "full_name": "Audincourt, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 47
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Epfig",
+  "full_name": "Epfig, Grand Est, France",
+  "active_listings_count": 47
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Chantonnay",
+  "full_name": "Chantonnay, Pays de la Loire, France",
+  "active_listings_count": 47
+ },
+ {
+  "country": "France",
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Morcenx-la-Nouvelle",
+  "full_name": "Morcenx-la-Nouvelle, Nouvelle-Aquitaine, France",
+  "active_listings_count": 47
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Fraize",
+  "full_name": "Fraize, Grand Est, France",
+  "active_listings_count": 46
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Mouchamps",
+  "full_name": "Mouchamps, Pays de la Loire, France",
+  "active_listings_count": 46
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Bain-de-Bretagne",
+  "full_name": "Bain-de-Bretagne, Brittany, France",
+  "active_listings_count": 46
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Meusnes",
+  "full_name": "Meusnes, Centre-Val de Loire, France",
+  "active_listings_count": 44
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Mosnes",
+  "full_name": "Mosnes, Centre-Val de Loire, France",
+  "active_listings_count": 44
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Malbuisson",
+  "full_name": "Malbuisson, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 44
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Dienville",
+  "full_name": "Dienville, Grand Est, France",
+  "active_listings_count": 44
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Rethel",
+  "full_name": "Rethel, Grand Est, France",
+  "active_listings_count": 44
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Mittelwihr",
+  "full_name": "Mittelwihr, Grand Est, France",
+  "active_listings_count": 44
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Bennwihr",
+  "full_name": "Bennwihr, Grand Est, France",
+  "active_listings_count": 44
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Longchaumois",
+  "full_name": "Longchaumois, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 43
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Nanchez",
+  "full_name": "Nanchez, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 43
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Woignarue",
+  "full_name": "Woignarue, Hauts-de-France, France",
+  "active_listings_count": 43
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Marquise",
+  "full_name": "Marquise, Hauts-de-France, France",
+  "active_listings_count": 43
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Lunéville",
+  "full_name": "Lunéville, Grand Est, France",
+  "active_listings_count": 43
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Sézanne",
+  "full_name": "Sézanne, Grand Est, France",
+  "active_listings_count": 43
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Champagné",
+  "full_name": "Champagné, Pays de la Loire, France",
+  "active_listings_count": 43
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Veigné",
+  "full_name": "Veigné, Centre-Val de Loire, France",
+  "active_listings_count": 42
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Tonnerre",
+  "full_name": "Tonnerre, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 42
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Wambrechies",
+  "full_name": "Wambrechies, Hauts-de-France, France",
+  "active_listings_count": 42
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Benfeld",
+  "full_name": "Benfeld, Grand Est, France",
+  "active_listings_count": 42
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Riedisheim",
+  "full_name": "Riedisheim, Grand Est, France",
+  "active_listings_count": 42
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Hautvillers",
+  "full_name": "Hautvillers, Grand Est, France",
+  "active_listings_count": 42
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Cugand",
+  "full_name": "Cugand, Pays de la Loire, France",
+  "active_listings_count": 42
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Esvres",
+  "full_name": "Esvres, Centre-Val de Loire, France",
+  "active_listings_count": 41
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Pommard",
+  "full_name": "Pommard, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 41
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Wattignies",
+  "full_name": "Wattignies, Hauts-de-France, France",
+  "active_listings_count": 41
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Bailleul",
+  "full_name": "Bailleul, Hauts-de-France, France",
+  "active_listings_count": 41
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Cassel",
+  "full_name": "Cassel, Hauts-de-France, France",
+  "active_listings_count": 41
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Clermont",
+  "full_name": "Clermont, Hauts-de-France, France",
+  "active_listings_count": 41
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Sapois",
+  "full_name": "Sapois, Grand Est, France",
+  "active_listings_count": 41
+ },
+ {
+  "country": "France",
+  "region": "Grand Est",
+  "locality": "Bœrsch",
+  "full_name": "Bœrsch, Grand Est, France",
+  "active_listings_count": 41
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Amilly",
+  "full_name": "Amilly, Centre-Val de Loire, France",
+  "active_listings_count": 40
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Givry",
+  "full_name": "Givry, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 40
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Lezennes",
+  "full_name": "Lezennes, Hauts-de-France, France",
+  "active_listings_count": 40
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Vieux-Fort",
+  "full_name": "Vieux-Fort, Guadeloupe, France",
+  "active_listings_count": 40
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Saint-Esprit",
+  "full_name": "Saint-Esprit, Martinique, France",
+  "active_listings_count": 40
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Cheverny",
+  "full_name": "Cheverny, Centre-Val de Loire, France",
+  "active_listings_count": 39
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Thésée",
+  "full_name": "Thésée, Centre-Val de Loire, France",
+  "active_listings_count": 39
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Bergues",
+  "full_name": "Bergues, Hauts-de-France, France",
+  "active_listings_count": 39
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Groffliers",
+  "full_name": "Groffliers, Hauts-de-France, France",
+  "active_listings_count": 39
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Terre-de-Bas",
+  "full_name": "Terre-de-Bas, Guadeloupe, France",
+  "active_listings_count": 39
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Levernois",
+  "full_name": "Levernois, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 38
+ },
+ {
+  "country": "France",
+  "region": "Normandy",
+  "locality": "Condé-en-Normandie",
+  "full_name": "Condé-en-Normandie, Normandy, France",
+  "active_listings_count": 38
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Pierrefonds",
+  "full_name": "Pierrefonds, Hauts-de-France, France",
+  "active_listings_count": 38
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Aizenay",
+  "full_name": "Aizenay, Pays de la Loire, France",
+  "active_listings_count": 38
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Durtal",
+  "full_name": "Durtal, Pays de la Loire, France",
+  "active_listings_count": 38
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Savenay",
+  "full_name": "Savenay, Pays de la Loire, France",
+  "active_listings_count": 38
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Longvic",
+  "full_name": "Longvic, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 37
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Noyers",
+  "full_name": "Noyers, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 37
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Gétigné",
+  "full_name": "Gétigné, Pays de la Loire, France",
+  "active_listings_count": 37
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Héric",
+  "full_name": "Héric, Pays de la Loire, France",
+  "active_listings_count": 37
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Ernée",
+  "full_name": "Ernée, Pays de la Loire, France",
+  "active_listings_count": 37
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Corseul",
+  "full_name": "Corseul, Brittany, France",
+  "active_listings_count": 37
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Pontlevoy",
+  "full_name": "Pontlevoy, Centre-Val de Loire, France",
+  "active_listings_count": 36
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Saulieu",
+  "full_name": "Saulieu, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 36
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Doucier",
+  "full_name": "Doucier, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 36
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montbard",
+  "full_name": "Montbard, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 36
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Hem",
+  "full_name": "Hem, Hauts-de-France, France",
+  "active_listings_count": 36
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Vairé",
+  "full_name": "Vairé, Pays de la Loire, France",
+  "active_listings_count": 36
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Givrand",
+  "full_name": "Givrand, Pays de la Loire, France",
+  "active_listings_count": 36
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Rouillon",
+  "full_name": "Rouillon, Pays de la Loire, France",
+  "active_listings_count": 36
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le Morne-Rouge",
+  "full_name": "Le Morne-Rouge, Martinique, France",
+  "active_listings_count": 36
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Chécy",
+  "full_name": "Chécy, Centre-Val de Loire, France",
+  "active_listings_count": 35
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Verton",
+  "full_name": "Verton, Hauts-de-France, France",
+  "active_listings_count": 35
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Escalles",
+  "full_name": "Escalles, Hauts-de-France, France",
+  "active_listings_count": 35
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Hazebrouck",
+  "full_name": "Hazebrouck, Hauts-de-France, France",
+  "active_listings_count": 35
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Noyon",
+  "full_name": "Noyon, Hauts-de-France, France",
+  "active_listings_count": 35
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Blain",
+  "full_name": "Blain, Pays de la Loire, France",
+  "active_listings_count": 35
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Noizay",
+  "full_name": "Noizay, Centre-Val de Loire, France",
+  "active_listings_count": 34
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Louhans",
+  "full_name": "Louhans, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 34
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Marigny",
+  "full_name": "Marigny, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 34
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Commequiers",
+  "full_name": "Commequiers, Pays de la Loire, France",
+  "active_listings_count": 34
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Plessé",
+  "full_name": "Plessé, Pays de la Loire, France",
+  "active_listings_count": 34
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Chémery",
+  "full_name": "Chémery, Centre-Val de Loire, France",
+  "active_listings_count": 33
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Valencisse",
+  "full_name": "Valencisse, Centre-Val de Loire, France",
+  "active_listings_count": 33
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Lajoux",
+  "full_name": "Lajoux, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 33
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Carvin",
+  "full_name": "Carvin, Hauts-de-France, France",
+  "active_listings_count": 33
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Haubourdin",
+  "full_name": "Haubourdin, Hauts-de-France, France",
+  "active_listings_count": 33
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Évron",
+  "full_name": "Évron, Pays de la Loire, France",
+  "active_listings_count": 33
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Frossay",
+  "full_name": "Frossay, Pays de la Loire, France",
+  "active_listings_count": 33
+ },
+ {
+  "country": "France",
+  "region": "Guadeloupe",
+  "locality": "Baillif",
+  "full_name": "Baillif, Guadeloupe, France",
+  "active_listings_count": 33
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Mainvilliers",
+  "full_name": "Mainvilliers, Centre-Val de Loire, France",
+  "active_listings_count": 32
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Bellefontaine",
+  "full_name": "Bellefontaine, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 32
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montfaucon",
+  "full_name": "Montfaucon, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 32
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Tillé",
+  "full_name": "Tillé, Hauts-de-France, France",
+  "active_listings_count": 32
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Audembert",
+  "full_name": "Audembert, Hauts-de-France, France",
+  "active_listings_count": 32
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Venansault",
+  "full_name": "Venansault, Pays de la Loire, France",
+  "active_listings_count": 32
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Chartres-de-Bretagne",
+  "full_name": "Chartres-de-Bretagne, Brittany, France",
+  "active_listings_count": 32
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Francueil",
+  "full_name": "Francueil, Centre-Val de Loire, France",
+  "active_listings_count": 31
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Couffy",
+  "full_name": "Couffy, Centre-Val de Loire, France",
+  "active_listings_count": 31
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Bonneval",
+  "full_name": "Bonneval, Centre-Val de Loire, France",
+  "active_listings_count": 31
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Avoine",
+  "full_name": "Avoine, Centre-Val de Loire, France",
+  "active_listings_count": 31
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Lorris",
+  "full_name": "Lorris, Centre-Val de Loire, France",
+  "active_listings_count": 31
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Villandry",
+  "full_name": "Villandry, Centre-Val de Loire, France",
+  "active_listings_count": 31
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Écueillé",
+  "full_name": "Écueillé, Centre-Val de Loire, France",
+  "active_listings_count": 31
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Raismes",
+  "full_name": "Raismes, Hauts-de-France, France",
+  "active_listings_count": 31
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Soullans",
+  "full_name": "Soullans, Pays de la Loire, France",
+  "active_listings_count": 31
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Oudon",
+  "full_name": "Oudon, Pays de la Loire, France",
+  "active_listings_count": 31
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Montsoreau",
+  "full_name": "Montsoreau, Pays de la Loire, France",
+  "active_listings_count": 31
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Orbigny",
+  "full_name": "Orbigny, Centre-Val de Loire, France",
+  "active_listings_count": 30
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Luynes",
+  "full_name": "Luynes, Centre-Val de Loire, France",
+  "active_listings_count": 30
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Huismes",
+  "full_name": "Huismes, Centre-Val de Loire, France",
+  "active_listings_count": 30
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Vézelay",
+  "full_name": "Vézelay, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 30
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Orgelet",
+  "full_name": "Orgelet, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 30
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Bonlieu",
+  "full_name": "Bonlieu, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 30
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Seclin",
+  "full_name": "Seclin, Hauts-de-France, France",
+  "active_listings_count": 30
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Bellevigny",
+  "full_name": "Bellevigny, Pays de la Loire, France",
+  "active_listings_count": 30
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Trangé",
+  "full_name": "Trangé, Pays de la Loire, France",
+  "active_listings_count": 30
+ },
+ {
+  "country": "France",
+  "region": "Mayotte",
+  "locality": "Dzaoudzi",
+  "full_name": "Dzaoudzi, Mayotte, France",
+  "active_listings_count": 30
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Courtenay",
+  "full_name": "Courtenay, Centre-Val de Loire, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Vermenton",
+  "full_name": "Vermenton, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Morteau",
+  "full_name": "Morteau, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Decize",
+  "full_name": "Decize, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Marck",
+  "full_name": "Marck, Hauts-de-France, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Albert",
+  "full_name": "Albert, Hauts-de-France, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Landevieille",
+  "full_name": "Landevieille, Pays de la Loire, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Guenrouet",
+  "full_name": "Guenrouet, Pays de la Loire, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Landeronde",
+  "full_name": "Landeronde, Pays de la Loire, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Tuffalun",
+  "full_name": "Tuffalun, Pays de la Loire, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Monnières",
+  "full_name": "Monnières, Pays de la Loire, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Bretagne",
+  "locality": "Plounéour-Brignogan-plages",
+  "full_name": "Plounéour-Brignogan-plages, Bretagne, France",
+  "active_listings_count": 29
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Rosnay",
+  "full_name": "Rosnay, Centre-Val de Loire, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Valençay",
+  "full_name": "Valençay, Centre-Val de Loire, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Senonches",
+  "full_name": "Senonches, Centre-Val de Loire, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Charolles",
+  "full_name": "Charolles, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Quetigny",
+  "full_name": "Quetigny, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Gray",
+  "full_name": "Gray, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montperreux",
+  "full_name": "Montperreux, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Pendé",
+  "full_name": "Pendé, Hauts-de-France, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Montournais",
+  "full_name": "Montournais, Pays de la Loire, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Tiercé",
+  "full_name": "Tiercé, Pays de la Loire, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Turquant",
+  "full_name": "Turquant, Pays de la Loire, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Maulévrier",
+  "full_name": "Maulévrier, Pays de la Loire, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Vigneux-de-Bretagne",
+  "full_name": "Vigneux-de-Bretagne, Pays de la Loire, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Mayotte",
+  "locality": "Bouéni",
+  "full_name": "Bouéni, Mayotte, France",
+  "active_listings_count": 28
+ },
+ {
+  "country": "France",
+  "region": "Bretagne",
+  "locality": "Île de Groix",
+  "full_name": "Île de Groix, Bretagne, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Chabris",
+  "full_name": "Chabris, Centre-Val de Loire, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Suèvres",
+  "full_name": "Suèvres, Centre-Val de Loire, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Montlivault",
+  "full_name": "Montlivault, Centre-Val de Loire, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Billy",
+  "full_name": "Billy, Centre-Val de Loire, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Blanzy",
+  "full_name": "Blanzy, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Lormes",
+  "full_name": "Lormes, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Maisod",
+  "full_name": "Maisod, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Arrest",
+  "full_name": "Arrest, Hauts-de-France, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Lesquin",
+  "full_name": "Lesquin, Hauts-de-France, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Marly",
+  "full_name": "Marly, Hauts-de-France, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Nalliers",
+  "full_name": "Nalliers, Pays de la Loire, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Sautron",
+  "full_name": "Sautron, Pays de la Loire, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Mayotte",
+  "locality": "Pamandzi",
+  "full_name": "Pamandzi, Mayotte, France",
+  "active_listings_count": 27
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Angé",
+  "full_name": "Angé, Centre-Val de Loire, France",
+  "active_listings_count": 26
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Maintenon",
+  "full_name": "Maintenon, Centre-Val de Loire, France",
+  "active_listings_count": 26
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Bracieux",
+  "full_name": "Bracieux, Centre-Val de Loire, France",
+  "active_listings_count": 26
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Jargeau",
+  "full_name": "Jargeau, Centre-Val de Loire, France",
+  "active_listings_count": 26
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Chitenay",
+  "full_name": "Chitenay, Centre-Val de Loire, France",
+  "active_listings_count": 26
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Monts",
+  "full_name": "Monts, Centre-Val de Loire, France",
+  "active_listings_count": 26
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Chauny",
+  "full_name": "Chauny, Hauts-de-France, France",
+  "active_listings_count": 26
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Beuvry",
+  "full_name": "Beuvry, Hauts-de-France, France",
+  "active_listings_count": 26
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Apremont",
+  "full_name": "Apremont, Pays de la Loire, France",
+  "active_listings_count": 26
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Grues",
+  "full_name": "Grues, Pays de la Loire, France",
+  "active_listings_count": 26
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Mellecey",
+  "full_name": "Mellecey, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Sochaux",
+  "full_name": "Sochaux, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montmorot",
+  "full_name": "Montmorot, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Fresse",
+  "full_name": "Fresse, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Outreau",
+  "full_name": "Outreau, Hauts-de-France, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Péronne",
+  "full_name": "Péronne, Hauts-de-France, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Samer",
+  "full_name": "Samer, Hauts-de-France, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Caudry",
+  "full_name": "Caudry, Hauts-de-France, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Beaucouzé",
+  "full_name": "Beaucouzé, Pays de la Loire, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Poiroux",
+  "full_name": "Poiroux, Pays de la Loire, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Treillières",
+  "full_name": "Treillières, Pays de la Loire, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Craon",
+  "full_name": "Craon, Pays de la Loire, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Montoir-de-Bretagne",
+  "full_name": "Montoir-de-Bretagne, Pays de la Loire, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Bretagne",
+  "locality": "Plouhinec",
+  "full_name": "Plouhinec, Bretagne, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Vauvert",
+  "full_name": "Vauvert, Occitanie, France",
+  "active_listings_count": 25
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Lèves",
+  "full_name": "Lèves, Centre-Val de Loire, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Chisseaux",
+  "full_name": "Chisseaux, Centre-Val de Loire, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Cheillé",
+  "full_name": "Cheillé, Centre-Val de Loire, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Véretz",
+  "full_name": "Véretz, Centre-Val de Loire, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Bréhémont",
+  "full_name": "Bréhémont, Centre-Val de Loire, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Rochejean",
+  "full_name": "Rochejean, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Baubigny",
+  "full_name": "Baubigny, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Brassy",
+  "full_name": "Brassy, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Migennes",
+  "full_name": "Migennes, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Donzy",
+  "full_name": "Donzy, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Chagny",
+  "full_name": "Chagny, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Fruges",
+  "full_name": "Fruges, Hauts-de-France, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Lanchères",
+  "full_name": "Lanchères, Hauts-de-France, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Tardinghen",
+  "full_name": "Tardinghen, Hauts-de-France, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Louplande",
+  "full_name": "Louplande, Pays de la Loire, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Paimbœuf",
+  "full_name": "Paimbœuf, Pays de la Loire, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Denée",
+  "full_name": "Denée, Pays de la Loire, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Damvix",
+  "full_name": "Damvix, Pays de la Loire, France",
+  "active_listings_count": 24
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Vatan",
+  "full_name": "Vatan, Centre-Val de Loire, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Chançay",
+  "full_name": "Chançay, Centre-Val de Loire, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Vouzon",
+  "full_name": "Vouzon, Centre-Val de Loire, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Benais",
+  "full_name": "Benais, Centre-Val de Loire, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Chaveignes",
+  "full_name": "Chaveignes, Centre-Val de Loire, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Dhuizon",
+  "full_name": "Dhuizon, Centre-Val de Loire, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Genillé",
+  "full_name": "Genillé, Centre-Val de Loire, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Ardentes",
+  "full_name": "Ardentes, Centre-Val de Loire, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Lure",
+  "full_name": "Lure, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Rully",
+  "full_name": "Rully, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Azé",
+  "full_name": "Azé, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Toucy",
+  "full_name": "Toucy, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Héricourt",
+  "full_name": "Héricourt, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Hondainville",
+  "full_name": "Hondainville, Hauts-de-France, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Estrébœuf",
+  "full_name": "Estrébœuf, Hauts-de-France, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Venette",
+  "full_name": "Venette, Hauts-de-France, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Hauts-de-France",
+  "locality": "Camon",
+  "full_name": "Camon, Hauts-de-France, France",
+  "active_listings_count": 23
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Île-de-Sein",
+  "full_name": "Île-de-Sein, Brittany, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Saché",
+  "full_name": "Saché, Centre-Val de Loire, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Ambillou",
+  "full_name": "Ambillou, Centre-Val de Loire, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Arcisses",
+  "full_name": "Arcisses, Centre-Val de Loire, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Restigné",
+  "full_name": "Restigné, Centre-Val de Loire, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Ingré",
+  "full_name": "Ingré, Centre-Val de Loire, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Auxonne",
+  "full_name": "Auxonne, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Boron",
+  "full_name": "Boron, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Sancé",
+  "full_name": "Sancé, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Clamecy",
+  "full_name": "Clamecy, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Voiteur",
+  "full_name": "Voiteur, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Prissé",
+  "full_name": "Prissé, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Bretagne",
+  "locality": "Penmarch",
+  "full_name": "Penmarch, Bretagne, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Mayotte",
+  "locality": "Koungou",
+  "full_name": "Koungou, Mayotte, France",
+  "active_listings_count": 22
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Reugny",
+  "full_name": "Reugny, Centre-Val de Loire, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Montrésor",
+  "full_name": "Montrésor, Centre-Val de Loire, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Souesmes",
+  "full_name": "Souesmes, Centre-Val de Loire, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Chailles",
+  "full_name": "Chailles, Centre-Val de Loire, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Gièvres",
+  "full_name": "Gièvres, Centre-Val de Loire, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Cormeray",
+  "full_name": "Cormeray, Centre-Val de Loire, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Montbazon",
+  "full_name": "Montbazon, Centre-Val de Loire, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Sampans",
+  "full_name": "Sampans, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Nolay",
+  "full_name": "Nolay, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Bussières",
+  "full_name": "Bussières, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montchanin",
+  "full_name": "Montchanin, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Santenay",
+  "full_name": "Santenay, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Épinac",
+  "full_name": "Épinac, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Fontaines",
+  "full_name": "Fontaines, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Gurgy",
+  "full_name": "Gurgy, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Montauban-de-Bretagne",
+  "full_name": "Montauban-de-Bretagne, Brittany, France",
+  "active_listings_count": 21
+ },
+ {
+  "country": "France",
+  "region": "Centre-Val de Loire",
+  "locality": "Boulleret",
+  "full_name": "Boulleret, Centre-Val de Loire, France",
+  "active_listings_count": 20
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Chauffailles",
+  "full_name": "Chauffailles, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 20
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Monéteau",
+  "full_name": "Monéteau, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 20
+ },
+ {
+  "country": "France",
+  "region": "Mayotte",
+  "locality": "Kani-Kéli",
+  "full_name": "Kani-Kéli, Mayotte, France",
+  "active_listings_count": 20
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Île-d'Houat",
+  "full_name": "Île-d'Houat, Brittany, France",
+  "active_listings_count": 19
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Valentigney",
+  "full_name": "Valentigney, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 19
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Igé",
+  "full_name": "Igé, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 19
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Chaudenay",
+  "full_name": "Chaudenay, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 19
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Planchez",
+  "full_name": "Planchez, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 19
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Jougne",
+  "full_name": "Jougne, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 19
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Maîche",
+  "full_name": "Maîche, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 19
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Cuisery",
+  "full_name": "Cuisery, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 18
+ },
+ {
+  "country": "France",
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Étival",
+  "full_name": "Étival, Bourgogne – Franche-Comté, France",
+  "active_listings_count": 18
+ },
+ {
+  "country": "France",
+  "region": "Normandy",
+  "locality": "Percy-en-Normandie",
+  "full_name": "Percy-en-Normandie, Normandy, France",
+  "active_listings_count": 18
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Bellefontaine",
+  "full_name": "Bellefontaine, Martinique, France",
+  "active_listings_count": 17
+ },
+ {
+  "country": "France",
+  "region": "Mayotte",
+  "locality": "Sada",
+  "full_name": "Sada, Mayotte, France",
+  "active_listings_count": 17
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le Morne-Vert",
+  "full_name": "Le Morne-Vert, Martinique, France",
+  "active_listings_count": 15
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le Lorrain",
+  "full_name": "Le Lorrain, Martinique, France",
+  "active_listings_count": 15
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Onet-le-Château",
+  "full_name": "Onet-le-Château, Occitanie, France",
+  "active_listings_count": 14
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Cap d'Agde",
+  "full_name": "Cap d'Agde, Occitanie, France",
+  "active_listings_count": 14
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le Marigot",
+  "full_name": "Le Marigot, Martinique, France",
+  "active_listings_count": 14
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Le Prêcheur",
+  "full_name": "Le Prêcheur, Martinique, France",
+  "active_listings_count": 13
+ },
+ {
+  "country": "France",
+  "region": "Mayotte",
+  "locality": "Bandrélé",
+  "full_name": "Bandrélé, Mayotte, France",
+  "active_listings_count": 13
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Île-Molène",
+  "full_name": "Île-Molène, Brittany, France",
+  "active_listings_count": 12
+ },
+ {
+  "country": "France",
+  "region": "Normandie",
+  "locality": "Carentan les Marais",
+  "full_name": "Carentan les Marais, Normandie, France",
+  "active_listings_count": 12
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Saint-Christol-lès-Alès",
+  "full_name": "Saint-Christol-lès-Alès, Occitanie, France",
+  "active_listings_count": 12
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Gignac",
+  "full_name": "Gignac, Occitanie, France",
+  "active_listings_count": 12
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Corsept",
+  "full_name": "Corsept, Pays de la Loire, France",
+  "active_listings_count": 12
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "La Guerche-de-Bretagne",
+  "full_name": "La Guerche-de-Bretagne, Brittany, France",
+  "active_listings_count": 11
+ },
+ {
+  "country": "France",
+  "region": "Pays de la Loire",
+  "locality": "Le Temple-de-Bretagne",
+  "full_name": "Le Temple-de-Bretagne, Pays de la Loire, France",
+  "active_listings_count": 11
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "La Bastide-Solages",
+  "full_name": "La Bastide-Solages, Occitanie, France",
+  "active_listings_count": 11
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Le Vigan",
+  "full_name": "Le Vigan, Occitanie, France",
+  "active_listings_count": 11
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Peyre-en-Aubrac",
+  "full_name": "Peyre-en-Aubrac, Occitanie, France",
+  "active_listings_count": 11
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Saint-Nazaire",
+  "full_name": "Saint-Nazaire, Occitanie, France",
+  "active_listings_count": 11
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Fonds-Saint-Denis",
+  "full_name": "Fonds-Saint-Denis, Martinique, France",
+  "active_listings_count": 11
+ },
+ {
+  "country": "France",
+  "region": "Martinique",
+  "locality": "Basse-Pointe",
+  "full_name": "Basse-Pointe, Martinique, France",
+  "active_listings_count": 11
+ },
+ {
+  "country": "France",
+  "region": "Mayotte",
+  "locality": "Chiconi",
+  "full_name": "Chiconi, Mayotte, France",
+  "active_listings_count": 11
+ },
+ {
+  "country": "France",
+  "region": "Brittany",
+  "locality": "Le Theil-de-Bretagne",
+  "full_name": "Le Theil-de-Bretagne, Brittany, France",
+  "active_listings_count": 10
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Bellegarde",
+  "full_name": "Bellegarde, Occitanie, France",
+  "active_listings_count": 10
+ },
+ {
+  "country": "France",
+  "region": "Occitanie",
+  "locality": "Le Cap d’Agde",
+  "full_name": "Le Cap d’Agde, Occitanie, France",
+  "active_listings_count": 10
+ }
+]

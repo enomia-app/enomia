@@ -1,0 +1,159 @@
+---
+export const prerender = true;
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import ContratLandingStyles from '../../../components/ContratLandingStyles.astro';
+import NewsletterBlock from '../../../components/NewsletterBlock.astro';
+import AuthorBubble from '../../../components/AuthorBubble.astro';
+import data from '../../../data/rentabilite-villes.json';
+
+export async function getStaticPaths() {
+  return data.regions
+    .filter((r) => r.classables > 0)
+    .map((r) => {
+      const villes = data.villes
+        .filter((v) => v.classable && v.region_slug === r.slug)
+        .sort((a, b) => b.ratio - a.ratio);
+      return { params: { region: r.slug }, props: { region: r, villes } };
+    });
+}
+
+const { region, villes } = Astro.props;
+const top = villes[0];
+const top3 = villes.slice(0, 3);
+const moyenneRatio = (villes.reduce((s, v) => s + v.ratio, 0) / villes.length).toFixed(1);
+const occMoy = Math.round(villes.reduce((s, v) => s + v.occupation, 0) / villes.length);
+const totalAnnonces = villes.reduce((s, v) => s + (v.annonces || 0), 0);
+const prixNuitsSorted = villes.map((v) => v.prix_nuit).sort((a, b) => a - b);
+const prixNuitMin = prixNuitsSorted[0];
+const prixNuitMax = prixNuitsSorted[prixNuitsSorted.length - 1];
+const bottom = villes.length >= 8 ? villes.slice(-3).reverse() : [];
+const otherRegions = data.regions.filter((r) => r.classables > 0 && r.slug !== region.slug).sort((a, b) => b.classables - a.classables);
+
+const title = `Investir en Airbnb en ${region.region} : les villes les plus rentables (2026)`;
+const description = `Investir en Airbnb en ${region.region} : classement du rendement locatif par ville (${villes.length} villes), occupation et prix de la location saisonnière. ${top.ville} en tête (${top.ratio}%). Données réelles AirDNA + DVF.`;
+const canonical = `https://www.enomia.app/rentabilite-airbnb/${region.slug}`;
+
+const faqItems = [
+  { q: `Faut-il investir en Airbnb en ${region.region} ?`, a: `${region.region} compte ${villes.length} villes au marché Airbnb significatif, avec un rendement brut moyen de ${moyenneRatio}% et un pic à ${top.ratio}% (${top.ville}). C'est un bon terrain si le coût d'achat reste maîtrisé : la rentabilité dépend autant de la ville que de la méthode d'exploitation (taux d'occupation, gestion en direct, pricing dynamique).` },
+  { q: `Quelle est la ville la plus rentable en Airbnb en ${region.region} ?`, a: `D'après nos données 2026 (revenus AirDNA ÷ prix d'achat réel DVF), la ville la plus rentable de ${region.region} est ${top.ville}, avec un rendement brut d'environ ${top.ratio}% : ${top.occupation}% d'occupation, ${top.prix_nuit} €/nuit, pour un bien médian à ${top.prix_bien?.toLocaleString('fr-FR')} €.` },
+  { q: `Quel rendement locatif espérer en Airbnb en ${region.region} ?`, a: `Le rendement brut moyen des villes classées de ${region.region} est de ${moyenneRatio}% (revenu annuel ÷ prix d'achat réel + travaux). C'est un rendement avant charges et financement : comptez ensuite 35 à 40% de charges d'exploitation pour estimer le rendement net.` },
+];
+const ldFaq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="simulateur">
+  <ContratLandingStyles />
+
+  <div class="landing-hero">
+    <div class="landing-tag">Rentabilité Airbnb · {region.region}</div>
+    <h1 class="landing-h1">Investir en Airbnb en <em>{region.region}</em></h1>
+    <p class="landing-sub">Le rendement locatif par ville en location saisonnière : {villes.length} villes classées. Occupation et prix par nuit : AirDNA. Prix du bien : DVF (DGFiP).</p>
+    <div class="landing-stats">
+      <div class="landing-stat"><div class="landing-stat-val">{villes.length}</div><div class="landing-stat-lbl">villes classées</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">{top.ratio}%</div><div class="landing-stat-lbl">meilleur ({top.ville})</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">{moyenneRatio}%</div><div class="landing-stat-lbl">rendement brut moyen</div></div>
+    </div>
+  </div>
+
+  <div class="seo-wrap"><div class="seo-body">
+
+    <h2>Les villes les plus rentables en {region.region}</h2>
+    <p>Classement des {villes.length} villes de {region.region} ayant un marché Airbnb significatif (≥ 100 annonces actives), par <strong>rendement locatif brut</strong> : revenu annuel de la location saisonnière ÷ prix d'achat réel du bien (DVF + 700&nbsp;€/m² de travaux). <strong>{top.ville}</strong> arrive en tête avec {top.ratio}%.</p>
+
+    <div class="reg-scroll">
+      <table class="reg-table">
+        <thead>
+          <tr><th>#</th><th>Ville</th><th>Rendement brut</th><th>Occupation</th><th>Prix/nuit</th><th>Prix médian (bien)</th><th>Annonces</th></tr>
+        </thead>
+        <tbody>
+          {villes.map((v, i) => (
+            <tr>
+              <td class="reg-rank">{i + 1}</td>
+              <td>{v.published ? <a href={`/rentabilite-airbnb/${region.slug}/${v.slug}`}>{v.ville}</a> : <span class="reg-soon" title="Fiche détaillée à venir">{v.ville}</span>}</td>
+              <td class="reg-ratio"><strong>{v.ratio}%</strong></td>
+              <td>{v.occupation}%</td>
+              <td>{v.prix_nuit}&nbsp;€</td>
+              <td>{v.prix_bien?.toLocaleString('fr-FR')}&nbsp;€</td>
+              <td>{v.annonces?.toLocaleString('fr-FR')}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px; color:#999; margin-top:10px;">Rendement brut = revenu annuel (prix/nuit × occupation × 365) ÷ (prix médian du bien DVF + 700&nbsp;€/m² de travaux). C'est un rendement avant charges et financement.</p>
+
+    <p>En tête du classement régional :{' '}
+    {top3.map((v, i) => (
+      <Fragment>{v.published ? <a href={`/rentabilite-airbnb/${region.slug}/${v.slug}`}><strong>{v.ville}</strong></a> : <strong>{v.ville}</strong>} ({v.ratio}% de rendement brut, {v.occupation}% d'occupation, {v.prix_nuit}&nbsp;€/nuit){i === top3.length - 1 ? '.' : ', '}</Fragment>
+    ))}</p>
+
+    <p>Sur l'ensemble de {region.region}, le marché de la location saisonnière tourne à <strong>{occMoy}% d'occupation moyenne</strong>, avec des nuitées de {prixNuitMin} à {prixNuitMax}&nbsp;€ selon les villes, et {totalAnnonces.toLocaleString('fr-FR')} annonces Airbnb actives au total (données AirDNA). Le <strong>rendement locatif</strong> dépend ensuite du prix d'achat local : c'est tout l'intérêt de comparer ville par ville plutôt que de raisonner à l'échelle régionale.</p>
+
+    {bottom.length > 0 && (
+      <>
+        <h2>Les villes les moins rentables de {region.region}</h2>
+        <p>À l'autre bout du classement, certaines villes de {region.region} affichent un rendement plus faible. Non pas faute de demande, mais parce que le <strong>prix d'achat y est élevé au regard des revenus</strong> Airbnb générés. À regarder de près avant d'investir :{' '}
+        {bottom.map((v, i) => (
+          <Fragment>{v.published ? <a href={`/rentabilite-airbnb/${region.slug}/${v.slug}`}>{v.ville}</a> : <span class="reg-soon">{v.ville}</span>} ({v.ratio}%){i === bottom.length - 1 ? '.' : ', '}</Fragment>
+        ))}</p>
+      </>
+    )}
+
+    <h2>La méthode compte plus que la ville</h2>
+    <p>Ce classement donne les ordres de grandeur du marché de chaque ville. Mais le vrai levier, c'est la <strong>méthode d'exploitation</strong> : l'auteur de <a href="/la-methode-97">La Méthode 97%</a> atteint environ 15% net dans une ville absente du haut de ce classement, grâce à un taux d'occupation de 97% (location à la nuit, pricing dynamique, double plateforme, automatisation). Avant d'investir, <a href="/estimation-airbnb">estimez les revenus de votre futur bien</a> et <a href="/blog/louer-airbnb-rentable">regardez des opérations réelles</a>.</p>
+
+    <AuthorBubble />
+
+    <h2>Investir en Airbnb en {region.region} : questions fréquentes</h2>
+    <div class="faq">
+      {faqItems.map((f, i) => (
+        <details open={i === 0}>
+          <summary>{f.q}</summary>
+          <div class="faq-ans"><p>{f.a}</p></div>
+        </details>
+      ))}
+    </div>
+
+    <div class="hero-cta-block">
+      <div>
+        <h3>Calculez la rentabilité de votre projet</h3>
+        <p>Le simulateur intègre VOS chiffres (prix d'achat, financement, charges) pour un rendement net réel.</p>
+      </div>
+      <a href="/simulateur-lcd" class="hero-cta-btn">Lancer le calcul &rarr;</a>
+    </div>
+
+    <h2>Rentabilité Airbnb dans les autres régions</h2>
+    <div class="related">
+      <a href="/rentabilite-airbnb">
+        <div class="rk">National</div>
+        <div class="rt">Classement de toutes les villes</div>
+        <div class="rd">Le classement complet ({data.villes.filter((v) => v.classable).length} villes) + recherche par ville.</div>
+      </a>
+      {otherRegions.slice(0, 5).map((r) => (
+        <a href={`/rentabilite-airbnb/${r.slug}`}>
+          <div class="rk">Région</div>
+          <div class="rt">Investir en Airbnb en {r.region}</div>
+          <div class="rd">{r.classables} villes classées par rendement locatif.</div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <NewsletterBlock source={`NL-Rentabilite-${region.slug}`} />
+  </div>
+
+  <style is:global>
+    .reg-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 18px 0; }
+    .reg-table { width: 100%; min-width: 600px; border-collapse: separate; border-spacing: 0; font-size: 14px; line-height: 1.5; }
+    .reg-table thead th { background: #2b2d2b; color: #fff; font-size: 13px; font-weight: 600; padding: 12px 14px; text-align: left; white-space: nowrap; }
+    .reg-table tbody td { padding: 11px 14px; color: #555; border-top: 1px solid #e8e4dc; white-space: nowrap; }
+    .reg-table tbody tr:hover { background: rgba(0,0,0,0.02); }
+    .reg-table a { color: #1f7a3d; text-decoration: none; font-weight: 600; }
+    .reg-table a:hover { text-decoration: underline; }
+    .reg-rank { color: #aaa; }
+    .reg-ratio strong { color: #1f7a3d; }
+    .reg-soon { color: #555; }
+    @media (max-width: 640px) { .reg-table thead th, .reg-table tbody td { padding: 10px 11px; font-size: 13px; } }
+  </style>
+
+  <script type="application/ld+json" set:html={JSON.stringify(ldFaq)}></script>
+</ToolLayout>

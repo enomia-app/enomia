@@ -1,0 +1,7841 @@
+{
+ "Ile-de-France|Paris": {
+  "region": "Ile-de-France",
+  "locality": "Paris",
+  "listings": 43573,
+  "occupancy": 0.53,
+  "adr": 248.2,
+  "rev_par": 136,
+  "revenue": 27725.3
+ },
+ "Provence-Alpes-Côte d'Azur|Cannes": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cannes",
+  "listings": 8251,
+  "occupancy": 0.36,
+  "adr": 274.6,
+  "rev_par": 95.7,
+  "revenue": 18328.7
+ },
+ "Provence-Alpes-Côte d'Azur|Nice": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Nice",
+  "listings": 9949,
+  "occupancy": 0.52,
+  "adr": 169.3,
+  "rev_par": 91.2,
+  "revenue": 18052.8
+ },
+ "Provence-Alpes-Côte d'Azur|Marseille": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Marseille",
+  "listings": 9384,
+  "occupancy": 0.49,
+  "adr": 130.4,
+  "rev_par": 63.1,
+  "revenue": 12663.4
+ },
+ "Provence-Alpes-Côte d'Azur|Antibes": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Antibes",
+  "listings": 4223,
+  "occupancy": 0.47,
+  "adr": 192.2,
+  "rev_par": 92.9,
+  "revenue": 16558.6
+ },
+ "Auvergne-Rhône-Alpes|Annecy": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Annecy",
+  "listings": 3331,
+  "occupancy": 0.51,
+  "adr": 166.8,
+  "rev_par": 85,
+  "revenue": 18390.3
+ },
+ "Nouvelle-Aquitaine|Bordeaux": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bordeaux",
+  "listings": 3629,
+  "occupancy": 0.47,
+  "adr": 139.7,
+  "rev_par": 68,
+  "revenue": 14318.5
+ },
+ "Auvergne-Rhône-Alpes|Lyon": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Lyon",
+  "listings": 4755,
+  "occupancy": 0.48,
+  "adr": 122.5,
+  "rev_par": 59.1,
+  "revenue": 13330.6
+ },
+ "Pays de la Loire|Nantes": {
+  "region": "Pays de la Loire",
+  "locality": "Nantes",
+  "listings": 2245,
+  "occupancy": 0.45,
+  "adr": 89.6,
+  "rev_par": 40.3,
+  "revenue": 8571.9
+ },
+ "Provence-Alpes-Côte d'Azur|Avignon": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Avignon",
+  "listings": 2751,
+  "occupancy": 0.42,
+  "adr": 117.5,
+  "rev_par": 51.8,
+  "revenue": 8172.9
+ },
+ "Nouvelle-Aquitaine|La Rochelle": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "La Rochelle",
+  "listings": 3064,
+  "occupancy": 0.47,
+  "adr": 117.7,
+  "rev_par": 54.9,
+  "revenue": 9654.8
+ },
+ "Grand Est|Strasbourg": {
+  "region": "Grand Est",
+  "locality": "Strasbourg",
+  "listings": 2606,
+  "occupancy": 0.49,
+  "adr": 134.2,
+  "rev_par": 67.3,
+  "revenue": 16427.6
+ },
+ "Hauts-de-France|Lille": {
+  "region": "Hauts-de-France",
+  "locality": "Lille",
+  "listings": 1992,
+  "occupancy": 0.47,
+  "adr": 114.3,
+  "rev_par": 51.9,
+  "revenue": 12280.5
+ },
+ "Provence-Alpes-Côte d'Azur|Hyères": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Hyères",
+  "listings": 2237,
+  "occupancy": 0.42,
+  "adr": 157.9,
+  "rev_par": 67.4,
+  "revenue": 11870.4
+ },
+ "Pays de la Loire|Les Sables-d'Olonne": {
+  "region": "Pays de la Loire",
+  "locality": "Les Sables-d'Olonne",
+  "listings": 2167,
+  "occupancy": 0.39,
+  "adr": 131.7,
+  "rev_par": 51.8,
+  "revenue": 9604.6
+ },
+ "Pays de la Loire|Le Mans": {
+  "region": "Pays de la Loire",
+  "locality": "Le Mans",
+  "listings": 2045,
+  "occupancy": 0.32,
+  "adr": 149.7,
+  "rev_par": 43,
+  "revenue": 7541.3
+ },
+ "Nouvelle-Aquitaine|Biarritz": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Biarritz",
+  "listings": 1774,
+  "occupancy": 0.5,
+  "adr": 204,
+  "rev_par": 101.1,
+  "revenue": 16686.7
+ },
+ "Provence-Alpes-Côte d'Azur|Toulon": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Toulon",
+  "listings": 1816,
+  "occupancy": 0.42,
+  "adr": 105.6,
+  "rev_par": 44.6,
+  "revenue": 7991.9
+ },
+ "Grand Est|Reims": {
+  "region": "Grand Est",
+  "locality": "Reims",
+  "listings": 1700,
+  "occupancy": 0.41,
+  "adr": 112.6,
+  "rev_par": 45.3,
+  "revenue": 10474
+ },
+ "Provence-Alpes-Côte d'Azur|Fréjus": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Fréjus",
+  "listings": 1859,
+  "occupancy": 0.4,
+  "adr": 139.7,
+  "rev_par": 58.4,
+  "revenue": 9441.9
+ },
+ "Bourgogne – Franche-Comté|Dijon": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Dijon",
+  "listings": 1673,
+  "occupancy": 0.44,
+  "adr": 89.2,
+  "rev_par": 38.8,
+  "revenue": 9222.7
+ },
+ "Provence-Alpes-Côte d'Azur|La Ciotat": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "La Ciotat",
+  "listings": 1573,
+  "occupancy": 0.45,
+  "adr": 140.6,
+  "rev_par": 64.1,
+  "revenue": 12438.8
+ },
+ "Nouvelle-Aquitaine|Arcachon": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Arcachon",
+  "listings": 1720,
+  "occupancy": 0.41,
+  "adr": 180.3,
+  "rev_par": 74.1,
+  "revenue": 14399.8
+ },
+ "Auvergne-Rhône-Alpes|Morzine": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Morzine",
+  "listings": 1693,
+  "occupancy": 0.38,
+  "adr": 324.9,
+  "rev_par": 126.9,
+  "revenue": 22943.7
+ },
+ "Nouvelle-Aquitaine|Lacanau": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Lacanau",
+  "listings": 1460,
+  "occupancy": 0.39,
+  "adr": 173.3,
+  "rev_par": 71.4,
+  "revenue": 11430.5
+ },
+ "Auvergne-Rhône-Alpes|Grenoble": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Grenoble",
+  "listings": 1392,
+  "occupancy": 0.44,
+  "adr": 70.9,
+  "rev_par": 30.9,
+  "revenue": 6528.8
+ },
+ "Occitania|La Grande-Motte": {
+  "region": "Occitania",
+  "locality": "La Grande-Motte",
+  "listings": 1577,
+  "occupancy": 0.4,
+  "adr": 108.3,
+  "rev_par": 44.9,
+  "revenue": 8294.3
+ },
+ "Provence-Alpes-Côte d'Azur|Arles": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Arles",
+  "listings": 1564,
+  "occupancy": 0.41,
+  "adr": 135.6,
+  "rev_par": 54.9,
+  "revenue": 10357.2
+ },
+ "Auvergne-Rhône-Alpes|Les Belleville": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Les Belleville",
+  "listings": 1350,
+  "occupancy": 0.41,
+  "adr": 263.4,
+  "rev_par": 129.7,
+  "revenue": 21071.6
+ },
+ "Provence-Alpes-Côte d'Azur|Menton": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Menton",
+  "listings": 1389,
+  "occupancy": 0.48,
+  "adr": 153.1,
+  "rev_par": 75.9,
+  "revenue": 16454.6
+ },
+ "Pays de la Loire|La Baule-Escoublac": {
+  "region": "Pays de la Loire",
+  "locality": "La Baule-Escoublac",
+  "listings": 1324,
+  "occupancy": 0.36,
+  "adr": 155.2,
+  "rev_par": 55.3,
+  "revenue": 10005.6
+ },
+ "Nouvelle-Aquitaine|Lège-Cap-Ferret": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Lège-Cap-Ferret",
+  "listings": 1372,
+  "occupancy": 0.38,
+  "adr": 326.3,
+  "rev_par": 128.1,
+  "revenue": 21846
+ },
+ "Centre-Val de Loire|Tours": {
+  "region": "Centre-Val de Loire",
+  "locality": "Tours",
+  "listings": 1266,
+  "occupancy": 0.44,
+  "adr": 91.3,
+  "rev_par": 40.3,
+  "revenue": 9429.9
+ },
+ "Nouvelle-Aquitaine|Capbreton": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Capbreton",
+  "listings": 1269,
+  "occupancy": 0.42,
+  "adr": 156.7,
+  "rev_par": 70,
+  "revenue": 12197.3
+ },
+ "Guadeloupe|Saint-François": {
+  "region": "Guadeloupe",
+  "locality": "Saint-François",
+  "listings": 1400,
+  "occupancy": 0.41,
+  "adr": 157.7,
+  "rev_par": 67.5,
+  "revenue": 13557.1
+ },
+ "Nouvelle-Aquitaine|Anglet": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Anglet",
+  "listings": 1208,
+  "occupancy": 0.47,
+  "adr": 164.3,
+  "rev_par": 78,
+  "revenue": 11517
+ },
+ "Grand Est|Colmar": {
+  "region": "Grand Est",
+  "locality": "Colmar",
+  "listings": 1251,
+  "occupancy": 0.45,
+  "adr": 147.4,
+  "rev_par": 66.6,
+  "revenue": 17157.6
+ },
+ "Auvergne-Rhône-Alpes|La Plagne-Tarentaise": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "La Plagne-Tarentaise",
+  "listings": 1205,
+  "occupancy": 0.4,
+  "adr": 183.2,
+  "rev_par": 83,
+  "revenue": 14549.7
+ },
+ "Pays de la Loire|Angers": {
+  "region": "Pays de la Loire",
+  "locality": "Angers",
+  "listings": 1181,
+  "occupancy": 0.49,
+  "adr": 87.2,
+  "rev_par": 41.7,
+  "revenue": 9485.5
+ },
+ "Auvergne-Rhône-Alpes|Villeurbanne": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Villeurbanne",
+  "listings": 1150,
+  "occupancy": 0.47,
+  "adr": 96.3,
+  "rev_par": 43.6,
+  "revenue": 9752.1
+ },
+ "Auvergne-Rhône-Alpes|Huez": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Huez",
+  "listings": 1182,
+  "occupancy": 0.36,
+  "adr": 225.8,
+  "rev_par": 87.2,
+  "revenue": 15912.9
+ },
+ "Nouvelle-Aquitaine|La Teste-de-Buch": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "La Teste-de-Buch",
+  "listings": 1125,
+  "occupancy": 0.39,
+  "adr": 227.3,
+  "rev_par": 90.3,
+  "revenue": 15816.3
+ },
+ "Nouvelle-Aquitaine|Biscarrosse": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Biscarrosse",
+  "listings": 1051,
+  "occupancy": 0.4,
+  "adr": 156.6,
+  "rev_par": 68.2,
+  "revenue": 11213.6
+ },
+ "Ile-de-France|Saint-Denis": {
+  "region": "Ile-de-France",
+  "locality": "Saint-Denis",
+  "listings": 1035,
+  "occupancy": 0.45,
+  "adr": 127.9,
+  "rev_par": 54.9,
+  "revenue": 11399.9
+ },
+ "Ile-de-France|Boulogne-Billancourt": {
+  "region": "Ile-de-France",
+  "locality": "Boulogne-Billancourt",
+  "listings": 970,
+  "occupancy": 0.44,
+  "adr": 174.5,
+  "rev_par": 72.8,
+  "revenue": 13494
+ },
+ "Auvergne-Rhône-Alpes|Tignes": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Tignes",
+  "listings": 1094,
+  "occupancy": 0.42,
+  "adr": 220.2,
+  "rev_par": 107.8,
+  "revenue": 20841.7
+ },
+ "Auvergne-Rhône-Alpes|Clermont-Ferrand": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Clermont-Ferrand",
+  "listings": 1093,
+  "occupancy": 0.41,
+  "adr": 84.3,
+  "rev_par": 33.6,
+  "revenue": 7706.4
+ },
+ "Grand Est|Nancy": {
+  "region": "Grand Est",
+  "locality": "Nancy",
+  "listings": 1031,
+  "occupancy": 0.44,
+  "adr": 83.4,
+  "rev_par": 35.3,
+  "revenue": 8179.2
+ },
+ "Grand Est|Gérardmer": {
+  "region": "Grand Est",
+  "locality": "Gérardmer",
+  "listings": 1179,
+  "occupancy": 0.4,
+  "adr": 209.5,
+  "rev_par": 79.7,
+  "revenue": 21746.8
+ },
+ "Nouvelle-Aquitaine|Bayonne": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bayonne",
+  "listings": 861,
+  "occupancy": 0.49,
+  "adr": 120.2,
+  "rev_par": 59.4,
+  "revenue": 8817.9
+ },
+ "Nouvelle-Aquitaine|Royan": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Royan",
+  "listings": 1054,
+  "occupancy": 0.39,
+  "adr": 126.5,
+  "rev_par": 50,
+  "revenue": 8785.7
+ },
+ "Auvergne-Rhône-Alpes|Les Allues": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Les Allues",
+  "listings": 858,
+  "occupancy": 0.37,
+  "adr": 452.8,
+  "rev_par": 166.8,
+  "revenue": 26305.4
+ },
+ "Provence-Alpes-Côte d'Azur|Bandol": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Bandol",
+  "listings": 978,
+  "occupancy": 0.41,
+  "adr": 159.4,
+  "rev_par": 68.3,
+  "revenue": 12899.3
+ },
+ "Auvergne-Rhône-Alpes|Saint-Étienne": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Saint-Étienne",
+  "listings": 906,
+  "occupancy": 0.39,
+  "adr": 65.7,
+  "rev_par": 24.1,
+  "revenue": 4939.7
+ },
+ "Centre-Val de Loire|Orléans": {
+  "region": "Centre-Val de Loire",
+  "locality": "Orléans",
+  "listings": 944,
+  "occupancy": 0.44,
+  "adr": 81.1,
+  "rev_par": 33.7,
+  "revenue": 8000.4
+ },
+ "Guadeloupe|Sainte-Anne": {
+  "region": "Guadeloupe",
+  "locality": "Sainte-Anne",
+  "listings": 1046,
+  "occupancy": 0.45,
+  "adr": 133.7,
+  "rev_par": 60.3,
+  "revenue": 12417.6
+ },
+ "Provence-Alpes-Côte d'Azur|Vallauris": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vallauris",
+  "listings": 873,
+  "occupancy": 0.42,
+  "adr": 216.7,
+  "rev_par": 91.8,
+  "revenue": 14705.6
+ },
+ "Nouvelle-Aquitaine|Mimizan": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Mimizan",
+  "listings": 934,
+  "occupancy": 0.4,
+  "adr": 143.1,
+  "rev_par": 60,
+  "revenue": 10283.1
+ },
+ "Ile-de-France|Montreuil": {
+  "region": "Ile-de-France",
+  "locality": "Montreuil",
+  "listings": 805,
+  "occupancy": 0.48,
+  "adr": 108.4,
+  "rev_par": 51.2,
+  "revenue": 10111.9
+ },
+ "Grand Est|Mulhouse": {
+  "region": "Grand Est",
+  "locality": "Mulhouse",
+  "listings": 924,
+  "occupancy": 0.4,
+  "adr": 84.2,
+  "rev_par": 32.5,
+  "revenue": 7388.7
+ },
+ "Nouvelle-Aquitaine|Gujan-Mestras": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Gujan-Mestras",
+  "listings": 864,
+  "occupancy": 0.41,
+  "adr": 170.8,
+  "rev_par": 73.3,
+  "revenue": 13633.9
+ },
+ "Auvergne-Rhône-Alpes|Vichy": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Vichy",
+  "listings": 856,
+  "occupancy": 0.41,
+  "adr": 84.5,
+  "rev_par": 33.8,
+  "revenue": 7343
+ },
+ "Nouvelle-Aquitaine|Seignosse": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Seignosse",
+  "listings": 877,
+  "occupancy": 0.43,
+  "adr": 184.6,
+  "rev_par": 83.8,
+  "revenue": 13648.7
+ },
+ "Auvergne-Rhône-Alpes|Megève": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Megève",
+  "listings": 888,
+  "occupancy": 0.32,
+  "adr": 368.3,
+  "rev_par": 118,
+  "revenue": 20597.3
+ },
+ "Provence-Alpes-Côte d'Azur|Cassis": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cassis",
+  "listings": 902,
+  "occupancy": 0.46,
+  "adr": 215.9,
+  "rev_par": 100.5,
+  "revenue": 23540.4
+ },
+ "Hauts-de-France|Dunkirk": {
+  "region": "Hauts-de-France",
+  "locality": "Dunkirk",
+  "listings": 801,
+  "occupancy": 0.44,
+  "adr": 116.7,
+  "rev_par": 50.2,
+  "revenue": 11795.5
+ },
+ "Martinique|Les Trois-Îlets": {
+  "region": "Martinique",
+  "locality": "Les Trois-Îlets",
+  "listings": 891,
+  "occupancy": 0.48,
+  "adr": 135.3,
+  "rev_par": 68.3,
+  "revenue": 15554.9
+ },
+ "Hauts-de-France|Amiens": {
+  "region": "Hauts-de-France",
+  "locality": "Amiens",
+  "listings": 816,
+  "occupancy": 0.4,
+  "adr": 84.5,
+  "rev_par": 33.5,
+  "revenue": 7993.1
+ },
+ "Guadeloupe|Le Gosier": {
+  "region": "Guadeloupe",
+  "locality": "Le Gosier",
+  "listings": 788,
+  "occupancy": 0.45,
+  "adr": 118.6,
+  "rev_par": 55.5,
+  "revenue": 11944.7
+ },
+ "Nouvelle-Aquitaine|Sarlat-la-Canéda": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Sarlat-la-Canéda",
+  "listings": 839,
+  "occupancy": 0.4,
+  "adr": 140.2,
+  "rev_par": 57.2,
+  "revenue": 12494
+ },
+ "Provence-Alpes-Côte d'Azur|Grimaud": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Grimaud",
+  "listings": 795,
+  "occupancy": 0.4,
+  "adr": 335.9,
+  "rev_par": 137.1,
+  "revenue": 24267.4
+ },
+ "Auvergne-Rhône-Alpes|Courchevel": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Courchevel",
+  "listings": 722,
+  "occupancy": 0.38,
+  "adr": 454.7,
+  "rev_par": 186.5,
+  "revenue": 28808
+ },
+ "Grand Est|Troyes": {
+  "region": "Grand Est",
+  "locality": "Troyes",
+  "listings": 734,
+  "occupancy": 0.38,
+  "adr": 93.5,
+  "rev_par": 34.2,
+  "revenue": 8012.1
+ },
+ "Nouvelle-Aquitaine|Poitiers": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Poitiers",
+  "listings": 719,
+  "occupancy": 0.44,
+  "adr": 75.6,
+  "rev_par": 33.1,
+  "revenue": 7329.7
+ },
+ "Pays de la Loire|Pornichet": {
+  "region": "Pays de la Loire",
+  "locality": "Pornichet",
+  "listings": 722,
+  "occupancy": 0.38,
+  "adr": 146.7,
+  "rev_par": 57,
+  "revenue": 10580
+ },
+ "Pays de la Loire|Pornic": {
+  "region": "Pays de la Loire",
+  "locality": "Pornic",
+  "listings": 755,
+  "occupancy": 0.42,
+  "adr": 129.4,
+  "rev_par": 55,
+  "revenue": 11615.3
+ },
+ "Nouvelle-Aquitaine|Soorts-Hossegor": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Soorts-Hossegor",
+  "listings": 724,
+  "occupancy": 0.4,
+  "adr": 234.2,
+  "rev_par": 100.7,
+  "revenue": 17693
+ },
+ "Grand Est|Metz": {
+  "region": "Grand Est",
+  "locality": "Metz",
+  "listings": 710,
+  "occupancy": 0.44,
+  "adr": 96.8,
+  "rev_par": 42.9,
+  "revenue": 9648
+ },
+ "Nouvelle-Aquitaine|Pau": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Pau",
+  "listings": 695,
+  "occupancy": 0.44,
+  "adr": 73,
+  "rev_par": 31.2,
+  "revenue": 7105.2
+ },
+ "Hauts-de-France|Berck": {
+  "region": "Hauts-de-France",
+  "locality": "Berck",
+  "listings": 739,
+  "occupancy": 0.39,
+  "adr": 118.8,
+  "rev_par": 46.8,
+  "revenue": 9757.4
+ },
+ "Provence-Alpes-Côte d'Azur|Beausoleil": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Beausoleil",
+  "listings": 680,
+  "occupancy": 0.46,
+  "adr": 261.4,
+  "rev_par": 112.4,
+  "revenue": 25356.1
+ },
+ "Auvergne-Rhône-Alpes|Mont-Dore": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Mont-Dore",
+  "listings": 747,
+  "occupancy": 0.39,
+  "adr": 101.8,
+  "rev_par": 39.3,
+  "revenue": 9815.7
+ },
+ "Ile-de-France|Clichy": {
+  "region": "Ile-de-France",
+  "locality": "Clichy",
+  "listings": 644,
+  "occupancy": 0.55,
+  "adr": 126.5,
+  "rev_par": 71,
+  "revenue": 15271.2
+ },
+ "Nouvelle-Aquitaine|Limoges": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Limoges",
+  "listings": 661,
+  "occupancy": 0.42,
+  "adr": 74.8,
+  "rev_par": 29.8,
+  "revenue": 6805.3
+ },
+ "Auvergne-Rhône-Alpes|La Clusaz": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "La Clusaz",
+  "listings": 573,
+  "occupancy": 0.37,
+  "adr": 361.5,
+  "rev_par": 134.9,
+  "revenue": 25090.2
+ },
+ "Provence-Alpes-Côte d'Azur|Allos": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Allos",
+  "listings": 746,
+  "occupancy": 0.3,
+  "adr": 118.3,
+  "rev_par": 35.6,
+  "revenue": 6703.7
+ },
+ "Nouvelle-Aquitaine|Angoulême": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Angoulême",
+  "listings": 617,
+  "occupancy": 0.33,
+  "adr": 86.4,
+  "rev_par": 27.1,
+  "revenue": 5266.1
+ },
+ "Bourgogne – Franche-Comté|Besançon": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Besançon",
+  "listings": 647,
+  "occupancy": 0.46,
+  "adr": 76.4,
+  "rev_par": 34.1,
+  "revenue": 7703.6
+ },
+ "Martinique|Le Diamant": {
+  "region": "Martinique",
+  "locality": "Le Diamant",
+  "listings": 728,
+  "occupancy": 0.44,
+  "adr": 177.6,
+  "rev_par": 81.7,
+  "revenue": 18925.2
+ },
+ "Centre-Val de Loire|Blois": {
+  "region": "Centre-Val de Loire",
+  "locality": "Blois",
+  "listings": 638,
+  "occupancy": 0.41,
+  "adr": 99.5,
+  "rev_par": 39.4,
+  "revenue": 9204.1
+ },
+ "Auvergne-Rhône-Alpes|Les Houches": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Les Houches",
+  "listings": 631,
+  "occupancy": 0.43,
+  "adr": 281.2,
+  "rev_par": 117.2,
+  "revenue": 26339.9
+ },
+ "Ile-de-France|Versailles": {
+  "region": "Ile-de-France",
+  "locality": "Versailles",
+  "listings": 560,
+  "occupancy": 0.47,
+  "adr": 135,
+  "rev_par": 62.3,
+  "revenue": 13276.1
+ },
+ "Nouvelle-Aquitaine|Andernos-les-Bains": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Andernos-les-Bains",
+  "listings": 635,
+  "occupancy": 0.41,
+  "adr": 172.9,
+  "rev_par": 72.2,
+  "revenue": 13964.5
+ },
+ "Auvergne-Rhône-Alpes|Les Gets": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Les Gets",
+  "listings": 540,
+  "occupancy": 0.37,
+  "adr": 331.8,
+  "rev_par": 121.5,
+  "revenue": 19842.5
+ },
+ "Centre-Val de Loire|Bourges": {
+  "region": "Centre-Val de Loire",
+  "locality": "Bourges",
+  "listings": 591,
+  "occupancy": 0.41,
+  "adr": 85,
+  "rev_par": 33.9,
+  "revenue": 8024.4
+ },
+ "Provence-Alpes-Côte d'Azur|Briançon": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Briançon",
+  "listings": 579,
+  "occupancy": 0.4,
+  "adr": 135.7,
+  "rev_par": 52.7,
+  "revenue": 11139.1
+ },
+ "Nouvelle-Aquitaine|Hendaye": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Hendaye",
+  "listings": 545,
+  "occupancy": 0.48,
+  "adr": 132.5,
+  "rev_par": 66.6,
+  "revenue": 11737.2
+ },
+ "Provence-Alpes-Côte d'Azur|Grasse": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Grasse",
+  "listings": 565,
+  "occupancy": 0.41,
+  "adr": 191,
+  "rev_par": 78.4,
+  "revenue": 12962.2
+ },
+ "Auvergne-Rhône-Alpes|Samoëns": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Samoëns",
+  "listings": 621,
+  "occupancy": 0.39,
+  "adr": 222.5,
+  "rev_par": 88.1,
+  "revenue": 19466.6
+ },
+ "Nouvelle-Aquitaine|Saint-Pierre-d'Oléron": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Saint-Pierre-d'Oléron",
+  "listings": 626,
+  "occupancy": 0.42,
+  "adr": 139,
+  "rev_par": 61.3,
+  "revenue": 12130.6
+ },
+ "Ile-de-France|Courbevoie": {
+  "region": "Ile-de-France",
+  "locality": "Courbevoie",
+  "listings": 520,
+  "occupancy": 0.48,
+  "adr": 132.1,
+  "rev_par": 64.9,
+  "revenue": 12753.5
+ },
+ "Nouvelle-Aquitaine|Moliets-et-Maâ": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Moliets-et-Maâ",
+  "listings": 570,
+  "occupancy": 0.37,
+  "adr": 171.1,
+  "rev_par": 69.8,
+  "revenue": 11377.5
+ },
+ "Provence-Alpes-Côte d'Azur|Vars": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vars",
+  "listings": 595,
+  "occupancy": 0.33,
+  "adr": 190.9,
+  "rev_par": 66.3,
+  "revenue": 11958.8
+ },
+ "Auvergne-Rhône-Alpes|Châtel": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Châtel",
+  "listings": 534,
+  "occupancy": 0.35,
+  "adr": 278.2,
+  "rev_par": 91.3,
+  "revenue": 16983.6
+ },
+ "Ile-de-France|Pantin": {
+  "region": "Ile-de-France",
+  "locality": "Pantin",
+  "listings": 470,
+  "occupancy": 0.51,
+  "adr": 106.4,
+  "rev_par": 55.3,
+  "revenue": 10227
+ },
+ "Nouvelle-Aquitaine|Saint-Georges-d'Oléron": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Saint-Georges-d'Oléron",
+  "listings": 539,
+  "occupancy": 0.4,
+  "adr": 141.9,
+  "rev_par": 59.2,
+  "revenue": 10615.7
+ },
+ "Nouvelle-Aquitaine|Rochefort": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Rochefort",
+  "listings": 517,
+  "occupancy": 0.47,
+  "adr": 71.5,
+  "rev_par": 33.3,
+  "revenue": 7074.2
+ },
+ "Grand Est|La Bresse": {
+  "region": "Grand Est",
+  "locality": "La Bresse",
+  "listings": 611,
+  "occupancy": 0.38,
+  "adr": 197,
+  "rev_par": 71.5,
+  "revenue": 18782.1
+ },
+ "Pays de la Loire|La Tranche-sur-Mer": {
+  "region": "Pays de la Loire",
+  "locality": "La Tranche-sur-Mer",
+  "listings": 504,
+  "occupancy": 0.37,
+  "adr": 148.9,
+  "rev_par": 58.2,
+  "revenue": 9630.3
+ },
+ "Provence-Alpes-Côte d'Azur|Orcières": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Orcières",
+  "listings": 559,
+  "occupancy": 0.34,
+  "adr": 128.8,
+  "rev_par": 45.9,
+  "revenue": 9362.1
+ },
+ "Hauts-de-France|Calais": {
+  "region": "Hauts-de-France",
+  "locality": "Calais",
+  "listings": 518,
+  "occupancy": 0.41,
+  "adr": 88.8,
+  "rev_par": 36.4,
+  "revenue": 7852.4
+ },
+ "Auvergne-Rhône-Alpes|Annemasse": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Annemasse",
+  "listings": 494,
+  "occupancy": 0.43,
+  "adr": 83.2,
+  "rev_par": 38.1,
+  "revenue": 6080
+ },
+ "Martinique|Sainte-Anne": {
+  "region": "Martinique",
+  "locality": "Sainte-Anne",
+  "listings": 533,
+  "occupancy": 0.4,
+  "adr": 120.8,
+  "rev_par": 48.8,
+  "revenue": 9891.5
+ },
+ "Provence-Alpes-Côte d'Azur|Martigues": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Martigues",
+  "listings": 491,
+  "occupancy": 0.41,
+  "adr": 111.3,
+  "rev_par": 46.9,
+  "revenue": 8796.9
+ },
+ "Martinique|Sainte-Luce": {
+  "region": "Martinique",
+  "locality": "Sainte-Luce",
+  "listings": 558,
+  "occupancy": 0.46,
+  "adr": 144,
+  "rev_par": 69.9,
+  "revenue": 15028.9
+ },
+ "Nouvelle-Aquitaine|Les Mathes": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Les Mathes",
+  "listings": 498,
+  "occupancy": 0.37,
+  "adr": 119.5,
+  "rev_par": 46.9,
+  "revenue": 7206.5
+ },
+ "Nouvelle-Aquitaine|Soustons": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Soustons",
+  "listings": 452,
+  "occupancy": 0.37,
+  "adr": 141,
+  "rev_par": 54.2,
+  "revenue": 9349.8
+ },
+ "Guadeloupe|Deshaies": {
+  "region": "Guadeloupe",
+  "locality": "Deshaies",
+  "listings": 527,
+  "occupancy": 0.44,
+  "adr": 151,
+  "rev_par": 68.8,
+  "revenue": 15444.6
+ },
+ "Nouvelle-Aquitaine|Bidart": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bidart",
+  "listings": 457,
+  "occupancy": 0.45,
+  "adr": 202,
+  "rev_par": 94.6,
+  "revenue": 14668.2
+ },
+ "Nouvelle-Aquitaine|Soulac-sur-Mer": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Soulac-sur-Mer",
+  "listings": 493,
+  "occupancy": 0.35,
+  "adr": 146.2,
+  "rev_par": 52.8,
+  "revenue": 8668.6
+ },
+ "Pays de la Loire|Cholet": {
+  "region": "Pays de la Loire",
+  "locality": "Cholet",
+  "listings": 476,
+  "occupancy": 0.42,
+  "adr": 93.3,
+  "rev_par": 39.5,
+  "revenue": 8491.2
+ },
+ "Pays de la Loire|Saumur": {
+  "region": "Pays de la Loire",
+  "locality": "Saumur",
+  "listings": 465,
+  "occupancy": 0.41,
+  "adr": 102.8,
+  "rev_par": 40.7,
+  "revenue": 9827.8
+ },
+ "Auvergne-Rhône-Alpes|Chambéry": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Chambéry",
+  "listings": 435,
+  "occupancy": 0.44,
+  "adr": 87.3,
+  "rev_par": 37.5,
+  "revenue": 7886.2
+ },
+ "Auvergne-Rhône-Alpes|Valence": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Valence",
+  "listings": 441,
+  "occupancy": 0.42,
+  "adr": 82,
+  "rev_par": 33.8,
+  "revenue": 7381.2
+ },
+ "Nouvelle-Aquitaine|Mérignac": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Mérignac",
+  "listings": 396,
+  "occupancy": 0.47,
+  "adr": 104.3,
+  "rev_par": 47,
+  "revenue": 9188.5
+ },
+ "Auvergne-Rhône-Alpes|Chamrousse": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Chamrousse",
+  "listings": 457,
+  "occupancy": 0.35,
+  "adr": 121,
+  "rev_par": 47.4,
+  "revenue": 9452.3
+ },
+ "Nouvelle-Aquitaine|Périgueux": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Périgueux",
+  "listings": 408,
+  "occupancy": 0.42,
+  "adr": 75.1,
+  "rev_par": 30.6,
+  "revenue": 6212.8
+ },
+ "Provence-Alpes-Côte d'Azur|Carqueiranne": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Carqueiranne",
+  "listings": 453,
+  "occupancy": 0.42,
+  "adr": 206.4,
+  "rev_par": 91.2,
+  "revenue": 15825.7
+ },
+ "Nouvelle-Aquitaine|Niort": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Niort",
+  "listings": 412,
+  "occupancy": 0.39,
+  "adr": 67.4,
+  "rev_par": 25.6,
+  "revenue": 5616.2
+ },
+ "Hauts-de-France|Wimereux": {
+  "region": "Hauts-de-France",
+  "locality": "Wimereux",
+  "listings": 446,
+  "occupancy": 0.4,
+  "adr": 145,
+  "rev_par": 58.6,
+  "revenue": 14883.5
+ },
+ "Nouvelle-Aquitaine|La Flotte": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "La Flotte",
+  "listings": 434,
+  "occupancy": 0.45,
+  "adr": 222,
+  "rev_par": 109.7,
+  "revenue": 21960.1
+ },
+ "Nouvelle-Aquitaine|Carcans": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Carcans",
+  "listings": 403,
+  "occupancy": 0.35,
+  "adr": 133,
+  "rev_par": 49.5,
+  "revenue": 7903.1
+ },
+ "Centre-Val de Loire|Châteauroux": {
+  "region": "Centre-Val de Loire",
+  "locality": "Châteauroux",
+  "listings": 399,
+  "occupancy": 0.4,
+  "adr": 75.1,
+  "rev_par": 28.4,
+  "revenue": 6174.8
+ },
+ "Provence-Alpes-Côte d'Azur|Risoul": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Risoul",
+  "listings": 405,
+  "occupancy": 0.34,
+  "adr": 138,
+  "rev_par": 51.4,
+  "revenue": 9839.7
+ },
+ "Nouvelle-Aquitaine|Pessac": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Pessac",
+  "listings": 352,
+  "occupancy": 0.48,
+  "adr": 94.6,
+  "rev_par": 44.1,
+  "revenue": 9189
+ },
+ "Guadeloupe|Bouillante": {
+  "region": "Guadeloupe",
+  "locality": "Bouillante",
+  "listings": 442,
+  "occupancy": 0.47,
+  "adr": 137,
+  "rev_par": 67.7,
+  "revenue": 16090.3
+ },
+ "Provence-Alpes-Côte d'Azur|Gassin": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Gassin",
+  "listings": 370,
+  "occupancy": 0.39,
+  "adr": 409.3,
+  "rev_par": 161.5,
+  "revenue": 26748.3
+ },
+ "Centre-Val de Loire|Chartres": {
+  "region": "Centre-Val de Loire",
+  "locality": "Chartres",
+  "listings": 395,
+  "occupancy": 0.42,
+  "adr": 91.1,
+  "rev_par": 37,
+  "revenue": 8601.9
+ },
+ "Auvergne-Rhône-Alpes|Villarembert": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Villarembert",
+  "listings": 404,
+  "occupancy": 0.34,
+  "adr": 116.7,
+  "rev_par": 42.8,
+  "revenue": 7077
+ },
+ "Hauts-de-France|Arras": {
+  "region": "Hauts-de-France",
+  "locality": "Arras",
+  "listings": 392,
+  "occupancy": 0.41,
+  "adr": 84.2,
+  "rev_par": 34.7,
+  "revenue": 8237.3
+ },
+ "Nouvelle-Aquitaine|Bergerac": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bergerac",
+  "listings": 375,
+  "occupancy": 0.39,
+  "adr": 99.5,
+  "rev_par": 39.7,
+  "revenue": 8286.1
+ },
+ "Centre-Val de Loire|Amboise": {
+  "region": "Centre-Val de Loire",
+  "locality": "Amboise",
+  "listings": 395,
+  "occupancy": 0.45,
+  "adr": 126.1,
+  "rev_par": 55.4,
+  "revenue": 13104.4
+ },
+ "Provence-Alpes-Côte d'Azur|Vence": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vence",
+  "listings": 348,
+  "occupancy": 0.44,
+  "adr": 213.1,
+  "rev_par": 96.3,
+  "revenue": 17434.2
+ },
+ "Martinique|Fort-de-France": {
+  "region": "Martinique",
+  "locality": "Fort-de-France",
+  "listings": 347,
+  "occupancy": 0.4,
+  "adr": 101.6,
+  "rev_par": 40.3,
+  "revenue": 8427.7
+ },
+ "Nouvelle-Aquitaine|Talence": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Talence",
+  "listings": 333,
+  "occupancy": 0.48,
+  "adr": 88.4,
+  "rev_par": 43.5,
+  "revenue": 8583.2
+ },
+ "Auvergne-Rhône-Alpes|Combloux": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Combloux",
+  "listings": 382,
+  "occupancy": 0.38,
+  "adr": 273,
+  "rev_par": 104.7,
+  "revenue": 21633.5
+ },
+ "Provence-Alpes-Côte d'Azur|Gap": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Gap",
+  "listings": 353,
+  "occupancy": 0.41,
+  "adr": 88.8,
+  "rev_par": 35.3,
+  "revenue": 7612
+ },
+ "Nouvelle-Aquitaine|Châtelaillon-Plage": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Châtelaillon-Plage",
+  "listings": 371,
+  "occupancy": 0.42,
+  "adr": 136,
+  "rev_par": 58.4,
+  "revenue": 11286.2
+ },
+ "Provence-Alpes-Côte d'Azur|Cogolin": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cogolin",
+  "listings": 349,
+  "occupancy": 0.39,
+  "adr": 196.2,
+  "rev_par": 77.8,
+  "revenue": 13952.5
+ },
+ "Nouvelle-Aquitaine|Labenne": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Labenne",
+  "listings": 364,
+  "occupancy": 0.46,
+  "adr": 194.5,
+  "rev_par": 95.5,
+  "revenue": 16448.8
+ },
+ "Guadeloupe|Sainte-Rose": {
+  "region": "Guadeloupe",
+  "locality": "Sainte-Rose",
+  "listings": 359,
+  "occupancy": 0.39,
+  "adr": 116.1,
+  "rev_par": 47.9,
+  "revenue": 9641
+ },
+ "Provence-Alpes-Côte d'Azur|Mougins": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Mougins",
+  "listings": 316,
+  "occupancy": 0.41,
+  "adr": 381.1,
+  "rev_par": 152.1,
+  "revenue": 24060.3
+ },
+ "Auvergne-Rhône-Alpes|Valmeinier": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Valmeinier",
+  "listings": 367,
+  "occupancy": 0.37,
+  "adr": 148.3,
+  "rev_par": 61.7,
+  "revenue": 10912.1
+ },
+ "Hauts-de-France|Roubaix": {
+  "region": "Hauts-de-France",
+  "locality": "Roubaix",
+  "listings": 345,
+  "occupancy": 0.38,
+  "adr": 95.7,
+  "rev_par": 35.6,
+  "revenue": 7110.2
+ },
+ "Nouvelle-Aquitaine|Agen": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Agen",
+  "listings": 336,
+  "occupancy": 0.41,
+  "adr": 70.4,
+  "rev_par": 27,
+  "revenue": 5686.7
+ },
+ "Nouvelle-Aquitaine|Hourtin": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Hourtin",
+  "listings": 354,
+  "occupancy": 0.36,
+  "adr": 142.5,
+  "rev_par": 54.7,
+  "revenue": 8930.1
+ },
+ "Hauts-de-France|Neufchâtel-Hardelot": {
+  "region": "Hauts-de-France",
+  "locality": "Neufchâtel-Hardelot",
+  "listings": 379,
+  "occupancy": 0.38,
+  "adr": 163.7,
+  "rev_par": 63,
+  "revenue": 14946
+ },
+ "Auvergne-Rhône-Alpes|Valloire": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Valloire",
+  "listings": 362,
+  "occupancy": 0.37,
+  "adr": 177.5,
+  "rev_par": 71.6,
+  "revenue": 12896.1
+ },
+ "Pays de la Loire|Laval": {
+  "region": "Pays de la Loire",
+  "locality": "Laval",
+  "listings": 336,
+  "occupancy": 0.4,
+  "adr": 70.4,
+  "rev_par": 26.8,
+  "revenue": 6402.9
+ },
+ "Guadeloupe|Le Moule": {
+  "region": "Guadeloupe",
+  "locality": "Le Moule",
+  "listings": 314,
+  "occupancy": 0.38,
+  "adr": 123.6,
+  "rev_par": 48.6,
+  "revenue": 9605.3
+ },
+ "Pays de la Loire|La Roche-sur-Yon": {
+  "region": "Pays de la Loire",
+  "locality": "La Roche-sur-Yon",
+  "listings": 324,
+  "occupancy": 0.44,
+  "adr": 72.1,
+  "rev_par": 32.1,
+  "revenue": 6476.1
+ },
+ "Grand Est|Épernay": {
+  "region": "Grand Est",
+  "locality": "Épernay",
+  "listings": 373,
+  "occupancy": 0.38,
+  "adr": 140,
+  "rev_par": 53.7,
+  "revenue": 14238.3
+ },
+ "Auvergne-Rhône-Alpes|Montélimar": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Montélimar",
+  "listings": 312,
+  "occupancy": 0.36,
+  "adr": 94.8,
+  "rev_par": 36.2,
+  "revenue": 6693.5
+ },
+ "Nouvelle-Aquitaine|Ciboure": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Ciboure",
+  "listings": 297,
+  "occupancy": 0.47,
+  "adr": 161,
+  "rev_par": 75.9,
+  "revenue": 13877.6
+ },
+ "Grand Est|Schiltigheim": {
+  "region": "Grand Est",
+  "locality": "Schiltigheim",
+  "listings": 320,
+  "occupancy": 0.47,
+  "adr": 107.6,
+  "rev_par": 51.7,
+  "revenue": 11956.1
+ },
+ "Bourgogne – Franche-Comté|Beaune": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Beaune",
+  "listings": 351,
+  "occupancy": 0.45,
+  "adr": 193.9,
+  "rev_par": 83.4,
+  "revenue": 22993.8
+ },
+ "Pays de la Loire|Guérande": {
+  "region": "Pays de la Loire",
+  "locality": "Guérande",
+  "listings": 288,
+  "occupancy": 0.39,
+  "adr": 122.2,
+  "rev_par": 46.7,
+  "revenue": 8359.8
+ },
+ "Grand Est|Saint-Louis": {
+  "region": "Grand Est",
+  "locality": "Saint-Louis",
+  "listings": 339,
+  "occupancy": 0.47,
+  "adr": 90.3,
+  "rev_par": 42.1,
+  "revenue": 10331.1
+ },
+ "Nouvelle-Aquitaine|Arès": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Arès",
+  "listings": 332,
+  "occupancy": 0.39,
+  "adr": 189,
+  "rev_par": 76.2,
+  "revenue": 12859.2
+ },
+ "Nouvelle-Aquitaine|Bègles": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bègles",
+  "listings": 272,
+  "occupancy": 0.45,
+  "adr": 93.7,
+  "rev_par": 42.2,
+  "revenue": 8203.3
+ },
+ "Bourgogne – Franche-Comté|Belfort": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Belfort",
+  "listings": 330,
+  "occupancy": 0.41,
+  "adr": 71.1,
+  "rev_par": 28.5,
+  "revenue": 6341.7
+ },
+ "Bourgogne – Franche-Comté|Auxerre": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Auxerre",
+  "listings": 318,
+  "occupancy": 0.39,
+  "adr": 86.8,
+  "rev_par": 34,
+  "revenue": 8370.8
+ },
+ "Nouvelle-Aquitaine|Vendays-Montalivet": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Vendays-Montalivet",
+  "listings": 301,
+  "occupancy": 0.36,
+  "adr": 157.3,
+  "rev_par": 59.4,
+  "revenue": 9291.1
+ },
+ "Provence-Alpes-Côte d'Azur|Embrun": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Embrun",
+  "listings": 315,
+  "occupancy": 0.42,
+  "adr": 99.1,
+  "rev_par": 41.1,
+  "revenue": 7957.2
+ },
+ "Grand Est|Charleville-Mézières": {
+  "region": "Grand Est",
+  "locality": "Charleville-Mézières",
+  "listings": 306,
+  "occupancy": 0.39,
+  "adr": 88.8,
+  "rev_par": 34.6,
+  "revenue": 7709.1
+ },
+ "Nouvelle-Aquitaine|La Tremblade": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "La Tremblade",
+  "listings": 326,
+  "occupancy": 0.38,
+  "adr": 146.1,
+  "rev_par": 59.9,
+  "revenue": 11069
+ },
+ "Martinique|La Trinité": {
+  "region": "Martinique",
+  "locality": "La Trinité",
+  "listings": 310,
+  "occupancy": 0.42,
+  "adr": 104.6,
+  "rev_par": 45.1,
+  "revenue": 9644.5
+ },
+ "Nouvelle-Aquitaine|Dax": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Dax",
+  "listings": 276,
+  "occupancy": 0.45,
+  "adr": 69.2,
+  "rev_par": 30.3,
+  "revenue": 5944.9
+ },
+ "Nouvelle-Aquitaine|Dolus-d'Oléron": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Dolus-d'Oléron",
+  "listings": 320,
+  "occupancy": 0.4,
+  "adr": 141.4,
+  "rev_par": 57.9,
+  "revenue": 11745.2
+ },
+ "Nouvelle-Aquitaine|Eaux-Bonnes": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Eaux-Bonnes",
+  "listings": 296,
+  "occupancy": 0.34,
+  "adr": 99.3,
+  "rev_par": 35.7,
+  "revenue": 7092.4
+ },
+ "Hauts-de-France|Le Crotoy": {
+  "region": "Hauts-de-France",
+  "locality": "Le Crotoy",
+  "listings": 338,
+  "occupancy": 0.41,
+  "adr": 142.6,
+  "rev_par": 58.2,
+  "revenue": 15101.5
+ },
+ "Grand Est|Châlons-en-Champagne": {
+  "region": "Grand Est",
+  "locality": "Châlons-en-Champagne",
+  "listings": 318,
+  "occupancy": 0.39,
+  "adr": 79.9,
+  "rev_par": 30.9,
+  "revenue": 7612
+ },
+ "Hauts-de-France|Valenciennes": {
+  "region": "Hauts-de-France",
+  "locality": "Valenciennes",
+  "listings": 282,
+  "occupancy": 0.4,
+  "adr": 75.1,
+  "rev_par": 29.4,
+  "revenue": 6398.8
+ },
+ "Provence-Alpes-Côte d'Azur|Orange": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Orange",
+  "listings": 284,
+  "occupancy": 0.34,
+  "adr": 133.8,
+  "rev_par": 46.1,
+  "revenue": 8876.7
+ },
+ "Nouvelle-Aquitaine|Tarnos": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Tarnos",
+  "listings": 277,
+  "occupancy": 0.49,
+  "adr": 143.3,
+  "rev_par": 72.4,
+  "revenue": 12178
+ },
+ "Provence-Alpes-Côte d'Azur|Isola": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Isola",
+  "listings": 311,
+  "occupancy": 0.33,
+  "adr": 174.1,
+  "rev_par": 59,
+  "revenue": 10594.2
+ },
+ "Provence-Alpes-Côte d'Azur|Lorgues": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Lorgues",
+  "listings": 272,
+  "occupancy": 0.38,
+  "adr": 192.3,
+  "rev_par": 76.7,
+  "revenue": 11841.8
+ },
+ "Provence-Alpes-Côte d'Azur|Carpentras": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Carpentras",
+  "listings": 298,
+  "occupancy": 0.37,
+  "adr": 161.9,
+  "rev_par": 60.4,
+  "revenue": 11602.9
+ },
+ "Provence-Alpes-Côte d'Azur|Montgenèvre": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Montgenèvre",
+  "listings": 240,
+  "occupancy": 0.34,
+  "adr": 257,
+  "rev_par": 93.6,
+  "revenue": 16088.4
+ },
+ "Occitanie|Nîmes": {
+  "region": "Occitanie",
+  "locality": "Nîmes",
+  "listings": 232,
+  "occupancy": 0.37,
+  "adr": 110.4,
+  "rev_par": 38.9,
+  "revenue": 6463.4
+ },
+ "Hauts-de-France|Saint-Quentin": {
+  "region": "Hauts-de-France",
+  "locality": "Saint-Quentin",
+  "listings": 267,
+  "occupancy": 0.31,
+  "adr": 67.7,
+  "rev_par": 21.9,
+  "revenue": 4076.6
+ },
+ "Bourgogne – Franche-Comté|Nevers": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Nevers",
+  "listings": 284,
+  "occupancy": 0.38,
+  "adr": 84.4,
+  "rev_par": 31.7,
+  "revenue": 7260.5
+ },
+ "Martinique|Les Anses-d'Arlet": {
+  "region": "Martinique",
+  "locality": "Les Anses-d'Arlet",
+  "listings": 312,
+  "occupancy": 0.44,
+  "adr": 169.5,
+  "rev_par": 80.4,
+  "revenue": 18033.7
+ },
+ "Auvergne-Rhône-Alpes|Aurillac": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Aurillac",
+  "listings": 250,
+  "occupancy": 0.4,
+  "adr": 71.3,
+  "rev_par": 27,
+  "revenue": 5516.5
+ },
+ "Hauts-de-France|Cucq": {
+  "region": "Hauts-de-France",
+  "locality": "Cucq",
+  "listings": 281,
+  "occupancy": 0.37,
+  "adr": 153.2,
+  "rev_par": 57.3,
+  "revenue": 13736.7
+ },
+ "Nouvelle-Aquitaine|Urrugne": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Urrugne",
+  "listings": 257,
+  "occupancy": 0.42,
+  "adr": 166.6,
+  "rev_par": 70.2,
+  "revenue": 13418.5
+ },
+ "Auvergne-Rhône-Alpes|Morillon": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Morillon",
+  "listings": 273,
+  "occupancy": 0.36,
+  "adr": 184.2,
+  "rev_par": 65.3,
+  "revenue": 12732.4
+ },
+ "Auvergne-Rhône-Alpes|Beaufort": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Beaufort",
+  "listings": 261,
+  "occupancy": 0.32,
+  "adr": 140.8,
+  "rev_par": 46.5,
+  "revenue": 8859.7
+ },
+ "Hauts-de-France|Tourcoing": {
+  "region": "Hauts-de-France",
+  "locality": "Tourcoing",
+  "listings": 270,
+  "occupancy": 0.38,
+  "adr": 92.2,
+  "rev_par": 35,
+  "revenue": 7683.9
+ },
+ "Auvergne-Rhône-Alpes|Sevrier": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Sevrier",
+  "listings": 279,
+  "occupancy": 0.47,
+  "adr": 230.1,
+  "rev_par": 107.6,
+  "revenue": 23486.8
+ },
+ "Auvergne-Rhône-Alpes|Hauteluce": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Hauteluce",
+  "listings": 261,
+  "occupancy": 0.39,
+  "adr": 179.6,
+  "rev_par": 74.4,
+  "revenue": 14811
+ },
+ "Hauts-de-France|Douai": {
+  "region": "Hauts-de-France",
+  "locality": "Douai",
+  "listings": 265,
+  "occupancy": 0.36,
+  "adr": 85.9,
+  "rev_par": 30.3,
+  "revenue": 6893
+ },
+ "Nouvelle-Aquitaine|Lanton": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Lanton",
+  "listings": 272,
+  "occupancy": 0.41,
+  "adr": 158,
+  "rev_par": 66.8,
+  "revenue": 12019.6
+ },
+ "Provence-Alpes-Côte d'Azur|Draguignan": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Draguignan",
+  "listings": 244,
+  "occupancy": 0.38,
+  "adr": 146.7,
+  "rev_par": 56.8,
+  "revenue": 9386.9
+ },
+ "Auvergne-Rhône-Alpes|Passy": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Passy",
+  "listings": 269,
+  "occupancy": 0.44,
+  "adr": 124.7,
+  "rev_par": 51.8,
+  "revenue": 11432.5
+ },
+ "Provence-Alpes-Côte d'Azur|Aubagne": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Aubagne",
+  "listings": 243,
+  "occupancy": 0.42,
+  "adr": 149.9,
+  "rev_par": 60.8,
+  "revenue": 12136.9
+ },
+ "Bourgogne – Franche-Comté|Mâcon": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Mâcon",
+  "listings": 265,
+  "occupancy": 0.35,
+  "adr": 91.9,
+  "rev_par": 32.2,
+  "revenue": 7490.2
+ },
+ "Nouvelle-Aquitaine|Aytré": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Aytré",
+  "listings": 224,
+  "occupancy": 0.48,
+  "adr": 99.5,
+  "rev_par": 46.7,
+  "revenue": 7881
+ },
+ "Auvergne-Rhône-Alpes|Vienne": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Vienne",
+  "listings": 259,
+  "occupancy": 0.37,
+  "adr": 97.8,
+  "rev_par": 35.5,
+  "revenue": 7726.2
+ },
+ "Auvergne-Rhône-Alpes|Montluçon": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Montluçon",
+  "listings": 244,
+  "occupancy": 0.37,
+  "adr": 75.3,
+  "rev_par": 27.3,
+  "revenue": 6186.9
+ },
+ "Provence-Alpes-Côte d'Azur|Apt": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Apt",
+  "listings": 255,
+  "occupancy": 0.41,
+  "adr": 165.6,
+  "rev_par": 68.5,
+  "revenue": 13978.2
+ },
+ "Pays de la Loire|Rezé": {
+  "region": "Pays de la Loire",
+  "locality": "Rezé",
+  "listings": 229,
+  "occupancy": 0.42,
+  "adr": 72.1,
+  "rev_par": 30.6,
+  "revenue": 6651.3
+ },
+ "Nouvelle-Aquitaine|Le Teich": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Le Teich",
+  "listings": 244,
+  "occupancy": 0.41,
+  "adr": 143.2,
+  "rev_par": 60.6,
+  "revenue": 9803.2
+ },
+ "Grand Est|Xonrupt-Longemer": {
+  "region": "Grand Est",
+  "locality": "Xonrupt-Longemer",
+  "listings": 277,
+  "occupancy": 0.42,
+  "adr": 225.5,
+  "rev_par": 94.2,
+  "revenue": 26563.7
+ },
+ "Guadeloupe|Petit-Bourg": {
+  "region": "Guadeloupe",
+  "locality": "Petit-Bourg",
+  "listings": 229,
+  "occupancy": 0.42,
+  "adr": 114.6,
+  "rev_par": 46.9,
+  "revenue": 9648
+ },
+ "Auvergne-Rhône-Alpes|Roanne": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Roanne",
+  "listings": 237,
+  "occupancy": 0.37,
+  "adr": 63.8,
+  "rev_par": 22.9,
+  "revenue": 5030.5
+ },
+ "Provence-Alpes-Côte d'Azur|Gordes": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Gordes",
+  "listings": 251,
+  "occupancy": 0.41,
+  "adr": 386.8,
+  "rev_par": 168.8,
+  "revenue": 30670.3
+ },
+ "Hauts-de-France|Villeneuve-d'Ascq": {
+  "region": "Hauts-de-France",
+  "locality": "Villeneuve-d'Ascq",
+  "listings": 217,
+  "occupancy": 0.41,
+  "adr": 98.2,
+  "rev_par": 40.7,
+  "revenue": 8831.5
+ },
+ "Pays de la Loire|L'Aiguillon-la-Presqu'île": {
+  "region": "Pays de la Loire",
+  "locality": "L'Aiguillon-la-Presqu'île",
+  "listings": 220,
+  "occupancy": 0.36,
+  "adr": 154.8,
+  "rev_par": 59.3,
+  "revenue": 10922.9
+ },
+ "Grand Est|Épinal": {
+  "region": "Grand Est",
+  "locality": "Épinal",
+  "listings": 258,
+  "occupancy": 0.36,
+  "adr": 88.3,
+  "rev_par": 31.8,
+  "revenue": 7641.4
+ },
+ "Nouvelle-Aquitaine|Ondres": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Ondres",
+  "listings": 230,
+  "occupancy": 0.46,
+  "adr": 149.1,
+  "rev_par": 71.5,
+  "revenue": 12006.9
+ },
+ "Auvergne-Rhône-Alpes|Sallanches": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Sallanches",
+  "listings": 246,
+  "occupancy": 0.46,
+  "adr": 153.9,
+  "rev_par": 61.4,
+  "revenue": 14909.9
+ },
+ "Pays de la Loire|La Turballe": {
+  "region": "Pays de la Loire",
+  "locality": "La Turballe",
+  "listings": 235,
+  "occupancy": 0.4,
+  "adr": 139,
+  "rev_par": 56.2,
+  "revenue": 10953.1
+ },
+ "Hauts-de-France|Beauvais": {
+  "region": "Hauts-de-France",
+  "locality": "Beauvais",
+  "listings": 244,
+  "occupancy": 0.4,
+  "adr": 74.6,
+  "rev_par": 29.4,
+  "revenue": 6950.7
+ },
+ "Provence-Alpes-Côte d'Azur|Manosque": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Manosque",
+  "listings": 218,
+  "occupancy": 0.42,
+  "adr": 93.2,
+  "rev_par": 39.5,
+  "revenue": 8024.6
+ },
+ "Martinique|Le Vauclin": {
+  "region": "Martinique",
+  "locality": "Le Vauclin",
+  "listings": 219,
+  "occupancy": 0.32,
+  "adr": 194.3,
+  "rev_par": 62.3,
+  "revenue": 11513.7
+ },
+ "Nouvelle-Aquitaine|Fouras": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Fouras",
+  "listings": 237,
+  "occupancy": 0.39,
+  "adr": 139.9,
+  "rev_par": 55.6,
+  "revenue": 11564.8
+ },
+ "Provence-Alpes-Côte d'Azur|Ramatuelle": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Ramatuelle",
+  "listings": 234,
+  "occupancy": 0.4,
+  "adr": 593.4,
+  "rev_par": 249.2,
+  "revenue": 39591.5
+ },
+ "Hauts-de-France|Le Portel": {
+  "region": "Hauts-de-France",
+  "locality": "Le Portel",
+  "listings": 241,
+  "occupancy": 0.39,
+  "adr": 107.3,
+  "rev_par": 42.8,
+  "revenue": 10266.2
+ },
+ "Provence-Alpes-Côte d'Azur|Péone": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Péone",
+  "listings": 236,
+  "occupancy": 0.33,
+  "adr": 181.3,
+  "rev_par": 60.6,
+  "revenue": 12283.1
+ },
+ "Nouvelle-Aquitaine|Libourne": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Libourne",
+  "listings": 214,
+  "occupancy": 0.38,
+  "adr": 99.6,
+  "rev_par": 37,
+  "revenue": 7489.3
+ },
+ "Auvergne-Rhône-Alpes|Montvalezan": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Montvalezan",
+  "listings": 234,
+  "occupancy": 0.38,
+  "adr": 189.8,
+  "rev_par": 77.2,
+  "revenue": 13851.1
+ },
+ "Grand Est|Sélestat": {
+  "region": "Grand Est",
+  "locality": "Sélestat",
+  "listings": 237,
+  "occupancy": 0.44,
+  "adr": 112.8,
+  "rev_par": 50.9,
+  "revenue": 14247.8
+ },
+ "Provence-Alpes-Côte d'Azur|Valbonne": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Valbonne",
+  "listings": 194,
+  "occupancy": 0.44,
+  "adr": 290,
+  "rev_par": 133.3,
+  "revenue": 20784.6
+ },
+ "Hauts-de-France|Ault": {
+  "region": "Hauts-de-France",
+  "locality": "Ault",
+  "listings": 231,
+  "occupancy": 0.4,
+  "adr": 127.5,
+  "rev_par": 50.4,
+  "revenue": 11967.1
+ },
+ "Normandy|La Hague": {
+  "region": "Normandy",
+  "locality": "La Hague",
+  "listings": 231,
+  "occupancy": 0.44,
+  "adr": 117.6,
+  "rev_par": 51.4,
+  "revenue": 12205.2
+ },
+ "Martinique|Le Robert": {
+  "region": "Martinique",
+  "locality": "Le Robert",
+  "listings": 211,
+  "occupancy": 0.4,
+  "adr": 130.5,
+  "rev_par": 50.9,
+  "revenue": 10689.8
+ },
+ "Pays de la Loire|Arnage": {
+  "region": "Pays de la Loire",
+  "locality": "Arnage",
+  "listings": 175,
+  "occupancy": 0.24,
+  "adr": 198.2,
+  "rev_par": 44.4,
+  "revenue": 6445.2
+ },
+ "Auvergne-Rhône-Alpes|Modane": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Modane",
+  "listings": 221,
+  "occupancy": 0.35,
+  "adr": 100.7,
+  "rev_par": 36,
+  "revenue": 6881.4
+ },
+ "Guadeloupe|Pointe-Noire": {
+  "region": "Guadeloupe",
+  "locality": "Pointe-Noire",
+  "listings": 218,
+  "occupancy": 0.41,
+  "adr": 122.5,
+  "rev_par": 49.7,
+  "revenue": 10025.3
+ },
+ "Auvergne-Rhône-Alpes|Manigod": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Manigod",
+  "listings": 232,
+  "occupancy": 0.39,
+  "adr": 447,
+  "rev_par": 210,
+  "revenue": 48402.6
+ },
+ "Nouvelle-Aquitaine|Saintes": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Saintes",
+  "listings": 208,
+  "occupancy": 0.4,
+  "adr": 74.2,
+  "rev_par": 29,
+  "revenue": 6136.7
+ },
+ "Martinique|Le Marin": {
+  "region": "Martinique",
+  "locality": "Le Marin",
+  "listings": 224,
+  "occupancy": 0.44,
+  "adr": 148.3,
+  "rev_par": 64.9,
+  "revenue": 14054.8
+ },
+ "Auvergne-Rhône-Alpes|Vénissieux": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Vénissieux",
+  "listings": 178,
+  "occupancy": 0.42,
+  "adr": 82.5,
+  "rev_par": 34.3,
+  "revenue": 6464.8
+ },
+ "Guadeloupe|Baie-Mahault": {
+  "region": "Guadeloupe",
+  "locality": "Baie-Mahault",
+  "listings": 189,
+  "occupancy": 0.43,
+  "adr": 114.4,
+  "rev_par": 48.5,
+  "revenue": 9996.8
+ },
+ "Provence-Alpes-Côte d'Azur|Barcelonnette": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Barcelonnette",
+  "listings": 212,
+  "occupancy": 0.34,
+  "adr": 115.7,
+  "rev_par": 38.1,
+  "revenue": 8128.4
+ },
+ "Nouvelle-Aquitaine|Cognac": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Cognac",
+  "listings": 195,
+  "occupancy": 0.37,
+  "adr": 81.2,
+  "rev_par": 30.7,
+  "revenue": 6346.7
+ },
+ "Provence-Alpes-Côte d'Azur|Cotignac": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cotignac",
+  "listings": 213,
+  "occupancy": 0.39,
+  "adr": 227.4,
+  "rev_par": 94,
+  "revenue": 16269.5
+ },
+ "Martinique|Schœlcher": {
+  "region": "Martinique",
+  "locality": "Schœlcher",
+  "listings": 203,
+  "occupancy": 0.44,
+  "adr": 113.2,
+  "rev_par": 51.8,
+  "revenue": 11295.4
+ },
+ "Hauts-de-France|Wissant": {
+  "region": "Hauts-de-France",
+  "locality": "Wissant",
+  "listings": 225,
+  "occupancy": 0.44,
+  "adr": 174.3,
+  "rev_par": 77.1,
+  "revenue": 20582
+ },
+ "Guadeloupe|Les Abymes": {
+  "region": "Guadeloupe",
+  "locality": "Les Abymes",
+  "listings": 166,
+  "occupancy": 0.4,
+  "adr": 84.5,
+  "rev_par": 34.5,
+  "revenue": 6902
+ },
+ "Hauts-de-France|Compiègne": {
+  "region": "Hauts-de-France",
+  "locality": "Compiègne",
+  "listings": 200,
+  "occupancy": 0.37,
+  "adr": 103.6,
+  "rev_par": 38.3,
+  "revenue": 8315.2
+ },
+ "Nouvelle-Aquitaine|Audenge": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Audenge",
+  "listings": 191,
+  "occupancy": 0.43,
+  "adr": 135.7,
+  "rev_par": 61.2,
+  "revenue": 11370.3
+ },
+ "Provence-Alpes-Côte d'Azur|Istres": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Istres",
+  "listings": 183,
+  "occupancy": 0.44,
+  "adr": 112.9,
+  "rev_par": 49.1,
+  "revenue": 10397.9
+ },
+ "Bourgogne – Franche-Comté|Dole": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Dole",
+  "listings": 196,
+  "occupancy": 0.41,
+  "adr": 84.2,
+  "rev_par": 33.3,
+  "revenue": 7633.9
+ },
+ "Auvergne-Rhône-Alpes|Laveissière": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Laveissière",
+  "listings": 215,
+  "occupancy": 0.33,
+  "adr": 120.2,
+  "rev_par": 40.8,
+  "revenue": 8150.1
+ },
+ "Provence-Alpes-Côte d'Azur|Bédoin": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Bédoin",
+  "listings": 198,
+  "occupancy": 0.42,
+  "adr": 149.8,
+  "rev_par": 63.1,
+  "revenue": 12916.5
+ },
+ "Hauts-de-France|Lens": {
+  "region": "Hauts-de-France",
+  "locality": "Lens",
+  "listings": 196,
+  "occupancy": 0.4,
+  "adr": 84.6,
+  "rev_par": 33.7,
+  "revenue": 8052.6
+ },
+ "Pays de la Loire|Barbâtre": {
+  "region": "Pays de la Loire",
+  "locality": "Barbâtre",
+  "listings": 198,
+  "occupancy": 0.39,
+  "adr": 144.7,
+  "rev_par": 57.7,
+  "revenue": 11162.5
+ },
+ "Provence-Alpes-Côte d'Azur|Cavaillon": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cavaillon",
+  "listings": 192,
+  "occupancy": 0.4,
+  "adr": 211.6,
+  "rev_par": 85,
+  "revenue": 17765.3
+ },
+ "Provence-Alpes-Côte d'Azur|Èze": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Èze",
+  "listings": 186,
+  "occupancy": 0.43,
+  "adr": 304.2,
+  "rev_par": 124.3,
+  "revenue": 25282.8
+ },
+ "Hauts-de-France|Camiers": {
+  "region": "Hauts-de-France",
+  "locality": "Camiers",
+  "listings": 197,
+  "occupancy": 0.39,
+  "adr": 113.2,
+  "rev_par": 43.8,
+  "revenue": 9999
+ },
+ "Auvergne-Rhône-Alpes|Montriond": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Montriond",
+  "listings": 185,
+  "occupancy": 0.37,
+  "adr": 375.7,
+  "rev_par": 144.6,
+  "revenue": 31189.7
+ },
+ "Hauts-de-France|Merlimont": {
+  "region": "Hauts-de-France",
+  "locality": "Merlimont",
+  "listings": 201,
+  "occupancy": 0.37,
+  "adr": 129.8,
+  "rev_par": 48.4,
+  "revenue": 11702.8
+ },
+ "Provence-Alpes-Côte d'Azur|Biot": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Biot",
+  "listings": 174,
+  "occupancy": 0.45,
+  "adr": 246.8,
+  "rev_par": 105.2,
+  "revenue": 15885.2
+ },
+ "Hauts-de-France|Quend": {
+  "region": "Hauts-de-France",
+  "locality": "Quend",
+  "listings": 182,
+  "occupancy": 0.35,
+  "adr": 163.8,
+  "rev_par": 57.2,
+  "revenue": 11274.8
+ },
+ "Auvergne-Rhône-Alpes|Albertville": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Albertville",
+  "listings": 194,
+  "occupancy": 0.4,
+  "adr": 109.3,
+  "rev_par": 39.5,
+  "revenue": 9055.4
+ },
+ "Pays de la Loire|La Bernerie-en-Retz": {
+  "region": "Pays de la Loire",
+  "locality": "La Bernerie-en-Retz",
+  "listings": 197,
+  "occupancy": 0.37,
+  "adr": 144,
+  "rev_par": 51.5,
+  "revenue": 9970.7
+ },
+ "Bourgogne – Franche-Comté|Montbéliard": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montbéliard",
+  "listings": 174,
+  "occupancy": 0.36,
+  "adr": 74.1,
+  "rev_par": 26.1,
+  "revenue": 5795.8
+ },
+ "Nouvelle-Aquitaine|Cenon": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Cenon",
+  "listings": 150,
+  "occupancy": 0.48,
+  "adr": 85.5,
+  "rev_par": 39.8,
+  "revenue": 7857.8
+ },
+ "Pays de la Loire|Mesquer": {
+  "region": "Pays de la Loire",
+  "locality": "Mesquer",
+  "listings": 181,
+  "occupancy": 0.37,
+  "adr": 210.3,
+  "rev_par": 77.9,
+  "revenue": 15668
+ },
+ "Nouvelle-Aquitaine|Léon": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Léon",
+  "listings": 180,
+  "occupancy": 0.4,
+  "adr": 150.2,
+  "rev_par": 63.9,
+  "revenue": 10895.1
+ },
+ "Auvergne-Rhône-Alpes|Allevard": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Allevard",
+  "listings": 189,
+  "occupancy": 0.38,
+  "adr": 93.4,
+  "rev_par": 35.3,
+  "revenue": 7249.3
+ },
+ "Provence-Alpes-Côte d'Azur|Châteaurenard": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Châteaurenard",
+  "listings": 170,
+  "occupancy": 0.4,
+  "adr": 160.2,
+  "rev_par": 65.5,
+  "revenue": 12316.3
+ },
+ "Auvergne-Rhône-Alpes|Doussard": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Doussard",
+  "listings": 191,
+  "occupancy": 0.43,
+  "adr": 226,
+  "rev_par": 99.8,
+  "revenue": 19874.9
+ },
+ "Pays de la Loire|L'Épine": {
+  "region": "Pays de la Loire",
+  "locality": "L'Épine",
+  "listings": 190,
+  "occupancy": 0.42,
+  "adr": 151.8,
+  "rev_par": 66.7,
+  "revenue": 15137.5
+ },
+ "Nouvelle-Aquitaine|Châtellerault": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Châtellerault",
+  "listings": 180,
+  "occupancy": 0.39,
+  "adr": 80.5,
+  "rev_par": 30.3,
+  "revenue": 7372
+ },
+ "Pays de la Loire|La Guérinière": {
+  "region": "Pays de la Loire",
+  "locality": "La Guérinière",
+  "listings": 195,
+  "occupancy": 0.41,
+  "adr": 149.8,
+  "rev_par": 59.8,
+  "revenue": 13173.4
+ },
+ "Provence-Alpes-Côte d'Azur|Éguilles": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Éguilles",
+  "listings": 155,
+  "occupancy": 0.44,
+  "adr": 178.7,
+  "rev_par": 79.9,
+  "revenue": 12420.9
+ },
+ "Auvergne-Rhône-Alpes|Taninges": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Taninges",
+  "listings": 179,
+  "occupancy": 0.39,
+  "adr": 157.1,
+  "rev_par": 61.5,
+  "revenue": 12830.7
+ },
+ "Nouvelle-Aquitaine|Mios": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Mios",
+  "listings": 165,
+  "occupancy": 0.42,
+  "adr": 146.3,
+  "rev_par": 64,
+  "revenue": 11178.9
+ },
+ "Provence-Alpes-Côte d'Azur|Mallemort": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Mallemort",
+  "listings": 151,
+  "occupancy": 0.4,
+  "adr": 155.9,
+  "rev_par": 63,
+  "revenue": 10561.3
+ },
+ "Provence-Alpes-Côte d'Azur|Bollène": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Bollène",
+  "listings": 170,
+  "occupancy": 0.4,
+  "adr": 121.5,
+  "rev_par": 47.1,
+  "revenue": 9081.9
+ },
+ "Hauts-de-France|Cambrai": {
+  "region": "Hauts-de-France",
+  "locality": "Cambrai",
+  "listings": 181,
+  "occupancy": 0.37,
+  "adr": 66.4,
+  "rev_par": 24.8,
+  "revenue": 5697.5
+ },
+ "Martinique|Le François": {
+  "region": "Martinique",
+  "locality": "Le François",
+  "listings": 170,
+  "occupancy": 0.35,
+  "adr": 197.4,
+  "rev_par": 62,
+  "revenue": 13487.2
+ },
+ "Provence-Alpes-Côte d'Azur|Malaucène": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Malaucène",
+  "listings": 172,
+  "occupancy": 0.35,
+  "adr": 173,
+  "rev_par": 62,
+  "revenue": 12749.4
+ },
+ "Provence-Alpes-Côte d'Azur|Vidauban": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vidauban",
+  "listings": 156,
+  "occupancy": 0.39,
+  "adr": 179.5,
+  "rev_par": 72.5,
+  "revenue": 11331
+ },
+ "Auvergne-Rhône-Alpes|Aubenas": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Aubenas",
+  "listings": 156,
+  "occupancy": 0.43,
+  "adr": 107.2,
+  "rev_par": 44.6,
+  "revenue": 8296.5
+ },
+ "Bourgogne – Franche-Comté|Sens": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Sens",
+  "listings": 176,
+  "occupancy": 0.35,
+  "adr": 76.5,
+  "rev_par": 25.6,
+  "revenue": 6184.7
+ },
+ "Guadeloupe|Grand-Bourg": {
+  "region": "Guadeloupe",
+  "locality": "Grand-Bourg",
+  "listings": 192,
+  "occupancy": 0.34,
+  "adr": 170.5,
+  "rev_par": 57.1,
+  "revenue": 14198.3
+ },
+ "Auvergne-Rhône-Alpes|Chamonix": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Chamonix",
+  "listings": 142,
+  "occupancy": 0.47,
+  "adr": 316.2,
+  "rev_par": 142.1,
+  "revenue": 28718
+ },
+ "Auvergne-Rhône-Alpes|Nyons": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Nyons",
+  "listings": 166,
+  "occupancy": 0.38,
+  "adr": 118.1,
+  "rev_par": 47.2,
+  "revenue": 9030.5
+ },
+ "Réunion|La Possession": {
+  "region": "Réunion",
+  "locality": "La Possession",
+  "listings": 170,
+  "occupancy": 0.48,
+  "adr": 90.8,
+  "rev_par": 43.9,
+  "revenue": 10362.4
+ },
+ "Auvergne-Rhône-Alpes|Bron": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Bron",
+  "listings": 147,
+  "occupancy": 0.42,
+  "adr": 95.9,
+  "rev_par": 40.2,
+  "revenue": 9125.3
+ },
+ "Grand Est|Kaysersberg-Vignoble": {
+  "region": "Grand Est",
+  "locality": "Kaysersberg-Vignoble",
+  "listings": 189,
+  "occupancy": 0.43,
+  "adr": 140.5,
+  "rev_par": 60.9,
+  "revenue": 15738.3
+ },
+ "Provence-Alpes-Côte d'Azur|Montauroux": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Montauroux",
+  "listings": 164,
+  "occupancy": 0.38,
+  "adr": 229.7,
+  "rev_par": 97.9,
+  "revenue": 16111.8
+ },
+ "Martinique|Le Lamentin": {
+  "region": "Martinique",
+  "locality": "Le Lamentin",
+  "listings": 139,
+  "occupancy": 0.41,
+  "adr": 91.9,
+  "rev_par": 39.1,
+  "revenue": 8013.6
+ },
+ "Auvergne-Rhône-Alpes|Royat": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Royat",
+  "listings": 158,
+  "occupancy": 0.44,
+  "adr": 69.9,
+  "rev_par": 30.2,
+  "revenue": 6775.3
+ },
+ "Auvergne-Rhône-Alpes|Chamalières": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Chamalières",
+  "listings": 158,
+  "occupancy": 0.4,
+  "adr": 71.3,
+  "rev_par": 28.4,
+  "revenue": 6458.1
+ },
+ "Pays de la Loire|Changé": {
+  "region": "Pays de la Loire",
+  "locality": "Changé",
+  "listings": 139,
+  "occupancy": 0.29,
+  "adr": 206.2,
+  "rev_par": 58.6,
+  "revenue": 9974.5
+ },
+ "Auvergne-Rhône-Alpes|Moulins": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Moulins",
+  "listings": 164,
+  "occupancy": 0.44,
+  "adr": 74.8,
+  "rev_par": 33.1,
+  "revenue": 8501.3
+ },
+ "Nouvelle-Aquitaine|Salles": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Salles",
+  "listings": 145,
+  "occupancy": 0.39,
+  "adr": 147.5,
+  "rev_par": 60.5,
+  "revenue": 10203.6
+ },
+ "Guadeloupe|Terre-de-Haut": {
+  "region": "Guadeloupe",
+  "locality": "Terre-de-Haut",
+  "listings": 182,
+  "occupancy": 0.4,
+  "adr": 194,
+  "rev_par": 75.8,
+  "revenue": 18476.9
+ },
+ "Nouvelle-Aquitaine|Jonzac": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Jonzac",
+  "listings": 134,
+  "occupancy": 0.41,
+  "adr": 61.4,
+  "rev_par": 22.8,
+  "revenue": 3721.4
+ },
+ "Nouvelle-Aquitaine|Messanges": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Messanges",
+  "listings": 139,
+  "occupancy": 0.37,
+  "adr": 201.9,
+  "rev_par": 83.5,
+  "revenue": 12005
+ },
+ "Centre-Val de Loire|Chinon": {
+  "region": "Centre-Val de Loire",
+  "locality": "Chinon",
+  "listings": 158,
+  "occupancy": 0.39,
+  "adr": 99.8,
+  "rev_par": 38.4,
+  "revenue": 8983.3
+ },
+ "Nouvelle-Aquitaine|Sanguinet": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Sanguinet",
+  "listings": 140,
+  "occupancy": 0.38,
+  "adr": 165.1,
+  "rev_par": 68.2,
+  "revenue": 10755.2
+ },
+ "Nouvelle-Aquitaine|Angoulins": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Angoulins",
+  "listings": 165,
+  "occupancy": 0.41,
+  "adr": 140.5,
+  "rev_par": 58.2,
+  "revenue": 11320.7
+ },
+ "Martinique|Rivière-Salée": {
+  "region": "Martinique",
+  "locality": "Rivière-Salée",
+  "listings": 143,
+  "occupancy": 0.43,
+  "adr": 131,
+  "rev_par": 54.7,
+  "revenue": 10916.1
+ },
+ "Provence-Alpes-Côte d'Azur|Castellane": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Castellane",
+  "listings": 156,
+  "occupancy": 0.39,
+  "adr": 104.7,
+  "rev_par": 42.2,
+  "revenue": 7428
+ },
+ "Pays de la Loire|Sèvremont": {
+  "region": "Pays de la Loire",
+  "locality": "Sèvremont",
+  "listings": 145,
+  "occupancy": 0.4,
+  "adr": 175.1,
+  "rev_par": 60.5,
+  "revenue": 12507
+ },
+ "Bourgogne – Franche-Comté|Métabief": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Métabief",
+  "listings": 154,
+  "occupancy": 0.37,
+  "adr": 117.2,
+  "rev_par": 42.4,
+  "revenue": 10528.7
+ },
+ "Nouvelle-Aquitaine|Biganos": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Biganos",
+  "listings": 133,
+  "occupancy": 0.4,
+  "adr": 116.4,
+  "rev_par": 50.9,
+  "revenue": 9997.4
+ },
+ "Nouvelle-Aquitaine|Boucau": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Boucau",
+  "listings": 131,
+  "occupancy": 0.44,
+  "adr": 144.3,
+  "rev_par": 64.5,
+  "revenue": 9163.1
+ },
+ "Auvergne-Rhône-Alpes|Oz": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Oz",
+  "listings": 167,
+  "occupancy": 0.38,
+  "adr": 236.8,
+  "rev_par": 94.9,
+  "revenue": 18561.5
+ },
+ "Provence-Alpes-Côte d'Azur|Roussillon": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Roussillon",
+  "listings": 140,
+  "occupancy": 0.42,
+  "adr": 242.3,
+  "rev_par": 107.4,
+  "revenue": 19176.1
+ },
+ "Provence-Alpes-Côte d'Azur|Cabriès": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Cabriès",
+  "listings": 129,
+  "occupancy": 0.4,
+  "adr": 146.9,
+  "rev_par": 62.3,
+  "revenue": 10830.8
+ },
+ "Auvergne-Rhône-Alpes|Vaujany": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Vaujany",
+  "listings": 157,
+  "occupancy": 0.33,
+  "adr": 239.8,
+  "rev_par": 82.2,
+  "revenue": 15258
+ },
+ "Auvergne-Rhône-Alpes|Grospierres": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Grospierres",
+  "listings": 140,
+  "occupancy": 0.35,
+  "adr": 129.3,
+  "rev_par": 47.7,
+  "revenue": 7538.5
+ },
+ "Provence-Alpes-Côte d'Azur|Monteux": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Monteux",
+  "listings": 138,
+  "occupancy": 0.35,
+  "adr": 157.7,
+  "rev_par": 57.3,
+  "revenue": 9101.1
+ },
+ "Nouvelle-Aquitaine|Aureilhan": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Aureilhan",
+  "listings": 136,
+  "occupancy": 0.4,
+  "adr": 128.3,
+  "rev_par": 55.8,
+  "revenue": 8258.7
+ },
+ "Provence-Alpes-Côte d'Azur|Robion": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Robion",
+  "listings": 136,
+  "occupancy": 0.38,
+  "adr": 243,
+  "rev_par": 90.5,
+  "revenue": 14977.8
+ },
+ "Pays de la Loire|La Plaine-sur-Mer": {
+  "region": "Pays de la Loire",
+  "locality": "La Plaine-sur-Mer",
+  "listings": 137,
+  "occupancy": 0.41,
+  "adr": 125.4,
+  "rev_par": 50.2,
+  "revenue": 9860.4
+ },
+ "Grand Est|Illkirch-Graffenstaden": {
+  "region": "Grand Est",
+  "locality": "Illkirch-Graffenstaden",
+  "listings": 136,
+  "occupancy": 0.48,
+  "adr": 100.2,
+  "rev_par": 50.4,
+  "revenue": 11772.7
+ },
+ "Nouvelle-Aquitaine|Guéthary": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Guéthary",
+  "listings": 127,
+  "occupancy": 0.46,
+  "adr": 213.9,
+  "rev_par": 100.2,
+  "revenue": 15962.3
+ },
+ "Nouvelle-Aquitaine|Gastes": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Gastes",
+  "listings": 126,
+  "occupancy": 0.36,
+  "adr": 108,
+  "rev_par": 41.3,
+  "revenue": 5643.6
+ },
+ "Nouvelle-Aquitaine|Floirac": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Floirac",
+  "listings": 116,
+  "occupancy": 0.46,
+  "adr": 103.2,
+  "rev_par": 47.6,
+  "revenue": 9413.1
+ },
+ "Provence-Alpes-Côte d'Azur|Fayence": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Fayence",
+  "listings": 134,
+  "occupancy": 0.37,
+  "adr": 233.4,
+  "rev_par": 91.8,
+  "revenue": 14389.9
+ },
+ "Provence-Alpes-Côte d'Azur|Sorgues": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Sorgues",
+  "listings": 133,
+  "occupancy": 0.38,
+  "adr": 149,
+  "rev_par": 58.3,
+  "revenue": 9774.9
+ },
+ "Hauts-de-France|Étaples": {
+  "region": "Hauts-de-France",
+  "locality": "Étaples",
+  "listings": 136,
+  "occupancy": 0.35,
+  "adr": 128.7,
+  "rev_par": 45.9,
+  "revenue": 10507.7
+ },
+ "Provence-Alpes-Côte d'Azur|Forcalquier": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Forcalquier",
+  "listings": 136,
+  "occupancy": 0.36,
+  "adr": 111.8,
+  "rev_par": 41.2,
+  "revenue": 7667
+ },
+ "Provence-Alpes-Côte d'Azur|Lambesc": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Lambesc",
+  "listings": 117,
+  "occupancy": 0.4,
+  "adr": 154.8,
+  "rev_par": 64.9,
+  "revenue": 12183.9
+ },
+ "Provence-Alpes-Côte d'Azur|Pertuis": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Pertuis",
+  "listings": 118,
+  "occupancy": 0.38,
+  "adr": 133.4,
+  "rev_par": 49.2,
+  "revenue": 8775.5
+ },
+ "Hauts-de-France|Croix": {
+  "region": "Hauts-de-France",
+  "locality": "Croix",
+  "listings": 137,
+  "occupancy": 0.48,
+  "adr": 90.6,
+  "rev_par": 42.7,
+  "revenue": 9942.8
+ },
+ "Hauts-de-France|Gravelines": {
+  "region": "Hauts-de-France",
+  "locality": "Gravelines",
+  "listings": 138,
+  "occupancy": 0.43,
+  "adr": 95.7,
+  "rev_par": 40.6,
+  "revenue": 8704.1
+ },
+ "Provence-Alpes-Côte d'Azur|Bonnieux": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Bonnieux",
+  "listings": 134,
+  "occupancy": 0.42,
+  "adr": 264.8,
+  "rev_par": 112.7,
+  "revenue": 21136.3
+ },
+ "Grand Est|Thionville": {
+  "region": "Grand Est",
+  "locality": "Thionville",
+  "listings": 119,
+  "occupancy": 0.42,
+  "adr": 83.5,
+  "rev_par": 36.7,
+  "revenue": 7210.4
+ },
+ "Auvergne-Rhône-Alpes|Meyzieu": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Meyzieu",
+  "listings": 128,
+  "occupancy": 0.4,
+  "adr": 108.3,
+  "rev_par": 42.9,
+  "revenue": 9638.4
+ },
+ "Nouvelle-Aquitaine|Laruns": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Laruns",
+  "listings": 145,
+  "occupancy": 0.38,
+  "adr": 101.2,
+  "rev_par": 36.2,
+  "revenue": 8786.3
+ },
+ "Grand Est|Obernai": {
+  "region": "Grand Est",
+  "locality": "Obernai",
+  "listings": 141,
+  "occupancy": 0.45,
+  "adr": 113,
+  "rev_par": 50.8,
+  "revenue": 12469.5
+ },
+ "Nouvelle-Aquitaine|Lagord": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Lagord",
+  "listings": 128,
+  "occupancy": 0.44,
+  "adr": 143.9,
+  "rev_par": 66.2,
+  "revenue": 13579.8
+ },
+ "Centre-Val de Loire|Vierzon": {
+  "region": "Centre-Val de Loire",
+  "locality": "Vierzon",
+  "listings": 129,
+  "occupancy": 0.34,
+  "adr": 90.7,
+  "rev_par": 30,
+  "revenue": 6663.8
+ },
+ "Nouvelle-Aquitaine|Arcangues": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Arcangues",
+  "listings": 117,
+  "occupancy": 0.42,
+  "adr": 238.9,
+  "rev_par": 100.3,
+  "revenue": 15836.8
+ },
+ "Hauts-de-France|Abbeville": {
+  "region": "Hauts-de-France",
+  "locality": "Abbeville",
+  "listings": 136,
+  "occupancy": 0.37,
+  "adr": 92,
+  "rev_par": 32.4,
+  "revenue": 7511.3
+ },
+ "Provence-Alpes-Côte d'Azur|Rognes": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Rognes",
+  "listings": 136,
+  "occupancy": 0.41,
+  "adr": 255.5,
+  "rev_par": 111.8,
+  "revenue": 17238.7
+ },
+ "Auvergne-Rhône-Alpes|Auris": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Auris",
+  "listings": 124,
+  "occupancy": 0.37,
+  "adr": 153,
+  "rev_par": 54.7,
+  "revenue": 9606.3
+ },
+ "Grand Est|Cornimont": {
+  "region": "Grand Est",
+  "locality": "Cornimont",
+  "listings": 136,
+  "occupancy": 0.39,
+  "adr": 153.2,
+  "rev_par": 59.3,
+  "revenue": 14953.7
+ },
+ "Provence-Alpes-Côte d'Azur|Salernes": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Salernes",
+  "listings": 125,
+  "occupancy": 0.36,
+  "adr": 199.5,
+  "rev_par": 76.8,
+  "revenue": 12039.2
+ },
+ "Auvergne-Rhône-Alpes|Écully": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Écully",
+  "listings": 122,
+  "occupancy": 0.37,
+  "adr": 118.2,
+  "rev_par": 45.4,
+  "revenue": 8726
+ },
+ "Centre-Val de Loire|Gien": {
+  "region": "Centre-Val de Loire",
+  "locality": "Gien",
+  "listings": 130,
+  "occupancy": 0.33,
+  "adr": 97.8,
+  "rev_par": 32.6,
+  "revenue": 6600.5
+ },
+ "Bourgogne – Franche-Comté|Prémanon": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Prémanon",
+  "listings": 137,
+  "occupancy": 0.39,
+  "adr": 135.3,
+  "rev_par": 55.2,
+  "revenue": 12921.6
+ },
+ "Provence-Alpes-Côte d'Azur|Aups": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Aups",
+  "listings": 126,
+  "occupancy": 0.37,
+  "adr": 135.8,
+  "rev_par": 53.5,
+  "revenue": 8199.7
+ },
+ "Provence-Alpes-Côte d'Azur|Mazan": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Mazan",
+  "listings": 130,
+  "occupancy": 0.38,
+  "adr": 193.2,
+  "rev_par": 78.2,
+  "revenue": 13493.8
+ },
+ "Martinique|Rivière-Pilote": {
+  "region": "Martinique",
+  "locality": "Rivière-Pilote",
+  "listings": 130,
+  "occupancy": 0.44,
+  "adr": 91.3,
+  "rev_par": 41.7,
+  "revenue": 9381.5
+ },
+ "Provence-Alpes-Côte d'Azur|Ollioules": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Ollioules",
+  "listings": 128,
+  "occupancy": 0.38,
+  "adr": 242.9,
+  "rev_par": 96.8,
+  "revenue": 16955.8
+ },
+ "Auvergne-Rhône-Alpes|Die": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Die",
+  "listings": 128,
+  "occupancy": 0.42,
+  "adr": 98,
+  "rev_par": 40.4,
+  "revenue": 7893.8
+ },
+ "Auvergne-Rhône-Alpes|Crest": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Crest",
+  "listings": 110,
+  "occupancy": 0.43,
+  "adr": 85,
+  "rev_par": 36.8,
+  "revenue": 7172.6
+ },
+ "Provence-Alpes-Côte d'Azur|Ventabren": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Ventabren",
+  "listings": 118,
+  "occupancy": 0.41,
+  "adr": 219.8,
+  "rev_par": 97.7,
+  "revenue": 16231.8
+ },
+ "Martinique|Le Carbet": {
+  "region": "Martinique",
+  "locality": "Le Carbet",
+  "listings": 144,
+  "occupancy": 0.49,
+  "adr": 122.9,
+  "rev_par": 59.8,
+  "revenue": 15153.4
+ },
+ "Auvergne-Rhône-Alpes|Thônes": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Thônes",
+  "listings": 139,
+  "occupancy": 0.48,
+  "adr": 198.4,
+  "rev_par": 105.2,
+  "revenue": 25734
+ },
+ "Pays de la Loire|Bouguenais": {
+  "region": "Pays de la Loire",
+  "locality": "Bouguenais",
+  "listings": 110,
+  "occupancy": 0.46,
+  "adr": 81.5,
+  "rev_par": 36.8,
+  "revenue": 7975.7
+ },
+ "Nouvelle-Aquitaine|Marmande": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Marmande",
+  "listings": 119,
+  "occupancy": 0.37,
+  "adr": 86.3,
+  "rev_par": 31.2,
+  "revenue": 6137.7
+ },
+ "Guadeloupe|Pointe-à-Pitre": {
+  "region": "Guadeloupe",
+  "locality": "Pointe-à-Pitre",
+  "listings": 117,
+  "occupancy": 0.35,
+  "adr": 88.6,
+  "rev_par": 32.7,
+  "revenue": 6686.7
+ },
+ "Nouvelle-Aquitaine|Eysines": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Eysines",
+  "listings": 112,
+  "occupancy": 0.45,
+  "adr": 105.8,
+  "rev_par": 47.8,
+  "revenue": 9346.8
+ },
+ "Réunion|Petite-Île": {
+  "region": "Réunion",
+  "locality": "Petite-Île",
+  "listings": 126,
+  "occupancy": 0.45,
+  "adr": 137.8,
+  "rev_par": 60.7,
+  "revenue": 14878.1
+ },
+ "Pays de la Loire|Vertou": {
+  "region": "Pays de la Loire",
+  "locality": "Vertou",
+  "listings": 108,
+  "occupancy": 0.4,
+  "adr": 83.3,
+  "rev_par": 32.4,
+  "revenue": 6422.5
+ },
+ "Grand Est|Vittel": {
+  "region": "Grand Est",
+  "locality": "Vittel",
+  "listings": 119,
+  "occupancy": 0.38,
+  "adr": 79.1,
+  "rev_par": 29.5,
+  "revenue": 5199.7
+ },
+ "Provence-Alpes-Côte d'Azur|Enchastrayes": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Enchastrayes",
+  "listings": 125,
+  "occupancy": 0.28,
+  "adr": 119.9,
+  "rev_par": 34,
+  "revenue": 7014.2
+ },
+ "Provence-Alpes-Côte d'Azur|Chorges": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Chorges",
+  "listings": 122,
+  "occupancy": 0.4,
+  "adr": 118.6,
+  "rev_par": 47.4,
+  "revenue": 9688
+ },
+ "Nouvelle-Aquitaine|Hasparren": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Hasparren",
+  "listings": 118,
+  "occupancy": 0.46,
+  "adr": 110.4,
+  "rev_par": 50.7,
+  "revenue": 9563.2
+ },
+ "Guadeloupe|Trois-Rivières": {
+  "region": "Guadeloupe",
+  "locality": "Trois-Rivières",
+  "listings": 125,
+  "occupancy": 0.41,
+  "adr": 104.1,
+  "rev_par": 43.4,
+  "revenue": 9347
+ },
+ "Nouvelle-Aquitaine|Arette": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Arette",
+  "listings": 121,
+  "occupancy": 0.34,
+  "adr": 114.3,
+  "rev_par": 42.4,
+  "revenue": 9031.7
+ },
+ "Grand Est|Verdun": {
+  "region": "Grand Est",
+  "locality": "Verdun",
+  "listings": 128,
+  "occupancy": 0.41,
+  "adr": 97.1,
+  "rev_par": 37.5,
+  "revenue": 9976.1
+ },
+ "Auvergne-Rhône-Alpes|Ruoms": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Ruoms",
+  "listings": 130,
+  "occupancy": 0.37,
+  "adr": 160.5,
+  "rev_par": 62,
+  "revenue": 11628.3
+ },
+ "Provence-Alpes-Côte d'Azur|Ceyreste": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Ceyreste",
+  "listings": 119,
+  "occupancy": 0.42,
+  "adr": 165.5,
+  "rev_par": 68,
+  "revenue": 11907.7
+ },
+ "Nouvelle-Aquitaine|Bruges": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Bruges",
+  "listings": 108,
+  "occupancy": 0.43,
+  "adr": 113.6,
+  "rev_par": 50.3,
+  "revenue": 10448.1
+ },
+ "Provence-Alpes-Côte d'Azur|Tarascon": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Tarascon",
+  "listings": 110,
+  "occupancy": 0.41,
+  "adr": 193.7,
+  "rev_par": 74.1,
+  "revenue": 15248
+ },
+ "Provence-Alpes-Côte d'Azur|Callian": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Callian",
+  "listings": 100,
+  "occupancy": 0.35,
+  "adr": 214.7,
+  "rev_par": 87.9,
+  "revenue": 12904.7
+ },
+ "Grand Est|Saint-Dizier": {
+  "region": "Grand Est",
+  "locality": "Saint-Dizier",
+  "listings": 119,
+  "occupancy": 0.4,
+  "adr": 62.5,
+  "rev_par": 24,
+  "revenue": 5496.1
+ },
+ "Grand Est|Riquewihr": {
+  "region": "Grand Est",
+  "locality": "Riquewihr",
+  "listings": 130,
+  "occupancy": 0.4,
+  "adr": 150.9,
+  "rev_par": 58,
+  "revenue": 14208.6
+ },
+ "Nouvelle-Aquitaine|Lormont": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Lormont",
+  "listings": 107,
+  "occupancy": 0.46,
+  "adr": 133.6,
+  "rev_par": 59.3,
+  "revenue": 11578
+ },
+ "Provence-Alpes-Côte d'Azur|Valensole": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Valensole",
+  "listings": 119,
+  "occupancy": 0.4,
+  "adr": 119.2,
+  "rev_par": 50.7,
+  "revenue": 8600.2
+ },
+ "Provence-Alpes-Côte d'Azur|Flayosc": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Flayosc",
+  "listings": 124,
+  "occupancy": 0.36,
+  "adr": 179,
+  "rev_par": 67.7,
+  "revenue": 12448.6
+ },
+ "Nouvelle-Aquitaine|Tosse": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Tosse",
+  "listings": 103,
+  "occupancy": 0.41,
+  "adr": 196.9,
+  "rev_par": 81.8,
+  "revenue": 11056.1
+ },
+ "Hauts-de-France|Sangatte": {
+  "region": "Hauts-de-France",
+  "locality": "Sangatte",
+  "listings": 118,
+  "occupancy": 0.44,
+  "adr": 139.8,
+  "rev_par": 63.8,
+  "revenue": 14983.1
+ },
+ "Hauts-de-France|Ambleteuse": {
+  "region": "Hauts-de-France",
+  "locality": "Ambleteuse",
+  "listings": 129,
+  "occupancy": 0.42,
+  "adr": 166.9,
+  "rev_par": 73.1,
+  "revenue": 20325.1
+ },
+ "Centre-Val de Loire|Montrichard Val de Cher": {
+  "region": "Centre-Val de Loire",
+  "locality": "Montrichard Val de Cher",
+  "listings": 124,
+  "occupancy": 0.41,
+  "adr": 138.8,
+  "rev_par": 53.7,
+  "revenue": 12263
+ },
+ "Auvergne-Rhône-Alpes|Landry": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Landry",
+  "listings": 105,
+  "occupancy": 0.31,
+  "adr": 210.4,
+  "rev_par": 76.7,
+  "revenue": 9965.1
+ },
+ "Provence-Alpes-Côte d'Azur|Allauch": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Allauch",
+  "listings": 102,
+  "occupancy": 0.39,
+  "adr": 143.1,
+  "rev_par": 54.4,
+  "revenue": 10094.9
+ },
+ "Hauts-de-France|Lambersart": {
+  "region": "Hauts-de-France",
+  "locality": "Lambersart",
+  "listings": 104,
+  "occupancy": 0.43,
+  "adr": 119.4,
+  "rev_par": 51.3,
+  "revenue": 10933.8
+ },
+ "Nouvelle-Aquitaine|Ascain": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Ascain",
+  "listings": 114,
+  "occupancy": 0.47,
+  "adr": 152.6,
+  "rev_par": 68.5,
+  "revenue": 13536.6
+ },
+ "Hauts-de-France|Senlis": {
+  "region": "Hauts-de-France",
+  "locality": "Senlis",
+  "listings": 113,
+  "occupancy": 0.46,
+  "adr": 132.3,
+  "rev_par": 56.5,
+  "revenue": 13560.3
+ },
+ "Hauts-de-France|Béthune": {
+  "region": "Hauts-de-France",
+  "locality": "Béthune",
+  "listings": 117,
+  "occupancy": 0.38,
+  "adr": 79.1,
+  "rev_par": 31,
+  "revenue": 6806.7
+ },
+ "Pays de la Loire|Mulsanne": {
+  "region": "Pays de la Loire",
+  "locality": "Mulsanne",
+  "listings": 101,
+  "occupancy": 0.24,
+  "adr": 199.2,
+  "rev_par": 47.5,
+  "revenue": 6739.2
+ },
+ "Provence-Alpes-Côte d'Azur|Lauris": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Lauris",
+  "listings": 111,
+  "occupancy": 0.39,
+  "adr": 178.4,
+  "rev_par": 76.3,
+  "revenue": 13842.1
+ },
+ "Provence-Alpes-Côte d'Azur|Fuveau": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Fuveau",
+  "listings": 100,
+  "occupancy": 0.42,
+  "adr": 184.8,
+  "rev_par": 78.9,
+  "revenue": 14446.5
+ },
+ "Grand Est|Boofzheim": {
+  "region": "Grand Est",
+  "locality": "Boofzheim",
+  "listings": 119,
+  "occupancy": 0.41,
+  "adr": 100.5,
+  "rev_par": 42.2,
+  "revenue": 8192.4
+ },
+ "Provence-Alpes-Côte d'Azur|Brignoles": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Brignoles",
+  "listings": 112,
+  "occupancy": 0.37,
+  "adr": 158.8,
+  "rev_par": 66.6,
+  "revenue": 12855.3
+ },
+ "Nouvelle-Aquitaine|Périgny": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Périgny",
+  "listings": 99,
+  "occupancy": 0.42,
+  "adr": 128.5,
+  "rev_par": 55.2,
+  "revenue": 9854.6
+ },
+ "Pays de la Loire|La Flèche": {
+  "region": "Pays de la Loire",
+  "locality": "La Flèche",
+  "listings": 120,
+  "occupancy": 0.39,
+  "adr": 108.7,
+  "rev_par": 43.5,
+  "revenue": 10623
+ },
+ "Bourgogne – Franche-Comté|Autun": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Autun",
+  "listings": 117,
+  "occupancy": 0.41,
+  "adr": 99,
+  "rev_par": 39,
+  "revenue": 9322.5
+ },
+ "Provence-Alpes-Côte d'Azur|Marignane": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Marignane",
+  "listings": 102,
+  "occupancy": 0.39,
+  "adr": 115.8,
+  "rev_par": 45.7,
+  "revenue": 8784
+ },
+ "Nouvelle-Aquitaine|Saujon": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Saujon",
+  "listings": 102,
+  "occupancy": 0.48,
+  "adr": 65,
+  "rev_par": 32.6,
+  "revenue": 6063.4
+ },
+ "Pays de la Loire|Orvault": {
+  "region": "Pays de la Loire",
+  "locality": "Orvault",
+  "listings": 91,
+  "occupancy": 0.46,
+  "adr": 74.1,
+  "rev_par": 33.5,
+  "revenue": 6773.1
+ },
+ "Provence-Alpes-Côte d'Azur|Vitrolles": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vitrolles",
+  "listings": 98,
+  "occupancy": 0.4,
+  "adr": 98.7,
+  "rev_par": 40.4,
+  "revenue": 8095.9
+ },
+ "Auvergne-Rhône-Alpes|Gaillard": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Gaillard",
+  "listings": 102,
+  "occupancy": 0.44,
+  "adr": 91.5,
+  "rev_par": 40.8,
+  "revenue": 7453.2
+ },
+ "Pays de la Loire|Préfailles": {
+  "region": "Pays de la Loire",
+  "locality": "Préfailles",
+  "listings": 109,
+  "occupancy": 0.35,
+  "adr": 192.6,
+  "rev_par": 70.6,
+  "revenue": 14864.1
+ },
+ "Auvergne-Rhône-Alpes|Flumet": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Flumet",
+  "listings": 115,
+  "occupancy": 0.35,
+  "adr": 161.1,
+  "rev_par": 57.9,
+  "revenue": 11352.4
+ },
+ "Provence-Alpes-Côte d'Azur|Ancelle": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Ancelle",
+  "listings": 115,
+  "occupancy": 0.35,
+  "adr": 99.6,
+  "rev_par": 34.9,
+  "revenue": 8252.6
+ },
+ "Grand Est|Haguenau": {
+  "region": "Grand Est",
+  "locality": "Haguenau",
+  "listings": 112,
+  "occupancy": 0.47,
+  "adr": 87,
+  "rev_par": 41.7,
+  "revenue": 10473.9
+ },
+ "Provence-Alpes-Côte d'Azur|Vedène": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Vedène",
+  "listings": 108,
+  "occupancy": 0.41,
+  "adr": 144.3,
+  "rev_par": 55.6,
+  "revenue": 9900.4
+ },
+ "Provence-Alpes-Côte d'Azur|Eyguières": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Eyguières",
+  "listings": 103,
+  "occupancy": 0.4,
+  "adr": 135.2,
+  "rev_par": 57.1,
+  "revenue": 10343.9
+ },
+ "Guadeloupe|Vieux-Habitants": {
+  "region": "Guadeloupe",
+  "locality": "Vieux-Habitants",
+  "listings": 105,
+  "occupancy": 0.47,
+  "adr": 95.3,
+  "rev_par": 45.2,
+  "revenue": 10402.2
+ },
+ "Provence-Alpes-Côte d'Azur|Gardanne": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Gardanne",
+  "listings": 103,
+  "occupancy": 0.46,
+  "adr": 101.5,
+  "rev_par": 44.6,
+  "revenue": 7850.9
+ },
+ "Occitanie|Les Angles": {
+  "region": "Occitanie",
+  "locality": "Les Angles",
+  "listings": 70,
+  "occupancy": 0.39,
+  "adr": 117.8,
+  "rev_par": 47,
+  "revenue": 6910.5
+ },
+ "Guadeloupe|Capesterre-Belle-Eau": {
+  "region": "Guadeloupe",
+  "locality": "Capesterre-Belle-Eau",
+  "listings": 105,
+  "occupancy": 0.39,
+  "adr": 91.9,
+  "rev_par": 36.8,
+  "revenue": 7501.3
+ },
+ "Auvergne-Rhône-Alpes|Lagorce": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Lagorce",
+  "listings": 101,
+  "occupancy": 0.38,
+  "adr": 151.9,
+  "rev_par": 58.4,
+  "revenue": 9773.2
+ },
+ "Brittany|Île-aux-Moines": {
+  "region": "Brittany",
+  "locality": "Île-aux-Moines",
+  "listings": 119,
+  "occupancy": 0.37,
+  "adr": 227.6,
+  "rev_par": 83.2,
+  "revenue": 17282.2
+ },
+ "Provence-Alpes-Côte d'Azur|Lourmarin": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Lourmarin",
+  "listings": 117,
+  "occupancy": 0.42,
+  "adr": 242.5,
+  "rev_par": 101.6,
+  "revenue": 19904
+ },
+ "Brittany|Île-Tudy": {
+  "region": "Brittany",
+  "locality": "Île-Tudy",
+  "listings": 107,
+  "occupancy": 0.4,
+  "adr": 150.5,
+  "rev_par": 61.6,
+  "revenue": 11943.1
+ },
+ "Provence-Alpes-Côte d'Azur|Paradou": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Paradou",
+  "listings": 98,
+  "occupancy": 0.35,
+  "adr": 271.3,
+  "rev_par": 95.3,
+  "revenue": 16361.2
+ },
+ "Auvergne-Rhône-Alpes|Duingt": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Duingt",
+  "listings": 99,
+  "occupancy": 0.46,
+  "adr": 234.5,
+  "rev_par": 111.7,
+  "revenue": 21235.9
+ },
+ "Auvergne-Rhône-Alpes|Annonay": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Annonay",
+  "listings": 99,
+  "occupancy": 0.47,
+  "adr": 122.5,
+  "rev_par": 52.7,
+  "revenue": 10788.2
+ },
+ "Centre-Val de Loire|Montargis": {
+  "region": "Centre-Val de Loire",
+  "locality": "Montargis",
+  "listings": 97,
+  "occupancy": 0.36,
+  "adr": 75.4,
+  "rev_par": 25.2,
+  "revenue": 5914.2
+ },
+ "Bourgogne – Franche-Comté|Pontarlier": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Pontarlier",
+  "listings": 96,
+  "occupancy": 0.47,
+  "adr": 77.6,
+  "rev_par": 36.4,
+  "revenue": 8112.5
+ },
+ "Grand Est|Barr": {
+  "region": "Grand Est",
+  "locality": "Barr",
+  "listings": 108,
+  "occupancy": 0.42,
+  "adr": 118,
+  "rev_par": 48.7,
+  "revenue": 13043
+ },
+ "Provence-Alpes-Côte d'Azur|Roquevaire": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Roquevaire",
+  "listings": 104,
+  "occupancy": 0.43,
+  "adr": 163.4,
+  "rev_par": 73.6,
+  "revenue": 13337.5
+ },
+ "Auvergne-Rhône-Alpes|Orelle": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Orelle",
+  "listings": 104,
+  "occupancy": 0.44,
+  "adr": 183.5,
+  "rev_par": 81.6,
+  "revenue": 15709.1
+ },
+ "Grand Est|Bischheim": {
+  "region": "Grand Est",
+  "locality": "Bischheim",
+  "listings": 94,
+  "occupancy": 0.44,
+  "adr": 98,
+  "rev_par": 43.6,
+  "revenue": 8846.9
+ },
+ "Auvergne-Rhône-Alpes|Voiron": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Voiron",
+  "listings": 92,
+  "occupancy": 0.47,
+  "adr": 66.5,
+  "rev_par": 31.5,
+  "revenue": 8008.4
+ },
+ "Guadeloupe|Lamentin": {
+  "region": "Guadeloupe",
+  "locality": "Lamentin",
+  "listings": 99,
+  "occupancy": 0.39,
+  "adr": 101.5,
+  "rev_par": 38.4,
+  "revenue": 7509
+ },
+ "Provence-Alpes-Côte d'Azur|Guillestre": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Guillestre",
+  "listings": 98,
+  "occupancy": 0.4,
+  "adr": 117.7,
+  "rev_par": 44.7,
+  "revenue": 9671.2
+ },
+ "Hauts-de-France|Laon": {
+  "region": "Hauts-de-France",
+  "locality": "Laon",
+  "listings": 94,
+  "occupancy": 0.39,
+  "adr": 94.6,
+  "rev_par": 37,
+  "revenue": 9027.9
+ },
+ "Auvergne-Rhône-Alpes|Bernex": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Bernex",
+  "listings": 106,
+  "occupancy": 0.39,
+  "adr": 109.8,
+  "rev_par": 45.5,
+  "revenue": 10569.6
+ },
+ "Auvergne-Rhône-Alpes|Murol": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Murol",
+  "listings": 109,
+  "occupancy": 0.38,
+  "adr": 115.6,
+  "rev_par": 45.2,
+  "revenue": 9967.6
+ },
+ "Provence-Alpes-Côte d'Azur|Riez": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Riez",
+  "listings": 99,
+  "occupancy": 0.4,
+  "adr": 96.1,
+  "rev_par": 41.5,
+  "revenue": 6626.6
+ },
+ "Grand Est|Turckheim": {
+  "region": "Grand Est",
+  "locality": "Turckheim",
+  "listings": 106,
+  "occupancy": 0.44,
+  "adr": 121.7,
+  "rev_par": 51.8,
+  "revenue": 14278.3
+ },
+ "Auvergne-Rhône-Alpes|Abondance": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Abondance",
+  "listings": 96,
+  "occupancy": 0.43,
+  "adr": 213.3,
+  "rev_par": 102.1,
+  "revenue": 22196
+ },
+ "Pays de la Loire|Sèvremoine": {
+  "region": "Pays de la Loire",
+  "locality": "Sèvremoine",
+  "listings": 88,
+  "occupancy": 0.37,
+  "adr": 123.3,
+  "rev_par": 44.9,
+  "revenue": 8864
+ },
+ "Provence-Alpes-Côte d'Azur|Auriol": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Auriol",
+  "listings": 93,
+  "occupancy": 0.44,
+  "adr": 155,
+  "rev_par": 67.7,
+  "revenue": 12211.8
+ },
+ "Guadeloupe|Saint-Claude": {
+  "region": "Guadeloupe",
+  "locality": "Saint-Claude",
+  "listings": 87,
+  "occupancy": 0.38,
+  "adr": 96.3,
+  "rev_par": 36.5,
+  "revenue": 7720.2
+ },
+ "Provence-Alpes-Côte d'Azur|Valréas": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Valréas",
+  "listings": 98,
+  "occupancy": 0.33,
+  "adr": 145.7,
+  "rev_par": 44,
+  "revenue": 8040.4
+ },
+ "Guadeloupe|Port-Louis": {
+  "region": "Guadeloupe",
+  "locality": "Port-Louis",
+  "listings": 81,
+  "occupancy": 0.35,
+  "adr": 98.4,
+  "rev_par": 36.2,
+  "revenue": 7429.2
+ },
+ "Provence-Alpes-Côte d'Azur|Pélissanne": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Pélissanne",
+  "listings": 80,
+  "occupancy": 0.4,
+  "adr": 166.1,
+  "rev_par": 66.4,
+  "revenue": 9775.3
+ },
+ "Grand Est|Lingolsheim": {
+  "region": "Grand Est",
+  "locality": "Lingolsheim",
+  "listings": 90,
+  "occupancy": 0.46,
+  "adr": 103.2,
+  "rev_par": 47,
+  "revenue": 10256.2
+ },
+ "Grand Est|Wintzenheim": {
+  "region": "Grand Est",
+  "locality": "Wintzenheim",
+  "listings": 100,
+  "occupancy": 0.44,
+  "adr": 125.5,
+  "rev_par": 52.6,
+  "revenue": 12935.6
+ },
+ "Grand Est|Ribeauvillé": {
+  "region": "Grand Est",
+  "locality": "Ribeauvillé",
+  "listings": 101,
+  "occupancy": 0.45,
+  "adr": 136.5,
+  "rev_par": 59.5,
+  "revenue": 15829.9
+ },
+ "Auvergne-Rhône-Alpes|Bozel": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Bozel",
+  "listings": 96,
+  "occupancy": 0.43,
+  "adr": 162.4,
+  "rev_par": 72.7,
+  "revenue": 14294.4
+ },
+ "Auvergne-Rhône-Alpes|Issoire": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Issoire",
+  "listings": 100,
+  "occupancy": 0.45,
+  "adr": 62.5,
+  "rev_par": 26.7,
+  "revenue": 6223.5
+ },
+ "Grand Est|Le Tholy": {
+  "region": "Grand Est",
+  "locality": "Le Tholy",
+  "listings": 103,
+  "occupancy": 0.39,
+  "adr": 175.4,
+  "rev_par": 65.4,
+  "revenue": 17355
+ },
+ "Auvergne-Rhône-Alpes|Riom": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Riom",
+  "listings": 98,
+  "occupancy": 0.37,
+  "adr": 82.7,
+  "rev_par": 30.5,
+  "revenue": 7820.8
+ },
+ "Grand Est|Huningue": {
+  "region": "Grand Est",
+  "locality": "Huningue",
+  "listings": 89,
+  "occupancy": 0.46,
+  "adr": 113.9,
+  "rev_par": 52.1,
+  "revenue": 11239.7
+ },
+ "Grand Est|Munster": {
+  "region": "Grand Est",
+  "locality": "Munster",
+  "listings": 96,
+  "occupancy": 0.43,
+  "adr": 114.7,
+  "rev_par": 48.5,
+  "revenue": 12094
+ },
+ "Provence-Alpes-Côte d'Azur|Fontvieille": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Fontvieille",
+  "listings": 89,
+  "occupancy": 0.41,
+  "adr": 208.8,
+  "rev_par": 82.1,
+  "revenue": 13697.1
+ },
+ "Pays de la Loire|Clisson": {
+  "region": "Pays de la Loire",
+  "locality": "Clisson",
+  "listings": 87,
+  "occupancy": 0.35,
+  "adr": 110.8,
+  "rev_par": 40.3,
+  "revenue": 8664
+ },
+ "Pays de la Loire|Chanverrie": {
+  "region": "Pays de la Loire",
+  "locality": "Chanverrie",
+  "listings": 91,
+  "occupancy": 0.45,
+  "adr": 133.5,
+  "rev_par": 55.9,
+  "revenue": 12355.6
+ },
+ "Provence-Alpes-Côte d'Azur|Eygalières": {
+  "region": "Provence-Alpes-Côte d'Azur",
+  "locality": "Eygalières",
+  "listings": 87,
+  "occupancy": 0.39,
+  "adr": 391.4,
+  "rev_par": 161.2,
+  "revenue": 29681.2
+ },
+ "Guadeloupe|Capesterre-de-Marie-Galante": {
+  "region": "Guadeloupe",
+  "locality": "Capesterre-de-Marie-Galante",
+  "listings": 99,
+  "occupancy": 0.27,
+  "adr": 153.8,
+  "rev_par": 44.8,
+  "revenue": 9465.6
+ },
+ "Bretagne|Brest": {
+  "region": "Bretagne",
+  "locality": "Brest",
+  "listings": 85,
+  "occupancy": 0.43,
+  "adr": 64.6,
+  "rev_par": 28,
+  "revenue": 4827.3
+ },
+ "Auvergne-Rhône-Alpes|Bellevaux": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Bellevaux",
+  "listings": 101,
+  "occupancy": 0.35,
+  "adr": 101.7,
+  "rev_par": 38.1,
+  "revenue": 8365.5
+ },
+ "Martinique|Dikos": {
+  "region": "Martinique",
+  "locality": "Dikos",
+  "listings": 88,
+  "occupancy": 0.42,
+  "adr": 87.3,
+  "rev_par": 37.3,
+  "revenue": 8219.4
+ },
+ "Grand Est|Eguisheim": {
+  "region": "Grand Est",
+  "locality": "Eguisheim",
+  "listings": 102,
+  "occupancy": 0.45,
+  "adr": 128,
+  "rev_par": 60.9,
+  "revenue": 16642.6
+ },
+ "Pays de la Loire|Challans": {
+  "region": "Pays de la Loire",
+  "locality": "Challans",
+  "listings": 90,
+  "occupancy": 0.37,
+  "adr": 95.8,
+  "rev_par": 36.1,
+  "revenue": 6833.6
+ },
+ "Auvergne-Rhône-Alpes|Publier": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Publier",
+  "listings": 91,
+  "occupancy": 0.41,
+  "adr": 156.1,
+  "rev_par": 63.6,
+  "revenue": 13518.5
+ },
+ "Auvergne-Rhône-Alpes|Dieulefit": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Dieulefit",
+  "listings": 92,
+  "occupancy": 0.4,
+  "adr": 154.5,
+  "rev_par": 64.7,
+  "revenue": 11634.1
+ },
+ "Auvergne-Rhône-Alpes|Pierrelatte": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Pierrelatte",
+  "listings": 87,
+  "occupancy": 0.45,
+  "adr": 71.9,
+  "rev_par": 31.8,
+  "revenue": 6418.2
+ },
+ "Centre-Val de Loire|Vendôme": {
+  "region": "Centre-Val de Loire",
+  "locality": "Vendôme",
+  "listings": 92,
+  "occupancy": 0.41,
+  "adr": 92.1,
+  "rev_par": 36.6,
+  "revenue": 8882.9
+ },
+ "Grand Est|Saverne": {
+  "region": "Grand Est",
+  "locality": "Saverne",
+  "listings": 90,
+  "occupancy": 0.41,
+  "adr": 98,
+  "rev_par": 39.2,
+  "revenue": 9636
+ },
+ "Pays de la Loire|Carquefou": {
+  "region": "Pays de la Loire",
+  "locality": "Carquefou",
+  "listings": 87,
+  "occupancy": 0.44,
+  "adr": 97.3,
+  "rev_par": 40.6,
+  "revenue": 9686
+ },
+ "Auvergne-Rhône-Alpes|Allemond": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Allemond",
+  "listings": 97,
+  "occupancy": 0.44,
+  "adr": 129.4,
+  "rev_par": 58.8,
+  "revenue": 14483.4
+ },
+ "Auvergne-Rhône-Alpes|Salavas": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Salavas",
+  "listings": 86,
+  "occupancy": 0.4,
+  "adr": 133.1,
+  "rev_par": 56.2,
+  "revenue": 9340.4
+ },
+ "Bourgogne – Franche-Comté|Tournus": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Tournus",
+  "listings": 94,
+  "occupancy": 0.31,
+  "adr": 112.2,
+  "rev_par": 33.3,
+  "revenue": 7515.4
+ },
+ "Grand Est|Orbey": {
+  "region": "Grand Est",
+  "locality": "Orbey",
+  "listings": 95,
+  "occupancy": 0.4,
+  "adr": 152,
+  "rev_par": 60.2,
+  "revenue": 17014.3
+ },
+ "Grand Est|Bussang": {
+  "region": "Grand Est",
+  "locality": "Bussang",
+  "listings": 91,
+  "occupancy": 0.4,
+  "adr": 171.7,
+  "rev_par": 74.5,
+  "revenue": 18264.3
+ },
+ "Grand Est|Chaumont": {
+  "region": "Grand Est",
+  "locality": "Chaumont",
+  "listings": 87,
+  "occupancy": 0.44,
+  "adr": 74.8,
+  "rev_par": 32.1,
+  "revenue": 8080.9
+ },
+ "Auvergne-Rhône-Alpes|Thiers": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Thiers",
+  "listings": 82,
+  "occupancy": 0.33,
+  "adr": 103.9,
+  "rev_par": 32.1,
+  "revenue": 7101.6
+ },
+ "Centre-Val de Loire|Olivet": {
+  "region": "Centre-Val de Loire",
+  "locality": "Olivet",
+  "listings": 86,
+  "occupancy": 0.48,
+  "adr": 113.1,
+  "rev_par": 47,
+  "revenue": 11518.4
+ },
+ "Grand Est|Ventron": {
+  "region": "Grand Est",
+  "locality": "Ventron",
+  "listings": 92,
+  "occupancy": 0.4,
+  "adr": 284.6,
+  "rev_par": 112.4,
+  "revenue": 29942.1
+ },
+ "Grand Est|Sedan": {
+  "region": "Grand Est",
+  "locality": "Sedan",
+  "listings": 83,
+  "occupancy": 0.38,
+  "adr": 79.7,
+  "rev_par": 29.7,
+  "revenue": 7379
+ },
+ "Pays de la Loire|Spay": {
+  "region": "Pays de la Loire",
+  "locality": "Spay",
+  "listings": 77,
+  "occupancy": 0.29,
+  "adr": 161.3,
+  "rev_par": 47.7,
+  "revenue": 7826.7
+ },
+ "Grand Est|Anould": {
+  "region": "Grand Est",
+  "locality": "Anould",
+  "listings": 86,
+  "occupancy": 0.38,
+  "adr": 189,
+  "rev_par": 73.8,
+  "revenue": 19606
+ },
+ "Hauts-de-France|Chantilly": {
+  "region": "Hauts-de-France",
+  "locality": "Chantilly",
+  "listings": 83,
+  "occupancy": 0.43,
+  "adr": 119.3,
+  "rev_par": 51.1,
+  "revenue": 12198.8
+ },
+ "Auvergne-Rhône-Alpes|Valserhône": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Valserhône",
+  "listings": 78,
+  "occupancy": 0.42,
+  "adr": 88.5,
+  "rev_par": 39.6,
+  "revenue": 8383.1
+ },
+ "Auvergne-Rhône-Alpes|Fillière": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Fillière",
+  "listings": 75,
+  "occupancy": 0.45,
+  "adr": 153.7,
+  "rev_par": 70.3,
+  "revenue": 14546.1
+ },
+ "Centre-Val de Loire|Loches": {
+  "region": "Centre-Val de Loire",
+  "locality": "Loches",
+  "listings": 82,
+  "occupancy": 0.37,
+  "adr": 115,
+  "rev_par": 42.2,
+  "revenue": 8506.1
+ },
+ "Auvergne-Rhône-Alpes|Sciez": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Sciez",
+  "listings": 77,
+  "occupancy": 0.41,
+  "adr": 151.9,
+  "rev_par": 61.6,
+  "revenue": 11919.6
+ },
+ "Auvergne-Rhône-Alpes|Cluses": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Cluses",
+  "listings": 86,
+  "occupancy": 0.43,
+  "adr": 85.7,
+  "rev_par": 36.1,
+  "revenue": 7681.1
+ },
+ "Auvergne-Rhône-Alpes|Fontaine": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Fontaine",
+  "listings": 75,
+  "occupancy": 0.38,
+  "adr": 91.9,
+  "rev_par": 31.9,
+  "revenue": 6921.2
+ },
+ "Auvergne-Rhône-Alpes|Aussois": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Aussois",
+  "listings": 86,
+  "occupancy": 0.41,
+  "adr": 123.3,
+  "rev_par": 48.6,
+  "revenue": 10325.7
+ },
+ "Auvergne-Rhône-Alpes|Lablachère": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Lablachère",
+  "listings": 67,
+  "occupancy": 0.37,
+  "adr": 156.6,
+  "rev_par": 54.9,
+  "revenue": 9173.7
+ },
+ "Martinique|Case-Pilote": {
+  "region": "Martinique",
+  "locality": "Case-Pilote",
+  "listings": 84,
+  "occupancy": 0.43,
+  "adr": 159.8,
+  "rev_par": 66.9,
+  "revenue": 14552.7
+ },
+ "Brittany|Dol-de-Bretagne": {
+  "region": "Brittany",
+  "locality": "Dol-de-Bretagne",
+  "listings": 85,
+  "occupancy": 0.41,
+  "adr": 122.9,
+  "rev_par": 48.5,
+  "revenue": 11466.7
+ },
+ "Hauts-de-France|Ronchin": {
+  "region": "Hauts-de-France",
+  "locality": "Ronchin",
+  "listings": 66,
+  "occupancy": 0.4,
+  "adr": 81.2,
+  "rev_par": 30.3,
+  "revenue": 6134.9
+ },
+ "Bourgogne – Franche-Comté|Vesoul": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Vesoul",
+  "listings": 82,
+  "occupancy": 0.44,
+  "adr": 78.6,
+  "rev_par": 34.1,
+  "revenue": 9312.9
+ },
+ "Grand Est|Givet": {
+  "region": "Grand Est",
+  "locality": "Givet",
+  "listings": 70,
+  "occupancy": 0.46,
+  "adr": 74.2,
+  "rev_par": 35.4,
+  "revenue": 8258.3
+ },
+ "Grand Est|Bergheim": {
+  "region": "Grand Est",
+  "locality": "Bergheim",
+  "listings": 86,
+  "occupancy": 0.45,
+  "adr": 130.9,
+  "rev_par": 59.2,
+  "revenue": 14398.3
+ },
+ "Guadeloupe|Saint-Louis": {
+  "region": "Guadeloupe",
+  "locality": "Saint-Louis",
+  "listings": 85,
+  "occupancy": 0.31,
+  "adr": 135.3,
+  "rev_par": 46.4,
+  "revenue": 8937.9
+ },
+ "Pays de la Loire|Avrillé": {
+  "region": "Pays de la Loire",
+  "locality": "Avrillé",
+  "listings": 74,
+  "occupancy": 0.44,
+  "adr": 112.2,
+  "rev_par": 47,
+  "revenue": 10321.1
+ },
+ "Pays de la Loire|Ruaudin": {
+  "region": "Pays de la Loire",
+  "locality": "Ruaudin",
+  "listings": 71,
+  "occupancy": 0.26,
+  "adr": 184.4,
+  "rev_par": 50.1,
+  "revenue": 7730.6
+ },
+ "Bourgogne – Franche-Comté|Arbois": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Arbois",
+  "listings": 78,
+  "occupancy": 0.39,
+  "adr": 136.9,
+  "rev_par": 48.4,
+  "revenue": 12276.5
+ },
+ "Centre-Val de Loire|Beaugency": {
+  "region": "Centre-Val de Loire",
+  "locality": "Beaugency",
+  "listings": 71,
+  "occupancy": 0.39,
+  "adr": 77.9,
+  "rev_par": 32.8,
+  "revenue": 6913.3
+ },
+ "Auvergne-Rhône-Alpes|Beaumont": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Beaumont",
+  "listings": 73,
+  "occupancy": 0.42,
+  "adr": 93.2,
+  "rev_par": 40,
+  "revenue": 7827.2
+ },
+ "Auvergne-Rhône-Alpes|Lagnieu": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Lagnieu",
+  "listings": 74,
+  "occupancy": 0.41,
+  "adr": 80.6,
+  "rev_par": 31.3,
+  "revenue": 6887.3
+ },
+ "Auvergne-Rhône-Alpes|Tresserve": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Tresserve",
+  "listings": 83,
+  "occupancy": 0.44,
+  "adr": 169.7,
+  "rev_par": 70.3,
+  "revenue": 15933.1
+ },
+ "Bourgogne – Franche-Comté|Cluny": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Cluny",
+  "listings": 76,
+  "occupancy": 0.37,
+  "adr": 124.5,
+  "rev_par": 43.7,
+  "revenue": 9905.1
+ },
+ "Bourgogne – Franche-Comté|Avallon": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Avallon",
+  "listings": 72,
+  "occupancy": 0.42,
+  "adr": 120.3,
+  "rev_par": 52.7,
+  "revenue": 13058
+ },
+ "Auvergne-Rhône-Alpes|Gex": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Gex",
+  "listings": 66,
+  "occupancy": 0.43,
+  "adr": 89.6,
+  "rev_par": 41.1,
+  "revenue": 8189.7
+ },
+ "Auvergne-Rhône-Alpes|Lélex": {
+  "region": "Auvergne-Rhône-Alpes",
+  "locality": "Lélex",
+  "listings": 80,
+  "occupancy": 0.36,
+  "adr": 101.4,
+  "rev_par": 35.7,
+  "revenue": 8233
+ },
+ "Hauts-de-France|Wimille": {
+  "region": "Hauts-de-France",
+  "locality": "Wimille",
+  "listings": 72,
+  "occupancy": 0.34,
+  "adr": 162.6,
+  "rev_par": 55.2,
+  "revenue": 12764.7
+ },
+ "Pays de la Loire|Allonnes": {
+  "region": "Pays de la Loire",
+  "locality": "Allonnes",
+  "listings": 69,
+  "occupancy": 0.28,
+  "adr": 163.2,
+  "rev_par": 48.2,
+  "revenue": 7667.7
+ },
+ "Guadeloupe|Gourbeyre": {
+  "region": "Guadeloupe",
+  "locality": "Gourbeyre",
+  "listings": 71,
+  "occupancy": 0.4,
+  "adr": 99,
+  "rev_par": 39.8,
+  "revenue": 8399.5
+ },
+ "Grand Est|Ostwald": {
+  "region": "Grand Est",
+  "locality": "Ostwald",
+  "listings": 62,
+  "occupancy": 0.46,
+  "adr": 109.8,
+  "rev_par": 51.3,
+  "revenue": 9905.4
+ },
+ "Martinique|Saint-Pierre": {
+  "region": "Martinique",
+  "locality": "Saint-Pierre",
+  "listings": 79,
+  "occupancy": 0.48,
+  "adr": 157.6,
+  "rev_par": 80.2,
+  "revenue": 20108.9
+ },
+ "Grand Est|Guebwiller": {
+  "region": "Grand Est",
+  "locality": "Guebwiller",
+  "listings": 72,
+  "occupancy": 0.39,
+  "adr": 142.9,
+  "rev_par": 53.9,
+  "revenue": 13158.4
+ },
+ "Normandy|Bagnoles-de-l'Orne-Normandie": {
+  "region": "Normandy",
+  "locality": "Bagnoles-de-l'Orne-Normandie",
+  "listings": 62,
+  "occupancy": 0.4,
+  "adr": 66.2,
+  "rev_par": 24.6,
+  "revenue": 4519.7
+ },
+ "Martinique|Sainte-Marie": {
+  "region": "Martinique",
+  "locality": "Sainte-Marie",
+  "listings": 72,
+  "occupancy": 0.38,
+  "adr": 101.1,
+  "rev_par": 39.2,
+  "revenue": 8083.8
+ },
+ "Grand Est|Ammerschwihr": {
+  "region": "Grand Est",
+  "locality": "Ammerschwihr",
+  "listings": 77,
+  "occupancy": 0.45,
+  "adr": 102.9,
+  "rev_par": 45.6,
+  "revenue": 11009.8
+ },
+ "Mayotte|Mamoudzou": {
+  "region": "Mayotte",
+  "locality": "Mamoudzou",
+  "listings": 47,
+  "occupancy": 0.4,
+  "adr": 106.7,
+  "rev_par": 44.5,
+  "revenue": 6562.4
+ },
+ "Centre-Val de Loire|Seigy": {
+  "region": "Centre-Val de Loire",
+  "locality": "Seigy",
+  "listings": 79,
+  "occupancy": 0.42,
+  "adr": 142.7,
+  "rev_par": 56.2,
+  "revenue": 15766.4
+ },
+ "Centre-Val de Loire|Vouvray": {
+  "region": "Centre-Val de Loire",
+  "locality": "Vouvray",
+  "listings": 68,
+  "occupancy": 0.38,
+  "adr": 190.8,
+  "rev_par": 69.9,
+  "revenue": 16448.7
+ },
+ "Hauts-de-France|Loos": {
+  "region": "Hauts-de-France",
+  "locality": "Loos",
+  "listings": 56,
+  "occupancy": 0.45,
+  "adr": 83.7,
+  "rev_par": 38.1,
+  "revenue": 7929.1
+ },
+ "Normandy|Vire Normandie": {
+  "region": "Normandy",
+  "locality": "Vire Normandie",
+  "listings": 69,
+  "occupancy": 0.44,
+  "adr": 107.5,
+  "rev_par": 49.4,
+  "revenue": 11687.9
+ },
+ "Grand Est|Rochesson": {
+  "region": "Grand Est",
+  "locality": "Rochesson",
+  "listings": 78,
+  "occupancy": 0.41,
+  "adr": 172.5,
+  "rev_par": 69.9,
+  "revenue": 19452.5
+ },
+ "Hauts-de-France|Anzin": {
+  "region": "Hauts-de-France",
+  "locality": "Anzin",
+  "listings": 67,
+  "occupancy": 0.41,
+  "adr": 62.1,
+  "rev_par": 26.8,
+  "revenue": 6023
+ },
+ "Hauts-de-France|Soissons": {
+  "region": "Hauts-de-France",
+  "locality": "Soissons",
+  "listings": 67,
+  "occupancy": 0.39,
+  "adr": 94.3,
+  "rev_par": 34.7,
+  "revenue": 8489.1
+ },
+ "Guadeloupe|Anse-Bertrand": {
+  "region": "Guadeloupe",
+  "locality": "Anse-Bertrand",
+  "listings": 60,
+  "occupancy": 0.32,
+  "adr": 99.5,
+  "rev_par": 32.5,
+  "revenue": 6442.8
+ },
+ "Grand Est|Langres": {
+  "region": "Grand Est",
+  "locality": "Langres",
+  "listings": 69,
+  "occupancy": 0.42,
+  "adr": 92.6,
+  "rev_par": 39.6,
+  "revenue": 10319.6
+ },
+ "Centre-Val de Loire|Fondettes": {
+  "region": "Centre-Val de Loire",
+  "locality": "Fondettes",
+  "listings": 70,
+  "occupancy": 0.42,
+  "adr": 168.4,
+  "rev_par": 64.7,
+  "revenue": 14300.3
+ },
+ "Grand Est|Rouffach": {
+  "region": "Grand Est",
+  "locality": "Rouffach",
+  "listings": 67,
+  "occupancy": 0.36,
+  "adr": 125,
+  "rev_par": 44.9,
+  "revenue": 10356.9
+ },
+ "Pays de la Loire|Sallertaine": {
+  "region": "Pays de la Loire",
+  "locality": "Sallertaine",
+  "listings": 55,
+  "occupancy": 0.35,
+  "adr": 163.3,
+  "rev_par": 64.1,
+  "revenue": 9824.1
+ },
+ "Guadeloupe|Morne-à-l'Eau": {
+  "region": "Guadeloupe",
+  "locality": "Morne-à-l'Eau",
+  "listings": 56,
+  "occupancy": 0.38,
+  "adr": 71,
+  "rev_par": 28.3,
+  "revenue": 5643
+ },
+ "Pays de la Loire|Teloché": {
+  "region": "Pays de la Loire",
+  "locality": "Teloché",
+  "listings": 57,
+  "occupancy": 0.24,
+  "adr": 160.9,
+  "rev_par": 36.3,
+  "revenue": 6401.4
+ },
+ "Centre-Val de Loire|Bourgueil": {
+  "region": "Centre-Val de Loire",
+  "locality": "Bourgueil",
+  "listings": 61,
+  "occupancy": 0.35,
+  "adr": 134.7,
+  "rev_par": 44.4,
+  "revenue": 9014.1
+ },
+ "Centre-Val de Loire|Vineuil": {
+  "region": "Centre-Val de Loire",
+  "locality": "Vineuil",
+  "listings": 61,
+  "occupancy": 0.4,
+  "adr": 136,
+  "rev_par": 52.7,
+  "revenue": 12387.3
+ },
+ "Centre-Val de Loire|Sancerre": {
+  "region": "Centre-Val de Loire",
+  "locality": "Sancerre",
+  "listings": 62,
+  "occupancy": 0.34,
+  "adr": 150.8,
+  "rev_par": 49.8,
+  "revenue": 10926.8
+ },
+ "Pays de la Loire|Assérac": {
+  "region": "Pays de la Loire",
+  "locality": "Assérac",
+  "listings": 63,
+  "occupancy": 0.38,
+  "adr": 198,
+  "rev_par": 76.7,
+  "revenue": 14924.2
+ },
+ "Pays de la Loire|Angles": {
+  "region": "Pays de la Loire",
+  "locality": "Angles",
+  "listings": 57,
+  "occupancy": 0.36,
+  "adr": 137.1,
+  "rev_par": 51.8,
+  "revenue": 7341.3
+ },
+ "Centre-Val de Loire|Mer": {
+  "region": "Centre-Val de Loire",
+  "locality": "Mer",
+  "listings": 60,
+  "occupancy": 0.35,
+  "adr": 126.6,
+  "rev_par": 40.8,
+  "revenue": 9296.6
+ },
+ "Grand Est|Plainfaing": {
+  "region": "Grand Est",
+  "locality": "Plainfaing",
+  "listings": 60,
+  "occupancy": 0.4,
+  "adr": 142.5,
+  "rev_par": 55.3,
+  "revenue": 14448
+ },
+ "Grand Est|Sarreguemines": {
+  "region": "Grand Est",
+  "locality": "Sarreguemines",
+  "listings": 58,
+  "occupancy": 0.38,
+  "adr": 118.5,
+  "rev_par": 54.4,
+  "revenue": 12912.8
+ },
+ "Grand Est|Châtenois": {
+  "region": "Grand Est",
+  "locality": "Châtenois",
+  "listings": 63,
+  "occupancy": 0.45,
+  "adr": 128.9,
+  "rev_par": 58.9,
+  "revenue": 15087.7
+ },
+ "Pays de la Loire|Châteaubriant": {
+  "region": "Pays de la Loire",
+  "locality": "Châteaubriant",
+  "listings": 60,
+  "occupancy": 0.43,
+  "adr": 66.5,
+  "rev_par": 28.8,
+  "revenue": 6315.7
+ },
+ "Grand Est|Hoenheim": {
+  "region": "Grand Est",
+  "locality": "Hoenheim",
+  "listings": 49,
+  "occupancy": 0.43,
+  "adr": 113.4,
+  "rev_par": 46.1,
+  "revenue": 9744.6
+ },
+ "Grand Est|Remiremont": {
+  "region": "Grand Est",
+  "locality": "Remiremont",
+  "listings": 61,
+  "occupancy": 0.42,
+  "adr": 86.8,
+  "rev_par": 36.5,
+  "revenue": 9616.5
+ },
+ "Centre-Val de Loire|Dreux": {
+  "region": "Centre-Val de Loire",
+  "locality": "Dreux",
+  "listings": 55,
+  "occupancy": 0.41,
+  "adr": 69.3,
+  "rev_par": 27.2,
+  "revenue": 5989.8
+ },
+ "Centre-Val de Loire|Issoudun": {
+  "region": "Centre-Val de Loire",
+  "locality": "Issoudun",
+  "listings": 56,
+  "occupancy": 0.38,
+  "adr": 88.8,
+  "rev_par": 29.9,
+  "revenue": 6999.8
+ },
+ "Pays de la Loire|Mayenne": {
+  "region": "Pays de la Loire",
+  "locality": "Mayenne",
+  "listings": 49,
+  "occupancy": 0.39,
+  "adr": 58.5,
+  "rev_par": 22.6,
+  "revenue": 4696.3
+ },
+ "Pays de la Loire|Pouzauges": {
+  "region": "Pays de la Loire",
+  "locality": "Pouzauges",
+  "listings": 58,
+  "occupancy": 0.39,
+  "adr": 131,
+  "rev_par": 49,
+  "revenue": 10044
+ },
+ "Grand Est|Yutz": {
+  "region": "Grand Est",
+  "locality": "Yutz",
+  "listings": 52,
+  "occupancy": 0.45,
+  "adr": 73.1,
+  "rev_par": 32,
+  "revenue": 6571.4
+ },
+ "Pays de la Loire|Herbignac": {
+  "region": "Pays de la Loire",
+  "locality": "Herbignac",
+  "listings": 50,
+  "occupancy": 0.38,
+  "adr": 211.6,
+  "rev_par": 86.8,
+  "revenue": 16504.5
+ },
+ "Bourgogne – Franche-Comté|Chablis": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Chablis",
+  "listings": 65,
+  "occupancy": 0.36,
+  "adr": 180.4,
+  "rev_par": 65.9,
+  "revenue": 19340.3
+ },
+ "Bourgogne – Franche-Comté|Lamoura": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Lamoura",
+  "listings": 60,
+  "occupancy": 0.41,
+  "adr": 125.5,
+  "rev_par": 55.2,
+  "revenue": 14057.2
+ },
+ "Centre-Val de Loire|Salbris": {
+  "region": "Centre-Val de Loire",
+  "locality": "Salbris",
+  "listings": 57,
+  "occupancy": 0.34,
+  "adr": 134.8,
+  "rev_par": 43.7,
+  "revenue": 8955.1
+ },
+ "Hauts-de-France|Audinghen": {
+  "region": "Hauts-de-France",
+  "locality": "Audinghen",
+  "listings": 63,
+  "occupancy": 0.39,
+  "adr": 213.5,
+  "rev_par": 84.4,
+  "revenue": 22954.6
+ },
+ "Pays de la Loire|Vallet": {
+  "region": "Pays de la Loire",
+  "locality": "Vallet",
+  "listings": 47,
+  "occupancy": 0.35,
+  "adr": 105.6,
+  "rev_par": 45.6,
+  "revenue": 8928.6
+ },
+ "Pays de la Loire|Coulaines": {
+  "region": "Pays de la Loire",
+  "locality": "Coulaines",
+  "listings": 48,
+  "occupancy": 0.38,
+  "adr": 144.3,
+  "rev_par": 48.5,
+  "revenue": 7456.5
+ },
+ "Centre-Val de Loire|Langeais": {
+  "region": "Centre-Val de Loire",
+  "locality": "Langeais",
+  "listings": 58,
+  "occupancy": 0.36,
+  "adr": 129.1,
+  "rev_par": 44.5,
+  "revenue": 10592.1
+ },
+ "Hauts-de-France|Liévin": {
+  "region": "Hauts-de-France",
+  "locality": "Liévin",
+  "listings": 54,
+  "occupancy": 0.42,
+  "adr": 87.7,
+  "rev_par": 35.6,
+  "revenue": 8146
+ },
+ "Grand Est|Wissembourg": {
+  "region": "Grand Est",
+  "locality": "Wissembourg",
+  "listings": 59,
+  "occupancy": 0.42,
+  "adr": 111,
+  "rev_par": 45.1,
+  "revenue": 12031.6
+ },
+ "Grand Est|Amnéville": {
+  "region": "Grand Est",
+  "locality": "Amnéville",
+  "listings": 56,
+  "occupancy": 0.42,
+  "adr": 99.9,
+  "rev_par": 40.5,
+  "revenue": 10217.3
+ },
+ "Guadeloupe|Goyave": {
+  "region": "Guadeloupe",
+  "locality": "Goyave",
+  "listings": 54,
+  "occupancy": 0.37,
+  "adr": 116.9,
+  "rev_par": 43.1,
+  "revenue": 7424.7
+ },
+ "Pays de la Loire|Bouchemaine": {
+  "region": "Pays de la Loire",
+  "locality": "Bouchemaine",
+  "listings": 48,
+  "occupancy": 0.4,
+  "adr": 119.2,
+  "rev_par": 42.2,
+  "revenue": 8383.9
+ },
+ "Bourgogne – Franche-Comté|Morbier": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Morbier",
+  "listings": 55,
+  "occupancy": 0.39,
+  "adr": 118.8,
+  "rev_par": 44.8,
+  "revenue": 10981.1
+ },
+ "Hauts-de-France|Creil": {
+  "region": "Hauts-de-France",
+  "locality": "Creil",
+  "listings": 54,
+  "occupancy": 0.39,
+  "adr": 73.3,
+  "rev_par": 29.3,
+  "revenue": 6252.2
+ },
+ "Centre-Val de Loire|Rochecorbon": {
+  "region": "Centre-Val de Loire",
+  "locality": "Rochecorbon",
+  "listings": 52,
+  "occupancy": 0.4,
+  "adr": 159.9,
+  "rev_par": 68.6,
+  "revenue": 14441.5
+ },
+ "Pays de la Loire|Écommoy": {
+  "region": "Pays de la Loire",
+  "locality": "Écommoy",
+  "listings": 48,
+  "occupancy": 0.25,
+  "adr": 118.6,
+  "rev_par": 29.9,
+  "revenue": 5112.1
+ },
+ "Bourgogne – Franche-Comté|Digoin": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Digoin",
+  "listings": 52,
+  "occupancy": 0.35,
+  "adr": 93.4,
+  "rev_par": 32.6,
+  "revenue": 7464.2
+ },
+ "Martinique|Saint-Joseph": {
+  "region": "Martinique",
+  "locality": "Saint-Joseph",
+  "listings": 44,
+  "occupancy": 0.38,
+  "adr": 104.8,
+  "rev_par": 39.3,
+  "revenue": 7010.7
+ },
+ "Grand Est|Hayange": {
+  "region": "Grand Est",
+  "locality": "Hayange",
+  "listings": 46,
+  "occupancy": 0.37,
+  "adr": 70.4,
+  "rev_par": 26.2,
+  "revenue": 5116.8
+ },
+ "Hauts-de-France|Audresselles": {
+  "region": "Hauts-de-France",
+  "locality": "Audresselles",
+  "listings": 58,
+  "occupancy": 0.44,
+  "adr": 148.4,
+  "rev_par": 67.1,
+  "revenue": 19617.3
+ },
+ "Pays de la Loire|Couëron": {
+  "region": "Pays de la Loire",
+  "locality": "Couëron",
+  "listings": 44,
+  "occupancy": 0.43,
+  "adr": 96.2,
+  "rev_par": 40.7,
+  "revenue": 8177
+ },
+ "Hauts-de-France|Maubeuge": {
+  "region": "Hauts-de-France",
+  "locality": "Maubeuge",
+  "listings": 53,
+  "occupancy": 0.39,
+  "adr": 72,
+  "rev_par": 27.6,
+  "revenue": 5356.7
+ },
+ "Bourgogne – Franche-Comté|Ornans": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Ornans",
+  "listings": 53,
+  "occupancy": 0.44,
+  "adr": 125.8,
+  "rev_par": 54.7,
+  "revenue": 13515.4
+ },
+ "Pays de la Loire|Guécélard": {
+  "region": "Pays de la Loire",
+  "locality": "Guécélard",
+  "listings": 42,
+  "occupancy": 0.24,
+  "adr": 151.3,
+  "rev_par": 34.5,
+  "revenue": 5914.4
+ },
+ "Bourgogne – Franche-Comté|Poligny": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Poligny",
+  "listings": 49,
+  "occupancy": 0.38,
+  "adr": 119.2,
+  "rev_par": 41.5,
+  "revenue": 10411.4
+ },
+ "Pays de la Loire|Trélazé": {
+  "region": "Pays de la Loire",
+  "locality": "Trélazé",
+  "listings": 44,
+  "occupancy": 0.42,
+  "adr": 92.5,
+  "rev_par": 38.3,
+  "revenue": 7918.6
+ },
+ "Hauts-de-France|Rue": {
+  "region": "Hauts-de-France",
+  "locality": "Rue",
+  "listings": 46,
+  "occupancy": 0.3,
+  "adr": 205.8,
+  "rev_par": 60,
+  "revenue": 12556.5
+ },
+ "Grand Est|Thann": {
+  "region": "Grand Est",
+  "locality": "Thann",
+  "listings": 49,
+  "occupancy": 0.42,
+  "adr": 95,
+  "rev_par": 40.1,
+  "revenue": 9259.6
+ },
+ "Hauts-de-France|Ardres": {
+  "region": "Hauts-de-France",
+  "locality": "Ardres",
+  "listings": 48,
+  "occupancy": 0.39,
+  "adr": 122.5,
+  "rev_par": 53.2,
+  "revenue": 11734.2
+ },
+ "Centre-Val de Loire|Châteauvieux": {
+  "region": "Centre-Val de Loire",
+  "locality": "Châteauvieux",
+  "listings": 51,
+  "occupancy": 0.42,
+  "adr": 137.7,
+  "rev_par": 56.8,
+  "revenue": 14755.4
+ },
+ "Guadeloupe|Petit-Canal": {
+  "region": "Guadeloupe",
+  "locality": "Petit-Canal",
+  "listings": 39,
+  "occupancy": 0.33,
+  "adr": 104.2,
+  "rev_par": 35.9,
+  "revenue": 7435.2
+ },
+ "Pays de la Loire|Pontchâteau": {
+  "region": "Pays de la Loire",
+  "locality": "Pontchâteau",
+  "listings": 49,
+  "occupancy": 0.4,
+  "adr": 85.5,
+  "rev_par": 34.8,
+  "revenue": 8093.1
+ },
+ "Centre-Val de Loire|Saran": {
+  "region": "Centre-Val de Loire",
+  "locality": "Saran",
+  "listings": 47,
+  "occupancy": 0.47,
+  "adr": 56.3,
+  "rev_par": 26.5,
+  "revenue": 6016.5
+ },
+ "Hauts-de-France|Gouvieux": {
+  "region": "Hauts-de-France",
+  "locality": "Gouvieux",
+  "listings": 42,
+  "occupancy": 0.38,
+  "adr": 164.7,
+  "rev_par": 66.2,
+  "revenue": 13748.3
+ },
+ "Bourgogne – Franche-Comté|Joigny": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Joigny",
+  "listings": 49,
+  "occupancy": 0.31,
+  "adr": 78.7,
+  "rev_par": 23.5,
+  "revenue": 5995.4
+ },
+ "Pays de la Loire|Bouaye": {
+  "region": "Pays de la Loire",
+  "locality": "Bouaye",
+  "listings": 43,
+  "occupancy": 0.33,
+  "adr": 97.1,
+  "rev_par": 30.9,
+  "revenue": 6065.7
+ },
+ "Brittany|Île-de-Bréhat": {
+  "region": "Brittany",
+  "locality": "Île-de-Bréhat",
+  "listings": 52,
+  "occupancy": 0.43,
+  "adr": 221.2,
+  "rev_par": 90.1,
+  "revenue": 22550.5
+ },
+ "Centre-Val de Loire|Cellettes": {
+  "region": "Centre-Val de Loire",
+  "locality": "Cellettes",
+  "listings": 45,
+  "occupancy": 0.39,
+  "adr": 282.5,
+  "rev_par": 111.6,
+  "revenue": 21795.1
+ },
+ "Brittany|Île-d'Arz": {
+  "region": "Brittany",
+  "locality": "Île-d'Arz",
+  "listings": 49,
+  "occupancy": 0.33,
+  "adr": 149.7,
+  "rev_par": 49.9,
+  "revenue": 11189.4
+ },
+ "Centre-Val de Loire|Briare": {
+  "region": "Centre-Val de Loire",
+  "locality": "Briare",
+  "listings": 36,
+  "occupancy": 0.37,
+  "adr": 81.6,
+  "rev_par": 27.7,
+  "revenue": 4902.6
+ },
+ "Hauts-de-France|Armentières": {
+  "region": "Hauts-de-France",
+  "locality": "Armentières",
+  "listings": 50,
+  "occupancy": 0.4,
+  "adr": 138.3,
+  "rev_par": 53.5,
+  "revenue": 12277.1
+ },
+ "Grand Est|Labaroche": {
+  "region": "Grand Est",
+  "locality": "Labaroche",
+  "listings": 50,
+  "occupancy": 0.43,
+  "adr": 211.2,
+  "rev_par": 89.4,
+  "revenue": 23660.2
+ },
+ "Hauts-de-France|Favières": {
+  "region": "Hauts-de-France",
+  "locality": "Favières",
+  "listings": 49,
+  "occupancy": 0.38,
+  "adr": 135.8,
+  "rev_par": 51.4,
+  "revenue": 13961.5
+ },
+ "Centre-Val de Loire|Bléré": {
+  "region": "Centre-Val de Loire",
+  "locality": "Bléré",
+  "listings": 42,
+  "occupancy": 0.39,
+  "adr": 134.8,
+  "rev_par": 59.5,
+  "revenue": 11613.6
+ },
+ "Grand Est|Ingersheim": {
+  "region": "Grand Est",
+  "locality": "Ingersheim",
+  "listings": 44,
+  "occupancy": 0.46,
+  "adr": 121.5,
+  "rev_par": 55.2,
+  "revenue": 12322.9
+ },
+ "Grand Est|Beblenheim": {
+  "region": "Grand Est",
+  "locality": "Beblenheim",
+  "listings": 48,
+  "occupancy": 0.38,
+  "adr": 138.4,
+  "rev_par": 54.3,
+  "revenue": 12297.1
+ },
+ "Centre-Val de Loire|Châteaudun": {
+  "region": "Centre-Val de Loire",
+  "locality": "Châteaudun",
+  "listings": 46,
+  "occupancy": 0.36,
+  "adr": 117.9,
+  "rev_par": 49.9,
+  "revenue": 12367.5
+ },
+ "Brittany|Île-de-Batz": {
+  "region": "Brittany",
+  "locality": "Île-de-Batz",
+  "listings": 47,
+  "occupancy": 0.39,
+  "adr": 158.8,
+  "rev_par": 62.8,
+  "revenue": 15923.8
+ },
+ "Bourgogne – Franche-Comté|Meursault": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Meursault",
+  "listings": 46,
+  "occupancy": 0.39,
+  "adr": 208.8,
+  "rev_par": 80.4,
+  "revenue": 21045.7
+ },
+ "Centre-Val de Loire|Savonnières": {
+  "region": "Centre-Val de Loire",
+  "locality": "Savonnières",
+  "listings": 43,
+  "occupancy": 0.39,
+  "adr": 143.9,
+  "rev_par": 59.3,
+  "revenue": 13457
+ },
+ "Hauts-de-France|Bourbourg": {
+  "region": "Hauts-de-France",
+  "locality": "Bourbourg",
+  "listings": 40,
+  "occupancy": 0.41,
+  "adr": 108.1,
+  "rev_par": 43.7,
+  "revenue": 8675.9
+ },
+ "Grand Est|Corcieux": {
+  "region": "Grand Est",
+  "locality": "Corcieux",
+  "listings": 39,
+  "occupancy": 0.4,
+  "adr": 169.7,
+  "rev_par": 63.2,
+  "revenue": 14836.2
+ },
+ "Grand Est|Gerbépal": {
+  "region": "Grand Est",
+  "locality": "Gerbépal",
+  "listings": 46,
+  "occupancy": 0.38,
+  "adr": 229.2,
+  "rev_par": 84.4,
+  "revenue": 21810.4
+ },
+ "Grand Est|Scherwiller": {
+  "region": "Grand Est",
+  "locality": "Scherwiller",
+  "listings": 47,
+  "occupancy": 0.38,
+  "adr": 151,
+  "rev_par": 55.1,
+  "revenue": 13275.2
+ },
+ "Martinique|Gros-Morne": {
+  "region": "Martinique",
+  "locality": "Gros-Morne",
+  "listings": 43,
+  "occupancy": 0.4,
+  "adr": 95.1,
+  "rev_par": 36,
+  "revenue": 8089
+ },
+ "Bourgogne – Franche-Comté|Talant": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Talant",
+  "listings": 39,
+  "occupancy": 0.37,
+  "adr": 121.4,
+  "rev_par": 42.1,
+  "revenue": 10885.6
+ },
+ "Grand Est|Forbach": {
+  "region": "Grand Est",
+  "locality": "Forbach",
+  "listings": 35,
+  "occupancy": 0.34,
+  "adr": 73.7,
+  "rev_par": 23.4,
+  "revenue": 4122.9
+ },
+ "Pays de la Loire|Luçon": {
+  "region": "Pays de la Loire",
+  "locality": "Luçon",
+  "listings": 39,
+  "occupancy": 0.45,
+  "adr": 111.4,
+  "rev_par": 42.9,
+  "revenue": 8189.3
+ },
+ "Grand Est|Soultzeren": {
+  "region": "Grand Est",
+  "locality": "Soultzeren",
+  "listings": 45,
+  "occupancy": 0.44,
+  "adr": 115.1,
+  "rev_par": 51.2,
+  "revenue": 13927.5
+ },
+ "Hauts-de-France|Wasquehal": {
+  "region": "Hauts-de-France",
+  "locality": "Wasquehal",
+  "listings": 36,
+  "occupancy": 0.43,
+  "adr": 101.9,
+  "rev_par": 44.9,
+  "revenue": 10069.8
+ },
+ "Grand Est|Vagney": {
+  "region": "Grand Est",
+  "locality": "Vagney",
+  "listings": 39,
+  "occupancy": 0.36,
+  "adr": 177.8,
+  "rev_par": 59.7,
+  "revenue": 16330.4
+ },
+ "Bourgogne – Franche-Comté|Champagnole": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Champagnole",
+  "listings": 37,
+  "occupancy": 0.44,
+  "adr": 95.7,
+  "rev_par": 40.1,
+  "revenue": 9390.1
+ },
+ "Pays de la Loire|Gorges": {
+  "region": "Pays de la Loire",
+  "locality": "Gorges",
+  "listings": 35,
+  "occupancy": 0.37,
+  "adr": 96,
+  "rev_par": 39.3,
+  "revenue": 5599.5
+ },
+ "Bourgogne – Franche-Comté|Chenôve": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Chenôve",
+  "listings": 36,
+  "occupancy": 0.37,
+  "adr": 82.5,
+  "rev_par": 31,
+  "revenue": 6747.2
+ },
+ "Grand Est|Toul": {
+  "region": "Grand Est",
+  "locality": "Toul",
+  "listings": 41,
+  "occupancy": 0.41,
+  "adr": 66.7,
+  "rev_par": 27.8,
+  "revenue": 6819.5
+ },
+ "Hauts-de-France|Condette": {
+  "region": "Hauts-de-France",
+  "locality": "Condette",
+  "listings": 42,
+  "occupancy": 0.34,
+  "adr": 150.8,
+  "rev_par": 46.9,
+  "revenue": 11208.1
+ },
+ "Pays de la Loire|Bouin": {
+  "region": "Pays de la Loire",
+  "locality": "Bouin",
+  "listings": 41,
+  "occupancy": 0.36,
+  "adr": 97.8,
+  "rev_par": 35.3,
+  "revenue": 6833.8
+ },
+ "Grand Est|Eckbolsheim": {
+  "region": "Grand Est",
+  "locality": "Eckbolsheim",
+  "listings": 41,
+  "occupancy": 0.45,
+  "adr": 111.1,
+  "rev_par": 49.8,
+  "revenue": 11051
+ },
+ "Hauts-de-France|Mouvaux": {
+  "region": "Hauts-de-France",
+  "locality": "Mouvaux",
+  "listings": 41,
+  "occupancy": 0.42,
+  "adr": 123.1,
+  "rev_par": 52.2,
+  "revenue": 11066.4
+ },
+ "Grand Est|Rosheim": {
+  "region": "Grand Est",
+  "locality": "Rosheim",
+  "listings": 38,
+  "occupancy": 0.45,
+  "adr": 106.1,
+  "rev_par": 48,
+  "revenue": 11952.2
+ },
+ "Pays de la Loire|Missillac": {
+  "region": "Pays de la Loire",
+  "locality": "Missillac",
+  "listings": 40,
+  "occupancy": 0.38,
+  "adr": 138.7,
+  "rev_par": 48.1,
+  "revenue": 10195
+ },
+ "Pays de la Loire|Fillé": {
+  "region": "Pays de la Loire",
+  "locality": "Fillé",
+  "listings": 29,
+  "occupancy": 0.25,
+  "adr": 185,
+  "rev_par": 43.7,
+  "revenue": 6282.7
+ },
+ "Hauts-de-France|Lamorlaye": {
+  "region": "Hauts-de-France",
+  "locality": "Lamorlaye",
+  "listings": 41,
+  "occupancy": 0.38,
+  "adr": 178.6,
+  "rev_par": 64.7,
+  "revenue": 15126.6
+ },
+ "Guadeloupe|Basse-Terre": {
+  "region": "Guadeloupe",
+  "locality": "Basse-Terre",
+  "listings": 33,
+  "occupancy": 0.37,
+  "adr": 87.7,
+  "rev_par": 31.8,
+  "revenue": 6935.2
+ },
+ "Bourgogne – Franche-Comté|Audincourt": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Audincourt",
+  "listings": 40,
+  "occupancy": 0.36,
+  "adr": 72.8,
+  "rev_par": 25.5,
+  "revenue": 5913.7
+ },
+ "Nouvelle-Aquitaine|Île-d'Aix": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Île-d'Aix",
+  "listings": 43,
+  "occupancy": 0.32,
+  "adr": 247.5,
+  "rev_par": 72.2,
+  "revenue": 13866.8
+ },
+ "Centre-Val de Loire|Déols": {
+  "region": "Centre-Val de Loire",
+  "locality": "Déols",
+  "listings": 40,
+  "occupancy": 0.45,
+  "adr": 75.6,
+  "rev_par": 32.5,
+  "revenue": 7717.9
+ },
+ "Grand Est|Epfig": {
+  "region": "Grand Est",
+  "locality": "Epfig",
+  "listings": 41,
+  "occupancy": 0.41,
+  "adr": 184.8,
+  "rev_par": 73.2,
+  "revenue": 19121.2
+ },
+ "Nouvelle-Aquitaine|Morcenx-la-Nouvelle": {
+  "region": "Nouvelle-Aquitaine",
+  "locality": "Morcenx-la-Nouvelle",
+  "listings": 43,
+  "occupancy": 0.35,
+  "adr": 183.4,
+  "rev_par": 65.2,
+  "revenue": 14588.3
+ },
+ "Pays de la Loire|Chantonnay": {
+  "region": "Pays de la Loire",
+  "locality": "Chantonnay",
+  "listings": 36,
+  "occupancy": 0.35,
+  "adr": 100.8,
+  "rev_par": 33,
+  "revenue": 7248.3
+ },
+ "Grand Est|Fraize": {
+  "region": "Grand Est",
+  "locality": "Fraize",
+  "listings": 39,
+  "occupancy": 0.39,
+  "adr": 115.9,
+  "rev_par": 46.9,
+  "revenue": 12742.4
+ },
+ "Pays de la Loire|Mouchamps": {
+  "region": "Pays de la Loire",
+  "locality": "Mouchamps",
+  "listings": 38,
+  "occupancy": 0.43,
+  "adr": 131.4,
+  "rev_par": 54.9,
+  "revenue": 13784.4
+ },
+ "Brittany|Bain-de-Bretagne": {
+  "region": "Brittany",
+  "locality": "Bain-de-Bretagne",
+  "listings": 38,
+  "occupancy": 0.35,
+  "adr": 125.1,
+  "rev_par": 41.5,
+  "revenue": 10574.6
+ },
+ "Centre-Val de Loire|Mosnes": {
+  "region": "Centre-Val de Loire",
+  "locality": "Mosnes",
+  "listings": 38,
+  "occupancy": 0.39,
+  "adr": 161.2,
+  "rev_par": 64.2,
+  "revenue": 13887.6
+ },
+ "Centre-Val de Loire|Meusnes": {
+  "region": "Centre-Val de Loire",
+  "locality": "Meusnes",
+  "listings": 40,
+  "occupancy": 0.44,
+  "adr": 126,
+  "rev_par": 53,
+  "revenue": 15288.3
+ },
+ "Bourgogne – Franche-Comté|Malbuisson": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Malbuisson",
+  "listings": 37,
+  "occupancy": 0.46,
+  "adr": 118.5,
+  "rev_par": 54.2,
+  "revenue": 14976.2
+ },
+ "Grand Est|Mittelwihr": {
+  "region": "Grand Est",
+  "locality": "Mittelwihr",
+  "listings": 36,
+  "occupancy": 0.44,
+  "adr": 111.5,
+  "rev_par": 47.2,
+  "revenue": 11324.8
+ },
+ "Grand Est|Rethel": {
+  "region": "Grand Est",
+  "locality": "Rethel",
+  "listings": 39,
+  "occupancy": 0.35,
+  "adr": 93.4,
+  "rev_par": 33,
+  "revenue": 8489
+ },
+ "Grand Est|Dienville": {
+  "region": "Grand Est",
+  "locality": "Dienville",
+  "listings": 38,
+  "occupancy": 0.35,
+  "adr": 134.6,
+  "rev_par": 46.6,
+  "revenue": 10999.9
+ },
+ "Grand Est|Bennwihr": {
+  "region": "Grand Est",
+  "locality": "Bennwihr",
+  "listings": 39,
+  "occupancy": 0.47,
+  "adr": 152.3,
+  "rev_par": 71,
+  "revenue": 18240.4
+ },
+ "Hauts-de-France|Woignarue": {
+  "region": "Hauts-de-France",
+  "locality": "Woignarue",
+  "listings": 38,
+  "occupancy": 0.35,
+  "adr": 142.8,
+  "rev_par": 52.5,
+  "revenue": 12759.8
+ },
+ "Bourgogne – Franche-Comté|Longchaumois": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Longchaumois",
+  "listings": 38,
+  "occupancy": 0.32,
+  "adr": 136.9,
+  "rev_par": 38,
+  "revenue": 8607.8
+ },
+ "Bourgogne – Franche-Comté|Nanchez": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Nanchez",
+  "listings": 39,
+  "occupancy": 0.37,
+  "adr": 130.6,
+  "rev_par": 51.1,
+  "revenue": 13776.3
+ },
+ "Hauts-de-France|Marquise": {
+  "region": "Hauts-de-France",
+  "locality": "Marquise",
+  "listings": 37,
+  "occupancy": 0.41,
+  "adr": 112.4,
+  "rev_par": 44.7,
+  "revenue": 11070
+ },
+ "Centre-Val de Loire|Veigné": {
+  "region": "Centre-Val de Loire",
+  "locality": "Veigné",
+  "listings": 29,
+  "occupancy": 0.47,
+  "adr": 101.4,
+  "rev_par": 47.9,
+  "revenue": 10198.4
+ },
+ "Grand Est|Lunéville": {
+  "region": "Grand Est",
+  "locality": "Lunéville",
+  "listings": 32,
+  "occupancy": 0.39,
+  "adr": 83.7,
+  "rev_par": 30.6,
+  "revenue": 7834.4
+ },
+ "Grand Est|Sézanne": {
+  "region": "Grand Est",
+  "locality": "Sézanne",
+  "listings": 31,
+  "occupancy": 0.36,
+  "adr": 95.2,
+  "rev_par": 31,
+  "revenue": 5568.5
+ },
+ "Pays de la Loire|Champagné": {
+  "region": "Pays de la Loire",
+  "locality": "Champagné",
+  "listings": 35,
+  "occupancy": 0.26,
+  "adr": 171.8,
+  "rev_par": 52.9,
+  "revenue": 10420
+ },
+ "Bourgogne – Franche-Comté|Tonnerre": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Tonnerre",
+  "listings": 32,
+  "occupancy": 0.35,
+  "adr": 102.9,
+  "rev_par": 32.9,
+  "revenue": 7371
+ },
+ "Hauts-de-France|Wambrechies": {
+  "region": "Hauts-de-France",
+  "locality": "Wambrechies",
+  "listings": 35,
+  "occupancy": 0.37,
+  "adr": 186.4,
+  "rev_par": 59.9,
+  "revenue": 15393.6
+ },
+ "Grand Est|Benfeld": {
+  "region": "Grand Est",
+  "locality": "Benfeld",
+  "listings": 38,
+  "occupancy": 0.43,
+  "adr": 99.6,
+  "rev_par": 40,
+  "revenue": 10028.9
+ },
+ "Grand Est|Riedisheim": {
+  "region": "Grand Est",
+  "locality": "Riedisheim",
+  "listings": 33,
+  "occupancy": 0.48,
+  "adr": 83.3,
+  "rev_par": 38.9,
+  "revenue": 9533.1
+ },
+ "Grand Est|Hautvillers": {
+  "region": "Grand Est",
+  "locality": "Hautvillers",
+  "listings": 39,
+  "occupancy": 0.4,
+  "adr": 152.9,
+  "rev_par": 55.5,
+  "revenue": 15226.9
+ },
+ "Centre-Val de Loire|Esvres": {
+  "region": "Centre-Val de Loire",
+  "locality": "Esvres",
+  "listings": 33,
+  "occupancy": 0.51,
+  "adr": 147.7,
+  "rev_par": 62,
+  "revenue": 14119.3
+ },
+ "Pays de la Loire|Cugand": {
+  "region": "Pays de la Loire",
+  "locality": "Cugand",
+  "listings": 31,
+  "occupancy": 0.35,
+  "adr": 115.4,
+  "rev_par": 40.8,
+  "revenue": 7806.3
+ },
+ "Bourgogne – Franche-Comté|Pommard": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Pommard",
+  "listings": 36,
+  "occupancy": 0.41,
+  "adr": 227.7,
+  "rev_par": 85.9,
+  "revenue": 19363.1
+ },
+ "Hauts-de-France|Wattignies": {
+  "region": "Hauts-de-France",
+  "locality": "Wattignies",
+  "listings": 27,
+  "occupancy": 0.39,
+  "adr": 68.3,
+  "rev_par": 30.8,
+  "revenue": 6637.5
+ },
+ "Hauts-de-France|Clermont": {
+  "region": "Hauts-de-France",
+  "locality": "Clermont",
+  "listings": 28,
+  "occupancy": 0.35,
+  "adr": 84.4,
+  "rev_par": 29.7,
+  "revenue": 5482.3
+ },
+ "Hauts-de-France|Bailleul": {
+  "region": "Hauts-de-France",
+  "locality": "Bailleul",
+  "listings": 35,
+  "occupancy": 0.38,
+  "adr": 129,
+  "rev_par": 42.7,
+  "revenue": 10937.6
+ },
+ "Hauts-de-France|Cassel": {
+  "region": "Hauts-de-France",
+  "locality": "Cassel",
+  "listings": 30,
+  "occupancy": 0.35,
+  "adr": 142.3,
+  "rev_par": 44.7,
+  "revenue": 10913
+ },
+ "Centre-Val de Loire|Amilly": {
+  "region": "Centre-Val de Loire",
+  "locality": "Amilly",
+  "listings": 34,
+  "occupancy": 0.37,
+  "adr": 80.9,
+  "rev_par": 29.8,
+  "revenue": 7574.1
+ },
+ "Bourgogne – Franche-Comté|Givry": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Givry",
+  "listings": 34,
+  "occupancy": 0.4,
+  "adr": 167,
+  "rev_par": 69,
+  "revenue": 16672.2
+ },
+ "Grand Est|Sapois": {
+  "region": "Grand Est",
+  "locality": "Sapois",
+  "listings": 38,
+  "occupancy": 0.48,
+  "adr": 171.5,
+  "rev_par": 84.5,
+  "revenue": 21942.1
+ },
+ "Grand Est|Bœrsch": {
+  "region": "Grand Est",
+  "locality": "Bœrsch",
+  "listings": 34,
+  "occupancy": 0.39,
+  "adr": 115.9,
+  "rev_par": 42.8,
+  "revenue": 10322.6
+ },
+ "Guadeloupe|Vieux-Fort": {
+  "region": "Guadeloupe",
+  "locality": "Vieux-Fort",
+  "listings": 31,
+  "occupancy": 0.44,
+  "adr": 117.2,
+  "rev_par": 51.7,
+  "revenue": 10444.8
+ },
+ "Centre-Val de Loire|Cheverny": {
+  "region": "Centre-Val de Loire",
+  "locality": "Cheverny",
+  "listings": 31,
+  "occupancy": 0.42,
+  "adr": 148,
+  "rev_par": 55.7,
+  "revenue": 13558.8
+ },
+ "Martinique|Saint-Esprit": {
+  "region": "Martinique",
+  "locality": "Saint-Esprit",
+  "listings": 27,
+  "occupancy": 0.35,
+  "adr": 121,
+  "rev_par": 42.4,
+  "revenue": 6833.5
+ },
+ "Hauts-de-France|Lezennes": {
+  "region": "Hauts-de-France",
+  "locality": "Lezennes",
+  "listings": 31,
+  "occupancy": 0.42,
+  "adr": 84.5,
+  "rev_par": 31.9,
+  "revenue": 6387.7
+ },
+ "Hauts-de-France|Bergues": {
+  "region": "Hauts-de-France",
+  "locality": "Bergues",
+  "listings": 35,
+  "occupancy": 0.39,
+  "adr": 111,
+  "rev_par": 43.7,
+  "revenue": 12801.1
+ },
+ "Guadeloupe|Terre-de-Bas": {
+  "region": "Guadeloupe",
+  "locality": "Terre-de-Bas",
+  "listings": 34,
+  "occupancy": 0.29,
+  "adr": 137.4,
+  "rev_par": 40.4,
+  "revenue": 10633.5
+ },
+ "Hauts-de-France|Groffliers": {
+  "region": "Hauts-de-France",
+  "locality": "Groffliers",
+  "listings": 33,
+  "occupancy": 0.33,
+  "adr": 167.2,
+  "rev_par": 53,
+  "revenue": 14044
+ },
+ "Centre-Val de Loire|Thésée": {
+  "region": "Centre-Val de Loire",
+  "locality": "Thésée",
+  "listings": 35,
+  "occupancy": 0.35,
+  "adr": 216.9,
+  "rev_par": 82.8,
+  "revenue": 20738.2
+ },
+ "Hauts-de-France|Pierrefonds": {
+  "region": "Hauts-de-France",
+  "locality": "Pierrefonds",
+  "listings": 32,
+  "occupancy": 0.43,
+  "adr": 125.2,
+  "rev_par": 49.4,
+  "revenue": 13472.1
+ },
+ "Normandy|Condé-en-Normandie": {
+  "region": "Normandy",
+  "locality": "Condé-en-Normandie",
+  "listings": 26,
+  "occupancy": 0.31,
+  "adr": 193.5,
+  "rev_par": 53.5,
+  "revenue": 9466
+ },
+ "Bourgogne – Franche-Comté|Levernois": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Levernois",
+  "listings": 29,
+  "occupancy": 0.33,
+  "adr": 160.7,
+  "rev_par": 53.6,
+  "revenue": 11074
+ },
+ "Pays de la Loire|Aizenay": {
+  "region": "Pays de la Loire",
+  "locality": "Aizenay",
+  "listings": 33,
+  "occupancy": 0.39,
+  "adr": 118,
+  "rev_par": 47.1,
+  "revenue": 9645.5
+ },
+ "Pays de la Loire|Savenay": {
+  "region": "Pays de la Loire",
+  "locality": "Savenay",
+  "listings": 27,
+  "occupancy": 0.42,
+  "adr": 83,
+  "rev_par": 37.9,
+  "revenue": 6716.1
+ },
+ "Bourgogne – Franche-Comté|Noyers": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Noyers",
+  "listings": 32,
+  "occupancy": 0.37,
+  "adr": 240.9,
+  "rev_par": 75.7,
+  "revenue": 18698.1
+ },
+ "Bourgogne – Franche-Comté|Longvic": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Longvic",
+  "listings": 32,
+  "occupancy": 0.38,
+  "adr": 99.6,
+  "rev_par": 32.6,
+  "revenue": 8435.5
+ },
+ "Pays de la Loire|Durtal": {
+  "region": "Pays de la Loire",
+  "locality": "Durtal",
+  "listings": 32,
+  "occupancy": 0.3,
+  "adr": 154.9,
+  "rev_par": 44.9,
+  "revenue": 10909.6
+ },
+ "Pays de la Loire|Héric": {
+  "region": "Pays de la Loire",
+  "locality": "Héric",
+  "listings": 26,
+  "occupancy": 0.39,
+  "adr": 160.3,
+  "rev_par": 55.1,
+  "revenue": 11026.4
+ },
+ "Brittany|Corseul": {
+  "region": "Brittany",
+  "locality": "Corseul",
+  "listings": 33,
+  "occupancy": 0.4,
+  "adr": 128.6,
+  "rev_par": 46.4,
+  "revenue": 10121.6
+ },
+ "Pays de la Loire|Gétigné": {
+  "region": "Pays de la Loire",
+  "locality": "Gétigné",
+  "listings": 25,
+  "occupancy": 0.37,
+  "adr": 115.3,
+  "rev_par": 40.3,
+  "revenue": 8297.5
+ },
+ "Pays de la Loire|Ernée": {
+  "region": "Pays de la Loire",
+  "locality": "Ernée",
+  "listings": 23,
+  "occupancy": 0.28,
+  "adr": 88.9,
+  "rev_par": 24.2,
+  "revenue": 4204.7
+ },
+ "Centre-Val de Loire|Pontlevoy": {
+  "region": "Centre-Val de Loire",
+  "locality": "Pontlevoy",
+  "listings": 30,
+  "occupancy": 0.33,
+  "adr": 173.5,
+  "rev_par": 52.1,
+  "revenue": 12249.6
+ },
+ "Bourgogne – Franche-Comté|Saulieu": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Saulieu",
+  "listings": 27,
+  "occupancy": 0.4,
+  "adr": 120.9,
+  "rev_par": 48,
+  "revenue": 11581.1
+ },
+ "Bourgogne – Franche-Comté|Doucier": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Doucier",
+  "listings": 36,
+  "occupancy": 0.42,
+  "adr": 142.5,
+  "rev_par": 59.8,
+  "revenue": 16021
+ },
+ "Bourgogne – Franche-Comté|Montbard": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montbard",
+  "listings": 31,
+  "occupancy": 0.3,
+  "adr": 124.5,
+  "rev_par": 37.2,
+  "revenue": 7914.5
+ },
+ "Pays de la Loire|Givrand": {
+  "region": "Pays de la Loire",
+  "locality": "Givrand",
+  "listings": 30,
+  "occupancy": 0.36,
+  "adr": 155.4,
+  "rev_par": 55.9,
+  "revenue": 9485.2
+ },
+ "Hauts-de-France|Hem": {
+  "region": "Hauts-de-France",
+  "locality": "Hem",
+  "listings": 28,
+  "occupancy": 0.4,
+  "adr": 108.1,
+  "rev_par": 44.8,
+  "revenue": 9729.6
+ },
+ "Pays de la Loire|Rouillon": {
+  "region": "Pays de la Loire",
+  "locality": "Rouillon",
+  "listings": 25,
+  "occupancy": 0.29,
+  "adr": 172.8,
+  "rev_par": 50.7,
+  "revenue": 8604.8
+ },
+ "Pays de la Loire|Vairé": {
+  "region": "Pays de la Loire",
+  "locality": "Vairé",
+  "listings": 24,
+  "occupancy": 0.35,
+  "adr": 110.6,
+  "rev_par": 37.3,
+  "revenue": 5259.3
+ },
+ "Martinique|Le Morne-Rouge": {
+  "region": "Martinique",
+  "locality": "Le Morne-Rouge",
+  "listings": 31,
+  "occupancy": 0.45,
+  "adr": 80.9,
+  "rev_par": 37.2,
+  "revenue": 10480.8
+ },
+ "Hauts-de-France|Verton": {
+  "region": "Hauts-de-France",
+  "locality": "Verton",
+  "listings": 30,
+  "occupancy": 0.39,
+  "adr": 169.1,
+  "rev_par": 62.7,
+  "revenue": 17083
+ },
+ "Hauts-de-France|Escalles": {
+  "region": "Hauts-de-France",
+  "locality": "Escalles",
+  "listings": 32,
+  "occupancy": 0.45,
+  "adr": 220.1,
+  "rev_par": 96.8,
+  "revenue": 23392.6
+ },
+ "Centre-Val de Loire|Chécy": {
+  "region": "Centre-Val de Loire",
+  "locality": "Chécy",
+  "listings": 29,
+  "occupancy": 0.41,
+  "adr": 80.9,
+  "rev_par": 33.3,
+  "revenue": 8367.4
+ },
+ "Pays de la Loire|Blain": {
+  "region": "Pays de la Loire",
+  "locality": "Blain",
+  "listings": 24,
+  "occupancy": 0.34,
+  "adr": 86.7,
+  "rev_par": 31.7,
+  "revenue": 6267.8
+ },
+ "Centre-Val de Loire|Noizay": {
+  "region": "Centre-Val de Loire",
+  "locality": "Noizay",
+  "listings": 31,
+  "occupancy": 0.39,
+  "adr": 183.7,
+  "rev_par": 72.6,
+  "revenue": 16734.2
+ },
+ "Hauts-de-France|Noyon": {
+  "region": "Hauts-de-France",
+  "locality": "Noyon",
+  "listings": 27,
+  "occupancy": 0.4,
+  "adr": 61.5,
+  "rev_par": 25.1,
+  "revenue": 4916.5
+ },
+ "Bourgogne – Franche-Comté|Louhans": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Louhans",
+  "listings": 28,
+  "occupancy": 0.39,
+  "adr": 84.1,
+  "rev_par": 32.8,
+  "revenue": 7865.1
+ },
+ "Hauts-de-France|Tillé": {
+  "region": "Hauts-de-France",
+  "locality": "Tillé",
+  "listings": 32,
+  "occupancy": 0.46,
+  "adr": 101.7,
+  "rev_par": 43.6,
+  "revenue": 13792.6
+ },
+ "Centre-Val de Loire|Lorris": {
+  "region": "Centre-Val de Loire",
+  "locality": "Lorris",
+  "listings": 24,
+  "occupancy": 0.28,
+  "adr": 278.5,
+  "rev_par": 64.5,
+  "revenue": 15436.7
+ },
+ "Pays de la Loire|Soullans": {
+  "region": "Pays de la Loire",
+  "locality": "Soullans",
+  "listings": 25,
+  "occupancy": 0.39,
+  "adr": 111.1,
+  "rev_par": 46.1,
+  "revenue": 6963.7
+ },
+ "Pays de la Loire|Montsoreau": {
+  "region": "Pays de la Loire",
+  "locality": "Montsoreau",
+  "listings": 28,
+  "occupancy": 0.32,
+  "adr": 137.7,
+  "rev_par": 47.1,
+  "revenue": 9761.6
+ },
+ "Centre-Val de Loire|Luynes": {
+  "region": "Centre-Val de Loire",
+  "locality": "Luynes",
+  "listings": 23,
+  "occupancy": 0.36,
+  "adr": 157.6,
+  "rev_par": 64.8,
+  "revenue": 12936.3
+ },
+ "Centre-Val de Loire|Huismes": {
+  "region": "Centre-Val de Loire",
+  "locality": "Huismes",
+  "listings": 23,
+  "occupancy": 0.48,
+  "adr": 101.1,
+  "rev_par": 41.4,
+  "revenue": 8471.9
+ },
+ "Bourgogne – Franche-Comté|Orgelet": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Orgelet",
+  "listings": 21,
+  "occupancy": 0.33,
+  "adr": 103.5,
+  "rev_par": 34.5,
+  "revenue": 6925.8
+ },
+ "Bourgogne – Franche-Comté|Vézelay": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Vézelay",
+  "listings": 30,
+  "occupancy": 0.35,
+  "adr": 154.3,
+  "rev_par": 48.9,
+  "revenue": 14677.8
+ },
+ "Bourgogne – Franche-Comté|Bonlieu": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Bonlieu",
+  "listings": 27,
+  "occupancy": 0.48,
+  "adr": 124.5,
+  "rev_par": 59.1,
+  "revenue": 13083.5
+ },
+ "Hauts-de-France|Seclin": {
+  "region": "Hauts-de-France",
+  "locality": "Seclin",
+  "listings": 24,
+  "occupancy": 0.41,
+  "adr": 125.2,
+  "rev_par": 53.3,
+  "revenue": 12459.2
+ },
+ "Mayotte|Dzaoudzi": {
+  "region": "Mayotte",
+  "locality": "Dzaoudzi",
+  "listings": 20,
+  "occupancy": 0.26,
+  "adr": 79.2,
+  "rev_par": 18.7,
+  "revenue": 3428.7
+ },
+ "Pays de la Loire|Bellevigny": {
+  "region": "Pays de la Loire",
+  "locality": "Bellevigny",
+  "listings": 21,
+  "occupancy": 0.39,
+  "adr": 125.8,
+  "rev_par": 52.5,
+  "revenue": 10423.8
+ },
+ "Bourgogne – Franche-Comté|Vermenton": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Vermenton",
+  "listings": 24,
+  "occupancy": 0.24,
+  "adr": 180.2,
+  "rev_par": 41.7,
+  "revenue": 7402.5
+ },
+ "Bourgogne – Franche-Comté|Decize": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Decize",
+  "listings": 21,
+  "occupancy": 0.35,
+  "adr": 84.9,
+  "rev_par": 29.5,
+  "revenue": 5402.4
+ },
+ "Centre-Val de Loire|Courtenay": {
+  "region": "Centre-Val de Loire",
+  "locality": "Courtenay",
+  "listings": 26,
+  "occupancy": 0.29,
+  "adr": 182.6,
+  "rev_par": 46.8,
+  "revenue": 10333.8
+ },
+ "Hauts-de-France|Albert": {
+  "region": "Hauts-de-France",
+  "locality": "Albert",
+  "listings": 22,
+  "occupancy": 0.44,
+  "adr": 81.5,
+  "rev_par": 33.2,
+  "revenue": 7369.2
+ },
+ "Pays de la Loire|Guenrouet": {
+  "region": "Pays de la Loire",
+  "locality": "Guenrouet",
+  "listings": 24,
+  "occupancy": 0.29,
+  "adr": 124.8,
+  "rev_par": 38.8,
+  "revenue": 8289.8
+ },
+ "Hauts-de-France|Marck": {
+  "region": "Hauts-de-France",
+  "locality": "Marck",
+  "listings": 24,
+  "occupancy": 0.41,
+  "adr": 106.4,
+  "rev_par": 43.8,
+  "revenue": 8237.1
+ },
+ "Pays de la Loire|Landevieille": {
+  "region": "Pays de la Loire",
+  "locality": "Landevieille",
+  "listings": 22,
+  "occupancy": 0.34,
+  "adr": 189.4,
+  "rev_par": 72.9,
+  "revenue": 11483.7
+ },
+ "Pays de la Loire|Tuffalun": {
+  "region": "Pays de la Loire",
+  "locality": "Tuffalun",
+  "listings": 21,
+  "occupancy": 0.33,
+  "adr": 108.2,
+  "rev_par": 35.2,
+  "revenue": 7543.2
+ },
+ "Pays de la Loire|Landeronde": {
+  "region": "Pays de la Loire",
+  "locality": "Landeronde",
+  "listings": 23,
+  "occupancy": 0.37,
+  "adr": 100.3,
+  "rev_par": 39.7,
+  "revenue": 5896
+ },
+ "Bretagne|Plounéour-Brignogan-plages": {
+  "region": "Bretagne",
+  "locality": "Plounéour-Brignogan-plages",
+  "listings": 12,
+  "occupancy": 0.34,
+  "adr": 150.5,
+  "rev_par": 55.7,
+  "revenue": 6628.7
+ },
+ "Pays de la Loire|Monnières": {
+  "region": "Pays de la Loire",
+  "locality": "Monnières",
+  "listings": 17,
+  "occupancy": 0.35,
+  "adr": 95.1,
+  "rev_par": 33,
+  "revenue": 5039.1
+ },
+ "Centre-Val de Loire|Rosnay": {
+  "region": "Centre-Val de Loire",
+  "locality": "Rosnay",
+  "listings": 25,
+  "occupancy": 0.35,
+  "adr": 103.5,
+  "rev_par": 39.3,
+  "revenue": 9107.8
+ },
+ "Centre-Val de Loire|Senonches": {
+  "region": "Centre-Val de Loire",
+  "locality": "Senonches",
+  "listings": 24,
+  "occupancy": 0.32,
+  "adr": 244.5,
+  "rev_par": 65.4,
+  "revenue": 13935.5
+ },
+ "Bourgogne – Franche-Comté|Charolles": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Charolles",
+  "listings": 23,
+  "occupancy": 0.32,
+  "adr": 115.9,
+  "rev_par": 37.2,
+  "revenue": 8968.8
+ },
+ "Centre-Val de Loire|Valençay": {
+  "region": "Centre-Val de Loire",
+  "locality": "Valençay",
+  "listings": 25,
+  "occupancy": 0.31,
+  "adr": 125.4,
+  "rev_par": 38.9,
+  "revenue": 7802.5
+ },
+ "Bourgogne – Franche-Comté|Quetigny": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Quetigny",
+  "listings": 24,
+  "occupancy": 0.44,
+  "adr": 64.7,
+  "rev_par": 33.7,
+  "revenue": 8117.1
+ },
+ "Bourgogne – Franche-Comté|Montperreux": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montperreux",
+  "listings": 21,
+  "occupancy": 0.44,
+  "adr": 153,
+  "rev_par": 65.2,
+  "revenue": 15665.8
+ },
+ "Hauts-de-France|Pendé": {
+  "region": "Hauts-de-France",
+  "locality": "Pendé",
+  "listings": 26,
+  "occupancy": 0.39,
+  "adr": 107.1,
+  "rev_par": 39.7,
+  "revenue": 10216.7
+ },
+ "Bourgogne – Franche-Comté|Gray": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Gray",
+  "listings": 22,
+  "occupancy": 0.35,
+  "adr": 65.1,
+  "rev_par": 24.6,
+  "revenue": 5620.9
+ },
+ "Pays de la Loire|Tiercé": {
+  "region": "Pays de la Loire",
+  "locality": "Tiercé",
+  "listings": 24,
+  "occupancy": 0.36,
+  "adr": 131.4,
+  "rev_par": 41.2,
+  "revenue": 9089.1
+ },
+ "Pays de la Loire|Montournais": {
+  "region": "Pays de la Loire",
+  "locality": "Montournais",
+  "listings": 26,
+  "occupancy": 0.37,
+  "adr": 111.6,
+  "rev_par": 38.9,
+  "revenue": 7879.8
+ },
+ "Pays de la Loire|Turquant": {
+  "region": "Pays de la Loire",
+  "locality": "Turquant",
+  "listings": 21,
+  "occupancy": 0.36,
+  "adr": 146.5,
+  "rev_par": 54.9,
+  "revenue": 11476.9
+ },
+ "Pays de la Loire|Maulévrier": {
+  "region": "Pays de la Loire",
+  "locality": "Maulévrier",
+  "listings": 23,
+  "occupancy": 0.39,
+  "adr": 97.3,
+  "rev_par": 34.3,
+  "revenue": 7254.3
+ },
+ "Mayotte|Bouéni": {
+  "region": "Mayotte",
+  "locality": "Bouéni",
+  "listings": 18,
+  "occupancy": 0.29,
+  "adr": 83.7,
+  "rev_par": 23.5,
+  "revenue": 3586.5
+ },
+ "Bretagne|Île de Groix": {
+  "region": "Bretagne",
+  "locality": "Île de Groix",
+  "listings": 8,
+  "occupancy": 0.34,
+  "adr": 152.1,
+  "rev_par": 46.5,
+  "revenue": 5255.5
+ },
+ "Centre-Val de Loire|Chabris": {
+  "region": "Centre-Val de Loire",
+  "locality": "Chabris",
+  "listings": 24,
+  "occupancy": 0.42,
+  "adr": 116.7,
+  "rev_par": 43.2,
+  "revenue": 9388.2
+ },
+ "Pays de la Loire|Vigneux-de-Bretagne": {
+  "region": "Pays de la Loire",
+  "locality": "Vigneux-de-Bretagne",
+  "listings": 24,
+  "occupancy": 0.34,
+  "adr": 281,
+  "rev_par": 88.3,
+  "revenue": 16224.8
+ },
+ "Centre-Val de Loire|Suèvres": {
+  "region": "Centre-Val de Loire",
+  "locality": "Suèvres",
+  "listings": 23,
+  "occupancy": 0.39,
+  "adr": 163.2,
+  "rev_par": 59.1,
+  "revenue": 9763.4
+ },
+ "Centre-Val de Loire|Montlivault": {
+  "region": "Centre-Val de Loire",
+  "locality": "Montlivault",
+  "listings": 24,
+  "occupancy": 0.46,
+  "adr": 154.6,
+  "rev_par": 63.5,
+  "revenue": 12108.9
+ },
+ "Centre-Val de Loire|Billy": {
+  "region": "Centre-Val de Loire",
+  "locality": "Billy",
+  "listings": 23,
+  "occupancy": 0.39,
+  "adr": 170.3,
+  "rev_par": 71.3,
+  "revenue": 17044.2
+ },
+ "Bourgogne – Franche-Comté|Blanzy": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Blanzy",
+  "listings": 23,
+  "occupancy": 0.4,
+  "adr": 74.4,
+  "rev_par": 28.7,
+  "revenue": 6504.6
+ },
+ "Bourgogne – Franche-Comté|Lormes": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Lormes",
+  "listings": 26,
+  "occupancy": 0.31,
+  "adr": 132.8,
+  "rev_par": 43.7,
+  "revenue": 8883.6
+ },
+ "Hauts-de-France|Arrest": {
+  "region": "Hauts-de-France",
+  "locality": "Arrest",
+  "listings": 27,
+  "occupancy": 0.35,
+  "adr": 113.9,
+  "rev_par": 41.7,
+  "revenue": 10808.9
+ },
+ "Bourgogne – Franche-Comté|Maisod": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Maisod",
+  "listings": 26,
+  "occupancy": 0.42,
+  "adr": 123.3,
+  "rev_par": 56.9,
+  "revenue": 15366.9
+ },
+ "Hauts-de-France|Lesquin": {
+  "region": "Hauts-de-France",
+  "locality": "Lesquin",
+  "listings": 23,
+  "occupancy": 0.48,
+  "adr": 91.3,
+  "rev_par": 38.5,
+  "revenue": 10713.1
+ },
+ "Mayotte|Pamandzi": {
+  "region": "Mayotte",
+  "locality": "Pamandzi",
+  "listings": 17,
+  "occupancy": 0.29,
+  "adr": 118.9,
+  "rev_par": 30.4,
+  "revenue": 4043.7
+ },
+ "Hauts-de-France|Marly": {
+  "region": "Hauts-de-France",
+  "locality": "Marly",
+  "listings": 21,
+  "occupancy": 0.48,
+  "adr": 68.1,
+  "rev_par": 30,
+  "revenue": 6719.3
+ },
+ "Pays de la Loire|Sautron": {
+  "region": "Pays de la Loire",
+  "locality": "Sautron",
+  "listings": 20,
+  "occupancy": 0.38,
+  "adr": 199.2,
+  "rev_par": 71.7,
+  "revenue": 15215.2
+ },
+ "Pays de la Loire|Nalliers": {
+  "region": "Pays de la Loire",
+  "locality": "Nalliers",
+  "listings": 22,
+  "occupancy": 0.4,
+  "adr": 143.9,
+  "rev_par": 54.3,
+  "revenue": 9341
+ },
+ "Centre-Val de Loire|Bracieux": {
+  "region": "Centre-Val de Loire",
+  "locality": "Bracieux",
+  "listings": 23,
+  "occupancy": 0.35,
+  "adr": 142.4,
+  "rev_par": 48.7,
+  "revenue": 12134.8
+ },
+ "Centre-Val de Loire|Maintenon": {
+  "region": "Centre-Val de Loire",
+  "locality": "Maintenon",
+  "listings": 17,
+  "occupancy": 0.32,
+  "adr": 87.8,
+  "rev_par": 28.8,
+  "revenue": 4243.3
+ },
+ "Centre-Val de Loire|Angé": {
+  "region": "Centre-Val de Loire",
+  "locality": "Angé",
+  "listings": 13,
+  "occupancy": 0.35,
+  "adr": 136.2,
+  "rev_par": 50.9,
+  "revenue": 7283.3
+ },
+ "Centre-Val de Loire|Jargeau": {
+  "region": "Centre-Val de Loire",
+  "locality": "Jargeau",
+  "listings": 22,
+  "occupancy": 0.42,
+  "adr": 99.4,
+  "rev_par": 35,
+  "revenue": 8148.5
+ },
+ "Centre-Val de Loire|Monts": {
+  "region": "Centre-Val de Loire",
+  "locality": "Monts",
+  "listings": 18,
+  "occupancy": 0.35,
+  "adr": 229.4,
+  "rev_par": 77.9,
+  "revenue": 11299.7
+ },
+ "Centre-Val de Loire|Chitenay": {
+  "region": "Centre-Val de Loire",
+  "locality": "Chitenay",
+  "listings": 23,
+  "occupancy": 0.37,
+  "adr": 171.1,
+  "rev_par": 60,
+  "revenue": 11450
+ },
+ "Hauts-de-France|Beuvry": {
+  "region": "Hauts-de-France",
+  "locality": "Beuvry",
+  "listings": 22,
+  "occupancy": 0.39,
+  "adr": 75.8,
+  "rev_par": 30.1,
+  "revenue": 6498.7
+ },
+ "Hauts-de-France|Chauny": {
+  "region": "Hauts-de-France",
+  "locality": "Chauny",
+  "listings": 17,
+  "occupancy": 0.38,
+  "adr": 75.3,
+  "rev_par": 27.4,
+  "revenue": 5932.1
+ },
+ "Pays de la Loire|Grues": {
+  "region": "Pays de la Loire",
+  "locality": "Grues",
+  "listings": 19,
+  "occupancy": 0.38,
+  "adr": 117.3,
+  "rev_par": 44.1,
+  "revenue": 7823.2
+ },
+ "Pays de la Loire|Apremont": {
+  "region": "Pays de la Loire",
+  "locality": "Apremont",
+  "listings": 21,
+  "occupancy": 0.34,
+  "adr": 79.9,
+  "rev_par": 25.5,
+  "revenue": 4795.2
+ },
+ "Bourgogne – Franche-Comté|Sochaux": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Sochaux",
+  "listings": 18,
+  "occupancy": 0.43,
+  "adr": 58.1,
+  "rev_par": 25,
+  "revenue": 5342.2
+ },
+ "Bourgogne – Franche-Comté|Mellecey": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Mellecey",
+  "listings": 21,
+  "occupancy": 0.39,
+  "adr": 157.1,
+  "rev_par": 52,
+  "revenue": 10958.5
+ },
+ "Bourgogne – Franche-Comté|Fresse": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Fresse",
+  "listings": 23,
+  "occupancy": 0.39,
+  "adr": 146.6,
+  "rev_par": 56.2,
+  "revenue": 14772.4
+ },
+ "Bourgogne – Franche-Comté|Montmorot": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montmorot",
+  "listings": 18,
+  "occupancy": 0.41,
+  "adr": 75.6,
+  "rev_par": 28.7,
+  "revenue": 7323.7
+ },
+ "Hauts-de-France|Péronne": {
+  "region": "Hauts-de-France",
+  "locality": "Péronne",
+  "listings": 21,
+  "occupancy": 0.4,
+  "adr": 78.9,
+  "rev_par": 31.7,
+  "revenue": 6674.2
+ },
+ "Hauts-de-France|Outreau": {
+  "region": "Hauts-de-France",
+  "locality": "Outreau",
+  "listings": 17,
+  "occupancy": 0.38,
+  "adr": 151.9,
+  "rev_par": 73.4,
+  "revenue": 12610.5
+ },
+ "Pays de la Loire|Poiroux": {
+  "region": "Pays de la Loire",
+  "locality": "Poiroux",
+  "listings": 22,
+  "occupancy": 0.34,
+  "adr": 104.8,
+  "rev_par": 36.6,
+  "revenue": 7036.7
+ },
+ "Pays de la Loire|Beaucouzé": {
+  "region": "Pays de la Loire",
+  "locality": "Beaucouzé",
+  "listings": 20,
+  "occupancy": 0.39,
+  "adr": 88,
+  "rev_par": 34.5,
+  "revenue": 7670.5
+ },
+ "Hauts-de-France|Samer": {
+  "region": "Hauts-de-France",
+  "locality": "Samer",
+  "listings": 18,
+  "occupancy": 0.31,
+  "adr": 131.1,
+  "rev_par": 42.2,
+  "revenue": 10061.3
+ },
+ "Hauts-de-France|Caudry": {
+  "region": "Hauts-de-France",
+  "locality": "Caudry",
+  "listings": 22,
+  "occupancy": 0.46,
+  "adr": 58.2,
+  "rev_par": 25.8,
+  "revenue": 6408.1
+ },
+ "Pays de la Loire|Treillières": {
+  "region": "Pays de la Loire",
+  "locality": "Treillières",
+  "listings": 17,
+  "occupancy": 0.39,
+  "adr": 101.1,
+  "rev_par": 39.6,
+  "revenue": 5900.5
+ },
+ "Bretagne|Plouhinec": {
+  "region": "Bretagne",
+  "locality": "Plouhinec",
+  "listings": 17,
+  "occupancy": 0.38,
+  "adr": 134.6,
+  "rev_par": 48.5,
+  "revenue": 8606.5
+ },
+ "Pays de la Loire|Montoir-de-Bretagne": {
+  "region": "Pays de la Loire",
+  "locality": "Montoir-de-Bretagne",
+  "listings": 22,
+  "occupancy": 0.4,
+  "adr": 78.7,
+  "rev_par": 34.5,
+  "revenue": 6815.7
+ },
+ "Pays de la Loire|Craon": {
+  "region": "Pays de la Loire",
+  "locality": "Craon",
+  "listings": 21,
+  "occupancy": 0.34,
+  "adr": 149.3,
+  "rev_par": 46.9,
+  "revenue": 10845
+ },
+ "Centre-Val de Loire|Cheillé": {
+  "region": "Centre-Val de Loire",
+  "locality": "Cheillé",
+  "listings": 19,
+  "occupancy": 0.42,
+  "adr": 119.9,
+  "rev_par": 46.9,
+  "revenue": 10109
+ },
+ "Centre-Val de Loire|Lèves": {
+  "region": "Centre-Val de Loire",
+  "locality": "Lèves",
+  "listings": 16,
+  "occupancy": 0.43,
+  "adr": 116.6,
+  "rev_par": 41.8,
+  "revenue": 9723.5
+ },
+ "Centre-Val de Loire|Chisseaux": {
+  "region": "Centre-Val de Loire",
+  "locality": "Chisseaux",
+  "listings": 20,
+  "occupancy": 0.35,
+  "adr": 134.7,
+  "rev_par": 54.6,
+  "revenue": 10971.6
+ },
+ "Occitanie|Vauvert": {
+  "region": "Occitanie",
+  "locality": "Vauvert",
+  "listings": 14,
+  "occupancy": 0.33,
+  "adr": 144.2,
+  "rev_par": 49.4,
+  "revenue": 6674.8
+ },
+ "Bourgogne – Franche-Comté|Baubigny": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Baubigny",
+  "listings": 22,
+  "occupancy": 0.4,
+  "adr": 175.7,
+  "rev_par": 60.8,
+  "revenue": 13428
+ },
+ "Centre-Val de Loire|Véretz": {
+  "region": "Centre-Val de Loire",
+  "locality": "Véretz",
+  "listings": 18,
+  "occupancy": 0.41,
+  "adr": 167.3,
+  "rev_par": 64.7,
+  "revenue": 12749.2
+ },
+ "Bourgogne – Franche-Comté|Rochejean": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Rochejean",
+  "listings": 20,
+  "occupancy": 0.41,
+  "adr": 108.5,
+  "rev_par": 42.1,
+  "revenue": 8158.5
+ },
+ "Centre-Val de Loire|Bréhémont": {
+  "region": "Centre-Val de Loire",
+  "locality": "Bréhémont",
+  "listings": 20,
+  "occupancy": 0.42,
+  "adr": 146.7,
+  "rev_par": 61.7,
+  "revenue": 15107.3
+ },
+ "Bourgogne – Franche-Comté|Migennes": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Migennes",
+  "listings": 19,
+  "occupancy": 0.37,
+  "adr": 55.1,
+  "rev_par": 19.9,
+  "revenue": 4454.7
+ },
+ "Bourgogne – Franche-Comté|Chagny": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Chagny",
+  "listings": 22,
+  "occupancy": 0.36,
+  "adr": 95.5,
+  "rev_par": 36.9,
+  "revenue": 9385
+ },
+ "Bourgogne – Franche-Comté|Donzy": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Donzy",
+  "listings": 20,
+  "occupancy": 0.36,
+  "adr": 127.2,
+  "rev_par": 45.7,
+  "revenue": 9646.4
+ },
+ "Bourgogne – Franche-Comté|Brassy": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Brassy",
+  "listings": 20,
+  "occupancy": 0.41,
+  "adr": 119.1,
+  "rev_par": 50,
+  "revenue": 10911.5
+ },
+ "Hauts-de-France|Lanchères": {
+  "region": "Hauts-de-France",
+  "locality": "Lanchères",
+  "listings": 20,
+  "occupancy": 0.43,
+  "adr": 114.8,
+  "rev_par": 45.3,
+  "revenue": 10891.3
+ },
+ "Hauts-de-France|Fruges": {
+  "region": "Hauts-de-France",
+  "locality": "Fruges",
+  "listings": 22,
+  "occupancy": 0.27,
+  "adr": 115.3,
+  "rev_par": 29.4,
+  "revenue": 6476.4
+ },
+ "Hauts-de-France|Tardinghen": {
+  "region": "Hauts-de-France",
+  "locality": "Tardinghen",
+  "listings": 22,
+  "occupancy": 0.4,
+  "adr": 264.2,
+  "rev_par": 114.9,
+  "revenue": 29868.3
+ },
+ "Pays de la Loire|Louplande": {
+  "region": "Pays de la Loire",
+  "locality": "Louplande",
+  "listings": 12,
+  "occupancy": 0.2,
+  "adr": 165.1,
+  "rev_par": 36.5,
+  "revenue": 5559.7
+ },
+ "Centre-Val de Loire|Vatan": {
+  "region": "Centre-Val de Loire",
+  "locality": "Vatan",
+  "listings": 18,
+  "occupancy": 0.26,
+  "adr": 121.3,
+  "rev_par": 30.7,
+  "revenue": 5825.3
+ },
+ "Pays de la Loire|Denée": {
+  "region": "Pays de la Loire",
+  "locality": "Denée",
+  "listings": 18,
+  "occupancy": 0.4,
+  "adr": 97.8,
+  "rev_par": 40.4,
+  "revenue": 10432.4
+ },
+ "Pays de la Loire|Paimbœuf": {
+  "region": "Pays de la Loire",
+  "locality": "Paimbœuf",
+  "listings": 21,
+  "occupancy": 0.38,
+  "adr": 97,
+  "rev_par": 35.4,
+  "revenue": 7592.3
+ },
+ "Pays de la Loire|Damvix": {
+  "region": "Pays de la Loire",
+  "locality": "Damvix",
+  "listings": 20,
+  "occupancy": 0.4,
+  "adr": 113.8,
+  "rev_par": 43.8,
+  "revenue": 10598.6
+ },
+ "Centre-Val de Loire|Chançay": {
+  "region": "Centre-Val de Loire",
+  "locality": "Chançay",
+  "listings": 20,
+  "occupancy": 0.35,
+  "adr": 129.7,
+  "rev_par": 43.3,
+  "revenue": 11056.7
+ },
+ "Centre-Val de Loire|Vouzon": {
+  "region": "Centre-Val de Loire",
+  "locality": "Vouzon",
+  "listings": 19,
+  "occupancy": 0.24,
+  "adr": 235.3,
+  "rev_par": 55.3,
+  "revenue": 8959.7
+ },
+ "Centre-Val de Loire|Chaveignes": {
+  "region": "Centre-Val de Loire",
+  "locality": "Chaveignes",
+  "listings": 19,
+  "occupancy": 0.27,
+  "adr": 94.9,
+  "rev_par": 28.3,
+  "revenue": 4969.2
+ },
+ "Centre-Val de Loire|Benais": {
+  "region": "Centre-Val de Loire",
+  "locality": "Benais",
+  "listings": 20,
+  "occupancy": 0.38,
+  "adr": 85.8,
+  "rev_par": 33.5,
+  "revenue": 7682.6
+ },
+ "Centre-Val de Loire|Genillé": {
+  "region": "Centre-Val de Loire",
+  "locality": "Genillé",
+  "listings": 16,
+  "occupancy": 0.45,
+  "adr": 175.8,
+  "rev_par": 72,
+  "revenue": 13227.4
+ },
+ "Centre-Val de Loire|Ardentes": {
+  "region": "Centre-Val de Loire",
+  "locality": "Ardentes",
+  "listings": 22,
+  "occupancy": 0.27,
+  "adr": 121.7,
+  "rev_par": 32.1,
+  "revenue": 7274.5
+ },
+ "Centre-Val de Loire|Dhuizon": {
+  "region": "Centre-Val de Loire",
+  "locality": "Dhuizon",
+  "listings": 20,
+  "occupancy": 0.36,
+  "adr": 117.1,
+  "rev_par": 37.3,
+  "revenue": 10473
+ },
+ "Bourgogne – Franche-Comté|Lure": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Lure",
+  "listings": 18,
+  "occupancy": 0.45,
+  "adr": 72.7,
+  "rev_par": 28.1,
+  "revenue": 7149.7
+ },
+ "Bourgogne – Franche-Comté|Héricourt": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Héricourt",
+  "listings": 20,
+  "occupancy": 0.4,
+  "adr": 75.9,
+  "rev_par": 32,
+  "revenue": 7519.7
+ },
+ "Bourgogne – Franche-Comté|Toucy": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Toucy",
+  "listings": 21,
+  "occupancy": 0.26,
+  "adr": 93,
+  "rev_par": 24.6,
+  "revenue": 5410.2
+ },
+ "Bourgogne – Franche-Comté|Rully": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Rully",
+  "listings": 21,
+  "occupancy": 0.39,
+  "adr": 223.8,
+  "rev_par": 110.2,
+  "revenue": 28103.1
+ },
+ "Bourgogne – Franche-Comté|Azé": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Azé",
+  "listings": 22,
+  "occupancy": 0.41,
+  "adr": 120.8,
+  "rev_par": 50.1,
+  "revenue": 14122.3
+ },
+ "Hauts-de-France|Venette": {
+  "region": "Hauts-de-France",
+  "locality": "Venette",
+  "listings": 20,
+  "occupancy": 0.3,
+  "adr": 110.8,
+  "rev_par": 30.6,
+  "revenue": 8492.9
+ },
+ "Hauts-de-France|Camon": {
+  "region": "Hauts-de-France",
+  "locality": "Camon",
+  "listings": 17,
+  "occupancy": 0.35,
+  "adr": 152.2,
+  "rev_par": 36.1,
+  "revenue": 8528.3
+ },
+ "Hauts-de-France|Estrébœuf": {
+  "region": "Hauts-de-France",
+  "locality": "Estrébœuf",
+  "listings": 21,
+  "occupancy": 0.34,
+  "adr": 160.1,
+  "rev_par": 58.4,
+  "revenue": 13944.5
+ },
+ "Brittany|Île-de-Sein": {
+  "region": "Brittany",
+  "locality": "Île-de-Sein",
+  "listings": 20,
+  "occupancy": 0.44,
+  "adr": 120.6,
+  "rev_par": 54,
+  "revenue": 12586.7
+ },
+ "Centre-Val de Loire|Ambillou": {
+  "region": "Centre-Val de Loire",
+  "locality": "Ambillou",
+  "listings": 20,
+  "occupancy": 0.26,
+  "adr": 371.2,
+  "rev_par": 82.4,
+  "revenue": 21650.2
+ },
+ "Centre-Val de Loire|Arcisses": {
+  "region": "Centre-Val de Loire",
+  "locality": "Arcisses",
+  "listings": 19,
+  "occupancy": 0.4,
+  "adr": 117.7,
+  "rev_par": 42.7,
+  "revenue": 11042.2
+ },
+ "Centre-Val de Loire|Saché": {
+  "region": "Centre-Val de Loire",
+  "locality": "Saché",
+  "listings": 18,
+  "occupancy": 0.31,
+  "adr": 183.8,
+  "rev_par": 59.2,
+  "revenue": 11816.4
+ },
+ "Centre-Val de Loire|Ingré": {
+  "region": "Centre-Val de Loire",
+  "locality": "Ingré",
+  "listings": 18,
+  "occupancy": 0.42,
+  "adr": 76.1,
+  "rev_par": 32.7,
+  "revenue": 6244.8
+ },
+ "Centre-Val de Loire|Restigné": {
+  "region": "Centre-Val de Loire",
+  "locality": "Restigné",
+  "listings": 18,
+  "occupancy": 0.4,
+  "adr": 170.9,
+  "rev_par": 65.3,
+  "revenue": 12437.3
+ },
+ "Bourgogne – Franche-Comté|Auxonne": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Auxonne",
+  "listings": 19,
+  "occupancy": 0.44,
+  "adr": 75.8,
+  "rev_par": 30.7,
+  "revenue": 8189.5
+ },
+ "Bourgogne – Franche-Comté|Clamecy": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Clamecy",
+  "listings": 19,
+  "occupancy": 0.4,
+  "adr": 128.6,
+  "rev_par": 46.9,
+  "revenue": 11551.9
+ },
+ "Bourgogne – Franche-Comté|Sancé": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Sancé",
+  "listings": 17,
+  "occupancy": 0.38,
+  "adr": 128,
+  "rev_par": 45.7,
+  "revenue": 10229.3
+ },
+ "Bourgogne – Franche-Comté|Prissé": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Prissé",
+  "listings": 20,
+  "occupancy": 0.39,
+  "adr": 172.2,
+  "rev_par": 58.3,
+  "revenue": 14398.4
+ },
+ "Bretagne|Penmarch": {
+  "region": "Bretagne",
+  "locality": "Penmarch",
+  "listings": 21,
+  "occupancy": 0.37,
+  "adr": 159.9,
+  "rev_par": 61.8,
+  "revenue": 12851
+ },
+ "Centre-Val de Loire|Montrésor": {
+  "region": "Centre-Val de Loire",
+  "locality": "Montrésor",
+  "listings": 15,
+  "occupancy": 0.32,
+  "adr": 173.6,
+  "rev_par": 62.1,
+  "revenue": 10977.4
+ },
+ "Mayotte|Koungou": {
+  "region": "Mayotte",
+  "locality": "Koungou",
+  "listings": 9,
+  "occupancy": 0.32,
+  "adr": 162,
+  "rev_par": 47.4,
+  "revenue": 7199.7
+ },
+ "Centre-Val de Loire|Reugny": {
+  "region": "Centre-Val de Loire",
+  "locality": "Reugny",
+  "listings": 17,
+  "occupancy": 0.38,
+  "adr": 166.3,
+  "rev_par": 69.1,
+  "revenue": 12815.7
+ },
+ "Centre-Val de Loire|Gièvres": {
+  "region": "Centre-Val de Loire",
+  "locality": "Gièvres",
+  "listings": 17,
+  "occupancy": 0.42,
+  "adr": 206.7,
+  "rev_par": 80.2,
+  "revenue": 16894.9
+ },
+ "Centre-Val de Loire|Chailles": {
+  "region": "Centre-Val de Loire",
+  "locality": "Chailles",
+  "listings": 18,
+  "occupancy": 0.43,
+  "adr": 96.1,
+  "rev_par": 42.3,
+  "revenue": 10611.1
+ },
+ "Centre-Val de Loire|Montbazon": {
+  "region": "Centre-Val de Loire",
+  "locality": "Montbazon",
+  "listings": 14,
+  "occupancy": 0.43,
+  "adr": 144.4,
+  "rev_par": 57.3,
+  "revenue": 14305.6
+ },
+ "Bourgogne – Franche-Comté|Sampans": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Sampans",
+  "listings": 17,
+  "occupancy": 0.31,
+  "adr": 94,
+  "rev_par": 31.4,
+  "revenue": 5141.4
+ },
+ "Bourgogne – Franche-Comté|Nolay": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Nolay",
+  "listings": 17,
+  "occupancy": 0.33,
+  "adr": 108.6,
+  "rev_par": 31.5,
+  "revenue": 7490.4
+ },
+ "Bourgogne – Franche-Comté|Montchanin": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montchanin",
+  "listings": 17,
+  "occupancy": 0.38,
+  "adr": 74.8,
+  "rev_par": 28.8,
+  "revenue": 5969.5
+ },
+ "Bourgogne – Franche-Comté|Épinac": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Épinac",
+  "listings": 20,
+  "occupancy": 0.38,
+  "adr": 661.9,
+  "rev_par": 335.7,
+  "revenue": 74147.5
+ },
+ "Bourgogne – Franche-Comté|Fontaines": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Fontaines",
+  "listings": 18,
+  "occupancy": 0.32,
+  "adr": 138.2,
+  "rev_par": 49,
+  "revenue": 12773.4
+ },
+ "Bourgogne – Franche-Comté|Santenay": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Santenay",
+  "listings": 20,
+  "occupancy": 0.39,
+  "adr": 197,
+  "rev_par": 64.2,
+  "revenue": 16102.9
+ },
+ "Centre-Val de Loire|Boulleret": {
+  "region": "Centre-Val de Loire",
+  "locality": "Boulleret",
+  "listings": 16,
+  "occupancy": 0.36,
+  "adr": 110.8,
+  "rev_par": 38.6,
+  "revenue": 7350.2
+ },
+ "Brittany|Montauban-de-Bretagne": {
+  "region": "Brittany",
+  "locality": "Montauban-de-Bretagne",
+  "listings": 16,
+  "occupancy": 0.39,
+  "adr": 54.7,
+  "rev_par": 22.1,
+  "revenue": 4440.5
+ },
+ "Bourgogne – Franche-Comté|Valentigney": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Valentigney",
+  "listings": 15,
+  "occupancy": 0.42,
+  "adr": 77,
+  "rev_par": 32,
+  "revenue": 7174.1
+ },
+ "Bourgogne – Franche-Comté|Monéteau": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Monéteau",
+  "listings": 15,
+  "occupancy": 0.49,
+  "adr": 68,
+  "rev_par": 34,
+  "revenue": 9457.2
+ },
+ "Mayotte|Kani-Kéli": {
+  "region": "Mayotte",
+  "locality": "Kani-Kéli",
+  "listings": 13,
+  "occupancy": 0.26,
+  "adr": 110.4,
+  "rev_par": 26.1,
+  "revenue": 7330.2
+ },
+ "Bourgogne – Franche-Comté|Jougne": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Jougne",
+  "listings": 14,
+  "occupancy": 0.38,
+  "adr": 146.7,
+  "rev_par": 63,
+  "revenue": 11281.1
+ },
+ "Bourgogne – Franche-Comté|Chaudenay": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Chaudenay",
+  "listings": 12,
+  "occupancy": 0.36,
+  "adr": 140.3,
+  "rev_par": 45.9,
+  "revenue": 7505.4
+ },
+ "Martinique|Bellefontaine": {
+  "region": "Martinique",
+  "locality": "Bellefontaine",
+  "listings": 16,
+  "occupancy": 0.39,
+  "adr": 130.3,
+  "rev_par": 53.1,
+  "revenue": 14470.1
+ },
+ "Mayotte|Sada": {
+  "region": "Mayotte",
+  "locality": "Sada",
+  "listings": 9,
+  "occupancy": 0.32,
+  "adr": 86.7,
+  "rev_par": 26.5,
+  "revenue": 4446
+ },
+ "Hauts-de-France|Hazebrouck": {
+  "region": "Hauts-de-France",
+  "locality": "Hazebrouck",
+  "listings": 28,
+  "occupancy": 0.29,
+  "adr": 101.4,
+  "rev_par": 29,
+  "revenue": 6716
+ },
+ "Bourgogne – Franche-Comté|Marigny": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Marigny",
+  "listings": 31,
+  "occupancy": 0.4,
+  "adr": 137,
+  "rev_par": 56.8,
+  "revenue": 12441
+ },
+ "Pays de la Loire|Commequiers": {
+  "region": "Pays de la Loire",
+  "locality": "Commequiers",
+  "listings": 27,
+  "occupancy": 0.35,
+  "adr": 104.1,
+  "rev_par": 38.4,
+  "revenue": 7922.6
+ },
+ "Pays de la Loire|Plessé": {
+  "region": "Pays de la Loire",
+  "locality": "Plessé",
+  "listings": 21,
+  "occupancy": 0.32,
+  "adr": 87.8,
+  "rev_par": 26.8,
+  "revenue": 5437.8
+ },
+ "Centre-Val de Loire|Chémery": {
+  "region": "Centre-Val de Loire",
+  "locality": "Chémery",
+  "listings": 28,
+  "occupancy": 0.39,
+  "adr": 209,
+  "rev_par": 64.6,
+  "revenue": 13570.6
+ },
+ "Centre-Val de Loire|Valencisse": {
+  "region": "Centre-Val de Loire",
+  "locality": "Valencisse",
+  "listings": 29,
+  "occupancy": 0.37,
+  "adr": 195.1,
+  "rev_par": 73.5,
+  "revenue": 15220.6
+ },
+ "Hauts-de-France|Carvin": {
+  "region": "Hauts-de-France",
+  "locality": "Carvin",
+  "listings": 28,
+  "occupancy": 0.43,
+  "adr": 92.5,
+  "rev_par": 36.8,
+  "revenue": 10100.8
+ },
+ "Bourgogne – Franche-Comté|Lajoux": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Lajoux",
+  "listings": 32,
+  "occupancy": 0.35,
+  "adr": 118,
+  "rev_par": 43.8,
+  "revenue": 11221.1
+ },
+ "Hauts-de-France|Haubourdin": {
+  "region": "Hauts-de-France",
+  "locality": "Haubourdin",
+  "listings": 26,
+  "occupancy": 0.51,
+  "adr": 78.9,
+  "rev_par": 40.4,
+  "revenue": 8633.7
+ },
+ "Pays de la Loire|Frossay": {
+  "region": "Pays de la Loire",
+  "locality": "Frossay",
+  "listings": 25,
+  "occupancy": 0.35,
+  "adr": 133.3,
+  "rev_par": 47.4,
+  "revenue": 10895.9
+ },
+ "Guadeloupe|Baillif": {
+  "region": "Guadeloupe",
+  "locality": "Baillif",
+  "listings": 23,
+  "occupancy": 0.36,
+  "adr": 88.9,
+  "rev_par": 32.9,
+  "revenue": 5994.4
+ },
+ "Pays de la Loire|Évron": {
+  "region": "Pays de la Loire",
+  "locality": "Évron",
+  "listings": 26,
+  "occupancy": 0.38,
+  "adr": 62.3,
+  "rev_par": 22.7,
+  "revenue": 4433.9
+ },
+ "Bourgogne – Franche-Comté|Montfaucon": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Montfaucon",
+  "listings": 25,
+  "occupancy": 0.34,
+  "adr": 76.1,
+  "rev_par": 25.8,
+  "revenue": 5713.6
+ },
+ "Hauts-de-France|Audembert": {
+  "region": "Hauts-de-France",
+  "locality": "Audembert",
+  "listings": 27,
+  "occupancy": 0.36,
+  "adr": 148,
+  "rev_par": 50.9,
+  "revenue": 11680.9
+ },
+ "Centre-Val de Loire|Mainvilliers": {
+  "region": "Centre-Val de Loire",
+  "locality": "Mainvilliers",
+  "listings": 26,
+  "occupancy": 0.47,
+  "adr": 68.8,
+  "rev_par": 33.9,
+  "revenue": 7539.6
+ },
+ "Bourgogne – Franche-Comté|Bellefontaine": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Bellefontaine",
+  "listings": 26,
+  "occupancy": 0.38,
+  "adr": 88.1,
+  "rev_par": 32.3,
+  "revenue": 7749.7
+ },
+ "Brittany|Chartres-de-Bretagne": {
+  "region": "Brittany",
+  "locality": "Chartres-de-Bretagne",
+  "listings": 24,
+  "occupancy": 0.42,
+  "adr": 87.7,
+  "rev_par": 33.4,
+  "revenue": 7707.7
+ },
+ "Centre-Val de Loire|Francueil": {
+  "region": "Centre-Val de Loire",
+  "locality": "Francueil",
+  "listings": 27,
+  "occupancy": 0.37,
+  "adr": 126.8,
+  "rev_par": 49.8,
+  "revenue": 10350.6
+ },
+ "Pays de la Loire|Venansault": {
+  "region": "Pays de la Loire",
+  "locality": "Venansault",
+  "listings": 20,
+  "occupancy": 0.33,
+  "adr": 73.5,
+  "rev_par": 27,
+  "revenue": 5696.8
+ },
+ "Centre-Val de Loire|Couffy": {
+  "region": "Centre-Val de Loire",
+  "locality": "Couffy",
+  "listings": 24,
+  "occupancy": 0.34,
+  "adr": 129.6,
+  "rev_par": 39.8,
+  "revenue": 7043.7
+ },
+ "Centre-Val de Loire|Avoine": {
+  "region": "Centre-Val de Loire",
+  "locality": "Avoine",
+  "listings": 26,
+  "occupancy": 0.36,
+  "adr": 114.7,
+  "rev_par": 45.3,
+  "revenue": 10849.9
+ },
+ "Centre-Val de Loire|Bonneval": {
+  "region": "Centre-Val de Loire",
+  "locality": "Bonneval",
+  "listings": 28,
+  "occupancy": 0.3,
+  "adr": 106,
+  "rev_par": 31.8,
+  "revenue": 8432.4
+ },
+ "Centre-Val de Loire|Villandry": {
+  "region": "Centre-Val de Loire",
+  "locality": "Villandry",
+  "listings": 29,
+  "occupancy": 0.33,
+  "adr": 241.3,
+  "rev_par": 86.6,
+  "revenue": 19669
+ },
+ "Centre-Val de Loire|Écueillé": {
+  "region": "Centre-Val de Loire",
+  "locality": "Écueillé",
+  "listings": 26,
+  "occupancy": 0.38,
+  "adr": 95.6,
+  "rev_par": 38.7,
+  "revenue": 7672.7
+ },
+ "Hauts-de-France|Raismes": {
+  "region": "Hauts-de-France",
+  "locality": "Raismes",
+  "listings": 20,
+  "occupancy": 0.24,
+  "adr": 68.8,
+  "rev_par": 17.2,
+  "revenue": 2428.8
+ },
+ "Pays de la Loire|Oudon": {
+  "region": "Pays de la Loire",
+  "locality": "Oudon",
+  "listings": 23,
+  "occupancy": 0.36,
+  "adr": 116.6,
+  "rev_par": 45,
+  "revenue": 8939.4
+ },
+ "Centre-Val de Loire|Orbigny": {
+  "region": "Centre-Val de Loire",
+  "locality": "Orbigny",
+  "listings": 25,
+  "occupancy": 0.41,
+  "adr": 112.3,
+  "rev_par": 45.3,
+  "revenue": 11034.9
+ },
+ "Pays de la Loire|Trangé": {
+  "region": "Pays de la Loire",
+  "locality": "Trangé",
+  "listings": 23,
+  "occupancy": 0.27,
+  "adr": 139.3,
+  "rev_par": 26.6,
+  "revenue": 5130.1
+ },
+ "Bourgogne – Franche-Comté|Morteau": {
+  "region": "Bourgogne – Franche-Comté",
+  "locality": "Morteau",
+  "listings": 19,
+  "occupancy": 0.47,
+  "adr": 84,
+  "rev_par": 38.2,
+  "revenue": 7312.7
+ }
+}

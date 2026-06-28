@@ -1,0 +1,9132 @@
+[
+ {
+  "ville": "Paris",
+  "insee": "75056",
+  "region": "Île-de-France",
+  "population": 2103778,
+  "occupation": 71,
+  "prix_nuit": 229,
+  "revenu_annuel": 59414,
+  "annonces": 36168
+ },
+ {
+  "ville": "Cannes",
+  "insee": "06029",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 74350,
+  "occupation": 48,
+  "prix_nuit": 230,
+  "revenu_annuel": 40694,
+  "annonces": 10662
+ },
+ {
+  "ville": "Nice",
+  "insee": "06088",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 357737,
+  "occupation": 68,
+  "prix_nuit": 146,
+  "revenu_annuel": 36238,
+  "annonces": 8797
+ },
+ {
+  "ville": "Marseille",
+  "insee": "13055",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 886040,
+  "occupation": 65,
+  "prix_nuit": 110,
+  "revenu_annuel": 25976,
+  "annonces": 7232
+ },
+ {
+  "ville": "Agde",
+  "insee": "34003",
+  "region": "Occitanie",
+  "population": 29939,
+  "occupation": 52,
+  "prix_nuit": 111,
+  "revenu_annuel": 21140,
+  "annonces": 5107
+ },
+ {
+  "ville": "Antibes",
+  "insee": "06004",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 77637,
+  "occupation": 63,
+  "prix_nuit": 162,
+  "revenu_annuel": 37519,
+  "annonces": 4350
+ },
+ {
+  "ville": "Lyon",
+  "insee": "69123",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 519127,
+  "occupation": 62,
+  "prix_nuit": 103,
+  "revenu_annuel": 23281,
+  "annonces": 3977
+ },
+ {
+  "ville": "Toulouse",
+  "insee": "31555",
+  "region": "Occitanie",
+  "population": 514819,
+  "occupation": 64,
+  "prix_nuit": 73,
+  "revenu_annuel": 17181,
+  "annonces": 3354
+ },
+ {
+  "ville": "Saint-Raphaël",
+  "insee": "83118",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 37113,
+  "occupation": 60,
+  "prix_nuit": 144,
+  "revenu_annuel": 31522,
+  "annonces": 3119
+ },
+ {
+  "ville": "Allier",
+  "insee": "65005",
+  "region": "Occitanie",
+  "population": 446,
+  "occupation": 49,
+  "prix_nuit": 85,
+  "revenu_annuel": 15185,
+  "annonces": 3105
+ },
+ {
+  "ville": "Bordeaux",
+  "insee": "33063",
+  "region": "Nouvelle-Aquitaine",
+  "population": 267991,
+  "occupation": 63,
+  "prix_nuit": 123,
+  "revenu_annuel": 28364,
+  "annonces": 2875
+ },
+ {
+  "ville": "Annecy",
+  "insee": "74010",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 132117,
+  "occupation": 65,
+  "prix_nuit": 124,
+  "revenu_annuel": 29401,
+  "annonces": 2752
+ },
+ {
+  "ville": "Montpellier",
+  "insee": "34172",
+  "region": "Occitanie",
+  "population": 310240,
+  "occupation": 65,
+  "prix_nuit": 82,
+  "revenu_annuel": 19539,
+  "annonces": 2578
+ },
+ {
+  "ville": "Corrèze",
+  "insee": "19062",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1171,
+  "occupation": 50,
+  "prix_nuit": 89,
+  "revenu_annuel": 16158,
+  "annonces": 2520
+ },
+ {
+  "ville": "Hyères",
+  "insee": "83069",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 55858,
+  "occupation": 57,
+  "prix_nuit": 138,
+  "revenu_annuel": 28796,
+  "annonces": 2429
+ },
+ {
+  "ville": "Fréjus",
+  "insee": "83061",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 59719,
+  "occupation": 58,
+  "prix_nuit": 124,
+  "revenu_annuel": 26397,
+  "annonces": 2390
+ },
+ {
+  "ville": "La Rochelle",
+  "insee": "17300",
+  "region": "Nouvelle-Aquitaine",
+  "population": 79851,
+  "occupation": 59,
+  "prix_nuit": 99,
+  "revenu_annuel": 21493,
+  "annonces": 2249
+ },
+ {
+  "ville": "Aix-en-Provence",
+  "insee": "13001",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 149695,
+  "occupation": 63,
+  "prix_nuit": 126,
+  "revenu_annuel": 29190,
+  "annonces": 2234
+ },
+ {
+  "ville": "Porto-Vecchio",
+  "insee": "2A247",
+  "region": "Corse",
+  "population": 11198,
+  "occupation": 69,
+  "prix_nuit": 238,
+  "revenu_annuel": 59815,
+  "annonces": 2209
+ },
+ {
+  "ville": "Le Grau-du-Roi",
+  "insee": "30133",
+  "region": "Occitanie",
+  "population": 8588,
+  "occupation": 53,
+  "prix_nuit": 92,
+  "revenu_annuel": 17855,
+  "annonces": 2172
+ },
+ {
+  "ville": "Avignon",
+  "insee": "84007",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 92188,
+  "occupation": 57,
+  "prix_nuit": 98,
+  "revenu_annuel": 20324,
+  "annonces": 2129
+ },
+ {
+  "ville": "Les Belleville",
+  "insee": "73257",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 3498,
+  "occupation": 62,
+  "prix_nuit": 271,
+  "revenu_annuel": 60969,
+  "annonces": 2124
+ },
+ {
+  "ville": "Sète",
+  "insee": "34301",
+  "region": "Occitanie",
+  "population": 45337,
+  "occupation": 54,
+  "prix_nuit": 106,
+  "revenu_annuel": 20905,
+  "annonces": 2103
+ },
+ {
+  "ville": "Arcachon",
+  "insee": "33009",
+  "region": "Nouvelle-Aquitaine",
+  "population": 11092,
+  "occupation": 53,
+  "prix_nuit": 153,
+  "revenu_annuel": 29848,
+  "annonces": 2095
+ },
+ {
+  "ville": "Saint-Paul",
+  "insee": "97415",
+  "region": "La Réunion",
+  "population": 108088,
+  "occupation": 70,
+  "prix_nuit": 127,
+  "revenu_annuel": 32405,
+  "annonces": 2022
+ },
+ {
+  "ville": "Strasbourg",
+  "insee": "67482",
+  "region": "Grand Est",
+  "population": 293771,
+  "occupation": 64,
+  "prix_nuit": 122,
+  "revenu_annuel": 28511,
+  "annonces": 2002
+ },
+ {
+  "ville": "Le Mans",
+  "insee": "72181",
+  "region": "Pays de la Loire",
+  "population": 146249,
+  "occupation": 45,
+  "prix_nuit": 103,
+  "revenu_annuel": 16962,
+  "annonces": 2001
+ },
+ {
+  "ville": "Argelès-sur-Mer",
+  "insee": "66008",
+  "region": "Occitanie",
+  "population": 10616,
+  "occupation": 53,
+  "prix_nuit": 93,
+  "revenu_annuel": 17990,
+  "annonces": 1924
+ },
+ {
+  "ville": "Le Barcarès",
+  "insee": "66017",
+  "region": "Occitanie",
+  "population": 6109,
+  "occupation": 46,
+  "prix_nuit": 88,
+  "revenu_annuel": 14796,
+  "annonces": 1874
+ },
+ {
+  "ville": "Morzine",
+  "insee": "74191",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2658,
+  "occupation": 58,
+  "prix_nuit": 335,
+  "revenu_annuel": 70976,
+  "annonces": 1872
+ },
+ {
+  "ville": "Aube",
+  "insee": "61008",
+  "region": "Normandie",
+  "population": 1254,
+  "occupation": 49,
+  "prix_nuit": 95,
+  "revenu_annuel": 16857,
+  "annonces": 1853
+ },
+ {
+  "ville": "La Grande-Motte",
+  "insee": "34344",
+  "region": "Occitanie",
+  "population": 8440,
+  "occupation": 55,
+  "prix_nuit": 91,
+  "revenu_annuel": 18268,
+  "annonces": 1792
+ },
+ {
+  "ville": "Reims",
+  "insee": "51454",
+  "region": "Grand Est",
+  "population": 177674,
+  "occupation": 55,
+  "prix_nuit": 87,
+  "revenu_annuel": 17383,
+  "annonces": 1754
+ },
+ {
+  "ville": "Nantes",
+  "insee": "44109",
+  "region": "Pays de la Loire",
+  "population": 327734,
+  "occupation": 60,
+  "prix_nuit": 78,
+  "revenu_annuel": 17028,
+  "annonces": 1699
+ },
+ {
+  "ville": "Indre",
+  "insee": "44074",
+  "region": "Pays de la Loire",
+  "population": 4160,
+  "occupation": 48,
+  "prix_nuit": 92,
+  "revenu_annuel": 16171,
+  "annonces": 1694
+ },
+ {
+  "ville": "Dijon",
+  "insee": "21231",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 161830,
+  "occupation": 58,
+  "prix_nuit": 74,
+  "revenu_annuel": 15662,
+  "annonces": 1688
+ },
+ {
+  "ville": "Sainte-Maxime",
+  "insee": "83115",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 14118,
+  "occupation": 58,
+  "prix_nuit": 243,
+  "revenu_annuel": 51651,
+  "annonces": 1669
+ },
+ {
+  "ville": "Lège-Cap-Ferret",
+  "insee": "33236",
+  "region": "Nouvelle-Aquitaine",
+  "population": 7909,
+  "occupation": 52,
+  "prix_nuit": 326,
+  "revenu_annuel": 62336,
+  "annonces": 1667
+ },
+ {
+  "ville": "Toulon",
+  "insee": "83137",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 179116,
+  "occupation": 59,
+  "prix_nuit": 86,
+  "revenu_annuel": 18483,
+  "annonces": 1662
+ },
+ {
+  "ville": "Menton",
+  "insee": "06083",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 30604,
+  "occupation": 61,
+  "prix_nuit": 129,
+  "revenu_annuel": 28906,
+  "annonces": 1661
+ },
+ {
+  "ville": "Saint-Cyprien",
+  "insee": "66171",
+  "region": "Occitanie",
+  "population": 12068,
+  "occupation": 54,
+  "prix_nuit": 94,
+  "revenu_annuel": 18409,
+  "annonces": 1624
+ },
+ {
+  "ville": "Huez",
+  "insee": "38191",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1244,
+  "occupation": 51,
+  "prix_nuit": 278,
+  "revenu_annuel": 52252,
+  "annonces": 1614
+ },
+ {
+  "ville": "Les Deux Alpes",
+  "insee": "38253",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1910,
+  "occupation": 60,
+  "prix_nuit": 198,
+  "revenu_annuel": 43440,
+  "annonces": 1614
+ },
+ {
+  "ville": "Saint-Malo",
+  "insee": "35288",
+  "region": "Bretagne",
+  "population": 47439,
+  "occupation": 59,
+  "prix_nuit": 116,
+  "revenu_annuel": 25103,
+  "annonces": 1609
+ },
+ {
+  "ville": "Lacanau",
+  "insee": "33214",
+  "region": "Nouvelle-Aquitaine",
+  "population": 5739,
+  "occupation": 57,
+  "prix_nuit": 166,
+  "revenu_annuel": 34573,
+  "annonces": 1604
+ },
+ {
+  "ville": "Les Orres",
+  "insee": "05098",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 510,
+  "occupation": 47,
+  "prix_nuit": 140,
+  "revenu_annuel": 24211,
+  "annonces": 1578
+ },
+ {
+  "ville": "Rouen",
+  "insee": "76540",
+  "region": "Normandie",
+  "population": 117662,
+  "occupation": 59,
+  "prix_nuit": 65,
+  "revenu_annuel": 14090,
+  "annonces": 1548
+ },
+ {
+  "ville": "La Ciotat",
+  "insee": "13028",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 38477,
+  "occupation": 61,
+  "prix_nuit": 118,
+  "revenu_annuel": 26211,
+  "annonces": 1504
+ },
+ {
+  "ville": "Nîmes",
+  "insee": "30189",
+  "region": "Occitanie",
+  "population": 151839,
+  "occupation": 53,
+  "prix_nuit": 90,
+  "revenu_annuel": 17336,
+  "annonces": 1482
+ },
+ {
+  "ville": "Lille",
+  "insee": "59350",
+  "region": "Hauts-de-France",
+  "population": 238246,
+  "occupation": 60,
+  "prix_nuit": 96,
+  "revenu_annuel": 20970,
+  "annonces": 1464
+ },
+ {
+  "ville": "Tignes",
+  "insee": "73296",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1919,
+  "occupation": 66,
+  "prix_nuit": 254,
+  "revenu_annuel": 61483,
+  "annonces": 1464
+ },
+ {
+  "ville": "Biscarrosse",
+  "insee": "40046",
+  "region": "Nouvelle-Aquitaine",
+  "population": 15836,
+  "occupation": 54,
+  "prix_nuit": 150,
+  "revenu_annuel": 29694,
+  "annonces": 1453
+ },
+ {
+  "ville": "Narbonne",
+  "insee": "11262",
+  "region": "Occitanie",
+  "population": 57587,
+  "occupation": 54,
+  "prix_nuit": 91,
+  "revenu_annuel": 17798,
+  "annonces": 1383
+ },
+ {
+  "ville": "Arles",
+  "insee": "13004",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 51811,
+  "occupation": 53,
+  "prix_nuit": 117,
+  "revenu_annuel": 22735,
+  "annonces": 1379
+ },
+ {
+  "ville": "Mayenne",
+  "insee": "53147",
+  "region": "Pays de la Loire",
+  "population": 12883,
+  "occupation": 47,
+  "prix_nuit": 90,
+  "revenu_annuel": 15498,
+  "annonces": 1354
+ },
+ {
+  "ville": "Megève",
+  "insee": "74173",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2893,
+  "occupation": 43,
+  "prix_nuit": 373,
+  "revenu_annuel": 59112,
+  "annonces": 1354
+ },
+ {
+  "ville": "Les Allues",
+  "insee": "73015",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1736,
+  "occupation": 55,
+  "prix_nuit": 497,
+  "revenu_annuel": 99874,
+  "annonces": 1350
+ },
+ {
+  "ville": "Gruissan",
+  "insee": "11170",
+  "region": "Occitanie",
+  "population": 5032,
+  "occupation": 50,
+  "prix_nuit": 93,
+  "revenu_annuel": 17017,
+  "annonces": 1327
+ },
+ {
+  "ville": "Gérardmer",
+  "insee": "88196",
+  "region": "Grand Est",
+  "population": 7581,
+  "occupation": 48,
+  "prix_nuit": 168,
+  "revenu_annuel": 29449,
+  "annonces": 1309
+ },
+ {
+  "ville": "Capbreton",
+  "insee": "40065",
+  "region": "Nouvelle-Aquitaine",
+  "population": 9184,
+  "occupation": 60,
+  "prix_nuit": 147,
+  "revenu_annuel": 32258,
+  "annonces": 1296
+ },
+ {
+  "ville": "Le Lavandou",
+  "insee": "83070",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 6646,
+  "occupation": 57,
+  "prix_nuit": 153,
+  "revenu_annuel": 32106,
+  "annonces": 1289
+ },
+ {
+  "ville": "Ajaccio",
+  "insee": "2A004",
+  "region": "Corse",
+  "population": 76320,
+  "occupation": 63,
+  "prix_nuit": 106,
+  "revenu_annuel": 24421,
+  "annonces": 1276
+ },
+ {
+  "ville": "Colmar",
+  "insee": "68066",
+  "region": "Grand Est",
+  "population": 66970,
+  "occupation": 59,
+  "prix_nuit": 131,
+  "revenu_annuel": 28219,
+  "annonces": 1265
+ },
+ {
+  "ville": "Aix-les-Bains",
+  "insee": "73008",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 32406,
+  "occupation": 60,
+  "prix_nuit": 76,
+  "revenu_annuel": 16543,
+  "annonces": 1244
+ },
+ {
+  "ville": "Leucate",
+  "insee": "11202",
+  "region": "Occitanie",
+  "population": 4562,
+  "occupation": 49,
+  "prix_nuit": 88,
+  "revenu_annuel": 15662,
+  "annonces": 1228
+ },
+ {
+  "ville": "La Teste-de-Buch",
+  "insee": "33529",
+  "region": "Nouvelle-Aquitaine",
+  "population": 27566,
+  "occupation": 52,
+  "prix_nuit": 218,
+  "revenu_annuel": 41766,
+  "annonces": 1228
+ },
+ {
+  "ville": "Biarritz",
+  "insee": "64122",
+  "region": "Nouvelle-Aquitaine",
+  "population": 26206,
+  "occupation": 67,
+  "prix_nuit": 179,
+  "revenu_annuel": 43581,
+  "annonces": 1222
+ },
+ {
+  "ville": "Grenoble",
+  "insee": "38185",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 156140,
+  "occupation": 61,
+  "prix_nuit": 56,
+  "revenu_annuel": 12476,
+  "annonces": 1218
+ },
+ {
+  "ville": "Tours",
+  "insee": "37261",
+  "region": "Centre-Val de Loire",
+  "population": 139259,
+  "occupation": 59,
+  "prix_nuit": 75,
+  "revenu_annuel": 16178,
+  "annonces": 1185
+ },
+ {
+  "ville": "Cauterets",
+  "insee": "65138",
+  "region": "Occitanie",
+  "population": 829,
+  "occupation": 51,
+  "prix_nuit": 96,
+  "revenu_annuel": 17975,
+  "annonces": 1170
+ },
+ {
+  "ville": "Sanary-sur-Mer",
+  "insee": "83123",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 18538,
+  "occupation": 56,
+  "prix_nuit": 133,
+  "revenu_annuel": 27223,
+  "annonces": 1157
+ },
+ {
+  "ville": "Carcassonne",
+  "insee": "11069",
+  "region": "Occitanie",
+  "population": 46080,
+  "occupation": 51,
+  "prix_nuit": 95,
+  "revenu_annuel": 17621,
+  "annonces": 1135
+ },
+ {
+  "ville": "Bandol",
+  "insee": "83009",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 8267,
+  "occupation": 56,
+  "prix_nuit": 138,
+  "revenu_annuel": 28095,
+  "annonces": 1130
+ },
+ {
+  "ville": "Cabourg",
+  "insee": "14117",
+  "region": "Normandie",
+  "population": 3725,
+  "occupation": 48,
+  "prix_nuit": 105,
+  "revenu_annuel": 18389,
+  "annonces": 1121
+ },
+ {
+  "ville": "Rennes",
+  "insee": "35238",
+  "region": "Bretagne",
+  "population": 230890,
+  "occupation": 65,
+  "prix_nuit": 73,
+  "revenu_annuel": 17446,
+  "annonces": 1106
+ },
+ {
+  "ville": "Angers",
+  "insee": "49007",
+  "region": "Pays de la Loire",
+  "population": 159022,
+  "occupation": 62,
+  "prix_nuit": 75,
+  "revenu_annuel": 16960,
+  "annonces": 1103
+ },
+ {
+  "ville": "Mimizan",
+  "insee": "40184",
+  "region": "Nouvelle-Aquitaine",
+  "population": 7673,
+  "occupation": 56,
+  "prix_nuit": 131,
+  "revenu_annuel": 26973,
+  "annonces": 1098
+ },
+ {
+  "ville": "Grimaud",
+  "insee": "83068",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 4587,
+  "occupation": 58,
+  "prix_nuit": 322,
+  "revenu_annuel": 67916,
+  "annonces": 1094
+ },
+ {
+  "ville": "Villeurbanne",
+  "insee": "69266",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 163684,
+  "occupation": 62,
+  "prix_nuit": 75,
+  "revenu_annuel": 17031,
+  "annonces": 1087
+ },
+ {
+  "ville": "Clermont-Ferrand",
+  "insee": "63113",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 146351,
+  "occupation": 55,
+  "prix_nuit": 70,
+  "revenu_annuel": 13941,
+  "annonces": 1081
+ },
+ {
+  "ville": "Royan",
+  "insee": "17306",
+  "region": "Nouvelle-Aquitaine",
+  "population": 19425,
+  "occupation": 53,
+  "prix_nuit": 108,
+  "revenu_annuel": 20879,
+  "annonces": 1068
+ },
+ {
+  "ville": "Perpignan",
+  "insee": "66136",
+  "region": "Occitanie",
+  "population": 121616,
+  "occupation": 56,
+  "prix_nuit": 77,
+  "revenu_annuel": 15771,
+  "annonces": 1058
+ },
+ {
+  "ville": "Nancy",
+  "insee": "54395",
+  "region": "Grand Est",
+  "population": 103671,
+  "occupation": 57,
+  "prix_nuit": 67,
+  "revenu_annuel": 14040,
+  "annonces": 1054
+ },
+ {
+  "ville": "Dinard",
+  "insee": "35093",
+  "region": "Bretagne",
+  "population": 10772,
+  "occupation": 53,
+  "prix_nuit": 125,
+  "revenu_annuel": 24095,
+  "annonces": 1050
+ },
+ {
+  "ville": "Calvi",
+  "insee": "2B050",
+  "region": "Corse",
+  "population": 5788,
+  "occupation": 65,
+  "prix_nuit": 165,
+  "revenu_annuel": 38965,
+  "annonces": 1049
+ },
+ {
+  "ville": "Saint-Tropez",
+  "insee": "83119",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3582,
+  "occupation": 53,
+  "prix_nuit": 485,
+  "revenu_annuel": 94223,
+  "annonces": 1021
+ },
+ {
+  "ville": "Zonza",
+  "insee": "2A362",
+  "region": "Corse",
+  "population": 2989,
+  "occupation": 64,
+  "prix_nuit": 332,
+  "revenu_annuel": 77451,
+  "annonces": 1019
+ },
+ {
+  "ville": "Le Havre",
+  "insee": "76351",
+  "region": "Normandie",
+  "population": 166687,
+  "occupation": 56,
+  "prix_nuit": 67,
+  "revenu_annuel": 13816,
+  "annonces": 1009
+ },
+ {
+  "ville": "Caen",
+  "insee": "14118",
+  "region": "Normandie",
+  "population": 109400,
+  "occupation": 63,
+  "prix_nuit": 73,
+  "revenu_annuel": 16665,
+  "annonces": 993
+ },
+ {
+  "ville": "Saint-Denis",
+  "insee": "97411",
+  "region": "La Réunion",
+  "population": 155634,
+  "occupation": 58,
+  "prix_nuit": 106,
+  "revenu_annuel": 22630,
+  "annonces": 992
+ },
+ {
+  "ville": "Cagnes-sur-Mer",
+  "insee": "06027",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 53354,
+  "occupation": 66,
+  "prix_nuit": 125,
+  "revenu_annuel": 30049,
+  "annonces": 992
+ },
+ {
+  "ville": "Courchevel",
+  "insee": "73227",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2290,
+  "occupation": 57,
+  "prix_nuit": 560,
+  "revenu_annuel": 116718,
+  "annonces": 983
+ },
+ {
+  "ville": "Saint-Pierre",
+  "insee": "97416",
+  "region": "La Réunion",
+  "population": 85038,
+  "occupation": 67,
+  "prix_nuit": 100,
+  "revenu_annuel": 24423,
+  "annonces": 982
+ },
+ {
+  "ville": "Vannes",
+  "insee": "56260",
+  "region": "Bretagne",
+  "population": 55790,
+  "occupation": 61,
+  "prix_nuit": 87,
+  "revenu_annuel": 19243,
+  "annonces": 972
+ },
+ {
+  "ville": "Villard-de-Lans",
+  "insee": "38548",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 4328,
+  "occupation": 44,
+  "prix_nuit": 108,
+  "revenu_annuel": 17480,
+  "annonces": 967
+ },
+ {
+  "ville": "La Seyne-sur-Mer",
+  "insee": "83126",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 63732,
+  "occupation": 57,
+  "prix_nuit": 106,
+  "revenu_annuel": 22177,
+  "annonces": 967
+ },
+ {
+  "ville": "Mont-Dore",
+  "insee": "63236",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1163,
+  "occupation": 46,
+  "prix_nuit": 90,
+  "revenu_annuel": 15022,
+  "annonces": 963
+ },
+ {
+  "ville": "Vallauris",
+  "insee": "06155",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 29259,
+  "occupation": 59,
+  "prix_nuit": 196,
+  "revenu_annuel": 42027,
+  "annonces": 954
+ },
+ {
+  "ville": "Collioure",
+  "insee": "66053",
+  "region": "Occitanie",
+  "population": 2756,
+  "occupation": 54,
+  "prix_nuit": 115,
+  "revenu_annuel": 22489,
+  "annonces": 935
+ },
+ {
+  "ville": "La Clusaz",
+  "insee": "74080",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1623,
+  "occupation": 51,
+  "prix_nuit": 291,
+  "revenu_annuel": 54476,
+  "annonces": 934
+ },
+ {
+  "ville": "Trouville-sur-Mer",
+  "insee": "14715",
+  "region": "Normandie",
+  "population": 4619,
+  "occupation": 44,
+  "prix_nuit": 135,
+  "revenu_annuel": 21757,
+  "annonces": 925
+ },
+ {
+  "ville": "Deauville",
+  "insee": "14220",
+  "region": "Normandie",
+  "population": 3539,
+  "occupation": 43,
+  "prix_nuit": 161,
+  "revenu_annuel": 25504,
+  "annonces": 914
+ },
+ {
+  "ville": "Arâches-la-Frasse",
+  "insee": "74014",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1764,
+  "occupation": 50,
+  "prix_nuit": 172,
+  "revenu_annuel": 31691,
+  "annonces": 911
+ },
+ {
+  "ville": "Seignosse",
+  "insee": "40296",
+  "region": "Nouvelle-Aquitaine",
+  "population": 4056,
+  "occupation": 61,
+  "prix_nuit": 180,
+  "revenu_annuel": 39761,
+  "annonces": 902
+ },
+ {
+  "ville": "Dévoluy",
+  "insee": "05139",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 932,
+  "occupation": 47,
+  "prix_nuit": 125,
+  "revenu_annuel": 21332,
+  "annonces": 898
+ },
+ {
+  "ville": "Les Mathes",
+  "insee": "17225",
+  "region": "Nouvelle-Aquitaine",
+  "population": 2180,
+  "occupation": 52,
+  "prix_nuit": 107,
+  "revenu_annuel": 20327,
+  "annonces": 897
+ },
+ {
+  "ville": "Brest",
+  "insee": "29019",
+  "region": "Bretagne",
+  "population": 142346,
+  "occupation": 64,
+  "prix_nuit": 56,
+  "revenu_annuel": 13103,
+  "annonces": 891
+ },
+ {
+  "ville": "Carnac",
+  "insee": "56034",
+  "region": "Bretagne",
+  "population": 4194,
+  "occupation": 57,
+  "prix_nuit": 124,
+  "revenu_annuel": 25920,
+  "annonces": 890
+ },
+ {
+  "ville": "Vichy",
+  "insee": "03310",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 25115,
+  "occupation": 53,
+  "prix_nuit": 68,
+  "revenu_annuel": 13118,
+  "annonces": 888
+ },
+ {
+  "ville": "Valras-Plage",
+  "insee": "34324",
+  "region": "Occitanie",
+  "population": 4432,
+  "occupation": 52,
+  "prix_nuit": 109,
+  "revenu_annuel": 20670,
+  "annonces": 882
+ },
+ {
+  "ville": "Perros-Guirec",
+  "insee": "22168",
+  "region": "Bretagne",
+  "population": 7336,
+  "occupation": 51,
+  "prix_nuit": 111,
+  "revenu_annuel": 20731,
+  "annonces": 864
+ },
+ {
+  "ville": "Bagnères-de-Luchon",
+  "insee": "31042",
+  "region": "Occitanie",
+  "population": 2076,
+  "occupation": 47,
+  "prix_nuit": 84,
+  "revenu_annuel": 14470,
+  "annonces": 862
+ },
+ {
+  "ville": "Cassis",
+  "insee": "13022",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 6661,
+  "occupation": 60,
+  "prix_nuit": 182,
+  "revenu_annuel": 39546,
+  "annonces": 859
+ },
+ {
+  "ville": "Les Gets",
+  "insee": "74134",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1227,
+  "occupation": 47,
+  "prix_nuit": 320,
+  "revenu_annuel": 55187,
+  "annonces": 859
+ },
+ {
+  "ville": "Sarlat-la-Canéda",
+  "insee": "24520",
+  "region": "Nouvelle-Aquitaine",
+  "population": 8763,
+  "occupation": 53,
+  "prix_nuit": 123,
+  "revenu_annuel": 23629,
+  "annonces": 854
+ },
+ {
+  "ville": "Beausoleil",
+  "insee": "06012",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 11936,
+  "occupation": 60,
+  "prix_nuit": 179,
+  "revenu_annuel": 39403,
+  "annonces": 847
+ },
+ {
+  "ville": "Le Grand-Bornand",
+  "insee": "74136",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2050,
+  "occupation": 49,
+  "prix_nuit": 204,
+  "revenu_annuel": 36821,
+  "annonces": 846
+ },
+ {
+  "ville": "Samoëns",
+  "insee": "74258",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2203,
+  "occupation": 52,
+  "prix_nuit": 191,
+  "revenu_annuel": 36081,
+  "annonces": 839
+ },
+ {
+  "ville": "Saint-Étienne",
+  "insee": "42218",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 173136,
+  "occupation": 53,
+  "prix_nuit": 54,
+  "revenu_annuel": 10440,
+  "annonces": 838
+ },
+ {
+  "ville": "Orléans",
+  "insee": "45234",
+  "region": "Centre-Val de Loire",
+  "population": 116357,
+  "occupation": 58,
+  "prix_nuit": 66,
+  "revenu_annuel": 14060,
+  "annonces": 836
+ },
+ {
+  "ville": "Anglet",
+  "insee": "64024",
+  "region": "Nouvelle-Aquitaine",
+  "population": 43271,
+  "occupation": 68,
+  "prix_nuit": 161,
+  "revenu_annuel": 39883,
+  "annonces": 834
+ },
+ {
+  "ville": "Lecci",
+  "insee": "2A139",
+  "region": "Corse",
+  "population": 2134,
+  "occupation": 66,
+  "prix_nuit": 246,
+  "revenu_annuel": 59310,
+  "annonces": 833
+ },
+ {
+  "ville": "Mulhouse",
+  "insee": "68224",
+  "region": "Grand Est",
+  "population": 104978,
+  "occupation": 56,
+  "prix_nuit": 69,
+  "revenu_annuel": 14174,
+  "annonces": 832
+ },
+ {
+  "ville": "Pornic",
+  "insee": "44131",
+  "region": "Pays de la Loire",
+  "population": 18745,
+  "occupation": 52,
+  "prix_nuit": 111,
+  "revenu_annuel": 21173,
+  "annonces": 828
+ },
+ {
+  "ville": "Berck",
+  "insee": "62108",
+  "region": "Hauts-de-France",
+  "population": 12951,
+  "occupation": 50,
+  "prix_nuit": 97,
+  "revenu_annuel": 17717,
+  "annonces": 818
+ },
+ {
+  "ville": "Amiens",
+  "insee": "80021",
+  "region": "Hauts-de-France",
+  "population": 136449,
+  "occupation": 54,
+  "prix_nuit": 69,
+  "revenu_annuel": 13559,
+  "annonces": 811
+ },
+ {
+  "ville": "Saint-Cyr-sur-Mer",
+  "insee": "83112",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 11658,
+  "occupation": 60,
+  "prix_nuit": 153,
+  "revenu_annuel": 33267,
+  "annonces": 807
+ },
+ {
+  "ville": "Vars",
+  "insee": "05177",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 588,
+  "occupation": 47,
+  "prix_nuit": 179,
+  "revenu_annuel": 31020,
+  "annonces": 802
+ },
+ {
+  "ville": "Montreuil",
+  "insee": "93048",
+  "region": "Île-de-France",
+  "population": 111934,
+  "occupation": 65,
+  "prix_nuit": 93,
+  "revenu_annuel": 21930,
+  "annonces": 801
+ },
+ {
+  "ville": "Mauguio",
+  "insee": "34154",
+  "region": "Occitanie",
+  "population": 16522,
+  "occupation": 56,
+  "prix_nuit": 107,
+  "revenu_annuel": 22060,
+  "annonces": 800
+ },
+ {
+  "ville": "Quiberon",
+  "insee": "56186",
+  "region": "Bretagne",
+  "population": 4876,
+  "occupation": 56,
+  "prix_nuit": 112,
+  "revenu_annuel": 22986,
+  "annonces": 792
+ },
+ {
+  "ville": "Marseillan",
+  "insee": "34150",
+  "region": "Occitanie",
+  "population": 8414,
+  "occupation": 54,
+  "prix_nuit": 112,
+  "revenu_annuel": 21974,
+  "annonces": 791
+ },
+ {
+  "ville": "Gujan-Mestras",
+  "insee": "33199",
+  "region": "Nouvelle-Aquitaine",
+  "population": 22153,
+  "occupation": 54,
+  "prix_nuit": 154,
+  "revenu_annuel": 30442,
+  "annonces": 778
+ },
+ {
+  "ville": "Palavas-les-Flots",
+  "insee": "34192",
+  "region": "Occitanie",
+  "population": 6133,
+  "occupation": 58,
+  "prix_nuit": 102,
+  "revenu_annuel": 21698,
+  "annonces": 777
+ },
+ {
+  "ville": "Dunkerque",
+  "insee": "59183",
+  "region": "Hauts-de-France",
+  "population": 86263,
+  "occupation": 57,
+  "prix_nuit": 94,
+  "revenu_annuel": 19563,
+  "annonces": 773
+ },
+ {
+  "ville": "Boulogne-sur-Mer",
+  "insee": "62160",
+  "region": "Hauts-de-France",
+  "population": 40539,
+  "occupation": 51,
+  "prix_nuit": 80,
+  "revenu_annuel": 14814,
+  "annonces": 773
+ },
+ {
+  "ville": "Soorts-Hossegor",
+  "insee": "40304",
+  "region": "Nouvelle-Aquitaine",
+  "population": 3817,
+  "occupation": 56,
+  "prix_nuit": 239,
+  "revenu_annuel": 49239,
+  "annonces": 772
+ },
+ {
+  "ville": "Les Angles",
+  "insee": "30011",
+  "region": "Occitanie",
+  "population": 8908,
+  "occupation": 50,
+  "prix_nuit": 124,
+  "revenu_annuel": 22742,
+  "annonces": 767
+ },
+ {
+  "ville": "Pornichet",
+  "insee": "44132",
+  "region": "Pays de la Loire",
+  "population": 12800,
+  "occupation": 51,
+  "prix_nuit": 124,
+  "revenu_annuel": 22998,
+  "annonces": 764
+ },
+ {
+  "ville": "Loiré",
+  "insee": "49178",
+  "region": "Pays de la Loire",
+  "population": 900,
+  "occupation": 45,
+  "prix_nuit": 90,
+  "revenu_annuel": 14824,
+  "annonces": 763
+ },
+ {
+  "ville": "Moliets-et-Maa",
+  "insee": "40187",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1299,
+  "occupation": 59,
+  "prix_nuit": 172,
+  "revenu_annuel": 37040,
+  "annonces": 760
+ },
+ {
+  "ville": "Allos",
+  "insee": "04006",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 812,
+  "occupation": 42,
+  "prix_nuit": 110,
+  "revenu_annuel": 16828,
+  "annonces": 744
+ },
+ {
+  "ville": "La Tranche-sur-Mer",
+  "insee": "85294",
+  "region": "Pays de la Loire",
+  "population": 3136,
+  "occupation": 50,
+  "prix_nuit": 132,
+  "revenu_annuel": 23937,
+  "annonces": 734
+ },
+ {
+  "ville": "La Croix-Valmer",
+  "insee": "83048",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3855,
+  "occupation": 57,
+  "prix_nuit": 306,
+  "revenu_annuel": 63791,
+  "annonces": 732
+ },
+ {
+  "ville": "Sarzeau",
+  "insee": "56240",
+  "region": "Bretagne",
+  "population": 9212,
+  "occupation": 49,
+  "prix_nuit": 136,
+  "revenu_annuel": 24166,
+  "annonces": 730
+ },
+ {
+  "ville": "Béziers",
+  "insee": "34032",
+  "region": "Occitanie",
+  "population": 81545,
+  "occupation": 49,
+  "prix_nuit": 84,
+  "revenu_annuel": 15131,
+  "annonces": 728
+ },
+ {
+  "ville": "Briançon",
+  "insee": "05023",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 11411,
+  "occupation": 53,
+  "prix_nuit": 116,
+  "revenu_annuel": 22597,
+  "annonces": 721
+ },
+ {
+  "ville": "Fleury",
+  "insee": "11145",
+  "region": "Occitanie",
+  "population": 4246,
+  "occupation": 50,
+  "prix_nuit": 92,
+  "revenu_annuel": 16910,
+  "annonces": 719
+ },
+ {
+  "ville": "Grosseto-Prugna",
+  "insee": "2A130",
+  "region": "Corse",
+  "population": 3900,
+  "occupation": 62,
+  "prix_nuit": 165,
+  "revenu_annuel": 37232,
+  "annonces": 711
+ },
+ {
+  "ville": "Saint-Leu",
+  "insee": "97413",
+  "region": "La Réunion",
+  "population": 36163,
+  "occupation": 70,
+  "prix_nuit": 102,
+  "revenu_annuel": 26120,
+  "annonces": 707
+ },
+ {
+  "ville": "La Bresse",
+  "insee": "88075",
+  "region": "Grand Est",
+  "population": 3853,
+  "occupation": 48,
+  "prix_nuit": 157,
+  "revenu_annuel": 27337,
+  "annonces": 706
+ },
+ {
+  "ville": "Honfleur",
+  "insee": "14333",
+  "region": "Normandie",
+  "population": 6640,
+  "occupation": 47,
+  "prix_nuit": 130,
+  "revenu_annuel": 22121,
+  "annonces": 695
+ },
+ {
+  "ville": "Troyes",
+  "insee": "10387",
+  "region": "Grand Est",
+  "population": 62088,
+  "occupation": 51,
+  "prix_nuit": 73,
+  "revenu_annuel": 13546,
+  "annonces": 690
+ },
+ {
+  "ville": "Balaruc-les-Bains",
+  "insee": "34023",
+  "region": "Occitanie",
+  "population": 7139,
+  "occupation": 54,
+  "prix_nuit": 60,
+  "revenu_annuel": 11737,
+  "annonces": 688
+ },
+ {
+  "ville": "Concarneau",
+  "insee": "29039",
+  "region": "Bretagne",
+  "population": 20845,
+  "occupation": 55,
+  "prix_nuit": 104,
+  "revenu_annuel": 20990,
+  "annonces": 663
+ },
+ {
+  "ville": "Limoges",
+  "insee": "87085",
+  "region": "Nouvelle-Aquitaine",
+  "population": 129937,
+  "occupation": 58,
+  "prix_nuit": 64,
+  "revenu_annuel": 13583,
+  "annonces": 659
+ },
+ {
+  "ville": "Villeneuve-Loubet",
+  "insee": "06161",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 17548,
+  "occupation": 62,
+  "prix_nuit": 132,
+  "revenu_annuel": 29973,
+  "annonces": 658
+ },
+ {
+  "ville": "Villers-sur-Mer",
+  "insee": "14754",
+  "region": "Normandie",
+  "population": 2440,
+  "occupation": 44,
+  "prix_nuit": 110,
+  "revenu_annuel": 17752,
+  "annonces": 656
+ },
+ {
+  "ville": "Pau",
+  "insee": "64445",
+  "region": "Nouvelle-Aquitaine",
+  "population": 80441,
+  "occupation": 61,
+  "prix_nuit": 58,
+  "revenu_annuel": 12863,
+  "annonces": 656
+ },
+ {
+  "ville": "Metz",
+  "insee": "57463",
+  "region": "Grand Est",
+  "population": 122572,
+  "occupation": 61,
+  "prix_nuit": 78,
+  "revenu_annuel": 17360,
+  "annonces": 655
+ },
+ {
+  "ville": "Bonifacio",
+  "insee": "2A041",
+  "region": "Corse",
+  "population": 3344,
+  "occupation": 63,
+  "prix_nuit": 210,
+  "revenu_annuel": 48089,
+  "annonces": 650
+ },
+ {
+  "ville": "Andernos-les-Bains",
+  "insee": "33005",
+  "region": "Nouvelle-Aquitaine",
+  "population": 12710,
+  "occupation": 55,
+  "prix_nuit": 155,
+  "revenu_annuel": 31371,
+  "annonces": 648
+ },
+ {
+  "ville": "Clichy",
+  "insee": "92024",
+  "region": "Île-de-France",
+  "population": 64410,
+  "occupation": 71,
+  "prix_nuit": 106,
+  "revenu_annuel": 27296,
+  "annonces": 648
+ },
+ {
+  "ville": "Arzon",
+  "insee": "56005",
+  "region": "Bretagne",
+  "population": 2271,
+  "occupation": 45,
+  "prix_nuit": 123,
+  "revenu_annuel": 20222,
+  "annonces": 641
+ },
+ {
+  "ville": "Sérignan",
+  "insee": "34299",
+  "region": "Occitanie",
+  "population": 8588,
+  "occupation": 53,
+  "prix_nuit": 124,
+  "revenu_annuel": 24063,
+  "annonces": 628
+ },
+ {
+  "ville": "Dieppe",
+  "insee": "76217",
+  "region": "Normandie",
+  "population": 28496,
+  "occupation": 50,
+  "prix_nuit": 84,
+  "revenu_annuel": 15250,
+  "annonces": 628
+ },
+ {
+  "ville": "Orcières",
+  "insee": "05096",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 651,
+  "occupation": 53,
+  "prix_nuit": 128,
+  "revenu_annuel": 24700,
+  "annonces": 622
+ },
+ {
+  "ville": "Soulac-sur-Mer",
+  "insee": "33514",
+  "region": "Nouvelle-Aquitaine",
+  "population": 3100,
+  "occupation": 52,
+  "prix_nuit": 128,
+  "revenu_annuel": 24491,
+  "annonces": 613
+ },
+ {
+  "ville": "Les Houches",
+  "insee": "74143",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 3515,
+  "occupation": 56,
+  "prix_nuit": 240,
+  "revenu_annuel": 48856,
+  "annonces": 613
+ },
+ {
+  "ville": "Besançon",
+  "insee": "25056",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 118489,
+  "occupation": 61,
+  "prix_nuit": 64,
+  "revenu_annuel": 14192,
+  "annonces": 612
+ },
+ {
+  "ville": "Valloire",
+  "insee": "73306",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1064,
+  "occupation": 53,
+  "prix_nuit": 203,
+  "revenu_annuel": 39624,
+  "annonces": 612
+ },
+ {
+  "ville": "Combloux",
+  "insee": "74083",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2093,
+  "occupation": 48,
+  "prix_nuit": 262,
+  "revenu_annuel": 46220,
+  "annonces": 609
+ },
+ {
+  "ville": "Poitiers",
+  "insee": "86194",
+  "region": "Nouvelle-Aquitaine",
+  "population": 89916,
+  "occupation": 57,
+  "prix_nuit": 66,
+  "revenu_annuel": 13821,
+  "annonces": 604
+ },
+ {
+  "ville": "Crozon",
+  "insee": "29042",
+  "region": "Bretagne",
+  "population": 7499,
+  "occupation": 59,
+  "prix_nuit": 117,
+  "revenu_annuel": 25029,
+  "annonces": 602
+ },
+ {
+  "ville": "Blois",
+  "insee": "41018",
+  "region": "Centre-Val de Loire",
+  "population": 47219,
+  "occupation": 52,
+  "prix_nuit": 84,
+  "revenu_annuel": 15910,
+  "annonces": 601
+ },
+ {
+  "ville": "Saint-Nazaire",
+  "insee": "44184",
+  "region": "Pays de la Loire",
+  "population": 74568,
+  "occupation": 59,
+  "prix_nuit": 75,
+  "revenu_annuel": 16127,
+  "annonces": 597
+ },
+ {
+  "ville": "La Salle-les-Alpes",
+  "insee": "05161",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 892,
+  "occupation": 53,
+  "prix_nuit": 190,
+  "revenu_annuel": 36560,
+  "annonces": 587
+ },
+ {
+  "ville": "Val-Cenis",
+  "insee": "73290",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2112,
+  "occupation": 54,
+  "prix_nuit": 133,
+  "revenu_annuel": 26221,
+  "annonces": 581
+ },
+ {
+  "ville": "Grasse",
+  "insee": "06069",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 50970,
+  "occupation": 59,
+  "prix_nuit": 177,
+  "revenu_annuel": 37897,
+  "annonces": 581
+ },
+ {
+  "ville": "Le Cannet",
+  "insee": "06030",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 41938,
+  "occupation": 54,
+  "prix_nuit": 186,
+  "revenu_annuel": 36454,
+  "annonces": 572
+ },
+ {
+  "ville": "Fouesnant",
+  "insee": "29058",
+  "region": "Bretagne",
+  "population": 10436,
+  "occupation": 55,
+  "prix_nuit": 130,
+  "revenu_annuel": 25872,
+  "annonces": 568
+ },
+ {
+  "ville": "Bourges",
+  "insee": "18033",
+  "region": "Centre-Val de Loire",
+  "population": 64186,
+  "occupation": 56,
+  "prix_nuit": 69,
+  "revenu_annuel": 14070,
+  "annonces": 566
+ },
+ {
+  "ville": "La Bourboule",
+  "insee": "63047",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1727,
+  "occupation": 46,
+  "prix_nuit": 74,
+  "revenu_annuel": 12446,
+  "annonces": 560
+ },
+ {
+  "ville": "Eaux-Bonnes",
+  "insee": "64204",
+  "region": "Nouvelle-Aquitaine",
+  "population": 215,
+  "occupation": 42,
+  "prix_nuit": 86,
+  "revenu_annuel": 13221,
+  "annonces": 559
+ },
+ {
+  "ville": "Ax-les-Thermes",
+  "insee": "09032",
+  "region": "Occitanie",
+  "population": 1285,
+  "occupation": 51,
+  "prix_nuit": 98,
+  "revenu_annuel": 18114,
+  "annonces": 558
+ },
+ {
+  "ville": "Cancale",
+  "insee": "35049",
+  "region": "Bretagne",
+  "population": 5672,
+  "occupation": 54,
+  "prix_nuit": 117,
+  "revenu_annuel": 22902,
+  "annonces": 551
+ },
+ {
+  "ville": "Banyuls-sur-Mer",
+  "insee": "66016",
+  "region": "Occitanie",
+  "population": 4496,
+  "occupation": 52,
+  "prix_nuit": 94,
+  "revenu_annuel": 17842,
+  "annonces": 551
+ },
+ {
+  "ville": "Chamrousse",
+  "insee": "38567",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 453,
+  "occupation": 51,
+  "prix_nuit": 111,
+  "revenu_annuel": 20691,
+  "annonces": 548
+ },
+ {
+  "ville": "Propriano",
+  "insee": "2A249",
+  "region": "Corse",
+  "population": 3996,
+  "occupation": 61,
+  "prix_nuit": 142,
+  "revenu_annuel": 31639,
+  "annonces": 543
+ },
+ {
+  "ville": "Puy-Saint-Vincent",
+  "insee": "05110",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 270,
+  "occupation": 53,
+  "prix_nuit": 93,
+  "revenu_annuel": 17946,
+  "annonces": 542
+ },
+ {
+  "ville": "Frontignan",
+  "insee": "34108",
+  "region": "Occitanie",
+  "population": 24136,
+  "occupation": 56,
+  "prix_nuit": 111,
+  "revenu_annuel": 22705,
+  "annonces": 537
+ },
+ {
+  "ville": "Albi",
+  "insee": "81004",
+  "region": "Occitanie",
+  "population": 51290,
+  "occupation": 56,
+  "prix_nuit": 70,
+  "revenu_annuel": 14229,
+  "annonces": 532
+ },
+ {
+  "ville": "Asnières-sur-Seine",
+  "insee": "92004",
+  "region": "Île-de-France",
+  "population": 93941,
+  "occupation": 66,
+  "prix_nuit": 97,
+  "revenu_annuel": 23369,
+  "annonces": 524
+ },
+ {
+  "ville": "Saint-Chaffrey",
+  "insee": "05133",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1494,
+  "occupation": 54,
+  "prix_nuit": 176,
+  "revenu_annuel": 34931,
+  "annonces": 523
+ },
+ {
+  "ville": "Quimper",
+  "insee": "29232",
+  "region": "Bretagne",
+  "population": 64385,
+  "occupation": 62,
+  "prix_nuit": 65,
+  "revenu_annuel": 14650,
+  "annonces": 520
+ },
+ {
+  "ville": "Rochefort",
+  "insee": "17299",
+  "region": "Nouvelle-Aquitaine",
+  "population": 23460,
+  "occupation": 66,
+  "prix_nuit": 57,
+  "revenu_annuel": 13703,
+  "annonces": 519
+ },
+ {
+  "ville": "Uvernet-Fours",
+  "insee": "04226",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 499,
+  "occupation": 42,
+  "prix_nuit": 125,
+  "revenu_annuel": 19257,
+  "annonces": 519
+ },
+ {
+  "ville": "Lourdes",
+  "insee": "65286",
+  "region": "Occitanie",
+  "population": 13266,
+  "occupation": 54,
+  "prix_nuit": 69,
+  "revenu_annuel": 13588,
+  "annonces": 506
+ },
+ {
+  "ville": "Bolquère",
+  "insee": "66020",
+  "region": "Occitanie",
+  "population": 816,
+  "occupation": 50,
+  "prix_nuit": 168,
+  "revenu_annuel": 30425,
+  "annonces": 506
+ },
+ {
+  "ville": "Bayonne",
+  "insee": "64102",
+  "region": "Nouvelle-Aquitaine",
+  "population": 54306,
+  "occupation": 68,
+  "prix_nuit": 113,
+  "revenu_annuel": 28007,
+  "annonces": 505
+ },
+ {
+  "ville": "Calais",
+  "insee": "62193",
+  "region": "Hauts-de-France",
+  "population": 67571,
+  "occupation": 54,
+  "prix_nuit": 74,
+  "revenu_annuel": 14597,
+  "annonces": 501
+ },
+ {
+  "ville": "Pléneuf-Val-André",
+  "insee": "22186",
+  "region": "Bretagne",
+  "population": 3988,
+  "occupation": 49,
+  "prix_nuit": 117,
+  "revenu_annuel": 21015,
+  "annonces": 500
+ },
+ {
+  "ville": "Martigues",
+  "insee": "13056",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 48298,
+  "occupation": 58,
+  "prix_nuit": 95,
+  "revenu_annuel": 19986,
+  "annonces": 498
+ },
+ {
+  "ville": "Gassin",
+  "insee": "83065",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 2687,
+  "occupation": 58,
+  "prix_nuit": 357,
+  "revenu_annuel": 75656,
+  "annonces": 496
+ },
+ {
+  "ville": "Port-la-Nouvelle",
+  "insee": "11266",
+  "region": "Occitanie",
+  "population": 5852,
+  "occupation": 51,
+  "prix_nuit": 77,
+  "revenu_annuel": 14195,
+  "annonces": 495
+ },
+ {
+  "ville": "Serris",
+  "insee": "77449",
+  "region": "Île-de-France",
+  "population": 10326,
+  "occupation": 67,
+  "prix_nuit": 129,
+  "revenu_annuel": 31775,
+  "annonces": 495
+ },
+ {
+  "ville": "Courbevoie",
+  "insee": "92026",
+  "region": "Île-de-France",
+  "population": 82902,
+  "occupation": 62,
+  "prix_nuit": 118,
+  "revenu_annuel": 26670,
+  "annonces": 495
+ },
+ {
+  "ville": "Versailles",
+  "insee": "78646",
+  "region": "Île-de-France",
+  "population": 84095,
+  "occupation": 65,
+  "prix_nuit": 109,
+  "revenu_annuel": 25746,
+  "annonces": 494
+ },
+ {
+  "ville": "Soustons",
+  "insee": "40310",
+  "region": "Nouvelle-Aquitaine",
+  "population": 8701,
+  "occupation": 54,
+  "prix_nuit": 129,
+  "revenu_annuel": 25398,
+  "annonces": 493
+ },
+ {
+  "ville": "Lumio",
+  "insee": "2B150",
+  "region": "Corse",
+  "population": 1224,
+  "occupation": 64,
+  "prix_nuit": 178,
+  "revenu_annuel": 41642,
+  "annonces": 485
+ },
+ {
+  "ville": "Wimereux",
+  "insee": "62893",
+  "region": "Hauts-de-France",
+  "population": 6256,
+  "occupation": 48,
+  "prix_nuit": 120,
+  "revenu_annuel": 21217,
+  "annonces": 483
+ },
+ {
+  "ville": "Risoul",
+  "insee": "05119",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 664,
+  "occupation": 52,
+  "prix_nuit": 131,
+  "revenu_annuel": 25083,
+  "annonces": 483
+ },
+ {
+  "ville": "La Flotte",
+  "insee": "17161",
+  "region": "Nouvelle-Aquitaine",
+  "population": 3150,
+  "occupation": 58,
+  "prix_nuit": 187,
+  "revenu_annuel": 39651,
+  "annonces": 481
+ },
+ {
+  "ville": "Lorient",
+  "insee": "56121",
+  "region": "Bretagne",
+  "population": 58329,
+  "occupation": 61,
+  "prix_nuit": 70,
+  "revenu_annuel": 15565,
+  "annonces": 479
+ },
+ {
+  "ville": "Angoulême",
+  "insee": "16015",
+  "region": "Nouvelle-Aquitaine",
+  "population": 41908,
+  "occupation": 49,
+  "prix_nuit": 69,
+  "revenu_annuel": 12365,
+  "annonces": 478
+ },
+ {
+  "ville": "Saumur",
+  "insee": "49328",
+  "region": "Pays de la Loire",
+  "population": 26241,
+  "occupation": 50,
+  "prix_nuit": 80,
+  "revenu_annuel": 14573,
+  "annonces": 471
+ },
+ {
+  "ville": "Erquy",
+  "insee": "22054",
+  "region": "Bretagne",
+  "population": 3974,
+  "occupation": 50,
+  "prix_nuit": 121,
+  "revenu_annuel": 22291,
+  "annonces": 469
+ },
+ {
+  "ville": "Creuse",
+  "insee": "80225",
+  "region": "Hauts-de-France",
+  "population": 186,
+  "occupation": 48,
+  "prix_nuit": 95,
+  "revenu_annuel": 16801,
+  "annonces": 469
+ },
+ {
+  "ville": "Aubervilliers",
+  "insee": "93001",
+  "region": "Île-de-France",
+  "population": 88365,
+  "occupation": 62,
+  "prix_nuit": 95,
+  "revenu_annuel": 21486,
+  "annonces": 466
+ },
+ {
+  "ville": "Gréoux-les-Bains",
+  "insee": "04094",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3084,
+  "occupation": 66,
+  "prix_nuit": 59,
+  "revenu_annuel": 14157,
+  "annonces": 465
+ },
+ {
+  "ville": "Carqueiranne",
+  "insee": "83034",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 9408,
+  "occupation": 58,
+  "prix_nuit": 199,
+  "revenu_annuel": 42025,
+  "annonces": 462
+ },
+ {
+  "ville": "Villarembert",
+  "insee": "73318",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 253,
+  "occupation": 59,
+  "prix_nuit": 103,
+  "revenu_annuel": 22130,
+  "annonces": 454
+ },
+ {
+  "ville": "Ivry-sur-Seine",
+  "insee": "94041",
+  "region": "Île-de-France",
+  "population": 65064,
+  "occupation": 67,
+  "prix_nuit": 93,
+  "revenu_annuel": 22747,
+  "annonces": 453
+ },
+ {
+  "ville": "Granville",
+  "insee": "50218",
+  "region": "Normandie",
+  "population": 12510,
+  "occupation": 50,
+  "prix_nuit": 94,
+  "revenu_annuel": 17282,
+  "annonces": 452
+ },
+ {
+  "ville": "Fécamp",
+  "insee": "76259",
+  "region": "Normandie",
+  "population": 17313,
+  "occupation": 53,
+  "prix_nuit": 90,
+  "revenu_annuel": 17512,
+  "annonces": 452
+ },
+ {
+  "ville": "Courseulles-sur-Mer",
+  "insee": "14191",
+  "region": "Normandie",
+  "population": 4268,
+  "occupation": 55,
+  "prix_nuit": 77,
+  "revenu_annuel": 15472,
+  "annonces": 450
+ },
+ {
+  "ville": "Pantin",
+  "insee": "93055",
+  "region": "Île-de-France",
+  "population": 61929,
+  "occupation": 67,
+  "prix_nuit": 88,
+  "revenu_annuel": 21430,
+  "annonces": 446
+ },
+ {
+  "ville": "Cholet",
+  "insee": "49099",
+  "region": "Pays de la Loire",
+  "population": 54404,
+  "occupation": 53,
+  "prix_nuit": 79,
+  "revenu_annuel": 15391,
+  "annonces": 444
+ },
+ {
+  "ville": "Vias",
+  "insee": "34332",
+  "region": "Occitanie",
+  "population": 5952,
+  "occupation": 57,
+  "prix_nuit": 109,
+  "revenu_annuel": 22723,
+  "annonces": 441
+ },
+ {
+  "ville": "Carcans",
+  "insee": "33097",
+  "region": "Nouvelle-Aquitaine",
+  "population": 2415,
+  "occupation": 55,
+  "prix_nuit": 128,
+  "revenu_annuel": 25718,
+  "annonces": 437
+ },
+ {
+  "ville": "Hourtin",
+  "insee": "33203",
+  "region": "Nouvelle-Aquitaine",
+  "population": 4045,
+  "occupation": 53,
+  "prix_nuit": 132,
+  "revenu_annuel": 25669,
+  "annonces": 435
+ },
+ {
+  "ville": "Hauteluce",
+  "insee": "73132",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 734,
+  "occupation": 54,
+  "prix_nuit": 185,
+  "revenu_annuel": 36288,
+  "annonces": 435
+ },
+ {
+  "ville": "Cogolin",
+  "insee": "83042",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 12301,
+  "occupation": 58,
+  "prix_nuit": 175,
+  "revenu_annuel": 37361,
+  "annonces": 435
+ },
+ {
+  "ville": "Le Tampon",
+  "insee": "97422",
+  "region": "La Réunion",
+  "population": 82579,
+  "occupation": 56,
+  "prix_nuit": 102,
+  "revenu_annuel": 20678,
+  "annonces": 432
+ },
+ {
+  "ville": "Fort-Mahon-Plage",
+  "insee": "80333",
+  "region": "Hauts-de-France",
+  "population": 1363,
+  "occupation": 47,
+  "prix_nuit": 112,
+  "revenu_annuel": 19011,
+  "annonces": 431
+ },
+ {
+  "ville": "Montgenèvre",
+  "insee": "05085",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 461,
+  "occupation": 50,
+  "prix_nuit": 280,
+  "revenu_annuel": 50821,
+  "annonces": 430
+ },
+ {
+  "ville": "Bénodet",
+  "insee": "29006",
+  "region": "Bretagne",
+  "population": 3849,
+  "occupation": 56,
+  "prix_nuit": 100,
+  "revenu_annuel": 20608,
+  "annonces": 428
+ },
+ {
+  "ville": "Guérande",
+  "insee": "44069",
+  "region": "Pays de la Loire",
+  "population": 16804,
+  "occupation": 50,
+  "prix_nuit": 108,
+  "revenu_annuel": 19886,
+  "annonces": 427
+ },
+ {
+  "ville": "Doubs",
+  "insee": "25204",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 3335,
+  "occupation": 53,
+  "prix_nuit": 84,
+  "revenu_annuel": 16248,
+  "annonces": 419
+ },
+ {
+  "ville": "Saint-Brieuc",
+  "insee": "22278",
+  "region": "Bretagne",
+  "population": 44364,
+  "occupation": 58,
+  "prix_nuit": 60,
+  "revenu_annuel": 12601,
+  "annonces": 418
+ },
+ {
+  "ville": "Modane",
+  "insee": "73157",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2849,
+  "occupation": 50,
+  "prix_nuit": 98,
+  "revenu_annuel": 17901,
+  "annonces": 418
+ },
+ {
+  "ville": "Bastia",
+  "insee": "2B033",
+  "region": "Corse",
+  "population": 46867,
+  "occupation": 61,
+  "prix_nuit": 98,
+  "revenu_annuel": 21955,
+  "annonces": 414
+ },
+ {
+  "ville": "Amboise",
+  "insee": "37003",
+  "region": "Centre-Val de Loire",
+  "population": 12937,
+  "occupation": 55,
+  "prix_nuit": 105,
+  "revenu_annuel": 21162,
+  "annonces": 412
+ },
+ {
+  "ville": "Thonon-les-Bains",
+  "insee": "74281",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 37928,
+  "occupation": 63,
+  "prix_nuit": 84,
+  "revenu_annuel": 19222,
+  "annonces": 412
+ },
+ {
+  "ville": "Neuilly-sur-Seine",
+  "insee": "92051",
+  "region": "Île-de-France",
+  "population": 59538,
+  "occupation": 67,
+  "prix_nuit": 169,
+  "revenu_annuel": 41253,
+  "annonces": 409
+ },
+ {
+  "ville": "Brides-les-Bains",
+  "insee": "73057",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 442,
+  "occupation": 70,
+  "prix_nuit": 98,
+  "revenu_annuel": 24959,
+  "annonces": 406
+ },
+ {
+  "ville": "Le Croisic",
+  "insee": "44049",
+  "region": "Pays de la Loire",
+  "population": 4056,
+  "occupation": 49,
+  "prix_nuit": 113,
+  "revenu_annuel": 20018,
+  "annonces": 405
+ },
+ {
+  "ville": "Montévrain",
+  "insee": "77307",
+  "region": "Île-de-France",
+  "population": 15687,
+  "occupation": 67,
+  "prix_nuit": 103,
+  "revenu_annuel": 25031,
+  "annonces": 405
+ },
+ {
+  "ville": "Épernay",
+  "insee": "51230",
+  "region": "Grand Est",
+  "population": 22174,
+  "occupation": 48,
+  "prix_nuit": 118,
+  "revenu_annuel": 20716,
+  "annonces": 404
+ },
+ {
+  "ville": "La Tremblade",
+  "insee": "17452",
+  "region": "Nouvelle-Aquitaine",
+  "population": 4650,
+  "occupation": 50,
+  "prix_nuit": 126,
+  "revenu_annuel": 23080,
+  "annonces": 403
+ },
+ {
+  "ville": "Aston",
+  "insee": "09024",
+  "region": "Occitanie",
+  "population": 197,
+  "occupation": 32,
+  "prix_nuit": 190,
+  "revenu_annuel": 21937,
+  "annonces": 401
+ },
+ {
+  "ville": "Chambéry",
+  "insee": "73065",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 59964,
+  "occupation": 62,
+  "prix_nuit": 73,
+  "revenu_annuel": 16592,
+  "annonces": 398
+ },
+ {
+  "ville": "Vence",
+  "insee": "06157",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 19917,
+  "occupation": 60,
+  "prix_nuit": 190,
+  "revenu_annuel": 41829,
+  "annonces": 395
+ },
+ {
+  "ville": "Vendays-Montalivet",
+  "insee": "33540",
+  "region": "Nouvelle-Aquitaine",
+  "population": 2838,
+  "occupation": 52,
+  "prix_nuit": 148,
+  "revenu_annuel": 28292,
+  "annonces": 394
+ },
+ {
+  "ville": "Montauban",
+  "insee": "82121",
+  "region": "Occitanie",
+  "population": 62945,
+  "occupation": 52,
+  "prix_nuit": 71,
+  "revenu_annuel": 13529,
+  "annonces": 393
+ },
+ {
+  "ville": "Levallois-Perret",
+  "insee": "92044",
+  "region": "Île-de-France",
+  "population": 68092,
+  "occupation": 64,
+  "prix_nuit": 145,
+  "revenu_annuel": 33941,
+  "annonces": 393
+ },
+ {
+  "ville": "Châtelaillon-Plage",
+  "insee": "17094",
+  "region": "Nouvelle-Aquitaine",
+  "population": 6653,
+  "occupation": 53,
+  "prix_nuit": 120,
+  "revenu_annuel": 23172,
+  "annonces": 392
+ },
+ {
+  "ville": "Douarnenez",
+  "insee": "29046",
+  "region": "Bretagne",
+  "population": 14068,
+  "occupation": 56,
+  "prix_nuit": 99,
+  "revenu_annuel": 20184,
+  "annonces": 392
+ },
+ {
+  "ville": "Saint-Jean-de-Luz",
+  "insee": "64483",
+  "region": "Nouvelle-Aquitaine",
+  "population": 14857,
+  "occupation": 64,
+  "prix_nuit": 150,
+  "revenu_annuel": 35240,
+  "annonces": 390
+ },
+ {
+  "ville": "Mougins",
+  "insee": "06085",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 19782,
+  "occupation": 58,
+  "prix_nuit": 422,
+  "revenu_annuel": 88700,
+  "annonces": 390
+ },
+ {
+  "ville": "Périgueux",
+  "insee": "24322",
+  "region": "Nouvelle-Aquitaine",
+  "population": 29055,
+  "occupation": 56,
+  "prix_nuit": 63,
+  "revenu_annuel": 12888,
+  "annonces": 389
+ },
+ {
+  "ville": "Chalon-sur-Saône",
+  "insee": "71076",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 45102,
+  "occupation": 57,
+  "prix_nuit": 67,
+  "revenu_annuel": 13911,
+  "annonces": 388
+ },
+ {
+  "ville": "Sainte-Marie-de-Ré",
+  "insee": "17360",
+  "region": "Nouvelle-Aquitaine",
+  "population": 3412,
+  "occupation": 59,
+  "prix_nuit": 231,
+  "revenu_annuel": 49674,
+  "annonces": 383
+ },
+ {
+  "ville": "Cucq",
+  "insee": "62261",
+  "region": "Hauts-de-France",
+  "population": 5129,
+  "occupation": 43,
+  "prix_nuit": 116,
+  "revenu_annuel": 18391,
+  "annonces": 382
+ },
+ {
+  "ville": "Le Crotoy",
+  "insee": "80228",
+  "region": "Hauts-de-France",
+  "population": 1958,
+  "occupation": 49,
+  "prix_nuit": 121,
+  "revenu_annuel": 21802,
+  "annonces": 381
+ },
+ {
+  "ville": "Valence",
+  "insee": "26362",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 64458,
+  "occupation": 56,
+  "prix_nuit": 67,
+  "revenu_annuel": 13814,
+  "annonces": 380
+ },
+ {
+  "ville": "Bergerac",
+  "insee": "24037",
+  "region": "Nouvelle-Aquitaine",
+  "population": 27110,
+  "occupation": 54,
+  "prix_nuit": 85,
+  "revenu_annuel": 16873,
+  "annonces": 379
+ },
+ {
+  "ville": "Saint-Martin-de-Ré",
+  "insee": "17369",
+  "region": "Nouvelle-Aquitaine",
+  "population": 2355,
+  "occupation": 55,
+  "prix_nuit": 170,
+  "revenu_annuel": 33993,
+  "annonces": 377
+ },
+ {
+  "ville": "Vitry-sur-Seine",
+  "insee": "94081",
+  "region": "Île-de-France",
+  "population": 93963,
+  "occupation": 67,
+  "prix_nuit": 86,
+  "revenu_annuel": 20877,
+  "annonces": 377
+ },
+ {
+  "ville": "Sari-Solenzara",
+  "insee": "2A269",
+  "region": "Corse",
+  "population": 1445,
+  "occupation": 61,
+  "prix_nuit": 190,
+  "revenu_annuel": 42584,
+  "annonces": 377
+ },
+ {
+  "ville": "Arras",
+  "insee": "62041",
+  "region": "Hauts-de-France",
+  "population": 42875,
+  "occupation": 56,
+  "prix_nuit": 69,
+  "revenu_annuel": 14030,
+  "annonces": 375
+ },
+ {
+  "ville": "Luz-Saint-Sauveur",
+  "insee": "65295",
+  "region": "Occitanie",
+  "population": 900,
+  "occupation": 50,
+  "prix_nuit": 101,
+  "revenu_annuel": 18596,
+  "annonces": 374
+ },
+ {
+  "ville": "Aime-la-Plagne",
+  "insee": "73006",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 4385,
+  "occupation": 54,
+  "prix_nuit": 162,
+  "revenu_annuel": 32002,
+  "annonces": 372
+ },
+ {
+  "ville": "Châteauroux",
+  "insee": "36044",
+  "region": "Centre-Val de Loire",
+  "population": 42963,
+  "occupation": 55,
+  "prix_nuit": 61,
+  "revenu_annuel": 12225,
+  "annonces": 371
+ },
+ {
+  "ville": "Chartres",
+  "insee": "28085",
+  "region": "Centre-Val de Loire",
+  "population": 38324,
+  "occupation": 54,
+  "prix_nuit": 76,
+  "revenu_annuel": 14902,
+  "annonces": 370
+ },
+ {
+  "ville": "Le Puy-en-Velay",
+  "insee": "43157",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 18540,
+  "occupation": 49,
+  "prix_nuit": 63,
+  "revenu_annuel": 11202,
+  "annonces": 370
+ },
+ {
+  "ville": "Le Tréport",
+  "insee": "76711",
+  "region": "Normandie",
+  "population": 4378,
+  "occupation": 44,
+  "prix_nuit": 86,
+  "revenu_annuel": 13766,
+  "annonces": 369
+ },
+ {
+  "ville": "Brive-la-Gaillarde",
+  "insee": "19031",
+  "region": "Nouvelle-Aquitaine",
+  "population": 47095,
+  "occupation": 52,
+  "prix_nuit": 67,
+  "revenu_annuel": 12833,
+  "annonces": 367
+ },
+ {
+  "ville": "Guidel",
+  "insee": "56078",
+  "region": "Bretagne",
+  "population": 12338,
+  "occupation": 53,
+  "prix_nuit": 101,
+  "revenu_annuel": 19558,
+  "annonces": 366
+ },
+ {
+  "ville": "Niort",
+  "insee": "79191",
+  "region": "Nouvelle-Aquitaine",
+  "population": 59854,
+  "occupation": 55,
+  "prix_nuit": 58,
+  "revenu_annuel": 11562,
+  "annonces": 366
+ },
+ {
+  "ville": "Uzès",
+  "insee": "30334",
+  "region": "Occitanie",
+  "population": 8519,
+  "occupation": 52,
+  "prix_nuit": 159,
+  "revenu_annuel": 30448,
+  "annonces": 364
+ },
+ {
+  "ville": "Saint-Joseph",
+  "insee": "97412",
+  "region": "La Réunion",
+  "population": 39207,
+  "occupation": 60,
+  "prix_nuit": 115,
+  "revenu_annuel": 25054,
+  "annonces": 362
+ },
+ {
+  "ville": "Théoule-sur-Mer",
+  "insee": "06138",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1477,
+  "occupation": 60,
+  "prix_nuit": 219,
+  "revenu_annuel": 47716,
+  "annonces": 361
+ },
+ {
+  "ville": "Millau",
+  "insee": "12145",
+  "region": "Occitanie",
+  "population": 22044,
+  "occupation": 48,
+  "prix_nuit": 72,
+  "revenu_annuel": 12648,
+  "annonces": 359
+ },
+ {
+  "ville": "Houlgate",
+  "insee": "14338",
+  "region": "Normandie",
+  "population": 1834,
+  "occupation": 46,
+  "prix_nuit": 130,
+  "revenu_annuel": 21833,
+  "annonces": 355
+ },
+ {
+  "ville": "Ploemeur",
+  "insee": "56162",
+  "region": "Bretagne",
+  "population": 18872,
+  "occupation": 52,
+  "prix_nuit": 105,
+  "revenu_annuel": 19760,
+  "annonces": 355
+ },
+ {
+  "ville": "Le Pouliguen",
+  "insee": "44135",
+  "region": "Pays de la Loire",
+  "population": 4173,
+  "occupation": 47,
+  "prix_nuit": 125,
+  "revenu_annuel": 21249,
+  "annonces": 354
+ },
+ {
+  "ville": "Vaux-sur-Mer",
+  "insee": "17461",
+  "region": "Nouvelle-Aquitaine",
+  "population": 4013,
+  "occupation": 55,
+  "prix_nuit": 111,
+  "revenu_annuel": 22451,
+  "annonces": 352
+ },
+ {
+  "ville": "Beaufort",
+  "insee": "73034",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1989,
+  "occupation": 55,
+  "prix_nuit": 139,
+  "revenu_annuel": 28050,
+  "annonces": 352
+ },
+ {
+  "ville": "Port-Vendres",
+  "insee": "66148",
+  "region": "Occitanie",
+  "population": 4018,
+  "occupation": 52,
+  "prix_nuit": 94,
+  "revenu_annuel": 17950,
+  "annonces": 351
+ },
+ {
+  "ville": "Pietrosella",
+  "insee": "2A228",
+  "region": "Corse",
+  "population": 2074,
+  "occupation": 64,
+  "prix_nuit": 240,
+  "revenu_annuel": 55885,
+  "annonces": 350
+ },
+ {
+  "ville": "Lattes",
+  "insee": "34129",
+  "region": "Occitanie",
+  "population": 17351,
+  "occupation": 56,
+  "prix_nuit": 112,
+  "revenu_annuel": 22913,
+  "annonces": 349
+ },
+ {
+  "ville": "Ouistreham",
+  "insee": "14488",
+  "region": "Normandie",
+  "population": 9212,
+  "occupation": 52,
+  "prix_nuit": 97,
+  "revenu_annuel": 18248,
+  "annonces": 347
+ },
+ {
+  "ville": "Aigues-Mortes",
+  "insee": "30003",
+  "region": "Occitanie",
+  "population": 8699,
+  "occupation": 49,
+  "prix_nuit": 134,
+  "revenu_annuel": 23943,
+  "annonces": 342
+ },
+ {
+  "ville": "Valmeinier",
+  "insee": "73307",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 593,
+  "occupation": 60,
+  "prix_nuit": 156,
+  "revenu_annuel": 34185,
+  "annonces": 341
+ },
+ {
+  "ville": "Olmeto",
+  "insee": "2A189",
+  "region": "Corse",
+  "population": 1289,
+  "occupation": 62,
+  "prix_nuit": 200,
+  "revenu_annuel": 45529,
+  "annonces": 340
+ },
+ {
+  "ville": "Cayeux-sur-Mer",
+  "insee": "80182",
+  "region": "Hauts-de-France",
+  "population": 2316,
+  "occupation": 49,
+  "prix_nuit": 102,
+  "revenu_annuel": 18089,
+  "annonces": 335
+ },
+ {
+  "ville": "Saint-Quentin",
+  "insee": "02691",
+  "region": "Hauts-de-France",
+  "population": 52813,
+  "occupation": 47,
+  "prix_nuit": 51,
+  "revenu_annuel": 8825,
+  "annonces": 333
+ },
+ {
+  "ville": "Penmarch",
+  "insee": "29158",
+  "region": "Bretagne",
+  "population": 5508,
+  "occupation": 55,
+  "prix_nuit": 123,
+  "revenu_annuel": 24828,
+  "annonces": 331
+ },
+ {
+  "ville": "Dinan",
+  "insee": "22050",
+  "region": "Bretagne",
+  "population": 14764,
+  "occupation": 53,
+  "prix_nuit": 92,
+  "revenu_annuel": 17788,
+  "annonces": 329
+ },
+ {
+  "ville": "Mers-les-Bains",
+  "insee": "80533",
+  "region": "Hauts-de-France",
+  "population": 2540,
+  "occupation": 46,
+  "prix_nuit": 94,
+  "revenu_annuel": 15937,
+  "annonces": 329
+ },
+ {
+  "ville": "Colombes",
+  "insee": "92025",
+  "region": "Île-de-France",
+  "population": 91053,
+  "occupation": 64,
+  "prix_nuit": 95,
+  "revenu_annuel": 22126,
+  "annonces": 328
+ },
+ {
+  "ville": "Le Pradet",
+  "insee": "83098",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 10933,
+  "occupation": 57,
+  "prix_nuit": 164,
+  "revenu_annuel": 34372,
+  "annonces": 327
+ },
+ {
+  "ville": "Gap",
+  "insee": "05061",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 41293,
+  "occupation": 56,
+  "prix_nuit": 73,
+  "revenu_annuel": 14821,
+  "annonces": 326
+ },
+ {
+  "ville": "La Couarde-sur-Mer",
+  "insee": "17121",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1112,
+  "occupation": 55,
+  "prix_nuit": 250,
+  "revenu_annuel": 50159,
+  "annonces": 325
+ },
+ {
+  "ville": "Agen",
+  "insee": "47001",
+  "region": "Nouvelle-Aquitaine",
+  "population": 32801,
+  "occupation": 58,
+  "prix_nuit": 56,
+  "revenu_annuel": 11765,
+  "annonces": 325
+ },
+ {
+  "ville": "Praz-sur-Arly",
+  "insee": "74215",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1311,
+  "occupation": 52,
+  "prix_nuit": 175,
+  "revenu_annuel": 33008,
+  "annonces": 325
+ },
+ {
+  "ville": "Linguizzetta",
+  "insee": "2B143",
+  "region": "Corse",
+  "population": 1166,
+  "occupation": 57,
+  "prix_nuit": 114,
+  "revenu_annuel": 23902,
+  "annonces": 325
+ },
+ {
+  "ville": "Laveissière",
+  "insee": "15101",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 537,
+  "occupation": 45,
+  "prix_nuit": 109,
+  "revenu_annuel": 17994,
+  "annonces": 324
+ },
+ {
+  "ville": "Beaune",
+  "insee": "21054",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 20352,
+  "occupation": 57,
+  "prix_nuit": 161,
+  "revenu_annuel": 33419,
+  "annonces": 324
+ },
+ {
+  "ville": "Paimpol",
+  "insee": "22162",
+  "region": "Bretagne",
+  "population": 7341,
+  "occupation": 50,
+  "prix_nuit": 102,
+  "revenu_annuel": 18684,
+  "annonces": 324
+ },
+ {
+  "ville": "Mérignac",
+  "insee": "33281",
+  "region": "Nouvelle-Aquitaine",
+  "population": 78090,
+  "occupation": 63,
+  "prix_nuit": 93,
+  "revenu_annuel": 21358,
+  "annonces": 323
+ },
+ {
+  "ville": "Auxerre",
+  "insee": "89024",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 35097,
+  "occupation": 52,
+  "prix_nuit": 67,
+  "revenu_annuel": 12822,
+  "annonces": 323
+ },
+ {
+  "ville": "Vincennes",
+  "insee": "94080",
+  "region": "Île-de-France",
+  "population": 48193,
+  "occupation": 70,
+  "prix_nuit": 111,
+  "revenu_annuel": 28404,
+  "annonces": 323
+ },
+ {
+  "ville": "Jullouville",
+  "insee": "50066",
+  "region": "Normandie",
+  "population": 2394,
+  "occupation": 49,
+  "prix_nuit": 125,
+  "revenu_annuel": 22239,
+  "annonces": 322
+ },
+ {
+  "ville": "Puteaux",
+  "insee": "92062",
+  "region": "Île-de-France",
+  "population": 44002,
+  "occupation": 63,
+  "prix_nuit": 127,
+  "revenu_annuel": 29326,
+  "annonces": 321
+ },
+ {
+  "ville": "Clohars-Carnoët",
+  "insee": "29031",
+  "region": "Bretagne",
+  "population": 4708,
+  "occupation": 53,
+  "prix_nuit": 140,
+  "revenu_annuel": 26933,
+  "annonces": 320
+ },
+ {
+  "ville": "Bidart",
+  "insee": "64125",
+  "region": "Nouvelle-Aquitaine",
+  "population": 7689,
+  "occupation": 65,
+  "prix_nuit": 192,
+  "revenu_annuel": 45485,
+  "annonces": 320
+ },
+ {
+  "ville": "Lorgues",
+  "insee": "83072",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 9849,
+  "occupation": 57,
+  "prix_nuit": 193,
+  "revenu_annuel": 40006,
+  "annonces": 318
+ },
+ {
+  "ville": "Bayeux",
+  "insee": "14047",
+  "region": "Normandie",
+  "population": 12659,
+  "occupation": 59,
+  "prix_nuit": 130,
+  "revenu_annuel": 27885,
+  "annonces": 316
+ },
+ {
+  "ville": "Piriac-sur-Mer",
+  "insee": "44125",
+  "region": "Pays de la Loire",
+  "population": 2685,
+  "occupation": 51,
+  "prix_nuit": 144,
+  "revenu_annuel": 26742,
+  "annonces": 314
+ },
+ {
+  "ville": "Nanterre",
+  "insee": "92050",
+  "region": "Île-de-France",
+  "population": 97783,
+  "occupation": 62,
+  "prix_nuit": 108,
+  "revenu_annuel": 24603,
+  "annonces": 313
+ },
+ {
+  "ville": "Dax",
+  "insee": "40088",
+  "region": "Nouvelle-Aquitaine",
+  "population": 22109,
+  "occupation": 67,
+  "prix_nuit": 53,
+  "revenu_annuel": 12872,
+  "annonces": 311
+ },
+ {
+  "ville": "Bussy-Saint-Georges",
+  "insee": "77058",
+  "region": "Île-de-France",
+  "population": 27498,
+  "occupation": 69,
+  "prix_nuit": 89,
+  "revenu_annuel": 22352,
+  "annonces": 311
+ },
+ {
+  "ville": "Villejuif",
+  "insee": "94076",
+  "region": "Île-de-France",
+  "population": 60183,
+  "occupation": 67,
+  "prix_nuit": 110,
+  "revenu_annuel": 26775,
+  "annonces": 311
+ },
+ {
+  "ville": "Fontainebleau",
+  "insee": "77186",
+  "region": "Île-de-France",
+  "population": 15583,
+  "occupation": 60,
+  "prix_nuit": 83,
+  "revenu_annuel": 18048,
+  "annonces": 310
+ },
+ {
+  "ville": "Arès",
+  "insee": "33011",
+  "region": "Nouvelle-Aquitaine",
+  "population": 6482,
+  "occupation": 53,
+  "prix_nuit": 174,
+  "revenu_annuel": 33596,
+  "annonces": 308
+ },
+ {
+  "ville": "Carpentras",
+  "insee": "84031",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 31619,
+  "occupation": 52,
+  "prix_nuit": 158,
+  "revenu_annuel": 30220,
+  "annonces": 308
+ },
+ {
+  "ville": "Jard-sur-Mer",
+  "insee": "85114",
+  "region": "Pays de la Loire",
+  "population": 3235,
+  "occupation": 51,
+  "prix_nuit": 123,
+  "revenu_annuel": 22901,
+  "annonces": 307
+ },
+ {
+  "ville": "Saint-Louis",
+  "insee": "97414",
+  "region": "La Réunion",
+  "population": 54941,
+  "occupation": 62,
+  "prix_nuit": 75,
+  "revenu_annuel": 16973,
+  "annonces": 307
+ },
+ {
+  "ville": "Chessy",
+  "insee": "77111",
+  "region": "Île-de-France",
+  "population": 7771,
+  "occupation": 64,
+  "prix_nuit": 146,
+  "revenu_annuel": 34178,
+  "annonces": 303
+ },
+ {
+  "ville": "Valenciennes",
+  "insee": "59606",
+  "region": "Hauts-de-France",
+  "population": 43468,
+  "occupation": 57,
+  "prix_nuit": 63,
+  "revenu_annuel": 13087,
+  "annonces": 301
+ },
+ {
+  "ville": "Labenne",
+  "insee": "40133",
+  "region": "Nouvelle-Aquitaine",
+  "population": 7183,
+  "occupation": 63,
+  "prix_nuit": 189,
+  "revenu_annuel": 43171,
+  "annonces": 300
+ },
+ {
+  "ville": "Fouras",
+  "insee": "17168",
+  "region": "Nouvelle-Aquitaine",
+  "population": 4148,
+  "occupation": 50,
+  "prix_nuit": 126,
+  "revenu_annuel": 23160,
+  "annonces": 299
+ },
+ {
+  "ville": "Étretat",
+  "insee": "76254",
+  "region": "Normandie",
+  "population": 1102,
+  "occupation": 52,
+  "prix_nuit": 130,
+  "revenu_annuel": 24906,
+  "annonces": 299
+ },
+ {
+  "ville": "Montvalezan",
+  "insee": "73176",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 734,
+  "occupation": 62,
+  "prix_nuit": 274,
+  "revenu_annuel": 62367,
+  "annonces": 298
+ },
+ {
+  "ville": "Saint-Florent",
+  "insee": "2B298",
+  "region": "Corse",
+  "population": 1694,
+  "occupation": 60,
+  "prix_nuit": 162,
+  "revenu_annuel": 35418,
+  "annonces": 296
+ },
+ {
+  "ville": "Mallemort",
+  "insee": "13053",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 6166,
+  "occupation": 53,
+  "prix_nuit": 149,
+  "revenu_annuel": 29058,
+  "annonces": 295
+ },
+ {
+  "ville": "Trébeurden",
+  "insee": "22343",
+  "region": "Bretagne",
+  "population": 3821,
+  "occupation": 52,
+  "prix_nuit": 124,
+  "revenu_annuel": 23514,
+  "annonces": 294
+ },
+ {
+  "ville": "Schiltigheim",
+  "insee": "67447",
+  "region": "Grand Est",
+  "population": 34708,
+  "occupation": 62,
+  "prix_nuit": 93,
+  "revenu_annuel": 21073,
+  "annonces": 294
+ },
+ {
+  "ville": "Ramatuelle",
+  "insee": "83101",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1888,
+  "occupation": 61,
+  "prix_nuit": 709,
+  "revenu_annuel": 158318,
+  "annonces": 294
+ },
+ {
+  "ville": "Mâcon",
+  "insee": "71270",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 35177,
+  "occupation": 51,
+  "prix_nuit": 72,
+  "revenu_annuel": 13386,
+  "annonces": 293
+ },
+ {
+  "ville": "Apt",
+  "insee": "84003",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 10143,
+  "occupation": 56,
+  "prix_nuit": 159,
+  "revenu_annuel": 32385,
+  "annonces": 293
+ },
+ {
+  "ville": "Le Portel",
+  "insee": "62667",
+  "region": "Hauts-de-France",
+  "population": 8768,
+  "occupation": 48,
+  "prix_nuit": 91,
+  "revenu_annuel": 16022,
+  "annonces": 292
+ },
+ {
+  "ville": "Laval",
+  "insee": "53130",
+  "region": "Pays de la Loire",
+  "population": 49400,
+  "occupation": 54,
+  "prix_nuit": 63,
+  "revenu_annuel": 12309,
+  "annonces": 291
+ },
+ {
+  "ville": "Sartène",
+  "insee": "2A272",
+  "region": "Corse",
+  "population": 3742,
+  "occupation": 58,
+  "prix_nuit": 132,
+  "revenu_annuel": 27913,
+  "annonces": 291
+ },
+ {
+  "ville": "Conca",
+  "insee": "2A092",
+  "region": "Corse",
+  "population": 1175,
+  "occupation": 64,
+  "prix_nuit": 238,
+  "revenu_annuel": 55392,
+  "annonces": 291
+ },
+ {
+  "ville": "Morillon",
+  "insee": "74190",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 719,
+  "occupation": 52,
+  "prix_nuit": 162,
+  "revenu_annuel": 30556,
+  "annonces": 290
+ },
+ {
+  "ville": "Torreilles",
+  "insee": "66212",
+  "region": "Occitanie",
+  "population": 3753,
+  "occupation": 53,
+  "prix_nuit": 112,
+  "revenu_annuel": 21503,
+  "annonces": 289
+ },
+ {
+  "ville": "Sausset-les-Pins",
+  "insee": "13104",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 7574,
+  "occupation": 55,
+  "prix_nuit": 124,
+  "revenu_annuel": 24850,
+  "annonces": 287
+ },
+ {
+  "ville": "Isola",
+  "insee": "06073",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 642,
+  "occupation": 47,
+  "prix_nuit": 175,
+  "revenu_annuel": 29777,
+  "annonces": 287
+ },
+ {
+  "ville": "Barbâtre",
+  "insee": "85011",
+  "region": "Pays de la Loire",
+  "population": 1824,
+  "occupation": 46,
+  "prix_nuit": 127,
+  "revenu_annuel": 21124,
+  "annonces": 286
+ },
+ {
+  "ville": "Tarbes",
+  "insee": "65440",
+  "region": "Occitanie",
+  "population": 44399,
+  "occupation": 60,
+  "prix_nuit": 52,
+  "revenu_annuel": 11312,
+  "annonces": 285
+ },
+ {
+  "ville": "Xonrupt-Longemer",
+  "insee": "88531",
+  "region": "Grand Est",
+  "population": 1479,
+  "occupation": 50,
+  "prix_nuit": 192,
+  "revenu_annuel": 35143,
+  "annonces": 285
+ },
+ {
+  "ville": "Montélimar",
+  "insee": "26198",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 40595,
+  "occupation": 53,
+  "prix_nuit": 77,
+  "revenu_annuel": 14805,
+  "annonces": 284
+ },
+ {
+  "ville": "Mèze",
+  "insee": "34157",
+  "region": "Occitanie",
+  "population": 12669,
+  "occupation": 54,
+  "prix_nuit": 101,
+  "revenu_annuel": 19918,
+  "annonces": 284
+ },
+ {
+  "ville": "Embrun",
+  "insee": "05046",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 6412,
+  "occupation": 54,
+  "prix_nuit": 89,
+  "revenu_annuel": 17615,
+  "annonces": 284
+ },
+ {
+  "ville": "Annemasse",
+  "insee": "74012",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 37628,
+  "occupation": 70,
+  "prix_nuit": 76,
+  "revenu_annuel": 19305,
+  "annonces": 282
+ },
+ {
+  "ville": "Belfort",
+  "insee": "90010",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 45912,
+  "occupation": 55,
+  "prix_nuit": 58,
+  "revenu_annuel": 11617,
+  "annonces": 282
+ },
+ {
+  "ville": "Trégastel",
+  "insee": "22353",
+  "region": "Bretagne",
+  "population": 2524,
+  "occupation": 52,
+  "prix_nuit": 105,
+  "revenu_annuel": 19928,
+  "annonces": 280
+ },
+ {
+  "ville": "Quend",
+  "insee": "80649",
+  "region": "Hauts-de-France",
+  "population": 1280,
+  "occupation": 46,
+  "prix_nuit": 139,
+  "revenu_annuel": 23274,
+  "annonces": 280
+ },
+ {
+  "ville": "Épinal",
+  "insee": "88160",
+  "region": "Grand Est",
+  "population": 32251,
+  "occupation": 51,
+  "prix_nuit": 77,
+  "revenu_annuel": 14263,
+  "annonces": 278
+ },
+ {
+  "ville": "Carry-le-Rouet",
+  "insee": "13021",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 5702,
+  "occupation": 54,
+  "prix_nuit": 150,
+  "revenu_annuel": 29709,
+  "annonces": 277
+ },
+ {
+  "ville": "Le Palais",
+  "insee": "56152",
+  "region": "Bretagne",
+  "population": 2599,
+  "occupation": 59,
+  "prix_nuit": 128,
+  "revenu_annuel": 27694,
+  "annonces": 275
+ },
+ {
+  "ville": "Talence",
+  "insee": "33522",
+  "region": "Nouvelle-Aquitaine",
+  "population": 46338,
+  "occupation": 65,
+  "prix_nuit": 78,
+  "revenu_annuel": 18626,
+  "annonces": 274
+ },
+ {
+  "ville": "Portiragnes",
+  "insee": "34209",
+  "region": "Occitanie",
+  "population": 3530,
+  "occupation": 52,
+  "prix_nuit": 115,
+  "revenu_annuel": 21726,
+  "annonces": 274
+ },
+ {
+  "ville": "La Roche-sur-Yon",
+  "insee": "85191",
+  "region": "Pays de la Loire",
+  "population": 54849,
+  "occupation": 60,
+  "prix_nuit": 67,
+  "revenu_annuel": 14785,
+  "annonces": 274
+ },
+ {
+  "ville": "Bagnolet",
+  "insee": "93006",
+  "region": "Île-de-France",
+  "population": 43086,
+  "occupation": 66,
+  "prix_nuit": 95,
+  "revenu_annuel": 22839,
+  "annonces": 272
+ },
+ {
+  "ville": "Nevers",
+  "insee": "58194",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 33085,
+  "occupation": 52,
+  "prix_nuit": 67,
+  "revenu_annuel": 12712,
+  "annonces": 271
+ },
+ {
+  "ville": "Longeville-sur-Mer",
+  "insee": "85127",
+  "region": "Pays de la Loire",
+  "population": 2625,
+  "occupation": 51,
+  "prix_nuit": 128,
+  "revenu_annuel": 23841,
+  "annonces": 271
+ },
+ {
+  "ville": "Cargèse",
+  "insee": "2A065",
+  "region": "Corse",
+  "population": 1150,
+  "occupation": 58,
+  "prix_nuit": 171,
+  "revenu_annuel": 36374,
+  "annonces": 271
+ },
+ {
+  "ville": "Saint-Aignan",
+  "insee": "41198",
+  "region": "Centre-Val de Loire",
+  "population": 2789,
+  "occupation": 54,
+  "prix_nuit": 123,
+  "revenu_annuel": 24239,
+  "annonces": 270
+ },
+ {
+  "ville": "Draguignan",
+  "insee": "83050",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 40826,
+  "occupation": 56,
+  "prix_nuit": 141,
+  "revenu_annuel": 28820,
+  "annonces": 270
+ },
+ {
+  "ville": "Rodez",
+  "insee": "12202",
+  "region": "Occitanie",
+  "population": 23981,
+  "occupation": 60,
+  "prix_nuit": 52,
+  "revenu_annuel": 11346,
+  "annonces": 268
+ },
+ {
+  "ville": "Douai",
+  "insee": "59178",
+  "region": "Hauts-de-France",
+  "population": 40250,
+  "occupation": 52,
+  "prix_nuit": 72,
+  "revenu_annuel": 13594,
+  "annonces": 268
+ },
+ {
+  "ville": "Lanton",
+  "insee": "33229",
+  "region": "Nouvelle-Aquitaine",
+  "population": 7337,
+  "occupation": 56,
+  "prix_nuit": 138,
+  "revenu_annuel": 28440,
+  "annonces": 267
+ },
+ {
+  "ville": "Damgan",
+  "insee": "56052",
+  "region": "Bretagne",
+  "population": 1943,
+  "occupation": 47,
+  "prix_nuit": 112,
+  "revenu_annuel": 19103,
+  "annonces": 267
+ },
+ {
+  "ville": "Sélestat",
+  "insee": "67462",
+  "region": "Grand Est",
+  "population": 19589,
+  "occupation": 54,
+  "prix_nuit": 99,
+  "revenu_annuel": 19639,
+  "annonces": 267
+ },
+ {
+  "ville": "Figari",
+  "insee": "2A114",
+  "region": "Corse",
+  "population": 1772,
+  "occupation": 65,
+  "prix_nuit": 207,
+  "revenu_annuel": 49281,
+  "annonces": 267
+ },
+ {
+  "ville": "Montrouge",
+  "insee": "92049",
+  "region": "Île-de-France",
+  "population": 46324,
+  "occupation": 69,
+  "prix_nuit": 111,
+  "revenu_annuel": 27812,
+  "annonces": 266
+ },
+ {
+  "ville": "Lamalou-les-Bains",
+  "insee": "34126",
+  "region": "Occitanie",
+  "population": 2389,
+  "occupation": 43,
+  "prix_nuit": 45,
+  "revenu_annuel": 7046,
+  "annonces": 261
+ },
+ {
+  "ville": "Ault",
+  "insee": "80039",
+  "region": "Hauts-de-France",
+  "population": 1346,
+  "occupation": 49,
+  "prix_nuit": 106,
+  "revenu_annuel": 18827,
+  "annonces": 261
+ },
+ {
+  "ville": "Orange",
+  "insee": "84087",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 29706,
+  "occupation": 48,
+  "prix_nuit": 113,
+  "revenu_annuel": 19982,
+  "annonces": 261
+ },
+ {
+  "ville": "Camiers",
+  "insee": "62201",
+  "region": "Hauts-de-France",
+  "population": 2582,
+  "occupation": 48,
+  "prix_nuit": 93,
+  "revenu_annuel": 16291,
+  "annonces": 260
+ },
+ {
+  "ville": "Gordes",
+  "insee": "84050",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1661,
+  "occupation": 60,
+  "prix_nuit": 408,
+  "revenu_annuel": 89818,
+  "annonces": 260
+ },
+ {
+  "ville": "La Turballe",
+  "insee": "44211",
+  "region": "Pays de la Loire",
+  "population": 4850,
+  "occupation": 51,
+  "prix_nuit": 124,
+  "revenu_annuel": 22978,
+  "annonces": 259
+ },
+ {
+  "ville": "Pessac",
+  "insee": "33318",
+  "region": "Nouvelle-Aquitaine",
+  "population": 67339,
+  "occupation": 65,
+  "prix_nuit": 84,
+  "revenu_annuel": 20064,
+  "annonces": 258
+ },
+ {
+  "ville": "La Guérinière",
+  "insee": "85106",
+  "region": "Pays de la Loire",
+  "population": 1377,
+  "occupation": 50,
+  "prix_nuit": 131,
+  "revenu_annuel": 24000,
+  "annonces": 257
+ },
+ {
+  "ville": "Évian-les-Bains",
+  "insee": "74119",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 9267,
+  "occupation": 60,
+  "prix_nuit": 102,
+  "revenu_annuel": 22471,
+  "annonces": 255
+ },
+ {
+  "ville": "Roubaix",
+  "insee": "59512",
+  "region": "Hauts-de-France",
+  "population": 98286,
+  "occupation": 51,
+  "prix_nuit": 76,
+  "revenu_annuel": 14208,
+  "annonces": 254
+ },
+ {
+  "ville": "Péone",
+  "insee": "06094",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1094,
+  "occupation": 43,
+  "prix_nuit": 167,
+  "revenu_annuel": 26043,
+  "annonces": 254
+ },
+ {
+  "ville": "Roscoff",
+  "insee": "29239",
+  "region": "Bretagne",
+  "population": 3334,
+  "occupation": 55,
+  "prix_nuit": 110,
+  "revenu_annuel": 21948,
+  "annonces": 253
+ },
+ {
+  "ville": "Noisy-le-Grand",
+  "insee": "93051",
+  "region": "Île-de-France",
+  "population": 72978,
+  "occupation": 62,
+  "prix_nuit": 84,
+  "revenu_annuel": 19020,
+  "annonces": 253
+ },
+ {
+  "ville": "Monticello",
+  "insee": "2B168",
+  "region": "Corse",
+  "population": 2065,
+  "occupation": 65,
+  "prix_nuit": 200,
+  "revenu_annuel": 47307,
+  "annonces": 253
+ },
+ {
+  "ville": "Cahors",
+  "insee": "46042",
+  "region": "Occitanie",
+  "population": 20050,
+  "occupation": 59,
+  "prix_nuit": 69,
+  "revenu_annuel": 14834,
+  "annonces": 252
+ },
+ {
+  "ville": "Vaison-la-Romaine",
+  "insee": "84137",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 6058,
+  "occupation": 51,
+  "prix_nuit": 162,
+  "revenu_annuel": 30028,
+  "annonces": 252
+ },
+ {
+  "ville": "Montluçon",
+  "insee": "03185",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 33147,
+  "occupation": 52,
+  "prix_nuit": 62,
+  "revenu_annuel": 11746,
+  "annonces": 252
+ },
+ {
+  "ville": "Plouguerneau",
+  "insee": "29195",
+  "region": "Bretagne",
+  "population": 6755,
+  "occupation": 52,
+  "prix_nuit": 112,
+  "revenu_annuel": 21320,
+  "annonces": 251
+ },
+ {
+  "ville": "Barcelonnette",
+  "insee": "04019",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 2518,
+  "occupation": 43,
+  "prix_nuit": 102,
+  "revenu_annuel": 16087,
+  "annonces": 250
+ },
+ {
+  "ville": "Salon-de-Provence",
+  "insee": "13103",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 44194,
+  "occupation": 60,
+  "prix_nuit": 92,
+  "revenu_annuel": 20022,
+  "annonces": 249
+ },
+ {
+  "ville": "Cazaubon",
+  "insee": "32096",
+  "region": "Occitanie",
+  "population": 1665,
+  "occupation": 52,
+  "prix_nuit": 42,
+  "revenu_annuel": 8013,
+  "annonces": 249
+ },
+ {
+  "ville": "Saint-Lunaire",
+  "insee": "35287",
+  "region": "Bretagne",
+  "population": 2768,
+  "occupation": 48,
+  "prix_nuit": 151,
+  "revenu_annuel": 26481,
+  "annonces": 249
+ },
+ {
+  "ville": "Aurillac",
+  "insee": "15014",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 26214,
+  "occupation": 52,
+  "prix_nuit": 60,
+  "revenu_annuel": 11293,
+  "annonces": 248
+ },
+ {
+  "ville": "Aubagne",
+  "insee": "13005",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 47529,
+  "occupation": 58,
+  "prix_nuit": 119,
+  "revenu_annuel": 25195,
+  "annonces": 247
+ },
+ {
+  "ville": "Agon-Coutainville",
+  "insee": "50003",
+  "region": "Normandie",
+  "population": 3020,
+  "occupation": 50,
+  "prix_nuit": 129,
+  "revenu_annuel": 23341,
+  "annonces": 247
+ },
+ {
+  "ville": "Wissant",
+  "insee": "62899",
+  "region": "Hauts-de-France",
+  "population": 835,
+  "occupation": 53,
+  "prix_nuit": 144,
+  "revenu_annuel": 27895,
+  "annonces": 247
+ },
+ {
+  "ville": "Cambo-les-Bains",
+  "insee": "64160",
+  "region": "Nouvelle-Aquitaine",
+  "population": 6760,
+  "occupation": 52,
+  "prix_nuit": 72,
+  "revenu_annuel": 13630,
+  "annonces": 247
+ },
+ {
+  "ville": "Suresnes",
+  "insee": "92073",
+  "region": "Île-de-France",
+  "population": 48956,
+  "occupation": 65,
+  "prix_nuit": 109,
+  "revenu_annuel": 25793,
+  "annonces": 247
+ },
+ {
+  "ville": "Argenteuil",
+  "insee": "95018",
+  "region": "Île-de-France",
+  "population": 106130,
+  "occupation": 56,
+  "prix_nuit": 89,
+  "revenu_annuel": 18190,
+  "annonces": 247
+ },
+ {
+  "ville": "Manigod",
+  "insee": "74160",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1000,
+  "occupation": 57,
+  "prix_nuit": 252,
+  "revenu_annuel": 52310,
+  "annonces": 246
+ },
+ {
+  "ville": "Passy",
+  "insee": "74208",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 10856,
+  "occupation": 56,
+  "prix_nuit": 109,
+  "revenu_annuel": 22289,
+  "annonces": 245
+ },
+ {
+  "ville": "Bédoin",
+  "insee": "84017",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3106,
+  "occupation": 55,
+  "prix_nuit": 139,
+  "revenu_annuel": 28068,
+  "annonces": 244
+ },
+ {
+  "ville": "Hendaye",
+  "insee": "64260",
+  "region": "Nouvelle-Aquitaine",
+  "population": 18102,
+  "occupation": 63,
+  "prix_nuit": 128,
+  "revenu_annuel": 29600,
+  "annonces": 242
+ },
+ {
+  "ville": "Sallanches",
+  "insee": "74256",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 17319,
+  "occupation": 60,
+  "prix_nuit": 111,
+  "revenu_annuel": 24447,
+  "annonces": 241
+ },
+ {
+  "ville": "Sevrier",
+  "insee": "74267",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 4333,
+  "occupation": 60,
+  "prix_nuit": 200,
+  "revenu_annuel": 44033,
+  "annonces": 241
+ },
+ {
+  "ville": "Le Muy",
+  "insee": "83086",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 10118,
+  "occupation": 51,
+  "prix_nuit": 168,
+  "revenu_annuel": 30975,
+  "annonces": 241
+ },
+ {
+  "ville": "Audierne",
+  "insee": "29003",
+  "region": "Bretagne",
+  "population": 3727,
+  "occupation": 51,
+  "prix_nuit": 99,
+  "revenu_annuel": 18467,
+  "annonces": 240
+ },
+ {
+  "ville": "Roanne",
+  "insee": "42187",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 35409,
+  "occupation": 50,
+  "prix_nuit": 57,
+  "revenu_annuel": 10339,
+  "annonces": 240
+ },
+ {
+  "ville": "Cavaillon",
+  "insee": "84035",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 25636,
+  "occupation": 56,
+  "prix_nuit": 180,
+  "revenu_annuel": 36580,
+  "annonces": 240
+ },
+ {
+  "ville": "Maisons-Alfort",
+  "insee": "94046",
+  "region": "Île-de-France",
+  "population": 56799,
+  "occupation": 64,
+  "prix_nuit": 93,
+  "revenu_annuel": 21721,
+  "annonces": 240
+ },
+ {
+  "ville": "Les Rousses",
+  "insee": "39470",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 3740,
+  "occupation": 54,
+  "prix_nuit": 95,
+  "revenu_annuel": 18834,
+  "annonces": 239
+ },
+ {
+  "ville": "Clamart",
+  "insee": "92023",
+  "region": "Île-de-France",
+  "population": 58576,
+  "occupation": 64,
+  "prix_nuit": 115,
+  "revenu_annuel": 26695,
+  "annonces": 239
+ },
+ {
+  "ville": "Albitreccia",
+  "insee": "2A008",
+  "region": "Corse",
+  "population": 1833,
+  "occupation": 60,
+  "prix_nuit": 176,
+  "revenu_annuel": 38759,
+  "annonces": 239
+ },
+ {
+  "ville": "Erdeven",
+  "insee": "56054",
+  "region": "Bretagne",
+  "population": 4008,
+  "occupation": 55,
+  "prix_nuit": 120,
+  "revenu_annuel": 23935,
+  "annonces": 238
+ },
+ {
+  "ville": "Monflanquin",
+  "insee": "47175",
+  "region": "Nouvelle-Aquitaine",
+  "population": 2342,
+  "occupation": 48,
+  "prix_nuit": 128,
+  "revenu_annuel": 22571,
+  "annonces": 237
+ },
+ {
+  "ville": "Aulnay-sous-Bois",
+  "insee": "93005",
+  "region": "Île-de-France",
+  "population": 87599,
+  "occupation": 55,
+  "prix_nuit": 96,
+  "revenu_annuel": 19310,
+  "annonces": 237
+ },
+ {
+  "ville": "Plérin",
+  "insee": "22187",
+  "region": "Bretagne",
+  "population": 14425,
+  "occupation": 55,
+  "prix_nuit": 100,
+  "revenu_annuel": 20051,
+  "annonces": 236
+ },
+ {
+  "ville": "Vienne",
+  "insee": "38544",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 31778,
+  "occupation": 53,
+  "prix_nuit": 80,
+  "revenu_annuel": 15397,
+  "annonces": 236
+ },
+ {
+  "ville": "Merlimont",
+  "insee": "62571",
+  "region": "Hauts-de-France",
+  "population": 3342,
+  "occupation": 46,
+  "prix_nuit": 109,
+  "revenu_annuel": 18449,
+  "annonces": 235
+ },
+ {
+  "ville": "Grospierres",
+  "insee": "07101",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 941,
+  "occupation": 48,
+  "prix_nuit": 131,
+  "revenu_annuel": 22833,
+  "annonces": 235
+ },
+ {
+  "ville": "Pénestin",
+  "insee": "56155",
+  "region": "Bretagne",
+  "population": 2085,
+  "occupation": 50,
+  "prix_nuit": 134,
+  "revenu_annuel": 24655,
+  "annonces": 233
+ },
+ {
+  "ville": "La Roche-Posay",
+  "insee": "86207",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1566,
+  "occupation": 44,
+  "prix_nuit": 43,
+  "revenu_annuel": 6930,
+  "annonces": 233
+ },
+ {
+  "ville": "Malakoff",
+  "insee": "92046",
+  "region": "Île-de-France",
+  "population": 30557,
+  "occupation": 67,
+  "prix_nuit": 122,
+  "revenu_annuel": 29685,
+  "annonces": 233
+ },
+ {
+  "ville": "Vanves",
+  "insee": "92075",
+  "region": "Île-de-France",
+  "population": 28622,
+  "occupation": 73,
+  "prix_nuit": 118,
+  "revenu_annuel": 31259,
+  "annonces": 233
+ },
+ {
+  "ville": "Serra-di-Ferro",
+  "insee": "2A276",
+  "region": "Corse",
+  "population": 727,
+  "occupation": 60,
+  "prix_nuit": 149,
+  "revenu_annuel": 32751,
+  "annonces": 233
+ },
+ {
+  "ville": "Pézenas",
+  "insee": "34199",
+  "region": "Occitanie",
+  "population": 7797,
+  "occupation": 48,
+  "prix_nuit": 136,
+  "revenu_annuel": 23644,
+  "annonces": 231
+ },
+ {
+  "ville": "Groix",
+  "insee": "56069",
+  "region": "Bretagne",
+  "population": 2310,
+  "occupation": 53,
+  "prix_nuit": 124,
+  "revenu_annuel": 23849,
+  "annonces": 230
+ },
+ {
+  "ville": "Beauvais",
+  "insee": "60057",
+  "region": "Hauts-de-France",
+  "population": 55550,
+  "occupation": 58,
+  "prix_nuit": 64,
+  "revenu_annuel": 13459,
+  "annonces": 230
+ },
+ {
+  "ville": "Urrugne",
+  "insee": "64545",
+  "region": "Nouvelle-Aquitaine",
+  "population": 10661,
+  "occupation": 57,
+  "prix_nuit": 160,
+  "revenu_annuel": 33162,
+  "annonces": 230
+ },
+ {
+  "ville": "Le Plan-de-la-Tour",
+  "insee": "83094",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3125,
+  "occupation": 58,
+  "prix_nuit": 303,
+  "revenu_annuel": 64516,
+  "annonces": 230
+ },
+ {
+  "ville": "Rueil-Malmaison",
+  "insee": "92063",
+  "region": "Île-de-France",
+  "population": 82874,
+  "occupation": 60,
+  "prix_nuit": 103,
+  "revenu_annuel": 22444,
+  "annonces": 230
+ },
+ {
+  "ville": "Parentis-en-Born",
+  "insee": "40217",
+  "region": "Nouvelle-Aquitaine",
+  "population": 7586,
+  "occupation": 53,
+  "prix_nuit": 117,
+  "revenu_annuel": 22546,
+  "annonces": 229
+ },
+ {
+  "ville": "Batz-sur-Mer",
+  "insee": "44010",
+  "region": "Pays de la Loire",
+  "population": 2892,
+  "occupation": 48,
+  "prix_nuit": 134,
+  "revenu_annuel": 23273,
+  "annonces": 229
+ },
+ {
+  "ville": "Cambrai",
+  "insee": "59122",
+  "region": "Hauts-de-France",
+  "population": 31134,
+  "occupation": 52,
+  "prix_nuit": 56,
+  "revenu_annuel": 10704,
+  "annonces": 228
+ },
+ {
+  "ville": "Bègles",
+  "insee": "33039",
+  "region": "Nouvelle-Aquitaine",
+  "population": 31831,
+  "occupation": 62,
+  "prix_nuit": 84,
+  "revenu_annuel": 19148,
+  "annonces": 227
+ },
+ {
+  "ville": "Tourcoing",
+  "insee": "59599",
+  "region": "Hauts-de-France",
+  "population": 98772,
+  "occupation": 54,
+  "prix_nuit": 76,
+  "revenu_annuel": 15000,
+  "annonces": 227
+ },
+ {
+  "ville": "Campan",
+  "insee": "65123",
+  "region": "Occitanie",
+  "population": 1245,
+  "occupation": 47,
+  "prix_nuit": 126,
+  "revenu_annuel": 21764,
+  "annonces": 226
+ },
+ {
+  "ville": "Cotignac",
+  "insee": "83046",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 2197,
+  "occupation": 55,
+  "prix_nuit": 211,
+  "revenu_annuel": 42598,
+  "annonces": 226
+ },
+ {
+  "ville": "Allevard",
+  "insee": "38006",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 3971,
+  "occupation": 50,
+  "prix_nuit": 76,
+  "revenu_annuel": 13956,
+  "annonces": 225
+ },
+ {
+  "ville": "Lens",
+  "insee": "62498",
+  "region": "Hauts-de-France",
+  "population": 32920,
+  "occupation": 55,
+  "prix_nuit": 71,
+  "revenu_annuel": 14141,
+  "annonces": 225
+ },
+ {
+  "ville": "Dives-sur-Mer",
+  "insee": "14225",
+  "region": "Normandie",
+  "population": 5122,
+  "occupation": 48,
+  "prix_nuit": 117,
+  "revenu_annuel": 20297,
+  "annonces": 223
+ },
+ {
+  "ville": "Caluire-et-Cuire",
+  "insee": "69034",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 43597,
+  "occupation": 59,
+  "prix_nuit": 90,
+  "revenu_annuel": 19414,
+  "annonces": 223
+ },
+ {
+  "ville": "Dole",
+  "insee": "39198",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 23840,
+  "occupation": 52,
+  "prix_nuit": 75,
+  "revenu_annuel": 14166,
+  "annonces": 222
+ },
+ {
+  "ville": "San-Nicolao",
+  "insee": "2B313",
+  "region": "Corse",
+  "population": 2062,
+  "occupation": 60,
+  "prix_nuit": 108,
+  "revenu_annuel": 23474,
+  "annonces": 222
+ },
+ {
+  "ville": "Èze",
+  "insee": "06059",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 2144,
+  "occupation": 56,
+  "prix_nuit": 264,
+  "revenu_annuel": 53711,
+  "annonces": 222
+ },
+ {
+  "ville": "Rivedoux-Plage",
+  "insee": "17297",
+  "region": "Nouvelle-Aquitaine",
+  "population": 2483,
+  "occupation": 60,
+  "prix_nuit": 180,
+  "revenu_annuel": 39135,
+  "annonces": 221
+ },
+ {
+  "ville": "Guilvinec",
+  "insee": "29072",
+  "region": "Bretagne",
+  "population": 2669,
+  "occupation": 54,
+  "prix_nuit": 105,
+  "revenu_annuel": 20718,
+  "annonces": 221
+ },
+ {
+  "ville": "Lit-et-Mixe",
+  "insee": "40157",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1719,
+  "occupation": 57,
+  "prix_nuit": 176,
+  "revenu_annuel": 36387,
+  "annonces": 220
+ },
+ {
+  "ville": "Trégunc",
+  "insee": "29293",
+  "region": "Bretagne",
+  "population": 7148,
+  "occupation": 57,
+  "prix_nuit": 130,
+  "revenu_annuel": 27031,
+  "annonces": 219
+ },
+ {
+  "ville": "Champigny-sur-Marne",
+  "insee": "94017",
+  "region": "Île-de-France",
+  "population": 78072,
+  "occupation": 61,
+  "prix_nuit": 87,
+  "revenu_annuel": 19417,
+  "annonces": 219
+ },
+ {
+  "ville": "Bourg-en-Bresse",
+  "insee": "01053",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 42372,
+  "occupation": 57,
+  "prix_nuit": 60,
+  "revenu_annuel": 12519,
+  "annonces": 219
+ },
+ {
+  "ville": "Pleumeur-Bodou",
+  "insee": "22198",
+  "region": "Bretagne",
+  "population": 3848,
+  "occupation": 51,
+  "prix_nuit": 128,
+  "revenu_annuel": 24001,
+  "annonces": 217
+ },
+ {
+  "ville": "Ciboure",
+  "insee": "64189",
+  "region": "Nouvelle-Aquitaine",
+  "population": 5951,
+  "occupation": 62,
+  "prix_nuit": 132,
+  "revenu_annuel": 29963,
+  "annonces": 217
+ },
+ {
+  "ville": "Lannion",
+  "insee": "22113",
+  "region": "Bretagne",
+  "population": 20315,
+  "occupation": 56,
+  "prix_nuit": 78,
+  "revenu_annuel": 15846,
+  "annonces": 216
+ },
+ {
+  "ville": "Moëlan-sur-Mer",
+  "insee": "29150",
+  "region": "Bretagne",
+  "population": 6749,
+  "occupation": 56,
+  "prix_nuit": 114,
+  "revenu_annuel": 23195,
+  "annonces": 216
+ },
+ {
+  "ville": "Plouescat",
+  "insee": "29185",
+  "region": "Bretagne",
+  "population": 3554,
+  "occupation": 61,
+  "prix_nuit": 147,
+  "revenu_annuel": 32939,
+  "annonces": 216
+ },
+ {
+  "ville": "Plougasnou",
+  "insee": "29188",
+  "region": "Bretagne",
+  "population": 3192,
+  "occupation": 50,
+  "prix_nuit": 121,
+  "revenu_annuel": 21965,
+  "annonces": 216
+ },
+ {
+  "ville": "Les Adrets",
+  "insee": "38002",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1079,
+  "occupation": 46,
+  "prix_nuit": 110,
+  "revenu_annuel": 18530,
+  "annonces": 216
+ },
+ {
+  "ville": "Montriond",
+  "insee": "74188",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 969,
+  "occupation": 53,
+  "prix_nuit": 372,
+  "revenu_annuel": 71486,
+  "annonces": 216
+ },
+ {
+  "ville": "Talloires-Montmin",
+  "insee": "74275",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1903,
+  "occupation": 53,
+  "prix_nuit": 230,
+  "revenu_annuel": 44414,
+  "annonces": 216
+ },
+ {
+  "ville": "Larmor-Plage",
+  "insee": "56107",
+  "region": "Bretagne",
+  "population": 8418,
+  "occupation": 52,
+  "prix_nuit": 123,
+  "revenu_annuel": 23289,
+  "annonces": 215
+ },
+ {
+  "ville": "Corbara",
+  "insee": "2B093",
+  "region": "Corse",
+  "population": 962,
+  "occupation": 64,
+  "prix_nuit": 253,
+  "revenu_annuel": 59234,
+  "annonces": 215
+ },
+ {
+  "ville": "Loctudy",
+  "insee": "29135",
+  "region": "Bretagne",
+  "population": 4075,
+  "occupation": 54,
+  "prix_nuit": 143,
+  "revenu_annuel": 28362,
+  "annonces": 213
+ },
+ {
+  "ville": "Demi-Quartier",
+  "insee": "74099",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 801,
+  "occupation": 46,
+  "prix_nuit": 305,
+  "revenu_annuel": 51709,
+  "annonces": 212
+ },
+ {
+  "ville": "Alfortville",
+  "insee": "94002",
+  "region": "Île-de-France",
+  "population": 45531,
+  "occupation": 66,
+  "prix_nuit": 89,
+  "revenu_annuel": 21559,
+  "annonces": 212
+ },
+ {
+  "ville": "Belgodère",
+  "insee": "2B034",
+  "region": "Corse",
+  "population": 835,
+  "occupation": 65,
+  "prix_nuit": 129,
+  "revenu_annuel": 30688,
+  "annonces": 212
+ },
+ {
+  "ville": "Carantec",
+  "insee": "29023",
+  "region": "Bretagne",
+  "population": 3272,
+  "occupation": 50,
+  "prix_nuit": 156,
+  "revenu_annuel": 28305,
+  "annonces": 210
+ },
+ {
+  "ville": "La Trinité-sur-Mer",
+  "insee": "56258",
+  "region": "Bretagne",
+  "population": 1845,
+  "occupation": 54,
+  "prix_nuit": 151,
+  "revenu_annuel": 29629,
+  "annonces": 210
+ },
+ {
+  "ville": "Saint-Jorioz",
+  "insee": "74242",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 6390,
+  "occupation": 56,
+  "prix_nuit": 188,
+  "revenu_annuel": 38426,
+  "annonces": 210
+ },
+ {
+  "ville": "Malaucène",
+  "insee": "84069",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 2758,
+  "occupation": 50,
+  "prix_nuit": 162,
+  "revenu_annuel": 29343,
+  "annonces": 210
+ },
+ {
+  "ville": "Digne-les-Bains",
+  "insee": "04070",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 17979,
+  "occupation": 58,
+  "prix_nuit": 65,
+  "revenu_annuel": 13760,
+  "annonces": 210
+ },
+ {
+  "ville": "La Hague",
+  "insee": "50041",
+  "region": "Normandie",
+  "population": 11484,
+  "occupation": 56,
+  "prix_nuit": 109,
+  "revenu_annuel": 22438,
+  "annonces": 209
+ },
+ {
+  "ville": "Châtel-Guyon",
+  "insee": "63103",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 6299,
+  "occupation": 54,
+  "prix_nuit": 53,
+  "revenu_annuel": 10465,
+  "annonces": 209
+ },
+ {
+  "ville": "Manosque",
+  "insee": "04112",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 22718,
+  "occupation": 57,
+  "prix_nuit": 81,
+  "revenu_annuel": 16890,
+  "annonces": 208
+ },
+ {
+  "ville": "Beaulieu-sur-Mer",
+  "insee": "06011",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3874,
+  "occupation": 66,
+  "prix_nuit": 165,
+  "revenu_annuel": 39765,
+  "annonces": 208
+ },
+ {
+  "ville": "Pont-Aven",
+  "insee": "29217",
+  "region": "Bretagne",
+  "population": 2777,
+  "occupation": 54,
+  "prix_nuit": 77,
+  "revenu_annuel": 15099,
+  "annonces": 207
+ },
+ {
+  "ville": "Vendres",
+  "insee": "34329",
+  "region": "Occitanie",
+  "population": 2616,
+  "occupation": 48,
+  "prix_nuit": 127,
+  "revenu_annuel": 22236,
+  "annonces": 207
+ },
+ {
+  "ville": "Le Teich",
+  "insee": "33527",
+  "region": "Nouvelle-Aquitaine",
+  "population": 9180,
+  "occupation": 58,
+  "prix_nuit": 134,
+  "revenu_annuel": 28331,
+  "annonces": 205
+ },
+ {
+  "ville": "Sotta",
+  "insee": "2A288",
+  "region": "Corse",
+  "population": 1893,
+  "occupation": 69,
+  "prix_nuit": 196,
+  "revenu_annuel": 49022,
+  "annonces": 205
+ },
+ {
+  "ville": "Mont-de-Marsan",
+  "insee": "40192",
+  "region": "Nouvelle-Aquitaine",
+  "population": 31592,
+  "occupation": 56,
+  "prix_nuit": 61,
+  "revenu_annuel": 12427,
+  "annonces": 204
+ },
+ {
+  "ville": "Peisey-Nancroix",
+  "insee": "73197",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 632,
+  "occupation": 55,
+  "prix_nuit": 308,
+  "revenu_annuel": 62289,
+  "annonces": 204
+ },
+ {
+  "ville": "Vidauban",
+  "insee": "83148",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 12608,
+  "occupation": 55,
+  "prix_nuit": 203,
+  "revenu_annuel": 40837,
+  "annonces": 203
+ },
+ {
+  "ville": "Romainville",
+  "insee": "93063",
+  "region": "Île-de-France",
+  "population": 37152,
+  "occupation": 72,
+  "prix_nuit": 94,
+  "revenu_annuel": 24558,
+  "annonces": 202
+ },
+ {
+  "ville": "Borgo",
+  "insee": "2B042",
+  "region": "Corse",
+  "population": 10311,
+  "occupation": 61,
+  "prix_nuit": 102,
+  "revenu_annuel": 22605,
+  "annonces": 202
+ },
+ {
+  "ville": "Argelès-Gazost",
+  "insee": "65025",
+  "region": "Occitanie",
+  "population": 2761,
+  "occupation": 52,
+  "prix_nuit": 80,
+  "revenu_annuel": 15135,
+  "annonces": 201
+ },
+ {
+  "ville": "Ustou",
+  "insee": "09322",
+  "region": "Occitanie",
+  "population": 281,
+  "occupation": 45,
+  "prix_nuit": 85,
+  "revenu_annuel": 13928,
+  "annonces": 201
+ },
+ {
+  "ville": "Corte",
+  "insee": "2B096",
+  "region": "Corse",
+  "population": 7819,
+  "occupation": 59,
+  "prix_nuit": 78,
+  "revenu_annuel": 16802,
+  "annonces": 201
+ },
+ {
+  "ville": "Les Déserts",
+  "insee": "73098",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 845,
+  "occupation": 48,
+  "prix_nuit": 139,
+  "revenu_annuel": 24465,
+  "annonces": 200
+ },
+ {
+  "ville": "Baden",
+  "insee": "56008",
+  "region": "Bretagne",
+  "population": 5086,
+  "occupation": 53,
+  "prix_nuit": 148,
+  "revenu_annuel": 28523,
+  "annonces": 199
+ },
+ {
+  "ville": "Calcatoggio",
+  "insee": "2A048",
+  "region": "Corse",
+  "population": 516,
+  "occupation": 62,
+  "prix_nuit": 147,
+  "revenu_annuel": 33160,
+  "annonces": 199
+ },
+ {
+  "ville": "Blonville-sur-Mer",
+  "insee": "14079",
+  "region": "Normandie",
+  "population": 1621,
+  "occupation": 46,
+  "prix_nuit": 134,
+  "revenu_annuel": 22292,
+  "annonces": 198
+ },
+ {
+  "ville": "Ondres",
+  "insee": "40209",
+  "region": "Nouvelle-Aquitaine",
+  "population": 6533,
+  "occupation": 66,
+  "prix_nuit": 132,
+  "revenu_annuel": 31568,
+  "annonces": 198
+ },
+ {
+  "ville": "Compiègne",
+  "insee": "60159",
+  "region": "Hauts-de-France",
+  "population": 40761,
+  "occupation": 52,
+  "prix_nuit": 87,
+  "revenu_annuel": 16652,
+  "annonces": 197
+ },
+ {
+  "ville": "Istres",
+  "insee": "13047",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 44292,
+  "occupation": 58,
+  "prix_nuit": 98,
+  "revenu_annuel": 20661,
+  "annonces": 196
+ },
+ {
+  "ville": "Aragnouet",
+  "insee": "65017",
+  "region": "Occitanie",
+  "population": 289,
+  "occupation": 52,
+  "prix_nuit": 102,
+  "revenu_annuel": 19337,
+  "annonces": 196
+ },
+ {
+  "ville": "Saint-Jean-de-Sixt",
+  "insee": "74239",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1561,
+  "occupation": 53,
+  "prix_nuit": 204,
+  "revenu_annuel": 39593,
+  "annonces": 196
+ },
+ {
+  "ville": "Bagneux",
+  "insee": "92007",
+  "region": "Île-de-France",
+  "population": 44572,
+  "occupation": 66,
+  "prix_nuit": 143,
+  "revenu_annuel": 34333,
+  "annonces": 196
+ },
+ {
+  "ville": "Nyons",
+  "insee": "26220",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 6816,
+  "occupation": 52,
+  "prix_nuit": 106,
+  "revenu_annuel": 20303,
+  "annonces": 195
+ },
+ {
+  "ville": "Barèges",
+  "insee": "65481",
+  "region": "Occitanie",
+  "population": 127,
+  "occupation": 49,
+  "prix_nuit": 87,
+  "revenu_annuel": 15510,
+  "annonces": 195
+ },
+ {
+  "ville": "Calenzana",
+  "insee": "2B049",
+  "region": "Corse",
+  "population": 2684,
+  "occupation": 61,
+  "prix_nuit": 146,
+  "revenu_annuel": 32691,
+  "annonces": 195
+ },
+ {
+  "ville": "Pontorson",
+  "insee": "50410",
+  "region": "Normandie",
+  "population": 4280,
+  "occupation": 53,
+  "prix_nuit": 111,
+  "revenu_annuel": 21588,
+  "annonces": 194
+ },
+ {
+  "ville": "Port-Bail-sur-Mer",
+  "insee": "50412",
+  "region": "Normandie",
+  "population": 2520,
+  "occupation": 55,
+  "prix_nuit": 107,
+  "revenu_annuel": 21402,
+  "annonces": 194
+ },
+ {
+  "ville": "Gastes",
+  "insee": "40108",
+  "region": "Nouvelle-Aquitaine",
+  "population": 925,
+  "occupation": 52,
+  "prix_nuit": 105,
+  "revenu_annuel": 19928,
+  "annonces": 193
+ },
+ {
+  "ville": "Castres",
+  "insee": "81065",
+  "region": "Occitanie",
+  "population": 42505,
+  "occupation": 55,
+  "prix_nuit": 61,
+  "revenu_annuel": 12144,
+  "annonces": 193
+ },
+ {
+  "ville": "Cognac",
+  "insee": "16102",
+  "region": "Nouvelle-Aquitaine",
+  "population": 18532,
+  "occupation": 51,
+  "prix_nuit": 71,
+  "revenu_annuel": 13268,
+  "annonces": 192
+ },
+ {
+  "ville": "Alès",
+  "insee": "30007",
+  "region": "Occitanie",
+  "population": 46125,
+  "occupation": 54,
+  "prix_nuit": 86,
+  "revenu_annuel": 17010,
+  "annonces": 192
+ },
+ {
+  "ville": "Saint-Pair-sur-Mer",
+  "insee": "50532",
+  "region": "Normandie",
+  "population": 4507,
+  "occupation": 47,
+  "prix_nuit": 124,
+  "revenu_annuel": 21438,
+  "annonces": 192
+ },
+ {
+  "ville": "Châteaurenard",
+  "insee": "13027",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 16545,
+  "occupation": 56,
+  "prix_nuit": 151,
+  "revenu_annuel": 31127,
+  "annonces": 191
+ },
+ {
+  "ville": "Bray-Dunes",
+  "insee": "59107",
+  "region": "Hauts-de-France",
+  "population": 4189,
+  "occupation": 51,
+  "prix_nuit": 113,
+  "revenu_annuel": 20903,
+  "annonces": 191
+ },
+ {
+  "ville": "Aussois",
+  "insee": "73023",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 676,
+  "occupation": 41,
+  "prix_nuit": 112,
+  "revenu_annuel": 16765,
+  "annonces": 190
+ },
+ {
+  "ville": "Orelle",
+  "insee": "73194",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 324,
+  "occupation": 60,
+  "prix_nuit": 130,
+  "revenu_annuel": 28445,
+  "annonces": 190
+ },
+ {
+  "ville": "Messanges",
+  "insee": "40181",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1086,
+  "occupation": 56,
+  "prix_nuit": 208,
+  "revenu_annuel": 42283,
+  "annonces": 189
+ },
+ {
+  "ville": "Veuzain-sur-Loire",
+  "insee": "41167",
+  "region": "Centre-Val de Loire",
+  "population": 3333,
+  "occupation": 47,
+  "prix_nuit": 93,
+  "revenu_annuel": 16103,
+  "annonces": 189
+ },
+ {
+  "ville": "Montauroux",
+  "insee": "83081",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 7183,
+  "occupation": 58,
+  "prix_nuit": 234,
+  "revenu_annuel": 49284,
+  "annonces": 189
+ },
+ {
+  "ville": "Drancy",
+  "insee": "93029",
+  "region": "Île-de-France",
+  "population": 72390,
+  "occupation": 56,
+  "prix_nuit": 91,
+  "revenu_annuel": 18455,
+  "annonces": 189
+ },
+ {
+  "ville": "Plouha",
+  "insee": "22222",
+  "region": "Bretagne",
+  "population": 4634,
+  "occupation": 54,
+  "prix_nuit": 107,
+  "revenu_annuel": 20936,
+  "annonces": 188
+ },
+ {
+  "ville": "Tarnos",
+  "insee": "40312",
+  "region": "Nouvelle-Aquitaine",
+  "population": 12957,
+  "occupation": 67,
+  "prix_nuit": 128,
+  "revenu_annuel": 31179,
+  "annonces": 188
+ },
+ {
+  "ville": "La Plaine-sur-Mer",
+  "insee": "44126",
+  "region": "Pays de la Loire",
+  "population": 4760,
+  "occupation": 52,
+  "prix_nuit": 108,
+  "revenu_annuel": 20395,
+  "annonces": 188
+ },
+ {
+  "ville": "Montignac",
+  "insee": "65321",
+  "region": "Occitanie",
+  "population": 135,
+  "occupation": 48,
+  "prix_nuit": 108,
+  "revenu_annuel": 18997,
+  "annonces": 188
+ },
+ {
+  "ville": "Doussard",
+  "insee": "74104",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 3751,
+  "occupation": 54,
+  "prix_nuit": 179,
+  "revenu_annuel": 35524,
+  "annonces": 188
+ },
+ {
+  "ville": "Taninges",
+  "insee": "74276",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 3491,
+  "occupation": 51,
+  "prix_nuit": 141,
+  "revenu_annuel": 26019,
+  "annonces": 188
+ },
+ {
+  "ville": "Le Beausset",
+  "insee": "83016",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 10219,
+  "occupation": 51,
+  "prix_nuit": 170,
+  "revenu_annuel": 31546,
+  "annonces": 188
+ },
+ {
+  "ville": "Porta",
+  "insee": "66146",
+  "region": "Occitanie",
+  "population": 94,
+  "occupation": 41,
+  "prix_nuit": 132,
+  "revenu_annuel": 19812,
+  "annonces": 187
+ },
+ {
+  "ville": "Aytré",
+  "insee": "17028",
+  "region": "Nouvelle-Aquitaine",
+  "population": 9746,
+  "occupation": 62,
+  "prix_nuit": 88,
+  "revenu_annuel": 19817,
+  "annonces": 186
+ },
+ {
+  "ville": "Fréhel",
+  "insee": "22179",
+  "region": "Bretagne",
+  "population": 1611,
+  "occupation": 54,
+  "prix_nuit": 108,
+  "revenu_annuel": 21388,
+  "annonces": 186
+ },
+ {
+  "ville": "Vaujany",
+  "insee": "38527",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 357,
+  "occupation": 62,
+  "prix_nuit": 232,
+  "revenu_annuel": 52660,
+  "annonces": 186
+ },
+ {
+  "ville": "Mesquer",
+  "insee": "44097",
+  "region": "Pays de la Loire",
+  "population": 2171,
+  "occupation": 49,
+  "prix_nuit": 176,
+  "revenu_annuel": 31712,
+  "annonces": 186
+ },
+ {
+  "ville": "Ruoms",
+  "insee": "07201",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2311,
+  "occupation": 47,
+  "prix_nuit": 143,
+  "revenu_annuel": 24642,
+  "annonces": 186
+ },
+ {
+  "ville": "Camaret-sur-Mer",
+  "insee": "29022",
+  "region": "Bretagne",
+  "population": 2494,
+  "occupation": 56,
+  "prix_nuit": 102,
+  "revenu_annuel": 20893,
+  "annonces": 185
+ },
+ {
+  "ville": "Audenge",
+  "insee": "33019",
+  "region": "Nouvelle-Aquitaine",
+  "population": 9596,
+  "occupation": 57,
+  "prix_nuit": 125,
+  "revenu_annuel": 25818,
+  "annonces": 185
+ },
+ {
+  "ville": "Castelnau-le-Lez",
+  "insee": "34057",
+  "region": "Occitanie",
+  "population": 26058,
+  "occupation": 58,
+  "prix_nuit": 98,
+  "revenu_annuel": 20859,
+  "annonces": 183
+ },
+ {
+  "ville": "Loudenvielle",
+  "insee": "65282",
+  "region": "Occitanie",
+  "population": 374,
+  "occupation": 53,
+  "prix_nuit": 133,
+  "revenu_annuel": 25741,
+  "annonces": 183
+ },
+ {
+  "ville": "Petit-Caux",
+  "insee": "76618",
+  "region": "Normandie",
+  "population": 9513,
+  "occupation": 50,
+  "prix_nuit": 88,
+  "revenu_annuel": 16027,
+  "annonces": 183
+ },
+ {
+  "ville": "Paray-le-Monial",
+  "insee": "71342",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 9291,
+  "occupation": 46,
+  "prix_nuit": 89,
+  "revenu_annuel": 14933,
+  "annonces": 182
+ },
+ {
+  "ville": "Créteil",
+  "insee": "94028",
+  "region": "Île-de-France",
+  "population": 93397,
+  "occupation": 64,
+  "prix_nuit": 91,
+  "revenu_annuel": 21095,
+  "annonces": 182
+ },
+ {
+  "ville": "Locquirec",
+  "insee": "29133",
+  "region": "Bretagne",
+  "population": 1555,
+  "occupation": 51,
+  "prix_nuit": 146,
+  "revenu_annuel": 27102,
+  "annonces": 180
+ },
+ {
+  "ville": "Le Blanc-Mesnil",
+  "insee": "93007",
+  "region": "Île-de-France",
+  "population": 62376,
+  "occupation": 57,
+  "prix_nuit": 100,
+  "revenu_annuel": 20944,
+  "annonces": 180
+ },
+ {
+  "ville": "Le Conquet",
+  "insee": "29040",
+  "region": "Bretagne",
+  "population": 2835,
+  "occupation": 53,
+  "prix_nuit": 116,
+  "revenu_annuel": 22604,
+  "annonces": 179
+ },
+ {
+  "ville": "Pérols",
+  "insee": "34198",
+  "region": "Occitanie",
+  "population": 9615,
+  "occupation": 59,
+  "prix_nuit": 137,
+  "revenu_annuel": 29607,
+  "annonces": 179
+ },
+ {
+  "ville": "Vals-les-Bains",
+  "insee": "07331",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 3474,
+  "occupation": 55,
+  "prix_nuit": 71,
+  "revenu_annuel": 14206,
+  "annonces": 179
+ },
+ {
+  "ville": "Libourne",
+  "insee": "33243",
+  "region": "Nouvelle-Aquitaine",
+  "population": 25036,
+  "occupation": 52,
+  "prix_nuit": 77,
+  "revenu_annuel": 14475,
+  "annonces": 178
+ },
+ {
+  "ville": "Les Lilas",
+  "insee": "93045",
+  "region": "Île-de-France",
+  "population": 23843,
+  "occupation": 68,
+  "prix_nuit": 101,
+  "revenu_annuel": 24898,
+  "annonces": 178
+ },
+ {
+  "ville": "Ensuès-la-Redonne",
+  "insee": "13033",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 5757,
+  "occupation": 52,
+  "prix_nuit": 159,
+  "revenu_annuel": 30270,
+  "annonces": 177
+ },
+ {
+  "ville": "Luc-sur-Mer",
+  "insee": "14384",
+  "region": "Normandie",
+  "population": 3275,
+  "occupation": 52,
+  "prix_nuit": 91,
+  "revenu_annuel": 17366,
+  "annonces": 177
+ },
+ {
+  "ville": "Léon",
+  "insee": "40150",
+  "region": "Nouvelle-Aquitaine",
+  "population": 2306,
+  "occupation": 60,
+  "prix_nuit": 146,
+  "revenu_annuel": 31712,
+  "annonces": 177
+ },
+ {
+  "ville": "Les Herbiers",
+  "insee": "85109",
+  "region": "Pays de la Loire",
+  "population": 16521,
+  "occupation": 52,
+  "prix_nuit": 119,
+  "revenu_annuel": 22683,
+  "annonces": 177
+ },
+ {
+  "ville": "Beaucaire",
+  "insee": "30032",
+  "region": "Occitanie",
+  "population": 15692,
+  "occupation": 52,
+  "prix_nuit": 133,
+  "revenu_annuel": 25308,
+  "annonces": 176
+ },
+ {
+  "ville": "Évry-Courcouronnes",
+  "insee": "91228",
+  "region": "Île-de-France",
+  "population": 66919,
+  "occupation": 64,
+  "prix_nuit": 84,
+  "revenu_annuel": 19583,
+  "annonces": 176
+ },
+ {
+  "ville": "Les Avirons",
+  "insee": "97401",
+  "region": "La Réunion",
+  "population": 11536,
+  "occupation": 67,
+  "prix_nuit": 101,
+  "revenu_annuel": 24875,
+  "annonces": 176
+ },
+ {
+  "ville": "La Possession",
+  "insee": "97408",
+  "region": "La Réunion",
+  "population": 36568,
+  "occupation": 70,
+  "prix_nuit": 86,
+  "revenu_annuel": 22118,
+  "annonces": 176
+ },
+ {
+  "ville": "Ghisonaccia",
+  "insee": "2B123",
+  "region": "Corse",
+  "population": 4405,
+  "occupation": 61,
+  "prix_nuit": 139,
+  "revenu_annuel": 30720,
+  "annonces": 176
+ },
+ {
+  "ville": "Coti-Chiavari",
+  "insee": "2A098",
+  "region": "Corse",
+  "population": 737,
+  "occupation": 63,
+  "prix_nuit": 313,
+  "revenu_annuel": 71631,
+  "annonces": 176
+ },
+ {
+  "ville": "Le Bouscat",
+  "insee": "33069",
+  "region": "Nouvelle-Aquitaine",
+  "population": 25081,
+  "occupation": 63,
+  "prix_nuit": 121,
+  "revenu_annuel": 27707,
+  "annonces": 175
+ },
+ {
+  "ville": "Albertville",
+  "insee": "73011",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 19978,
+  "occupation": 55,
+  "prix_nuit": 87,
+  "revenu_annuel": 17431,
+  "annonces": 175
+ },
+ {
+  "ville": "Oletta",
+  "insee": "2B185",
+  "region": "Corse",
+  "population": 1780,
+  "occupation": 62,
+  "prix_nuit": 160,
+  "revenu_annuel": 36256,
+  "annonces": 175
+ },
+ {
+  "ville": "Roussillon",
+  "insee": "38344",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 8595,
+  "occupation": 60,
+  "prix_nuit": 252,
+  "revenu_annuel": 55462,
+  "annonces": 174
+ },
+ {
+  "ville": "Laruns",
+  "insee": "64320",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1177,
+  "occupation": 47,
+  "prix_nuit": 89,
+  "revenu_annuel": 15124,
+  "annonces": 174
+ },
+ {
+  "ville": "Mazan",
+  "insee": "84072",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 6285,
+  "occupation": 55,
+  "prix_nuit": 200,
+  "revenu_annuel": 40355,
+  "annonces": 174
+ },
+ {
+  "ville": "Saint-Mandé",
+  "insee": "94067",
+  "region": "Île-de-France",
+  "population": 21071,
+  "occupation": 65,
+  "prix_nuit": 114,
+  "revenu_annuel": 26886,
+  "annonces": 174
+ },
+ {
+  "ville": "Cilaos",
+  "insee": "97424",
+  "region": "La Réunion",
+  "population": 5040,
+  "occupation": 59,
+  "prix_nuit": 132,
+  "revenu_annuel": 28336,
+  "annonces": 174
+ },
+ {
+  "ville": "Villarodin-Bourget",
+  "insee": "73322",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 499,
+  "occupation": 53,
+  "prix_nuit": 110,
+  "revenu_annuel": 21224,
+  "annonces": 173
+ },
+ {
+  "ville": "Aubenas",
+  "insee": "07019",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 12416,
+  "occupation": 56,
+  "prix_nuit": 93,
+  "revenu_annuel": 19029,
+  "annonces": 173
+ },
+ {
+  "ville": "Ploubazlanec",
+  "insee": "22210",
+  "region": "Bretagne",
+  "population": 2932,
+  "occupation": 53,
+  "prix_nuit": 126,
+  "revenu_annuel": 24247,
+  "annonces": 172
+ },
+ {
+  "ville": "Auray",
+  "insee": "56007",
+  "region": "Bretagne",
+  "population": 14207,
+  "occupation": 57,
+  "prix_nuit": 88,
+  "revenu_annuel": 18385,
+  "annonces": 172
+ },
+ {
+  "ville": "Criel-sur-Mer",
+  "insee": "76192",
+  "region": "Normandie",
+  "population": 2527,
+  "occupation": 49,
+  "prix_nuit": 101,
+  "revenu_annuel": 18135,
+  "annonces": 172
+ },
+ {
+  "ville": "Rezé",
+  "insee": "44143",
+  "region": "Pays de la Loire",
+  "population": 43556,
+  "occupation": 59,
+  "prix_nuit": 69,
+  "revenu_annuel": 14793,
+  "annonces": 171
+ },
+ {
+  "ville": "Châtellerault",
+  "insee": "86066",
+  "region": "Nouvelle-Aquitaine",
+  "population": 31003,
+  "occupation": 50,
+  "prix_nuit": 62,
+  "revenu_annuel": 11370,
+  "annonces": 171
+ },
+ {
+  "ville": "Gentilly",
+  "insee": "94037",
+  "region": "Île-de-France",
+  "population": 19963,
+  "occupation": 67,
+  "prix_nuit": 100,
+  "revenu_annuel": 24417,
+  "annonces": 171
+ },
+ {
+  "ville": "Petite-Île",
+  "insee": "97405",
+  "region": "La Réunion",
+  "population": 13067,
+  "occupation": 61,
+  "prix_nuit": 128,
+  "revenu_annuel": 28551,
+  "annonces": 171
+ },
+ {
+  "ville": "Cervione",
+  "insee": "2B087",
+  "region": "Corse",
+  "population": 2149,
+  "occupation": 60,
+  "prix_nuit": 120,
+  "revenu_annuel": 26095,
+  "annonces": 171
+ },
+ {
+  "ville": "Cerbère",
+  "insee": "66048",
+  "region": "Occitanie",
+  "population": 1209,
+  "occupation": 55,
+  "prix_nuit": 89,
+  "revenu_annuel": 17899,
+  "annonces": 170
+ },
+ {
+  "ville": "Fayence",
+  "insee": "83055",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 6157,
+  "occupation": 53,
+  "prix_nuit": 202,
+  "revenu_annuel": 39240,
+  "annonces": 170
+ },
+ {
+  "ville": "La Garde",
+  "insee": "83062",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 26476,
+  "occupation": 59,
+  "prix_nuit": 119,
+  "revenu_annuel": 25760,
+  "annonces": 170
+ },
+ {
+  "ville": "Meudon",
+  "insee": "92048",
+  "region": "Île-de-France",
+  "population": 46334,
+  "occupation": 66,
+  "prix_nuit": 158,
+  "revenu_annuel": 37788,
+  "annonces": 170
+ },
+ {
+  "ville": "Grandcamp-Maisy",
+  "insee": "14312",
+  "region": "Normandie",
+  "population": 1522,
+  "occupation": 46,
+  "prix_nuit": 121,
+  "revenu_annuel": 20445,
+  "annonces": 169
+ },
+ {
+  "ville": "Jonzac",
+  "insee": "17197",
+  "region": "Nouvelle-Aquitaine",
+  "population": 3602,
+  "occupation": 64,
+  "prix_nuit": 49,
+  "revenu_annuel": 11476,
+  "annonces": 169
+ },
+ {
+  "ville": "Auris",
+  "insee": "38020",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 189,
+  "occupation": 51,
+  "prix_nuit": 120,
+  "revenu_annuel": 22202,
+  "annonces": 169
+ },
+ {
+  "ville": "Plouhinec",
+  "insee": "56169",
+  "region": "Bretagne",
+  "population": 5400,
+  "occupation": 55,
+  "prix_nuit": 114,
+  "revenu_annuel": 22995,
+  "annonces": 169
+ },
+ {
+  "ville": "Bollène",
+  "insee": "84019",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 14024,
+  "occupation": 59,
+  "prix_nuit": 117,
+  "revenu_annuel": 25349,
+  "annonces": 169
+ },
+ {
+  "ville": "Sens",
+  "insee": "89387",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 27106,
+  "occupation": 54,
+  "prix_nuit": 61,
+  "revenu_annuel": 11920,
+  "annonces": 169
+ },
+ {
+  "ville": "Bonnieux",
+  "insee": "84020",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1198,
+  "occupation": 56,
+  "prix_nuit": 288,
+  "revenu_annuel": 58782,
+  "annonces": 168
+ },
+ {
+  "ville": "Névez",
+  "insee": "29153",
+  "region": "Bretagne",
+  "population": 2795,
+  "occupation": 53,
+  "prix_nuit": 149,
+  "revenu_annuel": 28922,
+  "annonces": 167
+ },
+ {
+  "ville": "Arcueil",
+  "insee": "94003",
+  "region": "Île-de-France",
+  "population": 22200,
+  "occupation": 67,
+  "prix_nuit": 98,
+  "revenu_annuel": 23969,
+  "annonces": 167
+ },
+ {
+  "ville": "Enchastrayes",
+  "insee": "04073",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 399,
+  "occupation": 39,
+  "prix_nuit": 102,
+  "revenu_annuel": 14353,
+  "annonces": 167
+ },
+ {
+  "ville": "Bezons",
+  "insee": "95063",
+  "region": "Île-de-France",
+  "population": 36434,
+  "occupation": 62,
+  "prix_nuit": 89,
+  "revenu_annuel": 20097,
+  "annonces": 166
+ },
+ {
+  "ville": "Évreux",
+  "insee": "27229",
+  "region": "Normandie",
+  "population": 49360,
+  "occupation": 57,
+  "prix_nuit": 60,
+  "revenu_annuel": 12419,
+  "annonces": 165
+ },
+ {
+  "ville": "Vernon",
+  "insee": "27681",
+  "region": "Normandie",
+  "population": 25290,
+  "occupation": 55,
+  "prix_nuit": 93,
+  "revenu_annuel": 18516,
+  "annonces": 165
+ },
+ {
+  "ville": "Arette",
+  "insee": "64040",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1032,
+  "occupation": 46,
+  "prix_nuit": 107,
+  "revenu_annuel": 18037,
+  "annonces": 165
+ },
+ {
+  "ville": "Le Kremlin-Bicêtre",
+  "insee": "94043",
+  "region": "Île-de-France",
+  "population": 24110,
+  "occupation": 64,
+  "prix_nuit": 114,
+  "revenu_annuel": 26706,
+  "annonces": 165
+ },
+ {
+  "ville": "Combrit",
+  "insee": "29037",
+  "region": "Bretagne",
+  "population": 4265,
+  "occupation": 54,
+  "prix_nuit": 144,
+  "revenu_annuel": 28269,
+  "annonces": 164
+ },
+ {
+  "ville": "Vic-la-Gardiole",
+  "insee": "34333",
+  "region": "Occitanie",
+  "population": 3428,
+  "occupation": 57,
+  "prix_nuit": 113,
+  "revenu_annuel": 23594,
+  "annonces": 164
+ },
+ {
+  "ville": "Massy",
+  "insee": "91377",
+  "region": "Île-de-France",
+  "population": 51729,
+  "occupation": 64,
+  "prix_nuit": 87,
+  "revenu_annuel": 20440,
+  "annonces": 164
+ },
+ {
+  "ville": "Rosny-sous-Bois",
+  "insee": "93064",
+  "region": "Île-de-France",
+  "population": 47180,
+  "occupation": 65,
+  "prix_nuit": 86,
+  "revenu_annuel": 20462,
+  "annonces": 164
+ },
+ {
+  "ville": "Valbonne",
+  "insee": "06152",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 11939,
+  "occupation": 63,
+  "prix_nuit": 364,
+  "revenu_annuel": 84049,
+  "annonces": 164
+ },
+ {
+  "ville": "Antony",
+  "insee": "92002",
+  "region": "Île-de-France",
+  "population": 64263,
+  "occupation": 68,
+  "prix_nuit": 91,
+  "revenu_annuel": 22516,
+  "annonces": 163
+ },
+ {
+  "ville": "Vallouise-Pelvoux",
+  "insee": "05101",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1138,
+  "occupation": 54,
+  "prix_nuit": 114,
+  "revenu_annuel": 22403,
+  "annonces": 163
+ },
+ {
+  "ville": "Murol",
+  "insee": "63247",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 672,
+  "occupation": 48,
+  "prix_nuit": 102,
+  "revenu_annuel": 18022,
+  "annonces": 162
+ },
+ {
+  "ville": "Saintes",
+  "insee": "17415",
+  "region": "Nouvelle-Aquitaine",
+  "population": 25363,
+  "occupation": 54,
+  "prix_nuit": 64,
+  "revenu_annuel": 12537,
+  "annonces": 161
+ },
+ {
+  "ville": "Lons-le-Saunier",
+  "insee": "39300",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 16618,
+  "occupation": 58,
+  "prix_nuit": 73,
+  "revenu_annuel": 15543,
+  "annonces": 161
+ },
+ {
+  "ville": "La Barre-de-Monts",
+  "insee": "85012",
+  "region": "Pays de la Loire",
+  "population": 2367,
+  "occupation": 46,
+  "prix_nuit": 107,
+  "revenu_annuel": 18060,
+  "annonces": 161
+ },
+ {
+  "ville": "Plougonvelin",
+  "insee": "29190",
+  "region": "Bretagne",
+  "population": 4521,
+  "occupation": 53,
+  "prix_nuit": 126,
+  "revenu_annuel": 24449,
+  "annonces": 160
+ },
+ {
+  "ville": "Aups",
+  "insee": "83007",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 2192,
+  "occupation": 54,
+  "prix_nuit": 141,
+  "revenu_annuel": 27934,
+  "annonces": 160
+ },
+ {
+  "ville": "Penvénan",
+  "insee": "22166",
+  "region": "Bretagne",
+  "population": 2584,
+  "occupation": 51,
+  "prix_nuit": 157,
+  "revenu_annuel": 29079,
+  "annonces": 159
+ },
+ {
+  "ville": "Cléder",
+  "insee": "29030",
+  "region": "Bretagne",
+  "population": 3584,
+  "occupation": 58,
+  "prix_nuit": 127,
+  "revenu_annuel": 26943,
+  "annonces": 159
+ },
+ {
+  "ville": "Saint-Cloud",
+  "insee": "92064",
+  "region": "Île-de-France",
+  "population": 29855,
+  "occupation": 61,
+  "prix_nuit": 124,
+  "revenu_annuel": 27815,
+  "annonces": 159
+ },
+ {
+  "ville": "Moulins",
+  "insee": "03190",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 19206,
+  "occupation": 59,
+  "prix_nuit": 64,
+  "revenu_annuel": 13844,
+  "annonces": 159
+ },
+ {
+  "ville": "Albiez-Montrond",
+  "insee": "73013",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 350,
+  "occupation": 45,
+  "prix_nuit": 135,
+  "revenu_annuel": 22297,
+  "annonces": 158
+ },
+ {
+  "ville": "Le Castellet",
+  "insee": "83035",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 6040,
+  "occupation": 52,
+  "prix_nuit": 189,
+  "revenu_annuel": 36133,
+  "annonces": 158
+ },
+ {
+  "ville": "Castellane",
+  "insee": "04039",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1472,
+  "occupation": 51,
+  "prix_nuit": 94,
+  "revenu_annuel": 17522,
+  "annonces": 158
+ },
+ {
+  "ville": "Sèvremont",
+  "insee": "85090",
+  "region": "Pays de la Loire",
+  "population": 6385,
+  "occupation": 49,
+  "prix_nuit": 152,
+  "revenu_annuel": 27034,
+  "annonces": 157
+ },
+ {
+  "ville": "Morlaix",
+  "insee": "29151",
+  "region": "Bretagne",
+  "population": 15194,
+  "occupation": 57,
+  "prix_nuit": 73,
+  "revenu_annuel": 15171,
+  "annonces": 156
+ },
+ {
+  "ville": "Séné",
+  "insee": "56243",
+  "region": "Bretagne",
+  "population": 9554,
+  "occupation": 57,
+  "prix_nuit": 117,
+  "revenu_annuel": 24282,
+  "annonces": 156
+ },
+ {
+  "ville": "Gravelines",
+  "insee": "59273",
+  "region": "Hauts-de-France",
+  "population": 11430,
+  "occupation": 61,
+  "prix_nuit": 79,
+  "revenu_annuel": 17540,
+  "annonces": 156
+ },
+ {
+  "ville": "Formiguères",
+  "insee": "66082",
+  "region": "Occitanie",
+  "population": 494,
+  "occupation": 47,
+  "prix_nuit": 148,
+  "revenu_annuel": 25201,
+  "annonces": 156
+ },
+ {
+  "ville": "Monteux",
+  "insee": "84080",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 13301,
+  "occupation": 48,
+  "prix_nuit": 148,
+  "revenu_annuel": 26114,
+  "annonces": 156
+ },
+ {
+  "ville": "Sorgues",
+  "insee": "84129",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 19006,
+  "occupation": 60,
+  "prix_nuit": 173,
+  "revenu_annuel": 37699,
+  "annonces": 156
+ },
+ {
+  "ville": "Métabief",
+  "insee": "25380",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 1375,
+  "occupation": 55,
+  "prix_nuit": 96,
+  "revenu_annuel": 19297,
+  "annonces": 155
+ },
+ {
+  "ville": "Ambon",
+  "insee": "56002",
+  "region": "Bretagne",
+  "population": 2101,
+  "occupation": 57,
+  "prix_nuit": 93,
+  "revenu_annuel": 19266,
+  "annonces": 155
+ },
+ {
+  "ville": "Chambon-sur-Lac",
+  "insee": "63077",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 407,
+  "occupation": 58,
+  "prix_nuit": 133,
+  "revenu_annuel": 28356,
+  "annonces": 155
+ },
+ {
+  "ville": "Boofzheim",
+  "insee": "67055",
+  "region": "Grand Est",
+  "population": 1379,
+  "occupation": 58,
+  "prix_nuit": 85,
+  "revenu_annuel": 17860,
+  "annonces": 155
+ },
+ {
+  "ville": "Cergy",
+  "insee": "95127",
+  "region": "Île-de-France",
+  "population": 70906,
+  "occupation": 62,
+  "prix_nuit": 87,
+  "revenu_annuel": 19683,
+  "annonces": 155
+ },
+ {
+  "ville": "Roquefort-les-Pins",
+  "insee": "06105",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 7292,
+  "occupation": 64,
+  "prix_nuit": 326,
+  "revenu_annuel": 76108,
+  "annonces": 155
+ },
+ {
+  "ville": "Romans-sur-Isère",
+  "insee": "26281",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 33464,
+  "occupation": 55,
+  "prix_nuit": 61,
+  "revenu_annuel": 12163,
+  "annonces": 154
+ },
+ {
+  "ville": "Auch",
+  "insee": "32013",
+  "region": "Occitanie",
+  "population": 22428,
+  "occupation": 61,
+  "prix_nuit": 67,
+  "revenu_annuel": 14856,
+  "annonces": 153
+ },
+ {
+  "ville": "Plouharnel",
+  "insee": "56168",
+  "region": "Bretagne",
+  "population": 2285,
+  "occupation": 55,
+  "prix_nuit": 120,
+  "revenu_annuel": 23989,
+  "annonces": 153
+ },
+ {
+  "ville": "Melun",
+  "insee": "77288",
+  "region": "Île-de-France",
+  "population": 45995,
+  "occupation": 60,
+  "prix_nuit": 73,
+  "revenu_annuel": 16051,
+  "annonces": 153
+ },
+ {
+  "ville": "Fontenay-sous-Bois",
+  "insee": "94033",
+  "region": "Île-de-France",
+  "population": 53757,
+  "occupation": 61,
+  "prix_nuit": 93,
+  "revenu_annuel": 20680,
+  "annonces": 153
+ },
+ {
+  "ville": "Éguilles",
+  "insee": "13032",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 8479,
+  "occupation": 62,
+  "prix_nuit": 147,
+  "revenu_annuel": 33455,
+  "annonces": 152
+ },
+ {
+  "ville": "La Forêt-Fouesnant",
+  "insee": "29057",
+  "region": "Bretagne",
+  "population": 3508,
+  "occupation": 54,
+  "prix_nuit": 128,
+  "revenu_annuel": 25422,
+  "annonces": 152
+ },
+ {
+  "ville": "Choisy-le-Roi",
+  "insee": "94022",
+  "region": "Île-de-France",
+  "population": 45946,
+  "occupation": 64,
+  "prix_nuit": 83,
+  "revenu_annuel": 19274,
+  "annonces": 152
+ },
+ {
+  "ville": "Lancieux",
+  "insee": "22094",
+  "region": "Bretagne",
+  "population": 1611,
+  "occupation": 50,
+  "prix_nuit": 153,
+  "revenu_annuel": 27817,
+  "annonces": 151
+ },
+ {
+  "ville": "Céret",
+  "insee": "66049",
+  "region": "Occitanie",
+  "population": 7521,
+  "occupation": 55,
+  "prix_nuit": 92,
+  "revenu_annuel": 18325,
+  "annonces": 151
+ },
+ {
+  "ville": "La Giettaz",
+  "insee": "73123",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 381,
+  "occupation": 55,
+  "prix_nuit": 201,
+  "revenu_annuel": 40414,
+  "annonces": 151
+ },
+ {
+  "ville": "Salernes",
+  "insee": "83121",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 4019,
+  "occupation": 52,
+  "prix_nuit": 179,
+  "revenu_annuel": 33796,
+  "annonces": 151
+ },
+ {
+  "ville": "Vierzon",
+  "insee": "18279",
+  "region": "Centre-Val de Loire",
+  "population": 25068,
+  "occupation": 45,
+  "prix_nuit": 73,
+  "revenu_annuel": 12099,
+  "annonces": 150
+ },
+ {
+  "ville": "Lunel",
+  "insee": "34145",
+  "region": "Occitanie",
+  "population": 26623,
+  "occupation": 53,
+  "prix_nuit": 97,
+  "revenu_annuel": 18765,
+  "annonces": 149
+ },
+ {
+  "ville": "Chinon",
+  "insee": "37072",
+  "region": "Centre-Val de Loire",
+  "population": 8144,
+  "occupation": 49,
+  "prix_nuit": 92,
+  "revenu_annuel": 16307,
+  "annonces": 149
+ },
+ {
+  "ville": "Chamalières",
+  "insee": "63075",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 17509,
+  "occupation": 54,
+  "prix_nuit": 56,
+  "revenu_annuel": 11014,
+  "annonces": 149
+ },
+ {
+  "ville": "Brando",
+  "insee": "2B043",
+  "region": "Corse",
+  "population": 1584,
+  "occupation": 57,
+  "prix_nuit": 190,
+  "revenu_annuel": 39656,
+  "annonces": 149
+ },
+ {
+  "ville": "Étaples",
+  "insee": "62318",
+  "region": "Hauts-de-France",
+  "population": 10710,
+  "occupation": 44,
+  "prix_nuit": 109,
+  "revenu_annuel": 17684,
+  "annonces": 148
+ },
+ {
+  "ville": "Puget-sur-Argens",
+  "insee": "83099",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 8602,
+  "occupation": 57,
+  "prix_nuit": 147,
+  "revenu_annuel": 30326,
+  "annonces": 148
+ },
+ {
+  "ville": "Cornimont",
+  "insee": "88116",
+  "region": "Grand Est",
+  "population": 3027,
+  "occupation": 47,
+  "prix_nuit": 123,
+  "revenu_annuel": 21167,
+  "annonces": 148
+ },
+ {
+  "ville": "Angoulins",
+  "insee": "17010",
+  "region": "Nouvelle-Aquitaine",
+  "population": 4240,
+  "occupation": 47,
+  "prix_nuit": 116,
+  "revenu_annuel": 19700,
+  "annonces": 147
+ },
+ {
+  "ville": "La Brée-les-Bains",
+  "insee": "17486",
+  "region": "Nouvelle-Aquitaine",
+  "population": 716,
+  "occupation": 57,
+  "prix_nuit": 138,
+  "revenu_annuel": 28593,
+  "annonces": 147
+ },
+ {
+  "ville": "Les Eyzies",
+  "insee": "24172",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1134,
+  "occupation": 53,
+  "prix_nuit": 124,
+  "revenu_annuel": 23851,
+  "annonces": 147
+ },
+ {
+  "ville": "Oz",
+  "insee": "38289",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 217,
+  "occupation": 57,
+  "prix_nuit": 242,
+  "revenu_annuel": 50179,
+  "annonces": 147
+ },
+ {
+  "ville": "Préfailles",
+  "insee": "44136",
+  "region": "Pays de la Loire",
+  "population": 1321,
+  "occupation": 47,
+  "prix_nuit": 156,
+  "revenu_annuel": 26477,
+  "annonces": 147
+ },
+ {
+  "ville": "Ambleteuse",
+  "insee": "62025",
+  "region": "Hauts-de-France",
+  "population": 2033,
+  "occupation": 50,
+  "prix_nuit": 133,
+  "revenu_annuel": 24374,
+  "annonces": 147
+ },
+ {
+  "ville": "Jaunay-Marigny",
+  "insee": "86115",
+  "region": "Nouvelle-Aquitaine",
+  "population": 7528,
+  "occupation": 54,
+  "prix_nuit": 91,
+  "revenu_annuel": 18060,
+  "annonces": 147
+ },
+ {
+  "ville": "Athis-Mons",
+  "insee": "91027",
+  "region": "Île-de-France",
+  "population": 36613,
+  "occupation": 65,
+  "prix_nuit": 77,
+  "revenu_annuel": 18185,
+  "annonces": 147
+ },
+ {
+  "ville": "Forcalquier",
+  "insee": "04088",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 5222,
+  "occupation": 49,
+  "prix_nuit": 103,
+  "revenu_annuel": 18279,
+  "annonces": 147
+ },
+ {
+  "ville": "Bastelicaccia",
+  "insee": "2A032",
+  "region": "Corse",
+  "population": 4411,
+  "occupation": 63,
+  "prix_nuit": 119,
+  "revenu_annuel": 27275,
+  "annonces": 147
+ },
+ {
+  "ville": "Saint-Pol-de-Léon",
+  "insee": "29259",
+  "region": "Bretagne",
+  "population": 6941,
+  "occupation": 55,
+  "prix_nuit": 97,
+  "revenu_annuel": 19602,
+  "annonces": 146
+ },
+ {
+  "ville": "Fougères",
+  "insee": "35115",
+  "region": "Bretagne",
+  "population": 20307,
+  "occupation": 55,
+  "prix_nuit": 64,
+  "revenu_annuel": 12941,
+  "annonces": 146
+ },
+ {
+  "ville": "Sanguinet",
+  "insee": "40287",
+  "region": "Nouvelle-Aquitaine",
+  "population": 4741,
+  "occupation": 51,
+  "prix_nuit": 161,
+  "revenu_annuel": 29811,
+  "annonces": 146
+ },
+ {
+  "ville": "Arradon",
+  "insee": "56003",
+  "region": "Bretagne",
+  "population": 5835,
+  "occupation": 57,
+  "prix_nuit": 132,
+  "revenu_annuel": 27559,
+  "annonces": 146
+ },
+ {
+  "ville": "Royat",
+  "insee": "63308",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 4479,
+  "occupation": 56,
+  "prix_nuit": 57,
+  "revenu_annuel": 11668,
+  "annonces": 146
+ },
+ {
+  "ville": "Biot",
+  "insee": "06018",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 10511,
+  "occupation": 63,
+  "prix_nuit": 225,
+  "revenu_annuel": 51452,
+  "annonces": 146
+ },
+ {
+  "ville": "Saint-Herblain",
+  "insee": "44162",
+  "region": "Pays de la Loire",
+  "population": 50973,
+  "occupation": 58,
+  "prix_nuit": 75,
+  "revenu_annuel": 15958,
+  "annonces": 145
+ },
+ {
+  "ville": "Vénissieux",
+  "insee": "69259",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 65502,
+  "occupation": 58,
+  "prix_nuit": 80,
+  "revenu_annuel": 16840,
+  "annonces": 145
+ },
+ {
+  "ville": "Magny-le-Hongre",
+  "insee": "77268",
+  "region": "Île-de-France",
+  "population": 9060,
+  "occupation": 64,
+  "prix_nuit": 116,
+  "revenu_annuel": 27144,
+  "annonces": 145
+ },
+ {
+  "ville": "Vittel",
+  "insee": "88516",
+  "region": "Grand Est",
+  "population": 4780,
+  "occupation": 57,
+  "prix_nuit": 61,
+  "revenu_annuel": 12672,
+  "annonces": 145
+ },
+ {
+  "ville": "Prémanon",
+  "insee": "39441",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 1265,
+  "occupation": 50,
+  "prix_nuit": 119,
+  "revenu_annuel": 21739,
+  "annonces": 144
+ },
+ {
+  "ville": "Veyrier-du-Lac",
+  "insee": "74299",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2320,
+  "occupation": 57,
+  "prix_nuit": 370,
+  "revenu_annuel": 77318,
+  "annonces": 144
+ },
+ {
+  "ville": "Foix",
+  "insee": "09122",
+  "region": "Occitanie",
+  "population": 9934,
+  "occupation": 56,
+  "prix_nuit": 72,
+  "revenu_annuel": 14801,
+  "annonces": 144
+ },
+ {
+  "ville": "Tourgéville",
+  "insee": "14701",
+  "region": "Normandie",
+  "population": 846,
+  "occupation": 41,
+  "prix_nuit": 201,
+  "revenu_annuel": 30381,
+  "annonces": 143
+ },
+ {
+  "ville": "Le Thor",
+  "insee": "84132",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 8882,
+  "occupation": 58,
+  "prix_nuit": 195,
+  "revenu_annuel": 41222,
+  "annonces": 143
+ },
+ {
+  "ville": "Locmariaquer",
+  "insee": "56116",
+  "region": "Bretagne",
+  "population": 1577,
+  "occupation": 52,
+  "prix_nuit": 157,
+  "revenu_annuel": 29798,
+  "annonces": 142
+ },
+ {
+  "ville": "La Crau",
+  "insee": "83047",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 19556,
+  "occupation": 52,
+  "prix_nuit": 140,
+  "revenu_annuel": 26318,
+  "annonces": 142
+ },
+ {
+  "ville": "La Garde-Freinet",
+  "insee": "83063",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1862,
+  "occupation": 55,
+  "prix_nuit": 266,
+  "revenu_annuel": 53407,
+  "annonces": 142
+ },
+ {
+  "ville": "Brem-sur-Mer",
+  "insee": "85243",
+  "region": "Pays de la Loire",
+  "population": 2993,
+  "occupation": 50,
+  "prix_nuit": 109,
+  "revenu_annuel": 19797,
+  "annonces": 142
+ },
+ {
+  "ville": "Bernières-sur-Mer",
+  "insee": "14066",
+  "region": "Normandie",
+  "population": 2437,
+  "occupation": 53,
+  "prix_nuit": 109,
+  "revenu_annuel": 21029,
+  "annonces": 141
+ },
+ {
+  "ville": "Crest-Voland",
+  "insee": "73094",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 346,
+  "occupation": 44,
+  "prix_nuit": 199,
+  "revenu_annuel": 32241,
+  "annonces": 141
+ },
+ {
+  "ville": "Flayosc",
+  "insee": "83058",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 4673,
+  "occupation": 55,
+  "prix_nuit": 197,
+  "revenu_annuel": 39865,
+  "annonces": 141
+ },
+ {
+  "ville": "Le Bourget",
+  "insee": "93013",
+  "region": "Île-de-France",
+  "population": 15925,
+  "occupation": 52,
+  "prix_nuit": 117,
+  "revenu_annuel": 22216,
+  "annonces": 141
+ },
+ {
+  "ville": "Ars-en-Ré",
+  "insee": "17019",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1314,
+  "occupation": 53,
+  "prix_nuit": 191,
+  "revenu_annuel": 37199,
+  "annonces": 140
+ },
+ {
+  "ville": "Landéda",
+  "insee": "29101",
+  "region": "Bretagne",
+  "population": 3702,
+  "occupation": 52,
+  "prix_nuit": 120,
+  "revenu_annuel": 22809,
+  "annonces": 140
+ },
+ {
+  "ville": "Aureilhan",
+  "insee": "65047",
+  "region": "Occitanie",
+  "population": 8031,
+  "occupation": 54,
+  "prix_nuit": 110,
+  "revenu_annuel": 21514,
+  "annonces": 140
+ },
+ {
+  "ville": "Obernai",
+  "insee": "67348",
+  "region": "Grand Est",
+  "population": 12587,
+  "occupation": 56,
+  "prix_nuit": 100,
+  "revenu_annuel": 20351,
+  "annonces": 140
+ },
+ {
+  "ville": "Abondance",
+  "insee": "74001",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1583,
+  "occupation": 55,
+  "prix_nuit": 182,
+  "revenu_annuel": 36681,
+  "annonces": 140
+ },
+ {
+  "ville": "La Valette-du-Var",
+  "insee": "83144",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 23719,
+  "occupation": 59,
+  "prix_nuit": 122,
+  "revenu_annuel": 26180,
+  "annonces": 140
+ },
+ {
+  "ville": "Lamballe-Armor",
+  "insee": "22093",
+  "region": "Bretagne",
+  "population": 17241,
+  "occupation": 53,
+  "prix_nuit": 96,
+  "revenu_annuel": 18461,
+  "annonces": 139
+ },
+ {
+  "ville": "Saint-Omer",
+  "insee": "62765",
+  "region": "Hauts-de-France",
+  "population": 14382,
+  "occupation": 51,
+  "prix_nuit": 81,
+  "revenu_annuel": 15087,
+  "annonces": 139
+ },
+ {
+  "ville": "Poggio-Mezzana",
+  "insee": "2B242",
+  "region": "Corse",
+  "population": 885,
+  "occupation": 57,
+  "prix_nuit": 100,
+  "revenu_annuel": 20835,
+  "annonces": 139
+ },
+ {
+  "ville": "La Colle-sur-Loup",
+  "insee": "06044",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 8202,
+  "occupation": 62,
+  "prix_nuit": 266,
+  "revenu_annuel": 60191,
+  "annonces": 139
+ },
+ {
+  "ville": "Saint-Gilles",
+  "insee": "30258",
+  "region": "Occitanie",
+  "population": 14734,
+  "occupation": 49,
+  "prix_nuit": 160,
+  "revenu_annuel": 28629,
+  "annonces": 138
+ },
+ {
+  "ville": "Vignec",
+  "insee": "65471",
+  "region": "Occitanie",
+  "population": 191,
+  "occupation": 50,
+  "prix_nuit": 124,
+  "revenu_annuel": 22523,
+  "annonces": 138
+ },
+ {
+  "ville": "Vernet-les-Bains",
+  "insee": "66222",
+  "region": "Occitanie",
+  "population": 1498,
+  "occupation": 50,
+  "prix_nuit": 61,
+  "revenu_annuel": 11082,
+  "annonces": 138
+ },
+ {
+  "ville": "Les Arcs",
+  "insee": "83004",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 8109,
+  "occupation": 52,
+  "prix_nuit": 142,
+  "revenu_annuel": 27047,
+  "annonces": 138
+ },
+ {
+  "ville": "Épinay-sur-Seine",
+  "insee": "93031",
+  "region": "Île-de-France",
+  "population": 52833,
+  "occupation": 60,
+  "prix_nuit": 88,
+  "revenu_annuel": 19192,
+  "annonces": 138
+ },
+ {
+  "ville": "Nogent-sur-Marne",
+  "insee": "94052",
+  "region": "Île-de-France",
+  "population": 32455,
+  "occupation": 64,
+  "prix_nuit": 95,
+  "revenu_annuel": 22240,
+  "annonces": 138
+ },
+ {
+  "ville": "Tremblay-en-France",
+  "insee": "93073",
+  "region": "Île-de-France",
+  "population": 38348,
+  "occupation": 57,
+  "prix_nuit": 91,
+  "revenu_annuel": 19075,
+  "annonces": 137
+ },
+ {
+  "ville": "Saint-Paul-lès-Dax",
+  "insee": "40279",
+  "region": "Nouvelle-Aquitaine",
+  "population": 14481,
+  "occupation": 62,
+  "prix_nuit": 72,
+  "revenu_annuel": 16322,
+  "annonces": 136
+ },
+ {
+  "ville": "Saint-Philibert",
+  "insee": "56233",
+  "region": "Bretagne",
+  "population": 1575,
+  "occupation": 56,
+  "prix_nuit": 160,
+  "revenu_annuel": 32462,
+  "annonces": 136
+ },
+ {
+  "ville": "Riquewihr",
+  "insee": "68277",
+  "region": "Grand Est",
+  "population": 999,
+  "occupation": 54,
+  "prix_nuit": 138,
+  "revenu_annuel": 27278,
+  "annonces": 136
+ },
+ {
+  "ville": "Pertuis",
+  "insee": "84089",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 19548,
+  "occupation": 56,
+  "prix_nuit": 120,
+  "revenu_annuel": 24482,
+  "annonces": 136
+ },
+ {
+  "ville": "Cachan",
+  "insee": "94016",
+  "region": "Île-de-France",
+  "population": 31103,
+  "occupation": 69,
+  "prix_nuit": 105,
+  "revenu_annuel": 26460,
+  "annonces": 136
+ },
+ {
+  "ville": "Santec",
+  "insee": "29273",
+  "region": "Bretagne",
+  "population": 2454,
+  "occupation": 55,
+  "prix_nuit": 161,
+  "revenu_annuel": 32477,
+  "annonces": 135
+ },
+ {
+  "ville": "Cenon",
+  "insee": "33119",
+  "region": "Nouvelle-Aquitaine",
+  "population": 26834,
+  "occupation": 62,
+  "prix_nuit": 78,
+  "revenu_annuel": 17619,
+  "annonces": 133
+ },
+ {
+  "ville": "Le Verdon-sur-Mer",
+  "insee": "33544",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1408,
+  "occupation": 49,
+  "prix_nuit": 102,
+  "revenu_annuel": 18279,
+  "annonces": 133
+ },
+ {
+  "ville": "Villeneuve-sur-Lot",
+  "insee": "47323",
+  "region": "Nouvelle-Aquitaine",
+  "population": 22350,
+  "occupation": 54,
+  "prix_nuit": 91,
+  "revenu_annuel": 17780,
+  "annonces": 133
+ },
+ {
+  "ville": "Locmaria",
+  "insee": "56114",
+  "region": "Bretagne",
+  "population": 978,
+  "occupation": 56,
+  "prix_nuit": 143,
+  "revenu_annuel": 29361,
+  "annonces": 133
+ },
+ {
+  "ville": "Les Epesses",
+  "insee": "85082",
+  "region": "Pays de la Loire",
+  "population": 2983,
+  "occupation": 53,
+  "prix_nuit": 140,
+  "revenu_annuel": 26930,
+  "annonces": 133
+ },
+ {
+  "ville": "Mouans-Sartoux",
+  "insee": "06084",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 11015,
+  "occupation": 62,
+  "prix_nuit": 269,
+  "revenu_annuel": 60878,
+  "annonces": 133
+ },
+ {
+  "ville": "Kerlouan",
+  "insee": "29091",
+  "region": "Bretagne",
+  "population": 1999,
+  "occupation": 58,
+  "prix_nuit": 146,
+  "revenu_annuel": 30709,
+  "annonces": 132
+ },
+ {
+  "ville": "Ploudalmézeau",
+  "insee": "29178",
+  "region": "Bretagne",
+  "population": 6522,
+  "occupation": 53,
+  "prix_nuit": 127,
+  "revenu_annuel": 24420,
+  "annonces": 132
+ },
+ {
+  "ville": "Le Porge",
+  "insee": "33333",
+  "region": "Nouvelle-Aquitaine",
+  "population": 3465,
+  "occupation": 59,
+  "prix_nuit": 135,
+  "revenu_annuel": 29124,
+  "annonces": 132
+ },
+ {
+  "ville": "Carentan-les-Marais",
+  "insee": "50099",
+  "region": "Normandie",
+  "population": 10218,
+  "occupation": 49,
+  "prix_nuit": 94,
+  "revenu_annuel": 16793,
+  "annonces": 132
+ },
+ {
+  "ville": "Sainte-Mère-Église",
+  "insee": "50523",
+  "region": "Normandie",
+  "population": 2896,
+  "occupation": 46,
+  "prix_nuit": 118,
+  "revenu_annuel": 19754,
+  "annonces": 132
+ },
+ {
+  "ville": "La Madeleine",
+  "insee": "59368",
+  "region": "Hauts-de-France",
+  "population": 21790,
+  "occupation": 57,
+  "prix_nuit": 105,
+  "revenu_annuel": 21771,
+  "annonces": 132
+ },
+ {
+  "ville": "Saint-Priest",
+  "insee": "69290",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 49229,
+  "occupation": 59,
+  "prix_nuit": 90,
+  "revenu_annuel": 19455,
+  "annonces": 132
+ },
+ {
+  "ville": "La Grave",
+  "insee": "05063",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 479,
+  "occupation": 52,
+  "prix_nuit": 147,
+  "revenu_annuel": 27843,
+  "annonces": 132
+ },
+ {
+  "ville": "Tarascon",
+  "insee": "13108",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 15396,
+  "occupation": 53,
+  "prix_nuit": 175,
+  "revenu_annuel": 33547,
+  "annonces": 131
+ },
+ {
+  "ville": "Montbéliard",
+  "insee": "25388",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 24672,
+  "occupation": 53,
+  "prix_nuit": 61,
+  "revenu_annuel": 11744,
+  "annonces": 131
+ },
+ {
+  "ville": "Salies-de-Béarn",
+  "insee": "64499",
+  "region": "Nouvelle-Aquitaine",
+  "population": 4742,
+  "occupation": 59,
+  "prix_nuit": 69,
+  "revenu_annuel": 14851,
+  "annonces": 131
+ },
+ {
+  "ville": "Vielle-Aure",
+  "insee": "65465",
+  "region": "Occitanie",
+  "population": 315,
+  "occupation": 53,
+  "prix_nuit": 117,
+  "revenu_annuel": 22580,
+  "annonces": 131
+ },
+ {
+  "ville": "Les Vans",
+  "insee": "07334",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2662,
+  "occupation": 53,
+  "prix_nuit": 150,
+  "revenu_annuel": 29280,
+  "annonces": 131
+ },
+ {
+  "ville": "Ancelle",
+  "insee": "05004",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1017,
+  "occupation": 49,
+  "prix_nuit": 93,
+  "revenu_annuel": 16710,
+  "annonces": 131
+ },
+ {
+  "ville": "Casaglione",
+  "insee": "2A070",
+  "region": "Corse",
+  "population": 571,
+  "occupation": 63,
+  "prix_nuit": 149,
+  "revenu_annuel": 34278,
+  "annonces": 131
+ },
+ {
+  "ville": "Plouézec",
+  "insee": "22214",
+  "region": "Bretagne",
+  "population": 3147,
+  "occupation": 50,
+  "prix_nuit": 110,
+  "revenu_annuel": 20238,
+  "annonces": 130
+ },
+ {
+  "ville": "Arreau",
+  "insee": "65031",
+  "region": "Occitanie",
+  "population": 725,
+  "occupation": 46,
+  "prix_nuit": 97,
+  "revenu_annuel": 16198,
+  "annonces": 130
+ },
+ {
+  "ville": "Callian",
+  "insee": "83029",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3823,
+  "occupation": 54,
+  "prix_nuit": 224,
+  "revenu_annuel": 44519,
+  "annonces": 130
+ },
+ {
+  "ville": "Saint-Coulomb",
+  "insee": "35263",
+  "region": "Bretagne",
+  "population": 2969,
+  "occupation": 57,
+  "prix_nuit": 129,
+  "revenu_annuel": 26615,
+  "annonces": 129
+ },
+ {
+  "ville": "Thônes",
+  "insee": "74280",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 6654,
+  "occupation": 60,
+  "prix_nuit": 133,
+  "revenu_annuel": 29092,
+  "annonces": 129
+ },
+ {
+  "ville": "Meaux",
+  "insee": "77284",
+  "region": "Île-de-France",
+  "population": 56905,
+  "occupation": 58,
+  "prix_nuit": 71,
+  "revenu_annuel": 14924,
+  "annonces": 129
+ },
+ {
+  "ville": "Charenton-le-Pont",
+  "insee": "94018",
+  "region": "Île-de-France",
+  "population": 28830,
+  "occupation": 69,
+  "prix_nuit": 99,
+  "revenu_annuel": 24959,
+  "annonces": 129
+ },
+ {
+  "ville": "Benerville-sur-Mer",
+  "insee": "14059",
+  "region": "Normandie",
+  "population": 367,
+  "occupation": 44,
+  "prix_nuit": 220,
+  "revenu_annuel": 35310,
+  "annonces": 128
+ },
+ {
+  "ville": "Les Portes-en-Ré",
+  "insee": "17286",
+  "region": "Nouvelle-Aquitaine",
+  "population": 577,
+  "occupation": 55,
+  "prix_nuit": 302,
+  "revenu_annuel": 60670,
+  "annonces": 128
+ },
+ {
+  "ville": "Pleubian",
+  "insee": "22195",
+  "region": "Bretagne",
+  "population": 2365,
+  "occupation": 56,
+  "prix_nuit": 112,
+  "revenu_annuel": 22926,
+  "annonces": 128
+ },
+ {
+  "ville": "Doué-en-Anjou",
+  "insee": "49125",
+  "region": "Pays de la Loire",
+  "population": 11029,
+  "occupation": 51,
+  "prix_nuit": 114,
+  "revenu_annuel": 21029,
+  "annonces": 128
+ },
+ {
+  "ville": "Esquièze-Sère",
+  "insee": "65168",
+  "region": "Occitanie",
+  "population": 412,
+  "occupation": 53,
+  "prix_nuit": 95,
+  "revenu_annuel": 18497,
+  "annonces": 128
+ },
+ {
+  "ville": "Turckheim",
+  "insee": "68338",
+  "region": "Grand Est",
+  "population": 4139,
+  "occupation": 57,
+  "prix_nuit": 92,
+  "revenu_annuel": 19030,
+  "annonces": 128
+ },
+ {
+  "ville": "Landry",
+  "insee": "73142",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 813,
+  "occupation": 52,
+  "prix_nuit": 294,
+  "revenu_annuel": 55491,
+  "annonces": 128
+ },
+ {
+  "ville": "Chelles",
+  "insee": "77108",
+  "region": "Île-de-France",
+  "population": 54620,
+  "occupation": 62,
+  "prix_nuit": 79,
+  "revenu_annuel": 17835,
+  "annonces": 128
+ },
+ {
+  "ville": "Lagny-sur-Marne",
+  "insee": "77243",
+  "region": "Île-de-France",
+  "population": 21461,
+  "occupation": 57,
+  "prix_nuit": 92,
+  "revenu_annuel": 19203,
+  "annonces": 128
+ },
+ {
+  "ville": "Valensole",
+  "insee": "04230",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3137,
+  "occupation": 56,
+  "prix_nuit": 116,
+  "revenu_annuel": 23698,
+  "annonces": 128
+ },
+ {
+  "ville": "Salles",
+  "insee": "33498",
+  "region": "Nouvelle-Aquitaine",
+  "population": 8208,
+  "occupation": 54,
+  "prix_nuit": 134,
+  "revenu_annuel": 26313,
+  "annonces": 127
+ },
+ {
+  "ville": "Décines-Charpieu",
+  "insee": "69275",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 29877,
+  "occupation": 54,
+  "prix_nuit": 82,
+  "revenu_annuel": 16263,
+  "annonces": 127
+ },
+ {
+  "ville": "Grand-Aigueblanche",
+  "insee": "73003",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 3780,
+  "occupation": 56,
+  "prix_nuit": 89,
+  "revenu_annuel": 18049,
+  "annonces": 127
+ },
+ {
+  "ville": "Ceyreste",
+  "insee": "13023",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 4863,
+  "occupation": 58,
+  "prix_nuit": 159,
+  "revenu_annuel": 33848,
+  "annonces": 126
+ },
+ {
+  "ville": "Eygalières",
+  "insee": "13034",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1773,
+  "occupation": 56,
+  "prix_nuit": 415,
+  "revenu_annuel": 85218,
+  "annonces": 126
+ },
+ {
+  "ville": "Paradou",
+  "insee": "13068",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 2159,
+  "occupation": 57,
+  "prix_nuit": 295,
+  "revenu_annuel": 61288,
+  "annonces": 126
+ },
+ {
+  "ville": "Anduze",
+  "insee": "30010",
+  "region": "Occitanie",
+  "population": 3391,
+  "occupation": 46,
+  "prix_nuit": 149,
+  "revenu_annuel": 25118,
+  "annonces": 126
+ },
+ {
+  "ville": "Gagny",
+  "insee": "93032",
+  "region": "Île-de-France",
+  "population": 42313,
+  "occupation": 61,
+  "prix_nuit": 74,
+  "revenu_annuel": 16421,
+  "annonces": 126
+ },
+ {
+  "ville": "Donville-les-Bains",
+  "insee": "50165",
+  "region": "Normandie",
+  "population": 3146,
+  "occupation": 48,
+  "prix_nuit": 117,
+  "revenu_annuel": 20397,
+  "annonces": 125
+ },
+ {
+  "ville": "Gouville-sur-Mer",
+  "insee": "50215",
+  "region": "Normandie",
+  "population": 3274,
+  "occupation": 48,
+  "prix_nuit": 131,
+  "revenu_annuel": 22964,
+  "annonces": 125
+ },
+ {
+  "ville": "Flumet",
+  "insee": "73114",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 799,
+  "occupation": 54,
+  "prix_nuit": 133,
+  "revenu_annuel": 26152,
+  "annonces": 125
+ },
+ {
+  "ville": "Robion",
+  "insee": "84099",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 4816,
+  "occupation": 55,
+  "prix_nuit": 220,
+  "revenu_annuel": 43835,
+  "annonces": 125
+ },
+ {
+  "ville": "Bois-Colombes",
+  "insee": "92009",
+  "region": "Île-de-France",
+  "population": 28909,
+  "occupation": 60,
+  "prix_nuit": 100,
+  "revenu_annuel": 21990,
+  "annonces": 125
+ },
+ {
+  "ville": "Saint-Nic",
+  "insee": "29256",
+  "region": "Bretagne",
+  "population": 753,
+  "occupation": 57,
+  "prix_nuit": 89,
+  "revenu_annuel": 18560,
+  "annonces": 124
+ },
+ {
+  "ville": "Ploemel",
+  "insee": "56161",
+  "region": "Bretagne",
+  "population": 3175,
+  "occupation": 49,
+  "prix_nuit": 136,
+  "revenu_annuel": 24292,
+  "annonces": 124
+ },
+ {
+  "ville": "Le Luc",
+  "insee": "83073",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 11310,
+  "occupation": 36,
+  "prix_nuit": 115,
+  "revenu_annuel": 14915,
+  "annonces": 124
+ },
+ {
+  "ville": "Lourmarin",
+  "insee": "84068",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1020,
+  "occupation": 57,
+  "prix_nuit": 242,
+  "revenu_annuel": 50617,
+  "annonces": 124
+ },
+ {
+  "ville": "Litteau",
+  "insee": "14369",
+  "region": "Normandie",
+  "population": 271,
+  "occupation": 51,
+  "prix_nuit": 65,
+  "revenu_annuel": 12144,
+  "annonces": 123
+ },
+ {
+  "ville": "Vauvert",
+  "insee": "30341",
+  "region": "Occitanie",
+  "population": 11671,
+  "occupation": 50,
+  "prix_nuit": 109,
+  "revenu_annuel": 19903,
+  "annonces": 123
+ },
+ {
+  "ville": "Mios",
+  "insee": "33284",
+  "region": "Nouvelle-Aquitaine",
+  "population": 12043,
+  "occupation": 58,
+  "prix_nuit": 145,
+  "revenu_annuel": 30545,
+  "annonces": 123
+ },
+ {
+  "ville": "Bernex",
+  "insee": "74033",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1472,
+  "occupation": 52,
+  "prix_nuit": 97,
+  "revenu_annuel": 18566,
+  "annonces": 123
+ },
+ {
+  "ville": "Ollioules",
+  "insee": "83090",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 14568,
+  "occupation": 55,
+  "prix_nuit": 228,
+  "revenu_annuel": 45780,
+  "annonces": 123
+ },
+ {
+  "ville": "Néris-les-Bains",
+  "insee": "03195",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2368,
+  "occupation": 52,
+  "prix_nuit": 47,
+  "revenu_annuel": 8840,
+  "annonces": 123
+ },
+ {
+  "ville": "Gien",
+  "insee": "45155",
+  "region": "Centre-Val de Loire",
+  "population": 13459,
+  "occupation": 48,
+  "prix_nuit": 84,
+  "revenu_annuel": 14757,
+  "annonces": 122
+ },
+ {
+  "ville": "Verdun",
+  "insee": "55545",
+  "region": "Grand Est",
+  "population": 16890,
+  "occupation": 54,
+  "prix_nuit": 77,
+  "revenu_annuel": 15177,
+  "annonces": 122
+ },
+ {
+  "ville": "Domme",
+  "insee": "24152",
+  "region": "Nouvelle-Aquitaine",
+  "population": 906,
+  "occupation": 54,
+  "prix_nuit": 223,
+  "revenu_annuel": 43689,
+  "annonces": 121
+ },
+ {
+  "ville": "Plomodiern",
+  "insee": "29172",
+  "region": "Bretagne",
+  "population": 2282,
+  "occupation": 52,
+  "prix_nuit": 99,
+  "revenu_annuel": 18807,
+  "annonces": 121
+ },
+ {
+  "ville": "Sangatte",
+  "insee": "62774",
+  "region": "Hauts-de-France",
+  "population": 4668,
+  "occupation": 55,
+  "prix_nuit": 118,
+  "revenu_annuel": 23545,
+  "annonces": 121
+ },
+ {
+  "ville": "Elne",
+  "insee": "66065",
+  "region": "Occitanie",
+  "population": 9511,
+  "occupation": 56,
+  "prix_nuit": 100,
+  "revenu_annuel": 20380,
+  "annonces": 121
+ },
+ {
+  "ville": "Trévou-Tréguignec",
+  "insee": "22379",
+  "region": "Bretagne",
+  "population": 1603,
+  "occupation": 57,
+  "prix_nuit": 99,
+  "revenu_annuel": 20650,
+  "annonces": 120
+ },
+ {
+  "ville": "Bourgoin-Jallieu",
+  "insee": "38053",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 30151,
+  "occupation": 61,
+  "prix_nuit": 67,
+  "revenu_annuel": 14796,
+  "annonces": 120
+ },
+ {
+  "ville": "Alençon",
+  "insee": "61001",
+  "region": "Normandie",
+  "population": 25490,
+  "occupation": 56,
+  "prix_nuit": 64,
+  "revenu_annuel": 13135,
+  "annonces": 120
+ },
+ {
+  "ville": "Bron",
+  "insee": "69029",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 42982,
+  "occupation": 54,
+  "prix_nuit": 88,
+  "revenu_annuel": 17478,
+  "annonces": 120
+ },
+ {
+  "ville": "La Léchère",
+  "insee": "73187",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2538,
+  "occupation": 53,
+  "prix_nuit": 146,
+  "revenu_annuel": 28008,
+  "annonces": 120
+ },
+ {
+  "ville": "Noisy-le-Sec",
+  "insee": "93053",
+  "region": "Île-de-France",
+  "population": 45510,
+  "occupation": 63,
+  "prix_nuit": 84,
+  "revenu_annuel": 19385,
+  "annonces": 120
+ },
+ {
+  "ville": "Réallon",
+  "insee": "05114",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 242,
+  "occupation": 45,
+  "prix_nuit": 95,
+  "revenu_annuel": 15472,
+  "annonces": 120
+ },
+ {
+  "ville": "Noves",
+  "insee": "13066",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 6080,
+  "occupation": 51,
+  "prix_nuit": 252,
+  "revenu_annuel": 46598,
+  "annonces": 119
+ },
+ {
+  "ville": "Équemauville",
+  "insee": "14243",
+  "region": "Normandie",
+  "population": 1574,
+  "occupation": 46,
+  "prix_nuit": 109,
+  "revenu_annuel": 18453,
+  "annonces": 119
+ },
+ {
+  "ville": "Blagnac",
+  "insee": "31069",
+  "region": "Occitanie",
+  "population": 27604,
+  "occupation": 63,
+  "prix_nuit": 68,
+  "revenu_annuel": 15523,
+  "annonces": 119
+ },
+ {
+  "ville": "Hasparren",
+  "insee": "64256",
+  "region": "Nouvelle-Aquitaine",
+  "population": 7626,
+  "occupation": 58,
+  "prix_nuit": 97,
+  "revenu_annuel": 20633,
+  "annonces": 119
+ },
+ {
+  "ville": "Bagnols-en-Forêt",
+  "insee": "83008",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3194,
+  "occupation": 60,
+  "prix_nuit": 224,
+  "revenu_annuel": 49204,
+  "annonces": 119
+ },
+ {
+  "ville": "Le Tholy",
+  "insee": "88470",
+  "region": "Grand Est",
+  "population": 1489,
+  "occupation": 49,
+  "prix_nuit": 141,
+  "revenu_annuel": 25007,
+  "annonces": 119
+ },
+ {
+  "ville": "Corbeil-Essonnes",
+  "insee": "91174",
+  "region": "Île-de-France",
+  "population": 54471,
+  "occupation": 54,
+  "prix_nuit": 72,
+  "revenu_annuel": 14258,
+  "annonces": 119
+ },
+ {
+  "ville": "Saujon",
+  "insee": "17421",
+  "region": "Nouvelle-Aquitaine",
+  "population": 7440,
+  "occupation": 69,
+  "prix_nuit": 59,
+  "revenu_annuel": 14846,
+  "annonces": 118
+ },
+ {
+  "ville": "Bréhal",
+  "insee": "50076",
+  "region": "Normandie",
+  "population": 3487,
+  "occupation": 42,
+  "prix_nuit": 104,
+  "revenu_annuel": 15811,
+  "annonces": 118
+ },
+ {
+  "ville": "Île-aux-Moines",
+  "insee": "56087",
+  "region": "Bretagne",
+  "population": 630,
+  "occupation": 50,
+  "prix_nuit": 217,
+  "revenu_annuel": 39662,
+  "annonces": 118
+ },
+ {
+  "ville": "Fontvieille",
+  "insee": "13038",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3571,
+  "occupation": 52,
+  "prix_nuit": 213,
+  "revenu_annuel": 40581,
+  "annonces": 117
+ },
+ {
+  "ville": "Île-Tudy",
+  "insee": "29085",
+  "region": "Bretagne",
+  "population": 742,
+  "occupation": 52,
+  "prix_nuit": 125,
+  "revenu_annuel": 23727,
+  "annonces": 117
+ },
+ {
+  "ville": "Saint-Dizier",
+  "insee": "52448",
+  "region": "Grand Est",
+  "population": 22858,
+  "occupation": 56,
+  "prix_nuit": 55,
+  "revenu_annuel": 11200,
+  "annonces": 117
+ },
+ {
+  "ville": "Arnage",
+  "insee": "72008",
+  "region": "Pays de la Loire",
+  "population": 5445,
+  "occupation": 34,
+  "prix_nuit": 219,
+  "revenu_annuel": 26977,
+  "annonces": 117
+ },
+ {
+  "ville": "Abbeville",
+  "insee": "80001",
+  "region": "Hauts-de-France",
+  "population": 22395,
+  "occupation": 56,
+  "prix_nuit": 72,
+  "revenu_annuel": 14590,
+  "annonces": 117
+ },
+ {
+  "ville": "Palaiseau",
+  "insee": "91477",
+  "region": "Île-de-France",
+  "population": 37471,
+  "occupation": 66,
+  "prix_nuit": 74,
+  "revenu_annuel": 17853,
+  "annonces": 117
+ },
+ {
+  "ville": "Joyeuse",
+  "insee": "07110",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1811,
+  "occupation": 45,
+  "prix_nuit": 132,
+  "revenu_annuel": 21891,
+  "annonces": 117
+ },
+ {
+  "ville": "Montargis",
+  "insee": "45208",
+  "region": "Centre-Val de Loire",
+  "population": 14825,
+  "occupation": 51,
+  "prix_nuit": 62,
+  "revenu_annuel": 11544,
+  "annonces": 116
+ },
+ {
+  "ville": "Gavarnie-Gèdre",
+  "insee": "65192",
+  "region": "Occitanie",
+  "population": 340,
+  "occupation": 53,
+  "prix_nuit": 118,
+  "revenu_annuel": 22620,
+  "annonces": 116
+ },
+ {
+  "ville": "Germ",
+  "insee": "65199",
+  "region": "Occitanie",
+  "population": 33,
+  "occupation": 42,
+  "prix_nuit": 124,
+  "revenu_annuel": 19073,
+  "annonces": 116
+ },
+ {
+  "ville": "Croix",
+  "insee": "59163",
+  "region": "Hauts-de-France",
+  "population": 20566,
+  "occupation": 63,
+  "prix_nuit": 81,
+  "revenu_annuel": 18766,
+  "annonces": 115
+ },
+ {
+  "ville": "Villard-sur-Doron",
+  "insee": "73317",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 702,
+  "occupation": 52,
+  "prix_nuit": 174,
+  "revenu_annuel": 32982,
+  "annonces": 115
+ },
+ {
+  "ville": "Lucciana",
+  "insee": "2B148",
+  "region": "Corse",
+  "population": 6923,
+  "occupation": 58,
+  "prix_nuit": 113,
+  "revenu_annuel": 24054,
+  "annonces": 115
+ },
+ {
+  "ville": "Salavas",
+  "insee": "07304",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 740,
+  "occupation": 52,
+  "prix_nuit": 114,
+  "revenu_annuel": 21659,
+  "annonces": 115
+ },
+ {
+  "ville": "Plestin-les-Grèves",
+  "insee": "22194",
+  "region": "Bretagne",
+  "population": 3639,
+  "occupation": 51,
+  "prix_nuit": 116,
+  "revenu_annuel": 21749,
+  "annonces": 114
+ },
+ {
+  "ville": "Calvisson",
+  "insee": "30062",
+  "region": "Occitanie",
+  "population": 6486,
+  "occupation": 53,
+  "prix_nuit": 97,
+  "revenu_annuel": 18729,
+  "annonces": 114
+ },
+ {
+  "ville": "Barr",
+  "insee": "67021",
+  "region": "Grand Est",
+  "population": 7057,
+  "occupation": 54,
+  "prix_nuit": 95,
+  "revenu_annuel": 18718,
+  "annonces": 114
+ },
+ {
+  "ville": "Vico",
+  "insee": "2A348",
+  "region": "Corse",
+  "population": 999,
+  "occupation": 57,
+  "prix_nuit": 181,
+  "revenu_annuel": 37954,
+  "annonces": 114
+ },
+ {
+  "ville": "Sedan",
+  "insee": "08409",
+  "region": "Grand Est",
+  "population": 16667,
+  "occupation": 52,
+  "prix_nuit": 65,
+  "revenu_annuel": 12368,
+  "annonces": 114
+ },
+ {
+  "ville": "Sigean",
+  "insee": "11379",
+  "region": "Occitanie",
+  "population": 5657,
+  "occupation": 48,
+  "prix_nuit": 110,
+  "revenu_annuel": 19084,
+  "annonces": 113
+ },
+ {
+  "ville": "Le Boulou",
+  "insee": "66024",
+  "region": "Occitanie",
+  "population": 5487,
+  "occupation": 58,
+  "prix_nuit": 64,
+  "revenu_annuel": 13627,
+  "annonces": 113
+ },
+ {
+  "ville": "Sorède",
+  "insee": "66196",
+  "region": "Occitanie",
+  "population": 3512,
+  "occupation": 54,
+  "prix_nuit": 125,
+  "revenu_annuel": 24717,
+  "annonces": 113
+ },
+ {
+  "ville": "Autun",
+  "insee": "71014",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 13172,
+  "occupation": 55,
+  "prix_nuit": 81,
+  "revenu_annuel": 16153,
+  "annonces": 113
+ },
+ {
+  "ville": "Lauris",
+  "insee": "84065",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3921,
+  "occupation": 54,
+  "prix_nuit": 177,
+  "revenu_annuel": 34733,
+  "annonces": 113
+ },
+ {
+  "ville": "Challans",
+  "insee": "85047",
+  "region": "Pays de la Loire",
+  "population": 22943,
+  "occupation": 48,
+  "prix_nuit": 84,
+  "revenu_annuel": 14704,
+  "annonces": 113
+ },
+ {
+  "ville": "Châtillon",
+  "insee": "92020",
+  "region": "Île-de-France",
+  "population": 36705,
+  "occupation": 66,
+  "prix_nuit": 103,
+  "revenu_annuel": 24923,
+  "annonces": 113
+ },
+ {
+  "ville": "Rognes",
+  "insee": "13082",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 4693,
+  "occupation": 58,
+  "prix_nuit": 239,
+  "revenu_annuel": 50833,
+  "annonces": 112
+ },
+ {
+  "ville": "Beaussais-sur-Mer",
+  "insee": "22209",
+  "region": "Bretagne",
+  "population": 4498,
+  "occupation": 46,
+  "prix_nuit": 129,
+  "revenu_annuel": 21792,
+  "annonces": 112
+ },
+ {
+  "ville": "Pont-Saint-Esprit",
+  "insee": "30202",
+  "region": "Occitanie",
+  "population": 10958,
+  "occupation": 53,
+  "prix_nuit": 104,
+  "revenu_annuel": 20005,
+  "annonces": 112
+ },
+ {
+  "ville": "Juvignac",
+  "insee": "34123",
+  "region": "Occitanie",
+  "population": 14055,
+  "occupation": 55,
+  "prix_nuit": 112,
+  "revenu_annuel": 22385,
+  "annonces": 112
+ },
+ {
+  "ville": "Gresse-en-Vercors",
+  "insee": "38186",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 351,
+  "occupation": 45,
+  "prix_nuit": 86,
+  "revenu_annuel": 14036,
+  "annonces": 112
+ },
+ {
+  "ville": "Bangor",
+  "insee": "56009",
+  "region": "Bretagne",
+  "population": 994,
+  "occupation": 59,
+  "prix_nuit": 159,
+  "revenu_annuel": 34200,
+  "annonces": 112
+ },
+ {
+  "ville": "Die",
+  "insee": "26113",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 4844,
+  "occupation": 56,
+  "prix_nuit": 83,
+  "revenu_annuel": 16933,
+  "annonces": 111
+ },
+ {
+  "ville": "Plouarzel",
+  "insee": "29177",
+  "region": "Bretagne",
+  "population": 4029,
+  "occupation": 55,
+  "prix_nuit": 128,
+  "revenu_annuel": 25778,
+  "annonces": 111
+ },
+ {
+  "ville": "Rochefort-du-Gard",
+  "insee": "30217",
+  "region": "Occitanie",
+  "population": 8117,
+  "occupation": 56,
+  "prix_nuit": 177,
+  "revenu_annuel": 36397,
+  "annonces": 111
+ },
+ {
+  "ville": "Avène",
+  "insee": "34019",
+  "region": "Occitanie",
+  "population": 294,
+  "occupation": 50,
+  "prix_nuit": 53,
+  "revenu_annuel": 9759,
+  "annonces": 111
+ },
+ {
+  "ville": "Haguenau",
+  "insee": "67180",
+  "region": "Grand Est",
+  "population": 36391,
+  "occupation": 63,
+  "prix_nuit": 74,
+  "revenu_annuel": 17082,
+  "annonces": 111
+ },
+ {
+  "ville": "Ventron",
+  "insee": "88500",
+  "region": "Grand Est",
+  "population": 805,
+  "occupation": 47,
+  "prix_nuit": 243,
+  "revenu_annuel": 41298,
+  "annonces": 111
+ },
+ {
+  "ville": "Livry-Gargan",
+  "insee": "93046",
+  "region": "Île-de-France",
+  "population": 47228,
+  "occupation": 50,
+  "prix_nuit": 86,
+  "revenu_annuel": 15614,
+  "annonces": 111
+ },
+ {
+  "ville": "Chorges",
+  "insee": "05040",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3146,
+  "occupation": 52,
+  "prix_nuit": 115,
+  "revenu_annuel": 21740,
+  "annonces": 111
+ },
+ {
+  "ville": "Lambesc",
+  "insee": "13050",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 10024,
+  "occupation": 56,
+  "prix_nuit": 164,
+  "revenu_annuel": 33679,
+  "annonces": 110
+ },
+ {
+  "ville": "Bagnols-sur-Cèze",
+  "insee": "30028",
+  "region": "Occitanie",
+  "population": 18112,
+  "occupation": 52,
+  "prix_nuit": 112,
+  "revenu_annuel": 21137,
+  "annonces": 110
+ },
+ {
+  "ville": "Lagorce",
+  "insee": "33218",
+  "region": "Nouvelle-Aquitaine",
+  "population": 1575,
+  "occupation": 51,
+  "prix_nuit": 147,
+  "revenu_annuel": 27457,
+  "annonces": 110
+ },
+ {
+  "ville": "Béthune",
+  "insee": "62119",
+  "region": "Hauts-de-France",
+  "population": 25224,
+  "occupation": 59,
+  "prix_nuit": 67,
+  "revenu_annuel": 14510,
+  "annonces": 110
+ },
+ {
+  "ville": "Bozel",
+  "insee": "73055",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2098,
+  "occupation": 60,
+  "prix_nuit": 142,
+  "revenu_annuel": 31157,
+  "annonces": 110
+ },
+ {
+  "ville": "Caromb",
+  "insee": "84030",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3479,
+  "occupation": 52,
+  "prix_nuit": 164,
+  "revenu_annuel": 30892,
+  "annonces": 110
+ },
+ {
+  "ville": "Appietto",
+  "insee": "2A017",
+  "region": "Corse",
+  "population": 1749,
+  "occupation": 60,
+  "prix_nuit": 127,
+  "revenu_annuel": 27978,
+  "annonces": 110
+ },
+ {
+  "ville": "Valréas",
+  "insee": "84138",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 9224,
+  "occupation": 46,
+  "prix_nuit": 151,
+  "revenu_annuel": 25549,
+  "annonces": 109
+ },
+ {
+  "ville": "Lagord",
+  "insee": "17200",
+  "region": "Nouvelle-Aquitaine",
+  "population": 7802,
+  "occupation": 56,
+  "prix_nuit": 126,
+  "revenu_annuel": 25879,
+  "annonces": 108
+ },
+ {
+  "ville": "Barjac",
+  "insee": "30029",
+  "region": "Occitanie",
+  "population": 1608,
+  "occupation": 50,
+  "prix_nuit": 155,
+  "revenu_annuel": 28125,
+  "annonces": 108
+ },
+ {
+  "ville": "Pleurtuit",
+  "insee": "35228",
+  "region": "Bretagne",
+  "population": 7167,
+  "occupation": 51,
+  "prix_nuit": 116,
+  "revenu_annuel": 21667,
+  "annonces": 108
+ },
+ {
+  "ville": "Savines-le-Lac",
+  "insee": "05164",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1102,
+  "occupation": 51,
+  "prix_nuit": 134,
+  "revenu_annuel": 25017,
+  "annonces": 108
+ },
+ {
+  "ville": "Châteauneuf-Grasse",
+  "insee": "06038",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 3815,
+  "occupation": 60,
+  "prix_nuit": 343,
+  "revenu_annuel": 75186,
+  "annonces": 108
+ },
+ {
+  "ville": "Biganos",
+  "insee": "33051",
+  "region": "Nouvelle-Aquitaine",
+  "population": 11431,
+  "occupation": 56,
+  "prix_nuit": 115,
+  "revenu_annuel": 23632,
+  "annonces": 107
+ },
+ {
+  "ville": "Munster",
+  "insee": "68226",
+  "region": "Grand Est",
+  "population": 4738,
+  "occupation": 50,
+  "prix_nuit": 99,
+  "revenu_annuel": 18155,
+  "annonces": 107
+ },
+ {
+  "ville": "Verchaix",
+  "insee": "74294",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 830,
+  "occupation": 50,
+  "prix_nuit": 197,
+  "revenu_annuel": 35859,
+  "annonces": 107
+ },
+ {
+  "ville": "Sisteron",
+  "insee": "04209",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 7850,
+  "occupation": 51,
+  "prix_nuit": 82,
+  "revenu_annuel": 15358,
+  "annonces": 107
+ },
+ {
+  "ville": "Plonéour-Lanvern",
+  "insee": "29174",
+  "region": "Bretagne",
+  "population": 6452,
+  "occupation": 52,
+  "prix_nuit": 114,
+  "revenu_annuel": 21514,
+  "annonces": 106
+ },
+ {
+  "ville": "Crach",
+  "insee": "56046",
+  "region": "Bretagne",
+  "population": 3423,
+  "occupation": 49,
+  "prix_nuit": 150,
+  "revenu_annuel": 26745,
+  "annonces": 106
+ },
+ {
+  "ville": "Sartrouville",
+  "insee": "78586",
+  "region": "Île-de-France",
+  "population": 52763,
+  "occupation": 59,
+  "prix_nuit": 78,
+  "revenu_annuel": 16689,
+  "annonces": 106
+ },
+ {
+  "ville": "Ménerbes",
+  "insee": "84073",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 962,
+  "occupation": 63,
+  "prix_nuit": 340,
+  "revenu_annuel": 77813,
+  "annonces": 106
+ },
+ {
+  "ville": "Saignon",
+  "insee": "84105",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 912,
+  "occupation": 57,
+  "prix_nuit": 211,
+  "revenu_annuel": 43604,
+  "annonces": 106
+ },
+ {
+  "ville": "Viggianello",
+  "insee": "2A349",
+  "region": "Corse",
+  "population": 908,
+  "occupation": 61,
+  "prix_nuit": 170,
+  "revenu_annuel": 37964,
+  "annonces": 106
+ },
+ {
+  "ville": "Mollans-sur-Ouvèze",
+  "insee": "26188",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 1043,
+  "occupation": 56,
+  "prix_nuit": 147,
+  "revenu_annuel": 29840,
+  "annonces": 105
+ },
+ {
+  "ville": "Figeac",
+  "insee": "46102",
+  "region": "Occitanie",
+  "population": 9793,
+  "occupation": 52,
+  "prix_nuit": 76,
+  "revenu_annuel": 14497,
+  "annonces": 105
+ },
+ {
+  "ville": "Houilles",
+  "insee": "78311",
+  "region": "Île-de-France",
+  "population": 33983,
+  "occupation": 69,
+  "prix_nuit": 86,
+  "revenu_annuel": 21798,
+  "annonces": 105
+ },
+ {
+  "ville": "Guillestre",
+  "insee": "05065",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 2295,
+  "occupation": 54,
+  "prix_nuit": 106,
+  "revenu_annuel": 20929,
+  "annonces": 105
+ },
+ {
+  "ville": "Jausiers",
+  "insee": "04096",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1146,
+  "occupation": 43,
+  "prix_nuit": 102,
+  "revenu_annuel": 16077,
+  "annonces": 105
+ },
+ {
+  "ville": "Ferney-Voltaire",
+  "insee": "01160",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 12094,
+  "occupation": 69,
+  "prix_nuit": 104,
+  "revenu_annuel": 26295,
+  "annonces": 105
+ },
+ {
+  "ville": "Pordic",
+  "insee": "22251",
+  "region": "Bretagne",
+  "population": 7454,
+  "occupation": 49,
+  "prix_nuit": 95,
+  "revenu_annuel": 16974,
+  "annonces": 104
+ },
+ {
+  "ville": "Plozévet",
+  "insee": "29215",
+  "region": "Bretagne",
+  "population": 2984,
+  "occupation": 59,
+  "prix_nuit": 113,
+  "revenu_annuel": 24129,
+  "annonces": 104
+ },
+ {
+  "ville": "Lans-en-Vercors",
+  "insee": "38205",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 2751,
+  "occupation": 48,
+  "prix_nuit": 119,
+  "revenu_annuel": 20898,
+  "annonces": 104
+ },
+ {
+  "ville": "Sauzon",
+  "insee": "56241",
+  "region": "Bretagne",
+  "population": 1036,
+  "occupation": 56,
+  "prix_nuit": 143,
+  "revenu_annuel": 29308,
+  "annonces": 104
+ },
+ {
+  "ville": "Senlis",
+  "insee": "60612",
+  "region": "Hauts-de-France",
+  "population": 15157,
+  "occupation": 58,
+  "prix_nuit": 110,
+  "revenu_annuel": 23432,
+  "annonces": 104
+ },
+ {
+  "ville": "Ribeauvillé",
+  "insee": "68269",
+  "region": "Grand Est",
+  "population": 4685,
+  "occupation": 57,
+  "prix_nuit": 117,
+  "revenu_annuel": 24468,
+  "annonces": 104
+ },
+ {
+  "ville": "Luxeuil-les-Bains",
+  "insee": "70311",
+  "region": "Bourgogne-Franche-Comté",
+  "population": 6663,
+  "occupation": 53,
+  "prix_nuit": 51,
+  "revenu_annuel": 9959,
+  "annonces": 104
+ },
+ {
+  "ville": "Bressuire",
+  "insee": "79049",
+  "region": "Nouvelle-Aquitaine",
+  "population": 19970,
+  "occupation": 48,
+  "prix_nuit": 102,
+  "revenu_annuel": 18046,
+  "annonces": 104
+ },
+ {
+  "ville": "Seillans",
+  "insee": "83124",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 2941,
+  "occupation": 57,
+  "prix_nuit": 231,
+  "revenu_annuel": 48062,
+  "annonces": 104
+ },
+ {
+  "ville": "Villecroze",
+  "insee": "83149",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1514,
+  "occupation": 52,
+  "prix_nuit": 165,
+  "revenu_annuel": 31170,
+  "annonces": 104
+ },
+ {
+  "ville": "Oppède",
+  "insee": "84086",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1285,
+  "occupation": 65,
+  "prix_nuit": 277,
+  "revenu_annuel": 65241,
+  "annonces": 104
+ },
+ {
+  "ville": "Montaigu-Vendée",
+  "insee": "85146",
+  "region": "Pays de la Loire",
+  "population": 21134,
+  "occupation": 58,
+  "prix_nuit": 79,
+  "revenu_annuel": 16653,
+  "annonces": 104
+ },
+ {
+  "ville": "Granges-Aumontzey",
+  "insee": "88218",
+  "region": "Grand Est",
+  "population": 2529,
+  "occupation": 40,
+  "prix_nuit": 128,
+  "revenu_annuel": 18768,
+  "annonces": 104
+ },
+ {
+  "ville": "Colomiers",
+  "insee": "31149",
+  "region": "Occitanie",
+  "population": 40882,
+  "occupation": 66,
+  "prix_nuit": 70,
+  "revenu_annuel": 16951,
+  "annonces": 103
+ },
+ {
+  "ville": "Bonneval-sur-Arc",
+  "insee": "73047",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 285,
+  "occupation": 53,
+  "prix_nuit": 144,
+  "revenu_annuel": 27606,
+  "annonces": 103
+ },
+ {
+  "ville": "Saint-Arnoult",
+  "insee": "76557",
+  "region": "Normandie",
+  "population": 1446,
+  "occupation": 44,
+  "prix_nuit": 176,
+  "revenu_annuel": 28093,
+  "annonces": 103
+ },
+ {
+  "ville": "Aubignan",
+  "insee": "84004",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 5981,
+  "occupation": 54,
+  "prix_nuit": 158,
+  "revenu_annuel": 30887,
+  "annonces": 103
+ },
+ {
+  "ville": "Angles",
+  "insee": "85004",
+  "region": "Pays de la Loire",
+  "population": 3115,
+  "occupation": 45,
+  "prix_nuit": 134,
+  "revenu_annuel": 21877,
+  "annonces": 103
+ },
+ {
+  "ville": "Chanverrie",
+  "insee": "85302",
+  "region": "Pays de la Loire",
+  "population": 5653,
+  "occupation": 53,
+  "prix_nuit": 119,
+  "revenu_annuel": 22869,
+  "annonces": 103
+ },
+ {
+  "ville": "Anould",
+  "insee": "88009",
+  "region": "Grand Est",
+  "population": 3234,
+  "occupation": 47,
+  "prix_nuit": 170,
+  "revenu_annuel": 29276,
+  "annonces": 103
+ },
+ {
+  "ville": "Villiers-sur-Marne",
+  "insee": "94079",
+  "region": "Île-de-France",
+  "population": 33162,
+  "occupation": 64,
+  "prix_nuit": 78,
+  "revenu_annuel": 18351,
+  "annonces": 103
+ },
+ {
+  "ville": "Vitrolles",
+  "insee": "13117",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 36758,
+  "occupation": 57,
+  "prix_nuit": 86,
+  "revenu_annuel": 18030,
+  "annonces": 102
+ },
+ {
+  "ville": "Crest",
+  "insee": "26108",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 8658,
+  "occupation": 54,
+  "prix_nuit": 85,
+  "revenu_annuel": 16808,
+  "annonces": 102
+ },
+ {
+  "ville": "Saint-Lô",
+  "insee": "50502",
+  "region": "Normandie",
+  "population": 19471,
+  "occupation": 56,
+  "prix_nuit": 72,
+  "revenu_annuel": 14704,
+  "annonces": 102
+ },
+ {
+  "ville": "Faverges-Seythenex",
+  "insee": "74123",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 7545,
+  "occupation": 48,
+  "prix_nuit": 105,
+  "revenu_annuel": 18284,
+  "annonces": 102
+ },
+ {
+  "ville": "Publier",
+  "insee": "74218",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 7864,
+  "occupation": 54,
+  "prix_nuit": 118,
+  "revenu_annuel": 23322,
+  "annonces": 102
+ },
+ {
+  "ville": "Maisons-Laffitte",
+  "insee": "78358",
+  "region": "Île-de-France",
+  "population": 23093,
+  "occupation": 60,
+  "prix_nuit": 85,
+  "revenu_annuel": 18510,
+  "annonces": 102
+ },
+ {
+  "ville": "Bobigny",
+  "insee": "93008",
+  "region": "Île-de-France",
+  "population": 56927,
+  "occupation": 65,
+  "prix_nuit": 82,
+  "revenu_annuel": 19560,
+  "annonces": 102
+ },
+ {
+  "ville": "Esparron-de-Verdon",
+  "insee": "04081",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 379,
+  "occupation": 57,
+  "prix_nuit": 136,
+  "revenu_annuel": 28245,
+  "annonces": 102
+ },
+ {
+  "ville": "Alata",
+  "insee": "2A006",
+  "region": "Corse",
+  "population": 3681,
+  "occupation": 63,
+  "prix_nuit": 145,
+  "revenu_annuel": 33237,
+  "annonces": 102
+ },
+ {
+  "ville": "Patrimonio",
+  "insee": "2B205",
+  "region": "Corse",
+  "population": 897,
+  "occupation": 57,
+  "prix_nuit": 136,
+  "revenu_annuel": 28079,
+  "annonces": 102
+ },
+ {
+  "ville": "Fuveau",
+  "insee": "13040",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 10337,
+  "occupation": 58,
+  "prix_nuit": 174,
+  "revenu_annuel": 36558,
+  "annonces": 101
+ },
+ {
+  "ville": "Langrune-sur-Mer",
+  "insee": "14354",
+  "region": "Normandie",
+  "population": 1916,
+  "occupation": 53,
+  "prix_nuit": 119,
+  "revenu_annuel": 23220,
+  "annonces": 101
+ },
+ {
+  "ville": "Lormont",
+  "insee": "33249",
+  "region": "Nouvelle-Aquitaine",
+  "population": 25769,
+  "occupation": 62,
+  "prix_nuit": 94,
+  "revenu_annuel": 21363,
+  "annonces": 101
+ },
+ {
+  "ville": "Noyers-sur-Cher",
+  "insee": "41164",
+  "region": "Centre-Val de Loire",
+  "population": 2631,
+  "occupation": 46,
+  "prix_nuit": 130,
+  "revenu_annuel": 21921,
+  "annonces": 101
+ },
+ {
+  "ville": "Étel",
+  "insee": "56055",
+  "region": "Bretagne",
+  "population": 2074,
+  "occupation": 56,
+  "prix_nuit": 126,
+  "revenu_annuel": 25966,
+  "annonces": 101
+ },
+ {
+  "ville": "Saint-Nectaire",
+  "insee": "63380",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 822,
+  "occupation": 47,
+  "prix_nuit": 111,
+  "revenu_annuel": 19057,
+  "annonces": 101
+ },
+ {
+  "ville": "Wintzenheim",
+  "insee": "68374",
+  "region": "Grand Est",
+  "population": 8059,
+  "occupation": 55,
+  "prix_nuit": 100,
+  "revenu_annuel": 19906,
+  "annonces": 101
+ },
+ {
+  "ville": "La Flèche",
+  "insee": "72154",
+  "region": "Pays de la Loire",
+  "population": 14947,
+  "occupation": 47,
+  "prix_nuit": 98,
+  "revenu_annuel": 16636,
+  "annonces": 101
+ },
+ {
+  "ville": "Bessans",
+  "insee": "73040",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 341,
+  "occupation": 55,
+  "prix_nuit": 107,
+  "revenu_annuel": 21336,
+  "annonces": 101
+ },
+ {
+  "ville": "Saint-Claude",
+  "insee": "97124",
+  "region": "Guadeloupe",
+  "population": 10177,
+  "occupation": 50,
+  "prix_nuit": 74,
+  "revenu_annuel": 13625,
+  "annonces": 101
+ },
+ {
+  "ville": "Riez",
+  "insee": "04166",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 1610,
+  "occupation": 55,
+  "prix_nuit": 89,
+  "revenu_annuel": 17734,
+  "annonces": 101
+ },
+ {
+  "ville": "Peymeinade",
+  "insee": "06095",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": 8514,
+  "occupation": 60,
+  "prix_nuit": 220,
+  "revenu_annuel": 47903,
+  "annonces": 101
+ },
+ {
+  "ville": "Plougastel-Daoulas",
+  "insee": "29189",
+  "region": "Bretagne",
+  "population": 13434,
+  "occupation": 55,
+  "prix_nuit": 96,
+  "revenu_annuel": 19219,
+  "annonces": 100
+ },
+ {
+  "ville": "Bruges",
+  "insee": "33075",
+  "region": "Nouvelle-Aquitaine",
+  "population": 20020,
+  "occupation": 58,
+  "prix_nuit": 102,
+  "revenu_annuel": 21551,
+  "annonces": 100
+ },
+ {
+  "ville": "Voiron",
+  "insee": "38563",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 21847,
+  "occupation": 62,
+  "prix_nuit": 60,
+  "revenu_annuel": 13500,
+  "annonces": 100
+ },
+ {
+  "ville": "Écully",
+  "insee": "69081",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 17944,
+  "occupation": 52,
+  "prix_nuit": 93,
+  "revenu_annuel": 17744,
+  "annonces": 100
+ },
+ {
+  "ville": "Cohennoz",
+  "insee": "73088",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": 137,
+  "occupation": 29,
+  "prix_nuit": 160,
+  "revenu_annuel": 16685,
+  "annonces": 100
+ },
+ {
+  "ville": "Veules-les-Roses",
+  "insee": "76735",
+  "region": "Normandie",
+  "population": 510,
+  "occupation": 52,
+  "prix_nuit": 114,
+  "revenu_annuel": 21614,
+  "annonces": 100
+ },
+ {
+  "ville": "Gaillac",
+  "insee": "81099",
+  "region": "Occitanie",
+  "population": 16162,
+  "occupation": 51,
+  "prix_nuit": 95,
+  "revenu_annuel": 17606,
+  "annonces": 100
+ },
+ {
+  "ville": "Villepinte",
+  "insee": "93078",
+  "region": "Île-de-France",
+  "population": 41470,
+  "occupation": 56,
+  "prix_nuit": 93,
+  "revenu_annuel": 19069,
+  "annonces": 100
+ },
+ {
+  "ville": "Santa-Maria-Poggio",
+  "insee": "2B311",
+  "region": "Corse",
+  "population": 807,
+  "occupation": 58,
+  "prix_nuit": 98,
+  "revenu_annuel": 20585,
+  "annonces": 100
+ }
+]

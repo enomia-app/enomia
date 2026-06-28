@@ -23,7 +23,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { extractDomain } from '../backlinks-source-monthly/filters.mjs';
-import { callClaudeMaxJson } from '../lib/claude-cli.mjs';
+import { callClaudeMax } from '../lib/claude-cli.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..', '..');
@@ -118,22 +118,39 @@ async function findLegalText(domain) {
   return null;
 }
 
+let _dbgLogged = false;
 async function extractNameLLM(text, nomBoite) {
   const prompt = `Voici le texte des mentions légales (ou page à-propos) d'un site d'entreprise française. Trouve le NOM de la PERSONNE PHYSIQUE qui dirige (gérant, président, directeur de la publication, responsable légal). PAS la raison sociale, PAS un nom d'agence ou de marque.
 
-Réponds en JSON strict : {"prenom": "...", "nom": "...", "confiance": "haute|moyenne|basse"}.
+Réponds UNIQUEMENT par un objet JSON, sans aucun texte avant ou après, sans bloc markdown :
+{"prenom": "...", "nom": "...", "confiance": "haute|moyenne|basse"}
 - "prenom"/"nom" = "" si tu n'es pas sûr.
-- "confiance" = "haute" UNIQUEMENT si le texte nomme explicitement la personne (ex. "Gérant : Jean Dupont", "représentée par M. Jean Dupont", "Directeur de la publication : Marie Martin"). Sinon "moyenne" ou "basse".
+- "confiance" = "haute" UNIQUEMENT si le texte nomme explicitement la personne (ex. "Gérant : Jean Dupont", "représentée par M. Jean Dupont"). Sinon "moyenne" ou "basse".
 - N'invente JAMAIS. Dans le doute : confiance "basse", champs vides.
 
 Entreprise : "${nomBoite || ''}"
 
 Texte :
 ${text}`;
+  let out;
   try {
-    const obj = await callClaudeMaxJson(prompt, { model: MODEL });
-    return (obj && typeof obj === 'object') ? obj : null;
-  } catch { return null; }
+    out = await callClaudeMax(prompt, { model: MODEL });
+  } catch (e) {
+    if (!_dbgLogged) { _dbgLogged = true; console.log(`    [dbg] claude erreur: ${String(e.message || e).slice(0, 200)}`); }
+    return null;
+  }
+  const raw = String(out || '');
+  const m = raw.match(/\{[\s\S]*\}/); // tolère du texte autour du JSON
+  if (!m) {
+    if (!_dbgLogged) { _dbgLogged = true; console.log(`    [dbg] sortie sans JSON (${raw.length} car) : ${raw.slice(0, 200)}`); }
+    return null;
+  }
+  try {
+    return JSON.parse(m[0]);
+  } catch {
+    if (!_dbgLogged) { _dbgLogged = true; console.log(`    [dbg] JSON invalide : ${m[0].slice(0, 200)}`); }
+    return null;
+  }
 }
 
 // ─── I/O base ────────────────────────────────────────────────────────────
@@ -178,17 +195,18 @@ async function main() {
       diag.fromCache++;
     } else {
       const text = await findLegalText(domain);
+      let cacheable = true;
       if (!text) { diag.noLegal++; resolved = { prenom: '', nom_gerant: '' }; }
       else {
         const llm = await extractNameLLM(text, r.nom_boite);
-        if (!llm) { diag.llmFail++; resolved = { prenom: '', nom_gerant: '' }; }
+        if (!llm) { diag.llmFail++; resolved = { prenom: '', nom_gerant: '' }; cacheable = false; } // transitoire → ne pas cacher
         else if (llm.confiance !== 'haute') { diag.lowConf++; resolved = { prenom: '', nom_gerant: '' }; }
         else {
           resolved = resolveName(llm, { siteDomain: domain });
           if (!resolved.prenom && !resolved.nom_gerant) diag.rejected++;
         }
       }
-      writeCache(domain, resolved);
+      if (cacheable) writeCache(domain, resolved);
     }
     if (resolved.prenom || resolved.nom_gerant) {
       found++;

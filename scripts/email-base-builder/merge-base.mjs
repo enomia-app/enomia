@@ -22,7 +22,14 @@ for (const f of SEGMENT_FILES) {
   if (!fs.existsSync(p)) { console.log(`(absent, ignoré: ${f})`); continue; }
   all = all.concat(JSON.parse(fs.readFileSync(p, 'utf-8')));
 }
-all.forEach(r => { if (!('phone' in r)) r.phone = ''; if (!('page_en_ligne' in r)) r.page_en_ligne = ''; if (!('page_url' in r)) r.page_url = ''; });
+all.forEach(r => {
+  if (!('phone' in r)) r.phone = '';
+  if (!('page_en_ligne' in r)) r.page_en_ligne = '';
+  if (!('page_url' in r)) r.page_url = '';
+  if (!('rating' in r)) r.rating = '';
+  if (!('reviews' in r)) r.reviews = '';
+  if (!('nom_gerant' in r)) r.nom_gerant = '';
+});
 
 // Enrichit le téléphone des conciergeries depuis la source Places (le fichier
 // segment conciergeries.json peut être antérieur à l'ajout de la colonne tel).
@@ -49,7 +56,7 @@ all.sort((a, b) => (a.campagne - b.campagne) || ((rank[a.statut] ?? 9) - (rank[b
 
 fs.writeFileSync(path.join(dir, 'base_complete.json'), JSON.stringify(all, null, 2));
 
-const COLS = ['segment', 'campagne', 'nom_boite', 'site', 'email', 'prenom', 'statut', 'phone', 'page_en_ligne', 'ville', 'rcpt_code', 'url_formulaire', 'page_url', 'note'];
+const COLS = ['segment', 'campagne', 'nom_boite', 'site', 'email', 'prenom', 'nom_gerant', 'statut', 'phone', 'page_en_ligne', 'ville', 'rcpt_code', 'url_formulaire', 'page_url', 'rating', 'reviews', 'note'];
 const cell = v => { v = v == null ? '' : String(v); return /[";\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
 fs.writeFileSync(path.join(dir, 'base_complete.csv'), '﻿' + COLS.join(';') + '\n' + all.map(r => COLS.map(c => cell(r[c])).join(';')).join('\n') + '\n');
 

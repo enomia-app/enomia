@@ -9,9 +9,9 @@ from openpyxl.utils import get_column_letter
 DIR = "data/email-base"
 data = json.load(open(os.path.join(DIR, "base_complete.json")))
 cols = ["segment", "campagne", "nom_boite", "site", "email", "prenom",
-        "statut", "phone", "page_en_ligne", "ville", "rcpt_code",
-        "url_formulaire", "page_url", "note"]
-widths = [16, 9, 32, 34, 30, 12, 11, 16, 13, 12, 12, 34, 34, 22]
+        "nom_gerant", "statut", "phone", "page_en_ligne", "ville", "rcpt_code",
+        "url_formulaire", "page_url", "rating", "reviews", "note"]
+widths = [16, 9, 32, 34, 30, 12, 18, 11, 16, 13, 12, 12, 34, 34, 7, 8, 22]
 
 wb = Workbook(); ws = wb.active; ws.title = "base"
 ws.append(cols)

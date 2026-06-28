@@ -90,7 +90,7 @@ const SEGMENTS = {
     const p = fs.existsSync(newP) ? newP : oldP;
     const raw = JSON.parse(fs.readFileSync(p, 'utf-8'));
     const arr = Array.isArray(raw) ? raw : (Object.values(raw).find(Array.isArray) || []);
-    return arr.map(x => ({ name: x.name, site: x.website || x.site || x.url, ville: x.ville || x.city, phone: x.phone || '', page_en_ligne: x.page_en_ligne, page_url: x.page_url || '', segment: 'conciergerie', campagne: 3 }));
+    return arr.map(x => ({ name: x.name, site: x.website || x.site || x.url, ville: x.ville || x.city, phone: x.phone || '', page_en_ligne: x.page_en_ligne, page_url: x.page_url || '', rating: x.rating, reviews: x.reviews, segment: 'conciergerie', campagne: 3 }));
   },
   // Camp 1 : blogs LCD où on pitche un outil (non-conciergerie, sans simulateur perso).
   blog_lcd: () => loadBlogPool()
@@ -101,8 +101,8 @@ const SEGMENTS = {
     .filter(x => !x.is_conciergerie && hasSim(x) && (x.email || x.url_formulaire))
     .map(x => mapBlog(x, 'blog_simulateur', 2)),
   // Niches annuaire (proprios découverts via Places) : on scrape l'email comme les conciergeries.
-  loveroom: () => loadDiscovered('loveroom.json').map(x => ({ name: x.name, site: x.website, ville: x.ville, phone: x.phone || '', segment: 'loveroom', campagne: 4 })),
-  cabane: () => loadDiscovered('cabane.json').map(x => ({ name: x.name, site: x.website, ville: x.ville, phone: x.phone || '', segment: 'cabane', campagne: 5 })),
+  loveroom: () => loadDiscovered('loveroom.json').map(x => ({ name: x.name, site: x.website, ville: x.ville, phone: x.phone || '', page_en_ligne: x.page_en_ligne, page_url: x.page_url || '', rating: x.rating, reviews: x.reviews, segment: 'loveroom', campagne: 4 })),
+  cabane: () => loadDiscovered('cabane.json').map(x => ({ name: x.name, site: x.website, ville: x.ville, phone: x.phone || '', page_en_ligne: x.page_en_ligne, page_url: x.page_url || '', rating: x.rating, reviews: x.reviews, segment: 'cabane', campagne: 5 })),
 };
 
 function loadCandidates() {
@@ -196,7 +196,7 @@ async function pool(items, fn, concurrency) {
 let done = 0;
 async function processCandidate(c, total) {
   const site = normSite(c.site);
-  const base = { segment: c.segment || args.segment || '', campagne: c.campagne ?? '', nom_boite: cleanName(c.name), site: site || '', email: '', prenom: '', statut: '', phone: c.phone || '', page_en_ligne: c.page_en_ligne === true ? 'oui' : c.page_en_ligne === false ? 'non' : '', ville: c.ville || '', rcpt_code: '', url_formulaire: c.url_formulaire || '', page_url: c.page_url || '', note: c.note || '' };
+  const base = { segment: c.segment || args.segment || '', campagne: c.campagne ?? '', nom_boite: cleanName(c.name), site: site || '', email: '', prenom: '', nom_gerant: '', statut: '', phone: c.phone || '', page_en_ligne: c.page_en_ligne === true ? 'oui' : c.page_en_ligne === false ? 'non' : '', ville: c.ville || '', rcpt_code: '', url_formulaire: c.url_formulaire || '', page_url: c.page_url || '', rating: c.rating ?? '', reviews: c.reviews ?? '', note: c.note || '' };
 
   if (!site) { base.statut = 'ecarte'; base.note = base.note || 'pas de site'; tick(total); return base; }
 
@@ -243,7 +243,7 @@ function tick(total) {
 }
 
 // ─── CSV (séparateur ; + BOM pour Excel FR) ─────────────────────────────
-const COLS = ['segment', 'campagne', 'nom_boite', 'site', 'email', 'prenom', 'statut', 'phone', 'page_en_ligne', 'ville', 'rcpt_code', 'url_formulaire', 'page_url', 'note'];
+const COLS = ['segment', 'campagne', 'nom_boite', 'site', 'email', 'prenom', 'nom_gerant', 'statut', 'phone', 'page_en_ligne', 'ville', 'rcpt_code', 'url_formulaire', 'page_url', 'rating', 'reviews', 'note'];
 function csvCell(v) {
   v = v == null ? '' : String(v);
   return /[";\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;

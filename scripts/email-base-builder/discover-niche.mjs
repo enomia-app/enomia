@@ -39,17 +39,31 @@ function isConciergerie(p) {
 const NICHE_BAD = /child_care|car_rental|car_repair|hair_care|gym|restaurant|cafe|^bar$|night_club|supermarket|clothing_store|store|gas_station|bank|doctor|dentist/i;
 const nicheRelevant = p => !NICHE_BAD.test((p.types || []).join(' '));
 
+const ORIGIN = 'https://www.enomia.app';
 const NICHES = {
-  loveroom: { src: 'scripts/loveroom-cities.json', label: c => c.displayName, slug: c => c.slug, q: c => `love room ${c.displayName}`, relevant: nicheRelevant, extra: () => ({}), out: 'loveroom.json' },
-  cabane: { src: 'scripts/cabane-zones.json', label: c => c.displayName, slug: c => c.slug, q: c => `cabane insolite ${c.displayName}`, relevant: nicheRelevant, extra: () => ({}), out: 'cabane.json' },
+  loveroom: {
+    src: 'scripts/loveroom-cities.json', label: c => c.displayName, slug: c => c.slug,
+    q: c => `love room ${c.displayName}`, relevant: nicheRelevant, out: 'loveroom.json',
+    // page ville = /love-room/[regionSlug]/[slug] (indexable, dans le sitemap)
+    sitemapRe: /\/love-room\/[^/]+\/([a-z0-9-]+)/g,
+    pageUrl: c => (c.regionSlug && c.slug) ? `${ORIGIN}/love-room/${c.regionSlug}/${c.slug}` : '',
+  },
+  cabane: {
+    src: 'scripts/cabane-zones.json', label: c => c.displayName, slug: c => c.slug,
+    q: c => `cabane insolite ${c.displayName}`, relevant: nicheRelevant, out: 'cabane.json',
+    // page zone = /cabane/[slug]
+    sitemapRe: /\/cabane\/([a-z0-9-]+)/g,
+    pageUrl: c => c.slug ? `${ORIGIN}/cabane/${c.slug}` : '',
+  },
   conciergerie: {
     src: 'scripts/city-backlog.json',
     cityFilter: c => c.status !== 'Hors scope',
     label: c => c.ville, slug: c => c.citySlug,
     q: c => `conciergerie airbnb ${c.ville}`,
-    relevant: isConciergerie,
-    extra: c => ({ citySlug: c.citySlug, page_url: c.newUrl ? 'https://www.enomia.app' + c.newUrl : '', city_status: c.status }),
-    sitemap: true, out: 'conciergerie.json',
+    relevant: isConciergerie, out: 'conciergerie.json',
+    // page ville = /conciergerie-airbnb/[region]/[citySlug]
+    sitemapRe: /\/conciergerie-airbnb\/[^/]+\/([a-z0-9-]+)/g,
+    pageUrl: c => c.newUrl ? `${ORIGIN}${c.newUrl}` : '',
   },
 };
 
@@ -68,13 +82,14 @@ async function placesSearch(query) {
   return (await res.json()).places || [];
 }
 
-// Sitemap live → set des citySlugs dont la page conciergerie existe.
-async function liveConciergerieSlugs() {
+// Sitemap live → set des derniers segments (slug ville/zone) des URLs matchant
+// la regex de la niche = la page de destination du badge existe ET est indexée.
+async function liveSlugs(re) {
   try {
     const r = await fetch('https://www.enomia.app/sitemap.xml', { signal: AbortSignal.timeout(15000) });
     const xml = await r.text();
     const set = new Set();
-    for (const m of xml.matchAll(/\/conciergerie-airbnb\/[^/]+\/([a-z0-9-]+)/g)) set.add(m[1]);
+    for (const m of xml.matchAll(re)) set.add(m[1]);
     return set;
   } catch (e) { console.log('⚠️ sitemap inaccessible:', e.message); return new Set(); }
 }
@@ -85,8 +100,8 @@ async function run(key) {
   const n = NICHES[key];
   let cities = JSON.parse(fs.readFileSync(path.join(ROOT, n.src), 'utf8'));
   if (n.cityFilter) cities = cities.filter(n.cityFilter);
-  const live = n.sitemap ? await liveConciergerieSlugs() : null;
-  if (live) console.log(`  sitemap : ${live.size} pages conciergerie en ligne`);
+  const live = n.sitemapRe ? await liveSlugs(n.sitemapRe) : null;
+  if (live) console.log(`  sitemap : ${live.size} pages ${key} en ligne`);
 
   const out = [];
   const seenPid = new Set(), seenDom = new Set();
@@ -110,7 +125,7 @@ async function run(key) {
         ville: n.label(c), slug: n.slug(c), name: p.displayName?.text,
         website, phone: p.nationalPhoneNumber, rating: p.rating, reviews: p.userRatingCount,
         address: p.formattedAddress, place_id: p.id, types: p.types,
-        ...n.extra(c),
+        page_url: n.pageUrl ? n.pageUrl(c) : '',
         ...(live ? { page_en_ligne: live.has(n.slug(c)) } : {}),
       });
       kept++;

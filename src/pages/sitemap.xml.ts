@@ -2,7 +2,7 @@ export const prerender = true;
 
 import { getCollection } from 'astro:content';
 import { cities, regions } from '../data/cities';
-import { getPublishedCitiesRentabilite } from '../data/cities-rentabilite';
+import rentaData from '../data/rentabilite-villes.json';
 import { loveRoomCities, loveRoomRegions } from '../data/loveRooms';
 import { cabaneZones } from '../data/cabanes';
 
@@ -44,12 +44,21 @@ export async function GET() {
     lastmod: c.updatedAt,
   }));
 
-  const rentabiliteCityEntries = getPublishedCitiesRentabilite().map((c) => ({
-    url: `/rentabilite-airbnb/${c.slug}`,
-    changefreq: 'monthly',
-    priority: '0.8',
-    lastmod: c.publishAt,
-  }));
+  // Villes rentabilité : uniquement les publiées (URLs nichées). Suit automatiquement le cron.
+  const rentabiliteCityEntries = rentaData.villes
+    .filter((v) => v.published)
+    .map((v) => ({
+      url: `/rentabilite-airbnb/${v.region_slug}/${v.slug}`,
+      changefreq: 'monthly',
+      priority: '0.8',
+    }));
+  const rentabiliteRegionEntries = rentaData.regions
+    .filter((r) => r.classables > 0)
+    .map((r) => ({
+      url: `/rentabilite-airbnb/${r.slug}`,
+      changefreq: 'monthly',
+      priority: '0.8',
+    }));
 
   const regionEntries = regions
     .filter((r) => cities.some((c) => c.regionSlug === r.slug))
@@ -97,6 +106,7 @@ export async function GET() {
     pillarEntry,
     ...regionEntries,
     ...cityEntries,
+    ...rentabiliteRegionEntries,
     ...rentabiliteCityEntries,
     loveRoomPillar,
     ...loveRoomRegionEntries,

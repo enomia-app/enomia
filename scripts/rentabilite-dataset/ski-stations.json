@@ -1,0 +1,2358 @@
+{
+  "generated_at": "2026-06-28T20:44:35.981Z",
+  "source": "RES / Data ES (Ministère des Sports) — ODbL, via equipements.sports.gouv.fr + geo.api.gouv.fr",
+  "definition": "alpine",
+  "types": [
+    "Domaine de ski alpin"
+  ],
+  "count": 293,
+  "geocode_failures": 0,
+  "insee": [
+    "01104",
+    "01135",
+    "01174",
+    "01185",
+    "01187",
+    "01204",
+    "01210",
+    "01247",
+    "03139",
+    "04006",
+    "04062",
+    "04073",
+    "04120",
+    "04126",
+    "04178",
+    "04203",
+    "04205",
+    "04210",
+    "04226",
+    "05001",
+    "05003",
+    "05004",
+    "05007",
+    "05023",
+    "05026",
+    "05044",
+    "05063",
+    "05072",
+    "05075",
+    "05077",
+    "05079",
+    "05085",
+    "05093",
+    "05096",
+    "05098",
+    "05101",
+    "05110",
+    "05114",
+    "05119",
+    "05133",
+    "05139",
+    "05142",
+    "05149",
+    "05153",
+    "05157",
+    "05161",
+    "05177",
+    "05181",
+    "06003",
+    "06016",
+    "06020",
+    "06028",
+    "06056",
+    "06070",
+    "06071",
+    "06073",
+    "06077",
+    "06086",
+    "06094",
+    "06110",
+    "06120",
+    "06125",
+    "06153",
+    "07038",
+    "09004",
+    "09023",
+    "09032",
+    "09193",
+    "09206",
+    "09322",
+    "09334",
+    "11066",
+    "12119",
+    "12187",
+    "15101",
+    "15216",
+    "25127",
+    "25254",
+    "25285",
+    "25307",
+    "25318",
+    "25321",
+    "25343",
+    "25348",
+    "25356",
+    "25380",
+    "25413",
+    "25453",
+    "25494",
+    "26059",
+    "26163",
+    "26168",
+    "26290",
+    "26315",
+    "26361",
+    "2A031",
+    "2B007",
+    "2B124",
+    "31081",
+    "31085",
+    "31221",
+    "31470",
+    "38002",
+    "38006",
+    "38020",
+    "38090",
+    "38129",
+    "38186",
+    "38191",
+    "38205",
+    "38225",
+    "38253",
+    "38264",
+    "38265",
+    "38285",
+    "38289",
+    "38322",
+    "38333",
+    "38376",
+    "38395",
+    "38433",
+    "38439",
+    "38442",
+    "38471",
+    "38472",
+    "38514",
+    "38548",
+    "38567",
+    "39047",
+    "39130",
+    "39228",
+    "39274",
+    "39275",
+    "39297",
+    "39367",
+    "39373",
+    "39391",
+    "39413",
+    "39441",
+    "39470",
+    "39487",
+    "42039",
+    "43091",
+    "48029",
+    "48053",
+    "48073",
+    "48082",
+    "48096",
+    "48145",
+    "62617",
+    "63038",
+    "63098",
+    "63236",
+    "63319",
+    "64040",
+    "64204",
+    "64320",
+    "65017",
+    "65059",
+    "65077",
+    "65138",
+    "65192",
+    "65195",
+    "65199",
+    "65210",
+    "65388",
+    "65481",
+    "66004",
+    "66020",
+    "66067",
+    "66075",
+    "66082",
+    "66098",
+    "66124",
+    "66147",
+    "66154",
+    "67027",
+    "68040",
+    "68073",
+    "68171",
+    "68229",
+    "68247",
+    "68249",
+    "68298",
+    "68307",
+    "68311",
+    "68329",
+    "70414",
+    "73004",
+    "73006",
+    "73013",
+    "73015",
+    "73023",
+    "73024",
+    "73034",
+    "73047",
+    "73054",
+    "73057",
+    "73071",
+    "73088",
+    "73094",
+    "73098",
+    "73107",
+    "73114",
+    "73116",
+    "73123",
+    "73132",
+    "73142",
+    "73150",
+    "73157",
+    "73173",
+    "73176",
+    "73186",
+    "73190",
+    "73194",
+    "73197",
+    "73206",
+    "73227",
+    "73230",
+    "73232",
+    "73235",
+    "73242",
+    "73257",
+    "73267",
+    "73280",
+    "73285",
+    "73290",
+    "73296",
+    "73303",
+    "73304",
+    "73306",
+    "73307",
+    "73318",
+    "73322",
+    "73323",
+    "74001",
+    "74014",
+    "74032",
+    "74033",
+    "74034",
+    "74049",
+    "74056",
+    "74058",
+    "74059",
+    "74063",
+    "74080",
+    "74083",
+    "74085",
+    "74089",
+    "74134",
+    "74136",
+    "74140",
+    "74143",
+    "74155",
+    "74159",
+    "74160",
+    "74173",
+    "74183",
+    "74188",
+    "74189",
+    "74190",
+    "74191",
+    "74193",
+    "74196",
+    "74208",
+    "74215",
+    "74221",
+    "74236",
+    "74238",
+    "74239",
+    "74241",
+    "74252",
+    "74253",
+    "74258",
+    "74273",
+    "74275",
+    "74276",
+    "74279",
+    "74290",
+    "74310",
+    "81033",
+    "81124",
+    "84017",
+    "84041",
+    "88075",
+    "88081",
+    "88196",
+    "88302",
+    "88391",
+    "88426",
+    "88492",
+    "88500",
+    "90065"
+  ],
+  "communes": [
+    {
+      "insee": "01104",
+      "nom": "Chézery-Forens",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "01135",
+      "nom": "Crozet",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "01174",
+      "nom": "Giron",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "01185",
+      "nom": "Plateau d'Hauteville",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "01187",
+      "nom": "Haut Valromey",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "01204",
+      "nom": "Le Poizat-Lalleyriat",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "01210",
+      "nom": "Lélex",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "01247",
+      "nom": "Mijoux",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "03139",
+      "nom": "Laprugne",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "04006",
+      "nom": "Allos",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "04062",
+      "nom": "La Condamine-Châtelard",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "04073",
+      "nom": "Enchastrayes",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "04120",
+      "nom": "Val d'Oronaye",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "04126",
+      "nom": "Montclar",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "04178",
+      "nom": "Saint-Étienne-les-Orgues",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "04203",
+      "nom": "Selonnet",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "04205",
+      "nom": "Seyne",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "04210",
+      "nom": "Soleilhas",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "04226",
+      "nom": "Uvernet-Fours",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05001",
+      "nom": "Abriès-Ristolas",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05003",
+      "nom": "Aiguilles",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05004",
+      "nom": "Ancelle",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05007",
+      "nom": "Arvieux",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05023",
+      "nom": "Briançon",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05026",
+      "nom": "Ceillac",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05044",
+      "nom": "Crévoux",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05063",
+      "nom": "La Grave",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05072",
+      "nom": "Laye",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05075",
+      "nom": "Manteyer",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05077",
+      "nom": "Molines-en-Queyras",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05079",
+      "nom": "Le Monêtier-les-Bains",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05085",
+      "nom": "Montgenèvre",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05093",
+      "nom": "Névache",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05096",
+      "nom": "Orcières",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05098",
+      "nom": "Les Orres",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05101",
+      "nom": "Vallouise-Pelvoux",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05110",
+      "nom": "Puy-Saint-Vincent",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05114",
+      "nom": "Réallon",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05119",
+      "nom": "Risoul",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05133",
+      "nom": "Saint-Chaffrey",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05139",
+      "nom": "Dévoluy",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05142",
+      "nom": "Saint-Firmin",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05149",
+      "nom": "Saint-Léger-les-Mélèzes",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05153",
+      "nom": "Saint-Michel-de-Chaillol",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05157",
+      "nom": "Saint-Véran",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05161",
+      "nom": "La Salle-les-Alpes",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05177",
+      "nom": "Vars",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "05181",
+      "nom": "Villar-d'Arêne",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06003",
+      "nom": "Andon",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06016",
+      "nom": "Beuil",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06020",
+      "nom": "La Bollène-Vésubie",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06028",
+      "nom": "Caille",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06056",
+      "nom": "Entraunes",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06070",
+      "nom": "Gréolières",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06071",
+      "nom": "Guillaumes",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06073",
+      "nom": "Isola",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06077",
+      "nom": "Lucéram",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06086",
+      "nom": "Moulinet",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06094",
+      "nom": "Péone",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06110",
+      "nom": "Roubion",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06120",
+      "nom": "Saint-Étienne-de-Tinée",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06125",
+      "nom": "Saint-Martin-d'Entraunes",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "06153",
+      "nom": "Valdeblore",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "07038",
+      "nom": "Borne",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "09004",
+      "nom": "Albiès",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "09023",
+      "nom": "Ascou",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "09032",
+      "nom": "Ax-les-Thermes",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "09193",
+      "nom": "Mijanès",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "09206",
+      "nom": "Montferrier",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "09322",
+      "nom": "Ustou",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "09334",
+      "nom": "Val-de-Sos",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "11066",
+      "nom": "Camurac",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "12119",
+      "nom": "Laguiole",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "12187",
+      "nom": "Prades-d'Aubrac",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "15101",
+      "nom": "Laveissière",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "15216",
+      "nom": "Saint-Urcize",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25127",
+      "nom": "Charquemont",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25254",
+      "nom": "Les Fourgs",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25285",
+      "nom": "Grand'Combe-Châteleu",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25307",
+      "nom": "Les Hôpitaux-Neufs",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25318",
+      "nom": "Jougne",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25321",
+      "nom": "Villers-le-Lac",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25343",
+      "nom": "Longemaison",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25348",
+      "nom": "Longevilles-Mont-d'Or",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25356",
+      "nom": "Maîche",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25380",
+      "nom": "Métabief",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25413",
+      "nom": "Mouthe",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25453",
+      "nom": "Pierrefontaine-les-Varans",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "25494",
+      "nom": "Rochejean",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "26059",
+      "nom": "Bouvante",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "26163",
+      "nom": "Léoncel",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "26168",
+      "nom": "Lus-la-Croix-Haute",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "26290",
+      "nom": "Saint-Agnan-en-Vercors",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "26315",
+      "nom": "Saint-Martin-en-Vercors",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "26361",
+      "nom": "Valdrôme",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "2A031",
+      "nom": "Bastelica",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "2B007",
+      "nom": "Albertacce",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "2B124",
+      "nom": "Ghisoni",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "31081",
+      "nom": "Bourg-d'Oueil",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "31085",
+      "nom": "Boutx",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "31221",
+      "nom": "Gouaux-de-Larboust",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "31470",
+      "nom": "Saint-Aventin",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38002",
+      "nom": "Les Adrets",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38006",
+      "nom": "Allevard",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38020",
+      "nom": "Auris",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38090",
+      "nom": "Château-Bernard",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38129",
+      "nom": "Corrençon-en-Vercors",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38186",
+      "nom": "Gresse-en-Vercors",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38191",
+      "nom": "Huez",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38205",
+      "nom": "Lans-en-Vercors",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38225",
+      "nom": "Autrans-Méaudre en Vercors",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38253",
+      "nom": "Les Deux Alpes",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38264",
+      "nom": "La Morte",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38265",
+      "nom": "La Motte-d'Aveillans",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38285",
+      "nom": "Ornon",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38289",
+      "nom": "Oz",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38322",
+      "nom": "Presles",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38333",
+      "nom": "Rencurel",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38376",
+      "nom": "Saint-Christophe-sur-Guiers",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38395",
+      "nom": "Plateau-des-Petites-Roches",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38433",
+      "nom": "Saint-Nizier-du-Moucherotte",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38439",
+      "nom": "Crêts en Belledonne",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38442",
+      "nom": "Saint-Pierre-de-Chartreuse",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38471",
+      "nom": "Le Sappey-en-Chartreuse",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38472",
+      "nom": "Sarcenas",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38514",
+      "nom": "Tréminis",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38548",
+      "nom": "Villard-de-Lans",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "38567",
+      "nom": "Chamrousse",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39047",
+      "nom": "Bellefontaine",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39130",
+      "nom": "Nanchez",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39228",
+      "nom": "Foncine-le-Haut",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39274",
+      "nom": "Lajoux",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39275",
+      "nom": "Lamoura",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39297",
+      "nom": "Longchaumois",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39367",
+      "nom": "Morbier",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39373",
+      "nom": "Les Moussières",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39391",
+      "nom": "Nozeroy",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39413",
+      "nom": "La Pesse",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39441",
+      "nom": "Prémanon",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39470",
+      "nom": "Les Rousses",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "39487",
+      "nom": "Saint-Laurent-en-Grandvaux",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "42039",
+      "nom": "Chalmazel-Jeansagnière",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "43091",
+      "nom": "Les Estables",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "48029",
+      "nom": "Le Born",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "48053",
+      "nom": "Cubières",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "48073",
+      "nom": "Les Hermaux",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "48082",
+      "nom": "Laubert",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "48096",
+      "nom": "Meyrueis",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "48145",
+      "nom": "Saint-Denis-en-Margeride",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "62617",
+      "nom": "Nœux-les-Mines",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "63038",
+      "nom": "Besse-et-Saint-Anastaise",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "63098",
+      "nom": "Chastreix",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "63236",
+      "nom": "Mont-Dore",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "63319",
+      "nom": "Saint-Anthème",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "64040",
+      "nom": "Arette",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "64204",
+      "nom": "Eaux-Bonnes",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "64320",
+      "nom": "Laruns",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "65017",
+      "nom": "Aragnouet",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "65059",
+      "nom": "Bagnères-de-Bigorre",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "65077",
+      "nom": "Beaucens",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "65138",
+      "nom": "Cauterets",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "65192",
+      "nom": "Gavarnie-Gèdre",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "65195",
+      "nom": "Génos",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "65199",
+      "nom": "Germ",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "65210",
+      "nom": "Grust",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "65388",
+      "nom": "Saint-Lary-Soulan",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "65481",
+      "nom": "Barèges",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "66004",
+      "nom": "Les Angles",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "66020",
+      "nom": "Bolquère",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "66067",
+      "nom": "Err",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "66075",
+      "nom": "Eyne",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "66082",
+      "nom": "Formiguères",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "66098",
+      "nom": "La Llagonne",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "66124",
+      "nom": "Font-Romeu-Odeillo-Via",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "66147",
+      "nom": "Porté-Puymorens",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "66154",
+      "nom": "Puyvalador",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "67027",
+      "nom": "Belmont",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "68040",
+      "nom": "Bitschwiller-lès-Thann",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "68073",
+      "nom": "Dolleren",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "68171",
+      "nom": "Kruth",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "68229",
+      "nom": "Murbach",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "68247",
+      "nom": "Oderen",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "68249",
+      "nom": "Orbey",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "68298",
+      "nom": "Sainte-Marie-aux-Mines",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "68307",
+      "nom": "Sewen",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "68311",
+      "nom": "Sondernach",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "68329",
+      "nom": "Stosswihr",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "70414",
+      "nom": "Plancher-les-Mines",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73004",
+      "nom": "Aillon-le-Jeune",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73006",
+      "nom": "Aime-la-Plagne",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73013",
+      "nom": "Albiez-Montrond",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73015",
+      "nom": "Les Allues",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73023",
+      "nom": "Aussois",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73024",
+      "nom": "Les Avanchers-Valmorel",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73034",
+      "nom": "Beaufort",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73047",
+      "nom": "Bonneval-sur-Arc",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73054",
+      "nom": "Bourg-Saint-Maurice",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73057",
+      "nom": "Brides-les-Bains",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73071",
+      "nom": "Champagny-en-Vanoise",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73088",
+      "nom": "Cohennoz",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73094",
+      "nom": "Crest-Voland",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73098",
+      "nom": "Les Déserts",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73107",
+      "nom": "Entremont-le-Vieux",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73114",
+      "nom": "Flumet",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73116",
+      "nom": "Fontcouverte-la-Toussuire",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73123",
+      "nom": "La Giettaz",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73132",
+      "nom": "Hauteluce",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73142",
+      "nom": "Landry",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73150",
+      "nom": "La Plagne Tarentaise",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73157",
+      "nom": "Modane",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73173",
+      "nom": "Montricher-Albanne",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73176",
+      "nom": "Montvalezan",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73186",
+      "nom": "Notre-Dame-de-Bellecombe",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73190",
+      "nom": "Notre-Dame-du-Pré",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73194",
+      "nom": "Orelle",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73197",
+      "nom": "Peisey-Nancroix",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73206",
+      "nom": "Pralognan-la-Vanoise",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73227",
+      "nom": "Courchevel",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73230",
+      "nom": "Saint-Colomban-des-Villards",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73232",
+      "nom": "Sainte-Foy-Tarentaise",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73235",
+      "nom": "Saint François Longchamp",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73242",
+      "nom": "Saint-Jean-d'Arves",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73257",
+      "nom": "Les Belleville",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73267",
+      "nom": "Saint-Pancrace",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73280",
+      "nom": "Saint-Sorlin-d'Arves",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73285",
+      "nom": "Séez",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73290",
+      "nom": "Val-Cenis",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73296",
+      "nom": "Tignes",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73303",
+      "nom": "Ugine",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73304",
+      "nom": "Val-d'Isère",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73306",
+      "nom": "Valloire",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73307",
+      "nom": "Valmeinier",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73318",
+      "nom": "Villarembert",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73322",
+      "nom": "Villarodin-Bourget",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "73323",
+      "nom": "Villaroger",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74001",
+      "nom": "Abondance",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74014",
+      "nom": "Arâches-la-Frasse",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74032",
+      "nom": "Bellevaux",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74033",
+      "nom": "Bernex",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74034",
+      "nom": "Le Biot",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74049",
+      "nom": "Brizon",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74056",
+      "nom": "Chamonix-Mont-Blanc",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74058",
+      "nom": "La Chapelle-d'Abondance",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74059",
+      "nom": "La Chapelle-Rambaud",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74063",
+      "nom": "Châtel",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74080",
+      "nom": "La Clusaz",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74083",
+      "nom": "Combloux",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74085",
+      "nom": "Les Contamines-Montjoie",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74089",
+      "nom": "Cordon",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74134",
+      "nom": "Les Gets",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74136",
+      "nom": "Le Grand-Bornand",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74140",
+      "nom": "Habère-Poche",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74143",
+      "nom": "Les Houches",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74155",
+      "nom": "Lullin",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74159",
+      "nom": "Magland",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74160",
+      "nom": "Manigod",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74173",
+      "nom": "Megève",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74183",
+      "nom": "Mieussy",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74188",
+      "nom": "Montriond",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74189",
+      "nom": "Mont-Saxonnex",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74190",
+      "nom": "Morillon",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74191",
+      "nom": "Morzine",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74193",
+      "nom": "La Muraz",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74196",
+      "nom": "Nancy-sur-Cluses",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74208",
+      "nom": "Passy",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74215",
+      "nom": "Praz-sur-Arly",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74221",
+      "nom": "Le Reposoir",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74236",
+      "nom": "Saint-Gervais-les-Bains",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74238",
+      "nom": "Saint-Jean-d'Aulps",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74239",
+      "nom": "Saint-Jean-de-Sixt",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74241",
+      "nom": "Saint-Jeoire",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74252",
+      "nom": "Saint-Sigismond",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74253",
+      "nom": "Saint-Sixt",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74258",
+      "nom": "Samoëns",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74273",
+      "nom": "Sixt-Fer-à-Cheval",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74275",
+      "nom": "Talloires-Montmin",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74276",
+      "nom": "Taninges",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74279",
+      "nom": "Thollon-les-Mémises",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74290",
+      "nom": "Vallorcine",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "74310",
+      "nom": "Viuz-la-Chiésaz",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "81033",
+      "nom": "Blaye-les-Mines",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "81124",
+      "nom": "Lacaune",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "84017",
+      "nom": "Bédoin",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "84041",
+      "nom": "Crillon-le-Brave",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "88075",
+      "nom": "La Bresse",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "88081",
+      "nom": "Bussang",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "88196",
+      "nom": "Gérardmer",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "88302",
+      "nom": "Le Ménil",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "88391",
+      "nom": "Rochesson",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "88426",
+      "nom": "Saint-Maurice-sur-Moselle",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "88492",
+      "nom": "Le Valtin",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "88500",
+      "nom": "Ventron",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    },
+    {
+      "insee": "90065",
+      "nom": "Lepuix",
+      "types": [
+        "Domaine de ski alpin"
+      ]
+    }
+  ]
+}

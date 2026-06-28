@@ -1,0 +1,174 @@
+---
+export const prerender = true;
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import ContratLandingStyles from '../../../components/ContratLandingStyles.astro';
+import NewsletterBlock from '../../../components/NewsletterBlock.astro';
+import AuthorBubble from '../../../components/AuthorBubble.astro';
+import data from '../../../data/rentabilite-villes.json';
+
+export async function getStaticPaths() {
+  const classables = data.villes.filter((v) => v.classable).sort((a, b) => b.ratio - a.ratio);
+  const rankNat = {};
+  classables.forEach((v, i) => { rankNat[v.slug] = i + 1; });
+  // On ne génère une page que pour les villes publiées (le cron en publie d'autres au fil de l'eau).
+  // Le rang reste calculé sur les 898 classables (rang réel), mais seules les publiées ont une URL.
+  return classables.filter((c) => c.published).map((v) => {
+    const regionVilles = classables.filter((x) => x.region_slug === v.region_slug);
+    const rankReg = regionVilles.findIndex((x) => x.slug === v.slug) + 1;
+    const region = data.regions.find((r) => r.slug === v.region_slug);
+    // Voisins = uniquement des villes publiées (sinon le lien serait un 404).
+    const neighbors = regionVilles.filter((x) => x.slug !== v.slug && x.published)
+      .sort((a, b) => Math.abs(a.ratio - v.ratio) - Math.abs(b.ratio - v.ratio)).slice(0, 6);
+    return {
+      params: { region: v.region_slug, ville: v.slug },
+      props: { city: v, region, rankNat: rankNat[v.slug], rankReg, totalNat: classables.length, totalReg: regionVilles.length, neighbors },
+    };
+  });
+}
+
+const { city, region, rankNat, rankReg, totalNat, totalReg, neighbors } = Astro.props;
+const tendue = city.zone_tendue && !/Non tendue/i.test(city.zone_tendue);
+
+// Profil + saisonnalité générés depuis les flags catégorie (sources officielles, zéro invention).
+const tailleLabel = { metropole: 'grande ville', moyenne: 'ville moyenne', petite: 'petite ville', rural: 'commune rurale' }[city.taille] || 'commune';
+const traits = [];
+if (city.ski) traits.push('classée station de ski');
+if (city.littoral) traits.push('en bord de mer (loi Littoral)');
+if (city.village_caractere) traits.push('labellisée village de caractère');
+const popTxt = city.population != null ? city.population.toLocaleString('fr-FR') : null;
+const profil = `<strong>${city.ville}</strong> est une <strong>${tailleLabel}</strong>${popTxt ? ` d'environ ${popTxt} habitants` : ''}${traits.length ? ', ' + traits.join(' et ') : ''}.`;
+const grandeVilleCotiere = city.taille === 'metropole' || city.taille === 'moyenne';
+const saisonByCat = {
+  ski: `Le marché est <strong>fortement saisonnier l'hiver</strong> : l'essentiel de la demande se concentre de <strong>décembre à mars</strong> (vacances de Noël et de février), avec une intersaison plus creuse. Beaucoup de stations développent aussi une <strong>saison estivale</strong> (randonnée, VTT) qui lisse une partie de l'année.`,
+  littoral: `Le marché est <strong>saisonnier l'été</strong> : le pic de demande va de <strong>juin à septembre</strong>, avec une basse saison plus marquée en hiver. ` + (grandeVilleCotiere ? `La taille de la ville (tourisme urbain, événements, déplacements professionnels) <strong>lisse en partie la demande hors-saison</strong>.` : `Hors saison estivale, la demande baisse nettement : un bien très rentable l'été peut tourner au ralenti une partie de l'hiver.`),
+  village: `Le marché suit une <strong>saisonnalité de tourisme de charme</strong> : forte demande de <strong>mai à septembre</strong> et sur les week-ends et ponts du printemps à l'automne, plus calme en plein hiver. La clientèle vient pour le patrimoine et l'art de vivre, souvent sur des séjours courts.`,
+  metropole: `La demande est <strong>relativement étale sur l'année</strong> : tourisme urbain, événements et <strong>déplacements professionnels</strong> limitent les creux saisonniers. Profil plus régulier qu'une station balnéaire ou de ski, mais une concurrence plus dense.`,
+  rural: `La demande est <strong>diffuse et plutôt locale</strong> : tourisme vert, étapes, visites familiales et événements de proximité. Marché de niche, <strong>moins saisonnier qu'une station</strong> mais à volume plus faible — la rentabilité dépend beaucoup de l'emplacement précis et de la qualité du bien.`,
+};
+const saison = saisonByCat[city.categorie] || `La demande est portée par un <strong>mélange de tourisme, de déplacements professionnels et d'événements</strong> locaux. La saisonnalité est <strong>modérée</strong> : moins de pic estival qu'au bord de mer, mais une demande plus régulière et souvent moins concurrentielle.`;
+
+const title = `Rentabilité Airbnb à ${city.ville} : rendement, occupation et prix 2026`;
+const description = `Rentabilité Airbnb à ${city.ville} (${region.region}) en 2026 : ${city.ratio}% de rendement brut, ${city.occupation}% d'occupation, ${city.prix_nuit} €/nuit (AirDNA), bien médian ${city.prix_bien?.toLocaleString('fr-FR')} € (DVF). ${rankNat}ᵉ ville la plus rentable de France. Estimation gratuite des revenus.`;
+const canonical = `https://www.enomia.app/rentabilite-airbnb/${region.slug}/${city.slug}`;
+
+const ldFaq = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: `Quel est le rendement d'un Airbnb à ${city.ville} ?`, acceptedAnswer: { '@type': 'Answer', text: `Le rendement brut d'un Airbnb à ${city.ville} est d'environ ${city.ratio}% en 2026 : un revenu annuel d'environ ${city.revenu_annuel.toLocaleString('fr-FR')} € (${city.prix_nuit} €/nuit × ${city.occupation}% d'occupation) rapporté au prix médian d'un bien (${city.prix_bien.toLocaleString('fr-FR')} € + travaux). C'est un rendement brut, avant charges et financement.` } },
+    { '@type': 'Question', name: `Combien rapporte un Airbnb à ${city.ville} ?`, acceptedAnswer: { '@type': 'Answer', text: `À ${city.ville}, un bien type génère environ ${city.revenu_annuel.toLocaleString('fr-FR')} €/an de revenus Airbnb (${city.prix_nuit} €/nuit × ${city.occupation}% d'occupation × 365 jours), sur la base de ${city.annonces.toLocaleString('fr-FR')} annonces actives (données AirDNA). C'est un chiffre d'affaires brut, avant charges d'exploitation.` } },
+    { '@type': 'Question', name: `Quel est le prix moyen d'une nuit en Airbnb à ${city.ville} ?`, acceptedAnswer: { '@type': 'Answer', text: `Le prix moyen d'une nuit en Airbnb à ${city.ville} est d'environ ${city.prix_nuit} € en 2026 (ADR moyen du marché, données AirDNA sur ${city.annonces.toLocaleString('fr-FR')} annonces actives). Ce tarif varie selon la saison, le type de bien et l'emplacement.` } },
+    { '@type': 'Question', name: `Quel taux d'occupation Airbnb à ${city.ville} ?`, acceptedAnswer: { '@type': 'Answer', text: `Le taux d'occupation moyen du marché à ${city.ville} est de ${city.occupation}% (données AirDNA, ${city.annonces.toLocaleString('fr-FR')} annonces actives). La Méthode 97% vise 97% d'occupation grâce à la location à la nuit, au pricing dynamique et à la double plateforme.` } },
+    { '@type': 'Question', name: `Est-ce rentable de faire de l'Airbnb à ${city.ville} ?`, acceptedAnswer: { '@type': 'Answer', text: `Avec un rendement brut d'environ ${city.ratio}%, ${city.ville} se classe ${rankNat}ᵉ ville la plus rentable de France sur notre palmarès. Mais la rentabilité finale dépend surtout de votre méthode d'exploitation et de votre coût de gestion : une conciergerie classique peut diviser le cash flow net par deux.` } },
+    { '@type': 'Question', name: `Pourquoi un Airbnb peut-il ne pas être rentable à ${city.ville} ?`, acceptedAnswer: { '@type': 'Answer', text: `Le marché à ${city.ville} tourne à ${city.occupation}% d'occupation en moyenne. Les Airbnb non rentables cumulent souvent une occupation trop basse, une conciergerie qui absorbe 50 à 80% du cash flow net, le micro-BIC fiscalement défavorable et un bien payé trop cher. La Méthode 97% vise 97% d'occupation en gestion directe pour préserver le rendement.` } },
+    { '@type': 'Question', name: `Quelles règles Loi Le Meur à ${city.ville} ?`, acceptedAnswer: { '@type': 'Answer', text: tendue ? `${city.ville} est en ${city.zone_tendue.toLowerCase()}. Le plafond de 90 jours/an s'applique à la location de votre résidence principale, et la commune peut imposer une déclaration et un numéro d'enregistrement. Pour un bien d'investissement dédié au régime réel LMNP, l'impact reste faible.` : `${city.ville} n'est pas en zone tendue : pas de plafond de 90 jours sur la résidence principale. Les règles générales Le Meur (numéro d'enregistrement, micro-BIC à 30%) s'appliquent partout.` } },
+  ],
+};
+---
+<ToolLayout title={title} description={description} canonical={canonical} currentTool="simulateur">
+  <ContratLandingStyles />
+
+  <div class="landing-hero">
+    <div class="landing-tag">Rentabilité Airbnb · {city.ville}</div>
+    <h1 class="landing-h1">Rentabilité Airbnb à <em>{city.ville}</em></h1>
+    <p class="landing-sub">{region.region} · {rankNat}ᵉ ville la plus rentable de France ({rankReg}ᵉ de sa région) · données AirDNA + DVF 2026</p>
+    <div class="landing-stats rex-stats4">
+      <div class="landing-stat"><div class="landing-stat-val">{city.ratio}%</div><div class="landing-stat-lbl">rendement brut</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">{city.occupation}%</div><div class="landing-stat-lbl">occupation</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">{city.prix_nuit}&euro;</div><div class="landing-stat-lbl">prix moyen / nuit</div></div>
+      <div class="landing-stat"><div class="landing-stat-val">{city.annonces?.toLocaleString('fr-FR')}</div><div class="landing-stat-lbl">annonces actives</div></div>
+    </div>
+  </div>
+
+  <div class="seo-wrap"><div class="seo-body">
+
+    <h2>Combien rapporte un Airbnb à {city.ville} ?</h2>
+    <p>À {city.ville} en 2026, un bien type génère un <strong>revenu Airbnb d'environ {city.revenu_annuel.toLocaleString('fr-FR')}&nbsp;€/an</strong> ({city.prix_nuit}&nbsp;€/nuit en moyenne × {city.occupation}% d'occupation, sur {city.annonces.toLocaleString('fr-FR')} annonces actives, données AirDNA). Rapporté au <strong>prix médian d'un bien dans la commune ({city.prix_bien?.toLocaleString('fr-FR')}&nbsp;€</strong>, données DVF + 700&nbsp;€/m² de travaux), ça donne un <strong>rendement brut de {city.ratio}%</strong>. C'est la {rankNat}ᵉ ville la plus rentable de France sur <a href="/rentabilite-airbnb">notre classement</a>.</p>
+    <p class="rex-formula"><strong>Le calcul :</strong> {city.prix_nuit}&nbsp;€ × {city.occupation}% × 365 = {city.revenu_annuel.toLocaleString('fr-FR')}&nbsp;€/an, ÷ ({city.prix_bien?.toLocaleString('fr-FR')}&nbsp;€ + travaux) = <strong>{city.ratio}% de rendement brut</strong>.</p>
+    <p style="font-size:13px; color:#666;">Rendement <em>brut</em> : avant charges d'exploitation (~35-40% du CA) et financement. Pour estimer les revenus de votre propre bien, utilisez l'<a href="/estimation-airbnb">outil d'estimation Airbnb</a>&nbsp;; pour le rendement net adapté à votre projet, le <a href="/simulateur-lcd">simulateur</a>.</p>
+
+    <h3>Taux d'occupation à {city.ville}</h3>
+    <p>Le <strong>taux d'occupation moyen</strong> du marché à {city.ville} est de <strong>{city.occupation}%</strong> (taux de remplissage AirDNA, sur {city.annonces.toLocaleString('fr-FR')} annonces actives). C'est une moyenne de marché&nbsp;: avec la location à la nuit, le pricing dynamique et la double plateforme, <a href="/blog/taux-occupation-par-ville">il est possible de viser bien plus haut</a>, jusqu'à 97% (La Méthode 97%©).</p>
+
+    <h3>Prix moyen d'une nuit à {city.ville}</h3>
+    <p>Le <strong>prix moyen d'une nuit</strong> en Airbnb à {city.ville} s'établit autour de <strong>{city.prix_nuit}&nbsp;€</strong> en 2026 (ADR moyen du marché, données AirDNA). Ce tarif varie selon la saison, le type de bien et l'emplacement&nbsp;: un pricing dynamique bien réglé capte les pics de demande sans sacrifier l'occupation.</p>
+
+    <h2>Saisonnalité et profil du marché à {city.ville}</h2>
+    <p set:html={profil}></p>
+    <p set:html={saison}></p>
+
+    {tendue && (
+      <div style="background:#fff4f0; border-left:4px solid #c14; padding:18px 22px; margin:28px 0; border-radius:6px;">
+        <h3 style="margin-top:0; color:#c14;">🚨 Réglementation à {city.ville}</h3>
+        <p style="margin:0;">{city.ville} est classée <strong>{city.zone_tendue.toLowerCase()}</strong> (décret zonage 2025). Conséquences : plafond de <strong>90 jours/an</strong> pour louer sa résidence principale, déclaration en mairie et numéro d'enregistrement possibles (amende jusqu'à 5&nbsp;000&nbsp;€ sans). Pour un <strong>bien d'investissement dédié</strong> au régime réel LMNP, l'impact reste faible. <a href="/blog/loi-le-meur-airbnb" style="color:#c14;"><strong>Guide Loi Le Meur →</strong></a></p>
+      </div>
+    )}
+
+    <AuthorBubble />
+    <div class="callout">
+      <p>Mes logements sont en périphérie, sans tourisme, un profil très différent de {city.ville}, et pourtant 97% d'occupation et autour de 15% de rendement net. La rentabilité dépend surtout de la méthode d'exploitation et du coût de gestion. <a href="/blog/automatiser-airbnb">Comment je gère en direct, sans conciergerie</a>.</p>
+    </div>
+
+    {neighbors.length > 0 && (
+      <>
+        <h2>Autres villes rentables en {region.region}</h2>
+        <div class="related">
+          {neighbors.map((n) => (
+            <a href={`/rentabilite-airbnb/${region.slug}/${n.slug}`}>
+              <div class="rk">{n.ratio}% de rendement brut</div>
+              <div class="rt">Rentabilité Airbnb {n.ville}</div>
+              <div class="rd">{n.occupation}% d'occupation · {n.prix_nuit} €/nuit · bien médian {n.prix_bien?.toLocaleString('fr-FR')} €</div>
+            </a>
+          ))}
+        </div>
+      </>
+    )}
+
+    <h2>Questions fréquentes — Airbnb à {city.ville}</h2>
+    <div class="faq">
+      {ldFaq.mainEntity.map((item, idx) => (
+        <details open={idx === 0}>
+          <summary>{item.name}</summary>
+          <div class="faq-ans"><p>{item.acceptedAnswer.text}</p></div>
+        </details>
+      ))}
+    </div>
+
+    <div class="hero-cta-block">
+      <div>
+        <h3>Calculez la rentabilité de votre projet</h3>
+        <p>Le simulateur intègre VOS chiffres (prix d'achat, financement, charges) pour un rendement net précis.</p>
+      </div>
+      <a href="/simulateur-lcd" class="hero-cta-btn">Lancer le calcul &rarr;</a>
+    </div>
+
+    <h2>Pour aller plus loin</h2>
+    <div class="related">
+      <a href={`/rentabilite-airbnb/${region.slug}`}>
+        <div class="rk">Région</div>
+        <div class="rt">Rentabilité Airbnb en {region.region}</div>
+        <div class="rd">Le classement complet des {totalReg} villes de la région.</div>
+      </a>
+      <a href="/rentabilite-airbnb">
+        <div class="rk">National</div>
+        <div class="rt">Classement de toutes les villes</div>
+        <div class="rd">{totalNat} villes françaises classées + recherche.</div>
+      </a>
+      <a href="/blog/louer-airbnb-rentable">
+        <div class="rk">Méthode</div>
+        <div class="rt">La Méthode 97%© en détail</div>
+        <div class="rd">Autour de 15% de rendement net, sans conciergerie.</div>
+      </a>
+    </div>
+  </div>
+
+  <NewsletterBlock source={`NL-Rentabilite-${city.slug}`} />
+  </div>
+
+  <style is:global>
+    .rex-stats4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    @media (max-width: 560px) { .rex-stats4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    .seo-body .rex-formula { background: rgba(63,189,113,0.08); border-left: 3px solid #3fbd71; padding: 12px 16px; border-radius: 0 8px 8px 0; font-size: 14px; color: #1a1a1a; }
+  </style>
+
+  <script type="application/ld+json" set:html={JSON.stringify(ldFaq)}></script>
+</ToolLayout>

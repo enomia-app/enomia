@@ -32,7 +32,7 @@ const BASE_PATH = path.join(DIR, 'base_complete.json');
 const CSV_PATH = path.join(DIR, 'base_complete.csv');
 const CACHE_DIR = path.join(DIR, '.names-cache');
 
-const MODEL = 'claude-haiku-4-5-20251001';
+const MODEL = 'haiku'; // alias (comme loveroom-ai-pass/cabane-ai-pass) — id complet pas reconnu par le claude CLI du mini
 
 const COLS = ['segment', 'campagne', 'nom_boite', 'site', 'email', 'prenom', 'nom_gerant', 'statut', 'phone', 'page_en_ligne', 'ville', 'rcpt_code', 'url_formulaire', 'page_url', 'rating', 'reviews', 'note'];
 const SENDABLE = new Set(['verifie', 'a_tester']);
@@ -165,18 +165,29 @@ async function main() {
     SENDABLE.has(r.statut) && r.site && !r.prenom && !r.nom_gerant && (!SEGMENT || r.segment === SEGMENT),
   ).slice(0, LIMIT);
 
-  console.log(`👤 enrich-names : ${candidates.length} candidats (segment=${SEGMENT || 'tous'}, dry=${DRY})`);
+  console.log(`👤 enrich-names : ${candidates.length} candidats (segment=${SEGMENT || 'tous'}, model=${MODEL}, dry=${DRY})`);
   let found = 0, done = 0;
+  const diag = { noLegal: 0, llmFail: 0, lowConf: 0, rejected: 0, fromCache: 0 };
 
   await pool(candidates, async (r) => {
     const domain = extractDomain(/^https?:/.test(r.site) ? r.site : 'https://' + r.site);
     if (!domain) return;
 
     let resolved = (!FORCE && readCache(domain)) || null;
-    if (!resolved) {
+    if (resolved) {
+      diag.fromCache++;
+    } else {
       const text = await findLegalText(domain);
-      const llm = text ? await extractNameLLM(text, r.nom_boite) : null;
-      resolved = resolveName(llm, { siteDomain: domain });
+      if (!text) { diag.noLegal++; resolved = { prenom: '', nom_gerant: '' }; }
+      else {
+        const llm = await extractNameLLM(text, r.nom_boite);
+        if (!llm) { diag.llmFail++; resolved = { prenom: '', nom_gerant: '' }; }
+        else if (llm.confiance !== 'haute') { diag.lowConf++; resolved = { prenom: '', nom_gerant: '' }; }
+        else {
+          resolved = resolveName(llm, { siteDomain: domain });
+          if (!resolved.prenom && !resolved.nom_gerant) diag.rejected++;
+        }
+      }
       writeCache(domain, resolved);
     }
     if (resolved.prenom || resolved.nom_gerant) {
@@ -189,6 +200,7 @@ async function main() {
   }, CONCURRENCY);
 
   console.log(`\n✅ ${found}/${candidates.length} identités trouvées (haute confiance).`);
+  console.log(`   diag : pas de mentions légales=${diag.noLegal} · LLM échec=${diag.llmFail} · confiance basse=${diag.lowConf} · rejeté garde-fou=${diag.rejected} · depuis cache=${diag.fromCache}`);
   if (!DRY) { writeBase(rows); console.log(`📄 ${BASE_PATH} mis à jour`); }
   else console.log('(dry : base non modifiée)');
 }

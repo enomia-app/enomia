@@ -56,6 +56,7 @@ scripts/gsc-indexation/candidates-today.json
 scripts/*/logs/
 data/backlinks-*.json
 data/backlinks-send-state.json
+data/email-base/
 cities.ts.bak
 .loveroom-cache/
 .cabane-cache/

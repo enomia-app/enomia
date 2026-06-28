@@ -332,6 +332,20 @@ async function getGmailClient() {
   return google.gmail({ version: 'v1', auth: oauth2 });
 }
 
+// Verdicts MillionVerifier (email → statut), depuis la base email vérifiée.
+// Camp 1/2 (blogs) : on ne pitche QUE les MV-vérifiés (zéro-bounce). Les emails
+// MV-mauvais (catch_all/incertain/faux_email) sont retirés avant envoi ; ceux
+// absents de la base passent les garde-fous habituels (isPitchable/MX/RCPT).
+const EMAIL_BASE_PATH = path.join(ROOT, 'data', 'email-base', 'base_complete.json');
+export function loadMvVerdicts(p = EMAIL_BASE_PATH) {
+  const m = new Map();
+  try {
+    const rows = JSON.parse(fs.readFileSync(p, 'utf-8'));
+    for (const r of rows) if (r.email && r.statut) m.set(r.email.toLowerCase(), r.statut);
+  } catch { /* base absente → pas de filtre MV */ }
+  return m;
+}
+
 async function main() {
   log(`🚀 Send daily backlinks ${TODAY} ${DRY ? '(DRY)' : ''}`);
 
@@ -339,6 +353,12 @@ async function main() {
   if (!backlog.candidates.length) {
     log('⚠️ Backlog vide. Run sourcing d\'abord.');
     return;
+  }
+
+  const mvByEmail = loadMvVerdicts();
+  if (mvByEmail.size) {
+    const nbVerifie = [...mvByEmail.values()].filter(s => s === 'verifie').length;
+    log(`🔎 ${mvByEmail.size} verdicts MV chargés (${nbVerifie} verifie) → filtre zéro-bounce camp 1/2`);
   }
 
   const bccState = DRY ? { bcc: false, reason: 'dry' } : shouldBccToday(BCC_STATE_PATH);
@@ -406,7 +426,16 @@ async function main() {
     // contact@naps-immo.com. Le niveau 3 (ajouté ce jour) les attrape.
     // invalide → strip email + skip (ou formulaire si dispo).
     if (c.email) {
-      let emailOk = isPitchableEmail(c.email, extractDomain(c.site));
+      // Niveau 0 : verdict MillionVerifier (si connu) — zéro-bounce. On retire
+      // tout email MV-mauvais (catch_all/incertain/faux_email) ; verifie ou
+      // inconnu de la base → on poursuit avec les garde-fous habituels.
+      let emailOk = true;
+      const mvVerdict = mvByEmail.get(c.email.toLowerCase());
+      if (mvVerdict && mvVerdict !== 'verifie') {
+        emailOk = false;
+        log(`  🚫 MV ${mvVerdict}: ${c.email} → retiré (zéro-bounce)`);
+      }
+      if (emailOk) emailOk = isPitchableEmail(c.email, extractDomain(c.site));
       if (emailOk) emailOk = await hasValidMX(c.email.split('@')[1]);
       if (emailOk) {
         const v = await verifyMailbox(c.email);

@@ -54,6 +54,7 @@ sed \
 
 echo "🚀 Chargement du plist dans launchd..."
 launchctl load "$PLIST_DEST"
+sleep 1  # launchctl load est asynchrone : laisser l'agent apparaître avant de vérifier
 
 if launchctl list | grep -q "app.enomia.rentabilite-publish"; then
   echo ""

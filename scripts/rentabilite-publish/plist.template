@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>app.enomia.rentabilite-publish</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>__RUN_SH_PATH__</string>
+    </array>
+
+    <!-- Lancé tous les jours à 09h23. run.sh ne publie QUE mardi + samedi
+         (2 fois/semaine, 3 villes par run) — logique des jours dans le script. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>9</integer>
+        <key>Minute</key>
+        <integer>23</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>__LOGS_DIR__/launchd-stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>__LOGS_DIR__/launchd-stderr.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>__HOME__</string>
+    </dict>
+
+    <key>WorkingDirectory</key>
+    <string>__REPO_ROOT__</string>
+</dict>
+</plist>

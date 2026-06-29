@@ -1,6 +1,7 @@
 #!/bin/bash
 # Lancé par launchd app.enomia.backlinks-send-daily — Lun-Ven 10h17.
-# Envoi quotidien automatique des pitches backlinks.
+# Envoi quotidien : pitches blog (send-daily) + badge conciergerie/niches
+# (send-badge-daily). Cap 15/j partagé sur marc@enomia.app (7 blog + 8 badge).
 
 set -euo pipefail
 
@@ -14,6 +15,8 @@ cd "$REPO"
 
 {
   echo "===== backlinks-send-daily start $(date -Iseconds) ====="
-  node "$SCRIPT_DIR/send-daily.mjs" --max=10  # throttle 10/j (delivrabilite) — retirer pour revenir au ramp auto
+  node "$SCRIPT_DIR/send-daily.mjs" --max=7 || echo "⚠️ send-daily a échoué ($?)"               # blog
+  echo "----- badge (niches love room / cabane ; conciergerie en pause) -----"
+  node "$SCRIPT_DIR/send-badge-daily.mjs" --max=8 || echo "⚠️ send-badge-daily a échoué ($?)"   # badge camp 4/5
   echo "===== backlinks-send-daily end $(date -Iseconds) ====="
 } >> "$LOG" 2>&1

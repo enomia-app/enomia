@@ -55,6 +55,11 @@ const SENDABLE = new Set(['verifie', 'a_tester']);
 // Statuts du state badge = domaine déjà traité (ne plus re-pitcher).
 const CONTACTED = new Set(['sent', 'relance_1', 'repondu_positif', 'repondu_negatif', 'repondu_neutre', 'repondu_spam', 'bounced', 'faux_email', 'opt_out']);
 
+// Segments en PAUSE (jamais d'envoi auto). Conciergerie : tant que les pages
+// conciergerie ne sont pas un annuaire lié (badge sans destination où figurer).
+// Décision Marc — retirer de ce Set pour réactiver.
+const PAUSED_SEGMENTS = new Set(['conciergerie']);
+
 function dom(site) {
   if (!site) return '';
   try { return extractDomain(/^https?:/.test(site) ? site : 'https://' + site) || ''; } catch { return ''; }
@@ -130,6 +135,7 @@ export function pickBadgeProspects(rows, { max, segment, suppression, excludeDom
   const rank = { verifie: 0, a_tester: 1 };
   const filtered = rows.filter(r =>
     BADGE_SEGMENTS.includes(r.segment)
+    && !PAUSED_SEGMENTS.has(r.segment)
     && (!segment || r.segment === segment)
     && SENDABLE.has(r.statut)
     && r.email

@@ -7,7 +7,7 @@ import { isSuppressed } from './mailer.mjs';
 
 const NOSUPP = { emails: new Set(), domains: new Set() };
 const row = (o = {}) => ({
-  segment: 'conciergerie', statut: 'verifie', email: 'a@b.fr', site: 'https://b.fr',
+  segment: 'loveroom', statut: 'verifie', email: 'a@b.fr', site: 'https://b.fr',
   page_url: 'https://www.enomia.app/x', page_en_ligne: 'oui', ville: 'Paris', reviews: 10, ...o,
 });
 
@@ -58,10 +58,19 @@ test('pick: suppression + excludeDomains', () => {
 
 test('pick: --segment restreint', () => {
   const rows = [
-    row({ site: 'https://a.fr', email: '1@a.fr', segment: 'conciergerie' }),
+    row({ site: 'https://a.fr', email: '1@a.fr', segment: 'cabane' }),
     row({ site: 'https://b.fr', email: '2@b.fr', segment: 'loveroom' }),
   ];
   const picked = pickBadgeProspects(rows, { max: 10, segment: 'loveroom', suppression: NOSUPP, excludeDomains: new Set() });
+  assert.deepEqual(picked.map(p => p.segment), ['loveroom']);
+});
+
+test('pick: conciergerie en PAUSE jamais piochée', () => {
+  const rows = [
+    row({ site: 'https://c.fr', email: 'x@c.fr', segment: 'conciergerie', reviews: 9999 }),
+    row({ site: 'https://l.fr', email: 'y@l.fr', segment: 'loveroom', reviews: 1 }),
+  ];
+  const picked = pickBadgeProspects(rows, { max: 10, suppression: NOSUPP, excludeDomains: new Set() });
   assert.deepEqual(picked.map(p => p.segment), ['loveroom']);
 });
 

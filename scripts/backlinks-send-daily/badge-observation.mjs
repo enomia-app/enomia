@@ -33,9 +33,10 @@ const NEGATIVE_RE = /\b(il manque|manque de|vous ne |n'abordez|dommage|regrette|
 /** Fallback déterministe (toujours valorisant, jamais une critique). */
 export function fallbackObservation({ rating, reviews, ville }) {
   const v = ville || 'votre ville';
+  const deV = /^[aàâeéèêiîïoôuùyh]/i.test(v) ? `d'${v}` : `de ${v}`; // élision : d'Auvergne, de Bretagne
   const r = rating != null && rating !== '' ? String(rating).replace('.', ',') : null;
   const n = reviews != null && reviews !== '' ? Number(reviews) : null;
-  if (r && n) return `Vos ${n} avis à ${r}/5 sur Google vous placent parmi les mieux notées de ${v}.`;
+  if (r && n) return `Vos ${n} avis à ${r}/5 sur Google vous placent parmi les mieux notées ${deV}.`;
   if (n) return `Vos ${n} avis sur Google montrent un vrai sérieux à ${v}.`;
   return `Votre réputation à ${v} ressort très bien sur Google.`;
 }

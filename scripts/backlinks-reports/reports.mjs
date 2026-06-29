@@ -13,7 +13,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { google } from 'googleapis';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -71,6 +71,33 @@ function loadAllBacklogs() {
 function inPeriod(dateIso) {
   if (!dateIso) return false;
   return new Date(dateIso.slice(0, 10)) >= PERIOD_START;
+}
+
+// ─── Conversations backlinks (réponses manuelles de Marc) ───────────────
+// Source de vérité VERSIONNÉE des prospects à qui Marc a répondu (cf
+// data/conversations-backlinks.json). Sert l'alerte « à relancer ».
+const CONVERSATIONS_PATH = path.join(ROOT, 'data', 'conversations-backlinks.json');
+
+function loadConversations() {
+  try {
+    const d = JSON.parse(fs.readFileSync(CONVERSATIONS_PATH, 'utf-8'));
+    return Array.isArray(d.conversations) ? d.conversations : [];
+  } catch { return []; } // fichier absent / JSON cassé → pas d'alerte (pas de crash)
+}
+
+// Pur (testable) : conversations encore en_attente de backlink depuis >= minDays
+// jours (depuis le dernier échange). Trie les plus anciennes d'abord, ajoute `jours`.
+export function pendingConversations(list, todayIso, minDays = 7) {
+  const today = new Date(todayIso.slice(0, 10));
+  return (list || [])
+    .filter(c => c.backlink === 'en_attente')
+    .map(c => {
+      const ref = (c.date_dernier_echange || c.date_premier_echange || todayIso).slice(0, 10);
+      const jours = Math.floor((today - new Date(ref)) / 86400000);
+      return { ...c, jours };
+    })
+    .filter(c => c.jours >= minDays)
+    .sort((a, b) => b.jours - a.jours);
 }
 
 // ─── Stats ──────────────────────────────────────────────────────────────
@@ -141,7 +168,7 @@ async function getGmailClient() {
   return google.gmail({ version: 'v1', auth: oauth2 });
 }
 
-function buildBody(stats) {
+export function buildBody(stats) {
   return `Salut Marc,
 
 Rapport ${period} backlinks — ${stats.period_label}.
@@ -165,7 +192,10 @@ Rapport ${period} backlinks — ${stats.period_label}.
   - simulateur    : ${stats.par_outil_positive.simulateur}
   - contrat       : ${stats.par_outil_positive.contrat}
   - facture       : ${stats.par_outil_positive.facture}
-
+${(stats.pending_conversations && stats.pending_conversations.length) ? `
+🔗 Conversations sans backlink (>7j) — À RELANCER (${stats.pending_conversations.length})
+${stats.pending_conversations.map(c => `  • ${c.site} — répondu ${c.date_premier_echange || '?'}, en attente depuis ${c.jours}j${c.dernier_statut ? ` — ${c.dernier_statut}` : ''}${c.note ? ` (${c.note})` : ''}`).join('\n')}
+` : ''}
 📊 Pipeline actuel (tous mois confondus)
   Total candidats   : ${stats.pipeline.total_candidates}
   À envoyer         : ${stats.pipeline.pending}
@@ -183,7 +213,8 @@ ${stats.formulaires_a_traiter.slice(0, 10).map(c => `  • ${c.site} → ${c.url
 
 async function sendReport(stats) {
   const gm = await getGmailClient();
-  const subject = `[backlinks] Rapport ${period} ${stats.period_label} — ${stats.envois.total} envois, ${stats.backlinks_obtenus} backlinks`;
+  const nbRelance = stats.pending_conversations?.length || 0;
+  const subject = `[backlinks] Rapport ${period} ${stats.period_label} — ${stats.envois.total} envois, ${stats.backlinks_obtenus} backlinks${nbRelance ? `, ${nbRelance} à relancer` : ''}`;
   const subjectEncoded = '=?UTF-8?B?' + Buffer.from(subject, 'utf8').toString('base64') + '?=';
   const body = buildBody(stats);
   const raw = [
@@ -208,9 +239,13 @@ async function main() {
   const candidates = loadAllBacklogs();
   log(`  ${candidates.length} candidats chargés (tous mois)`);
   const stats = computeStats(candidates);
+  stats.pending_conversations = pendingConversations(loadConversations(), TODAY.toISOString());
   log(`  Envois sur période: ${stats.envois.total}`);
   log(`  Réponses positives: ${stats.reponses.positive}`);
+  log(`  Conversations à relancer (>7j): ${stats.pending_conversations.length}`);
   await sendReport(stats);
 }
 
-main().catch(e => { console.error('❌ Fatal:', e); process.exit(1); });
+// Ne lance main() que si exécuté directement (pas à l'import depuis les tests).
+const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isMain) main().catch(e => { console.error('❌ Fatal:', e); process.exit(1); });

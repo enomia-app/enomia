@@ -1,0 +1,12 @@
+{
+  "_doc": "Conversations backlinks où Marc a RÉPONDU manuellement (prospects qui ont répliqué à un pitch/relance). Tenu à jour depuis le chat Claude Code (commit/push). Source de vérité unique, VERSIONNÉE (le cron du Mac mini la lit après git pull). Lu par scripts/backlinks-reports/reports.mjs (rapport weekly, dim 18h43) : liste les 'en_attente' depuis >7j → Marc relance jusqu'à statut final.",
+  "_schema": {
+    "site": "domaine du prospect (ex: popacademy.fr)",
+    "date_premier_echange": "YYYY-MM-DD du 1er échange (réponse reçue)",
+    "date_dernier_echange": "YYYY-MM-DD du dernier message (maj à chaque round)",
+    "dernier_statut": "texte libre : où en est la conversation",
+    "backlink": "en_attente | obtenu | refuse",
+    "note": "contexte utile pour la relance (qui, quoi, quel article)"
+  },
+  "conversations": []
+}

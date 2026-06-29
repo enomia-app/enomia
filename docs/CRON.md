@@ -26,7 +26,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 | `com.enomia.fb-weekly-recap` | Ven 17h00 | Récap hebdo volume + liens Enomia partagés + (phase 2 : GA4 perfs par utm_content) | actif |
 | `com.enomia.fb-monthly-insights` | 1er du mois 9h31 | Rapport mensuel opportunités SEO + features | actif |
 | `app.enomia.backlinks-source-monthly` | 1er du mois 9h47 | Pipeline v2 : sourcing SEMrush 75 KW, filtres, check outil concurrent, output `data/backlinks-YYYY-MM.json` | actif |
-| `app.enomia.backlinks-send-daily` | Lun-Ven 10h17 | Pipeline v2 : envoi auto via Gmail API, ramp-up 5→30/j sur 8 sem (BCC Marc J1-5 puis 1/5 jours aléatoire) | actif |
+| `app.enomia.backlinks-send-daily` | Lun-Ven 10h17 | **2 senders** dans le même `run.sh` : `send-daily` (blog, `--max=7`, filtré MillionVerifier zéro-bounce) + `send-badge-daily` (badge love-room/cabane, `--max=8`, hybride retenu/offre, conciergerie en pause) = 15/j sur marc@enomia.app | actif |
 | `app.enomia.backlinks-report-monthly` | 1er du mois 10h53 | Pipeline v2 : récap mensuel envois/réponses/backlinks par outil | actif |
 | `app.enomia.backlinks-report-quarterly` | 1er jan/avr/juil/oct 11h17 | Pipeline v2 : récap trimestriel | actif |
 | `app.enomia.backlinks-report-yearly` | 1er janvier 11h43 | Pipeline v2 : récap annuel | actif |
@@ -149,8 +149,15 @@ Pipeline refactoré : envoi auto sans validation Marc, 3 outils prioritaires (si
 
 **État local** : `data/backlinks-send-state.json` (audit BCC)
 **Logs** : `scripts/backlinks-send-daily/logs/run-YYYY-MM-DD.log`
-**Coût Claude Haiku** : ~$0.10/mois en plateau (15-30 prospects × 22 jours × ~$0.0003/call) via `fetch` direct (pas `claude -p`, donc pas d'OAuth Max).
 **Throttle** : 10s entre 2 envois Gmail (anti-spam)
+**Filtre MV (ajouté 2026-06-29)** : `loadMvVerdicts()` charge les verdicts MillionVerifier depuis `data/email-base/base_complete.json` et **retire les emails MV-mauvais** (catch_all/incertain/faux_email) avant envoi blog → zéro-bounce. `--max` passé de 10 à **7** (cap 15/j partagé avec le badge).
+
+### `send-badge-daily.mjs` — ajouté au MÊME cron (2026-06-29)
+Lancé par le **même `run.sh`** que send-daily (donc même créneau **Lun-Ven 10h17**), juste après le blog. `--max=8` (15/j partagé : 7 blog + 8 badge). Garde `|| echo` dans run.sh → un sender qui échoue ne bloque pas l'autre.
+**Code** : `send-badge-daily.mjs` + `badge-templates.mjs` + `badge-observation.mjs` (**Sonnet/Claude Max**) + `mailer.mjs` (HTML + opt-out gris + List-Unsubscribe + liste de suppression).
+**Fait** : lit `data/email-base/base_complete.json` (base MV-vérifiée), pitche un **badge** aux **love-room / cabane** (camp 4/5) repérées via Google Places parmi les mieux notées de leur ville. Observation = note/avis Google (Sonnet). Variante **« retenu »** si le prospect figure RÉELLEMENT sur sa page Enomia (détection par domaine, fetch + match), **« offre »** sinon (« j'aimerais y ajouter la vôtre »). Filtre `page_en_ligne=oui`, garde-fou RCPT pré-envoi, state anti-doublon `send-badge-state.json`, dédup croisé avec le pool blog. **Conciergerie en PAUSE** (`PAUSED_SEGMENTS`) tant que ses pages ne sont pas un annuaire lié.
+**Enrichissement prénom** : `scripts/email-base-builder/enrich-names.mjs` (Haiku, mentions-légales → « Bonjour Prénom, »). À relancer sur le mini après chaque régen de base.
+**Base** : produite par `scripts/email-base-builder/` (discover Places + extract email + RCPT + MillionVerifier 10k crédits), ~210 prospects badge zéro-bounce. Régénérée sur le **MBP** (claude Max 401 en SSH → l'observation/enrich tournent sur le mini), `scp` vers `~/projects/eunomia/data/email-base/` du mini. ⚠️ Gitignored → ne pas re-scp par-dessus après un enrich-names mini.
 
 ### `app.enomia.backlinks-track-replies-v2` — Lun-Ven 10h31
 **Script** : `scripts/backlinks-track-replies-v2/run.sh`

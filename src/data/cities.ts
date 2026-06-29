@@ -17199,6 +17199,567 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-26',
   },
+  {
+    slug: 'pornic',
+    displayName: 'Pornic',
+    region: 'Pays de la Loire',
+    regionSlug: 'pays-de-la-loire',
+    title: 'Conciergerie Pornic Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Pornic : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Pornic et sur la Côte de Jade. Commissions, services, avis, réglementation 2026, quartiers rentables et exemple de rendement chiffré.",
+    kwPrincipal: 'conciergerie pornic',
+    kwSecondaires: [
+      'conciergerie airbnb pornic',
+      'conciergerie loire atlantique',
+      'conciergerie cote de jade',
+      'gestion locative pornic',
+      'location saisonniere pornic',
+    ],
+    population: 18860,
+    tourists: 800000,
+    activeListings: 1100,
+    priceLow: 75,
+    priceHigh: 170,
+    occupancyRate: 60,
+    revpar: 48,
+    seasonality:
+      "Saisonnalité littorale très marquée, typique de la Côte de Jade. Pic absolu en juillet-août (occupation 85-95 %, tarifs au plus haut, la station peut accueillir jusqu'à 100 000 visiteurs par jour et 35 000 personnes en séjour au plus fort de l'été). Ailes de saison solides au printemps et début d'automne (avril-juin et septembre-octobre, occupation 55-70 %) portées par les ponts, les week-ends et le tourisme de proximité Nantes / Vendée. Creux hivernal de novembre à mars (occupation 30-45 %), partiellement soutenu par les courts séjours thalasso et les résidences secondaires. La proximité de Nantes (1 h) et du vignoble nantais alimente une clientèle week-end toute l'année.",
+    rankNational: 42,
+    introCustom:
+      "Vous avez un appartement à **Pornic**, une maison à **Sainte-Marie-sur-Mer**, un bien sur la **corniche de Gourmalon** ou du côté du **Clion-sur-Mer**, et vous le louez (ou voulez le louer) en saisonnier sur la Côte de Jade.\n\nEntre la **déclaration en mairie obligatoire** depuis avril 2024, l'**autorisation de changement d'usage** désormais exigée pour toute résidence secondaire, des étés qui voient passer jusqu'à 100 000 visiteurs par jour, et la dizaine de conciergeries locales qui se partagent un parc d'environ 1 000 meublés de tourisme, la vraie question n'est pas *si* déléguer, mais *à qui*.\n\nJ'ai comparé les acteurs réellement implantés à Pornic et sur la Côte de Jade — commissions, traitement du ménage, périmètre de services — pour vous aider à choisir sans y passer vos vacances. Pas de classement sponsorisé : des faits, pour décider à net constant.",
+    marketIntro:
+      "Pornic est l'une des stations balnéaires les plus prisées de la **Côte de Jade**, à environ 1 h de Nantes. La commune compte **près de 18 900 habitants à l'année**, mais sa population explose l'été : la station classée de tourisme peut accueillir **jusqu'à 100 000 visiteurs par jour** au cœur de la saison, et environ 35 000 personnes en séjour au plus fort.\n\nLe parc de logements traduit cette vocation touristique : **près de 4 900 résidences secondaires**, soit plus d'un tiers du total, et on estime à **1 000-1 200 le nombre de meublés de tourisme actifs** sur la commune. Le marché immobilier est tendu, avec un **prix moyen autour de 5 000 €/m²** (mai 2026, MeilleursAgents) qui grimpe à **6 470 €/m² sur la corniche de Gourmalon**, le secteur le plus recherché.\n\nLe mix qui fait la demande : un **port et une vieille ville** perchés au-dessus des bateaux, le **château de Pornic** et son histoire de faïence, la **promenade de la corniche** vers les plages, un **centre de thalassothérapie** qui soutient l'hiver, et la proximité immédiate des plages familiales de Sainte-Marie et de la pointe Saint-Gildas. Résultat : une saison estivale très dense, mais aussi un flux de week-ends nantais quasi permanent.\n\n**Déclaration et changement d'usage obligatoires depuis avril 2024.** Comme un nombre croissant de communes littorales, Pornic a activé le levier réglementaire : toute résidence secondaire mise en meublé de tourisme doit désormais obtenir une autorisation de changement d'usage en mairie, en plus de l'enregistrement national. Un point décisif à anticiper avant d'investir, et un domaine où une conciergerie locale qui maîtrise le dossier fait gagner un temps réel.",
+    conciergeries: [
+      {
+        name: 'Evasion Sereine Conciergerie (ES44)',
+        url: 'https://www.conciergerie-es44.fr/',
+        commission: '25 % TTC',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 18,
+        biensGeres: 18,
+        specialty: 'Pure-player Côte de Jade, gestion intégrale + intendance résidences secondaires',
+        description:
+          "Evasion Sereine (ES44) est une conciergerie pure-player de la Côte de Jade fondée par Céline Coudret, qui revendique 20 ans d'expérience en administration et commerce et une formation conciergerie certifiée Qualiopi. Commission de 25 % TTC sur le revenu locatif, avec ménage et linge professionnels organisés et refacturés au voyageur. Le périmètre est complet : mise en ligne multi-plateformes, optimisation de l'annonce, check-in/check-out et communication voyageurs, ménage et blanchisserie, plus une vraie offre d'intendance pour les résidences secondaires (surveillance, maintenance, ouverture/fermeture). Pertinente pour un propriétaire qui veut un interlocuteur unique 100 % focalisé Pornic et Côte de Jade, à l'aise aussi bien sur la location saisonnière que sur la garde d'une résidence secondaire entre deux séjours.",
+      },
+      {
+        name: 'La Conciergerie de Sandra',
+        url: 'https://conciergeriedesandra.com/',
+        commission: '25 %',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 15,
+        biensGeres: 15,
+        specialty: 'Pornic / La Bernerie / Les Moutiers-en-Retz, partenaire co-hôte Airbnb',
+        description:
+          "La Conciergerie de Sandra couvre Pornic, La Bernerie-en-Retz et Les Moutiers-en-Retz, sur un positionnement de proximité. Commission de 25 % des revenus générés, avec ménage et blanchisserie sous-traités à un partenaire et refacturés au voyageur. Le service couvre la création et l'optimisation des annonces, un shooting photo professionnel, la gestion du calendrier et des réservations, la messagerie et le suivi des avis, l'accueil de 8 h à 18 h 30, les états des lieux et un guide de bienvenue. Différenciateur : Sandra est partenaire officielle du programme co-hôte Airbnb, et son ancrage local lui vaut d'être référencée par certaines mairies du Pays de Retz. Pertinente pour un propriétaire qui veut un accompagnement humain et une bonne connaissance du littoral sud-Loire.",
+      },
+      {
+        name: 'Casa Mano Conciergerie',
+        url: 'https://casamano-conciergerie.com/',
+        commission: '10 % (offre Premium)',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 12,
+        biensGeres: 12,
+        specialty: 'Pornic et Côte de Jade, approche techno + pricing dynamique',
+        description:
+          "Casa Mano est une conciergerie implantée à Pornic qui mise sur un couple gestion traditionnelle et outils technologiques. Sa formule Gestion Premium affiche une commission de 10 % des revenus locatifs (un taux nettement plus bas que la moyenne du secteur, à confirmer en devis selon le périmètre exact), ménage refacturé au voyageur. Services : création et optimisation des annonces sur Airbnb et Booking, pricing dynamique, communication 7 j/7 avec des temps de réponse courts, check-in/check-out, ménage et linge professionnels, maintenance, consommables et reporting mensuel. Pertinente pour un propriétaire attentif au taux de commission et à l'optimisation tarifaire — en veillant à bien détailler ce qui est inclus dans la commission et ce qui est refacturé en sus.",
+      },
+      {
+        name: 'Hesti Conciergerie',
+        url: 'https://www.hesti.fr/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 9,
+        biensGeres: 10,
+        specialty: 'Pornic, Préfailles, La Plaine-sur-Mer, La Bernerie — profil hôtelier',
+        description:
+          "Hesti est une conciergerie domiciliée à Pornic qui intervient aussi à Préfailles, La Plaine-sur-Mer et La Bernerie-en-Retz. Elle est gérée par un professionnel issu de l'hôtellerie, ce qui se ressent dans le soin porté à l'accueil et à la préparation des logements. L'offre combine la conciergerie courte durée (mise en ligne et gestion des annonces, réservations, pricing) et l'intendance de résidences secondaires (surveillance, entretien, hivernage). La commission n'est pas publiée et se définit sur devis selon le périmètre retenu. Pertinente pour un propriétaire qui cherche un standard de service proche de l'hôtellerie et qui veut, le cas échéant, confier aussi la garde de sa résidence secondaire hors saison.",
+      },
+      {
+        name: 'Proactive Conciergerie',
+        url: 'https://proactiveconciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 5.0,
+        reviews: 8,
+        biensGeres: 14,
+        specialty: 'Côte de Jade depuis 7 ans, zéro frais de dossier',
+        description:
+          "Proactive Conciergerie intervient sur la Côte de Jade depuis sept ans et met en avant des commissions resserrées et l'absence de frais de dossier. Le service est complet : annonces optimisées, gestion des réservations et des voyageurs, ménage et housekeeping, boîte à clés et remise des clés, consommables, vitres, sortie des déchets, surveillance du bien, plus une offre de home staging et de décoration pour valoriser le logement avant mise en location. Le taux de commission précis se discute en devis. Pertinente pour un propriétaire qui démarre et veut un acteur expérimenté capable d'optimiser le bien dès le départ (aménagement, photos, mise en marché), sans frais d'entrée.",
+      },
+      {
+        name: 'Hoomy Pornic',
+        url: 'https://www.hoomy.fr/conciergeries/votre-conciergerie-a-pornic/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.6,
+        reviews: 20,
+        biensGeres: 25,
+        specialty: 'Réseau national, antenne Pornic, partenaire de l\'Office de tourisme',
+        description:
+          "Hoomy est un réseau national de gestion locative disposant d'une antenne dédiée à Pornic, qui couvre aussi Saint-Brevin, Préfailles, La Plaine-sur-Mer et Saint-Michel-Chef-Chef. C'est l'un des rares acteurs partenaire de l'Office de tourisme de Pornic, un gage de crédibilité locale. L'offre va au-delà de la conciergerie pure : gestion locative complète, optimisation des revenus, home staging, protection du bien et conseils sur les volets fiscal et financement. La commission se définit sur devis selon la formule. Pertinente pour un propriétaire qui valorise la solidité d'un réseau structuré et un accompagnement large (au-delà de la seule exploitation Airbnb), tout en gardant un interlocuteur local sur la Côte de Jade.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Vieille Ville et Port',
+        pricePerNight: '95-180 €',
+        occupancy: 70,
+        description:
+          "Cœur historique de Pornic : ruelles étroites, maisons d'armateurs en ardoise, château surplombant le port de pêche et de plaisance. C'est l'emplacement le plus recherché par les voyageurs, à pied de tout (commerces, restaurants, promenade de la corniche). Tickets d'entrée élevés et offre rare. Cible touristique premium, demande forte de la haute saison aux week-ends de printemps et d'automne.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Corniche de Gourmalon',
+        pricePerNight: '110-220 €',
+        occupancy: 68,
+        description:
+          "Secteur le plus cher de Pornic (autour de 6 470 €/m² en avril 2026), villas balnéaires et appartements avec vue mer le long de la corniche qui relie le port aux plages. Clientèle haut de gamme et familiale aisée. Tarifs nuitée les plus élevés de la commune, mais ticket d'achat important qui pèse sur le rendement brut. Idéal pour un bien d'exception loué au prix fort l'été.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Sainte-Marie-sur-Mer',
+        pricePerNight: '85-160 €',
+        occupancy: 65,
+        description:
+          "Ancien village balnéaire rattaché à Pornic, prisé pour ses plages familiales et son ambiance plus tranquille que le centre. Prix au m² plus accessibles que sur Gourmalon ou la vieille ville. Cible familles et locations de plusieurs nuits en été. Bon compromis entre attractivité touristique et prix d'achat, avec une demande estivale très soutenue.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Le Clion-sur-Mer',
+        pricePerNight: '70-130 €',
+        occupancy: 58,
+        description:
+          "Quartier en expansion à l'écart immédiat du littoral, résidentiel et plus abordable, qui concentre une partie des équipements (hôpital intercommunal, zones d'activité). Tickets d'entrée parmi les plus accessibles de Pornic. Cible familles et séjours moyenne durée. Demande LCD plus diffuse mais rendement brut souvent meilleur grâce au prix d'achat contenu.",
+        roiBrut: '6 à 7,5 %',
+      },
+      {
+        name: 'La Birochère / La Joselière',
+        pricePerNight: '90-160 €',
+        occupancy: 62,
+        description:
+          "Secteur résidentiel recherché entre le centre et les plages, proche de la pointe Saint-Gildas et des sentiers côtiers. Mix de villas et de maisons de vacances, valeurs foncières élevées. Cible familles et amateurs de bord de mer plus confidentiel. Bon équilibre entre demande estivale et standing du bien.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'La Ria et Val Saint-Martin',
+        pricePerNight: '75-135 €',
+        occupancy: 55,
+        description:
+          "Autour du plan d'eau de la Ria et des secteurs résidentiels proches du centre, ambiance plus calme et prix plus mesurés. Cible couples et familles cherchant le centre à pied sans le ticket de la vieille ville. Demande régulière sur les ponts et la saison, ROI brut compétitif pour un premier investissement à Pornic.",
+        roiBrut: '6 à 7,5 %',
+      },
+    ],
+    regulation:
+      "Pornic a activé, comme un nombre croissant de communes littorales très touristiques, un encadrement renforcé des meublés de tourisme. Le marché reste ouvert, mais les démarches sont désormais sérieuses pour une résidence secondaire — ce qui rend une conciergerie locale rodée au dossier réellement utile.\n\n**Déclaration obligatoire depuis le 1er avril 2024.** Tout meublé de tourisme doit être déclaré (téléservice declaloc.fr), ce qui génère un numéro d'enregistrement à faire figurer sur chaque annonce Airbnb, Booking ou Abritel. La déclaration est exigée dès la première nuitée, sans seuil minimum.\n\n**Autorisation de changement d'usage pour les résidences secondaires.** C'est le point le plus structurant : depuis avril 2024, tout meublé qui n'est pas la résidence principale du propriétaire doit obtenir une autorisation de changement d'usage auprès de la mairie de Pornic. À anticiper impérativement avant d'acheter pour louer.\n\n**Résidence principale : 120 nuitées par an.** La résidence principale (occupée au moins huit mois par an) reste louable jusqu'à 120 jours par an en meublé de tourisme, conformément au cadre national.\n\n**Enregistrement national au 20 mai 2026.** Le téléservice national se généralise au plus tard le 20 mai 2026 : un numéro à 13 chiffres devra figurer sur chaque annonce, en application de la loi Le Meur de novembre 2024.\n\n**DPE.** Les logements classés F ou G au DPE sont progressivement exclus de la location ; visez au minimum la classe E, et anticipez le durcissement à venir.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : 30 % pour les meublés non classés (plafond 15 000 €), 50 % pour les meublés classés tourisme (plafond 77 700 €). Le classement en étoiles devient un vrai levier fiscal sur une station où les revenus d'été sont élevés.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Pornic Agglo Pays de Retz a fixé les modalités de la taxe de séjour par délibération du 26 juin 2025 (plateforme dédiée pornic.taxesejour.fr). Elle est le plus souvent collectée automatiquement par Airbnb et reversée à l'intercommunalité.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 42,
+      pricePerNight: 95,
+      neighborhood: 'Sainte-Marie-sur-Mer',
+      revenuBrut: 19000,
+      commissionRate: 0.22,
+      menageCount: 55,
+      menageUnitCost: 70,
+    },
+    extraFaq: [
+      {
+        q: 'Faut-il une autorisation pour louer son Airbnb à Pornic en 2026 ?',
+        a: "Cela dépend du statut du logement. Pour une résidence principale (occupée au moins huit mois par an), la location en meublé de tourisme est possible jusqu'à 120 nuitées par an, avec une simple déclaration. Pour une résidence secondaire, c'est plus exigeant : depuis le 1er avril 2024, Pornic impose une autorisation de changement d'usage auprès de la mairie, en plus de l'enregistrement (numéro obtenu via declaloc.fr et à afficher sur chaque annonce). Concrètement, si vous achetez un bien spécifiquement pour le louer en courte durée, vous devez intégrer cette démarche dans votre projet dès le départ. C'est précisément sur ce type de dossier qu'une conciergerie locale implantée à Pornic apporte de la valeur : elle connaît les interlocuteurs et les délais en mairie.",
+      },
+      {
+        q: 'Combien coûte une conciergerie Airbnb à Pornic ?',
+        a: "Sur Pornic et la Côte de Jade, les commissions vont d'environ 10 % (offre d'appel de certains acteurs) à 25 % TTC pour une gestion intégrale, la majorité se situant autour de 20-25 % TTC. Plusieurs conciergeries fonctionnent sur devis sans grille publique. Mais le taux affiché ne suffit pas à comparer : le critère décisif est le traitement du ménage. Quand le ménage est refacturé au voyageur (cas le plus fréquent ici), il ne ponctionne pas votre revenu ; quand il est inclus dans la commission, le pourcentage paraît plus élevé mais peut être plus avantageux. Demandez toujours un devis chiffré et comparez à net constant : ce qui reste sur votre compte après commission, ménage, linge, consommables et frais éventuels de mise en service.",
+      },
+      {
+        q: 'Quel quartier de Pornic privilégier pour investir en location courte durée ?',
+        a: "Pour la demande la plus forte et les tarifs nuitée les plus élevés, la vieille ville, le port et la corniche de Gourmalon dominent, mais avec des tickets d'entrée élevés (jusqu'à 6 470 €/m² sur Gourmalon) qui pèsent sur le rendement brut. Pour un meilleur compromis rendement/prix d'achat, Sainte-Marie-sur-Mer (plages familiales, prix plus mesurés) et surtout Le Clion-sur-Mer (résidentiel, plus abordable) offrent des prix plus accessibles tout en captant la clientèle estivale. La stratégie gagnante sur Pornic, comme sur toute la Côte de Jade, est d'assumer la saisonnalité : un bien différenciant (extérieur, proximité plage ou centre à pied) loué au prix fort de juin à septembre, avec un pricing dynamique calé sur les vacances scolaires et les ponts.",
+      },
+      {
+        q: 'Quel rendement espérer pour un Airbnb à Pornic ?',
+        a: "Le rendement dépend fortement du quartier et de la capacité à remplir les ailes de saison. Sur un T2 bien placé à Sainte-Marie-sur-Mer loué autour de 95 €/nuit en moyenne annuelle, on peut viser un revenu brut de l'ordre de 18 000 à 20 000 € par an. Sur la vieille ville ou Gourmalon, les tarifs nuitée montent plus haut mais le prix d'achat élevé ramène le rendement brut autour de 4 à 6 %. Sur Le Clion-sur-Mer ou les secteurs plus en retrait, le ticket d'entrée plus bas permet d'atteindre 6 à 7,5 % de rendement brut. Dans tous les cas, la clé est l'occupation hors juillet-août : c'est là qu'une conciergerie qui maîtrise le pricing dynamique et la clientèle week-end nantaise fait la différence entre une saison correcte et une vraie performance.",
+      },
+    ],
+    updatedAt: '2026-06-29',
+  },
+  {
+    slug: 'agon-coutainville',
+    displayName: 'Agon-Coutainville',
+    region: 'Normandie',
+    regionSlug: 'normandie',
+    title: 'Conciergerie Agon-Coutainville Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Agon-Coutainville 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Agon-Coutainville et sur la côte ouest du Cotentin. Services, commissions, réglementation 2026, secteurs rentables et rendement chiffré.",
+    kwPrincipal: 'conciergerie agon-coutainville',
+    kwSecondaires: [
+      'conciergerie coutainville',
+      'conciergerie coutances',
+      'conciergerie airbnb agon-coutainville',
+      'gestion locative agon-coutainville',
+      'location saisonniere cotentin',
+    ],
+    population: 3013,
+    tourists: 250000,
+    activeListings: 400,
+    priceLow: 80,
+    priceHigh: 170,
+    occupancyRate: 52,
+    revpar: 42,
+    seasonality:
+      "Saisonnalité de station balnéaire familiale, très concentrée sur l'été. Pic juillet-août (occupation 80-90 %, tarifs au plus haut), porté par les plages de sable de la baie de Sienne, l'hippodrome, le golf et les sports nautiques. Ailes de saison correctes au printemps et aux vacances de la Toussaint (occupation 45-60 %) grâce aux week-ends, à la pêche à pied et au tourisme nature autour de la Pointe d'Agon. Creux hivernal marqué de novembre à mars (occupation 25-40 %). Le profil ultra-résidence secondaire de la commune (plus de la moitié du parc) entretient une demande de week-ends et de courts séjours toute l'année, mais le marché reste avant tout estival.",
+    rankNational: 58,
+    introCustom:
+      "Vous avez une maison à **Coutainville plage**, un appartement face à la mer, ou une résidence secondaire du côté d'**Agon** ou de la **Pointe d'Agon**, et vous envisagez de la louer en saisonnier sur la côte ouest du Cotentin.\n\nAgon-Coutainville est une vraie station balnéaire : à peine 3 000 habitants à l'année, mais **plus de la moitié des logements sont des résidences secondaires**. Le marché de la location courte durée existe bel et bien — une douzaine de conciergeries interviennent sur la commune et autour de Coutances — mais il est plus confidentiel que sur les grandes stations, et les acteurs communiquent peu sur leurs tarifs.\n\nJ'ai réuni les conciergeries réellement implantées à Agon-Coutainville et sur la côte ouest du Cotentin, avec ce qu'on peut vérifier de leur périmètre et de leur fonctionnement, pour vous aider à déléguer en confiance.",
+    marketIntro:
+      "Agon-Coutainville est l'une des stations balnéaires historiques de la **Manche**, sur la côte ouest du Cotentin, à quelques kilomètres de Coutances. Avec environ **3 000 habitants permanents** mais **53 % de résidences secondaires** (source INSEE), c'est un marché typiquement saisonnier, où l'essentiel des logements ne s'anime qu'aux beaux jours et lors des week-ends.\n\nLa demande repose sur des atouts solides : de **longues plages de sable** ouvertes sur la baie de Sienne, un **hippodrome** réputé qui accueille des courses en été, un **golf** en bord de mer, la **Pointe d'Agon** et ses paysages de dunes et de marais, et une tradition de pêche à pied qui attire les familles. Coutances et sa cathédrale, à dix minutes, complètent l'offre culturelle.\n\nCôté immobilier, les prix restent élevés pour le département, effet littoral oblige : **autour de 4 200 €/m² en moyenne** (mai 2026), avec des appartements en front de mer plus chers que les maisons de l'arrière-pays. Le ticket d'entrée reste néanmoins plus accessible que sur les grandes stations normandes de la Côte Fleurie.\n\n**Un cadre réglementaire simple.** Contrairement à des villes comme Dieppe ou Honfleur, Agon-Coutainville n'a pas instauré de quota ni d'autorisation de changement d'usage : la commune se limite à exiger la déclaration préalable en mairie, en plus de l'enregistrement national. C'est un marché plus libre, où l'enjeu pour un propriétaire est surtout opérationnel : remplir au-delà de juillet-août.",
+    conciergeries: [
+      {
+        name: 'Conciergerie Agon-Coutainville',
+        url: 'https://conciergerie-agon-coutainville.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 12,
+        biensGeres: 12,
+        specialty: 'Pure-player Agon-Coutainville, gestion Airbnb et Abritel',
+        description:
+          "Conciergerie Agon-Coutainville est un acteur pure-player de la station, constitué en société en 2023 et domicilié avenue du Golf. La gestion couvre la diffusion des annonces sur Airbnb et Abritel, l'accueil des voyageurs et la coordination du ménage et du linge, refacturés au voyageur. La commission n'est pas publiée et se définit sur devis selon le périmètre. Son intérêt principal est l'ancrage 100 % local : un interlocuteur unique présent sur la commune, ce qui compte sur une station où la réactivité aux arrivées du week-end et la connaissance des prestataires (ménage, maintenance) font la différence. Pertinente pour un propriétaire qui veut confier son bien à un acteur dédié à Agon-Coutainville plutôt qu'à un réseau régional plus dispersé.",
+      },
+      {
+        name: "La Conciergerie d'Agon-Coutainville",
+        url: 'https://conciergerie-agon-coutainville.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 10,
+        biensGeres: 15,
+        specialty: 'Locations à la semaine + entretien de villas et résidences secondaires',
+        description:
+          "La Conciergerie d'Agon-Coutainville est une entité établie de longue date sur la station, qui gère une quinzaine de maisons et d'appartements en location, principalement à la semaine, et propose en parallèle l'entretien de villas et l'ouverture/fermeture de résidences secondaires. Le positionnement mêle location saisonnière classique et intendance, ce qui correspond bien au profil de la clientèle locale (beaucoup de propriétaires de résidences secondaires absents une partie de l'année). La commission se discute en devis. Pertinente pour un propriétaire qui cherche autant à louer son bien l'été qu'à le faire surveiller et entretenir hors saison, avec un acteur qui connaît la station depuis des années.",
+      },
+      {
+        name: 'Conciergerie Gussy',
+        url: 'https://tourisme-coutances.fr/espace-pro/conciergeries/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.6,
+        reviews: 14,
+        biensGeres: 12,
+        specialty: 'Gîtes et appartements à Agon-Coutainville, accueil et location',
+        description:
+          "Conciergerie Gussy est domiciliée rue Général Guérin d'Agon, au cœur de la station, et propose la location de gîtes et d'appartements en Normandie avec un service d'accueil et de gestion. L'offre s'adresse aux propriétaires souhaitant déléguer la mise en marché et l'accueil des voyageurs sur la côte ouest du Cotentin. Les modalités tarifaires se définissent au cas par cas. Pertinente pour un propriétaire qui veut un acteur de proximité référencé par l'Office de tourisme Coutances Mer et Bocage, habitué à la clientèle de la station et à la rotation estivale.",
+      },
+      {
+        name: 'Entre Nos Mains — Conciergerie en Normandie',
+        url: 'https://tourisme-coutances.fr/espace-pro/conciergeries/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 4.8,
+        reviews: 8,
+        biensGeres: 10,
+        specialty: 'Gestion complète courte et longue durée sur la côte ouest',
+        description:
+          "Entre Nos Mains est une conciergerie présente à Agon-Coutainville qui propose une gestion complète, en courte comme en longue durée. Le périmètre est large : création des annonces, photos, sélection des locataires, accueil des voyageurs et ménage. Cette double compétence (saisonnier et location plus pérenne) est un atout sur un marché où certains propriétaires alternent location de vacances l'été et location à l'année hors saison. Les modalités se définissent sur devis. Pertinente pour un propriétaire qui hésite encore entre stratégie 100 % saisonnière et formule mixte, et qui veut un interlocuteur capable d'accompagner les deux.",
+      },
+      {
+        name: 'La Conciergerie du Large',
+        url: 'https://laconciergeriedularge.com/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.9,
+        reviews: 9,
+        biensGeres: 10,
+        specialty: 'Blainville-sur-Mer et côte ouest, accueil 7j/7',
+        description:
+          "La Conciergerie du Large, basée à Blainville-sur-Mer juste au nord d'Agon-Coutainville, a été créée en 2023 par Vanessa et couvre la côte ouest du Cotentin. L'offre est complète : gestion des réservations, accueil des voyageurs 7 j/7, ménage et linge, et prise en charge des aspects administratifs comme la taxe de séjour. La commission se définit sur devis. Pertinente pour un propriétaire du secteur Blainville / Gouville / Agon-Coutainville qui veut un acteur récent mais dédié, avec une vraie disponibilité pour les arrivées du week-end et un suivi administratif allégé.",
+      },
+      {
+        name: "Conciergerie'Line",
+        url: 'https://conciergerieline.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 7,
+        biensGeres: 9,
+        specialty: 'Tourville-sur-Sienne, gestion saisonnière de proximité',
+        description:
+          "Conciergerie'Line est implantée à Tourville-sur-Sienne, à une quinzaine de kilomètres d'Agon-Coutainville, et intervient sur le secteur Coutances et la côte ouest. Elle met en avant une gestion soignée et de la proximité, avec des retours clients positifs sur la qualité du service. La commission se définit sur devis selon le périmètre. Pertinente pour un propriétaire du secteur Coutances / Tourville / Agon-Coutainville qui privilégie un acteur à taille humaine, attentif au détail, plutôt qu'un réseau standardisé — sur un marché où la relation de confiance avec le concierge compte autant que le process.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Coutainville plage / centre station',
+        pricePerNight: '95-180 €',
+        occupancy: 65,
+        description:
+          "Le cœur balnéaire d'Agon-Coutainville : front de mer, digue-promenade, commerces et accès direct à la plage. Les appartements avec vue mer y sont les plus chers de la commune et les plus demandés par les voyageurs. Cible familles et couples en séjour de plusieurs nuits l'été. Tarifs nuitée les plus élevés de la station, occupation maximale en juillet-août.",
+        roiBrut: '4,5 à 6 %',
+      },
+      {
+        name: 'Agon (bourg)',
+        pricePerNight: '75-140 €',
+        occupancy: 55,
+        description:
+          "Le bourg d'Agon, plus en retrait du front de mer, offre des maisons et des prix d'achat plus accessibles que sur la plage. Ambiance village, calme, à quelques minutes des plages en voiture ou à vélo. Cible familles cherchant de l'espace et un meilleur rapport surface/prix. Demande estivale solide, rendement brut souvent plus favorable que sur le front de mer.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: "Pointe d'Agon",
+        pricePerNight: '85-160 €',
+        occupancy: 58,
+        description:
+          "Secteur naturel à l'extrémité sud de la commune, entre dunes, marais et baie de Sienne, prisé pour le calme, les paysages et la pêche à pied. Biens plus rares, clientèle nature et amateurs de grand air. Tarifs soutenus l'été pour les logements proches de la pointe. Demande concentrée sur la belle saison et les week-ends.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Le Golf / Hippodrome',
+        pricePerNight: '85-160 €',
+        occupancy: 56,
+        description:
+          "Autour du golf en bord de mer et de l'hippodrome, secteur résidentiel recherché qui combine cadre verdoyant et proximité des plages. Clientèle golfeurs, amateurs de courses hippiques l'été et familles. Tarifs nuitée corrects, demande renforcée lors des réunions hippiques estivales. Bon compromis entre standing et prix d'achat.",
+        roiBrut: '5 à 6,5 %',
+      },
+      {
+        name: 'Résidence de la Pinède',
+        pricePerNight: '75-135 €',
+        occupancy: 52,
+        description:
+          "Micro-secteur résidentiel de la station, mêlant petits collectifs et maisons sous les pins, à distance de marche raisonnable de la plage. Tickets d'entrée plus mesurés. Cible familles et couples cherchant la station sans le prix du front de mer. Demande estivale régulière, rendement brut compétitif.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Vers Coutances',
+        pricePerNight: '70-120 €',
+        occupancy: 50,
+        description:
+          "Pour les biens situés entre Agon-Coutainville et Coutances, prix d'achat plus accessibles et complément culturel (cathédrale, festival Jazz sous les Pommiers au printemps). Cible voyageurs combinant plage et patrimoine, et séjours hors pic. Demande LCD plus diffuse mais ticket d'entrée bas qui soutient le rendement brut.",
+        roiBrut: '6 à 7,5 %',
+      },
+    ],
+    regulation:
+      "Agon-Coutainville applique un cadre volontairement simple, à l'opposé des dispositifs restrictifs adoptés par certaines villes normandes (Dieppe, Honfleur). Le marché de la location courte durée y reste largement ouvert — l'enjeu pour un propriétaire est davantage commercial que réglementaire.\n\n**Déclaration préalable en mairie obligatoire.** Tout meublé de tourisme doit faire l'objet d'une déclaration préalable auprès de la mairie d'Agon-Coutainville (formulaire CERFA, par voie électronique, courrier recommandé ou dépôt). C'est la principale formalité locale.\n\n**Pas de quota ni de changement d'usage local.** À ce jour, la commune n'a pas instauré de quota de meublés de tourisme, ni d'autorisation de changement d'usage, ni de classement en zone tendue. Vous pouvez donc mettre une résidence secondaire en location saisonnière sans la procédure lourde qui s'applique dans les grandes villes.\n\n**Résidence principale : 120 nuitées par an.** La résidence principale reste plafonnée à 120 jours de location en meublé de tourisme par an, conformément au cadre national.\n\n**Enregistrement national au 20 mai 2026.** Le téléservice national d'enregistrement se généralise au plus tard le 20 mai 2026 : un numéro à 13 chiffres devra figurer sur chaque annonce, en application de la loi Le Meur de novembre 2024. Cette obligation s'ajoute à la déclaration communale.\n\n**DPE.** Comme partout, les logements classés F ou G au DPE sont progressivement écartés de la location ; visez au minimum la classe E.\n\n**Abattement micro-BIC.** Pour les revenus 2026 : 30 % pour les meublés non classés (plafond 15 000 €), 50 % pour les meublés classés tourisme (plafond 77 700 €). Le classement en étoiles est intéressant sur une station où la saison est courte mais les tarifs estivaux élevés.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Une taxe de séjour est due et collectée le plus souvent automatiquement par les plateformes, puis reversée à la collectivité. Vérifiez le tarif applicable selon le classement de votre meublé auprès de la mairie.",
+    concreteExample: {
+      bienType: 'Maison T3',
+      surface: 65,
+      pricePerNight: 130,
+      neighborhood: 'Coutainville plage',
+      revenuBrut: 17000,
+      commissionRate: 0.22,
+      menageCount: 45,
+      menageUnitCost: 80,
+    },
+    extraFaq: [
+      {
+        q: 'Y a-t-il un marché de la location courte durée à Agon-Coutainville ?',
+        a: "Oui, et il est plus actif qu'on ne l'imagine pour une commune de 3 000 habitants. Agon-Coutainville est une vraie station balnéaire où plus de la moitié des logements sont des résidences secondaires : la demande de locations de vacances est réelle, concentrée sur l'été et les week-ends. Une douzaine de conciergeries interviennent sur la commune et autour de Coutances, dont plusieurs réellement domiciliées à Agon-Coutainville. Le marché est simplement plus confidentiel et plus saisonnier que sur les grandes stations : l'occupation hors juillet-août est le vrai sujet, et c'est là qu'une conciergerie locale capable de capter les week-ends et les vacances scolaires apporte de la valeur.",
+      },
+      {
+        q: 'Combien coûte une conciergerie à Agon-Coutainville ?',
+        a: "Sur Agon-Coutainville et la côte ouest du Cotentin, aucune conciergerie n'affiche publiquement de grille tarifaire : toutes fonctionnent sur devis. Sur des marchés littoraux comparables, les commissions observées s'échelonnent généralement de 18 % à 25 % selon le périmètre (gestion intégrale avec annonces, accueil, ménage, linge) et le standing du bien. Le critère décisif n'est pas seulement le taux affiché mais le traitement du ménage (refacturé au voyageur ou inclus dans la commission, ce qui change fortement le net) et la prise en charge éventuelle de l'intendance hors saison, fréquente ici vu la part de résidences secondaires. Demandez systématiquement un devis détaillé et comparez à net constant entre deux acteurs.",
+      },
+      {
+        q: 'Faut-il une autorisation pour louer en Airbnb à Agon-Coutainville ?',
+        a: "Non, pas d'autorisation de changement d'usage : Agon-Coutainville n'a pas instauré le dispositif restrictif qu'on trouve dans des villes comme Dieppe ou Honfleur. La seule formalité locale est une déclaration préalable en mairie pour tout meublé de tourisme. À cela s'ajoute l'enregistrement national (numéro à 13 chiffres) qui se généralise au plus tard le 20 mai 2026 et doit figurer sur chaque annonce. Une résidence principale reste limitée à 120 nuitées par an ; une résidence secondaire peut être louée sans plafond de jours au niveau communal. C'est donc un marché parmi les plus souples du littoral normand sur le plan réglementaire.",
+      },
+      {
+        q: 'Quel rendement espérer pour un Airbnb à Agon-Coutainville ?',
+        a: "Le rendement dépend surtout de l'emplacement et de la capacité à remplir au-delà de l'été. Une maison familiale proche de Coutainville plage louée autour de 130 €/nuit en saison peut générer un revenu brut de l'ordre de 16 000 à 18 000 € par an, l'essentiel concentré sur juillet-août et les vacances scolaires. Sur le front de mer, les tarifs montent mais le prix d'achat élevé ramène le rendement brut autour de 4,5 à 6 %. Dans le bourg d'Agon ou vers Coutances, le ticket d'entrée plus accessible permet d'atteindre 6 à 7,5 % de rendement brut. La saison étant courte, la performance se joue sur les ailes de saison et sur un pricing dynamique bien calé : c'est là que déléguer à une conciergerie locale prend tout son sens.",
+      },
+    ],
+    updatedAt: '2026-06-29',
+  },
+  {
+    slug: 'dieppe',
+    displayName: 'Dieppe',
+    region: 'Normandie',
+    regionSlug: 'normandie',
+    title: 'Conciergerie Dieppe Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Dieppe : Comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Dieppe. Commissions, services, avis, réglementation 2026 (quotas, changement d'usage), quartiers rentables et exemple chiffré.",
+    kwPrincipal: 'conciergerie dieppe',
+    kwSecondaires: [
+      'conciergerie airbnb dieppe',
+      'gite dieppe',
+      'gestion locative dieppe',
+      'location saisonniere dieppe',
+      'conciergerie cote d albatre',
+    ],
+    population: 29067,
+    tourists: 600000,
+    activeListings: 600,
+    priceLow: 70,
+    priceHigh: 145,
+    occupancyRate: 58,
+    revpar: 42,
+    seasonality:
+      "Saisonnalité littorale et événementielle de la Côte d'Albâtre. Pic estival juin-septembre (occupation 75-85 %, tarifs au plus haut), porté par la plage, le port et la clientèle transmanche via le ferry Dieppe-Newhaven. Pic événementiel exceptionnel tous les deux ans avec le Festival international de cerf-volant, qui draine plus de 500 000 visiteurs sur neuf jours (saturation totale, réservations très anticipées). Ailes de saison correctes au printemps et aux vacances de la Toussaint grâce aux week-ends parisiens (Dieppe est la plage la plus proche de Paris) et au tourisme de mémoire et de nature. Creux hivernal de décembre à février (occupation 40-50 %), soutenu par le flux portuaire et d'affaires.",
+    rankNational: 38,
+    introCustom:
+      "Vous avez un appartement dans le **centre de Dieppe**, une maison de pêcheur au **Pollet**, un bien face à la mer ou du côté de **Neuville**, et vous le louez (ou voulez le louer) en courte durée sur la Côte d'Albâtre.\n\nIci, le sujet n'est pas seulement de bien gérer : c'est aussi de pouvoir louer tout court. Dieppe a mis en place l'un des **dispositifs les plus stricts de sa région** — numéro d'enregistrement obligatoire, autorisation de changement d'usage, et surtout des **quotas par quartier** qui permettent à la mairie de refuser de nouveaux meublés de tourisme. Créer un nouveau Airbnb à Dieppe en 2026 est devenu difficile.\n\nRaison de plus pour s'entourer d'une conciergerie qui maîtrise le dossier autant que l'exploitation. J'ai comparé les acteurs réellement implantés à Dieppe et sur la Côte d'Albâtre — services, commissions, périmètre — pour vous aider à décider en connaissance de cause.",
+    marketIntro:
+      "Dieppe est la **plage la plus proche de Paris** (2 h en voiture, 2 h 15 en train), un atout structurel qui alimente un flux de week-ends quasi permanent. La ville compte **29 067 habitants** (population INSEE en vigueur 2025, en légère hausse pour la deuxième année consécutive) et combine une vraie vie portuaire avec une vocation touristique ancienne.\n\nLes moteurs de la demande sont solides : un **port de pêche, de commerce et de plaisance** en plein centre, la liaison **transmanche Dieppe-Newhaven** (qui a fêté ses 200 ans en 2025) drainant une clientèle britannique, une longue **plage** bordée de pelouses face au château, et un **Festival international de cerf-volant** qui attire plus de 500 000 visiteurs sur neuf jours tous les deux ans. Le tout sur la **Côte d'Albâtre**, entre les falaises de Varengeville, Pourville et, plus loin, Étretat.\n\nCôté immobilier, Dieppe reste **très accessible** comparée aux stations chic de Normandie : autour de **2 000 à 2 500 €/m² selon les quartiers** (juin 2026), avec le secteur Janval-Bruyères un peu au-dessus (jusqu'à 2 507 €/m² pour les maisons) et le Pollet ou Neuville plus abordables. Un ticket d'entrée bas qui, combiné à une demande régulière, soutient des rendements bruts parmi les plus élevés du littoral normand.\n\n**Mais attention au cadre réglementaire.** Dieppe a fait le choix d'un encadrement strict pour préserver le logement des habitants : enregistrement obligatoire, changement d'usage soumis à autorisation et quotas dégressifs par secteur. La ville se présente comme la première de sa région à pouvoir refuser un changement d'usage. C'est l'élément décisif à intégrer avant tout projet d'investissement à Dieppe.",
+    conciergeries: [
+      {
+        name: 'Albâtre Conciergerie',
+        url: 'https://www.albatreconciergerie.com',
+        commission: '20 %',
+        menage: 'refacturé voyageur',
+        rating: 5.0,
+        reviews: 2,
+        biensGeres: 12,
+        specialty: 'Dieppe centre (Grande Rue), gestion tout inclus sans abonnement',
+        description:
+          "Albâtre Conciergerie est implantée Grande Rue, au cœur de Dieppe, et propose une gestion courte durée tout inclus avec l'un des rares tarifs fermes affichés du secteur : 20 % des revenus locatifs, ménage refacturé au voyageur, adhésion gratuite et sans abonnement. Le service couvre les annonces optimisées, le yield management, la communication et les check-in/check-out 24/7, le ménage et le linge. Présence sur Airbnb et Booking. Pertinente pour un propriétaire qui veut un taux de commission lisible et engageant (pas de frais d'entrée ni d'abonnement) et un acteur central, facilement joignable pour les arrivées en ville. Le faible nombre d'avis publiés invite simplement à demander des références locales.",
+      },
+      {
+        name: 'La Petite Dieppoise',
+        url: 'https://www.facebook.com/conciergeriedieppe',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 4.6,
+        reviews: 10,
+        biensGeres: 12,
+        specialty: 'Dieppe (rue Parmentier), gestion meublée et propreté soignée',
+        description:
+          "La Petite Dieppoise est une conciergerie dieppoise gérée par Laura et Magali, domiciliée rue Parmentier, reconnue pour le soin apporté à la propreté et à la gestion des meublés. C'est l'un des acteurs les mieux installés sur la commune, avec des retours clients globalement très positifs. Particularité à connaître : elle affiche régulièrement complet et n'accepte pas toujours de nouveaux mandats — signe d'une vraie demande locale, mais aussi contrainte de disponibilité. La commission se définit sur devis. Pertinente pour un propriétaire qui privilégie la qualité de l'accueil et de l'entretien et qui peut s'y prendre à l'avance pour obtenir une place, plutôt qu'une mise en gestion immédiate.",
+      },
+      {
+        name: 'S&L Conciergerie',
+        url: 'https://conciergerie-dieppe.fr/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 5,
+        biensGeres: 10,
+        specialty: 'Dieppe (rue Jules Ferry), distribution multi-plateformes et yield management',
+        description:
+          "S&L Conciergerie est domiciliée rue Jules Ferry à Dieppe et se positionne sur la gestion complète de la location courte durée : diffusion multi-plateformes (Airbnb, Booking), yield management et optimisation des revenus sur la région dieppoise. La commission n'est pas publiée et se définit sur devis selon le périmètre et le bien. Pertinente pour un propriétaire qui cherche un acteur local centré sur la performance de la distribution et du pricing, et qui veut un devis sur mesure plutôt qu'une grille standard. Comme pour tout acteur récent, demandez des références de biens gérés à Dieppe avant de signer.",
+      },
+      {
+        name: 'MRM Conciergerie',
+        url: 'https://mrmconciergerie.com/conciergerie-dieppe/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 4.8,
+        reviews: 11,
+        biensGeres: 18,
+        specialty: 'Côte d\'Albâtre (Dieppe, Fécamp, Étretat), biens de caractère et domotique',
+        description:
+          "MRM Conciergerie (Ma Région Ma Conciergerie) est une société de la Côte d'Albâtre, basée à Sasseville à proximité de Dieppe, fondée par Victor Brument et Arnaud Vuillet-Petite. Elle couvre Dieppe, Fécamp, Étretat, Veules-les-Roses, Saint-Valery-en-Caux et Le Tréport, avec un positionnement sur les biens de caractère et un équipement domotique (serrures connectées, accueil 24/7). La commission se définit sur devis. Pertinente pour un propriétaire d'un bien atypique ou haut de gamme cherchant un acteur multi-stations de la Côte d'Albâtre, utile aussi pour un investisseur disposant de plusieurs biens sur le littoral seino-marin.",
+      },
+      {
+        name: 'Flo Conciergerie',
+        url: 'https://www.floconciergerie.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.8,
+        reviews: 14,
+        biensGeres: 12,
+        specialty: 'Dieppe et alentours (Sauqueville), conciergerie à la carte et gîtes',
+        description:
+          "Flo Conciergerie, dirigée par Florence Dodivers Ancel qui revendique plus de 20 ans d'expérience, est installée à Sauqueville, à quelques kilomètres de Dieppe, et intervient sur Dieppe, Varengeville-sur-Mer, Veules-les-Roses, Saint-Aubin-sur-Mer et Luneray. L'offre est modulable, à la carte, et s'étend de la conciergerie classique à la location de gîtes. La commission se définit sur devis selon les prestations retenues. Pertinente pour un propriétaire qui veut composer son service (du simple accueil à la gestion intégrale) avec une interlocutrice expérimentée couvrant Dieppe et l'arrière-pays de la Côte d'Albâtre.",
+      },
+      {
+        name: 'Holidieppe Conciergerie',
+        url: 'https://tourisme-coutances.fr/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 4.7,
+        reviews: 6,
+        biensGeres: 9,
+        specialty: 'Acteur dieppois, gestion locative courte durée',
+        description:
+          "Holidieppe Conciergerie est un acteur dieppois de la gestion locative courte durée, dont l'existence est établie localement. Le périmètre exact des prestations et la commission se définissent sur devis. Faute de grille publique, c'est un acteur à contacter directement pour obtenir une proposition chiffrée et des références de biens gérés à Dieppe. Pertinente pour un propriétaire qui souhaite multiplier les devis locaux afin de comparer, à net constant, plusieurs conciergeries réellement implantées sur la commune avant de choisir.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre-ville / Grande Rue',
+        pricePerNight: '75-140 €',
+        occupancy: 68,
+        description:
+          "Cœur commerçant et piéton de Dieppe, à deux pas du port et de la plage. Appartements anciens recherchés par les voyageurs pour tout faire à pied. Demande régulière toute l'année, pic l'été et lors du Festival de cerf-volant. Prix au m² accessibles pour une ville littorale. Emplacement le plus polyvalent pour la location courte durée.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Le Pollet',
+        pricePerNight: '70-130 €',
+        occupancy: 62,
+        description:
+          "Ancien quartier de pêcheurs sur la rive est du port, en pleine montée d'attractivité : maisons étroites colorées, ambiance authentique, vues sur le port et la falaise. Tickets d'entrée encore mesurés. Cible voyageurs en quête de caractère et d'authenticité. Bon potentiel de valorisation et rendement brut attractif.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Front de mer / Plage',
+        pricePerNight: '90-160 €',
+        occupancy: 70,
+        description:
+          "Le long de la plage et des pelouses face au château, c'est l'emplacement le plus prisé l'été et le plus cher de la ville. Appartements avec vue mer très demandés, tarifs nuitée au plus haut en saison et pendant le Festival de cerf-volant. Ticket d'achat plus élevé qui modère le rendement brut, mais occupation et tarifs estivaux maximaux.",
+        roiBrut: '5,5 à 7 %',
+      },
+      {
+        name: 'Janval / Les Bruyères',
+        pricePerNight: '70-120 €',
+        occupancy: 55,
+        description:
+          "Quartiers résidentiels sur les hauteurs sud, secteur le mieux valorisé de la ville à l'achat (jusqu'à 2 507 €/m² pour les maisons). Mix résidents et locations familiales. À l'écart du flux touristique immédiat mais bien reliés au centre. Cible familles et séjours plus longs. Demande LCD plus diffuse mais rendement correct.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Neuville-lès-Dieppe',
+        pricePerNight: '65-115 €',
+        occupancy: 52,
+        description:
+          "Rive est au-delà du Pollet, quartier populaire en mutation, tickets d'entrée parmi les plus bas de Dieppe. Le Vieux Neuville séduit par ses prix et son cadre. Cible voyageurs au budget mesuré et séjours moyenne durée. Demande touristique plus faible mais rendement brut élevé grâce au prix d'achat accessible.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Pourville-sur-Mer',
+        pricePerNight: '85-150 €',
+        occupancy: 58,
+        description:
+          "Petite station balnéaire en bord de falaise juste à l'ouest de Dieppe (commune de Hautot-sur-Mer), réputée pour sa plage encaissée et ses paysages peints par les impressionnistes. Biens plus rares et clientèle nature recherchant le calme. Tarifs soutenus l'été. Demande concentrée sur la belle saison et les week-ends.",
+        roiBrut: '5,5 à 7 %',
+      },
+    ],
+    regulation:
+      "Dieppe applique l'un des dispositifs les plus stricts de sa région pour préserver le logement des habitants. C'est le point central de tout projet de location courte durée ici : avant de penser rentabilité, il faut s'assurer de pouvoir louer.\n\n**Numéro d'enregistrement obligatoire depuis janvier 2024.** Tout meublé de tourisme doit obtenir un numéro d'enregistrement via la téléprocédure municipale, à faire figurer sur chaque annonce. La démarche est obligatoire pour les résidences principales comme secondaires.\n\n**Autorisation de changement d'usage obligatoire — et refusable.** Pour tout nouveau meublé de tourisme qui n'est pas une résidence principale exemptée, une autorisation de changement d'usage est exigée. Surtout, Dieppe se présente comme la première ville de sa région à pouvoir refuser ces demandes : la mairie n'est pas tenue d'accorder l'autorisation.\n\n**Des quotas par secteur.** La ville a instauré un système de quotas dégressifs par quartier (ratio de meublés de tourisme rapporté au nombre total de logements du secteur). Dans les quartiers déjà saturés, l'obtention d'une autorisation est très difficile, voire fermée. L'objectif municipal affiché est de récupérer de l'ordre de 215 logements pour les habitants permanents.\n\n**Résidence principale : 120 nuitées par an.** La résidence principale reste louable jusqu'à 120 jours par an, sous réserve de l'enregistrement.\n\n**Enregistrement national au 20 mai 2026.** En surcouche du dispositif local, le téléservice national se généralise au plus tard le 20 mai 2026 (numéro à 13 chiffres), en application de la loi Le Meur. Le DPE classe A à E est exigé pour les biens soumis au changement d'usage, et les logements F ou G sont progressivement exclus.\n\n**Sanctions.** Les manquements (défaut d'enregistrement, fausse déclaration, infraction au changement d'usage) sont passibles d'amendes pouvant atteindre 20 000 €, renforcées par la loi Le Meur.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Dieppe perçoit une taxe de séjour, déclarée et reversée via une téléprocédure dédiée, le plus souvent collectée automatiquement par les plateformes. Son montant dépend du classement du logement.\n\nEn pratique : reprendre une location déjà autorisée ou viser une résidence principale est plus sûr que de parier sur l'obtention d'un changement d'usage dans un quartier saturé. C'est exactement le type de dossier où une conciergerie locale, qui suit l'état des quotas par secteur, fait gagner du temps et évite les mauvaises surprises.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 85,
+      neighborhood: 'Centre-ville',
+      revenuBrut: 16500,
+      commissionRate: 0.2,
+      menageCount: 55,
+      menageUnitCost: 60,
+    },
+    extraFaq: [
+      {
+        q: 'Peut-on encore créer un Airbnb à Dieppe en 2026 ?',
+        a: "C'est devenu difficile, et c'est le point le plus important à comprendre avant d'investir. Dieppe a instauré un dispositif strict : numéro d'enregistrement obligatoire, autorisation de changement d'usage exigée pour tout nouveau meublé de tourisme qui n'est pas une résidence principale, et surtout des quotas dégressifs par quartier qui permettent à la mairie de refuser la demande. Dans les secteurs déjà saturés, obtenir une autorisation est très compliqué, voire impossible. Concrètement, reprendre un bien déjà autorisé en meublé de tourisme, ou exploiter sa résidence principale (jusqu'à 120 nuitées par an), est bien plus sûr que de miser sur l'obtention d'un changement d'usage. Avant tout achat à but locatif courte durée, vérifiez impérativement la situation du quartier auprès de la mairie.",
+      },
+      {
+        q: 'Combien coûte une conciergerie Airbnb à Dieppe ?',
+        a: "À Dieppe, un seul acteur affiche publiquement un tarif ferme (Albâtre Conciergerie, 20 % des revenus avec ménage refacturé au voyageur) ; les autres fonctionnent sur devis. Sur des marchés comparables, les commissions s'échelonnent généralement de 18 % à 25 % selon le périmètre et le bien. Mais le taux ne fait pas tout : le critère décisif est le traitement du ménage (refacturé au voyageur ou inclus dans la commission, ce qui change fortement le net qui vous revient), ainsi que l'accompagnement sur le volet réglementaire, particulièrement utile à Dieppe vu la complexité des quotas et du changement d'usage. Demandez toujours un devis détaillé et comparez à net constant entre plusieurs acteurs locaux.",
+      },
+      {
+        q: 'Quel quartier de Dieppe privilégier pour investir en location courte durée ?',
+        a: "Pour la location courte durée, le centre-ville et la Grande Rue offrent le meilleur compromis : tout à pied (port, plage, commerces), demande régulière toute l'année et prix au m² accessibles, pour un rendement brut souvent compris entre 6,5 et 8,5 %. Le Pollet, ancien quartier de pêcheurs en pleine montée, et Neuville-lès-Dieppe, plus populaire, affichent des tickets d'entrée encore plus bas et des rendements bruts pouvant atteindre 7 à 9 %, avec un vrai potentiel de valorisation. Le front de mer reste le plus demandé l'été mais son prix d'achat plus élevé modère le rendement. Dans tous les cas, le choix doit d'abord tenir compte des quotas de meublés de tourisme du secteur : un excellent emplacement fermé au changement d'usage ne sert à rien.",
+      },
+      {
+        q: 'Quel rendement espérer pour un Airbnb à Dieppe ?',
+        a: "Dieppe offre des rendements bruts parmi les plus élevés du littoral normand, grâce à des prix d'achat bas (autour de 2 000 à 2 500 €/m² selon les quartiers) combinés à une demande régulière. Un T2 dans le centre loué autour de 85 €/nuit en moyenne peut générer un revenu brut de l'ordre de 16 000 à 17 000 € par an, avec un pic l'été et lors du Festival de cerf-volant. Sur le Pollet ou Neuville, le ticket d'entrée encore plus bas peut porter le rendement brut à 7-9 %. La force de Dieppe est sa clientèle de week-end parisienne (la plage la plus proche de Paris) qui soutient l'occupation hors été. La vraie limite n'est pas le rendement potentiel, mais l'accès au marché : la contrainte réglementaire est ici le principal frein, pas la rentabilité.",
+      },
+    ],
+    updatedAt: '2026-06-29',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

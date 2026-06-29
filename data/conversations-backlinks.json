@@ -8,5 +8,14 @@
     "backlink": "en_attente | obtenu | refuse",
     "note": "contexte utile pour la relance (qui, quoi, quel article)"
   },
-  "conversations": []
+  "conversations": [
+    {
+      "site": "popacademy.fr",
+      "date_premier_echange": "2026-06-25",
+      "date_dernier_echange": "2026-06-29",
+      "dernier_statut": "Backlink en place et confirmé par Marc",
+      "backlink": "obtenu",
+      "note": "Échange guest post (copropriété loi Alur). Lien dofollow vers le simulateur sur popacademy.fr/glossaire-loi-alur/amortissement. DA 17. Suite prévue : proposer l'article 'villes rentables de France' pour un 2e échange."
+    }
+  ]
 }

@@ -8,7 +8,9 @@
  *
  * Liens internes — flag en 3 catégories :
  *   - 404         : article inexistant
- *   - DRAFT       : article existe mais en status: brouillon (404 public)
+ *   - DRAFT       : lien vers un article en brouillon
+ *                     · depuis un article EN LIGNE → 404 public réel → bloque
+ *                     · depuis un autre brouillon  → toléré (les deux sont invisibles)
  *   - WRONG_PATH  : lien sans /blog/ vers un article (oubli de préfixe)
  *
  * Liens externes (mode --external) :
@@ -21,8 +23,8 @@
  *   node scripts/audit-blog-links.mjs --external      # internes + externes
  *
  * Exit code :
- *   0 = OK (warnings DRAFT/WARN tolérés)
- *   1 = bloquant (404, WRONG_PATH, DEAD)
+ *   0 = OK (DRAFT entre brouillons / WARN tolérés)
+ *   1 = bloquant (404, WRONG_PATH, DRAFT depuis un article en ligne, DEAD)
  */
 
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
@@ -86,7 +88,10 @@ for (const file of readdirSync(BLOG_DIR).filter((f) => f.endsWith('.mdoc'))) {
       if (!(articleSlug in articles)) {
         issues.push({ file, link: `/${link}`, type: '404', detail: `article "${articleSlug}" inexistant` });
       } else if (articles[articleSlug] !== 'en-ligne') {
-        issues.push({ file, link: `/${link}`, type: 'DRAFT', detail: `article "${articleSlug}" en status: ${articles[articleSlug]}` });
+        // Un lien depuis un article EN LIGNE vers un brouillon = 404 public réel (bloquant).
+        // Entre deux brouillons (source aussi en brouillon) = toléré, les deux sont invisibles.
+        const fromLive = articles[file.replace('.mdoc', '')] === 'en-ligne';
+        issues.push({ file, link: `/${link}`, type: 'DRAFT', fromLive, detail: `article "${articleSlug}" en status: ${articles[articleSlug]}` });
       }
       continue;
     }
@@ -197,17 +202,26 @@ if (byType[404].length > 0) {
   console.log();
 }
 
-if (byType.DRAFT.length > 0) {
-  console.log(`⚠️  ${byType.DRAFT.length} lien(s) vers articles en brouillon (404 public tant que non publiés)`);
+const draftLive = byType.DRAFT.filter((i) => i.fromLive);
+const draftDraft = byType.DRAFT.filter((i) => !i.fromLive);
+
+if (draftLive.length > 0) {
+  console.log(`❌ ${draftLive.length} lien(s) depuis un article EN LIGNE vers un brouillon (404 public réel — bloquant)`);
+  for (const i of draftLive) console.log(`   ${i.file} : ${i.link} (${i.detail})`);
+  console.log(`   → publier la cible (status: en-ligne) ou retirer le lien\n`);
+}
+
+if (draftDraft.length > 0) {
+  console.log(`⚠️  ${draftDraft.length} lien(s) entre brouillons (invisibles tant que non publiés — toléré)`);
   const byTarget = {};
-  for (const i of byType.DRAFT) {
+  for (const i of draftDraft) {
     const target = i.link.replace('/blog/', '').split(/[#?]/)[0];
     (byTarget[target] ||= []).push(i.file);
   }
   for (const [target, files] of Object.entries(byTarget)) {
     console.log(`   /blog/${target} (cité dans ${files.length} article(s))`);
   }
-  console.log(`   → publier ces articles (status: en-ligne) pour activer les liens\n`);
+  console.log(`   → publier ces articles activera les liens\n`);
 }
 
 if (issues.length === 0) console.log(`✅ Aucun lien interne cassé.`);
@@ -229,6 +243,6 @@ if (CHECK_EXTERNAL) {
   if (externalIssues.length === 0) console.log(`✅ Tous les liens externes répondent.`);
 }
 
-// Exit code : 1 si bloquant (404 interne, WRONG_PATH, DEAD externe)
-const blocking = issues.filter((i) => i.type !== 'DRAFT').length + externalIssues.filter((i) => i.type === 'DEAD').length;
+// Exit code : 1 si bloquant (404 interne, WRONG_PATH, DRAFT depuis un article en ligne, DEAD externe)
+const blocking = issues.filter((i) => i.type !== 'DRAFT' || i.fromLive).length + externalIssues.filter((i) => i.type === 'DEAD').length;
 process.exit(blocking > 0 ? 1 : 0);

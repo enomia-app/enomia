@@ -55,9 +55,10 @@ const SENDABLE = new Set(['verifie', 'a_tester']);
 // Statuts du state badge = domaine déjà traité (ne plus re-pitcher).
 const CONTACTED = new Set(['sent', 'relance_1', 'repondu_positif', 'repondu_negatif', 'repondu_neutre', 'repondu_spam', 'bounced', 'faux_email', 'opt_out']);
 
-// Segments en PAUSE (jamais d'envoi auto). Conciergerie : tant que les pages
-// conciergerie ne sont pas un annuaire lié (badge sans destination où figurer).
-// Décision Marc — retirer de ce Set pour réactiver.
+// Segments ÉCARTÉS de l'envoi badge. Conciergerie : écartée DÉFINITIVEMENT
+// (décision Marc 2026-06-29 — pas d'annuaire conciergerie ; ce sont des clientes/
+// partenaires SaaS, pas des entrées à lister). Traitée comme liste de prospection
+// 2027, pas comme cible backlink. (cf. memory project_email_base_2026-06)
 const PAUSED_SEGMENTS = new Set(['conciergerie']);
 
 function dom(site) {

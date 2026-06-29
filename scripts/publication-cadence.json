@@ -1,7 +1,7 @@
 {
   "_note": "Cadence de publication par niche = villes/zones publiées PAR RUN de cron. Lu par les crons conciergerie / love-room / cabane. Piloté chaque lundi par gsc-cadence-weekly selon la santé GSC (mail à Marc avec décision + pourquoi). Marc peut éditer à la main (commit + push) pour rectifier.",
   "love-room": {
-    "villesParRun": 2
+    "villesParRun": 3
   },
   "cabane": {
     "villesParRun": 2
@@ -21,10 +21,10 @@
   },
   "_calcul": "pages/semaine = Σ (runsPerWeek[niche] × villesParRun[niche]). Garde-fou DUR dans gsc-cadence-apply.mjs : chaque niche clampée à [1,6] ET total hebdo plafonné à maxPagesPerWeek (sinon on redescend la niche la plus grosse). Actuel : 3×2 + 2×2 + 2×2 = 14/sem.",
   "lastDecision": {
-    "date": "2026-06-22",
+    "date": "2026-06-29",
     "by": "gsc-cadence-weekly",
-    "weeklyTotal": 17,
+    "weeklyTotal": 19,
     "guardHit": false,
-    "reason": "Conciergerie : BAISSE de 4→3 (taux d'indexation s'effondre 99%→81%, 18 pending s'accumulent — Google ne suit pas le rythme, surcharge évidente). Love-room & Cabane : MONTE +1 chacun (love-room excellent 83% d'indexation stable, cabane bon 55% en 11j — Google rattrape bien). Total hebdo : 17 pages (3×3 + 2×2 + 2×2), sous le plafond de 20."
+    "reason": "Conciergerie stable à 3 : indexation excellente et EN AMÉLIORATION (87.8% vs 81% le 22), pending en baisse rapide (22→13 en 3j). Love-room monte à 3 : indexation bonne (79.5%), steady, pending diminue (6→8 mais cohérent avec +4 pages). Cabane stable à 2 : indexation plus lente (61.5%), pending à 5 sans amélioration — attendre signal meilleur avant montée. Total : 19 pages/semaine (sous plafond 20)."
   }
 }

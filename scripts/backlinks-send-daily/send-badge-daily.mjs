@@ -12,7 +12,8 @@
  *   - state propre anti-doublon (data/email-base/send-badge-state.json) + dédup
  *     croisé avec la machine blog (send-daily) pour ne pas double-pitcher un domaine.
  *
- * Cap quotidien PARTAGÉ avec send-daily (15/j total) → régler via --max (défaut 8).
+ * Cap quotidien via --max (défaut 8). En prod, run.sh fixe --max dynamiquement :
+ * budget neufs = 20 − relances dues, réparti blog/badge (relances prioritaires).
  *
  * Usage :
  *   node scripts/backlinks-send-daily/send-badge-daily.mjs --dry
@@ -270,7 +271,7 @@ ${sent.length === 0 ? '  (aucun)' : sent.map(({ r, pitch, observation }) =>
 ⏭ Skippés (${skipped.length})
 ${skipped.length === 0 ? '  (aucun)' : skipped.map(({ r, reason }) => `  • ${r.nom_boite} (${dom(r.site)}) : ${reason}`).join('\n')}
 
-Cap badge du jour = ${MAX} (à coordonner avec send-daily pour rester à 15/j au total).
+Cap badge du jour = ${MAX} (budget neufs réparti par run.sh ; relances prioritaires, total 20/j).
 Rappel : un mail-tester ponctuel de temps en temps (délivrabilité).
 `;
   const subjectEncoded = '=?UTF-8?B?' + Buffer.from(subject, 'utf8').toString('base64') + '?=';

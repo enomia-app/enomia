@@ -21,12 +21,12 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 | `app.enomia.blog-publish-daily` | 8h17 quotidien (publie jours impairs, ~1/2j) | Publie 1 article blog brouillon → en-ligne dans l'ordre `scripts/blog-publish-queue.json`, commit/push + email récap Resend. Pas de claude -p (git+node pur). | **actif** (installé Mac mini 2026-05-29) |
 | `app.enomia.rentabilite-publish` | Mar/Jeu/Sam 9h23 | Publie 3 villes rentabilité (`published` false→true, par région : gros volume + meilleur ratio d'abord) → pages nichées `/rentabilite-airbnb/{region}/{ville}`, commit/push main + email récap Resend. Liens conditionnels (non-publiées = texte, zéro 404). Pas de claude -p (git+node pur). | **actif** (installé Mac mini 2026-06-29) |
 | `app.enomia.conciergerie-production` | Lun/Mer/Ven 8h37 | Cycle de production landing conciergerie | actif |
-| `app.enomia.backlinks-track-replies-v2` | Lun-Ven 10h31 | Pipeline v2 : tracking réponses + bounces + relances auto J+5/J+10/J+15 (10h31 = 14 min après send-daily 10h17 → chope les hard bounces immédiats du jour) | actif |
+| `app.enomia.backlinks-track-replies-v2` | Lun-Ven 10h31 | Pipeline v2 : tracking réponses + bounces + relances auto J+5/J+10/J+15. Relances **prioritaires** dans le **budget total partagé 20/j** (`BACKLINKS_DAILY_TOTAL`), FIFO (plus anciennes d'abord), surplus reporté au run suivant. (10h31 = 14 min après send-daily 10h17 → chope les hard bounces immédiats du jour) | actif |
 | `com.enomia.fb-check-replies` | 9h23 quotidien | Check réponses sous commentaires FB Marc | actif |
 | `com.enomia.fb-weekly-recap` | Ven 17h00 | Récap hebdo volume + liens Enomia partagés + (phase 2 : GA4 perfs par utm_content) | actif |
 | `com.enomia.fb-monthly-insights` | 1er du mois 9h31 | Rapport mensuel opportunités SEO + features | actif |
 | `app.enomia.backlinks-source-monthly` | 1er du mois 9h47 | Pipeline v2 : sourcing SEMrush 75 KW, filtres, check outil concurrent, output `data/backlinks-YYYY-MM.json` | actif |
-| `app.enomia.backlinks-send-daily` | Lun-Ven 10h17 | **3 étapes** dans le même `run.sh` : `send-daily` (blog, `--max=7`, filtré MillionVerifier) + `send-badge-daily` (badge love-room/cabane, `--max=8`, hybride retenu/offre, conciergerie en pause) = 15 emails/j ; puis `form-todo-daily` (`--max=10`, mail copy-paste des formulaires-seul niches → Marc soumet à la main, hors budget email) | actif |
+| `app.enomia.backlinks-send-daily` | Lun-Ven 10h17 | **3 étapes** dans le même `run.sh`. Budget neufs = `compute-new-budget.mjs` (20 − relances dues du jour → **réserve la place des relances prioritaires**), réparti blog (`--max` jusqu'à 7) + badge (le reste). `send-daily` (blog, MillionVerifier) + `send-badge-daily` (badge love-room/cabane, hybride retenu/offre, conciergerie en pause) = neufs ; puis `form-todo-daily` (`--max=10`, mail copy-paste des formulaires-seul niches → Marc soumet à la main, hors budget email). **Total prospection plafonné 20/j** (relances + neufs) sur marc@enomia.app | actif |
 | `app.enomia.backlinks-report-monthly` | 1er du mois 10h53 | Pipeline v2 : récap mensuel envois/réponses/backlinks par outil | actif |
 | `app.enomia.backlinks-report-quarterly` | 1er jan/avr/juil/oct 11h17 | Pipeline v2 : récap trimestriel | actif |
 | `app.enomia.backlinks-report-yearly` | 1er janvier 11h43 | Pipeline v2 : récap annuel | actif |
@@ -150,10 +150,10 @@ Pipeline refactoré : envoi auto sans validation Marc, 3 outils prioritaires (si
 **État local** : `data/backlinks-send-state.json` (audit BCC)
 **Logs** : `scripts/backlinks-send-daily/logs/run-YYYY-MM-DD.log`
 **Throttle** : 10s entre 2 envois Gmail (anti-spam)
-**Filtre MV (ajouté 2026-06-29)** : `loadMvVerdicts()` charge les verdicts MillionVerifier depuis `data/email-base/base_complete.json` et **retire les emails MV-mauvais** (catch_all/incertain/faux_email) avant envoi blog → zéro-bounce. `--max` passé de 10 à **7** (cap 15/j partagé avec le badge).
+**Filtre MV (ajouté 2026-06-29)** : `loadMvVerdicts()` charge les verdicts MillionVerifier depuis `data/email-base/base_complete.json` et **retire les emails MV-mauvais** (catch_all/incertain/faux_email) avant envoi blog → zéro-bounce. `--max` fixé dynamiquement par `run.sh` (≤ 7 selon le budget neufs du jour).
 
 ### `send-badge-daily.mjs` — ajouté au MÊME cron (2026-06-29)
-Lancé par le **même `run.sh`** que send-daily (donc même créneau **Lun-Ven 10h17**), juste après le blog. `--max=8` (15/j partagé : 7 blog + 8 badge). Garde `|| echo` dans run.sh → un sender qui échoue ne bloque pas l'autre.
+Lancé par le **même `run.sh`** que send-daily (donc même créneau **Lun-Ven 10h17**), juste après le blog. `--max` fixé dynamiquement par `run.sh` = reste du budget neufs après le blog (budget = 20 − relances dues, cf. `compute-new-budget.mjs`). Garde `|| echo` dans run.sh → un sender qui échoue ne bloque pas l'autre.
 **Code** : `send-badge-daily.mjs` + `badge-templates.mjs` + `badge-observation.mjs` (**Sonnet/Claude Max**) + `mailer.mjs` (HTML + opt-out gris + List-Unsubscribe + liste de suppression).
 **Fait** : lit `data/email-base/base_complete.json` (base MV-vérifiée), pitche un **badge** aux **love-room / cabane** (camp 4/5) repérées via Google Places parmi les mieux notées de leur ville. Observation = note/avis Google (Sonnet). Variante **« retenu »** si le prospect figure RÉELLEMENT sur sa page Enomia (détection par domaine, fetch + match), **« offre »** sinon (« j'aimerais y ajouter la vôtre »). Filtre `page_en_ligne=oui`, garde-fou RCPT pré-envoi, state anti-doublon `send-badge-state.json`, dédup croisé avec le pool blog. **Conciergerie écartée du badge** (`PAUSED_SEGMENTS`, définitif 2026-06-29 : pas d'annuaire conciergerie — ce sont des clientes/partenaires SaaS ; les 774 = liste de prospection 2027, pas une cible backlink).
 **Enrichissement prénom** : `scripts/email-base-builder/enrich-names.mjs` (Haiku, mentions-légales → « Bonjour Prénom, »). À relancer sur le mini après chaque régen de base.
@@ -166,10 +166,10 @@ Lancé par le **même `run.sh`** que send-daily (donc même créneau **Lun-Ven 1
 1. Charge backlog, filter prospects avec `status ∈ {sent, relance_1, relance_2}` + email
 2. Pour chaque : query Gmail pour réponses depuis `date_envoi` ou `date_relance_X`
 3. Si réponse : classifie via Haiku (positive / negative / neutre / spam), update status + `date_reponse` + `gmail_reply_id`
-4. Si pas de réponse :
+4. Si pas de réponse (relances plafonnées au **budget total 20/j**, FIFO plus anciennes d'abord ; surplus → `defer`, repris au prochain run) :
    - J+5 → envoi relance T2 (court, neutre), `status=relance_1`
    - J+10 → envoi relance T3 (proposition visio), `status=relance_2`
-   - J+15 → `status=pas_de_reponse` (silencieux)
+   - J+15 → `status=pas_de_reponse` (silencieux, **jamais** plafonné — ce n'est pas un email)
 5. Si actions : envoie mail récap à Marc avec lien direct vers thread Gmail pour les positives
 
 **Logs** : `scripts/backlinks-track-replies-v2/logs/run-YYYY-MM-DD.log`
@@ -192,7 +192,7 @@ Le script accepte `--period={week|month|quarter|year}` et envoie un mail récap 
 
 - **Pas de CRM intermédiaire** : tout vit dans `data/backlinks-YYYY-MM.json` (gitignored). Un fichier par mois, recyclage automatique du reliquat non-contacté.
 - **Pas de validation Marc** par défaut : envoi auto. Sauf BCC les 5 premiers jours + 1 jour aléatoire tous les 5 jours pour spot-check.
-- **Volume cible** : 15/jour ouvré × 22 jours = 330 envois/mois. À 3% conv réaliste = ~10 backlinks/mois. Phase 2 (mois 3+) : scale à 30/jour si délivrabilité OK.
+- **Volume cible** : **budget total 20/jour ouvré** (relances + neufs confondus, relances prioritaires), réglable via `BACKLINKS_DAILY_TOTAL`. Le nb de relances découle des neufs (~1,7 relance/neuf en régime stable) → les neufs s'auto-régulent à ~5-8/j une fois la machine chaude (0 le lundi, où le backlog de relances du week-end sature les 20). Phase 2 : monter `BACKLINKS_DAILY_TOTAL` si délivrabilité OK.
 - **Monitoring spam** : Google Postmaster Tools (à activer sur enomia.app) + watch bounces dans track-replies.
 - **DMARC** : actuellement `p=none`. Roadmap upgrade dans memory `domains/prospection-backlinks/reference_dmarc_upgrade.md`.
 

@@ -1,12 +1,53 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { pickLatestInbound, getHeader, pickBestDomainReply, rootDomain, outilLabel } from './track-replies.mjs';
+import { pickLatestInbound, getHeader, pickBestDomainReply, rootDomain, outilLabel, relanceDecision, countDueRelances } from './track-replies.mjs';
 
 test('outilLabel : libellé par outil, JAMAIS "undefined" (bug relance)', () => {
   assert.equal(outilLabel('simulateur'), 'notre simulateur de rentabilité gratuit');
   assert.equal(outilLabel('taxe_sejour'), 'notre calculateur de taxe de séjour gratuit');
   assert.equal(outilLabel(undefined), 'notre outil gratuit'); // le bug d'origine (c.outil_cible inexistant)
   assert.ok(!outilLabel('cle_inconnue').includes('undefined'));
+});
+
+// ─── Cap quotidien des relances (5/j) ─────────────────────────────────────
+const TODAY = '2026-06-29';
+test('relanceDecision : sent J+5 sous le cap → relance_1', () => {
+  const c = { status: 'sent', date_envoi: '2026-06-24' }; // J+5
+  assert.equal(relanceDecision(c, { today: TODAY, sentCount: 0, max: 5 }), 'relance_1');
+});
+
+test('relanceDecision : relance_1 J+5 sous le cap → relance_2', () => {
+  const c = { status: 'relance_1', date_envoi: '2026-06-19', date_relance_1: '2026-06-24' };
+  assert.equal(relanceDecision(c, { today: TODAY, sentCount: 4, max: 5 }), 'relance_2');
+});
+
+test('relanceDecision : cap atteint → defer (reporté, pas envoyé)', () => {
+  const sent = { status: 'sent', date_envoi: '2026-06-24' };
+  const r1 = { status: 'relance_1', date_relance_1: '2026-06-24' };
+  assert.equal(relanceDecision(sent, { today: TODAY, sentCount: 5, max: 5 }), 'defer');
+  assert.equal(relanceDecision(r1, { today: TODAY, sentCount: 5, max: 5 }), 'defer');
+});
+
+test('relanceDecision : J+15 → close même quand le cap est atteint (clôture ≠ email)', () => {
+  const c = { status: 'relance_2', date_relance_2: '2026-06-14' }; // J+15
+  assert.equal(relanceDecision(c, { today: TODAY, sentCount: 99, max: 5 }), 'close');
+});
+
+test('relanceDecision : pas encore dû (J+4) → none', () => {
+  const c = { status: 'sent', date_envoi: '2026-06-25' }; // J+4
+  assert.equal(relanceDecision(c, { today: TODAY, sentCount: 0, max: 5 }), 'none');
+});
+
+test('countDueRelances : compte les dues (J+5/J+10), ignore non-dues / sans email / J+15', () => {
+  const cands = [
+    { status: 'sent', date_envoi: '2026-06-24', email: 'a@x.fr' },                              // due relance_1
+    { status: 'relance_1', date_relance_1: '2026-06-24', email: 'b@x.fr' },                     // due relance_2
+    { status: 'sent', date_envoi: '2026-06-27', email: 'c@x.fr' },                              // J+2, pas due
+    { status: 'sent', date_envoi: '2026-06-24' },                                               // due mais SANS email → ignoré
+    { status: 'relance_2', date_relance_2: '2026-06-14', email: 'd@x.fr' },                     // J+15 → close, pas un email
+    { status: 'repondu_positif', date_envoi: '2026-06-01', email: 'e@x.fr' },                   // déjà répondu
+  ];
+  assert.equal(countDueRelances(cands, TODAY), 2);
 });
 
 test('rootDomain : sous-domaine → domaine racine (cas zently)', () => {

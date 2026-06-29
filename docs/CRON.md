@@ -26,7 +26,7 @@ Les plists launchd sources sont versionnés dans `scripts/`, les copies actives 
 | `com.enomia.fb-weekly-recap` | Ven 17h00 | Récap hebdo volume + liens Enomia partagés + (phase 2 : GA4 perfs par utm_content) | actif |
 | `com.enomia.fb-monthly-insights` | 1er du mois 9h31 | Rapport mensuel opportunités SEO + features | actif |
 | `app.enomia.backlinks-source-monthly` | 1er du mois 9h47 | Pipeline v2 : sourcing SEMrush 75 KW, filtres, check outil concurrent, output `data/backlinks-YYYY-MM.json` | actif |
-| `app.enomia.backlinks-send-daily` | Lun-Ven 10h17 | **2 senders** dans le même `run.sh` : `send-daily` (blog, `--max=7`, filtré MillionVerifier zéro-bounce) + `send-badge-daily` (badge love-room/cabane, `--max=8`, hybride retenu/offre, conciergerie en pause) = 15/j sur marc@enomia.app | actif |
+| `app.enomia.backlinks-send-daily` | Lun-Ven 10h17 | **3 étapes** dans le même `run.sh` : `send-daily` (blog, `--max=7`, filtré MillionVerifier) + `send-badge-daily` (badge love-room/cabane, `--max=8`, hybride retenu/offre, conciergerie en pause) = 15 emails/j ; puis `form-todo-daily` (`--max=10`, mail copy-paste des formulaires-seul niches → Marc soumet à la main, hors budget email) | actif |
 | `app.enomia.backlinks-report-monthly` | 1er du mois 10h53 | Pipeline v2 : récap mensuel envois/réponses/backlinks par outil | actif |
 | `app.enomia.backlinks-report-quarterly` | 1er jan/avr/juil/oct 11h17 | Pipeline v2 : récap trimestriel | actif |
 | `app.enomia.backlinks-report-yearly` | 1er janvier 11h43 | Pipeline v2 : récap annuel | actif |

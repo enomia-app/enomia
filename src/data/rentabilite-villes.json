@@ -6606,7 +6606,7 @@
       "population": 461,
       "taille": "rural",
       "categorie": "ski",
-      "published": false
+      "published": true
     },
     {
       "slug": "benodet",
@@ -7278,7 +7278,7 @@
       "population": 19782,
       "taille": "petite",
       "categorie": "petite-ville",
-      "published": false
+      "published": true
     },
     {
       "slug": "perigueux",
@@ -16910,7 +16910,7 @@
       "population": 11939,
       "taille": "petite",
       "categorie": "petite-ville",
-      "published": false
+      "published": true
     },
     {
       "slug": "antony",

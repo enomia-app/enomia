@@ -102,25 +102,30 @@ const articleLd = {
 
 // JSON-LD: LocalBusiness with aggregateRating → enables star ratings in Google SERP
 // (Google requires a valid parent type: LocalBusiness, Product, etc., not standalone Review)
-const reviewLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: `Conciergerie Airbnb ${c.displayName}`,
-  description: `Services de conciergerie Airbnb et gestion locative courte durée à ${c.displayName}`,
-  url: canonical,
-  areaServed: {
-    '@type': 'City',
-    name: c.displayName,
-    address: { '@type': 'PostalAddress', addressCountry: 'FR', addressRegion: c.region },
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: weightedRating.toFixed(1),
-    reviewCount: totalReviews,
-    bestRating: 5,
-    worstRating: 1,
-  },
-};
+// Only emitted when we have verified reviews: Google rejects reviewCount:0 and a
+// 0.0 ratingValue (out of the 1-5 range). null → no schema for this city.
+const reviewLd =
+  totalReviews > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        name: `Conciergerie Airbnb ${c.displayName}`,
+        description: `Services de conciergerie Airbnb et gestion locative courte durée à ${c.displayName}`,
+        url: canonical,
+        areaServed: {
+          '@type': 'City',
+          name: c.displayName,
+          address: { '@type': 'PostalAddress', addressCountry: 'FR', addressRegion: c.region },
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: weightedRating.toFixed(1),
+          reviewCount: totalReviews,
+          bestRating: 5,
+          worstRating: 1,
+        },
+      }
+    : null;
 
 // JSON-LD: ItemList of the reviewed conciergeries
 // aggregateRating is only emitted when we have verified rating + reviews. Google rejects 0-review schemas.
@@ -189,7 +194,7 @@ const faqLd = {
 
 <ToolLayout title={c.metaTitle} description={c.metaDescription} canonical={canonical}>
   <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
-  <script type="application/ld+json" set:html={JSON.stringify(reviewLd)} />
+  {reviewLd && <script type="application/ld+json" set:html={JSON.stringify(reviewLd)} />}
   <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />

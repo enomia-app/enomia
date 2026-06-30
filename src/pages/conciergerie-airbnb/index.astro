@@ -13,10 +13,11 @@ const cityByRegion = allRegions.map((r) => ({
   cities: cities.filter((c) => c.regionSlug === r.slug).sort((a, b) => b.activeListings - a.activeListings),
 })).filter((g) => g.cities.length > 0);
 
-// Aggregate rating across all conciergeries in all cities (for SERP stars)
-const allRatings = cities.flatMap((c) => c.conciergeries.map((cc) => ({ rating: cc.rating, reviews: cc.reviews })));
-const totalReviews = allRatings.reduce((s, r) => s + r.reviews, 0);
-const weightedRating = allRatings.reduce((s, r) => s + r.rating * r.reviews, 0) / totalReviews;
+// Aggregate rating across all conciergeries with verified reviews (for SERP stars)
+const ratedAll = cities.flatMap((c) => c.conciergeries).filter((cc) => cc.reviews > 0 && cc.rating > 0);
+const totalReviews = ratedAll.reduce((s, cc) => s + cc.reviews, 0);
+const weightedRating =
+  totalReviews > 0 ? ratedAll.reduce((s, cc) => s + cc.rating * cc.reviews, 0) / totalReviews : 0;
 
 const articleLd = {
   '@context': 'https://schema.org',
@@ -79,20 +80,24 @@ const faqLd = {
 
 // LocalBusiness schema with aggregateRating → enables star ratings in SERP
 // (Google requires a valid parent type: LocalBusiness, Product, etc., not standalone Review)
-const reviewLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Conciergerie Airbnb en France',
-  description: 'Services de gestion locative courte durée pour biens Airbnb en France',
-  url: canonical,
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: weightedRating.toFixed(1),
-    reviewCount: totalReviews,
-    bestRating: 5,
-    worstRating: 1,
-  },
-};
+// null when there are no verified reviews — avoids reviewCount:0 / out-of-range rating.
+const reviewLd =
+  totalReviews > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        name: 'Conciergerie Airbnb en France',
+        description: 'Services de gestion locative courte durée pour biens Airbnb en France',
+        url: canonical,
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: weightedRating.toFixed(1),
+          reviewCount: totalReviews,
+          bestRating: 5,
+          worstRating: 1,
+        },
+      }
+    : null;
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -107,7 +112,7 @@ const breadcrumbLd = {
 <ToolLayout title={title} description={description} canonical={canonical}>
   <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
-  <script type="application/ld+json" set:html={JSON.stringify(reviewLd)} />
+  {reviewLd && <script type="application/ld+json" set:html={JSON.stringify(reviewLd)} />}
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
 
   <style>

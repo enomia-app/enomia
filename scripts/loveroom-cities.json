@@ -313,19 +313,37 @@
     "slug": "le-mans",
     "displayName": "Le Mans",
     "searchVolume": 1210,
-    "status": "todo"
+    "status": "done",
+    "lat": 48.00579,
+    "lng": 0.20154,
+    "region": "Pays de la Loire",
+    "regionSlug": "pays-de-la-loire",
+    "radiusKm": 150,
+    "found": 39
   },
   {
     "slug": "aix-en-provence",
     "displayName": "Aix-en-Provence",
     "searchVolume": 1200,
-    "status": "todo"
+    "status": "done",
+    "lat": 43.5323,
+    "lng": 5.45097,
+    "region": "Provence-Alpes-Côte d'Azur",
+    "regionSlug": "provence-alpes-cote-dazur",
+    "radiusKm": 50,
+    "found": 37
   },
   {
     "slug": "valenciennes",
     "displayName": "Valenciennes",
     "searchVolume": 1200,
-    "status": "todo"
+    "status": "done",
+    "lat": 50.35711,
+    "lng": 3.51833,
+    "region": "Hauts-de-France",
+    "regionSlug": "hauts-de-france",
+    "radiusKm": 50,
+    "found": 39
   },
   {
     "slug": "limoges",

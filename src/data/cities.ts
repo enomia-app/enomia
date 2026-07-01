@@ -17760,6 +17760,576 @@ export const cities: City[] = [
     ],
     updatedAt: '2026-06-29',
   },
+  // ==========================================================================
+  // ALBI (Occitanie)
+  // ==========================================================================
+  {
+    slug: 'albi',
+    displayName: 'Albi',
+    region: 'Occitanie',
+    regionSlug: 'occitanie',
+    title: 'Conciergerie Albi Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Albi : comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 meilleures conciergeries Airbnb à Albi : commissions, services, avis, réglementation 2026 et quartiers rentables. Guide complet et neutre.",
+    kwPrincipal: 'conciergerie albi',
+    kwSecondaires: [
+      'conciergerie airbnb albi',
+      'meilleure conciergerie albi',
+      'gestion locative albi',
+      'location courte durée albi',
+      'conciergerie tarn',
+    ],
+    population: 51290,
+    tourists: 800000,
+    activeListings: 550,
+    priceLow: 65,
+    priceHigh: 120,
+    occupancyRate: 55,
+    revpar: 41,
+    seasonality:
+      "Saisonnalité patrimoniale et événementielle. Pic estival de juin à septembre porté par la Cité épiscopale classée à l'UNESCO (cathédrale Sainte-Cécile, musée Toulouse-Lautrec) et par le festival Pause Guitare début juillet, qui rassemble plus de 65 000 spectateurs et sature l'hébergement plusieurs semaines à l'avance. Rebond automnal en septembre-octobre avec le Grand Prix automobile et les festivals culturels. Marché de Noël en décembre. Creux hivernal de janvier à mars, partiellement soutenu par le tourisme d'affaires et universitaire.",
+    rankNational: 42,
+    introCustom:
+      "Vous avez un appartement dans le **centre historique d'Albi**, une maison de ville du côté de **Rochegude** ou un bien à deux pas de la cathédrale Sainte-Cécile, et vous le louez (ou envisagez de le louer) en courte durée.\n\nEntre les check-in du week-end, le linge à enchaîner entre deux séjours et les voyageurs qui débarquent pour le festival Pause Guitare, la question se pose vite : déléguer à une conciergerie, est-ce rentable ? Et surtout, laquelle choisir quand la plupart affichent « sur devis » ?\n\nJ'ai comparé les conciergeries réellement implantées à Albi et dans l'Albigeois — commissions, services, périmètre — pour vous aider à décider en connaissance de cause, sans jargon.",
+    marketIntro:
+      "Albi compte **51 290 habitants** (population légale INSEE) et vit à l'heure de sa **Cité épiscopale classée au patrimoine mondial de l'UNESCO depuis 2010** : la cathédrale Sainte-Cécile, plus grande cathédrale de brique au monde, et le musée Toulouse-Lautrec attirent à eux seuls plusieurs centaines de milliers de visiteurs chaque année.\n\nLe marché de la location courte durée y est porté par un tourisme culturel étalé et de gros pics événementiels, à commencer par le festival **Pause Guitare** début juillet (plus de 65 000 spectateurs au pied de la cathédrale). L'immobilier reste **accessible** — de l'ordre de 2 000 €/m² en moyenne, avec des quartiers sous ce seuil — ce qui soutient des rendements bruts solides pour une ville patrimoniale.\n\nCôté cadre légal, Albi n'est **pas classée en zone tendue** : la déclaration en mairie et un numéro d'enregistrement suffisent pour une résidence principale, une autorisation de changement d'usage étant requise pour les résidences secondaires. Un contexte plus souple que sur le littoral, qui laisse encore de la place aux nouveaux projets bien montés.",
+    conciergeries: [
+      {
+        name: 'La Lodge Conciergerie',
+        url: 'https://lalodgeconciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Albi centre (boulevard Carnot), gestion complète clé en main",
+        description:
+          "La Lodge Conciergerie est implantée boulevard Carnot, en plein centre d'Albi, et propose une gestion complète de la location courte durée : création et optimisation des annonces, shooting photo, tarification, communication voyageurs, ménage professionnel, blanchisserie et livret d'accueil numérique. Le service est piloté par Charlène et Lloyd, avec un positionnement de proximité et un interlocuteur unique. La commission n'est pas affichée publiquement et se définit sur devis selon le périmètre et le bien. Pertinente pour un propriétaire albigeois qui cherche une prise en charge intégrale, sans jongler entre plusieurs prestataires, et qui privilégie un acteur central, facilement joignable pour les arrivées en ville. Comme pour tout acteur, demandez des références de biens gérés à Albi avant de signer.",
+      },
+      {
+        name: 'Blissva',
+        url: 'https://www.blissva.fr/conciergerie/',
+        commission: '14 % (< 50 m²) / 17 % (> 50 m²)',
+        menage: 'inclus dans la prestation',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Albigeois (Terssac), commission affichée et ménage qualité hôtelière",
+        description:
+          "Blissva est domiciliée à Terssac, dans l'agglomération albigeoise, et couvre Albi et Gaillac. C'est l'un des rares acteurs du secteur à afficher publiquement sa grille : 14 % de commission pour les biens de moins de 50 m² et 17 % au-delà, avec une option « à la carte » pour le ménage seul facturé au taux horaire. La prestation comprend un ménage professionnel de qualité hôtelière entre chaque séjour, le linge, et une gestion guest-to-guest coordonnée par un interlocuteur unique. Pertinente pour un propriétaire qui veut un taux de commission lisible et engageant, plutôt qu'un devis opaque, et qui accorde de l'importance à la propreté du bien. Le point à vérifier : le périmètre exact des services inclus dans chaque formule.",
+      },
+      {
+        name: 'NDO Design Conciergerie',
+        url: 'https://www.ndodesign.fr/conciergerie/',
+        commission: 'sur devis',
+        menage: 'selon formule (inclus au Pack Sérénité)',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Albi et Tarn Nord, conciergerie et décoration, packs modulables",
+        description:
+          "NDO Design Conciergerie associe gestion locative courte durée et décoration d'intérieur, sur Albi et le Tarn Nord (Lescure-d'Albigeois, Carmaux, Gaillac, Saint-Juéry, Marssac). L'offre est organisée en packs modulables : du « Pack Essentiel » (digital, annonces, communication) au « Pack Sérénité » (gestion complète avec ménage entre séjours et linge inclus). La commission se définit sur devis selon la formule retenue. Pertinente pour un propriétaire qui veut composer son niveau de service, du simple accompagnement digital à la gestion intégrale, et qui apprécie l'angle aménagement/décoration pour valoriser un bien sur les plateformes. Demandez le détail de ce qui bascule d'une formule à l'autre pour comparer à net constant.",
+      },
+      {
+        name: 'Niddoo',
+        url: 'https://www.niddoo.fr/',
+        commission: 'sur devis',
+        menage: 'via partenaires locaux',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Albi, gestion personnalisée de résidences secondaires",
+        description:
+          "Niddoo est une conciergerie saisonnière albigeoise créée en 2022 et gérée directement par Anne Girod, qui mise sur une relation personnelle plutôt que sur un channel manager externe. Elle s'adresse en priorité aux propriétaires de résidences secondaires et travaille avec des sociétés de ménage locales (produits professionnels, rotation possible sous 24 h). Partenaire des principales plateformes (Airbnb, Booking, Abritel) et de Gîtes de France, elle promet une gestion à taille humaine avec réponse sous 48 h. La commission se définit sur devis. Pertinente pour un propriétaire qui privilégie un interlocuteur unique et impliqué, disponible et proche du terrain, plutôt qu'une structure industrialisée. Le corollaire d'une petite structure : une capacité de prise en charge forcément limitée, donc à réserver à l'avance.",
+      },
+      {
+        name: 'Freedom Keys',
+        url: 'https://freedomkeys.fr/conciergerie/',
+        commission: 'sur devis',
+        menage: 'via prestataires (ménage complet sur devis)',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Albi et Tarn, conciergerie privée ancrée dans le tissu local",
+        description:
+          "Freedom Keys est une conciergerie privée intervenant sur Albi et le Tarn (Albi centre, Aiguelèze, Marssac, Graulhet, Saint-Grégoire, Trébas). Son positionnement met en avant les partenariats avec des artisans et entrepreneurs locaux pour l'entretien, le ménage et la maintenance, avec un ménage et une blanchisserie confiés à des prestataires et un ménage complet chiffré sur devis. La commission n'est pas publiée. Pertinente pour un propriétaire disposant d'un bien en périphérie d'Albi ou dans le vignoble tarnais, qui cherche un acteur couvrant un large secteur départemental plutôt que le seul centre-ville. Faute de grille publique, demandez un devis détaillé précisant ce qui est inclus et ce qui reste refacturé au voyageur.",
+      },
+      {
+        name: 'Clénéa Conciergerie',
+        url: 'https://www.clenea-conciergerie.fr/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Albi et secteur albigeois, accompagnement complet et home-sitting",
+        description:
+          "Clénéa Conciergerie propose un accompagnement complet de la location courte durée sur Albi et le secteur albigeois : gestion digitale des annonces, home-sitting (surveillance et entretien des résidences secondaires), shooting photo et services aux voyageurs. Le périmètre exact des prestations et la commission se définissent sur devis, la grille n'étant pas publiée. Pertinente pour un propriétaire qui cherche un acteur local capable de couvrir aussi la surveillance d'un bien secondaire entre deux locations, au-delà de la seule mise en ligne. Comme pour les autres acteurs sans tarif affiché, contactez-la directement pour obtenir une proposition chiffrée et des références de biens gérés à Albi, afin de comparer à net constant.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre historique / Cité épiscopale',
+        pricePerNight: '75-130 €',
+        occupancy: 62,
+        description:
+          "Cœur patrimonial d'Albi, autour de la cathédrale Sainte-Cécile et du palais de la Berbie, classé à l'UNESCO. Appartements anciens en brique très recherchés par les voyageurs qui veulent tout faire à pied. Demande régulière toute l'année, saturée pendant Pause Guitare et l'été. C'est l'emplacement le plus polyvalent et le plus valorisé pour la location courte durée, avec un ticket d'achat plus élevé que la moyenne albigeoise.",
+        roiBrut: '5,5 à 7,5 %',
+      },
+      {
+        name: 'Le Vigan / Rochegude',
+        pricePerNight: '70-120 €',
+        occupancy: 55,
+        description:
+          "Quartiers résidentiels prisés autour de la place du Vigan et du jardin national, à quelques minutes à pied du centre historique. Bel habitat bourgeois, commerces et vie de quartier. Cible une clientèle qui veut la proximité du patrimoine sans l'affluence du cœur touristique. Demande solide, tickets d'entrée corrects et rendement brut équilibré.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'La Madeleine (rive droite)',
+        pricePerNight: '65-110 €',
+        occupancy: 54,
+        description:
+          "Sur la rive droite du Tarn, face à la Cité épiscopale, ce quartier offre les plus belles vues sur la cathédrale et le Pont-Vieux. Habitat mixte, ambiance de village dans la ville, tickets d'entrée un peu plus mesurés que le centre classé. Cible les voyageurs en quête de la carte postale albigeoise. Bon compromis entre attractivité touristique et prix d'achat.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Rayssac',
+        pricePerNight: '60-100 €',
+        occupancy: 50,
+        description:
+          "Quartier résidentiel de l'ouest albigeois, calme et bien desservi, apprécié des familles et des séjours de moyenne durée. À l'écart du flux touristique immédiat mais à quelques minutes du centre. Prix d'achat accessibles. Demande courte durée plus diffuse, davantage tirée par la clientèle d'affaires et les visites familiales que par le tourisme patrimonial.",
+        roiBrut: '6 à 8 %',
+      },
+      {
+        name: 'Cantepau',
+        pricePerNight: '55-95 €',
+        occupancy: 48,
+        description:
+          "Quartier populaire au nord-est du centre, parmi les tickets d'entrée les plus bas d'Albi. Habitat en renouvellement, bien relié au cœur de ville. Cible une clientèle au budget mesuré et des séjours plus longs. Demande touristique faible, mais le prix d'achat accessible peut soutenir un rendement brut élevé pour qui vise le volume et la location moyenne durée.",
+        roiBrut: '6,5 à 9 %',
+      },
+      {
+        name: 'Breuil-Mazicou',
+        pricePerNight: '55-95 €',
+        occupancy: 47,
+        description:
+          "Secteur résidentiel du nord d'Albi, l'un des plus abordables de la ville pour l'appartement. Environnement calme, adapté aux familles et aux séjours de travail prolongés. Éloigné du centre historique, il vise moins le tourisme de passage que la demande liée à l'activité économique et universitaire albigeoise. Ticket d'entrée bas et rendement brut potentiellement attractif sur la moyenne durée.",
+        roiBrut: '6,5 à 9 %',
+      },
+    ],
+    regulation:
+      "Albi encadre la location de meublés de tourisme sans pour autant fermer le marché : la ville n'est **pas classée en zone tendue** — aucune commune du Tarn ne figure au décret de 2023 — ce qui la distingue nettement des grandes métropoles et du littoral.\n\n**Déclaration et numéro d'enregistrement obligatoires.** Tout meublé de tourisme doit être déclaré en mairie via la téléprocédure et se voir attribuer un numéro à faire figurer sur chaque annonce. La démarche vaut pour les résidences principales comme secondaires.\n\n**Changement d'usage pour les résidences secondaires.** Un logement qui n'est pas la résidence principale du loueur doit obtenir une autorisation de changement d'usage auprès de la mairie avant d'être exploité en meublé de tourisme.\n\n**Résidence principale : 120 nuitées par an.** La location d'une résidence principale reste possible jusqu'à 120 jours par an, sous réserve de l'enregistrement.\n\n**Enregistrement national au 20 mai 2026.** En application de la loi Le Meur, le téléservice national se généralise (numéro à 13 chiffres) et le DPE devient un critère d'éligibilité pour les biens soumis au changement d'usage.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Pour un meublé non classé, Albi applique 5 % du prix de la nuitée hors taxes, plafonné à 3,02 € par personne et par nuit, majoré des taxes additionnelles départementale et régionale. Les meublés classés relèvent d'un barème forfaitaire par catégorie d'étoiles.\n\nEn pratique, le cadre albigeois reste l'un des plus abordables parmi les villes touristiques : pas de quota ni de zone saturée, mais un formalisme — déclaration, puis changement d'usage pour le secondaire — qu'une conciergerie locale gère en routine.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 80,
+      neighborhood: 'centre historique',
+      revenuBrut: 14500,
+      commissionRate: 0.18,
+      menageCount: 50,
+      menageUnitCost: 55,
+    },
+    extraFaq: [
+      {
+        q: 'Combien coûte une conciergerie Airbnb à Albi ?',
+        a: "À Albi, la plupart des conciergeries fonctionnent sur devis ; un seul acteur affiche publiquement une grille (Blissva : 14 % pour les biens de moins de 50 m², 17 % au-delà). Sur des marchés comparables, les commissions s'échelonnent généralement de 15 % à 25 % selon le périmètre et le bien. Mais le taux ne fait pas tout : le critère décisif est le traitement du ménage (refacturé au voyageur ou pris sur votre marge, ce qui change fortement le net qui vous revient), ainsi que les éventuels frais annexes (mise en ligne, photos, abonnement). Demandez toujours un devis détaillé et comparez à net constant entre plusieurs acteurs locaux.",
+      },
+      {
+        q: 'Faut-il une autorisation pour louer en Airbnb à Albi ?',
+        a: "Oui, mais le cadre reste souple comparé aux grandes villes. Tout meublé de tourisme doit être déclaré en mairie et obtenir un numéro d'enregistrement à afficher sur l'annonce. Si le logement n'est pas votre résidence principale, une autorisation de changement d'usage est en outre requise. En revanche, Albi n'est pas en zone tendue : il n'y a ni quota ni secteur saturé fermé aux nouveaux meublés, contrairement au littoral ou aux métropoles. Une résidence principale reste louable jusqu'à 120 jours par an. À partir de mai 2026, l'enregistrement bascule sur le téléservice national à 13 chiffres prévu par la loi Le Meur.",
+      },
+      {
+        q: 'Quel quartier d\'Albi privilégier pour un investissement Airbnb ?',
+        a: "Pour la location courte durée, le centre historique et la Cité épiscopale offrent la meilleure demande touristique (tout à pied, patrimoine UNESCO), pour un rendement brut souvent compris entre 5,5 et 7,5 % du fait d'un prix d'achat plus élevé. Les quartiers du Vigan-Rochegude et de La Madeleine, sur la rive droite face à la cathédrale, constituent de bons compromis entre attractivité et prix. Pour viser un rendement brut plus élevé, les secteurs plus abordables comme Cantepau ou Breuil-Mazicou peuvent convenir, mais avec une demande davantage tirée par la clientèle d'affaires et universitaire que par le tourisme patrimonial.",
+      },
+      {
+        q: 'La location courte durée est-elle rentable à Albi ?',
+        a: "Oui, à condition de bien calibrer son bien. Albi combine des prix d'achat accessibles (autour de 2 000 €/m² en moyenne, moins dans certains quartiers) et une demande soutenue par un tourisme patrimonial UNESCO et de gros événements comme Pause Guitare. Un T2 dans le centre loué autour de 80 €/nuit peut générer un revenu brut de l'ordre de 14 000 à 15 000 € par an, avec des pics l'été et lors des festivals. La saisonnalité est réelle (creux hivernal), mais partiellement compensée par la clientèle d'affaires et universitaire. Le cadre réglementaire souple (pas de zone tendue) reste un atout par rapport à d'autres villes touristiques.",
+      },
+    ],
+    updatedAt: '2026-07-01',
+  },
+  // ==========================================================================
+  // LE LAVANDOU (Provence-Alpes-Côte d'Azur)
+  // ==========================================================================
+  {
+    slug: 'le-lavandou',
+    displayName: 'Le Lavandou',
+    region: 'Provence-Alpes-Côte d\'Azur',
+    regionSlug: 'provence-alpes-cote-dazur',
+    title: 'Conciergerie Le Lavandou Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Le Lavandou : comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 conciergeries Airbnb au Lavandou : commissions, services, avis, réglementation 2026 (enregistrement, changement d'usage) et quartiers.",
+    kwPrincipal: 'conciergerie le lavandou',
+    kwSecondaires: [
+      'conciergerie airbnb le lavandou',
+      'conciergerie lavandou',
+      'gestion locative le lavandou',
+      'location saisonnière le lavandou',
+      'conciergerie var',
+    ],
+    population: 6646,
+    tourists: 500000,
+    activeListings: 1130,
+    priceLow: 120,
+    priceHigh: 260,
+    occupancyRate: 57,
+    revpar: 95,
+    seasonality:
+      "Saisonnalité estivale très marquée, typique des stations balnéaires du Var. Pic juillet-août (occupation autour de 84 % en août, tarifs à leur maximum) porté par les douze plages de la commune et une clientèle familiale à 60 %. La commune a enregistré 2,3 millions de nuitées en 2024, un record. Ailes de saison correctes en mai-juin et septembre, quand la météo reste clémente et les tarifs plus doux. Creux hivernal prononcé de novembre à mars, la station vivant essentiellement au rythme de la belle saison.",
+    rankNational: 22,
+    introCustom:
+      "Vous avez un appartement à **Saint-Clair**, une villa du côté d'**Aiguebelle** ou de **Cavalière**, ou un bien avec vue mer au cœur du **village du Lavandou**, et vous le louez en saisonnier sur la Côte des Maures.\n\nIci, deux sujets se cumulent : bien exploiter un marché ultra-estival où tout se joue sur juillet-août, et respecter une réglementation qui s'est durcie — numéro d'enregistrement obligatoire et, pour une résidence secondaire, autorisation de changement d'usage. Autant s'entourer d'une conciergerie qui maîtrise les deux.\n\nJ'ai comparé les acteurs réellement présents au Lavandou et à Bormes-les-Mimosas — services, commissions, périmètre — pour vous aider à choisir en connaissance de cause.",
+    marketIntro:
+      "Le Lavandou ne compte que **6 646 habitants** à l'année, mais sa population explose l'été : la commune, surnommée « la ville aux douze sables » pour ses douze plages, a enregistré **2,3 millions de nuitées en 2024**, un record.\n\nLe marché de la location courte durée y est l'un des plus tendus du Var, avec une saisonnalité extrême : l'essentiel du chiffre se fait sur juillet-août (occupation proche de 84 % en août), pour des tarifs parmi les plus élevés de la côte varoise. L'immobilier est à l'avenant — autour de **6 700 €/m²** pour un appartement, davantage pour une villa — un ticket d'entrée élevé qui suppose de bien calibrer son exploitation.\n\nLa réglementation s'est **resserrée** : numéro d'enregistrement obligatoire pour tout meublé de tourisme, et autorisation de changement d'usage exigée en amont pour les résidences secondaires. Dans ce contexte, une conciergerie locale qui connaît à la fois la clientèle estivale et le dossier administratif fait gagner un temps précieux.",
+    conciergeries: [
+      {
+        name: 'Conciergerie Suzette',
+        url: 'https://www.conciergerie-suzette.fr/',
+        commission: 'sur devis',
+        menage: 'inclus (qualité hôtelière)',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 65,
+        specialty: "Le Lavandou (Nouveau Port), gestion complète qualité hôtelière",
+        description:
+          "Conciergerie Suzette est installée place de l'Étoile, au Nouveau Port du Lavandou (avec un second bureau à Hyères), et gère une soixantaine de logements sur le secteur : Le Lavandou, Bormes-les-Mimosas, La Londe-les-Maures et Hyères. Son positionnement met en avant des prestations de qualité hôtelière (ménage professionnel, kit d'accueil) et une gestion complète de la location saisonnière. La commission n'est pas affichée et se définit sur devis. C'est l'un des acteurs les plus solidement implantés localement, avec une adresse en centre-station qui facilite les arrivées et la réactivité en pleine saison. Pertinente pour un propriétaire qui veut confier son bien à une structure ancrée au Lavandou et rodée aux pics estivaux. Demandez le détail des services inclus et un devis chiffré avant de vous engager.",
+      },
+      {
+        name: 'Conciergerie BONNI',
+        url: 'https://bonni.fr/conciergerie-airbnb-lavandou/',
+        commission: 'à partir de 10 % du CA net',
+        menage: 'inclus (intervention hôtelière + linge)',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Le Lavandou et plages (Saint-Clair, Aiguebelle, Cavalière), tarif d'entrée bas",
+        description:
+          "Conciergerie BONNI propose une gestion clé en main de la location courte durée sur Le Lavandou et ses plages (Saint-Clair, Aiguebelle, Cavalière, Pramousquier, Le Layet, village), avec l'un des rares taux d'entrée annoncés du secteur : à partir de 10 % du chiffre d'affaires net. La prestation comprend une intervention de type hôtelier après chaque séjour, le linge et une optimisation tarifaire dynamique. Pertinente pour un propriétaire attentif au taux de commission qui cherche un acteur couvrant précisément les différents secteurs de plage du Lavandou. À vérifier, comme toujours avec un « à partir de » : le périmètre réellement inclus à ce taux et les prestations facturées en supplément, pour comparer à net constant avec un devis complet.",
+      },
+      {
+        name: 'La Conciergerie des Mimosas',
+        url: 'https://conciergeriedesmimosas.fr/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Le Lavandou et Bormes-les-Mimosas, gestion locative avec carte professionnelle",
+        description:
+          "La Conciergerie des Mimosas intervient entre Le Lavandou et Bormes-les-Mimosas et présente la particularité de disposer d'une carte professionnelle immobilière avec garanties financières, en combinant gestion de meublés de vacances et transaction. Cette double casquette peut rassurer un propriétaire qui envisage à terme d'acheter ou de revendre sur le secteur. Le périmètre des prestations et la commission se définissent sur devis. Pertinente pour un propriétaire cherchant un interlocuteur encadré juridiquement et présent sur les deux communes voisines, au-delà de la seule conciergerie. Faute de grille publique, demandez une proposition chiffrée précisant le traitement du ménage et des frais annexes, ainsi que des références de biens gérés localement.",
+      },
+      {
+        name: 'Conciergerie Janua',
+        url: 'https://conciergeriejanua.fr/',
+        commission: 'sur devis',
+        menage: 'inclus (intendance + entretien)',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Bormes-les-Mimosas et Le Lavandou, locations de standing",
+        description:
+          "Conciergerie Janua, dirigée par Coraline Guyon, se positionne sur la location saisonnière de standing (appartements, maisons et villas) entre Bormes-les-Mimosas et Le Lavandou. La prestation couvre l'intendance et l'entretien via un réseau de partenaires, avec un soin particulier apporté à l'accueil. La commission se définit sur devis selon le bien et le niveau de service. Pertinente pour un propriétaire d'un bien haut de gamme ou d'une villa avec prestations, qui recherche une gestion soignée plutôt qu'un service standardisé. Comme pour les autres acteurs sans tarif affiché, demandez un devis détaillé et des références de biens comparables au vôtre sur le secteur avant de choisir.",
+      },
+      {
+        name: 'La Parenthèse Conciergerie',
+        url: 'https://www.lpconciergerie.com/copie-de-conciergerie-le-lavandou',
+        commission: 'sur devis (pourcentage ou forfait)',
+        menage: 'inclus (entretien + contrôle qualité)',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Secteur Hyères–Le Lavandou, gestion complète courte durée",
+        description:
+          "La Parenthèse Conciergerie est basée à Hyères et étend son périmètre jusqu'au Lavandou. Elle propose une gestion complète de la location courte durée, avec un choix entre commission sur les revenus locatifs ou forfait mensuel, un entretien complet et un contrôle qualité après chaque séjour. Pertinente pour un propriétaire situé sur l'axe Hyères–Le Lavandou qui apprécie la souplesse d'un modèle tarifaire au choix (pourcentage ou forfait). À noter : le siège n'est pas au Lavandou même, ce qui peut jouer sur la réactivité en cœur de station lors des pics estivaux — un point à valider selon l'emplacement précis de votre bien. Demandez un devis chiffrant les deux formules pour comparer.",
+      },
+      {
+        name: 'SELECT\'soHOME',
+        url: 'https://www.selectsohome.com/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Bormes-les-Mimosas et Le Lavandou, location de vacances et offre propriétaire",
+        description:
+          "SELECT'soHOME propose de la location de vacances sur Bormes-les-Mimosas et Le Lavandou, assortie d'une offre destinée aux propriétaires qui souhaitent confier la mise en location et la gestion de leur bien. Le périmètre exact des prestations et la commission ne sont pas publiés et se définissent sur devis. Pertinente pour un propriétaire du secteur qui veut multiplier les devis locaux afin de comparer plusieurs acteurs réellement présents sur les deux communes. En l'absence de grille publique, contactez directement la structure pour obtenir une proposition chiffrée, le détail du traitement du ménage et des références de biens gérés, avant tout engagement.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Village / Nouveau Port',
+        pricePerNight: '110-220 €',
+        occupancy: 62,
+        description:
+          "Cœur animé du Lavandou, entre le vieux village, les commerces et le Nouveau Port. Appartements et studios très recherchés pour tout faire à pied — plage, restaurants, marché. C'est l'emplacement le plus polyvalent, demandé sur une saison plus large que les plages excentrées. Tarifs élevés en été, ticket d'achat parmi les plus hauts de la commune. Occupation soutenue de mai à septembre.",
+        roiBrut: '4 à 5,5 %',
+      },
+      {
+        name: 'Saint-Clair',
+        pricePerNight: '130-250 €',
+        occupancy: 60,
+        description:
+          "Première grande plage à l'est du village, l'une des plus prisées de la commune avec son long ruban de sable. Résidences et villas face à la mer, clientèle familiale haut de gamme. Tarifs estivaux au sommet, réservations très anticipées. Ticket d'entrée élevé qui modère le rendement brut, mais occupation et prix maximaux sur juillet-août.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'La Fossette',
+        pricePerNight: '130-250 €',
+        occupancy: 58,
+        description:
+          "Petite crique intimiste entre Saint-Clair et Aiguebelle, cadre verdoyant et confidentiel prisé d'une clientèle en quête de calme. Biens plus rares, souvent des villas ou appartements de standing. Demande concentrée sur la haute saison, tarifs soutenus. Rendement brut modéré du fait de prix d'achat élevés, mais fort pouvoir d'attraction estival.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Aiguebelle',
+        pricePerNight: '120-230 €',
+        occupancy: 58,
+        description:
+          "Station balnéaire résidentielle réputée pour sa plage et son ambiance familiale, à l'est du Lavandou. Appartements et villas avec vue mer, clientèle fidèle qui revient chaque été. Tarifs élevés en saison, occupation concentrée sur la belle saison. Secteur valorisé où le ticket d'achat pèse sur le rendement brut, compensé par des nuitées estivales élevées.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Cavalière',
+        pricePerNight: '120-240 €',
+        occupancy: 57,
+        description:
+          "Grande plage prisée du secteur est, bordée de résidences et de villas, appréciée pour sa baie abritée et ses activités nautiques. Clientèle familiale et de standing sur juillet-août. Tarifs élevés en saison, demande très saisonnière. Prix d'achat parmi les plus hauts de la commune, rendement brut modéré mais tarifs nuitée au plus haut l'été.",
+        roiBrut: '3,5 à 5 %',
+      },
+      {
+        name: 'Pramousquier / Le Layet',
+        pricePerNight: '110-220 €',
+        occupancy: 54,
+        description:
+          "Extrémité est de la commune, secteurs les plus confidentiels et naturels, entre criques et plages plus sauvages (dont Le Layet). Biens rares, cible une clientèle en quête d'intimité et de nature. Demande fortement concentrée sur le cœur de l'été. Rendement brut contenu par les prix, mais forte désirabilité et tarifs soutenus en pleine saison.",
+        roiBrut: '3,5 à 5 %',
+      },
+    ],
+    regulation:
+      "Le Lavandou fait partie des communes touristiques du Var qui ont **resserré** l'accès à la location courte durée pour préserver le logement des résidents. C'est un point à intégrer avant tout projet.\n\n**Numéro d'enregistrement obligatoire.** Tout meublé de tourisme et toute chambre d'hôtes doivent obtenir un numéro d'enregistrement (déclaration gratuite via la téléprocédure) à afficher sur chaque annonce.\n\n**Changement d'usage pour les résidences secondaires — en amont.** Lorsqu'il s'agit d'une résidence secondaire, une autorisation de changement d'usage doit être obtenue avant même la demande de numéro d'enregistrement. La mairie suit ces autorisations et rappelle qu'elles peuvent expirer : le dossier n'est pas un simple formulaire.\n\n**Loi Le Meur.** Le cadre national renforce les pouvoirs de la commune (abaissement possible du plafond de nuitées d'une résidence principale, quotas d'autorisations, compensation) et impose l'enregistrement national unifié au plus tard le 20 mai 2026. Le défaut de numéro expose à une amende et au retrait de l'annonce.\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** Pour un meublé non classé, la taxe s'élève à 5 % du coût de la nuitée hors taxes, plafonnée à 4,60 € par personne et par nuit, majorée des parts départementale (10 %) et régionale (34 %). Les hébergements classés relèvent d'un tarif fixe par catégorie.\n\nConcrètement, viser une résidence principale ou reprendre un bien déjà autorisé est plus sûr que de parier sur l'obtention d'un changement d'usage. C'est exactement le type de dossier où une conciergerie implantée localement, qui connaît l'état des autorisations, évite les mauvaises surprises.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 40,
+      pricePerNight: 160,
+      neighborhood: 'Saint-Clair',
+      revenuBrut: 22000,
+      commissionRate: 0.2,
+      menageCount: 40,
+      menageUnitCost: 80,
+    },
+    extraFaq: [
+      {
+        q: 'Combien coûte une conciergerie Airbnb au Lavandou ?',
+        a: "Au Lavandou, la plupart des conciergeries fonctionnent sur devis ; un acteur affiche un taux d'entrée (BONNI, à partir de 10 % du chiffre d'affaires net). Sur les marchés balnéaires comparables du Var, les commissions s'échelonnent généralement de 18 % à 30 % selon le périmètre et le standing du bien. Le taux affiché ne suffit pas à décider : vérifiez le traitement du ménage (refacturé au voyageur ou inclus), les frais annexes (photos, mise en ligne, linge) et surtout la capacité de l'agence à gérer les pics de juillet-août. Demandez un devis détaillé et comparez à net constant, car sur un marché ultra-saisonnier la performance de mise en location compte autant que la commission.",
+      },
+      {
+        q: 'Peut-on encore créer un meublé de tourisme au Lavandou en 2026 ?',
+        a: "C'est possible mais encadré, et c'est le point à vérifier avant tout achat. Le Lavandou impose un numéro d'enregistrement pour tout meublé de tourisme, et surtout une autorisation de changement d'usage préalable pour les résidences secondaires — à obtenir avant même le numéro. La commune suit ces autorisations et rappelle qu'elles peuvent expirer. La loi Le Meur donne par ailleurs à la mairie des leviers supplémentaires (quotas, abaissement du plafond de nuitées d'une résidence principale, compensation). Reprendre un bien déjà autorisé ou exploiter une résidence principale est donc plus sûr que de parier sur un nouveau changement d'usage. Renseignez-vous en mairie sur la situation précise du secteur visé.",
+      },
+      {
+        q: 'Quel est le meilleur secteur du Lavandou pour investir en location saisonnière ?',
+        a: "Tout dépend de votre objectif. Le village et le Nouveau Port offrent la saison la plus large (tout à pied, demande étalée de mai à septembre) et la meilleure polyvalence, pour un rendement brut de l'ordre de 4 à 5,5 %. Les plages de l'est — Saint-Clair, La Fossette, Aiguebelle, Cavalière — affichent les tarifs nuitée les plus élevés en juillet-août mais des prix d'achat très hauts qui modèrent le rendement brut (souvent 3,5 à 5 %). Les secteurs plus confidentiels comme Pramousquier ou Le Layet séduisent une clientèle en quête d'intimité, avec une demande concentrée sur le cœur de l'été. Dans tous les cas, la contrainte du changement d'usage prime sur le choix de l'emplacement.",
+      },
+      {
+        q: 'Quelle rentabilité pour un Airbnb au Lavandou ?',
+        a: "Le Lavandou offre des tarifs nuitée parmi les plus élevés de la côte varoise en été, mais un ticket d'entrée immobilier très haut (autour de 6 700 €/m² pour un appartement) et une saisonnalité extrême qui concentrent l'essentiel du chiffre sur juillet-août. Un T2 proche des plages loué autour de 160 €/nuit en moyenne de saison peut générer un revenu brut de l'ordre de 20 000 à 24 000 € par an, l'occupation dépassant 80 % en août mais chutant fortement l'hiver. Les rendements bruts se situent souvent entre 3,5 et 5,5 % selon le secteur : on est ici sur un marché patrimonial de valorisation et de plaisir, où l'optimisation de la haute saison par une conciergerie locale fait une réelle différence.",
+      },
+    ],
+    updatedAt: '2026-07-01',
+  },
+  // ==========================================================================
+  // VALENCIENNES (Hauts-de-France)
+  // ==========================================================================
+  {
+    slug: 'valenciennes',
+    displayName: 'Valenciennes',
+    region: 'Hauts-de-France',
+    regionSlug: 'hauts-de-france',
+    title: 'Conciergerie Valenciennes Airbnb : comparatif 2026 des 6 meilleures agences',
+    metaTitle: 'Conciergerie Airbnb Valenciennes : comparatif 2026',
+    metaDescription:
+      "Comparatif des 6 conciergeries Airbnb à Valenciennes : commissions, services, avis, réglementation 2026 et quartiers rentables. Guide complet et neutre.",
+    kwPrincipal: 'conciergerie valenciennes',
+    kwSecondaires: [
+      'conciergerie airbnb valenciennes',
+      'meilleure conciergerie valenciennes',
+      'gestion locative valenciennes',
+      'location courte durée valenciennes',
+      'conciergerie hainaut',
+    ],
+    population: 42979,
+    tourists: 250000,
+    activeListings: 320,
+    priceLow: 55,
+    priceHigh: 95,
+    occupancyRate: 58,
+    revpar: 40,
+    seasonality:
+      "Saisonnalité peu marquée, atypique pour une page conciergerie : la demande est tirée par le tourisme d'affaires — usine Toyota d'Onnaing, sous-traitants automobiles, pôle image et écoles Rubika — et s'étale sur toute l'année, avec une prédominance des nuitées en semaine et des séjours de moyenne durée (missions, intérim, cadres détachés). Pics ponctuels lors des congrès, des rentrées universitaires, des événements et des matchs du VAFC. Absence de creux estival profond, ce qui sécurise un taux d'occupation régulier plutôt que dépendant de deux mois d'été.",
+    rankNational: 60,
+    introCustom:
+      "Vous avez un appartement près de la **Place d'Armes**, un bien dans le **quartier du musée des Beaux-Arts** ou une maison de ville côté **Saint-Waast**, et vous le louez (ou voulez le louer) en courte durée à Valenciennes.\n\nIci, la donne est particulière : la demande n'est pas touristique mais **économique**. L'usine Toyota d'Onnaing, ses sous-traitants, le pôle image et les écoles Rubika alimentent un flux régulier de missions, d'intérim et de séjours semaine — une occupation étalée sur l'année plutôt qu'un pic estival. Encore faut-il une conciergerie qui sait adresser cette clientèle professionnelle.\n\nJ'ai comparé les conciergeries réellement actives à Valenciennes et dans son agglomération — commissions, services, périmètre — pour vous aider à choisir.",
+    marketIntro:
+      "Valenciennes compte **42 979 habitants** (INSEE) et son agglomération dépasse les 190 000, au cœur d'un bassin économique redynamisé par l'automobile et le numérique. Ici, la demande de location courte durée est avant tout **professionnelle** : l'usine **Toyota d'Onnaing** et ses milliers d'emplois, les sous-traitants de la filière, le pôle image (Serre Numérique) et les écoles **Rubika** génèrent un flux régulier de séjours semaine, de missions et de détachements.\n\nContrairement aux villes littorales, la saisonnalité y est **faible** : l'occupation est étalée sur l'année, avec des pics lors des congrès, des rentrées universitaires et des matchs du VAFC. C'est un profil rassurant pour un investisseur, moins dépendant de deux mois d'été.\n\nL'immobilier reste **très accessible** pour un centre urbain — de l'ordre de 1 900 à 2 000 €/m² pour un appartement selon les quartiers — ce qui, combiné à une demande régulière, place Valenciennes parmi les marchés au rendement brut intéressant des Hauts-de-France. Côté réglementation, la ville applique le cadre national (déclaration et numéro d'enregistrement) sans dispositif local de zone tendue identifié à ce jour.",
+    conciergeries: [
+      {
+        name: 'La Pépite Immobilier',
+        url: 'https://www.lapepite-immobilier.fr/location-meuble-tourisme',
+        commission: '20 % du revenu par réservation',
+        menage: 'inclus (ménage +18 € TTC/h en supplément)',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Valenciennes centre (rue de Paris), gestion totale clé en main",
+        description:
+          "La Pépite Immobilier est domiciliée 55 rue de Paris, en plein centre de Valenciennes, et combine agence immobilière et gestion complète de meublés de tourisme. C'est l'un des rares acteurs à afficher une commission ferme : 20 % du revenu total par réservation, l'entretien après chaque location étant inclus, avec un ménage supplémentaire facturé 18 € TTC de l'heure et le changement du linge compris. Le service couvre le home staging, les photos professionnelles, la mise en ligne et la maintenance 7 j/7, pour des résidences principales comme secondaires (LMNP/LMP). Pertinente pour un propriétaire valenciennois qui veut un interlocuteur local avec pignon sur rue, un tarif lisible et la sécurité d'une agence détentrice d'une carte professionnelle. Demandez le détail des frais annexes pour comparer à net constant.",
+      },
+      {
+        name: 'Lockypnoz',
+        url: 'https://www.lockypnoz.fr/',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Valenciennes, conciergerie Airbnb et sous-location professionnelle",
+        description:
+          "Lockypnoz se présente comme une conciergerie Airbnb et un acteur de la sous-location professionnelle à Valenciennes. L'offre couvre la gestion de la location courte durée pour les propriétaires, avec un positionnement tourné vers l'optimisation des revenus. Le périmètre exact des prestations et la commission ne sont pas publiés et se définissent sur devis. Pertinente pour un propriétaire valenciennois qui souhaite comparer plusieurs acteurs réellement présents en ville avant de choisir. En l'absence de grille tarifaire publique, contactez directement la structure pour obtenir une proposition chiffrée, le détail du traitement du ménage et des références de biens gérés localement, afin de comparer objectivement avec les autres conciergeries du secteur.",
+      },
+      {
+        name: 'Conciergerie du Hainaut',
+        url: 'https://www.conciergerieduhainaut.fr/',
+        commission: 'sur devis',
+        menage: 'inclus (ménage et maintenance)',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Hainaut (Maubeuge, Valenciennes, Cambrai), gestion complète",
+        description:
+          "Conciergerie du Hainaut couvre un large secteur du sud du département — Maubeuge, Valenciennes, Cambrai et alentours — depuis son siège de Rousies, près de Maubeuge. Elle propose une gestion complète de la location courte durée : création et diffusion des annonces, communication voyageurs, optimisation tarifaire, ménage et maintenance. La commission se définit sur devis selon le bien et le périmètre. Pertinente pour un propriétaire de l'agglomération valenciennoise qui cherche un acteur régional capable de couvrir plusieurs communes du Hainaut, notamment s'il détient des biens répartis sur le territoire. À noter : le siège n'est pas à Valenciennes même, un point à valider selon l'emplacement de votre bien et vos attentes en réactivité. Demandez un devis détaillé et des références locales.",
+      },
+      {
+        name: "DETENT'TOIT",
+        url: 'https://www.detenttoit-conciergerie.fr/valenciennes',
+        commission: 'sur devis',
+        menage: 'variable',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Hauts-de-France (Lille, Valenciennes), experts location courte durée",
+        description:
+          "DETENT'TOIT est une conciergerie basée à Lille qui intervient sur toute la région, dont Valenciennes, en se présentant comme experte de la location courte durée. Son périmètre couvre Lille, Valenciennes, Amiens, Arras, Cambrai, Douai et la métropole lilloise. La commission et le détail des prestations se définissent sur devis. Pertinente pour un propriétaire qui privilégie une structure régionale rodée et présente sur plusieurs villes des Hauts-de-France, éventuellement s'il possède des biens dans différentes communes. Le siège étant à Lille, la page Valenciennes correspond à une zone d'intervention plutôt qu'à une agence locale : vérifiez la réactivité et l'organisation terrain sur votre secteur précis, et demandez un devis chiffré ainsi que des références de biens gérés à Valenciennes.",
+      },
+      {
+        name: 'YourHostHelper',
+        url: 'https://yourhosthelper.com/conciergerie/herin/',
+        commission: 'sur devis',
+        menage: 'refacturé voyageur',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Agglomération valenciennoise (Hérin), réseau national et pricing dynamique",
+        description:
+          "YourHostHelper est un réseau national de conciergeries (créé à Cannes en 2017, en franchise depuis 2022, présent dans plus de 40 villes) qui couvre l'agglomération valenciennoise via une agence sur le secteur de Hérin. Le positionnement met en avant l'optimisation du revenu par un pricing dynamique et des services standardisés à l'échelle du réseau. La commission se définit sur devis, le ménage étant généralement refacturé au voyageur. Pertinente pour un propriétaire qui préfère la structure et les process d'un réseau national aux acteurs indépendants locaux. Le revers de cette standardisation : un ancrage local parfois moins fort qu'une conciergerie de proximité. Demandez qui gère concrètement votre bien sur place et un devis détaillé avant de vous engager.",
+      },
+      {
+        name: 'Cocoonr Valenciennes',
+        url: 'https://cocoonr.fr/conciergeries/valenciennes-59/',
+        commission: 'sur devis',
+        menage: 'inclus dans commission',
+        rating: 0,
+        reviews: 0,
+        biensGeres: 0,
+        specialty: "Réseau national (partenaire local basé à Achicourt), couverture régionale",
+        description:
+          "Cocoonr est l'un des plus gros réseaux français de conciergeries, avec plus de 2 000 biens gérés dans de nombreuses villes. Sa couverture de Valenciennes s'appuie sur un partenaire régional basé à Achicourt, près d'Arras. L'offre est celle d'un réseau structuré : diffusion multiplateforme, tarification, communication voyageurs et ménage généralement inclus dans la commission. Le taux se définit sur devis selon le bien. Pertinente pour un propriétaire rassuré par la taille et les outils d'un réseau national, plutôt que par un acteur purement local. À vérifier : le ménage inclus dans la commission peut grever la marge sur les séjours courts, et le partenaire n'étant pas domicilié à Valenciennes même, confirmez l'organisation terrain sur votre secteur avant de signer.",
+      },
+    ],
+    neighborhoods: [
+      {
+        name: 'Centre / Place d\'Armes',
+        pricePerNight: '60-95 €',
+        occupancy: 62,
+        description:
+          "Cœur commerçant et historique de Valenciennes, autour de la Place d'Armes, de l'hôtel de ville et des rues piétonnes. Appartements recherchés par la clientèle d'affaires comme par les visiteurs de passage, pour tout faire à pied. Demande régulière toute l'année, peu dépendante de la saison. C'est l'emplacement le plus polyvalent, avec des prix au m² parmi les plus hauts de la ville tout en restant accessibles pour un centre urbain.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Quartier du Musée',
+        pricePerNight: '60-95 €',
+        occupancy: 60,
+        description:
+          "Secteur prisé autour du musée des Beaux-Arts et de la bibliothèque, entre boulevards et immeubles bourgeois. Cadre agréable, proche du centre, apprécié d'une clientèle qui recherche le calme sans s'éloigner. Demande soutenue par le tourisme d'affaires et culturel. Tickets d'entrée corrects et rendement brut équilibré pour un emplacement central.",
+        roiBrut: '6,5 à 8,5 %',
+      },
+      {
+        name: 'Saint-Waast',
+        pricePerNight: '55-90 €',
+        occupancy: 56,
+        description:
+          "Quartier résidentiel proche du centre, mêlant maisons de ville et petits collectifs, apprécié pour son ambiance de proximité. Cible une clientèle en séjour de moyenne durée et les déplacements professionnels. À l'écart de l'hyper-centre mais bien relié. Prix d'achat accessibles et rendement brut solide, adaptés à une stratégie de volume sur la demande semaine.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Faubourg de Paris',
+        pricePerNight: '55-90 €',
+        occupancy: 55,
+        description:
+          "Axe résidentiel au sud du centre, habitat mixte et tickets d'entrée mesurés. Bien desservi vers la gare et les zones d'emploi. Cible les séjours professionnels et les moyennes durées liées à l'activité économique locale. Demande touristique faible mais demande d'affaires régulière, pour un rendement brut attractif grâce à des prix d'achat contenus.",
+        roiBrut: '7 à 9 %',
+      },
+      {
+        name: 'Anzin',
+        pricePerNight: '50-85 €',
+        occupancy: 54,
+        description:
+          "Commune limitrophe au nord de Valenciennes, en continuité urbaine directe et proche des zones d'activité. Tickets d'entrée parmi les plus bas de l'agglomération. Cible une clientèle professionnelle et des séjours de mission liés à l'industrie et à la logistique du bassin. Demande de passage moindre, mais le prix d'achat accessible peut soutenir un rendement brut élevé.",
+        roiBrut: '7,5 à 9,5 %',
+      },
+      {
+        name: 'Marly',
+        pricePerNight: '55-90 €',
+        occupancy: 55,
+        description:
+          "Commune résidentielle au sud de Valenciennes, prisée des familles et bien reliée au centre. Habitat pavillonnaire et petits collectifs, cadre calme. Cible les séjours de moyenne durée, les détachements professionnels et les visites familiales. Marché plus diffus côté courte durée, mais prix d'achat raisonnables et demande stable liée à l'activité de l'agglomération valenciennoise.",
+        roiBrut: '7 à 9 %',
+      },
+    ],
+    regulation:
+      "Valenciennes applique le **cadre national** de la location meublée touristique, sans dispositif local restrictif identifié à ce jour — pas de zone tendue ni de quota communal connu — un contexte plus souple que dans les métropoles et sur le littoral.\n\n**Déclaration et numéro d'enregistrement.** La tendance générale, confirmée par la loi Le Meur, est à la généralisation d'un numéro d'enregistrement à 13 chiffres obligatoire sur toutes les annonces au plus tard le 20 mai 2026, via le téléservice national. Il concerne aussi bien la résidence principale que la résidence secondaire.\n\n**Résidence principale : 120 nuitées par an.** La location d'une résidence principale reste plafonnée à 120 jours par an dans le cadre national.\n\n**Sanctions.** Le défaut d'enregistrement ou une fausse déclaration exposent à des amendes (jusqu'à 10 000 € pour l'absence d'enregistrement, davantage en cas de fausse déclaration ou de changement d'usage illégal là où il s'applique).\n\n**[Taxe de séjour](/calcul-taxe-de-sejour).** La taxe de séjour est gérée à l'échelle de **Valenciennes Métropole** ; son montant dépend du classement du logement et est le plus souvent collecté automatiquement par les plateformes. Vérifiez le barème en vigueur auprès de la métropole.\n\nÀ défaut de contrainte locale forte, l'enjeu à Valenciennes est moins réglementaire qu'opérationnel : capter une demande professionnelle régulière suppose une gestion réactive — arrivées tardives, séjours semaine, factures pour les entreprises — qu'une conciergerie locale sait industrialiser. Avant tout achat, confirmez néanmoins auprès de la mairie l'absence d'obligation de changement d'usage pour votre situation.",
+    concreteExample: {
+      bienType: 'T2',
+      surface: 45,
+      pricePerNight: 70,
+      neighborhood: 'centre',
+      revenuBrut: 15000,
+      commissionRate: 0.2,
+      menageCount: 60,
+      menageUnitCost: 45,
+    },
+    extraFaq: [
+      {
+        q: 'Combien coûte une conciergerie Airbnb à Valenciennes ?',
+        a: "À Valenciennes, un acteur affiche une commission ferme (La Pépite Immobilier : 20 % du revenu par réservation, ménage inclus avec supplément à 18 € TTC de l'heure) ; les autres fonctionnent sur devis. Sur des marchés comparables, les commissions s'échelonnent généralement de 18 % à 25 % selon le périmètre et le bien. Le taux affiché ne dit pas tout : le critère décisif est le traitement du ménage (refacturé au voyageur ou pris sur votre marge) et les frais annexes (photos, mise en ligne, abonnement). Sur un marché tiré par la demande professionnelle, la capacité de l'agence à gérer des arrivées en semaine et à facturer les entreprises compte autant que la commission. Demandez un devis détaillé et comparez à net constant.",
+      },
+      {
+        q: 'Faut-il une autorisation pour louer en Airbnb à Valenciennes ?',
+        a: "À ce jour, Valenciennes applique le cadre national sans dispositif local restrictif identifié : pas de zone tendue ni de quota communal connu, contrairement aux métropoles et au littoral. La loi Le Meur généralise toutefois l'obligation d'un numéro d'enregistrement à 13 chiffres sur toutes les annonces, au plus tard le 20 mai 2026, pour les résidences principales comme secondaires. Une résidence principale reste louable jusqu'à 120 jours par an. Comme la situation peut évoluer et dépend de votre cas précis, confirmez auprès de la mairie l'absence d'obligation de changement d'usage avant d'investir. C'est un contexte globalement souple, plutôt favorable aux nouveaux projets.",
+      },
+      {
+        q: 'La location courte durée est-elle rentable à Valenciennes ?',
+        a: "Oui, et le profil de Valenciennes est même particulier : la demande est portée par l'économie plutôt que par le tourisme. L'usine Toyota d'Onnaing, ses sous-traitants, le pôle image et les écoles Rubika alimentent un flux régulier de séjours semaine, missions et détachements, ce qui étale l'occupation sur toute l'année au lieu de la concentrer sur deux mois d'été. Combiné à des prix d'achat très accessibles (de l'ordre de 1 900 à 2 000 €/m² pour un appartement), ce profil soutient des rendements bruts intéressants pour la région. Un T2 loué autour de 70 €/nuit peut viser un revenu brut de l'ordre de 15 000 € par an avec une occupation régulière, à condition de savoir capter la clientèle professionnelle.",
+      },
+      {
+        q: 'Quel quartier de Valenciennes privilégier pour investir ?',
+        a: "Pour une occupation régulière tirée par la demande d'affaires, le centre et la Place d'Armes offrent la meilleure polyvalence (tout à pied, clientèle pro et de passage), avec un rendement brut souvent compris entre 6,5 et 8,5 %. Le quartier du musée des Beaux-Arts constitue une alternative résidentielle prisée et proche du centre. Pour viser un rendement brut plus élevé, les secteurs plus abordables comme Saint-Waast, le Faubourg de Paris ou les communes limitrophes (Anzin, Marly) peuvent atteindre 7 à 9,5 %, avec une demande davantage liée aux missions et détachements qu'au tourisme. Dans tous les cas, la proximité des zones d'emploi et des accès (gare, axes vers Onnaing) est un critère clé sur ce marché professionnel.",
+      },
+    ],
+    updatedAt: '2026-07-01',
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

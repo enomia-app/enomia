@@ -1068,8 +1068,9 @@
     "oldSlug": "/conciergerie-airbnb-valenciennes",
     "kw": "conciergerie valenciennes",
     "vol": 120,
-    "status": "À faire",
-    "kd": 7
+    "status": "Publié",
+    "kd": 7,
+    "publishedAt": "2026-07-01"
   },
   {
     "num": 83,
@@ -1531,28 +1532,30 @@
   {
     "num": 116,
     "ville": "Albi",
-    "region": "?",
-    "regionSlug": "?",
+    "region": "Occitanie",
+    "regionSlug": "occitanie",
     "citySlug": "albi",
-    "newUrl": "/conciergerie-airbnb/?/albi",
+    "newUrl": "/conciergerie-airbnb/occitanie/albi",
     "kw": "conciergerie Albi",
     "vol": 140,
     "kd": "16",
-    "status": "À faire",
-    "source": "semrush-expand-2026-05-15"
+    "status": "Publié",
+    "source": "semrush-expand-2026-05-15",
+    "publishedAt": "2026-07-01"
   },
   {
     "num": 117,
     "ville": "Le Lavandou",
-    "region": "?",
-    "regionSlug": "?",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "regionSlug": "provence-alpes-cote-dazur",
     "citySlug": "le-lavandou",
-    "newUrl": "/conciergerie-airbnb/?/le-lavandou",
+    "newUrl": "/conciergerie-airbnb/provence-alpes-cote-dazur/le-lavandou",
     "kw": "conciergerie Le Lavandou",
     "vol": 140,
     "kd": "26",
-    "status": "À faire",
-    "source": "semrush-expand-2026-05-15"
+    "status": "Publié",
+    "source": "semrush-expand-2026-05-15",
+    "publishedAt": "2026-07-01"
   },
   {
     "num": 118,

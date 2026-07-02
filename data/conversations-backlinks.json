@@ -64,6 +64,15 @@
       "dernier_statut": "Refusé (remonté par Marc le 30/06).",
       "backlink": "refuse",
       "note": "Statut refus communiqué par Marc. Domaine à confirmer."
+    },
+    {
+      "site": "mes-allocs.fr",
+      "date_premier_echange": "2026-06-30",
+      "date_dernier_echange": "2026-06-30",
+      "dernier_statut": "Intéressée mais refuse POUR L'INSTANT : domaine Enomia jugé trop jeune / autorité trop faible. Contact : Camille Jouanne.",
+      "backlink": "refuse",
+      "recontact_apres": "2027-06",
+      "note": "Refus SOFT (pas un non définitif) : elle voulait, mais AS/DA d'Enomia trop bas à ce stade. À RECONTACTER quand l'autorité a monté, viser ~2027 (≈12 mois), idéalement à la sortie du livre / quand l'AS est matériellement plus haut. Vérifier l'AS d'Enomia AVANT de recontacter. Contact Camille Jouanne. Domaine à confirmer (mes-allocs.fr ?)."
     }
   ]
 }

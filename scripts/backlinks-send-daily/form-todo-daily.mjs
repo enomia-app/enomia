@@ -31,6 +31,7 @@ const ROOT = path.resolve(__dirname, '../..');
 const args = process.argv.slice(2);
 const DRY = args.includes('--dry');
 const MAX = parseInt(args.find(a => a.startsWith('--max='))?.split('=')[1] || '10', 10);
+const RESEND = args.find(a => a.startsWith('--resend='))?.split('=')[1] || null; // YYYY-MM-DD : renvoie proprement le batch déjà envoyé ce jour-là
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const BASE_PATH = path.join(ROOT, 'data', 'email-base', 'base_complete.json');
@@ -89,16 +90,30 @@ export function buildFormPitch(r) {
   return buildBadgePitch({ segment: r.segment, listed: false, greeting, observation, ville: r.ville, page_url: r.page_url });
 }
 
-function buildEmailBody(items) {
+/** Retrouve les prospects d'un batch déjà envoyé (repérés par date dans le state) pour un renvoi propre. Pur + exporté (testable). */
+export function pickResendProspects(rows, state, date) {
+  const wanted = Object.entries(state?.sent || {}).filter(([, v]) => v && v.date === date);
+  const picked = [];
+  for (const [d, v] of wanted) {
+    const r = rows.find(x => dom(x.site) === d && x.url_formulaire === v.url) || rows.find(x => dom(x.site) === d);
+    if (r) picked.push(r);
+  }
+  return picked;
+}
+
+export function buildEmailBody(items) {
   const blocks = items.map((it, i) => {
     const { r, pitch } = it;
+    // Message en CLAIR, sans préfixe ni indentation, pour un copier-coller propre
+    // dans les formulaires (les anciennes barres « | » polluaient le collage).
     return `${i + 1}. ${r.nom_boite}  [${r.segment} · ${r.ville}]
    Formulaire : ${r.url_formulaire}
-   Objet      : ${pitch.subject}
-   Message    :
-${pitch.text.split('\n').map(l => '   | ' + l).join('\n')}
-${r.phone ? `   (tél si besoin : ${r.phone})\n` : ''}`;
-  }).join('\n──────────\n\n');
+   Objet      : ${pitch.subject}${r.phone ? `\n   Tél (si demandé) : ${r.phone}` : ''}
+
+Message à coller (tout le bloc ci-dessous, jusqu'à la ligne de tirets) :
+
+${pitch.text}`;
+  }).join('\n\n──────────\n\n');
 
   return `Salut Marc,
 
@@ -140,6 +155,20 @@ async function main() {
   if (!base.length) { log(`⚠️ Base absente (${BASE_PATH}).`); return; }
 
   const state = loadState();
+
+  if (RESEND) {
+    const picked = pickResendProspects(base, state, RESEND);
+    if (!picked.length) { log(`⚠️ Aucun prospect envoyé le ${RESEND} retrouvé dans la base.`); return; }
+    const items = picked.map(r => ({ r, pitch: buildFormPitch(r) }));
+    const subject = `[forms] RENVOI — ${items.length} formulaires du ${RESEND}`;
+    const body = buildEmailBody(items);
+    if (DRY) { log(`[DRY] renvoi ${RESEND} (${items.length} prospects) :`); console.log('Objet :', subject); console.log(body); return; }
+    const gm = await getGmailClient();
+    const id = await sendToMarc(gm, subject, body);
+    log(`📧 Renvoi du ${RESEND} envoyé (gmail ${id}) — ${items.length} formulaires. State inchangé (pas de re-marquage).`);
+    return;
+  }
+
   const doneDomains = new Set(Object.keys(state.sent));
   const picked = pickFormProspects(base, { max: MAX, doneDomains });
   if (!picked.length) { log('✅ Aucun formulaire en attente (pool épuisé ou tout déjà proposé).'); return; }

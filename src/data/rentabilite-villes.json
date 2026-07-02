@@ -2938,7 +2938,7 @@
       "population": 932,
       "taille": "rural",
       "categorie": "ski",
-      "published": false
+      "published": true
     },
     {
       "slug": "les-mathes",
@@ -3582,7 +3582,7 @@
       "population": 588,
       "taille": "rural",
       "categorie": "ski",
-      "published": false
+      "published": true
     },
     {
       "slug": "montreuil",
@@ -22034,7 +22034,7 @@
       "population": 3194,
       "taille": "petite",
       "categorie": "petite-ville",
-      "published": false
+      "published": true
     },
     {
       "slug": "le-tholy",

@@ -1,11 +1,12 @@
 {
-  "_doc": "Conversations backlinks où Marc a RÉPONDU manuellement (prospects qui ont répliqué à un pitch/relance). Tenu à jour depuis le chat Claude Code (commit/push). Source de vérité unique, VERSIONNÉE (le cron du Mac mini la lit après git pull). Lu par scripts/backlinks-reports/reports.mjs (rapport weekly, dim 18h43) : liste les 'en_attente' depuis >7j → Marc relance jusqu'à statut final.",
+  "_doc": "Conversations backlinks suivies manuellement. Tenu à jour depuis le chat Claude Code (commit/push). Source de vérité unique, VERSIONNÉE (le cron du Mac mini la lit après git pull). Lu par scripts/backlinks-reports/reports.mjs (rapport weekly, dim 18h43). Statuts : 'obtenu' (lien acquis), 'refuse' (réponse négative, jamais relancé), 'noanswer' (jamais répondu, à relancer), 'en_attente' (conversation active, on attend leur retour). 'en_attente'+'noanswer' >7j = section À RELANCER. 'recontact_apres' (YYYY-MM) parque un lead jusqu'à ce mois puis le fait ressortir en section À RECONTACTER.",
   "_schema": {
     "site": "domaine du prospect (ex: popacademy.fr)",
     "date_premier_echange": "YYYY-MM-DD du 1er échange (réponse reçue)",
     "date_dernier_echange": "YYYY-MM-DD du dernier message (maj à chaque round)",
     "dernier_statut": "texte libre : où en est la conversation",
-    "backlink": "en_attente | obtenu | refuse",
+    "backlink": "en_attente | noanswer | obtenu | refuse",
+    "recontact_apres": "YYYY-MM (optionnel) : lead parqué, ressort dans la section 'à recontacter' du weekly quand ce mois arrive",
     "note": "contexte utile pour la relance (qui, quoi, quel article)"
   },
   "conversations": [
@@ -118,9 +119,9 @@
       "site": "conciergerierouen.com",
       "date_premier_echange": "2026-06-30",
       "date_dernier_echange": "2026-06-30",
-      "dernier_statut": "Refusé. Contact : contact@conciergerierouen.com.",
-      "backlink": "refuse",
-      "note": "Statut communiqué par Marc le 30/06. Adresse quasi-identique à conciegerierouen.com (sans le r) listée en attente par Marc : à confirmer si 2 prospects distincts ou 1 typo (l'autre est en attente de log)."
+      "dernier_statut": "En conversation, à relancer (Marc doit répondre). Contact : contact@conciergerierouen.com.",
+      "backlink": "en_attente",
+      "note": "UN SEUL prospect (pas 2). Il répond DEPUIS conciegerierouen.com (sans le r) mais cette adresse BOUNCE : toujours répondre à contact@conciergerierouen.com (avec le r). Reclassé refuse -> en_attente le 02/07 (l'ancien 'refus' venait de l'étiquette de la liste de Marc, erreur de saisie ; le prospect est bien réactif)."
     }
   ]
 }

@@ -85,12 +85,19 @@ function loadConversations() {
   } catch { return []; } // fichier absent / JSON cassé → pas d'alerte (pas de crash)
 }
 
-// Pur (testable) : conversations encore en_attente de backlink depuis >= minDays
-// jours (depuis le dernier échange). Trie les plus anciennes d'abord, ajoute `jours`.
+// Statuts qui appellent une relance : conversation active (en_attente) ou jamais
+// répondu (noanswer). 'refuse' (réponse négative) et 'obtenu' sont terminaux.
+const RELANCE_STATUSES = new Set(['en_attente', 'noanswer']);
+
+// Pur (testable) : conversations à relancer depuis >= minDays jours (depuis le
+// dernier échange). Exclut les leads parqués (recontact_apres dans le futur).
+// Trie les plus anciennes d'abord, ajoute `jours`.
 export function pendingConversations(list, todayIso, minDays = 7) {
   const today = new Date(todayIso.slice(0, 10));
+  const ym = todayIso.slice(0, 7);
   return (list || [])
-    .filter(c => c.backlink === 'en_attente')
+    .filter(c => RELANCE_STATUSES.has(c.backlink))
+    .filter(c => !c.recontact_apres || c.recontact_apres <= ym)
     .map(c => {
       const ref = (c.date_dernier_echange || c.date_premier_echange || todayIso).slice(0, 10);
       const jours = Math.floor((today - new Date(ref)) / 86400000);
@@ -98,6 +105,15 @@ export function pendingConversations(list, todayIso, minDays = 7) {
     })
     .filter(c => c.jours >= minDays)
     .sort((a, b) => b.jours - a.jours);
+}
+
+// Pur (testable) : leads parqués (refus-soft, noanswer en pause) dont la date de
+// recontact (recontact_apres, format YYYY-MM) est arrivée. Exclut les obtenus.
+export function reactivationDue(list, todayIso) {
+  const ym = todayIso.slice(0, 7);
+  return (list || [])
+    .filter(c => c.recontact_apres && c.recontact_apres <= ym && c.backlink !== 'obtenu')
+    .sort((a, b) => String(a.recontact_apres).localeCompare(String(b.recontact_apres)));
 }
 
 // ─── Stats ──────────────────────────────────────────────────────────────
@@ -193,8 +209,11 @@ Rapport ${period} backlinks — ${stats.period_label}.
   - contrat       : ${stats.par_outil_positive.contrat}
   - facture       : ${stats.par_outil_positive.facture}
 ${(stats.pending_conversations && stats.pending_conversations.length) ? `
-🔗 Conversations sans backlink (>7j) — À RELANCER (${stats.pending_conversations.length})
-${stats.pending_conversations.map(c => `  • ${c.site} — répondu ${c.date_premier_echange || '?'}, en attente depuis ${c.jours}j${c.dernier_statut ? ` — ${c.dernier_statut}` : ''}${c.note ? ` (${c.note})` : ''}`).join('\n')}
+🔗 À RELANCER — sans réponse / en attente (>7j) (${stats.pending_conversations.length})
+${stats.pending_conversations.map(c => `  • ${c.site} [${c.backlink === 'noanswer' ? 'jamais répondu' : 'en conversation'}] — ${c.jours}j${c.dernier_statut ? ` — ${c.dernier_statut}` : ''}`).join('\n')}
+` : ''}${(stats.reactivation_due && stats.reactivation_due.length) ? `
+🔄 À RECONTACTER — leads parqués dont la date est arrivée (${stats.reactivation_due.length})
+${stats.reactivation_due.map(c => `  • ${c.site} (prévu ${c.recontact_apres})${c.dernier_statut ? ` — ${c.dernier_statut}` : ''}`).join('\n')}
 ` : ''}
 📊 Pipeline actuel (tous mois confondus)
   Total candidats   : ${stats.pipeline.total_candidates}
@@ -239,10 +258,13 @@ async function main() {
   const candidates = loadAllBacklogs();
   log(`  ${candidates.length} candidats chargés (tous mois)`);
   const stats = computeStats(candidates);
-  stats.pending_conversations = pendingConversations(loadConversations(), TODAY.toISOString());
+  const convos = loadConversations();
+  stats.pending_conversations = pendingConversations(convos, TODAY.toISOString());
+  stats.reactivation_due = reactivationDue(convos, TODAY.toISOString());
   log(`  Envois sur période: ${stats.envois.total}`);
   log(`  Réponses positives: ${stats.reponses.positive}`);
   log(`  Conversations à relancer (>7j): ${stats.pending_conversations.length}`);
+  log(`  Leads à recontacter (date arrivée): ${stats.reactivation_due.length}`);
   await sendReport(stats);
 }
 

@@ -32,6 +32,38 @@
       "dernier_statut": "Lien PROMIS par le prospect (article rentabilité LCD en cours, intègre le lien vers le simulateur). Marc a répondu le 30/06 : remerciement + pitch produit (discovery, sans prix). En attente : pose du lien + retour sur le pitch.",
       "backlink": "en_attente",
       "note": "Hôte en Guadeloupe (971), ~50% de résa en direct, allié potentiel Enomia (a lancé le débat sur l'alternative FR à Airbnb), pitché le produit le 30/06. Contact lcdservices971@gmail.com. À faire : confirmer le domaine du blog + vérifier que le lien est posé (~7 juillet). NE PAS confondre avec betterhost.fr (autre prospect)."
+    },
+    {
+      "site": "sweethome-conciergerie",
+      "date_premier_echange": "2026-06-30",
+      "date_dernier_echange": "2026-06-30",
+      "dernier_statut": "Chaud. Marc a envoyé le matériel le 30/06. En attente du retour.",
+      "backlink": "en_attente",
+      "note": "Conciergerie, prospect chaud. Domaine + date de 1er contact à confirmer."
+    },
+    {
+      "site": "Henri",
+      "date_premier_echange": "2026-06-30",
+      "date_dernier_echange": "2026-06-30",
+      "dernier_statut": "En attente (confirmé par Marc le 30/06).",
+      "backlink": "en_attente",
+      "note": "Marc le pensait déjà tracké mais il était absent du fichier, ajouté le 30/06. ⚠️ À confirmer : domaine + depuis quand en attente (cette date pilote la relance, mise à 30/06 par défaut faute de mieux)."
+    },
+    {
+      "site": "alpinest",
+      "date_premier_echange": "2026-06-30",
+      "date_dernier_echange": "2026-06-30",
+      "dernier_statut": "Refusé (remonté par Marc le 30/06).",
+      "backlink": "refuse",
+      "note": "Statut refus communiqué par Marc. Domaine à confirmer."
+    },
+    {
+      "site": "conciergerie-toulousaine",
+      "date_premier_echange": "2026-06-30",
+      "date_dernier_echange": "2026-06-30",
+      "dernier_statut": "Refusé (remonté par Marc le 30/06).",
+      "backlink": "refuse",
+      "note": "Statut refus communiqué par Marc. Domaine à confirmer."
     }
   ]
 }

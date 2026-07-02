@@ -73,6 +73,54 @@
       "backlink": "refuse",
       "recontact_apres": "2027-06",
       "note": "Refus SOFT (pas un non définitif) : elle voulait, mais AS/DA d'Enomia trop bas à ce stade. À RECONTACTER quand l'autorité a monté, viser ~2027 (≈12 mois), idéalement à la sortie du livre / quand l'AS est matériellement plus haut. Vérifier l'AS d'Enomia AVANT de recontacter. Contact Camille Jouanne. Domaine à confirmer (mes-allocs.fr ?)."
+    },
+    {
+      "site": "qalimo.fr",
+      "date_premier_echange": "2026-06-30",
+      "date_dernier_echange": "2026-06-30",
+      "dernier_statut": "Refusé. Contact : Théophile (contact@qalimo.fr).",
+      "backlink": "refuse",
+      "note": "Statut communiqué par Marc le 30/06."
+    },
+    {
+      "site": "amarris.fr",
+      "date_premier_echange": "2026-06-30",
+      "date_dernier_echange": "2026-06-30",
+      "dernier_statut": "Attente de leur retour, à relancer. Contact : julie.vachon@amarris.fr.",
+      "backlink": "en_attente",
+      "note": "Consolidé par Marc le 30/06. Date réelle du dernier contact à préciser (pilote la relance)."
+    },
+    {
+      "site": "mikedigitalbnb (gmail)",
+      "date_premier_echange": "2026-06-30",
+      "date_dernier_echange": "2026-06-30",
+      "dernier_statut": "Attente de leur retour, à relancer. Contact : mikedigitalbnb@gmail.com.",
+      "backlink": "en_attente",
+      "note": "Consolidé par Marc le 30/06. Pas de domaine (gmail). Date réelle du dernier contact à préciser."
+    },
+    {
+      "site": "hosting-academy.com",
+      "date_premier_echange": "2026-06-30",
+      "date_dernier_echange": "2026-06-30",
+      "dernier_statut": "BACKLINK OBTENU. Contact : pauline@hosting-academy.com.",
+      "backlink": "obtenu",
+      "note": "Lien obtenu (confirmé Marc 30/06). Hosting Academy = partenaire distribution formations LCD 2027 (cf mémoire management) : relation à cultiver au-delà du backlink."
+    },
+    {
+      "site": "zently.fr",
+      "date_premier_echange": "2026-06-30",
+      "date_dernier_echange": "2026-06-30",
+      "dernier_statut": "Attente de leur retour, à relancer. Contact : hello@zently.fr.",
+      "backlink": "en_attente",
+      "note": "Consolidé par Marc le 30/06. Zently = concurrent identifie dans la veille (competitive_intel_new_entrants) : un backlink depuis un concurrent direct est inhabituel, vérifier le contexte."
+    },
+    {
+      "site": "conciergerierouen.com",
+      "date_premier_echange": "2026-06-30",
+      "date_dernier_echange": "2026-06-30",
+      "dernier_statut": "Refusé. Contact : contact@conciergerierouen.com.",
+      "backlink": "refuse",
+      "note": "Statut communiqué par Marc le 30/06. Adresse quasi-identique à conciegerierouen.com (sans le r) listée en attente par Marc : à confirmer si 2 prospects distincts ou 1 typo (l'autre est en attente de log)."
     }
   ]
 }
